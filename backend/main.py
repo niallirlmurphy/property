@@ -412,50 +412,40 @@ async def _geocode_mapbox(
         return None
 
 
-async def _geocode_eircode_autoaddress(
+async def _geocode_eircode_nominatim(
     eircode: str,
     client: httpx.AsyncClient,
 ) -> "tuple[float, float] | None":
-    """Resolve a full eircode to precise coordinates via Autoaddress API.
+    """Resolve a full eircode to precise coordinates via Nominatim.
     Returns (lat, lon) if successful, None otherwise.
-    Uses autocomplete → lookup flow to get coordinates."""
-    if not AUTOADDRESS_KEY:
-        return None
-    headers = {
-        "Authorization": f"Bearer {AUTOADDRESS_KEY}",
-        "User-Agent": USER_AGENT,
-    }
+    Uses public OSM Nominatim which has eircode data."""
     try:
-        # Step 1: autocomplete to get the lookup URL
-        r = await client.get(
-            AA_AUTOCOMPLETE,
-            params={"key": AUTOADDRESS_KEY, "address": eircode.strip()},
-            headers=headers,
+        # Nominatim search for eircode
+        resp = await client.get(
+            "https://nominatim.openstreetmap.org/search",
+            params={
+                "q": f"{eircode.strip()} Ireland",
+                "format": "json",
+                "limit": 1,
+            },
+            headers={"User-Agent": USER_AGENT},
             timeout=5.0,
         )
-        if r.status_code != 200:
-            return None
-        options = r.json().get("options", [])
-        if not options:
-            return None
-        lookup_href = options[0]["link"]["href"]
-
-        # Step 2: lookup to get full address details including coordinates
-        r2 = await client.get(lookup_href, headers=headers, timeout=5.0)
-        if r2.status_code != 200:
+        if resp.status_code != 200:
             return None
 
-        address_data = r2.json().get("address", {})
-        # Autoaddress returns reformattedAddressPostcode with full coordinates
-        coords = address_data.get("reformattedAddressPostcode", {})
-        lat = coords.get("latitude")
-        lon = coords.get("longitude")
+        results = resp.json()
+        if not results:
+            return None
+
+        lat = results[0].get("lat")
+        lon = results[0].get("lon")
 
         if lat is not None and lon is not None:
             return float(lat), float(lon)
         return None
     except Exception as e:
-        logger.debug(f"Autoaddress eircode geocoding failed for {eircode!r}: {e}")
+        logger.debug(f"Nominatim eircode geocoding failed for {eircode!r}: {e}")
         return None
 
 
@@ -495,12 +485,12 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         """, norm)
         if row and (row["cnt"] or 0) >= 1:
             return _cache_and_return(float(row["lat"]), float(row["lon"]))
-        # Exact match not in PPR — try Autoaddress for precise eircode geocoding.
+        # Exact match not in PPR — try Nominatim for precise eircode geocoding (OSM has eircode data).
         async with httpx.AsyncClient() as eircode_client:
-            aa_result = await _geocode_eircode_autoaddress(query, eircode_client)
-            if aa_result:
-                return _cache_and_return(*aa_result)
-        # Autoaddress unavailable/failed — derive routing-key centroid for Mapbox proximity hint.
+            nominatim_result = await _geocode_eircode_nominatim(query, eircode_client)
+            if nominatim_result:
+                return _cache_and_return(*nominatim_result)
+        # Nominatim unavailable/failed — derive routing-key centroid for Mapbox proximity hint.
         prefix = norm[:3]
         rk_row = await db_pool.fetchrow("""
             SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
