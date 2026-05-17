@@ -15,6 +15,9 @@ import httpx
 import logging
 from typing import Optional
 from dotenv import load_dotenv
+import sentry_sdk
+from sentry_sdk.integrations.fastapi import FastApiIntegration
+from sentry_sdk.integrations.asyncio import AsyncioIntegration
 
 load_dotenv()
 
@@ -24,7 +27,23 @@ logger = logging.getLogger(__name__)
 DATABASE_URL    = os.environ["DATABASE_URL"]
 MAPBOX_TOKEN    = os.environ.get("MAPBOX_TOKEN", "")
 AUTOADDRESS_KEY = os.environ.get("AUTOADDRESS_KEY", "")
+SENTRY_DSN      = os.environ.get("SENTRY_DSN", "")
 USER_AGENT      = "PPR-webapp/1.0 (personal research)"
+
+# Initialize Sentry for error tracking and performance monitoring
+if SENTRY_DSN:
+    sentry_sdk.init(
+        dsn=SENTRY_DSN,
+        integrations=[
+            FastApiIntegration(transaction_style="endpoint"),
+            AsyncioIntegration(),
+        ],
+        traces_sample_rate=0.1,  # 10% of transactions for performance monitoring
+        profiles_sample_rate=0.1,  # 10% profiling
+        environment=os.environ.get("RAILWAY_ENVIRONMENT", "development"),
+        release=os.environ.get("RAILWAY_GIT_COMMIT_SHA", "unknown"),
+    )
+    logger.info("Sentry initialized for error tracking")
 
 AA_AUTOCOMPLETE = "https://api.autoaddress.com/3.0/autocomplete"
 
@@ -449,8 +468,8 @@ async def _geocode_eircode_nominatim(
         return None
 
 
-async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[float, float]":
-    """Return (lat, lon) for an address, eircode, or 'lat,lon' string.
+async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[float, float, str]":
+    """Return (lat, lon, source) for an address, eircode, or 'lat,lon' string.
 
     Resolution order:
       1. Raw coordinates passthrough
@@ -458,20 +477,22 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
       3. Eircode → DB centroid         (fast indexed lookup)
       4. Mapbox Geocoding API          (~300ms, good for areas/places/addresses)
       5. Fuzzy DB ILIKE full-scan      (slow last resort if Mapbox unavailable)
+
+    Source values: 'raw', 'cache', 'db_exact', 'nominatim', 'db_tokens', 'mapbox', 'db_fuzzy'
     """
     # 1. Raw coordinates
     coord_match = re.match(r"^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$", query.strip())
     if coord_match:
-        return float(coord_match.group(1)), float(coord_match.group(2))
+        return float(coord_match.group(1)), float(coord_match.group(2)), "raw"
 
     # 2. Cache hit (v2 namespace after adding Nominatim eircode geocoding)
     cached = cache.get("geocode_v2", {"q": query})
     if cached is not None:
-        return cached["lat"], cached["lon"]
+        return cached["lat"], cached["lon"], "cache"
 
-    def _cache_and_return(lat: float, lon: float) -> "tuple[float, float]":
+    def _cache_and_return(lat: float, lon: float, source: str) -> "tuple[float, float, str]":
         cache.set("geocode_v2", {"q": query}, {"lat": lat, "lon": lon}, TTL_GEOCODE)
-        return lat, lon
+        return lat, lon, source
 
     # 3. Eircode — fast indexed DB lookup
     if _looks_like_eircode(query):
@@ -484,12 +505,12 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
               AND REPLACE(UPPER(eircode), ' ', '') = $1
         """, norm)
         if row and (row["cnt"] or 0) >= 1:
-            return _cache_and_return(float(row["lat"]), float(row["lon"]))
+            return _cache_and_return(float(row["lat"]), float(row["lon"]), "db_exact")
         # Exact match not in PPR — try Nominatim for precise eircode geocoding (OSM has eircode data).
         async with httpx.AsyncClient() as eircode_client:
             nominatim_result = await _geocode_eircode_nominatim(query, eircode_client)
             if nominatim_result:
-                return _cache_and_return(*nominatim_result)
+                return _cache_and_return(*nominatim_result, "nominatim")
         # Nominatim unavailable/failed — derive routing-key centroid for Mapbox proximity hint.
         prefix = norm[:3]
         rk_row = await db_pool.fetchrow("""
@@ -501,21 +522,21 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         rk_proximity = None
         if rk_row and (rk_row["cnt"] or 0) >= 1:
             rk_proximity = f"{rk_row['lon']:.6f},{rk_row['lat']:.6f}"
-        # Try Mapbox — less precise than Autoaddress but better than routing-key fallback.
+        # Try Mapbox — less precise than Nominatim but better than routing-key fallback.
         async with httpx.AsyncClient() as eircode_client:
             mapbox_result = await _geocode_mapbox(query, eircode_client, proximity=rk_proximity)
             if mapbox_result:
-                return _cache_and_return(*mapbox_result)
+                return _cache_and_return(*mapbox_result, "mapbox")
         # Last resort: routing key prefix average (computed above)
         if rk_row and (rk_row["cnt"] or 0) >= 1:
-            return _cache_and_return(float(rk_row["lat"]), float(rk_row["lon"]))
+            return _cache_and_return(float(rk_row["lat"]), float(rk_row["lon"]), "db_routing_key")
 
     # 4. Token-based DB lookup — matches addresses by significant words.
     # Handles abbreviation mismatches (Rd vs Road) and finds tight clusters in known
     # Irish developments before falling through to Mapbox.
     result = await _geocode_db_tokens(query)
     if result:
-        return _cache_and_return(*result)
+        return _cache_and_return(*result, "db_tokens")
 
     # 5. Mapbox — good for area/place names and addresses not in the DB.
     # Expand abbreviations first (Rd→Road, Ave→Avenue etc) so Mapbox resolves correctly.
@@ -532,12 +553,12 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
             mapbox_query = mapbox_query + (f", {county}" if county else ", Dublin")
         result = await _geocode_mapbox(mapbox_query, client, proximity=proximity)
         if result:
-            return _cache_and_return(*result)
+            return _cache_and_return(*result, "mapbox")
 
     # 6. Fuzzy DB ILIKE fallback — only reached if Mapbox unavailable/fails
     result = await _geocode_db(query)
     if result:
-        return _cache_and_return(*result)
+        return _cache_and_return(*result, "db_fuzzy")
 
     raise HTTPException(status_code=404, detail=f"Could not geocode: {query}")
 
@@ -598,6 +619,37 @@ async def _enrich_eircodes(props: list[dict]) -> None:
         await asyncio.gather(*[_enrich_one(p) for p in targets], return_exceptions=True)
 
 
+async def _log_search_query(
+    query: str,
+    resolved_lat: float,
+    resolved_lon: float,
+    radius_km: float,
+    result_count: int,
+    elapsed_ms: int,
+    county_filter: Optional[str],
+    min_price: Optional[int],
+    max_price: Optional[int],
+    min_year: Optional[int],
+    max_year: Optional[int],
+    geocode_source: str,
+    user_agent: Optional[str],
+    ip_address: Optional[str],
+) -> None:
+    """Log search query to search_log table for analytics. Fire and forget — errors are ignored."""
+    try:
+        await db_pool.execute("""
+            INSERT INTO search_log (
+                query, resolved_lat, resolved_lon, radius_km, result_count, elapsed_ms,
+                county_filter, min_price, max_price, min_year, max_year,
+                geocode_source, user_agent, ip_address
+            ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+        """, query, resolved_lat, resolved_lon, radius_km, result_count, elapsed_ms,
+            county_filter, min_price, max_price, min_year, max_year,
+            geocode_source, user_agent, ip_address)
+    except Exception as e:
+        logger.debug(f"Search query logging failed: {e}")
+
+
 # ---------------------------------------------------------------------------
 # Routes
 # ---------------------------------------------------------------------------
@@ -615,7 +667,7 @@ async def geocode(
 ):
     """Resolve a query to (lat, lon) without running a property search."""
     _rate_limit_check(request, 60, "geocode")
-    lat, lon = await resolve_location(q, county=county)
+    lat, lon, _source = await resolve_location(q, county=county)
     return {"lat": lat, "lon": lon}
 
 
@@ -632,6 +684,7 @@ async def search(
     limit: int = Query(200, ge=1, le=500),
     sort: str = Query("date", regex="^(date|distance)$"),
 ):
+    start_time = time.time()
     _rate_limit_check(request, 60, "search")
     cache_params = {"q": q, "radius_km": radius_km, "min_price": min_price,
                     "max_price": max_price, "min_year": min_year, "max_year": max_year,
@@ -640,7 +693,7 @@ async def search(
     if cached is not None:
         return cached
 
-    lat, lon = await resolve_location(q, county=county)
+    lat, lon, geocode_source = await resolve_location(q, county=county)
 
     filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)"]
     params  = [lat, lon, radius_km * 1000]
@@ -680,6 +733,25 @@ async def search(
     }
     cache.set("search", cache_params, result, TTL_SEARCH)
 
+    # Log search query for analytics (fire and forget)
+    elapsed_ms = int((time.time() - start_time) * 1000)
+    asyncio.create_task(_log_search_query(
+        query=q,
+        resolved_lat=lat,
+        resolved_lon=lon,
+        radius_km=radius_km,
+        result_count=len(rows),
+        elapsed_ms=elapsed_ms,
+        county_filter=county,
+        min_price=min_price,
+        max_price=max_price,
+        min_year=min_year,
+        max_year=max_year,
+        geocode_source=geocode_source,
+        user_agent=request.headers.get("user-agent"),
+        ip_address=request.client.host if request.client else None,
+    ))
+
     # Enrich missing eircodes in the background — does not block the response
     asyncio.create_task(_enrich_eircodes(result["results"]))
 
@@ -707,7 +779,7 @@ async def trends(
     idx = 1
 
     if q:
-        lat, lon = await resolve_location(q)
+        lat, lon, _source = await resolve_location(q)
         filters.append(f"ST_DWithin(geog, ST_MakePoint(${idx+1}, ${idx})::geography, ${idx+2})")
         params.extend([lat, lon, radius_km * 1000])
         idx += 3

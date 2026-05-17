@@ -41,3 +41,28 @@ CREATE INDEX IF NOT EXISTS properties_sale_date_idx ON properties (sale_date);
 CREATE INDEX IF NOT EXISTS properties_price_idx   ON properties (price);
 CREATE INDEX IF NOT EXISTS properties_eircode_idx ON properties (eircode);
 
+-- Search query analytics log
+CREATE TABLE IF NOT EXISTS search_log (
+    id               BIGSERIAL PRIMARY KEY,
+    ts               TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    query            TEXT NOT NULL,
+    resolved_lat     DOUBLE PRECISION,
+    resolved_lon     DOUBLE PRECISION,
+    radius_km        DOUBLE PRECISION NOT NULL,
+    result_count     INTEGER NOT NULL,
+    elapsed_ms       INTEGER NOT NULL,
+    county_filter    TEXT,
+    min_price        INTEGER,
+    max_price        INTEGER,
+    min_year         INTEGER,
+    max_year         INTEGER,
+    geocode_source   TEXT,  -- 'db_exact' | 'nominatim' | 'db_tokens' | 'mapbox' | 'db_fuzzy' | 'cache'
+    user_agent       TEXT,
+    ip_address       INET
+);
+
+-- Index for analytics queries
+CREATE INDEX IF NOT EXISTS search_log_ts_idx ON search_log (ts DESC);
+CREATE INDEX IF NOT EXISTS search_log_query_idx ON search_log (query);
+CREATE INDEX IF NOT EXISTS search_log_result_count_idx ON search_log (result_count) WHERE result_count = 0;
+
