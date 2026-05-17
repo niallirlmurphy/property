@@ -431,21 +431,22 @@ async def _geocode_mapbox(
         return None
 
 
-async def _geocode_eircode_nominatim(
-    eircode: str,
+async def _geocode_nominatim(
+    query: str,
     client: httpx.AsyncClient,
 ) -> "tuple[float, float] | None":
-    """Resolve a full eircode to precise coordinates via Nominatim.
+    """Resolve query (address, place name, or eircode) via Nominatim.
     Returns (lat, lon) if successful, None otherwise.
-    Uses public OSM Nominatim which has eircode data."""
+    Nominatim returns results ordered by importance, so first result is usually correct."""
     try:
-        # Nominatim search for eircode
+        # Nominatim search — add "Ireland" to avoid international matches
         resp = await client.get(
             "https://nominatim.openstreetmap.org/search",
             params={
-                "q": f"{eircode.strip()} Ireland",
+                "q": f"{query.strip()} Ireland",
                 "format": "json",
                 "limit": 1,
+                "addressdetails": 0,  # Faster response without full address breakdown
             },
             headers={"User-Agent": USER_AGENT},
             timeout=5.0,
@@ -464,7 +465,7 @@ async def _geocode_eircode_nominatim(
             return float(lat), float(lon)
         return None
     except Exception as e:
-        logger.debug(f"Nominatim eircode geocoding failed for {eircode!r}: {e}")
+        logger.debug(f"Nominatim geocoding failed for {query!r}: {e}")
         return None
 
 
@@ -474,11 +475,14 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
     Resolution order:
       1. Raw coordinates passthrough
       2. Cache hit
-      3. Eircode → DB centroid         (fast indexed lookup)
-      4. Mapbox Geocoding API          (~300ms, good for areas/places/addresses)
-      5. Fuzzy DB ILIKE full-scan      (slow last resort if Mapbox unavailable)
+      3. Eircode → DB exact match      (fast indexed lookup)
+      4. Eircode → Nominatim           (OSM eircode data, address-level precision)
+      5. Token-based DB lookup         (tight clusters in known developments)
+      6. Nominatim                     (OSM geocoder, importance-ranked results)
+      7. Mapbox Geocoding API          (commercial fallback)
+      8. Fuzzy DB ILIKE full-scan      (slow last resort)
 
-    Source values: 'raw', 'cache', 'db_exact', 'nominatim', 'db_tokens', 'mapbox', 'db_fuzzy'
+    Source values: 'raw', 'cache', 'db_exact', 'nominatim', 'db_tokens', 'mapbox', 'db_fuzzy', 'db_routing_key'
     """
     # 1. Raw coordinates
     coord_match = re.match(r"^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$", query.strip())
@@ -508,7 +512,7 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
             return _cache_and_return(float(row["lat"]), float(row["lon"]), "db_exact")
         # Exact match not in PPR — try Nominatim for precise eircode geocoding (OSM has eircode data).
         async with httpx.AsyncClient() as eircode_client:
-            nominatim_result = await _geocode_eircode_nominatim(query, eircode_client)
+            nominatim_result = await _geocode_nominatim(query, eircode_client)
             if nominatim_result:
                 return _cache_and_return(*nominatim_result, "nominatim")
         # Nominatim unavailable/failed — derive routing-key centroid for Mapbox proximity hint.
@@ -533,12 +537,20 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
 
     # 4. Token-based DB lookup — matches addresses by significant words.
     # Handles abbreviation mismatches (Rd vs Road) and finds tight clusters in known
-    # Irish developments before falling through to Mapbox.
+    # Irish developments before falling through to external geocoders.
     result = await _geocode_db_tokens(query)
     if result:
         return _cache_and_return(*result, "db_tokens")
 
-    # 5. Mapbox — good for area/place names and addresses not in the DB.
+    # 5. Nominatim — free OSM geocoder with good Irish coverage. Returns results ordered
+    # by importance, so first result is usually the primary settlement/address.
+    # Better than Mapbox for place names (avoids sub-locality confusion like Barna).
+    async with httpx.AsyncClient() as client:
+        result = await _geocode_nominatim(query, client)
+        if result:
+            return _cache_and_return(*result, "nominatim")
+
+    # 6. Mapbox — commercial geocoder, fallback if Nominatim fails.
     # Expand abbreviations first (Rd→Road, Ave→Avenue etc) so Mapbox resolves correctly.
     mapbox_query = _expand_abbreviations(query)
     q_lower = query.lower()
@@ -555,7 +567,7 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         if result:
             return _cache_and_return(*result, "mapbox")
 
-    # 6. Fuzzy DB ILIKE fallback — only reached if Mapbox unavailable/fails
+    # 7. Fuzzy DB ILIKE fallback — only reached if all external geocoders fail
     result = await _geocode_db(query)
     if result:
         return _cache_and_return(*result, "db_fuzzy")

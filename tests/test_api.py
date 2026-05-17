@@ -156,6 +156,21 @@ def test_search_specific_address_in_correct_area(api):
     )
 
 
+def test_search_barna_galway_resolves_correctly(api):
+    """Barna, Galway should resolve to the village center, not a sub-locality 3km away."""
+    r = get(api, "/geocode", q="Barna, Galway")
+    assert r.status_code == 200
+    data = r.json()
+    # Correct Barna center per OSM: 53.2704, -9.1125
+    # Backend was returning 53.2512, -9.1520 (3.39 km south — wrong sub-locality)
+    center_lat, center_lon = data["lat"], data["lon"]
+    dist_from_barna = haversine_km(center_lat, center_lon, 53.2704, -9.1125)
+    assert dist_from_barna < 2.0, (
+        f"Geocoded Barna to ({center_lat:.4f},{center_lon:.4f}), which is {dist_from_barna:.2f} km "
+        f"from the correct village center (53.2704,-9.1125). Likely resolved to wrong sub-locality."
+    )
+
+
 # ----------------------------------------------------------------------------
 # Trends
 # ----------------------------------------------------------------------------
