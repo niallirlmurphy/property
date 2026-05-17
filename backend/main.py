@@ -412,6 +412,53 @@ async def _geocode_mapbox(
         return None
 
 
+async def _geocode_eircode_autoaddress(
+    eircode: str,
+    client: httpx.AsyncClient,
+) -> "tuple[float, float] | None":
+    """Resolve a full eircode to precise coordinates via Autoaddress API.
+    Returns (lat, lon) if successful, None otherwise.
+    Uses autocomplete → lookup flow to get coordinates."""
+    if not AUTOADDRESS_KEY:
+        return None
+    headers = {
+        "Authorization": f"Bearer {AUTOADDRESS_KEY}",
+        "User-Agent": USER_AGENT,
+    }
+    try:
+        # Step 1: autocomplete to get the lookup URL
+        r = await client.get(
+            AA_AUTOCOMPLETE,
+            params={"key": AUTOADDRESS_KEY, "address": eircode.strip()},
+            headers=headers,
+            timeout=5.0,
+        )
+        if r.status_code != 200:
+            return None
+        options = r.json().get("options", [])
+        if not options:
+            return None
+        lookup_href = options[0]["link"]["href"]
+
+        # Step 2: lookup to get full address details including coordinates
+        r2 = await client.get(lookup_href, headers=headers, timeout=5.0)
+        if r2.status_code != 200:
+            return None
+
+        address_data = r2.json().get("address", {})
+        # Autoaddress returns reformattedAddressPostcode with full coordinates
+        coords = address_data.get("reformattedAddressPostcode", {})
+        lat = coords.get("latitude")
+        lon = coords.get("longitude")
+
+        if lat is not None and lon is not None:
+            return float(lat), float(lon)
+        return None
+    except Exception as e:
+        logger.debug(f"Autoaddress eircode geocoding failed for {eircode!r}: {e}")
+        return None
+
+
 async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[float, float]":
     """Return (lat, lon) for an address, eircode, or 'lat,lon' string.
 
@@ -448,8 +495,12 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         """, norm)
         if row and (row["cnt"] or 0) >= 1:
             return _cache_and_return(float(row["lat"]), float(row["lon"]))
-        # Exact match not in PPR — derive routing-key centroid first so we can use it
-        # as a Mapbox proximity hint (avoids the fallback Dublin-center bias for non-Dublin codes).
+        # Exact match not in PPR — try Autoaddress for precise eircode geocoding.
+        async with httpx.AsyncClient() as eircode_client:
+            aa_result = await _geocode_eircode_autoaddress(query, eircode_client)
+            if aa_result:
+                return _cache_and_return(*aa_result)
+        # Autoaddress unavailable/failed — derive routing-key centroid for Mapbox proximity hint.
         prefix = norm[:3]
         rk_row = await db_pool.fetchrow("""
             SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
@@ -460,8 +511,7 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         rk_proximity = None
         if rk_row and (rk_row["cnt"] or 0) >= 1:
             rk_proximity = f"{rk_row['lon']:.6f},{rk_row['lat']:.6f}"
-        # Try Mapbox — it has eircode geocoding data for addresses not yet in the PPR.
-        # Using the routing-key centroid as proximity keeps non-Dublin results accurate.
+        # Try Mapbox — less precise than Autoaddress but better than routing-key fallback.
         async with httpx.AsyncClient() as eircode_client:
             mapbox_result = await _geocode_mapbox(query, eircode_client, proximity=rk_proximity)
             if mapbox_result:
@@ -835,8 +885,8 @@ class ContactPayload(BaseModel):
 
 
 @app.post("/feedback")
-@limiter.limit("5/minute")
 async def submit_feedback(request: Request, payload: FeedbackPayload):
+    _rate_limit_check(request, 5, "feedback")
     try:
         await db_pool.execute("""
             INSERT INTO submissions (kind, name, email, datasets, comments)
@@ -851,8 +901,8 @@ async def submit_feedback(request: Request, payload: FeedbackPayload):
 
 
 @app.post("/contact")
-@limiter.limit("5/minute")
 async def submit_contact(request: Request, payload: ContactPayload):
+    _rate_limit_check(request, 5, "contact")
     try:
         await db_pool.execute("""
             INSERT INTO submissions (kind, name, email, message, price_updates)
