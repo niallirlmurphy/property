@@ -489,13 +489,13 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
     if coord_match:
         return float(coord_match.group(1)), float(coord_match.group(2)), "raw"
 
-    # 2. Cache hit (v2 namespace after adding Nominatim eircode geocoding)
-    cached = cache.get("geocode_v2", {"q": query})
+    # 2. Cache hit (v3 namespace after prioritizing Nominatim for place names)
+    cached = cache.get("geocode_v3", {"q": query})
     if cached is not None:
         return cached["lat"], cached["lon"], "cache"
 
     def _cache_and_return(lat: float, lon: float, source: str) -> "tuple[float, float, str]":
-        cache.set("geocode_v2", {"q": query}, {"lat": lat, "lon": lon}, TTL_GEOCODE)
+        cache.set("geocode_v3", {"q": query}, {"lat": lat, "lon": lon}, TTL_GEOCODE)
         return lat, lon, source
 
     # 3. Eircode — fast indexed DB lookup
