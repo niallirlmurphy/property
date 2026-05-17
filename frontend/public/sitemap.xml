@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://homeiq.ie/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://homeiq.ie/mortgages</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://homeiq.ie/energy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://homeiq.ie/about</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- County pages -->
+  <url><loc>https://homeiq.ie/county/carlow</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/cavan</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/clare</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/cork</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://homeiq.ie/county/donegal</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/dublin</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://homeiq.ie/county/galway</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://homeiq.ie/county/kerry</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/kildare</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/kilkenny</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/laois</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/county/leitrim</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/county/limerick</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/longford</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/county/louth</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/mayo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/meath</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/monaghan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/county/offaly</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/county/roscommon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/county/sligo</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/county/tipperary</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/waterford</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/westmeath</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/county/wexford</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/county/wicklow</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Area pages -->
+  <url><loc>https://homeiq.ie/area/rathmines</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/area/ranelagh</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/area/blackrock</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/area/dun-laoghaire</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/area/clontarf</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/area/howth</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/malahide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/stillorgan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/sandymount</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/portobello</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/galway-city</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/area/cork-city</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/area/limerick-city</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/waterford-city</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/kilkenny-city</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/drogheda</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/dundalk</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/navan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/naas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/area/bray</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Dublin Eircode pages -->
+  <url><loc>https://homeiq.ie/eircode/D01</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D02</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D03</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D04</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D05</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D06</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D07</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D08</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D09</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D10</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D11</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D12</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D13</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D14</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D15</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D16</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D18</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://homeiq.ie/eircode/D24</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
