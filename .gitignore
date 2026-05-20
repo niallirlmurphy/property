@@ -50,3 +50,4 @@ Thumbs.db
 
 # Archived one-off pipeline scripts (contain old hardcoded tokens, not for git)
 archive_local/
+logs/
