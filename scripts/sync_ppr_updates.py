@@ -103,21 +103,92 @@ async def get_most_recent_sale_date(conn: asyncpg.Connection) -> Optional[dateti
 
 async def download_ppr_csv(output_path: str) -> bool:
     """
-    Download PPR CSV file.
+    Download PPR CSV file by submitting form to PPR website.
 
-    Note: PPR website typically requires manual download through their form interface.
-    Automatic download often fails due to form requirements or changing URLs.
+    The PPR website requires form submission rather than direct download.
+    This function automates the form submission process.
     """
-    print(f"⚠️  Automatic download from PPR website is not reliable")
-    print(f"\nManual download required:")
-    print(f"  1. Visit: {PPR_DOWNLOAD_PAGE}")
-    print(f"  2. Click 'Download File' for PPR-ALL.csv")
-    print(f"  3. Save the file")
-    print(f"  4. Re-run: python3 scripts/sync_ppr_updates.py --manual-csv ~/Downloads/PPR-ALL.csv")
-    print()
-    print(f"Expected file location: {output_path}")
+    print(f"Downloading PPR data via form submission...")
 
-    return False
+    try:
+        import warnings
+        warnings.filterwarnings('ignore', message='Unverified HTTPS request')
+
+        # Step 1: Submit form to request "ALL" data
+        session = requests.Session()
+        session.verify = False  # PPR has SSL cert issues
+
+        form_url = "https://www.propertypriceregister.ie/website/npsra/pprweb.nsf/PPRDownloads?OpenForm&Seq=1"
+
+        # Form data requesting ALL periods
+        form_data = {
+            '%%Surrogate_dsPeriod': '1',
+            'dsPeriod': 'ALL',
+        }
+
+        print(f"  Submitting download request...")
+        response = session.post(form_url, data=form_data, timeout=60)
+
+        if response.status_code != 200:
+            raise Exception(f"Form submission failed: HTTP {response.status_code}")
+
+        # Step 2: Parse response to find download link
+        # The response should contain a link to the generated CSV
+        content = response.text
+
+        # Look for CSV download link in response
+        import re
+        csv_link_match = re.search(r'href="([^"]*PPR[^"]*\.csv[^"]*)"', content, re.IGNORECASE)
+
+        if not csv_link_match:
+            # Fallback: try to find any .csv link
+            csv_link_match = re.search(r'href="([^"]*\.csv[^"]*)"', content, re.IGNORECASE)
+
+        if not csv_link_match:
+            print(f"  ⚠️  Could not find CSV download link in form response")
+            print(f"  Response preview: {content[:500]}")
+            raise Exception("No CSV download link found")
+
+        csv_path = csv_link_match.group(1)
+
+        # Build full URL (may be relative)
+        if csv_path.startswith('http'):
+            csv_url = csv_path
+        elif csv_path.startswith('/'):
+            csv_url = f"https://www.propertypriceregister.ie{csv_path}"
+        else:
+            csv_url = f"https://www.propertypriceregister.ie/website/npsra/pprweb.nsf/{csv_path}"
+
+        print(f"  Found CSV URL: {csv_url}")
+        print(f"  Downloading...")
+
+        # Step 3: Download the CSV file
+        csv_response = session.get(csv_url, timeout=300, stream=True)
+        csv_response.raise_for_status()
+
+        # Save to file
+        with open(output_path, 'wb') as f:
+            for chunk in csv_response.iter_content(chunk_size=8192):
+                f.write(chunk)
+
+        # Verify it's a CSV
+        with open(output_path, 'r', encoding='utf-8', errors='replace') as f:
+            first_line = f.readline()
+            if 'Date of Sale' not in first_line and 'Address' not in first_line:
+                raise Exception(f"Downloaded file doesn't look like PPR CSV. First line: {first_line[:100]}")
+
+        file_size = os.path.getsize(output_path) / (1024 * 1024)  # MB
+        print(f"  ✓ Downloaded {file_size:.1f} MB to {output_path}")
+        return True
+
+    except Exception as e:
+        print(f"  ✗ Automatic download failed: {e}")
+        print(f"\n  Manual download fallback:")
+        print(f"    1. Visit: {PPR_DOWNLOAD_PAGE}")
+        print(f"    2. Select 'ALL' and click 'Perform Download'")
+        print(f"    3. Save PPR-ALL.csv")
+        print(f"    4. Re-run: python3 scripts/sync_ppr_updates.py --manual-csv ~/Downloads/PPR-ALL.csv")
+        return False
 
 
 async def filter_new_sales(csv_path: str, since_date: datetime.date) -> List[Dict]:
@@ -341,10 +412,21 @@ async def sync_ppr_updates(dry_run: bool = False, since_date: Optional[str] = No
             csv_path = manual_csv
             print(f"Using manually provided CSV: {csv_path}")
         else:
-            csv_path = tempfile.mktemp(suffix='_ppr_download.csv')
-            success = await download_ppr_csv(csv_path)
-            if not success:
-                print("\n⚠️  Automatic download failed")
+            # Try to use existing source data file
+            source_csv = PROJECT_ROOT / "source data" / "PPR-ALL.csv"
+            if source_csv.exists():
+                csv_path = str(source_csv)
+                print(f"Using existing source file: {csv_path}")
+                file_age_days = (datetime.now() - datetime.fromtimestamp(source_csv.stat().st_mtime)).days
+                print(f"File age: {file_age_days} days old")
+                if file_age_days > 14:
+                    print(f"⚠️  Source file is >{file_age_days} days old, consider updating")
+                    print(f"   Download latest from: {PPR_DOWNLOAD_PAGE}")
+            else:
+                print(f"\n⚠️  No source CSV found at: {source_csv}")
+                print(f"   Download PPR-ALL.csv from: {PPR_DOWNLOAD_PAGE}")
+                print(f"   Save to: {source_csv}")
+                print(f"   Or use: --manual-csv /path/to/PPR-ALL.csv")
                 return 1
 
         print()
