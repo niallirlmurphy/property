@@ -47,6 +47,15 @@ if SENTRY_DSN:
 
 AA_AUTOCOMPLETE = "https://api.autoaddress.com/3.0/autocomplete"
 
+# Ireland geographic bounds for validation (prevents geocoding to UK/international locations)
+# Coordinates: (min_lat, max_lat, min_lon, max_lon)
+IRELAND_BOUNDS = (51.4, 55.5, -10.7, -5.4)
+
+def _is_in_ireland(lat: float, lon: float) -> bool:
+    """Check if coordinates fall within Ireland's bounding box."""
+    min_lat, max_lat, min_lon, max_lon = IRELAND_BOUNDS
+    return min_lat <= lat <= max_lat and min_lon <= lon <= max_lon
+
 # Max concurrent Autoaddress lookups across all in-flight requests
 _aa_semaphore: asyncio.Semaphore = None
 
@@ -446,7 +455,13 @@ async def _geocode_mapbox(
         if not features:
             return None
         lon, lat = features[0]["center"]
-        return float(lat), float(lon)
+        lat_f, lon_f = float(lat), float(lon)
+        # Validate coordinates are in Ireland
+        if _is_in_ireland(lat_f, lon_f):
+            return lat_f, lon_f
+        else:
+            logger.warning(f"Mapbox returned out-of-bounds coordinates for {query!r}: {lat_f}, {lon_f}")
+            return None
     except Exception as e:
         logger.warning(f"Mapbox geocoding failed: {type(e).__name__}: {e}")
         return None
@@ -483,7 +498,12 @@ async def _geocode_nominatim(
         lon = results[0].get("lon")
 
         if lat is not None and lon is not None:
-            return float(lat), float(lon)
+            lat_f, lon_f = float(lat), float(lon)
+            # Validate coordinates are in Ireland (prevents matching "Ireland" hamlet in UK)
+            if _is_in_ireland(lat_f, lon_f):
+                return lat_f, lon_f
+            else:
+                logger.warning(f"Nominatim returned out-of-bounds coordinates for {query!r}: {lat_f}, {lon_f}")
         return None
     except Exception as e:
         logger.debug(f"Nominatim geocoding failed for {query!r}: {e}")
