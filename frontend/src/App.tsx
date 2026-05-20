@@ -166,12 +166,24 @@ export default function App() {
     }
 
     try {
-      const [pins, result, trendData] = await Promise.all([
+      let [pins, result, trendData] = await Promise.all([
         fetchNearestPins(params, 10),
         searchProperties(params),
         fetchTrends(params.q, params.radius_km, params.county),
       ]);
       if (searchGenRef.current !== gen) return;
+
+      // Auto-retry without county filter if 0 results and county was specified
+      // Better UX: user likely searched for a place in a different county
+      if (result.count === 0 && params.county) {
+        const paramsNoCounty = { ...params, county: undefined };
+        [pins, result, trendData] = await Promise.all([
+          fetchNearestPins(paramsNoCounty, 10),
+          searchProperties(paramsNoCounty),
+          fetchTrends(params.q, params.radius_km, undefined),
+        ]);
+        if (searchGenRef.current !== gen) return;
+      }
 
       const { exact, rest } = partitionByExactMatch(result.results, params.q);
       const sortedResults = [...exact, ...rest];
