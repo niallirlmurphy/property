@@ -76,15 +76,19 @@ def normalize_ppr_row(row: Dict[str, str]) -> Dict[str, any]:
     """Normalize PPR CSV row to database schema format."""
 
     # PPR CSV column names (as of 2024)
-    # Date of Sale (dd/mm/yyyy), Address, Postal Code, County, Price (€),
+    # Date of Sale (dd/mm/yyyy), Address, Postal Code/Eircode, County, Price (€/�),
     # Not Full Market Price, VAT Exclusive, Description of Property, Property Size Description
+
+    # Handle various column name variations
+    price_raw = row.get('Price (€)') or row.get('Price (�)') or row.get('Price (EUR)') or row.get('Price')
+    eircode_raw = row.get('Postal Code') or row.get('Eircode')
 
     return {
         'sale_date': parse_date(row.get('Date of Sale (dd/mm/yyyy)')),
         'address': row.get('Address', '').strip(),
-        'eircode': row.get('Postal Code', '').strip() or None,
+        'eircode': (eircode_raw or '').strip() or None,
         'county': row.get('County', '').strip(),
-        'price': parse_price(row.get('Price (€)')),
+        'price': parse_price(price_raw),
         'not_full_market_price': parse_bool(row.get('Not Full Market Price', 'No')),
         'vat_exclusive': parse_bool(row.get('VAT Exclusive', 'No')),
         'description': row.get('Description of Property', '').strip(),
