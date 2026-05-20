@@ -35,8 +35,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DATABASE_URL = os.environ["DATABASE_URL"]
-PPR_DOWNLOAD_URL = "https://www.propertypriceregister.ie/website/npsra/pprweb.nsf/PPRDownloads?OpenForm"
-PPR_CSV_URL = "https://www.propertypriceregister.ie/website/npsra/ppr/npsra-ppr.nsf/Downloads/PPR-ALL.csv/$FILE/PPR-ALL.csv"
+PPR_DOWNLOAD_PAGE = "https://www.propertypriceregister.ie/website/npsra/pprweb.nsf/PPRDownloads?OpenForm"
+
+# Note: PPR website requires manual download through their form.
+# Direct CSV URL changes frequently and may not work reliably.
+# Users should download manually from the website.
 
 PROJECT_ROOT = Path(__file__).parent.parent
 
@@ -102,41 +105,19 @@ async def download_ppr_csv(output_path: str) -> bool:
     """
     Download PPR CSV file.
 
-    Note: The PPR website requires navigating through a form to download.
-    This is a simplified version that attempts direct download.
-    If it fails, manual download may be required.
+    Note: PPR website typically requires manual download through their form interface.
+    Automatic download often fails due to form requirements or changing URLs.
     """
-    print(f"Downloading PPR data from {PPR_CSV_URL}...")
+    print(f"⚠️  Automatic download from PPR website is not reliable")
+    print(f"\nManual download required:")
+    print(f"  1. Visit: {PPR_DOWNLOAD_PAGE}")
+    print(f"  2. Click 'Download File' for PPR-ALL.csv")
+    print(f"  3. Save the file")
+    print(f"  4. Re-run: python3 scripts/sync_ppr_updates.py --manual-csv ~/Downloads/PPR-ALL.csv")
+    print()
+    print(f"Expected file location: {output_path}")
 
-    try:
-        # Attempt direct download
-        response = requests.get(PPR_CSV_URL, timeout=60, stream=True)
-        response.raise_for_status()
-
-        # Save to file
-        with open(output_path, 'wb') as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
-
-        # Verify it's a CSV (check first line)
-        with open(output_path, 'r', encoding='utf-8') as f:
-            first_line = f.readline()
-            if 'Date of Sale' not in first_line and 'Address' not in first_line:
-                print(f"⚠️  Downloaded file doesn't look like PPR CSV")
-                print(f"   First line: {first_line[:100]}")
-                return False
-
-        print(f"✓ Downloaded PPR CSV to {output_path}")
-        return True
-
-    except requests.exceptions.RequestException as e:
-        print(f"✗ Failed to download PPR CSV: {e}")
-        print(f"\nManual download required:")
-        print(f"  1. Visit: {PPR_DOWNLOAD_URL}")
-        print(f"  2. Download 'PPR-ALL.csv'")
-        print(f"  3. Save to: {output_path}")
-        print(f"  4. Re-run this script with --manual-download")
-        return False
+    return False
 
 
 async def filter_new_sales(csv_path: str, since_date: datetime.date) -> List[Dict]:

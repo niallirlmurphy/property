@@ -21,7 +21,7 @@ The system automatically checks for and imports new property sales from the PPR 
 ```
 1. Query database for most recent sale_date
    ↓
-2. Download latest PPR-ALL.csv from propertypriceregister.ie
+2. Download latest PPR-ALL.csv (typically manual download required)
    ↓
 3. Filter CSV to sales after most recent sale_date (delta only)
    ↓
