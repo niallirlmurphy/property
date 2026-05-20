@@ -765,6 +765,7 @@ async def search(
                 id, sale_date, address, county, eircode, price,
                 not_full_market_price, vat_exclusive, description,
                 size_description, latitude, longitude,
+                routing_key,
                 ST_Distance(geog, ST_MakePoint($2, $1)::geography) AS distance_m
             FROM properties
             WHERE {where}
@@ -919,7 +920,8 @@ async def eircode_search(
         SELECT
             id, sale_date, address, county, eircode, price,
             not_full_market_price, vat_exclusive, description,
-            size_description, latitude, longitude
+            size_description, latitude, longitude,
+            routing_key
         FROM properties
         WHERE {where}
         ORDER BY sale_date DESC
@@ -947,6 +949,91 @@ async def eircode_search(
         "results":    [dict(r) for r in rows],
     }
     cache.set("eircode", cache_params, result, TTL_EIRCODE)
+    return result
+
+
+@app.get("/routing-keys")
+async def routing_keys_list(
+    request: Request,
+    limit: int = Query(100, ge=1, le=200),
+    sort: str = Query("count", regex="^(count|name)$"),
+):
+    """
+    List all Eircode routing keys with statistics and centroids.
+    Used for autocomplete, area browse, and analytics.
+    """
+    _rate_limit_check(request, 60, "routing_keys")
+
+    cache_params = {"limit": limit, "sort": sort}
+    cached = cache.get("routing_keys", cache_params)
+    if cached is not None:
+        return cached
+
+    order_by = "property_count DESC" if sort == "count" else "routing_key"
+
+    rows = await db_pool.fetch(f"""
+        SELECT
+            routing_key,
+            primary_county,
+            property_count,
+            counties,
+            earliest_sale,
+            latest_sale,
+            median_price,
+            centroid_lat,
+            centroid_lon,
+            geocoded_count,
+            geocoded_pct
+        FROM routing_key_stats
+        ORDER BY {order_by}
+        LIMIT $1
+    """, limit)
+
+    result = {
+        "count": len(rows),
+        "routing_keys": [dict(r) for r in rows],
+    }
+    cache.set("routing_keys", cache_params, result, TTL_EIRCODE)  # 1 hour cache
+    return result
+
+
+@app.get("/routing-keys/autocomplete")
+async def routing_keys_autocomplete(
+    request: Request,
+    prefix: str = Query(..., min_length=1, max_length=3, description="Routing key prefix (1-3 chars)"),
+):
+    """
+    Autocomplete Eircode routing keys as user types.
+    Returns matching routing keys with county context and property counts.
+    """
+    _rate_limit_check(request, 120, "routing_keys_autocomplete")
+
+    prefix_upper = prefix.upper().strip()
+    cache_params = {"prefix": prefix_upper}
+    cached = cache.get("routing_keys_autocomplete", cache_params)
+    if cached is not None:
+        return cached
+
+    rows = await db_pool.fetch("""
+        SELECT
+            routing_key,
+            primary_county,
+            property_count,
+            centroid_lat,
+            centroid_lon,
+            geocoded_pct
+        FROM routing_key_stats
+        WHERE routing_key LIKE $1 || '%'
+        ORDER BY property_count DESC
+        LIMIT 20
+    """, prefix_upper)
+
+    result = {
+        "prefix": prefix_upper,
+        "count": len(rows),
+        "matches": [dict(r) for r in rows],
+    }
+    cache.set("routing_keys_autocomplete", cache_params, result, 3600)  # 1 hour
     return result
 
 
