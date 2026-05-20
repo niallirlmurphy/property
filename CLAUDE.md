@@ -24,6 +24,14 @@ nominatim/
 db/
   schema.sql            # PostgreSQL/PostGIS table + indexes
   import.py             # Step 3: import geocoded CSV into Supabase/Postgres
+  eircode_enrich.py     # Daily Eircode enrichment via Autoaddress API
+
+scripts/
+  normalize_addresses.py              # Address normalization for better geocoding
+  create_hybrid_geocoding.py          # Merge best coordinates from multiple sources
+  enable_rls_security.py              # Enable Row-Level Security on database
+  analyze_salesforce_geocoding_quality.py  # Quality analysis tools
+  county_validator.py                 # County boundary validation
 
 backend/
   main.py               # FastAPI app (search, trends, counties endpoints)
@@ -41,24 +49,31 @@ frontend/
       TrendsChart.tsx   # Recharts median/avg price by year overlay
   vite.config.ts        # Dev proxy: /api → localhost:8000
   vercel.json           # SPA rewrite rule for Vercel
+
+tests/
+  test_production_suite.py  # Comprehensive production tests (backend, frontend, security)
 ```
 
 ## Environment variables
 Canonical variables used across scripts/services:
-- `DATABASE_URL` (required for `db/import.py` and backend DB access)
-- `VITE_API_URL` (frontend; optional for local dev if proxy is used, required for deployed frontend)
-- `NOMINATIM_URL` (backend geocoding endpoint; defaults to public endpoint unless overridden)
+- `DATABASE_URL` (required for all database operations; Supabase connection string)
+- `VITE_API_URL` (frontend; points to Railway backend in production)
+- `NOMINATIM_URL` (backend geocoding endpoint; defaults to public endpoint)
+- `AUTOADDRESS_KEY` (for Eircode enrichment; pub_xxx format)
+- `SENTRY_DSN` (optional; error tracking and performance monitoring)
 
 `backend/.env.example`:
 ```
 DATABASE_URL=postgresql://postgres:<password>@db.<ref>.supabase.co:5432/postgres
+AUTOADDRESS_KEY=pub_xxxxxxxxxx
+SENTRY_DSN=https://xxx@xxx.ingest.sentry.io/xxx
 # NOMINATIM_URL=http://localhost:8080/search
 ```
 
 `frontend/.env.example`:
 ```
-VITE_API_URL=http://localhost:8000
-# VITE_API_URL=https://your-app.railway.app  # for production
+VITE_API_URL=https://eloquent-optimism-production-350a.up.railway.app
+# VITE_API_URL=http://localhost:8000  # for local development
 ```
 
 Keep local secrets in `.env`/`.env.local`; never commit filled secret files.
@@ -120,12 +135,30 @@ After frontend starts:
 - `vercel.json` handles SPA routing.
 
 ## Architecture notes
-- **Radius search**: `ST_DWithin(geom::geography, ...)` on a GIST-indexed PostGIS geometry column. Results ordered by `ST_Distance` ascending.
-- **Geocoding at search time**: Backend calls Nominatim (`NOMINATIM_URL`, defaulting to public OSM) to resolve user query to (lat, lon).
-- **Bulk geocoding pipeline**: `geocode.py` uses local Nominatim (`http://localhost:8080/search`) as primary and Photon as fallback for non-Eircode address queries.
+
+### Data Quality & Geocoding
+- **Hybrid geocoding strategy**: Coordinates sourced from multiple providers (Nominatim, Mapbox, Salesforce Maps) and scored for quality (0-100). Best source chosen per property; low-quality coordinates rejected entirely (set to NULL). Philosophy: "Better to have no data than bad data."
+- **Address normalization**: All addresses stored in both original and normalized forms. `address_normalized` column applies consistent formatting (title case, whitespace cleanup, abbreviation standardization) for better API matching. Improves geocoding success rate by ~15-20% and Eircode enrichment from 24% to 40%+.
+- **Quality scoring criteria**: Out-of-bounds check (Ireland bbox), county boundary validation, centroid detection (>50 properties at same coordinate), coordinate precision analysis.
+- **Eircode enrichment**: Daily cron job processes 500 properties via Autoaddress API. Prioritizes urban addresses with house numbers (highest success rate). Enrichment enables Eircode-based search and improves address matching.
+- **County validation**: Approximate bounding boxes for all 26 Irish counties validate that coordinates fall within expected geographic boundaries. Flags mismatches that indicate geocoding errors.
+
+### Search & Performance
+- **Radius search**: `ST_DWithin(geom::geography, ...)` on GIST-indexed PostGIS geometry column. Results ordered by `ST_Distance` ascending. Auto-expands radius (2x, 3x, 5x, 10x up to 20km) if fewer than 5 results found.
+- **Geocoding at search time**: Backend calls Nominatim (`NOMINATIM_URL`) to resolve user queries to (lat, lon). Supports addresses, Eircodes, and coordinate pairs.
 - **Trends query**: Uses `PERCENTILE_CONT(0.5)` for median price, filtered to `not_full_market_price = FALSE`.
-- **NOT_FOUND sentinel**: Ungeocodable addresses are cached in `geocode_cache.db` with NULL lat/lon so they are not retried. Imported rows with no geometry do not appear in radius searches.
-- **Rate limiting (geocoder)**: Local Nominatim configured for high throughput; external fallback is intentionally slower to respect public service limits.
+- **Caching**: In-memory TTL cache for counties (1h), trends (1h), Eircodes (1h), geocode results (24h), search results (5min).
+
+### Security
+- **Row-Level Security (RLS)**: Enabled on properties table. Public has SELECT-only access; writes blocked by default. Protects against unauthorized data modification while keeping PPR data publicly readable.
+- **CORS**: Restricted to homeiq.ie and www.homeiq.ie in production. localhost:5173 allowed in development.
+- **Monitoring**: Sentry integration for error tracking and performance monitoring. Search analytics tracked for observability.
+
+### Infrastructure
+- **Database**: Supabase (PostgreSQL + PostGIS). 781,501 properties, ~620,000 with coordinates after hybrid quality update.
+- **Backend**: FastAPI on Railway (https://eloquent-optimism-production-350a.up.railway.app).
+- **Frontend**: React + TypeScript on Vercel (https://homeiq.ie).
+- **Rate limiting (geocoder)**: Local Nominatim configured for high throughput; external fallback slower to respect public service limits.
 
 ## Troubleshooting
 - **`DATABASE_URL` errors**: verify `.env` value format and DB reachability; confirm PostGIS extension is enabled.

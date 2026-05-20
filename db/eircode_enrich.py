@@ -37,6 +37,22 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger(__name__)
 
 
+def _clean_address(address: str) -> str:
+    """Clean PPR address for better Autoaddress matching."""
+    import re
+
+    # Remove common noise that prevents matches
+    cleaned = address
+    cleaned = re.sub(r'\bMinisters?\s+Road\b', '', cleaned, flags=re.I)  # "Ministers Road"
+    cleaned = re.sub(r'\bChurch\s+Fields\s+(East|West|Park)\b', 'Church Fields', cleaned, flags=re.I)
+    cleaned = re.sub(r'\bMiller\s*[\'S]*\s+Glen\b', 'Millers Glen', cleaned, flags=re.I)
+    cleaned = re.sub(r',\s*,', ',', cleaned)  # Remove double commas
+    cleaned = re.sub(r'\s+', ' ', cleaned)  # Normalize whitespace
+    cleaned = cleaned.strip(', ')
+
+    return cleaned
+
+
 def _autoaddress_lookup(address: str, county: str) -> "str | None":
     """
     Two-step Autoaddress lookup:
@@ -45,14 +61,14 @@ def _autoaddress_lookup(address: str, county: str) -> "str | None":
 
     Returns the eircode string (e.g. "D14 XT52") or None if not found.
     """
-    headers = {"Authorization": f"Bearer {AUTOADDRESS_KEY}", "User-Agent": "HomeIQ-eircode-enricher/1.0"}
-
-    query = f"{address}, {county}" if county else address
+    cleaned_address = _clean_address(address)
+    query = f"{cleaned_address}, {county}" if county else cleaned_address
 
     # Step 1: autocomplete
     try:
+        # Use 'key' parameter (not Authorization header) for Autoaddress API
         r = requests.get(AA_AUTOCOMPLETE, params={"key": AUTOADDRESS_KEY, "address": query},
-                         headers=headers, timeout=10)
+                         headers={"User-Agent": "HomeIQ-eircode-enricher/1.0"}, timeout=10)
         r.raise_for_status()
     except Exception as e:
         log.warning(f"Autocomplete request failed for {query!r}: {e}")
@@ -63,10 +79,16 @@ def _autoaddress_lookup(address: str, county: str) -> "str | None":
         log.debug(f"No autocomplete options for {query!r}")
         return None
 
+    # Filter to only "lookup" rel links (not "drilldown" which need more steps)
+    lookup_options = [opt for opt in options if opt.get("link", {}).get("rel") == "lookup"]
+    if not lookup_options:
+        log.debug(f"No direct lookup options for {query!r} (only drilldowns)")
+        return None
+
     # Step 2: lookup using the href from the best match
-    lookup_href = options[0]["link"]["href"]
+    lookup_href = lookup_options[0]["link"]["href"]
     try:
-        r2 = requests.get(lookup_href, headers=headers, timeout=10)
+        r2 = requests.get(lookup_href, headers={"User-Agent": "HomeIQ-eircode-enricher/1.0"}, timeout=10)
         r2.raise_for_status()
     except Exception as e:
         log.warning(f"Lookup request failed for {query!r}: {e}")
@@ -85,13 +107,34 @@ def run():
     conn = psycopg2.connect(DATABASE_URL)
     cur  = conn.cursor()
 
-    # Fetch rows with no eircode, prioritising recently sold (most likely to be searched)
+    # Fetch rows with no eircode, prioritizing addresses most likely to have Eircodes:
+    # 1. Urban areas (Dublin, Cork, Galway, Limerick, Waterford)
+    # 2. Addresses with house numbers (more structured)
+    # 3. Recent sales (more likely to be searched)
+    # 4. Has coordinates (already validated)
     cur.execute("""
         SELECT id, address, county
         FROM properties
         WHERE eircode IS NULL
           AND latitude IS NOT NULL
-        ORDER BY sale_date DESC
+          AND (
+            -- Urban counties (high priority)
+            county IN ('Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford',
+                      'Louth', 'Kildare', 'Meath', 'Wicklow')
+            -- OR has a house number (indicates structured address)
+            OR address ~ '^[0-9]+'
+          )
+        ORDER BY
+          -- Prioritize urban addresses
+          CASE
+            WHEN county IN ('Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford') THEN 1
+            WHEN county IN ('Louth', 'Kildare', 'Meath', 'Wicklow') THEN 2
+            ELSE 3
+          END,
+          -- Then prioritize addresses with house numbers
+          CASE WHEN address ~ '^[0-9]+' THEN 1 ELSE 2 END,
+          -- Finally by recency
+          sale_date DESC
         LIMIT %s
     """, (DAILY_LIMIT,))
     rows = cur.fetchall()

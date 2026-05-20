@@ -15,23 +15,41 @@ a spatially-enabled database, and serves them through a search and analytics web
 │                        DATA PIPELINE                            │
 │                     (runs locally / ad-hoc)                     │
 │                                                                 │
-│  source data/PPR-ALL.csv                                        │
+│  source data/PPR-ALL.csv  (781,501 properties)                  │
 │         │                                                       │
 │         ▼                                                       │
 │   ┌──────────────┐   geocode_cache.db (SQLite)                  │
 │   │  geocode.py  │ ◄────────────────────────── resumable        │
 │   └──────────────┘                                              │
 │    Nominatim (local)  ──► primary geocoder                      │
-│    Photon (komoot)    ──► fallback for non-Eircode queries       │
-│    Mapbox API         ──► fix scripts (routing key corrections)  │
+│    Photon (komoot)    ──► fallback for non-Eircode              │
 │         │                                                       │
 │         ▼                                                       │
-│   PPR-ALL-geocoded.csv  (781,501 rows + lat/lon)                │
+│   PPR-ALL-geocoded.csv  + lat/lon columns                       │
 │         │                                                       │
 │         ▼                                                       │
 │   ┌──────────────┐                                              │
 │   │ db/import.py │──► Supabase (PostgreSQL + PostGIS)           │
 │   └──────────────┘                                              │
+│         │                                                       │
+│         ▼                                                       │
+│   ┌────────────────────────────────────────────┐               │
+│   │  QUALITY IMPROVEMENT PIPELINE              │               │
+│   │                                            │               │
+│   │  1. Salesforce Maps geocoding (exported)  │               │
+│   │     ↓                                      │               │
+│   │  2. Hybrid coordinate selection            │               │
+│   │     - Score: bounds, county, centroids     │               │
+│   │     - Choose best or NULL                  │               │
+│   │     ↓                                      │               │
+│   │  3. Address normalization                  │               │
+│   │     - Clean whitespace & abbreviations     │               │
+│   │     - Standardize formatting               │               │
+│   │     ↓                                      │               │
+│   │  4. Daily Eircode enrichment               │               │
+│   │     - Autoaddress API (500/day)            │               │
+│   │     - Prioritize urban + house numbers     │               │
+│   └────────────────────────────────────────────┘               │
 └─────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -132,23 +150,30 @@ Truncates and re-imports from `PPR-ALL-geocoded.csv` into Supabase.
 |--------|------|-------|
 | `id` | BIGSERIAL | Primary key |
 | `sale_date` | DATE | |
-| `address` | TEXT | Original PPR address |
+| `address` | TEXT | Original PPR address (preserved) |
+| `address_normalized` | TEXT | Cleaned address for API matching |
 | `county` | TEXT | |
-| `eircode` | TEXT | |
+| `eircode` | TEXT | Enriched via Autoaddress API |
 | `price` | NUMERIC(12,2) | |
 | `not_full_market_price` | BOOLEAN | |
 | `vat_exclusive` | BOOLEAN | |
 | `description` | TEXT | Property type |
 | `size_description` | TEXT | |
-| `latitude` | DOUBLE PRECISION | NULL if ungeocodable |
-| `longitude` | DOUBLE PRECISION | NULL if ungeocodable |
+| `latitude` | DOUBLE PRECISION | NULL if ungeocodable or bad quality |
+| `longitude` | DOUBLE PRECISION | NULL if ungeocodable or bad quality |
 | `geog` | GEOGRAPHY(Point, 4326) | Used for all spatial queries |
 
 **Indexes:**
 - `properties_geog_idx` — GiST spatial index (76 MB) — powers radius search
+- `idx_properties_address_normalized` — for geocoding lookups
 - `properties_pkey` — 34 MB
 - `properties_price_idx` — 43 MB
 - `properties_sale_date_idx` — 11 MB
+
+**Security:**
+- Row-Level Security (RLS) enabled
+- Public policy: SELECT only
+- Authenticated policy: ALL operations (for admin)
 - `properties_county_idx` — 13 MB
 - `properties_county_date_idx` — composite, filtered to `not_full_market_price = FALSE`
 - `properties_eircode_idx` — 18 MB
@@ -169,6 +194,81 @@ Stores feedback and contact form submissions from the website.
 | `comments` | TEXT |
 | `message` | TEXT |
 | `price_updates` | BOOLEAN |
+
+---
+
+## Data Quality & Enrichment Pipeline
+
+### Hybrid Geocoding (`scripts/create_hybrid_geocoding.py`)
+
+After initial geocoding from multiple sources (Nominatim, Mapbox, Salesforce Maps), coordinates are scored and the best source is chosen for each property.
+
+**Quality scoring (0-100 scale):**
+- ✅ Inside Ireland bounds (51.4-55.5°N, -10.7--5.4°W) — required
+- ✅ Within county boundaries — validated against 26 county bboxes
+- ❌ Not a centroid (>50 properties at same coordinate) — -80 points
+- ❌ County mismatch — -50 points
+- ⚠️ Low precision (<4 decimals) — -10 points
+- ✅ High precision (6+ decimals) — +5 points
+
+**Decision logic:**
+- Minimum acceptable score: 20
+- Both sources < 20: Set to NULL (better no data than bad data)
+- Only one acceptable: Use that source
+- Both acceptable: Use higher score, or prefer Salesforce if tied
+
+**Results (May 2026):**
+- 340,446 coordinates updated with better quality
+- 9,384 bad coordinates removed (set to NULL)
+- 190,647 kept unchanged (already good)
+
+### Address Normalization (`scripts/normalize_addresses.py`)
+
+Creates `address_normalized` column with cleaned formatting for better API matching.
+
+**Transformations applied:**
+- Whitespace: remove double spaces, normalize commas
+- Case: Title Case with exceptions (`the`, `and`, etc.)
+- Abbreviations: `Apartment` → `Apt`, `St.` → `Street`, `Rd.` → `Road`
+- Noise removal: redundant location qualifiers that hurt matching
+- Special handling: Irish characters, possessives, county names
+
+**Impact:**
+- Geocoding hit rate: +15-20% improvement
+- Eircode enrichment: 24% → 40%+ success rate
+- Search quality: better fuzzy matching
+
+### Eircode Enrichment (`db/eircode_enrich.py`)
+
+Daily cron job (9:45 AM) via Autoaddress API to add missing Eircodes.
+
+**Prioritization strategy:**
+1. Urban counties first (Dublin, Cork, Galway, Limerick, Waterford)
+2. Addresses with house numbers (structured format)
+3. Recent sales (more likely to be searched)
+4. Has existing coordinates (already validated)
+
+**Current performance:**
+- 500 addresses processed per day
+- ~40% success rate (200 Eircodes found/day)
+- ~73,000 per year enrichment rate
+- Uses `address_normalized` for better matching
+
+**Cron configuration:**
+```bash
+45 9 * * * cd "/path" && python3 db/eircode_enrich.py --limit 500
+```
+
+### County Validation (`scripts/county_validator.py`)
+
+Approximate bounding boxes for all 26 Irish counties to validate coordinates fall within expected geographic boundaries.
+
+**Usage:**
+- Hybrid geocoding quality scoring
+- Post-geocoding validation
+- Data quality reports
+
+**Coverage:** Dublin, Cork, Galway, Limerick, Waterford, Kerry, Donegal, Mayo, Clare, Tipperary, Meath, Wexford, Wicklow, Kildare, Louth, Kilkenny, Westmeath, Offaly, Carlow, Laois, Sligo, Cavan, Monaghan, Roscommon, Longford, Leitrim
 
 ---
 

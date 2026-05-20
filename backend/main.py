@@ -180,7 +180,28 @@ app.add_middleware(
 async def track_activity(request: Request, call_next):
     global _last_activity
     _last_activity = time.time()
-    return await call_next(request)
+    response = await call_next(request)
+    return response
+
+
+@app.middleware("http")
+async def add_security_headers(request: Request, call_next):
+    """Add security headers to all responses."""
+    response = await call_next(request)
+
+    # Prevent MIME type sniffing
+    response.headers["X-Content-Type-Options"] = "nosniff"
+
+    # Prevent clickjacking
+    response.headers["X-Frame-Options"] = "DENY"
+
+    # Enable XSS protection (legacy browsers)
+    response.headers["X-XSS-Protection"] = "1; mode=block"
+
+    # Referrer policy
+    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+
+    return response
 
 
 # ---------------------------------------------------------------------------
@@ -707,39 +728,65 @@ async def search(
 
     lat, lon, geocode_source = await resolve_location(q, county=county)
 
-    filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)"]
-    params  = [lat, lon, radius_km * 1000]
-    idx     = 4
+    # Auto-expand radius if too few results found
+    # Try original radius, then incrementally expand until we have at least 5 results
+    MIN_RESULTS = 5
+    MAX_RADIUS_KM = 20.0
+    RADIUS_INCREMENTS = [radius_km, radius_km * 2, radius_km * 3, radius_km * 5, radius_km * 10, MAX_RADIUS_KM]
 
-    if min_price is not None:
-        filters.append(f"price >= ${idx}"); params.append(min_price); idx += 1
-    if max_price is not None:
-        filters.append(f"price <= ${idx}"); params.append(max_price); idx += 1
-    if min_year is not None:
-        filters.append(f"EXTRACT(YEAR FROM sale_date) >= ${idx}"); params.append(min_year); idx += 1
-    if max_year is not None:
-        filters.append(f"EXTRACT(YEAR FROM sale_date) <= ${idx}"); params.append(max_year); idx += 1
-    if county:
-        filters.append(f"LOWER(county) = LOWER(${idx})"); params.append(county); idx += 1
+    rows = []
+    actual_radius = radius_km
+    radius_expanded = False
 
-    where = " AND ".join(filters)
-    params.append(limit)
+    for attempt_radius in RADIUS_INCREMENTS:
+        if attempt_radius > MAX_RADIUS_KM:
+            attempt_radius = MAX_RADIUS_KM
 
-    rows = await db_pool.fetch(f"""
-        SELECT
-            id, sale_date, address, county, eircode, price,
-            not_full_market_price, vat_exclusive, description,
-            size_description, latitude, longitude,
-            ST_Distance(geog, ST_MakePoint($2, $1)::geography) AS distance_m
-        FROM properties
-        WHERE {where}
-        ORDER BY {("distance_m" if sort == "distance" else "sale_date DESC, distance_m")}
-        LIMIT ${idx}
-    """, *params)
+        filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)"]
+        params  = [lat, lon, attempt_radius * 1000]
+        idx     = 4
+
+        if min_price is not None:
+            filters.append(f"price >= ${idx}"); params.append(min_price); idx += 1
+        if max_price is not None:
+            filters.append(f"price <= ${idx}"); params.append(max_price); idx += 1
+        if min_year is not None:
+            filters.append(f"EXTRACT(YEAR FROM sale_date) >= ${idx}"); params.append(min_year); idx += 1
+        if max_year is not None:
+            filters.append(f"EXTRACT(YEAR FROM sale_date) <= ${idx}"); params.append(max_year); idx += 1
+        if county:
+            filters.append(f"LOWER(county) = LOWER(${idx})"); params.append(county); idx += 1
+
+        where = " AND ".join(filters)
+        params.append(limit)
+
+        rows = await db_pool.fetch(f"""
+            SELECT
+                id, sale_date, address, county, eircode, price,
+                not_full_market_price, vat_exclusive, description,
+                size_description, latitude, longitude,
+                ST_Distance(geog, ST_MakePoint($2, $1)::geography) AS distance_m
+            FROM properties
+            WHERE {where}
+            ORDER BY {("distance_m" if sort == "distance" else "sale_date DESC, distance_m")}
+            LIMIT ${idx}
+        """, *params)
+
+        actual_radius = attempt_radius
+
+        # If we have enough results or reached max radius, stop expanding
+        if len(rows) >= MIN_RESULTS or attempt_radius >= MAX_RADIUS_KM:
+            if attempt_radius != radius_km:
+                radius_expanded = True
+                logger.info(f"Auto-expanded radius from {radius_km}km to {actual_radius}km for query '{q}' "
+                          f"(found {len(rows)} results)")
+            break
 
     result = {
         "center": {"lat": lat, "lon": lon},
-        "radius_km": radius_km,
+        "radius_km": actual_radius,
+        "radius_expanded": radius_expanded,
+        "requested_radius_km": radius_km,
         "count": len(rows),
         "results": [dict(r) for r in rows],
     }
