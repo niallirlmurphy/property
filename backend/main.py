@@ -539,40 +539,45 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         cache.set("geocode_v3", {"q": query}, {"lat": lat, "lon": lon}, TTL_GEOCODE)
         return lat, lon, source
 
-    # 3. Eircode — fast indexed DB lookup
+    # 3. Eircode — fast indexed DB lookup with routing key validation
     if _looks_like_eircode(query):
         norm = _normalise_eircode(query)
-        # Try exact eircode first (e.g. D14XT52) — tight cluster at the specific property.
-        row = await db_pool.fetchrow("""
-            SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
-            FROM properties
-            WHERE latitude IS NOT NULL
-              AND REPLACE(UPPER(eircode), ' ', '') = $1
-        """, norm)
-        if row and (row["cnt"] or 0) >= 1:
-            return _cache_and_return(float(row["lat"]), float(row["lon"]), "db_exact")
-        # Exact match not in PPR — try Nominatim for precise eircode geocoding (OSM has eircode data).
-        async with httpx.AsyncClient() as eircode_client:
-            nominatim_result = await _geocode_nominatim(query, eircode_client)
-            if nominatim_result:
-                return _cache_and_return(*nominatim_result, "nominatim")
-        # Nominatim unavailable/failed — derive routing-key centroid for Mapbox proximity hint.
         prefix = norm[:3]
+
+        # Get routing key centroid for quality validation
         rk_row = await db_pool.fetchrow("""
             SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
             FROM properties
             WHERE latitude IS NOT NULL
               AND REPLACE(UPPER(eircode), ' ', '') LIKE $1
         """, prefix + "%")
-        rk_proximity = None
-        if rk_row and (rk_row["cnt"] or 0) >= 1:
-            rk_proximity = f"{rk_row['lon']:.6f},{rk_row['lat']:.6f}"
-        # Try Mapbox — less precise than Nominatim but better than routing-key fallback.
-        async with httpx.AsyncClient() as eircode_client:
-            mapbox_result = await _geocode_mapbox(query, eircode_client, proximity=rk_proximity)
-            if mapbox_result:
-                return _cache_and_return(*mapbox_result, "mapbox")
-        # Last resort: routing key prefix average (computed above)
+
+        # Try exact eircode
+        row = await db_pool.fetchrow("""
+            SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
+            FROM properties
+            WHERE latitude IS NOT NULL
+              AND REPLACE(UPPER(eircode), ' ', '') = $1
+        """, norm)
+
+        if row and (row["cnt"] or 0) >= 1:
+            exact_lat, exact_lon = float(row["lat"]), float(row["lon"])
+            # Validate: exact coordinates should be within ~5km of routing key centroid
+            # Reject if too far away (indicates bad geocoding data)
+            if rk_row and (rk_row["cnt"] or 0) >= 5:
+                rk_lat, rk_lon = float(rk_row["lat"]), float(rk_row["lon"])
+                # Rough distance check (0.05 degrees ≈ 5km at Irish latitudes)
+                lat_diff = abs(exact_lat - rk_lat)
+                lon_diff = abs(exact_lon - rk_lon)
+                if lat_diff < 0.05 and lon_diff < 0.08:  # lon degrees are smaller at this latitude
+                    return _cache_and_return(exact_lat, exact_lon, "db_exact")
+                else:
+                    logger.warning(f"Eircode {norm} coordinates ({exact_lat:.5f}, {exact_lon:.5f}) too far from routing key {prefix} centroid ({rk_lat:.5f}, {rk_lon:.5f}), using centroid instead")
+            else:
+                # No routing key data to validate against, trust the exact match
+                return _cache_and_return(exact_lat, exact_lon, "db_exact")
+
+        # Exact match not in PPR or failed validation — use routing key centroid (already fetched above)
         if rk_row and (rk_row["cnt"] or 0) >= 1:
             return _cache_and_return(float(rk_row["lat"]), float(rk_row["lon"]), "db_routing_key")
 
