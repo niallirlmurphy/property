@@ -510,6 +510,21 @@ async def _geocode_nominatim(
         return None
 
 
+async def _flag_bad_geocode(eircode: str):
+    """Flag properties with this Eircode for priority re-geocoding.
+    Fire-and-forget task to avoid blocking geocoding response."""
+    try:
+        await db_pool.execute("""
+            UPDATE properties
+            SET geocode_quality_issue = TRUE
+            WHERE REPLACE(UPPER(eircode), ' ', '') = $1
+              AND geocode_quality_issue = FALSE
+        """, eircode.replace(' ', '').upper())
+        logger.info(f"Flagged Eircode {eircode} for priority re-geocoding")
+    except Exception as e:
+        logger.error(f"Failed to flag bad geocode for {eircode}: {e}")
+
+
 async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[float, float, str]":
     """Return (lat, lon, source) for an address, eircode, or 'lat,lon' string.
 
@@ -573,6 +588,8 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
                     return _cache_and_return(exact_lat, exact_lon, "db_exact")
                 else:
                     logger.warning(f"Eircode {norm} coordinates ({exact_lat:.5f}, {exact_lon:.5f}) too far from routing key {prefix} centroid ({rk_lat:.5f}, {rk_lon:.5f}), using centroid instead")
+                    # Flag properties with bad geocoding for priority re-geocoding
+                    asyncio.create_task(_flag_bad_geocode(norm))
             else:
                 # No routing key data to validate against, trust the exact match
                 return _cache_and_return(exact_lat, exact_lon, "db_exact")
