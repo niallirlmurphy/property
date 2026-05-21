@@ -137,6 +137,41 @@ async def test_backend_search(client: httpx.AsyncClient, results: TestResults):
             results.add_fail(f"Search: {query}", str(e))
 
 
+async def test_county_filter_fallback(client: httpx.AsyncClient, results: TestResults):
+    """Test that county filter fallback works when no results found with filter."""
+    try:
+        # Search for Nobber (Meath) with Dublin county filter
+        # Should return 0 with filter, then retry without filter and find results
+        resp = await client.get(f"{BACKEND_URL}/search",
+                              params={"q": "Nobber", "radius_km": 5, "county": "Dublin"},
+                              timeout=TIMEOUT)
+        if resp.status_code == 200:
+            data = resp.json()
+            count = data.get("count", 0)
+            county_filter_removed = data.get("county_filter_removed", False)
+            results_list = data.get("results", [])
+
+            if count > 0 and county_filter_removed:
+                # Verify results are actually from Meath, not Dublin
+                counties = {r.get("county") for r in results_list}
+                if "Meath" in counties and "Dublin" not in counties:
+                    results.add_pass("County filter fallback",
+                                   f"Correctly removed Dublin filter, found {count} Meath properties")
+                else:
+                    results.add_fail("County filter fallback",
+                                   f"county_filter_removed=true but got wrong counties: {counties}")
+            elif count == 0:
+                results.add_fail("County filter fallback",
+                               "No results returned - fallback didn't work")
+            else:
+                results.add_warning("County filter fallback",
+                                  f"Found {count} results but county_filter_removed={county_filter_removed}")
+        else:
+            results.add_fail("County filter fallback", f"Status code: {resp.status_code}")
+    except Exception as e:
+        results.add_fail("County filter fallback", str(e))
+
+
 async def test_backend_trends(client: httpx.AsyncClient, results: TestResults):
     """Test backend trends endpoint."""
     test_cases = [
@@ -489,6 +524,7 @@ async def run_all_tests():
 
         print("\nBackend Search:")
         await test_backend_search(client, results)
+        await test_county_filter_fallback(client, results)
 
         print("\nBackend Trends:")
         await test_backend_trends(client, results)

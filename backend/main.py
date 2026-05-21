@@ -770,8 +770,9 @@ async def search(
 
     lat, lon, geocode_source = await resolve_location(q, county=county)
 
-    # Auto-expand radius if too few results found
-    # Try original radius, then incrementally expand until we have at least 5 results
+    # Strategy: Try original radius with county filter first.
+    # If no results at original radius AND county filter is set, retry without county filter before expanding radius.
+    # This ensures Nobber (Meath) with county=Dublin gets Meath results, not distant Dublin results.
     MIN_RESULTS = 5
     MAX_RADIUS_KM = 20.0
     RADIUS_INCREMENTS = [radius_km, radius_km * 2, radius_km * 3, radius_km * 5, radius_km * 10, MAX_RADIUS_KM]
@@ -781,12 +782,10 @@ async def search(
     radius_expanded = False
     county_filter_removed = False
 
-    for attempt_radius in RADIUS_INCREMENTS:
-        if attempt_radius > MAX_RADIUS_KM:
-            attempt_radius = MAX_RADIUS_KM
-
+    # Try with county filter first (if provided)
+    if county:
         filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)"]
-        params  = [lat, lon, attempt_radius * 1000]
+        params  = [lat, lon, radius_km * 1000]
         idx     = 4
 
         if min_price is not None:
@@ -797,8 +796,7 @@ async def search(
             filters.append(f"EXTRACT(YEAR FROM sale_date) >= ${idx}"); params.append(min_year); idx += 1
         if max_year is not None:
             filters.append(f"EXTRACT(YEAR FROM sale_date) <= ${idx}"); params.append(max_year); idx += 1
-        if county and not county_filter_removed:
-            filters.append(f"LOWER(county) = LOWER(${idx})"); params.append(county); idx += 1
+        filters.append(f"LOWER(county) = LOWER(${idx})"); params.append(county); idx += 1
 
         where = " AND ".join(filters)
         params.append(limit)
@@ -816,22 +814,13 @@ async def search(
             LIMIT ${idx}
         """, *params)
 
-        actual_radius = attempt_radius
+        # If no results with county filter at original radius, remove filter and try again
+        if len(rows) == 0:
+            logger.info(f"No results at {radius_km}km with county filter '{county}' for query '{q}', removing county filter")
+            county_filter_removed = True
 
-        # If we have enough results or reached max radius, stop expanding
-        if len(rows) >= MIN_RESULTS or attempt_radius >= MAX_RADIUS_KM:
-            if attempt_radius != radius_km:
-                radius_expanded = True
-                logger.info(f"Auto-expanded radius from {radius_km}km to {actual_radius}km for query '{q}' "
-                          f"(found {len(rows)} results)")
-            break
-
-    # If no results found and county filter was applied, retry without county filter
-    if len(rows) == 0 and county and not county_filter_removed:
-        logger.info(f"No results found with county filter '{county}' for query '{q}', retrying without county filter")
-        county_filter_removed = True
-        actual_radius = radius_km  # Reset radius for retry
-
+    # Main search loop (with or without county filter)
+    if len(rows) < MIN_RESULTS:
         for attempt_radius in RADIUS_INCREMENTS:
             if attempt_radius > MAX_RADIUS_KM:
                 attempt_radius = MAX_RADIUS_KM
@@ -848,6 +837,9 @@ async def search(
                 filters.append(f"EXTRACT(YEAR FROM sale_date) >= ${idx}"); params.append(min_year); idx += 1
             if max_year is not None:
                 filters.append(f"EXTRACT(YEAR FROM sale_date) <= ${idx}"); params.append(max_year); idx += 1
+            # Only add county filter if not removed
+            if county and not county_filter_removed:
+                filters.append(f"LOWER(county) = LOWER(${idx})"); params.append(county); idx += 1
 
             where = " AND ".join(filters)
             params.append(limit)
