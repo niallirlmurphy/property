@@ -158,3 +158,33 @@ export async function fetchCounties(): Promise<string[]> {
   const data: { county: string }[] = await res.json();
   return data.map((r) => r.county);
 }
+
+export async function fetchNextPropertyToGeocode(): Promise<Property | null> {
+  const res = await fetch(`${BASE}/geocoding-queue/next`);
+  if (!res.ok) throw new Error("Could not fetch next property");
+  const data = await res.json();
+  return data.property;
+}
+
+export async function updatePropertyGeocode(
+  propertyId: number,
+  latitude: number,
+  longitude: number
+): Promise<void> {
+  const res = await fetch(`${BASE}/geocoding-queue/update`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ property_id: propertyId, latitude, longitude }),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.detail ?? "Could not update geocode");
+  }
+}
+
+export async function skipPropertyGeocode(propertyId: number): Promise<void> {
+  const res = await fetch(`${BASE}/geocoding-queue/skip?property_id=${propertyId}`, {
+    method: "POST",
+  });
+  if (!res.ok) throw new Error("Could not skip property");
+}

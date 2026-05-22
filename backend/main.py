@@ -1142,6 +1142,84 @@ async def counties(request: Request):
 
 
 # ---------------------------------------------------------------------------
+# Manual geocoding endpoints — admin workflow for hard-to-geocode addresses
+# ---------------------------------------------------------------------------
+
+
+@app.get("/geocoding-queue/next")
+async def get_next_property_to_geocode(request: Request):
+    """
+    Return the next high-priority property that needs manual geocoding.
+    Priority order: price (>€500k first), then recency.
+    Skips properties that already have coordinates.
+    """
+    _rate_limit_check(request, 60, "geocoding_queue")
+    row = await db_pool.fetchrow("""
+        SELECT id, sale_date, address, county, eircode, price,
+               not_full_market_price, vat_exclusive, description,
+               size_description, latitude, longitude, routing_key
+        FROM properties
+        WHERE needs_geocoding = TRUE
+          AND latitude IS NULL
+        ORDER BY (price > 500000) DESC, sale_date DESC
+        LIMIT 1
+    """)
+    if not row:
+        return {"property": None}
+    return {"property": dict(row)}
+
+
+class GeocodeUpdatePayload(BaseModel):
+    property_id: int = Field(..., description="Property ID to update")
+    latitude: float = Field(..., ge=51.4, le=55.5, description="Latitude (Ireland bounds)")
+    longitude: float = Field(..., ge=-10.7, le=-5.4, description="Longitude (Ireland bounds)")
+
+
+@app.post("/geocoding-queue/update")
+async def update_property_geocode(request: Request, payload: GeocodeUpdatePayload):
+    """
+    Manually assign geocode coordinates to a property.
+    Marks needs_geocoding = FALSE and sets geocode_source = 'manual'.
+    """
+    _rate_limit_check(request, 10, "geocoding_queue_update")
+    try:
+        result = await db_pool.execute("""
+            UPDATE properties
+            SET latitude = $1,
+                longitude = $2,
+                geom = ST_SetSRID(ST_MakePoint($2, $1), 4326),
+                geog = ST_SetSRID(ST_MakePoint($2, $1), 4326)::geography,
+                needs_geocoding = FALSE,
+                geocode_source = 'manual'
+            WHERE id = $3
+              AND needs_geocoding = TRUE
+        """, payload.latitude, payload.longitude, payload.property_id)
+        if result == "UPDATE 0":
+            raise HTTPException(status_code=404, detail="Property not found or already geocoded")
+        logger.info(f"Manual geocode applied to property {payload.property_id}: ({payload.latitude}, {payload.longitude})")
+        return {"ok": True}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Manual geocode update failed: {e}")
+        raise HTTPException(status_code=500, detail="Could not update property")
+
+
+@app.post("/geocoding-queue/skip")
+async def skip_property_geocode(request: Request, property_id: int = Query(...)):
+    """
+    Skip manual geocoding for this property — keeps needs_geocoding = TRUE
+    but could be extended to flag as 'skipped' if needed.
+    """
+    _rate_limit_check(request, 10, "geocoding_queue_skip")
+    row = await db_pool.fetchrow("SELECT id FROM properties WHERE id = $1", property_id)
+    if not row:
+        raise HTTPException(status_code=404, detail="Property not found")
+    logger.info(f"Skipped manual geocode for property {property_id}")
+    return {"ok": True}
+
+
+# ---------------------------------------------------------------------------
 # Contact / Feedback forms — stored in the submissions DB table
 # ---------------------------------------------------------------------------
 

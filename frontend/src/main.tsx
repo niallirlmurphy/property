@@ -10,6 +10,7 @@ import EircodePage from "./pages/EircodePage";
 import MortgagePage from "./pages/MortgagePage";
 import EnergyPage from "./pages/EnergyPage";
 import AboutPage from "./pages/AboutPage";
+import ManualGeocodePage from "./pages/ManualGeocodePage";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
 
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/mortgages" element={<MortgagePage />} />
         <Route path="/energy" element={<EnergyPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/geocodes" element={<ManualGeocodePage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
