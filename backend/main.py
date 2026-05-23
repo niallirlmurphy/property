@@ -1172,26 +1172,48 @@ class GeocodeUpdatePayload(BaseModel):
     property_id: int = Field(..., description="Property ID to update")
     latitude: float = Field(..., ge=51.4, le=55.5, description="Latitude (Ireland bounds)")
     longitude: float = Field(..., ge=-10.7, le=-5.4, description="Longitude (Ireland bounds)")
+    address: Optional[str] = Field(None, max_length=500, description="Updated address")
+    eircode: Optional[str] = Field(None, max_length=10, description="Updated Eircode")
 
 
 @app.post("/geocoding-queue/update")
 async def update_property_geocode(request: Request, payload: GeocodeUpdatePayload):
     """
     Manually assign geocode coordinates to a property.
-    Updates latitude, longitude, and geography column for spatial queries.
+    Updates latitude, longitude, geography column, and optionally address/eircode.
     """
     _rate_limit_check(request, 10, "geocoding_queue_update")
     try:
-        result = await db_pool.execute("""
+        # Build dynamic UPDATE query based on what fields are provided
+        updates = ["latitude = $1", "longitude = $2", "geog = ST_SetSRID(ST_MakePoint($2, $1), 4326)::geography"]
+        params = [payload.latitude, payload.longitude]
+        idx = 3
+
+        if payload.address is not None and payload.address.strip():
+            updates.append(f"address = ${idx}")
+            params.append(payload.address.strip())
+            idx += 1
+
+        if payload.eircode is not None and payload.eircode.strip():
+            updates.append(f"eircode = ${idx}")
+            params.append(payload.eircode.strip().upper())
+            idx += 1
+
+        params.append(payload.property_id)
+
+        result = await db_pool.execute(f"""
             UPDATE properties
-            SET latitude = $1,
-                longitude = $2,
-                geog = ST_SetSRID(ST_MakePoint($2, $1), 4326)::geography
-            WHERE id = $3
-        """, payload.latitude, payload.longitude, payload.property_id)
+            SET {', '.join(updates)}
+            WHERE id = ${idx}
+        """, *params)
+
         if result == "UPDATE 0":
             raise HTTPException(status_code=404, detail="Property not found")
-        logger.info(f"Manual geocode applied to property {payload.property_id}: ({payload.latitude}, {payload.longitude})")
+
+        logger.info(f"Manual geocode applied to property {payload.property_id}: "
+                   f"({payload.latitude}, {payload.longitude})"
+                   f"{', address updated' if payload.address else ''}"
+                   f"{', eircode updated' if payload.eircode else ''}")
         return {"ok": True}
     except HTTPException:
         raise

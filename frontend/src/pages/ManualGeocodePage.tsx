@@ -51,6 +51,8 @@ export default function ManualGeocodePage() {
   const [error, setError] = useState<string | null>(null);
   const [latitude, setLatitude] = useState<string>("");
   const [longitude, setLongitude] = useState<string>("");
+  const [address, setAddress] = useState<string>("");
+  const [eircode, setEircode] = useState<string>("");
   const [markerPosition, setMarkerPosition] = useState<[number, number] | null>(null);
   const [saving, setSaving] = useState(false);
   const [queueEmpty, setQueueEmpty] = useState(false);
@@ -60,6 +62,8 @@ export default function ManualGeocodePage() {
     setError(null);
     setLatitude("");
     setLongitude("");
+    setAddress("");
+    setEircode("");
     setMarkerPosition(null);
     setQueueEmpty(false);
 
@@ -70,8 +74,8 @@ export default function ManualGeocodePage() {
         setProperty(null);
       } else {
         setProperty(next);
-        // Default center: Ireland center or county-based if we have hints
-        // For now, center on Ireland
+        setAddress(next.address);
+        setEircode(next.eircode || "");
       }
     } catch (e: any) {
       setError(e.message ?? "Failed to load property");
@@ -106,11 +110,16 @@ export default function ManualGeocodePage() {
       return;
     }
 
+    if (!address.trim()) {
+      setError("Address is required");
+      return;
+    }
+
     setSaving(true);
     setError(null);
 
     try {
-      await updatePropertyGeocode(property.id, lat, lon);
+      await updatePropertyGeocode(property.id, lat, lon, address.trim(), eircode.trim() || undefined);
       // Load next property
       await loadNextProperty();
     } catch (e: any) {
@@ -201,10 +210,23 @@ export default function ManualGeocodePage() {
             </h2>
 
             <div style={{ marginBottom: "1rem" }}>
-              <strong>Address:</strong>
-              <div style={{ marginTop: "0.25rem", fontSize: "0.95rem" }}>
-                {property.address}
-              </div>
+              <label style={{ display: "block", marginBottom: "0.25rem", fontWeight: 600 }}>
+                Address:
+              </label>
+              <textarea
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                rows={3}
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  fontSize: "0.95rem",
+                  fontFamily: "inherit",
+                  resize: "vertical"
+                }}
+              />
             </div>
 
             <div style={{ marginBottom: "1rem" }}>
@@ -213,8 +235,24 @@ export default function ManualGeocodePage() {
             </div>
 
             <div style={{ marginBottom: "1rem" }}>
-              <strong>Eircode:</strong>
-              <div style={{ marginTop: "0.25rem" }}>{property.eircode ?? "—"}</div>
+              <label style={{ display: "block", marginBottom: "0.25rem", fontWeight: 600 }}>
+                Eircode:
+              </label>
+              <input
+                type="text"
+                value={eircode}
+                onChange={(e) => setEircode(e.target.value.toUpperCase())}
+                placeholder="D02 XY12"
+                maxLength={8}
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  fontSize: "0.95rem",
+                  textTransform: "uppercase"
+                }}
+              />
             </div>
 
             <div style={{ marginBottom: "1rem" }}>

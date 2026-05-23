@@ -169,12 +169,18 @@ export async function fetchNextPropertyToGeocode(): Promise<Property | null> {
 export async function updatePropertyGeocode(
   propertyId: number,
   latitude: number,
-  longitude: number
+  longitude: number,
+  address?: string,
+  eircode?: string
 ): Promise<void> {
+  const body: any = { property_id: propertyId, latitude, longitude };
+  if (address) body.address = address;
+  if (eircode) body.eircode = eircode;
+
   const res = await fetch(`${BASE}/geocoding-queue/update`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ property_id: propertyId, latitude, longitude }),
+    body: JSON.stringify(body),
   });
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
