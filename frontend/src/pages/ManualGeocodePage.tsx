@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, useMapEvents, useMap } from "react-leaflet";
 import L from "leaflet";
 import { fetchNextPropertyToGeocode, updatePropertyGeocode, skipPropertyGeocode } from "../api";
 import type { Property } from "../types";
@@ -28,6 +28,20 @@ function MapClickHandler({ onMapClick }: MapClickHandlerProps) {
       onMapClick(e.latlng.lat, e.latlng.lng);
     },
   });
+  return null;
+}
+
+interface MapCenterUpdaterProps {
+  center: [number, number] | null;
+}
+
+function MapCenterUpdater({ center }: MapCenterUpdaterProps) {
+  const map = useMap();
+  useEffect(() => {
+    if (center) {
+      map.setView(center, 15, { animate: true });
+    }
+  }, [center, map]);
   return null;
 }
 
@@ -251,6 +265,7 @@ export default function ManualGeocodePage() {
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 <MapClickHandler onMapClick={handleMapClick} />
+                <MapCenterUpdater center={markerPosition} />
                 {markerPosition && <Marker position={markerPosition} />}
               </MapContainer>
             </div>
