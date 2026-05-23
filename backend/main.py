@@ -1184,28 +1184,48 @@ async def update_property_geocode(request: Request, payload: GeocodeUpdatePayloa
     """
     _rate_limit_check(request, 10, "geocoding_queue_update")
     try:
-        # Build dynamic UPDATE query based on what fields are provided
-        updates = ["latitude = $1", "longitude = $2", "geog = ST_SetSRID(ST_MakePoint($2, $1), 4326)::geography"]
-        params = [payload.latitude, payload.longitude]
-        idx = 3
-
-        if payload.address is not None and payload.address.strip():
-            updates.append(f"address = ${idx}")
-            params.append(payload.address.strip())
-            idx += 1
-
-        if payload.eircode is not None and payload.eircode.strip():
-            updates.append(f"eircode = ${idx}")
-            params.append(payload.eircode.strip().upper())
-            idx += 1
-
-        params.append(payload.property_id)
-
-        result = await db_pool.execute(f"""
-            UPDATE properties
-            SET {', '.join(updates)}
-            WHERE id = ${idx}
-        """, *params)
+        # Update coordinates always, plus optional address/eircode
+        if payload.address and payload.eircode:
+            # Update all fields
+            result = await db_pool.execute("""
+                UPDATE properties
+                SET latitude = $1,
+                    longitude = $2,
+                    geog = ST_SetSRID(ST_MakePoint($2, $1), 4326)::geography,
+                    address = $3,
+                    eircode = $4
+                WHERE id = $5
+            """, payload.latitude, payload.longitude, payload.address.strip(),
+                 payload.eircode.strip().upper(), payload.property_id)
+        elif payload.address:
+            # Update coords + address
+            result = await db_pool.execute("""
+                UPDATE properties
+                SET latitude = $1,
+                    longitude = $2,
+                    geog = ST_SetSRID(ST_MakePoint($2, $1), 4326)::geography,
+                    address = $3
+                WHERE id = $4
+            """, payload.latitude, payload.longitude, payload.address.strip(), payload.property_id)
+        elif payload.eircode:
+            # Update coords + eircode
+            result = await db_pool.execute("""
+                UPDATE properties
+                SET latitude = $1,
+                    longitude = $2,
+                    geog = ST_SetSRID(ST_MakePoint($2, $1), 4326)::geography,
+                    eircode = $3
+                WHERE id = $4
+            """, payload.latitude, payload.longitude, payload.eircode.strip().upper(), payload.property_id)
+        else:
+            # Update coords only
+            result = await db_pool.execute("""
+                UPDATE properties
+                SET latitude = $1,
+                    longitude = $2,
+                    geog = ST_SetSRID(ST_MakePoint($2, $1), 4326)::geography
+                WHERE id = $3
+            """, payload.latitude, payload.longitude, payload.property_id)
 
         if result == "UPDATE 0":
             raise HTTPException(status_code=404, detail="Property not found")
