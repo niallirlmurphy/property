@@ -1151,16 +1151,15 @@ async def get_next_property_to_geocode(request: Request):
     """
     Return the next high-priority property that needs manual geocoding.
     Priority order: price (>€500k first), then recency.
-    Skips properties that already have coordinates.
+    Returns properties without coordinates (latitude IS NULL).
     """
     _rate_limit_check(request, 60, "geocoding_queue")
     row = await db_pool.fetchrow("""
         SELECT id, sale_date, address, county, eircode, price,
                not_full_market_price, vat_exclusive, description,
-               size_description, latitude, longitude, routing_key
+               size_description, latitude, longitude
         FROM properties
-        WHERE needs_geocoding = TRUE
-          AND latitude IS NULL
+        WHERE latitude IS NULL
         ORDER BY (price > 500000) DESC, sale_date DESC
         LIMIT 1
     """)
@@ -1179,7 +1178,7 @@ class GeocodeUpdatePayload(BaseModel):
 async def update_property_geocode(request: Request, payload: GeocodeUpdatePayload):
     """
     Manually assign geocode coordinates to a property.
-    Marks needs_geocoding = FALSE and sets geocode_source = 'manual'.
+    Updates latitude, longitude, and geography column for spatial queries.
     """
     _rate_limit_check(request, 10, "geocoding_queue_update")
     try:
@@ -1187,15 +1186,11 @@ async def update_property_geocode(request: Request, payload: GeocodeUpdatePayloa
             UPDATE properties
             SET latitude = $1,
                 longitude = $2,
-                geom = ST_SetSRID(ST_MakePoint($2, $1), 4326),
-                geog = ST_SetSRID(ST_MakePoint($2, $1), 4326)::geography,
-                needs_geocoding = FALSE,
-                geocode_source = 'manual'
+                geog = ST_SetSRID(ST_MakePoint($2, $1), 4326)::geography
             WHERE id = $3
-              AND needs_geocoding = TRUE
         """, payload.latitude, payload.longitude, payload.property_id)
         if result == "UPDATE 0":
-            raise HTTPException(status_code=404, detail="Property not found or already geocoded")
+            raise HTTPException(status_code=404, detail="Property not found")
         logger.info(f"Manual geocode applied to property {payload.property_id}: ({payload.latitude}, {payload.longitude})")
         return {"ok": True}
     except HTTPException:
