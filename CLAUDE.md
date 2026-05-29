@@ -118,6 +118,48 @@ python3 geocode.py --status   # show progress percentage and ETA
 python3 geocode.py --export   # write PPR-ALL-geocoded.csv and exit
 ```
 
+## Centroid cleanup (ongoing)
+Re-geocode properties stuck at generic centroid coordinates:
+```bash
+# Check current centroid status
+python3 -c "
+import os, psycopg2
+from dotenv import load_dotenv
+load_dotenv('backend/.env')
+conn = psycopg2.connect(os.getenv('DATABASE_URL'))
+cur = conn.cursor()
+cur.execute('''
+    WITH centroids AS (
+        SELECT latitude, longitude
+        FROM properties
+        WHERE latitude IS NOT NULL
+        GROUP BY latitude, longitude
+        HAVING COUNT(DISTINCT address) >= 100
+    )
+    SELECT COUNT(DISTINCT p.id)
+    FROM properties p
+    JOIN centroids c ON ABS(p.latitude - c.latitude) < 0.000001 
+                    AND ABS(p.longitude - c.longitude) < 0.000001
+''')
+print(f'Properties at centroids: {cur.fetchone()[0]:,}')
+conn.close()
+"
+
+# Test with small batch first
+python3 scripts/geocode_mapbox_batch.py --centroid --limit 100
+
+# Run cleanup (uses ~10k Mapbox requests per 10k properties)
+python3 scripts/geocode_mapbox_batch.py --centroid --limit 10000 --apply
+
+# Monitor Mapbox usage - reserve 2k/month for PPR sync
+# Free tier: 100k requests/month, resets monthly
+```
+
+**Progress log:**
+- 2026-05-29: Fixed 17,813 properties (92-97% success, 87/100 quality, 50%+ rooftop)
+- Remaining: ~57,144 properties at centroids
+- Next: Continue monthly with fresh API credits
+
 ## Running the backend locally
 ```bash
 cd backend
@@ -170,15 +212,16 @@ After frontend starts:
 ## Architecture notes
 
 ### Data Quality & Geocoding
-- **Mapbox batch geocoding** (Current): Primary geocoding service for new imports. Batch API processes up to 1,000 properties per request with comprehensive validation. Success rate: 70-80%, average quality: 88.8/100. Free tier: 100k requests/month.
+- **Mapbox batch geocoding** (Primary): Main geocoding service. Batch API processes up to 1,000 properties per request with comprehensive validation. With Mapbox's improved Irish coverage (announced 2026), achieving 92-97% success rate with 87/100 average quality. Free tier: 100k requests/month.
 - **Validation framework**: Three-layer validation for all geocoded coordinates:
   1. Ireland bounds check (51.4-55.5°N, -10.7--5.4°W) - hard reject for out-of-bounds
   2. County boundary validation - soft reject (downgrades quality score)
   3. Routing key distance validation - hard reject if Eircode >5km from routing key centroid (0.05° lat, 0.08° lon threshold)
-- **Quality scoring**: Rooftop (100), Parcel (90), Point (80), Locality (70). Minimum acceptable: 70. Rejects street-level, interpolated, and approximate results.
+- **Quality scoring**: Rooftop (100), Parcel (90), Point (80), Street (75), Locality (70). Minimum acceptable: 70. Rejects interpolated and approximate results.
 - **Address normalization**: All addresses stored in both original and normalized forms. `address_normalized` column applies consistent formatting (title case, whitespace cleanup, abbreviation standardization, remove "No." prefix, standardize apartment/unit). Applied to all 784k properties.
 - **Routing key indexing**: Generated column extracts first 3 characters of Eircode (e.g., D02, H91). Materialized view `routing_key_stats` provides centroids and statistics for 301 routing keys. Enables validation and fallback geocoding.
 - **Geocoding queue**: Properties imported without coordinates flagged with `needs_geocoding = TRUE`. Priority order: price (>€500k first), then recency. View: `properties_needing_geocoding` for processing.
+- **Centroid cleanup** (In progress): ~70k properties stuck at generic centroid coordinates (100+ addresses at same point). Mapbox re-geocoding achieving 92-97% success with 50%+ rooftop precision. Progress: 17,813 fixed (2026-05-29), 57,144 remaining. Continue monthly with fresh API credits.
 - **Eircode enrichment**: Daily cron job processes properties via Autoaddress API (address validation only, not geocoding). Autoaddress provides address formatting and Eircode data but not coordinates.
 
 ### Search & Performance
@@ -193,13 +236,13 @@ After frontend starts:
 - **Monitoring**: Sentry integration for error tracking and performance monitoring. Search analytics tracked for observability.
 
 ### Infrastructure
-- **Database**: Supabase (PostgreSQL + PostGIS). 784,464 properties, ~613,500 with coordinates (78.2% coverage).
+- **Database**: Supabase (PostgreSQL + PostGIS). 784,464 properties, ~614,200 with coordinates (78.3% coverage as of 2026-05-29).
   - Best coverage: 2022-2024 (89-91% geocoded)
   - Recent: 2025-2026 (77-81% geocoded)
   - Eircode coverage: 29.7% overall (74-79% for 2022+ sales)
 - **Backend**: FastAPI on Railway (https://eloquent-optimism-production-350a.up.railway.app).
 - **Frontend**: React + TypeScript on Vercel (https://homeiq.ie).
-- **Geocoding API**: Mapbox (70k/100k requests used, 30k remaining in free tier).
+- **Geocoding API**: Mapbox (~100k/100k requests used this month, resets next month). Reserve 2k/month for biweekly PPR sync.
 
 ## Troubleshooting
 - **`DATABASE_URL` errors**: verify `.env` value format and DB reachability; confirm PostGIS extension is enabled.
