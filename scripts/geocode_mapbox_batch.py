@@ -23,11 +23,15 @@ Usage:
     # Geocode properties WITHOUT Eircodes
     python3 scripts/geocode_mapbox_batch.py --needs-geocoding --no-eircode --apply
 
+    # Re-geocode centroid coordinates (70k properties with generic coords)
+    python3 scripts/geocode_mapbox_batch.py --centroid --limit 100 --apply
+
     # Test with small batch
     python3 scripts/geocode_mapbox_batch.py --needs-geocoding --limit 10
 
 Flags:
     --needs-geocoding    Process properties with needs_geocoding=TRUE flag
+    --centroid           Process properties at centroid coordinates (100+ addresses at same point)
     --no-eircode         Filter to properties WITHOUT Eircodes
     --min-price N        Filter to properties with price >= N
     --apply              Actually update database (default is dry-run)
@@ -101,6 +105,66 @@ async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = No
 
     rows = await pool.fetch(query, *params)
     return [dict(row) for row in rows]
+
+
+async def fetch_centroid_properties(pool: asyncpg.Pool, limit: int = None,
+                                    county: str = None) -> List[Dict]:
+    """Fetch properties at centroid coordinates (100+ addresses at same point)."""
+    print("Identifying centroid coordinates...")
+
+    # Find centroid coordinates
+    centroid_query = """
+        SELECT latitude, longitude, COUNT(DISTINCT address) as addr_count
+        FROM properties
+        WHERE latitude IS NOT NULL AND longitude IS NOT NULL
+        GROUP BY latitude, longitude
+        HAVING COUNT(DISTINCT address) >= 100
+        ORDER BY COUNT(DISTINCT address) DESC
+    """
+
+    centroids = await pool.fetch(centroid_query)
+    print(f"Found {len(centroids)} centroid coordinates")
+
+    if not centroids:
+        return []
+
+    # Fetch properties at those centroids
+    properties = []
+    for centroid in centroids:
+        lat, lon = centroid['latitude'], centroid['longitude']
+
+        where_clauses = [
+            "ABS(latitude - $1) < 0.000001",
+            "ABS(longitude - $2) < 0.000001"
+        ]
+        params = [lat, lon]
+        idx = 3
+
+        if county:
+            where_clauses.append(f"LOWER(county) = LOWER(${idx})")
+            params.append(county)
+            idx += 1
+
+        where = " AND ".join(where_clauses)
+
+        query = f"""
+            SELECT id, address, address_normalized, county, eircode,
+                   latitude, longitude, price, sale_date
+            FROM properties
+            WHERE {where}
+            ORDER BY
+                CASE WHEN eircode IS NOT NULL THEN 0 ELSE 1 END,
+                sale_date DESC
+            LIMIT 500
+        """
+
+        rows = await pool.fetch(query, *params)
+        for row in rows:
+            properties.append(dict(row))
+            if limit and len(properties) >= limit:
+                return properties
+
+    return properties
 
 
 def validate_coordinates(lat: float, lon: float, county: str, feature_type: str, precision: Optional[str]) -> Tuple[bool, str, int]:
@@ -242,7 +306,8 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
 
 async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                                county: str = None, needs_geocoding: bool = False,
-                               no_eircode: bool = False, min_price: int = None):
+                               no_eircode: bool = False, min_price: int = None,
+                               centroid: bool = False):
     """
     Batch geocode properties using Mapbox.
 
@@ -253,6 +318,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         needs_geocoding: If True, process properties flagged as needs_geocoding
         no_eircode: If True (with needs_geocoding), only process properties WITHOUT Eircodes
         min_price: If set, only process properties >= this price
+        centroid: If True, process properties at centroid coordinates
     """
     if not MAPBOX_TOKEN:
         print("❌ MAPBOX_TOKEN not set in backend/.env")
@@ -264,14 +330,21 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
 
     try:
         # Fetch properties
-        properties = await fetch_properties_needing_geocoding(
-            pool, limit=limit, county=county, no_eircode=no_eircode, min_price=min_price
-        )
+        if centroid:
+            properties = await fetch_centroid_properties(
+                pool, limit=limit, county=county
+            )
+        else:
+            properties = await fetch_properties_needing_geocoding(
+                pool, limit=limit, county=county, no_eircode=no_eircode, min_price=min_price
+            )
 
         print(f"\n{'='*70}")
         print(f"MAPBOX BATCH GEOCODING")
         print(f"{'='*70}")
-        if needs_geocoding:
+        if centroid:
+            print(f"Mode: CENTROID RE-GEOCODING")
+        elif needs_geocoding:
             filters = []
             if no_eircode:
                 filters.append("WITHOUT Eircodes")
@@ -336,6 +409,7 @@ async def main():
     dry_run = "--apply" not in sys.argv
     needs_geocoding = "--needs-geocoding" in sys.argv
     no_eircode = "--no-eircode" in sys.argv
+    centroid = "--centroid" in sys.argv
     limit = None
     county = None
     min_price = None
@@ -354,7 +428,8 @@ async def main():
         county=county,
         needs_geocoding=needs_geocoding,
         no_eircode=no_eircode,
-        min_price=min_price
+        min_price=min_price,
+        centroid=centroid
     )
 
 
