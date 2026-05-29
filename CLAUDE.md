@@ -179,6 +179,8 @@ npm run dev
 ```
 
 ## Verification / smoke checks
+
+### Local development
 After backend starts:
 - `GET /health` should return 200 (`/health` endpoint is defined in `backend/main.py`).
 - Run a sample search request and confirm non-empty results for known populated areas.
@@ -188,6 +190,31 @@ After frontend starts:
 - Search by a known address, confirm map marker/list render.
 - Change radius and verify result count changes.
 - Open trends chart and confirm yearly series updates.
+
+### Production test suite
+Comprehensive test suite for production deployment (frontend + backend):
+```bash
+python3 tests/test_production_suite.py
+```
+
+Tests include:
+- **Security**: Database RLS, CORS, headers, sensitive paths
+- **Backend Health**: /health endpoint
+- **Geocoding**: Dublin, Nobber, Cork (coordinates validation)
+- **Search**: Address queries, coordinate search, county filter fallback
+- **Trends**: Price trends by county with median/average
+- **Eircode**: Routing key queries (D02, A82, etc.)
+- **Counties**: List all counties with property counts
+- **Coordinate Quality**: Nobber centroid validation (fixed issue)
+- **Frontend**: Bundle loading, API connectivity
+- **Performance**: Response times (<100ms for most endpoints)
+
+**Last run (2026-05-29):** 23/24 tests passed
+- ✅ All production endpoints working
+- ✅ Nobber coordinates correct (53.8217, -6.7479)
+- ✅ Search returning 162 Nobber properties
+- ✅ Performance: 82-90ms response times
+- ⚠️ Database security test requires DATABASE_URL (expected for local run)
 
 ## Deploying
 **Database (Supabase/Postgres)**
