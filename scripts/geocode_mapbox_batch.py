@@ -135,8 +135,13 @@ def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
         # Rural areas without street addresses - acceptable but lower quality
         quality_score = 70
 
+    elif feature_type == 'street':
+        # Street-level results - acceptable for properties without Eircodes
+        # Better than nothing, especially with improved Mapbox Irish coverage
+        quality_score = 75
+
     else:
-        # Other feature types (street, postcode, etc.) - may be too imprecise
+        # Other feature types (postcode, etc.) - may be too imprecise
         return False, f"feature_type_{feature_type}", 0
 
     # Validation 3: County boundary (optional, downgrades quality but doesn't reject)
