@@ -44,13 +44,13 @@ PPR_DOWNLOAD_PAGE = "https://www.propertypriceregister.ie/website/npsra/pprweb.n
 PROJECT_ROOT = Path(__file__).parent.parent
 
 
-def parse_date(raw: Optional[str]) -> Optional[str]:
-    """Parse date from PPR format (DD/MM/YYYY) to ISO format (YYYY-MM-DD)."""
+def parse_date(raw: Optional[str]):
+    """Parse date from PPR format (DD/MM/YYYY) to date object."""
     if not raw:
         return None
     for fmt in ("%d/%m/%Y", "%Y-%m-%d"):
         try:
-            return datetime.strptime(raw.strip(), fmt).date().isoformat()
+            return datetime.strptime(raw.strip(), fmt).date()
         except ValueError:
             continue
     return None
@@ -196,45 +196,56 @@ async def download_ppr_csv(output_path: str) -> bool:
 
 
 async def filter_new_sales(csv_path: str, since_date: datetime.date) -> List[Dict]:
-    """Read PPR CSV and filter to sales after since_date."""
+    """Read PPR CSV and filter to sales after since_date.
 
-    new_sales = []
-    skipped = 0
-    invalid = 0
+    Optimized: PPR CSV is sorted oldest→newest, so we read from the end backwards
+    to find recent sales quickly without scanning all 785k+ rows.
+    """
 
     print(f"Filtering sales after {since_date}...")
+    print(f"  (PPR CSV is date-sorted, reading from end...)")
 
+    # Read all lines (fast for 103MB file)
     with open(csv_path, 'r', encoding='utf-8', errors='replace') as f:
-        # Try to detect delimiter
-        sample = f.read(1024)
-        f.seek(0)
+        lines = f.readlines()
 
-        # PPR uses comma delimiter
-        reader = csv.DictReader(f)
+    header = lines[0]
+    fieldnames = next(csv.reader([header]))
 
-        for row in reader:
-            try:
-                normalized = normalize_ppr_row(row)
+    new_sales = []
+    invalid = 0
+    cutoff_line = len(lines)  # Where we stopped finding new sales
 
-                # Skip if no sale date or price
-                if not normalized['sale_date'] or not normalized['price']:
-                    invalid += 1
-                    continue
+    # Read backwards from end until we hit older dates
+    for i in range(len(lines) - 1, 0, -1):
+        try:
+            row_dict = dict(zip(fieldnames, next(csv.reader([lines[i]]))))
+            normalized = normalize_ppr_row(row_dict)
 
-                sale_date = datetime.fromisoformat(normalized['sale_date']).date()
-
-                # Filter to new sales only
-                if sale_date > since_date:
-                    new_sales.append(normalized)
-                else:
-                    skipped += 1
-
-            except Exception as e:
+            # Skip if no sale date or price
+            if not normalized['sale_date'] or not normalized['price']:
                 invalid += 1
                 continue
 
+            sale_date = normalized['sale_date']  # Already a date object
+
+            if sale_date > since_date:
+                new_sales.append(normalized)
+                cutoff_line = i
+            else:
+                # Hit older dates, stop scanning
+                break
+
+        except Exception as e:
+            invalid += 1
+            continue
+
+    # Reverse to get chronological order (oldest new sale first)
+    new_sales.reverse()
+
+    skipped = cutoff_line - 1  # Approximate
     print(f"  Found {len(new_sales)} new sales")
-    print(f"  Skipped {skipped} existing sales")
+    print(f"  Scanned last {len(lines) - cutoff_line:,} rows (skipped first {skipped:,})")
     print(f"  Invalid {invalid} rows")
 
     return new_sales
@@ -267,7 +278,7 @@ async def geocode_new_sales(sales: List[Dict], output_csv: str):
 
         for sale in sales:
             writer.writerow({
-                'Date of Sale (dd/mm/yyyy)': datetime.fromisoformat(sale['sale_date']).strftime('%d/%m/%Y'),
+                'Date of Sale (dd/mm/yyyy)': sale['sale_date'].strftime('%d/%m/%Y'),
                 'Address': sale['address'],
                 'Postal Code': sale['eircode'] or '',
                 'County': sale['county'],
@@ -316,8 +327,85 @@ async def geocode_new_sales(sales: List[Dict], output_csv: str):
     return output_csv
 
 
+IRELAND_BOUNDS = (51.4, 55.5, -10.7, -5.4)  # min_lat, max_lat, min_lon, max_lon
+
+
+def validate_coordinates(lat: float, lon: float, eircode: Optional[str], county: str) -> tuple[Optional[float], Optional[float], str]:
+    """
+    Validate geocoded coordinates using multiple checks.
+
+    Returns: (validated_lat, validated_lon, reason)
+    - Returns (None, None, reason) if coordinates fail validation
+    - Returns (lat, lon, "ok") if coordinates pass all checks
+    """
+
+    if lat is None or lon is None:
+        return None, None, "no_coordinates"
+
+    # Check 1: Ireland bounds
+    min_lat, max_lat, min_lon, max_lon = IRELAND_BOUNDS
+    if not (min_lat <= lat <= max_lat and min_lon <= lon <= max_lon):
+        return None, None, f"out_of_bounds({lat:.2f},{lon:.2f})"
+
+    # Check 2: Basic sanity - not at 0,0 or other obvious bad values
+    if (lat == 0.0 and lon == 0.0) or abs(lat) < 1 or abs(lon) < 1:
+        return None, None, "suspicious_zero"
+
+    # Coordinates pass basic validation
+    return lat, lon, "ok"
+
+
+async def validate_against_routing_keys(sales: List[Dict], conn: asyncpg.Connection) -> tuple[int, int]:
+    """
+    Validate Eircode coordinates against routing key centroids.
+
+    Sets coordinates to None if they're >5km from routing key centroid.
+    Returns: (validated_count, rejected_count)
+    """
+
+    validated = 0
+    rejected = 0
+
+    for sale in sales:
+        if not sale.get('eircode') or not sale.get('latitude'):
+            continue
+
+        # Extract routing key (first 3 chars)
+        routing_key = sale['eircode'].replace(' ', '').upper()[:3]
+
+        # Get routing key centroid
+        row = await conn.fetchrow("""
+            SELECT lat, lon, property_count
+            FROM routing_key_stats
+            WHERE routing_key = $1
+        """, routing_key)
+
+        if not row or row['property_count'] < 5:
+            # No routing key data, can't validate
+            validated += 1
+            continue
+
+        # Calculate distance
+        centroid_lat, centroid_lon = float(row['lat']), float(row['lon'])
+        lat_diff = abs(sale['latitude'] - centroid_lat)
+        lon_diff = abs(sale['longitude'] - centroid_lon)
+
+        # ~5km threshold (0.05° lat ≈ 5.5km, 0.08° lon ≈ 5.6km at Ireland latitude)
+        if lat_diff < 0.05 and lon_diff < 0.08:
+            validated += 1
+        else:
+            # Too far from routing key centroid - reject
+            distance_km = ((lat_diff * 111)**2 + (lon_diff * 85)**2)**0.5
+            sale['validation_issue'] = f"routing_key_distance_{distance_km:.1f}km"
+            sale['latitude'] = None
+            sale['longitude'] = None
+            rejected += 1
+
+    return validated, rejected
+
+
 async def import_to_database(csv_path: str, conn: asyncpg.Connection, dry_run: bool = False):
-    """Import geocoded sales to database."""
+    """Import geocoded sales to database with validation."""
 
     print(f"\nImporting from {csv_path}...")
 
@@ -328,15 +416,55 @@ async def import_to_database(csv_path: str, conn: asyncpg.Connection, dry_run: b
             normalized = normalize_ppr_row(row)
 
             # Add coordinates if available
-            normalized['latitude'] = float(row['Latitude']) if row.get('Latitude') else None
-            normalized['longitude'] = float(row['Longitude']) if row.get('Longitude') else None
+            raw_lat = float(row['Latitude']) if row.get('Latitude') else None
+            raw_lon = float(row['Longitude']) if row.get('Longitude') else None
+
+            # Validate coordinates
+            if raw_lat and raw_lon:
+                validated_lat, validated_lon, reason = validate_coordinates(
+                    raw_lat, raw_lon, normalized.get('eircode'), normalized['county']
+                )
+                normalized['latitude'] = validated_lat
+                normalized['longitude'] = validated_lon
+                normalized['validation_issue'] = None if reason == "ok" else reason
+            else:
+                normalized['latitude'] = None
+                normalized['longitude'] = None
+                normalized['validation_issue'] = None
 
             sales.append(normalized)
 
+    # Validate Eircode coordinates against routing keys
+    print(f"\nValidating coordinates against routing key centroids...")
+    validated, rejected = await validate_against_routing_keys(sales, conn)
+    print(f"  ✓ Validated: {validated} Eircodes within 5km of routing key centroid")
+    if rejected > 0:
+        print(f"  ⚠️  Rejected: {rejected} Eircodes >5km from centroid (set to NULL)")
+
+    # Statistics
+    with_coords = sum(1 for s in sales if s['latitude'] is not None)
+    without_coords = len(sales) - with_coords
+    validation_issues = sum(1 for s in sales if s.get('validation_issue'))
+
+    print(f"\nImport summary:")
+    print(f"  Total properties: {len(sales)}")
+    print(f"  With coordinates: {with_coords} ({100*with_coords/len(sales):.1f}%)")
+    print(f"  Without coordinates: {without_coords}")
+    if validation_issues > 0:
+        print(f"  Validation issues: {validation_issues}")
+        # Show breakdown of issues
+        from collections import Counter
+        issue_counts = Counter(s.get('validation_issue') for s in sales if s.get('validation_issue'))
+        for issue, count in issue_counts.most_common(5):
+            print(f"    - {issue}: {count}")
+
     if dry_run:
-        print(f"[DRY RUN] Would import {len(sales)} properties")
+        print(f"\n[DRY RUN] Would import {len(sales)} properties")
+        print(f"\nSample properties:")
         for i, sale in enumerate(sales[:5], 1):
-            print(f"  {i}. {sale['address']} - €{sale['price']:,.0f} on {sale['sale_date']}")
+            coords = f"({sale['latitude']:.5f}, {sale['longitude']:.5f})" if sale['latitude'] else "NO COORDS"
+            issue = f" [{sale.get('validation_issue')}]" if sale.get('validation_issue') else ""
+            print(f"  {i}. {sale['address'][:50]} - €{sale['price']:,.0f} - {coords}{issue}")
         if len(sales) > 5:
             print(f"  ... and {len(sales) - 5} more")
         return
@@ -353,14 +481,15 @@ async def import_to_database(csv_path: str, conn: asyncpg.Connection, dry_run: b
                 sale_date, address, county, eircode, price,
                 not_full_market_price, vat_exclusive,
                 description, size_description,
-                latitude, longitude, geog
+                latitude, longitude, geog, needs_geocoding
             ) VALUES (
-                $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11,
+                $1, $2, $3, $4, $5, $6, $7, $8, $9, $10::double precision, $11::double precision,
                 CASE
                     WHEN $10 IS NOT NULL AND $11 IS NOT NULL
                     THEN ST_MakePoint($11, $10)::geography
                     ELSE NULL
-                END
+                END,
+                $12
             )
             ON CONFLICT DO NOTHING
         """, [
@@ -368,7 +497,8 @@ async def import_to_database(csv_path: str, conn: asyncpg.Connection, dry_run: b
                 sale['sale_date'], sale['address'], sale['county'], sale['eircode'],
                 sale['price'], sale['not_full_market_price'], sale['vat_exclusive'],
                 sale['description'], sale['size_description'],
-                sale['latitude'], sale['longitude']
+                sale['latitude'], sale['longitude'],
+                sale['latitude'] is None or sale['longitude'] is None  # needs_geocoding
             )
             for sale in batch
         ])
@@ -386,7 +516,7 @@ async def import_to_database(csv_path: str, conn: asyncpg.Connection, dry_run: b
         print(f"✓ Routing key stats updated")
 
 
-async def sync_ppr_updates(dry_run: bool = False, since_date: Optional[str] = None, manual_csv: Optional[str] = None):
+async def sync_ppr_updates(dry_run: bool = False, since_date: Optional[str] = None, manual_csv: Optional[str] = None, skip_geocoding: bool = False):
     """Main sync process."""
 
     print("=" * 70)
@@ -444,9 +574,39 @@ async def sync_ppr_updates(dry_run: bool = False, since_date: Optional[str] = No
 
         print()
 
-        # 4. Geocode new sales
-        geocoded_csv = tempfile.mktemp(suffix='_ppr_geocoded.csv')
-        await geocode_new_sales(new_sales, geocoded_csv)
+        # 4. Geocode new sales (or skip)
+        if skip_geocoding:
+            print("Skipping geocoding (--skip-geocoding flag)")
+            print("Properties will be imported with NULL coordinates")
+            # Write CSV without geocoding
+            geocoded_csv = tempfile.mktemp(suffix='_ppr_no_geocode.csv')
+            with open(geocoded_csv, 'w', newline='', encoding='utf-8') as f:
+                fieldnames = [
+                    'Date of Sale (dd/mm/yyyy)', 'Address', 'Postal Code',
+                    'County', 'Price (€)', 'Not Full Market Price',
+                    'VAT Exclusive', 'Description of Property', 'Property Size Description',
+                    'Latitude', 'Longitude'
+                ]
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
+                writer.writeheader()
+
+                for sale in new_sales:
+                    writer.writerow({
+                        'Date of Sale (dd/mm/yyyy)': sale['sale_date'].strftime('%d/%m/%Y'),
+                        'Address': sale['address'],
+                        'Postal Code': sale['eircode'] or '',
+                        'County': sale['county'],
+                        'Price (€)': f"€{sale['price']:.2f}",
+                        'Not Full Market Price': 'Yes' if sale['not_full_market_price'] else 'No',
+                        'VAT Exclusive': 'Yes' if sale['vat_exclusive'] else 'No',
+                        'Description of Property': sale['description'],
+                        'Property Size Description': sale['size_description'] or '',
+                        'Latitude': '',  # Empty = NULL
+                        'Longitude': '',
+                    })
+        else:
+            geocoded_csv = tempfile.mktemp(suffix='_ppr_geocoded.csv')
+            await geocode_new_sales(new_sales, geocoded_csv)
 
         print()
 
@@ -471,13 +631,15 @@ if __name__ == "__main__":
     parser.add_argument("--dry-run", action="store_true", help="Show what would be imported without importing")
     parser.add_argument("--since", help="Override cutoff date (YYYY-MM-DD)")
     parser.add_argument("--manual-csv", help="Path to manually downloaded PPR-ALL.csv")
+    parser.add_argument("--skip-geocoding", action="store_true", help="Skip geocoding, import with NULL coordinates")
 
     args = parser.parse_args()
 
     exit_code = asyncio.run(sync_ppr_updates(
         dry_run=args.dry_run,
         since_date=args.since,
-        manual_csv=args.manual_csv
+        manual_csv=args.manual_csv,
+        skip_geocoding=args.skip_geocoding
     ))
 
     sys.exit(exit_code)

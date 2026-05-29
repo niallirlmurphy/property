@@ -20,6 +20,9 @@ MIN_ROWS             = 750_000
 MIN_GEOCODED_PCT     = 75.0   # % of rows with lat/lon
 MIN_EIRCODE_PPR_PCT  =  5.0   # % of rows with PPR-sourced eircode (conservative floor)
 MAX_OUT_OF_BOUNDS    = 0      # rows with coordinates outside Ireland
+MAX_CENTROID_COORDS  = 50     # max coordinates with 100+ distinct addresses (centroid fallback limit)
+MAX_CENTROID_MEDIUM  = 200    # max coordinates with 10-99 distinct addresses (medium priority)
+MIN_REGEOCODE_SUCCESS_RATE = 70.0  # % of re-geocoding attempts that should succeed
 
 
 # ---------------------------------------------------------------------------
@@ -65,6 +68,292 @@ def test_coordinates_within_ireland(db):
     assert out_of_bounds <= MAX_OUT_OF_BOUNDS, (
         f"{out_of_bounds} rows have coordinates outside Ireland bounding box"
     )
+
+
+def test_duplicate_geocodes_centroid_detection(db):
+    """
+    Check if too many addresses share identical coordinates.
+
+    When geocoding falls back to county/town centroids, hundreds or thousands
+    of distinct addresses get mapped to the same point. This test detects that
+    pattern and fails if the problem is widespread.
+
+    Threshold: Maximum 50 coordinates with 100+ distinct addresses.
+    (Current baseline from 2025-05 assessment shows ~50 centroid coords)
+    """
+    cur = db.cursor()
+    cur.execute("""
+        SELECT
+            latitude,
+            longitude,
+            COUNT(DISTINCT address) as distinct_addresses,
+            COUNT(*) as total_sales,
+            ARRAY_AGG(DISTINCT county) FILTER (WHERE county IS NOT NULL) as counties
+        FROM properties
+        WHERE latitude IS NOT NULL
+        GROUP BY latitude, longitude
+        HAVING COUNT(DISTINCT address) >= 100
+        ORDER BY COUNT(DISTINCT address) DESC
+    """)
+    centroid_coords = cur.fetchall()
+    count = len(centroid_coords)
+
+    print(f"\n--- Duplicate geocode / centroid detection ---")
+    print(f"  Coordinates with 100+ distinct addresses: {count:,}")
+
+    if centroid_coords:
+        print(f"\n  Top 10 worst offenders:")
+        print(f"  {'Coordinate':<30} {'Addresses':<12} {'Sales':<10} {'Counties'}")
+        print(f"  {'-'*30} {'-'*12} {'-'*10} {'-'*30}")
+        for lat, lon, addrs, sales, counties in centroid_coords[:10]:
+            coord = f"({lat:.6f}, {lon:.6f})"
+            counties_str = ", ".join(counties[:3]) if counties else "None"
+            if len(counties) > 3:
+                counties_str += f" +{len(counties)-3}"
+            print(f"  {coord:<30} {addrs:<12,} {sales:<10,} {counties_str}")
+
+        if count > 10:
+            print(f"  ... and {count - 10} more centroid coordinates")
+
+        # Calculate total impact
+        cur.execute("""
+            WITH centroid_coords AS (
+                SELECT latitude, longitude
+                FROM properties
+                WHERE latitude IS NOT NULL
+                GROUP BY latitude, longitude
+                HAVING COUNT(DISTINCT address) >= 100
+            )
+            SELECT
+                COUNT(DISTINCT p.id) as affected_properties,
+                COUNT(DISTINCT p.address) as affected_addresses
+            FROM properties p
+            INNER JOIN centroid_coords c
+                ON ABS(p.latitude - c.latitude) < 0.000001
+                AND ABS(p.longitude - c.longitude) < 0.000001
+            WHERE p.latitude IS NOT NULL
+        """)
+        affected_props, affected_addrs = cur.fetchone()
+
+        print(f"\n  Total impact:")
+        print(f"    Affected properties: {affected_props:,}")
+        print(f"    Affected addresses:  {affected_addrs:,}")
+
+    assert count <= MAX_CENTROID_COORDS, (
+        f"{count} centroid coordinates found (threshold: {MAX_CENTROID_COORDS}). "
+        f"This indicates widespread geocoding fallback to county/town centroids. "
+        f"Run: python3 scripts/identify_centroid_coordinates.py --export"
+    )
+
+
+def test_medium_priority_clusters(db):
+    """
+    Monitor medium-priority clustering issues (10-99 addresses per coordinate).
+    These may be valid (e.g. apartment complexes) or geocoding artifacts.
+    """
+    cur = db.cursor()
+    cur.execute("""
+        SELECT COUNT(*)
+        FROM (
+            SELECT latitude, longitude, COUNT(DISTINCT address) as addrs
+            FROM properties
+            WHERE latitude IS NOT NULL
+            GROUP BY latitude, longitude
+            HAVING COUNT(DISTINCT address) BETWEEN 10 AND 99
+        ) sub
+    """)
+    count = cur.fetchone()[0]
+
+    print(f"\n--- Medium-priority clusters (10-99 addresses) ---")
+    print(f"  Coordinates with 10-99 distinct addresses: {count:,}")
+
+    # This is informational - we expect some clustering (apartment buildings, etc)
+    # but alert if it grows significantly
+    if count > MAX_CENTROID_MEDIUM:
+        print(f"  ⚠️  Exceeds monitoring threshold of {MAX_CENTROID_MEDIUM}")
+
+    assert count <= MAX_CENTROID_MEDIUM, (
+        f"{count} medium-priority clusters found (threshold: {MAX_CENTROID_MEDIUM}). "
+        f"Review for potential geocoding issues."
+    )
+
+
+def test_regeocode_progress():
+    """
+    Track re-geocoding progress from regeocode_high_priority.py script.
+    Ensures re-geocoding efforts are making progress and achieving good success rates.
+    """
+    import sqlite3
+    import os
+
+    progress_db = "regeocode_progress.db"
+
+    if not os.path.exists(progress_db):
+        print("\n--- Re-geocoding progress ---")
+        print("  No re-geocoding runs yet (regeocode_progress.db not found)")
+        print("  Run: python3 scripts/regeocode_high_priority.py --apply")
+        return  # Skip test if no re-geocoding has been attempted
+
+    print(f"\n--- Re-geocoding progress ---")
+
+    conn = sqlite3.connect(progress_db)
+
+    # Overall stats
+    stats = conn.execute("""
+        SELECT processed, succeeded, failed, skipped, started_at, last_update
+        FROM session_stats WHERE id = 1
+    """).fetchone()
+
+    if stats and stats[0] > 0:  # processed > 0
+        processed, succeeded, failed, skipped, started_at, last_update = stats
+        success_rate = 100.0 * succeeded / processed if processed > 0 else 0
+
+        print(f"  Started: {started_at}")
+        print(f"  Last update: {last_update}")
+        print(f"  Total processed: {processed:,}")
+        print(f"  ✓ Succeeded: {succeeded:,} ({success_rate:.1f}%)")
+        print(f"  ✗ Failed: {failed:,}")
+        print(f"  ⊘ Skipped: {skipped:,}")
+
+        # Method breakdown
+        methods = conn.execute("""
+            SELECT method, COUNT(*) as count
+            FROM regeocode_log
+            WHERE status = 'success'
+            GROUP BY method
+            ORDER BY count DESC
+        """).fetchall()
+
+        if methods:
+            print(f"\n  Success by method:")
+            for method, count in methods:
+                print(f"    {method}: {count:,}")
+
+        # Check success rate threshold
+        assert success_rate >= MIN_REGEOCODE_SUCCESS_RATE, (
+            f"Re-geocoding success rate {success_rate:.1f}% is below "
+            f"threshold {MIN_REGEOCODE_SUCCESS_RATE}%. "
+            f"Review failed geocoding attempts and adjust strategy."
+        )
+    else:
+        print("  No properties processed yet")
+
+    conn.close()
+
+
+def test_known_problem_locations(db):
+    """
+    Test specific locations known to have had geocoding issues.
+    Ensures fixes have been applied and are holding.
+    """
+    cur = db.cursor()
+
+    print(f"\n--- Known problem locations ---")
+
+    # Test 1: Nobber, Meath should be near (53.8217, -6.7479)
+    # NOT at the wrong location (53.717143, -7.062706)
+    cur.execute("""
+        SELECT COUNT(*)
+        FROM properties
+        WHERE address ILIKE '%nobber%'
+          AND latitude IS NOT NULL
+          AND ABS(latitude - 53.717143) < 0.001
+          AND ABS(longitude - (-7.062706)) < 0.001
+    """)
+    nobber_wrong = cur.fetchone()[0]
+
+    cur.execute("""
+        SELECT COUNT(*)
+        FROM properties
+        WHERE address ILIKE '%nobber%'
+          AND latitude IS NOT NULL
+    """)
+    nobber_total = cur.fetchone()[0]
+
+    print(f"  Nobber, Meath:")
+    print(f"    Total properties: {nobber_total}")
+    print(f"    At wrong coordinates: {nobber_wrong}")
+
+    if nobber_wrong == 0:
+        print(f"    ✓ All Nobber properties have correct coordinates")
+    else:
+        print(f"    ✗ {nobber_wrong} properties still at wrong location")
+
+    assert nobber_wrong == 0, (
+        f"{nobber_wrong} Nobber properties still at wrong coordinates. "
+        f"Run: python3 scripts/fix_nobber_coordinates.py --apply"
+    )
+
+
+def test_geocoding_improvement_trend(db):
+    """
+    Track geocoding quality improvements over time.
+    Compares current state to known baseline from 2025-05-18.
+    """
+    cur = db.cursor()
+
+    print(f"\n--- Geocoding improvement trend ---")
+
+    # Baseline from assessment on 2025-05-18
+    BASELINE_CENTROID_COUNT = 50
+    BASELINE_AFFECTED_PROPERTIES = 150000  # approximate
+
+    # Current state
+    cur.execute("""
+        SELECT COUNT(*)
+        FROM (
+            SELECT latitude, longitude
+            FROM properties
+            WHERE latitude IS NOT NULL
+            GROUP BY latitude, longitude
+            HAVING COUNT(DISTINCT address) >= 100
+        ) sub
+    """)
+    current_centroid_count = cur.fetchone()[0]
+
+    # Count affected properties
+    cur.execute("""
+        WITH centroid_coords AS (
+            SELECT latitude, longitude
+            FROM properties
+            WHERE latitude IS NOT NULL
+            GROUP BY latitude, longitude
+            HAVING COUNT(DISTINCT address) >= 100
+        )
+        SELECT COUNT(DISTINCT p.id)
+        FROM properties p
+        INNER JOIN centroid_coords c
+            ON ABS(p.latitude - c.latitude) < 0.000001
+            AND ABS(p.longitude - c.longitude) < 0.000001
+        WHERE p.latitude IS NOT NULL
+    """)
+    current_affected = cur.fetchone()[0]
+
+    print(f"  Baseline (2025-05-18):")
+    print(f"    Centroid coordinates: {BASELINE_CENTROID_COUNT}")
+    print(f"    Affected properties: ~{BASELINE_AFFECTED_PROPERTIES:,}")
+    print(f"\n  Current:")
+    print(f"    Centroid coordinates: {current_centroid_count}")
+    print(f"    Affected properties: {current_affected:,}")
+
+    if current_centroid_count < BASELINE_CENTROID_COUNT:
+        improvement_coords = BASELINE_CENTROID_COUNT - current_centroid_count
+        print(f"\n  ✓ Improvement: {improvement_coords} fewer centroid coordinates")
+    elif current_centroid_count > BASELINE_CENTROID_COUNT:
+        regression = current_centroid_count - BASELINE_CENTROID_COUNT
+        print(f"\n  ✗ Regression: {regression} more centroid coordinates")
+    else:
+        print(f"\n  → No change in centroid count")
+
+    if current_affected < BASELINE_AFFECTED_PROPERTIES:
+        improvement = BASELINE_AFFECTED_PROPERTIES - current_affected
+        pct = 100.0 * improvement / BASELINE_AFFECTED_PROPERTIES
+        print(f"  ✓ Improvement: {improvement:,} fewer affected properties ({pct:.1f}%)")
+    elif current_affected > BASELINE_AFFECTED_PROPERTIES:
+        print(f"  ✗ Regression: More properties at centroid coordinates")
+
+    # Informational only - don't fail on regression yet as we're still fixing things
+    # In production, you might assert current_affected <= BASELINE_AFFECTED_PROPERTIES
 
 
 # ---------------------------------------------------------------------------

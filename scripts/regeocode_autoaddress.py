@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Re-geocode properties using AutoAddress API.
+Geocode properties using AutoAddress API with comprehensive validation.
 
 AutoAddress is an Irish geocoding service with excellent Irish address coverage,
 including Eircodes and precise coordinates.
@@ -9,8 +9,25 @@ API: https://www.autoaddress.com/
 - Autocomplete: Search for addresses
 - Lookup: Get full address details including coordinates
 
+Validation:
+- Ireland bounds check (51.4-55.5°N, -10.7--5.4°W)
+- County boundary validation
+- Routing key distance validation (Eircodes within 5km of centroid)
+- Quality scoring (100 = perfect, 70 = acceptable minimum)
+
 Usage:
-    python3 scripts/regeocode_autoaddress.py [--apply] [--limit N] [--county COUNTY]
+    # Geocode properties flagged as needs_geocoding (from PPR sync)
+    python3 scripts/regeocode_autoaddress.py --needs-geocoding --with-eircode --apply --limit 2215
+
+    # Re-geocode centroid properties (legacy mode)
+    python3 scripts/regeocode_autoaddress.py --apply --limit 100 [--county DUBLIN]
+
+Flags:
+    --needs-geocoding    Process properties with needs_geocoding=TRUE flag
+    --with-eircode       Filter to properties with Eircodes (requires --needs-geocoding)
+    --apply              Actually update database (default is dry-run)
+    --limit N            Process at most N properties
+    --county COUNTY      Filter to specific county
 """
 
 import asyncio
@@ -141,10 +158,50 @@ class ProgressTracker:
         }
 
 
-async def geocode_autoaddress(address: str, county: str, client: httpx.AsyncClient) -> Optional[Tuple[float, float, str]]:
+async def validate_routing_key_distance(pool: asyncpg.Pool, lat: float, lon: float,
+                                        eircode: str) -> Tuple[bool, str]:
     """
-    Geocode using AutoAddress API.
-    Returns (lat, lon, eircode) or None.
+    Validate coordinates against routing key centroid.
+    Returns (is_valid, reason)
+    """
+    if not eircode or len(eircode.replace(' ', '')) < 3:
+        return True, "no_eircode"  # Can't validate without routing key
+
+    routing_key = eircode.replace(' ', '').upper()[:3]
+
+    row = await pool.fetchrow("""
+        SELECT lat, lon, property_count
+        FROM routing_key_stats
+        WHERE routing_key = $1
+    """, routing_key)
+
+    if not row or row['property_count'] < 5:
+        return True, "routing_key_too_small"  # Not enough data to validate
+
+    centroid_lat, centroid_lon = float(row['lat']), float(row['lon'])
+    lat_diff = abs(lat - centroid_lat)
+    lon_diff = abs(lon - centroid_lon)
+
+    # ~5km threshold (0.05° lat ≈ 5.5km, 0.08° lon ≈ 5.6km at Ireland latitude)
+    if lat_diff < 0.05 and lon_diff < 0.08:
+        return True, "routing_key_valid"
+    else:
+        distance_km = ((lat_diff * 111)**2 + (lon_diff * 85)**2)**0.5
+        return False, f"routing_key_distance_{distance_km:.1f}km"
+
+
+async def geocode_autoaddress(address: str, county: str, eircode: Optional[str],
+                              pool: asyncpg.Pool, client: httpx.AsyncClient) -> Optional[Tuple[float, float, str, int]]:
+    """
+    Geocode using AutoAddress API with comprehensive validation.
+    Returns (lat, lon, eircode, quality_score) or None.
+
+    Quality score:
+    - 100: Perfect (Ireland + county + routing key validated)
+    - 90: Excellent (Ireland + county validated)
+    - 80: Good (Ireland validated, no county to check)
+    - 70: Acceptable (Ireland validated, county check failed)
+    - <70: Rejected
     """
     if not AUTOADDRESS_KEY:
         return None
@@ -199,30 +256,83 @@ async def geocode_autoaddress(address: str, county: str, client: httpx.AsyncClie
         location = result.get("address", {}).get("location", {})
         lat = location.get("latitude")
         lon = location.get("longitude")
-        eircode = result.get("address", {}).get("postcode", {}).get("value", "")
+        returned_eircode = result.get("address", {}).get("postcode", {}).get("value", "")
 
-        if lat and lon:
-            lat, lon = float(lat), float(lon)
+        if not lat or not lon:
+            return None
 
-            # Validate Ireland bounding box
-            min_lat, max_lat, min_lon, max_lon = IRELAND_BBOX
-            if not (min_lat <= lat <= max_lat and min_lon <= lon <= max_lon):
-                print(f"  ⚠️  Coordinates outside Ireland: ({lat:.6f}, {lon:.6f})")
-                return None
+        lat, lon = float(lat), float(lon)
+        quality_score = 100  # Start with perfect score
 
-            # Validate county boundary
-            if county:
-                is_valid, reason = validate_county(lat, lon, county)
-                if not is_valid:
-                    print(f"  ⚠️  County validation failed: {reason}")
-                    return None
+        # Validation 1: Ireland bounding box (CRITICAL)
+        min_lat, max_lat, min_lon, max_lon = IRELAND_BBOX
+        if not (min_lat <= lat <= max_lat and min_lon <= lon <= max_lon):
+            print(f"  ⚠️  Coordinates outside Ireland: ({lat:.6f}, {lon:.6f})")
+            return None  # Hard reject
 
-            return (lat, lon, eircode.strip() if eircode else None)
+        # Validation 2: County boundary (if county provided)
+        if county:
+            is_valid, reason = validate_county(lat, lon, county)
+            if not is_valid:
+                print(f"  ⚠️  County validation failed: {reason}")
+                quality_score = 70  # Downgrade but don't reject
+
+        # Validation 3: Routing key distance (if Eircode available)
+        eircode_to_use = returned_eircode or eircode
+        if eircode_to_use:
+            is_valid, reason = await validate_routing_key_distance(pool, lat, lon, eircode_to_use)
+            if not is_valid:
+                print(f"  ⚠️  Routing key validation failed: {reason}")
+                return None  # Hard reject - Eircode geocodes must be within routing key
+            elif reason == "routing_key_valid":
+                quality_score = 100  # Perfect validation
+
+        # Return coordinates with quality score
+        return (lat, lon, returned_eircode.strip() if returned_eircode else None, quality_score)
 
     except Exception as e:
         print(f"  AutoAddress error for {query}: {e}")
 
     return None
+
+
+async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = None,
+                                             county: str = None, with_eircode: bool = False) -> list[dict]:
+    """Fetch properties flagged as needing geocoding (priority order)."""
+    print("Fetching properties needing geocoding...")
+
+    where_clauses = ["needs_geocoding = TRUE"]
+    params = []
+    idx = 1
+
+    if county:
+        where_clauses.append(f"LOWER(county) = LOWER(${idx})")
+        params.append(county)
+        idx += 1
+
+    if with_eircode:
+        where_clauses.append("eircode IS NOT NULL AND eircode != ''")
+
+    where = " AND ".join(where_clauses)
+    limit_clause = f"LIMIT {limit}" if limit else ""
+
+    query = f"""
+        SELECT id, address, county, eircode, routing_key, price, sale_date
+        FROM properties
+        WHERE {where}
+        ORDER BY
+            CASE
+                WHEN price > 500000 THEN 1
+                WHEN price > 300000 THEN 2
+                ELSE 3
+            END,
+            sale_date DESC,
+            price DESC
+        {limit_clause}
+    """
+
+    rows = await pool.fetch(query, *params)
+    return [dict(row) for row in rows]
 
 
 async def fetch_centroid_properties(pool: asyncpg.Pool, limit: int = None,
@@ -275,8 +385,18 @@ async def fetch_centroid_properties(pool: asyncpg.Pool, limit: int = None,
 
 
 async def regeocode_with_autoaddress(limit: int = None, dry_run: bool = True,
-                                     county: str = None):
-    """Re-geocode properties using AutoAddress."""
+                                     county: str = None, needs_geocoding: bool = False,
+                                     with_eircode: bool = False):
+    """
+    Re-geocode properties using AutoAddress.
+
+    Args:
+        limit: Max number of properties to process
+        dry_run: If True, don't update database
+        county: Filter to specific county
+        needs_geocoding: If True, process properties flagged as needs_geocoding
+        with_eircode: If True (with needs_geocoding), only process properties with Eircodes
+    """
     if not AUTOADDRESS_KEY:
         print("❌ AUTOADDRESS_KEY not set in backend/.env")
         print("\nGet your API key from: https://www.autoaddress.com/")
@@ -287,13 +407,22 @@ async def regeocode_with_autoaddress(limit: int = None, dry_run: bool = True,
     tracker = ProgressTracker()
 
     try:
-        properties = await fetch_centroid_properties(pool, limit=limit, county=county)
+        # Fetch properties based on mode
+        if needs_geocoding:
+            properties = await fetch_properties_needing_geocoding(
+                pool, limit=limit, county=county, with_eircode=with_eircode
+            )
+        else:
+            properties = await fetch_centroid_properties(pool, limit=limit, county=county)
 
         print(f"\n{'='*70}")
-        print(f"AUTOADDRESS RE-GEOCODING")
+        print(f"AUTOADDRESS GEOCODING")
         print(f"{'='*70}")
+        print(f"Mode: {'NEEDS GEOCODING' if needs_geocoding else 'CENTROID RE-GEOCODE'}")
+        if needs_geocoding and with_eircode:
+            print(f"Filter: Properties WITH Eircodes only")
         print(f"Properties to process: {len(properties):,}")
-        print(f"Mode: {'DRY RUN' if dry_run else 'APPLY'}")
+        print(f"Database updates: {'DRY RUN (no changes)' if dry_run else 'APPLY'}")
         print()
 
         if dry_run:
@@ -302,53 +431,64 @@ async def regeocode_with_autoaddress(limit: int = None, dry_run: bool = True,
         async with httpx.AsyncClient() as client:
             success_count = 0
             failed_count = 0
-            county_validation_rejected = 0
+            routing_key_rejected = 0
+            quality_scores = []
 
             for i, prop in enumerate(properties, 1):
                 if tracker.is_processed(prop["id"]):
                     continue
 
-                old_coords = (prop["latitude"], prop["longitude"])
+                old_coords = (prop.get("latitude"), prop.get("longitude"))
 
                 result = await geocode_autoaddress(
                     prop["address"],
                     prop["county"] or "",
+                    prop.get("eircode"),
+                    pool=pool,
                     client=client
                 )
 
                 if result:
-                    lat, lon, eircode = result
+                    lat, lon, eircode, quality_score = result
                     success_count += 1
-                    tracker.log_result(prop["id"], old_coords, (lat, lon), eircode, 'success')
+                    quality_scores.append(quality_score)
+                    tracker.log_result(prop["id"], old_coords, (lat, lon), eircode, f'success_q{quality_score}')
 
                     if not dry_run:
-                        # Update coordinates and eircode
-                        if eircode and not prop["eircode"]:
+                        # Update coordinates, eircode, and clear needs_geocoding flag
+                        if eircode and not prop.get("eircode"):
                             await pool.execute("""
                                 UPDATE properties
                                 SET latitude = $1, longitude = $2,
                                     geog = ST_MakePoint($2, $1)::geography,
-                                    eircode = $3
+                                    eircode = $3,
+                                    needs_geocoding = FALSE
                                 WHERE id = $4
                             """, lat, lon, eircode, prop["id"])
                         else:
                             await pool.execute("""
                                 UPDATE properties
                                 SET latitude = $1, longitude = $2,
-                                    geog = ST_MakePoint($2, $1)::geography
+                                    geog = ST_MakePoint($2, $1)::geography,
+                                    needs_geocoding = FALSE
                                 WHERE id = $3
                             """, lat, lon, prop["id"])
 
                     if i <= 10 or i % 20 == 0:
                         eircode_str = f"| Eircode: {eircode}" if eircode else ""
+                        old_str = f"{old_coords[0]:.6f},{old_coords[1]:.6f} → " if old_coords[0] else ""
                         print(f"  ✓ [{i}/{len(properties)}] {prop['address'][:50]}")
-                        print(f"    {old_coords[0]:.6f},{old_coords[1]:.6f} → {lat:.6f},{lon:.6f} {eircode_str}")
+                        print(f"    {old_str}{lat:.6f},{lon:.6f} | Q:{quality_score} {eircode_str}")
                 else:
                     failed_count += 1
-                    tracker.log_result(prop["id"], old_coords, None, None, 'failed', 'No result from AutoAddress')
+                    # Check if it was routing key rejection
+                    if "routing_key" in str(tracker):
+                        routing_key_rejected += 1
+                    tracker.log_result(prop["id"], old_coords, None, None, 'failed', 'Validation failed or no result')
 
                 if i % 50 == 0:
-                    print(f"\nProgress: {i}/{len(properties)} | Success: {success_count} | Failed: {failed_count}\n")
+                    avg_quality = sum(quality_scores) / len(quality_scores) if quality_scores else 0
+                    print(f"\nProgress: {i}/{len(properties)} | Success: {success_count} | Failed: {failed_count} | Avg Quality: {avg_quality:.1f}\n")
 
         print(f"\n{'='*70}")
         print(f"COMPLETE")
@@ -356,10 +496,20 @@ async def regeocode_with_autoaddress(limit: int = None, dry_run: bool = True,
         print(f"Processed: {i:,}")
         print(f"✓ Success: {success_count:,} ({100*success_count/i:.1f}%)")
         print(f"✗ Failed: {failed_count:,}")
+        if routing_key_rejected > 0:
+            print(f"⚠️  Routing key rejected: {routing_key_rejected:,}")
+
+        if quality_scores:
+            avg_quality = sum(quality_scores) / len(quality_scores)
+            print(f"\nQuality Score Average: {avg_quality:.1f}/100")
+            print(f"  Perfect (100): {sum(1 for q in quality_scores if q == 100)} properties")
+            print(f"  Excellent (90-99): {sum(1 for q in quality_scores if 90 <= q < 100)} properties")
+            print(f"  Good (80-89): {sum(1 for q in quality_scores if 80 <= q < 90)} properties")
+            print(f"  Acceptable (70-79): {sum(1 for q in quality_scores if 70 <= q < 80)} properties")
 
         stats = tracker.get_stats()
         if stats['county_validation_rejected'] > 0:
-            print(f"⚠️  County validation rejected: {stats['county_validation_rejected']:,}")
+            print(f"⚠️  County validation issues: {stats['county_validation_rejected']:,}")
 
         if dry_run:
             print(f"\n⚠️  DRY RUN - No changes made. Run with --apply to commit.")
@@ -370,6 +520,8 @@ async def regeocode_with_autoaddress(limit: int = None, dry_run: bool = True,
 
 async def main():
     dry_run = "--apply" not in sys.argv
+    needs_geocoding = "--needs-geocoding" in sys.argv
+    with_eircode = "--with-eircode" in sys.argv
     limit = None
     county = None
 
@@ -379,7 +531,13 @@ async def main():
         elif arg == "--county" and i + 1 < len(sys.argv):
             county = sys.argv[i + 1]
 
-    await regeocode_with_autoaddress(limit=limit, dry_run=dry_run, county=county)
+    await regeocode_with_autoaddress(
+        limit=limit,
+        dry_run=dry_run,
+        county=county,
+        needs_geocoding=needs_geocoding,
+        with_eircode=with_eircode
+    )
 
 
 if __name__ == "__main__":
