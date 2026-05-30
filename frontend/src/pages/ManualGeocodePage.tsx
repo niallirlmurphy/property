@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, useMapEvents, useMap } from "react-lea
 import L from "leaflet";
 import { fetchNextPropertyToGeocode, updatePropertyGeocode, skipPropertyGeocode } from "../api";
 import type { Property } from "../types";
+import { usePageMeta } from "../hooks/usePageMeta";
 import "leaflet/dist/leaflet.css";
 import "../index.css";
 
@@ -46,6 +47,12 @@ function MapCenterUpdater({ center }: MapCenterUpdaterProps) {
 }
 
 export default function ManualGeocodePage() {
+  // SEO meta tags
+  usePageMeta(
+    "Manual Geocoding Tool",
+    "Internal tool for manually geocoding Irish properties. Click on the map to assign coordinates to properties in the geocoding queue."
+  );
+
   const [property, setProperty] = useState<Property | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

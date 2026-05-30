@@ -6,6 +6,7 @@ import "leaflet-draw/dist/leaflet.draw.css";
 import "leaflet-draw";
 import WaffleMenu from "../components/WaffleMenu";
 import PageHeader from "../components/PageHeader";
+import { usePageMeta } from "../hooks/usePageMeta";
 import type { Property } from "../types";
 
 // Fix Leaflet icon paths
@@ -320,6 +321,12 @@ export default function PolygonSearchPage() {
   const [loading, setLoading] = useState(false);
   const [activeProperty, setActiveProperty] = useState<Property | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  // SEO meta tags
+  usePageMeta(
+    "Map Based Property Search | Ireland Property Prices",
+    "Interactive map search for residential property sales in Ireland. Draw custom search areas to find properties sold in specific locations. View property prices, sale dates, and trends from Ireland's Property Price Register."
+  );
 
   const handleRegionSelect = (region: string) => {
     setSelectedRegion(region);

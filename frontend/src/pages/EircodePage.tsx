@@ -5,6 +5,7 @@ import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
 import type { EircodeResponse, TrendPoint } from "../types";
 import { DUBLIN_EIRCODE_AREAS } from "../areas";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -15,6 +16,12 @@ export default function EircodePage() {
   const { code } = useParams<{ code: string }>();
   const upperCode = code?.toUpperCase() ?? "";
   const friendlyName = DUBLIN_EIRCODE_AREAS[upperCode] ?? upperCode;
+
+  // SEO meta tags
+  usePageMeta(
+    `${friendlyName} Property Prices (${upperCode})`,
+    `View all residential property sales in ${friendlyName} (${upperCode} Eircode area). Browse recent transactions, median prices, and price trends from Ireland's Property Price Register.`
+  );
 
   const [data, setData] = useState<EircodeResponse | null>(null);
   const [trends, setTrends] = useState<TrendPoint[]>([]);

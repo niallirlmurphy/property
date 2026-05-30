@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 function formatPrice(n: number) {
   return "€" + Math.round(n).toLocaleString("en-IE");
@@ -47,6 +48,12 @@ const MOST_AFFORDABLE = [...POSTCODE_DATA].sort((a, b) => a.medianPrice - b.medi
 const MOST_ACTIVE = [...POSTCODE_DATA].sort((a, b) => b.txCount - a.txCount)[0];
 
 export default function DublinCountyPage() {
+  // SEO meta tags
+  usePageMeta(
+    "Dublin Property Prices by Postcode",
+    "Explore property prices across Dublin's 22 postcodes. View median prices, transaction volumes, and trends from Ireland's Property Price Register. Updated 2025 data for all Dublin areas."
+  );
+
   return (
     <>
       <PageHeader title="Property Prices in County Dublin" />

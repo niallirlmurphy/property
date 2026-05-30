@@ -11,6 +11,7 @@ import EmailAlertModal from "./components/EmailAlertModal";
 import type { Property, SearchResponse, TrendPoint, SearchParams, EircodeResponse } from "./types";
 import WaffleMenu from "./components/WaffleMenu";
 import ContactSidebar from "./components/ContactModals";
+import { usePageMeta } from "./hooks/usePageMeta";
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -94,6 +95,9 @@ type MobileTab = "map" | "list" | "trends";
 
 export default function App() {
   const [searchParams, setSearchParams] = useSearchParams();
+
+  // SEO meta tags for home page
+  usePageMeta();
 
   const [counties, setCounties] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
