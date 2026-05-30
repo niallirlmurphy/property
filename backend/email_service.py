@@ -38,10 +38,11 @@ def send_confirmation_email(
     address: str,
     radius_km: float,
     county: Optional[str],
-    unsubscribe_token: str
+    unsubscribe_token: str,
+    properties: Optional[List[Dict[str, Any]]] = None
 ) -> bool:
     """
-    Send subscription confirmation email.
+    Send subscription confirmation email with recent matching properties.
 
     Args:
         email: Recipient email address
@@ -49,22 +50,47 @@ def send_confirmation_email(
         radius_km: Search radius in km
         county: Optional county filter
         unsubscribe_token: Token for unsubscribe link
+        properties: Optional list of recent properties (up to 10)
 
     Returns:
         True if email sent successfully, False otherwise
     """
     try:
+        # Format properties for template (limit to 10)
+        formatted_properties = []
+        if properties:
+            for prop in properties[:10]:
+                formatted_properties.append({
+                    "id": prop.get("id"),
+                    "property_address": prop.get("address", ""),
+                    "price_formatted": f"{int(prop.get('price', 0)):,}",
+                    "sale_date": prop.get("sale_date", ""),
+                    "county": prop.get("county", ""),
+                    "address_encoded": quote(address),
+                    "radius_km": radius_km,
+                })
+
         context = {
             "address": address,
             "radius_km": radius_km,
             "county": county if county else None,
             "address_encoded": quote(address),
             "unsubscribe_token": unsubscribe_token,
+            "has_properties": len(formatted_properties) > 0,
+            "properties": formatted_properties,
+            "property_count": len(formatted_properties),
         }
 
         html_content = _render_template("confirmation", context)
 
         # Plain text fallback
+        property_lines = []
+        if properties:
+            for prop in properties[:10]:
+                property_lines.append(f"€{int(prop.get('price', 0)):,} - {prop.get('address', '')}")
+                property_lines.append(f"  Sold: {prop.get('sale_date', '')}")
+                property_lines.append("")
+
         plain_text = f"""
 HomeIQ - Subscription Confirmed
 
@@ -75,6 +101,8 @@ Radius: {radius_km} km
 {f'County: {county}' if county else ''}
 
 You'll receive monthly email alerts when new properties matching your criteria are added to the Property Price Register.
+
+{f'Recent properties in this area:{chr(10)}{chr(10)}{chr(10).join(property_lines)}' if property_lines else ''}
 
 View current properties: https://homeiq.ie/?q={quote(address)}&radius_km={radius_km}
 

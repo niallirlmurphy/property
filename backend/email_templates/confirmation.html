@@ -48,12 +48,41 @@
                                 You'll receive monthly email alerts when new properties matching your criteria are added to the Property Price Register.
                             </p>
 
+                            <!-- Recent Properties Section -->
+                            {{#has_properties}}
+                            <h3 style="margin: 0 0 20px 0; color: #1a3c5e; font-size: 20px; font-weight: 600; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px;">
+                                Recent Properties ({{property_count}})
+                            </h3>
+
+                            {{#properties}}
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 20px 0; padding-bottom: 20px; border-bottom: 1px solid #e5e7eb;">
+                                <tr>
+                                    <td>
+                                        <h4 style="margin: 0 0 8px 0; color: #1a3c5e; font-size: 20px; font-weight: 700;">
+                                            €{{price_formatted}}
+                                        </h4>
+                                        <p style="margin: 0 0 6px 0; color: #333; font-size: 15px; line-height: 1.4;">
+                                            {{property_address}}
+                                        </p>
+                                        <p style="margin: 0 0 12px 0; color: #666; font-size: 14px;">
+                                            Sold: {{sale_date}} {{#county}}• {{county}}{{/county}}
+                                        </p>
+                                        <a href="https://homeiq.ie/?q={{address_encoded}}&radius_km={{radius_km}}&highlight={{id}}"
+                                           style="display: inline-block; padding: 8px 16px; background-color: #f8f9fa; color: #1a3c5e; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; border: 1px solid #e5e7eb;">
+                                            View on Map →
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            {{/properties}}
+                            {{/has_properties}}
+
                             <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                     <td align="center" style="padding: 20px 0;">
                                         <a href="https://homeiq.ie/?q={{address_encoded}}&radius_km={{radius_km}}"
                                            style="display: inline-block; padding: 14px 28px; background-color: #1a3c5e; color: #ffffff; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600;">
-                                            View Current Properties
+                                            View All Properties
                                         </a>
                                     </td>
                                 </tr>

@@ -1475,6 +1475,53 @@ async def subscribe_email_alert(
             unsubscribe_token = row['unsubscribe_token']
             logger.info(f"Created new email alert subscription for {subscription.email}")
 
+        # Fetch recent properties to include in confirmation email
+        recent_properties = []
+        try:
+            # Geocode the address to get lat/lon
+            geocode_result = await db_pool.fetchrow("""
+                SELECT latitude, longitude
+                FROM properties
+                WHERE address ILIKE $1 || '%'
+                  AND latitude IS NOT NULL
+                LIMIT 1
+            """, subscription.address)
+
+            if geocode_result and geocode_result['latitude']:
+                lat = geocode_result['latitude']
+                lon = geocode_result['longitude']
+
+                # Find recent 10 properties matching criteria
+                query = """
+                    SELECT id, address, price, sale_date, county
+                    FROM properties
+                    WHERE geog IS NOT NULL
+                      AND ST_DWithin(geog, ST_MakePoint($1, $2)::geography, $3 * 1000)
+                      AND not_full_market_price = FALSE
+                """
+                params = [lon, lat, subscription.radius_km]
+
+                if subscription.county:
+                    query += " AND county = $4"
+                    params.append(subscription.county)
+
+                query += " ORDER BY sale_date DESC LIMIT 10"
+
+                rows = await db_pool.fetch(query, *params)
+
+                for row in rows:
+                    recent_properties.append({
+                        "id": row['id'],
+                        "address": row['address'],
+                        "price": float(row['price']) if row['price'] else 0,
+                        "sale_date": row['sale_date'].strftime("%Y-%m-%d") if row['sale_date'] else "",
+                        "county": row['county'] or "",
+                    })
+
+        except Exception as geocode_error:
+            logger.warning(f"Could not fetch recent properties for confirmation email: {geocode_error}")
+            # Continue without properties
+
         # Send confirmation email (async, don't block on failure)
         try:
             send_confirmation_email(
@@ -1482,7 +1529,8 @@ async def subscribe_email_alert(
                 address=subscription.address,
                 radius_km=subscription.radius_km,
                 county=subscription.county,
-                unsubscribe_token=unsubscribe_token
+                unsubscribe_token=unsubscribe_token,
+                properties=recent_properties
             )
         except Exception as email_error:
             logger.error(f"Failed to send confirmation email (subscription still active): {email_error}")
