@@ -252,6 +252,21 @@ Tests include:
 - ⚠️ Database security test requires DATABASE_URL (expected for local run)
 
 ## Deploying
+
+**Domain & DNS**
+- **Domain:** homeiq.ie
+- **Registrar:** Letshost.ie (Team Blue Internet Services IE Ltd)
+- **DNS Management:** https://www.letshost.ie (client login required)
+- **Nameservers:** Irish domain registry (.ie TLD servers)
+- **Current Setup:** Domain points to Vercel edge network
+
+To modify DNS records (TXT for verification, A/CNAME for routing):
+1. Log in to https://www.letshost.ie
+2. Navigate to Domain Management → homeiq.ie
+3. Access DNS Settings/Records section
+4. Add/modify records as needed
+5. DNS propagation typically takes 5-15 minutes
+
 **Database (Supabase/Postgres)**
 1. Create project/instance and copy connection string.
 2. `DATABASE_URL=<url> python3 db/import.py` — runs `schema.sql` then bulk-imports.
@@ -270,6 +285,7 @@ Tests include:
 - Connect the `frontend/` directory to a Vercel project.
 - Set `VITE_API_URL` to the backend URL.
 - `vercel.json` handles SPA routing.
+- Auto-deploys on push to main branch.
 
 ## Architecture notes
 

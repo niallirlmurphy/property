@@ -2,9 +2,17 @@
 
 ## Current Situation
 - **Live Site:** https://homeiq.ie
+- **Domain Registrar:** Letshost.ie (https://www.letshost.ie)
+- **Hosting:** Vercel (frontend), Railway (backend)
 - **Traffic:** Very low (newly launched)
 - **Competition:** PropertyPrice.ie, MyHome.ie, Daft.ie (partial PPR data)
 - **Unique Value:** Complete PPR dataset, map-based search, free access, no ads
+
+## Infrastructure Access
+- **DNS Management:** https://www.letshost.ie (client login)
+- **Frontend Deploy:** Vercel dashboard (auto-deploy on git push)
+- **Backend Deploy:** Railway dashboard
+- **Database:** Supabase dashboard
 
 ## Immediate Actions (Week 1)
 
