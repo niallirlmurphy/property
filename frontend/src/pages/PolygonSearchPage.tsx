@@ -270,14 +270,14 @@ export default function PolygonSearchPage() {
   };
 
   return (
-    <div className="h-screen flex flex-col">
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
       <PageHeader title="Map Search" />
 
-      <div className="flex-1 relative">
+      <div style={{ flex: 1, position: 'relative', minHeight: 0 }}>
         <MapContainer
           center={[53.3498, -6.2603]}
           zoom={7}
-          style={{ height: '100%', width: '100%' }}
+          style={{ height: '100%', width: '100%', position: 'absolute' }}
           zoomControl={false}
         >
           <TileLayer
