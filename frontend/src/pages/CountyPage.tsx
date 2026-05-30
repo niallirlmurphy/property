@@ -8,6 +8,10 @@ import type { CountySummary } from "../types";
 import { countyFromSlug } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { getCountyContent } from "../content/counties";
+import {
+  getCachedCountyData,
+  setCachedCountyData,
+} from "../utils/countyDataCache";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -33,12 +37,24 @@ export default function CountyPage() {
 
   useEffect(() => {
     if (!county) return;
-    setLoading(true);
-    fetchCountySummary(county)
-      .then(setData)
-      .catch(e => setError(e.message))
-      .finally(() => setLoading(false));
-  }, [slug]);
+
+    // Try cache first
+    const cached = getCachedCountyData(county);
+
+    if (cached) {
+      setData(cached);
+      setLoading(false);
+    } else {
+      setLoading(true);
+      fetchCountySummary(county)
+        .then((freshData) => {
+          setData(freshData);
+          setCachedCountyData(county, freshData);
+        })
+        .catch((e) => setError(e.message))
+        .finally(() => setLoading(false));
+    }
+  }, [county, slug]);
 
   if (!county) return (
     <>

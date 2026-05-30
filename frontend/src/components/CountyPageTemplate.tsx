@@ -6,6 +6,10 @@ import PageHeader from "./PageHeader";
 import type { CountySummary } from "../types";
 import type { CountyContent } from "../content/countyData";
 import { usePageMeta } from "../hooks/usePageMeta";
+import {
+  getCachedCountyData,
+  setCachedCountyData,
+} from "../utils/countyDataCache";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -20,16 +24,34 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
   const [data, setData] = useState<CountySummary | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [usingCache, setUsingCache] = useState(false);
 
   // SEO meta tags
   usePageMeta(content.metaTitle, content.metaDescription);
 
   useEffect(() => {
-    setLoading(true);
-    fetchCountySummary(content.name)
-      .then(setData)
-      .catch(e => setError(e.message))
-      .finally(() => setLoading(false));
+    // Try to get cached data first
+    const cached = getCachedCountyData(content.name);
+
+    if (cached) {
+      // Use cached data immediately
+      setData(cached);
+      setLoading(false);
+      setUsingCache(true);
+    } else {
+      // No cache or expired - fetch from API
+      setLoading(true);
+      setUsingCache(false);
+
+      fetchCountySummary(content.name)
+        .then((freshData) => {
+          setData(freshData);
+          // Save to cache for next time
+          setCachedCountyData(content.name, freshData);
+        })
+        .catch((e) => setError(e.message))
+        .finally(() => setLoading(false));
+    }
   }, [content.name]);
 
   const latestTrend = data?.trends[data.trends.length - 1];
