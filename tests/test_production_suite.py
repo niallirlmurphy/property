@@ -353,6 +353,58 @@ async def test_performance(client: httpx.AsyncClient, results: TestResults):
             results.add_fail(f"Performance: {name}", str(e))
 
 
+async def test_database_statistics(results: TestResults):
+    """Track database statistics: email signups, feedback, contact messages."""
+    import os
+    import asyncpg
+
+    DATABASE_URL = os.environ.get("DATABASE_URL")
+    if not DATABASE_URL:
+        results.add_fail("Database statistics", "DATABASE_URL not set")
+        return
+
+    try:
+        conn = await asyncpg.connect(DATABASE_URL, timeout=10.0)
+
+        # Email alert subscriptions
+        try:
+            email_count = await conn.fetchval("""
+                SELECT COUNT(*) FROM email_alerts WHERE is_active = TRUE
+            """)
+            results.add_pass("Email alert subscriptions",
+                           f"{email_count:,} active subscriptions")
+        except Exception:
+            results.add_warning("Email alert subscriptions",
+                              "Table not found (run db/email_alerts.sql)")
+
+        # Feedback submissions
+        try:
+            feedback_count = await conn.fetchval("""
+                SELECT COUNT(*) FROM submissions WHERE form_type = 'feedback'
+            """)
+            results.add_pass("Feedback submissions",
+                           f"{feedback_count:,} total submissions")
+        except Exception:
+            results.add_warning("Feedback submissions",
+                              "Table not found")
+
+        # Contact submissions
+        try:
+            contact_count = await conn.fetchval("""
+                SELECT COUNT(*) FROM submissions WHERE form_type = 'contact'
+            """)
+            results.add_pass("Contact submissions",
+                           f"{contact_count:,} total messages")
+        except Exception:
+            results.add_warning("Contact submissions",
+                              "Table not found")
+
+        await conn.close()
+
+    except Exception as e:
+        results.add_fail("Database statistics", str(e))
+
+
 async def test_database_security(results: TestResults):
     """Test database security configuration (RLS, policies, etc)."""
     import os
@@ -510,8 +562,12 @@ async def run_all_tests():
     results = TestResults()
 
     async with httpx.AsyncClient() as client:
+        # Database statistics (informational)
+        print("Database Statistics:")
+        await test_database_statistics(results)
+
         # Security tests (most important)
-        print("Security:")
+        print("\nSecurity:")
         await test_database_security(results)
         await test_api_security(client, results)
 
