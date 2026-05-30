@@ -50,6 +50,11 @@ frontend/
       SearchPanel.tsx   # Address input, radius selector, optional filters
       ResultsList.tsx   # Scrollable sidebar list of results
       TrendsChart.tsx   # Recharts median/avg price by year overlay
+    pages/
+      PolygonSearchPage.tsx  # Map-based search with drawing tools (polygon, rectangle, circle)
+      CountyPage.tsx         # County overview pages
+      AreaPage.tsx           # Area-specific pages
+      [other pages...]
   vite.config.ts        # Dev proxy: /api → localhost:8000
   vercel.json           # SPA rewrite rule for Vercel
 
@@ -191,6 +196,36 @@ After frontend starts:
 - Change radius and verify result count changes.
 - Open trends chart and confirm yearly series updates.
 
+### Polygon search page
+Interactive map-based search at `/polygon`:
+```bash
+# Navigate to http://localhost:5173/polygon
+```
+
+Features to test:
+- Draw polygon, rectangle, or circle on map
+- Select region from dropdown (counties or Dublin postcodes)
+- Verify results panel shows properties within drawn shape
+- Confirm circle searches convert to radius-based queries
+- Test delete tool removes shapes and clears results
+
+**Backend endpoint:**
+```bash
+# Test polygon search API directly
+curl -X POST http://localhost:8000/search/polygon \
+  -H "Content-Type: application/json" \
+  -d '{
+    "coordinates": [
+      [53.35, -6.26],
+      [53.35, -6.25],
+      [53.34, -6.25],
+      [53.34, -6.26],
+      [53.35, -6.26]
+    ],
+    "limit": 100
+  }'
+```
+
 ### Production test suite
 Comprehensive test suite for production deployment (frontend + backend):
 ```bash
@@ -253,6 +288,7 @@ Tests include:
 
 ### Search & Performance
 - **Radius search**: `ST_DWithin(geom::geography, ...)` on GIST-indexed PostGIS geometry column. Results ordered by `ST_Distance` ascending. Auto-expands radius (2x, 3x, 5x, 10x up to 20km) if fewer than 5 results found.
+- **Polygon search** (New): `ST_Within(geom::geometry, polygon)` for map-based area selection. Supports drawing tools (polygon, rectangle, circle) at `/polygon`. Accepts custom polygon coordinates via `POST /search/polygon`. Up to 1,000 properties per query.
 - **Geocoding at search time**: Backend calls Nominatim (`NOMINATIM_URL`) to resolve user queries to (lat, lon). Supports addresses, Eircodes, and coordinate pairs.
 - **Trends query**: Uses `PERCENTILE_CONT(0.5)` for median price, filtered to `not_full_market_price = FALSE`.
 - **Caching**: In-memory TTL cache for counties (1h), trends (1h), Eircodes (1h), geocode results (24h), search results (5min).
@@ -267,8 +303,12 @@ Tests include:
   - Best coverage: 2022-2024 (89-91% geocoded)
   - Recent: 2025-2026 (77-81% geocoded)
   - Eircode coverage: 29.7% overall (74-79% for 2022+ sales)
+  - Spatial indexes: GIST index on `geog` geography column for fast radius/polygon queries
 - **Backend**: FastAPI on Railway (https://eloquent-optimism-production-350a.up.railway.app).
+  - Endpoints: `/search` (radius), `/search/polygon` (spatial), `/trends`, `/counties`, `/eircode`, `/geocode`
 - **Frontend**: React + TypeScript on Vercel (https://homeiq.ie).
+  - Pages: Home (text search), `/polygon` (map search), `/county/:slug`, `/area/:slug`, `/eircode/:code`
+  - Map library: Leaflet 1.9.4 with Leaflet Draw for drawing tools
 - **Geocoding API**: Mapbox (~100k/100k requests used this month, resets next month). Reserve 2k/month for biweekly PPR sync.
 
 ## Troubleshooting
