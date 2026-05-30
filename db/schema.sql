@@ -66,3 +66,21 @@ CREATE INDEX IF NOT EXISTS search_log_ts_idx ON search_log (ts DESC);
 CREATE INDEX IF NOT EXISTS search_log_query_idx ON search_log (query);
 CREATE INDEX IF NOT EXISTS search_log_result_count_idx ON search_log (result_count) WHERE result_count = 0;
 
+-- Email alerts for property notifications
+CREATE TABLE IF NOT EXISTS email_alerts (
+    id            BIGSERIAL PRIMARY KEY,
+    email         TEXT NOT NULL,
+    address       TEXT NOT NULL,
+    radius_km     DOUBLE PRECISION NOT NULL DEFAULT 2.0,
+    county        TEXT,
+    is_active     BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    last_sent_at  TIMESTAMPTZ,
+    unsubscribe_token TEXT UNIQUE DEFAULT gen_random_uuid()::TEXT
+);
+
+-- Index for active subscriptions
+CREATE INDEX IF NOT EXISTS email_alerts_active_idx ON email_alerts (is_active, email);
+CREATE INDEX IF NOT EXISTS email_alerts_email_idx ON email_alerts (email);
+CREATE INDEX IF NOT EXISTS email_alerts_token_idx ON email_alerts (unsubscribe_token);
+

@@ -1407,7 +1407,6 @@ class EmailAlertSubscription(BaseModel):
     address: str = Field(..., max_length=500)
     radius_km: float = Field(2.0, ge=0.5, le=20.0)
     county: Optional[str] = Field(None, max_length=100)
-    min_year: Optional[int] = None
 
     @field_validator('email')
     @classmethod
@@ -1445,11 +1444,9 @@ async def subscribe_email_alert(
                     UPDATE email_alerts
                     SET radius_km = $1,
                         county = $2,
-                        min_year = $3,
                         created_at = CURRENT_TIMESTAMP
-                    WHERE id = $4
-                """, subscription.radius_km, subscription.county,
-                     subscription.min_year, existing['id'])
+                    WHERE id = $3
+                """, subscription.radius_km, subscription.county, existing['id'])
                 logger.info(f"Updated email alert subscription for {subscription.email}")
             else:
                 # Reactivate inactive subscription
@@ -1458,19 +1455,17 @@ async def subscribe_email_alert(
                     SET is_active = TRUE,
                         radius_km = $1,
                         county = $2,
-                        min_year = $3,
                         created_at = CURRENT_TIMESTAMP
-                    WHERE id = $4
-                """, subscription.radius_km, subscription.county,
-                     subscription.min_year, existing['id'])
+                    WHERE id = $3
+                """, subscription.radius_km, subscription.county, existing['id'])
                 logger.info(f"Reactivated email alert subscription for {subscription.email}")
         else:
             # Create new subscription
             await db_pool.execute("""
-                INSERT INTO email_alerts (email, address, radius_km, county, min_year)
-                VALUES ($1, $2, $3, $4, $5)
+                INSERT INTO email_alerts (email, address, radius_km, county)
+                VALUES ($1, $2, $3, $4)
             """, subscription.email, subscription.address, subscription.radius_km,
-                 subscription.county, subscription.min_year)
+                 subscription.county)
             logger.info(f"Created new email alert subscription for {subscription.email}")
 
         return {
@@ -1522,8 +1517,8 @@ async def get_active_email_alerts(request: Request):
     _rate_limit_check(request, 10, "email_alerts_active")
 
     rows = await db_pool.fetch("""
-        SELECT id, email, address, radius_km, county, min_year,
-               created_at, last_email_sent_at, unsubscribe_token
+        SELECT id, email, address, radius_km, county,
+               created_at, last_sent_at, unsubscribe_token
         FROM email_alerts
         WHERE is_active = TRUE
         ORDER BY created_at DESC

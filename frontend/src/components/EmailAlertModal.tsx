@@ -5,43 +5,37 @@ interface Props {
   onClose: () => void;
   defaultAddress?: string;
   defaultRadius?: number;
-  defaultPeriod?: number;
   defaultCounty?: string;
   counties: string[];
 }
-
-const PERIOD_OPTIONS = [
-  { label: "All time", minYear: undefined },
-  { label: "Previous 10 years", minYear: new Date().getFullYear() - 10 },
-  { label: "Previous 5 years", minYear: new Date().getFullYear() - 5 },
-  { label: "Previous 2 years", minYear: new Date().getFullYear() - 2 },
-];
 
 export default function EmailAlertModal({
   isOpen,
   onClose,
   defaultAddress = "",
   defaultRadius = 2,
-  defaultPeriod = 2,
   defaultCounty = "Dublin",
   counties,
 }: Props) {
   const [address, setAddress] = useState(defaultAddress);
   const [radius, setRadius] = useState(defaultRadius);
-  const [period, setPeriod] = useState(defaultPeriod);
   const [county, setCounty] = useState(defaultCounty);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [validationErrors, setValidationErrors] = useState<{
+    address?: string;
+    radius?: string;
+    email?: string;
+  }>({});
 
   // Update form when defaults change (when user fills search and opens modal)
   useEffect(() => {
     setAddress(defaultAddress);
     setRadius(defaultRadius);
-    setPeriod(defaultPeriod);
     setCounty(defaultCounty);
-  }, [defaultAddress, defaultRadius, defaultPeriod, defaultCounty, isOpen]);
+  }, [defaultAddress, defaultRadius, defaultCounty, isOpen]);
 
   // Reset state when modal closes
   useEffect(() => {
@@ -49,13 +43,44 @@ export default function EmailAlertModal({
       setSuccess(false);
       setError(null);
       setEmail("");
+      setValidationErrors({});
     }
   }, [isOpen]);
 
+  const validateForm = (): boolean => {
+    const errors: typeof validationErrors = {};
+
+    // Validate address (minimum 3 characters)
+    if (!address || address.trim().length < 3) {
+      errors.address = "Please enter an address or area (minimum 3 characters)";
+    }
+
+    // Validate radius (must be positive number)
+    if (!radius || radius <= 0 || radius > 20) {
+      errors.radius = "Radius must be between 0.5 and 20 km";
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      errors.email = "Please enter a valid email address";
+    }
+
+    setValidationErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
     setError(null);
+    setValidationErrors({});
+
+    // Validate form before submitting
+    if (!validateForm()) {
+      return;
+    }
+
+    setLoading(true);
 
     try {
       const BASE = import.meta.env.VITE_API_URL ?? "/api";
@@ -63,17 +88,16 @@ export default function EmailAlertModal({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email,
-          address,
+          email: email.trim(),
+          address: address.trim(),
           radius_km: radius,
-          min_year: PERIOD_OPTIONS[period].minYear,
           county: county || undefined,
         }),
       });
 
       if (!response.ok) {
         const data = await response.json().catch(() => ({}));
-        throw new Error(data.detail || "Failed to subscribe");
+        throw new Error(data.detail || `Failed to subscribe (${response.status})`);
       }
 
       setSuccess(true);
@@ -81,7 +105,8 @@ export default function EmailAlertModal({
         onClose();
       }, 2000);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to subscribe");
+      console.error("Email alert subscription error:", err);
+      setError(err instanceof Error ? err.message : "Failed to subscribe. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -156,17 +181,24 @@ export default function EmailAlertModal({
               <input
                 type="text"
                 value={address}
-                onChange={(e) => setAddress(e.target.value)}
+                onChange={(e) => {
+                  setAddress(e.target.value);
+                  setValidationErrors((prev) => ({ ...prev, address: undefined }));
+                }}
                 placeholder="e.g. D14, Rathmines, Dublin 2"
-                required
                 style={{
                   width: "100%",
                   padding: "0.5rem",
-                  border: "1px solid #ddd",
+                  border: validationErrors.address ? "1px solid #ef4444" : "1px solid #ddd",
                   borderRadius: "4px",
                   fontSize: "1rem",
                 }}
               />
+              {validationErrors.address && (
+                <div style={{ marginTop: "0.25rem", fontSize: "0.85rem", color: "#ef4444" }}>
+                  {validationErrors.address}
+                </div>
+              )}
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1rem" }}>
@@ -176,11 +208,14 @@ export default function EmailAlertModal({
                 </label>
                 <select
                   value={radius}
-                  onChange={(e) => setRadius(Number(e.target.value))}
+                  onChange={(e) => {
+                    setRadius(Number(e.target.value));
+                    setValidationErrors((prev) => ({ ...prev, radius: undefined }));
+                  }}
                   style={{
                     width: "100%",
                     padding: "0.5rem",
-                    border: "1px solid #ddd",
+                    border: validationErrors.radius ? "1px solid #ef4444" : "1px solid #ddd",
                     borderRadius: "4px",
                     fontSize: "1rem",
                   }}
@@ -191,15 +226,20 @@ export default function EmailAlertModal({
                   <option value={5}>5 km</option>
                   <option value={10}>10 km</option>
                 </select>
+                {validationErrors.radius && (
+                  <div style={{ marginTop: "0.25rem", fontSize: "0.85rem", color: "#ef4444" }}>
+                    {validationErrors.radius}
+                  </div>
+                )}
               </div>
 
               <div>
                 <label style={{ display: "block", marginBottom: "0.5rem", fontWeight: 500 }}>
-                  Period
+                  County
                 </label>
                 <select
-                  value={period}
-                  onChange={(e) => setPeriod(Number(e.target.value))}
+                  value={county}
+                  onChange={(e) => setCounty(e.target.value)}
                   style={{
                     width: "100%",
                     padding: "0.5rem",
@@ -208,37 +248,14 @@ export default function EmailAlertModal({
                     fontSize: "1rem",
                   }}
                 >
-                  {PERIOD_OPTIONS.map((opt, i) => (
-                    <option key={i} value={i}>
-                      {opt.label}
+                  <option value="">All counties</option>
+                  {counties.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
                     </option>
                   ))}
                 </select>
               </div>
-            </div>
-
-            <div style={{ marginBottom: "1rem" }}>
-              <label style={{ display: "block", marginBottom: "0.5rem", fontWeight: 500 }}>
-                County
-              </label>
-              <select
-                value={county}
-                onChange={(e) => setCounty(e.target.value)}
-                style={{
-                  width: "100%",
-                  padding: "0.5rem",
-                  border: "1px solid #ddd",
-                  borderRadius: "4px",
-                  fontSize: "1rem",
-                }}
-              >
-                <option value="">All counties</option>
-                {counties.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
-                  </option>
-                ))}
-              </select>
             </div>
 
             <div style={{ marginBottom: "1.5rem" }}>
@@ -248,17 +265,24 @@ export default function EmailAlertModal({
               <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setValidationErrors((prev) => ({ ...prev, email: undefined }));
+                }}
                 placeholder="your.email@example.com"
-                required
                 style={{
                   width: "100%",
                   padding: "0.5rem",
-                  border: "1px solid #ddd",
+                  border: validationErrors.email ? "1px solid #ef4444" : "1px solid #ddd",
                   borderRadius: "4px",
                   fontSize: "1rem",
                 }}
               />
+              {validationErrors.email && (
+                <div style={{ marginTop: "0.25rem", fontSize: "0.85rem", color: "#ef4444" }}>
+                  {validationErrors.email}
+                </div>
+              )}
             </div>
 
             <button

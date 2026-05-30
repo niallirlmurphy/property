@@ -378,7 +378,6 @@ export default function App() {
         onClose={() => setEmailAlertOpen(false)}
         defaultAddress={lastSearchParams?.q || urlQ}
         defaultRadius={lastSearchParams?.radius_km || urlRadius}
-        defaultPeriod={lastSearchParams?.min_year ? (new Date().getFullYear() - lastSearchParams.min_year === 2 ? 2 : 1) : 0}
         defaultCounty={lastSearchParams?.county || urlCounty}
         counties={counties}
       />
