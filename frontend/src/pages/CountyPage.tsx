@@ -3,9 +3,11 @@ import { useParams, Link } from "react-router-dom";
 import { fetchCountySummary } from "../api";
 import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
+import CountyPageTemplate from "../components/CountyPageTemplate";
 import type { CountySummary } from "../types";
 import { countyFromSlug } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { getCountyContent } from "../content/counties";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -15,6 +17,16 @@ function formatPrice(n: number | null) {
 export default function CountyPage() {
   const { slug } = useParams<{ slug: string }>();
   const county = countyFromSlug(slug ?? "");
+
+  // Check if we have custom content for this county
+  const customContent = getCountyContent(slug ?? "");
+
+  // If custom content exists, use the template
+  if (customContent) {
+    return <CountyPageTemplate content={customContent} />;
+  }
+
+  // Otherwise, fall back to the default dynamic page
   const [data, setData] = useState<CountySummary | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
