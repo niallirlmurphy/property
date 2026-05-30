@@ -903,6 +903,79 @@ async def search(
     return result
 
 
+class PolygonSearchRequest(BaseModel):
+    coordinates: list[list[float]] = Field(..., description="List of [lat, lon] coordinates forming a polygon")
+    min_price: Optional[int] = None
+    max_price: Optional[int] = None
+    min_year: Optional[int] = None
+    max_year: Optional[int] = None
+    limit: int = Field(500, ge=1, le=1000)
+
+
+@app.post("/search/polygon")
+async def search_polygon(
+    request: Request,
+    search_request: PolygonSearchRequest,
+):
+    """Search properties within a polygon defined by coordinates."""
+    _rate_limit_check(request, 30, "polygon_search")
+
+    # Validate polygon has at least 3 points
+    if len(search_request.coordinates) < 3:
+        raise HTTPException(status_code=400, detail="Polygon must have at least 3 coordinates")
+
+    # Build PostGIS polygon from coordinates
+    # PostGIS expects lon,lat order, not lat,lon
+    points_str = ", ".join([f"{lon} {lat}" for lat, lon in search_request.coordinates])
+    polygon_wkt = f"POLYGON(({points_str}))"
+
+    # Build query
+    filters = [f"ST_Within(geog::geometry, ST_GeomFromText('{polygon_wkt}', 4326))"]
+    params: list = []
+    idx = 1
+
+    if search_request.min_price is not None:
+        filters.append(f"price >= ${idx}")
+        params.append(search_request.min_price)
+        idx += 1
+    if search_request.max_price is not None:
+        filters.append(f"price <= ${idx}")
+        params.append(search_request.max_price)
+        idx += 1
+    if search_request.min_year is not None:
+        filters.append(f"EXTRACT(YEAR FROM sale_date) >= ${idx}")
+        params.append(search_request.min_year)
+        idx += 1
+    if search_request.max_year is not None:
+        filters.append(f"EXTRACT(YEAR FROM sale_date) <= ${idx}")
+        params.append(search_request.max_year)
+        idx += 1
+
+    where = " AND ".join(filters)
+    params.append(search_request.limit)
+
+    rows = await db_pool.fetch(f"""
+        SELECT
+            id, sale_date, address, county, eircode, price,
+            not_full_market_price, vat_exclusive, description,
+            size_description, latitude, longitude,
+            routing_key
+        FROM properties
+        WHERE {where}
+        ORDER BY sale_date DESC
+        LIMIT ${idx}
+    """, *params)
+
+    results = [dict(r) for r in rows]
+
+    logger.info(f"Polygon search: {len(results)} properties found within polygon")
+
+    return {
+        "count": len(results),
+        "results": results,
+    }
+
+
 @app.get("/trends")
 async def trends(
     request: Request,

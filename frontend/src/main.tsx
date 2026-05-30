@@ -11,6 +11,7 @@ import MortgagePage from "./pages/MortgagePage";
 import EnergyPage from "./pages/EnergyPage";
 import AboutPage from "./pages/AboutPage";
 import ManualGeocodePage from "./pages/ManualGeocodePage";
+import PolygonSearchPage from "./pages/PolygonSearchPage";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
 
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/polygon" element={<PolygonSearchPage />} />
         <Route path="/area/:slug" element={<AreaPage />} />
         <Route path="/county/dublin" element={<DublinCountyPage />} />
         <Route path="/county/:slug" element={<CountyPage />} />
