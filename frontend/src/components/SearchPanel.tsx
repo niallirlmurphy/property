@@ -49,11 +49,28 @@ export default function SearchPanel({ counties, loading, error, onSearch, result
     setQ(query);
     setShowRecent(false);
     setRecentSearches(saveRecent(query.trim()));
+
+    // Auto-detect county from search query and override county filter if mismatch
+    let finalCounty = county || undefined;
+    const queryLower = query.trim().toLowerCase();
+
+    // Check if query contains a county name that doesn't match current filter
+    for (const countyName of counties) {
+      if (queryLower.includes(countyName.toLowerCase())) {
+        // Query mentions a county - use that instead of dropdown
+        if (countyName !== county) {
+          finalCounty = countyName;
+          setCounty(countyName); // Update dropdown to match
+        }
+        break;
+      }
+    }
+
     onSearch({
       q: query.trim(),
       radius_km: radiusKm,
       min_year: PERIOD_OPTIONS[period].minYear,
-      county: county || undefined,
+      county: finalCounty,
     });
   };
 

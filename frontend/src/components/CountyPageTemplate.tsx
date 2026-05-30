@@ -182,7 +182,7 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
             <section className="content-section">
               <h2>Search Properties in County {content.name}</h2>
               <p>
-                Use the <Link to={`/?county=${content.name}`}>interactive map</Link> to search
+                Use the <Link to={`/?q=${encodeURIComponent(content.name)}&county=${encodeURIComponent(content.name)}`}>interactive map</Link> to search
                 by address or Eircode within County {content.name}.
               </p>
             </section>

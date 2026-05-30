@@ -388,6 +388,7 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
 - **Geocoder seems stalled**: use `python3 geocode.py --status`; verify local Nominatim is reachable at `http://localhost:8080/search` and check `geocode.py` logs for retry/backoff errors.
 - **HTTP 429 / throttling**: reduce request rate, retry later, or switch to local/self-hosted Nominatim.
 - **Frontend can’t reach API**: verify `VITE_API_URL`, CORS settings, and backend URL/health.
+- **Search shows wrong county results**: County filter defaults to "Dublin" for usability (most populous region). Auto-detection corrects mismatches when search query contains a county name (e.g., searching "Galway City" with "Dublin" filter will auto-switch to Galway). County page links include both `q` and `county` parameters to ensure proper filtering.
 
 ## Local Nominatim instance
 `nominatim/ireland.osm.pbf` contains OSM data for local geocoding. To start a local Nominatim service using Docker:

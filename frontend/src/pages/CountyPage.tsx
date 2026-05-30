@@ -151,7 +151,7 @@ export default function CountyPage() {
           <section className="content-section">
             <h2>Search County {county} Properties</h2>
             <p>
-              Use the <Link to={`/?county=${encodeURIComponent(county)}`}>interactive map</Link> to
+              Use the <Link to={`/?q=${encodeURIComponent(county)}&county=${encodeURIComponent(county)}`}>interactive map</Link> to
               search by address or Eircode within County {county}.
             </p>
           </section>
