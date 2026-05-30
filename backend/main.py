@@ -909,7 +909,7 @@ class PolygonSearchRequest(BaseModel):
     max_price: Optional[int] = None
     min_year: Optional[int] = None
     max_year: Optional[int] = None
-    limit: int = Field(500, ge=1, le=1000)
+    limit: int = Field(50, ge=1, le=50)
 
 
 @app.post("/search/polygon")

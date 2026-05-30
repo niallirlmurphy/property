@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-draw/dist/leaflet.draw.css";
@@ -7,6 +7,32 @@ import "leaflet-draw";
 import WaffleMenu from "../components/WaffleMenu";
 import PageHeader from "../components/PageHeader";
 import type { Property } from "../types";
+
+// Fix Leaflet icon paths
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+});
+
+// Active marker icon (red)
+const activeIcon = new L.Icon({
+  iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
+
+// Dublin city center (south and central) - default view
+const DUBLIN_CITY_CENTER: [number, number] = [53.3398, -6.2603]; // Dublin 2
+const DUBLIN_CITY_ZOOM = 13; // Zoomed in to city level
+
+// Maximum allowed search area width (4km)
+const MAX_SEARCH_WIDTH_KM = 4;
+const MAX_RESULTS = 50;
 
 // County and Dublin postcode centroids for quick navigation
 const REGION_CENTROIDS: Record<string, [number, number]> = {
@@ -60,6 +86,92 @@ const REGION_CENTROIDS: Record<string, [number, number]> = {
   "Dublin 22": [53.3333, -6.3667],
   "Dublin 24": [53.2833, -6.3333],
 };
+
+// Tips overlay component
+function MapTips() {
+  const [isOpen, setIsOpen] = useState(true);
+
+  if (!isOpen) {
+    return (
+      <button
+        onClick={() => setIsOpen(true)}
+        style={{
+          position: 'absolute',
+          bottom: '5rem',
+          left: '0.5rem',
+          zIndex: 1000,
+          backgroundColor: 'white',
+          border: '2px solid #1a3c5e',
+          borderRadius: '4px',
+          padding: '0.5rem 0.75rem',
+          cursor: 'pointer',
+          fontSize: '0.85rem',
+          fontWeight: 600,
+          color: '#1a3c5e',
+          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        }}
+      >
+        ? Tips
+      </button>
+    );
+  }
+
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        bottom: '5rem',
+        left: '0.5rem',
+        zIndex: 1000,
+        backgroundColor: 'white',
+        borderRadius: '6px',
+        padding: '1rem',
+        maxWidth: '280px',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.15)',
+        border: '1px solid #e5e7eb',
+      }}
+    >
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
+        <h4 style={{ margin: 0, fontSize: '0.9rem', fontWeight: 600, color: '#1a3c5e' }}>
+          How to use Map Search
+        </h4>
+        <button
+          onClick={() => setIsOpen(false)}
+          style={{
+            background: 'none',
+            border: 'none',
+            fontSize: '1.25rem',
+            cursor: 'pointer',
+            color: '#999',
+            padding: 0,
+            lineHeight: 1,
+          }}
+        >
+          ×
+        </button>
+      </div>
+
+      <ul style={{ margin: 0, paddingLeft: '1.25rem', fontSize: '0.8rem', lineHeight: 1.6, color: '#4b5563' }}>
+        <li style={{ marginBottom: '0.5rem' }}>
+          Use drawing tools (top-left) to select an area
+        </li>
+        <li style={{ marginBottom: '0.5rem' }}>
+          Draw polygon, rectangle, or circle
+        </li>
+        <li style={{ marginBottom: '0.5rem' }}>
+          Maximum search area: 4km width
+        </li>
+        <li style={{ marginBottom: '0.5rem' }}>
+          Shows 50 most recent sales
+        </li>
+        <li style={{ marginBottom: '0.5rem' }}>
+          Use region dropdown to jump to areas
+        </li>
+        <li>Click property markers or list items for details</li>
+      </ul>
+    </div>
+  );
+}
 
 // Map controls component
 function MapControls({ onRegionSelect }: { onRegionSelect: (region: string) => void }) {
@@ -206,6 +318,8 @@ export default function PolygonSearchPage() {
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
   const [searchResults, setSearchResults] = useState<Property[]>([]);
   const [loading, setLoading] = useState(false);
+  const [activeProperty, setActiveProperty] = useState<Property | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleRegionSelect = (region: string) => {
     setSelectedRegion(region);
@@ -227,25 +341,64 @@ export default function PolygonSearchPage() {
 
   const handleShapeDeleted = () => {
     setSearchResults([]);
+    setActiveProperty(null);
+    setError(null);
+  };
+
+  const calculatePolygonBounds = (coordinates: number[][]): number => {
+    // Calculate width in kilometers
+    const lats = coordinates.map(c => c[0]);
+    const lngs = coordinates.map(c => c[1]);
+
+    const minLat = Math.min(...lats);
+    const maxLat = Math.max(...lats);
+    const minLng = Math.min(...lngs);
+    const maxLng = Math.max(...lngs);
+
+    // Rough calculation: 1 degree lat ≈ 111km, 1 degree lng ≈ 85km at Ireland latitude
+    const latWidth = (maxLat - minLat) * 111;
+    const lngWidth = (maxLng - minLng) * 85;
+
+    return Math.max(latWidth, lngWidth);
   };
 
   const searchInPolygon = async (coordinates: [number, number][]) => {
     setLoading(true);
+    setError(null);
+    setActiveProperty(null);
+
     try {
+      // Check polygon width
+      const width = calculatePolygonBounds(coordinates);
+      if (width > MAX_SEARCH_WIDTH_KM) {
+        setError(`Search area too large (${width.toFixed(1)}km). Maximum width is ${MAX_SEARCH_WIDTH_KM}km.`);
+        setSearchResults([]);
+        setLoading(false);
+        return;
+      }
+
       const BASE = import.meta.env.VITE_API_URL ?? "/api";
       const response = await fetch(`${BASE}/search/polygon`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ coordinates }),
+        body: JSON.stringify({
+          coordinates,
+          limit: MAX_RESULTS
+        }),
       });
 
       if (!response.ok) throw new Error('Polygon search failed');
 
       const data = await response.json();
       setSearchResults(data.results || []);
+
+      if (data.results.length === 0) {
+        setError('No properties found in this area.');
+      }
     } catch (error) {
       console.error('Search error:', error);
-      alert('Search failed. Please try again.');
+      setError('Search failed. Please try again.');
+      setSearchResults([]);
     } finally {
       setLoading(false);
     }
@@ -253,30 +406,58 @@ export default function PolygonSearchPage() {
 
   const searchInCircle = async (lat: number, lng: number, radiusKm: number) => {
     setLoading(true);
+    setError(null);
+    setActiveProperty(null);
+
     try {
+      // Check radius
+      if (radiusKm * 2 > MAX_SEARCH_WIDTH_KM) {
+        setError(`Search radius too large (${radiusKm.toFixed(1)}km). Maximum radius is ${MAX_SEARCH_WIDTH_KM / 2}km.`);
+        setSearchResults([]);
+        setLoading(false);
+        return;
+      }
+
       const BASE = import.meta.env.VITE_API_URL ?? "/api";
-      const response = await fetch(`${BASE}/search?q=${lat},${lng}&radius_km=${radiusKm}`);
+      const response = await fetch(`${BASE}/search?q=${lat},${lng}&radius_km=${radiusKm}&limit=${MAX_RESULTS}`);
 
       if (!response.ok) throw new Error('Circle search failed');
 
       const data = await response.json();
       setSearchResults(data.results || []);
+
+      if (data.results.length === 0) {
+        setError('No properties found in this area.');
+      }
     } catch (error) {
       console.error('Search error:', error);
-      alert('Search failed. Please try again.');
+      setError('Search failed. Please try again.');
+      setSearchResults([]);
     } finally {
       setLoading(false);
     }
   };
 
+  const formatPrice = (price: number) => {
+    return "€" + Math.round(price).toLocaleString("en-IE");
+  };
+
+  const formatDate = (dateStr: string) => {
+    return new Date(dateStr).toLocaleDateString('en-IE', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+  };
+
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <PageHeader title="Map Search" />
+      <PageHeader title="Map Based Search - Select an area to see sold properties in that area" />
 
       <div style={{ flex: 1, position: 'relative', minHeight: 0 }}>
         <MapContainer
-          center={[53.3498, -6.2603]}
-          zoom={7}
+          center={DUBLIN_CITY_CENTER}
+          zoom={DUBLIN_CITY_ZOOM}
           style={{ height: '100%', width: '100%', position: 'absolute' }}
           zoomControl={false}
         >
@@ -290,41 +471,149 @@ export default function PolygonSearchPage() {
             onShapeDeleted={handleShapeDeleted}
           />
 
+          {/* Property markers */}
+          {searchResults
+            .filter(p => p.latitude !== null && p.longitude !== null)
+            .map(p => (
+              <Marker
+                key={p.id}
+                position={[p.latitude!, p.longitude!]}
+                icon={p.id === activeProperty?.id ? activeIcon : new L.Icon.Default()}
+                eventHandlers={{
+                  click: () => setActiveProperty(p),
+                }}
+              >
+                <Popup>
+                  <div style={{ minWidth: '200px' }}>
+                    <strong style={{ fontSize: '1.1em' }}>{formatPrice(p.price)}</strong>
+                    <br />
+                    {p.address}
+                    <br />
+                    <small style={{ color: '#666' }}>
+                      {formatDate(p.sale_date)}
+                      {p.eircode && ` · ${p.eircode}`}
+                    </small>
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
+
           <MapController selectedRegion={selectedRegion} />
         </MapContainer>
 
+        <MapTips />
         <MapControls onRegionSelect={handleRegionSelect} />
 
-        {/* Results panel */}
-        {searchResults.length > 0 && (
-          <div className="absolute top-4 right-4 w-80 bg-white rounded-lg shadow-lg p-4 max-h-[calc(100vh-200px)] overflow-y-auto z-[1000]">
-            <h3 className="font-semibold text-lg mb-3">
-              Found {searchResults.length} properties
+        {/* Loading overlay */}
+        {loading && (
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              backgroundColor: 'rgba(0, 0, 0, 0.3)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              zIndex: 1001,
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: 'white',
+                padding: '1.5rem 2rem',
+                borderRadius: '8px',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+              }}
+            >
+              <div style={{ fontSize: '1.1rem' }}>Searching...</div>
+            </div>
+          </div>
+        )}
+
+        {/* Error message */}
+        {error && !loading && (
+          <div
+            style={{
+              position: 'absolute',
+              top: '1rem',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              backgroundColor: '#fee',
+              border: '1px solid #fcc',
+              borderRadius: '6px',
+              padding: '0.75rem 1rem',
+              color: '#c33',
+              zIndex: 1000,
+              maxWidth: '90%',
+              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+            }}
+          >
+            {error}
+          </div>
+        )}
+      </div>
+
+      {/* Results list below map */}
+      {searchResults.length > 0 && (
+        <div
+          style={{
+            backgroundColor: 'white',
+            borderTop: '2px solid #e5e7eb',
+            maxHeight: '40vh',
+            overflowY: 'auto',
+          }}
+        >
+          <div style={{ padding: '1rem' }}>
+            <h3 style={{ margin: 0, marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 600 }}>
+              {searchResults.length} {searchResults.length === 1 ? 'Property' : 'Properties'} Found
+              {searchResults.length === MAX_RESULTS && ' (showing 50 most recent)'}
             </h3>
-            <div className="space-y-2">
-              {searchResults.slice(0, 50).map((prop, idx) => (
-                <div key={idx} className="p-2 border-b border-gray-200 text-sm">
-                  <div className="font-medium">{prop.address}</div>
-                  <div className="text-gray-600">
-                    €{prop.price.toLocaleString('en-IE')}
-                  </div>
-                  <div className="text-gray-500 text-xs">
-                    {new Date(prop.sale_date).toLocaleDateString('en-IE')}
+
+            <div style={{ display: 'grid', gap: '0.5rem' }}>
+              {searchResults.map((prop) => (
+                <div
+                  key={prop.id}
+                  onClick={() => setActiveProperty(prop)}
+                  style={{
+                    padding: '0.75rem',
+                    border: '1px solid #e5e7eb',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    backgroundColor: prop.id === activeProperty?.id ? '#eff6ff' : 'white',
+                    borderColor: prop.id === activeProperty?.id ? '#3b82f6' : '#e5e7eb',
+                    transition: 'all 0.2s',
+                  }}
+                  onMouseEnter={(e) => {
+                    if (prop.id !== activeProperty?.id) {
+                      e.currentTarget.style.backgroundColor = '#f9fafb';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (prop.id !== activeProperty?.id) {
+                      e.currentTarget.style.backgroundColor = 'white';
+                    }
+                  }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', gap: '1rem' }}>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontWeight: 500, marginBottom: '0.25rem' }}>
+                        {prop.address}
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: '#6b7280' }}>
+                        {formatDate(prop.sale_date)}
+                        {prop.eircode && ` · ${prop.eircode}`}
+                      </div>
+                    </div>
+                    <div style={{ fontWeight: 600, color: '#1a3c5e', whiteSpace: 'nowrap' }}>
+                      {formatPrice(prop.price)}
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        )}
-
-        {loading && (
-          <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center z-[1001]">
-            <div className="bg-white px-6 py-4 rounded-lg shadow-lg">
-              <div className="text-lg">Searching...</div>
-            </div>
-          </div>
-        )}
-      </div>
+        </div>
+      )}
 
       <WaffleMenu />
     </div>
