@@ -36,6 +36,13 @@ export interface CountyContent {
 
   // Optional: custom stats or features
   highlights?: string[];  // Bullet points for key features
+
+  // Hero images (3 images for visual appeal)
+  heroImages?: Array<{
+    url: string;           // Image URL (local or external)
+    alt: string;           // Alt text for accessibility & SEO
+    credit?: string;       // Photo credit/attribution
+  }>;
 }
 
 // Helper to get county display name from slug

@@ -61,6 +61,24 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
     <>
       <PageHeader title={`Property Prices in County ${content.name}`} />
       <div className="content-page">
+        {/* Hero Images - 3 images in a grid */}
+        {content.heroImages && content.heroImages.length > 0 && (
+          <div className="county-hero-images">
+            {content.heroImages.map((image, idx) => (
+              <div key={idx} className="county-hero-image">
+                <img
+                  src={image.url}
+                  alt={image.alt}
+                  loading={idx === 0 ? "eager" : "lazy"}
+                />
+                {image.credit && (
+                  <p className="image-credit">{image.credit}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+
         {/* Intro paragraph */}
         <p className="content-intro">{content.intro}</p>
 

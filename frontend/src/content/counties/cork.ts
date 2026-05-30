@@ -82,5 +82,23 @@ export const corkContent: CountyContent = {
     "Coastal lifestyle opportunities in Kinsale, Cobh, Clonakilty",
     "Excellent commuter belt infrastructure (M8, M28)",
     "Growing population and expanding job market"
+  ],
+
+  heroImages: [
+    {
+      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Cork_City_from_St._Patrick%27s_Hill.jpg/1200px-Cork_City_from_St._Patrick%27s_Hill.jpg",
+      alt: "Cork city center with River Lee and historic buildings",
+      credit: "Photo: Wikimedia Commons"
+    },
+    {
+      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cobh_-_Cathedral_of_St._Colman_-_geograph.org.uk_-_1619942.jpg/1200px-Cobh_-_Cathedral_of_St._Colman_-_geograph.org.uk_-_1619942.jpg",
+      alt: "Cobh Cathedral overlooking Cork harbor",
+      credit: "Photo: Wikimedia Commons"
+    },
+    {
+      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kinsale_Harbour_-_geograph.org.uk_-_1886583.jpg/1200px-Kinsale_Harbour_-_geograph.org.uk_-_1886583.jpg",
+      alt: "Kinsale harbor with colorful buildings",
+      credit: "Photo: Wikimedia Commons"
+    }
   ]
 };

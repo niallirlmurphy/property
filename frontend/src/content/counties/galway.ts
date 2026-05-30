@@ -77,5 +77,23 @@ export const galwayContent: CountyContent = {
     "NUIG student population supports rental market",
     "Excellent commuter infrastructure (M6, M17, M18)",
     "Coastal and Connemara lifestyle options"
+  ],
+
+  heroImages: [
+    {
+      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Galway_-_Claddagh_Basin_-_20190822131244.jpg/1200px-Galway-_Claddagh_Basin_-_20190822131244.jpg",
+      alt: "Galway city center with Claddagh Basin and colorful buildings",
+      credit: "Photo: Wikimedia Commons"
+    },
+    {
+      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Salthill_Promenade%2C_Galway_-_geograph.org.uk_-_1361501.jpg/1200px-Salthill_Promenade%2C_Galway_-_geograph.org.uk_-_1361501.jpg",
+      alt: "Salthill Promenade along Galway Bay",
+      credit: "Photo: Wikimedia Commons"
+    },
+    {
+      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Connemara_-_geograph.org.uk_-_535706.jpg/1200px-Connemara_-_geograph.org.uk_-_535706.jpg",
+      alt: "Connemara landscape with mountains and lakes",
+      credit: "Photo: Wikimedia Commons"
+    }
   ]
 };
