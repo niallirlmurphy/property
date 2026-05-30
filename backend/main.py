@@ -1395,3 +1395,138 @@ async def submit_contact(request: Request, payload: ContactPayload):
         logger.error(f"Contact DB write failed: {e}")
         raise HTTPException(status_code=500, detail="Could not save message")
     return {"ok": True}
+
+
+# ---------------------------------------------------------------------------
+# Email alerts — property notification subscriptions
+# ---------------------------------------------------------------------------
+
+
+class EmailAlertSubscription(BaseModel):
+    email: str = Field(..., max_length=255)
+    address: str = Field(..., max_length=500)
+    radius_km: float = Field(2.0, ge=0.5, le=20.0)
+    county: Optional[str] = Field(None, max_length=100)
+    min_year: Optional[int] = None
+
+    @field_validator('email')
+    @classmethod
+    def validate_email(cls, v: str) -> str:
+        if not _EMAIL_RE.match(v):
+            raise ValueError('Invalid email address')
+        return v.lower().strip()
+
+
+@app.post("/email-alerts/subscribe")
+async def subscribe_email_alert(
+    request: Request,
+    subscription: EmailAlertSubscription,
+):
+    """
+    Subscribe to email alerts for properties matching search criteria.
+    Stores subscription in email_alerts table.
+    """
+    _rate_limit_check(request, 10, "email_alerts_subscribe")
+
+    try:
+        # Check if email already has an active subscription for this address
+        existing = await db_pool.fetchrow("""
+            SELECT id, is_active
+            FROM email_alerts
+            WHERE email = $1 AND address = $2
+            ORDER BY created_at DESC
+            LIMIT 1
+        """, subscription.email, subscription.address)
+
+        if existing:
+            if existing['is_active']:
+                # Update existing active subscription
+                await db_pool.execute("""
+                    UPDATE email_alerts
+                    SET radius_km = $1,
+                        county = $2,
+                        min_year = $3,
+                        created_at = CURRENT_TIMESTAMP
+                    WHERE id = $4
+                """, subscription.radius_km, subscription.county,
+                     subscription.min_year, existing['id'])
+                logger.info(f"Updated email alert subscription for {subscription.email}")
+            else:
+                # Reactivate inactive subscription
+                await db_pool.execute("""
+                    UPDATE email_alerts
+                    SET is_active = TRUE,
+                        radius_km = $1,
+                        county = $2,
+                        min_year = $3,
+                        created_at = CURRENT_TIMESTAMP
+                    WHERE id = $4
+                """, subscription.radius_km, subscription.county,
+                     subscription.min_year, existing['id'])
+                logger.info(f"Reactivated email alert subscription for {subscription.email}")
+        else:
+            # Create new subscription
+            await db_pool.execute("""
+                INSERT INTO email_alerts (email, address, radius_km, county, min_year)
+                VALUES ($1, $2, $3, $4, $5)
+            """, subscription.email, subscription.address, subscription.radius_km,
+                 subscription.county, subscription.min_year)
+            logger.info(f"Created new email alert subscription for {subscription.email}")
+
+        return {
+            "ok": True,
+            "message": "Successfully subscribed to email alerts"
+        }
+
+    except Exception as e:
+        logger.error(f"Email alert subscription failed: {e}")
+        raise HTTPException(status_code=500, detail="Could not create subscription")
+
+
+@app.post("/email-alerts/unsubscribe/{token}")
+async def unsubscribe_email_alert(
+    request: Request,
+    token: str,
+):
+    """
+    Unsubscribe from email alerts using the unsubscribe token.
+    """
+    _rate_limit_check(request, 10, "email_alerts_unsubscribe")
+
+    try:
+        result = await db_pool.execute("""
+            UPDATE email_alerts
+            SET is_active = FALSE
+            WHERE unsubscribe_token = $1::uuid AND is_active = TRUE
+        """, token)
+
+        if result == "UPDATE 0":
+            raise HTTPException(status_code=404, detail="Subscription not found or already unsubscribed")
+
+        logger.info(f"Unsubscribed email alert with token {token[:8]}...")
+        return {"ok": True, "message": "Successfully unsubscribed"}
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Email alert unsubscribe failed: {e}")
+        raise HTTPException(status_code=500, detail="Could not unsubscribe")
+
+
+@app.get("/email-alerts/active")
+async def get_active_email_alerts(request: Request):
+    """
+    Get all active email alert subscriptions.
+    For admin/cron use to send out alerts.
+    """
+    _rate_limit_check(request, 10, "email_alerts_active")
+
+    rows = await db_pool.fetch("""
+        SELECT id, email, address, radius_km, county, min_year,
+               created_at, last_email_sent_at, unsubscribe_token
+        FROM email_alerts
+        WHERE is_active = TRUE
+        ORDER BY created_at DESC
+    """)
+
+    return [dict(r) for r in rows]

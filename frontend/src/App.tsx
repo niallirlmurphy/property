@@ -7,6 +7,7 @@ import SearchPanel from "./components/SearchPanel";
 import ResultsList from "./components/ResultsList";
 import EircodePanel from "./components/EircodePanel";
 import TrendsChart from "./components/TrendsChart";
+import EmailAlertModal from "./components/EmailAlertModal";
 import type { Property, SearchResponse, TrendPoint, SearchParams, EircodeResponse } from "./types";
 import WaffleMenu from "./components/WaffleMenu";
 import ContactSidebar from "./components/ContactModals";
@@ -112,6 +113,8 @@ export default function App() {
   const [activeProperty, setActiveProperty] = useState<Property | null>(null);
   const [lastSearchQuery, setLastSearchQuery] = useState<string>("");
   const [mobileTab, setMobileTab] = useState<MobileTab>("map");
+  const [emailAlertOpen, setEmailAlertOpen] = useState(false);
+  const [lastSearchParams, setLastSearchParams] = useState<SearchParams | null>(null);
   const searchGenRef = useRef(0);
 
   // Read initial search state from URL params
@@ -146,6 +149,7 @@ export default function App() {
     setMapPins([]);
     setTrends([]);
     setShowTrends(false);
+    setLastSearchParams(params);
     setPendingCenter(null);
     setLastSearchQuery("");
     setHasSearched(true);
@@ -361,8 +365,19 @@ export default function App() {
           onEircode={handleEircode}
           resultSummary={resultSummary}
           defaultValues={{ q: urlQ, radius_km: urlRadius, county: urlCounty }}
+          onOpenEmailAlert={() => setEmailAlertOpen(true)}
         />
       </div>
+
+      <EmailAlertModal
+        isOpen={emailAlertOpen}
+        onClose={() => setEmailAlertOpen(false)}
+        defaultAddress={lastSearchParams?.q || urlQ}
+        defaultRadius={lastSearchParams?.radius_km || urlRadius}
+        defaultPeriod={lastSearchParams?.min_year ? (new Date().getFullYear() - lastSearchParams.min_year === 2 ? 2 : 1) : 0}
+        defaultCounty={lastSearchParams?.county || urlCounty}
+        counties={counties}
+      />
 
       <div className="results-pane">
         {resultsPanel}

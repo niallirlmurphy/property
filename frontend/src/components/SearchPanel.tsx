@@ -33,9 +33,10 @@ interface Props {
   onEircode?: (code: string) => void;
   resultSummary?: { count: number; radius_km: number } | null;
   defaultValues?: { q?: string; radius_km?: number; county?: string; period?: number };
+  onOpenEmailAlert?: () => void;
 }
 
-export default function SearchPanel({ counties, loading, error, onSearch, resultSummary, defaultValues }: Props) {
+export default function SearchPanel({ counties, loading, error, onSearch, resultSummary, defaultValues, onOpenEmailAlert }: Props) {
   const [q, setQ] = useState(defaultValues?.q ?? "");
   const [radiusKm, setRadiusKm] = useState(defaultValues?.radius_km ?? 0.5);
   const [period, setPeriod] = useState(defaultValues?.period ?? 2);
@@ -125,6 +126,37 @@ export default function SearchPanel({ counties, loading, error, onSearch, result
       )}
 
       {error && <div className="error-msg">{error}</div>}
+
+      {onOpenEmailAlert && (
+        <button
+          type="button"
+          onClick={onOpenEmailAlert}
+          className="btn-email-alert"
+          style={{
+            width: "100%",
+            padding: "0.75rem",
+            marginTop: "1rem",
+            backgroundColor: "#f8f9fa",
+            border: "2px solid #1a3c5e",
+            borderRadius: "4px",
+            color: "#1a3c5e",
+            fontWeight: 600,
+            cursor: "pointer",
+            fontSize: "0.95rem",
+            transition: "all 0.2s",
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = "#1a3c5e";
+            e.currentTarget.style.color = "white";
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = "#f8f9fa";
+            e.currentTarget.style.color = "#1a3c5e";
+          }}
+        >
+          📧 Property Email Alert
+        </button>
+      )}
     </form>
   );
 }
