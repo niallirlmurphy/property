@@ -1423,14 +1423,18 @@ async def subscribe_email_alert(
 ):
     """
     Subscribe to email alerts for properties matching search criteria.
-    Stores subscription in email_alerts table.
+    Stores subscription in email_alerts table and sends confirmation email.
     """
     _rate_limit_check(request, 10, "email_alerts_subscribe")
 
     try:
+        from email_service import send_confirmation_email
+
+        unsubscribe_token = None
+
         # Check if email already has an active subscription for this address
         existing = await db_pool.fetchrow("""
-            SELECT id, is_active
+            SELECT id, is_active, unsubscribe_token
             FROM email_alerts
             WHERE email = $1 AND address = $2
             ORDER BY created_at DESC
@@ -1438,6 +1442,7 @@ async def subscribe_email_alert(
         """, subscription.email, subscription.address)
 
         if existing:
+            unsubscribe_token = existing['unsubscribe_token']
             if existing['is_active']:
                 # Update existing active subscription
                 await db_pool.execute("""
@@ -1460,13 +1465,28 @@ async def subscribe_email_alert(
                 """, subscription.radius_km, subscription.county, existing['id'])
                 logger.info(f"Reactivated email alert subscription for {subscription.email}")
         else:
-            # Create new subscription
-            await db_pool.execute("""
+            # Create new subscription and get the token
+            row = await db_pool.fetchrow("""
                 INSERT INTO email_alerts (email, address, radius_km, county)
                 VALUES ($1, $2, $3, $4)
+                RETURNING unsubscribe_token
             """, subscription.email, subscription.address, subscription.radius_km,
                  subscription.county)
+            unsubscribe_token = row['unsubscribe_token']
             logger.info(f"Created new email alert subscription for {subscription.email}")
+
+        # Send confirmation email (async, don't block on failure)
+        try:
+            send_confirmation_email(
+                email=subscription.email,
+                address=subscription.address,
+                radius_km=subscription.radius_km,
+                county=subscription.county,
+                unsubscribe_token=unsubscribe_token
+            )
+        except Exception as email_error:
+            logger.error(f"Failed to send confirmation email (subscription still active): {email_error}")
+            # Don't fail the subscription if email fails
 
         return {
             "ok": True,
@@ -1525,3 +1545,134 @@ async def get_active_email_alerts(request: Request):
     """)
 
     return [dict(r) for r in rows]
+
+
+@app.post("/cron/send-monthly-alerts")
+async def cron_send_monthly_alerts(request: Request, authorization: Optional[str] = None):
+    """
+    Cron endpoint to send monthly property alerts.
+    Protected by CRON_SECRET environment variable.
+    Called by GitHub Actions on 1st of each month.
+    """
+    # Check authorization
+    cron_secret = os.getenv("CRON_SECRET")
+    if cron_secret:
+        auth_header = request.headers.get("Authorization", "")
+        provided_secret = auth_header.replace("Bearer ", "").strip()
+        if provided_secret != cron_secret:
+            logger.warning(f"Unauthorized cron attempt from {request.client.host}")
+            raise HTTPException(status_code=401, detail="Unauthorized")
+
+    try:
+        from email_service import send_monthly_digest
+
+        # Get all active subscriptions
+        subscriptions = await db_pool.fetch("""
+            SELECT id, email, address, radius_km, county, created_at, last_sent_at, unsubscribe_token
+            FROM email_alerts
+            WHERE is_active = TRUE
+            ORDER BY created_at ASC
+        """)
+
+        logger.info(f"Processing {len(subscriptions)} active subscriptions")
+
+        emails_sent = 0
+        errors = 0
+        skipped = 0
+
+        for sub in subscriptions:
+            try:
+                # Geocode the address (simplified - use existing geocode logic)
+                geocode_result = await db_pool.fetchrow("""
+                    SELECT latitude, longitude
+                    FROM properties
+                    WHERE address ILIKE $1 || '%'
+                      AND latitude IS NOT NULL
+                    LIMIT 1
+                """, sub['address'])
+
+                if not geocode_result or not geocode_result['latitude']:
+                    logger.warning(f"Could not geocode address: {sub['address']}")
+                    skipped += 1
+                    continue
+
+                lat = geocode_result['latitude']
+                lon = geocode_result['longitude']
+
+                # Find properties added since last_sent_at (or created_at if never sent)
+                since_date = sub['last_sent_at'] or sub['created_at']
+
+                query = """
+                    SELECT id, address, price, sale_date, county, description
+                    FROM properties
+                    WHERE geog IS NOT NULL
+                      AND ST_DWithin(geog, ST_MakePoint($1, $2)::geography, $3 * 1000)
+                      AND created_at > $4
+                      AND not_full_market_price = FALSE
+                """
+
+                params = [lon, lat, sub['radius_km'], since_date]
+
+                if sub['county']:
+                    query += " AND county = $5"
+                    params.append(sub['county'])
+
+                query += " ORDER BY sale_date DESC LIMIT 50"
+
+                rows = await db_pool.fetch(query, *params)
+
+                if rows:
+                    properties = []
+                    for row in rows:
+                        properties.append({
+                            "id": row['id'],
+                            "address": row['address'],
+                            "price": float(row['price']) if row['price'] else 0,
+                            "sale_date": row['sale_date'].strftime("%Y-%m-%d") if row['sale_date'] else "",
+                            "county": row['county'] or "",
+                            "description": row['description'] or "",
+                        })
+
+                    # Send digest email
+                    success = send_monthly_digest(
+                        email=sub['email'],
+                        address=sub['address'],
+                        radius_km=sub['radius_km'],
+                        county=sub['county'],
+                        properties=properties,
+                        unsubscribe_token=sub['unsubscribe_token']
+                    )
+
+                    if success:
+                        # Update last_sent_at timestamp
+                        await db_pool.execute("""
+                            UPDATE email_alerts
+                            SET last_sent_at = CURRENT_TIMESTAMP
+                            WHERE id = $1
+                        """, sub['id'])
+                        emails_sent += 1
+                        logger.info(f"✓ Sent digest to {sub['email']}: {len(properties)} properties")
+                    else:
+                        errors += 1
+                        logger.error(f"✗ Failed to send digest to {sub['email']}")
+                else:
+                    skipped += 1
+                    logger.info(f"No new properties for {sub['email']} ({sub['address']})")
+
+            except Exception as e:
+                logger.error(f"Error processing subscription {sub['id']} ({sub['email']}): {e}")
+                errors += 1
+
+        logger.info(f"Monthly alerts job complete: {emails_sent} sent, {skipped} skipped, {errors} errors")
+
+        return {
+            "ok": True,
+            "subscriptions_processed": len(subscriptions),
+            "emails_sent": emails_sent,
+            "skipped": skipped,
+            "errors": errors
+        }
+
+    except Exception as e:
+        logger.error(f"Fatal error in monthly alerts cron: {e}")
+        raise HTTPException(status_code=500, detail=str(e))

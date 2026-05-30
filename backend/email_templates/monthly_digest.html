@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Properties in {{address}}</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f4f4f4;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; padding: 40px 0;">
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <!-- Header -->
+                    <tr>
+                        <td style="padding: 40px 40px 20px 40px; text-align: center; background-color: #1a3c5e; border-radius: 8px 8px 0 0;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 600;">HomeIQ</h1>
+                            <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 16px;">Property Price Alerts</p>
+                        </td>
+                    </tr>
+
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 40px;">
+                            <h2 style="margin: 0 0 10px 0; color: #1a3c5e; font-size: 24px; font-weight: 600;">New Properties in {{address}}</h2>
+                            <p style="margin: 0 0 30px 0; color: #666; font-size: 16px;">
+                                {{property_count}} new {{#plural}}properties{{/plural}}{{^plural}}property{{/plural}} this month
+                            </p>
+
+                            <!-- Property Listings -->
+                            {{#properties}}
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 30px 0; border-bottom: 1px solid #e5e7eb; padding-bottom: 30px;">
+                                <tr>
+                                    <td>
+                                        <h3 style="margin: 0 0 10px 0; color: #1a3c5e; font-size: 22px; font-weight: 700;">
+                                            €{{price_formatted}}
+                                        </h3>
+                                        <p style="margin: 0 0 8px 0; color: #333; font-size: 16px; line-height: 1.5;">
+                                            {{property_address}}
+                                        </p>
+                                        <p style="margin: 0 0 15px 0; color: #666; font-size: 14px;">
+                                            Sold: {{sale_date}} {{#county}}• {{county}}{{/county}}
+                                        </p>
+                                        {{#description}}
+                                        <p style="margin: 0 0 15px 0; color: #666; font-size: 14px;">
+                                            {{description}}
+                                        </p>
+                                        {{/description}}
+                                        <a href="https://homeiq.ie/?q={{address_encoded}}&radius_km={{radius_km}}&highlight={{id}}"
+                                           style="display: inline-block; padding: 10px 20px; background-color: #1a3c5e; color: #ffffff; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600;">
+                                            View on Map
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            {{/properties}}
+
+                            <!-- More Properties Link -->
+                            {{#has_more}}
+                            <p style="margin: 30px 0 0 0; color: #666; font-size: 16px; text-align: center;">
+                                and {{remaining_count}} more...
+                            </p>
+                            {{/has_more}}
+
+                            <!-- View All Button -->
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 30px;">
+                                <tr>
+                                    <td align="center">
+                                        <a href="https://homeiq.ie/?q={{address_encoded}}&radius_km={{radius_km}}"
+                                           style="display: inline-block; padding: 14px 28px; background-color: #22c55e; color: #ffffff; text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: 600;">
+                                            View All Properties
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #f8f9fa; border-radius: 0 0 8px 8px; border-top: 1px solid #e5e7eb;">
+                            <p style="margin: 0 0 15px 0; color: #666; font-size: 14px; text-align: center; line-height: 1.6;">
+                                You're receiving this because you subscribed to property alerts for <strong>{{address}}</strong> ({{radius_km}}km radius).
+                            </p>
+                            <p style="margin: 0; color: #999; font-size: 12px; text-align: center;">
+                                <a href="https://homeiq.ie/email-alerts/unsubscribe/{{unsubscribe_token}}" style="color: #1a3c5e; text-decoration: underline;">Unsubscribe</a> •
+                                <a href="https://homeiq.ie" style="color: #1a3c5e; text-decoration: underline;">HomeIQ.ie</a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

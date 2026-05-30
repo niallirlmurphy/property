@@ -1,0 +1,57 @@
+name: Monthly Property Alerts
+
+on:
+  schedule:
+    # Run on the 1st of every month at 2:00 AM UTC
+    - cron: '0 2 1 * *'
+  # Allow manual trigger for testing
+  workflow_dispatch:
+
+jobs:
+  send-alerts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Monthly Property Alerts
+        run: |
+          response=$(curl -s -w "\n%{http_code}" -X POST \
+            https://eloquent-optimism-production-350a.up.railway.app/cron/send-monthly-alerts \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json")
+
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+
+          echo "HTTP Status: $http_code"
+          echo "Response: $body"
+
+          if [ "$http_code" -ne 200 ]; then
+            echo "❌ Monthly alerts job failed with status $http_code"
+            exit 1
+          fi
+
+          echo "✅ Monthly alerts job completed successfully"
+          echo "$body" | jq '.'
+
+      - name: Create issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🚨 Monthly Property Alerts Failed',
+              body: `The monthly property alerts cron job failed on ${new Date().toISOString()}.
+
+              **Workflow Run:** ${context.payload.repository.html_url}/actions/runs/${context.runId}
+
+              Please investigate the logs and ensure:
+              - Railway backend is running
+              - CRON_SECRET is correctly configured
+              - RESEND_API_KEY is set in Railway environment
+              - Database connection is healthy
+
+              cc: @niallirlmurphy`,
+              labels: ['bug', 'email-alerts', 'cron']
+            })

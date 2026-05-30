@@ -169,7 +169,7 @@ export default function EmailAlertModal({
           <div style={{ textAlign: "center", padding: "2rem 0" }}>
             <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>✓</div>
             <p style={{ fontSize: "1.1rem", color: "#22c55e", margin: 0 }}>
-              Successfully subscribed! Check your email to confirm.
+              Successfully subscribed! You'll receive monthly alerts when new properties match your criteria.
             </p>
           </div>
         ) : (
