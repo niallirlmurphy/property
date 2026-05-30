@@ -251,6 +251,61 @@ Tests include:
 - ✅ Performance: 82-90ms response times
 - ⚠️ Database security test requires DATABASE_URL (expected for local run)
 
+## Publishing New Content
+
+When you create new pages, blog posts, or update existing content, follow these steps for optimal SEO:
+
+### 1. Deploy Changes
+```bash
+git add .
+git commit -m "Add new content: [description]"
+git push origin main
+# Vercel auto-deploys frontend, Railway auto-deploys backend
+```
+
+### 2. Notify Search Engines (IndexNow)
+Submit new/updated URLs for instant indexing (Bing, Yandex, Naver):
+
+```bash
+# Single URL
+./scripts/submit_indexnow.sh https://homeiq.ie/new-page
+
+# Multiple URLs (edit the script to add more)
+./scripts/submit_indexnow.sh https://homeiq.ie/blog/new-post
+./scripts/submit_indexnow.sh https://homeiq.ie/county/dublin
+```
+
+**IndexNow Key:** `32cfaa418f6f4182aa77505f3f1815de`
+- Verification file: https://homeiq.ie/32cfaa418f6f4182aa77505f3f1815de.txt
+- Provides instant indexing instead of waiting for crawlers
+
+### 3. Update Sitemap (if needed)
+If you add new page types (not just individual pages), regenerate sitemap:
+
+```bash
+python3 scripts/generate_sitemap.py
+git add frontend/public/sitemap.xml
+git commit -m "Update sitemap with new pages"
+git push origin main
+```
+
+Google Search Console will automatically detect sitemap updates within 24 hours.
+
+### 4. Submit to Google Search Console (Manual - Optional)
+For important new pages, manually request indexing:
+1. Go to https://search.google.com/search-console
+2. Use "URL Inspection" tool
+3. Enter the new URL
+4. Click "Request Indexing"
+
+**Note:** Google doesn't support IndexNow, so manual requests or waiting for crawl are your options.
+
+### 5. Check Analytics (After 24-48 hours)
+Monitor new content performance:
+- Google Analytics: Traffic, engagement, conversions
+- Search Console: Impressions, clicks, position
+- Bing Webmaster: Indexing status, search performance
+
 ## Deploying
 
 **Domain & DNS**
