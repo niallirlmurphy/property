@@ -1478,11 +1478,11 @@ async def subscribe_email_alert(
         # Fetch recent properties to include in confirmation email
         recent_properties = []
         try:
-            # Geocode the address to get lat/lon
+            # Geocode the address to get lat/lon (use substring match to find properties containing the search term)
             geocode_result = await db_pool.fetchrow("""
                 SELECT latitude, longitude
                 FROM properties
-                WHERE address ILIKE $1 || '%'
+                WHERE address ILIKE '%' || $1 || '%'
                   AND latitude IS NOT NULL
                 LIMIT 1
             """, subscription.address)
@@ -1630,11 +1630,11 @@ async def cron_send_monthly_alerts(request: Request, authorization: Optional[str
 
         for sub in subscriptions:
             try:
-                # Geocode the address (simplified - use existing geocode logic)
+                # Geocode the address (use substring match to find properties containing the search term)
                 geocode_result = await db_pool.fetchrow("""
                     SELECT latitude, longitude
                     FROM properties
-                    WHERE address ILIKE $1 || '%'
+                    WHERE address ILIKE '%' || $1 || '%'
                       AND latitude IS NOT NULL
                     LIMIT 1
                 """, sub['address'])

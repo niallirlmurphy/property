@@ -66,7 +66,7 @@ def send_confirmation_email(
                     "price_formatted": f"{int(prop.get('price', 0)):,}",
                     "sale_date": prop.get("sale_date", ""),
                     "county": prop.get("county", ""),
-                    "address_encoded": quote(address),
+                    "address_encoded": quote(prop.get("address", "")),  # Use property address, not subscription address
                     "radius_km": radius_km,
                 })
 
@@ -175,7 +175,7 @@ def send_monthly_digest(
                 "sale_date": prop.get("sale_date", ""),
                 "county": prop.get("county", ""),
                 "description": prop.get("description", ""),
-                "address_encoded": quote(address),
+                "address_encoded": quote(prop.get("address", "")),  # Use property address, not subscription address
                 "radius_km": radius_km,
             })
 
