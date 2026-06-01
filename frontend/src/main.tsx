@@ -12,6 +12,7 @@ import EnergyPage from "./pages/EnergyPage";
 import AboutPage from "./pages/AboutPage";
 import ManualGeocodePage from "./pages/ManualGeocodePage";
 import PolygonSearchPage from "./pages/PolygonSearchPage";
+import CaminoPage from "./pages/CaminoPage";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
 
@@ -31,6 +32,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/energy" element={<EnergyPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/geocodes" element={<ManualGeocodePage />} />
+        <Route path="/camino" element={<CaminoPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
