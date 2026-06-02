@@ -245,7 +245,7 @@ export default function PropertyPriceRegisterPage() {
         </section>
 
         <section className="about-section">
-          <h2>Who Should Use the Property Price Register?</h2>
+          <h2>What This Means for You</h2>
           <p>The PPR and enhanced versions like HomeIQ are valuable resources for:</p>
           <ul>
             <li><strong>Property Buyers:</strong> Research fair market value for target areas before making an offer</li>
@@ -289,6 +289,14 @@ export default function PropertyPriceRegisterPage() {
             Whether you're buying your first home, researching investment opportunities, or simply curious
             about Irish property market trends, HomeIQ gives you the tools to explore over 784,000 residential
             sales with confidence.
+          </p>
+          <p>
+            Want to learn about our other data sources?{" "}
+            <Link to="/about" style={{ color: "#1a3c5e", textDecoration: "underline" }}>
+              Visit our About page
+            </Link>{" "}
+            to see how we integrate CSO statistics, BER energy ratings, and geospatial data for
+            comprehensive property intelligence.
           </p>
           <p>
             <strong>Ready to start?</strong>
