@@ -31,6 +31,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://homeiq.ie/camino</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://homeiq.ie/county/carlow</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
