@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import { usePageMeta } from "../hooks/usePageMeta";
 
@@ -53,7 +54,11 @@ export default function AboutPage() {
               </dt>
               <dd>
                 The primary source for all residential sales in Ireland since 2010. This allows us
-                to track every transaction, providing the baseline for our valuation models.
+                to track every transaction, providing the baseline for our valuation models.{" "}
+                <Link to="/property-price-register" style={{ color: "#1a3c5e", textDecoration: "underline" }}>
+                  Learn more about the Property Price Register
+                </Link>
+                .
               </dd>
             </div>
             <div className="about-source">
