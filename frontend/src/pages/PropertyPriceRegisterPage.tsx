@@ -6,6 +6,8 @@ export default function PropertyPriceRegisterPage() {
   usePageMeta(
     "Property Price Register Ireland | Complete Guide & Enhanced Data",
     "Understand Ireland's Property Price Register, its limitations as a taxation record, and how HomeIQ enhances the data with geocoding validation and address normalization for better property search.",
+    undefined,
+    "https://homeiq.ie/images/ppr-og-image.jpg"
   );
 
   return (

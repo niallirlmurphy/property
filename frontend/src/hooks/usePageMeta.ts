@@ -8,7 +8,7 @@ interface BreadcrumbItem {
   url: string;
 }
 
-export function usePageMeta(title?: string, description?: string, breadcrumbs?: BreadcrumbItem[]) {
+export function usePageMeta(title?: string, description?: string, breadcrumbs?: BreadcrumbItem[], ogImage?: string) {
   useEffect(() => {
     document.title = title ? `${title} | HomeIQ` : BASE_TITLE;
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -18,6 +18,18 @@ export function usePageMeta(title?: string, description?: string, breadcrumbs?: 
     if (ogTitle) ogTitle.setAttribute("content", document.title);
     const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute("content", description ?? BASE_DESC);
+
+    // Set og:image if provided
+    if (ogImage) {
+      const ogImageMeta = document.querySelector('meta[property="og:image"]');
+      if (ogImageMeta) {
+        ogImageMeta.setAttribute("content", ogImage);
+      }
+      const twitterImage = document.querySelector('meta[name="twitter:image"]');
+      if (twitterImage) {
+        twitterImage.setAttribute("content", ogImage);
+      }
+    }
 
     // Add breadcrumb schema if provided
     let breadcrumbScript: HTMLScriptElement | null = null;
@@ -60,5 +72,5 @@ export function usePageMeta(title?: string, description?: string, breadcrumbs?: 
         document.head.removeChild(breadcrumbScript);
       }
     };
-  }, [title, description, breadcrumbs]);
+  }, [title, description, breadcrumbs, ogImage]);
 }
