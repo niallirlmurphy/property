@@ -412,12 +412,34 @@ export default function PropertyPriceRegisterPage() {
             comprehensive property intelligence.
           </p>
           <p>
-            <strong>Ready to start?</strong>
+            <strong>Ready to start exploring?</strong>
           </p>
-          <ul>
-            <li><Link to="/">Search by address, Eircode, or coordinates</Link></li>
-            <li><Link to="/polygon">Draw a custom area on the map</Link></li>
-            <li><Link to="/county/dublin">Browse sales by county</Link></li>
+          <ul style={{ listStyle: "disc", paddingLeft: "1.5rem", marginTop: "1rem" }}>
+            <li style={{ marginBottom: "0.75rem" }}>
+              <Link to="/" style={{ color: "#1a3c5e", textDecoration: "underline", fontWeight: "500" }}>
+                Search by address, Eircode, or coordinates
+              </Link> — Find specific properties or search within a radius
+            </li>
+            <li style={{ marginBottom: "0.75rem" }}>
+              <Link to="/polygon" style={{ color: "#1a3c5e", textDecoration: "underline", fontWeight: "500" }}>
+                Draw a custom area on the map
+              </Link> — Define your target neighborhood with polygon drawing tools
+            </li>
+            <li style={{ marginBottom: "0.75rem" }}>
+              <Link to="/county/dublin" style={{ color: "#1a3c5e", textDecoration: "underline", fontWeight: "500" }}>
+                Browse sales by county
+              </Link> — View price trends and recent sales for all 26 counties
+            </li>
+            <li style={{ marginBottom: "0.75rem" }}>
+              <Link to="/eircode/D02" style={{ color: "#1a3c5e", textDecoration: "underline", fontWeight: "500" }}>
+                Search by Eircode routing key
+              </Link> — Explore properties in specific Dublin postal areas (e.g., D02, D04, A94)
+            </li>
+            <li style={{ marginBottom: "0.75rem" }}>
+              <Link to="/mortgages" style={{ color: "#1a3c5e", textDecoration: "underline", fontWeight: "500" }}>
+                Calculate mortgage affordability
+              </Link> — See what you can afford based on your income and deposit
+            </li>
           </ul>
         </section>
       </main>
