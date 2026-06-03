@@ -50,8 +50,10 @@ export default function EircodePage() {
       <PageHeader title={`Property Prices — ${friendlyName}`} />
       <div className="content-page">
       <p className="content-intro">
-        All residential property sales recorded under Eircode routing key <strong>{upperCode}</strong> in
-        Ireland's Property Price Register, from 2010 to present.
+        All residential property sales recorded under Eircode routing key <strong>{upperCode}</strong> in{" "}
+        <Link to="/property-price-register" style={{ color: "#1a3c5e", textDecoration: "underline" }}>
+          Ireland's Property Price Register
+        </Link>, from 2010 to present.
       </p>
 
       {loading && <div className="content-loading">Loading data…</div>}

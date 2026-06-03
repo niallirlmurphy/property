@@ -76,8 +76,10 @@ export default function CountyPage() {
       <PageHeader title={`Property Prices in County ${county}`} />
       <div className="content-page">
       <p className="content-intro">
-        Explore residential property sale prices across County {county} from Ireland's
-        Property Price Register. Every sale since 2010 is included.
+        Explore residential property sale prices across County {county} from{" "}
+        <Link to="/property-price-register" style={{ color: "#1a3c5e", textDecoration: "underline" }}>
+          Ireland's Property Price Register
+        </Link>. Every sale since 2010 is included.
       </p>
 
       {loading && <div className="content-loading">Loading data…</div>}
