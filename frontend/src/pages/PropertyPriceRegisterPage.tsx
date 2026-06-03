@@ -20,6 +20,62 @@ export default function PropertyPriceRegisterPage() {
           ]
         })}
       </script>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the Property Price Register Ireland?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Property Price Register (PPR) is Ireland's official government database of all residential property sales since 2010. Managed by the Property Services Regulatory Authority (PSRA), it records every sale over €100,000 as a legal requirement, providing transparency into the Irish housing market with over 784,000 recorded transactions."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is the Property Price Register accurate?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The PPR data is comprehensive but has limitations. It originates from stamp duty tax records, so addresses may have inconsistent formatting and lack geographic coordinates. HomeIQ enhances this data through address normalization, geocoding validation, and quality scoring to improve accuracy. We've added coordinates to 78% of properties with 89-91% coverage for recent sales."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I search the Property Price Register?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can search the official PPR website at propertypriceregister.ie with basic text search, or use HomeIQ.ie for enhanced search capabilities including radius-based search, interactive map tools, polygon drawing, county filtering, and Eircode lookup. HomeIQ provides geocoded property locations and price trend analysis not available on the official site."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the Property Price Register include all property sales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The PPR includes all residential property sales over €100,000 in Ireland since January 2010. It covers houses, apartments, and residential units. However, it includes both full market price sales and non-market transactions like family transfers, which should be filtered out for accurate price analysis."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why doesn't the Property Price Register have coordinates?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The PPR was designed as a taxation record, not a property search tool, so it only contains text addresses without geographic coordinates. This makes map-based searching impossible on the official site. HomeIQ addresses this by geocoding addresses and validating coordinates against Ireland's boundaries, county borders, and Eircode routing keys."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How far back does the Property Price Register go?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Property Price Register contains property sales data from January 1, 2010 to the present. It was established under the Finance Act 2010 following the 2008 financial crisis to bring transparency to Ireland's property market. All qualifying sales since then are legally required to be registered."
+              }
+            }
+          ]
+        })}
+      </script>
       <PageHeader title="Understanding Ireland's Property Price Register" />
       <main className="static-content">
         <section className="about-section">
@@ -274,6 +330,61 @@ export default function PropertyPriceRegisterPage() {
             You can explore these trends on our{" "}
             <Link to="/county/dublin">county pages</Link> and{" "}
             <Link to="/polygon">map-based search tool</Link>.
+          </p>
+        </section>
+
+        <section className="about-section">
+          <h2>Frequently Asked Questions</h2>
+
+          <h3>What is the Property Price Register Ireland?</h3>
+          <p>
+            The Property Price Register (PPR) is Ireland's official government database of all residential
+            property sales since 2010. Managed by the Property Services Regulatory Authority (PSRA), it
+            records every sale over €100,000 as a legal requirement, providing transparency into the Irish
+            housing market with over 784,000 recorded transactions.
+          </p>
+
+          <h3>Is the Property Price Register accurate?</h3>
+          <p>
+            The PPR data is comprehensive but has limitations. It originates from stamp duty tax records,
+            so addresses may have inconsistent formatting and lack geographic coordinates. HomeIQ enhances
+            this data through address normalization, geocoding validation, and quality scoring to improve
+            accuracy. We've added coordinates to 78% of properties with 89-91% coverage for recent sales.
+          </p>
+
+          <h3>How do I search the Property Price Register?</h3>
+          <p>
+            You can search the official PPR website at{" "}
+            <a href="https://www.propertypriceregister.ie" target="_blank" rel="noopener noreferrer">
+              propertypriceregister.ie
+            </a>{" "}
+            with basic text search, or use HomeIQ.ie for enhanced search capabilities including radius-based
+            search, interactive map tools, polygon drawing, county filtering, and Eircode lookup. HomeIQ
+            provides geocoded property locations and price trend analysis not available on the official site.
+          </p>
+
+          <h3>Does the Property Price Register include all property sales?</h3>
+          <p>
+            The PPR includes all residential property sales over €100,000 in Ireland since January 2010.
+            It covers houses, apartments, and residential units. However, it includes both full market price
+            sales and non-market transactions like family transfers, which should be filtered out for accurate
+            price analysis.
+          </p>
+
+          <h3>Why doesn't the Property Price Register have coordinates?</h3>
+          <p>
+            The PPR was designed as a taxation record, not a property search tool, so it only contains text
+            addresses without geographic coordinates. This makes map-based searching impossible on the official
+            site. HomeIQ addresses this by geocoding addresses and validating coordinates against Ireland's
+            boundaries, county borders, and Eircode routing keys.
+          </p>
+
+          <h3>How far back does the Property Price Register go?</h3>
+          <p>
+            The Property Price Register contains property sales data from January 1, 2010 to the present.
+            It was established under the Finance Act 2010 following the 2008 financial crisis to bring
+            transparency to Ireland's property market. All qualifying sales since then are legally required
+            to be registered.
           </p>
         </section>
 
