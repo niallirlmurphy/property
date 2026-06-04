@@ -806,7 +806,7 @@ async def search(
                 id, sale_date, address, county, eircode, price,
                 not_full_market_price, vat_exclusive, description,
                 size_description, latitude, longitude,
-                routing_key,
+                routing_key, bedrooms, property_type,
                 ST_Distance(geog, ST_MakePoint($2, $1)::geography) AS distance_m
             FROM properties
             WHERE {where}
@@ -849,7 +849,7 @@ async def search(
                     id, sale_date, address, county, eircode, price,
                     not_full_market_price, vat_exclusive, description,
                     size_description, latitude, longitude,
-                    routing_key,
+                    routing_key, bedrooms, property_type,
                     ST_Distance(geog, ST_MakePoint($2, $1)::geography) AS distance_m
                 FROM properties
                 WHERE {where}
@@ -959,7 +959,7 @@ async def search_polygon(
             id, sale_date, address, county, eircode, price,
             not_full_market_price, vat_exclusive, description,
             size_description, latitude, longitude,
-            routing_key
+            routing_key, bedrooms, property_type
         FROM properties
         WHERE {where}
         ORDER BY sale_date DESC
@@ -1079,7 +1079,7 @@ async def eircode_search(
             id, sale_date, address, county, eircode, price,
             not_full_market_price, vat_exclusive, description,
             size_description, latitude, longitude,
-            routing_key
+            routing_key, bedrooms, property_type
         FROM properties
         WHERE {where}
         ORDER BY sale_date DESC

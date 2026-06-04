@@ -11,6 +11,8 @@ export interface Property {
   size_description: string | null;
   latitude: number | null;
   longitude: number | null;
+  bedrooms: number | null;
+  property_type: string | null;
   distance_m?: number;
 }
 
