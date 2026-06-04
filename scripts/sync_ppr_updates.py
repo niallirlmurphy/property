@@ -72,6 +72,77 @@ def parse_bool(raw: str) -> bool:
     return raw.strip().lower() in ("yes", "true", "1")
 
 
+def normalize_address(address: str) -> str:
+    """
+    Normalize Irish property address for better geocoding and matching.
+
+    Rules:
+    1. Title case (except common words)
+    2. Remove "No." prefix from house numbers
+    3. Standardize apartment/unit formatting
+    4. Standardize street type abbreviations
+    5. Clean up punctuation and whitespace
+    """
+    if not address:
+        return address
+
+    normalized = address.strip()
+
+    # Basic cleanup
+    normalized = re.sub(r'\s+', ' ', normalized)
+    normalized = re.sub(r',\s*,+', ',', normalized)
+
+    # Remove "No." prefix
+    normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
+
+    # Standardize apartment/unit
+    normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
+
+    # Standardize street types
+    street_types = {
+        r'\bSt\.?\b': 'Street',
+        r'\bRd\.?\b': 'Road',
+        r'\bAve\.?\b': 'Avenue',
+        r'\bDr\.?\b': 'Drive',
+        r'\bCl\.?\b': 'Close',
+        r'\bCt\.?\b': 'Court',
+        r'\bPk\.?\b': 'Park',
+        r'\bSq\.?\b': 'Square',
+    }
+
+    for abbrev, full in street_types.items():
+        normalized = re.sub(abbrev, full, normalized, flags=re.I)
+
+    # Clean up punctuation
+    normalized = re.sub(r',\s*,', ',', normalized)
+    normalized = re.sub(r'\s+,', ',', normalized)
+    normalized = re.sub(r',\s+', ', ', normalized)
+    normalized = normalized.strip(', ')
+
+    # Title case with exceptions
+    words = normalized.split()
+    lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
+    upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
+
+    result_words = []
+    for i, word in enumerate(words):
+        if i == 0:
+            result_words.append(word.capitalize())
+        elif word in upper_exceptions:
+            result_words.append(word)
+        elif word.lower() in lower_exceptions:
+            result_words.append(word.lower())
+        else:
+            result_words.append(word.capitalize())
+
+    normalized = ' '.join(result_words)
+
+    # Final cleanup
+    normalized = re.sub(r'\s+', ' ', normalized).strip()
+
+    return normalized
+
+
 def normalize_ppr_row(row: Dict[str, str]) -> Dict[str, any]:
     """Normalize PPR CSV row to database schema format."""
 
@@ -83,9 +154,12 @@ def normalize_ppr_row(row: Dict[str, str]) -> Dict[str, any]:
     price_raw = row.get('Price (€)') or row.get('Price (�)') or row.get('Price (EUR)') or row.get('Price')
     eircode_raw = row.get('Postal Code') or row.get('Eircode')
 
+    address_raw = row.get('Address', '').strip()
+
     return {
         'sale_date': parse_date(row.get('Date of Sale (dd/mm/yyyy)')),
-        'address': row.get('Address', '').strip(),
+        'address': address_raw,
+        'address_normalized': normalize_address(address_raw),
         'eircode': (eircode_raw or '').strip() or None,
         'county': row.get('County', '').strip(),
         'price': parse_price(price_raw),
@@ -478,23 +552,24 @@ async def import_to_database(csv_path: str, conn: asyncpg.Connection, dry_run: b
 
         await conn.executemany("""
             INSERT INTO properties (
-                sale_date, address, county, eircode, price,
+                sale_date, address, address_normalized, county, eircode, price,
                 not_full_market_price, vat_exclusive,
                 description, size_description,
                 latitude, longitude, geog, needs_geocoding
             ) VALUES (
-                $1, $2, $3, $4, $5, $6, $7, $8, $9, $10::double precision, $11::double precision,
+                $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11::double precision, $12::double precision,
                 CASE
-                    WHEN $10 IS NOT NULL AND $11 IS NOT NULL
-                    THEN ST_MakePoint($11, $10)::geography
+                    WHEN $11 IS NOT NULL AND $12 IS NOT NULL
+                    THEN ST_MakePoint($12, $11)::geography
                     ELSE NULL
                 END,
-                $12
+                $13
             )
             ON CONFLICT DO NOTHING
         """, [
             (
-                sale['sale_date'], sale['address'], sale['county'], sale['eircode'],
+                sale['sale_date'], sale['address'], sale['address_normalized'],
+                sale['county'], sale['eircode'],
                 sale['price'], sale['not_full_market_price'], sale['vat_exclusive'],
                 sale['description'], sale['size_description'],
                 sale['latitude'], sale['longitude'],
