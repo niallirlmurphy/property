@@ -4,6 +4,8 @@
 
 Property enrichment adds bedroom counts and property types to recent sales by searching the web for property listings.
 
+**Automatic Integration:** Property enrichment now runs automatically as part of the biweekly PPR sync process (`scripts/sync_ppr_updates.py`). After importing new sales, the script enriches properties from the last month (up to 100 properties per run).
+
 ## Database Schema
 
 **New columns added:**

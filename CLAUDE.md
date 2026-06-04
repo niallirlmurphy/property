@@ -114,7 +114,19 @@ python3 scripts/geocode_mapbox_batch.py --needs-geocoding --apply
 - Expected success: 70-80% with quality 85-90/100
 - Cost: FREE (within 100k/month tier)
 
-**Result:** Database stays current with 2-week lag, 70-80% of new properties geocoded automatically.
+**Property enrichment (automatic):**
+The sync script automatically enriches new properties with bedroom counts and property types by searching the web. This happens after import and geocoding complete. Properties from the last month are enriched (limit: 100 per run).
+
+**Manual enrichment:**
+```bash
+python3 scripts/enrich_recent_properties.py --months 3
+```
+- Searches DuckDuckGo for property details
+- Extracts bedroom counts and property types
+- 10-second rate limiting to avoid blocking
+- Expected success: 60-90% for recent high-value properties
+
+**Result:** Database stays current with 2-week lag, 70-80% of new properties geocoded automatically, and recent properties enriched with bedroom/type data.
 
 ## Running the geocoder
 ```bash

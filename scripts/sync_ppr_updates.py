@@ -614,6 +614,46 @@ async def sync_ppr_updates(dry_run: bool = False, since_date: Optional[str] = No
         await import_to_database(geocoded_csv, conn, dry_run=dry_run)
 
         print()
+
+        # 6. Enrich new properties with bedroom and type data
+        if not dry_run and not skip_geocoding:
+            print("6. Enriching new properties with bedroom and type data...")
+            print("   (This may take several minutes with 10s rate limiting)")
+            print()
+
+            try:
+                # Run enrichment script on properties from last week
+                # (covers the new imports plus any recent we might have missed)
+                result = subprocess.run(
+                    [sys.executable, str(PROJECT_ROOT / 'scripts' / 'enrich_recent_properties.py'),
+                     '--months', '1', '--limit', '100'],
+                    capture_output=True,
+                    text=True,
+                    timeout=600  # 10 minute timeout
+                )
+
+                if result.returncode == 0:
+                    print("   ✓ Property enrichment complete")
+                    # Show last few lines of output (summary)
+                    output_lines = result.stdout.strip().split('\n')
+                    for line in output_lines[-10:]:
+                        if line.strip():
+                            print(f"   {line}")
+                else:
+                    print(f"   ⚠ Property enrichment failed (exit code {result.returncode})")
+                    print(f"   You can run manually: python3 scripts/enrich_recent_properties.py")
+            except subprocess.TimeoutExpired:
+                print("   ⚠ Property enrichment timed out (>10 minutes)")
+                print("   You can run manually: python3 scripts/enrich_recent_properties.py")
+            except Exception as e:
+                print(f"   ⚠ Property enrichment error: {e}")
+                print("   You can run manually: python3 scripts/enrich_recent_properties.py")
+        elif skip_geocoding:
+            print("6. Skipping property enrichment (geocoding was skipped)")
+        else:
+            print("6. Skipping property enrichment (dry-run mode)")
+
+        print()
         print("=" * 70)
         print("✓ SYNC COMPLETE")
         print("=" * 70)
