@@ -182,7 +182,7 @@ def enrich_properties(months=3, limit=None, dry_run=False):
                 failed += 1
 
             # Rate limiting - be more respectful
-            time.sleep(2)  # 2 seconds between requests
+            time.sleep(10)  # 10 seconds between requests
 
         print(f"   Progress: {len(properties)}/{len(properties)} (100.0%)", flush=True)
         print(flush=True)

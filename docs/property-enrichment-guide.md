@@ -57,9 +57,9 @@ python3 scripts/enrich_recent_properties.py --limit 100
 
 ## Rate Limiting
 
-- **2 seconds between requests** to avoid being blocked
-- Processing 100 properties takes ~3-4 minutes
-- Processing 1,000 properties takes ~35-40 minutes
+- **10 seconds between requests** to avoid being blocked
+- Processing 100 properties takes ~17 minutes
+- Processing 1,000 properties takes ~3 hours
 
 **Recommendation:** Run in batches of 100-200 properties to avoid timeouts
 
