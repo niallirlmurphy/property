@@ -20,6 +20,12 @@ function formatDist(m: number) {
   return m < 1000 ? `${Math.round(m)} m` : `${(m / 1000).toFixed(2)} km`;
 }
 
+function formatDate(dateString: string): string {
+  // Convert YYYY-MM-DD to DD-MM-YYYY
+  const [year, month, day] = dateString.slice(0, 10).split('-');
+  return `${day}-${month}-${year}`;
+}
+
 export default function ResultsList({ results, activeId, onSelect, exactMatchIds, hasSearched, loading }: Props) {
   const activeRef = useRef<HTMLDivElement | null>(null);
 
@@ -78,7 +84,7 @@ export default function ResultsList({ results, activeId, onSelect, exactMatchIds
                 )}
               </div>
               <div className="result-meta">
-                <span>{new Date(p.sale_date).getFullYear()}</span>
+                <span>{formatDate(p.sale_date)}</span>
                 {p.eircode && <span>{p.eircode}</span>}
                 {p.distance_m != null && <span>{formatDist(p.distance_m)}</span>}
                 {p.not_full_market_price && (

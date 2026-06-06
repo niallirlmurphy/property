@@ -33,6 +33,12 @@ function formatPrice(n: number) {
   return "€" + Math.round(n).toLocaleString("en-IE");
 }
 
+function formatDate(dateString: string): string {
+  // Convert YYYY-MM-DD to DD-MM-YYYY
+  const [year, month, day] = dateString.slice(0, 10).split('-');
+  return `${day}-${month}-${year}`;
+}
+
 const ABBREV_MAP: [RegExp, string][] = [
   [/\brd\b/g,   "road"],
   [/\bave?\b/g, "avenue"],
@@ -340,7 +346,7 @@ export default function App() {
             <Popup>
               <strong>{formatPrice(p.price)}</strong><br />
               {p.address}<br />
-              <small>{p.sale_date.slice(0, 10)}{p.eircode ? ` · ${p.eircode}` : ""}</small>
+              <small>{formatDate(p.sale_date)}{p.eircode ? ` · ${p.eircode}` : ""}</small>
             </Popup>
           </Marker>
         ))}

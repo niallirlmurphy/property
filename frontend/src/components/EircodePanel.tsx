@@ -12,6 +12,12 @@ function formatPrice(n: number | null) {
   return "€" + Math.round(n).toLocaleString("en-IE");
 }
 
+function formatDate(dateString: string): string {
+  // Convert YYYY-MM-DD to DD-MM-YYYY
+  const [year, month, day] = dateString.slice(0, 10).split('-');
+  return `${day}-${month}-${year}`;
+}
+
 export default function EircodePanel({ result, activeId, onSelect }: Props) {
   const { code, match_type, stats, results } = result;
   const activeRef = useRef<HTMLDivElement | null>(null);
@@ -59,7 +65,7 @@ export default function EircodePanel({ result, activeId, onSelect }: Props) {
           <div className="result-price">{"€" + Math.round(p.price).toLocaleString("en-IE")}</div>
           <div className="result-address">{p.address}</div>
           <div className="result-meta">
-            <span>{p.sale_date.slice(0, 10)}</span>
+            <span>{formatDate(p.sale_date)}</span>
             {p.eircode && <span>{p.eircode}</span>}
             {p.not_full_market_price && <span title="Not full market price">⚠ NMP</span>}
           </div>
