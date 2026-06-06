@@ -31,6 +31,17 @@ export function usePageMeta(title?: string, description?: string, breadcrumbs?: 
       }
     }
 
+    // Add canonical URL
+    const canonicalUrl = `https://homeiq.ie${window.location.pathname}`;
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', canonicalUrl);
+
     // Add breadcrumb schema if provided
     let breadcrumbScript: HTMLScriptElement | null = null;
     if (breadcrumbs && breadcrumbs.length > 0) {
@@ -70,6 +81,12 @@ export function usePageMeta(title?: string, description?: string, breadcrumbs?: 
       // Clean up breadcrumb schema
       if (breadcrumbScript) {
         document.head.removeChild(breadcrumbScript);
+      }
+
+      // Reset canonical URL
+      const canonicalToReset = document.querySelector('link[rel="canonical"]');
+      if (canonicalToReset) {
+        canonicalToReset.setAttribute('href', 'https://homeiq.ie/');
       }
     };
   }, [title, description, breadcrumbs, ogImage]);
