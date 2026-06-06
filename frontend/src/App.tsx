@@ -258,6 +258,15 @@ export default function App() {
   const handleSelectProperty = (p: Property) => {
     setActiveProperty(p);
     setMobileTab("map");
+
+    // Add marker for this property if it has coordinates and isn't already on the map
+    // This ensures that when clicking a result, there's always a marker to pan to
+    if (p.latitude != null && p.longitude != null) {
+      const isAlreadyOnMap = mapPins.some(pin => pin.id === p.id);
+      if (!isAlreadyOnMap) {
+        setMapPins(prev => [...prev, p]);
+      }
+    }
   };
 
   const mapProperties: Property[] = eircodeResult
