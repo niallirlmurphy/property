@@ -14,6 +14,8 @@ import PropertyPriceRegisterPage from "./pages/PropertyPriceRegisterPage";
 import ManualGeocodePage from "./pages/ManualGeocodePage";
 import PolygonSearchPage from "./pages/PolygonSearchPage";
 import CaminoPage from "./pages/CaminoPage";
+import BlogListPage from "./pages/BlogListPage";
+import BlogPostPage from "./pages/BlogPostPage";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
 
@@ -35,6 +37,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/property-price-register" element={<PropertyPriceRegisterPage />} />
         <Route path="/geocodes" element={<ManualGeocodePage />} />
         <Route path="/camino" element={<CaminoPage />} />
+        <Route path="/blog" element={<BlogListPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
