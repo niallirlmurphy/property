@@ -284,6 +284,106 @@ After a long walk we eventually reach the hostel --- it is beautiful --- we noti
         </div>
       </div>
 
+      {/* Route Overview */}
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+          <div className="p-8 md:p-12">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-teal-600 rounded-2xl flex items-center justify-center text-white">
+                <MapPin className="w-6 h-6" />
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-black text-stone-900">The Route</h2>
+                <p className="text-stone-600">Irun, Spain → Santiago de Compostela</p>
+              </div>
+            </div>
+
+            {/* Route Highlights */}
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <div className="bg-blue-50 rounded-2xl p-6">
+                <div className="text-blue-600 font-bold mb-2 text-sm uppercase tracking-wide">Start</div>
+                <div className="text-xl font-bold text-stone-900">Irun</div>
+                <div className="text-stone-600 text-sm">Basque Country, Spain</div>
+                <div className="text-stone-500 text-xs mt-2">On the French border</div>
+              </div>
+
+              <div className="bg-teal-50 rounded-2xl p-6">
+                <div className="text-teal-600 font-bold mb-2 text-sm uppercase tracking-wide">Route Type</div>
+                <div className="text-xl font-bold text-stone-900">Coastal</div>
+                <div className="text-stone-600 text-sm">Camino del Norte</div>
+                <div className="text-stone-500 text-xs mt-2">Along Bay of Biscay</div>
+              </div>
+
+              <div className="text-cyan-50 rounded-2xl p-6">
+                <div className="text-cyan-600 font-bold mb-2 text-sm uppercase tracking-wide">End</div>
+                <div className="text-xl font-bold text-stone-900">Santiago</div>
+                <div className="text-stone-600 text-sm">Galicia, Spain</div>
+                <div className="text-stone-500 text-xs mt-2">817.5km total</div>
+              </div>
+            </div>
+
+            {/* Visual Route Timeline */}
+            <div className="mt-8 pt-8 border-t-2 border-stone-100">
+              <h3 className="text-xl font-bold text-stone-900 mb-6">The 817.5km Coastal Journey</h3>
+
+              {/* Route Flow */}
+              <div className="relative">
+                {/* Connecting Line */}
+                <div className="absolute top-6 left-6 right-6 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-cyan-600 rounded-full" />
+
+                {/* Stops */}
+                <div className="relative grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {[
+                    { name: 'Irun', region: 'Start', km: '0' },
+                    { name: 'San Sebastian', region: 'Basque Country', km: '27' },
+                    { name: 'Bilbao', region: 'Basque Country', km: '160' },
+                    { name: 'Castro-Urdiales', region: 'Cantabria', km: '200' },
+                    { name: 'Santander', region: 'Cantabria', km: '280' },
+                    { name: 'Gijon', region: 'Asturias', km: '450' },
+                    { name: 'Ribadeo', region: 'Galicia', km: '650' },
+                    { name: 'Santiago', region: 'End', km: '817' },
+                  ].map((stop, idx) => (
+                    <div key={idx} className="relative">
+                      {/* Marker */}
+                      <div className="relative z-10 w-12 h-12 rounded-full bg-white border-4 border-blue-500 mx-auto mb-3 flex items-center justify-center shadow-lg">
+                        <span className="text-xs font-bold text-blue-600">{idx + 1}</span>
+                      </div>
+                      {/* Info */}
+                      <div className="text-center">
+                        <div className="font-bold text-stone-900 text-sm mb-1">{stop.name}</div>
+                        <div className="text-stone-500 text-xs mb-1">{stop.region}</div>
+                        <div className="inline-block bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs font-semibold">
+                          {stop.km} km
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Route Stats */}
+              <div className="grid md:grid-cols-3 gap-4 mt-8">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-100">
+                  <div className="text-blue-600 text-xs font-bold mb-1 uppercase">Stage 1</div>
+                  <div className="font-bold text-stone-900">Irun → Bilbao</div>
+                  <div className="text-stone-600 text-sm">Basque coastal highlands</div>
+                </div>
+                <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-4 border border-teal-100">
+                  <div className="text-teal-600 text-xs font-bold mb-1 uppercase">Stage 2</div>
+                  <div className="font-bold text-stone-900">Bilbao → Ribadeo</div>
+                  <div className="text-stone-600 text-sm">Cantabria & Asturias coast</div>
+                </div>
+                <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-4 border border-cyan-100">
+                  <div className="text-cyan-600 text-xs font-bold mb-1 uppercase">Stage 3</div>
+                  <div className="font-bold text-stone-900">Ribadeo → Santiago</div>
+                  <div className="text-stone-600 text-sm">Through Galicia</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Featured Stages - Magazine Grid */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="text-center mb-16">
