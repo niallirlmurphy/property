@@ -210,6 +210,9 @@ async def add_security_headers(request: Request, call_next):
     # Referrer policy
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
 
+    # Force HTTPS for 1 year (including subdomains)
+    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+
     return response
 
 
