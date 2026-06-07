@@ -15,6 +15,7 @@ import ManualGeocodePage from "./pages/ManualGeocodePage";
 import PolygonSearchPage from "./pages/PolygonSearchPage";
 import CaminoIndexPage from "./pages/CaminoIndexPage";
 import FrenchWayPage from "./pages/FrenchWayPage";
+import SpanishWayPage from "./pages/SpanishWayPage";
 import BlogListPage from "./pages/BlogListPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import "leaflet/dist/leaflet.css";
@@ -39,6 +40,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/geocodes" element={<ManualGeocodePage />} />
         <Route path="/camino" element={<CaminoIndexPage />} />
         <Route path="/camino/french-way" element={<FrenchWayPage />} />
+        <Route path="/camino/spanish-way" element={<SpanishWayPage />} />
         <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
       </Routes>
