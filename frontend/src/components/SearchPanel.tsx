@@ -17,12 +17,15 @@ function saveRecent(q: string): string[] {
 }
 
 const CURRENT_YEAR = new Date().getFullYear();
+const EIGHTEEN_MONTHS_AGO = new Date();
+EIGHTEEN_MONTHS_AGO.setMonth(EIGHTEEN_MONTHS_AGO.getMonth() - 18);
 
 export const PERIOD_OPTIONS = [
   { label: "All time",          minYear: undefined },
   { label: "Previous 10 years", minYear: CURRENT_YEAR - 10 },
   { label: "Previous 5 years",  minYear: CURRENT_YEAR - 5 },
   { label: "Previous 2 years",  minYear: CURRENT_YEAR - 2 },
+  { label: "Previous 18 months", minYear: EIGHTEEN_MONTHS_AGO.getFullYear() },
 ];
 
 interface Props {
@@ -39,7 +42,7 @@ interface Props {
 export default function SearchPanel({ counties, loading, error, onSearch, resultSummary, defaultValues, onOpenEmailAlert }: Props) {
   const [q, setQ] = useState(defaultValues?.q ?? "");
   const [radiusKm, setRadiusKm] = useState(defaultValues?.radius_km ?? 0.5);
-  const [period, setPeriod] = useState(defaultValues?.period ?? 2);
+  const [period, setPeriod] = useState(defaultValues?.period ?? 4); // Default to 18 months (index 4)
   const [county, setCounty] = useState(defaultValues?.county ?? "Dublin");
   const [recentSearches, setRecentSearches] = useState<string[]>(loadRecent);
   const [showRecent, setShowRecent] = useState(false);
