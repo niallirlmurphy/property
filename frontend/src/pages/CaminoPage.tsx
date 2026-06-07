@@ -283,23 +283,58 @@ I think the cafe and pub culture in Spain and France is very healthy. The owner 
               </div>
             </div>
 
-            {/* Map Container */}
-            <div className="relative rounded-2xl overflow-hidden bg-stone-100" style={{ height: '500px' }}>
+            {/* Map Container with Route */}
+            <div className="relative rounded-2xl overflow-hidden bg-stone-100" style={{ height: '600px' }}>
               <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-1.6479%2C42.8169%2C3.8794%2C45.0428&layer=mapnik&marker=43.93%2C1.12"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=0.8%2C42.7%2C3.9%2C45.2&layer=mapnik"
                 width="100%"
                 height="100%"
                 style={{ border: 'none' }}
                 title="Camino Route from Le Puy to Pamplona"
               />
-              <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-stone-700">
+
+              {/* Route Overlay Description */}
+              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg max-w-sm">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-8 h-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full" />
+                  <span className="text-xs font-bold text-stone-700 uppercase tracking-wide">The Route</span>
+                </div>
+                <p className="text-xs text-stone-600 leading-relaxed">
+                  The <strong>GR 65 / Camino de Santiago</strong> from Le Puy-en-Velay through the Massif Central,
+                  Lot Valley, and Pyrenees to Pamplona. Part of the UNESCO World Heritage pilgrimage route.
+                </p>
+              </div>
+
+              {/* Interactive Waypoints */}
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+                  {[
+                    { name: 'Le Puy', emoji: '🏔️', desc: 'Start - 629m' },
+                    { name: 'Conques', emoji: '⛪', desc: 'Medieval village' },
+                    { name: 'Cahors', emoji: '🌉', desc: 'Rest day' },
+                    { name: 'Moissac', emoji: '🏛️', desc: 'Abbey' },
+                    { name: 'Pyrenees', emoji: '⛰️', desc: 'Peak - 1,400m' },
+                    { name: 'St-Jean', emoji: '🇫🇷', desc: 'Last stop France' },
+                    { name: 'Roncesvalles', emoji: '🇪🇸', desc: 'First stop Spain' },
+                    { name: 'Pamplona', emoji: '🎯', desc: 'End - 449m' },
+                  ].map((point, idx) => (
+                    <div key={idx} className="bg-amber-50 rounded-lg p-2">
+                      <div className="text-base mb-0.5">{point.emoji}</div>
+                      <div className="font-bold text-stone-900 text-xs">{point.name}</div>
+                      <div className="text-stone-500 text-[10px]">{point.desc}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-xs text-stone-700">
                 <a
-                  href="https://www.openstreetmap.org/?mlat=43.93&mlon=1.12#map=8/43.93/1.12"
+                  href="https://umap.openstreetmap.fr/en/map/chemin-de-saint-jacques-de-compostelle_73436#7/43.5/1.5"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-amber-600 transition-colors"
+                  className="hover:text-amber-600 transition-colors font-medium"
                 >
-                  View Larger Map
+                  View Full Route Map →
                 </a>
               </div>
             </div>
@@ -328,25 +363,62 @@ I think the cafe and pub culture in Spain and France is very healthy. The owner 
               </div>
             </div>
 
-            {/* Key Stops */}
+            {/* Visual Route Timeline */}
             <div className="mt-8 pt-8 border-t-2 border-stone-100">
-              <h3 className="text-xl font-bold text-stone-900 mb-4">Key Stops Along the Way</h3>
-              <div className="grid md:grid-cols-2 gap-3 text-sm">
-                {[
-                  'Le Puy-en-Velay',
-                  'Saint-Privat-d\'Allier',
-                  'Saugues',
-                  'Conques',
-                  'Cahors',
-                  'Moissac',
-                  'Saint-Jean-Pied-de-Port',
-                  'Pamplona'
-                ].map((stop, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-amber-500" />
-                    <span className="text-stone-700">{stop}</span>
-                  </div>
-                ))}
+              <h3 className="text-xl font-bold text-stone-900 mb-6">The 850km Journey</h3>
+
+              {/* Route Flow */}
+              <div className="relative">
+                {/* Connecting Line */}
+                <div className="absolute top-6 left-6 right-6 h-1 bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 rounded-full" />
+
+                {/* Stops */}
+                <div className="relative grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {[
+                    { name: 'Le Puy-en-Velay', region: 'Massif Central', km: '0' },
+                    { name: 'Saint-Privat-d\'Allier', region: 'Auvergne', km: '32' },
+                    { name: 'Saugues', region: 'Mountains', km: '64' },
+                    { name: 'Conques', region: 'Lot Valley', km: '170' },
+                    { name: 'Cahors', region: 'Rest Day', km: '340' },
+                    { name: 'Moissac', region: 'Midi-Pyrénées', km: '500' },
+                    { name: 'Saint-Jean-Pied-de-Port', region: 'Basque Country', km: '750' },
+                    { name: 'Pamplona', region: 'Navarre', km: '850' },
+                  ].map((stop, idx) => (
+                    <div key={idx} className="relative">
+                      {/* Marker */}
+                      <div className="relative z-10 w-12 h-12 rounded-full bg-white border-4 border-amber-500 mx-auto mb-3 flex items-center justify-center shadow-lg">
+                        <span className="text-xs font-bold text-amber-600">{idx + 1}</span>
+                      </div>
+                      {/* Info */}
+                      <div className="text-center">
+                        <div className="font-bold text-stone-900 text-sm mb-1">{stop.name}</div>
+                        <div className="text-stone-500 text-xs mb-1">{stop.region}</div>
+                        <div className="inline-block bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full text-xs font-semibold">
+                          {stop.km} km
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Route Stats */}
+              <div className="grid md:grid-cols-3 gap-4 mt-8">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-4 border border-amber-100">
+                  <div className="text-amber-600 text-xs font-bold mb-1 uppercase">Stage 1</div>
+                  <div className="font-bold text-stone-900">Le Puy → Conques</div>
+                  <div className="text-stone-600 text-sm">Massif Central highlands</div>
+                </div>
+                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-4 border border-orange-100">
+                  <div className="text-orange-600 text-xs font-bold mb-1 uppercase">Stage 2</div>
+                  <div className="font-bold text-stone-900">Conques → St-Jean</div>
+                  <div className="text-stone-600 text-sm">Lot Valley & Pyrénées</div>
+                </div>
+                <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-4 border border-red-100">
+                  <div className="text-red-600 text-xs font-bold mb-1 uppercase">Stage 3</div>
+                  <div className="font-bold text-stone-900">St-Jean → Pamplona</div>
+                  <div className="text-stone-600 text-sm">Over the Pyrenees</div>
+                </div>
               </div>
             </div>
           </div>
