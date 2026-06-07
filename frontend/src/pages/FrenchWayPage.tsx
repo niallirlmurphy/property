@@ -191,11 +191,11 @@ I think the cafe and pub culture in Spain and France is very healthy. The owner 
         {/* Navigation */}
         <div className="absolute top-0 left-0 right-0 z-20 p-6">
           <Link
-            to="/"
+            to="/camino"
             className="inline-flex items-center gap-2 text-white/90 hover:text-white transition-all bg-white/10 backdrop-blur-md px-5 py-3 rounded-full hover:bg-white/20 border border-white/20"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span className="font-medium">Back to HomeIQ</span>
+            <span className="font-medium">Back to Camino Journeys</span>
           </Link>
         </div>
 
@@ -283,61 +283,6 @@ I think the cafe and pub culture in Spain and France is very healthy. The owner 
               </div>
             </div>
 
-            {/* Map Container with Route */}
-            <div className="relative rounded-2xl overflow-hidden bg-stone-100" style={{ height: '600px' }}>
-              <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=0.8%2C42.7%2C3.9%2C45.2&layer=mapnik"
-                width="100%"
-                height="100%"
-                style={{ border: 'none' }}
-                title="Camino Route from Le Puy to Pamplona"
-              />
-
-              {/* Route Overlay Description */}
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg max-w-sm">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full" />
-                  <span className="text-xs font-bold text-stone-700 uppercase tracking-wide">The Route</span>
-                </div>
-                <p className="text-xs text-stone-600 leading-relaxed">
-                  The <strong>GR 65 / Camino de Santiago</strong> from Le Puy-en-Velay through the Massif Central,
-                  Lot Valley, and Pyrenees to Pamplona. Part of the UNESCO World Heritage pilgrimage route.
-                </p>
-              </div>
-
-              {/* Interactive Waypoints */}
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
-                  {[
-                    { name: 'Le Puy', emoji: '🏔️', desc: 'Start - 629m' },
-                    { name: 'Conques', emoji: '⛪', desc: 'Medieval village' },
-                    { name: 'Cahors', emoji: '🌉', desc: 'Rest day' },
-                    { name: 'Moissac', emoji: '🏛️', desc: 'Abbey' },
-                    { name: 'Pyrenees', emoji: '⛰️', desc: 'Peak - 1,400m' },
-                    { name: 'St-Jean', emoji: '🇫🇷', desc: 'Last stop France' },
-                    { name: 'Roncesvalles', emoji: '🇪🇸', desc: 'First stop Spain' },
-                    { name: 'Pamplona', emoji: '🎯', desc: 'End - 449m' },
-                  ].map((point, idx) => (
-                    <div key={idx} className="bg-amber-50 rounded-lg p-2">
-                      <div className="text-base mb-0.5">{point.emoji}</div>
-                      <div className="font-bold text-stone-900 text-xs">{point.name}</div>
-                      <div className="text-stone-500 text-[10px]">{point.desc}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-xs text-stone-700">
-                <a
-                  href="https://umap.openstreetmap.fr/en/map/chemin-de-saint-jacques-de-compostelle_73436#7/43.5/1.5"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-amber-600 transition-colors font-medium"
-                >
-                  View Full Route Map →
-                </a>
-              </div>
-            </div>
 
             {/* Route Highlights */}
             <div className="grid md:grid-cols-3 gap-6 mt-8">
