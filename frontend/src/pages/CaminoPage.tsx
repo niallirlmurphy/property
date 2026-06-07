@@ -269,6 +269,90 @@ I think the cafe and pub culture in Spain and France is very healthy. The owner 
         </div>
       </div>
 
+      {/* Route Map */}
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+          <div className="p-8 md:p-12">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-white">
+                <MapPin className="w-6 h-6" />
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-black text-stone-900">The Route</h2>
+                <p className="text-stone-600">Le Puy-en-Velay, France → Pamplona, Spain</p>
+              </div>
+            </div>
+
+            {/* Map Container */}
+            <div className="relative rounded-2xl overflow-hidden bg-stone-100" style={{ height: '500px' }}>
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-1.6479%2C42.8169%2C3.8794%2C45.0428&layer=mapnik&marker=43.93%2C1.12"
+                width="100%"
+                height="100%"
+                style={{ border: 'none' }}
+                title="Camino Route from Le Puy to Pamplona"
+              />
+              <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-stone-700">
+                <a
+                  href="https://www.openstreetmap.org/?mlat=43.93&mlon=1.12#map=8/43.93/1.12"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-600 transition-colors"
+                >
+                  View Larger Map
+                </a>
+              </div>
+            </div>
+
+            {/* Route Highlights */}
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <div className="bg-amber-50 rounded-2xl p-6">
+                <div className="text-amber-600 font-bold mb-2 text-sm uppercase tracking-wide">Start</div>
+                <div className="text-xl font-bold text-stone-900">Le Puy-en-Velay</div>
+                <div className="text-stone-600 text-sm">Auvergne, France</div>
+                <div className="text-stone-500 text-xs mt-2">Elevation: 629m</div>
+              </div>
+
+              <div className="bg-orange-50 rounded-2xl p-6">
+                <div className="text-orange-600 font-bold mb-2 text-sm uppercase tracking-wide">Highest Point</div>
+                <div className="text-xl font-bold text-stone-900">Col de Somport</div>
+                <div className="text-stone-600 text-sm">Pyrenees</div>
+                <div className="text-stone-500 text-xs mt-2">Elevation: 1,400m</div>
+              </div>
+
+              <div className="bg-red-50 rounded-2xl p-6">
+                <div className="text-red-600 font-bold mb-2 text-sm uppercase tracking-wide">End</div>
+                <div className="text-xl font-bold text-stone-900">Pamplona</div>
+                <div className="text-stone-600 text-sm">Navarre, Spain</div>
+                <div className="text-stone-500 text-xs mt-2">Elevation: 449m</div>
+              </div>
+            </div>
+
+            {/* Key Stops */}
+            <div className="mt-8 pt-8 border-t-2 border-stone-100">
+              <h3 className="text-xl font-bold text-stone-900 mb-4">Key Stops Along the Way</h3>
+              <div className="grid md:grid-cols-2 gap-3 text-sm">
+                {[
+                  'Le Puy-en-Velay',
+                  'Saint-Privat-d\'Allier',
+                  'Saugues',
+                  'Conques',
+                  'Cahors',
+                  'Moissac',
+                  'Saint-Jean-Pied-de-Port',
+                  'Pamplona'
+                ].map((stop, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-amber-500" />
+                    <span className="text-stone-700">{stop}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Featured Stories - Magazine Grid */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="text-center mb-16">
