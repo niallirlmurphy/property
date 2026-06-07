@@ -368,6 +368,39 @@ After a long walk we eventually reach the hostel --- it is beautiful --- we noti
         </div>
       </div>
 
+      {/* Journey Stats */}
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            { icon: <Coffee className="w-8 h-8" />, number: '31', label: 'Days Walking', detail: 'Irun to Santiago' },
+            { icon: <Users className="w-8 h-8" />, number: '6', label: 'The Offaly Gang', detail: 'Denis, Lil, Josie, Charlie, Bridget, Jim' },
+            { icon: <Heart className="w-8 h-8" />, number: '817.5', label: 'Kilometers', detail: 'Along the northern coast' },
+          ].map((stat, idx) => (
+            <div key={idx} className="text-center p-8 bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-shadow">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-400 to-teal-500 rounded-2xl text-white mb-4">
+                {stat.icon}
+              </div>
+              <div className="text-5xl font-black text-stone-900 mb-2">{stat.number}</div>
+              <div className="text-xl font-semibold text-stone-700 mb-1">{stat.label}</div>
+              <div className="text-sm text-stone-500">{stat.detail}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Conclusion */}
+      <div className="max-w-4xl mx-auto px-6 py-24">
+        <div className="bg-gradient-to-br from-stone-900 to-stone-800 rounded-3xl p-12 md:p-16 text-white shadow-2xl">
+          <h2 className="text-4xl md:text-5xl font-black mb-6">The Northern Way</h2>
+          <p className="text-xl leading-relaxed mb-6 text-white/90">
+            The scenery in the Northern route is spectacular exceeding my expectations but these beautiful mountains and valleys everywhere have a price ie there are non stop tough climbs and tough descents. You will get away with a bit of training in the French Camino but up North you need to have trained very hard.
+          </p>
+          <p className="text-2xl font-light text-blue-400">
+            Thanks to everyone that helped.
+          </p>
+        </div>
+      </div>
+
       {/* Footer */}
       <footer className="bg-stone-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
