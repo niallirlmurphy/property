@@ -284,7 +284,89 @@ After a long walk we eventually reach the hostel --- it is beautiful --- we noti
         </div>
       </div>
 
-      {/* Stages will be rendered here in a future task */}
+      {/* Featured Stages - Magazine Grid */}
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-black text-stone-900 mb-4">The Journey</h2>
+          <p className="text-xl text-stone-600">31 stages along Spain's northern coast</p>
+        </div>
+
+        <div className="space-y-24">
+          {stages.map((stage, idx) => (
+            <article
+              key={stage.stage}
+              className={`grid md:grid-cols-2 gap-8 items-center ${
+                idx % 2 === 1 ? 'md:grid-flow-dense' : ''
+              }`}
+            >
+              {/* Image */}
+              <div
+                className={`relative group cursor-pointer ${
+                  idx % 2 === 1 ? 'md:col-start-2' : ''
+                }`}
+                onClick={() => setSelectedStage(selectedStage === stage.stage ? null : stage.stage)}
+              >
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl aspect-[4/3]">
+                  <img
+                    src={stage.image || '/camino/image1.jpeg'}
+                    alt={stage.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+
+                  {/* Stage Badge */}
+                  <div className="absolute top-6 right-6">
+                    <div className={`bg-gradient-to-br ${regionColors[stage.region]} text-white px-6 py-3 rounded-2xl font-bold text-lg shadow-2xl`}>
+                      Stage {stage.stage}
+                    </div>
+                  </div>
+
+                  {/* Distance Badge */}
+                  {stage.distance && (
+                    <div className="absolute bottom-6 left-6">
+                      <div className="bg-white/90 backdrop-blur-sm text-stone-900 px-4 py-2 rounded-full font-semibold text-sm flex items-center gap-2">
+                        <Footprints className="w-4 h-4" />
+                        {stage.distance}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className={idx % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}>
+                <div className="space-y-4">
+                  <h3 className="text-4xl md:text-5xl font-black text-stone-900 leading-tight">
+                    {stage.title}
+                  </h3>
+
+                  <p className="text-xl text-stone-600 leading-relaxed font-light">
+                    {stage.excerpt}
+                  </p>
+
+                  {selectedStage === stage.stage && (
+                    <div className="prose prose-lg prose-stone max-w-none pt-4 border-t-2 border-stone-200">
+                      {stage.content.split('\n\n').map((paragraph, pIdx) => (
+                        <p key={pIdx} className="text-stone-700 leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  )}
+
+                  <button
+                    onClick={() => setSelectedStage(selectedStage === stage.stage ? null : stage.stage)}
+                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold group mt-2"
+                  >
+                    {selectedStage === stage.stage ? 'Show Less' : 'Read Full Story'}
+                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
 
       {/* Footer */}
       <footer className="bg-stone-900 text-white py-16">
