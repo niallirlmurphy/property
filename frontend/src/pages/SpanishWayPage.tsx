@@ -179,6 +179,270 @@ I meet up with Offaly gang and we decide to head for an isolated hostel in Gueme
 After a long walk we eventually reach the hostel --- it is beautiful --- we notice a beautiful room for reflection and another room for Bible reading. Ernesto Bustio a 78 year old runs the show. He has an eternal smile as do all the staff. He studied theology late in life and he gave us a lecture on the world in general and his role and his travels. It lasted one hour. There was no mention of god. Eventually we got to this communal dinner --- three mighty bowls of soup with a bucket of bread followed by a big stew. It was super. The cost for all that was a voluntary donation.`,
       image: "/camino/image3.jpeg"
     },
+    {
+      stage: 11,
+      title: "Guemes to Santander",
+      route: "Guemes → Somo → Santander",
+      distance: "24km",
+      region: "cantabria",
+      excerpt: "Ferry crossing. Extended day with cliff and beach walks. Offaly gang's final day. Celebrated together in Santander.",
+      content: `I head off with Offaly gang -- today it is supposed to be 17Km but we up it to 24 to get this big cliff walk and beach walk in. We get ferry from Somo to Santander. Arrived good and early. City is fine but it would not be my no 1 of the places so far --- maybe I did not see enough of it.
+
+We all book into a Pension in the centre - Hospedaje in Isabel 11 ( near the Cathedral and metres from the route out of the city). It is the Offaly gangs final day walking so lets say we celebrated. To make matters worse they paid for my meal. It is nice to meet nice people like that along the route -- the problem then is you split up. The girl in charge of the Pension needed to be shaken up.`,
+      image: "/camino/image5.jpeg"
+    },
+    {
+      stage: 12,
+      title: "Santander to Santillana del Mar",
+      route: "Santander → Santillana del Mar",
+      distance: "32.5km",
+      region: "cantabria",
+      excerpt: "Long walk out of city. Direction signs on pavement. One of Spain's most beautiful medieval towns. Beautiful pension for 20 euros.",
+      content: `I am out of bed at 6.30 and ready to go. I have told Offaly gang I will say a prayer for them in Santiago. The girl at reception in the Pension was lets say slow. Now this morning the internal door of the building is locked and I need to find her which I do in the room behind reception -- she is not happy to have her dreams disturbed. There is a restaurant open next door so I have a cup of coffee.
+
+I head off in the long walk out of the city. The direction signs here are on the pavement. Sometimes you come to a junction and there is no direction sign ---- or so you think. 90% of the time if you reverse a little and look at everything a little closer you will find a direction sign. The numbers are down--- I only see a few other walkers.
+
+I arrive in Santillana around 2pm. Santillana is known as one of Spains most beautiful towns with narrow streets. 20 years ago there were cattle in the ground floors of these houses. Now it is a mecca with tourists everywhere. A bus unloads as I pass and there is a rush in my direction -- I am the only pilgrim in sight ---- they want a photo with the pilgrim. I went for my first menu del dia tonight --three mighty courses and wine ad lib for 12.9 euros.`,
+      image: "/camino/image1.jpeg"
+    },
+    {
+      stage: 13,
+      title: "Santillana del Mar to Comillas",
+      route: "Santillana del Mar → Comillas",
+      distance: "23km",
+      region: "cantabria",
+      excerpt: "Country walking. Coffee and omelette for 2.25 euros. Gaudi's architecture. Menu del dia for 9 euros. Dogs everywhere.",
+      content: `In the country today away from towns. I called into the first bleak bar -- no food and some kind of kettle. I turned around and walked on until I found a nice place --- a cup of coffee a slice of their omlette and a lump of bread all for 2.25 euros. I hit town at 12 and get a nice room near the middle of town in Hostal Esmeralta for 35 euros.
+
+This town was the seaside resort of the wealthy from Barcelona and they hauled along the designer Gaudi whose work you can see. I have plenty of time so I call into a bar for a celebrated beer. It is lunch time. They stack me up with food -- no money.
+
+It is a lovely town. Again in every café or bar groups come in and have a coffee or drink. It looks like nobody can walk a dog without calling in for a beer or wine. Dogs are everywhere. It seams to be a security issue. I get menu del dia for 9 euros. It was great.`,
+      image: "/camino/image2.jpeg"
+    },
+    {
+      stage: 14,
+      title: "Comillas to Buelna",
+      route: "Comillas → Colombres → Buelna",
+      distance: "35km+",
+      region: "asturias",
+      excerpt: "Railway bridge shortcut. Extended to Buelna. Private hostel with Mexicans. Dutchman and Austrian taxi driver. Rain and wine.",
+      content: `I am getting in on the act of how to take a short cut. In one place you have to go off to one side of a river for 2km and to get a bridge and then 2km back again but there is an alternative ----- there is a railway bridge crossing the river directly on your track. Only problem is you must get on the tracks and then you go a fair distance on the tracks before you can get off them at the next railway stop. I go for it.
+
+I arrive in good time in Colombres which is in Asturia. The climb up to it was mighty. The hostel was a dreary old school so I keep going. I have done 28.5km but I feel fine. I go through the next town La Franca and 6km from Colombres when I need it there appears this perfect hostel in a place called Buelna. 15euros for dinner bed and breakfast --- a lovey mother and son aided by 3 mexicans.
+
+The rain comes pouring down and old mama grabs everything from the lines and puts them into the drier. The hostel has a bar also which is great.`,
+      image: "/camino/image7.jpeg"
+    },
+    {
+      stage: 15,
+      title: "Buelna to Ribadesella",
+      route: "Buelna → Nueva → Ribadesella",
+      distance: "42km",
+      region: "asturias",
+      excerpt: "Almost 50km in guidebook. Split from Dutchman and Austrian at 33km. Pushed on alone. 42km total. Beautiful man at Hotel Marina.",
+      content: `This is almost 50 km in the guidebook. The only three going to try it are yes the Dutchman, the Austrian and myself. I go through the maps to organise short cuts to bring it down to the low 40s. The Dutch man does his homework also. It is raining also. We start early.
+
+We stop a second time for coffee to evaluate progress. I detect that my friends will not make it to Ribadesella but I say nothing. 33 km into the journey in a village called Nueva the Dutchman announces he has had it and that he will negotiate a price for a triple room. The Austrian agrees readily -- there is no hostel. I announce that I feel fine (not entirely true) and that I will go on. I know if I can make it to Ribadesella I will have taken a day off the trip. He did not like it but I got satisfaction out of it.
+
+It was a hard slog and the last 5km were lets say hard. hard hard. I did 42/43 km. I arrived in Ribadessella and started studying the map. This lovely Young guy comes up and says do you need help. There is this beautiful man at reception and he says I will give you a very good room for 35 euro and I will get you a good breakfast also.`,
+      image: "/camino/image8.jpeg"
+    },
+    {
+      stage: 16,
+      title: "Ribadesella to Villaviciosa",
+      route: "Ribadesella → Sebrayo → Villaviciosa",
+      distance: "42km",
+      region: "asturias",
+      excerpt: "Sebrayo is an outpost with only water and bed. Not spending Saturday there. 42km to Villaviciosa. Hill Billy night.",
+      content: `I discoverd that sebrayo is an outpost in the hills. There is wáter available and a bed. nothing else nearby ---no food no shop no beer. I am not going to spend Saturday night their so I set my eyes on Villaviciosa another day of around 42km. It rained and it was cold esp in the mountains. For parts of it I am on unmarked territory. At one stage I was unable to verify my position for a long time but it turned out fine in the end.
+
+I booked into a hostal (an unclassified hotel) 15 euros for the bed. It is fine. Again the hotels and hostal are in a cluster in the middle of town after a long walk in to town. I do say a prayer for everyone in the Little churches. I judged villavicosa and gave it too much credit earlier ---- every second bar and cafe had a tv blazing in the afternoon with two or three people that looked down on their luck blankly staring at the tv.
+
+It came to night time. Every Hill Billy within 50km must have being in town. Very little sleep - shouting in the street. Missing steps on stairs and falling. Then one person at 4 puts on blaring music.`,
+      image: "/camino/image10.jpeg"
+    },
+    {
+      stage: 17,
+      title: "Villaviciosa to Gijon",
+      route: "Villaviciosa → Gijon",
+      distance: "35.5km",
+      region: "asturias",
+      excerpt: "Gigantic bowl climb. French woman: 'You're looking for miracles - Ernesto never mentioned God in three weeks.' Road into Gijon went on forever.",
+      content: `Gijon is a big city so I am looking forward to this. The walks in the last few days have being reasonable but at 7.30 this morning it feels like being in a gigantic bowl. You kind of think there must be a half gap somewhere up their that I cannot see yet. There was not-- it was pumping sweath all the way -- twice two climbs.
+
+On one occasion I was pondering between two directions on mountain top when along came a tough 30 something French woman. She is not sure from her guide either. We spoke about religion and she said she was spiritual. I asked what that meant in practice and she agreed that was difficult question to answer. Now for my Offaly gang she said she worked as a volunteer for three weeks with the Padres hostel in the mountain. I said he spoke for one hour but never mentioned god. She said you are looking for miracles I was with him for three weeks and he never mentioned god.
+
+The road into Gijon went on for ever like 5 miles. For the first time I got disorientated as to the right direction in the city. The local team was playing and won and there was a great party in town. The Corpus Christi procession was on and boy was there colour.`,
+      image: "/camino/image1.jpeg"
+    },
+    {
+      stage: 18,
+      title: "Gijon to Aviles",
+      route: "Gijon → Monte Areo → Aviles",
+      distance: "24.5km",
+      region: "asturias",
+      excerpt: "Industrial territory. Miles of massive factories. Author calls it ugly - they make products we all enjoy. Evangelical man in hostel.",
+      content: `Another big town or city. We are in industrial territory now with miles of massive factories and working class estates. The author in my Cicerone guide is good in most respects but he finds all this distateful using terms like you could be forgiven for getting a bus to bye pass this ugly scene. He should get real these people make the everyday products we all enjoy. This is also a Christian journey and he should think a bit more Christian.
+
+It is one day out of 30 plus days and I enjoyed trying to figure out what all the factories were making. God they were enormous like miles with their own railway tracks etc. There was a mighty climb mid morning to what is called the Monte Areo. At one stage I was confused and saw a local and double checked. Lucky I would have made the wrong decision and added a few km.
+
+Arrived in Aviles and in this big hostel there is another evangelical man from Chicago half way down the garden to greet me. 5 euros for the bed. I know no one in the hostel and have seen very few walkers in the past few days.`,
+      image: "/camino/image3.jpeg"
+    },
+    {
+      stage: 19,
+      title: "Aviles to Soto de Luina",
+      route: "Aviles → Soto de Luina",
+      distance: "45km+",
+      region: "asturias",
+      excerpt: "Detour disaster. Road ended on stilts in the air. Had to walk around motorway via coast. 45km+ day. Fionnan from Dunshaughlin!",
+      content: `Set off early as it is a 39Km walk. It is misty so my poor guide is getting raggy. I try a few detours and they work. Then I try another --- I was dumb I was on this minor road and then it was blocked with bolders. I could easily have switched to the official route which ran parallel but no I wanted to see where this road was going. There was grass growing on the road so it should have being obvious it was going no where which was the case -- it once was connected to the motorway now it ended on stilts up on the air.
+
+My town is somewhere on the other side of the motorway. To make a long story short the only way to get across the motorway was to my village as I discovered was to walk through two more villages then go to the coast go around the headland and come back the other side of the motorway ---45 km plus day I would guess.
+
+Hostel is fine 5 or 6 euros. A bit of the language helps as here I found out the hostel was run by the local publican so you had to go to the pub to register. Around 8.30 the first person from Ireland that I met in some time staggers tiredly in the door having being on the trail all day. He needed a bed quickly. He was from Dunshaughlin in Meath his name was Fionnan Tuite.`,
+      image: "/camino/image5.jpeg"
+    },
+    {
+      stage: 20,
+      title: "Soto de Luina to Luarca",
+      route: "Soto de Luina → Cadavedo → Luarca",
+      distance: "36km",
+      region: "asturias",
+      excerpt: "Bad marking. French snorers - found one earplug. Beautiful seaside town in basin. Steps everywhere. 360 miles walked, 151 to go.",
+      content: `This was a 36 Km walk with bad marking but territory not too tough. I walked with Fionnan. He is a teacher in Dublin. Normally during the day survival is an odd snack or an orange and a big meal at night. There was a problem in the hostel last night -- a group of French --boy did they make noise in their sleep. I never used the ear plugs but tonight I got out of bed to search for them. I could only find one so I put the ear with no plug on the pillow and managed fine.
+
+Met a nice young guy from Israel today Nadav -- he is 25 -- but up to now it is mostly the Germans that I have the craic with. I book into a fine hostel for 10 euros in a fine sea side town. It is beautiful. Fionnan going home tonight so I am on my own again. This is a beautiful town. It is based in the bottom of a basin with a marina and steps in their hundreds down to the town.
+
+The good news I have walked now 360 miles with 151 miles to go.`,
+      image: "/camino/image7.jpeg"
+    },
+    {
+      stage: 21,
+      title: "Luarca to La Caridad",
+      route: "Luarca → La Caridad",
+      distance: "31km",
+      region: "asturias",
+      excerpt: "Young guy zooms past. American Norman teaching English. Beautiful hostel for 10 euros. Bread and cheese dinner.",
+      content: `Nice day 31 Km and I got in very early. At one stage I was walking with a French guy behind me and this young guy came along and zoomed past. My heart sank a bit at the ease he passed us but it did not last he had just upped the speed to get past us. I got up with him again and finished the day with him.
+
+I met a young American from Maryland who was teaching english in Spain but was now going back to US. I asked him if he was getting real and he said yes. His name is Norman McKay Teaching English is a kind of lifestyle -- small money. he said those that work in grind schools make big big money like 2,000 euros a month. I wonder what would Irish teachers think of that.
+
+The hostel is beautiful for 10 euros. It is on the edge of town. I wander all over town and cannot find a proper meal so I go to the supermarket and get a lump of bread and cheese. I should have stayed with the gang in the hostel as they all went to a different place for a pilgrims menu and had a great night.`,
+      image: "/camino/image8.jpeg"
+    },
+    {
+      stage: 22,
+      title: "La Caridad to Ribadeo",
+      route: "La Caridad → Ribadeo",
+      distance: "21.5km",
+      region: "galicia",
+      excerpt: "German brothers gone with ankle injury. Drifted onto coastal route by mistake. Ribadeo in Galicia. Boss at hotel so helpful.",
+      content: `SINCE THE BEGINNING I HAVE BEING WALKING ON OFF WITH DIFFERENT INDIVIDUALS. there was three germans around my age. they walked military style one behind the other. I got on great with them but in luarca one of the brothers came over to me to say the other one had gone over on his ankle. When the grub was over I went over to them and wished them well. They were hoping for the best but our parting resembled a final departing. It was sad.
+
+I saw Nadav heading off early this morning. I shouted at him -- no point I will catch you. I said to Nadav that our journey did not look right. We were too near the sea and the wrong side of the highway. Nadav slows behind me studying the map and then comes up saying do you want the good news or the bad news. The good news was the weather was great. The bad news I knew -- we had drifted on to the coastal route.
+
+We are in Galicia now which is like remote rural Ireland in the 50s. I offer to pay the hotelier as I book in --- he says no you pay later and put that plastic card away I prefer money. The boss doubled as a receptionist/waiter and barman. Heading out the door of hotel at 7 and who is their at the bottom of the stairs except the boss to shake hands and offering me a free coffee.`,
+      image: "/camino/image10.jpeg"
+    },
+    {
+      stage: 23,
+      title: "Ribadeo to Lourenza",
+      route: "Ribadeo → Lourenza",
+      distance: "27.5km",
+      region: "galicia",
+      excerpt: "Boss on balcony wishing well. 1000-year-old monastery. Cute woman drags me to marble room. 38 euros. Major dislike to plastic money.",
+      content: `Heading out the door of hotel at 7 and who is their at the bottom of the stairs except the boss to shake hands and offering me a free coffee ---- he will never see me again and yet he is so helpful pointing the way out of town --- they are long days for that man. Did journey in great time. Lourenza has a beautiful 1000 plus year old monastery.
+
+There is a sign coming into town for a rural Casa or country house. It is on the edge of town so I said I will try it. The woman was as cute as hell. She listened to nothing dragging me to this room. It was all in marble --- fridge with orange juice milk etc. She says leave the bag and she shows me the kitchen beautiful again. I am always asking quanto or how much but that she ignores until the end when she knows I will not put that bag on my back again today. 38 Euros but it was worth the experience.
+
+That night the boss man insists I sit down for a half an hour while he goes through all the options for the week ahead --phone numbers -- options for accommodation. Again when paying I am told they have a major dislike to plastic money then he looks at me and giggles kind of saying you understand.`,
+      image: "/camino/image1.jpeg"
+    },
+    {
+      stage: 24,
+      title: "Lourenza to Gontan",
+      route: "Lourenza → Abadin → Gontan",
+      distance: "24km",
+      region: "galicia",
+      excerpt: "Boss on balcony wishing well. Steepest 2km climb in Spain. Deserted villages. Cleaning cow dung. Beautiful hostel 6 euros.",
+      content: `As I leave prior to 7 there on the balcony is the boss wishing me well ----- what attention to detail these people have. My fridge was topped up with juice and Pastrys. I took three of the pastrys and boy were they good in long stretches with no cafes.
+
+Meeting up with Norman and Nadav on and off. I have not seen the German brothers since. There is about 25 people walking every day in my stage now. This morning as I walk alone in the country side a young guy about 14 going to school comes up to me asks where am I from, where did I start, where an I going and why. He was a lovely guy.
+
+To day there is incredible scenery but it comes at a price -- the steepest 2km climb of all the Caminos in Spain is just one challenge. I get bye fine. We are now going to spend a few days going up. There are deserted and dying villages along the route. As if to emphasise it the signs for the villages are fading away in tandem with the village. I see two ladys cleaning out the cow dung with a wheel barrow Got a beautiful hostel in Gontan for 6 euros.`,
+      image: "/camino/image2.jpeg"
+    },
+    {
+      stage: 25,
+      title: "Gontan to Baamonde",
+      route: "Gontan → Vialaba → Baamonde",
+      distance: "40km",
+      region: "galicia",
+      excerpt: "40km managed by 3pm. Big angry American: 'This Camino is shit!' Screams for taxi. I ignore advice to walk 1km extra.",
+      content: `Still doing long days. Today is 40km again but I manage and I get home at a highly respectable 3pm. The hostel is 6 euro. Walked with Norman and Nadav on off. I stop in a town Vialaba and I murder two sandwitches and a coffee. I make up evenig grub for 2.8 euros. I get bored of the pilgrim menues.
+
+This morning as I walked I saw this very big man in front of me -- 6foot 5inches and twenty five stone. He is struggling. I have not seen him before. He has a mate that is half his size and looks well equipped. I salute as I pass the big man as usual but this time I do not even get a grunt for a reply. He then snarls at his mate to come back which he obediently does -- no question about who is the boss.
+
+I call into a lovely cafe at the cross roads a km later. I am in the middle of the sandwitch when the big man and his mate come crashing in. They speak German but the big man has american English. I go up for the hell of it and shake their hands. The big guy screams at me what you think of this Camino -- without waiting for an answer he says I am telling you it is s---. The camino is over. The little man is cringing. Ten minutes later the taxi called and there is the sad ending.`,
+      image: "/camino/image3.jpeg"
+    },
+    {
+      stage: 26,
+      title: "Baamonde to Miraz",
+      route: "Baamonde → Miraz",
+      distance: "14.5km",
+      region: "galicia",
+      excerpt: "Doss day. UK volunteers run old priest house magnificently. Meditation request - 33% show up. Pierre must go.",
+      content: `This is a doss day of 14.5 Km. Today the towns come up to meet me very fast. I get to the hostel quickly but am again beaten by the Yank. The hostel is the old house of the parish priest done up magnificantly and run by volunteers from the Uk. When checking in they said they hoped we would all come back for the meditation session this evening at 9pm. Norman came back for it 33% of us. He said it was great. I am lousy at that kind of thing.
+
+It is nice to meet again some familiar faces. I met a Belgian today Pierre also. My friends told me last night to make sure to avoid him. He was weird they said -- he keeps asking inappropriate questions. If you are in conversation with him he adds irrelevant information to the conversation which makes you uncomfortable. If he is looking for accommodation he says there should be no more than five people in a dorm as more can spread diseases and he does not want any diseases given to him.`,
+      image: "/camino/image7.jpeg"
+    },
+    {
+      stage: 27,
+      title: "Miraz to Sobrado",
+      route: "Miraz → Sobrado",
+      distance: "22.5km",
+      region: "galicia",
+      excerpt: "Beautiful monastery/hostel. Dorm has 120 beds. Uncontrollable old man. Music of the monks. Forest walking. Santiago just days away.",
+      content: `There is an incredible monastery run by monks here. The dorm or dorms are in a building opposite -- 120 beds. I got a good bed -- I mean one I was happy with and a bottom bunk. 6 euros. The showers are magnificent - all brand new in a building beside the main building. There are three or four old guys all doing the walk. I am doing well by comparison. It is not uncommon to find them in some stop and they are staying behind because they are exhausted.
+
+This morning I was having breakfast across the street from my Hostel. I was sitting near the door. Loud talk started happening in the cafe I looked around and it was Pierre being loud and inappropriate. Then I looked to my left and there he was passing the window on his way out and heading on the Camino. It was very early.
+
+There was this old and I mean old man walking very dangerously. I got the feeling that some poor man would have to pick him up soon. He was all over the road like drunk unable to control his legs. I walked behind him hoping that the worse would not happen. I went out of sight I heard the fall I turned around and he was up on his legs.
+
+Tonight we got the music of the monks for an hour. The forest walking is now really good beautiful. Santiago is now only days away.`,
+      image: "/camino/image8.jpeg"
+    },
+    {
+      stage: 28,
+      title: "Sobrado to Arzua",
+      route: "Sobrado → Arzua",
+      distance: "21.5km",
+      region: "galicia",
+      excerpt: "Meet the real Santiago traffic. 600+ pilgrims per day in summer. Taxis everywhere. End of long peaceful walks. Days from Santiago.",
+      content: `This is a place where a couple of thousand pilgrims could pass through on a daily basis. I suspect there are 600 people walking on it even in low season. I have being doing 24 to 45 km a day for a number of weeks -- it is hard not to look down on a little ---- but I try not to. This is the last few days for them ---- that is what the walk is for them unlike myself maybe 35days all in.
+
+There are taxis every where willing to take your bag ahead of you. There are people that are walking the last few days only and you can feel the pressure to make sure to get the parchment. I suspect some of these peple have never walked more than a Km in their life.
+
+Arzua is a real town. I have just come through nothing places ---- one bar or no bars no shops -- like rural Ireland in the 50s or 60s. Now I am buying my few supplies in an incredible super market. The town has every thing. I am staying in a hostel which has a restaurant on the ground floor. I am starting to meet old faces again --lots of them.`,
+      image: "/camino/image10.jpeg"
+    },
+    {
+      stage: 29,
+      title: "Arzua to Santiago",
+      route: "Arzua → Amenal → Santiago de Compostela",
+      distance: "39km",
+      region: "galicia",
+      excerpt: "Final day. 39km to Santiago. City outskirts endless. Cathedral suddenly appears. Incredible journey complete. Parchment earned.",
+      content: `LAST DAY. I left at 6.30am and there were several on the route already. I did the 39km great and got in around 1 o-clock. The 5 or so miles of the edge of the city are endless. You know you are approaching the cathedral but you do not know when you will see it. Then it kind of happens --- you are in a street and suddenly the cathedral is their.
+
+Now the Camino rules state you must do a 100 Km in the last stages of the walk to get the parchment. You can do this in a week so therefore the last week we are all entitled to it. I however had to go to the Pilgrims office to establish that I had walked the entire Camino --- this is checked by the various stops one registers at. I walked to the pilgrims office which is on the edge of the city near the camino.
+
+I discovered the Pilgrims office operates a queueing system -- you collect a number and you wait --- the wait can be anything from 1 to 3 hours I presume. My number was C 285 and it was serving c150 when I arrived. I went back to my hostel and got cleaned up showered and returned. I was processed quickly. I was told I was one of the very few to be walking the Camino Inlges the whole way. I walked into Santiago on day 34 having walked from Irun in Spain and having spent one full day in Gijon and walked for 33 days.`,
+      image: "/camino/image1.jpeg"
+    },
   ];
 
   return (
