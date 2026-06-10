@@ -73,16 +73,23 @@ export default function ResultsList({ results, activeId, onSelect, exactMatchIds
             >
               {isExact && <span className="exact-match-badge">Exact match</span>}
               <div className="result-price">{formatPrice(p.price)}</div>
-              <div className="result-address">
-                {p.address}
-                {(p.bedrooms || p.property_type) && (
-                  <span className="property-details">
-                    {p.bedrooms && `${p.bedrooms} bed`}
-                    {p.bedrooms && p.property_type && " · "}
-                    {p.property_type}
-                  </span>
-                )}
-              </div>
+              <div className="result-address">{p.address}</div>
+              {(p.bedrooms || p.property_type) && (
+                <div className="result-enriched">
+                  {p.bedrooms && (
+                    <span className="enriched-badge">
+                      <span className="enriched-icon">🛏️</span>
+                      {p.bedrooms} {p.bedrooms === 1 ? 'bed' : 'beds'}
+                    </span>
+                  )}
+                  {p.property_type && (
+                    <span className="enriched-badge">
+                      <span className="enriched-icon">🏠</span>
+                      {p.property_type}
+                    </span>
+                  )}
+                </div>
+              )}
               <div className="result-meta">
                 <span>{formatDate(p.sale_date)}</span>
                 {p.eircode && <span>{p.eircode}</span>}
