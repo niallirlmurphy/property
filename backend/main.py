@@ -535,13 +535,14 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
       1. Raw coordinates passthrough
       2. Cache hit
       3. Routing key (D02, H91) → DB   (centroid of all properties with that Eircode prefix)
-      4. Eircode → DB exact match      (fast indexed lookup with validation)
-      5. Token-based DB lookup         (tight clusters in known developments)
-      6. Nominatim                     (OSM geocoder, importance-ranked results)
-      7. Mapbox Geocoding API          (commercial fallback)
-      8. Fuzzy DB ILIKE full-scan      (slow last resort)
+      4. Eircode → DB exact match      (fast indexed lookup with validation from properties table)
+      5. Eircode → Reference table     (pre-computed Eircode centroids from 222k Eircodes)
+      6. Token-based DB lookup         (tight clusters in known developments)
+      7. Nominatim                     (OSM geocoder, importance-ranked results)
+      8. Mapbox Geocoding API          (commercial fallback)
+      9. Fuzzy DB ILIKE full-scan      (slow last resort)
 
-    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'nominatim', 'db_tokens', 'mapbox', 'db_fuzzy'
+    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'nominatim', 'db_tokens', 'mapbox', 'db_fuzzy'
     """
     # 1. Raw coordinates
     coord_match = re.match(r"^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$", query.strip())
@@ -610,7 +611,18 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
                 # No routing key data to validate against, trust the exact match
                 return _cache_and_return(exact_lat, exact_lon, "db_exact")
 
-        # Exact match not in PPR or failed validation — use routing key centroid (already fetched above)
+        # Exact match not in PPR or failed validation — try eircode_reference table
+        # This table contains pre-computed Eircode centroids from all PPR properties with Eircodes
+        ref_row = await db_pool.fetchrow("""
+            SELECT latitude, longitude, property_count, source
+            FROM eircode_reference
+            WHERE eircode = $1
+        """, norm)
+
+        if ref_row:
+            return _cache_and_return(float(ref_row["latitude"]), float(ref_row["longitude"]), "db_eircode_ref")
+
+        # Still no match — use routing key centroid (already fetched above)
         if rk_row and (rk_row["cnt"] or 0) >= 1:
             return _cache_and_return(float(rk_row["lat"]), float(rk_row["lon"]), "db_routing_key")
 

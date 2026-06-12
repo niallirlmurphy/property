@@ -105,6 +105,30 @@ export default function AboutPage() {
                 the broader framework of Irish population growth and housing stock age.
               </dd>
             </div>
+            <div className="about-source">
+              <dt>
+                <a href="https://data.gov.ie/organization/ordnance-survey-ireland" target="_blank" rel="noopener noreferrer">
+                  GeoHive &amp; OSI Geospatial Data
+                </a>
+              </dt>
+              <dd>
+                We use Ordnance Survey Ireland's open geospatial datasets, including Eircode boundaries,
+                small area statistics, and building footprints, to provide accurate location-based search
+                and mapping. This enables precise geocoding of Irish addresses and Eircode routing keys.
+              </dd>
+            </div>
+            <div className="about-source">
+              <dt>
+                <a href="https://www.openstreetmap.org/about" target="_blank" rel="noopener noreferrer">
+                  OpenStreetMap
+                </a>
+              </dt>
+              <dd>
+                For addresses not found in official datasets, we fall back to OpenStreetMap's
+                community-maintained geospatial database via the Nominatim geocoding service,
+                ensuring comprehensive coverage of Irish locations.
+              </dd>
+            </div>
           </dl>
         </section>
 
