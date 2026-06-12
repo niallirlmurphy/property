@@ -64,20 +64,79 @@ function normaliseAddr(s: string): string {
   return n.replace(/\s+/g, " ").trim();
 }
 
+function extractStreetName(address: string): string | null {
+  // Extract street name from address (e.g., "36 Fairfield Road, Dublin" → "fairfield road")
+  const normalized = normaliseAddr(address);
+
+  // Remove leading house number (e.g., "36 fairfield road" → "fairfield road")
+  const withoutNumber = normalized.replace(/^\d+\s+/, '');
+
+  // Take everything up to the first comma or before common area names
+  const parts = withoutNumber.split(',');
+  const streetPart = parts[0].trim();
+
+  // Street name should be at least 2 words to avoid false positives
+  const words = streetPart.split(/\s+/);
+  if (words.length < 2) return null;
+
+  return streetPart;
+}
+
 function isExactMatch(address: string, query: string): boolean {
   const a = normaliseAddr(address);
   const q = normaliseAddr(query);
   return a.startsWith(q) || a.includes(q);
 }
 
-function partitionByExactMatch(results: Property[], query: string): { exact: Property[]; rest: Property[] } {
-  const exact: Property[] = [];
-  const rest: Property[] = [];
+function isPartialMatch(address: string, query: string): boolean {
+  // Check if addresses are on the same street (e.g., "18 Fairfield Road" matches query "36 Fairfield Road")
+  const addressStreet = extractStreetName(address);
+  const queryStreet = extractStreetName(query);
+
+  if (!addressStreet || !queryStreet) return false;
+
+  // Streets match if they're identical or one contains the other
+  return addressStreet === queryStreet ||
+         addressStreet.includes(queryStreet) ||
+         queryStreet.includes(addressStreet);
+}
+
+function partitionByExactMatch(results: Property[], query: string): {
+  exact: Property[];
+  rest: Property[];
+  partialMatchIds: Set<number>;
+  exactMatchIds: Set<number>;
+} {
+  const partial: Property[] = [];   // Same street, different number
+  const exact: Property[] = [];     // Exact address match
+  const rest: Property[] = [];      // Other nearby properties
+
   for (const p of results) {
-    if (isExactMatch(p.address, query)) exact.push(p);
-    else rest.push(p);
+    if (isExactMatch(p.address, query)) {
+      exact.push(p);
+    } else if (isPartialMatch(p.address, query)) {
+      partial.push(p);
+    } else {
+      rest.push(p);
+    }
   }
-  return { exact, rest };
+
+  // Return first 2 partial matches, then exact matches, then remaining partial, then rest
+  const topPartial = partial.slice(0, 2);
+  const remainingPartial = partial.slice(2);
+
+  const sortedExact = [...topPartial, ...exact, ...remainingPartial];
+
+  // Track IDs for display styling
+  const partialMatchIds = new Set(topPartial.map(p => p.id));
+  const exactMatchIds = new Set(exact.map(p => p.id));
+
+  return {
+    exact: sortedExact,
+    rest,
+    partialMatchIds,
+    exactMatchIds
+  };
 }
 
 function MapFlyTo({ center, radius }: { center: [number, number]; radius: number }) {
@@ -199,9 +258,12 @@ export default function App() {
         if (searchGenRef.current !== gen) return;
       }
 
-      const { exact, rest } = partitionByExactMatch(result.results, params.q);
+      const { exact, rest, partialMatchIds, exactMatchIds } = partitionByExactMatch(result.results, params.q);
       const sortedResults = [...exact, ...rest];
       const sortedResult = { ...result, results: sortedResults };
+
+      // Combine partial and exact match IDs for highlighting
+      const allMatchIds = new Set([...partialMatchIds, ...exactMatchIds]);
 
       const exactWithCoords = exact.filter(p => p.latitude != null && p.longitude != null);
       const pinIds = new Set(exactWithCoords.map(p => p.id));
@@ -294,9 +356,28 @@ export default function App() {
 
   const resultCount = searchResult?.count ?? eircodeResult?.stats.total_count ?? 0;
 
-  const exactMatchIds = searchResult && lastSearchQuery
-    ? new Set(searchResult.results.filter(p => isExactMatch(p.address, lastSearchQuery)).map(p => p.id))
-    : new Set<number>();
+  // Compute match IDs for display styling
+  const matchIds = searchResult && lastSearchQuery
+    ? (() => {
+        const results = searchResult.results;
+        const partialTop2: number[] = [];
+        const exact: number[] = [];
+
+        for (const p of results) {
+          if (isExactMatch(p.address, lastSearchQuery)) {
+            exact.push(p.id);
+          } else if (isPartialMatch(p.address, lastSearchQuery) && partialTop2.length < 2) {
+            partialTop2.push(p.id);
+          }
+        }
+
+        return {
+          partialMatchIds: new Set(partialTop2),
+          exactMatchIds: new Set(exact),
+          allMatchIds: new Set([...partialTop2, ...exact])
+        };
+      })()
+    : { partialMatchIds: new Set<number>(), exactMatchIds: new Set<number>(), allMatchIds: new Set<number>() };
 
   const resultSummary = searchResult
     ? { count: searchResult.count, radius_km: searchResult.radius_km }
@@ -313,7 +394,8 @@ export default function App() {
       results={searchResult?.results ?? []}
       activeId={activeProperty?.id ?? null}
       onSelect={handleSelectProperty}
-      exactMatchIds={exactMatchIds}
+      exactMatchIds={matchIds.allMatchIds}
+      partialMatchIds={matchIds.partialMatchIds}
       hasSearched={hasSearched}
       loading={loading}
     />

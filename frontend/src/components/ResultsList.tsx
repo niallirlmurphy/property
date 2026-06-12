@@ -8,6 +8,7 @@ interface Props {
   activeId: number | null;
   onSelect: (p: Property) => void;
   exactMatchIds?: Set<number>;
+  partialMatchIds?: Set<number>;
   hasSearched?: boolean;
   loading?: boolean;
 }
@@ -26,7 +27,7 @@ function formatDate(dateString: string): string {
   return `${day}-${month}-${year}`;
 }
 
-export default function ResultsList({ results, activeId, onSelect, exactMatchIds, hasSearched, loading }: Props) {
+export default function ResultsList({ results, activeId, onSelect, exactMatchIds, partialMatchIds, hasSearched, loading }: Props) {
   const activeRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -44,7 +45,9 @@ export default function ResultsList({ results, activeId, onSelect, exactMatchIds
     );
   }
 
+  const hasPartial = partialMatchIds && partialMatchIds.size > 0;
   const hasExact = exactMatchIds && exactMatchIds.size > 0;
+  const hasMatches = hasPartial || hasExact;
 
   return (
     <div className="results-panel">
@@ -56,21 +59,27 @@ export default function ResultsList({ results, activeId, onSelect, exactMatchIds
           </span>
         )}
       </div>
-      {hasExact && (
-        <div className="exact-match-header">Exact address matches</div>
+      {hasMatches && (
+        <div className="exact-match-header">Comparable sales</div>
       )}
       {results.map((p, i) => {
+        const isPartial = partialMatchIds?.has(p.id) ?? false;
         const isExact = exactMatchIds?.has(p.id) ?? false;
-        const prevIsExact = i > 0 ? (exactMatchIds?.has(results[i - 1].id) ?? false) : false;
-        const showDivider = hasExact && !isExact && prevIsExact;
+        const isMatch = isPartial || isExact;
+        const prevIsMatch = i > 0 ? (
+          (partialMatchIds?.has(results[i - 1].id) ?? false) ||
+          (exactMatchIds?.has(results[i - 1].id) ?? false)
+        ) : false;
+        const showDivider = hasMatches && !isMatch && prevIsMatch;
         return (
           <div key={p.id}>
             {showDivider && <div className="exact-match-divider">Nearby results</div>}
             <div
               ref={p.id === activeId ? activeRef : null}
-              className={`result-card ${p.id === activeId ? "active" : ""} ${isExact ? "exact-match" : ""}`}
+              className={`result-card ${p.id === activeId ? "active" : ""} ${isMatch ? "exact-match" : ""}`}
               onClick={() => onSelect(p)}
             >
+              {isPartial && <span className="exact-match-badge">Same street</span>}
               {isExact && <span className="exact-match-badge">Exact match</span>}
               <div className="result-price">{formatPrice(p.price)}</div>
               <div className="result-address">{p.address}</div>
