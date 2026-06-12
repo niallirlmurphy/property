@@ -534,14 +534,14 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
     Resolution order:
       1. Raw coordinates passthrough
       2. Cache hit
-      3. Eircode → DB exact match      (fast indexed lookup)
-      4. Eircode → Nominatim           (OSM eircode data, address-level precision)
+      3. Routing key (D02, H91) → DB   (centroid of all properties with that Eircode prefix)
+      4. Eircode → DB exact match      (fast indexed lookup with validation)
       5. Token-based DB lookup         (tight clusters in known developments)
       6. Nominatim                     (OSM geocoder, importance-ranked results)
       7. Mapbox Geocoding API          (commercial fallback)
       8. Fuzzy DB ILIKE full-scan      (slow last resort)
 
-    Source values: 'raw', 'cache', 'db_exact', 'nominatim', 'db_tokens', 'mapbox', 'db_fuzzy', 'db_routing_key'
+    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'nominatim', 'db_tokens', 'mapbox', 'db_fuzzy'
     """
     # 1. Raw coordinates
     coord_match = re.match(r"^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$", query.strip())
@@ -557,7 +557,20 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         cache.set("geocode_v3", {"q": query}, {"lat": lat, "lon": lon}, TTL_GEOCODE)
         return lat, lon, source
 
-    # 3. Eircode — fast indexed DB lookup with routing key validation
+    # 3a. Routing key (3-char Eircode prefix like D02, H91) — return centroid of all properties with that prefix
+    if _looks_like_routing_key(query):
+        norm = query.strip().upper()
+        rk_row = await db_pool.fetchrow("""
+            SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
+            FROM properties
+            WHERE latitude IS NOT NULL
+              AND REPLACE(UPPER(eircode), ' ', '') LIKE $1
+        """, norm + "%")
+
+        if rk_row and (rk_row["cnt"] or 0) >= 1:
+            return _cache_and_return(float(rk_row["lat"]), float(rk_row["lon"]), "db_routing_key")
+
+    # 3b. Eircode — fast indexed DB lookup with routing key validation
     if _looks_like_eircode(query):
         norm = _normalise_eircode(query)
         prefix = norm[:3]
