@@ -296,11 +296,31 @@ def _address_tokens(s: str) -> list[str]:
 
 
 def _token_condition(t: str, idx: int) -> "tuple[str, list]":
-    """Return (SQL fragment, params) for a token, matching its abbreviation/expansion too."""
+    """Return (SQL fragment, params) for a token, matching its abbreviation/expansion too.
+    Also handles singular/plural variants (lawn/lawns, garden/gardens, etc.)."""
+    patterns = [f"%{t}%"]
+
+    # Check for abbreviation/expansion
     alt = _FULL_TO_ABBREV.get(t) or _ABBREV_TO_FULL.get(t)
     if alt:
-        return f"(LOWER(address) LIKE ${idx} OR LOWER(address) LIKE ${idx+1})", [f"%{t}%", f"%{alt}%"]
-    return f"LOWER(address) LIKE ${idx}", [f"%{t}%"]
+        patterns.append(f"%{alt}%")
+
+    # Handle plural/singular variants
+    if t.endswith('s') and len(t) > 3:
+        # Try singular: "lawns" → "lawn", "gardens" → "garden"
+        singular = t[:-1]
+        patterns.append(f"%{singular}%")
+    elif not t.endswith('s'):
+        # Try plural: "lawn" → "lawns", "garden" → "gardens"
+        plural = t + 's'
+        patterns.append(f"%{plural}%")
+
+    if len(patterns) == 1:
+        return f"LOWER(address) LIKE ${idx}", patterns
+    else:
+        # Build OR condition for all variants
+        conditions = [f"LOWER(address) LIKE ${idx+i}" for i in range(len(patterns))]
+        return f"({' OR '.join(conditions)})", patterns
 
 
 async def _geocode_db_tokens(query: str) -> "tuple[float, float] | None":
