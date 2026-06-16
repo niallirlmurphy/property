@@ -65,12 +65,19 @@ _HEARTBEAT_INTERVAL = 6 * 24 * 3600  # ping if idle for 6 days
 
 
 # ---------------------------------------------------------------------------
-# Simple in-memory TTL cache
+# LRU TTL cache with size limit
 # ---------------------------------------------------------------------------
 
-class TTLCache:
-    def __init__(self):
-        self._store: dict = {}
+from collections import OrderedDict
+
+class LRUTTLCache:
+    """LRU cache with TTL and size limit for predictable memory usage."""
+
+    def __init__(self, max_size: int = 2000):
+        self._store: OrderedDict = OrderedDict()
+        self._max_size = max_size
+        self._hits = 0
+        self._misses = 0
 
     def _key(self, namespace: str, params: dict) -> str:
         raw = namespace + json.dumps(params, sort_keys=True)
@@ -79,21 +86,55 @@ class TTLCache:
     def get(self, namespace: str, params: dict):
         key = self._key(namespace, params)
         entry = self._store.get(key)
+
         if entry and time.time() < entry["expires"]:
+            # Move to end (mark as recently used)
+            self._store.move_to_end(key)
+            self._hits += 1
             return entry["value"]
+
+        # Expired or not found
+        if entry:
+            del self._store[key]
+        self._misses += 1
         return None
 
     def set(self, namespace: str, params: dict, value, ttl_seconds: int):
         key = self._key(namespace, params)
-        self._store[key] = {"value": value, "expires": time.time() + ttl_seconds}
+
+        # Evict oldest if at capacity
+        if len(self._store) >= self._max_size and key not in self._store:
+            self._store.popitem(last=False)  # Remove oldest (FIFO)
+
+        self._store[key] = {
+            "value": value,
+            "expires": time.time() + ttl_seconds,
+            "namespace": namespace  # Store namespace for invalidation
+        }
+        self._store.move_to_end(key)
 
     def invalidate(self, namespace: str):
-        keys = [k for k, v in self._store.items() if k.startswith(namespace)]
-        for k in keys:
-            del self._store[k]
+        """Invalidate all cache entries in a namespace."""
+        keys_to_delete = [
+            key for key, entry in self._store.items()
+            if entry.get("namespace") == namespace
+        ]
+        for key in keys_to_delete:
+            del self._store[key]
+
+    def stats(self) -> dict:
+        """Return cache statistics for monitoring."""
+        total_requests = self._hits + self._misses
+        return {
+            "size": len(self._store),
+            "max_size": self._max_size,
+            "hits": self._hits,
+            "misses": self._misses,
+            "hit_rate": self._hits / total_requests if total_requests > 0 else 0
+        }
 
 
-cache = TTLCache()
+cache = LRUTTLCache(max_size=2000)
 
 # TTLs
 TTL_COUNTIES = 3600        # 1 hour
@@ -277,6 +318,31 @@ def _expand_abbreviations(query: str) -> str:
         query = pattern.sub(replacement, query)
     # Collapse any double spaces left by substitutions
     return re.sub(r"  +", " ", query).strip(", ").strip()
+
+
+def normalize_query(q: str) -> str:
+    """Normalize search query for consistent caching and better hit rates.
+
+    Normalizations:
+    - Lowercase
+    - Trim and collapse whitespace
+    - Remove common punctuation inconsistencies
+
+    Returns normalized query suitable for cache keys.
+    """
+    if not q:
+        return q
+
+    # Lowercase and trim
+    q = q.strip().lower()
+
+    # Collapse multiple spaces
+    q = re.sub(r'\s+', ' ', q)
+
+    # Remove trailing punctuation
+    q = q.rstrip('.,;')
+
+    return q
 
 
 _STOP_WORDS = {"the", "a", "an", "of", "and", "co", "no", "st", "dublin", "ireland"}
@@ -802,7 +868,15 @@ async def _log_search_query(
 
 @app.get("/health")
 async def health():
-    return {"status": "ok"}
+    stats = cache.stats()
+    return {
+        "status": "ok",
+        "cache": {
+            "hit_rate": f"{stats['hit_rate']:.1%}",
+            "size": f"{stats['size']}/{stats['max_size']}",
+            "utilization": f"{stats['size'] / stats['max_size'] * 100:.0f}%"
+        }
+    }
 
 
 @app.get("/geocode")
@@ -832,7 +906,10 @@ async def search(
 ):
     start_time = time.time()
     _rate_limit_check(request, 60, "search")
-    cache_params = {"q": q, "radius_km": radius_km, "min_price": min_price,
+
+    # Normalize query for consistent caching (case-insensitive, whitespace normalized)
+    normalized_q = normalize_query(q)
+    cache_params = {"q": normalized_q, "radius_km": radius_km, "min_price": min_price,
                     "max_price": max_price, "min_year": min_year, "max_year": max_year,
                     "county": county, "limit": limit, "sort": sort}
     cached = cache.get("search", cache_params)
@@ -971,7 +1048,14 @@ async def search(
     # Enrich missing eircodes in the background — does not block the response
     asyncio.create_task(_enrich_eircodes(result["results"]))
 
-    return result
+    # Add CDN cache headers for edge caching (Vercel Edge Network)
+    headers = {
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",  # 5min cache, 10min stale OK
+        "CDN-Cache-Control": "max-age=300",
+        "Vary": "Accept-Encoding",
+    }
+
+    return JSONResponse(content=result, headers=headers)
 
 
 class PolygonSearchRequest(BaseModel):
@@ -1096,7 +1180,14 @@ async def trends(
     result = {"data": [dict(r) for r in rows]}
     if not q:
         cache.set("trends", cache_params, result, TTL_TRENDS)
-    return result
+
+    # CDN cache headers (trends change infrequently)
+    headers = {
+        "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=7200",  # 1h cache, 2h stale OK
+        "CDN-Cache-Control": "max-age=3600",
+    }
+
+    return JSONResponse(content=result, headers=headers)
 
 
 @app.get("/eircode")
