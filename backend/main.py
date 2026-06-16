@@ -371,7 +371,8 @@ async def _geocode_db_tokens(query: str) -> "tuple[float, float] | None":
 
 
 async def _geocode_db(query: str) -> "tuple[float, float] | None":
-    """Fuzzy match query against DB addresses/counties, return centroid if confident."""
+    """Fuzzy match query against DB addresses/counties, return centroid if confident.
+    Also tries plural/singular variants (lawns → lawn, gardens → garden, etc.)"""
     term = f"%{query.strip()}%"
     row = await db_pool.fetchrow("""
         SELECT
@@ -384,6 +385,23 @@ async def _geocode_db(query: str) -> "tuple[float, float] | None":
     """, term)
     if row and row["match_count"] >= MIN_DB_MATCHES:
         return float(row["lat"]), float(row["lon"])
+
+    # Try stripping trailing 's' for plural → singular (lawns → lawn)
+    if query.lower().endswith('s') and not query.lower().endswith('ss'):
+        singular_query = query[:-1]
+        singular_term = f"%{singular_query.strip()}%"
+        row = await db_pool.fetchrow("""
+            SELECT
+                COUNT(*)            AS match_count,
+                AVG(latitude)       AS lat,
+                AVG(longitude)      AS lon
+            FROM properties
+            WHERE latitude IS NOT NULL
+              AND (address ILIKE $1 OR county ILIKE $1)
+        """, singular_term)
+        if row and row["match_count"] >= MIN_DB_MATCHES:
+            return float(row["lat"]), float(row["lon"])
+
     return None
 
 

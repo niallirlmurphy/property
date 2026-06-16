@@ -242,7 +242,7 @@ export default function App() {
       let [pins, result, trendData] = await Promise.all([
         fetchNearestPins(params, 10),
         searchProperties(params),
-        fetchTrends(params.q, params.radius_km, params.county),
+        fetchTrends(params.q, params.radius_km, params.county).catch(() => []), // Trends optional
       ]);
       if (searchGenRef.current !== gen) return;
 
@@ -253,7 +253,7 @@ export default function App() {
         [pins, result, trendData] = await Promise.all([
           fetchNearestPins(paramsNoCounty, 10),
           searchProperties(paramsNoCounty),
-          fetchTrends(params.q, params.radius_km, undefined),
+          fetchTrends(params.q, params.radius_km, undefined).catch(() => []), // Trends optional
         ]);
         if (searchGenRef.current !== gen) return;
       }
@@ -281,7 +281,11 @@ export default function App() {
       }
     } catch (e: any) {
       if (searchGenRef.current !== gen) return;
-      setError(e.message ?? "An error occurred");
+      // Provide more helpful error message for geocoding failures
+      const errorMsg = e.message?.includes("Could not geocode")
+        ? `Could not find "${params.q}". Try a more specific address or use an Eircode.`
+        : (e.message ?? "An error occurred");
+      setError(errorMsg);
     } finally {
       if (searchGenRef.current === gen) setLoading(false);
     }
