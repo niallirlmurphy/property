@@ -372,7 +372,7 @@ async def _geocode_db_tokens(query: str) -> "tuple[float, float] | None":
 
 async def _geocode_db(query: str) -> "tuple[float, float] | None":
     """Fuzzy match query against DB addresses/counties, return centroid if confident.
-    Also tries plural/singular variants (lawns → lawn, gardens → garden, etc.)"""
+    Only tries plural/singular variants if no exact matches found first."""
     term = f"%{query.strip()}%"
     row = await db_pool.fetchrow("""
         SELECT
@@ -383,24 +383,29 @@ async def _geocode_db(query: str) -> "tuple[float, float] | None":
         WHERE latitude IS NOT NULL
           AND (address ILIKE $1 OR county ILIKE $1)
     """, term)
+
+    # If we have enough matches with the original query, return those coordinates
     if row and row["match_count"] >= MIN_DB_MATCHES:
         return float(row["lat"]), float(row["lon"])
 
-    # Try stripping trailing 's' for plural → singular (lawns → lawn)
-    if query.lower().endswith('s') and not query.lower().endswith('ss'):
-        singular_query = query[:-1]
-        singular_term = f"%{singular_query.strip()}%"
-        row = await db_pool.fetchrow("""
-            SELECT
-                COUNT(*)            AS match_count,
-                AVG(latitude)       AS lat,
-                AVG(longitude)      AS lon
-            FROM properties
-            WHERE latitude IS NOT NULL
-              AND (address ILIKE $1 OR county ILIKE $1)
-        """, singular_term)
-        if row and row["match_count"] >= MIN_DB_MATCHES:
-            return float(row["lat"]), float(row["lon"])
+    # Only try plural → singular fallback if original query returned 0 results
+    # This prevents "Elm Gardens" from matching "Elm Garden" if both exist
+    if row and row["match_count"] == 0:
+        # Try stripping trailing 's' for plural → singular (lawns → lawn)
+        if query.lower().endswith('s') and not query.lower().endswith('ss'):
+            singular_query = query[:-1]
+            singular_term = f"%{singular_query.strip()}%"
+            row = await db_pool.fetchrow("""
+                SELECT
+                    COUNT(*)            AS match_count,
+                    AVG(latitude)       AS lat,
+                    AVG(longitude)      AS lon
+                FROM properties
+                WHERE latitude IS NOT NULL
+                  AND (address ILIKE $1 OR county ILIKE $1)
+            """, singular_term)
+            if row and row["match_count"] >= MIN_DB_MATCHES:
+                return float(row["lat"]), float(row["lon"])
 
     return None
 
