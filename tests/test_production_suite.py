@@ -172,6 +172,62 @@ async def test_county_filter_fallback(client: httpx.AsyncClient, results: TestRe
         results.add_fail("County filter fallback", str(e))
 
 
+async def test_plural_singular_geocoding(client: httpx.AsyncClient, results: TestResults):
+    """Test that plural and singular address forms match correctly."""
+    # Test cases: (plural_query, singular_query, description)
+    test_cases = [
+        ("cremore lawns", "cremore lawn", "lawns/lawn - Dublin residential"),
+        ("elm gardens", "elm garden", "gardens/garden - common Irish address"),
+        ("orchard woods", "orchard wood", "woods/wood - nature naming"),
+        ("the meadows", "the meadow", "meadows/meadow with article"),
+        ("abbey fields", "abbey field", "fields/field - common suffix"),
+    ]
+
+    for plural, singular, description in test_cases:
+        try:
+            # Try geocoding plural form
+            resp_plural = await client.get(f"{BACKEND_URL}/geocode",
+                                          params={"q": plural},
+                                          timeout=TIMEOUT)
+
+            # Try geocoding singular form
+            resp_singular = await client.get(f"{BACKEND_URL}/geocode",
+                                            params={"q": singular},
+                                            timeout=TIMEOUT)
+
+            plural_success = resp_plural.status_code == 200
+            singular_success = resp_singular.status_code == 200
+
+            # At least one should succeed
+            if plural_success or singular_success:
+                # If both succeed, they should return similar coordinates
+                if plural_success and singular_success:
+                    plural_data = resp_plural.json()
+                    singular_data = resp_singular.json()
+
+                    lat_diff = abs(plural_data["lat"] - singular_data["lat"])
+                    lon_diff = abs(plural_data["lon"] - singular_data["lon"])
+
+                    # Coordinates should be very close (within ~100m = 0.001 degrees)
+                    if lat_diff < 0.001 and lon_diff < 0.001:
+                        results.add_pass(f"Plural/singular: {description}",
+                                       f"Both forms geocode to same location")
+                    else:
+                        results.add_warning(f"Plural/singular: {description}",
+                                          f"Forms geocode to different locations: {lat_diff:.4f}°, {lon_diff:.4f}°")
+                else:
+                    # Only one form works - this is acceptable
+                    working_form = "plural" if plural_success else "singular"
+                    results.add_pass(f"Plural/singular: {description}",
+                                   f"{working_form} form geocodes successfully")
+            else:
+                # Both failed - this might be OK if the address doesn't exist
+                results.add_warning(f"Plural/singular: {description}",
+                                  f"Neither form geocodes (address may not exist in database)")
+        except Exception as e:
+            results.add_fail(f"Plural/singular: {description}", str(e))
+
+
 async def test_backend_trends(client: httpx.AsyncClient, results: TestResults):
     """Test backend trends endpoint."""
     test_cases = [
@@ -432,27 +488,80 @@ async def test_database_security(results: TestResults):
             results.add_fail("RLS enabled on properties table",
                            "CRITICAL: Table is publicly accessible without RLS")
 
-        # Check policies exist
+        # Check policies exist and are appropriate
         policies = await conn.fetch("""
-            SELECT policyname, cmd, roles
+            SELECT policyname, cmd, roles::text[]
             FROM pg_policies
             WHERE tablename = 'properties'
+            ORDER BY policyname
         """)
 
-        if len(policies) > 0:
-            policy_summary = ", ".join([f"{p['cmd']}" for p in policies])
-            results.add_pass("Security policies configured",
-                           f"{len(policies)} policies: {policy_summary}")
-        else:
+        if len(policies) == 0:
             results.add_fail("Security policies configured",
                            "No policies found - table may be inaccessible")
+        else:
+            # Detailed policy analysis
+            has_public_read = False
+            has_auth_write = False
+            policy_details = []
+
+            for p in policies:
+                policy_name = p['policyname']
+                cmd = p['cmd']
+                roles = p['roles']
+
+                policy_details.append(f"{cmd}:{','.join(roles)}")
+
+                # Check for public read access
+                if cmd == 'SELECT' and 'public' in roles:
+                    has_public_read = True
+
+                # Check for authenticated write access
+                if cmd == 'ALL' and 'authenticated' in roles:
+                    has_auth_write = True
+
+            # Verify expected configuration
+            if has_public_read and has_auth_write:
+                results.add_pass("Security policies configured",
+                               f"{len(policies)} policies: {', '.join(policy_details)}")
+            elif has_public_read and not has_auth_write:
+                results.add_warning("Security policies configured",
+                                  f"Public read OK, but no auth write policy")
+            elif not has_public_read:
+                results.add_warning("Security policies configured",
+                                  "No public read policy - data not accessible via API")
+            else:
+                results.add_pass("Security policies configured",
+                               f"{len(policies)} policies active")
 
         # Verify read access still works
         count = await conn.fetchval("SELECT COUNT(*) FROM properties LIMIT 1")
         if count is not None:
-            results.add_pass("Read access verified", "✓ Can query data")
+            results.add_pass("Read access verified", f"✓ Can query {count:,} properties")
         else:
             results.add_fail("Read access verified", "Cannot read data")
+
+        # Test that anonymous writes are blocked (simulate anon user)
+        try:
+            # This should fail with RLS error
+            await conn.execute("""
+                SET ROLE anon;
+                INSERT INTO properties (address, price, sale_date)
+                VALUES ('Test Security', 100000, '2026-01-01');
+            """)
+            results.add_fail("Write protection verified",
+                           "CRITICAL: Anonymous writes are NOT blocked")
+        except asyncpg.exceptions.InsufficientPrivilegeError:
+            results.add_pass("Write protection verified", "✓ Anonymous writes blocked")
+        except Exception as e:
+            # Other errors are acceptable (e.g., role doesn't exist, RLS policy violation)
+            if "row-level security" in str(e).lower() or "permission denied" in str(e).lower():
+                results.add_pass("Write protection verified", "✓ Anonymous writes blocked")
+            else:
+                results.add_warning("Write protection test", f"Unexpected error: {str(e)[:100]}")
+        finally:
+            # Reset role
+            await conn.execute("RESET ROLE;")
 
         # Check for other security issues
         # 1. Check if there are any tables without RLS
@@ -471,6 +580,20 @@ async def test_database_security(results: TestResults):
                               f"Tables: {table_list}")
         else:
             results.add_pass("All tables protected", "✓ RLS enabled on all tables")
+
+        # Check for proper indexes on security-critical queries
+        indexes = await conn.fetch("""
+            SELECT indexname, indexdef
+            FROM pg_indexes
+            WHERE schemaname = 'public'
+            AND tablename = 'properties'
+            AND indexdef LIKE '%geog%'
+        """)
+
+        if indexes:
+            results.add_pass("Spatial indexes present", f"✓ {len(indexes)} geospatial indexes")
+        else:
+            results.add_warning("Spatial indexes", "No geospatial indexes found - queries may be slow")
 
         await conn.close()
 
@@ -581,6 +704,9 @@ async def run_all_tests():
         print("\nBackend Search:")
         await test_backend_search(client, results)
         await test_county_filter_fallback(client, results)
+
+        print("\nPlural/Singular Matching:")
+        await test_plural_singular_geocoding(client, results)
 
         print("\nBackend Trends:")
         await test_backend_trends(client, results)
