@@ -61,7 +61,8 @@ def initialize_cache(database_url: str) -> None:
     try:
         cur = conn.cursor(cursor_factory=RealDictCursor)
 
-        # Fetch all properties with coordinates or enrichment data
+        # Fetch all properties with coordinates
+        # This is a coordinate cache; enrichment will be added by enrichment scripts
         cur.execute("""
             SELECT
                 address_normalized,
@@ -74,9 +75,7 @@ def initialize_cache(database_url: str) -> None:
                 geocode_quality_issue
             FROM properties
             WHERE address_normalized IS NOT NULL
-              AND (latitude IS NOT NULL
-                   OR bedrooms IS NOT NULL
-                   OR property_type IS NOT NULL)
+              AND latitude IS NOT NULL
             ORDER BY address_normalized, sale_date DESC
         """)
 
@@ -112,9 +111,18 @@ def _select_canonical_coordinates(sales: List[dict]) -> Tuple[float, float]:
     """
     Select canonical coordinates using hybrid strategy.
     Placeholder - will implement in Task 3.
+
+    Raises:
+        ValueError: If no sales with coordinates found
     """
+    # Filter to sales with non-NULL coordinates
+    sales_with_coords = [s for s in sales if s['latitude'] is not None and s['longitude'] is not None]
+
+    if not sales_with_coords:
+        raise ValueError("No sales with coordinates found")
+
     # For now, just return first sale's coordinates
-    return (sales[0]['latitude'], sales[0]['longitude'])
+    return (sales_with_coords[0]['latitude'], sales_with_coords[0]['longitude'])
 
 
 def _select_canonical_enrichment(sales: List[dict]) -> dict:

@@ -103,3 +103,16 @@ def test_initialize_cache_db_connection_failure():
     with patch('psycopg2.connect', side_effect=psycopg2.Error('Connection failed')):
         with pytest.raises(RuntimeError, match='Cannot initialize canonical cache'):
             initialize_cache('postgresql://invalid')
+
+
+def test_select_canonical_coordinates_raises_on_all_null():
+    """_select_canonical_coordinates raises error if all coordinates NULL."""
+    from scripts.canonical_geocoding import _select_canonical_coordinates
+
+    sales = [
+        {'latitude': None, 'longitude': None, 'sale_date': '2025-01-01'},
+        {'latitude': None, 'longitude': None, 'sale_date': '2024-01-01'},
+    ]
+
+    with pytest.raises(ValueError, match="No sales with coordinates found"):
+        _select_canonical_coordinates(sales)
