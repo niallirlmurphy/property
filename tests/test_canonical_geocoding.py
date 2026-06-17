@@ -1,5 +1,5 @@
 import pytest
-from datetime import datetime
+from datetime import datetime, date
 from unittest.mock import Mock, patch
 from scripts.canonical_geocoding import PropertyData, initialize_cache
 import psycopg2
@@ -188,5 +188,19 @@ def test_select_coordinates_all_have_quality_issues():
 
     lat, lon = _select_canonical_coordinates(sales)
     # Should still pick most common
+    assert lat == 53.35
+    assert lon == -6.26
+
+
+def test_select_coordinates_handles_date_objects():
+    """Handles database date objects (not just strings)."""
+    from scripts.canonical_geocoding import _select_canonical_coordinates
+
+    sales = [
+        {'latitude': 53.35, 'longitude': -6.26, 'geocode_quality_issue': False, 'sale_date': date(2025, 1, 1)},
+        {'latitude': 53.36, 'longitude': -6.27, 'geocode_quality_issue': False, 'sale_date': date(2024, 1, 1)},
+    ]
+
+    lat, lon = _select_canonical_coordinates(sales)
     assert lat == 53.35
     assert lon == -6.26

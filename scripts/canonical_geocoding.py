@@ -7,7 +7,7 @@ to ensure consistency across multiple sales of the same address.
 """
 
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, date
 from typing import Dict, Optional, Tuple, List
 import psycopg2
 from psycopg2.extras import RealDictCursor
@@ -158,12 +158,17 @@ def _select_canonical_coordinates(sales: List[dict]) -> Tuple[float, float]:
 
     # Step 5: Tiebreaker by most recent sale_date
     if len(most_common_coords) > 1:
-        def parse_date(date_str):
-            return datetime.strptime(date_str, '%Y-%m-%d')
+        def get_max_date(group):
+            """Get max date from group, handling both date objects and strings."""
+            dates = [s['sale_date'] for s in group]
+            # Handle both datetime.date objects (from DB) and strings (from tests)
+            if dates and isinstance(dates[0], str):
+                return max(datetime.strptime(d, '%Y-%m-%d') for d in dates)
+            return max(dates)  # date objects compare directly
 
         most_common_coords = sorted(
             most_common_coords,
-            key=lambda x: max(parse_date(s['sale_date']) for s in x[1]),
+            key=lambda x: get_max_date(x[1]),
             reverse=True
         )
 
