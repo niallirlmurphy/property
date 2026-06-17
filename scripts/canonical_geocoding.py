@@ -182,11 +182,79 @@ def _select_canonical_coordinates(sales: List[dict]) -> Tuple[float, float]:
 
 def _select_canonical_enrichment(sales: List[dict]) -> dict:
     """
-    Select canonical enrichment using frequency strategy.
-    Placeholder - will implement in Task 4.
+    Select canonical enrichment using frequency-based strategy.
+
+    Algorithm for each field (bedrooms, property_type):
+    1. Filter to non-NULL values
+    2. Group by value and count occurrences
+    3. Pick most common value
+    4. Tiebreaker: most recent sale_date
+    5. Final tiebreaker: highest price
+
+    Args:
+        sales: List of sale dicts with bedrooms/property_type/sale_date/price fields
+
+    Returns:
+        Dict with 'bedrooms' and 'property_type' keys (may be None if no data)
     """
-    # For now, just return first sale's enrichment
+    def select_field_value(field_name: str) -> Optional[any]:
+        """Select canonical value for a single field using frequency strategy."""
+        # Filter to sales with non-NULL values for this field
+        non_null_sales = [s for s in sales if s.get(field_name) is not None]
+
+        if not non_null_sales:
+            return None
+
+        # Group by value and count occurrences
+        value_groups = {}
+        for sale in non_null_sales:
+            value = sale[field_name]
+            if value not in value_groups:
+                value_groups[value] = []
+            value_groups[value].append(sale)
+
+        # Find most common value(s)
+        max_count = max(len(group) for group in value_groups.values())
+        most_common_values = [
+            (value, group) for value, group in value_groups.items()
+            if len(group) == max_count
+        ]
+
+        # Tiebreaker 1: most recent sale_date
+        def get_max_date(group):
+            """Get max date from group, handling both date objects and strings."""
+            dates = [s['sale_date'] for s in group]
+            # Handle both datetime.date objects (from DB) and strings (from tests)
+            if dates and isinstance(dates[0], str):
+                return max(datetime.strptime(d, '%Y-%m-%d') for d in dates)
+            return max(dates)  # date objects compare directly
+
+        if len(most_common_values) > 1:
+            most_common_values = sorted(
+                most_common_values,
+                key=lambda x: get_max_date(x[1]),
+                reverse=True
+            )
+
+            # Keep only values with the most recent date for further tiebreaking
+            max_date = get_max_date(most_common_values[0][1])
+            most_common_values = [
+                (value, group) for value, group in most_common_values
+                if get_max_date(group) == max_date
+            ]
+
+        # Tiebreaker 2: highest price (only applied if still tied after recency)
+        if len(most_common_values) > 1:
+            most_common_values = sorted(
+                most_common_values,
+                key=lambda x: max(s.get('price', 0) for s in x[1]),
+                reverse=True
+            )
+
+        chosen_value = most_common_values[0][0]
+        return chosen_value
+
     return {
-        'bedrooms': sales[0]['bedrooms'],
-        'property_type': sales[0]['property_type']
+        'bedrooms': select_field_value('bedrooms'),
+        'property_type': select_field_value('property_type')
     }

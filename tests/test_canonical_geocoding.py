@@ -204,3 +204,74 @@ def test_select_coordinates_handles_date_objects():
     lat, lon = _select_canonical_coordinates(sales)
     assert lat == 53.35
     assert lon == -6.26
+
+
+def test_select_enrichment_most_common_bedrooms():
+    """Selects most common bedroom count."""
+    from scripts.canonical_geocoding import _select_canonical_enrichment
+
+    sales = [
+        {'bedrooms': 3, 'property_type': None, 'sale_date': '2025-01-01', 'price': 400000},
+        {'bedrooms': 3, 'property_type': None, 'sale_date': '2024-06-01', 'price': 380000},
+        {'bedrooms': 4, 'property_type': None, 'sale_date': '2023-01-01', 'price': 420000},
+    ]
+
+    enrichment = _select_canonical_enrichment(sales)
+    assert enrichment['bedrooms'] == 3
+    assert enrichment['property_type'] is None
+
+
+def test_select_enrichment_most_common_property_type():
+    """Selects most common property type."""
+    from scripts.canonical_geocoding import _select_canonical_enrichment
+
+    sales = [
+        {'bedrooms': None, 'property_type': 'detached', 'sale_date': '2025-01-01', 'price': 400000},
+        {'bedrooms': None, 'property_type': 'detached', 'sale_date': '2024-06-01', 'price': 380000},
+        {'bedrooms': None, 'property_type': 'semi-detached', 'sale_date': '2023-01-01', 'price': 420000},
+    ]
+
+    enrichment = _select_canonical_enrichment(sales)
+    assert enrichment['bedrooms'] is None
+    assert enrichment['property_type'] == 'detached'
+
+
+def test_select_enrichment_tiebreaker_by_recency_bedrooms():
+    """Breaks ties by most recent sale_date for bedrooms."""
+    from scripts.canonical_geocoding import _select_canonical_enrichment
+
+    sales = [
+        {'bedrooms': 3, 'property_type': None, 'sale_date': '2025-01-01', 'price': 400000},
+        {'bedrooms': 4, 'property_type': None, 'sale_date': '2024-01-01', 'price': 420000},
+    ]
+
+    enrichment = _select_canonical_enrichment(sales)
+    assert enrichment['bedrooms'] == 3
+
+
+def test_select_enrichment_tiebreaker_by_price():
+    """Breaks ties by highest price (better listing data)."""
+    from scripts.canonical_geocoding import _select_canonical_enrichment
+
+    sales = [
+        {'bedrooms': 3, 'property_type': None, 'sale_date': '2025-01-01', 'price': 400000},
+        {'bedrooms': 4, 'property_type': None, 'sale_date': '2025-01-01', 'price': 420000},
+    ]
+
+    enrichment = _select_canonical_enrichment(sales)
+    # Tied on frequency (each appears once), tied on recency (same date), so pick by price
+    assert enrichment['bedrooms'] == 4
+
+
+def test_select_enrichment_all_null_returns_none():
+    """Returns None values if all enrichment fields are NULL."""
+    from scripts.canonical_geocoding import _select_canonical_enrichment
+
+    sales = [
+        {'bedrooms': None, 'property_type': None, 'sale_date': '2025-01-01', 'price': 400000},
+        {'bedrooms': None, 'property_type': None, 'sale_date': '2024-06-01', 'price': 380000},
+    ]
+
+    enrichment = _select_canonical_enrichment(sales)
+    assert enrichment['bedrooms'] is None
+    assert enrichment['property_type'] is None
