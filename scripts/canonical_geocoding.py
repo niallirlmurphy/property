@@ -247,7 +247,7 @@ def _select_canonical_enrichment(sales: List[dict]) -> dict:
         if len(most_common_values) > 1:
             most_common_values = sorted(
                 most_common_values,
-                key=lambda x: max(s.get('price', 0) for s in x[1]),
+                key=lambda x: max(s.get('price') or 0 for s in x[1]),
                 reverse=True
             )
 

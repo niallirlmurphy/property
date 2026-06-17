@@ -275,3 +275,17 @@ def test_select_enrichment_all_null_returns_none():
     enrichment = _select_canonical_enrichment(sales)
     assert enrichment['bedrooms'] is None
     assert enrichment['property_type'] is None
+
+
+def test_select_enrichment_handles_null_prices():
+    """Handles NULL prices in price tiebreaker gracefully."""
+    from scripts.canonical_geocoding import _select_canonical_enrichment
+
+    sales = [
+        {'bedrooms': 3, 'property_type': None, 'sale_date': date(2025, 1, 1), 'price': None},
+        {'bedrooms': 4, 'property_type': None, 'sale_date': date(2025, 1, 1), 'price': 420000},
+    ]
+
+    enrichment = _select_canonical_enrichment(sales)
+    # Should pick 4 bedrooms (highest price, treating None as 0)
+    assert enrichment['bedrooms'] == 4
