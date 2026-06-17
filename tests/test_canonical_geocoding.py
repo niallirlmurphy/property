@@ -1,6 +1,8 @@
 import pytest
 from datetime import datetime
-from scripts.canonical_geocoding import PropertyData
+from unittest.mock import Mock, patch
+from scripts.canonical_geocoding import PropertyData, initialize_cache
+import psycopg2
 
 
 def test_property_data_coordinates_only():
@@ -51,3 +53,53 @@ def test_canonical_cache_structure():
     from scripts import canonical_geocoding
     assert hasattr(canonical_geocoding, '_canonical_cache')
     assert isinstance(canonical_geocoding._canonical_cache, dict)
+
+
+def test_initialize_cache_success(monkeypatch):
+    """Cache initialization loads properties from database."""
+    # Mock database connection and cursor
+    mock_conn = Mock()
+    mock_cursor = Mock()
+    mock_conn.cursor.return_value = mock_cursor
+
+    # Mock query results: two sales of same address with same coords
+    mock_cursor.fetchall.return_value = [
+        {
+            'address_normalized': 'main street, dublin',
+            'latitude': 53.35,
+            'longitude': -6.26,
+            'bedrooms': 3,
+            'property_type': 'detached',
+            'sale_date': '2025-01-01',
+            'price': 400000,
+            'geocode_quality_issue': False
+        },
+        {
+            'address_normalized': 'main street, dublin',
+            'latitude': 53.35,
+            'longitude': -6.26,
+            'bedrooms': 3,
+            'property_type': 'detached',
+            'sale_date': '2024-01-01',
+            'price': 380000,
+            'geocode_quality_issue': False
+        }
+    ]
+
+    with patch('psycopg2.connect', return_value=mock_conn):
+        initialize_cache('postgresql://test')
+
+        from scripts import canonical_geocoding
+        assert 'main street, dublin' in canonical_geocoding._canonical_cache
+        data = canonical_geocoding._canonical_cache['main street, dublin']
+        assert data.latitude == 53.35
+        assert data.longitude == -6.26
+        assert data.bedrooms == 3
+        assert data.property_type == 'detached'
+
+
+def test_initialize_cache_db_connection_failure():
+    """Cache initialization fails if database unreachable."""
+    with patch('psycopg2.connect', side_effect=psycopg2.Error('Connection failed')):
+        with pytest.raises(RuntimeError, match='Cannot initialize canonical cache'):
+            initialize_cache('postgresql://invalid')

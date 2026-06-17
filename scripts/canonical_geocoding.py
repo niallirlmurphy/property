@@ -8,7 +8,11 @@ to ensure consistency across multiple sales of the same address.
 
 from dataclasses import dataclass
 from datetime import datetime
-from typing import Dict, Optional
+from typing import Dict, Optional, Tuple, List
+import psycopg2
+from psycopg2.extras import RealDictCursor
+import sys
+from collections import defaultdict
 
 
 @dataclass
@@ -31,3 +35,95 @@ class PropertyData:
 
 # Global in-memory cache: address_normalized -> PropertyData
 _canonical_cache: Dict[str, PropertyData] = {}
+
+
+def initialize_cache(database_url: str) -> None:
+    """
+    Load all property coordinates and enrichment into memory cache.
+
+    Args:
+        database_url: PostgreSQL connection string
+
+    Raises:
+        RuntimeError: If database connection fails
+    """
+    global _canonical_cache
+    _canonical_cache = {}
+
+    try:
+        conn = psycopg2.connect(database_url)
+    except psycopg2.Error as e:
+        raise RuntimeError(
+            f"Cannot initialize canonical cache: database connection failed. "
+            f"Refusing to run with empty cache. Error: {e}"
+        )
+
+    try:
+        cur = conn.cursor(cursor_factory=RealDictCursor)
+
+        # Fetch all properties with coordinates or enrichment data
+        cur.execute("""
+            SELECT
+                address_normalized,
+                latitude,
+                longitude,
+                bedrooms,
+                property_type,
+                sale_date,
+                price,
+                geocode_quality_issue
+            FROM properties
+            WHERE address_normalized IS NOT NULL
+              AND (latitude IS NOT NULL
+                   OR bedrooms IS NOT NULL
+                   OR property_type IS NOT NULL)
+            ORDER BY address_normalized, sale_date DESC
+        """)
+
+        rows = cur.fetchall()
+
+        # Group by address_normalized
+        by_address: Dict[str, List[dict]] = defaultdict(list)
+        for row in rows:
+            by_address[row['address_normalized']].append(row)
+
+        # Apply selection strategies for each address
+        for address_normalized, sales in by_address.items():
+            canonical_coords = _select_canonical_coordinates(sales)
+            canonical_enrichment = _select_canonical_enrichment(sales)
+
+            _canonical_cache[address_normalized] = PropertyData(
+                latitude=canonical_coords[0],
+                longitude=canonical_coords[1],
+                bedrooms=canonical_enrichment['bedrooms'],
+                property_type=canonical_enrichment['property_type']
+            )
+
+        # Log memory usage
+        cache_size = sys.getsizeof(_canonical_cache)
+        print(f"Cache initialized: {len(_canonical_cache)} addresses, "
+              f"{cache_size / 1024 / 1024:.1f} MB")
+
+    finally:
+        conn.close()
+
+
+def _select_canonical_coordinates(sales: List[dict]) -> Tuple[float, float]:
+    """
+    Select canonical coordinates using hybrid strategy.
+    Placeholder - will implement in Task 3.
+    """
+    # For now, just return first sale's coordinates
+    return (sales[0]['latitude'], sales[0]['longitude'])
+
+
+def _select_canonical_enrichment(sales: List[dict]) -> dict:
+    """
+    Select canonical enrichment using frequency strategy.
+    Placeholder - will implement in Task 4.
+    """
+    # For now, just return first sale's enrichment
+    return {
+        'bedrooms': sales[0]['bedrooms'],
+        'property_type': sales[0]['property_type']
+    }
