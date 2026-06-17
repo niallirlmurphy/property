@@ -110,7 +110,20 @@ def initialize_cache(database_url: str) -> None:
 def _select_canonical_coordinates(sales: List[dict]) -> Tuple[float, float]:
     """
     Select canonical coordinates using hybrid strategy.
-    Placeholder - will implement in Task 3.
+
+    Algorithm:
+    1. Filter to coordinates WITHOUT geocode_quality_issue
+    2. If filtered list non-empty, use it; else use all coordinates
+    3. Group by (lat, lon) and count occurrences
+    4. Pick most common coordinate pair
+    5. Tiebreaker: most recent sale_date
+    6. Final tiebreaker: lexicographic sort on (lat, lon)
+
+    Args:
+        sales: List of sale dicts with lat/lon/quality/date fields
+
+    Returns:
+        Tuple of (latitude, longitude)
 
     Raises:
         ValueError: If no sales with coordinates found
@@ -121,8 +134,45 @@ def _select_canonical_coordinates(sales: List[dict]) -> Tuple[float, float]:
     if not sales_with_coords:
         raise ValueError("No sales with coordinates found")
 
-    # For now, just return first sale's coordinates
-    return (sales_with_coords[0]['latitude'], sales_with_coords[0]['longitude'])
+    # Step 1: Filter to coordinates without quality issues
+    candidates = [s for s in sales_with_coords if not s.get('geocode_quality_issue', False)]
+
+    # Step 2: If all have quality issues, use all coordinates
+    if not candidates:
+        candidates = sales_with_coords
+
+    # Step 3: Group by (lat, lon) and count occurrences
+    coord_groups = {}
+    for sale in candidates:
+        coord_key = (sale['latitude'], sale['longitude'])
+        if coord_key not in coord_groups:
+            coord_groups[coord_key] = []
+        coord_groups[coord_key].append(sale)
+
+    # Step 4: Pick most common coordinate pair
+    most_common_count = max(len(group) for group in coord_groups.values())
+    most_common_coords = [
+        (coords, group) for coords, group in coord_groups.items()
+        if len(group) == most_common_count
+    ]
+
+    # Step 5: Tiebreaker by most recent sale_date
+    if len(most_common_coords) > 1:
+        def parse_date(date_str):
+            return datetime.strptime(date_str, '%Y-%m-%d')
+
+        most_common_coords = sorted(
+            most_common_coords,
+            key=lambda x: max(parse_date(s['sale_date']) for s in x[1]),
+            reverse=True
+        )
+
+    # Step 6: Final tiebreaker - lexicographic sort
+    if len(most_common_coords) > 1:
+        most_common_coords = sorted(most_common_coords, key=lambda x: (x[0][0], x[0][1]))
+
+    chosen_coords = most_common_coords[0][0]
+    return chosen_coords
 
 
 def _select_canonical_enrichment(sales: List[dict]) -> dict:

@@ -116,3 +116,77 @@ def test_select_canonical_coordinates_raises_on_all_null():
 
     with pytest.raises(ValueError, match="No sales with coordinates found"):
         _select_canonical_coordinates(sales)
+
+
+def test_select_coordinates_without_quality_issues():
+    """Selects coordinates without quality issues over those with issues."""
+    from scripts.canonical_geocoding import _select_canonical_coordinates
+
+    sales = [
+        {'latitude': 53.35, 'longitude': -6.26, 'geocode_quality_issue': False, 'sale_date': '2025-01-01'},
+        {'latitude': 53.36, 'longitude': -6.27, 'geocode_quality_issue': True, 'sale_date': '2024-01-01'},
+    ]
+
+    lat, lon = _select_canonical_coordinates(sales)
+    assert lat == 53.35
+    assert lon == -6.26
+
+
+def test_select_coordinates_most_common():
+    """Selects most common coordinate pair."""
+    from scripts.canonical_geocoding import _select_canonical_coordinates
+
+    sales = [
+        {'latitude': 53.35, 'longitude': -6.26, 'geocode_quality_issue': False, 'sale_date': '2025-01-01'},
+        {'latitude': 53.35, 'longitude': -6.26, 'geocode_quality_issue': False, 'sale_date': '2024-06-01'},
+        {'latitude': 53.36, 'longitude': -6.27, 'geocode_quality_issue': False, 'sale_date': '2024-01-01'},
+    ]
+
+    lat, lon = _select_canonical_coordinates(sales)
+    assert lat == 53.35
+    assert lon == -6.26
+
+
+def test_select_coordinates_tiebreaker_by_recency():
+    """Breaks ties by most recent sale_date."""
+    from scripts.canonical_geocoding import _select_canonical_coordinates
+
+    sales = [
+        {'latitude': 53.35, 'longitude': -6.26, 'geocode_quality_issue': False, 'sale_date': '2025-01-01'},
+        {'latitude': 53.36, 'longitude': -6.27, 'geocode_quality_issue': False, 'sale_date': '2024-01-01'},
+    ]
+
+    lat, lon = _select_canonical_coordinates(sales)
+    assert lat == 53.35
+    assert lon == -6.26
+
+
+def test_select_coordinates_lexicographic_tiebreaker():
+    """Breaks final ties with lexicographic sort."""
+    from scripts.canonical_geocoding import _select_canonical_coordinates
+
+    sales = [
+        {'latitude': 53.36, 'longitude': -6.27, 'geocode_quality_issue': False, 'sale_date': '2025-01-01'},
+        {'latitude': 53.35, 'longitude': -6.26, 'geocode_quality_issue': False, 'sale_date': '2025-01-01'},
+    ]
+
+    lat, lon = _select_canonical_coordinates(sales)
+    # Should pick lower latitude (lexicographic sort)
+    assert lat == 53.35
+    assert lon == -6.26
+
+
+def test_select_coordinates_all_have_quality_issues():
+    """Handles case where all coordinates have quality issues."""
+    from scripts.canonical_geocoding import _select_canonical_coordinates
+
+    sales = [
+        {'latitude': 53.35, 'longitude': -6.26, 'geocode_quality_issue': True, 'sale_date': '2025-01-01'},
+        {'latitude': 53.35, 'longitude': -6.26, 'geocode_quality_issue': True, 'sale_date': '2024-06-01'},
+        {'latitude': 53.36, 'longitude': -6.27, 'geocode_quality_issue': True, 'sale_date': '2024-01-01'},
+    ]
+
+    lat, lon = _select_canonical_coordinates(sales)
+    # Should still pick most common
+    assert lat == 53.35
+    assert lon == -6.26
