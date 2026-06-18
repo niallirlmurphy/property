@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Batch geocode properties using Mapbox Geocoding API.
+Batch geocode properties using Mapbox Geocoding API with canonical cache.
 
 Mapbox provides high-quality global geocoding with batch API support.
 Best used for properties WITHOUT Eircodes (Autoaddress is better for Eircode properties).
@@ -51,6 +51,11 @@ from dotenv import load_dotenv
 # Add scripts directory to path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
 from county_validator import validate_county
+from canonical_geocoding import (
+    initialize_cache,
+    get_canonical_coordinates,
+    cache_coordinates
+)
 
 load_dotenv("backend/.env")
 
@@ -220,7 +225,7 @@ def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
 async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                                 client: httpx.AsyncClient) -> List[Tuple[int, Optional[float], Optional[float], int]]:
     """
-    Batch geocode using Mapbox API (up to 1,000 at a time).
+    Batch geocode using Mapbox API (up to 1,000 at a time) with canonical cache.
 
     Returns list of (property_id, lat, lon, quality_score)
     """
@@ -228,11 +233,35 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
         print("❌ MAPBOX_TOKEN not set in backend/.env")
         return []
 
-    results = []
+    # Check cache first - filter to properties needing geocoding
+    properties_needing_geocoding = []
+    cached_results = []
+
+    for prop in properties:
+        address_normalized = prop.get('address_normalized')
+        if address_normalized:
+            cached_coords = get_canonical_coordinates(address_normalized)
+            if cached_coords:
+                # Use cached coordinates
+                cached_results.append((prop['id'], cached_coords[0], cached_coords[1], 90))
+                continue
+
+        # Need to geocode
+        properties_needing_geocoding.append(prop)
+
+    if cached_results:
+        print(f"✓ Cache hits: {len(cached_results)} properties (skipping Mapbox API)")
+
+    if not properties_needing_geocoding:
+        return cached_results
+
+    print(f"Cache misses: {len(properties_needing_geocoding)} properties need geocoding")
+
+    results = cached_results
     batch_size = 1000  # Mapbox max
 
-    for batch_start in range(0, len(properties), batch_size):
-        batch = properties[batch_start:batch_start + batch_size]
+    for batch_start in range(0, len(properties_needing_geocoding), batch_size):
+        batch = properties_needing_geocoding[batch_start:batch_start + batch_size]
 
         print(f"\nBatch {batch_start//batch_size + 1}: Processing {len(batch)} properties...")
 
@@ -290,6 +319,10 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
 
                 if is_valid and quality_score >= 70:
                     results.append((prop['id'], lat, lon, quality_score))
+                    # Update cache with successful geocoding
+                    address_normalized = prop.get('address_normalized')
+                    if address_normalized:
+                        cache_coordinates(address_normalized, lat, lon)
                 else:
                     if i < 5:  # Log first few failures
                         print(f"  ⚠️  Rejected {prop['address'][:40]}: {reason}")
@@ -406,6 +439,11 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
 
 
 async def main():
+    # Initialize canonical coordinate cache
+    print("Initializing canonical coordinate cache...")
+    initialize_cache(DATABASE_URL)
+    print("Cache initialized\n")
+
     dry_run = "--apply" not in sys.argv
     needs_geocoding = "--needs-geocoding" in sys.argv
     no_eircode = "--no-eircode" in sys.argv
