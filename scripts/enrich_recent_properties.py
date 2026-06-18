@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-Production enrichment pipeline for recent property sales.
+Production enrichment pipeline for recent property sales with canonical cache.
 Searches web for property details (bedrooms, type) and updates database.
 """
 
 import os
+import sys
 import psycopg2
 import requests
 import time
@@ -12,6 +13,14 @@ import re
 from dotenv import load_dotenv
 from urllib.parse import quote_plus
 from bs4 import BeautifulSoup
+
+# Add scripts directory to path
+sys.path.insert(0, os.path.dirname(__file__))
+from canonical_geocoding import (
+    initialize_cache,
+    get_canonical_property_data,
+    cache_enrichment_data
+)
 
 load_dotenv('backend/.env')
 DATABASE_URL = os.getenv('DATABASE_URL')
@@ -125,7 +134,7 @@ def enrich_properties(months=3, limit=None, dry_run=False):
         print(f"1. Finding recent properties (last {months} months)...", flush=True)
 
         query = f"""
-            SELECT id, address, county, price, sale_date
+            SELECT id, address, address_normalized, county, price, sale_date
             FROM properties
             WHERE sale_date >= CURRENT_DATE - INTERVAL '{months} months'
             AND address IS NOT NULL
@@ -152,17 +161,39 @@ def enrich_properties(months=3, limit=None, dry_run=False):
             print(flush=True)
 
         # Process each property
-        print(f"2. Searching for property details...", flush=True)
+        print(f"2. Searching for property details (checking cache first)...", flush=True)
         print(flush=True)
 
         successful = 0
         failed = 0
+        cached = 0
         updates = []
 
-        for i, (prop_id, address, county, price, sale_date) in enumerate(properties, 1):
+        for i, (prop_id, address, address_normalized, county, price, sale_date) in enumerate(properties, 1):
             if i % 10 == 0:
                 print(f"   Progress: {i}/{len(properties)} ({100*i/len(properties):.1f}%)", flush=True)
 
+            # Check cache first
+            bedrooms = None
+            property_type = None
+
+            if address_normalized:
+                cached_data = get_canonical_property_data(address_normalized)
+                if cached_data and cached_data.bedrooms is not None:
+                    # Use cached enrichment
+                    bedrooms = cached_data.bedrooms
+                    property_type = cached_data.property_type
+                    cached += 1
+                    successful += 1
+                    updates.append((prop_id, bedrooms, property_type, address[:50]))
+
+                    if i <= 5:  # Show first 5
+                        beds_str = f"{bedrooms} bed" if bedrooms else "N/A"
+                        type_str = property_type or "N/A"
+                        print(f"   ✅ [CACHE] {address[:50]:<50} → {beds_str}, {type_str}", flush=True)
+                    continue  # Skip web scraping
+
+            # Cache miss - web scrape
             result = search_web_for_property(address, county)
 
             if result['success']:
@@ -174,6 +205,10 @@ def enrich_properties(months=3, limit=None, dry_run=False):
                     address[:50]
                 ))
 
+                # Update cache with new enrichment
+                if address_normalized:
+                    cache_enrichment_data(address_normalized, result['bedrooms'], result['property_type'])
+
                 if i <= 5:  # Show first 5
                     beds_str = f"{result['bedrooms']} bed" if result['bedrooms'] else "N/A"
                     type_str = result['property_type'] or "N/A"
@@ -181,8 +216,8 @@ def enrich_properties(months=3, limit=None, dry_run=False):
             else:
                 failed += 1
 
-            # Rate limiting - be more respectful
-            time.sleep(10)  # 10 seconds between requests
+            # Rate limiting - only for actual web scraping (cache hits skip this)
+            time.sleep(3)  # 3 seconds between requests
 
         print(f"   Progress: {len(properties)}/{len(properties)} (100.0%)", flush=True)
         print(flush=True)
@@ -190,6 +225,8 @@ def enrich_properties(months=3, limit=None, dry_run=False):
         # Summary
         print("3. Summary:", flush=True)
         print(f"   Successful: {successful}/{len(properties)} ({100*successful/len(properties):.1f}%)", flush=True)
+        print(f"   - From cache: {cached}", flush=True)
+        print(f"   - Web scraped: {successful - cached}", flush=True)
         print(f"   Failed: {failed}/{len(properties)} ({100*failed/len(properties):.1f}%)", flush=True)
         print(flush=True)
 
@@ -252,6 +289,11 @@ def enrich_properties(months=3, limit=None, dry_run=False):
 
 def main():
     import argparse
+
+    # Initialize canonical cache
+    print("Initializing canonical coordinate cache...")
+    initialize_cache(DATABASE_URL)
+    print("Cache initialized\n")
 
     parser = argparse.ArgumentParser(description='Enrich properties with bedroom and type data')
     parser.add_argument('--months', type=int, default=3, help='How many months back to search (default: 3)')
