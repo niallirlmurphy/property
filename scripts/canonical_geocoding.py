@@ -258,3 +258,162 @@ def _select_canonical_enrichment(sales: List[dict]) -> dict:
         'bedrooms': select_field_value('bedrooms'),
         'property_type': select_field_value('property_type')
     }
+
+
+# ============================================================================
+# TASK 5: Getter Functions
+# ============================================================================
+
+def get_canonical_coordinates(address_normalized: str) -> Optional[Tuple[float, float]]:
+    """
+    Return cached coordinates for an address, or None if not found.
+
+    Args:
+        address_normalized: Normalized address string (cache key)
+
+    Returns:
+        Tuple of (latitude, longitude) if address in cache, None otherwise
+    """
+    if address_normalized not in _canonical_cache:
+        return None
+
+    data = _canonical_cache[address_normalized]
+    return (data.latitude, data.longitude)
+
+
+def get_canonical_property_data(address_normalized: str) -> Optional[PropertyData]:
+    """
+    Return cached property data (coordinates + enrichment) for an address.
+
+    Args:
+        address_normalized: Normalized address string (cache key)
+
+    Returns:
+        PropertyData object if address in cache, None otherwise
+    """
+    return _canonical_cache.get(address_normalized)
+
+
+def should_geocode(address_normalized: str) -> bool:
+    """
+    Return True only if address is not in cache (no canonical coordinates).
+
+    Used to determine whether to call external geocoding API for an address.
+
+    Args:
+        address_normalized: Normalized address string (cache key)
+
+    Returns:
+        True if address should be geocoded (not in cache), False if already cached
+    """
+    return address_normalized not in _canonical_cache
+
+
+def should_enrich(address_normalized: str) -> bool:
+    """
+    Return True only if address has no enrichment data in cache.
+
+    Returns True even if coordinates exist - enrichment is independent of geocoding.
+
+    Args:
+        address_normalized: Normalized address string (cache key)
+
+    Returns:
+        True if address should be enriched (no enrichment in cache), False if enriched
+    """
+    if address_normalized not in _canonical_cache:
+        return True
+
+    data = _canonical_cache[address_normalized]
+    # Should enrich if either bedrooms or property_type is missing
+    return data.bedrooms is None or data.property_type is None
+
+
+# ============================================================================
+# TASK 6: Setter Functions
+# ============================================================================
+
+def cache_coordinates(address_normalized: str, lat: float, lon: float) -> None:
+    """
+    Add or update coordinates in cache for an address.
+
+    Creates new PropertyData entry if address not in cache, or updates
+    coordinates while preserving enrichment data if address already cached.
+
+    Args:
+        address_normalized: Normalized address string (cache key)
+        lat: Latitude (must be within Ireland bounds: 51.4-55.5)
+        lon: Longitude (must be within Ireland bounds: -10.7--5.4)
+
+    Raises:
+        ValueError: If coordinates are outside Ireland bounds
+    """
+    # Validate coordinates
+    if not (51.4 <= lat <= 55.5):
+        raise ValueError(f"Latitude {lat} outside Ireland bounds (51.4-55.5°N)")
+    if not (-10.7 <= lon <= -5.4):
+        raise ValueError(f"Longitude {lon} outside Ireland bounds (-10.7--5.4°W)")
+
+    if address_normalized in _canonical_cache:
+        # Update existing entry, preserve enrichment data
+        existing = _canonical_cache[address_normalized]
+        _canonical_cache[address_normalized] = PropertyData(
+            latitude=lat,
+            longitude=lon,
+            bedrooms=existing.bedrooms,
+            property_type=existing.property_type,
+            last_geocoded=datetime.now(),
+            last_enriched=existing.last_enriched
+        )
+    else:
+        # Create new entry
+        _canonical_cache[address_normalized] = PropertyData(
+            latitude=lat,
+            longitude=lon,
+            last_geocoded=datetime.now()
+        )
+
+
+def cache_enrichment_data(address_normalized: str, bedrooms: Optional[int],
+                         property_type: Optional[str]) -> None:
+    """
+    Add or update enrichment data in cache for an address.
+
+    Creates new PropertyData entry if address not in cache (with placeholder coords),
+    or updates enrichment fields while preserving coordinates if address already cached.
+
+    When called with existing address, updates are selective:
+    - Non-None values update the field
+    - None values leave the field unchanged (don't clear existing data)
+
+    Args:
+        address_normalized: Normalized address string (cache key)
+        bedrooms: Number of bedrooms to set, or None to leave unchanged
+        property_type: Property type string to set, or None to leave unchanged
+
+    Notes:
+        If address not in cache, creates entry with placeholder coordinates (51.5, -8.0)
+        which should never be used directly (only enrichment data should be accessed).
+        This gracefully handles enrichment before geocoding completes.
+    """
+    if address_normalized in _canonical_cache:
+        # Update existing entry, preserve coordinates and other fields
+        existing = _canonical_cache[address_normalized]
+        _canonical_cache[address_normalized] = PropertyData(
+            latitude=existing.latitude,
+            longitude=existing.longitude,
+            bedrooms=bedrooms if bedrooms is not None else existing.bedrooms,
+            property_type=property_type if property_type is not None else existing.property_type,
+            last_geocoded=existing.last_geocoded,
+            last_enriched=datetime.now()
+        )
+    else:
+        # Create new entry with placeholder coordinates
+        # These should never be used directly; enrichment before geocoding is edge case
+        _canonical_cache[address_normalized] = PropertyData(
+            latitude=51.5,  # Placeholder: Ireland center
+            longitude=-8.0,
+            bedrooms=bedrooms,
+            property_type=property_type,
+            last_enriched=datetime.now()
+        )
