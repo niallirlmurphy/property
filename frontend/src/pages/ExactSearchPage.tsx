@@ -6,6 +6,7 @@ import type { Property, TrendPoint } from "../types";
 import "./ExactSearchPage.css";
 
 export default function ExactSearchPage() {
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Property[]>([]); // Filtered results for display
@@ -16,12 +17,13 @@ export default function ExactSearchPage() {
   const [trendsLoading, setTrendsLoading] = useState(false);
   const [center, setCenter] = useState<{ lat: number; lon: number } | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
+  const hasAutoSearched = useRef(false);
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!query.trim()) return;
+  // Search function that can be called from form submit or URL load
+  const performSearch = async (searchQuery: string) => {
+    if (!searchQuery.trim()) return;
 
-    console.log("[S1 Search] Starting search for:", query);
+    console.log("[S1 Search] Starting search for:", searchQuery);
     console.log("[S1 Search] API Base URL:", import.meta.env.VITE_API_URL || "/api");
     setLoading(true);
     setError(null);
@@ -33,7 +35,7 @@ export default function ExactSearchPage() {
 
     try {
       // Detect county from query or default to Dublin
-      const queryLower = query.toLowerCase();
+      const queryLower = searchQuery.toLowerCase();
       let county = "Dublin"; // Default assumption
 
       // Check if county is mentioned in query
@@ -47,14 +49,14 @@ export default function ExactSearchPage() {
 
       console.log("[S1 Search] Using county:", county);
       console.log("[S1 Search] Calling searchProperties with params:", {
-        q: query,
+        q: searchQuery,
         radius_km: 0.5,
         county,
       });
 
       // Search with 500m radius, full database history, specified/assumed county
       const response = await searchProperties({
-        q: query,
+        q: searchQuery,
         radius_km: 0.5, // 500m radius
         county: county,
         min_year: undefined, // Full history
@@ -72,7 +74,7 @@ export default function ExactSearchPage() {
 
       // Filter for exact address match using token matching
       const exactMatches = response.results.filter(prop =>
-        isExactMatch(prop.address, query)
+        isExactMatch(prop.address, searchQuery)
       );
 
       console.log("[S1 Search] Exact matches:", exactMatches.length, "of", response.results.length);
@@ -83,7 +85,7 @@ export default function ExactSearchPage() {
           const tokens = extractAddressTokens(r.address);
           console.log(`  ${r.address} -> number: "${tokens.number}", street: "${tokens.street}"`);
         });
-        const queryTokens = extractAddressTokens(query);
+        const queryTokens = extractAddressTokens(searchQuery);
         console.log("[S1 Search] Query tokens -> number: \"" + queryTokens.number + "\", street: \"" + queryTokens.street + "\"");
       }
 
@@ -104,7 +106,7 @@ export default function ExactSearchPage() {
       }
 
       // Update URL
-      navigate(`/s1?q=${encodeURIComponent(query)}`, { replace: true });
+      navigate(`/s1?q=${encodeURIComponent(searchQuery)}`, { replace: true });
 
       // Load trends using all results (not just exact matches)
       if (response.results.length > 0 && response.center) {
@@ -142,6 +144,23 @@ export default function ExactSearchPage() {
       setLoading(false);
     }
   };
+
+  // Form submit handler
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    await performSearch(query);
+  };
+
+  // Read query from URL params and auto-search once
+  useEffect(() => {
+    const urlQuery = searchParams.get('q');
+    if (urlQuery && !hasAutoSearched.current) {
+      console.log("[S1 Search] Loading from URL:", urlQuery);
+      setQuery(urlQuery);
+      hasAutoSearched.current = true;
+      performSearch(urlQuery);
+    }
+  }, [searchParams]);
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
