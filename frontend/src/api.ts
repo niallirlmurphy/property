@@ -17,6 +17,7 @@ export async function searchProperties(params: SearchParams): Promise<SearchResp
     radius_km: params.radius_km,
     min_year:  params.min_year,
     county:    params.county,
+    limit:     params.limit,
   });
 
   try {

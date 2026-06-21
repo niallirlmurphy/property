@@ -58,6 +58,7 @@ export default function ExactSearchPage() {
         radius_km: 0.5, // 500m radius
         county: county,
         min_year: undefined, // Full history
+        limit: 500, // Higher limit to capture all historical sales
       });
 
       console.log("[S1 Search] Search response:", {
