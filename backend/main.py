@@ -1106,24 +1106,42 @@ async def search_exact(
     request: Request,
     address: str = Query(..., description="Exact address to search for"),
 ):
-    """Get ALL sales for an exact address match (no radius limit)."""
+    """Get ALL sales for an exact address match (fuzzy matching with common variations)."""
     start_time = time.time()
     _rate_limit_check(request, 60, "search_exact")
 
-    # Normalize address for matching
-    normalized_address = address.strip().upper()
+    # Normalize search input: uppercase, remove punctuation, expand abbreviations
+    search_normalized = re.sub(r'[,.\-]', ' ', address.strip().upper())
+    search_normalized = re.sub(r'\s+', ' ', search_normalized).strip()
 
-    # Query for ALL sales at this exact address
-    rows = await db_pool.fetch("""
-        SELECT
-            id, sale_date, address, county, eircode, price,
-            not_full_market_price, vat_exclusive, description,
-            size_description, latitude, longitude,
-            routing_key, bedrooms, property_type
-        FROM properties
-        WHERE UPPER(address) = $1
-        ORDER BY sale_date DESC
-    """, normalized_address)
+    # Try both abbreviated and full forms (ROAD vs RD, STREET vs ST, etc.)
+    # Most PPR data uses abbreviations, but users type full words
+    search_variants = [search_normalized]
+
+    # Create abbreviated version
+    abbrev = search_normalized
+    abbrev = abbrev.replace(' ROAD ', ' RD ').replace(' ROAD', ' RD')
+    abbrev = abbrev.replace(' STREET ', ' ST ').replace(' STREET', ' ST')
+    abbrev = abbrev.replace(' AVENUE ', ' AVE ').replace(' AVENUE', ' AVE')
+    abbrev = abbrev.replace(' DRIVE ', ' DR ').replace(' DRIVE', ' DR')
+    if abbrev != search_normalized:
+        search_variants.insert(0, abbrev)  # Try abbreviated first (more common in PPR)
+
+    # Try each variant with LIKE (allows missing Dublin 12, etc.)
+    rows = []
+    for variant in search_variants:
+        rows = await db_pool.fetch("""
+            SELECT
+                id, sale_date, address, county, eircode, price,
+                not_full_market_price, vat_exclusive, description,
+                size_description, latitude, longitude,
+                routing_key, bedrooms, property_type
+            FROM properties
+            WHERE REGEXP_REPLACE(UPPER(address), '[,.\-]', ' ', 'g') LIKE $1 || '%'
+            ORDER BY sale_date DESC
+        """, variant)
+        if rows:
+            break
 
     result = {
         "address": address,
