@@ -113,7 +113,32 @@ export default function ExactSearchPage() {
     });
   };
 
+  const formatPropertyType = (type: string) => {
+    const formatted = type
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join('-');
+
+    if (formatted === 'Semi-detached' || formatted === 'Detached' || formatted === 'Terraced') {
+      return `${formatted} House`;
+    }
+
+    return formatted.charAt(0).toUpperCase() + formatted.slice(1);
+  };
+
   const hasResults = results.length > 0;
+
+  // Calculate statistics from results
+  const stats = hasResults ? {
+    total_sales: results.length,
+    latest_sale: results[results.length - 1].sale_date,
+    latest_price: results[results.length - 1].price,
+    price_range: {
+      min: Math.min(...results.map(r => r.price)),
+      max: Math.max(...results.map(r => r.price)),
+      median: results.map(r => r.price).sort((a, b) => a - b)[Math.floor(results.length / 2)],
+    },
+  } : null;
 
   return (
     <div className="exact-search-page">
@@ -170,6 +195,56 @@ export default function ExactSearchPage() {
                 )}
               </div>
             </div>
+
+            {/* Property Details Card */}
+            {(results[0].bedrooms || results[0].property_type) && (
+              <div className="details-card">
+                <h2>Property Details</h2>
+                <div className="details-grid">
+                  {results[0].bedrooms && (
+                    <div className="detail-item">
+                      <span className="detail-label">Bedrooms</span>
+                      <span className="detail-value">{results[0].bedrooms}</span>
+                    </div>
+                  )}
+                  {results[0].property_type && (
+                    <div className="detail-item">
+                      <span className="detail-label">Property Type</span>
+                      <span className="detail-value">{formatPropertyType(results[0].property_type)}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Price Statistics */}
+            {stats && (
+              <div className="stats-card">
+                <h2>Price History</h2>
+                <div className="stats-grid">
+                  <div className="stat-item highlight">
+                    <span className="stat-label">Latest Sale</span>
+                    <span className="stat-value">{formatPrice(stats.latest_price)}</span>
+                    <span className="stat-date">{formatDate(stats.latest_sale)}</span>
+                  </div>
+                  <div className="stat-item">
+                    <span className="stat-label">Median Price</span>
+                    <span className="stat-value">{formatPrice(stats.price_range.median)}</span>
+                  </div>
+                  <div className="stat-item">
+                    <span className="stat-label">Price Range</span>
+                    <span className="stat-value">
+                      {formatPrice(stats.price_range.min)} - {formatPrice(stats.price_range.max)}
+                    </span>
+                  </div>
+                  <div className="stat-item">
+                    <span className="stat-label">Total Sales</span>
+                    <span className="stat-value">{stats.total_sales}</span>
+                    <span className="stat-date">Since 2010</span>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Sales History Table */}
             <div className="sales-card">
