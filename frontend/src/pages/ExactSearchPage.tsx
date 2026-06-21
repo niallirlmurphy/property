@@ -6,9 +6,8 @@ import type { Property, TrendPoint } from "../types";
 import "./ExactSearchPage.css";
 
 export default function ExactSearchPage() {
-  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const [query, setQuery] = useState(searchParams.get("q") || "");
+  const [query, setQuery] = useState("");
   const [results, setResults] = useState<Property[]>([]); // Filtered results for display
   const [allResults, setAllResults] = useState<Property[]>([]); // All results for trends
   const [loading, setLoading] = useState(false);
@@ -134,15 +133,6 @@ export default function ExactSearchPage() {
       setLoading(false);
     }
   };
-
-  // Load query from URL on mount (but don't auto-search)
-  useEffect(() => {
-    const q = searchParams.get("q");
-    if (q) {
-      setQuery(q);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Only run on mount
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
