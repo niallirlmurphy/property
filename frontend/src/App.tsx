@@ -39,6 +39,45 @@ function formatDate(dateString: string): string {
   return `${day}-${month}-${year}`;
 }
 
+function calculateTrendsFromProperties(properties: Property[]): TrendPoint[] {
+  // Filter out non-market sales and group by year
+  const validProperties = properties.filter(p => !p.not_full_market_price && p.sale_date);
+
+  const byYear = new Map<number, number[]>();
+
+  validProperties.forEach(p => {
+    const year = new Date(p.sale_date).getFullYear();
+    if (!byYear.has(year)) {
+      byYear.set(year, []);
+    }
+    byYear.get(year)!.push(p.price);
+  });
+
+  const trends: TrendPoint[] = [];
+
+  byYear.forEach((prices, year) => {
+    prices.sort((a, b) => a - b);
+    const count = prices.length;
+    const median_price = count % 2 === 0
+      ? (prices[count / 2 - 1] + prices[count / 2]) / 2
+      : prices[Math.floor(count / 2)];
+    const avg_price = prices.reduce((sum, p) => sum + p, 0) / count;
+    const min_price = prices[0];
+    const max_price = prices[count - 1];
+
+    trends.push({
+      year,
+      count,
+      median_price: Math.round(median_price),
+      avg_price: Math.round(avg_price),
+      min_price,
+      max_price,
+    });
+  });
+
+  return trends.sort((a, b) => a.year - b.year);
+}
+
 const ABBREV_MAP: [RegExp, string][] = [
   [/\brd\b/g,   "road"],
   [/\bave?\b/g, "avenue"],
@@ -239,10 +278,9 @@ export default function App() {
     }
 
     try {
-      let [pins, result, trendData] = await Promise.all([
+      let [pins, result] = await Promise.all([
         fetchNearestPins(params, 10),
         searchProperties(params),
-        fetchTrends(params.q, params.radius_km, params.county).catch(() => []), // Trends optional
       ]);
       if (searchGenRef.current !== gen) return;
 
@@ -250,10 +288,9 @@ export default function App() {
       // Better UX: user likely searched for a place in a different county
       if (result.count === 0 && params.county) {
         const paramsNoCounty = { ...params, county: undefined };
-        [pins, result, trendData] = await Promise.all([
+        [pins, result] = await Promise.all([
           fetchNearestPins(paramsNoCounty, 10),
           searchProperties(paramsNoCounty),
-          fetchTrends(params.q, params.radius_km, undefined).catch(() => []), // Trends optional
         ]);
         if (searchGenRef.current !== gen) return;
       }
@@ -275,6 +312,8 @@ export default function App() {
       setLastSearchCounty(params.county);
       setPendingCenter({ lat: result.center.lat, lon: result.center.lon, radius_km: result.radius_km });
 
+      // Calculate trends from the search results
+      const trendData = calculateTrendsFromProperties(result.results);
       if (trendData.length > 0) {
         setTrends(trendData);
         setShowTrends(true);
@@ -312,12 +351,11 @@ export default function App() {
       const first = result.results.find((p) => p.latitude != null && p.longitude != null);
       if (first) setEircodeCenter([first.latitude!, first.longitude!]);
 
-      const county = result.results[0]?.county ?? undefined;
-      if (county) {
-        const trendData = await fetchTrends(undefined, 5, county);
-        if (searchGenRef.current !== gen) return;
+      // Calculate trends from the Eircode search results
+      const trendData = calculateTrendsFromProperties(result.results);
+      if (trendData.length > 0) {
         setTrends(trendData);
-        setShowTrends(trendData.length > 0);
+        setShowTrends(true);
       }
     } catch (e: any) {
       if (searchGenRef.current !== gen) return;
