@@ -1,4 +1,4 @@
-import { useState, FormEvent, useEffect } from "react";
+import { useState, FormEvent, useEffect, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import TrendsChart from "../components/TrendsChart";
 import { searchProperties, fetchTrends } from "../api";
@@ -57,16 +57,25 @@ export default function ExactSearchPage() {
         }
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
+      const errorMsg = err instanceof Error
+        ? err.message
+        : typeof err === 'string'
+        ? err
+        : "An error occurred. Please try again.";
+      setError(errorMsg);
+      console.error("Search error:", err);
     } finally {
       setLoading(false);
     }
   };
 
-  // Auto-search if query param present on mount
+  // Auto-search if query param present on mount (only once)
+  const hasSearched = useRef(false);
+
   useEffect(() => {
     const q = searchParams.get("q");
-    if (q) {
+    if (q && !hasSearched.current) {
+      hasSearched.current = true;
       setQuery(q);
       // Trigger search after a brief delay to allow state to settle
       setTimeout(() => {
@@ -74,7 +83,7 @@ export default function ExactSearchPage() {
         if (form) form.requestSubmit();
       }, 100);
     }
-  }, []);
+  }, [searchParams]);
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-IE", {
