@@ -18,7 +18,19 @@ export default function ExactSearchPage() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!query.trim()) return;
+    e.stopPropagation();
+
+    console.log("[S1 Search] handleSubmit called, loading:", loading, "query:", query);
+
+    if (loading) {
+      console.log("[S1 Search] Already loading, ignoring submit");
+      return;
+    }
+
+    if (!query.trim()) {
+      console.log("[S1 Search] Empty query, ignoring submit");
+      return;
+    }
 
     console.log("[S1 Search] Starting search for:", query);
     console.log("[S1 Search] API Base URL:", import.meta.env.VITE_API_URL || "/api");
