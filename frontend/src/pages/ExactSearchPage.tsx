@@ -14,7 +14,7 @@ export default function ExactSearchPage() {
   const [error, setError] = useState<string | null>(null);
   const [trends, setTrends] = useState<TrendPoint[]>([]);
   const [trendsLoading, setTrendsLoading] = useState(false);
-  const [center, setCenter] = useState<[number, number] | null>(null);
+  const [center, setCenter] = useState<{ lat: number; lon: number } | null>(null);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -45,9 +45,9 @@ export default function ExactSearchPage() {
         setTrendsLoading(true);
         try {
           const trendsData = await fetchTrends(
-            `${response.center[0]},${response.center[1]}`,
+            `${response.center.lat},${response.center.lon}`,
             0.5, // 500m radius for trends
-            response.results[0].county
+            response.results[0].county || undefined
           );
           setTrends(trendsData);
         } catch (err) {
@@ -191,7 +191,7 @@ export default function ExactSearchPage() {
                   data={trends}
                   onClose={() => {}}
                   inline={true}
-                  county={results[0].county}
+                  county={results[0].county || undefined}
                 />
                 <div className="trends-note">
                   <p>
