@@ -422,6 +422,12 @@ export default function ExactSearchPage() {
           <span className="separator">•</span>
           <a href="/about">About</a>
         </p>
+        <p className="build-info">
+          Build: {new Date().toLocaleString("en-IE", {
+            dateStyle: "medium",
+            timeStyle: "short",
+          })}
+        </p>
       </div>
     </div>
   );
