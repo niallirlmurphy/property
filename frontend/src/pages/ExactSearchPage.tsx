@@ -72,6 +72,17 @@ export default function ExactSearchPage() {
   // Auto-search if query param present on mount (only once)
   const hasSearched = useRef(false);
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setQuery("");
+    setResults([]);
+    setError(null);
+    setTrends([]);
+    setCenter(null);
+    hasSearched.current = false;
+    navigate("/s1", { replace: true });
+  };
+
   useEffect(() => {
     const q = searchParams.get("q");
     if (q && !hasSearched.current) {
@@ -109,7 +120,7 @@ export default function ExactSearchPage() {
       {/* Logo and Search Box */}
       <div className={`search-container ${hasResults ? "has-results" : "centered"}`}>
         <div className="logo">
-          <a href={hasResults ? "/s1" : "/"}>HomeIQ</a>
+          <a href="/s1" onClick={handleLogoClick}>HomeIQ</a>
         </div>
 
         <form onSubmit={handleSubmit} className="search-form">
