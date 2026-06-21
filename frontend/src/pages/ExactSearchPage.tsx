@@ -20,6 +20,7 @@ export default function ExactSearchPage() {
     e.preventDefault();
     if (!query.trim()) return;
 
+    console.log("[S1 Search] Starting search for:", query);
     setLoading(true);
     setError(null);
     setResults([]);
@@ -28,10 +29,20 @@ export default function ExactSearchPage() {
 
     try {
       // Use existing search endpoint with very small radius (50m)
+      console.log("[S1 Search] Calling searchProperties with params:", {
+        q: query,
+        radius_km: 0.05,
+      });
+
       const response = await searchProperties({
         q: query,
         radius_km: 0.05, // 50 meters for exact address matching
         county: undefined,
+      });
+
+      console.log("[S1 Search] Search response:", {
+        resultCount: response.results.length,
+        center: response.center,
       });
 
       setResults(response.results);
@@ -42,6 +53,7 @@ export default function ExactSearchPage() {
 
       // Load trends if we found results
       if (response.results.length > 0 && response.center) {
+        console.log("[S1 Search] Loading trends for:", response.center);
         setTrendsLoading(true);
         try {
           const trendsData = await fetchTrends(
@@ -49,21 +61,47 @@ export default function ExactSearchPage() {
             0.5, // 500m radius for trends
             response.results[0].county || undefined
           );
+          console.log("[S1 Search] Trends loaded:", trendsData.length, "data points");
           setTrends(trendsData);
         } catch (err) {
-          console.error("Failed to load trends:", err);
+          console.error("[S1 Search] Trends error:", err);
+          if (err instanceof Error) {
+            console.error("[S1 Search] Trends error message:", err.message);
+            console.error("[S1 Search] Trends error stack:", err.stack);
+          }
         } finally {
           setTrendsLoading(false);
         }
       }
     } catch (err) {
-      const errorMsg = err instanceof Error
-        ? err.message
-        : typeof err === 'string'
-        ? err
-        : "An error occurred. Please try again.";
+      console.error("[S1 Search] Main search error:", err);
+      console.error("[S1 Search] Error type:", typeof err);
+      console.error("[S1 Search] Error constructor:", err?.constructor?.name);
+
+      let errorMsg = "An error occurred. Please try again.";
+
+      if (err instanceof Error) {
+        console.error("[S1 Search] Error message:", err.message);
+        console.error("[S1 Search] Error stack:", err.stack);
+        errorMsg = err.message;
+      } else if (typeof err === 'string') {
+        errorMsg = err;
+      } else if (err && typeof err === 'object') {
+        console.error("[S1 Search] Error object keys:", Object.keys(err));
+        console.error("[S1 Search] Error JSON:", JSON.stringify(err, null, 2));
+
+        // Try to extract meaningful error message
+        if ('message' in err) {
+          errorMsg = String(err.message);
+        } else if ('detail' in err) {
+          errorMsg = String(err.detail);
+        } else if ('error' in err) {
+          errorMsg = String(err.error);
+        }
+      }
+
+      console.error("[S1 Search] Final error message:", errorMsg);
       setError(errorMsg);
-      console.error("Search error:", err);
     } finally {
       setLoading(false);
     }
