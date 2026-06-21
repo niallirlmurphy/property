@@ -37,6 +37,7 @@ export interface SearchParams {
   radius_km: number;
   min_year?: number;
   county?: string;
+  limit?: number;
 }
 
 export interface AreaSummary {
