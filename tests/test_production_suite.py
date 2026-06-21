@@ -408,6 +408,114 @@ async def test_frontend_api_calls(client: httpx.AsyncClient, results: TestResult
         results.add_fail("Frontend → Backend connectivity", str(e))
 
 
+async def test_address_normalization(results: TestResults):
+    """Test that all addresses have normalized versions populated."""
+    import asyncpg
+    import os
+    import re
+
+    DATABASE_URL = os.environ.get("DATABASE_URL")
+    if not DATABASE_URL:
+        results.add_warning("Address normalization", "DATABASE_URL not set - skipping")
+        return
+
+    def normalize_address(address: str) -> str:
+        """Normalize address using same logic as normalize_addresses.py script."""
+        if not address:
+            return address
+
+        normalized = address.strip()
+        normalized = re.sub(r'\s+', ' ', normalized)
+        normalized = re.sub(r',\s*,+', ',', normalized)
+        normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
+        normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
+
+        street_types = {
+            r'\bSt\.?\b': 'Street', r'\bRd\.?\b': 'Road', r'\bAve\.?\b': 'Avenue',
+            r'\bDr\.?\b': 'Drive', r'\bCl\.?\b': 'Close', r'\bCt\.?\b': 'Court',
+            r'\bPk\.?\b': 'Park', r'\bSq\.?\b': 'Square',
+        }
+        for abbrev, full in street_types.items():
+            normalized = re.sub(abbrev, full, normalized, flags=re.I)
+
+        normalized = re.sub(r',\s*,', ',', normalized)
+        normalized = re.sub(r'\s+,', ',', normalized)
+        normalized = re.sub(r',\s+', ', ', normalized)
+        normalized = normalized.strip(', ')
+
+        words = normalized.split()
+        lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
+        upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
+
+        result_words = []
+        for i, word in enumerate(words):
+            if i == 0:
+                result_words.append(word.capitalize())
+            elif word in upper_exceptions:
+                result_words.append(word)
+            elif word.lower() in lower_exceptions:
+                result_words.append(word.lower())
+            else:
+                result_words.append(word.capitalize())
+
+        return ' '.join(result_words).strip()
+
+    try:
+        conn = await asyncpg.connect(DATABASE_URL)
+
+        null_count = await conn.fetchval("""
+            SELECT COUNT(*)
+            FROM properties
+            WHERE address IS NOT NULL
+            AND (address_normalized IS NULL OR address_normalized = '')
+        """)
+
+        if null_count == 0:
+            total = await conn.fetchval("SELECT COUNT(*) FROM properties WHERE address IS NOT NULL")
+            results.add_pass("Address normalization", f"All {total:,} addresses normalized")
+        else:
+            print(f"   Found {null_count:,} unnormalized addresses - populating (limit 10k)...")
+
+            rows = await conn.fetch("""
+                SELECT id, address
+                FROM properties
+                WHERE address IS NOT NULL
+                AND (address_normalized IS NULL OR address_normalized = '')
+                LIMIT 10000
+            """)
+
+            BATCH_SIZE = 1000
+            updated = 0
+
+            for i in range(0, len(rows), BATCH_SIZE):
+                batch = rows[i:i+BATCH_SIZE]
+                async with conn.transaction():
+                    for row in batch:
+                        normalized = normalize_address(row['address'])
+                        await conn.execute("""
+                            UPDATE properties SET address_normalized = $1 WHERE id = $2
+                        """, normalized, row['id'])
+                        updated += 1
+
+            remaining = await conn.fetchval("""
+                SELECT COUNT(*)
+                FROM properties
+                WHERE address IS NOT NULL
+                AND (address_normalized IS NULL OR address_normalized = '')
+            """)
+
+            if remaining == 0:
+                results.add_pass("Address normalization", f"Populated {updated:,} addresses")
+            else:
+                results.add_warning("Address normalization",
+                                  f"Populated {updated:,}, {remaining:,} remaining - run scripts/normalize_addresses.py")
+
+        await conn.close()
+
+    except Exception as e:
+        results.add_fail("Address normalization", str(e))
+
+
 async def test_performance(client: httpx.AsyncClient, results: TestResults):
     """Test response time performance."""
     endpoints = [
@@ -752,6 +860,9 @@ async def run_all_tests():
         print("\nFrontend:")
         await test_frontend_loads(client, results)
         await test_frontend_api_calls(client, results)
+
+        print("\nAddress Normalization:")
+        await test_address_normalization(results)
 
         print("\nPerformance:")
         await test_performance(client, results)
