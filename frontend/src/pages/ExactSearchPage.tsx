@@ -1,5 +1,5 @@
-import { useState, FormEvent, useEffect, useRef } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useState, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import TrendsChart from "../components/TrendsChart";
 import { searchProperties, fetchTrends } from "../api";
 import type { Property, TrendPoint } from "../types";
