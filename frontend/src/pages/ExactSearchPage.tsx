@@ -21,6 +21,7 @@ export default function ExactSearchPage() {
     if (!query.trim()) return;
 
     console.log("[S1 Search] Starting search for:", query);
+    console.log("[S1 Search] API Base URL:", import.meta.env.VITE_API_URL || "/api");
     setLoading(true);
     setError(null);
     setResults([]);
@@ -72,6 +73,16 @@ export default function ExactSearchPage() {
       );
 
       console.log("[S1 Search] Exact matches:", exactMatches.length, "of", response.results.length);
+
+      if (exactMatches.length === 0 && response.results.length > 0) {
+        console.log("[S1 Search] Sample addresses from search:");
+        response.results.slice(0, 5).forEach(r => {
+          const tokens = extractAddressTokens(r.address);
+          console.log(`  ${r.address} -> number: "${tokens.number}", street: "${tokens.street}"`);
+        });
+        const queryTokens = extractAddressTokens(query);
+        console.log("[S1 Search] Query tokens -> number: \"" + queryTokens.number + "\", street: \"" + queryTokens.street + "\"");
+      }
 
       setResults(exactMatches);
 
