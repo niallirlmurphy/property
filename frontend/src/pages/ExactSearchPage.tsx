@@ -15,6 +15,7 @@ export default function ExactSearchPage() {
   const [trends, setTrends] = useState<TrendPoint[]>([]);
   const [trendsLoading, setTrendsLoading] = useState(false);
   const [center, setCenter] = useState<{ lat: number; lon: number } | null>(null);
+  const [hasSearched, setHasSearched] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -28,6 +29,7 @@ export default function ExactSearchPage() {
     setAllResults([]);
     setTrends([]);
     setCenter(null);
+    setHasSearched(true);
 
     try {
       // Detect county from query or default to Dublin
@@ -153,6 +155,7 @@ export default function ExactSearchPage() {
     setError(null);
     setTrends([]);
     setCenter(null);
+    setHasSearched(false);
     navigate("/s1", { replace: true });
   };
 
@@ -390,7 +393,7 @@ export default function ExactSearchPage() {
             )}
           </div>
         </div>
-      ) : !loading && query && (
+      ) : !loading && hasSearched && (
         <div className="no-results">
           <div className="no-results-icon">🔍</div>
           <h2>No Sales Found</h2>
