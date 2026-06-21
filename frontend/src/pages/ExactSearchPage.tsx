@@ -1,5 +1,5 @@
-import { useState, FormEvent } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, FormEvent, useEffect, useRef } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import TrendsChart from "../components/TrendsChart";
 import { searchProperties, fetchTrends } from "../api";
 import type { Property, TrendPoint } from "../types";
@@ -18,19 +18,7 @@ export default function ExactSearchPage() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    e.stopPropagation();
-
-    console.log("[S1 Search] handleSubmit called, loading:", loading, "query:", query);
-
-    if (loading) {
-      console.log("[S1 Search] Already loading, ignoring submit");
-      return;
-    }
-
-    if (!query.trim()) {
-      console.log("[S1 Search] Empty query, ignoring submit");
-      return;
-    }
+    if (!query.trim()) return;
 
     console.log("[S1 Search] Starting search for:", query);
     console.log("[S1 Search] API Base URL:", import.meta.env.VITE_API_URL || "/api");
