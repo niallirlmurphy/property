@@ -25,7 +25,9 @@ export async function searchProperties(params: SearchParams): Promise<SearchResp
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
       if (res.status === 500) {
-        throw new Error("Server error. Please try again in a moment.");
+        throw new Error("Service is temporarily unavailable. Please try again in a moment.");
+      } else if (res.status === 502 || res.status === 503 || res.status === 504) {
+        throw new Error("Service is starting up. Please wait a moment and try again.");
       } else if (res.status === 404) {
         throw new Error("Could not find that address. Please check the spelling.");
       } else if (res.status === 429) {
@@ -36,7 +38,7 @@ export async function searchProperties(params: SearchParams): Promise<SearchResp
     return res.json();
   } catch (err) {
     if (err instanceof TypeError && err.message.includes("fetch")) {
-      throw new Error("Cannot connect to server. Please check your internet connection.");
+      throw new Error("Unable to reach server. Service may be restarting.");
     }
     throw err;
   }

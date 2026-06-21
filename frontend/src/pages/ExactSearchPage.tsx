@@ -120,14 +120,7 @@ export default function ExactSearchPage() {
       let errorMsg = "Unable to search. Please try again in a moment.";
 
       if (err instanceof Error) {
-        // Network/fetch errors
-        if (err.message.includes("fetch") || err.message.includes("Failed to fetch")) {
-          errorMsg = "Cannot connect to server. The service may be temporarily unavailable.";
-        } else if (err.message.includes("geocod") || err.message.includes("location")) {
-          errorMsg = "Could not find that address. Please check the spelling and try again.";
-        } else {
-          errorMsg = err.message;
-        }
+        errorMsg = err.message; // Use the message from api.ts which has better error handling
       }
 
       setError(errorMsg);
