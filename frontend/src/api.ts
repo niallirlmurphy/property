@@ -50,6 +50,29 @@ export async function searchProperties(params: SearchParams): Promise<SearchResp
   }
 }
 
+export async function searchExactAddress(address: string): Promise<{ address: string; count: number; results: Property[] }> {
+  const url = buildUrl("/search/exact", { address });
+
+  try {
+    console.log("[API] Fetching exact address:", url);
+    const res = await fetch(url);
+    console.log("[API] Response status:", res.status, res.statusText);
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      console.error("[API] Error response:", err);
+      throw new Error(err.detail ?? `Exact search failed: HTTP ${res.status}`);
+    }
+    return res.json();
+  } catch (err) {
+    console.error("[API] Fetch error:", err);
+    if (err instanceof TypeError) {
+      throw new Error(`Network error: ${err.message} - Backend URL: ${BASE}`);
+    }
+    throw err;
+  }
+}
+
 export async function fetchTrends(
   q?: string,
   radius_km = 5,

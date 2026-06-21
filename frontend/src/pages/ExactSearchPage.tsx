@@ -1,7 +1,7 @@
 import { useState, FormEvent, useEffect, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import TrendsChart from "../components/TrendsChart";
-import { searchProperties, fetchTrends } from "../api";
+import { searchProperties, fetchTrends, searchExactAddress } from "../api";
 import type { Property, TrendPoint } from "../types";
 import "./ExactSearchPage.css";
 
@@ -87,7 +87,21 @@ export default function ExactSearchPage() {
         console.log("[S1 Search] Query tokens -> number: \"" + queryTokens.number + "\", street: \"" + queryTokens.street + "\"");
       }
 
-      setResults(exactMatches);
+      // If we found exact matches, get ALL sales for that exact address (not limited by radius)
+      if (exactMatches.length > 0) {
+        console.log("[S1 Search] Getting all historical sales for:", exactMatches[0].address);
+        try {
+          const exactAddressResults = await searchExactAddress(exactMatches[0].address);
+          console.log("[S1 Search] Found", exactAddressResults.count, "total sales for this address");
+          setResults(exactAddressResults.results);
+        } catch (err) {
+          console.error("[S1 Search] Error fetching exact address history:", err);
+          // Fall back to radius results if exact search fails
+          setResults(exactMatches);
+        }
+      } else {
+        setResults(exactMatches);
+      }
 
       // Update URL
       navigate(`/s1?q=${encodeURIComponent(query)}`, { replace: true });

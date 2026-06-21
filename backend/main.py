@@ -1058,6 +1058,39 @@ async def search(
     return JSONResponse(content=result, headers=headers)
 
 
+@app.get("/search/exact")
+async def search_exact(
+    request: Request,
+    address: str = Query(..., description="Exact address to search for"),
+):
+    """Get ALL sales for an exact address match (no radius limit)."""
+    start_time = time.time()
+    _rate_limit_check(request, 60, "search_exact")
+
+    # Normalize address for matching
+    normalized_address = address.strip().upper()
+
+    # Query for ALL sales at this exact address
+    rows = await db_pool.fetch("""
+        SELECT
+            id, sale_date, address, county, eircode, price,
+            not_full_market_price, vat_exclusive, description,
+            size_description, latitude, longitude,
+            routing_key, bedrooms, property_type
+        FROM properties
+        WHERE UPPER(address) = $1
+        ORDER BY sale_date DESC
+    """, normalized_address)
+
+    result = {
+        "address": address,
+        "count": len(rows),
+        "results": [dict(r) for r in rows],
+    }
+
+    return result
+
+
 class PolygonSearchRequest(BaseModel):
     coordinates: list[list[float]] = Field(..., description="List of [lat, lon] coordinates forming a polygon")
     min_price: Optional[int] = None
