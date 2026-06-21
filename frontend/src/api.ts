@@ -19,12 +19,26 @@ export async function searchProperties(params: SearchParams): Promise<SearchResp
     county:    params.county,
   });
 
-  const res = await fetch(url);
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({}));
-    throw new Error(err.detail ?? `Search failed (${res.status})`);
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      if (res.status === 500) {
+        throw new Error("Server error. Please try again in a moment.");
+      } else if (res.status === 404) {
+        throw new Error("Could not find that address. Please check the spelling.");
+      } else if (res.status === 429) {
+        throw new Error("Too many requests. Please wait a moment and try again.");
+      }
+      throw new Error(err.detail ?? `Search failed (${res.status})`);
+    }
+    return res.json();
+  } catch (err) {
+    if (err instanceof TypeError && err.message.includes("fetch")) {
+      throw new Error("Cannot connect to server. Please check your internet connection.");
+    }
+    throw err;
   }
-  return res.json();
 }
 
 export async function fetchTrends(

@@ -114,33 +114,21 @@ export default function ExactSearchPage() {
         }
       }
     } catch (err) {
-      console.error("[S1 Search] Main search error:", err);
-      console.error("[S1 Search] Error type:", typeof err);
-      console.error("[S1 Search] Error constructor:", err?.constructor?.name);
+      console.error("[S1 Search] Search error:", err);
 
-      let errorMsg = "An error occurred. Please try again.";
+      let errorMsg = "Unable to search. Please try again in a moment.";
 
       if (err instanceof Error) {
-        console.error("[S1 Search] Error message:", err.message);
-        console.error("[S1 Search] Error stack:", err.stack);
-        errorMsg = err.message;
-      } else if (typeof err === 'string') {
-        errorMsg = err;
-      } else if (err && typeof err === 'object') {
-        console.error("[S1 Search] Error object keys:", Object.keys(err));
-        console.error("[S1 Search] Error JSON:", JSON.stringify(err, null, 2));
-
-        // Try to extract meaningful error message
-        if ('message' in err) {
-          errorMsg = String(err.message);
-        } else if ('detail' in err) {
-          errorMsg = String(err.detail);
-        } else if ('error' in err) {
-          errorMsg = String(err.error);
+        // Network/fetch errors
+        if (err.message.includes("fetch") || err.message.includes("Failed to fetch")) {
+          errorMsg = "Cannot connect to server. The service may be temporarily unavailable.";
+        } else if (err.message.includes("geocod") || err.message.includes("location")) {
+          errorMsg = "Could not find that address. Please check the spelling and try again.";
+        } else {
+          errorMsg = err.message;
         }
       }
 
-      console.error("[S1 Search] Final error message:", errorMsg);
       setError(errorMsg);
     } finally {
       setLoading(false);
