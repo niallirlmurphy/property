@@ -1,0 +1,391 @@
+.exact-search-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+/* Logo and Search - Google-like centered layout */
+.search-container {
+  transition: all 0.3s ease;
+}
+
+.search-container.centered {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: -10vh;
+}
+
+.search-container.has-results {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.logo a {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1a3c5e;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.logo a:hover {
+  color: #2563eb;
+}
+
+.has-results .logo {
+  margin-bottom: 20px;
+}
+
+.has-results .logo a {
+  font-size: 2rem;
+}
+
+/* Search Form */
+.search-form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-input-wrapper {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.search-input-wrapper:focus-within {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-input {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-button {
+  padding: 14px 20px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.search-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.search-button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.spinner-small {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-message {
+  margin-top: 16px;
+  padding: 12px 20px;
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 8px;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Results Section */
+.results-section {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px 40px;
+}
+
+.results-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Property Header */
+.property-header {
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.property-address {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a3c5e;
+  margin: 0 0 8px 0;
+}
+
+.property-meta {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.property-meta .separator {
+  margin: 0 8px;
+}
+
+/* Sales Card */
+.sales-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sales-card h2 {
+  margin-bottom: 16px;
+  color: #1a3c5e;
+  font-size: 1.25rem;
+}
+
+.sales-table-wrapper {
+  overflow-x: auto;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sales-table th {
+  text-align: left;
+  padding: 12px;
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.sales-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sales-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.sales-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.price-cell {
+  font-weight: 600;
+  color: #1a3c5e;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 4px;
+}
+
+.badge.vat {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.details-cell span {
+  display: inline-block;
+  margin-right: 12px;
+  color: #6b7280;
+}
+
+/* Trends Card */
+.trends-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.trends-card h2 {
+  margin-bottom: 16px;
+  color: #1a3c5e;
+  font-size: 1.25rem;
+}
+
+.trends-note {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-left: 3px solid #2563eb;
+  border-radius: 4px;
+}
+
+.trends-note p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.trends-note strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.trends-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px;
+  color: #6b7280;
+}
+
+.trends-loading .spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* No Results */
+.no-results {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.no-results-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+.no-results h2 {
+  font-size: 1.5rem;
+  color: #1a3c5e;
+  margin-bottom: 8px;
+}
+
+.no-results p {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.no-results-help {
+  text-align: left;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.no-results-help strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.no-results-help ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #6b7280;
+}
+
+.no-results-help li {
+  margin-bottom: 8px;
+}
+
+.no-results-help a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.no-results-help a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.search-footer {
+  padding: 40px 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.search-footer a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.search-footer a:hover {
+  text-decoration: underline;
+}
+
+.search-footer .separator {
+  margin: 0 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo a {
+    font-size: 2.5rem;
+  }
+
+  .has-results .logo a {
+    font-size: 1.5rem;
+  }
+
+  .property-address {
+    font-size: 1.5rem;
+  }
+
+  .sales-table {
+    font-size: 0.875rem;
+  }
+
+  .sales-table th,
+  .sales-table td {
+    padding: 8px;
+  }
+}

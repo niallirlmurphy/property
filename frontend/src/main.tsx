@@ -13,6 +13,7 @@ import AboutPage from "./pages/AboutPage";
 import PropertyPriceRegisterPage from "./pages/PropertyPriceRegisterPage";
 import ManualGeocodePage from "./pages/ManualGeocodePage";
 import PolygonSearchPage from "./pages/PolygonSearchPage";
+import ExactSearchPage from "./pages/ExactSearchPage";
 import CaminoIndexPage from "./pages/CaminoIndexPage";
 import FrenchWayPage from "./pages/FrenchWayPage";
 import SpanishWayPage from "./pages/SpanishWayPage";
@@ -29,6 +30,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/s1" element={<ExactSearchPage />} />
         <Route path="/polygon" element={<PolygonSearchPage />} />
         <Route path="/area/:slug" element={<AreaPage />} />
         <Route path="/county/dublin" element={<DublinCountyPage />} />
