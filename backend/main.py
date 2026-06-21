@@ -26,12 +26,15 @@ logger = logging.getLogger(__name__)
 
 
 def serialize_row(row) -> dict:
-    """Convert asyncpg Record to JSON-serializable dict, handling date objects."""
+    """Convert asyncpg Record to JSON-serializable dict, handling date and Decimal objects."""
+    from decimal import Decimal
     result = dict(row)
-    # Convert date objects to ISO format strings
+    # Convert date and Decimal objects to JSON-serializable types
     for key, value in result.items():
         if hasattr(value, 'isoformat'):  # datetime.date, datetime.datetime
             result[key] = value.isoformat()
+        elif isinstance(value, Decimal):  # PostgreSQL numeric/decimal types
+            result[key] = float(value)
     return result
 
 DATABASE_URL    = os.environ["DATABASE_URL"]
