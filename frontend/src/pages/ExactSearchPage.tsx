@@ -135,17 +135,11 @@ export default function ExactSearchPage() {
     }
   };
 
-  // Auto-search if query param present on mount (only once)
+  // Load query from URL on mount (but don't auto-search)
   useEffect(() => {
     const q = searchParams.get("q");
-    if (q && query === "") {
-      // Only auto-search if we haven't set a query yet (first load)
+    if (q) {
       setQuery(q);
-      // Trigger search after a brief delay to allow state to settle
-      setTimeout(() => {
-        const form = document.querySelector("form");
-        if (form) form.requestSubmit();
-      }, 100);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Only run on mount
