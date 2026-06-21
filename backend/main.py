@@ -37,6 +37,30 @@ def serialize_row(row) -> dict:
             result[key] = float(value)
     return result
 
+
+class DecimalEncoder(json.JSONEncoder):
+    """Custom JSON encoder that handles Decimal and date objects."""
+    def default(self, obj):
+        from decimal import Decimal
+        if isinstance(obj, Decimal):
+            return float(obj)
+        if hasattr(obj, 'isoformat'):
+            return obj.isoformat()
+        return super().default(obj)
+
+
+class SafeJSONResponse(JSONResponse):
+    """JSONResponse that handles Decimal and date objects in cached data."""
+    def render(self, content) -> bytes:
+        return json.dumps(
+            content,
+            ensure_ascii=False,
+            allow_nan=False,
+            indent=None,
+            separators=(",", ":"),
+            cls=DecimalEncoder,
+        ).encode("utf-8")
+
 DATABASE_URL    = os.environ["DATABASE_URL"]
 MAPBOX_TOKEN    = os.environ.get("MAPBOX_TOKEN", "")
 AUTOADDRESS_KEY = os.environ.get("AUTOADDRESS_KEY", "")
@@ -927,7 +951,13 @@ async def search(
                     "county": county, "limit": limit, "sort": sort}
     cached = cache.get("search", cache_params)
     if cached is not None:
-        return cached
+        # Return cached result with proper headers
+        headers = {
+            "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
+            "CDN-Cache-Control": "max-age=300",
+            "Vary": "Accept-Encoding",
+        }
+        return SafeJSONResponse(content=cached, headers=headers)
 
     lat, lon, geocode_source = await resolve_location(q, county=county)
 
@@ -1191,7 +1221,12 @@ async def trends(
     if not q:
         cached = cache.get("trends", cache_params)
         if cached is not None:
-            return cached
+            # Return cached result with proper headers
+            headers = {
+                "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=7200",
+                "CDN-Cache-Control": "max-age=3600",
+            }
+            return SafeJSONResponse(content=cached, headers=headers)
 
     filters = ["not_full_market_price = FALSE"]
     params: list = []
@@ -1260,7 +1295,7 @@ async def eircode_search(
                     "min_year": min_year, "max_year": max_year, "limit": limit}
     cached = cache.get("eircode", cache_params)
     if cached is not None:
-        return cached
+        return SafeJSONResponse(content=cached)
 
     is_full = len(norm) >= 5  # full eircode vs routing key prefix
 
@@ -1333,7 +1368,7 @@ async def routing_keys_list(
     cache_params = {"limit": limit, "sort": sort}
     cached = cache.get("routing_keys", cache_params)
     if cached is not None:
-        return cached
+        return SafeJSONResponse(content=cached)
 
     order_by = "property_count DESC" if sort == "count" else "routing_key"
 
@@ -1378,7 +1413,7 @@ async def routing_keys_autocomplete(
     cache_params = {"prefix": prefix_upper}
     cached = cache.get("routing_keys_autocomplete", cache_params)
     if cached is not None:
-        return cached
+        return SafeJSONResponse(content=cached)
 
     rows = await db_pool.fetch("""
         SELECT
@@ -1408,7 +1443,7 @@ async def counties(request: Request):
     _rate_limit_check(request, 30, "counties")
     cached = cache.get("counties", {})
     if cached is not None:
-        return cached
+        return SafeJSONResponse(content=cached)
 
     rows = await db_pool.fetch("""
         SELECT county, COUNT(*) as count
