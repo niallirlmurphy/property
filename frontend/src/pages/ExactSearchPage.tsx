@@ -9,7 +9,8 @@ export default function ExactSearchPage() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const [query, setQuery] = useState(searchParams.get("q") || "");
-  const [results, setResults] = useState<Property[]>([]);
+  const [results, setResults] = useState<Property[]>([]); // Filtered results for display
+  const [allResults, setAllResults] = useState<Property[]>([]); // All results for trends
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [trends, setTrends] = useState<TrendPoint[]>([]);
@@ -24,42 +25,69 @@ export default function ExactSearchPage() {
     setLoading(true);
     setError(null);
     setResults([]);
+    setAllResults([]);
     setTrends([]);
     setCenter(null);
 
     try {
-      // Use existing search endpoint with very small radius (50m)
+      // Detect county from query or default to Dublin
+      const queryLower = query.toLowerCase();
+      let county = "Dublin"; // Default assumption
+
+      // Check if county is mentioned in query
+      const counties = ["Dublin", "Cork", "Galway", "Limerick", "Waterford", "Wicklow", "Meath", "Kildare", "Louth", "Kerry", "Clare", "Tipperary", "Donegal", "Mayo", "Sligo", "Wexford", "Carlow", "Kilkenny", "Laois", "Offaly", "Westmeath", "Cavan", "Monaghan", "Longford", "Roscommon", "Leitrim"];
+      for (const c of counties) {
+        if (queryLower.includes(c.toLowerCase())) {
+          county = c;
+          break;
+        }
+      }
+
+      console.log("[S1 Search] Using county:", county);
       console.log("[S1 Search] Calling searchProperties with params:", {
         q: query,
-        radius_km: 0.05,
+        radius_km: 0.5,
+        county,
       });
 
+      // Search with 500m radius, full database history, specified/assumed county
       const response = await searchProperties({
         q: query,
-        radius_km: 0.05, // 50 meters for exact address matching
-        county: undefined,
+        radius_km: 0.5, // 500m radius
+        county: county,
+        min_year: undefined, // Full history
       });
 
       console.log("[S1 Search] Search response:", {
-        resultCount: response.results.length,
+        totalResults: response.results.length,
         center: response.center,
       });
 
-      setResults(response.results);
+      // Store all results for trends
+      setAllResults(response.results);
       setCenter(response.center);
+
+      // Filter for exact address match using token matching
+      const exactMatches = response.results.filter(prop =>
+        isExactMatch(prop.address, query)
+      );
+
+      console.log("[S1 Search] Exact matches:", exactMatches.length, "of", response.results.length);
+
+      setResults(exactMatches);
 
       // Update URL
       navigate(`/s1?q=${encodeURIComponent(query)}`, { replace: true });
 
-      // Load trends if we found results
+      // Load trends using all results (not just exact matches)
       if (response.results.length > 0 && response.center) {
-        console.log("[S1 Search] Loading trends for:", response.center);
+        console.log("[S1 Search] Loading trends for all results");
         setTrendsLoading(true);
         try {
           const trendsData = await fetchTrends(
             `${response.center.lat},${response.center.lon}`,
-            0.5, // 500m radius for trends
-            response.results[0].county || undefined
+            0.5, // 500m radius for trends (matches search)
+            county
           );
           console.log("[S1 Search] Trends loaded:", trendsData.length, "data points");
           setTrends(trendsData);
@@ -126,10 +154,35 @@ export default function ExactSearchPage() {
     e.preventDefault();
     setQuery("");
     setResults([]);
+    setAllResults([]);
     setError(null);
     setTrends([]);
     setCenter(null);
     navigate("/s1", { replace: true });
+  };
+
+  // Extract street name and number from address for matching
+  const extractAddressTokens = (address: string): { number: string; street: string } => {
+    const normalized = address.toLowerCase().trim();
+    // Match leading number
+    const numberMatch = normalized.match(/^(\d+[a-z]?)/);
+    const number = numberMatch ? numberMatch[1] : "";
+
+    // Extract street name (everything before first comma, excluding number)
+    const withoutNumber = normalized.replace(/^\d+[a-z]?\s+/, "");
+    const street = withoutNumber.split(",")[0].trim();
+
+    return { number, street };
+  };
+
+  // Check if address matches the search query
+  const isExactMatch = (address: string, searchQuery: string): boolean => {
+    const searchTokens = extractAddressTokens(searchQuery);
+    const addressTokens = extractAddressTokens(address);
+
+    // Must match both number and street
+    return searchTokens.number === addressTokens.number &&
+           addressTokens.street.includes(searchTokens.street);
   };
 
   const formatPrice = (price: number) => {
@@ -346,13 +399,18 @@ export default function ExactSearchPage() {
         <div className="no-results">
           <div className="no-results-icon">🔍</div>
           <h2>No Sales Found</h2>
-          <p>No sales records found for this address within 50 meters.</p>
+          <p>No sales records found for this exact address.</p>
+          {allResults.length > 0 && (
+            <p className="nearby-info">
+              Found {allResults.length} properties within 500m, but none match the exact address.
+            </p>
+          )}
           <div className="no-results-help">
             <strong>Suggestions:</strong>
             <ul>
-              <li>Check the spelling of the address</li>
+              <li>Check the spelling of the address and house number</li>
               <li>Include the area name (e.g., "Crumlin" in "26 Slane Road, Crumlin")</li>
-              <li>Try the <a href="/">main search</a> with a larger radius</li>
+              <li>Try the <a href="/">main search</a> to see nearby properties</li>
             </ul>
           </div>
         </div>

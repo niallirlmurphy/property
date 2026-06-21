@@ -401,6 +401,11 @@
   margin-bottom: 24px;
 }
 
+.nearby-info {
+  color: #2563eb !important;
+  font-weight: 500;
+}
+
 .no-results-help {
   text-align: left;
   background: #f9fafb;
