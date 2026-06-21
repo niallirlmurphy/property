@@ -90,7 +90,7 @@ export default function TrendsChart({ data, onClose, inline = false, county }: P
           )}
         </div>
       </div>
-      <ResponsiveContainer width="100%" height={180}>
+      <ResponsiveContainer width="100%" height={252}>
         <LineChart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" stroke="#eee" />
           <XAxis dataKey="year" tick={{ fontSize: 11 }} />
