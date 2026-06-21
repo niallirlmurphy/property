@@ -1,9 +1,48 @@
 import { useState, FormEvent, useEffect, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import TrendsChart from "../components/TrendsChart";
-import { searchProperties, fetchTrends, searchExactAddress } from "../api";
+import { searchProperties, searchExactAddress } from "../api";
 import type { Property, TrendPoint } from "../types";
 import "./ExactSearchPage.css";
+
+function calculateTrendsFromProperties(properties: Property[]): TrendPoint[] {
+  // Filter out non-market sales and group by year
+  const validProperties = properties.filter(p => !p.not_full_market_price && p.sale_date);
+
+  const byYear = new Map<number, number[]>();
+
+  validProperties.forEach(p => {
+    const year = new Date(p.sale_date).getFullYear();
+    if (!byYear.has(year)) {
+      byYear.set(year, []);
+    }
+    byYear.get(year)!.push(p.price);
+  });
+
+  const trends: TrendPoint[] = [];
+
+  byYear.forEach((prices, year) => {
+    prices.sort((a, b) => a - b);
+    const count = prices.length;
+    const median_price = count % 2 === 0
+      ? (prices[count / 2 - 1] + prices[count / 2]) / 2
+      : prices[Math.floor(count / 2)];
+    const avg_price = prices.reduce((sum, p) => sum + p, 0) / count;
+    const min_price = prices[0];
+    const max_price = prices[count - 1];
+
+    trends.push({
+      year,
+      count,
+      median_price: Math.round(median_price),
+      avg_price: Math.round(avg_price),
+      min_price,
+      max_price,
+    });
+  });
+
+  return trends.sort((a, b) => a.year - b.year);
+}
 
 export default function ExactSearchPage() {
   const [searchParams] = useSearchParams();
@@ -14,7 +53,6 @@ export default function ExactSearchPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [trends, setTrends] = useState<TrendPoint[]>([]);
-  const [trendsLoading, setTrendsLoading] = useState(false);
   const [center, setCenter] = useState<{ lat: number; lon: number } | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
   const hasAutoSearched = useRef(false);
@@ -108,27 +146,12 @@ export default function ExactSearchPage() {
       // Update URL
       navigate(`/s1?q=${encodeURIComponent(searchQuery)}`, { replace: true });
 
-      // Load trends using all results (not just exact matches)
-      if (response.results.length > 0 && response.center) {
-        console.log("[S1 Search] Loading trends for all results");
-        setTrendsLoading(true);
-        try {
-          const trendsData = await fetchTrends(
-            `${response.center.lat},${response.center.lon}`,
-            0.5, // 500m radius for trends (matches search)
-            county
-          );
-          console.log("[S1 Search] Trends loaded:", trendsData.length, "data points");
-          setTrends(trendsData);
-        } catch (err) {
-          console.error("[S1 Search] Trends error:", err);
-          if (err instanceof Error) {
-            console.error("[S1 Search] Trends error message:", err.message);
-            console.error("[S1 Search] Trends error stack:", err.stack);
-          }
-        } finally {
-          setTrendsLoading(false);
-        }
+      // Calculate trends from search results (all properties within 500m)
+      if (response.results.length > 0) {
+        console.log("[S1 Search] Calculating trends from", response.results.length, "properties");
+        const trendsData = calculateTrendsFromProperties(response.results);
+        console.log("[S1 Search] Trends calculated:", trendsData.length, "data points");
+        setTrends(trendsData);
       }
     } catch (err) {
       console.error("[S1 Search] Search error:", err);
@@ -394,18 +417,12 @@ export default function ExactSearchPage() {
                 />
                 <div className="trends-note">
                   <p>
-                    <strong>What am I looking at?</strong> This chart shows median and average property prices
-                    for all properties within 500 meters (0.5km) of this address from 2010 to present.
-                    Use this to understand local market trends in the immediate area.
+                    <strong>What does this chart show?</strong> This chart displays median and average property prices
+                    for <strong>all {allResults.length} properties</strong> found within 500 meters of this address.
+                    The data represents the local market trends in the immediate neighborhood from 2010 to present,
+                    helping you understand how property values have changed in this area over time.
                   </p>
                 </div>
-              </div>
-            )}
-
-            {trendsLoading && (
-              <div className="trends-loading">
-                <span className="spinner" />
-                <span>Loading local property trends...</span>
               </div>
             )}
           </div>
