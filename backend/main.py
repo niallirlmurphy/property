@@ -24,6 +24,16 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
+def serialize_row(row) -> dict:
+    """Convert asyncpg Record to JSON-serializable dict, handling date objects."""
+    result = dict(row)
+    # Convert date objects to ISO format strings
+    for key, value in result.items():
+        if hasattr(value, 'isoformat'):  # datetime.date, datetime.datetime
+            result[key] = value.isoformat()
+    return result
+
 DATABASE_URL    = os.environ["DATABASE_URL"]
 MAPBOX_TOKEN    = os.environ.get("MAPBOX_TOKEN", "")
 AUTOADDRESS_KEY = os.environ.get("AUTOADDRESS_KEY", "")
@@ -1022,7 +1032,7 @@ async def search(
         "county_filter_removed": county_filter_removed,
         "requested_radius_km": radius_km,
         "count": len(rows),
-        "results": [dict(r) for r in rows],
+        "results": [serialize_row(r) for r in rows],
     }
     cache.set("search", cache_params, result, TTL_SEARCH)
 
@@ -1085,7 +1095,7 @@ async def search_exact(
     result = {
         "address": address,
         "count": len(rows),
-        "results": [dict(r) for r in rows],
+        "results": [serialize_row(r) for r in rows],
     }
 
     return result
@@ -1154,7 +1164,7 @@ async def search_polygon(
         LIMIT ${idx}
     """, *params)
 
-    results = [dict(r) for r in rows]
+    results = [serialize_row(r) for r in rows]
 
     logger.info(f"Polygon search: {len(results)} properties found within polygon")
 
@@ -1210,7 +1220,7 @@ async def trends(
         ORDER BY year
     """, *params)
 
-    result = {"data": [dict(r) for r in rows]}
+    result = {"data": [serialize_row(r) for r in rows]}
     if not q:
         cache.set("trends", cache_params, result, TTL_TRENDS)
 
@@ -1297,9 +1307,9 @@ async def eircode_search(
     result = {
         "code":       norm[:3] if not is_full else norm,
         "match_type": "full_eircode" if is_full else "routing_key",
-        "stats":      dict(stats_row),
+        "stats":      serialize_row(stats_row),
         "count":      len(rows),
-        "results":    [dict(r) for r in rows],
+        "results":    [serialize_row(r) for r in rows],
     }
     cache.set("eircode", cache_params, result, TTL_EIRCODE)
     return result
@@ -1344,7 +1354,7 @@ async def routing_keys_list(
 
     result = {
         "count": len(rows),
-        "routing_keys": [dict(r) for r in rows],
+        "routing_keys": [serialize_row(r) for r in rows],
     }
     cache.set("routing_keys", cache_params, result, TTL_EIRCODE)  # 1 hour cache
     return result
@@ -1384,7 +1394,7 @@ async def routing_keys_autocomplete(
     result = {
         "prefix": prefix_upper,
         "count": len(rows),
-        "matches": [dict(r) for r in rows],
+        "matches": [serialize_row(r) for r in rows],
     }
     cache.set("routing_keys_autocomplete", cache_params, result, 3600)  # 1 hour
     return result
@@ -1404,7 +1414,7 @@ async def counties(request: Request):
         GROUP BY county
         ORDER BY county
     """)
-    result = [dict(r) for r in rows]
+    result = [serialize_row(r) for r in rows]
     cache.set("counties", {}, result, TTL_COUNTIES)
     return result
 
@@ -1787,7 +1797,7 @@ async def get_active_email_alerts(request: Request):
         ORDER BY created_at DESC
     """)
 
-    return [dict(r) for r in rows]
+    return [serialize_row(r) for r in rows]
 
 
 @app.post("/cron/send-monthly-alerts")
