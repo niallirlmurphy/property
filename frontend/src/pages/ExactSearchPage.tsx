@@ -108,7 +108,19 @@ export default function ExactSearchPage() {
   };
 
   // Auto-search if query param present on mount (only once)
-  const hasSearched = useRef(false);
+  useEffect(() => {
+    const q = searchParams.get("q");
+    if (q && query === "") {
+      // Only auto-search if we haven't set a query yet (first load)
+      setQuery(q);
+      // Trigger search after a brief delay to allow state to settle
+      setTimeout(() => {
+        const form = document.querySelector("form");
+        if (form) form.requestSubmit();
+      }, 100);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Only run on mount
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -117,22 +129,8 @@ export default function ExactSearchPage() {
     setError(null);
     setTrends([]);
     setCenter(null);
-    hasSearched.current = false;
     navigate("/s1", { replace: true });
   };
-
-  useEffect(() => {
-    const q = searchParams.get("q");
-    if (q && !hasSearched.current) {
-      hasSearched.current = true;
-      setQuery(q);
-      // Trigger search after a brief delay to allow state to settle
-      setTimeout(() => {
-        const form = document.querySelector("form");
-        if (form) form.requestSubmit();
-      }, 100);
-    }
-  }, [searchParams]);
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-IE", {
