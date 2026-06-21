@@ -1,123 +1,111 @@
-/* Property Price Register - Archival Data Design */
-
 .exact-search-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #F8F9FA;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: #fff;
 }
 
-/* Initial Search State - Centered Form */
+/* Logo and Search - Google-like centered layout */
+.search-container {
+  transition: all 0.3s ease;
+}
+
 .search-container.centered {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
-  max-width: 680px;
-  margin: 0 auto;
+  padding: 20px;
+  margin-top: -10vh;
 }
 
-.search-container.centered .logo {
-  margin-bottom: 48px;
-  text-align: center;
-}
-
-.search-container.centered .logo a {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #3D5A80;
-  text-decoration: none;
-  border-bottom: 2px solid #98C1D9;
-  padding-bottom: 2px;
-}
-
-/* Results State - Top Bar */
 .search-container.has-results {
-  background: #FFFFFF;
-  border-bottom: 1px solid #DEE2E6;
-  padding: 16px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.search-container.has-results .search-form {
+  padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  width: 100%;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.logo a {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1a3c5e;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.logo a:hover {
+  color: #2563eb;
+}
+
+.has-results .logo {
+  margin-bottom: 20px;
+}
+
+.has-results .logo a {
+  font-size: 2rem;
 }
 
 /* Search Form */
 .search-form {
   width: 100%;
-  max-width: 680px;
+  max-width: 600px;
 }
 
 .search-input-wrapper {
   display: flex;
-  border: 2px solid #0A1628;
-  background: #FFFFFF;
-  transition: all 0.15s;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
 }
 
 .search-input-wrapper:focus-within {
-  border-color: #98C1D9;
-  box-shadow: 0 0 0 3px rgba(152, 193, 217, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .search-input {
   flex: 1;
-  padding: 14px 16px;
+  padding: 14px 20px;
   border: none;
   outline: none;
-  font-size: 15px;
-  font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
-  color: #0A1628;
-  background: transparent;
-}
-
-.search-input::placeholder {
-  color: #98C1D9;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .search-button {
-  padding: 14px 24px;
+  padding: 14px 20px;
   border: none;
-  background: #0A1628;
-  color: #FFFFFF;
+  background: #2563eb;
+  color: white;
   cursor: pointer;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
 }
 
 .search-button:hover:not(:disabled) {
-  background: #3D5A80;
+  background: #1d4ed8;
 }
 
 .search-button:disabled {
-  background: #98C1D9;
+  background: #93c5fd;
   cursor: not-allowed;
 }
 
 .spinner-small {
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
   border-top-color: white;
   border-radius: 50%;
-  animation: spin 0.6s linear infinite;
+  animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {
@@ -126,13 +114,12 @@
 
 .error-message {
   margin-top: 16px;
-  padding: 16px;
-  background: #FFF5F5;
-  color: #E8505B;
-  border-left: 3px solid #E8505B;
-  max-width: 680px;
-  font-size: 14px;
-  line-height: 1.5;
+  padding: 12px 20px;
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 8px;
+  max-width: 600px;
+  text-align: center;
 }
 
 /* Results Section */
@@ -141,190 +128,138 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  padding: 32px 20px 60px;
+  padding: 0 20px 40px;
 }
 
 .results-content {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 
-/* Registry Card Header */
+/* Property Header */
 .property-header {
-  background: #FFFFFF;
-  border: 2px solid #0A1628;
-  padding: 32px;
-  margin-bottom: 2px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
 }
 
 .property-address {
-  font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  color: #0A1628;
+  color: #1a3c5e;
   margin: 0 0 8px 0;
-  letter-spacing: -0.02em;
-  line-height: 1.3;
 }
 
 .property-meta {
-  font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
-  color: #3D5A80;
-  font-size: 13px;
-  letter-spacing: 0.02em;
+  color: #6b7280;
+  font-size: 1rem;
 }
 
 .property-meta .separator {
-  margin: 0 12px;
-  color: #98C1D9;
+  margin: 0 8px;
 }
 
-/* Property Details Card - Latest Sale Focus */
+/* Property Details Card */
 .details-card {
-  background: #FFFFFF;
-  border: 2px solid #0A1628;
-  border-top: none;
-  padding: 32px;
-  margin-bottom: 2px;
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .details-card h2 {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #3D5A80;
-  margin: 0 0 24px 0;
+  margin-bottom: 16px;
+  color: #1a3c5e;
+  font-size: 1.25rem;
 }
 
 .details-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 24px 32px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
 }
 
 .detail-item {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .detail-label {
-  font-size: 11px;
-  color: #3D5A80;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
 }
 
 .detail-value {
-  font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
-  font-size: 16px;
-  color: #0A1628;
+  font-size: 1.125rem;
+  color: #1a3c5e;
   font-weight: 600;
 }
 
 /* Price Statistics Card */
 .stats-card {
-  background: #FFFFFF;
-  border: 2px solid #0A1628;
-  border-top: none;
-  padding: 32px;
-  margin-bottom: 2px;
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .stats-card h2 {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #3D5A80;
-  margin: 0 0 24px 0;
+  margin-bottom: 16px;
+  color: #1a3c5e;
+  font-size: 1.25rem;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0;
+  gap: 16px;
 }
 
 .stat-item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 20px;
-  border-right: 1px solid #DEE2E6;
-  border-bottom: 1px solid #DEE2E6;
-}
-
-.stat-item:last-child {
-  border-right: none;
+  gap: 4px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
 }
 
 .stat-item.highlight {
-  background: #FFF5F5;
-  border: 2px solid #E8505B;
-  border-right: 2px solid #E8505B;
-  position: relative;
-}
-
-.stat-item.highlight::before {
-  content: 'LATEST';
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: #E8505B;
+  background: #dbeafe;
+  border: 2px solid #2563eb;
 }
 
 .stat-label {
-  font-size: 11px;
-  color: #3D5A80;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
 }
 
 .stat-value {
-  font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
-  font-size: 28px;
-  color: #0A1628;
+  font-size: 1.5rem;
+  color: #1a3c5e;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.stat-item.highlight .stat-value {
-  color: #E8505B;
 }
 
 .stat-date {
-  font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
-  font-size: 12px;
-  color: #3D5A80;
+  font-size: 0.875rem;
+  color: #6b7280;
 }
 
-/* Sales Table */
+/* Sales Card */
 .sales-card {
-  background: #FFFFFF;
-  border: 2px solid #0A1628;
-  border-top: none;
-  padding: 0;
-  margin-bottom: 2px;
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .sales-card h2 {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #3D5A80;
-  margin: 0;
-  padding: 24px 32px;
-  background: #F8F9FA;
-  border-bottom: 1px solid #DEE2E6;
+  margin-bottom: 16px;
+  color: #1a3c5e;
+  font-size: 1.25rem;
 }
 
 .sales-table-wrapper {
@@ -338,22 +273,16 @@
 
 .sales-table th {
   text-align: left;
-  padding: 16px 32px;
-  font-size: 11px;
-  font-weight: 700;
-  color: #3D5A80;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-bottom: 2px solid #0A1628;
-  background: #FFFFFF;
+  padding: 12px;
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
 }
 
 .sales-table td {
-  padding: 16px 32px;
-  font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
-  font-size: 13px;
-  color: #0A1628;
-  border-bottom: 1px solid #DEE2E6;
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .sales-table tbody tr:last-child td {
@@ -361,73 +290,67 @@
 }
 
 .sales-table tbody tr:hover {
-  background: #F8F9FA;
+  background: #f9fafb;
 }
 
 .price-cell {
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 600;
+  color: #1a3c5e;
 }
 
 .badge {
   display: inline-block;
-  margin-left: 12px;
-  padding: 3px 8px;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background: #FFF5F5;
-  color: #E8505B;
-  border: 1px solid #E8505B;
+  margin-left: 8px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 4px;
 }
 
 .badge.vat {
-  background: #F0F9FF;
-  color: #3D5A80;
-  border-color: #98C1D9;
-}
-
-.details-cell {
-  color: #3D5A80;
-  font-size: 12px;
+  background: #dbeafe;
+  color: #1e40af;
 }
 
 .details-cell span {
   display: inline-block;
-  margin-right: 16px;
+  margin-right: 12px;
+  color: #6b7280;
 }
 
 /* Trends Card */
 .trends-card {
-  background: #FFFFFF;
-  border: 2px solid #0A1628;
-  border-top: none;
-  padding: 32px;
-  margin-bottom: 32px;
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .trends-card h2 {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #3D5A80;
-  margin: 0 0 24px 0;
+  margin-bottom: 16px;
+  color: #1a3c5e;
+  font-size: 1.25rem;
 }
 
 .trends-note {
-  margin-top: 24px;
-  padding: 16px 20px;
-  background: #F8F9FA;
-  border-left: 3px solid #98C1D9;
-  font-size: 13px;
-  line-height: 1.6;
-  color: #3D5A80;
+  margin-top: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-left: 3px solid #2563eb;
+  border-radius: 4px;
+}
+
+.trends-note p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 .trends-note strong {
-  color: #0A1628;
+  color: #1f2937;
   font-weight: 600;
 }
 
@@ -436,23 +359,20 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 60px;
-  color: #3D5A80;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  padding: 40px;
+  color: #6b7280;
 }
 
 .trends-loading .spinner {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #DEE2E6;
-  border-top-color: #98C1D9;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #2563eb;
   border-radius: 50%;
-  animation: spin 0.6s linear infinite;
+  animation: spin 0.8s linear infinite;
 }
 
-/* No Results State */
+/* No Results */
 .no-results {
   flex: 1;
   display: flex;
@@ -460,60 +380,50 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .no-results-icon {
-  font-size: 48px;
-  margin-bottom: 24px;
-  opacity: 0.4;
+  font-size: 4rem;
+  margin-bottom: 16px;
 }
 
 .no-results h2 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #0A1628;
-  margin: 0 0 8px 0;
-  letter-spacing: -0.01em;
+  font-size: 1.5rem;
+  color: #1a3c5e;
+  margin-bottom: 8px;
 }
 
 .no-results p {
-  color: #3D5A80;
-  margin: 0 0 32px 0;
-  line-height: 1.5;
+  color: #6b7280;
+  margin-bottom: 24px;
 }
 
 .nearby-info {
-  color: #98C1D9 !important;
-  font-weight: 600;
+  color: #2563eb !important;
+  font-weight: 500;
 }
 
 .no-results-help {
   text-align: left;
-  background: #F8F9FA;
-  padding: 24px;
-  border: 1px solid #DEE2E6;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
   width: 100%;
 }
 
 .no-results-help strong {
   display: block;
-  margin-bottom: 12px;
-  color: #0A1628;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  color: #1f2937;
 }
 
 .no-results-help ul {
   margin: 0;
   padding-left: 20px;
-  color: #3D5A80;
-  font-size: 14px;
-  line-height: 1.7;
+  color: #6b7280;
 }
 
 .no-results-help li {
@@ -521,9 +431,8 @@
 }
 
 .no-results-help a {
-  color: #98C1D9;
+  color: #2563eb;
   text-decoration: none;
-  font-weight: 600;
 }
 
 .no-results-help a:hover {
@@ -532,76 +441,51 @@
 
 /* Footer */
 .search-footer {
-  padding: 48px 20px;
+  padding: 40px 20px;
   text-align: center;
-  background: #F8F9FA;
-  border-top: 1px solid #DEE2E6;
-}
-
-.search-footer p {
-  margin: 0 0 8px 0;
-  font-size: 13px;
-  color: #3D5A80;
+  color: #6b7280;
+  font-size: 0.95rem;
 }
 
 .search-footer a {
-  color: #98C1D9;
+  color: #2563eb;
   text-decoration: none;
-  font-weight: 600;
 }
 
 .search-footer a:hover {
-  color: #0A1628;
+  text-decoration: underline;
 }
 
 .search-footer .separator {
-  margin: 0 16px;
-  color: #DEE2E6;
+  margin: 0 12px;
 }
 
 .build-info {
-  font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
-  font-size: 11px;
-  color: #98C1D9 !important;
-  letter-spacing: 0.02em;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #9ca3af !important;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .property-header,
-  .details-card,
-  .stats-card,
-  .trends-card {
-    padding: 24px 20px;
+  .logo a {
+    font-size: 2.5rem;
+  }
+
+  .has-results .logo a {
+    font-size: 1.5rem;
   }
 
   .property-address {
-    font-size: 16px;
+    font-size: 1.5rem;
   }
 
-  .stat-value {
-    font-size: 22px;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stat-item {
-    border-right: none;
+  .sales-table {
+    font-size: 0.875rem;
   }
 
   .sales-table th,
   .sales-table td {
-    padding: 12px 16px;
-    font-size: 12px;
-  }
-
-  .price-cell {
-    font-size: 13px;
-  }
-
-  .search-container.centered .logo a {
-    font-size: 12px;
+    padding: 8px;
   }
 }
