@@ -21,24 +21,30 @@ export async function searchProperties(params: SearchParams): Promise<SearchResp
   });
 
   try {
+    console.log("[API] Fetching:", url);
     const res = await fetch(url);
+    console.log("[API] Response status:", res.status, res.statusText);
+
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
+      console.error("[API] Error response:", err);
+
       if (res.status === 500) {
-        throw new Error("Service is temporarily unavailable. Please try again in a moment.");
+        throw new Error(`Server error (${res.status}). Please try again in a moment.`);
       } else if (res.status === 502 || res.status === 503 || res.status === 504) {
-        throw new Error("Service is starting up. Please wait a moment and try again.");
+        throw new Error(`Service unavailable (${res.status}). Backend may be deploying.`);
       } else if (res.status === 404) {
         throw new Error("Could not find that address. Please check the spelling.");
       } else if (res.status === 429) {
         throw new Error("Too many requests. Please wait a moment and try again.");
       }
-      throw new Error(err.detail ?? `Search failed (${res.status})`);
+      throw new Error(err.detail ?? `Search failed: HTTP ${res.status}`);
     }
     return res.json();
   } catch (err) {
-    if (err instanceof TypeError && err.message.includes("fetch")) {
-      throw new Error("Unable to reach server. Service may be restarting.");
+    console.error("[API] Fetch error:", err);
+    if (err instanceof TypeError) {
+      throw new Error(`Network error: ${err.message} - Backend URL: ${BASE}`);
     }
     throw err;
   }

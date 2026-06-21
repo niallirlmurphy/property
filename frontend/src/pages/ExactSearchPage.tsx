@@ -212,7 +212,7 @@ export default function ExactSearchPage() {
   return (
     <div className="exact-search-page">
       {/* Logo and Search Box */}
-      <div className={`search-container ${hasResults ? "has-results" : "centered"}`}>
+      <div className={`search-container ${(hasResults || hasSearched) ? "has-results" : "centered"}`}>
         {!hasSearched && (
           <div className="logo">
             <a href="/s1" onClick={handleLogoClick}>HomeIQ</a>
