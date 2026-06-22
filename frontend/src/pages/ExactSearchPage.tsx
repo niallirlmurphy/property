@@ -72,106 +72,24 @@ export default function ExactSearchPage() {
     setHasSearched(true);
 
     try {
-      // Try exact search first for address-like queries (starts with number)
-      if (/^\d+\s/.test(searchQuery.trim())) {
-        console.log("[S1 Search] Query looks like an address, trying exact search first");
-        try {
-          const exactResult = await searchExactAddress(searchQuery);
-          console.log("[S1 Search] Exact search returned", exactResult.count, "results");
+      // S1 search: just call the exact search API directly
+      console.log("[S1 Search] Calling exact search API for:", searchQuery);
+      const exactResult = await searchExactAddress(searchQuery);
+      console.log("[S1 Search] Exact search returned", exactResult.count, "results");
 
-          if (exactResult.count > 0) {
-            // Found exact matches! Use them directly
-            setResults(exactResult.results);
-            setAllResults(exactResult.results);
+      setResults(exactResult.results);
+      setAllResults(exactResult.results);
 
-            // Set center from first result with coordinates
-            const withCoords = exactResult.results.find(r => r.latitude && r.longitude);
-            if (withCoords) {
-              setCenter({ lat: withCoords.latitude!, lon: withCoords.longitude! });
-            }
-
-            // Calculate trends
-            const trendsData = calculateTrendsFromProperties(exactResult.results);
-            setTrends(trendsData);
-
-            // Update URL
-            navigate(`/s1?q=${encodeURIComponent(searchQuery)}`, { replace: true });
-            return; // Success - skip radius search
-          }
-        } catch (err) {
-          console.log("[S1 Search] Exact search failed, falling back to radius search:", err);
-        }
+      // Set center from first result with coordinates
+      const withCoords = exactResult.results.find(r => r.latitude && r.longitude);
+      if (withCoords) {
+        setCenter({ lat: withCoords.latitude!, lon: withCoords.longitude! });
       }
 
-      // Fall back to radius search (original behavior)
-      const queryLower = searchQuery.toLowerCase();
-      let county = "Dublin"; // Default assumption
-
-      // Check if county is mentioned in query
-      const counties = ["Dublin", "Cork", "Galway", "Limerick", "Waterford", "Wicklow", "Meath", "Kildare", "Louth", "Kerry", "Clare", "Tipperary", "Donegal", "Mayo", "Sligo", "Wexford", "Carlow", "Kilkenny", "Laois", "Offaly", "Westmeath", "Cavan", "Monaghan", "Longford", "Roscommon", "Leitrim"];
-      for (const c of counties) {
-        if (queryLower.includes(c.toLowerCase())) {
-          county = c;
-          break;
-        }
-      }
-
-      console.log("[S1 Search] Using county:", county);
-      console.log("[S1 Search] Calling searchProperties with params:", {
-        q: searchQuery,
-        radius_km: 0.5,
-        county,
-      });
-
-      // Search with 500m radius, full database history, specified/assumed county
-      const response = await searchProperties({
-        q: searchQuery,
-        radius_km: 0.5, // 500m radius
-        county: county,
-        min_year: undefined, // Full history
-        limit: 500, // Higher limit to capture all historical sales
-      });
-
-      console.log("[S1 Search] Search response:", {
-        totalResults: response.results.length,
-        center: response.center,
-      });
-
-      // Store all results for trends
-      setAllResults(response.results);
-      setCenter(response.center);
-
-      // Filter for exact address match using token matching
-      const exactMatches = response.results.filter(prop =>
-        isExactMatch(prop.address, searchQuery)
-      );
-
-      console.log("[S1 Search] Exact matches:", exactMatches.length, "of", response.results.length);
-
-      if (exactMatches.length === 0 && response.results.length > 0) {
-        console.log("[S1 Search] Sample addresses from search:");
-        response.results.slice(0, 5).forEach(r => {
-          const tokens = extractAddressTokens(r.address);
-          console.log(`  ${r.address} -> number: "${tokens.number}", street: "${tokens.street}"`);
-        });
-        const queryTokens = extractAddressTokens(searchQuery);
-        console.log("[S1 Search] Query tokens -> number: \"" + queryTokens.number + "\", street: \"" + queryTokens.street + "\"");
-      }
-
-      // If we found exact matches, get ALL sales for that exact address (not limited by radius)
-      if (exactMatches.length > 0) {
-        console.log("[S1 Search] Getting all historical sales for:", exactMatches[0].address);
-        try {
-          const exactAddressResults = await searchExactAddress(exactMatches[0].address);
-          console.log("[S1 Search] Found", exactAddressResults.count, "total sales for this address");
-          setResults(exactAddressResults.results);
-        } catch (err) {
-          console.error("[S1 Search] Error fetching exact address history:", err);
-          // Fall back to radius results if exact search fails
-          setResults(exactMatches);
-        }
-      } else {
-        setResults(exactMatches);
+      // Calculate trends
+      if (exactResult.results.length > 0) {
+        const trendsData = calculateTrendsFromProperties(exactResult.results);
+        setTrends(trendsData);
       }
 
       // Update URL
