@@ -363,7 +363,24 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
   2. County boundary validation - soft reject (downgrades quality score)
   3. Routing key distance validation - hard reject if Eircode >5km from routing key centroid (0.05° lat, 0.08° lon threshold)
 - **Quality scoring**: Rooftop (100), Parcel (90), Point (80), Street (75), Locality (70). Minimum acceptable: 70. Rejects interpolated and approximate results.
-- **Address normalization**: All addresses stored in both original and normalized forms. `address_normalized` column applies consistent formatting (title case, whitespace cleanup, abbreviation standardization, remove "No." prefix, standardize apartment/unit). Applied to all 784k properties.
+- **Address normalization**: All addresses stored in both original and normalized forms. `address_normalized` column applies consistent formatting (title case, whitespace cleanup, abbreviation standardization, remove "No." prefix, standardize apartment/unit). **CRITICAL**: Normalization is applied automatically during import (`db/import.py`, `scripts/sync_ppr_updates.py`) and verified by test suite (`tests/test_production_suite.py::test_address_normalization`). This ensures exact address searches work reliably by eliminating punctuation/abbreviation variations.
+  - **Normalization rules**: 
+    1. Remove "No." prefix from house numbers
+    2. Expand abbreviations: Rd→Road, St→Street, Ave→Avenue, Dr→Drive, Apt→Apartment
+    3. Title case with exceptions (Dublin, Cork, Co., etc. stay capitalized)
+    4. Clean punctuation: normalize commas/spaces, remove leading/trailing
+    5. Normalize whitespace (single spaces only)
+  - **Query pattern**: For exact address matching, ALWAYS query `address_normalized` column directly (NOT LIKE/REGEXP). Example:
+    ```python
+    # ✅ CORRECT: Use normalized column directly
+    WHERE address_normalized LIKE $1 || '%'  # For prefix matching (e.g., "28 Slane Road" → "28 Slane Road, Crumlin, Dublin 12")
+    WHERE address_normalized = $1            # For exact match
+    
+    # ❌ WRONG: LIKE queries on raw address are unreliable
+    WHERE UPPER(address) LIKE UPPER($1) || '%'  # Fails on punctuation/abbreviation differences
+    WHERE REGEXP_REPLACE(...) LIKE ...          # Expensive, fragile, creates double-spaces
+    ```
+  - **Maintenance**: Test suite automatically normalizes up to 10k missing addresses per run. For bulk updates: `python3 scripts/normalize_addresses.py` (processes 1k/batch, resumable).
 - **Routing key indexing**: Generated column extracts first 3 characters of Eircode (e.g., D02, H91). Materialized view `routing_key_stats` provides centroids and statistics for 301 routing keys. Enables validation and fallback geocoding.
 - **Geocoding queue**: Properties imported without coordinates flagged with `needs_geocoding = TRUE`. Priority order: price (>€500k first), then recency. View: `properties_needing_geocoding` for processing.
 - **Centroid cleanup** (In progress): ~70k properties stuck at generic centroid coordinates (100+ addresses at same point). Mapbox re-geocoding achieving 92-97% success with 50%+ rooftop precision. Progress: 17,813 fixed (2026-05-29), 57,144 remaining. Continue monthly with fresh API credits.
@@ -372,9 +389,25 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
 ### Search & Performance
 - **Radius search**: `ST_DWithin(geom::geography, ...)` on GIST-indexed PostGIS geometry column. Results ordered by `ST_Distance` ascending. Auto-expands radius (2x, 3x, 5x, 10x up to 20km) if fewer than 5 results found.
 - **Polygon search** (New): `ST_Within(geom::geometry, polygon)` for map-based area selection. Supports drawing tools (polygon, rectangle, circle) at `/polygon`. Accepts custom polygon coordinates via `POST /search/polygon`. Up to 1,000 properties per query.
+- **Exact address search** (`/search/exact`): Matches against `address_normalized` column for reliable results. Handles user input variations (ROAD vs RD, punctuation differences) by normalizing search input with same logic as database. Supports prefix matching to handle missing area suffixes (e.g., "28 Slane Road" matches "28 Slane Road, Crumlin, Dublin 12").
 - **Geocoding at search time**: Backend calls Nominatim (`NOMINATIM_URL`) to resolve user queries to (lat, lon). Supports addresses, Eircodes, and coordinate pairs.
 - **Trends query**: Uses `PERCENTILE_CONT(0.5)` for median price, filtered to `not_full_market_price = FALSE`.
 - **Caching**: In-memory TTL cache for counties (1h), trends (1h), Eircodes (1h), geocode results (24h), search results (5min).
+
+### Query Best Practices
+**DO:**
+- ✅ Use indexed columns directly: `address_normalized`, `geog`, `routing_key`, `sale_date`
+- ✅ Use PostGIS functions for spatial queries: `ST_DWithin`, `ST_Within`, `ST_Distance`
+- ✅ Prefix match on normalized addresses: `WHERE address_normalized LIKE $1 || '%'`
+- ✅ Cache expensive aggregations (trends, county stats) with TTL
+- ✅ Normalize user input with same logic as database before querying
+
+**DON'T:**
+- ❌ Use LIKE queries on raw `address` column (punctuation/abbreviation mismatches)
+- ❌ Use REGEXP_REPLACE in WHERE clauses (expensive, creates whitespace issues)
+- ❌ Use UPPER/LOWER for matching when normalized column exists
+- ❌ Use `SELECT *` on large result sets (specify needed columns)
+- ❌ Query without indexes (always use EXPLAIN to verify index usage)
 
 ### Security
 - **Row-Level Security (RLS)**: Enabled on properties table. Public has SELECT-only access; writes blocked by default. Protects against unauthorized data modification while keeping PPR data publicly readable.
