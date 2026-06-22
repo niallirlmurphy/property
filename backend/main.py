@@ -1106,42 +1106,64 @@ async def search_exact(
     request: Request,
     address: str = Query(..., description="Exact address to search for"),
 ):
-    """Get ALL sales for an exact address match (fuzzy matching with common variations)."""
+    """Get ALL sales for an exact address match using normalized addresses."""
     start_time = time.time()
     _rate_limit_check(request, 60, "search_exact")
 
-    # Normalize search input: uppercase, remove punctuation, expand abbreviations
-    search_normalized = re.sub(r'[,.\-]', ' ', address.strip().upper())
-    search_normalized = re.sub(r'\s+', ' ', search_normalized).strip()
+    # Normalize the search input using same logic as address_normalized column
+    def normalize_for_search(addr: str) -> str:
+        """Apply same normalization as the database column."""
+        normalized = addr.strip()
+        normalized = re.sub(r'\s+', ' ', normalized)
+        normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
+        normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
 
-    # Try both abbreviated and full forms (ROAD vs RD, STREET vs ST, etc.)
-    # Most PPR data uses abbreviations, but users type full words
-    search_variants = [search_normalized]
+        # Expand common abbreviations to match normalized format
+        street_types = {
+            r'\bSt\.?\b': 'Street', r'\bRd\.?\b': 'Road', r'\bAve\.?\b': 'Avenue',
+            r'\bDr\.?\b': 'Drive', r'\bCl\.?\b': 'Close', r'\bCt\.?\b': 'Court',
+            r'\bPk\.?\b': 'Park', r'\bSq\.?\b': 'Square',
+        }
+        for abbrev, full in street_types.items():
+            normalized = re.sub(abbrev, full, normalized, flags=re.I)
 
-    # Create abbreviated version
-    abbrev = search_normalized
-    abbrev = abbrev.replace(' ROAD ', ' RD ').replace(' ROAD', ' RD')
-    abbrev = abbrev.replace(' STREET ', ' ST ').replace(' STREET', ' ST')
-    abbrev = abbrev.replace(' AVENUE ', ' AVE ').replace(' AVENUE', ' AVE')
-    abbrev = abbrev.replace(' DRIVE ', ' DR ').replace(' DRIVE', ' DR')
-    if abbrev != search_normalized:
-        search_variants.insert(0, abbrev)  # Try abbreviated first (more common in PPR)
+        # Clean punctuation and apply title case
+        normalized = re.sub(r',\s*,', ',', normalized)
+        normalized = re.sub(r'\s+,', ',', normalized)
+        normalized = re.sub(r',\s+', ', ', normalized)
+        normalized = normalized.strip(', ')
 
-    # Try each variant with LIKE (allows missing Dublin 12, etc.)
-    rows = []
-    for variant in search_variants:
-        rows = await db_pool.fetch("""
-            SELECT
-                id, sale_date, address, county, eircode, price,
-                not_full_market_price, vat_exclusive, description,
-                size_description, latitude, longitude,
-                routing_key, bedrooms, property_type
-            FROM properties
-            WHERE REGEXP_REPLACE(UPPER(address), '[,.\-]', ' ', 'g') LIKE $1 || '%'
-            ORDER BY sale_date DESC
-        """, variant)
-        if rows:
-            break
+        words = normalized.split()
+        lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
+        upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
+
+        result_words = []
+        for i, word in enumerate(words):
+            if i == 0:
+                result_words.append(word.capitalize())
+            elif word in upper_exceptions:
+                result_words.append(word)
+            elif word.lower() in lower_exceptions:
+                result_words.append(word.lower())
+            else:
+                result_words.append(word.capitalize())
+
+        return ' '.join(result_words).strip()
+
+    search_normalized = normalize_for_search(address)
+
+    # Match against address_normalized column (exact match with LIKE for prefix matching)
+    rows = await db_pool.fetch("""
+        SELECT
+            id, sale_date, address, county, eircode, price,
+            not_full_market_price, vat_exclusive, description,
+            size_description, latitude, longitude,
+            routing_key, bedrooms, property_type
+        FROM properties
+        WHERE address_normalized LIKE $1 || '%'
+        OR UPPER(address) LIKE UPPER($1) || '%'
+        ORDER BY sale_date DESC
+    """, search_normalized)
 
     result = {
         "address": address,
