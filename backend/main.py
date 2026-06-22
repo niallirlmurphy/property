@@ -1152,7 +1152,8 @@ async def search_exact(
 
     search_normalized = normalize_for_search(address)
 
-    # Try exact match first (most common case)
+    # Use starts_with function (efficient prefix match without LIKE)
+    # This handles "28 Slane Road" matching "28 Slane Road, Crumlin, Dublin 12"
     rows = await db_pool.fetch("""
         SELECT
             id, sale_date, address, county, eircode, price,
@@ -1160,13 +1161,12 @@ async def search_exact(
             size_description, latitude, longitude,
             routing_key, bedrooms, property_type
         FROM properties
-        WHERE address_normalized = $1
+        WHERE starts_with(address_normalized, $1)
         ORDER BY sale_date DESC
     """, search_normalized)
 
-    # If no exact match, try full-text search on normalized address
+    # If no prefix match, try full-text search
     if not rows:
-        # Convert search terms to tsquery (supports partial matching)
         search_terms = ' & '.join(search_normalized.split())
         rows = await db_pool.fetch("""
             SELECT
