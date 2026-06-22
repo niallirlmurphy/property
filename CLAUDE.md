@@ -398,16 +398,22 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
 **DO:**
 - ✅ Use indexed columns directly: `address_normalized`, `geog`, `routing_key`, `sale_date`
 - ✅ Use PostGIS functions for spatial queries: `ST_DWithin`, `ST_Within`, `ST_Distance`
-- ✅ Prefix match on normalized addresses: `WHERE address_normalized LIKE $1 || '%'`
+- ✅ Use exact equality or full-text search for address matching: `WHERE address_normalized = $1` or use `to_tsvector`/`to_tsquery`
 - ✅ Cache expensive aggregations (trends, county stats) with TTL
 - ✅ Normalize user input with same logic as database before querying
 
 **DON'T:**
+- ❌ **NEVER use LIKE queries** - they don't use indexes efficiently and create maintenance issues
 - ❌ Use LIKE queries on raw `address` column (punctuation/abbreviation mismatches)
 - ❌ Use REGEXP_REPLACE in WHERE clauses (expensive, creates whitespace issues)
 - ❌ Use UPPER/LOWER for matching when normalized column exists
 - ❌ Use `SELECT *` on large result sets (specify needed columns)
 - ❌ Query without indexes (always use EXPLAIN to verify index usage)
+
+**Address Matching Strategy:**
+- For exact address lookups: Use `WHERE address_normalized = $1` after normalizing user input
+- For fuzzy/partial matching: Use PostgreSQL full-text search with `to_tsvector(address_normalized) @@ to_tsquery($1)`
+- For geographic search: Use `ST_DWithin` with coordinates from geocoding API
 
 ### Security
 - **Row-Level Security (RLS)**: Enabled on properties table. Public has SELECT-only access; writes blocked by default. Protects against unauthorized data modification while keeping PPR data publicly readable.

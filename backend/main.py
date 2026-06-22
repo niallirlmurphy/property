@@ -1152,7 +1152,7 @@ async def search_exact(
 
     search_normalized = normalize_for_search(address)
 
-    # Match against address_normalized column (exact match with LIKE for prefix matching)
+    # Try exact match first (most common case)
     rows = await db_pool.fetch("""
         SELECT
             id, sale_date, address, county, eircode, price,
@@ -1160,10 +1160,26 @@ async def search_exact(
             size_description, latitude, longitude,
             routing_key, bedrooms, property_type
         FROM properties
-        WHERE address_normalized LIKE $1 || '%'
-        OR UPPER(address) LIKE UPPER($1) || '%'
+        WHERE address_normalized = $1
         ORDER BY sale_date DESC
     """, search_normalized)
+
+    # If no exact match, try full-text search on normalized address
+    if not rows:
+        # Convert search terms to tsquery (supports partial matching)
+        search_terms = ' & '.join(search_normalized.split())
+        rows = await db_pool.fetch("""
+            SELECT
+                id, sale_date, address, county, eircode, price,
+                not_full_market_price, vat_exclusive, description,
+                size_description, latitude, longitude,
+                routing_key, bedrooms, property_type,
+                ts_rank(to_tsvector('english', COALESCE(address_normalized, address)), to_tsquery('english', $1)) as rank
+            FROM properties
+            WHERE to_tsvector('english', COALESCE(address_normalized, address)) @@ to_tsquery('english', $1)
+            ORDER BY rank DESC, sale_date DESC
+            LIMIT 100
+        """, search_terms)
 
     result = {
         "address": address,
