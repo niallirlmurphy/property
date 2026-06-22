@@ -72,35 +72,37 @@ export default function ExactSearchPage() {
     setHasSearched(true);
 
     try {
-      // Call both exact search (for results) and radius search (for trends) in parallel
-      console.log("[S1 Search] Calling exact search and radius search for:", searchQuery);
-
-      const [exactResult, radiusResult] = await Promise.all([
-        searchExactAddress(searchQuery),
-        searchProperties({
-          q: searchQuery,
-          radius_km: 0.5, // 500m radius for neighborhood context
-          min_year: undefined, // Full history
-          limit: 500,
-        }),
-      ]);
-
+      // Stage 1: Load exact search results first (fast, shows results immediately)
+      console.log("[S1 Search] Stage 1: Loading exact search results");
+      const exactResult = await searchExactAddress(searchQuery);
       console.log("[S1 Search] Exact search returned", exactResult.count, "results");
-      console.log("[S1 Search] Radius search returned", radiusResult.results.length, "results for trends");
 
-      // Display exact search results
+      // Display results immediately
       setResults(exactResult.results);
+      setLoading(false); // Stop loading spinner - results are visible
 
-      // Use radius search results for trends (neighborhood context)
-      setAllResults(radiusResult.results);
-
-      // Set center from exact result or radius center
+      // Set center from exact result
       const withCoords = exactResult.results.find(r => r.latitude && r.longitude);
       if (withCoords) {
         setCenter({ lat: withCoords.latitude!, lon: withCoords.longitude! });
-      } else {
-        setCenter(radiusResult.center);
       }
+
+      // Update URL
+      navigate(`/s1?q=${encodeURIComponent(searchQuery)}`, { replace: true });
+
+      // Stage 2: Load radius search for trends in background (slower, for context)
+      console.log("[S1 Search] Stage 2: Loading neighborhood trends in background");
+      const radiusResult = await searchProperties({
+        q: searchQuery,
+        radius_km: 0.5, // 500m radius for neighborhood context
+        min_year: undefined, // Full history
+        limit: 500,
+      });
+
+      console.log("[S1 Search] Radius search returned", radiusResult.results.length, "results for trends");
+
+      // Update with trends data
+      setAllResults(radiusResult.results);
 
       // Calculate trends from radius search (neighborhood context)
       if (radiusResult.results.length > 0) {
@@ -109,9 +111,6 @@ export default function ExactSearchPage() {
         console.log("[S1 Search] Trends calculated:", trendsData.length, "data points");
         setTrends(trendsData);
       }
-
-      // Update URL
-      navigate(`/s1?q=${encodeURIComponent(searchQuery)}`, { replace: true });
     } catch (err) {
       console.error("[S1 Search] Search error:", err);
 
@@ -122,7 +121,6 @@ export default function ExactSearchPage() {
       }
 
       setError(errorMsg);
-    } finally {
       setLoading(false);
     }
   };
