@@ -117,8 +117,8 @@ def fetch_properties_to_enrich(conn, limit=100):
 
     return properties
 
-def update_property_enrichment(conn, property_id, bedrooms, property_type):
-    """Update property with enrichment data."""
+def update_property_enrichment(conn, property_id, address, bedrooms, property_type):
+    """Update property with enrichment data, applying to all sales of the same address."""
     cur = conn.cursor()
 
     updates = []
@@ -133,14 +133,34 @@ def update_property_enrichment(conn, property_id, bedrooms, property_type):
         params.append(property_type)
 
     if not updates:
-        return False
+        return False, 0
 
-    params.append(property_id)
-    query = f"UPDATE properties SET {', '.join(updates)} WHERE id = %s"
+    # Check if there are multiple sales of the same property
+    cur.execute("""
+        SELECT id, sale_date
+        FROM properties
+        WHERE address = %s
+          AND (bedrooms IS NULL OR property_type IS NULL)
+        ORDER BY sale_date DESC
+    """, (address,))
 
-    cur.execute(query, params)
-    conn.commit()
-    return True
+    duplicate_sales = cur.fetchall()
+
+    if len(duplicate_sales) > 1:
+        # Update all sales of this property
+        params_copy = params.copy()
+        params_copy.append(address)
+        query = f"UPDATE properties SET {', '.join(updates)} WHERE address = %s"
+        cur.execute(query, params_copy)
+        conn.commit()
+        return True, len(duplicate_sales)
+    else:
+        # Update just this property
+        params.append(property_id)
+        query = f"UPDATE properties SET {', '.join(updates)} WHERE id = %s"
+        cur.execute(query, params)
+        conn.commit()
+        return True, 1
 
 def run_enrichment_batch(batch_size=100, rate_limit_seconds=10):
     """Run batch enrichment process."""
@@ -173,6 +193,7 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10):
         'enriched': 0,
         'partial': 0,
         'failed': 0,
+        'duplicate_updates': 0,  # Track how many duplicate sales we updated
         'by_month': {}
     }
 
@@ -191,15 +212,22 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10):
         bedrooms, property_type = search_web_for_property(prop['address'], prop['county'])
 
         if bedrooms or property_type:
-            success = update_property_enrichment(conn, prop['id'], bedrooms, property_type)
+            success, count = update_property_enrichment(conn, prop['id'], prop['address'], bedrooms, property_type)
 
             if success:
                 if bedrooms and property_type:
-                    print(f"  ✅ Fully enriched: {bedrooms} bed, {property_type}")
+                    if count > 1:
+                        print(f"  ✅ Fully enriched: {bedrooms} bed, {property_type} (updated {count} sales)")
+                        stats['duplicate_updates'] += (count - 1)
+                    else:
+                        print(f"  ✅ Fully enriched: {bedrooms} bed, {property_type}")
                     stats['enriched'] += 1
                     stats['by_month'][month]['enriched'] += 1
                 else:
-                    print(f"  ⚠️  Partial: {bedrooms or '?'} bed, {property_type or '?'}")
+                    if count > 1:
+                        print(f"  ⚠️  Partial: {bedrooms or '?'} bed, {property_type or '?'} (updated {count} sales)")
+                    else:
+                        print(f"  ⚠️  Partial: {bedrooms or '?'} bed, {property_type or '?'}")
                     stats['partial'] += 1
             else:
                 print(f"  ❌ Update failed")
@@ -237,6 +265,8 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10):
     print(f"Fully enriched: {stats['enriched']} ({stats['enriched']/stats['total']*100:.1f}%)")
     print(f"Partially enriched: {stats['partial']} ({stats['partial']/stats['total']*100:.1f}%)")
     print(f"Failed: {stats['failed']} ({stats['failed']/stats['total']*100:.1f}%)")
+    if stats['duplicate_updates'] > 0:
+        print(f"Bonus: {stats['duplicate_updates']} additional sales enriched via duplicate detection!")
     print()
     print("Breakdown by month:")
     for month in sorted(stats['by_month'].keys(), reverse=True):
