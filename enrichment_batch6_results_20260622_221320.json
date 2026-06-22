@@ -1,0 +1,37 @@
+[
+  {
+    "id": 785974,
+    "address": "SHIPPOOL, INNISHANNON, CORK",
+    "sale_date": "2026-06-05",
+    "bedrooms": 3,
+    "property_type": "bungalow"
+  },
+  {
+    "id": 785972,
+    "address": "MAIN STREET, CLONMELLON, COUNTY WESTMEATH",
+    "sale_date": "2026-06-05",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 785928,
+    "address": "15 MARIAN PLACE, JANESBORO, LIMERICK",
+    "sale_date": "2026-06-05",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 785930,
+    "address": "176 RATHMINES ROAD UPPER, RATHMINES, DUBLIN",
+    "sale_date": "2026-06-05",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 785934,
+    "address": "20 HEATHER HILLS, PORTLAOISE RD, CARLOW",
+    "sale_date": "2026-06-05",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  }
+]
