@@ -77,6 +77,54 @@ def parse_float(raw: str) -> Optional[float]:
         return None
 
 
+def normalize_address(address: str) -> str:
+    """
+    Normalize address for better matching (same logic as scripts/normalize_addresses.py).
+    Applied automatically during import to ensure all new records have normalized addresses.
+    """
+    if not address:
+        return address
+
+    normalized = address.strip()
+    normalized = re.sub(r'\s+', ' ', normalized)
+    normalized = re.sub(r',\s*,+', ',', normalized)
+    normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
+    normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
+
+    # Standardize street types
+    street_types = {
+        r'\bSt\.?\b': 'Street', r'\bRd\.?\b': 'Road', r'\bAve\.?\b': 'Avenue',
+        r'\bDr\.?\b': 'Drive', r'\bCl\.?\b': 'Close', r'\bCt\.?\b': 'Court',
+        r'\bPk\.?\b': 'Park', r'\bSq\.?\b': 'Square',
+    }
+    for abbrev, full in street_types.items():
+        normalized = re.sub(abbrev, full, normalized, flags=re.I)
+
+    # Clean punctuation
+    normalized = re.sub(r',\s*,', ',', normalized)
+    normalized = re.sub(r'\s+,', ',', normalized)
+    normalized = re.sub(r',\s+', ', ', normalized)
+    normalized = normalized.strip(', ')
+
+    # Title case
+    words = normalized.split()
+    lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
+    upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
+
+    result_words = []
+    for i, word in enumerate(words):
+        if i == 0:
+            result_words.append(word.capitalize())
+        elif word in upper_exceptions:
+            result_words.append(word)
+        elif word.lower() in lower_exceptions:
+            result_words.append(word.lower())
+        else:
+            result_words.append(word.capitalize())
+
+    return ' '.join(result_words).strip()
+
+
 def run_import():
     conn = psycopg2.connect(DATABASE_URL)
     cur  = conn.cursor()
@@ -120,9 +168,11 @@ def run_import():
             lon = parse_float(row.get("Longitude"))
             geog = f"SRID=4326;POINT({lon} {lat})" if lat is not None and lon is not None else None
 
+            address = row.get("Address", "").strip()
             batch.append((
                 sale_date,
-                row.get("Address", "").strip(),
+                address,
+                normalize_address(address),  # Automatically normalize on import
                 row.get("County", "").strip() or None,
                 row.get("Eircode", "").strip() or None,
                 price,
@@ -155,13 +205,13 @@ def run_import():
 def _flush(cur, batch):
     execute_values(cur, """
         INSERT INTO properties
-            (sale_date, address, county, eircode, price,
+            (sale_date, address, address_normalized, county, eircode, price,
              not_full_market_price, vat_exclusive, description,
              size_description, latitude, longitude, geog)
         VALUES %s
         ON CONFLICT DO NOTHING
     """, batch, template="""(
-        %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
+        %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
         %s::geography
     )""")
 
