@@ -7,9 +7,11 @@ import { BLOG_POSTS } from "./BlogListPage";
 import { HowToUsePPRContent } from "../blog-posts/how-to-use-property-price-register";
 import { DublinPostcodesContent } from "../blog-posts/dublin-property-prices-by-postcode-2026";
 import { EircodeGuideContent } from "../blog-posts/understanding-eircode-property-search";
+import { IrelandsLongestGreenwayContent } from "../blog-posts/irelands-longest-greenway";
 
 // Map slugs to content components
 const BLOG_CONTENT: Record<string, React.ComponentType> = {
+  "irelands-longest-greenway": IrelandsLongestGreenwayContent,
   "how-to-use-property-price-register": HowToUsePPRContent,
   "dublin-property-prices-by-postcode-2026": DublinPostcodesContent,
   "understanding-eircode-property-search": EircodeGuideContent,
