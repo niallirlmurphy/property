@@ -72,36 +72,46 @@ export default function ExactSearchPage() {
     setHasSearched(true);
 
     try {
-      // S1 search: just call the exact search API directly
-      console.log("[S1 Search] Calling exact search API for:", searchQuery);
-      const exactResult = await searchExactAddress(searchQuery);
+      // Call both exact search (for results) and radius search (for trends) in parallel
+      console.log("[S1 Search] Calling exact search and radius search for:", searchQuery);
+
+      const [exactResult, radiusResult] = await Promise.all([
+        searchExactAddress(searchQuery),
+        searchProperties({
+          q: searchQuery,
+          radius_km: 0.5, // 500m radius for neighborhood context
+          min_year: undefined, // Full history
+          limit: 500,
+        }),
+      ]);
+
       console.log("[S1 Search] Exact search returned", exactResult.count, "results");
+      console.log("[S1 Search] Radius search returned", radiusResult.results.length, "results for trends");
 
+      // Display exact search results
       setResults(exactResult.results);
-      setAllResults(exactResult.results);
 
-      // Set center from first result with coordinates
+      // Use radius search results for trends (neighborhood context)
+      setAllResults(radiusResult.results);
+
+      // Set center from exact result or radius center
       const withCoords = exactResult.results.find(r => r.latitude && r.longitude);
       if (withCoords) {
         setCenter({ lat: withCoords.latitude!, lon: withCoords.longitude! });
+      } else {
+        setCenter(radiusResult.center);
       }
 
-      // Calculate trends
-      if (exactResult.results.length > 0) {
-        const trendsData = calculateTrendsFromProperties(exactResult.results);
+      // Calculate trends from radius search (neighborhood context)
+      if (radiusResult.results.length > 0) {
+        console.log("[S1 Search] Calculating trends from", radiusResult.results.length, "properties");
+        const trendsData = calculateTrendsFromProperties(radiusResult.results);
+        console.log("[S1 Search] Trends calculated:", trendsData.length, "data points");
         setTrends(trendsData);
       }
 
       // Update URL
       navigate(`/s1?q=${encodeURIComponent(searchQuery)}`, { replace: true });
-
-      // Calculate trends from search results (all properties within 500m)
-      if (response.results.length > 0) {
-        console.log("[S1 Search] Calculating trends from", response.results.length, "properties");
-        const trendsData = calculateTrendsFromProperties(response.results);
-        console.log("[S1 Search] Trends calculated:", trendsData.length, "data points");
-        setTrends(trendsData);
-      }
     } catch (err) {
       console.error("[S1 Search] Search error:", err);
 
