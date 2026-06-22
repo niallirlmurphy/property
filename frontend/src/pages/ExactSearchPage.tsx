@@ -372,7 +372,6 @@ export default function ExactSearchPage() {
                   data={trends}
                   onClose={() => {}}
                   inline={true}
-                  county={results[0].county || undefined}
                 />
                 <div className="trends-note">
                   <p>

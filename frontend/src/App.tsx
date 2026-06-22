@@ -580,7 +580,6 @@ export default function App() {
           <TrendsChart
             data={trends}
             onClose={() => setShowTrends(false)}
-            county={lastSearchCounty}
           />
         ) : trends.length > 0 ? (
           <button className="trends-toggle" onClick={() => setShowTrends(true)}>
@@ -591,7 +590,7 @@ export default function App() {
 
       <div className="trends-pane">
         {trends.length > 0 && (
-          <TrendsChart data={trends} onClose={() => {}} inline county={lastSearchCounty} />
+          <TrendsChart data={trends} onClose={() => {}} inline />
         )}
         {resultsPanel}
       </div>
