@@ -179,6 +179,7 @@ TTL_TRENDS   = 3600        # 1 hour
 TTL_EIRCODE  = 3600        # 1 hour
 TTL_GEOCODE  = 86400       # 24 hours — addresses don't move
 TTL_SEARCH   = 300         # 5 minutes — property results are stable enough
+TTL_EXACT_SEARCH = 86400   # 24 hours — exact address search results are deterministic, re-evaluate in 3 months for high traffic
 
 
 async def _heartbeat_loop():
@@ -1152,6 +1153,12 @@ async def search_exact(
 
     search_normalized = normalize_for_search(address)
 
+    # Check cache first
+    cache_key = {"address": search_normalized}
+    cached = cache.get("exact_search", cache_key)
+    if cached is not None:
+        return cached
+
     # Use starts_with function (efficient prefix match without LIKE)
     # This handles "28 Slane Road" matching "28 Slane Road, Crumlin, Dublin 12"
     rows = await db_pool.fetch("""
@@ -1186,6 +1193,9 @@ async def search_exact(
         "count": len(rows),
         "results": [serialize_row(r) for r in rows],
     }
+
+    # Cache the result
+    cache.set("exact_search", cache_key, result, TTL_EXACT_SEARCH)
 
     return result
 
