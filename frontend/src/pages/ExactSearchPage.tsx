@@ -210,11 +210,11 @@ export default function ExactSearchPage() {
 
   const hasResults = results.length > 0;
 
-  // Calculate statistics from results
+  // Calculate statistics from results (results are sorted DESC by sale_date, so [0] is latest)
   const stats = hasResults ? {
     total_sales: results.length,
-    latest_sale: results[results.length - 1].sale_date,
-    latest_price: results[results.length - 1].price,
+    latest_sale: results[0].sale_date,
+    latest_price: results[0].price,
     price_range: {
       min: Math.min(...results.map(r => r.price)),
       max: Math.max(...results.map(r => r.price)),
