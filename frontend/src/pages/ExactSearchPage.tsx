@@ -72,7 +72,38 @@ export default function ExactSearchPage() {
     setHasSearched(true);
 
     try {
-      // Detect county from query or default to Dublin
+      // Try exact search first for address-like queries (starts with number)
+      if (/^\d+\s/.test(searchQuery.trim())) {
+        console.log("[S1 Search] Query looks like an address, trying exact search first");
+        try {
+          const exactResult = await searchExactAddress(searchQuery);
+          console.log("[S1 Search] Exact search returned", exactResult.count, "results");
+
+          if (exactResult.count > 0) {
+            // Found exact matches! Use them directly
+            setResults(exactResult.results);
+            setAllResults(exactResult.results);
+
+            // Set center from first result with coordinates
+            const withCoords = exactResult.results.find(r => r.latitude && r.longitude);
+            if (withCoords) {
+              setCenter({ lat: withCoords.latitude!, lon: withCoords.longitude! });
+            }
+
+            // Calculate trends
+            const trendsData = calculateTrendsFromProperties(exactResult.results);
+            setTrends(trendsData);
+
+            // Update URL
+            navigate(`/s1?q=${encodeURIComponent(searchQuery)}`, { replace: true });
+            return; // Success - skip radius search
+          }
+        } catch (err) {
+          console.log("[S1 Search] Exact search failed, falling back to radius search:", err);
+        }
+      }
+
+      // Fall back to radius search (original behavior)
       const queryLower = searchQuery.toLowerCase();
       let county = "Dublin"; // Default assumption
 
