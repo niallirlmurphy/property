@@ -78,3 +78,75 @@ export interface EircodeResponse {
   count: number;
   results: Omit<Property, "distance_m">[];
 }
+
+// Valuation types
+export interface ValuationRequest {
+  address: string;
+  eircode?: string;
+  valuation_date?: string;
+}
+
+export interface ComparableProperty {
+  id: number;
+  address: string;
+  price: number;
+  adjusted_price: number;
+  sale_date: string;
+  distance_m: number;
+  weight: number;
+  bedrooms?: number | null;
+  property_type?: string | null;
+  temporal_adjustment_factor?: number;
+  recency_score?: number;
+}
+
+export interface ConfidenceInterval {
+  lower: number;
+  upper: number;
+  width_pct: number;
+}
+
+export interface ValidationWarning {
+  level: "info" | "warning" | "error";
+  message: string;
+  code?: string;
+}
+
+export interface ValidationResult {
+  is_valid: boolean;
+  confidence_level: "high" | "medium" | "low";
+  quality_score: number;
+  warnings: ValidationWarning[];
+  n_comparables: number;
+  avg_distance_km: number;
+  price_dispersion_cv?: number;
+}
+
+export interface ValuationStatistics {
+  mean_price: number;
+  median_price: number;
+  std_dev: number;
+  coefficient_of_variation: number;
+  min_price: number;
+  max_price: number;
+}
+
+export interface ValuationResponse {
+  estimate: number;
+  confidence_interval: ConfidenceInterval;
+  validation: ValidationResult;
+  comparables: ComparableProperty[];
+  statistics: ValuationStatistics;
+  metadata: {
+    geocoded_location: {
+      latitude: number;
+      longitude: number;
+      confidence: number;
+      method: string;
+      address_matched?: string;
+    };
+    valuation_date: string;
+    algorithm_version: string;
+    processing_time_ms: number;
+  };
+}

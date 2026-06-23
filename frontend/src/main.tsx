@@ -14,6 +14,7 @@ import PropertyPriceRegisterPage from "./pages/PropertyPriceRegisterPage";
 import ManualGeocodePage from "./pages/ManualGeocodePage";
 import PolygonSearchPage from "./pages/PolygonSearchPage";
 import ExactSearchPage from "./pages/ExactSearchPage";
+import { ValuationPage } from "./pages/ValuationPage";
 import CaminoIndexPage from "./pages/CaminoIndexPage";
 import FrenchWayPage from "./pages/FrenchWayPage";
 import SpanishWayPage from "./pages/SpanishWayPage";
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<App />} />
         <Route path="/s1" element={<ExactSearchPage />} />
         <Route path="/polygon" element={<PolygonSearchPage />} />
+        <Route path="/valuation" element={<ValuationPage />} />
         <Route path="/area/:slug" element={<AreaPage />} />
         <Route path="/county/dublin" element={<DublinCountyPage />} />
         <Route path="/county/:slug" element={<CountyPage />} />

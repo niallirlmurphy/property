@@ -263,6 +263,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Include valuation router
+from valuation.api import router as valuation_router
+app.include_router(valuation_router)
+
 
 @app.middleware("http")
 async def track_activity(request: Request, call_next):

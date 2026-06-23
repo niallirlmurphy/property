@@ -1,4 +1,4 @@
-import type { Property, SearchParams, SearchResponse, TrendPoint, EircodeResponse, AreaSummary, CountySummary } from "./types";
+import type { Property, SearchParams, SearchResponse, TrendPoint, EircodeResponse, AreaSummary, CountySummary, ValuationRequest, ValuationResponse } from "./types";
 
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 
@@ -239,4 +239,44 @@ export async function skipPropertyGeocode(propertyId: number): Promise<void> {
     method: "POST",
   });
   if (!res.ok) throw new Error("Could not skip property");
+}
+
+// Valuation API
+export async function estimatePropertyValue(request: ValuationRequest): Promise<ValuationResponse> {
+  const url = `${BASE}/valuation/estimate`;
+
+  try {
+    console.log("[API] Valuation request:", url, request);
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(request),
+    });
+
+    console.log("[API] Valuation response status:", res.status, res.statusText);
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      console.error("[API] Valuation error:", err);
+
+      if (res.status === 400) {
+        throw new Error(err.detail ?? "Invalid address or request. Please check your input.");
+      } else if (res.status === 404) {
+        throw new Error(err.detail ?? "No comparable sales found for this location.");
+      } else if (res.status === 500) {
+        throw new Error("Valuation calculation failed. Please try again.");
+      } else if (res.status === 429) {
+        throw new Error("Too many requests. Please wait a moment.");
+      }
+      throw new Error(err.detail ?? `Valuation failed: HTTP ${res.status}`);
+    }
+
+    return res.json();
+  } catch (err) {
+    console.error("[API] Valuation fetch error:", err);
+    if (err instanceof TypeError) {
+      throw new Error(`Network error: ${err.message}`);
+    }
+    throw err;
+  }
 }
