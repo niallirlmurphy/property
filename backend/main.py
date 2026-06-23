@@ -264,8 +264,14 @@ app.add_middleware(
 )
 
 # Include valuation router
-from valuation.api import router as valuation_router
-app.include_router(valuation_router)
+try:
+    from valuation.api import router as valuation_router
+    app.include_router(valuation_router)
+    logger.info(f"✅ Valuation router loaded with {len(valuation_router.routes)} routes")
+except Exception as e:
+    logger.error(f"❌ Failed to load valuation router: {e}")
+    import traceback
+    logger.error(traceback.format_exc())
 
 
 @app.middleware("http")
