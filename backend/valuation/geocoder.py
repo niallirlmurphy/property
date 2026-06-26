@@ -268,6 +268,37 @@ class ValuationGeocoder:
                 address_matched=row['address']
             )
 
+        # If prefix match fails, try searching just the start
+        # (e.g., "28 Slane Road, Dublin 12" → find "28 Slane Road, Crumlin, Dublin 12")
+        # Extract house number and street name
+        parts = address_norm.split(',')[0].strip()  # Get "28 Slane Road"
+
+        if parts:
+            query2 = """
+                SELECT
+                    latitude,
+                    longitude,
+                    address,
+                    COUNT(*) OVER() as match_count
+                FROM properties
+                WHERE
+                    address_normalized ILIKE $1 || '%'
+                    AND latitude IS NOT NULL
+                    AND longitude IS NOT NULL
+                LIMIT 1;
+            """
+
+            row = await self.db.fetchrow(query2, parts)
+
+            if row:
+                return GeocodingResult(
+                    latitude=float(row['latitude']),
+                    longitude=float(row['longitude']),
+                    confidence=0.65,  # Lower confidence for partial match
+                    method="database_partial",
+                    address_matched=row['address']
+                )
+
         return None
 
     @staticmethod
