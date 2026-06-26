@@ -43,9 +43,9 @@ class ValuationGeocoder:
         Geocode an address using multiple methods.
 
         Priority:
-        1. Eircode routing key (if provided)
-        2. Nominatim API
-        3. Database fuzzy match
+        1. Database lookup (check existing properties first!)
+        2. Eircode routing key (if provided)
+        3. Nominatim API (only if not in database)
 
         Args:
             address: Property address
@@ -58,26 +58,26 @@ class ValuationGeocoder:
             ValueError: If geocoding fails completely
         """
 
-        # Method 1: Eircode routing key lookup
+        # Method 1: Database fuzzy match (ALWAYS try this first!)
+        result = await self._geocode_by_db_fuzzy_match(address)
+        if result:
+            return result
+
+        # Method 2: Eircode routing key lookup
         if eircode:
             result = await self._geocode_by_eircode_routing_key(eircode)
             if result:
                 return result
 
-        # Method 2: Nominatim API
+        # Method 3: Nominatim API (last resort)
         result = await self._geocode_by_nominatim(address, eircode)
-        if result:
-            return result
-
-        # Method 3: Database fuzzy match
-        result = await self._geocode_by_db_fuzzy_match(address)
         if result:
             return result
 
         # All methods failed
         raise ValueError(
-            f"Could not geocode address: {address}. "
-            "Try providing an Eircode for better accuracy."
+            f"No properties found matching '{address}'. "
+            "Please check the address or try adding more details (e.g., area name)."
         )
 
     async def _geocode_by_eircode_routing_key(
