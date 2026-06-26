@@ -230,9 +230,9 @@ class ValuationGeocoder:
         address: str
     ) -> Optional[GeocodingResult]:
         """
-        Geocode by fuzzy matching against known addresses in database.
+        Geocode by matching against known addresses in database.
 
-        Uses normalized address column for matching.
+        Uses same logic as /search/exact endpoint (starts_with prefix match).
 
         Args:
             address: Property address
@@ -240,10 +240,11 @@ class ValuationGeocoder:
         Returns:
             GeocodingResult or None if no match found
         """
-        # Normalize address for matching
+        # Normalize address using same logic as /search/exact endpoint
         address_norm = self._normalize_address(address)
 
-        # Try exact prefix match first
+        # Use starts_with() function (same as S1 page) for exact prefix match
+        # Falls back to raw address if address_normalized is NULL
         query = """
             SELECT
                 latitude,
@@ -251,7 +252,7 @@ class ValuationGeocoder:
                 address
             FROM properties
             WHERE
-                address_normalized ILIKE $1 || '%'
+                starts_with(COALESCE(address_normalized, address), $1)
                 AND latitude IS NOT NULL
                 AND longitude IS NOT NULL
             LIMIT 1;
@@ -263,41 +264,10 @@ class ValuationGeocoder:
             return GeocodingResult(
                 latitude=float(row['latitude']),
                 longitude=float(row['longitude']),
-                confidence=0.70,  # Lower confidence for fuzzy match
-                method="database_fuzzy",
+                confidence=0.80,  # High confidence for database match
+                method="database_exact",
                 address_matched=row['address']
             )
-
-        # If prefix match fails, try searching just the start
-        # (e.g., "28 Slane Road, Dublin 12" → find "28 Slane Road, Crumlin, Dublin 12")
-        # Extract house number and street name
-        parts = address_norm.split(',')[0].strip()  # Get "28 Slane Road"
-
-        if parts:
-            query2 = """
-                SELECT
-                    latitude,
-                    longitude,
-                    address,
-                    COUNT(*) OVER() as match_count
-                FROM properties
-                WHERE
-                    address_normalized ILIKE $1 || '%'
-                    AND latitude IS NOT NULL
-                    AND longitude IS NOT NULL
-                LIMIT 1;
-            """
-
-            row = await self.db.fetchrow(query2, parts)
-
-            if row:
-                return GeocodingResult(
-                    latitude=float(row['latitude']),
-                    longitude=float(row['longitude']),
-                    confidence=0.65,  # Lower confidence for partial match
-                    method="database_partial",
-                    address_matched=row['address']
-                )
 
         return None
 
