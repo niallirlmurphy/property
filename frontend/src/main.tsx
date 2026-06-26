@@ -14,7 +14,7 @@ import PropertyPriceRegisterPage from "./pages/PropertyPriceRegisterPage";
 import ManualGeocodePage from "./pages/ManualGeocodePage";
 import PolygonSearchPage from "./pages/PolygonSearchPage";
 import ExactSearchPage from "./pages/ExactSearchPage";
-import { ValuationPage } from "./pages/ValuationPage";
+import ValuationPage from "./pages/ValuationPage";
 import CaminoIndexPage from "./pages/CaminoIndexPage";
 import FrenchWayPage from "./pages/FrenchWayPage";
 import SpanishWayPage from "./pages/SpanishWayPage";
