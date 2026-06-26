@@ -1170,6 +1170,7 @@ async def search_exact(
         return cached
 
     # Step 1: Find exact address match with prefix search
+    # Handle NULL address_normalized by falling back to address column
     exact_rows = await db_pool.fetch("""
         SELECT
             id, sale_date, address, county, eircode, price,
@@ -1177,7 +1178,7 @@ async def search_exact(
             size_description, latitude, longitude,
             routing_key, bedrooms, property_type
         FROM properties
-        WHERE starts_with(address_normalized, $1)
+        WHERE starts_with(COALESCE(address_normalized, address), $1)
         ORDER BY sale_date DESC
     """, search_normalized)
 
