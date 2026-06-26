@@ -163,6 +163,15 @@ export default function ValuationPage() {
               <li>Confidence level reflects data quality</li>
             </ul>
           </div>
+
+          <div className="val-info-box">
+            <h3>What addresses work?</h3>
+            <ul>
+              <li><strong>In database:</strong> Any property in the PPR (2010-present)</li>
+              <li><strong>Not in database:</strong> Provide full address + Eircode</li>
+              <li><strong>Tip:</strong> Include area name (e.g., "Crumlin")</li>
+            </ul>
+          </div>
         </aside>
 
         {/* ── Results ── */}

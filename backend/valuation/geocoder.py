@@ -58,27 +58,41 @@ class ValuationGeocoder:
             ValueError: If geocoding fails completely
         """
 
-        # Method 1: Database fuzzy match (ALWAYS try this first!)
+        # Method 1: Database lookup (ALWAYS try this first!)
+        # Works for any property in the Property Price Register (2010-present)
         result = await self._geocode_by_db_fuzzy_match(address)
         if result:
+            print(f"✅ Geocoded via database: {result.address_matched}")
             return result
 
         # Method 2: Eircode routing key lookup
+        # Works for properties not in database if Eircode provided
         if eircode:
             result = await self._geocode_by_eircode_routing_key(eircode)
             if result:
+                print(f"✅ Geocoded via Eircode routing key: {eircode[:3]}")
                 return result
 
         # Method 3: Nominatim API (last resort)
+        # Works for new properties not in database, uses OpenStreetMap
         result = await self._geocode_by_nominatim(address, eircode)
         if result:
+            print(f"✅ Geocoded via Nominatim: {result.address_matched}")
             return result
 
-        # All methods failed
-        raise ValueError(
-            f"No properties found matching '{address}'. "
-            "Please check the address or try adding more details (e.g., area name)."
-        )
+        # All methods failed - provide helpful error message
+        if eircode:
+            raise ValueError(
+                f"Could not locate '{address}' (Eircode: {eircode}). "
+                "This property may not exist in our database or external geocoding services. "
+                "Please verify the address and Eircode are correct."
+            )
+        else:
+            raise ValueError(
+                f"Could not locate '{address}'. "
+                "Try adding the area name (e.g., 'Crumlin') or providing an Eircode for better accuracy. "
+                "Note: Properties must have sold since 2010 to be in the Property Price Register."
+            )
 
     async def _geocode_by_eircode_routing_key(
         self,
