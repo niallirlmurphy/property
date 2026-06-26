@@ -56,6 +56,7 @@ from canonical_geocoding import (
     get_canonical_coordinates,
     cache_coordinates
 )
+from duplicate_handler import update_geocoding_for_duplicates
 
 load_dotenv("backend/.env")
 

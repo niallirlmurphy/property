@@ -21,6 +21,7 @@ from canonical_geocoding import (
     get_canonical_property_data,
     cache_enrichment_data
 )
+from duplicate_handler import update_enrichment_for_duplicates
 
 load_dotenv('backend/.env')
 DATABASE_URL = os.getenv('DATABASE_URL')
