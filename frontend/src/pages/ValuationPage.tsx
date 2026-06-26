@@ -75,6 +75,8 @@ export default function ValuationPage() {
 
   const [address, setAddress] = useState("");
   const [eircode, setEircode] = useState("");
+  const [bedrooms, setBedrooms] = useState("");
+  const [berRating, setBerRating] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<ValuationResponse | null>(null);
@@ -95,6 +97,8 @@ export default function ValuationPage() {
       const response = await estimatePropertyValue({
         address: address.trim(),
         eircode: eircode.trim() || undefined,
+        bedrooms: bedrooms ? parseInt(bedrooms) : undefined,
+        ber_rating: berRating || undefined,
       });
       setResult(response);
     } catch (err) {
@@ -140,7 +144,60 @@ export default function ValuationPage() {
                 disabled={loading}
               />
               <p className="val-field-hint">
-                Providing an Eircode improves accuracy
+                Improves accuracy &amp; helps enrich our database
+              </p>
+            </div>
+
+            <div className="val-field">
+              <label htmlFor="bedrooms">Number of Bedrooms (Optional)</label>
+              <select
+                id="bedrooms"
+                value={bedrooms}
+                onChange={e => setBedrooms(e.target.value)}
+                className="val-input"
+                disabled={loading}
+              >
+                <option value="">Not specified</option>
+                <option value="1">1 bedroom</option>
+                <option value="2">2 bedrooms</option>
+                <option value="3">3 bedrooms</option>
+                <option value="4">4 bedrooms</option>
+                <option value="5">5 bedrooms</option>
+                <option value="6">6+ bedrooms</option>
+              </select>
+              <p className="val-field-hint">
+                Helps find better comparables
+              </p>
+            </div>
+
+            <div className="val-field">
+              <label htmlFor="ber">BER Rating (Optional)</label>
+              <select
+                id="ber"
+                value={berRating}
+                onChange={e => setBerRating(e.target.value)}
+                className="val-input"
+                disabled={loading}
+              >
+                <option value="">Not specified</option>
+                <option value="A1">A1 (Best)</option>
+                <option value="A2">A2</option>
+                <option value="A3">A3</option>
+                <option value="B1">B1</option>
+                <option value="B2">B2</option>
+                <option value="B3">B3</option>
+                <option value="C1">C1</option>
+                <option value="C2">C2</option>
+                <option value="C3">C3</option>
+                <option value="D1">D1</option>
+                <option value="D2">D2</option>
+                <option value="E1">E1</option>
+                <option value="E2">E2</option>
+                <option value="F">F</option>
+                <option value="G">G (Worst)</option>
+              </select>
+              <p className="val-field-hint">
+                Energy efficiency rating
               </p>
             </div>
 

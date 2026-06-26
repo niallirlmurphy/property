@@ -48,6 +48,38 @@ class ValuationRequest(BaseModel):
         description="Valuation date (defaults to now)"
     )
 
+    bedrooms: Optional[int] = Field(
+        None,
+        ge=1,
+        le=20,
+        description="Number of bedrooms (optional, helps find better comparables)"
+    )
+
+    ber_rating: Optional[str] = Field(
+        None,
+        max_length=2,
+        example="B2",
+        description="BER energy rating (optional, A1-G)"
+    )
+
+    @validator('ber_rating')
+    def validate_ber_rating(cls, v):
+        """Validate BER rating format."""
+        if v is None:
+            return v
+
+        v_upper = v.upper()
+        valid_ratings = [
+            "A1", "A2", "A3", "B1", "B2", "B3",
+            "C1", "C2", "C3", "D1", "D2",
+            "E1", "E2", "F", "G"
+        ]
+
+        if v_upper not in valid_ratings:
+            raise ValueError(f"Invalid BER rating. Must be one of: {', '.join(valid_ratings)}")
+
+        return v_upper
+
     @validator('eircode')
     def validate_eircode_format(cls, v):
         """Validate Eircode format (3 chars + 4 chars, optional space)."""

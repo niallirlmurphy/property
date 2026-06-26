@@ -84,6 +84,8 @@ export interface ValuationRequest {
   address: string;
   eircode?: string;
   valuation_date?: string;
+  bedrooms?: number;
+  ber_rating?: string;
 }
 
 export interface ComparableProperty {
