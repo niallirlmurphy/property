@@ -157,42 +157,70 @@ class ValuationGeocoder:
         }
 
         try:
-            async with httpx.AsyncClient(timeout=5.0) as client:
-                response = await client.get(
-                    self.nominatim_url,
-                    params=params,
-                    headers=headers
-                )
-                response.raise_for_status()
+            # Add retry logic for transient network errors
+            for attempt in range(2):  # 2 attempts max
+                try:
+                    async with httpx.AsyncClient(timeout=10.0) as client:  # Increased timeout
+                        response = await client.get(
+                            self.nominatim_url,
+                            params=params,
+                            headers=headers
+                        )
 
-                results = response.json()
+                        # Handle rate limiting (429) gracefully
+                        if response.status_code == 429:
+                            if attempt == 0:
+                                await asyncio.sleep(1)  # Wait 1 second before retry
+                                continue
+                            else:
+                                return None  # Give up, try next method
 
-                if results and len(results) > 0:
-                    result = results[0]
+                        response.raise_for_status()
 
-                    # Check if result is in Ireland
-                    lat = float(result['lat'])
-                    lon = float(result['lon'])
+                        results = response.json()
 
-                    # Ireland bounding box
-                    if not (51.4 <= lat <= 55.5 and -10.7 <= lon <= -5.4):
+                        if results and len(results) > 0:
+                            result = results[0]
+
+                            # Check if result is in Ireland
+                            lat = float(result['lat'])
+                            lon = float(result['lon'])
+
+                            # Ireland bounding box
+                            if not (51.4 <= lat <= 55.5 and -10.7 <= lon <= -5.4):
+                                return None
+
+                            # Confidence based on result quality
+                            importance = float(result.get('importance', 0.5))
+                            confidence = min(0.95, 0.60 + importance * 0.35)
+
+                            return GeocodingResult(
+                                latitude=lat,
+                                longitude=lon,
+                                confidence=confidence,
+                                method="nominatim",
+                                address_matched=result.get('display_name')
+                            )
+
+                        # Empty results, no need to retry
                         return None
 
-                    # Confidence based on result quality
-                    importance = float(result.get('importance', 0.5))
-                    confidence = min(0.95, 0.60 + importance * 0.35)
+                except (httpx.ConnectError, httpx.TimeoutException) as e:
+                    # Network error - retry once
+                    if attempt == 0:
+                        await asyncio.sleep(0.5)
+                        continue
+                    else:
+                        # Final attempt failed, fall through to next method
+                        return None
 
-                    return GeocodingResult(
-                        latitude=lat,
-                        longitude=lon,
-                        confidence=confidence,
-                        method="nominatim",
-                        address_matched=result.get('display_name')
-                    )
-
-        except (httpx.HTTPError, httpx.TimeoutException) as e:
-            # Log error but don't fail - try next method
-            print(f"Nominatim error: {e}")
+        except httpx.HTTPStatusError as e:
+            # HTTP error (4xx, 5xx) - don't retry
+            print(f"Nominatim HTTP error: {e.response.status_code}")
+            return None
+        except Exception as e:
+            # Unexpected error - log and continue to next method
+            print(f"Nominatim unexpected error: {e}")
             return None
 
         return None
@@ -247,27 +275,64 @@ class ValuationGeocoder:
         """
         Normalize address for fuzzy matching.
 
-        Applies same normalization as database import:
-        - Title case
-        - Remove punctuation
-        - Standardize whitespace
+        IMPORTANT: Must match the normalization logic used in database imports
+        (db/import.py normalize_address() function).
 
         Args:
             address: Raw address string
 
         Returns:
-            Normalized address
+            Normalized address matching database format
         """
-        # Remove leading "No." or "Number"
-        address = re.sub(r'^(No\.|Number)\s*', '', address, flags=re.IGNORECASE)
+        if not address:
+            return address
 
-        # Title case
-        address = address.title()
+        normalized = address.strip()
 
-        # Remove extra punctuation
-        address = re.sub(r'[,\.]', ' ', address)
+        # Basic cleanup
+        normalized = re.sub(r'\s+', ' ', normalized)
+        normalized = re.sub(r',\s*,+', ',', normalized)
 
-        # Standardize whitespace
-        address = ' '.join(address.split())
+        # Remove "No." prefix
+        normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
 
-        return address
+        # Standardize apartment/unit
+        normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
+
+        # Standardize street types
+        street_types = {
+            r'\bSt\.?\b': 'Street',
+            r'\bRd\.?\b': 'Road',
+            r'\bAve?\.?\b': 'Avenue',
+            r'\bDr\.?\b': 'Drive',
+            r'\bCl\.?\b': 'Close',
+            r'\bCt\.?\b': 'Court',
+            r'\bPk\.?\b': 'Park',
+            r'\bSq\.?\b': 'Square',
+        }
+        for abbrev, full in street_types.items():
+            normalized = re.sub(abbrev, full, normalized, flags=re.I)
+
+        # Clean up punctuation (keep commas!)
+        normalized = re.sub(r',\s*,', ',', normalized)
+        normalized = re.sub(r'\s+,', ',', normalized)
+        normalized = re.sub(r',\s+', ', ', normalized)
+        normalized = normalized.strip(', ')
+
+        # Title case with exceptions
+        words = normalized.split()
+        lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
+        upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
+
+        result_words = []
+        for i, word in enumerate(words):
+            if i == 0:
+                result_words.append(word.capitalize())
+            elif word in upper_exceptions:
+                result_words.append(word)
+            elif word.lower() in lower_exceptions:
+                result_words.append(word.lower())
+            else:
+                result_words.append(word.capitalize())
+
+        return ' '.join(result_words).strip()

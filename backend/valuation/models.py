@@ -84,9 +84,9 @@ class ComparableProperty(BaseModel):
 
     address: str = Field(..., description="Property address")
 
-    price: int = Field(..., gt=0, description="Original sale price (€)")
+    price: float = Field(..., gt=0, description="Original sale price (€)")
 
-    adjusted_price: int = Field(
+    adjusted_price: float = Field(
         ...,
         gt=0,
         description="Price adjusted to valuation date (€)"
@@ -227,9 +227,9 @@ class ValuationStatistics(BaseModel):
         description="CV = std_dev / mean (price dispersion)"
     )
 
-    min_price: int = Field(..., gt=0, description="Minimum comparable price")
+    min_price: float = Field(..., gt=0, description="Minimum comparable price")
 
-    max_price: int = Field(..., gt=0, description="Maximum comparable price")
+    max_price: float = Field(..., gt=0, description="Maximum comparable price")
 
 
 class GeocodingResult(BaseModel):

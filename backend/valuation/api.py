@@ -259,7 +259,13 @@ async def estimate_property_value(
         raise
 
     except Exception as e:
-        # Log unexpected errors to Sentry (if configured)
+        # Log unexpected errors
+        import traceback
+        error_details = traceback.format_exc()
+        print(f"❌ Valuation error: {e}")
+        print(error_details)
+
+        # Log to Sentry (if configured)
         try:
             import sentry_sdk
             sentry_sdk.set_context("valuation_request", {
