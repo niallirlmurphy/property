@@ -107,11 +107,6 @@ export default function ValuationPage() {
   return (
     <div className="val-page">
       <PageHeader title="Property Valuation" />
-      <div className="val-page-subtitle">
-        <p className="val-subtitle">
-          Get a free property valuation estimate based on comparable sales in the Property Price Register.
-        </p>
-      </div>
 
       <div className="val-layout">
         {/* ── Input Form ── */}
@@ -307,17 +302,22 @@ export default function ValuationPage() {
         </main>
       </div>
 
-      {/* Disclaimer */}
-      <div className="val-disclaimer">
-        <h4>Important Notice</h4>
-        <p>
-          This valuation is a <strong>statistical estimate</strong> based on comparable sales in the Property Price Register.
-          It should not be used as a formal property valuation for financial, legal, or tax purposes.
-          Actual market value depends on property condition, specific features, market conditions, and other factors not captured in this analysis.
+      {/* Footer with description and disclaimer */}
+      <div className="val-footer">
+        <p className="val-footer-intro">
+          Get a free property valuation estimate based on comparable sales in the Property Price Register.
         </p>
-        <p>
-          For official valuations, consult a qualified property valuer or estate agent.
-        </p>
+        <div className="val-disclaimer">
+          <h4>Important Notice</h4>
+          <p>
+            This valuation is a <strong>statistical estimate</strong> based on comparable sales in the Property Price Register.
+            It should not be used as a formal property valuation for financial, legal, or tax purposes.
+            Actual market value depends on property condition, specific features, market conditions, and other factors not captured in this analysis.
+          </p>
+          <p>
+            For official valuations, consult a qualified property valuer or estate agent.
+          </p>
+        </div>
       </div>
     </div>
   );

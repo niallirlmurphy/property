@@ -1753,19 +1753,6 @@ input[type="range"]::-moz-range-thumb {
   padding-bottom: 60px;
 }
 
-.val-page-subtitle {
-  background: #1a3c5e;
-  padding: 0 32px 20px;
-}
-
-.val-subtitle {
-  font-size: 15px;
-  color: rgba(255,255,255,0.8);
-  max-width: 580px;
-  line-height: 1.5;
-  margin: 0;
-}
-
 /* Two-column layout */
 .val-layout {
   display: grid;
@@ -2223,10 +2210,22 @@ input[type="range"]::-moz-range-thumb {
   color: #333;
 }
 
-/* Disclaimer */
-.val-disclaimer {
+/* Footer with intro text and disclaimer */
+.val-footer {
   max-width: 1200px;
   margin: 24px auto 0;
+  padding: 0 24px;
+}
+
+.val-footer-intro {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.val-disclaimer {
   padding: 20px 24px;
   background: #fff;
   border-radius: 12px;
