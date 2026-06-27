@@ -1182,30 +1182,13 @@ async def search_exact(
         ORDER BY sale_date DESC
     """, search_normalized)
 
-    # Step 2: If found with coordinates, use spatial search for comparable sales
-    rows = []
-    if exact_rows and exact_rows[0]['latitude'] is not None and exact_rows[0]['longitude'] is not None:
-        lat = exact_rows[0]['latitude']
-        lon = exact_rows[0]['longitude']
-        radius_meters = 500  # 500m radius for comparable sales
-
-        # Use PostGIS ST_DWithin for efficient spatial search (no LIKE queries)
-        rows = await db_pool.fetch("""
-            SELECT
-                id, sale_date, address, county, eircode, price,
-                not_full_market_price, vat_exclusive, description,
-                size_description, latitude, longitude,
-                routing_key, bedrooms, property_type,
-                ST_Distance(geog, ST_MakePoint($2, $1)::geography) AS distance
-            FROM properties
-            WHERE latitude IS NOT NULL
-              AND longitude IS NOT NULL
-              AND ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)
-            ORDER BY distance ASC, sale_date DESC
-            LIMIT 200
-        """, lat, lon, radius_meters)
-    elif not exact_rows:
-        # Step 3: No exact match - try full-text search
+    # Step 2: Use exact matches only - DO NOT use spatial search
+    # S1 page shows sales history for the SPECIFIC property only, not nearby comparables
+    if exact_rows:
+        # Return exact matches only
+        rows = exact_rows
+    else:
+        # Step 3: No exact match - try full-text search as fallback
         search_terms = ' & '.join(search_normalized.split())
         rows = await db_pool.fetch("""
             SELECT
@@ -1219,9 +1202,6 @@ async def search_exact(
             ORDER BY rank DESC, sale_date DESC
             LIMIT 100
         """, search_terms)
-    else:
-        # Exact match found but no coordinates - return just that match
-        rows = exact_rows
 
     result = {
         "address": address,

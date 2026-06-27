@@ -945,6 +945,45 @@ async def test_valuation_nonexistent_property(client: httpx.AsyncClient, results
         results.add_fail(f"Valuation (non-existent): {address[:30]}...", str(e))
 
 
+async def test_s1_page_exact_matches_only(client: httpx.AsyncClient, results: TestResults):
+    """
+    Test that S1 page shows ONLY exact address matches, not spatial results.
+
+    This is critical: the S1 page is for viewing sales history of a specific property,
+    NOT for seeing nearby comparables.
+    """
+    try:
+        # Test with a known address
+        resp = await client.get(f"{BACKEND_URL}/search/exact", params={"address": "44 Mount Carmel Road"}, timeout=TIMEOUT)
+
+        if resp.status_code == 200:
+            data = resp.json()
+            results_list = data.get('results', [])
+
+            if not results_list:
+                results.add_warning("S1 exact matches", "No results returned")
+                return
+
+            # Verify ALL results start with "44 Mount Carmel Road"
+            non_matching = []
+            for sale in results_list:
+                addr = sale.get('address', '')
+                if not addr.startswith('44 Mount Carmel Road'):
+                    non_matching.append(addr)
+
+            if non_matching:
+                results.add_fail("S1 exact matches only",
+                               f"Found {len(non_matching)} non-matching addresses (e.g., '{non_matching[0][:50]}')")
+            else:
+                results.add_pass("S1 exact matches only",
+                               f"{len(results_list)} sales for '44 Mount Carmel Road' only")
+        else:
+            results.add_fail("S1 exact matches only", f"HTTP {resp.status_code}")
+
+    except Exception as e:
+        results.add_fail("S1 exact matches only", str(e))
+
+
 async def test_valuation_with_enrichment(client: httpx.AsyncClient, results: TestResults, address: str):
     """Test valuation with optional enrichment data (bedrooms, BER)."""
     try:
@@ -1015,6 +1054,7 @@ async def run_all_tests():
         print("\nBackend Search:")
         await test_backend_search(client, results)
         await test_county_filter_fallback(client, results)
+        await test_s1_page_exact_matches_only(client, results)
 
         print("\nPlural/Singular Matching:")
         await test_plural_singular_geocoding(client, results)
