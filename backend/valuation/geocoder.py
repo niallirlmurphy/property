@@ -255,7 +255,7 @@ class ValuationGeocoder:
         """
         Geocode by matching against known addresses in database.
 
-        Uses same logic as /search/exact endpoint (starts_with prefix match).
+        Uses EXACT same logic as /search/exact endpoint (S1 page).
 
         Args:
             address: Property address
@@ -263,11 +263,45 @@ class ValuationGeocoder:
         Returns:
             GeocodingResult or None if no match found
         """
-        # Normalize address using same logic as /search/exact endpoint
-        address_norm = self._normalize_address(address)
+        # Normalize address - EXACT copy from /search/exact endpoint
+        normalized = address.strip()
+        normalized = re.sub(r'\s+', ' ', normalized)
+        normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
+        normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
 
-        # Use starts_with() function (same as S1 page) for exact prefix match
-        # Falls back to raw address if address_normalized is NULL
+        # Expand common abbreviations to match normalized format
+        street_types = {
+            r'\bSt\.?\b': 'Street', r'\bRd\.?\b': 'Road', r'\bAve\.?\b': 'Avenue',
+            r'\bDr\.?\b': 'Drive', r'\bCl\.?\b': 'Close', r'\bCt\.?\b': 'Court',
+            r'\bPk\.?\b': 'Park', r'\bSq\.?\b': 'Square',
+        }
+        for abbrev, full in street_types.items():
+            normalized = re.sub(abbrev, full, normalized, flags=re.I)
+
+        # Clean punctuation and apply title case
+        normalized = re.sub(r',\s*,', ',', normalized)
+        normalized = re.sub(r'\s+,', ',', normalized)
+        normalized = re.sub(r',\s+', ', ', normalized)
+        normalized = normalized.strip(', ')
+
+        words = normalized.split()
+        lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
+        upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
+
+        result_words = []
+        for i, word in enumerate(words):
+            if i == 0:
+                result_words.append(word.capitalize())
+            elif word in upper_exceptions:
+                result_words.append(word)
+            elif word.lower() in lower_exceptions:
+                result_words.append(word.lower())
+            else:
+                result_words.append(word.capitalize())
+
+        address_norm = ' '.join(result_words).strip()
+
+        # Use starts_with() function - EXACT same as S1 page
         query = """
             SELECT
                 latitude,
@@ -294,69 +328,3 @@ class ValuationGeocoder:
 
         return None
 
-    @staticmethod
-    def _normalize_address(address: str) -> str:
-        """
-        Normalize address for fuzzy matching.
-
-        IMPORTANT: Must match the normalization logic used in database imports
-        (db/import.py normalize_address() function).
-
-        Args:
-            address: Raw address string
-
-        Returns:
-            Normalized address matching database format
-        """
-        if not address:
-            return address
-
-        normalized = address.strip()
-
-        # Basic cleanup
-        normalized = re.sub(r'\s+', ' ', normalized)
-        normalized = re.sub(r',\s*,+', ',', normalized)
-
-        # Remove "No." prefix
-        normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
-
-        # Standardize apartment/unit
-        normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
-
-        # Standardize street types
-        street_types = {
-            r'\bSt\.?\b': 'Street',
-            r'\bRd\.?\b': 'Road',
-            r'\bAve?\.?\b': 'Avenue',
-            r'\bDr\.?\b': 'Drive',
-            r'\bCl\.?\b': 'Close',
-            r'\bCt\.?\b': 'Court',
-            r'\bPk\.?\b': 'Park',
-            r'\bSq\.?\b': 'Square',
-        }
-        for abbrev, full in street_types.items():
-            normalized = re.sub(abbrev, full, normalized, flags=re.I)
-
-        # Clean up punctuation (keep commas!)
-        normalized = re.sub(r',\s*,', ',', normalized)
-        normalized = re.sub(r'\s+,', ',', normalized)
-        normalized = re.sub(r',\s+', ', ', normalized)
-        normalized = normalized.strip(', ')
-
-        # Title case with exceptions
-        words = normalized.split()
-        lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
-        upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
-
-        result_words = []
-        for i, word in enumerate(words):
-            if i == 0:
-                result_words.append(word.capitalize())
-            elif word in upper_exceptions:
-                result_words.append(word)
-            elif word.lower() in lower_exceptions:
-                result_words.append(word.lower())
-            else:
-                result_words.append(word.capitalize())
-
-        return ' '.join(result_words).strip()
