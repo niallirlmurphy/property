@@ -7,8 +7,13 @@ Tests both frontend (Vercel) and backend (Railway) deployments.
 import asyncio
 import httpx
 import sys
+import os
+import asyncpg
 from typing import Dict, List, Tuple
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv('backend/.env')
 
 # Configuration
 FRONTEND_URL = "https://homeiq.ie"
@@ -807,6 +812,169 @@ async def test_api_security(client: httpx.AsyncClient, results: TestResults):
         results.add_fail("API security check", str(e))
 
 
+async def get_random_test_addresses() -> Tuple[str, str]:
+    """
+    Get two test addresses from database:
+    1. Random address that exists (for positive test)
+    2. Fake address that doesn't exist (for negative test)
+
+    Returns:
+        Tuple of (existing_address, non_existing_address)
+    """
+    try:
+        conn = await asyncpg.connect(os.getenv('DATABASE_URL'))
+
+        # Get a random property with coordinates and decent price
+        row = await conn.fetchrow("""
+            SELECT address
+            FROM properties
+            WHERE latitude IS NOT NULL
+            AND longitude IS NOT NULL
+            AND price > 200000
+            AND price < 1000000
+            AND address NOT LIKE '%APT%'
+            AND address NOT LIKE '%APARTMENT%'
+            ORDER BY RANDOM()
+            LIMIT 1
+        """)
+
+        existing_address = row['address'] if row else "28 Slane Road"
+
+        # Create a fake address that definitely doesn't exist
+        non_existing_address = "999 Nonexistent Fake Street, Imaginarytown, Dublin 99"
+
+        await conn.close()
+        return existing_address, non_existing_address
+
+    except Exception as e:
+        print(f"Warning: Could not fetch random addresses from database: {e}")
+        # Fallback to known addresses
+        return "28 Slane Road", "999 Nonexistent Fake Street, Imaginarytown, Dublin 99"
+
+
+async def test_valuation_existing_property(client: httpx.AsyncClient, results: TestResults, address: str):
+    """Test valuation for a property that exists in database."""
+    try:
+        resp = await client.post(
+            f"{BACKEND_URL}/api/valuation/estimate",
+            json={"address": address},
+            timeout=30.0
+        )
+
+        if resp.status_code == 200:
+            data = resp.json()
+
+            # Validate response structure
+            required_fields = ['estimate', 'confidence_interval', 'validation', 'comparables', 'statistics', 'metadata']
+            missing = [f for f in required_fields if f not in data]
+
+            if missing:
+                results.add_fail(f"Valuation: {address[:40]}...", f"Missing fields: {', '.join(missing)}")
+                return
+
+            # Check estimate is reasonable
+            estimate = data['estimate']
+            if not (50000 <= estimate <= 5000000):
+                results.add_fail(f"Valuation: {address[:40]}...", f"Unrealistic estimate: €{estimate:,}")
+                return
+
+            # Check geocoding method
+            geocode_method = data['metadata']['geocoded_location']['method']
+            if geocode_method != 'database_exact':
+                results.add_warning(f"Valuation: {address[:40]}...",
+                                  f"Used {geocode_method} instead of database_exact")
+
+            # Check comparables
+            n_comparables = len(data['comparables'])
+            if n_comparables < 5:
+                results.add_warning(f"Valuation: {address[:40]}...",
+                                  f"Only {n_comparables} comparables (expected ≥5)")
+
+            confidence = data['validation']['confidence_level']
+            results.add_pass(f"Valuation: {address[:40]}...",
+                           f"€{estimate:,} ({confidence}, {n_comparables} comps, method: {geocode_method})")
+
+        elif resp.status_code == 404:
+            results.add_fail(f"Valuation: {address[:40]}...",
+                           "Property not found (should exist in database)")
+        else:
+            results.add_fail(f"Valuation: {address[:40]}...",
+                           f"HTTP {resp.status_code}: {resp.text[:100]}")
+
+    except Exception as e:
+        results.add_fail(f"Valuation: {address[:40]}...", str(e))
+
+
+async def test_valuation_nonexistent_property(client: httpx.AsyncClient, results: TestResults, address: str):
+    """Test valuation for a property that doesn't exist - should fail gracefully."""
+    try:
+        resp = await client.post(
+            f"{BACKEND_URL}/api/valuation/estimate",
+            json={"address": address},
+            timeout=30.0
+        )
+
+        # Should return 400 (bad request) with helpful error message
+        if resp.status_code == 400:
+            data = resp.json()
+            detail = data.get('detail', '')
+
+            # Check error message is helpful
+            if 'Could not locate' in detail or 'Not Found' in detail:
+                results.add_pass(f"Valuation (non-existent): {address[:30]}...",
+                               f"Correct error: {detail[:60]}")
+            else:
+                results.add_warning(f"Valuation (non-existent): {address[:30]}...",
+                                  f"Error message unclear: {detail[:60]}")
+
+        elif resp.status_code == 404:
+            # Also acceptable
+            results.add_pass(f"Valuation (non-existent): {address[:30]}...",
+                           "Correctly returned 404")
+
+        elif resp.status_code == 200:
+            # Should NOT succeed for fake address
+            results.add_fail(f"Valuation (non-existent): {address[:30]}...",
+                           "Should have failed but returned 200")
+
+        else:
+            results.add_warning(f"Valuation (non-existent): {address[:30]}...",
+                              f"Unexpected status: {resp.status_code}")
+
+    except Exception as e:
+        results.add_fail(f"Valuation (non-existent): {address[:30]}...", str(e))
+
+
+async def test_valuation_with_enrichment(client: httpx.AsyncClient, results: TestResults, address: str):
+    """Test valuation with optional enrichment data (bedrooms, BER)."""
+    try:
+        resp = await client.post(
+            f"{BACKEND_URL}/api/valuation/estimate",
+            json={
+                "address": address,
+                "bedrooms": 3,
+                "ber_rating": "B2"
+            },
+            timeout=30.0
+        )
+
+        if resp.status_code == 200:
+            data = resp.json()
+            estimate = data['estimate']
+            results.add_pass(f"Valuation with enrichment: {address[:30]}...",
+                           f"€{estimate:,} (3 bed, B2 BER)")
+        elif resp.status_code in [400, 404]:
+            # Expected if property doesn't exist
+            results.add_pass(f"Valuation with enrichment: {address[:30]}...",
+                           "Graceful failure")
+        else:
+            results.add_fail(f"Valuation with enrichment: {address[:30]}...",
+                           f"HTTP {resp.status_code}")
+
+    except Exception as e:
+        results.add_fail(f"Valuation with enrichment: {address[:30]}...", str(e))
+
+
 async def run_all_tests():
     """Run complete test suite."""
     print("╔══════════════════════════════════════════════════════════════╗")
@@ -820,6 +988,12 @@ async def run_all_tests():
     print("="*70 + "\n")
 
     results = TestResults()
+
+    # Get random test addresses for valuation tests
+    print("Selecting random test addresses...")
+    existing_address, non_existing_address = await get_random_test_addresses()
+    print(f"  Existing: {existing_address}")
+    print(f"  Non-existing: {non_existing_address}\n")
 
     async with httpx.AsyncClient() as client:
         # Database statistics (informational)
@@ -856,6 +1030,11 @@ async def run_all_tests():
 
         print("\nCoordinate Quality:")
         await test_coordinate_quality(client, results)
+
+        print("\nValuation API:")
+        await test_valuation_existing_property(client, results, existing_address)
+        await test_valuation_nonexistent_property(client, results, non_existing_address)
+        await test_valuation_with_enrichment(client, results, existing_address)
 
         print("\nFrontend:")
         await test_frontend_loads(client, results)
