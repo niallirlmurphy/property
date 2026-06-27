@@ -17,7 +17,9 @@ export default function PageHeader({ title }: Props) {
               <polyline points="9 22 9 12 15 12 15 22"/>
             </svg>
           </Link>
-          <Link to="/" className="page-banner-title">{title}</Link>
+          <Link to="/" className="page-banner-title">
+            <h1>{title}</h1>
+          </Link>
           <WaffleMenu />
         </div>
       </header>
