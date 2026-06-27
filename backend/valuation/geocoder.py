@@ -12,7 +12,10 @@ Returns coordinates with confidence score.
 import os
 import re
 import asyncio
+import logging
 import httpx
+
+logger = logging.getLogger(__name__)
 from typing import Dict, Optional, Tuple
 from .models import GeocodingResult
 
@@ -60,24 +63,30 @@ class ValuationGeocoder:
 
         # Method 1: Database lookup (ALWAYS try this first!)
         # Works for any property in the Property Price Register (2010-present)
-        result = await self._geocode_by_db_fuzzy_match(address)
-        if result:
-            print(f"✅ Geocoded via database: {result.address_matched}")
-            return result
+        try:
+            result = await self._geocode_by_db_fuzzy_match(address)
+            if result:
+                logger.info(f"✅ Geocoded via database: {result.address_matched}")
+                return result
+        except Exception as e:
+            logger.warning(f"Database geocoding failed: {e}")
 
         # Method 2: Eircode routing key lookup
         # Works for properties not in database if Eircode provided
         if eircode:
-            result = await self._geocode_by_eircode_routing_key(eircode)
-            if result:
-                print(f"✅ Geocoded via Eircode routing key: {eircode[:3]}")
-                return result
+            try:
+                result = await self._geocode_by_eircode_routing_key(eircode)
+                if result:
+                    logger.info(f"✅ Geocoded via Eircode routing key: {eircode[:3]}")
+                    return result
+            except Exception as e:
+                logger.warning(f"Eircode geocoding failed: {e}")
 
         # Method 3: Nominatim API (last resort)
         # Works for new properties not in database, uses OpenStreetMap
         result = await self._geocode_by_nominatim(address, eircode)
         if result:
-            print(f"✅ Geocoded via Nominatim: {result.address_matched}")
+            logger.info(f"✅ Geocoded via Nominatim: {result.address_matched}")
             return result
 
         # All methods failed - provide helpful error message

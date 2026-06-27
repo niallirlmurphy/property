@@ -323,13 +323,16 @@ async def log_valuation_request(
             RETURNING request_id;
         """
 
+        # Convert valuation_date string back to datetime for database
+        valuation_datetime = datetime.fromisoformat(response.metadata['valuation_date'])
+
         request_id = await db_pool.fetchval(
             query,
             request.address,
             request.eircode,
             location.latitude,
             location.longitude,
-            response.metadata['valuation_date'],
+            valuation_datetime,
             response.estimate,
             response.confidence_interval.lower,
             response.confidence_interval.upper,

@@ -185,7 +185,7 @@ class ConfidenceInterval(BaseModel):
     width_pct: float = Field(
         ...,
         ge=0,
-        le=100,
+        le=200,  # Can exceed 100% for very uncertain valuations
         description="Interval width as percentage of estimate"
     )
 
