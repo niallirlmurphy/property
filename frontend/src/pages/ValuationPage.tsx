@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PageHeader from "../components/PageHeader";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { estimatePropertyValue } from "../api";
@@ -80,6 +80,15 @@ export default function ValuationPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<ValuationResponse | null>(null);
+  const [buildVersion, setBuildVersion] = useState<string>("unknown");
+
+  // Fetch build version on mount
+  useEffect(() => {
+    fetch('/version.json')
+      .then(res => res.json())
+      .then(data => setBuildVersion(data.build))
+      .catch(() => setBuildVersion('dev'));
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -239,6 +248,18 @@ export default function ValuationPage() {
               <div>
                 <strong>Valuation Failed</strong>
                 <p>{error}</p>
+                <p className="val-error-meta">
+                  <small>
+                    {new Date().toLocaleString('en-IE', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric',
+                      hour: '2-digit',
+                      minute: '2-digit',
+                      second: '2-digit'
+                    })} · Build {buildVersion}
+                  </small>
+                </p>
               </div>
             </div>
           )}

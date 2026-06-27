@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Favicons</title>
+</head>
+<body>
+    <h1>Favicon Generator</h1>
+    <p>Open browser console and download the generated files</p>
+
+    <canvas id="canvas16" width="16" height="16" style="border:1px solid #ccc;"></canvas>
+    <canvas id="canvas32" width="32" height="32" style="border:1px solid #ccc;"></canvas>
+    <canvas id="canvas180" width="180" height="180" style="border:1px solid #ccc;"></canvas>
+
+    <script>
+        function drawHouseIcon(ctx, size) {
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+
+            // Scale factors
+            const scale = size / 100;
+
+            // Create gradient
+            const gradient = ctx.createLinearGradient(0, 0, 0, size);
+            gradient.addColorStop(0, '#4F46E5');
+            gradient.addColorStop(1, '#6366F1');
+
+            // Draw roof and body
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.moveTo(50 * scale, 10 * scale);  // Top point
+            ctx.lineTo(90 * scale, 45 * scale);  // Right corner
+            ctx.lineTo(80 * scale, 45 * scale);  // Right wall top
+            ctx.lineTo(80 * scale, 85 * scale);  // Right wall bottom
+            ctx.lineTo(20 * scale, 85 * scale);  // Left wall bottom
+            ctx.lineTo(20 * scale, 45 * scale);  // Left wall top
+            ctx.lineTo(10 * scale, 45 * scale);  // Left corner
+            ctx.closePath();
+            ctx.fill();
+
+            // Door
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.fillRect(42 * scale, 60 * scale, 16 * scale, 25 * scale);
+
+            // Windows
+            ctx.fillRect(30 * scale, 52 * scale, 12 * scale, 12 * scale);
+            ctx.fillRect(58 * scale, 52 * scale, 12 * scale, 12 * scale);
+        }
+
+        // Generate 16x16
+        const ctx16 = document.getElementById('canvas16').getContext('2d');
+        drawHouseIcon(ctx16, 16);
+        document.getElementById('canvas16').toBlob(blob => {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'favicon-16x16.png';
+            console.log('16x16 ready - right click canvas and "Save image as..." or click here to download:', a);
+            document.body.appendChild(a);
+        });
+
+        // Generate 32x32
+        const ctx32 = document.getElementById('canvas32').getContext('2d');
+        drawHouseIcon(ctx32, 32);
+        document.getElementById('canvas32').toBlob(blob => {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'favicon-32x32.png';
+            console.log('32x32 ready - right click canvas and "Save image as..." or click here to download:', a);
+            document.body.appendChild(a);
+        });
+
+        // Generate 180x180
+        const ctx180 = document.getElementById('canvas180').getContext('2d');
+        drawHouseIcon(ctx180, 180);
+        document.getElementById('canvas180').toBlob(blob => {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'apple-touch-icon.png';
+            console.log('180x180 ready - right click canvas and "Save image as..." or click here to download:', a);
+            document.body.appendChild(a);
+        });
+    </script>
+</body>
+</html>

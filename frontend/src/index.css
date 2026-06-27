@@ -1921,6 +1921,13 @@ input[type="range"]::-moz-range-thumb {
   margin: 0;
 }
 
+.val-error-meta {
+  margin-top: 8px !important;
+  padding-top: 8px;
+  border-top: 1px solid #fdd;
+  opacity: 0.7;
+}
+
 .val-loading {
   display: flex;
   flex-direction: column;
