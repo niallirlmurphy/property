@@ -17,11 +17,16 @@ function saveRecent(q: string): string[] {
 }
 
 const CURRENT_YEAR = new Date().getFullYear();
-const EIGHTEEN_MONTHS_AGO = new Date();
-EIGHTEEN_MONTHS_AGO.setMonth(EIGHTEEN_MONTHS_AGO.getMonth() - 18);
+
+// Calculate 18 months ago properly
+// If we're in June 2026, 18 months ago is December 2024
+const now = new Date();
+const eighteenMonthsAgo = new Date(now);
+eighteenMonthsAgo.setMonth(now.getMonth() - 18);
+const EIGHTEEN_MONTHS_AGO_YEAR = eighteenMonthsAgo.getFullYear();
 
 export const PERIOD_OPTIONS = [
-  { label: "Previous 18 months", minYear: EIGHTEEN_MONTHS_AGO.getFullYear() },
+  { label: "Previous 18 months", minYear: EIGHTEEN_MONTHS_AGO_YEAR },
   { label: "Previous 2 years",  minYear: CURRENT_YEAR - 2 },
   { label: "Previous 5 years",  minYear: CURRENT_YEAR - 5 },
   { label: "Previous 10 years", minYear: CURRENT_YEAR - 10 },
