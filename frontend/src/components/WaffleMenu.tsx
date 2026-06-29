@@ -13,26 +13,6 @@ const ITEMS = [
     desc: "Search sales by address or area",
   },
   {
-    href: "/county/dublin",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-      </svg>
-    ),
-    label: "Counties Guide",
-    desc: "Price trends for every county",
-  },
-  {
-    href: "/area/rathmines",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-      </svg>
-    ),
-    label: "Area Guide",
-    desc: "Explore Dublin neighbourhoods",
-  },
-  {
     href: "/valuation",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -44,7 +24,27 @@ const ITEMS = [
     desc: "Free automated valuations",
   },
   {
-    href: "/mortgages",
+    href: "/s1",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+    ),
+    label: "Single Property",
+    desc: "View sales history for one address",
+  },
+  {
+    href: "/county/dublin",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+      </svg>
+    ),
+    label: "Area Guides",
+    desc: "Price trends by county & area",
+  },
+  {
+    href: "/mortgage",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
@@ -54,14 +54,25 @@ const ITEMS = [
     desc: "Estimate your repayments",
   },
   {
-    href: "/energy",
+    href: "/blog",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+        <line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="11" x2="12" y2="11"/>
+      </svg>
+    ),
+    label: "Blog",
+    desc: "Property market insights & news",
+  },
+  {
+    href: "/ber-ratings",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
       </svg>
     ),
-    label: "Home Energy Ratings",
-    desc: "BER ratings and retrofit trends",
+    label: "BER Ratings",
+    desc: "Energy ratings and retrofit trends",
   },
   {
     href: "/about",
@@ -70,7 +81,7 @@ const ITEMS = [
         <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
       </svg>
     ),
-    label: "About HomeIQ.ie",
+    label: "About",
     desc: "Our data sources and mission",
   },
 ];

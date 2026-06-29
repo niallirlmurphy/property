@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import PageHeader from "../components/PageHeader";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import WaffleMenu from "../components/WaffleMenu";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { estimatePropertyValue } from "../api";
 import type { ValuationResponse } from "../types";
@@ -122,7 +123,19 @@ export default function ValuationPage() {
 
   return (
     <div className="val-page">
-      <PageHeader title="Property Valuation" />
+      {/* Use same header as home page */}
+      <header className="app-header">
+        <Link to="/" className="app-header-home" aria-label="Home">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </Link>
+        <Link to="/" className="app-header-title">
+          <h1>Property Valuation</h1>
+        </Link>
+        <WaffleMenu />
+      </header>
 
       <div className="val-layout">
         {/* ── Input Form ── */}

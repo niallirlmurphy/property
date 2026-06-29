@@ -308,9 +308,8 @@ class ValuationGeocoder:
 
         address_norm = ' '.join(result_words).strip()
 
-        # Use starts_with() function - EXACT same as S1 page
-        # Also fetch bedrooms if available for the subject property
-        query = """
+        # Try exact prefix match first (fast, for S1 page compatibility)
+        query_exact = """
             SELECT
                 latitude,
                 longitude,
@@ -324,7 +323,41 @@ class ValuationGeocoder:
             LIMIT 1;
         """
 
-        row = await self.db.fetchrow(query, address_norm)
+        row = await self.db.fetchrow(query_exact, address_norm)
+
+        # If no exact prefix match, try flexible matching for partial addresses
+        # e.g., "28 Slane Road, Dublin 12" should match "28 Slane Road, Crumlin, Dublin 12"
+        if not row:
+            # Extract significant tokens (alphanumeric only, skip very common words)
+            # Include house numbers, street names, but skip generic terms
+            words = re.findall(r'\w+', address_norm)  # Extract all alphanumeric tokens
+            skip_words = {'the', 'and', 'dublin', 'ireland', 'co', 'county'}
+            tokens = [w for w in words if len(w) >= 2 and w.lower() not in skip_words]
+
+            # Build query that matches all significant tokens
+            if len(tokens) >= 3:  # Need at least 3 tokens for reliable match (e.g., "28", "Slane", "Road")
+                token_conditions = []
+                for i, token in enumerate(tokens[:6]):  # Limit to first 6 tokens
+                    token_conditions.append(f"COALESCE(address_normalized, address) ILIKE ${i+1}")
+
+                query_flexible = f"""
+                    SELECT
+                        latitude,
+                        longitude,
+                        address,
+                        bedrooms,
+                        COALESCE(address_normalized, address) as matched_address
+                    FROM properties
+                    WHERE
+                        {' AND '.join(token_conditions)}
+                        AND latitude IS NOT NULL
+                        AND longitude IS NOT NULL
+                    ORDER BY LENGTH(COALESCE(address_normalized, address))  -- Prefer shorter (more specific) matches
+                    LIMIT 1;
+                """
+
+                params = [f'%{token}%' for token in tokens[:6]]
+                row = await self.db.fetchrow(query_flexible, *params)
 
         if row:
             result = GeocodingResult(
