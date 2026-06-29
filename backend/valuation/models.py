@@ -62,6 +62,13 @@ class ValuationRequest(BaseModel):
         description="BER energy rating (optional, A1-G)"
     )
 
+    county: Optional[str] = Field(
+        None,
+        max_length=50,
+        example="Dublin",
+        description="County name (optional, defaults to Dublin, helps with geocoding)"
+    )
+
     @validator('ber_rating')
     def validate_ber_rating(cls, v):
         """Validate BER rating format."""
@@ -272,6 +279,7 @@ class GeocodingResult(BaseModel):
     confidence: float = Field(..., ge=0, le=1, description="Geocoding confidence (0-1)")
     method: str = Field(..., description="Geocoding method used")
     address_matched: Optional[str] = Field(None, description="Matched address")
+    bedrooms: Optional[int] = Field(None, description="Bedrooms from database match (if found)")
 
 
 class ValuationResponse(BaseModel):

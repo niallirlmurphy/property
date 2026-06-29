@@ -25,7 +25,30 @@ from .validator import MVPValidator
 
 
 # Router
-router = APIRouter(prefix="/api/valuation", tags=["valuation"])
+router = APIRouter(prefix="/valuation", tags=["valuation"])
+
+
+@router.get("/health")
+async def valuation_health_check():
+    """
+    Health check for valuation service.
+
+    Returns:
+        dict: Service status and configuration info
+    """
+    import os
+    pool = get_db_pool()
+
+    return {
+        "status": "ok",
+        "service": "valuation",
+        "database_connected": pool is not None,
+        "config": {
+            "nominatim_url": os.getenv('NOMINATIM_URL', 'https://nominatim.openstreetmap.org/search'),
+            "has_mapbox_token": bool(os.getenv('MAPBOX_TOKEN')),
+            "has_autoaddress_key": bool(os.getenv('AUTOADDRESS_KEY'))
+        }
+    }
 
 
 # Database connection pool - imported from main
@@ -71,19 +94,45 @@ async def estimate_property_value(
 
     start_time = datetime.now()
 
+    # Log incoming request for debugging
+    print(f"[Valuation] Request: address='{request.address}', eircode={request.eircode}, county={request.county}, bedrooms={request.bedrooms}, ber={request.ber_rating}")
+
     # Get database pool
     pool = get_db_pool()
+
+    if not pool:
+        print("[Valuation] ERROR: Database pool is None!")
+        raise HTTPException(
+            status_code=500,
+            detail="Database connection not available. Please try again later."
+        )
+
+    # Initialize subject_bedrooms (will be determined after geocoding)
+    subject_bedrooms = request.bedrooms
 
     try:
         # Step 1: Geocode address
         geocoder = ValuationGeocoder(pool)
 
         try:
+            print(f"[Valuation] Geocoding address: '{request.address}', county: {request.county or 'Dublin (default)'}")
             location = await geocoder.geocode_address(
                 address=request.address,
-                eircode=request.eircode
+                eircode=request.eircode,
+                county=request.county
             )
+            print(f"[Valuation] Geocoded: lat={location.latitude}, lon={location.longitude}, method={location.method}, confidence={location.confidence}")
+
+            # Determine subject property bedroom count
+            # Priority: user input > database match
+            if subject_bedrooms is None and hasattr(location, 'bedrooms'):
+                subject_bedrooms = location.bedrooms
+                if subject_bedrooms is not None:
+                    print(f"[Valuation] Using bedrooms from database: {subject_bedrooms}")
+            elif subject_bedrooms is not None:
+                print(f"[Valuation] Using bedrooms from user input: {subject_bedrooms}")
         except ValueError as e:
+            print(f"[Valuation] Geocoding failed: {str(e)}")
             # Log geocoding failures to Sentry
             try:
                 import sentry_sdk
@@ -106,13 +155,16 @@ async def estimate_property_value(
         searcher = ComparableSearcher(pool)
 
         try:
+            print(f"[Valuation] Searching for comparables at ({location.latitude}, {location.longitude})")
             comparables = await searcher.find_comparables(
                 latitude=location.latitude,
                 longitude=location.longitude,
                 min_count=5,
                 max_count=30
             )
+            print(f"[Valuation] Found {len(comparables)} comparables")
         except ValueError as e:
+            print(f"[Valuation] Comparable search failed: {str(e)}")
             # Log comparable search failures to Sentry
             try:
                 import sentry_sdk
@@ -173,8 +225,13 @@ async def estimate_property_value(
             comp['adjustment_factor'] = temporal_adj['adjustment_factor']
             comp['temporal_adjustment'] = temporal_adj
 
-        # Calculate weights
-        weights = adjuster.calculate_all_weights(comparables)
+        # Calculate weights (with bedroom matching if known)
+        weights = adjuster.calculate_all_weights(comparables, subject_bedrooms)
+
+        # Log bedroom matching info
+        if subject_bedrooms is not None:
+            matching_beds = sum(1 for c in comparables if c.get('bedrooms') == subject_bedrooms)
+            print(f"[Valuation] Bedroom matching: {matching_beds}/{len(comparables)} comparables match {subject_bedrooms} bedrooms")
 
         # Add weights to comparables
         for comp, weight in zip(comparables, weights):
@@ -223,7 +280,12 @@ async def estimate_property_value(
                 },
                 'valuation_date': target_date.isoformat(),
                 'algorithm_version': '1.0.0-mvp',
-                'processing_time_ms': processing_time_ms
+                'processing_time_ms': processing_time_ms,
+                'bedroom_matching': {
+                    'enabled': subject_bedrooms is not None,
+                    'subject_bedrooms': subject_bedrooms,
+                    'matching_comparables': sum(1 for c in comparables if c.get('bedrooms') == subject_bedrooms) if subject_bedrooms is not None else 0
+                }
             }
         )
 
@@ -252,17 +314,20 @@ async def estimate_property_value(
         except ImportError:
             pass
 
+        print(f"[Valuation] ✅ Success: estimate={response.estimate}, confidence={response.validation.confidence_level.value}, comparables={response.validation.n_comparables}")
         return response
 
-    except HTTPException:
-        # Re-raise HTTP exceptions as-is
+    except HTTPException as e:
+        # Re-raise HTTP exceptions with enhanced logging
+        print(f"[Valuation] ❌ HTTP Error {e.status_code}: {e.detail}")
         raise
 
     except Exception as e:
-        # Log unexpected errors
+        # Log unexpected errors with full context
         import traceback
         error_details = traceback.format_exc()
-        print(f"❌ Valuation error: {e}")
+        print(f"[Valuation] ❌ Unexpected error: {e}")
+        print(f"[Valuation] Request context: address='{request.address}', eircode={request.eircode}")
         print(error_details)
 
         # Log to Sentry (if configured)

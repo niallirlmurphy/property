@@ -40,7 +40,8 @@ class ValuationGeocoder:
     async def geocode_address(
         self,
         address: str,
-        eircode: Optional[str] = None
+        eircode: Optional[str] = None,
+        county: Optional[str] = None
     ) -> GeocodingResult:
         """
         Geocode an address using multiple methods.
@@ -53,6 +54,7 @@ class ValuationGeocoder:
         Args:
             address: Property address
             eircode: Optional Eircode (7 chars, no space)
+            county: Optional county name (defaults to Dublin, used to bias Nominatim)
 
         Returns:
             GeocodingResult with coordinates and confidence
@@ -84,7 +86,7 @@ class ValuationGeocoder:
 
         # Method 3: Nominatim API (last resort)
         # Works for new properties not in database, uses OpenStreetMap
-        result = await self._geocode_by_nominatim(address, eircode)
+        result = await self._geocode_by_nominatim(address, eircode, county)
         if result:
             logger.info(f"✅ Geocoded via Nominatim: {result.address_matched}")
             return result
@@ -149,7 +151,8 @@ class ValuationGeocoder:
     async def _geocode_by_nominatim(
         self,
         address: str,
-        eircode: Optional[str] = None
+        eircode: Optional[str] = None,
+        county: Optional[str] = None
     ) -> Optional[GeocodingResult]:
         """
         Geocode using Nominatim (OpenStreetMap) API.
@@ -157,15 +160,19 @@ class ValuationGeocoder:
         Args:
             address: Property address
             eircode: Optional Eircode to include in query
+            county: Optional county name to bias search results
 
         Returns:
             GeocodingResult or None if no result found
         """
-        # Construct search query
+        # Construct search query with county bias
+        # Default to Dublin if no county specified
+        county_name = county or "Dublin"
+
         if eircode:
-            search_query = f"{address}, {eircode}, Ireland"
+            search_query = f"{address}, {eircode}, {county_name}, Ireland"
         else:
-            search_query = f"{address}, Ireland"
+            search_query = f"{address}, {county_name}, Ireland"
 
         params = {
             'q': search_query,
@@ -302,11 +309,13 @@ class ValuationGeocoder:
         address_norm = ' '.join(result_words).strip()
 
         # Use starts_with() function - EXACT same as S1 page
+        # Also fetch bedrooms if available for the subject property
         query = """
             SELECT
                 latitude,
                 longitude,
-                address
+                address,
+                bedrooms
             FROM properties
             WHERE
                 starts_with(COALESCE(address_normalized, address), $1)
@@ -318,13 +327,16 @@ class ValuationGeocoder:
         row = await self.db.fetchrow(query, address_norm)
 
         if row:
-            return GeocodingResult(
+            result = GeocodingResult(
                 latitude=float(row['latitude']),
                 longitude=float(row['longitude']),
                 confidence=0.80,  # High confidence for database match
                 method="database_exact",
                 address_matched=row['address']
             )
+            # Store bedrooms for later use (if available)
+            result.bedrooms = row['bedrooms']
+            return result
 
         return None
 

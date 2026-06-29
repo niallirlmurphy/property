@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PageHeader from "../components/PageHeader";
+import Footer from "../components/Footer";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { estimatePropertyValue } from "../api";
 import type { ValuationResponse } from "../types";
@@ -75,6 +76,7 @@ export default function ValuationPage() {
 
   const [address, setAddress] = useState("");
   const [eircode, setEircode] = useState("");
+  const [county, setCounty] = useState("Dublin");
   const [bedrooms, setBedrooms] = useState("");
   const [berRating, setBerRating] = useState("");
   const [loading, setLoading] = useState(false);
@@ -106,6 +108,7 @@ export default function ValuationPage() {
       const response = await estimatePropertyValue({
         address: address.trim(),
         eircode: eircode.trim() || undefined,
+        county: county || "Dublin",
         bedrooms: bedrooms ? parseInt(bedrooms) : undefined,
         ber_rating: berRating || undefined,
       });
@@ -138,6 +141,47 @@ export default function ValuationPage() {
                 className="val-input"
                 disabled={loading}
               />
+            </div>
+
+            <div className="val-field">
+              <label htmlFor="county">County</label>
+              <select
+                id="county"
+                value={county}
+                onChange={e => setCounty(e.target.value)}
+                className="val-input"
+                disabled={loading}
+              >
+                <option value="Dublin">Dublin</option>
+                <option value="Cork">Cork</option>
+                <option value="Galway">Galway</option>
+                <option value="Limerick">Limerick</option>
+                <option value="Waterford">Waterford</option>
+                <option value="Carlow">Carlow</option>
+                <option value="Cavan">Cavan</option>
+                <option value="Clare">Clare</option>
+                <option value="Donegal">Donegal</option>
+                <option value="Kerry">Kerry</option>
+                <option value="Kildare">Kildare</option>
+                <option value="Kilkenny">Kilkenny</option>
+                <option value="Laois">Laois</option>
+                <option value="Leitrim">Leitrim</option>
+                <option value="Longford">Longford</option>
+                <option value="Louth">Louth</option>
+                <option value="Mayo">Mayo</option>
+                <option value="Meath">Meath</option>
+                <option value="Monaghan">Monaghan</option>
+                <option value="Offaly">Offaly</option>
+                <option value="Roscommon">Roscommon</option>
+                <option value="Sligo">Sligo</option>
+                <option value="Tipperary">Tipperary</option>
+                <option value="Wexford">Wexford</option>
+                <option value="Westmeath">Westmeath</option>
+                <option value="Wicklow">Wicklow</option>
+              </select>
+              <p className="val-field-hint">
+                Defaults to Dublin, helps with geocoding
+              </p>
             </div>
 
             <div className="val-field">
@@ -247,17 +291,29 @@ export default function ValuationPage() {
               <span className="val-error-icon">⚠️</span>
               <div>
                 <strong>Valuation Failed</strong>
-                <p>{error}</p>
-                <p className="val-error-meta">
-                  <small>
-                    {new Date().toLocaleString('en-IE', {
+                <p style={{ whiteSpace: 'pre-wrap' }}>{error}</p>
+                <details style={{ marginTop: '1rem', fontSize: '0.9rem' }}>
+                  <summary style={{ cursor: 'pointer', color: '#666' }}>Debug Information</summary>
+                  <div style={{ marginTop: '0.5rem', padding: '0.5rem', background: '#f5f5f5', borderRadius: '4px', fontFamily: 'monospace', fontSize: '0.85rem' }}>
+                    <div>Address: {address}</div>
+                    {eircode && <div>Eircode: {eircode}</div>}
+                    {bedrooms && <div>Bedrooms: {bedrooms}</div>}
+                    {berRating && <div>BER: {berRating}</div>}
+                    <div>Timestamp: {new Date().toLocaleString('en-IE', {
                       year: 'numeric',
                       month: 'short',
                       day: 'numeric',
                       hour: '2-digit',
                       minute: '2-digit',
                       second: '2-digit'
-                    })} · Build {buildVersion}
+                    })}</div>
+                    <div>Build: {buildVersion}</div>
+                    <div>API URL: {import.meta.env.VITE_API_URL || '/api (default)'}</div>
+                  </div>
+                </details>
+                <p className="val-error-meta" style={{ marginTop: '1rem' }}>
+                  <small>
+                    Need help? Check the browser console (F12) for more details.
                   </small>
                 </p>
               </div>
@@ -342,6 +398,7 @@ export default function ValuationPage() {
                       <tr>
                         <th>Address</th>
                         <th>Sale Date</th>
+                        <th>Bedrooms</th>
                         <th>Original Price</th>
                         <th>Adjusted Price</th>
                         <th>Distance</th>
@@ -353,6 +410,7 @@ export default function ValuationPage() {
                         <tr key={comp.id}>
                           <td className="val-td-address">{comp.address}</td>
                           <td>{formatDate(comp.sale_date)}</td>
+                          <td>{comp.bedrooms ?? '—'}</td>
                           <td>{euro(comp.price)}</td>
                           <td className="val-td-adjusted">{euro(comp.adjusted_price)}</td>
                           <td>{formatDistance(comp.distance_m)}</td>
@@ -406,6 +464,8 @@ export default function ValuationPage() {
           </p>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

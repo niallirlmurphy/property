@@ -142,28 +142,32 @@ class MVPAdjuster:
     def calculate_weight(
         self,
         comparable: Dict,
-        max_distance_m: float
+        max_distance_m: float,
+        subject_bedrooms: int = None
     ) -> float:
         """
         Calculate weight for a comparable property.
 
         Weight formula:
-            weight = distance_factor² × recency_score
+            weight = distance_factor² × recency_score × bedroom_bonus
 
         Where:
             distance_factor = (1 - distance / max_distance)
             recency_score = 0-1 (calculated in comparable search)
+            bedroom_bonus = 1.5 if bedrooms match, 1.0 otherwise
 
-        Properties closer and more recent get higher weight.
+        Properties closer, more recent, and with matching bedrooms get higher weight.
 
         Args:
             comparable: Comparable property dict with keys:
                 - distance_m: Distance in meters
                 - recency_score: Recency score (0-1)
+                - bedrooms: Number of bedrooms (optional)
             max_distance_m: Maximum distance among all comparables
+            subject_bedrooms: Subject property bedroom count (optional)
 
         Returns:
-            Weight value (0-1)
+            Weight value (0-1+, normalized later)
         """
 
         distance_m = float(comparable['distance_m'])
@@ -179,20 +183,33 @@ class MVPAdjuster:
         distance_weight = distance_factor ** 2
 
         # Combine distance and recency
-        weight = distance_weight * recency_score
+        base_weight = distance_weight * recency_score
 
-        # Ensure weight is in [0, 1]
-        return max(0.0, min(1.0, weight))
+        # Bedroom matching bonus
+        bedroom_bonus = 1.0
+        if subject_bedrooms is not None:
+            comp_bedrooms = comparable.get('bedrooms')
+            if comp_bedrooms is not None and comp_bedrooms == subject_bedrooms:
+                # 50% bonus for matching bedroom count
+                bedroom_bonus = 1.5
+
+        # Apply bedroom bonus
+        weight = base_weight * bedroom_bonus
+
+        # Note: Not clamping to [0, 1] here since we normalize after
+        return max(0.0, weight)
 
     def calculate_all_weights(
         self,
-        comparables: list
+        comparables: list,
+        subject_bedrooms: int = None
     ) -> list:
         """
         Calculate weights for all comparables.
 
         Args:
             comparables: List of comparable property dicts
+            subject_bedrooms: Subject property bedroom count (optional)
 
         Returns:
             List of weight values (same order as input)
@@ -207,7 +224,7 @@ class MVPAdjuster:
         # Calculate weight for each comparable
         weights = []
         for comparable in comparables:
-            weight = self.calculate_weight(comparable, max_distance)
+            weight = self.calculate_weight(comparable, max_distance, subject_bedrooms)
             weights.append(weight)
 
         # Normalize weights to sum to 1.0

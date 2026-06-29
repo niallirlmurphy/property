@@ -83,6 +83,7 @@ export interface EircodeResponse {
 export interface ValuationRequest {
   address: string;
   eircode?: string;
+  county?: string;
   valuation_date?: string;
   bedrooms?: number;
   ber_rating?: string;
