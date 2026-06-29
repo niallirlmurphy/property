@@ -1,0 +1,77 @@
+name: Search Protection Tests
+
+on:
+  pull_request:
+    paths:
+      - 'backend/main.py'
+      - 'frontend/src/App.tsx'
+      - 'frontend/src/api.ts'
+      - 'frontend/src/components/SearchPanel.tsx'
+      - 'tests/test_search_core.py'
+  push:
+    branches: [ main ]
+    paths:
+      - 'backend/main.py'
+      - 'frontend/src/App.tsx'
+      - 'frontend/src/api.ts'
+      - 'frontend/src/components/SearchPanel.tsx'
+
+jobs:
+  search-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install pytest pytest-asyncio httpx
+          cd backend
+          pip install -r requirements.txt
+
+      - name: Start backend service
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          MAPBOX_TOKEN: ${{ secrets.MAPBOX_TOKEN }}
+        run: |
+          cd backend
+          python -m uvicorn main:app --host 0.0.0.0 --port 8000 &
+          echo $! > /tmp/backend.pid
+          # Wait for backend to be ready
+          for i in {1..30}; do
+            if curl -s http://localhost:8000/health > /dev/null; then
+              echo "Backend is ready"
+              break
+            fi
+            echo "Waiting for backend... ($i/30)"
+            sleep 1
+          done
+
+      - name: Run search regression tests
+        env:
+          TEST_API_URL: http://localhost:8000
+        run: |
+          pytest tests/test_search_core.py -v --tb=short
+
+      - name: Stop backend
+        if: always()
+        run: |
+          if [ -f /tmp/backend.pid ]; then
+            kill $(cat /tmp/backend.pid) || true
+          fi
+
+      - name: Report results
+        if: always()
+        run: |
+          if [ $? -eq 0 ]; then
+            echo "✅ All search protection tests passed"
+          else
+            echo "❌ Search protection tests failed"
+            echo "Review test output above and fix before merging"
+            exit 1
+          fi

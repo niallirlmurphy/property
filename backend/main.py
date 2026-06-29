@@ -1094,6 +1094,30 @@ async def search(
         "count": len(rows),
         "results": [serialize_row(r) for r in rows],
     }
+
+    # CRITICAL: Monitor county filter breaches
+    if county and not county_filter_removed and len(rows) > 0:
+        result_counties = {r["county"] for r in result["results"]}
+        if county not in result_counties or len(result_counties) > 1:
+            # Alert: county filter not working correctly!
+            wrong_county_count = sum(1 for r in result["results"] if r["county"] != county)
+            if SENTRY_DSN:
+                sentry_sdk.capture_message(
+                    f"County filter breach in radius search: requested {county}, got {result_counties}",
+                    level="error",
+                    extras={
+                        "query": q,
+                        "county_requested": county,
+                        "counties_in_results": list(result_counties),
+                        "wrong_county_count": wrong_county_count,
+                        "total_results": len(rows),
+                        "lat": lat,
+                        "lon": lon,
+                        "radius_km": actual_radius,
+                    }
+                )
+            logger.error(f"COUNTY FILTER BREACH: query='{q}', county={county}, result_counties={result_counties}")
+
     cache.set("search", cache_params, result, TTL_SEARCH)
 
     # Log search query for analytics (fire and forget)
@@ -1254,6 +1278,27 @@ async def search_exact(
         "count": len(rows),
         "results": [serialize_row(r) for r in rows],
     }
+
+    # CRITICAL: Monitor county filter breaches in exact search
+    if county and len(rows) > 0:
+        wrong_county = [r for r in rows if r["county"] != county]
+        if len(wrong_county) > 0:
+            # Alert: exact search returned wrong county!
+            result_counties = {r["county"] for r in rows}
+            if SENTRY_DSN:
+                sentry_sdk.capture_message(
+                    f"County filter breach in exact search: requested {county}, got {result_counties}",
+                    level="error",
+                    extras={
+                        "address": address,
+                        "county_requested": county,
+                        "counties_in_results": list(result_counties),
+                        "wrong_county_count": len(wrong_county),
+                        "total_results": len(rows),
+                        "search_normalized": search_normalized,
+                    }
+                )
+            logger.error(f"EXACT SEARCH COUNTY FILTER BREACH: address='{address}', county={county}, result_counties={result_counties}")
 
     # Cache the result
     cache.set("exact_search", cache_key, result, TTL_EXACT_SEARCH)

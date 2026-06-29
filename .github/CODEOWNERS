@@ -1,0 +1,33 @@
+# Code ownership for HomeIQ
+# Format: path/pattern @username
+# Owners automatically added as reviewers on PRs touching these files
+
+# Search-critical files require approval
+# Changes to search logic must pass test suite and manual verification
+/backend/main.py @niallirlmurphy
+/frontend/src/App.tsx @niallirlmurphy
+/frontend/src/api.ts @niallirlmurphy
+/frontend/src/components/SearchPanel.tsx @niallirlmurphy
+/tests/test_search_core.py @niallirlmurphy
+/docs/SEARCH_LOGIC.md @niallirlmurphy
+
+# Database schema and security
+/db/schema.sql @niallirlmurphy
+/backend/.env.example @niallirlmurphy
+/scripts/*security*.py @niallirlmurphy
+/scripts/enable_rls_security.py @niallirlmurphy
+
+# Geocoding and data quality
+/geocode.py @niallirlmurphy
+/scripts/geocode_mapbox_batch.py @niallirlmurphy
+/scripts/sync_ppr_updates.py @niallirlmurphy
+/scripts/normalize_addresses.py @niallirlmurphy
+
+# CI/CD and deployment
+/.github/workflows/ @niallirlmurphy
+/backend/railway.toml @niallirlmurphy
+/frontend/vercel.json @niallirlmurphy
+
+# Documentation
+/CLAUDE.md @niallirlmurphy
+/docs/ @niallirlmurphy
