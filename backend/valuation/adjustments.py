@@ -149,14 +149,18 @@ class MVPAdjuster:
         Calculate weight for a comparable property.
 
         Weight formula:
-            weight = distance_factor² × recency_score × bedroom_bonus
+            weight = distance_factor² × recency_score × bedroom_factor
 
         Where:
             distance_factor = (1 - distance / max_distance)
             recency_score = 0-1 (calculated in comparable search)
-            bedroom_bonus = 1.5 if bedrooms match, 1.0 otherwise
+            bedroom_factor depends on bedroom difference:
+                - Same bedrooms: 1.5× (50% bonus)
+                - 1 bedroom difference: 0.7× (30% penalty)
+                - 2+ bedroom difference: 0.2× (80% penalty)
 
-        Properties closer, more recent, and with matching bedrooms get higher weight.
+        This ensures properties with significantly different sizes (e.g., 3-bed vs 5-bed)
+        receive very low weight, preventing inappropriate comparisons.
 
         Args:
             comparable: Comparable property dict with keys:
@@ -185,16 +189,26 @@ class MVPAdjuster:
         # Combine distance and recency
         base_weight = distance_weight * recency_score
 
-        # Bedroom matching bonus
-        bedroom_bonus = 1.0
+        # Bedroom matching factor
+        bedroom_factor = 1.0
         if subject_bedrooms is not None:
             comp_bedrooms = comparable.get('bedrooms')
-            if comp_bedrooms is not None and comp_bedrooms == subject_bedrooms:
-                # 50% bonus for matching bedroom count
-                bedroom_bonus = 1.5
+            if comp_bedrooms is not None:
+                bedroom_diff = abs(comp_bedrooms - subject_bedrooms)
 
-        # Apply bedroom bonus
-        weight = base_weight * bedroom_bonus
+                if bedroom_diff == 0:
+                    # Exact match: 50% bonus
+                    bedroom_factor = 1.5
+                elif bedroom_diff == 1:
+                    # 1 bedroom difference: slight penalty
+                    bedroom_factor = 0.7
+                else:
+                    # 2+ bedroom difference: heavy penalty
+                    # 3-bed vs 5-bed should have very low weight
+                    bedroom_factor = 0.2
+
+        # Apply bedroom factor
+        weight = base_weight * bedroom_factor
 
         # Note: Not clamping to [0, 1] here since we normalize after
         return max(0.0, weight)
