@@ -50,8 +50,10 @@ export async function searchProperties(params: SearchParams): Promise<SearchResp
   }
 }
 
-export async function searchExactAddress(address: string): Promise<{ address: string; count: number; results: Property[] }> {
-  const url = buildUrl("/search/exact", { address });
+export async function searchExactAddress(address: string, county?: string): Promise<{ address: string; count: number; results: Property[] }> {
+  const params: Record<string, string> = { address };
+  if (county) params.county = county;
+  const url = buildUrl("/search/exact", params);
 
   try {
     console.log("[API] Fetching exact address:", url);

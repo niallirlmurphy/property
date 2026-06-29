@@ -1132,6 +1132,7 @@ async def search(
 async def search_exact(
     request: Request,
     address: str = Query(..., description="Exact address to search for"),
+    county: Optional[str] = Query(None, description="County filter (e.g., Dublin, Cork)"),
 ):
     """Get ALL sales for an exact address match using normalized addresses."""
     start_time = time.time()
@@ -1179,24 +1180,38 @@ async def search_exact(
 
     search_normalized = normalize_for_search(address)
 
-    # Check cache first
-    cache_key = {"address": search_normalized}
+    # Check cache first (include county in cache key)
+    cache_key = {"address": search_normalized, "county": county}
     cached = cache.get("exact_search", cache_key)
     if cached is not None:
         return cached
 
     # Step 1: Find exact address match with prefix search
     # Handle NULL address_normalized by falling back to address column
-    exact_rows = await db_pool.fetch("""
-        SELECT
-            id, sale_date, address, county, eircode, price,
-            not_full_market_price, vat_exclusive, description,
-            size_description, latitude, longitude,
-            routing_key, bedrooms, property_type
-        FROM properties
-        WHERE starts_with(COALESCE(address_normalized, address), $1)
-        ORDER BY sale_date DESC
-    """, search_normalized)
+    # Apply county filter if provided
+    if county:
+        exact_rows = await db_pool.fetch("""
+            SELECT
+                id, sale_date, address, county, eircode, price,
+                not_full_market_price, vat_exclusive, description,
+                size_description, latitude, longitude,
+                routing_key, bedrooms, property_type
+            FROM properties
+            WHERE starts_with(COALESCE(address_normalized, address), $1)
+              AND county = $2
+            ORDER BY sale_date DESC
+        """, search_normalized, county)
+    else:
+        exact_rows = await db_pool.fetch("""
+            SELECT
+                id, sale_date, address, county, eircode, price,
+                not_full_market_price, vat_exclusive, description,
+                size_description, latitude, longitude,
+                routing_key, bedrooms, property_type
+            FROM properties
+            WHERE starts_with(COALESCE(address_normalized, address), $1)
+            ORDER BY sale_date DESC
+        """, search_normalized)
 
     # Step 2: Use exact matches only - DO NOT use spatial search
     # S1 page shows sales history for the SPECIFIC property only, not nearby comparables
@@ -1206,18 +1221,33 @@ async def search_exact(
     else:
         # Step 3: No exact match - try full-text search as fallback
         search_terms = ' & '.join(search_normalized.split())
-        rows = await db_pool.fetch("""
-            SELECT
-                id, sale_date, address, county, eircode, price,
-                not_full_market_price, vat_exclusive, description,
-                size_description, latitude, longitude,
-                routing_key, bedrooms, property_type,
-                ts_rank(to_tsvector('english', COALESCE(address_normalized, address)), to_tsquery('english', $1)) as rank
-            FROM properties
-            WHERE to_tsvector('english', COALESCE(address_normalized, address)) @@ to_tsquery('english', $1)
-            ORDER BY rank DESC, sale_date DESC
-            LIMIT 100
-        """, search_terms)
+        if county:
+            rows = await db_pool.fetch("""
+                SELECT
+                    id, sale_date, address, county, eircode, price,
+                    not_full_market_price, vat_exclusive, description,
+                    size_description, latitude, longitude,
+                    routing_key, bedrooms, property_type,
+                    ts_rank(to_tsvector('english', COALESCE(address_normalized, address)), to_tsquery('english', $1)) as rank
+                FROM properties
+                WHERE to_tsvector('english', COALESCE(address_normalized, address)) @@ to_tsquery('english', $1)
+                  AND county = $2
+                ORDER BY rank DESC, sale_date DESC
+                LIMIT 100
+            """, search_terms, county)
+        else:
+            rows = await db_pool.fetch("""
+                SELECT
+                    id, sale_date, address, county, eircode, price,
+                    not_full_market_price, vat_exclusive, description,
+                    size_description, latitude, longitude,
+                    routing_key, bedrooms, property_type,
+                    ts_rank(to_tsvector('english', COALESCE(address_normalized, address)), to_tsquery('english', $1)) as rank
+                FROM properties
+                WHERE to_tsvector('english', COALESCE(address_normalized, address)) @@ to_tsquery('english', $1)
+                ORDER BY rank DESC, sale_date DESC
+                LIMIT 100
+            """, search_terms)
 
     result = {
         "address": address,

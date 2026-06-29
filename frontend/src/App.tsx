@@ -286,7 +286,7 @@ export default function App() {
     try {
       // Run exact search and radius search in parallel
       const looksLikeAddress = /^\d+\s/.test(params.q.trim());
-      const exactPromise = looksLikeAddress ? searchExactAddress(params.q).catch(() => null) : Promise.resolve(null);
+      const exactPromise = looksLikeAddress ? searchExactAddress(params.q, params.county).catch(() => null) : Promise.resolve(null);
 
       let [pins, result, exactResult] = await Promise.all([
         fetchNearestPins(params, 10),
