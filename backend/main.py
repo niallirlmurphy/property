@@ -437,7 +437,7 @@ def _token_condition(t: str, idx: int) -> "tuple[str, list]":
         return f"({' OR '.join(conditions)})", patterns
 
 
-async def _geocode_db_tokens(query: str) -> "tuple[float, float] | None":
+async def _geocode_db_tokens(query: str, county: Optional[str] = None) -> "tuple[float, float] | None":
     """Match query against DB by requiring all significant tokens to appear in the address.
     Each token also matches its abbreviated/expanded form (road↔rd, avenue↔ave, etc.)
     so DB entries like 'MERRION RD' match a query for 'Merrion Road'.
@@ -445,6 +445,7 @@ async def _geocode_db_tokens(query: str) -> "tuple[float, float] | None":
     Single-token queries (e.g. "Rathmines") use a tighter stddev threshold to avoid
     false positives from common words.
     Requires a pg_trgm GIN index on LOWER(address) for acceptable performance.
+    Optionally filters by county to disambiguate addresses that exist in multiple counties.
     """
     tokens = _address_tokens(query)
     if not tokens:
@@ -459,6 +460,12 @@ async def _geocode_db_tokens(query: str) -> "tuple[float, float] | None":
         parts.append(cond)
         params.extend(p)
         idx += len(p)
+
+    # Add county filter if provided
+    if county:
+        parts.append(f"LOWER(county) = LOWER(${idx})")
+        params.append(county)
+        idx += 1
 
     where = " AND ".join(parts)
     try:
@@ -630,16 +637,23 @@ async def _geocode_mapbox(
 async def _geocode_nominatim(
     query: str,
     client: httpx.AsyncClient,
+    county: Optional[str] = None,
 ) -> "tuple[float, float] | None":
     """Resolve query (address, place name, or eircode) via Nominatim.
     Returns (lat, lon) if successful, None otherwise.
-    Nominatim returns results ordered by importance, so first result is usually correct."""
+    Nominatim returns results ordered by importance, so first result is usually correct.
+    County parameter helps disambiguate addresses that exist in multiple counties."""
     try:
-        # Nominatim search — add "Ireland" to avoid international matches
+        # Nominatim search — add county (if provided) and "Ireland" to avoid international matches
+        search_query = f"{query.strip()}"
+        if county:
+            search_query = f"{search_query}, {county}"
+        search_query = f"{search_query}, Ireland"
+
         resp = await client.get(
             "https://nominatim.openstreetmap.org/search",
             params={
-                "q": f"{query.strip()} Ireland",
+                "q": search_query,
                 "format": "json",
                 "limit": 1,
                 "addressdetails": 0,  # Faster response without full address breakdown
@@ -706,13 +720,13 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
     if coord_match:
         return float(coord_match.group(1)), float(coord_match.group(2)), "raw"
 
-    # 2. Cache hit (v3 namespace after prioritizing Nominatim for place names)
-    cached = cache.get("geocode_v3", {"q": query})
+    # 2. Cache hit (v4 namespace - includes county for disambiguation)
+    cached = cache.get("geocode_v4", {"q": query, "county": county or ""})
     if cached is not None:
         return cached["lat"], cached["lon"], "cache"
 
     def _cache_and_return(lat: float, lon: float, source: str) -> "tuple[float, float, str]":
-        cache.set("geocode_v3", {"q": query}, {"lat": lat, "lon": lon}, TTL_GEOCODE)
+        cache.set("geocode_v4", {"q": query, "county": county or ""}, {"lat": lat, "lon": lon}, TTL_GEOCODE)
         return lat, lon, source
 
     # 3a. Routing key (3-char Eircode prefix like D02, H91) — return centroid of all properties with that prefix
@@ -786,15 +800,17 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
     # 4. Token-based DB lookup — matches addresses by significant words.
     # Handles abbreviation mismatches (Rd vs Road) and finds tight clusters in known
     # Irish developments before falling through to external geocoders.
-    result = await _geocode_db_tokens(query)
+    # County filter helps disambiguate addresses that exist in multiple counties.
+    result = await _geocode_db_tokens(query, county)
     if result:
         return _cache_and_return(*result, "db_tokens")
 
     # 5. Nominatim — free OSM geocoder with good Irish coverage. Returns results ordered
     # by importance, so first result is usually the primary settlement/address.
     # Better than Mapbox for place names (avoids sub-locality confusion like Barna).
+    # County parameter helps disambiguate addresses in multiple locations.
     async with httpx.AsyncClient() as client:
-        result = await _geocode_nominatim(query, client)
+        result = await _geocode_nominatim(query, client, county)
         if result:
             return _cache_and_return(*result, "nominatim")
 
