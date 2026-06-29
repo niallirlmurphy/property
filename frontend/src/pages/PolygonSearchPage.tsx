@@ -6,6 +6,7 @@ import "leaflet-draw/dist/leaflet.draw.css";
 import "leaflet-draw";
 import WaffleMenu from "../components/WaffleMenu";
 import PageHeader from "../components/PageHeader";
+import Footer from "../components/Footer";
 import { usePageMeta } from "../hooks/usePageMeta";
 import type { Property } from "../types";
 
@@ -622,6 +623,7 @@ export default function PolygonSearchPage() {
         </div>
       )}
 
+      <Footer />
       <WaffleMenu />
     </div>
   );

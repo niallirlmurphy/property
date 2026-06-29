@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
+import Footer from "../components/Footer";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function AboutPage() {
@@ -147,6 +148,7 @@ export default function AboutPage() {
           </p>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }

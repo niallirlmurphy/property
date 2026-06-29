@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
 import WaffleMenu from "../components/WaffleMenu";
+import Footer from "../components/Footer";
 import { BLOG_POSTS } from "./BlogListPage";
 
 // Blog post content - import from individual files
@@ -190,6 +191,7 @@ export default function BlogPostPage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { fetchAreaSummary } from "../api";
 import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
+import Footer from "../components/Footer";
 import type { AreaSummary } from "../types";
 import { areaFromSlug } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
@@ -115,6 +116,7 @@ export default function AreaPage() {
           </section>
         </>
       )}
+      <Footer />
     </div>
     </>
   );

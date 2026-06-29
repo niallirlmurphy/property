@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { fetchCountySummary } from "../api";
 import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
+import Footer from "../components/Footer";
 import CountyPageTemplate from "../components/CountyPageTemplate";
 import type { CountySummary } from "../types";
 import { countyFromSlug } from "../areas";
@@ -159,6 +160,7 @@ export default function CountyPage() {
           </section>
         </>
       )}
+      <Footer />
     </div>
     </>
   );

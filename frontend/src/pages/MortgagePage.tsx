@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import PageHeader from "../components/PageHeader";
+import Footer from "../components/Footer";
 import { usePageMeta } from "../hooks/usePageMeta";
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
@@ -373,6 +374,7 @@ export default function MortgagePage() {
       <p className="mc-disclaimer">
         This page is for educational and informational purposes only. Your mortgage provider may have additional terms or fees not taken into consideration here.
       </p>
+      <Footer />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import ResultsList from "./components/ResultsList";
 import EircodePanel from "./components/EircodePanel";
 import TrendsChart from "./components/TrendsChart";
 import EmailAlertModal from "./components/EmailAlertModal";
+import Footer from "./components/Footer";
 import type { Property, SearchResponse, TrendPoint, SearchParams, EircodeResponse } from "./types";
 import WaffleMenu from "./components/WaffleMenu";
 import ContactSidebar from "./components/ContactModals";

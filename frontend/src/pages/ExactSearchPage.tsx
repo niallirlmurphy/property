@@ -1,6 +1,7 @@
 import { useState, FormEvent, useEffect, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import TrendsChart from "../components/TrendsChart";
+import Footer from "../components/Footer";
 import { searchProperties, searchExactAddress } from "../api";
 import type { Property, TrendPoint } from "../types";
 import "./ExactSearchPage.css";
@@ -405,23 +406,7 @@ export default function ExactSearchPage() {
       )}
 
       {/* Footer */}
-      <div className="search-footer">
-        <p>
-          <a href="/">Standard Search</a>
-          <span className="separator">•</span>
-          <a href="/s1">Single Property Search</a>
-          <span className="separator">•</span>
-          <a href="/polygon">Map Search</a>
-          <span className="separator">•</span>
-          <a href="/about">About</a>
-        </p>
-        <p className="build-info">
-          Build: {new Date().toLocaleString("en-IE", {
-            dateStyle: "medium",
-            timeStyle: "short",
-          })}
-        </p>
-      </div>
+      <Footer />
     </div>
   );
 }

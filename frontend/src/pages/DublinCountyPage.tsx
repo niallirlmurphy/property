@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
+import Footer from "../components/Footer";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 function formatPrice(n: number) {
@@ -140,6 +141,7 @@ export default function DublinCountyPage() {
           <Link to="/area/rathmines">Dublin neighbourhood</Link>.
         </p>
       </section>
+      <Footer />
     </div>
     </>
   );

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
 import WaffleMenu from "../components/WaffleMenu";
+import Footer from "../components/Footer";
 
 // Blog post metadata
 export interface BlogPost {
@@ -223,6 +224,7 @@ export default function BlogListPage() {
           </p>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

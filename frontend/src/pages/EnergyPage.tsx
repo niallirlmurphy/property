@@ -6,6 +6,7 @@ import {
   ResponsiveContainer, LineChart, Line, Cell, PieChart, Pie,
 } from "recharts";
 import PageHeader from "../components/PageHeader";
+import Footer from "../components/Footer";
 
 // ---------------------------------------------------------------------------
 // Data — sourced from SEAI BER Public Search dataset (1,403,166 assessments)
@@ -563,6 +564,7 @@ export default function EnergyPage() {
         </section>
 
       </div>
+      <Footer />
     </>
   );
 }

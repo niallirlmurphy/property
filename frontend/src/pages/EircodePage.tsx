@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { fetchEircode, fetchTrends } from "../api";
 import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
+import Footer from "../components/Footer";
 import type { EircodeResponse, TrendPoint } from "../types";
 import { DUBLIN_EIRCODE_AREAS } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
@@ -121,6 +122,7 @@ export default function EircodePage() {
           </section>
         </>
       )}
+      <Footer />
     </div>
     </>
   );

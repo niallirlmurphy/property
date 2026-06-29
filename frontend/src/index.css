@@ -11,6 +11,35 @@ body {
   color: #1a1a1a;
 }
 
+/* Site Footer */
+.site-footer {
+  padding: 40px 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.site-footer a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer .separator {
+  margin: 0 12px;
+}
+
+.site-footer .build-info {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #9ca3af !important;
+}
+
 /* ------------------------------------------------------------------ */
 /* Desktop layout (≥1024px) — default                                  */
 /* ------------------------------------------------------------------ */

@@ -247,6 +247,7 @@ export async function estimatePropertyValue(request: ValuationRequest): Promise<
 
   try {
     console.log("[API] Valuation request:", url, request);
+    console.log("[API] Backend URL:", BASE);
     const res = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -259,24 +260,32 @@ export async function estimatePropertyValue(request: ValuationRequest): Promise<
       const err = await res.json().catch(() => ({}));
       console.error("[API] Valuation error:", err);
 
+      // Enhanced error messages with context
       if (res.status === 400) {
-        throw new Error(err.detail ?? "Invalid address or request. Please check your input.");
+        const detail = err.detail ?? "Invalid address or request. Please check your input.";
+        throw new Error(`${detail}\n\nTroubleshooting:\n• Verify the address spelling\n• Include area name (e.g., "Crumlin, Dublin 12")\n• Try adding an Eircode for better accuracy`);
       } else if (res.status === 404) {
-        throw new Error(err.detail ?? "No comparable sales found for this location.");
+        const detail = err.detail ?? "No comparable sales found for this location.";
+        throw new Error(`${detail}\n\nPossible reasons:\n• Property is in a remote area with few recent sales\n• Address not found in database or geocoding services\n• Try including more address details or Eircode`);
       } else if (res.status === 500) {
-        throw new Error("Valuation calculation failed. Please try again.");
+        throw new Error(`Valuation calculation failed. Please try again.\n\nIf the problem persists:\n• Check the browser console for errors\n• Try a different property address\n• Contact support with the error details`);
       } else if (res.status === 429) {
-        throw new Error("Too many requests. Please wait a moment.");
+        throw new Error("Too many requests. Please wait a moment and try again.");
       }
-      throw new Error(err.detail ?? `Valuation failed: HTTP ${res.status}`);
+
+      // Generic error with debug info
+      throw new Error(`Valuation failed (HTTP ${res.status})\n\nError: ${err.detail ?? res.statusText}\nAPI URL: ${url}\n\nPlease check the browser console for more details.`);
     }
 
     return res.json();
   } catch (err) {
     console.error("[API] Valuation fetch error:", err);
+
     if (err instanceof TypeError) {
-      throw new Error(`Network error: ${err.message}`);
+      // Network connectivity issue or CORS error
+      throw new Error(`Network Error: Cannot connect to backend\n\nDetails: ${err.message}\nAPI URL: ${url}\n\nTroubleshooting:\n• Check your internet connection\n• Verify backend is running: ${BASE}\n• Check browser console for CORS errors\n• Ensure VITE_API_URL is set correctly`);
     }
+
     throw err;
   }
 }
