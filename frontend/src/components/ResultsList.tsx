@@ -91,9 +91,19 @@ export default function ResultsList({ results, activeId, onSelect, exactMatchIds
                       {p.bedrooms} {p.bedrooms === 1 ? 'bed' : 'beds'}
                     </span>
                   )}
-                  {p.property_type && (
+                  {/* Show property type, but filter out misclassified apartments
+                      Heuristic: Properties €1M-€3M with 3+ beds are likely houses, not apartments
+                      (Over €3M could be genuine luxury apartments, under €1M keep as-is) */}
+                  {p.property_type && !(
+                    p.property_type.toLowerCase() === 'apartment' &&
+                    p.price > 1000000 &&
+                    p.price < 3000000 &&
+                    (p.bedrooms || 0) > 2
+                  ) && (
                     <span className="enriched-badge">
-                      <span className="enriched-icon">🏠</span>
+                      <span className="enriched-icon">
+                        {p.property_type.toLowerCase() === 'apartment' ? '🏢' : '🏠'}
+                      </span>
                       {p.property_type}
                     </span>
                   )}
