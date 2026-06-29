@@ -270,55 +270,7 @@ export default function App() {
     if (params.county) nextParams.county = params.county;
     setSearchParams(nextParams, { replace: true });
 
-    // Detect if query looks like a specific address (starts with a number)
-    const looksLikeAddress = /^\d+\s/.test(params.q.trim());
-
-    try {
-      // Try exact address search first for address-like queries
-      if (looksLikeAddress) {
-        const exactResult = await searchExactAddress(params.q);
-        if (searchGenRef.current !== gen) return;
-
-        if (exactResult.count > 0) {
-          // Found exact matches - use them directly
-          const { exact, rest, partialMatchIds, exactMatchIds } = partitionByExactMatch(exactResult.results, params.q);
-          const sortedResults = [...exact, ...rest];
-          const allMatchIds = new Set([...partialMatchIds, ...exactMatchIds]);
-
-          const exactWithCoords = exact.filter(p => p.latitude != null && p.longitude != null);
-          const pins = exactWithCoords.slice(0, 10); // Top 10 for map
-
-          setMapPins(pins);
-          setSearchResult({ ...exactResult, results: sortedResults, center: { lat: 0, lon: 0 }, radius_km: 0 });
-          setLastSearchQuery(params.q);
-          setLastSearchCounty(params.county);
-
-          // Calculate center from first result with coordinates
-          if (exactWithCoords.length > 0) {
-            setPendingCenter({
-              lat: exactWithCoords[0].latitude!,
-              lon: exactWithCoords[0].longitude!,
-              radius_km: 0.5
-            });
-          }
-
-          // Calculate trends from exact results
-          const trendData = calculateTrendsFromProperties(exactResult.results);
-          if (trendData.length > 0) {
-            setTrends(trendData);
-            setShowTrends(true);
-          }
-
-          if (searchGenRef.current === gen) setLoading(false);
-          return; // Success - skip radius search
-        }
-      }
-    } catch (e) {
-      // Exact search failed or no results - fall through to radius search
-      console.log("Exact search failed, trying radius search:", e);
-    }
-
-    // Fall back to radius search (original behavior)
+    // Home page uses radius-based search only (exact address search is for S1 page)
     try {
       const resolvedCenter = await fetchGeocode(params.q, params.county);
       if (searchGenRef.current !== gen) return;
