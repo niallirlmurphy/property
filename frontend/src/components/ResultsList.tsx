@@ -92,13 +92,15 @@ export default function ResultsList({ results, activeId, onSelect, exactMatchIds
                     </span>
                   )}
                   {/* Show property type, but filter out misclassified apartments
-                      Heuristic: Properties €1M-€3M with 3+ beds are likely houses, not apartments
-                      (Over €3M could be genuine luxury apartments, under €1M keep as-is) */}
+                      Rules:
+                      1. If address contains APT/APARTMENT/FLAT/UNIT → definitely an apartment, show badge
+                      2. Otherwise, if price €1M-€3M with 3+ beds → likely house, hide apartment badge */}
                   {p.property_type && !(
                     p.property_type.toLowerCase() === 'apartment' &&
                     p.price > 1000000 &&
                     p.price < 3000000 &&
-                    (p.bedrooms || 0) > 2
+                    (p.bedrooms || 0) > 2 &&
+                    !/(apt|apartment|flat|unit)\s*\d+/i.test(p.address)
                   ) && (
                     <span className="enriched-badge">
                       <span className="enriched-icon">
