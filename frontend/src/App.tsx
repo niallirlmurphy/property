@@ -286,17 +286,6 @@ export default function App() {
       ]);
       if (searchGenRef.current !== gen) return;
 
-      // Auto-retry without county filter if 0 results and county was specified
-      // Better UX: user likely searched for a place in a different county
-      if (result.count === 0 && params.county) {
-        const paramsNoCounty = { ...params, county: undefined };
-        [pins, result] = await Promise.all([
-          fetchNearestPins(paramsNoCounty, 10),
-          searchProperties(paramsNoCounty),
-        ]);
-        if (searchGenRef.current !== gen) return;
-      }
-
       const { exact, rest, partialMatchIds, exactMatchIds } = partitionByExactMatch(result.results, params.q);
       const sortedResults = [...exact, ...rest];
       const sortedResult = { ...result, results: sortedResults };
