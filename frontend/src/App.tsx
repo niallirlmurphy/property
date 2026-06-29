@@ -125,7 +125,10 @@ function extractStreetName(address: string): string | null {
 function isExactMatch(address: string, query: string): boolean {
   const a = normaliseAddr(address);
   const q = normaliseAddr(query);
-  return a.startsWith(q) || a.includes(q);
+  // Must start with query to be exact match (not just contain it anywhere)
+  // e.g., "92 rathdown park terenure" starts with "92 rathdown park" ✓
+  // e.g., "109 rathdown park terenure" does NOT start with "92 rathdown park" ✗
+  return a.startsWith(q);
 }
 
 function isPartialMatch(address: string, query: string): boolean {
@@ -270,7 +273,8 @@ export default function App() {
     if (params.county) nextParams.county = params.county;
     setSearchParams(nextParams, { replace: true });
 
-    // Home page uses radius-based search only (exact address search is for S1 page)
+    // Fetch both exact address matches and radius-based comparables
+    // Exact matches shown at top, then nearby properties for comparison
     try {
       const resolvedCenter = await fetchGeocode(params.q, params.county);
       if (searchGenRef.current !== gen) return;
@@ -280,15 +284,29 @@ export default function App() {
     }
 
     try {
-      let [pins, result] = await Promise.all([
+      // Run exact search and radius search in parallel
+      const looksLikeAddress = /^\d+\s/.test(params.q.trim());
+      const exactPromise = looksLikeAddress ? searchExactAddress(params.q).catch(() => null) : Promise.resolve(null);
+
+      let [pins, result, exactResult] = await Promise.all([
         fetchNearestPins(params, 10),
         searchProperties(params),
+        exactPromise,
       ]);
       if (searchGenRef.current !== gen) return;
 
-      const { exact, rest, partialMatchIds, exactMatchIds } = partitionByExactMatch(result.results, params.q);
+      // Merge exact matches with radius results
+      // Exact matches go first (if they're not already in radius results)
+      let allResults = result.results;
+      if (exactResult && exactResult.count > 0) {
+        const radiusIds = new Set(result.results.map(p => p.id));
+        const uniqueExact = exactResult.results.filter(p => !radiusIds.has(p.id));
+        allResults = [...uniqueExact, ...result.results];
+      }
+
+      const { exact, rest, partialMatchIds, exactMatchIds } = partitionByExactMatch(allResults, params.q);
       const sortedResults = [...exact, ...rest];
-      const sortedResult = { ...result, results: sortedResults };
+      const sortedResult = { ...result, results: sortedResults, count: sortedResults.length };
 
       // Combine partial and exact match IDs for highlighting
       const allMatchIds = new Set([...partialMatchIds, ...exactMatchIds]);
