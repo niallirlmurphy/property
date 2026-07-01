@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Query, HTTPException, Request
+from fastapi import FastAPI, Query, HTTPException, Request, Depends, Header
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from contextlib import asynccontextmanager
@@ -13,6 +13,7 @@ import hashlib
 import json
 import httpx
 import logging
+import secrets
 from typing import Optional
 from dotenv import load_dotenv
 import sentry_sdk
@@ -65,6 +66,8 @@ DATABASE_URL    = os.environ["DATABASE_URL"]
 MAPBOX_TOKEN    = os.environ.get("MAPBOX_TOKEN", "")
 AUTOADDRESS_KEY = os.environ.get("AUTOADDRESS_KEY", "")
 SENTRY_DSN      = os.environ.get("SENTRY_DSN", "")
+ADMIN_API_TOKEN = os.environ.get("ADMIN_API_TOKEN", "")
+CRON_SECRET     = os.environ.get("CRON_SECRET", "")
 USER_AGENT      = "PPR-webapp/1.0 (personal research)"
 
 # Initialize Sentry for error tracking and performance monitoring
@@ -87,6 +90,50 @@ AA_AUTOCOMPLETE = "https://api.autoaddress.com/3.0/autocomplete"
 # Ireland geographic bounds for validation (prevents geocoding to UK/international locations)
 # Coordinates: (min_lat, max_lat, min_lon, max_lon)
 IRELAND_BOUNDS = (51.4, 55.5, -10.7, -5.4)
+
+# ---------------------------------------------------------------------------
+# Authentication helpers
+# ---------------------------------------------------------------------------
+
+async def verify_admin_token(authorization: str = Header(None)) -> bool:
+    """
+    Verify admin API token using constant-time comparison.
+    Prevents timing attacks that could reveal the token.
+    """
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(status_code=401, detail="Missing authentication token")
+
+    token = authorization.removeprefix("Bearer ")
+
+    if not ADMIN_API_TOKEN:
+        logger.error("ADMIN_API_TOKEN not configured in environment")
+        raise HTTPException(status_code=500, detail="Admin authentication not configured")
+
+    # Use constant-time comparison to prevent timing attacks
+    if not secrets.compare_digest(token, ADMIN_API_TOKEN):
+        logger.warning("Invalid admin token attempt")
+        raise HTTPException(status_code=403, detail="Invalid authentication token")
+
+    return True
+
+async def verify_cron_secret(x_cron_secret: str = Header(None)) -> bool:
+    """
+    Verify cron job secret using constant-time comparison.
+    Prevents timing attacks that could reveal the secret.
+    """
+    if not x_cron_secret:
+        raise HTTPException(status_code=401, detail="Missing cron secret")
+
+    if not CRON_SECRET:
+        logger.error("CRON_SECRET not configured in environment")
+        raise HTTPException(status_code=500, detail="Cron authentication not configured")
+
+    # Use constant-time comparison to prevent timing attacks
+    if not secrets.compare_digest(x_cron_secret, CRON_SECRET):
+        logger.warning("Invalid cron secret attempt")
+        raise HTTPException(status_code=403, detail="Invalid cron secret")
+
+    return True
 
 def _is_in_ireland(lat: float, lon: float) -> bool:
     """Check if coordinates fall within Ireland's bounding box."""
@@ -224,9 +271,17 @@ async def lifespan(app: FastAPI):
 _rate_buckets: dict[str, deque] = defaultdict(deque)
 
 def _client_ip(request: Request) -> str:
-    fwd = request.headers.get("x-forwarded-for", "")
-    if fwd:
-        return fwd.split(",")[0].strip()
+    """
+    Get client IP address safely.
+    Railway/Cloudflare sets CF-Connecting-IP with the real client IP.
+    This prevents X-Forwarded-For spoofing attacks.
+    """
+    # Railway uses Cloudflare which sets this header with the real client IP
+    cf_ip = request.headers.get("cf-connecting-ip")
+    if cf_ip:
+        return cf_ip
+
+    # Fallback to socket IP (safest, but may not work behind all proxies)
     return request.client.host if request.client else "unknown"
 
 def _rate_limit_check(request: Request, limit_per_min: int, namespace: str) -> None:
@@ -1329,10 +1384,25 @@ async def search_polygon(
 
     # Build PostGIS polygon from coordinates
     # PostGIS expects lon,lat order, not lat,lon
-    points_str = ", ".join([f"{lon} {lat}" for lat, lon in search_request.coordinates])
-    polygon_wkt = f"POLYGON(({points_str}))"
+    # SECURITY: Validate coordinates are numeric to prevent SQL injection
+    try:
+        # Validate all coordinates are floats and within reasonable bounds
+        validated_coords = []
+        for lat, lon in search_request.coordinates:
+            lat_f = float(lat)
+            lon_f = float(lon)
+            # Validate reasonable geographic bounds (world coordinates)
+            if not (-90 <= lat_f <= 90) or not (-180 <= lon_f <= 180):
+                raise ValueError(f"Coordinates out of bounds: ({lat_f}, {lon_f})")
+            validated_coords.append((lat_f, lon_f))
 
-    # Build query
+        # Build WKT string with validated float values
+        points_str = ", ".join([f"{lon} {lat}" for lat, lon in validated_coords])
+        polygon_wkt = f"POLYGON(({points_str}))"
+    except (ValueError, TypeError) as e:
+        raise HTTPException(status_code=400, detail=f"Invalid coordinate format: {str(e)}")
+
+    # Build query (polygon_wkt is now safe - all values are validated floats)
     filters = [f"ST_Within(geog::geometry, ST_GeomFromText('{polygon_wkt}', 4326))"]
     params: list = []
     idx = 1
@@ -1634,12 +1704,14 @@ async def counties(request: Request):
 # ---------------------------------------------------------------------------
 
 
-@app.get("/geocoding-queue/next")
+@app.get("/geocoding-queue/next", dependencies=[Depends(verify_admin_token)])
 async def get_next_property_to_geocode(request: Request):
     """
     Return the next high-priority property that needs manual geocoding.
     Priority order: price (>€500k first), then recency.
     Returns properties without coordinates (latitude IS NULL).
+
+    **Authentication required:** Bearer token in Authorization header
     """
     _rate_limit_check(request, 60, "geocoding_queue")
     row = await db_pool.fetchrow("""
@@ -1664,11 +1736,13 @@ class GeocodeUpdatePayload(BaseModel):
     eircode: Optional[str] = Field(None, max_length=10, description="Updated Eircode")
 
 
-@app.post("/geocoding-queue/update")
+@app.post("/geocoding-queue/update", dependencies=[Depends(verify_admin_token)])
 async def update_property_geocode(request: Request, payload: GeocodeUpdatePayload):
     """
     Manually assign geocode coordinates to a property.
     Updates latitude, longitude, geography column, and optionally address/eircode.
+
+    **Authentication required:** Bearer token in Authorization header
     """
     _rate_limit_check(request, 10, "geocoding_queue_update")
     try:
@@ -1730,11 +1804,13 @@ async def update_property_geocode(request: Request, payload: GeocodeUpdatePayloa
         raise HTTPException(status_code=500, detail="Could not update property")
 
 
-@app.post("/geocoding-queue/skip")
+@app.post("/geocoding-queue/skip", dependencies=[Depends(verify_admin_token)])
 async def skip_property_geocode(request: Request, property_id: int = Query(...)):
     """
     Skip manual geocoding for this property — keeps needs_geocoding = TRUE
     but could be extended to flag as 'skipped' if needed.
+
+    **Authentication required:** Bearer token in Authorization header
     """
     _rate_limit_check(request, 10, "geocoding_queue_skip")
     row = await db_pool.fetchrow("SELECT id FROM properties WHERE id = $1", property_id)
@@ -1991,11 +2067,14 @@ async def unsubscribe_email_alert(
         raise HTTPException(status_code=500, detail="Could not unsubscribe")
 
 
-@app.get("/email-alerts/active")
+@app.get("/email-alerts/active", dependencies=[Depends(verify_admin_token)])
 async def get_active_email_alerts(request: Request):
     """
     Get all active email alert subscriptions.
     For admin/cron use to send out alerts.
+
+    **Authentication required:** Bearer token in Authorization header
+    **Returns sensitive PII:** Email addresses, unsubscribe tokens
     """
     _rate_limit_check(request, 10, "email_alerts_active")
 
@@ -2010,12 +2089,14 @@ async def get_active_email_alerts(request: Request):
     return [serialize_row(r) for r in rows]
 
 
-@app.post("/cron/send-monthly-alerts")
-async def cron_send_monthly_alerts(request: Request, authorization: Optional[str] = None):
+@app.post("/cron/send-monthly-alerts", dependencies=[Depends(verify_cron_secret)])
+async def cron_send_monthly_alerts(request: Request):
     """
     Cron endpoint to send monthly property alerts.
     Protected by CRON_SECRET environment variable.
     Called by GitHub Actions on 1st of each month.
+
+    **Authentication required:** X-Cron-Secret header
     """
     # Check authorization
     cron_secret = os.getenv("CRON_SECRET")
