@@ -416,9 +416,28 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
 - For geographic search: Use `ST_DWithin` with coordinates from geocoding API
 
 ### Security
-- **Row-Level Security (RLS)**: Enabled on properties table. Public has SELECT-only access; writes blocked by default. Protects against unauthorized data modification while keeping PPR data publicly readable.
-- **CORS**: Restricted to homeiq.ie and www.homeiq.ie in production. localhost:5173 allowed in development.
-- **Monitoring**: Sentry integration for error tracking and performance monitoring. Search analytics tracked for observability.
+
+**DESIGN RULE: No Direct Database Access**
+- Anonymous users MUST NEVER have direct access to the Supabase database
+- All data access flows through the authenticated Railway backend API
+- Architecture: `Frontend → Railway API (authenticated) → Supabase`
+- The `anon` role should have ZERO permissions on all tables
+- This prevents direct PostgREST API access and ensures all queries go through our controlled backend
+
+**Row-Level Security (RLS)**
+- Enabled on properties table with authenticated-only access
+- `authenticated` role (used by backend via DATABASE_URL) has full access
+- `anon` role has NO permissions (by design)
+- Backend connection uses postgres role with full credentials
+
+**CORS**
+- Restricted to homeiq.ie and www.homeiq.ie in production
+- localhost:5173 allowed in development
+- Prevents unauthorized frontend origins from calling API
+
+**Monitoring**
+- Sentry integration for error tracking and performance monitoring
+- Search analytics tracked for observability
 
 ### Infrastructure
 - **Database**: Supabase (PostgreSQL + PostGIS). 784,464 properties, ~614,200 with coordinates (78.3% coverage as of 2026-05-29).

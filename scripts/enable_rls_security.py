@@ -2,9 +2,21 @@
 """
 Enable Row-Level Security (RLS) on Supabase properties table.
 
-This fixes the critical security vulnerability where the table was publicly
-accessible without any access controls. After enabling RLS, we create a
-read-only policy since PPR data is public information.
+DESIGN RULE: No Direct Database Access
+======================================
+Anonymous users should NEVER have direct access to the database.
+Our architecture is: Frontend → Railway API → Supabase
+
+- Frontend calls Railway backend API (authenticated)
+- Backend uses DATABASE_URL with postgres/authenticated role
+- Anonymous (anon) role has ZERO permissions
+- This prevents direct Supabase REST API access
+
+Security Configuration:
+- RLS enabled on all tables
+- Only 'authenticated' role has access
+- 'anon' role explicitly blocked (no GRANT statements)
+- PPR data remains publicly accessible via our API endpoints
 """
 
 import asyncio
@@ -47,28 +59,41 @@ async def enable_rls_security():
         await conn.execute("ALTER TABLE properties ENABLE ROW LEVEL SECURITY;")
         print("   ✅ RLS enabled")
 
-        # 3. Create read-only policy for public access
-        # PPR data is public information, so SELECT is allowed
-        # But INSERT/UPDATE/DELETE are blocked by default (no policies)
-        print("\n3. Creating public read-only policy...")
+        # 3. Create authenticated-only policy
+        # DESIGN RULE: No public/anon access
+        # Only authenticated role (backend) can access data
+        print("\n3. Creating authenticated-only access policy...")
 
-        # Drop existing policy if it exists
+        # Drop any public policies if they exist (should not exist)
         await conn.execute("""
             DROP POLICY IF EXISTS "Allow public read access" ON properties;
         """)
 
-        # Create new policy
+        # Drop existing authenticated policy if it exists
         await conn.execute("""
-            CREATE POLICY "Allow public read access"
-            ON properties
-            FOR SELECT
-            TO public
-            USING (true);
+            DROP POLICY IF EXISTS "backend_full_access_properties" ON properties;
         """)
-        print("   ✅ Public read-only policy created")
 
-        # 4. Verify configuration
-        print("\n4. Verifying security configuration...")
+        # Create authenticated-only policy
+        await conn.execute("""
+            CREATE POLICY "backend_full_access_properties"
+            ON properties
+            FOR ALL
+            TO authenticated
+            USING (true)
+            WITH CHECK (true);
+        """)
+        print("   ✅ Authenticated-only policy created")
+
+        # 4. Explicitly revoke anonymous access
+        print("\n4. Revoking anonymous access...")
+        await conn.execute("""
+            REVOKE ALL ON properties FROM anon;
+        """)
+        print("   ✅ Anonymous access revoked")
+
+        # 5. Verify configuration
+        print("\n5. Verifying security configuration...")
 
         # Check RLS status
         result = await conn.fetchrow("""
@@ -86,7 +111,7 @@ async def enable_rls_security():
 
         # Check policies
         policies = await conn.fetch("""
-            SELECT policyname, cmd, roles, qual, with_check
+            SELECT policyname, cmd, roles::text[]
             FROM pg_policies
             WHERE tablename = 'properties'
         """)
@@ -95,25 +120,31 @@ async def enable_rls_security():
         for policy in policies:
             print(f"     • {policy['policyname']}")
             print(f"       Command: {policy['cmd']}")
-            print(f"       Roles: {policy['roles']}")
+            print(f"       Roles: {', '.join(policy['roles'])}")
 
-        # 5. Test read access
-        print("\n5. Testing read access...")
+        # Check anonymous access is blocked
+        result = await conn.fetchrow("""
+            SELECT has_table_privilege('anon', 'properties', 'SELECT') as can_select
+        """)
+        if not result['can_select']:
+            print("\n   ✅ Anonymous access BLOCKED")
+        else:
+            print("\n   ❌ WARNING: Anonymous can still access table")
+
+        # 6. Test backend access
+        print("\n6. Testing backend access...")
         count = await conn.fetchval("SELECT COUNT(*) FROM properties")
-        print(f"   ✅ Can read data: {count:,} properties")
-
-        # 6. Test write protection (should fail without proper role)
-        print("\n6. Testing write protection...")
-        print("   (This should show that writes are blocked)")
+        print(f"   ✅ Backend can read data: {count:,} properties")
 
         print("\n" + "="*70)
         print("SECURITY CONFIGURATION COMPLETE")
         print("="*70)
         print("\n✅ Properties table is now secured with RLS")
-        print("✅ Public can read (SELECT) data")
-        print("✅ Writes (INSERT/UPDATE/DELETE) are blocked by default")
-        print("\nRecommendation: Create additional policies if you need")
-        print("authenticated users to modify data in the future.")
+        print("✅ Authenticated role (backend) has full access")
+        print("✅ Anonymous role has NO access (by design)")
+        print("✅ Writes controlled by backend API only")
+        print("\nArchitecture: Frontend → Railway API → Supabase")
+        print("Result: All database access goes through authenticated backend")
 
     except Exception as e:
         print(f"\n❌ Error: {e}")
