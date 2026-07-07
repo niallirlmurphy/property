@@ -478,10 +478,25 @@ python3 scripts/enable_rls_security.py
 - localhost:5173 allowed in development
 - Prevents unauthorized frontend origins from calling API
 
-**Monitoring**
+**Automated Security Monitoring**
+- **Daily proactive checks** via GitHub Actions (3:00 AM UTC)
+- Auto-detects RLS configuration drift and fixes automatically
+- Script: `scripts/security_monitor.py` (run manually anytime)
+- Setup: See [AUTOMATED_SECURITY_SETUP.md](AUTOMATED_SECURITY_SETUP.md)
+- **Expected result**: No Supabase security alert emails
+
+**Manual verification** (if needed):
+```bash
+# Quick check
+python3 scripts/security_monitor.py
+
+# Check and auto-fix
+python3 scripts/security_monitor.py --fix
+```
+
+**Application Monitoring**
 - Sentry integration for error tracking and performance monitoring
 - Search analytics tracked for observability
-- Supabase security advisor: should show NO alerts for RLS configuration
 
 ### Infrastructure
 - **Database**: Supabase (PostgreSQL + PostGIS). 784,464 properties, ~614,200 with coordinates (78.3% coverage as of 2026-05-29).

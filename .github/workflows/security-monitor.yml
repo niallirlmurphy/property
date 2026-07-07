@@ -1,0 +1,69 @@
+name: Daily Security Monitoring
+
+on:
+  schedule:
+    # Run daily at 3:00 AM UTC (4:00 AM IST)
+    - cron: '0 3 * * *'
+  workflow_dispatch:  # Allow manual trigger
+  push:
+    paths:
+      - 'scripts/security_monitor.py'
+      - '.github/workflows/security-monitor.yml'
+
+jobs:
+  security-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install asyncpg python-dotenv
+
+      - name: Run security monitoring
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          python3 scripts/security_monitor.py
+
+      - name: Auto-fix if issues found
+        if: failure()
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          echo "⚠️ Security issues detected - attempting auto-fix..."
+          python3 scripts/security_monitor.py --fix
+
+      - name: Notify on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🚨 Security monitoring failed',
+              body: `Security checks detected issues that could not be auto-fixed.
+
+              **Action required:** Review and fix manually.
+
+              **Run:** \`python3 scripts/security_monitor.py\`
+
+              **Workflow:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}
+
+              See [SECURITY_CHECKLIST.md](SECURITY_CHECKLIST.md) for verification steps.`,
+              labels: ['security', 'automated']
+            })
+
+      - name: Report success
+        if: success()
+        run: |
+          echo "✅ All security checks passed"
+          echo "🔒 Database security configuration verified"
