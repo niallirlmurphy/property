@@ -424,11 +424,54 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
 - The `anon` role should have ZERO permissions on all tables
 - This prevents direct PostgREST API access and ensures all queries go through our controlled backend
 
-**Row-Level Security (RLS)**
-- Enabled on properties table with authenticated-only access
-- `authenticated` role (used by backend via DATABASE_URL) has full access
-- `anon` role has NO permissions (by design)
-- Backend connection uses postgres role with full credentials
+**Row-Level Security (RLS) - CONFIGURED 2026-07-07**
+- **Status**: ENABLED on properties table
+- **Policy**: `backend_full_access_properties` (FOR ALL TO authenticated)
+- **Authenticated role**: Full CRUD access via DATABASE_URL connection
+- **Anonymous role**: ALL privileges REVOKED (by design)
+- **Direct PostgREST access**: BLOCKED
+
+**Verifying RLS Configuration**
+If you receive Supabase security alerts about RLS, verify the configuration is correct:
+
+```bash
+# Quick verification - should show "ENABLED" and anon access BLOCKED
+python3 scripts/enable_rls_security.py
+
+# Manual SQL verification (via Supabase dashboard or psql)
+# 1. Check RLS is enabled
+SELECT tablename, rowsecurity 
+FROM pg_tables 
+WHERE schemaname = 'public' AND tablename = 'properties';
+-- Result: rowsecurity = true
+
+# 2. Check policy exists
+SELECT policyname, cmd, roles::text[] 
+FROM pg_policies 
+WHERE tablename = 'properties';
+-- Result: backend_full_access_properties, ALL, {authenticated}
+
+# 3. Verify anonymous access is blocked
+SELECT has_table_privilege('anon', 'properties', 'SELECT');
+-- Result: false
+
+# 4. Verify backend can access (via DATABASE_URL connection)
+SELECT COUNT(*) FROM properties;
+-- Result: ~785,000 rows (should succeed)
+```
+
+**Re-enabling RLS After Schema Changes**
+If you drop/recreate the properties table, RLS and policies are lost. Re-run:
+```bash
+export $(grep '^DATABASE_URL=' backend/.env | xargs)
+python3 scripts/enable_rls_security.py
+```
+
+**What This Prevents**
+- ❌ Direct access via Supabase PostgREST API (https://[project].supabase.co/rest/v1/properties)
+- ❌ Direct access via Supabase client libraries without authentication
+- ❌ Unauthorized reads, writes, updates, or deletes
+- ✅ All access controlled through Railway backend with rate limiting and validation
 
 **CORS**
 - Restricted to homeiq.ie and www.homeiq.ie in production
@@ -438,6 +481,7 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
 **Monitoring**
 - Sentry integration for error tracking and performance monitoring
 - Search analytics tracked for observability
+- Supabase security advisor: should show NO alerts for RLS configuration
 
 ### Infrastructure
 - **Database**: Supabase (PostgreSQL + PostGIS). 784,464 properties, ~614,200 with coordinates (78.3% coverage as of 2026-05-29).
@@ -453,12 +497,32 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
 - **Geocoding API**: Mapbox (~100k/100k requests used this month, resets next month). Reserve 2k/month for biweekly PPR sync.
 
 ## Troubleshooting
+
+### Database & Security
 - **`DATABASE_URL` errors**: verify `.env` value format and DB reachability; confirm PostGIS extension is enabled.
+- **Supabase security alerts about RLS**: 
+  - Check CLAUDE.md Security section for verification steps
+  - Run `python3 scripts/enable_rls_security.py` to re-enable RLS
+  - Verify with SQL queries in Security section
+  - Alert should clear within 24 hours after fixing
+  - **Expected configuration**: RLS ENABLED, anon role has NO permissions, authenticated role has full access
+- **Backend can’t access database after enabling RLS**: 
+  - Verify DATABASE_URL uses the correct postgres/service role credentials (not anon key)
+  - Check Railway environment variables match backend/.env
+  - Test with: `curl https://eloquent-optimism-production-350a.up.railway.app/health`
+
+### Search & Geocoding
 - **Few/no radius results**: confirm imported rows have non-NULL geometry and that search coordinates are valid.
 - **Geocoder seems stalled**: use `python3 geocode.py --status`; verify local Nominatim is reachable at `http://localhost:8080/search` and check `geocode.py` logs for retry/backoff errors.
 - **HTTP 429 / throttling**: reduce request rate, retry later, or switch to local/self-hosted Nominatim.
-- **Frontend can’t reach API**: verify `VITE_API_URL`, CORS settings, and backend URL/health.
 - **Search shows wrong county results**: County filter defaults to "Dublin" for usability (most populous region). Auto-detection corrects mismatches when search query contains a county name (e.g., searching "Galway City" with "Dublin" filter will auto-switch to Galway). County page links include both `q` and `county` parameters to ensure proper filtering.
+
+### Frontend & API
+- **Frontend can’t reach API**: verify `VITE_API_URL`, CORS settings, and backend URL/health.
+- **"Failed to fetch" errors**: 
+  - Check VITE_API_URL is set correctly in Vercel environment variables
+  - Verify Railway backend is running and healthy
+  - Check browser console for CORS errors
 
 ## Local Nominatim instance
 `nominatim/ireland.osm.pbf` contains OSM data for local geocoding. To start a local Nominatim service using Docker:
