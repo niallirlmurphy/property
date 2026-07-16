@@ -761,6 +761,67 @@ async def test_database_security(results: TestResults):
         results.add_fail("Database security check", str(e))
 
 
+async def test_hot_query_indexes(results: TestResults):
+    """Guard against Disk-IO regressions: verify hot-query columns are indexed.
+
+    Root cause of a 2026-07 Supabase Disk-IO-budget alert was full sequential
+    scans on `properties` driven by pipeline/enrichment queries filtering on
+    UNINDEXED columns (raw `address`, `needs_geocoding`). This test fails if
+    those supporting indexes go missing again, or if the planner would seq-scan
+    the enrichment lookup.
+    """
+    DATABASE_URL = os.environ.get("DATABASE_URL")
+    if not DATABASE_URL:
+        results.add_fail("Hot-query indexes", "DATABASE_URL not set")
+        return
+
+    try:
+        conn = await asyncpg.connect(DATABASE_URL, timeout=10.0)
+
+        # Required indexes that keep pipeline queries off full seq scans.
+        required = {
+            "properties_address_idx": "raw address lookups (enrichment + valuation)",
+            "properties_needs_geocoding_idx": "geocoding-backlog counts",
+        }
+        existing = {
+            r["indexname"]
+            for r in await conn.fetch("""
+                SELECT indexname FROM pg_indexes
+                WHERE schemaname = 'public' AND tablename = 'properties'
+            """)
+        }
+        missing = [f"{name} ({why})" for name, why in required.items() if name not in existing]
+        if missing:
+            results.add_fail("Hot-query indexes present",
+                             "Missing (causes seq scans / high Disk IO): " + "; ".join(missing))
+        else:
+            results.add_pass("Hot-query indexes present",
+                             f"✓ {len(required)} disk-IO-critical indexes exist")
+
+        # The enrichment lookup must NOT resolve to a Seq Scan.
+        sample = await conn.fetchval(
+            "SELECT address FROM properties WHERE address IS NOT NULL LIMIT 1"
+        )
+        if sample:
+            plan = await conn.fetch(
+                "EXPLAIN SELECT id, sale_date FROM properties "
+                "WHERE address = $1 AND (bedrooms IS NULL OR property_type IS NULL) "
+                "ORDER BY sale_date DESC",
+                sample,
+            )
+            plan_text = "\n".join(p[0] for p in plan)
+            if "Seq Scan" in plan_text:
+                results.add_fail("Enrichment address lookup is indexed",
+                                 "Query planner chose a Seq Scan on properties")
+            else:
+                results.add_pass("Enrichment address lookup is indexed",
+                                 "✓ Uses index, no seq scan")
+
+        await conn.close()
+    except Exception as e:
+        results.add_fail("Hot-query indexes", str(e))
+
+
 async def test_api_security(client: httpx.AsyncClient, results: TestResults):
     """Test API security headers and configurations."""
     try:
@@ -1060,6 +1121,7 @@ async def run_all_tests():
         # Security tests (most important)
         print("\nSecurity:")
         await test_database_security(results)
+        await test_hot_query_indexes(results)
         await test_api_security(client, results)
 
         # Backend tests

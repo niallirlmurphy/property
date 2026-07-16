@@ -63,42 +63,55 @@ def extract_property_type(text):
 
     return None
 
-def search_web_for_property(address, county):
-    """Search web for property details using DuckDuckGo."""
-    try:
-        search_query = f"{address} {county} Ireland property"
-        url = f"https://html.duckduckgo.com/html/?q={quote_plus(search_query)}"
+def search_web_for_property(address, county, max_retries=2):
+    """Search web for property details using DuckDuckGo with retries."""
+    for attempt in range(max_retries):
+        try:
+            search_query = f"{address} {county} Ireland property"
+            url = f"https://html.duckduckgo.com/html/?q={quote_plus(search_query)}"
 
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
-        }
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+            }
 
-        response = requests.get(url, headers=headers, timeout=10)
-        if response.status_code != 200:
-            return None, None
+            response = requests.get(url, headers=headers, timeout=30)
+            if response.status_code != 200:
+                if attempt < max_retries - 1:
+                    time.sleep(5)
+                    continue
+                return None, None
 
-        soup = BeautifulSoup(response.text, 'html.parser')
-        text_content = soup.get_text().lower()
+            soup = BeautifulSoup(response.text, 'html.parser')
+            text_content = soup.get_text().lower()
 
-        bedrooms = extract_bedrooms(text_content)
-        property_type = extract_property_type(text_content)
+            bedrooms = extract_bedrooms(text_content)
+            property_type = extract_property_type(text_content)
 
-        return bedrooms, property_type
+            return bedrooms, property_type
 
-    except Exception as e:
-        print(f"  ⚠️  Search failed: {e}")
-        return None, None
+        except Exception as e:
+            if attempt < max_retries - 1:
+                print(f"  ⚠️  Search failed (attempt {attempt + 1}/{max_retries}): {e}")
+                time.sleep(5)
+            else:
+                print(f"  ⚠️  Search failed after {max_retries} attempts: {e}")
+                return None, None
+
+    return None, None
 
 def fetch_properties_to_enrich(conn, limit=100):
     """Fetch 2026 properties missing enrichment data, prioritizing June first."""
     cur = conn.cursor()
 
     # Prioritize: June 2026, then May, April, etc. (most recent first)
-    # Only fetch properties missing BOTH fields to maximize impact
+    # Only fetch properties missing BOTH fields to maximize impact.
+    # Use a sargable date RANGE (not EXTRACT(YEAR ...)) so the planner can use
+    # properties_sale_date_idx as an Index Cond instead of a full index filter.
     cur.execute("""
         SELECT id, address, county, sale_date, price
         FROM properties
-        WHERE EXTRACT(YEAR FROM sale_date) = 2026
+        WHERE sale_date >= '2026-01-01'
+          AND sale_date < '2027-01-01'
           AND bedrooms IS NULL
           AND property_type IS NULL
         ORDER BY sale_date DESC
@@ -117,9 +130,9 @@ def fetch_properties_to_enrich(conn, limit=100):
 
     return properties
 
-def update_property_enrichment(conn, property_id, address, bedrooms, property_type):
-    """Update property with enrichment data, applying to all sales of the same address."""
-    cur = conn.cursor()
+def update_property_enrichment(property_id, address, bedrooms, property_type):
+    """Update property with enrichment data, applying to all sales of the same address.
+    Uses a fresh connection for each update to avoid pooling issues."""
 
     updates = []
     params = []
@@ -135,34 +148,41 @@ def update_property_enrichment(conn, property_id, address, bedrooms, property_ty
     if not updates:
         return False, 0
 
-    # Check if there are multiple sales of the same property
-    cur.execute("""
-        SELECT id, sale_date
-        FROM properties
-        WHERE address = %s
-          AND (bedrooms IS NULL OR property_type IS NULL)
-        ORDER BY sale_date DESC
-    """, (address,))
+    # Create fresh connection for this update
+    conn = psycopg2.connect(DATABASE_URL)
+    try:
+        cur = conn.cursor()
 
-    duplicate_sales = cur.fetchall()
+        # Check if there are multiple sales of the same property
+        cur.execute("""
+            SELECT id, sale_date
+            FROM properties
+            WHERE address = %s
+              AND (bedrooms IS NULL OR property_type IS NULL)
+            ORDER BY sale_date DESC
+        """, (address,))
 
-    if len(duplicate_sales) > 1:
-        # Update all sales of this property
-        params_copy = params.copy()
-        params_copy.append(address)
-        query = f"UPDATE properties SET {', '.join(updates)} WHERE address = %s"
-        cur.execute(query, params_copy)
-        conn.commit()
-        return True, len(duplicate_sales)
-    else:
-        # Update just this property
-        params.append(property_id)
-        query = f"UPDATE properties SET {', '.join(updates)} WHERE id = %s"
-        cur.execute(query, params)
-        conn.commit()
-        return True, 1
+        duplicate_sales = cur.fetchall()
 
-def run_enrichment_batch(batch_size=100, rate_limit_seconds=10):
+        if len(duplicate_sales) > 1:
+            # Update all sales of this property
+            params_copy = params.copy()
+            params_copy.append(address)
+            query = f"UPDATE properties SET {', '.join(updates)} WHERE address = %s"
+            cur.execute(query, params_copy)
+            conn.commit()
+            return True, len(duplicate_sales)
+        else:
+            # Update just this property
+            params.append(property_id)
+            query = f"UPDATE properties SET {', '.join(updates)} WHERE id = %s"
+            cur.execute(query, params)
+            conn.commit()
+            return True, 1
+    finally:
+        conn.close()
+
+def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=5):
     """Run batch enrichment process."""
     print("=" * 70)
     print("BATCH 6 ENRICHMENT: 2026 Properties")
@@ -171,6 +191,7 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10):
     print(f"Priority: June 2026 → January 2026 (most recent first)")
     print(f"Batch size: {batch_size}")
     print(f"Rate limit: {rate_limit_seconds}s between requests")
+    print(f"Progress reports: Every {report_interval} properties")
     print()
 
     conn = psycopg2.connect(DATABASE_URL)
@@ -212,7 +233,7 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10):
         bedrooms, property_type = search_web_for_property(prop['address'], prop['county'])
 
         if bedrooms or property_type:
-            success, count = update_property_enrichment(conn, prop['id'], prop['address'], bedrooms, property_type)
+            success, count = update_property_enrichment(prop['id'], prop['address'], bedrooms, property_type)
 
             if success:
                 if bedrooms and property_type:
@@ -244,7 +265,18 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10):
             'property_type': property_type
         })
 
-        print()
+        # Progress report every N properties
+        if i % report_interval == 0:
+            print()
+            print("─" * 70)
+            print(f"📊 PROGRESS REPORT: {i}/{len(properties)} ({i/len(properties)*100:.1f}%)")
+            print(f"   ✅ Fully enriched: {stats['enriched']} ({stats['enriched']/i*100:.1f}%)")
+            print(f"   ⚠️  Partially enriched: {stats['partial']} ({stats['partial']/i*100:.1f}%)")
+            print(f"   ❌ Failed: {stats['failed']} ({stats['failed']/i*100:.1f}%)")
+            if stats['duplicate_updates'] > 0:
+                print(f"   🎁 Bonus updates: {stats['duplicate_updates']} additional sales")
+            print("─" * 70)
+            print()
 
         # Rate limiting
         if i < len(properties):
@@ -281,10 +313,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Batch 6: Enrich 2026 properties')
     parser.add_argument('--batch-size', type=int, default=100, help='Number of properties to process')
     parser.add_argument('--rate-limit', type=int, default=10, help='Seconds between requests')
+    parser.add_argument('--report-interval', type=int, default=5, help='Progress report every N properties')
 
     args = parser.parse_args()
 
     run_enrichment_batch(
         batch_size=args.batch_size,
-        rate_limit_seconds=args.rate_limit
+        rate_limit_seconds=args.rate_limit,
+        report_interval=args.report_interval
     )
