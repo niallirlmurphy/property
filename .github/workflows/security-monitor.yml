@@ -10,6 +10,10 @@ on:
       - 'scripts/security_monitor.py'
       - '.github/workflows/security-monitor.yml'
 
+permissions:
+  contents: read
+  issues: write  # needed by the "Notify on failure" github-script step
+
 jobs:
   security-check:
     runs-on: ubuntu-latest

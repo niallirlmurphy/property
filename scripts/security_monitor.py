@@ -248,7 +248,22 @@ async def main():
     auto_fix = "--fix" in sys.argv
     notify = "--notify" in sys.argv
 
-    conn = await asyncpg.connect(DATABASE_URL)
+    # The Supabase pooler occasionally drops SSL mid-connect. Retry a few times
+    # so a transient network blip is not reported as a security failure.
+    conn = None
+    last_err = None
+    for attempt in range(4):
+        try:
+            conn = await asyncpg.connect(DATABASE_URL, timeout=15.0)
+            break
+        except Exception as e:
+            last_err = e
+            print(f"  ⚠️  Connection attempt {attempt + 1} failed: {str(e)[:80]}")
+            await asyncio.sleep(2)
+    if conn is None:
+        print(f"\n❌ Could not connect to database after retries: {last_err}")
+        print("   This is a connectivity issue, not a security failure.")
+        sys.exit(2)
 
     try:
         monitor = SecurityMonitor(conn)
