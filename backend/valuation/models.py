@@ -185,14 +185,18 @@ class ComparableProperty(BaseModel):
 class ConfidenceInterval(BaseModel):
     """Confidence interval for valuation estimate."""
 
-    lower: int = Field(..., gt=0, description="Lower bound (€)")
+    # Lower bound is floored at 0 by the calculator for high-variance
+    # (typically rural) comparable sets, so 0 is a legitimate value.
+    lower: int = Field(..., ge=0, description="Lower bound (€)")
 
     upper: int = Field(..., gt=0, description="Upper bound (€)")
 
+    # Width can exceed 200% for very uncertain valuations (sparse, widely
+    # dispersed comparables); the validator flags these as low confidence
+    # rather than rejecting them, so keep only the non-negative floor.
     width_pct: float = Field(
         ...,
         ge=0,
-        le=200,  # Can exceed 100% for very uncertain valuations
         description="Interval width as percentage of estimate"
     )
 

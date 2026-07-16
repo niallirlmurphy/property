@@ -476,6 +476,40 @@ class TestCalculator:
         assert stats['std_dev'] > 0
         assert stats['coefficient_of_variation'] > 0
 
+    def test_high_variance_ci_builds_response_model(self):
+        """High-variance rural comparables must not crash ConfidenceInterval.
+
+        Regression: dispersed rural sales (e.g. Newport, Mayo) produce a
+        confidence interval with lower bound floored at 0 and width_pct > 200%.
+        The endpoint wraps calculator output in ConfidenceInterval, which
+        previously rejected these legitimate values and surfaced a 500.
+        """
+        from valuation.models import ConfidenceInterval
+
+        calculator = ValuationCalculator()
+
+        # Widely dispersed prices around a modest estimate -> interval floors
+        # at 0 and width exceeds 200% of the estimate.
+        comparables = [
+            {'adjusted_price': 50000},
+            {'adjusted_price': 500000},
+            {'adjusted_price': 90000},
+            {'adjusted_price': 60000},
+        ]
+        weights = [0.25] * 4
+
+        result = calculator.calculate_valuation(comparables, weights)
+        ci = result['confidence_interval']
+
+        # Sanity: this is the pathological shape we care about.
+        assert ci['lower'] == 0
+        assert ci['width_pct'] > 200
+
+        # The endpoint does exactly this — it must not raise.
+        model = ConfidenceInterval(**ci)
+        assert model.lower == ci['lower']
+        assert model.width_pct == ci['width_pct']
+
     def test_calculate_valuation_invalid_inputs(self):
         """Test that invalid inputs raise errors."""
         calculator = ValuationCalculator()
