@@ -33,18 +33,30 @@ class SecurityMonitor:
         self.issues: List[SecurityIssue] = []
 
     async def check_rls_enabled(self) -> bool:
-        """Check if RLS is enabled on properties table."""
-        result = await self.conn.fetchrow("""
-            SELECT rowsecurity
-            FROM pg_tables
-            WHERE schemaname = 'public' AND tablename = 'properties'
+        """Check that RLS is enabled on EVERY public table, not just properties.
+
+        Supabase's rls_disabled_in_public scanner fires on ANY unprotected
+        public table, so checking only `properties` misses the tables that
+        actually trigger the recurring security-alert emails.
+        """
+        unprotected = await self.conn.fetch("""
+            SELECT c.relname AS name
+            FROM pg_class c
+            JOIN pg_namespace n ON n.oid = c.relnamespace
+            WHERE n.nspname = 'public'
+              AND c.relkind IN ('r', 'p')
+              AND c.relrowsecurity = false
+              AND c.relname NOT LIKE 'pg_%'
+              AND c.relname NOT LIKE 'sql_%'
+            ORDER BY c.relname
         """)
 
-        if not result or not result['rowsecurity']:
+        if unprotected:
+            names = ", ".join(r["name"] for r in unprotected)
             self.issues.append(SecurityIssue(
                 severity="CRITICAL",
-                title="RLS not enabled on properties table",
-                description="Row-Level Security is disabled, allowing direct database access",
+                title="RLS not enabled on public tables",
+                description=f"Row-Level Security is disabled on: {names}",
                 fix_available=True
             ))
             return False
@@ -70,46 +82,43 @@ class SecurityMonitor:
         return True
 
     async def check_anon_access_revoked(self) -> bool:
-        """Check if anonymous role has no access."""
-        result = await self.conn.fetchrow("""
-            SELECT has_table_privilege('anon', 'properties', 'SELECT') as can_select,
-                   has_table_privilege('anon', 'properties', 'INSERT') as can_insert,
-                   has_table_privilege('anon', 'properties', 'UPDATE') as can_update,
-                   has_table_privilege('anon', 'properties', 'DELETE') as can_delete
+        """Check that the anon role has ZERO grants on ANY public relation."""
+        anon_grants = await self.conn.fetch("""
+            SELECT table_name,
+                   string_agg(privilege_type, ', ' ORDER BY privilege_type) AS privs
+            FROM information_schema.role_table_grants
+            WHERE grantee = 'anon' AND table_schema = 'public'
+            GROUP BY table_name
+            ORDER BY table_name
         """)
 
-        has_any_access = any([
-            result['can_select'],
-            result['can_insert'],
-            result['can_update'],
-            result['can_delete']
-        ])
-
-        if has_any_access:
+        if anon_grants:
+            detail = "; ".join(f"{g['table_name']}: {g['privs']}" for g in anon_grants)
             self.issues.append(SecurityIssue(
                 severity="CRITICAL",
                 title="Anonymous role has database access",
-                description="Anonymous users can access the database directly via PostgREST API",
+                description=f"anon can access via PostgREST API: {detail}",
                 fix_available=True
             ))
             return False
         return True
 
     async def check_public_policies(self) -> bool:
-        """Check for unintended public access policies."""
+        """Check for unintended public/anon access policies on ANY public table."""
         public_policies = await self.conn.fetch("""
-            SELECT policyname
+            SELECT tablename, policyname
             FROM pg_policies
-            WHERE tablename = 'properties'
+            WHERE schemaname = 'public'
             AND ('public' = ANY(roles) OR 'anon' = ANY(roles))
+            ORDER BY tablename, policyname
         """)
 
         if public_policies:
-            policy_names = [p['policyname'] for p in public_policies]
+            detail = ", ".join(f"{p['tablename']}.{p['policyname']}" for p in public_policies)
             self.issues.append(SecurityIssue(
                 severity="HIGH",
                 title="Public/anon policies detected",
-                description=f"Found policies granting public access: {', '.join(policy_names)}",
+                description=f"Found policies granting public access: {detail}",
                 fix_available=True
             ))
             return False
@@ -174,44 +183,57 @@ class SecurityMonitor:
         return all_passed, self.issues
 
 async def auto_fix_issues(conn, issues: List[SecurityIssue]) -> int:
-    """Attempt to automatically fix security issues."""
-    fixed_count = 0
+    """Attempt to automatically fix security issues across ALL public tables.
 
-    for issue in issues:
-        if not issue.fix_available:
-            continue
+    Rather than patching individual tables (which is what allowed new tables to
+    slip through and re-trigger alerts), we re-apply the canonical, table-agnostic
+    RLS hardening: enable RLS + authenticated-only policy on every public table,
+    and revoke every anon grant. This is idempotent and safe to run repeatedly.
+    """
+    fixable = [i for i in issues if i.fix_available]
+    if not fixable:
+        return 0
 
-        try:
-            if "RLS not enabled" in issue.title:
-                await conn.execute("ALTER TABLE properties ENABLE ROW LEVEL SECURITY;")
-                print(f"  ✅ Fixed: {issue.title}")
-                fixed_count += 1
+    try:
+        # Enable RLS + authenticated-only policy on every public table.
+        tables = await conn.fetch("""
+            SELECT c.relname AS name
+            FROM pg_class c
+            JOIN pg_namespace n ON n.oid = c.relnamespace
+            WHERE n.nspname = 'public'
+              AND c.relkind IN ('r', 'p')
+              AND c.relname NOT LIKE 'pg_%'
+              AND c.relname NOT LIKE 'sql_%'
+        """)
+        for t in tables:
+            qname = f'"{t["name"]}"'
+            policy = f'backend_full_access_{t["name"]}'
+            await conn.execute(f"ALTER TABLE {qname} ENABLE ROW LEVEL SECURITY;")
+            await conn.execute(f'DROP POLICY IF EXISTS "{policy}" ON {qname};')
+            await conn.execute('DROP POLICY IF EXISTS "Allow public read access" ON ' + qname + ';')
+            await conn.execute('DROP POLICY IF EXISTS "Enable read access for all users" ON ' + qname + ';')
+            await conn.execute(f"""
+                CREATE POLICY "{policy}" ON {qname}
+                FOR ALL TO authenticated USING (true) WITH CHECK (true);
+            """)
 
-            elif "No authenticated policy" in issue.title:
-                await conn.execute("""
-                    CREATE POLICY IF NOT EXISTS "backend_full_access_properties"
-                    ON properties FOR ALL TO authenticated
-                    USING (true) WITH CHECK (true);
-                """)
-                print(f"  ✅ Fixed: {issue.title}")
-                fixed_count += 1
+        # Revoke every anon grant (tables AND views).
+        anon_rels = await conn.fetch("""
+            SELECT DISTINCT table_name
+            FROM information_schema.role_table_grants
+            WHERE grantee = 'anon' AND table_schema = 'public'
+        """)
+        for r in anon_rels:
+            await conn.execute(f'REVOKE ALL ON "{r["table_name"]}" FROM anon;')
+        await conn.execute("REVOKE ALL ON ALL TABLES IN SCHEMA public FROM anon;")
+        await conn.execute("REVOKE ALL ON ALL SEQUENCES IN SCHEMA public FROM anon;")
 
-            elif "Anonymous role has database access" in issue.title:
-                await conn.execute("REVOKE ALL ON properties FROM anon;")
-                print(f"  ✅ Fixed: {issue.title}")
-                fixed_count += 1
+        print(f"  ✅ Re-applied RLS hardening across {len(tables)} table(s)")
+        return len(fixable)
 
-            elif "Public/anon policies" in issue.title:
-                # Drop any public/anon policies
-                await conn.execute('DROP POLICY IF EXISTS "Allow public read access" ON properties;')
-                await conn.execute('DROP POLICY IF EXISTS "Enable read access for all users" ON properties;')
-                print(f"  ✅ Fixed: {issue.title}")
-                fixed_count += 1
-
-        except Exception as e:
-            print(f"  ❌ Failed to fix '{issue.title}': {e}")
-
-    return fixed_count
+    except Exception as e:
+        print(f"  ❌ Failed to auto-fix: {e}")
+        return 0
 
 async def main():
     print("╔══════════════════════════════════════════════════════════════╗")

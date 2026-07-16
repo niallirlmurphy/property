@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Enable Row-Level Security (RLS) on Supabase properties table.
+Enable Row-Level Security (RLS) on ALL public Supabase tables.
 
 DESIGN RULE: No Direct Database Access
 ======================================
@@ -11,12 +11,19 @@ Our architecture is: Frontend → Railway API → Supabase
 - Backend uses DATABASE_URL with postgres/authenticated role
 - Anonymous (anon) role has ZERO permissions
 - This prevents direct Supabase REST API access
+- PPR data remains publicly accessible via our API endpoints
 
 Security Configuration:
-- RLS enabled on all tables
-- Only 'authenticated' role has access
-- 'anon' role explicitly blocked (no GRANT statements)
-- PPR data remains publicly accessible via our API endpoints
+- RLS enabled on EVERY public table (not just `properties`)
+- Only 'authenticated' role has access, via a per-table FOR ALL policy
+- 'anon' role has ALL privileges revoked on every table AND view
+
+WHY THIS IS TABLE-AGNOSTIC
+==========================
+Supabase's rls_disabled_in_public scanner fires on ANY public table without
+RLS. Previously this script only touched `properties`, so every new feature
+table (valuation_*, search_log, mapbox_usage, ...) re-triggered the alert.
+This version iterates over all base tables so new tables are covered too.
 """
 
 import asyncio
@@ -26,12 +33,39 @@ import sys
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
 
-async def enable_rls_security():
-    """Enable RLS and create appropriate policies."""
 
-    print("╔══════════════════════════════════════════════════════════════╗")
-    print("║     ENABLING ROW-LEVEL SECURITY                              ║")
-    print("╚══════════════════════════════════════════════════════════════╝")
+async def get_public_tables(conn):
+    """Return all base/partitioned tables in the public schema."""
+    rows = await conn.fetch("""
+        SELECT c.relname AS name
+        FROM pg_class c
+        JOIN pg_namespace n ON n.oid = c.relnamespace
+        WHERE n.nspname = 'public'
+          AND c.relkind IN ('r', 'p')          -- ordinary + partitioned tables
+          AND c.relname NOT LIKE 'pg_%'
+          AND c.relname NOT LIKE 'sql_%'
+        ORDER BY c.relname
+    """)
+    return [r["name"] for r in rows]
+
+
+async def get_anon_granted_relations(conn):
+    """Return all public relations (tables AND views) where anon has any grant."""
+    rows = await conn.fetch("""
+        SELECT DISTINCT table_name
+        FROM information_schema.role_table_grants
+        WHERE grantee = 'anon' AND table_schema = 'public'
+        ORDER BY table_name
+    """)
+    return [r["table_name"] for r in rows]
+
+
+async def enable_rls_security():
+    """Enable RLS and create authenticated-only policies on all public tables."""
+
+    print("=" * 66)
+    print("  ENABLING ROW-LEVEL SECURITY ON ALL PUBLIC TABLES")
+    print("=" * 66)
     print()
 
     if not DATABASE_URL:
@@ -41,110 +75,77 @@ async def enable_rls_security():
     conn = await asyncpg.connect(DATABASE_URL)
 
     try:
-        # 1. Check current RLS status
-        print("1. Checking current security status...")
-        result = await conn.fetchrow("""
-            SELECT tablename, rowsecurity
-            FROM pg_tables
-            WHERE schemaname = 'public'
-            AND tablename = 'properties'
+        tables = await get_public_tables(conn)
+        print(f"Found {len(tables)} public table(s): {', '.join(tables)}\n")
+
+        # 1. Enable RLS + authenticated-only policy on every table.
+        for table in tables:
+            qname = f'"{table}"'
+
+            await conn.execute(f"ALTER TABLE {qname} ENABLE ROW LEVEL SECURITY;")
+
+            policy = f"backend_full_access_{table}"
+            await conn.execute(f'DROP POLICY IF EXISTS "{policy}" ON {qname};')
+            # Also drop any legacy public/anon read policies.
+            await conn.execute(
+                f'DROP POLICY IF EXISTS "Allow public read access" ON {qname};'
+            )
+            await conn.execute(
+                f'DROP POLICY IF EXISTS "Enable read access for all users" ON {qname};'
+            )
+            await conn.execute(f"""
+                CREATE POLICY "{policy}"
+                ON {qname}
+                FOR ALL
+                TO authenticated
+                USING (true)
+                WITH CHECK (true);
+            """)
+            print(f"  ✅ RLS + authenticated policy: {table}")
+
+        # 2. Revoke ALL anon privileges on every relation anon can touch
+        #    (covers tables AND views - Supabase flags anon-accessible views too).
+        print("\nRevoking anonymous access...")
+        anon_relations = await get_anon_granted_relations(conn)
+        for rel in anon_relations:
+            await conn.execute(f'REVOKE ALL ON "{rel}" FROM anon;')
+            print(f"  ✅ Revoked anon access: {rel}")
+        # Belt-and-braces: revoke default schema-wide too.
+        await conn.execute("REVOKE ALL ON ALL TABLES IN SCHEMA public FROM anon;")
+        await conn.execute("REVOKE ALL ON ALL SEQUENCES IN SCHEMA public FROM anon;")
+
+        # 3. Verify
+        print("\nVerifying configuration...")
+        still_off = await conn.fetch("""
+            SELECT c.relname AS name
+            FROM pg_class c
+            JOIN pg_namespace n ON n.oid = c.relnamespace
+            WHERE n.nspname = 'public'
+              AND c.relkind IN ('r', 'p')
+              AND c.relrowsecurity = false
+              AND c.relname NOT LIKE 'pg_%'
+              AND c.relname NOT LIKE 'sql_%'
         """)
+        remaining_anon = await get_anon_granted_relations(conn)
 
-        if result:
-            current_status = "ENABLED" if result["rowsecurity"] else "DISABLED"
-            print(f"   Current RLS status: {current_status}")
-
-        # 2. Enable RLS
-        print("\n2. Enabling Row-Level Security...")
-        await conn.execute("ALTER TABLE properties ENABLE ROW LEVEL SECURITY;")
-        print("   ✅ RLS enabled")
-
-        # 3. Create authenticated-only policy
-        # DESIGN RULE: No public/anon access
-        # Only authenticated role (backend) can access data
-        print("\n3. Creating authenticated-only access policy...")
-
-        # Drop any public policies if they exist (should not exist)
-        await conn.execute("""
-            DROP POLICY IF EXISTS "Allow public read access" ON properties;
-        """)
-
-        # Drop existing authenticated policy if it exists
-        await conn.execute("""
-            DROP POLICY IF EXISTS "backend_full_access_properties" ON properties;
-        """)
-
-        # Create authenticated-only policy
-        await conn.execute("""
-            CREATE POLICY "backend_full_access_properties"
-            ON properties
-            FOR ALL
-            TO authenticated
-            USING (true)
-            WITH CHECK (true);
-        """)
-        print("   ✅ Authenticated-only policy created")
-
-        # 4. Explicitly revoke anonymous access
-        print("\n4. Revoking anonymous access...")
-        await conn.execute("""
-            REVOKE ALL ON properties FROM anon;
-        """)
-        print("   ✅ Anonymous access revoked")
-
-        # 5. Verify configuration
-        print("\n5. Verifying security configuration...")
-
-        # Check RLS status
-        result = await conn.fetchrow("""
-            SELECT tablename, rowsecurity
-            FROM pg_tables
-            WHERE schemaname = 'public'
-            AND tablename = 'properties'
-        """)
-
-        if result["rowsecurity"]:
-            print("   ✅ RLS is ENABLED")
-        else:
-            print("   ❌ RLS is still DISABLED")
+        if still_off:
+            print(f"  ❌ RLS still disabled on: {', '.join(r['name'] for r in still_off)}")
             sys.exit(1)
+        print("  ✅ RLS enabled on all public tables")
 
-        # Check policies
-        policies = await conn.fetch("""
-            SELECT policyname, cmd, roles::text[]
-            FROM pg_policies
-            WHERE tablename = 'properties'
-        """)
+        if remaining_anon:
+            print(f"  ❌ anon still has grants on: {', '.join(remaining_anon)}")
+            sys.exit(1)
+        print("  ✅ anon role has zero table privileges")
 
-        print(f"\n   Active policies: {len(policies)}")
-        for policy in policies:
-            print(f"     • {policy['policyname']}")
-            print(f"       Command: {policy['cmd']}")
-            print(f"       Roles: {', '.join(policy['roles'])}")
-
-        # Check anonymous access is blocked
-        result = await conn.fetchrow("""
-            SELECT has_table_privilege('anon', 'properties', 'SELECT') as can_select
-        """)
-        if not result['can_select']:
-            print("\n   ✅ Anonymous access BLOCKED")
-        else:
-            print("\n   ❌ WARNING: Anonymous can still access table")
-
-        # 6. Test backend access
-        print("\n6. Testing backend access...")
+        # Backend still works?
         count = await conn.fetchval("SELECT COUNT(*) FROM properties")
-        print(f"   ✅ Backend can read data: {count:,} properties")
+        print(f"  ✅ Backend can read data: {count:,} properties")
 
-        print("\n" + "="*70)
+        print("\n" + "=" * 66)
         print("SECURITY CONFIGURATION COMPLETE")
-        print("="*70)
-        print("\n✅ Properties table is now secured with RLS")
-        print("✅ Authenticated role (backend) has full access")
-        print("✅ Anonymous role has NO access (by design)")
-        print("✅ Writes controlled by backend API only")
-        print("\nArchitecture: Frontend → Railway API → Supabase")
-        print("Result: All database access goes through authenticated backend")
+        print("=" * 66)
+        print("Architecture: Frontend → Railway API → Supabase")
 
     except Exception as e:
         print(f"\n❌ Error: {e}")

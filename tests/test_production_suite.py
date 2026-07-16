@@ -698,22 +698,48 @@ async def test_database_security(results: TestResults):
             await conn.execute("RESET ROLE;")
 
         # Check for other security issues
-        # 1. Check if there are any tables without RLS
+        # 1. EVERY public table must have RLS enabled (Supabase alerts fire on
+        #    ANY unprotected public table, not just `properties`). This is a
+        #    hard FAIL, not a warning - unprotected tables are what triggers the
+        #    recurring rls_disabled_in_public security emails.
         unprotected = await conn.fetch("""
-            SELECT tablename
-            FROM pg_tables
-            WHERE schemaname = 'public'
-            AND rowsecurity = false
-            AND tablename NOT LIKE 'pg_%'
-            AND tablename NOT LIKE 'sql_%'
+            SELECT c.relname AS tablename
+            FROM pg_class c
+            JOIN pg_namespace n ON n.oid = c.relnamespace
+            WHERE n.nspname = 'public'
+            AND c.relkind IN ('r', 'p')
+            AND c.relrowsecurity = false
+            AND c.relname NOT LIKE 'pg_%'
+            AND c.relname NOT LIKE 'sql_%'
+            ORDER BY c.relname
         """)
 
         if unprotected:
             table_list = ", ".join([t["tablename"] for t in unprotected])
-            results.add_warning("Other tables without RLS",
-                              f"Tables: {table_list}")
+            results.add_fail("All public tables have RLS enabled",
+                             f"CRITICAL: RLS disabled on: {table_list}")
         else:
-            results.add_pass("All tables protected", "✓ RLS enabled on all tables")
+            results.add_pass("All public tables have RLS enabled",
+                             "✓ RLS enabled on all public tables")
+
+        # 2. The anon role must have ZERO privileges on ANY public table.
+        #    Per CLAUDE.md design rule, all access flows through the backend.
+        #    Stray anon grants (SELECT/INSERT/TRUNCATE) are a hard FAIL.
+        anon_grants = await conn.fetch("""
+            SELECT table_name, string_agg(privilege_type, ', ' ORDER BY privilege_type) AS privs
+            FROM information_schema.role_table_grants
+            WHERE grantee = 'anon' AND table_schema = 'public'
+            GROUP BY table_name
+            ORDER BY table_name
+        """)
+
+        if anon_grants:
+            detail = "; ".join(f"{g['table_name']}: {g['privs']}" for g in anon_grants)
+            results.add_fail("Anon role has zero table privileges",
+                             f"CRITICAL: anon can access: {detail}")
+        else:
+            results.add_pass("Anon role has zero table privileges",
+                             "✓ No anon grants on any public table")
 
         # Check for proper indexes on security-critical queries
         indexes = await conn.fetch("""
