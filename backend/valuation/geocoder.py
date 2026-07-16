@@ -11,6 +11,7 @@ Returns coordinates with confidence score.
 
 import os
 import re
+import math
 import asyncio
 import logging
 import httpx
@@ -18,6 +19,24 @@ import httpx
 logger = logging.getLogger(__name__)
 from typing import Dict, Optional, Tuple
 from .models import GeocodingResult
+
+
+# A database coordinate further than this from the Eircode routing-key
+# centroid is treated as wrong-area data (e.g. a mismatched fuzzy match in
+# the wrong county) and discarded in favour of the routing-key centroid.
+# Routing keys are geographically compact, so 30km comfortably clears any
+# legitimate in-area address while catching gross county-level errors.
+_ROUTING_KEY_MAX_KM = 30.0
+
+
+def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    """Great-circle distance between two points in kilometres."""
+    r = 6371.0
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlam = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlam / 2) ** 2
+    return 2 * r * math.asin(math.sqrt(a))
 
 
 class ValuationGeocoder:
@@ -63,11 +82,34 @@ class ValuationGeocoder:
             ValueError: If geocoding fails completely
         """
 
+        # When an Eircode is supplied, resolve its routing-key centroid up
+        # front so we can sanity-check the (less trusted) database coordinate
+        # against it before returning.
+        routing_key_result = None
+        if eircode:
+            try:
+                routing_key_result = await self._geocode_by_eircode_routing_key(eircode)
+            except Exception as e:
+                logger.warning(f"Eircode geocoding failed: {e}")
+
         # Method 1: Database lookup (ALWAYS try this first!)
         # Works for any property in the Property Price Register (2010-present)
         try:
             result = await self._geocode_by_db_fuzzy_match(address)
             if result:
+                # Guard against wrong-area database coordinates: if the match
+                # is implausibly far from the Eircode's routing-key centroid,
+                # trust the centroid instead.
+                if routing_key_result and _haversine_km(
+                    result.latitude, result.longitude,
+                    routing_key_result.latitude, routing_key_result.longitude
+                ) > _ROUTING_KEY_MAX_KM:
+                    logger.warning(
+                        f"Database coordinate for '{address}' is "
+                        f">{_ROUTING_KEY_MAX_KM:.0f}km from routing key "
+                        f"{eircode[:3].upper()}; using routing-key centroid"
+                    )
+                    return routing_key_result
                 logger.info(f"✅ Geocoded via database: {result.address_matched}")
                 return result
         except Exception as e:
@@ -75,14 +117,9 @@ class ValuationGeocoder:
 
         # Method 2: Eircode routing key lookup
         # Works for properties not in database if Eircode provided
-        if eircode:
-            try:
-                result = await self._geocode_by_eircode_routing_key(eircode)
-                if result:
-                    logger.info(f"✅ Geocoded via Eircode routing key: {eircode[:3]}")
-                    return result
-            except Exception as e:
-                logger.warning(f"Eircode geocoding failed: {e}")
+        if routing_key_result:
+            logger.info(f"✅ Geocoded via Eircode routing key: {eircode[:3]}")
+            return routing_key_result
 
         # Method 3: Nominatim API (last resort)
         # Works for new properties not in database, uses OpenStreetMap

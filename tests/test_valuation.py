@@ -132,12 +132,15 @@ class TestGeocoder:
 
     @pytest.mark.asyncio
     async def test_geocode_rejects_bad_coordinates(self, mock_db_pool):
-        """Test that geocoder rejects coordinates too far from routing key centroid."""
-        # Mock routing key query (Dublin D02)
-        # Then exact match with coordinates in Cork (should be rejected)
+        """Test that geocoder rejects DB coordinates too far from the routing-key centroid."""
+        # The geocoder resolves the routing-key centroid (D02, Dublin) first,
+        # then the database fuzzy match returns a coordinate in Cork (~250km
+        # away) — clearly wrong-area data that must be discarded in favour of
+        # the routing-key centroid.
         mock_db_pool.fetchrow.side_effect = [
             {'centroid_lat': 53.32, 'centroid_lon': -6.32, 'property_count': 100},  # routing key D02
-            {'lat': 51.90, 'lon': -8.47, 'cnt': 1}  # Cork coordinates (bad data)
+            {'latitude': 51.90, 'longitude': -8.47,  # Cork coordinates (bad data)
+             'address': 'Somewhere, Cork', 'bedrooms': None},
         ]
 
         geocoder = ValuationGeocoder(mock_db_pool)
@@ -149,12 +152,32 @@ class TestGeocoder:
         assert result.method == "eircode_routing_key"  # Method name in geocoder
 
     @pytest.mark.asyncio
+    async def test_geocode_accepts_in_area_coordinates(self, mock_db_pool):
+        """Test that a DB coordinate near the routing-key centroid is kept."""
+        # Routing key D02 centroid, then a database match a short distance away
+        # (still well within the same routing key) — should be trusted.
+        mock_db_pool.fetchrow.side_effect = [
+            {'centroid_lat': 53.32, 'centroid_lon': -6.32, 'property_count': 100},
+            {'latitude': 53.34, 'longitude': -6.26,  # ~5km away, same area
+             'address': '28 Somewhere Road, Dublin 2', 'bedrooms': 3},
+        ]
+
+        geocoder = ValuationGeocoder(mock_db_pool)
+        result = await geocoder.geocode_address("28 Somewhere Road", eircode="D02X285")
+
+        # Database match is plausible, so it is used (not the centroid)
+        assert result.latitude == 53.34
+        assert result.longitude == -6.26
+        assert result.method == "database_exact"
+
+    @pytest.mark.asyncio
     async def test_geocode_db_fuzzy_match(self, mock_db_pool):
-        """Test database fuzzy address matching."""
+        """Test database address matching."""
         mock_db_pool.fetchrow.return_value = {
             'latitude': 53.3217,
             'longitude': -6.3167,
-            'address': '28 Slane Road, Crumlin, Dublin 12'
+            'address': '28 Slane Road, Crumlin, Dublin 12',
+            'bedrooms': 3,
         }
 
         geocoder = ValuationGeocoder(mock_db_pool)
@@ -162,21 +185,30 @@ class TestGeocoder:
 
         assert result.latitude == 53.3217
         assert result.longitude == -6.3167
-        assert result.confidence == 0.70  # Lower for fuzzy match
-        assert result.method == "database_fuzzy"
+        assert result.confidence == 0.80  # High confidence for database match
+        assert result.method == "database_exact"
+        assert result.bedrooms == 3
 
-    def test_normalize_address(self):
-        """Test address normalization."""
-        geocoder = ValuationGeocoder(None)
+    @pytest.mark.asyncio
+    async def test_normalize_address_inline(self):
+        """Test the inline address normalization used by the DB match path.
 
-        # Test "No." prefix removal
-        assert geocoder._normalize_address("No. 28 Slane Road") == "28 Slane Road"
+        Normalization lives inside _geocode_by_db_fuzzy_match (there is no
+        standalone _normalize_address method). Drive it via a mock and assert
+        the normalized string passed to the exact-prefix query.
+        """
+        geocoder = ValuationGeocoder(AsyncMock())
+        geocoder.db.fetchrow.return_value = None  # force it through the prefix query
 
-        # Test title case
-        assert geocoder._normalize_address("28 SLANE ROAD") == "28 Slane Road"
+        assert not hasattr(geocoder, '_normalize_address')
 
-        # Test punctuation removal
-        assert geocoder._normalize_address("28 Slane Road,") == "28 Slane Road"
+        await geocoder._geocode_by_db_fuzzy_match("No. 28 SLANE RD,")
+
+        # First fetchrow call is the exact-prefix match; its bound param is the
+        # normalized address: "No." stripped, "RD" -> "Road", title-cased,
+        # trailing comma removed.
+        first_call_args = geocoder.db.fetchrow.call_args_list[0][0]
+        assert first_call_args[1] == "28 Slane Road"
 
     @pytest.mark.asyncio
     async def test_geocode_fails_gracefully(self, mock_db_pool):
@@ -186,8 +218,10 @@ class TestGeocoder:
 
         geocoder = ValuationGeocoder(mock_db_pool)
 
-        with pytest.raises(ValueError, match="Could not geocode"):
-            await geocoder.geocode_address("Nonexistent Address")
+        # No DB match, no Nominatim result -> raises with a "Could not locate" message.
+        with patch.object(geocoder, '_geocode_by_nominatim', new=AsyncMock(return_value=None)):
+            with pytest.raises(ValueError, match="Could not locate"):
+                await geocoder.geocode_address("Nonexistent Address")
 
 
 # ============================================================================
