@@ -4,6 +4,7 @@ builder = "nixpacks"
 [deploy]
 startCommand = "/opt/venv/bin/uvicorn main:app --host 0.0.0.0 --port $PORT"
 healthcheckPath = "/health"
-healthcheckTimeout = 30
+healthcheckTimeout = 90
 restartPolicyType = "on_failure"
 # Updated 2026-05-23: manual geocoding with editable fields
+# Updated 2026-07-16: startup no longer blocks on DB; widened HC window for slow-DB deploys

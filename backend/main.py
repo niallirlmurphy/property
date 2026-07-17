@@ -19,6 +19,7 @@ from dotenv import load_dotenv
 import sentry_sdk
 from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.asyncio import AsyncioIntegration
+from mapbox_client import MapboxClient
 
 load_dotenv()
 
@@ -234,7 +235,7 @@ async def _heartbeat_loop():
     Prevents Supabase from pausing the project due to inactivity."""
     while True:
         await asyncio.sleep(3600)  # check every hour
-        if time.time() - _last_activity >= _HEARTBEAT_INTERVAL:
+        if db_pool is not None and time.time() - _last_activity >= _HEARTBEAT_INTERVAL:
             try:
                 async with db_pool.acquire() as conn:
                     await conn.fetchval("SELECT 1")
@@ -243,11 +244,9 @@ async def _heartbeat_loop():
                 logger.warning(f"Heartbeat ping failed: {e}")
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    global db_pool, _aa_semaphore
-    _aa_semaphore = asyncio.Semaphore(2)  # max 2 concurrent AA lookups
-    db_pool = await asyncpg.create_pool(
+async def _create_db_pool() -> asyncpg.Pool:
+    """Create and warm up the asyncpg pool. Raises on failure."""
+    pool = await asyncpg.create_pool(
         DATABASE_URL,
         min_size=2,
         max_size=10,
@@ -255,14 +254,54 @@ async def lifespan(app: FastAPI):
         server_settings={"application_name": "homeiq"},
         command_timeout=30,
     )
-    # Warm up min_size connections immediately so the first request isn't slow
-    async with db_pool.acquire() as conn:
+    # Warm up a connection so the first request isn't slow.
+    async with pool.acquire() as conn:
         await conn.fetchval("SELECT 1")
-    logger.info("DB pool warmed up")
+    return pool
+
+
+async def _init_db_pool_with_retry():
+    """Establish the DB pool in the background, retrying on transient failures.
+
+    Startup MUST NOT block indefinitely on the database: Railway's healthcheck
+    has a fixed window, and /health does not need the DB. If the initial connect
+    is slow (e.g. the Supabase pooler is busy - as happened during a concurrent
+    CREATE INDEX), we let the app start and keep retrying here so the deploy
+    still passes its healthcheck instead of being marked unhealthy.
+    """
+    global db_pool
+    delay = 2
+    while db_pool is None:
+        try:
+            db_pool = await _create_db_pool()
+            logger.info("DB pool warmed up")
+            return
+        except Exception as e:
+            logger.warning(f"DB pool init failed ({e}); retrying in {delay}s")
+            await asyncio.sleep(delay)
+            delay = min(delay * 2, 30)
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    global db_pool, _aa_semaphore
+    _aa_semaphore = asyncio.Semaphore(2)  # max 2 concurrent AA lookups
+
+    # Try to bring the pool up quickly, but never let a slow/unavailable DB
+    # stall startup past the healthcheck window. On timeout/failure, the app
+    # still starts and the pool is established in the background.
+    try:
+        db_pool = await asyncio.wait_for(_create_db_pool(), timeout=15)
+        logger.info("DB pool warmed up")
+    except Exception as e:
+        logger.warning(f"DB pool not ready at startup ({e}); continuing and retrying in background")
+        asyncio.create_task(_init_db_pool_with_retry())
+
     task = asyncio.create_task(_heartbeat_loop())
     yield
     task.cancel()
-    await db_pool.close()
+    if db_pool is not None:
+        await db_pool.close()
 
 # ---------------------------------------------------------------------------
 # Simple in-memory per-IP rate limiter
@@ -652,38 +691,41 @@ async def _geocode_mapbox(
 ) -> "tuple[float, float] | None":
     """Resolve query via Mapbox Geocoding API, restricted to Ireland.
     Uses a caller-supplied proximity hint when available, otherwise falls back
-    to Dublin city centre for queries with no county indicator."""
+    to Dublin city centre for queries with no county indicator.
+
+    NOTE: Uses MapboxClient for usage tracking."""
     if not MAPBOX_TOKEN:
         return None
-    url = f"https://api.mapbox.com/geocoding/v5/mapbox.places/{query}.json"
-    params: dict = {
-        "access_token": MAPBOX_TOKEN,
-        "country": "ie",
-        "limit": 1,
-        "types": "place,locality,neighborhood,address,postcode",
-    }
-    if proximity:
-        params["proximity"] = proximity
-    else:
+
+    # Determine proximity hint
+    if not proximity:
         q_lower = query.lower()
         has_county = COUNTY_KEYWORDS.search(q_lower) or any(c in q_lower for c in DUBLIN_COUNTIES)
         if not has_county:
-            params["proximity"] = DUBLIN_CENTER
+            proximity = DUBLIN_CENTER
+
     try:
-        resp = await client.get(url, params=params, timeout=5.0)
-        if resp.status_code != 200:
-            return None
-        features = resp.json().get("features", [])
-        if not features:
-            return None
-        lon, lat = features[0]["center"]
-        lat_f, lon_f = float(lat), float(lon)
-        # Validate coordinates are in Ireland
-        if _is_in_ireland(lat_f, lon_f):
-            return lat_f, lon_f
-        else:
-            logger.warning(f"Mapbox returned out-of-bounds coordinates for {query!r}: {lat_f}, {lon_f}")
-            return None
+        # Use MapboxClient for tracking
+        async with MapboxClient(source='backend_api', operation='search_geocode') as mapbox:
+            result = await mapbox.geocode(
+                query,
+                country='IE',
+                types='place,locality,neighborhood,address,postcode',
+                proximity=proximity,
+                limit=1
+            )
+
+            if not result:
+                return None
+
+            lat_f, lon_f = result['latitude'], result['longitude']
+
+            # Validate coordinates are in Ireland
+            if _is_in_ireland(lat_f, lon_f):
+                return lat_f, lon_f
+            else:
+                logger.warning(f"Mapbox returned out-of-bounds coordinates for {query!r}: {lat_f}, {lon_f}")
+                return None
     except Exception as e:
         logger.warning(f"Mapbox geocoding failed: {type(e).__name__}: {e}")
         return None
