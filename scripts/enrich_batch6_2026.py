@@ -284,9 +284,15 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=
 
     conn.close()
 
-    # Save results
+    # Save results to logs/enrichment_results/ (resolved relative to the
+    # project root so it works regardless of the current working directory)
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    output_file = f'enrichment_batch6_results_{timestamp}.json'
+    results_dir = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        'logs', 'enrichment_results'
+    )
+    os.makedirs(results_dir, exist_ok=True)
+    output_file = os.path.join(results_dir, f'enrichment_batch6_results_{timestamp}.json')
     with open(output_file, 'w') as f:
         json.dump(results, f, indent=2)
 
