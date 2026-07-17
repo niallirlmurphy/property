@@ -99,24 +99,24 @@ def search_web_for_property(address, county, max_retries=2):
 
     return None, None
 
-def fetch_properties_to_enrich(conn, limit=100):
-    """Fetch 2026 properties missing enrichment data, prioritizing June first."""
+def fetch_properties_to_enrich(conn, limit=100, year=2026):
+    """Fetch properties from the given year missing enrichment data, most recent first."""
     cur = conn.cursor()
 
-    # Prioritize: June 2026, then May, April, etc. (most recent first)
+    # Prioritize most recent sales first (December → January of the year).
     # Only fetch properties missing BOTH fields to maximize impact.
     # Use a sargable date RANGE (not EXTRACT(YEAR ...)) so the planner can use
     # properties_sale_date_idx as an Index Cond instead of a full index filter.
     cur.execute("""
         SELECT id, address, county, sale_date, price
         FROM properties
-        WHERE sale_date >= '2026-01-01'
-          AND sale_date < '2027-01-01'
+        WHERE sale_date >= %s
+          AND sale_date < %s
           AND bedrooms IS NULL
           AND property_type IS NULL
         ORDER BY sale_date DESC
         LIMIT %s
-    """, (limit,))
+    """, (f'{year}-01-01', f'{year + 1}-01-01', limit))
 
     properties = []
     for row in cur.fetchall():
@@ -182,13 +182,13 @@ def update_property_enrichment(property_id, address, bedrooms, property_type):
     finally:
         conn.close()
 
-def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=5):
+def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=5, year=2026):
     """Run batch enrichment process."""
     print("=" * 70)
-    print("BATCH 6 ENRICHMENT: 2026 Properties")
+    print(f"BATCH 6 ENRICHMENT: {year} Properties")
     print("=" * 70)
     print(f"Target: Properties missing both bedrooms AND property_type")
-    print(f"Priority: June 2026 → January 2026 (most recent first)")
+    print(f"Priority: December {year} → January {year} (most recent first)")
     print(f"Batch size: {batch_size}")
     print(f"Rate limit: {rate_limit_seconds}s between requests")
     print(f"Progress reports: Every {report_interval} properties")
@@ -198,7 +198,7 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=
 
     # Fetch properties to enrich
     print("📊 Fetching properties to enrich...")
-    properties = fetch_properties_to_enrich(conn, limit=batch_size)
+    properties = fetch_properties_to_enrich(conn, limit=batch_size, year=year)
 
     if not properties:
         print("✅ No properties to enrich!")
@@ -316,15 +316,17 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=
 if __name__ == '__main__':
     import argparse
 
-    parser = argparse.ArgumentParser(description='Batch 6: Enrich 2026 properties')
+    parser = argparse.ArgumentParser(description='Batch 6: Enrich properties by sale year')
     parser.add_argument('--batch-size', type=int, default=100, help='Number of properties to process')
     parser.add_argument('--rate-limit', type=int, default=10, help='Seconds between requests')
     parser.add_argument('--report-interval', type=int, default=5, help='Progress report every N properties')
+    parser.add_argument('--year', type=int, default=2026, help='Sale year to target (default: 2026)')
 
     args = parser.parse_args()
 
     run_enrichment_batch(
         batch_size=args.batch_size,
         rate_limit_seconds=args.rate_limit,
-        report_interval=args.report_interval
+        report_interval=args.report_interval,
+        year=args.year
     )
