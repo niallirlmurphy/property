@@ -168,16 +168,16 @@ export default function BlogPostPage() {
             color: "#111827",
             marginBottom: "0.5rem"
           }}>
-            Ready to search property prices?
+            Value your property now
           </h3>
           <p style={{
             color: "#6b7280",
             marginBottom: "1.5rem"
           }}>
-            Search 785,000 Irish property sales with interactive maps and price trends.
+            Get a free instant estimate based on comparable sales from Ireland's Property Price Register.
           </p>
           <Link
-            to="/"
+            to="/valuation"
             style={{
               display: "inline-block",
               backgroundColor: "#3b82f6",
@@ -188,7 +188,7 @@ export default function BlogPostPage() {
               fontWeight: "500"
             }}
           >
-            Start Searching
+            Value My Property
           </Link>
         </div>
 
