@@ -46,11 +46,19 @@ property_type         TEXT     -- house, apartment, terraced, detached, etc.
 
 -- Property type provenance (from add_property_type_source.sql)
 property_type_source  TEXT     -- how property_type was set, by confidence:
-                                --   'web_enrichment'      scraped from listings (~90%, authoritative)
+                                --   'web_enrichment'      scraped from listings (~90%, authoritative).
+                                --                         NOTE: when property_type is ALSO NULL this means
+                                --                         "scraped but found nothing" - a recorded attempt,
+                                --                         deprioritised behind never-scraped rows.
                                 --   'address_apartment'   APT/APARTMENT/FLAT token in address (~99%, protected)
                                 --   'address_house_guess' bare place-name heuristic, 2010-2020 (~81%, overwritable)
-                                --   NULL                  legacy/unknown (treated as established)
+                                --   NULL                  never attempted / legacy (highest scrape priority)
 ```
+
+**Enrichment scrape priority** (`scripts/enrich_batch6_2026.py`): untyped rows
+with `source IS NULL` (never attempted) are scraped first, then
+`address_house_guess`, then untyped rows already stamped `web_enrichment`
+(attempted, found empty) last.
 
 **property_type precedence:** web enrichment overwrites `address_house_guess`,
 legacy (NULL), and re-scraped rows on an address match, but never overwrites

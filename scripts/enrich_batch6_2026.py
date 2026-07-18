@@ -107,6 +107,12 @@ def fetch_properties_to_enrich(conn, limit=100, year=2026):
     # Only fetch properties missing BOTH fields to maximize impact.
     # Use a sargable date RANGE (not EXTRACT(YEAR ...)) so the planner can use
     # properties_sale_date_idx as an Index Cond instead of a full index filter.
+    # Eligible rows fall into three priority tiers (lower = scraped first):
+    #   0  never attempted        (untyped, source NULL)        -> biggest info gain
+    #   1  low-confidence guess   (source 'address_house_guess') -> upgrade to real data
+    #   2  attempted, found empty (untyped, source 'web_enrichment') -> lowest yield, retry last
+    # Within a tier, most-recent sales first.
+    # Sargable date RANGE keeps properties_sale_date_idx usable.
     cur.execute("""
         SELECT id, address, county, sale_date, price
         FROM properties
@@ -114,11 +120,16 @@ def fetch_properties_to_enrich(conn, limit=100, year=2026):
           AND sale_date < %s
           AND (
               (bedrooms IS NULL AND property_type IS NULL)
-              -- Re-visit low-confidence address heuristics so real listing data
-              -- can overwrite them.
               OR property_type_source = 'address_house_guess'
           )
-        ORDER BY sale_date DESC
+        ORDER BY
+            CASE
+                WHEN bedrooms IS NULL AND property_type IS NULL
+                     AND property_type_source IS NULL           THEN 0
+                WHEN property_type_source = 'address_house_guess' THEN 1
+                ELSE 2   -- attempted but empty (source = 'web_enrichment')
+            END,
+            sale_date DESC
         LIMIT %s
     """, (f'{year}-01-01', f'{year + 1}-01-01', limit))
 
@@ -208,6 +219,31 @@ def update_property_enrichment(property_id, address, bedrooms, property_type):
     finally:
         conn.close()
 
+def mark_enrichment_attempted(address):
+    """Record that an address was scraped but yielded nothing.
+
+    Sets property_type_source = 'web_enrichment' on never-attempted rows (type
+    and bedrooms still NULL) for this address, so they are DEPRIORITISED behind
+    rows that have not yet been scraped at all. Only touches rows that are both
+    untyped and unattempted; never downgrades apartment labels or house guesses
+    (both carry a non-NULL property_type)."""
+    conn = psycopg2.connect(DATABASE_URL)
+    try:
+        cur = conn.cursor()
+        cur.execute("""
+            UPDATE properties
+            SET property_type_source = 'web_enrichment'
+            WHERE address = %s
+              AND property_type IS NULL
+              AND bedrooms IS NULL
+              AND property_type_source IS NULL
+        """, (address,))
+        conn.commit()
+        return cur.rowcount
+    finally:
+        conn.close()
+
+
 def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=5, year=2026):
     """Run batch enrichment process."""
     print("=" * 70)
@@ -280,7 +316,10 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=
                 print(f"  ❌ Update failed")
                 stats['failed'] += 1
         else:
-            print(f"  ❌ No data found")
+            # Record the attempt so this address is deprioritised behind
+            # never-scraped rows on future runs.
+            mark_enrichment_attempted(prop['address'])
+            print(f"  ❌ No data found (marked attempted)")
             stats['failed'] += 1
 
         results.append({
