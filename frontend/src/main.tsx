@@ -43,6 +43,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         {/* Redirect the legacy plural path so old links/bookmarks keep working */}
         <Route path="/mortgages" element={<Navigate to="/mortgage" replace />} />
         <Route path="/energy" element={<EnergyPage />} />
+        {/* Redirect legacy/menu BER path so old links keep working */}
+        <Route path="/ber-ratings" element={<Navigate to="/energy" replace />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/property-price-register" element={<PropertyPriceRegisterPage />} />
