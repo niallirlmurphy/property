@@ -112,8 +112,12 @@ def fetch_properties_to_enrich(conn, limit=100, year=2026):
         FROM properties
         WHERE sale_date >= %s
           AND sale_date < %s
-          AND bedrooms IS NULL
-          AND property_type IS NULL
+          AND (
+              (bedrooms IS NULL AND property_type IS NULL)
+              -- Re-visit low-confidence address heuristics so real listing data
+              -- can overwrite them.
+              OR property_type_source = 'address_house_guess'
+          )
         ORDER BY sale_date DESC
         LIMIT %s
     """, (f'{year}-01-01', f'{year + 1}-01-01', limit))
@@ -132,7 +136,13 @@ def fetch_properties_to_enrich(conn, limit=100, year=2026):
 
 def update_property_enrichment(property_id, address, bedrooms, property_type):
     """Update property with enrichment data, applying to all sales of the same address.
-    Uses a fresh connection for each update to avoid pooling issues."""
+
+    Web enrichment is treated as the authoritative source: on an address match it
+    overwrites lower-confidence data (house guesses, legacy/unknown, NULL) but never
+    the high-confidence 'address_apartment' labels from the address rule.
+
+    Uses a fresh connection for each update to avoid pooling issues.
+    """
 
     updates = []
     params = []
@@ -142,43 +152,59 @@ def update_property_enrichment(property_id, address, bedrooms, property_type):
         params.append(bedrooms)
 
     if property_type is not None:
+        # Stamp provenance so future runs know this is authoritative listing data.
         updates.append("property_type = %s")
         params.append(property_type)
+        updates.append("property_type_source = 'web_enrichment'")
 
     if not updates:
         return False, 0
 
-    # Create fresh connection for this update
+    # Guard: never let web enrichment overwrite the high-confidence apartment
+    # labels derived from the address (~99% accurate vs the scraper's ~90%).
+    # bedrooms may still be filled in for those rows.
+    protect_type = "property_type_source IS DISTINCT FROM 'address_apartment'"
+
+    # If we are only setting property_type (no bedrooms), skip rows already
+    # protected; otherwise still allow the bedrooms-only update to proceed by
+    # dropping the property_type assignment for protected rows would complicate
+    # the SQL, so we simply exclude protected rows from the type overwrite.
     conn = psycopg2.connect(DATABASE_URL)
     try:
         cur = conn.cursor()
 
-        # Check if there are multiple sales of the same property
-        cur.execute("""
+        # Find all sales of the same address that still need this update:
+        # missing bedrooms, or a property_type that is safe to overwrite.
+        cur.execute(f"""
             SELECT id, sale_date
             FROM properties
             WHERE address = %s
-              AND (bedrooms IS NULL OR property_type IS NULL)
+              AND (
+                  bedrooms IS NULL
+                  OR (property_type IS NULL AND {protect_type})
+                  OR property_type_source = 'address_house_guess'
+              )
             ORDER BY sale_date DESC
         """, (address,))
 
-        duplicate_sales = cur.fetchall()
+        rows = cur.fetchall()
+        if not rows:
+            return False, 0
 
-        if len(duplicate_sales) > 1:
-            # Update all sales of this property
-            params_copy = params.copy()
-            params_copy.append(address)
-            query = f"UPDATE properties SET {', '.join(updates)} WHERE address = %s"
-            cur.execute(query, params_copy)
-            conn.commit()
-            return True, len(duplicate_sales)
+        # Build the WHERE clause for the write. When we are overwriting the
+        # property_type we must protect address_apartment rows.
+        if property_type is not None:
+            where = f"address = %s AND {protect_type}"
         else:
-            # Update just this property
-            params.append(property_id)
-            query = f"UPDATE properties SET {', '.join(updates)} WHERE id = %s"
-            cur.execute(query, params)
-            conn.commit()
-            return True, 1
+            where = "address = %s"
+
+        params_copy = params.copy()
+        params_copy.append(address)
+        query = f"UPDATE properties SET {', '.join(updates)} WHERE {where}"
+        cur.execute(query, params_copy)
+        affected = cur.rowcount
+        conn.commit()
+        return True, affected
     finally:
         conn.close()
 
