@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { inject } from "@vercel/analytics";
 import App from "./App";
 import AreaPage from "./pages/AreaPage";
@@ -39,7 +39,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/county/dublin" element={<DublinCountyPage />} />
         <Route path="/county/:slug" element={<CountyPage />} />
         <Route path="/eircode/:code" element={<EircodePage />} />
-        <Route path="/mortgages" element={<MortgagePage />} />
+        <Route path="/mortgage" element={<MortgagePage />} />
+        {/* Redirect the legacy plural path so old links/bookmarks keep working */}
+        <Route path="/mortgages" element={<Navigate to="/mortgage" replace />} />
         <Route path="/energy" element={<EnergyPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -51,6 +53,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/camino/before-you-go" element={<BeforeYouGoPage />} />
         <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
+        {/* Catch-all: send unknown paths home instead of rendering a blank page */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
