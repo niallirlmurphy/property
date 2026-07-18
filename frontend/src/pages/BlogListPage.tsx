@@ -17,6 +17,15 @@ export interface BlogPost {
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "best-month-to-sell-property-ireland",
+    title: "Which Month Is the Best Month to Sell Your Property in Ireland?",
+    description: "We analysed 749,031 property sales since 2010 to find the best time to sell a home in Ireland. Autumn brings the highest prices and the busiest market — here's the data.",
+    date: "2026-07-18",
+    author: "HomeIQ Team",
+    tags: ["Analysis", "Selling", "Market Trends", "Seasonality"],
+    readTime: "10 min read"
+  },
+  {
     slug: "irelands-longest-greenway",
     title: "Ireland's Longest Greenway",
     description: "Guide to Ireland's Longest Greenway - the 125km Royal Canal Greenway and Old Rail Trail route from Leixlip to Athlone.",
