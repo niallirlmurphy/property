@@ -10,6 +10,7 @@ import EircodePage from "./pages/EircodePage";
 import MortgagePage from "./pages/MortgagePage";
 import EnergyPage from "./pages/EnergyPage";
 import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 import PropertyPriceRegisterPage from "./pages/PropertyPriceRegisterPage";
 import ManualGeocodePage from "./pages/ManualGeocodePage";
 import PolygonSearchPage from "./pages/PolygonSearchPage";
@@ -41,6 +42,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/mortgages" element={<MortgagePage />} />
         <Route path="/energy" element={<EnergyPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/property-price-register" element={<PropertyPriceRegisterPage />} />
         <Route path="/geocodes" element={<ManualGeocodePage />} />
         <Route path="/camino" element={<CaminoIndexPage />} />

@@ -131,6 +131,22 @@ export default function BlogPostPage() {
         <div className="blog-content">
           <ContentComponent />
         </div>
+
+        {/* Copyright notice - applies to all blog posts */}
+        <p style={{
+          borderTop: "1px solid #e5e7eb",
+          marginTop: "2.5rem",
+          paddingTop: "1.5rem",
+          fontSize: "0.8125rem",
+          color: "#9ca3af",
+          lineHeight: 1.6,
+        }}>
+          © {new Date().getFullYear()} HomeIQ. All rights reserved. The analysis and content in this
+          article are the property of HomeIQ (homeiq.ie). You're welcome to share or cite it with a link
+          back to the original; reproduction in full without permission is not permitted. Questions or
+          permission requests?{" "}
+          <Link to="/contact" style={{ color: "#6b7280", textDecoration: "underline" }}>Contact us</Link>.
+        </p>
       </article>
 
       {/* Footer CTA */}
