@@ -41,29 +41,93 @@ def extract_bedrooms(text):
     return None
 
 def extract_property_type(text):
-    """Extract property type from text."""
+    """Extract property type from text.
+
+    Uses word-boundary regex (so 'apt' doesn't match inside other words) and
+    recognises common listing abbreviations ('Semi-D', 'end of terrace').
+    Generic dual-category boilerplate ('house/apartment', a listing-site label
+    rather than a real type) is stripped first so it can't win by position.
+    """
     if not text:
         return None
 
     text = text.lower()
-    type_keywords = [
-        ('semi-detached', ['semi-detached', 'semi detached', 'semidetached']),
-        ('detached', ['detached']),
-        ('terraced', ['terraced', 'terrace']),
-        ('apartment', ['apartment', 'apt']),
-        ('duplex', ['duplex']),
-        ('bungalow', ['bungalow']),
-        ('cottage', ['cottage']),
-        ('house', ['house'])
+
+    # Remove dual-category boilerplate that names both types generically
+    # (e.g. 'house/apartment', 'house / apartment', 'houses & apartments').
+    # These are listing-site category labels, not a real property type.
+    text = re.sub(r'\bhouses?\s*[/&]\s*apartments?\b', ' ', text)
+    text = re.sub(r'\bapartments?\s*[/&]\s*houses?\b', ' ', text)
+    text = re.sub(r'\bhouses?\s+and\s+apartments?\b', ' ', text)
+
+    # Ordered most-specific first; each entry is a list of regex alternatives.
+    type_patterns = [
+        ('semi-detached', [r'semi[\s-]?detached', r'semi[\s-]?d\b']),
+        ('detached',      [r'\bdetached\b']),
+        ('terraced',      [r'\bterraced\b', r'\bterrace\b',
+                           r'end[\s-]?of[\s-]?terrace', r'\bmid[\s-]?terrace\b']),
+        ('duplex',        [r'\bduplex\b']),
+        ('bungalow',      [r'\bbungalow\b']),
+        ('cottage',       [r'\bcottage\b']),
+        ('apartment',     [r'\bapartment\b', r'\bapt\b']),
+        ('house',         [r'\bhouse\b']),
     ]
 
-    for prop_type, keywords in type_keywords:
-        if any(keyword in text for keyword in keywords):
+    for prop_type, patterns in type_patterns:
+        if any(re.search(p, text) for p in patterns):
             return prop_type
 
     return None
 
-def search_web_for_property(address, county, max_retries=2):
+
+def _focused_result_text(soup, address, county, eircode=None):
+    """Return text from only the search-result blocks that match the target
+    address, so extraction is not polluted by unrelated listings or site
+    boilerplate. Falls back to whole-page text if no block clearly matches.
+
+    If an Eircode is known it is the strongest signal: any block containing it
+    is definitively about this property (regardless of street-name variants),
+    so those blocks are used exclusively when present.
+    """
+    blocks = soup.select('.result__body') or soup.select('.result')
+    if not blocks:
+        return soup.get_text()
+
+    block_texts = [b.get_text(' ', strip=True) for b in blocks]
+
+    # 1) Eircode match — unambiguous. Compare ignoring spaces/case.
+    if eircode:
+        ec_norm = eircode.replace(' ', '').upper()
+        ec_hits = [bt for bt in block_texts
+                   if ec_norm in bt.replace(' ', '').upper()]
+        if ec_hits:
+            return ' '.join(ec_hits)
+
+    # 2) Fall back to distinctive address tokens: letters len>=3, excluding
+    # generic street words and the county name (they recur across results).
+    stop = {'the', 'and', 'of', 'co', 'county', 'ireland', 'road', 'street',
+            'avenue', 'drive', 'close', 'court', 'park', 'lane', 'apt',
+            'apartment', 'flat', 'unit', 'block', 'property', 'properties',
+            'town', 'saint'}
+    if county:
+        stop |= set(re.findall(r'[a-z]{3,}', county.lower()))
+    tokens = set(t for t in re.findall(r'[a-z]{3,}', address.lower()) if t not in stop)
+    if not tokens:
+        return soup.get_text()
+
+    scored = [(sum(1 for t in tokens if t in bt.lower()), bt) for bt in block_texts]
+    best = max(c for c, _ in scored)
+    if best >= 2:
+        thr = max(2, best - 1)
+        matched = [bt for c, bt in scored if c >= thr]
+    elif best == 1:
+        matched = [bt for c, bt in scored if c == 1]
+    else:
+        matched = []
+
+    return ' '.join(matched) if matched else soup.get_text()
+
+def search_web_for_property(address, county, max_retries=2, eircode=None):
     """Search web for property details using DuckDuckGo with retries."""
     for attempt in range(max_retries):
         try:
@@ -82,7 +146,9 @@ def search_web_for_property(address, county, max_retries=2):
                 return None, None
 
             soup = BeautifulSoup(response.text, 'html.parser')
-            text_content = soup.get_text().lower()
+            # Focus on the result blocks that match this address (or Eircode),
+            # so unrelated listings and site boilerplate don't pollute extraction.
+            text_content = _focused_result_text(soup, address, county, eircode).lower()
 
             bedrooms = extract_bedrooms(text_content)
             property_type = extract_property_type(text_content)
@@ -114,7 +180,7 @@ def fetch_properties_to_enrich(conn, limit=100, year=2026):
     # Within a tier, most-recent sales first.
     # Sargable date RANGE keeps properties_sale_date_idx usable.
     cur.execute("""
-        SELECT id, address, county, sale_date, price
+        SELECT id, address, county, sale_date, price, eircode
         FROM properties
         WHERE sale_date >= %s
           AND sale_date < %s
@@ -140,7 +206,8 @@ def fetch_properties_to_enrich(conn, limit=100, year=2026):
             'address': row[1],
             'county': row[2],
             'sale_date': row[3],
-            'price': row[4]
+            'price': row[4],
+            'eircode': row[5]
         })
 
     return properties
@@ -317,7 +384,14 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=
         print(f"  📅 {prop['sale_date'].strftime('%d %b %Y')} | €{prop['price']:,.0f}")
 
         # Search web for property details
-        bedrooms, property_type = search_web_for_property(prop['address'], prop['county'])
+        bedrooms, property_type = search_web_for_property(
+            prop['address'], prop['county'], eircode=prop.get('eircode'))
+
+        # A dwelling with 4+ bedrooms is a house, not an apartment. Web results
+        # for large properties sometimes still carry apartment boilerplate, so
+        # treat a high bedroom count as decisive for the house/apartment split.
+        if bedrooms is not None and bedrooms >= 4 and property_type in (None, 'apartment', 'duplex'):
+            property_type = 'house'
 
         if bedrooms or property_type:
             success, count = update_property_enrichment(prop['id'], prop['address'], bedrooms, property_type)
