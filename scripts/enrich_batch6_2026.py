@@ -184,33 +184,58 @@ def update_property_enrichment(property_id, address, bedrooms, property_type):
     try:
         cur = conn.cursor()
 
+        # Two sales can share identical address TEXT but be different dwellings
+        # (e.g. subdivided/duplex units) distinguishable only by Eircode. Fetch
+        # the subject property's Eircode so we can avoid propagating enrichment
+        # to a same-address row whose Eircode contradicts it. Only enforce the
+        # match when BOTH Eircodes exist; a NULL on either side can't be judged.
+        cur.execute("SELECT eircode FROM properties WHERE id = %s", (property_id,))
+        row = cur.fetchone()
+        subject_eircode = row[0] if row else None
+        subject_norm = (subject_eircode or "").replace(" ", "").upper() or None
+
+        if subject_norm:
+            # Sibling kept if it has no Eircode, or its Eircode matches ours.
+            eircode_guard = (
+                "(eircode IS NULL OR REPLACE(UPPER(eircode), ' ', '') = %s)"
+            )
+        else:
+            eircode_guard = "TRUE"  # subject has no Eircode -> cannot discriminate
+
         # Find all sales of the same address that still need this update:
         # missing bedrooms, or a property_type that is safe to overwrite.
+        select_params = [address]
+        if subject_norm:
+            select_params.append(subject_norm)
         cur.execute(f"""
             SELECT id, sale_date
             FROM properties
             WHERE address = %s
+              AND {eircode_guard}
               AND (
                   bedrooms IS NULL
                   OR (property_type IS NULL AND {protect_type})
                   OR property_type_source = 'address_house_guess'
               )
             ORDER BY sale_date DESC
-        """, (address,))
+        """, select_params)
 
         rows = cur.fetchall()
         if not rows:
             return False, 0
 
         # Build the WHERE clause for the write. When we are overwriting the
-        # property_type we must protect address_apartment rows.
+        # property_type we must protect address_apartment rows. The Eircode
+        # guard applies to the write too, so contradicting rows are untouched.
         if property_type is not None:
-            where = f"address = %s AND {protect_type}"
+            where = f"address = %s AND {eircode_guard} AND {protect_type}"
         else:
-            where = "address = %s"
+            where = f"address = %s AND {eircode_guard}"
 
         params_copy = params.copy()
         params_copy.append(address)
+        if subject_norm:
+            params_copy.append(subject_norm)
         query = f"UPDATE properties SET {', '.join(updates)} WHERE {where}"
         cur.execute(query, params_copy)
         affected = cur.rowcount
