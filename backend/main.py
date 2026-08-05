@@ -229,6 +229,16 @@ TTL_GEOCODE  = 86400       # 24 hours — addresses don't move
 TTL_SEARCH   = 300         # 5 minutes — property results are stable enough
 TTL_EXACT_SEARCH = 86400   # 24 hours — exact address search results are deterministic, re-evaluate in 3 months for high traffic
 
+# Trend/aggregate price bounds. Sales outside this range are almost always special
+# cases the PPR records verbatim — multi-unit/portfolio sales filed at a shared
+# price (well above €20M) or nominal transfers (below €10k) — that aren't flagged
+# not_full_market_price. They're kept in the DB (they're genuine PPR records) but
+# excluded from median/average calculations so they don't skew trends. Row-listing
+# queries (search, alerts) are NOT filtered by these bounds.
+TREND_MIN_PRICE = 10_000
+TREND_MAX_PRICE = 20_000_000
+TREND_PRICE_FILTER = f"price >= {TREND_MIN_PRICE} AND price <= {TREND_MAX_PRICE}"
+
 
 async def _heartbeat_loop():
     """Ping the DB if there has been no activity for _HEARTBEAT_INTERVAL seconds.
@@ -1512,7 +1522,7 @@ async def trends(
             }
             return SafeJSONResponse(content=cached, headers=headers)
 
-    filters = ["not_full_market_price = FALSE"]
+    filters = ["not_full_market_price = FALSE", TREND_PRICE_FILTER]
     params: list = []
     idx = 1
 
@@ -1624,6 +1634,7 @@ async def eircode_search(
         FROM properties
         WHERE {where}
           AND not_full_market_price = FALSE
+          AND {TREND_PRICE_FILTER}
     """, *params)
 
     result = {
