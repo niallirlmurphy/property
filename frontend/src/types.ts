@@ -134,12 +134,21 @@ export interface ValuationStatistics {
   max_price: number;
 }
 
+export interface NearbyAmenity {
+  kind: string;        // rail | luas | primary_school | secondary_school
+  label: string;       // e.g. "DART / rail"
+  name: string;        // e.g. "DART Sandymount"
+  category?: string;   // e.g. "Luas Station (Green Line)"
+  distance_m: number;
+}
+
 export interface ValuationResponse {
   estimate: number;
   confidence_interval: ConfidenceInterval;
   validation: ValidationResult;
   comparables: ComparableProperty[];
   statistics: ValuationStatistics;
+  nearby_amenities?: NearbyAmenity[] | null;
   metadata: {
     geocoded_location: {
       latitude: number;

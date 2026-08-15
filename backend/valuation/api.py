@@ -15,13 +15,15 @@ from .models import (
     ValuationResponse,
     ComparableProperty,
     ConfidenceInterval,
-    ValuationStatistics
+    ValuationStatistics,
+    NearbyAmenity
 )
 from .geocoder import ValuationGeocoder
 from .comparable_search import ComparableSearcher
 from .adjustments import MVPAdjuster
 from .calculator import ValuationCalculator
 from .validator import MVPValidator
+from .nearby_amenities import get_nearby_amenities
 
 
 # Router
@@ -245,6 +247,16 @@ async def estimate_property_value(
         validator = MVPValidator()
         validation = validator.validate(valuation, comparables)
 
+        # Nearest amenities (Dublin only; None elsewhere or on any error).
+        # Uses an in-memory cache of the small amenities table, so this adds no
+        # per-request database round-trip after the first lookup.
+        amenity_rows = await get_nearby_amenities(
+            pool, location.latitude, location.longitude
+        )
+        nearby_amenities = (
+            [NearbyAmenity(**a) for a in amenity_rows] if amenity_rows else None
+        )
+
         # Calculate processing time
         processing_time_ms = int((datetime.now() - start_time).total_seconds() * 1000)
 
@@ -270,6 +282,7 @@ async def estimate_property_value(
                 for c in comparables
             ],
             statistics=ValuationStatistics(**valuation['statistics']),
+            nearby_amenities=nearby_amenities,
             metadata={
                 'geocoded_location': {
                     'latitude': location.latitude,
