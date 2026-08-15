@@ -17,6 +17,15 @@ export interface BlogPost {
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "does-living-near-a-good-school-add-value",
+    title: "Does Living Near a Good School Add Value to Your Home?",
+    description: "We analysed 214,888 Dublin sales to measure the property price premium for being near a school or university. The school-catchment effect is real — and bigger than the transport one.",
+    date: "2026-08-16",
+    author: "HomeIQ Team",
+    tags: ["Analysis", "Dublin", "Schools", "Education", "Property Value"],
+    readTime: "9 min read"
+  },
+  {
     slug: "does-being-near-a-luas-or-dart-add-value",
     title: "Does Living Near a Luas or DART Add Value to Your Home?",
     description: "We analysed 214,888 Dublin sales to see whether being near the Luas Green Line, Red Line or DART raises property prices. The honest answer surprises most people.",
