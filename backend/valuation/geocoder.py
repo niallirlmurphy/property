@@ -93,9 +93,13 @@ class ValuationGeocoder:
                 logger.warning(f"Eircode geocoding failed: {e}")
 
         # Method 1: Database lookup (ALWAYS try this first!)
-        # Works for any property in the Property Price Register (2010-present)
+        # Works for any property in the Property Price Register (2010-present).
+        # Constrain to the requested county (defaulting to Dublin) so an
+        # identical street/house number in another county is never returned —
+        # e.g. "36 Fairfield Road" exists only in Cork, but a Dublin request
+        # must not silently geocode to Cork.
         try:
-            result = await self._geocode_by_db_fuzzy_match(address)
+            result = await self._geocode_by_db_fuzzy_match(address, county)
             if result:
                 # Guard against wrong-area database coordinates: if the match
                 # is implausibly far from the Eircode's routing-key centroid,
@@ -294,19 +298,26 @@ class ValuationGeocoder:
 
     async def _geocode_by_db_fuzzy_match(
         self,
-        address: str
+        address: str,
+        county: Optional[str] = None
     ) -> Optional[GeocodingResult]:
         """
         Geocode by matching against known addresses in database.
 
-        Uses EXACT same logic as /search/exact endpoint (S1 page).
+        Uses EXACT same logic as /search/exact endpoint (S1 page), but
+        constrained to a single county so a matching street/house number in a
+        different county cannot be returned by mistake.
 
         Args:
             address: Property address
+            county: County to constrain the match to. Defaults to Dublin when
+                not supplied (most requests are Dublin, and an unscoped match
+                across all counties produces wrong-area results).
 
         Returns:
             GeocodingResult or None if no match found
         """
+        county_name = county or "Dublin"
         # Normalize address - EXACT copy from /search/exact endpoint
         normalized = address.strip()
         normalized = re.sub(r'\s+', ' ', normalized)
@@ -345,7 +356,9 @@ class ValuationGeocoder:
 
         address_norm = ' '.join(result_words).strip()
 
-        # Try exact prefix match first (fast, for S1 page compatibility)
+        # Try exact prefix match first (fast, for S1 page compatibility).
+        # Scope to county so e.g. a Cork "36 Fairfield Road" is not returned
+        # for a Dublin request.
         query_exact = """
             SELECT
                 latitude,
@@ -355,12 +368,13 @@ class ValuationGeocoder:
             FROM properties
             WHERE
                 starts_with(COALESCE(address_normalized, address), $1)
+                AND county ILIKE $2
                 AND latitude IS NOT NULL
                 AND longitude IS NOT NULL
             LIMIT 1;
         """
 
-        row = await self.db.fetchrow(query_exact, address_norm)
+        row = await self.db.fetchrow(query_exact, address_norm, county_name)
 
         # If no exact prefix match, try flexible matching for partial addresses
         # e.g., "28 Slane Road, Dublin 12" should match "28 Slane Road, Crumlin, Dublin 12"
@@ -377,6 +391,7 @@ class ValuationGeocoder:
                 for i, token in enumerate(tokens[:6]):  # Limit to first 6 tokens
                     token_conditions.append(f"COALESCE(address_normalized, address) ILIKE ${i+1}")
 
+                county_param_idx = len(tokens[:6]) + 1
                 query_flexible = f"""
                     SELECT
                         latitude,
@@ -387,13 +402,14 @@ class ValuationGeocoder:
                     FROM properties
                     WHERE
                         {' AND '.join(token_conditions)}
+                        AND county ILIKE ${county_param_idx}
                         AND latitude IS NOT NULL
                         AND longitude IS NOT NULL
                     ORDER BY LENGTH(COALESCE(address_normalized, address))  -- Prefer shorter (more specific) matches
                     LIMIT 1;
                 """
 
-                params = [f'%{token}%' for token in tokens[:6]]
+                params = [f'%{token}%' for token in tokens[:6]] + [county_name]
                 row = await self.db.fetchrow(query_flexible, *params)
 
         if row:
