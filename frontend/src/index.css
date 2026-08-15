@@ -2230,6 +2230,72 @@ input[type="range"]::-moz-range-thumb {
   color: #1a3c5e;
 }
 
+/* Nearby amenities card */
+.val-amenities-intro {
+  font-size: 13px;
+  color: #667;
+  margin: -8px 0 16px;
+}
+
+.val-amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.val-amenity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #eef0f3;
+  border-radius: 8px;
+  background: #fbfcfe;
+}
+
+.val-amenity-icon {
+  font-size: 22px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.val-amenity-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.val-amenity-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #8895a5;
+}
+
+.val-amenity-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a3c5e;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.val-amenity-cat {
+  font-size: 11px;
+  color: #778;
+}
+
+.val-amenity-dist {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2a78d6;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 /* Metadata */
 .val-metadata {
   padding: 16px;

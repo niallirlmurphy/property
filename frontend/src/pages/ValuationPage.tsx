@@ -27,6 +27,15 @@ function formatDistance(meters: number): string {
   return `${(meters / 1000).toFixed(2)}km`;
 }
 
+// Icon per amenity slot for the "Nearby Transport & Schools" card.
+const AMENITY_ICON: Record<string, string> = {
+  rail: "🚆",
+  luas: "🚋",
+  primary_school: "🏫",
+  secondary_school: "🎓",
+  tertiary: "🏛️",
+};
+
 // ---------------------------------------------------------------------------
 // Sub-components
 // ---------------------------------------------------------------------------
@@ -434,6 +443,31 @@ export default function ValuationPage() {
                   </table>
                 </div>
               </div>
+
+              {/* Nearby amenities (Dublin only) */}
+              {result.nearby_amenities && result.nearby_amenities.length > 0 && (
+                <div className="val-comparables-card val-amenities-card">
+                  <h3>Nearby Transport & Schools</h3>
+                  <p className="val-amenities-intro">
+                    The closest key transport links and schools to this property.
+                  </p>
+                  <div className="val-amenities-grid">
+                    {result.nearby_amenities.map(a => (
+                      <div className="val-amenity" key={a.kind}>
+                        <span className="val-amenity-icon" aria-hidden="true">
+                          {AMENITY_ICON[a.kind] ?? "📍"}
+                        </span>
+                        <div className="val-amenity-body">
+                          <span className="val-amenity-label">{a.label}</span>
+                          <span className="val-amenity-name">{a.name}</span>
+                          {a.category && <span className="val-amenity-cat">{a.category}</span>}
+                        </div>
+                        <span className="val-amenity-dist">{formatDistance(a.distance_m)}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Metadata */}
               <div className="val-metadata">

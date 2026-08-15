@@ -286,6 +286,16 @@ class GeocodingResult(BaseModel):
     bedrooms: Optional[int] = Field(None, description="Bedrooms from database match (if found)")
 
 
+class NearbyAmenity(BaseModel):
+    """A single nearest amenity (transport link or school) for a Dublin property."""
+
+    kind: str = Field(..., description="Slot key: rail | luas | primary_school | secondary_school")
+    label: str = Field(..., description="Human-readable slot label, e.g. 'DART / rail'")
+    name: str = Field(..., description="Amenity name, e.g. 'DART Sandymount'")
+    category: Optional[str] = Field(None, description="Category detail, e.g. 'Luas Station (Green Line)'")
+    distance_m: int = Field(..., ge=0, description="Distance from the property in metres")
+
+
 class ValuationResponse(BaseModel):
     """Response schema for property valuation."""
 
@@ -319,6 +329,12 @@ class ValuationResponse(BaseModel):
     statistics: ValuationStatistics = Field(
         ...,
         description="Statistical details about calculation"
+    )
+
+    # Nearest amenities (Dublin only; None/omitted elsewhere)
+    nearby_amenities: Optional[List[NearbyAmenity]] = Field(
+        None,
+        description="Nearest DART/rail, Luas, primary and secondary school (Dublin properties only)"
     )
 
     # Metadata
