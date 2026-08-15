@@ -17,6 +17,15 @@ export interface BlogPost {
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "does-being-near-a-luas-or-dart-add-value",
+    title: "Does Living Near a Luas or DART Add Value to Your Home?",
+    description: "We analysed 214,888 Dublin sales to see whether being near the Luas Green Line, Red Line or DART raises property prices. The honest answer surprises most people.",
+    date: "2026-08-16",
+    author: "HomeIQ Team",
+    tags: ["Analysis", "Dublin", "Transport", "Luas", "DART"],
+    readTime: "9 min read"
+  },
+  {
     slug: "best-month-to-sell-property-ireland",
     title: "Which Month Is the Best Month to Sell Your Property in Ireland?",
     description: "We analysed 749,031 property sales since 2010 to find the best time to sell a home in Ireland. Autumn brings the highest prices and the busiest market — here's the data.",
