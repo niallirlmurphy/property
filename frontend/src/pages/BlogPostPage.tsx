@@ -10,9 +10,11 @@ import { DublinPostcodesContent } from "../blog-posts/dublin-property-prices-by-
 import { EircodeGuideContent } from "../blog-posts/understanding-eircode-property-search";
 import { IrelandsLongestGreenwayContent } from "../blog-posts/irelands-longest-greenway";
 import { BestMonthToSellContent } from "../blog-posts/best-month-to-sell-property-ireland";
+import { TransportPremiumContent } from "../blog-posts/does-being-near-a-luas-or-dart-add-value";
 
 // Map slugs to content components
 const BLOG_CONTENT: Record<string, React.ComponentType> = {
+  "does-being-near-a-luas-or-dart-add-value": TransportPremiumContent,
   "best-month-to-sell-property-ireland": BestMonthToSellContent,
   "irelands-longest-greenway": IrelandsLongestGreenwayContent,
   "how-to-use-property-price-register": HowToUsePPRContent,
