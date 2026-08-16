@@ -10,6 +10,10 @@ export default defineConfig({
   // which concrete URLs get prerendered — it is NOT a ViteReactSSG() runtime
   // argument.
   ssgOptions: {
+    // Emit nested `route/index.html` files (not flat `route.html`) so static
+    // hosts serve them at the clean, extensionless URL via directory-index
+    // resolution — no cleanUrls rewrite needed.
+    dirStyle: "nested",
     includedRoutes(paths: string[]) {
       // Keep concrete static routes; drop the dynamic templates and catch-all.
       const staticPaths = paths.filter((p) => !p.includes(":") && p !== "*");
