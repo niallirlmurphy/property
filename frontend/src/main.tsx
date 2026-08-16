@@ -24,6 +24,7 @@ import BlogListPage from "./pages/BlogListPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
+import "./styles/county-template.css";
 
 export const routes = [
   { path: "/", element: <App /> },
