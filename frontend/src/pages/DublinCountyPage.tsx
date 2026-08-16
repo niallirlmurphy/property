@@ -64,6 +64,14 @@ export default function DublinCountyPage() {
       <div className="content-page">
       <Breadcrumbs items={[{ name: "Area Guides", url: "/areaguides" }, { name: "Dublin", url: "/county/dublin" }]} />
       <h1>Property Prices in County Dublin</h1>
+      <img
+        className="area-hero"
+        src="/images/dublin-port-liffey.jpg"
+        alt="An Irish Naval Service vessel on the River Liffey at Dublin Port, with the Poolbeg chimneys and the East-Link bridge behind"
+        width={2000}
+        height={1500}
+        loading="lazy"
+      />
       <p className="content-intro">
         Explore residential property sale prices across Dublin from Ireland's Property Price Register.
         Every sale since 2010 is included. Postcode breakdown figures are for 2025 full market price sales.
