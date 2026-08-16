@@ -55,7 +55,7 @@ export default function EircodePage() {
   return (
     <>
       {meta}
-      <PageHeader title={`Property Prices — ${friendlyName}`} />
+      <PageHeader title={`Property Prices — ${friendlyName}`} titleAsHeading={false} />
       <div className="content-page">
       <Breadcrumbs
         items={[
@@ -64,6 +64,7 @@ export default function EircodePage() {
           { name: friendlyName, url: `/eircode/${upperCode}` },
         ]}
       />
+      <h1>Property Prices — {friendlyName}</h1>
       <p className="content-intro">
         All residential property sales recorded under Eircode routing key <strong>{upperCode}</strong> in{" "}
         <Link to="/property-price-register" style={{ color: "#1a3c5e", textDecoration: "underline" }}>

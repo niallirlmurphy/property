@@ -84,9 +84,10 @@ export default function CountyPage() {
   return (
     <>
       {meta}
-      <PageHeader title={`Property Prices in County ${county}`} />
+      <PageHeader title={`Property Prices in County ${county}`} titleAsHeading={false} />
       <div className="content-page">
       <Breadcrumbs items={[{ name: "Area Guides", url: "/areaguides" }, { name: `County ${county}`, url: `/county/${slugStr}` }]} />
+      <h1>Property Prices in County {county}</h1>
       <p className="content-intro">
         Explore residential property sale prices across County {county} from{" "}
         <Link to="/property-price-register" style={{ color: "#1a3c5e", textDecoration: "underline" }}>

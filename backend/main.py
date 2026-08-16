@@ -1510,17 +1510,17 @@ async def trends(
 ):
     """Median price by year, with optional geographic or county filter."""
     _rate_limit_check(request, 60, "trends")
-    # Cache county-only trends (used heavily by content pages)
+    # Cache all trends queries (county-only AND area q= queries, both used
+    # heavily by content/area guide pages) so repeat renders skip the DB.
     cache_params = {"q": q, "radius_km": radius_km, "county": county}
-    if not q:
-        cached = cache.get("trends", cache_params)
-        if cached is not None:
-            # Return cached result with proper headers
-            headers = {
-                "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=7200",
-                "CDN-Cache-Control": "max-age=3600",
-            }
-            return SafeJSONResponse(content=cached, headers=headers)
+    cached = cache.get("trends", cache_params)
+    if cached is not None:
+        # Return cached result with proper headers
+        headers = {
+            "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=7200",
+            "CDN-Cache-Control": "max-age=3600",
+        }
+        return SafeJSONResponse(content=cached, headers=headers)
 
     filters = ["not_full_market_price = FALSE", TREND_PRICE_FILTER]
     params: list = []
@@ -1553,8 +1553,7 @@ async def trends(
     """, *params)
 
     result = {"data": [serialize_row(r) for r in rows]}
-    if not q:
-        cache.set("trends", cache_params, result, TTL_TRENDS)
+    cache.set("trends", cache_params, result, TTL_TRENDS)
 
     # CDN cache headers (trends change infrequently)
     headers = {

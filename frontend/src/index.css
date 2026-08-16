@@ -82,6 +82,16 @@ body {
   min-width: 0;
 }
 .app-header-title h1 { font-size: 18px; font-weight: 600; }
+/* Non-heading variant: used when the page renders its own in-content <h1>.
+   Matches the h1 styling so the header bar looks identical. */
+.app-header-title-text {
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .header-count { font-size: 13px; opacity: 0.8; margin-left: auto; white-space: nowrap; }
 
@@ -806,6 +816,25 @@ body {
   color: #444;
   line-height: 1.6;
   margin-bottom: 24px;
+}
+
+/* Hero photo on area guide pages (e.g. Clontarf) */
+.area-hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 8px 0 20px;
+}
+
+/* Factual location overview paragraph on area guide pages */
+.area-info {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  margin: 0 0 24px;
 }
 
 .back-link {

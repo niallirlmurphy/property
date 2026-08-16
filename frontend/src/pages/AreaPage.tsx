@@ -59,13 +59,30 @@ export default function AreaPage() {
   return (
     <>
       {meta}
-      <PageHeader title={`Property Prices in ${config.name}`} />
+      <PageHeader title={`Property Prices in ${config.name}`} titleAsHeading={false} />
       <div className="content-page">
       <Breadcrumbs items={crumbs} />
+      <h1>Property Prices in {config.name}</h1>
+
+      {config.image && (
+        <img
+          className="area-hero"
+          src={config.image}
+          alt={config.imageAlt ?? config.name}
+          width={2000}
+          height={1500}
+          loading="lazy"
+        />
+      )}
+
       <p className="content-intro">
         {config.name} is {config.description}. This page shows residential property
         sale prices from Ireland's Property Price Register, updated regularly.
       </p>
+
+      {config.info && (
+        <p className="area-info">{config.info}</p>
+      )}
 
       {loading && <div className="content-loading">Loading data…</div>}
       {error && <div className="error-msg">{error}</div>}

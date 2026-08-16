@@ -60,9 +60,10 @@ export default function DublinCountyPage() {
   return (
     <>
       {meta}
-      <PageHeader title="Property Prices in County Dublin" />
+      <PageHeader title="Property Prices in County Dublin" titleAsHeading={false} />
       <div className="content-page">
       <Breadcrumbs items={[{ name: "Area Guides", url: "/areaguides" }, { name: "Dublin", url: "/county/dublin" }]} />
+      <h1>Property Prices in County Dublin</h1>
       <p className="content-intro">
         Explore residential property sale prices across Dublin from Ireland's Property Price Register.
         Every sale since 2010 is included. Postcode breakdown figures are for 2025 full market price sales.

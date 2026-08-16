@@ -4,9 +4,16 @@ import ContactSidebar from "./ContactModals";
 
 interface Props {
   title: string;
+  /**
+   * When false, the header title is rendered as a plain <span> instead of an
+   * <h1>. Use this on pages that render their own prominent in-content <h1>
+   * (e.g. the area-guide pages) so the page has exactly one <h1>. Defaults to
+   * true to preserve the header-as-h1 behaviour every other page relies on.
+   */
+  titleAsHeading?: boolean;
 }
 
-export default function PageHeader({ title }: Props) {
+export default function PageHeader({ title, titleAsHeading = true }: Props) {
   return (
     <>
       <header className="app-header">
@@ -17,7 +24,7 @@ export default function PageHeader({ title }: Props) {
           </svg>
         </Link>
         <Link to="/" className="app-header-title">
-          <h1>{title}</h1>
+          {titleAsHeading ? <h1>{title}</h1> : <span className="app-header-title-text">{title}</span>}
         </Link>
         <WaffleMenu />
       </header>

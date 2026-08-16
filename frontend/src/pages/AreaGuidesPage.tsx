@@ -27,9 +27,10 @@ export default function AreaGuidesPage() {
   return (
     <>
       {meta}
-      <PageHeader title="Property Price Area Guides" />
+      <PageHeader title="Property Price Area Guides" titleAsHeading={false} />
       <div className="content-page">
         <Breadcrumbs items={[{ name: "Area Guides", url: "/areaguides" }]} />
+        <h1>Property Price Area Guides</h1>
 
         <p className="content-intro">
           Explore Irish residential property prices by location. Every guide draws on
