@@ -64,7 +64,7 @@ export default function CountyPage() {
     </>
   );
 
-  usePageMeta(
+  const meta = usePageMeta(
     county ? `Property Prices in County ${county}` : undefined,
     county ? `Browse every residential sale in County ${county} since 2010. View price trends, median values, and recent sales from Ireland's Property Price Register.` : undefined,
   );
@@ -74,6 +74,7 @@ export default function CountyPage() {
 
   return (
     <>
+      {meta}
       <PageHeader title={`Property Prices in County ${county}`} />
       <div className="content-page">
       <p className="content-intro">

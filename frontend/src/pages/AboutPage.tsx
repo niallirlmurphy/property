@@ -4,12 +4,13 @@ import Footer from "../components/Footer";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function AboutPage() {
-  usePageMeta(
+  const meta = usePageMeta(
     "About HomeIQ.ie",
     "HomeIQ.ie uses open data from the Property Price Register, CSO, SEAI BER, and other public Irish datasets to make the property market transparent and accessible.",
   );
   return (
     <div className="static-page">
+      {meta}
       <PageHeader title="About HomeIQ.ie" />
       <main className="static-content">
         <section className="about-section">

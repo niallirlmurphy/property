@@ -19,7 +19,7 @@ export default function EircodePage() {
   const friendlyName = DUBLIN_EIRCODE_AREAS[upperCode] ?? upperCode;
 
   // SEO meta tags
-  usePageMeta(
+  const meta = usePageMeta(
     `${friendlyName} Property Prices (${upperCode})`,
     `View all residential property sales in ${friendlyName} (${upperCode} Eircode area). Browse recent transactions, median prices, and price trends from Ireland's Property Price Register.`
   );
@@ -48,6 +48,7 @@ export default function EircodePage() {
 
   return (
     <>
+      {meta}
       <PageHeader title={`Property Prices — ${friendlyName}`} />
       <div className="content-page">
       <p className="content-intro">

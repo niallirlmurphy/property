@@ -82,13 +82,14 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 export default function BlogListPage() {
-  usePageMeta(
+  const meta = usePageMeta(
     "Property Price Blog - Guides & Market Analysis",
     "Expert guides, market analysis, and insights on Irish property prices. Learn how to search property data, understand market trends, and make informed decisions."
   );
 
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#f8f9fa" }}>
+      {meta}
       <WaffleMenu />
 
       {/* Header */}

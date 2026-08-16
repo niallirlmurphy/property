@@ -205,7 +205,7 @@ export default function App() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   // SEO meta tags for home page
-  usePageMeta();
+  const meta = usePageMeta();
 
   const [counties, setCounties] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
@@ -488,6 +488,7 @@ export default function App() {
 
   return (
     <div className="app" data-tab={mobileTab}>
+      {meta}
       <header className="app-header">
         <Link to="/" className="app-header-home" aria-label="Home">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function PropertyPriceRegisterPage() {
-  usePageMeta(
+  const meta = usePageMeta(
     "Property Price Register Ireland | Complete Guide & Enhanced Data",
     "Understand Ireland's Property Price Register, its limitations as a taxation record, and how HomeIQ enhances the data with geocoding validation and address normalization for better property search.",
     undefined,
@@ -13,6 +13,7 @@ export default function PropertyPriceRegisterPage() {
 
   return (
     <div className="static-page">
+      {meta}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",

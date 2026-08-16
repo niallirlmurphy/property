@@ -207,7 +207,7 @@ const AgeTooltip = ({ active, payload, label }: any) => {
 // ---------------------------------------------------------------------------
 
 export default function EnergyPage() {
-  usePageMeta(
+  const meta = usePageMeta(
     "Home Energy Ratings Ireland — BER Statistics",
     "Explore Building Energy Rating (BER) statistics across Ireland. See how your home's energy efficiency compares and what upgrades make the biggest difference.",
   );
@@ -239,6 +239,7 @@ export default function EnergyPage() {
 
   return (
     <>
+      {meta}
       <PageHeader title="Home Energy Ratings in Ireland" />
       <div className="content-page ber-page">
 

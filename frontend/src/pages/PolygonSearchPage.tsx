@@ -324,7 +324,7 @@ export default function PolygonSearchPage() {
   const [error, setError] = useState<string | null>(null);
 
   // SEO meta tags
-  usePageMeta(
+  const meta = usePageMeta(
     "Map Based Property Search | Ireland Property Prices",
     "Interactive map search for residential property sales in Ireland. Draw custom search areas to find properties sold in specific locations. View property prices, sale dates, and trends from Ireland's Property Price Register."
   );
@@ -460,6 +460,7 @@ export default function PolygonSearchPage() {
 
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
+      {meta}
       <PageHeader title="Map Based Search - Select an area to see sold properties in that area" />
 
       <div style={{ flex: 1, position: 'relative', minHeight: 0 }}>

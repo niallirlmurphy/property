@@ -48,7 +48,7 @@ function MapCenterUpdater({ center }: MapCenterUpdaterProps) {
 
 export default function ManualGeocodePage() {
   // SEO meta tags
-  usePageMeta(
+  const meta = usePageMeta(
     "Manual Geocoding Tool",
     "Internal tool for manually geocoding Irish properties. Click on the map to assign coordinates to properties in the geocoding queue."
   );
@@ -157,6 +157,7 @@ export default function ManualGeocodePage() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      {meta}
       {/* Header */}
       <header style={{
         display: "flex",

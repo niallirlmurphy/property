@@ -41,7 +41,7 @@ export default function BlogPostPage() {
   }
 
   // Set SEO meta tags
-  usePageMeta(
+  const meta = usePageMeta(
     post.title,
     post.description,
     [{ name: "Blog", url: "/blog" }]
@@ -49,6 +49,7 @@ export default function BlogPostPage() {
 
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#f8f9fa" }}>
+      {meta}
       <WaffleMenu />
 
       {/* Header */}

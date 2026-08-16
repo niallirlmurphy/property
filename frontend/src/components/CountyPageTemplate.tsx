@@ -27,7 +27,7 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
   const [usingCache, setUsingCache] = useState(false);
 
   // SEO meta tags
-  usePageMeta(content.metaTitle, content.metaDescription);
+  const meta = usePageMeta(content.metaTitle, content.metaDescription);
 
   useEffect(() => {
     // Try to get cached data first
@@ -59,6 +59,7 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
 
   return (
     <>
+      {meta}
       <PageHeader title={`Property Prices in County ${content.name}`} />
       <div className="content-page">
         {/* Hero Images - 3 images in a grid */}
