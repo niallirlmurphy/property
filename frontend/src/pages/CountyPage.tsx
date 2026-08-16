@@ -20,6 +20,15 @@ function formatPrice(n: number | null) {
   return "€" + Math.round(n).toLocaleString("en-IE");
 }
 
+// Optional hero photo per county slug (used on the default dynamic page).
+// Counties with a custom template (Cork/Galway/Dublin) manage their own imagery.
+const COUNTY_HERO_IMAGES: Record<string, { src: string; alt: string }> = {
+  westmeath: {
+    src: "/images/westmeath-athlone-bridge.jpg",
+    alt: "The town bridge over the River Shannon at Athlone, County Westmeath, with the twin towers of SS Peter and Paul's Church at sunset",
+  },
+};
+
 export default function CountyPage() {
   const { slug } = useParams<{ slug: string }>();
   const county = countyFromSlug(slug ?? "");
@@ -88,6 +97,16 @@ export default function CountyPage() {
       <div className="content-page">
       <Breadcrumbs items={[{ name: "Area Guides", url: "/areaguides" }, { name: `County ${county}`, url: `/county/${slugStr}` }]} />
       <h1>Property Prices in County {county}</h1>
+      {COUNTY_HERO_IMAGES[slugStr] && (
+        <img
+          className="area-hero"
+          src={COUNTY_HERO_IMAGES[slugStr].src}
+          alt={COUNTY_HERO_IMAGES[slugStr].alt}
+          width={2000}
+          height={1500}
+          loading="lazy"
+        />
+      )}
       <p className="content-intro">
         Explore residential property sale prices across County {county} from{" "}
         <Link to="/property-price-register" style={{ color: "#1a3c5e", textDecoration: "underline" }}>
