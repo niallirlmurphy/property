@@ -50,7 +50,7 @@ const MOST_ACTIVE = [...POSTCODE_DATA].sort((a, b) => b.txCount - a.txCount)[0];
 
 export default function DublinCountyPage() {
   // SEO meta tags with breadcrumbs
-  usePageMeta(
+  const meta = usePageMeta(
     "Dublin Property Prices by Postcode",
     "Explore property prices across Dublin's 22 postcodes. View median prices, transaction volumes, and trends from Ireland's Property Price Register. Updated 2025 data for all Dublin areas.",
     [{ name: "Dublin", url: "/county/dublin" }]
@@ -58,6 +58,7 @@ export default function DublinCountyPage() {
 
   return (
     <>
+      {meta}
       <PageHeader title="Property Prices in County Dublin" />
       <div className="content-page">
       <p className="content-intro">

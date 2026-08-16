@@ -7,11 +7,13 @@
 
 import { corkContent } from "./cork";
 import { galwayContent } from "./galway";
+import { dublinContent } from "./dublin";
 import type { CountyContent } from "../countyData";
 
 export const countyContent: Record<string, CountyContent> = {
   cork: corkContent,
   galway: galwayContent,
+  dublin: dublinContent,
   // Add more counties here as you create them
 };
 

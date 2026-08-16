@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { usePageMeta } from '../hooks/usePageMeta';
 import { MapPin, Calendar, ArrowLeft, ChevronRight, Footprints, Coffee, Users, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -26,6 +27,11 @@ const SpanishWayPage: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const meta = usePageMeta(
+    "Camino de Santiago: The Northern Spanish Way",
+    "A stage-by-stage walking journal of the Camino del Norte along Spain's northern coast — Basque Country, Cantabria, Asturias, and Galicia.",
+  );
 
   const regionColors = {
     basque: 'from-emerald-400 to-green-500',
@@ -447,6 +453,7 @@ I discovered the Pilgrims office operates a queueing system -- you collect a num
 
   return (
     <div className="min-h-screen bg-stone-50">
+      {meta}
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-stone-200 z-50">
         <div

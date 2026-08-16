@@ -79,7 +79,7 @@ function WarningBox({ warnings }: { warnings: Array<{ level: string; message: st
 // ---------------------------------------------------------------------------
 
 export default function ValuationPage() {
-  usePageMeta(
+  const meta = usePageMeta(
     "Property Valuation - Estimate Irish Property Values",
     "Get a free property valuation estimate based on real Property Price Register sales data. Compare your property to similar sales in your area.",
   );
@@ -132,6 +132,7 @@ export default function ValuationPage() {
 
   return (
     <div className="val-page">
+      {meta}
       {/* Use same header as home page */}
       <header className="app-header">
         <Link to="/" className="app-header-home" aria-label="Home">

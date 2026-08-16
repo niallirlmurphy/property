@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from "react-leaflet";
-import L from "leaflet";
+import { ClientOnly } from "vite-react-ssg";
 import { searchProperties, searchExactAddress, fetchTrends, fetchCounties, fetchEircode, fetchGeocode, fetchNearestPins } from "./api";
 import SearchPanel from "./components/SearchPanel";
 import ResultsList from "./components/ResultsList";
@@ -14,21 +13,7 @@ import WaffleMenu from "./components/WaffleMenu";
 import ContactSidebar from "./components/ContactModals";
 import { usePageMeta } from "./hooks/usePageMeta";
 
-delete (L.Icon.Default.prototype as any)._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-  iconUrl:       "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-  shadowUrl:     "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-});
-
-const activeIcon = new L.Icon({
-  iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
-});
+const MapView = lazy(() => import("./components/MapView"));
 
 function formatPrice(n: number) {
   return "€" + Math.round(n).toLocaleString("en-IE");
@@ -182,30 +167,13 @@ function partitionByExactMatch(results: Property[], query: string): {
   };
 }
 
-function MapFlyTo({ center, radius }: { center: [number, number]; radius: number }) {
-  const map = useMap();
-  useEffect(() => {
-    const zoom = radius <= 0.5 ? 17 : radius <= 1 ? 16 : radius <= 2 ? 15 : radius <= 5 ? 14 : 13;
-    map.flyTo(center, zoom, { duration: 1 });
-  }, [center, radius, map]);
-  return null;
-}
-
-function MapPanTo({ center }: { center: [number, number] | null }) {
-  const map = useMap();
-  useEffect(() => {
-    if (center) map.panTo(center, { animate: true, duration: 0.5 });
-  }, [center, map]);
-  return null;
-}
-
 type MobileTab = "map" | "list" | "trends";
 
 export default function App() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   // SEO meta tags for home page
-  usePageMeta();
+  const meta = usePageMeta();
 
   const [counties, setCounties] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
@@ -453,41 +421,28 @@ export default function App() {
   );
 
   const mapEl = (
-    <MapContainer center={initialCenter} zoom={7} style={{ width: "100%", height: "100%" }}>
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      {flyCenter && <MapFlyTo center={flyCenter} radius={flyRadius} />}
-      {pendingCenter && searchResult && (
-        <Circle
-          center={[pendingCenter.lat, pendingCenter.lon]}
-          radius={pendingCenter.radius_km * 1000}
-          pathOptions={{ color: "#1a3c5e", fillColor: "#1a3c5e", fillOpacity: 0.06, weight: 2 }}
-        />
+    <ClientOnly fallback={<div style={{ width: "100%", height: "100%", background: "#eef2f6" }} aria-hidden="true" />}>
+      {() => (
+        <Suspense fallback={<div style={{ width: "100%", height: "100%", background: "#eef2f6" }} />}>
+          <MapView
+            initialCenter={initialCenter}
+            flyCenter={flyCenter}
+            flyRadius={flyRadius}
+            pendingCenter={pendingCenter}
+            searchResult={searchResult}
+            panTarget={panTarget}
+            mapProperties={mapProperties}
+            activeProperty={activeProperty}
+            handleSelectProperty={handleSelectProperty}
+          />
+        </Suspense>
       )}
-      <MapPanTo center={panTarget} />
-      {mapProperties
-        .filter(p => p.latitude !== null && p.longitude !== null)
-        .map(p => (
-          <Marker
-            key={p.id}
-            position={[p.latitude!, p.longitude!]}
-            icon={p.id === activeProperty?.id ? activeIcon : new L.Icon.Default()}
-            eventHandlers={{ click: () => handleSelectProperty(p) }}
-          >
-            <Popup>
-              <strong>{formatPrice(p.price)}</strong><br />
-              {p.address}<br />
-              <small>{formatDate(p.sale_date)}{p.eircode ? ` · ${p.eircode}` : ""}</small>
-            </Popup>
-          </Marker>
-        ))}
-    </MapContainer>
+    </ClientOnly>
   );
 
   return (
     <div className="app" data-tab={mobileTab}>
+      {meta}
       <header className="app-header">
         <Link to="/" className="app-header-home" aria-label="Home">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -159,7 +159,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 // ---------------------------------------------------------------------------
 
 export default function MortgagePage() {
-  usePageMeta(
+  const meta = usePageMeta(
     "Mortgage Calculator Ireland",
     "Calculate your Irish mortgage repayments, see a full amortisation schedule, and understand the total interest cost over the life of your loan.",
   );
@@ -199,6 +199,7 @@ export default function MortgagePage() {
 
   return (
     <div className="mc-page">
+      {meta}
       <PageHeader title="Mortgage Calculator" />
       <div className="mc-page-subtitle">
         <p className="mc-subtitle">

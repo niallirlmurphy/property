@@ -5,7 +5,7 @@ import { usePageMeta } from "../hooks/usePageMeta";
 import { submitContact } from "../api";
 
 export default function ContactPage() {
-  usePageMeta(
+  const meta = usePageMeta(
     "Contact HomeIQ.ie",
     "Get in touch with the HomeIQ team. Questions about our property price data, content permission requests, feedback, or automated price updates for your area.",
     [{ name: "Contact", url: "/contact" }],
@@ -31,6 +31,7 @@ export default function ContactPage() {
 
   return (
     <div className="static-page">
+      {meta}
       <PageHeader title="Contact Us" />
       <main className="static-content">
         <section className="about-section">

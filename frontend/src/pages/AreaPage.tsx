@@ -37,7 +37,7 @@ export default function AreaPage() {
     </>
   );
 
-  usePageMeta(
+  const meta = usePageMeta(
     config ? `Property Prices in ${config.name}` : undefined,
     config ? `View every residential property sale in ${config.name}, ${config.description}. Historical price trends and recent sales from Ireland's Property Price Register.` : undefined,
   );
@@ -46,6 +46,7 @@ export default function AreaPage() {
 
   return (
     <>
+      {meta}
       <PageHeader title={`Property Prices in ${config.name}`} />
       <div className="content-page">
       <p className="content-intro">

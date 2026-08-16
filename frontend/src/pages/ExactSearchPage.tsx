@@ -1,5 +1,6 @@
 import { useState, FormEvent, useEffect, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import { usePageMeta } from "../hooks/usePageMeta";
 import TrendsChart from "../components/TrendsChart";
 import Footer from "../components/Footer";
 import { searchProperties, searchExactAddress } from "../api";
@@ -223,8 +224,14 @@ export default function ExactSearchPage() {
     },
   } : null;
 
+  const meta = usePageMeta(
+    "Exact Address Property Price Search",
+    "Search the exact sale history and price trends for a specific Irish address using the Property Price Register. See every recorded sale for a single property.",
+  );
+
   return (
     <div className="exact-search-page">
+      {meta}
       {/* Logo and Search Box */}
       <div className={`search-container ${(hasResults || hasSearched) ? "has-results" : "centered"}`}>
         {!hasSearched && (

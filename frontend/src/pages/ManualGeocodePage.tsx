@@ -1,54 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
-import { MapContainer, TileLayer, Marker, useMapEvents, useMap } from "react-leaflet";
-import L from "leaflet";
+import { ClientOnly } from "vite-react-ssg";
 import { fetchNextPropertyToGeocode, updatePropertyGeocode, skipPropertyGeocode } from "../api";
 import type { Property } from "../types";
 import { usePageMeta } from "../hooks/usePageMeta";
-import "leaflet/dist/leaflet.css";
 import "../index.css";
 
-delete (L.Icon.Default.prototype as any)._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-  iconUrl:       "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-  shadowUrl:     "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-});
+const ManualGeocodeMap = lazy(() => import("./ManualGeocodeMap"));
 
 function formatPrice(n: number) {
   return "€" + Math.round(n).toLocaleString("en-IE");
 }
 
-interface MapClickHandlerProps {
-  onMapClick: (lat: number, lon: number) => void;
-}
-
-function MapClickHandler({ onMapClick }: MapClickHandlerProps) {
-  useMapEvents({
-    click: (e) => {
-      onMapClick(e.latlng.lat, e.latlng.lng);
-    },
-  });
-  return null;
-}
-
-interface MapCenterUpdaterProps {
-  center: [number, number] | null;
-}
-
-function MapCenterUpdater({ center }: MapCenterUpdaterProps) {
-  const map = useMap();
-  useEffect(() => {
-    if (center) {
-      map.setView(center, 15, { animate: true });
-    }
-  }, [center, map]);
-  return null;
-}
-
 export default function ManualGeocodePage() {
   // SEO meta tags
-  usePageMeta(
+  const meta = usePageMeta(
     "Manual Geocoding Tool",
     "Internal tool for manually geocoding Irish properties. Click on the map to assign coordinates to properties in the geocoding queue."
   );
@@ -157,6 +123,7 @@ export default function ManualGeocodePage() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      {meta}
       {/* Header */}
       <header style={{
         display: "flex",
@@ -300,19 +267,17 @@ export default function ManualGeocodePage() {
           {/* Right panel: Map and controls */}
           <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
             <div style={{ flex: 1, position: "relative" }}>
-              <MapContainer
-                center={mapCenter}
-                zoom={13}
-                style={{ width: "100%", height: "100%" }}
-              >
-                <TileLayer
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <MapClickHandler onMapClick={handleMapClick} />
-                <MapCenterUpdater center={markerPosition} />
-                {markerPosition && <Marker position={markerPosition} />}
-              </MapContainer>
+              <ClientOnly fallback={<div style={{ width: "100%", height: "100%", background: "#eef2f6" }} aria-hidden="true" />}>
+                {() => (
+                  <Suspense fallback={<div style={{ width: "100%", height: "100%", background: "#eef2f6" }} />}>
+                    <ManualGeocodeMap
+                      mapCenter={mapCenter}
+                      markerPosition={markerPosition}
+                      onMapClick={handleMapClick}
+                    />
+                  </Suspense>
+                )}
+              </ClientOnly>
             </div>
 
             {/* Coordinates and buttons */}

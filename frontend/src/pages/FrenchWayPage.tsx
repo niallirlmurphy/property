@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { usePageMeta } from '../hooks/usePageMeta';
 import { MapPin, Calendar, ArrowLeft, ChevronRight, Navigation, Mountain, Footprints, Clock, Coffee, Users, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -25,6 +26,11 @@ const CaminoPage: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const meta = usePageMeta(
+    "Camino de Santiago: The French Way",
+    "A day-by-day walking journal of the Camino de Santiago French Way from Le Puy — stages, distances, gites, and reflections along the trail.",
+  );
 
   const featuredDays: DayEntry[] = [
     {
@@ -165,6 +171,7 @@ I think the cafe and pub culture in Spain and France is very healthy. The owner 
 
   return (
     <div className="min-h-screen bg-stone-50">
+      {meta}
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-stone-200 z-50">
         <div

@@ -1,6 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ViteReactSSG } from "vite-react-ssg";
+import { Navigate } from "react-router-dom";
 import { inject } from "@vercel/analytics";
 import App from "./App";
 import AreaPage from "./pages/AreaPage";
@@ -25,39 +24,41 @@ import BlogPostPage from "./pages/BlogPostPage";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
 
-inject();
+export const routes = [
+  { path: "/", element: <App /> },
+  { path: "/s1", element: <ExactSearchPage /> },
+  { path: "/polygon", element: <PolygonSearchPage /> },
+  { path: "/valuation", element: <ValuationPage /> },
+  { path: "/area/:slug", element: <AreaPage /> },
+  { path: "/county/dublin", element: <DublinCountyPage /> },
+  { path: "/county/:slug", element: <CountyPage /> },
+  { path: "/eircode/:code", element: <EircodePage /> },
+  { path: "/mortgage", element: <MortgagePage /> },
+  // Redirect the legacy plural path so old links/bookmarks keep working
+  { path: "/mortgages", element: <Navigate to="/mortgage" replace /> },
+  { path: "/energy", element: <EnergyPage /> },
+  // Redirect legacy/menu BER path so old links keep working
+  { path: "/ber-ratings", element: <Navigate to="/energy" replace /> },
+  { path: "/about", element: <AboutPage /> },
+  { path: "/contact", element: <ContactPage /> },
+  { path: "/property-price-register", element: <PropertyPriceRegisterPage /> },
+  { path: "/geocodes", element: <ManualGeocodePage /> },
+  { path: "/camino", element: <CaminoIndexPage /> },
+  { path: "/camino/french-way", element: <FrenchWayPage /> },
+  { path: "/camino/spanish-way", element: <SpanishWayPage /> },
+  { path: "/camino/before-you-go", element: <BeforeYouGoPage /> },
+  { path: "/blog", element: <BlogListPage /> },
+  { path: "/blog/:slug", element: <BlogPostPage /> },
+  // Catch-all: send unknown paths home instead of rendering a blank page
+  { path: "*", element: <Navigate to="/" replace /> },
+];
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/s1" element={<ExactSearchPage />} />
-        <Route path="/polygon" element={<PolygonSearchPage />} />
-        <Route path="/valuation" element={<ValuationPage />} />
-        <Route path="/area/:slug" element={<AreaPage />} />
-        <Route path="/county/dublin" element={<DublinCountyPage />} />
-        <Route path="/county/:slug" element={<CountyPage />} />
-        <Route path="/eircode/:code" element={<EircodePage />} />
-        <Route path="/mortgage" element={<MortgagePage />} />
-        {/* Redirect the legacy plural path so old links/bookmarks keep working */}
-        <Route path="/mortgages" element={<Navigate to="/mortgage" replace />} />
-        <Route path="/energy" element={<EnergyPage />} />
-        {/* Redirect legacy/menu BER path so old links keep working */}
-        <Route path="/ber-ratings" element={<Navigate to="/energy" replace />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/property-price-register" element={<PropertyPriceRegisterPage />} />
-        <Route path="/geocodes" element={<ManualGeocodePage />} />
-        <Route path="/camino" element={<CaminoIndexPage />} />
-        <Route path="/camino/french-way" element={<FrenchWayPage />} />
-        <Route path="/camino/spanish-way" element={<SpanishWayPage />} />
-        <Route path="/camino/before-you-go" element={<BeforeYouGoPage />} />
-        <Route path="/blog" element={<BlogListPage />} />
-        <Route path="/blog/:slug" element={<BlogPostPage />} />
-        {/* Catch-all: send unknown paths home instead of rendering a blank page */}
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+// NOTE: the SSG route list (which dynamic county/area/eircode/blog URLs get
+// prerendered) is configured via `ssgOptions.includedRoutes` in vite.config.ts,
+// not here — it is a build-time option, not a ViteReactSSG() runtime argument.
+export const createRoot = ViteReactSSG(
+  { routes },
+  ({ isClient }) => {
+    if (isClient) inject();
+  }
 );
