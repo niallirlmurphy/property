@@ -68,6 +68,7 @@ export default function CountyPage() {
   const meta = usePageMeta(
     county ? `Property Prices in County ${county}` : undefined,
     county ? `Browse every residential sale in County ${county} since 2010. View price trends, median values, and recent sales from Ireland's Property Price Register.` : undefined,
+    county ? [{ name: "Area Guides", url: "/areaguides" }, { name: `County ${county}`, url: `/county/${slug ?? ""}` }] : undefined,
   );
 
   const latestTrend = data?.trends[data.trends.length - 1];

@@ -40,9 +40,18 @@ export default function AreaPage() {
     </>
   );
 
+  const crumbs = [
+    { name: "Area Guides", url: "/areaguides" },
+    ...(parentCountySlug && parentCountyName
+      ? [{ name: `County ${parentCountyName}`, url: `/county/${parentCountySlug}` }]
+      : []),
+    { name: config.name, url: `/area/${config.slug}` },
+  ];
+
   const meta = usePageMeta(
     config ? `Property Prices in ${config.name}` : undefined,
     config ? `View every residential property sale in ${config.name}, ${config.description}. Historical price trends and recent sales from Ireland's Property Price Register.` : undefined,
+    crumbs,
   );
 
   const latestTrend = data?.trends[data.trends.length - 1];
@@ -52,15 +61,7 @@ export default function AreaPage() {
       {meta}
       <PageHeader title={`Property Prices in ${config.name}`} />
       <div className="content-page">
-      <Breadcrumbs
-        items={[
-          { name: "Area Guides", url: "/areaguides" },
-          ...(parentCountySlug && parentCountyName
-            ? [{ name: `County ${parentCountyName}`, url: `/county/${parentCountySlug}` }]
-            : []),
-          { name: config.name, url: `/area/${config.slug}` },
-        ]}
-      />
+      <Breadcrumbs items={crumbs} />
       <p className="content-intro">
         {config.name} is {config.description}. This page shows residential property
         sale prices from Ireland's Property Price Register, updated regularly.

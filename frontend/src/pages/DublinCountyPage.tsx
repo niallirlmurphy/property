@@ -54,7 +54,7 @@ export default function DublinCountyPage() {
   const meta = usePageMeta(
     "Dublin Property Prices by Postcode",
     "Explore property prices across Dublin's 22 postcodes. View median prices, transaction volumes, and trends from Ireland's Property Price Register. Updated 2025 data for all Dublin areas.",
-    [{ name: "Dublin", url: "/county/dublin" }]
+    [{ name: "Area Guides", url: "/areaguides" }, { name: "Dublin", url: "/county/dublin" }]
   );
 
   return (

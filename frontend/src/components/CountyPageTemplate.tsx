@@ -29,7 +29,10 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
   const [usingCache, setUsingCache] = useState(false);
 
   // SEO meta tags
-  const meta = usePageMeta(content.metaTitle, content.metaDescription);
+  const meta = usePageMeta(content.metaTitle, content.metaDescription, [
+    { name: "Area Guides", url: "/areaguides" },
+    { name: `County ${content.name}`, url: `/county/${countySlug(content.name)}` },
+  ]);
 
   useEffect(() => {
     // Try to get cached data first

@@ -22,7 +22,12 @@ export default function EircodePage() {
   // SEO meta tags
   const meta = usePageMeta(
     `${friendlyName} Property Prices (${upperCode})`,
-    `View all residential property sales in ${friendlyName} (${upperCode} Eircode area). Browse recent transactions, median prices, and price trends from Ireland's Property Price Register.`
+    `View all residential property sales in ${friendlyName} (${upperCode} Eircode area). Browse recent transactions, median prices, and price trends from Ireland's Property Price Register.`,
+    [
+      { name: "Area Guides", url: "/areaguides" },
+      { name: "Dublin", url: "/county/dublin" },
+      { name: friendlyName, url: `/eircode/${upperCode}` },
+    ]
   );
 
   const [data, setData] = useState<EircodeResponse | null>(null);
