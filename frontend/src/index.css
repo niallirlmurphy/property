@@ -2390,3 +2390,4 @@ input[type="range"]::-moz-range-thumb {
 .postcode-link:hover { background: #f8f9fa; }
 .area-county-group { margin-bottom: 1.5rem; }
 .area-county-group > h3 { margin: 0 0 0.5rem; color: #1a3c5e; }
+.postcode-badge-link { text-decoration: none; }
