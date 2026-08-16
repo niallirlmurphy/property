@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { usePageMeta } from '../hooks/usePageMeta';
 import { ArrowLeft, ChevronRight, Calendar, Footprints, Mountain, MapPin, Compass, Backpack } from 'lucide-react';
 
 const CaminoIndexPage: React.FC = () => {
@@ -15,8 +16,14 @@ const CaminoIndexPage: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const meta = usePageMeta(
+    "Camino de Santiago Journeys",
+    "Personal walking journals from the Camino de Santiago — the French Way and the Northern Spanish Way — with day-by-day stages, photos, and practical tips.",
+  );
+
   return (
     <div className="min-h-screen bg-stone-50">
+      {meta}
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-stone-200 z-50">
         <div

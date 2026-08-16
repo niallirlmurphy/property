@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { usePageMeta } from '../hooks/usePageMeta';
 import { ArrowLeft, ChevronRight, Compass, Plane, Signpost, Home, MapPin, Backpack, Mountain } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -15,8 +16,14 @@ const BeforeYouGoPage: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const meta = usePageMeta(
+    "Camino de Santiago: Before You Go",
+    "A practical planning guide for the Camino de Santiago — how to prepare, what to pack, choosing a route, gites and hostels, and getting there.",
+  );
+
   return (
     <div className="min-h-screen bg-stone-50">
+      {meta}
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-stone-200 z-50">
         <div
