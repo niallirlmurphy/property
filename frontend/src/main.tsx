@@ -19,8 +19,9 @@ import CaminoIndexPage from "./pages/CaminoIndexPage";
 import FrenchWayPage from "./pages/FrenchWayPage";
 import SpanishWayPage from "./pages/SpanishWayPage";
 import BeforeYouGoPage from "./pages/BeforeYouGoPage";
-import BlogListPage from "./pages/BlogListPage";
+import BlogListPage, { BLOG_POSTS } from "./pages/BlogListPage";
 import BlogPostPage from "./pages/BlogPostPage";
+import { COUNTIES, AREAS, DUBLIN_EIRCODE_AREAS, countySlug } from "./areas";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
 
@@ -57,5 +58,18 @@ export const createRoot = ViteReactSSG(
   { routes },
   ({ router, isClient }) => {
     if (isClient) inject();
+  },
+  {
+    async includedRoutes(paths) {
+      // Keep concrete static routes; drop the dynamic templates and catch-all.
+      const staticPaths = paths.filter(p => !p.includes(":") && p !== "*");
+      const counties = COUNTIES
+        .filter(c => c.toLowerCase() !== "dublin") // /county/dublin is its own static route
+        .map(c => `/county/${countySlug(c)}`);
+      const areas = AREAS.map(a => `/area/${a.slug}`);
+      const eircodes = Object.keys(DUBLIN_EIRCODE_AREAS).map(k => `/eircode/${k}`);
+      const posts = BLOG_POSTS.map(p => `/blog/${p.slug}`);
+      return [...staticPaths, ...counties, ...areas, ...eircodes, ...posts];
+    },
   }
 );
