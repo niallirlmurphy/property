@@ -10,6 +10,8 @@ import {
   getCachedCountyData,
   setCachedCountyData,
 } from "../utils/countyDataCache";
+import Breadcrumbs from "./Breadcrumbs";
+import { countySlug } from "../areas";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -62,6 +64,7 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
       {meta}
       <PageHeader title={`Property Prices in County ${content.name}`} />
       <div className="content-page">
+        <Breadcrumbs items={[{ name: "Area Guides", url: "/areaguides" }, { name: `County ${content.name}`, url: `/county/${countySlug(content.name)}` }]} />
         {/* Hero Images - 3 images in a grid */}
         {content.heroImages && content.heroImages.length > 0 && (
           <div className="county-hero-images">
@@ -185,6 +188,9 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
               <p>
                 Use the <Link to={`/?q=${encodeURIComponent(content.name)}&county=${encodeURIComponent(content.name)}`}>interactive map</Link> to search
                 by address or Eircode within County {content.name}.
+              </p>
+              <p>
+                Browse <Link to="/areaguides">all area guides</Link>.
               </p>
             </section>
           </>
