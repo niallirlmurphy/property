@@ -138,22 +138,25 @@ This is the task that actually delivers the SEO payload. Convert the hook from a
 **Files:**
 - Modify: `frontend/src/hooks/usePageMeta.ts`
 - Modify: all 16 files calling `usePageMeta(...)` (render the returned element).
+- Modify: `frontend/index.html` (remove the static per-page SEO tags that `<Head>` now owns, to avoid duplicate/conflicting tags).
 
 **Interfaces:**
-- Consumes: `routes` entry from Task 1.
+- Consumes: `routes` entry from Task 1; `useLocation` from `react-router-dom` (v6, present).
 - Produces: `usePageMeta(title?, description?, breadcrumbs?, ogImage?, path?): JSX.Element` — returns a `<Head>` element. Callers must render it.
 
-> **API facts (verified from vite-react-ssg 0.9.1 type declarations):** `import { Head } from "vite-react-ssg"`. `Head` is `react-helmet-async`'s Helmet — it takes **JSX children**, e.g. `<Head><title>…</title><meta name="description" content="…"/></Head>`, NOT a config object. There is no `useHead`. `HelmetProvider` is mounted internally by vite-react-ssg, so no provider wiring is needed in `main.tsx`.
+> **API facts (verified from vite-react-ssg 0.9.1 type declarations + package internals):** `import { Head } from "vite-react-ssg"`. `Head` is `react-helmet-async`'s Helmet — it takes **JSX children**, e.g. `<Head><title>…</title><meta name="description" content="…"/></Head>`, NOT a config object. There is no `useHead`. `HelmetProvider` is mounted internally by vite-react-ssg, so no provider wiring is needed in `main.tsx`. **During the SSG build, `window`/`document` are NOT defined** (jsdom mock is off by default) — this is exactly why Leaflet needs guarding in Tasks 3–5, and it means the canonical must NOT be derived from `window.location`. Helmet injects its tags immediately after the literal `<head>` in `index.html` and does **not** remove or dedupe against tags already hardcoded there — so any per-page tag `<Head>` emits must be deleted from `index.html` or the page ships two of them (two `<link rel="canonical">` = Google ignores both).
 
 - [ ] **Step 1: Rewrite the hook to return a `<Head>`**
 
-Rewrite `usePageMeta.ts`:
+Rewrite `usePageMeta.ts` (renamed to `.tsx`, see note). **The canonical is derived from `useLocation().pathname`** — this resolves correctly under BOTH the SSG render pass (vite-react-ssg wraps routes in `StaticRouterProvider`, which supplies the location) AND the client router. `window.location` must NOT be used (undefined during SSG → every page would fall back to `"/"`, reproducing the very homepage-canonical bug this project exists to fix).
 ```tsx
 import { Head } from "vite-react-ssg";
+import { useLocation } from "react-router-dom";
 
 const BASE_TITLE = "HomeIQ — Ireland Property Price Search";
 const BASE_DESC  = "Search 785,000 residential property sales in Ireland (2010-2026). 85% geocoded with interactive maps, price trends, and Eircode lookup. Free property price data.";
 const SITE = "https://homeiq.ie";
+const DEFAULT_OG_IMAGE = "https://homeiq.ie/images/ppr-og-image.jpg";
 
 interface BreadcrumbItem { name: string; url: string; }
 
@@ -162,14 +165,15 @@ export function usePageMeta(
   description?: string,
   breadcrumbs?: BreadcrumbItem[],
   ogImage?: string,
-  path?: string,        // optional explicit route path for canonical (SSR-safe)
+  path?: string,        // optional explicit route-path override for canonical
 ): JSX.Element {
+  const location = useLocation();
   const fullTitle = title ? `${title} | HomeIQ` : BASE_TITLE;
   const desc = description ?? BASE_DESC;
-  // Canonical: prefer explicit path; fall back to window at runtime; default "/".
-  const canonicalPath =
-    path ?? (typeof window !== "undefined" ? window.location.pathname : "/");
+  // Canonical: explicit override, else the current route path (SSR-safe via StaticRouter).
+  const canonicalPath = path ?? location.pathname;
   const canonical = `${SITE}${canonicalPath}`;
+  const image = ogImage ?? DEFAULT_OG_IMAGE;
 
   const breadcrumbJson =
     breadcrumbs && breadcrumbs.length > 0
@@ -189,12 +193,12 @@ export function usePageMeta(
     <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={desc} />
+      <link rel="canonical" href={canonical} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={desc} />
       <meta property="og:url" content={canonical} />
-      {ogImage && <meta property="og:image" content={ogImage} />}
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
-      <link rel="canonical" href={canonical} />
+      <meta property="og:image" content={image} />
+      <meta name="twitter:image" content={image} />
       {breadcrumbJson && (
         <script type="application/ld+json">{breadcrumbJson}</script>
       )}
@@ -202,7 +206,7 @@ export function usePageMeta(
   );
 }
 ```
-Notes: the file becomes `.tsx` is NOT required — a `.ts` file can hold JSX only if the project's tsconfig allows it; to be safe, **rename the file to `usePageMeta.tsx`** (JSX in a `.ts` file fails `tsc`). Update the import extension nowhere else — TS import paths are extensionless, so call sites' `import { usePageMeta } from "../hooks/usePageMeta"` keep working after the rename. react-helmet-async dedupes by tag, so the old manual cleanup is unnecessary; when a page unmounts, Helmet restores prior head state automatically.
+Notes: **rename the file to `usePageMeta.tsx`** (JSX in a `.ts` file fails `tsc`) using `git mv`. TS import paths are extensionless, so call sites' `import { usePageMeta } from "../hooks/usePageMeta"` keep working. og:image/twitter:image are now emitted unconditionally with a site default so removing them from `index.html` (Step 3) doesn't drop them on pages without a custom image. `useLocation()` makes this a genuine hook — it must be called unconditionally at the top of each component (all 16 call sites already do).
 
 - [ ] **Step 2: Render the returned element at all 16 call sites**
 
@@ -235,10 +239,24 @@ Rules for this mechanical pass:
 - Preserve each file's existing structure; wrap in a `<>…</>` fragment only if there isn't already a single root to attach `{meta}` to.
 - `main.tsx` needs NO head-provider change (vite-react-ssg mounts HelmetProvider itself).
 
-- [ ] **Step 3: Push and verify per-page meta on Vercel preview**
+- [ ] **Step 3: Remove the now-duplicated static SEO tags from `frontend/index.html`**
+
+`<Head>` now emits per-page `<title>`, `description`, `canonical`, `og:title`/`og:description`/`og:url`/`og:image`, and `twitter:image` on every route. Helmet inserts these WITHOUT removing the identical hardcoded tags in `index.html`, so those must be deleted or every page ships two of each (two canonicals → Google ignores both). **Delete these lines from `frontend/index.html`** (they are the per-page tags `<Head>` now owns):
+- `<title>…</title>` (line ~20)
+- `<meta name="description" …>` (line ~21)
+- `<link rel="canonical" …>` (line ~23)
+- `<meta property="og:title" …>` (line ~28)
+- `<meta property="og:description" …>` (line ~29)
+- `<meta property="og:url" …>` (line ~27)
+- `<meta property="og:image" …>` (line ~30)
+- `<meta name="twitter:image" …>` (line ~41)
+
+**KEEP everything else** in `index.html`: charset/viewport, favicon, Google gtag scripts, `<meta name="keywords">`, `og:type`/`og:image:width`/`og:image:height`/`og:image:alt`/`og:site_name`/`og:locale`, `twitter:card`/`twitter:title`/`twitter:description`/`twitter:image:alt`, the performance hints, all three static JSON-LD blocks (WebApplication/Dataset/FAQPage), and the Leaflet stylesheet. These are either global (fine as defaults, not per-page-conflicting) or not emitted by `<Head>`. Rationale: only tags `<Head>` ALSO emits create duplicates; leave the rest so nothing is lost. (`twitter:title`/`twitter:description` are intentionally left static as site-level fallbacks — `<Head>` doesn't emit them, so no duplication.)
+
+- [ ] **Step 4: Push and verify per-page meta on Vercel preview**
 
 ```bash
-git add frontend/src/hooks/usePageMeta.tsx frontend/src/**/*.tsx
+git add frontend/src/hooks/usePageMeta.tsx frontend/src/**/*.tsx frontend/index.html
 git rm frontend/src/hooks/usePageMeta.ts   # if the rename left the old file
 git commit -m "feat: emit per-page meta via vite-react-ssg Head so it serializes into static HTML"
 git push
@@ -247,7 +265,8 @@ Against the preview URL, `curl -s` these and assert **distinct** values in the R
 - `/about` → title contains "About"; canonical `href="https://homeiq.ie/about"`.
 - `/property-price-register` → its own title + description; self-referencing canonical.
 - `/blog/does-living-near-a-good-school-add-value` → post title; canonical to that path.
-Failure signal to watch: canonical still `https://homeiq.ie/` on a sub-page, or meta missing entirely from raw HTML → the `<Head>` element isn't being rendered at that call site; fix Step 2 for that page.
+- **Exactly ONE `<link rel="canonical">` and ONE `<title>` per page** (grep-count them) — proves the index.html dedup worked.
+Failure signals to watch: canonical still `https://homeiq.ie/` on a sub-page → the hook is using `window.location` instead of `useLocation`, or `{meta}` isn't rendered at that call site (fix Step 1/Step 2). Two canonicals/titles per page → a static tag wasn't removed from index.html (fix Step 3).
 (Leaflet pages may still fail the build here; that's Tasks 3–5.)
 
 ---
