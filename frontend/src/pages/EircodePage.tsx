@@ -5,8 +5,9 @@ import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import type { EircodeResponse, TrendPoint } from "../types";
-import { DUBLIN_EIRCODE_AREAS } from "../areas";
+import { DUBLIN_EIRCODE_AREAS, countySlug } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -51,6 +52,13 @@ export default function EircodePage() {
       {meta}
       <PageHeader title={`Property Prices — ${friendlyName}`} />
       <div className="content-page">
+      <Breadcrumbs
+        items={[
+          { name: "Area Guides", url: "/areaguides" },
+          { name: "Dublin", url: "/county/dublin" },
+          { name: friendlyName, url: `/eircode/${upperCode}` },
+        ]}
+      />
       <p className="content-intro">
         All residential property sales recorded under Eircode routing key <strong>{upperCode}</strong> in{" "}
         <Link to="/property-price-register" style={{ color: "#1a3c5e", textDecoration: "underline" }}>
@@ -86,7 +94,16 @@ export default function EircodePage() {
 
           {trends.length > 0 && (
             <section className="content-section">
-              <h2>Price Trends — {data.results[0]?.county ?? upperCode}</h2>
+              <h2>
+                Price Trends —{" "}
+                {data.results[0]?.county ? (
+                  <Link to={`/county/${countySlug(data.results[0].county)}`}>
+                    {data.results[0].county}
+                  </Link>
+                ) : (
+                  upperCode
+                )}
+              </h2>
               <p>County-level median and average sale prices by year.</p>
               <div style={{ position: "relative", height: 240 }}>
                 <TrendsChart data={trends} onClose={() => {}} inline />
@@ -119,6 +136,19 @@ export default function EircodePage() {
             <p>
               Use the <Link to="/">interactive map</Link> to search by full Eircode,
               filter by price range, and view properties on a map.
+            </p>
+            <p>Other Dublin postcodes:</p>
+            <div className="postcode-link-grid">
+              {Object.entries(DUBLIN_EIRCODE_AREAS)
+                .filter(([code]) => code !== upperCode)
+                .map(([code, label]) => (
+                  <Link key={code} to={`/eircode/${code}`} className="postcode-link">
+                    <span className="postcode-badge">{code}</span> {label}
+                  </Link>
+                ))}
+            </div>
+            <p>
+              Browse <Link to="/areaguides">all area guides</Link>.
             </p>
           </section>
         </>
