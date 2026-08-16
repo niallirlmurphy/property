@@ -15,6 +15,7 @@ import ManualGeocodePage from "./pages/ManualGeocodePage";
 import PolygonSearchPage from "./pages/PolygonSearchPage";
 import ExactSearchPage from "./pages/ExactSearchPage";
 import ValuationPage from "./pages/ValuationPage";
+import AreaGuidesPage from "./pages/AreaGuidesPage";
 import CaminoIndexPage from "./pages/CaminoIndexPage";
 import FrenchWayPage from "./pages/FrenchWayPage";
 import SpanishWayPage from "./pages/SpanishWayPage";
@@ -29,6 +30,7 @@ export const routes = [
   { path: "/s1", element: <ExactSearchPage /> },
   { path: "/polygon", element: <PolygonSearchPage /> },
   { path: "/valuation", element: <ValuationPage /> },
+  { path: "/areaguides", element: <AreaGuidesPage /> },
   { path: "/area/:slug", element: <AreaPage /> },
   { path: "/county/dublin", element: <DublinCountyPage /> },
   { path: "/county/:slug", element: <CountyPage /> },

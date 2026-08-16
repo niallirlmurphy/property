@@ -413,6 +413,25 @@ async def test_frontend_api_calls(client: httpx.AsyncClient, results: TestResult
         results.add_fail("Frontend → Backend connectivity", str(e))
 
 
+async def test_area_guides_navigation(client: httpx.AsyncClient, results: TestResults):
+    """Test that the area-guides hub and a sample new area page are reachable."""
+    checks = [
+        ("/areaguides", "Area guides hub"),
+        ("/area/douglas", "New area page (Douglas)"),
+        ("/eircode/D6W", "Dublin 6W eircode page"),
+    ]
+    for path, label in checks:
+        try:
+            resp = await client.get(f"{FRONTEND_URL}{path}", timeout=TIMEOUT,
+                                    follow_redirects=True)
+            if resp.status_code == 200 and "HomeIQ" in resp.text:
+                results.add_pass(label, f"{path} → 200")
+            else:
+                results.add_fail(label, f"{path} → {resp.status_code}")
+        except Exception as e:
+            results.add_fail(label, str(e))
+
+
 async def test_address_normalization(results: TestResults):
     """Test that all addresses have normalized versions populated."""
     import asyncpg
@@ -1159,6 +1178,7 @@ async def run_all_tests():
         print("\nFrontend:")
         await test_frontend_loads(client, results)
         await test_frontend_api_calls(client, results)
+        await test_area_guides_navigation(client, results)
 
         print("\nAddress Normalization:")
         await test_address_normalization(results)

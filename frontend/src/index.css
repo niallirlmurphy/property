@@ -2375,3 +2375,19 @@ input[type="range"]::-moz-range-thumb {
 
 /* County Template Styles */
 @import './styles/county-template.css';
+
+.breadcrumbs { padding: 0.75rem 0 0; font-size: 0.85rem; }
+.breadcrumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.15rem; }
+.breadcrumbs li { display: inline-flex; align-items: center; }
+.breadcrumbs a { color: #1a3c5e; text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs span[aria-current="page"] { color: #6b7280; }
+.breadcrumb-sep { color: #9ca3af; }
+
+.guide-badge { display: inline-block; margin-left: 0.4rem; font-size: 0.7rem; font-weight: 600; color: #1a3c5e; background: #e8f0f7; padding: 0.1rem 0.4rem; border-radius: 0.25rem; }
+.postcode-link-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.postcode-link { display: inline-flex; align-items: center; gap: 0.4rem; color: #1a3c5e; text-decoration: none; padding: 0.35rem 0.6rem; border: 1px solid #e5e7eb; border-radius: 0.375rem; }
+.postcode-link:hover { background: #f8f9fa; }
+.area-county-group { margin-bottom: 1.5rem; }
+.area-county-group > h3 { margin: 0 0 0.5rem; color: #1a3c5e; }
+.postcode-badge-link { text-decoration: none; }

@@ -6,7 +6,8 @@ import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import CountyPageTemplate from "../components/CountyPageTemplate";
 import type { CountySummary } from "../types";
-import { countyFromSlug } from "../areas";
+import { countyFromSlug, areasForCounty, provinceForCounty, PROVINCES } from "../areas";
+import Breadcrumbs from "../components/Breadcrumbs";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { getCountyContent } from "../content/counties";
 import {
@@ -67,16 +68,25 @@ export default function CountyPage() {
   const meta = usePageMeta(
     county ? `Property Prices in County ${county}` : undefined,
     county ? `Browse every residential sale in County ${county} since 2010. View price trends, median values, and recent sales from Ireland's Property Price Register.` : undefined,
+    county ? [{ name: "Area Guides", url: "/areaguides" }, { name: `County ${county}`, url: `/county/${slug ?? ""}` }] : undefined,
   );
 
   const latestTrend = data?.trends[data.trends.length - 1];
   const earliestTrend = data?.trends[0];
+
+  const slugStr = slug ?? "";
+  const countyAreas = areasForCounty(slugStr);
+  const province = provinceForCounty(slugStr);
+  const siblingCountySlugs = province
+    ? (PROVINCES.find(p => p.name === province)?.counties ?? []).filter(s => s !== slugStr)
+    : [];
 
   return (
     <>
       {meta}
       <PageHeader title={`Property Prices in County ${county}`} />
       <div className="content-page">
+      <Breadcrumbs items={[{ name: "Area Guides", url: "/areaguides" }, { name: `County ${county}`, url: `/county/${slugStr}` }]} />
       <p className="content-intro">
         Explore residential property sale prices across County {county} from{" "}
         <Link to="/property-price-register" style={{ color: "#1a3c5e", textDecoration: "underline" }}>
@@ -152,11 +162,41 @@ export default function CountyPage() {
             </section>
           )}
 
+          {countyAreas.length > 0 && (
+            <section className="content-section">
+              <h2>Areas in County {county}</h2>
+              <div className="areas-grid">
+                {countyAreas.map(area => (
+                  <Link key={area.slug} to={`/area/${area.slug}`} className="area-card">
+                    <h3>{area.name}</h3>
+                    <p>{area.description}</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {siblingCountySlugs.length > 0 && (
+            <section className="content-section">
+              <h2>Nearby Counties in {province}</h2>
+              <div className="county-links">
+                {siblingCountySlugs.map(sib => (
+                  <Link key={sib} to={`/county/${sib}`} className="county-link-btn">
+                    County {countyFromSlug(sib) ?? sib}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
           <section className="content-section">
             <h2>Search County {county} Properties</h2>
             <p>
               Use the <Link to={`/?q=${encodeURIComponent(county)}&county=${encodeURIComponent(county)}`}>interactive map</Link> to
               search by address or Eircode within County {county}.
+            </p>
+            <p>
+              Browse <Link to="/areaguides">all area guides</Link>.
             </p>
           </section>
         </>

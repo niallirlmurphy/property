@@ -5,8 +5,9 @@ import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import type { AreaSummary } from "../types";
-import { areaFromSlug } from "../areas";
+import { areaFromSlug, countyForArea, countyFromSlug } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -16,6 +17,8 @@ function formatPrice(n: number | null) {
 export default function AreaPage() {
   const { slug } = useParams<{ slug: string }>();
   const config = areaFromSlug(slug ?? "");
+  const parentCountySlug = countyForArea(config?.slug ?? "");
+  const parentCountyName = parentCountySlug ? countyFromSlug(parentCountySlug) : undefined;
   const [data, setData] = useState<AreaSummary | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -37,9 +40,18 @@ export default function AreaPage() {
     </>
   );
 
+  const crumbs = [
+    { name: "Area Guides", url: "/areaguides" },
+    ...(parentCountySlug && parentCountyName
+      ? [{ name: `County ${parentCountyName}`, url: `/county/${parentCountySlug}` }]
+      : []),
+    { name: config.name, url: `/area/${config.slug}` },
+  ];
+
   const meta = usePageMeta(
     config ? `Property Prices in ${config.name}` : undefined,
     config ? `View every residential property sale in ${config.name}, ${config.description}. Historical price trends and recent sales from Ireland's Property Price Register.` : undefined,
+    crumbs,
   );
 
   const latestTrend = data?.trends[data.trends.length - 1];
@@ -49,6 +61,7 @@ export default function AreaPage() {
       {meta}
       <PageHeader title={`Property Prices in ${config.name}`} />
       <div className="content-page">
+      <Breadcrumbs items={crumbs} />
       <p className="content-intro">
         {config.name} is {config.description}. This page shows residential property
         sale prices from Ireland's Property Price Register, updated regularly.
@@ -113,6 +126,15 @@ export default function AreaPage() {
             <p>
               Use the <Link to={`/?q=${encodeURIComponent(config.query)}&radius_km=${config.radius_km}`}>interactive map</Link> to
               filter by price range, year, and radius.
+            </p>
+            <p>
+              {parentCountySlug && parentCountyName && (
+                <>
+                  {config.name} is in{" "}
+                  <Link to={`/county/${parentCountySlug}`}>County {parentCountyName}</Link>. {" "}
+                </>
+              )}
+              Browse <Link to="/areaguides">all area guides</Link>.
             </p>
           </section>
         </>

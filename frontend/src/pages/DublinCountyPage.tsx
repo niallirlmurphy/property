@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
+import Breadcrumbs from "../components/Breadcrumbs";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 function formatPrice(n: number) {
@@ -53,7 +54,7 @@ export default function DublinCountyPage() {
   const meta = usePageMeta(
     "Dublin Property Prices by Postcode",
     "Explore property prices across Dublin's 22 postcodes. View median prices, transaction volumes, and trends from Ireland's Property Price Register. Updated 2025 data for all Dublin areas.",
-    [{ name: "Dublin", url: "/county/dublin" }]
+    [{ name: "Area Guides", url: "/areaguides" }, { name: "Dublin", url: "/county/dublin" }]
   );
 
   return (
@@ -61,6 +62,7 @@ export default function DublinCountyPage() {
       {meta}
       <PageHeader title="Property Prices in County Dublin" />
       <div className="content-page">
+      <Breadcrumbs items={[{ name: "Area Guides", url: "/areaguides" }, { name: "Dublin", url: "/county/dublin" }]} />
       <p className="content-intro">
         Explore residential property sale prices across Dublin from Ireland's Property Price Register.
         Every sale since 2010 is included. Postcode breakdown figures are for 2025 full market price sales.
@@ -106,7 +108,11 @@ export default function DublinCountyPage() {
             <tbody>
               {POSTCODE_DATA.map(row => (
                 <tr key={row.postcode}>
-                  <td><span className="postcode-badge">{row.postcode}</span></td>
+                  <td>
+                    <Link to={`/eircode/${row.postcode}`} className="postcode-badge-link">
+                      <span className="postcode-badge">{row.postcode}</span>
+                    </Link>
+                  </td>
                   <td>{row.label}</td>
                   <td className="num-col">{row.txCount.toLocaleString()}</td>
                   <td className="num-col median-col">{formatPrice(row.medianPrice)}</td>
@@ -140,6 +146,9 @@ export default function DublinCountyPage() {
           Use the <Link to="/?county=Dublin">interactive map</Link> to search by address or
           Eircode within County Dublin, or explore a specific{" "}
           <Link to="/area/rathmines">Dublin neighbourhood</Link>.
+        </p>
+        <p>
+          Browse <Link to="/areaguides">all area guides</Link> for other counties, towns and postcodes.
         </p>
       </section>
       <Footer />
