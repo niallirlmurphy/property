@@ -2375,3 +2375,11 @@ input[type="range"]::-moz-range-thumb {
 
 /* County Template Styles */
 @import './styles/county-template.css';
+
+.breadcrumbs { padding: 0.75rem 0 0; font-size: 0.85rem; }
+.breadcrumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.15rem; }
+.breadcrumbs li { display: inline-flex; align-items: center; }
+.breadcrumbs a { color: #1a3c5e; text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs span[aria-current="page"] { color: #6b7280; }
+.breadcrumb-sep { color: #9ca3af; }
