@@ -2,7 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
 import WaffleMenu from "../components/WaffleMenu";
 import Footer from "../components/Footer";
-import { BLOG_POSTS } from "./BlogListPage";
+import { BLOG_POSTS } from "../blogPosts";
 
 // Blog post content - import from individual files
 import { HowToUsePPRContent } from "../blog-posts/how-to-use-property-price-register";
