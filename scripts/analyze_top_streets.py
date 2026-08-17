@@ -8,65 +8,21 @@ and disambiguating with the area + county. Produces:
   - Top 20 streets by highest volume (transaction count)
 """
 import os
-import re
+import sys
 import csv
 import psycopg2
 from collections import defaultdict
 from statistics import median
+
+sys.path.insert(0, os.path.dirname(__file__))
+from street_key import street_key, APT_NAME_RE
 
 MIN_TX_FOR_VALUE = 8      # streets need enough sales to be a credible "high value" page
 MIN_TX_FLOOR = 3          # ignore near-unique addresses entirely
 N_VALUE = 30              # top-N by median price
 N_VOLUME = 20             # top-N by transaction count
 
-# apartment-complex detection: prefix on the original first line, or block-style name
-APT_PREFIX_RE = re.compile(
-    r"^(?:the\s+)?(apartment|apt|penthouse|ground floor|first floor|second floor|"
-    r"third floor|top floor|floor|flat)\b",
-    re.IGNORECASE,
-)
-APT_NAME_RE = re.compile(r"\b(block|building|apartments?)\b", re.IGNORECASE)
 APT_FRACTION_THRESHOLD = 0.5  # >=50% of sales flagged as apartments -> exclude as a block
-
-# leading house number / unit / apartment tokens to strip from first component
-LEAD_RE = re.compile(
-    r"^(?:(?:apartment|apt|unit|no\.?|flat|site)\s*)?\d+[a-z]?\s*(?:-\s*\d+[a-z]?\s*)?",
-    re.IGNORECASE,
-)
-# generic first-line words that mean the *real* street is the next component
-GENERIC_FIRST = re.compile(
-    r"^(the\s+)?(apartment|apartments|penthouse|ground floor|first floor|second floor|"
-    r"third floor|top floor|floor)\b",
-    re.IGNORECASE,
-)
-
-
-def street_key(addr, county):
-    parts = [p.strip() for p in addr.split(",") if p.strip()]
-    if len(parts) < 2:
-        return None  # not enough structure to place a street
-    first = parts[0]
-    apt_flag = bool(APT_PREFIX_RE.match(first))
-    # strip leading house number / unit
-    stripped = LEAD_RE.sub("", first).strip()
-    idx = 0
-    # if the first line is generic (floor/apartment), use the next component as street
-    if not stripped or GENERIC_FIRST.match(stripped) or len(stripped) < 3:
-        if len(parts) >= 3:
-            stripped = parts[1]
-            idx = 1
-        else:
-            return None
-    street = stripped
-    # drop keys that are just a number or a lone letter
-    if not re.search(r"[a-zA-Z]{3,}", street):
-        return None
-    # area = the component after the street line (town / postcode / townland)
-    area = parts[idx + 1] if len(parts) > idx + 1 else county
-    # normalise for grouping
-    def norm(s):
-        return re.sub(r"\s+", " ", s.strip().lower())
-    return (norm(street), norm(area), county.strip().lower()), (street.strip(), area.strip(), county.strip()), apt_flag
 
 
 def main():
