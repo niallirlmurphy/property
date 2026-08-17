@@ -12,9 +12,11 @@ import { IrelandsLongestGreenwayContent } from "../blog-posts/irelands-longest-g
 import { BestMonthToSellContent } from "../blog-posts/best-month-to-sell-property-ireland";
 import { TransportPremiumContent } from "../blog-posts/does-being-near-a-luas-or-dart-add-value";
 import { SchoolPremiumContent } from "../blog-posts/does-living-near-a-good-school-add-value";
+import { SolarValueContent } from "../blog-posts/do-solar-panels-add-value-to-your-home-ireland";
 
 // Map slugs to content components
 const BLOG_CONTENT: Record<string, React.ComponentType> = {
+  "do-solar-panels-add-value-to-your-home-ireland": SolarValueContent,
   "does-living-near-a-good-school-add-value": SchoolPremiumContent,
   "does-being-near-a-luas-or-dart-add-value": TransportPremiumContent,
   "best-month-to-sell-property-ireland": BestMonthToSellContent,

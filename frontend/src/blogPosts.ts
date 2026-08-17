@@ -16,6 +16,15 @@ export interface BlogPost {
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "do-solar-panels-add-value-to-your-home-ireland",
+    title: "Do Solar Panels Add Value to Your Home? An Irish Guide",
+    description: "Solar can genuinely add value to an Irish home — but only if it's installed and documented right. How to avoid scams, choose an SEAI-registered installer, and the paperwork checklist buyers and sellers must not skip.",
+    date: "2026-08-17",
+    author: "HomeIQ Team",
+    tags: ["Guide", "Solar", "Energy", "Home Improvement", "Property Value"],
+    readTime: "8 min read"
+  },
+  {
     slug: "does-living-near-a-good-school-add-value",
     title: "Does Living Near a Good School Add Value to Your Home?",
     description: "We analysed 214,888 Dublin sales to measure the property price premium for being near a school or university. The school-catchment effect is real — and bigger than the transport one.",
