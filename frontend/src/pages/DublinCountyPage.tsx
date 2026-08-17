@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
+import MapSearchThumb from "../components/MapSearchThumb";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 function formatPrice(n: number) {
@@ -156,6 +157,7 @@ export default function DublinCountyPage() {
           Eircode within County Dublin, or explore a specific{" "}
           <Link to="/area/rathmines">Dublin neighbourhood</Link>.
         </p>
+        <MapSearchThumb to="/?county=Dublin" label="Search County Dublin on the map" />
         <p>
           Browse <Link to="/areaguides">all area guides</Link> for other counties, towns and postcodes.
         </p>

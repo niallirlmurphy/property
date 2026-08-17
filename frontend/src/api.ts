@@ -136,7 +136,7 @@ export async function fetchCountySummary(county: string): Promise<CountySummary>
     fetch(buildUrl("/trends", { county })),
     fetch(buildUrl("/search", { q: `53.5,-7.5`, radius_km: 200, county, limit: 10 })),
   ]);
-  const countiesData: { county: string; count: number }[] = await countiesRes.json();
+  const countiesData: { county: string; count: number }[] = countiesRes.ok ? await countiesRes.json() : [];
   const trends = trendsRes.ok ? (await trendsRes.json()).data : [];
   const search = searchRes.ok ? await searchRes.json() : { results: [] };
 

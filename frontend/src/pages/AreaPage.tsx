@@ -8,6 +8,7 @@ import type { AreaSummary } from "../types";
 import { areaFromSlug, countyForArea, countyFromSlug } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
 import Breadcrumbs from "../components/Breadcrumbs";
+import MapSearchThumb from "../components/MapSearchThumb";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -144,6 +145,10 @@ export default function AreaPage() {
               Use the <Link to={`/?q=${encodeURIComponent(config.query)}&radius_km=${config.radius_km}`}>interactive map</Link> to
               filter by price range, year, and radius.
             </p>
+            <MapSearchThumb
+              to={`/?q=${encodeURIComponent(config.query)}&radius_km=${config.radius_km}`}
+              label={`Search ${config.name} on the map`}
+            />
             <p>
               {parentCountySlug && parentCountyName && (
                 <>

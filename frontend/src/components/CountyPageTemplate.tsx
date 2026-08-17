@@ -11,6 +11,7 @@ import {
   setCachedCountyData,
 } from "../utils/countyDataCache";
 import Breadcrumbs from "./Breadcrumbs";
+import MapSearchThumb from "./MapSearchThumb";
 import { countySlug } from "../areas";
 
 function formatPrice(n: number | null) {
@@ -192,6 +193,10 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
                 Use the <Link to={`/?q=${encodeURIComponent(content.name)}&county=${encodeURIComponent(content.name)}`}>interactive map</Link> to search
                 by address or Eircode within County {content.name}.
               </p>
+              <MapSearchThumb
+                to={`/?q=${encodeURIComponent(content.name)}&county=${encodeURIComponent(content.name)}`}
+                label={`Search County ${content.name} on the map`}
+              />
               <p>
                 Browse <Link to="/areaguides">all area guides</Link>.
               </p>

@@ -5,6 +5,7 @@ import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import CountyPageTemplate from "../components/CountyPageTemplate";
+import MapSearchThumb from "../components/MapSearchThumb";
 import type { CountySummary } from "../types";
 import { countyFromSlug, areasForCounty, provinceForCounty, PROVINCES } from "../areas";
 import Breadcrumbs from "../components/Breadcrumbs";
@@ -274,6 +275,10 @@ export default function CountyPage() {
               Use the <Link to={`/?q=${encodeURIComponent(county)}&county=${encodeURIComponent(county)}`}>interactive map</Link> to
               search by address or Eircode within County {county}.
             </p>
+            <MapSearchThumb
+              to={`/?q=${encodeURIComponent(county)}&county=${encodeURIComponent(county)}`}
+              label={`Search County ${county} on the map`}
+            />
             <p>
               Browse <Link to="/areaguides">all area guides</Link>.
             </p>
