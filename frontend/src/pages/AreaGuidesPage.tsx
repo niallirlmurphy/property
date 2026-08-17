@@ -59,18 +59,6 @@ export default function AreaGuidesPage() {
         ))}
 
         <section className="content-section">
-          <h2>Dublin Postcodes</h2>
-          <p>Property prices for each Dublin postal district.</p>
-          <div className="postcode-link-grid">
-            {Object.entries(DUBLIN_EIRCODE_AREAS).map(([code, label]) => (
-              <Link key={code} to={`/eircode/${code}`} className="postcode-link">
-                <span className="postcode-badge">{code}</span> {label}
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <section className="content-section">
           <h2>Popular Towns &amp; Suburbs</h2>
           {countiesWithAreas.map(slug => {
             const name = countyFromSlug(slug) ?? slug;
@@ -91,6 +79,18 @@ export default function AreaGuidesPage() {
           <p className="table-note">
             {AREAS.length} area guides available and growing.
           </p>
+        </section>
+
+        <section className="content-section">
+          <h2>Dublin Postcodes</h2>
+          <p>Property prices for each Dublin postal district.</p>
+          <div className="postcode-link-grid">
+            {Object.entries(DUBLIN_EIRCODE_AREAS).map(([code, label]) => (
+              <Link key={code} to={`/eircode/${code}`} className="postcode-link">
+                <span className="postcode-badge">{code}</span> {label}
+              </Link>
+            ))}
+          </div>
         </section>
 
         <Footer />
