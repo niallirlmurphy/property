@@ -22,10 +22,36 @@ function formatPrice(n: number | null) {
 
 // Optional hero photo per county slug (used on the default dynamic page).
 // Counties with a custom template (Cork/Galway/Dublin) manage their own imagery.
-const COUNTY_HERO_IMAGES: Record<string, { src: string; alt: string }> = {
+const COUNTY_HERO_IMAGES: Record<string, { src: string; alt: string; width: number; height: number }> = {
   westmeath: {
     src: "/images/westmeath-athlone-bridge.jpg",
     alt: "The town bridge over the River Shannon at Athlone, County Westmeath, with the twin towers of SS Peter and Paul's Church at sunset",
+    width: 2000,
+    height: 1500,
+  },
+  louth: {
+    src: "/images/louth-boyne-cable-bridge.png",
+    alt: "The Boyne Cable Bridge carrying the M1 Drogheda Bypass over the River Boyne, County Louth, seen from a riverside boardwalk",
+    width: 1600,
+    height: 1600,
+  },
+  sligo: {
+    src: "/images/sligo-classiebawn-benbulben.png",
+    alt: "Classiebawn Castle near Mullaghmore, County Sligo, with Benbulben mountain rising behind",
+    width: 2000,
+    height: 1500,
+  },
+  clare: {
+    src: "/images/clare-burren-coast-road.jpg",
+    alt: "The Burren coastal road in County Clare, with a limestone dry-stone wall and a glacial erratic boulder overlooking Galway Bay",
+    width: 2000,
+    height: 2000,
+  },
+  kerry: {
+    src: "/images/kerry-mountain-pass.png",
+    alt: "A mountain pass road winding through a glaciated upland valley in County Kerry, with dry-stone walls and open moorland",
+    width: 2000,
+    height: 661,
   },
 };
 
@@ -131,8 +157,8 @@ export default function CountyPage() {
           className="area-hero"
           src={COUNTY_HERO_IMAGES[slugStr].src}
           alt={COUNTY_HERO_IMAGES[slugStr].alt}
-          width={2000}
-          height={1500}
+          width={COUNTY_HERO_IMAGES[slugStr].width}
+          height={COUNTY_HERO_IMAGES[slugStr].height}
           loading="lazy"
         />
       )}
