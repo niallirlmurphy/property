@@ -54,6 +54,12 @@ const COUNTY_HERO_IMAGES: Record<string, { src: string; alt: string; width: numb
     width: 2000,
     height: 661,
   },
+  meath: {
+    src: "/images/meath-knowth-passage-tomb.png",
+    alt: "The Neolithic passage tomb mounds at Knowth, part of Brú na Bóinne in County Meath, with a decorated kerbstone in the foreground",
+    width: 1440,
+    height: 1080,
+  },
 };
 
 // Factual overview paragraph per county slug (setting, population, area,
