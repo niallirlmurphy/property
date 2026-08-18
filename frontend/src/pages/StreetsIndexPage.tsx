@@ -7,10 +7,10 @@ import { usePageMeta } from "../hooks/usePageMeta";
 import { STREETS } from "../streets";
 
 export default function StreetsIndexPage() {
-  const crumbs = [{ name: "Notable Streets", url: "/streets" }];
+  const crumbs = [{ name: "Street Level Analysis", url: "/streets" }];
   const meta = usePageMeta(
-    "Notable Streets in Ireland",
-    "Property price guides for Ireland's highest-value and most active streets, based on the Property Price Register.",
+    "Street Level Property Price Analysis in Ireland",
+    "Street-level property price analysis for Ireland's highest-value and most active streets, based on the Property Price Register.",
     crumbs,
   );
   const value = STREETS.filter(s => s.category === "value").sort((a, b) => a.rank - b.rank);
@@ -30,12 +30,12 @@ export default function StreetsIndexPage() {
   return (
     <>
       {meta}
-      <PageHeader title="Notable Streets in Ireland" titleAsHeading={false} />
+      <PageHeader title="Street Level Analysis" titleAsHeading={false} />
       <div className="content-page">
         <Breadcrumbs items={crumbs} />
-        <h1>Notable Streets in Ireland</h1>
+        <h1>Street Level Analysis</h1>
         <p className="content-intro">
-          Dedicated property-price guides for Ireland's highest-value and most active
+          Street-level property price analysis for Ireland's highest-value and most active
           streets, drawn from the Property Price Register (2010 onwards).
         </p>
         <section className="content-section">

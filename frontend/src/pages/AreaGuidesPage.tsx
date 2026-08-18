@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
@@ -11,8 +11,19 @@ import {
   DUBLIN_EIRCODE_AREAS,
 } from "../areas";
 import { hasCountyContent } from "../content/counties";
+import { STREETS } from "../streets";
 
 export default function AreaGuidesPage() {
+  const navigate = useNavigate();
+
+  // All covered streets grouped by county, for the Street Level Analysis
+  // dropdown. Counties sorted alphabetically; streets alphabetically within.
+  const streetsByCounty = [...STREETS]
+    .sort((a, b) => a.county.localeCompare(b.county) || a.name.localeCompare(b.name))
+    .reduce<Record<string, typeof STREETS>>((acc, s) => {
+      (acc[s.county] ??= []).push(s);
+      return acc;
+    }, {});
   const meta = usePageMeta(
     "Area Guides — Ireland Property Prices by County, Area & Postcode",
     "Browse HomeIQ's property price area guides: every Irish county, popular towns and suburbs, and all Dublin postcodes. Median prices, trends and recent sales from the Property Price Register.",
@@ -91,6 +102,38 @@ export default function AreaGuidesPage() {
               </Link>
             ))}
           </div>
+        </section>
+
+        <section className="content-section">
+          <h2>Street Level Analysis</h2>
+          <p>
+            Dive into individual streets with dedicated price guides for Ireland's
+            highest-value and most active streets. Pick a street below, or{" "}
+            <Link to="/streets">browse the full list</Link>.
+          </p>
+          <select
+            className="street-select"
+            defaultValue=""
+            aria-label="Select a street for street-level analysis"
+            onChange={e => {
+              if (e.target.value) navigate(`/street/${e.target.value}`);
+            }}
+          >
+            <option value="" disabled>
+              Select a street…
+            </option>
+            {Object.entries(streetsByCounty)
+              .sort(([a], [b]) => a.localeCompare(b))
+              .map(([county, streets]) => (
+                <optgroup key={county} label={`Co. ${county}`}>
+                  {streets.map(s => (
+                    <option key={s.slug} value={s.slug}>
+                      {s.name}, {s.area}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
+          </select>
         </section>
 
         <Footer />

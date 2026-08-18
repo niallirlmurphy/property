@@ -3,7 +3,7 @@ import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import MapSearchThumb from "../components/MapSearchThumb";
-import NotableStreets from "../components/NotableStreets";
+import StreetLevelAnalysis from "../components/StreetLevelAnalysis";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 function formatPrice(n: number) {
@@ -151,7 +151,7 @@ export default function DublinCountyPage() {
         </p>
       </section>
 
-      <NotableStreets countySlug="dublin" />
+      <StreetLevelAnalysis countySlug="dublin" />
 
       <section className="content-section">
         <h2>Search Dublin Properties</h2>

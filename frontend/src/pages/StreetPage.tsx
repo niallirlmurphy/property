@@ -30,7 +30,7 @@ export default function StreetPage() {
   const crumbs = config
     ? [
         { name: `County ${config.county}`, url: `/county/${config.countySlug}` },
-        { name: "Notable Streets", url: "/streets" },
+        { name: "Street Level Analysis", url: "/streets" },
         { name: config.name, url: `/street/${config.slug}` },
       ]
     : [];
@@ -161,7 +161,7 @@ export default function StreetPage() {
           />
           <p>
             {config.name} is in <Link to={`/county/${config.countySlug}`}>County {config.county}</Link>.{" "}
-            Browse <Link to="/streets">all notable streets</Link>.
+            Browse <Link to="/streets">street level analysis</Link> for all Ireland.
           </p>
         </section>
 

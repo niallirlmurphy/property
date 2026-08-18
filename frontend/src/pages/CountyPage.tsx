@@ -9,7 +9,7 @@ import MapSearchThumb from "../components/MapSearchThumb";
 import type { CountySummary } from "../types";
 import { countyFromSlug, areasForCounty, provinceForCounty, PROVINCES } from "../areas";
 import Breadcrumbs from "../components/Breadcrumbs";
-import NotableStreets from "../components/NotableStreets";
+import StreetLevelAnalysis from "../components/StreetLevelAnalysis";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { getCountyContent } from "../content/counties";
 import {
@@ -263,7 +263,7 @@ export default function CountyPage() {
             </section>
           )}
 
-          <NotableStreets countySlug={slug ?? ""} />
+          <StreetLevelAnalysis countySlug={slug ?? ""} />
 
           {siblingCountySlugs.length > 0 && (
             <section className="content-section">
