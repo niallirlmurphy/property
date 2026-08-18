@@ -1,0 +1,145 @@
+{
+  "slug": "temple-road-dartry",
+  "stats": {
+    "count": 10,
+    "median": 4927500,
+    "avg": 4358000,
+    "min": 1350000,
+    "max": 8725000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1600000,
+      "avg_price": 1600000,
+      "min_price": 1600000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 5112500,
+      "avg_price": 5112500,
+      "min_price": 1500000,
+      "max_price": 8725000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 3075000,
+      "avg_price": 3075000,
+      "min_price": 1350000,
+      "max_price": 4800000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 3525000,
+      "avg_price": 3525000,
+      "min_price": 1950000,
+      "max_price": 5100000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 7500000,
+      "avg_price": 7500000,
+      "min_price": 7500000,
+      "max_price": 7500000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 5527500,
+      "avg_price": 5527500,
+      "min_price": 5055000,
+      "max_price": 6000000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-15",
+      "address": "48 TEMPLE RD, DARTRY, DUBLIN 6",
+      "price": 5055000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06TH92"
+    },
+    {
+      "date": "2026-03-19",
+      "address": "27 TEMPLE RD, DARTRY, DUBLIN 6",
+      "price": 6000000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D06KV07"
+    },
+    {
+      "date": "2024-04-03",
+      "address": "21 TEMPLE RD, DARTRY, DUBLIN 6",
+      "price": 7500000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D06WD39"
+    },
+    {
+      "date": "2022-07-14",
+      "address": "12 TEMPLE RD, DARTRY, DUBLIN 6",
+      "price": 1950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06X680"
+    },
+    {
+      "date": "2022-04-29",
+      "address": "13 TEMPLE RD, DARTRY, DUBLIN 6",
+      "price": 5100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06E022"
+    },
+    {
+      "date": "2019-09-17",
+      "address": "22 TEMPLE RD, DARTRY, DUBLIN 6",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-10",
+      "address": "29 TEMPLE RD, DARTRY, DUBLIN 6",
+      "price": 4800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-05-18",
+      "address": "19 TEMPLE RD, DARTRY, DUBLIN 6",
+      "price": 8725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-05-18",
+      "address": "19 TEMPLE RD, DARTRY, DUBLIN 6",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-05-13",
+      "address": "16 TEMPLE ROAD, DARTRY",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

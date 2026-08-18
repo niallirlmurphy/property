@@ -1,0 +1,137 @@
+{
+  "slug": "palmerston-park-rathmines",
+  "stats": {
+    "count": 9,
+    "median": 2350000,
+    "avg": 2379222,
+    "min": 728000,
+    "max": 3850000,
+    "firstYear": 2012,
+    "lastYear": 2023
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 1850000,
+      "avg_price": 1850000,
+      "min_price": 1800000,
+      "max_price": 1900000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 1239000,
+      "avg_price": 1239000,
+      "min_price": 728000,
+      "max_price": 1750000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 2350000,
+      "avg_price": 2350000,
+      "min_price": 2350000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 2815000,
+      "avg_price": 2815000,
+      "min_price": 2530000,
+      "max_price": 3100000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 3405000,
+      "avg_price": 3405000,
+      "min_price": 3405000,
+      "max_price": 3405000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 3850000,
+      "avg_price": 3850000,
+      "min_price": 3850000,
+      "max_price": 3850000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2023-07-12",
+      "address": "8 PALMERSTON PARK, RATHMINES, DUBLIN",
+      "price": 3850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06F577"
+    },
+    {
+      "date": "2022-08-30",
+      "address": "16 PALMERSTON PARK, RATHMINES, DUBLIN 6",
+      "price": 3405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06YX43"
+    },
+    {
+      "date": "2021-08-11",
+      "address": "5 PALMERSTON PARK, RATHMINES, DUBLIN",
+      "price": 2530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06FN20"
+    },
+    {
+      "date": "2021-01-18",
+      "address": "7 PALMERSTON PARK, RATHMINES, DUBLIN",
+      "price": 3100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-11-07",
+      "address": "11 PALMERSTON PARK, RATHMINES, DUBLIN 6",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-12-06",
+      "address": "20 Palmerston Park, Rathmines, Dublin 6",
+      "price": 728000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-05-31",
+      "address": "19 Palmerston Park, Rathmines",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-09-07",
+      "address": "8 Palmerston Park, Rathmines",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-08-16",
+      "address": "7 Palmerston Park, Rathmines",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

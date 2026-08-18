@@ -1,0 +1,489 @@
+{
+  "slug": "beaulieu-village-termonfeckin-road",
+  "stats": {
+    "count": 160,
+    "median": 237925,
+    "avg": 261756,
+    "min": 191629,
+    "max": 415000,
+    "firstYear": 2018,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2018,
+      "count": 8,
+      "median_price": 225551,
+      "avg_price": 226322,
+      "min_price": 210573,
+      "max_price": 259912
+    },
+    {
+      "year": 2019,
+      "count": 29,
+      "median_price": 228194,
+      "avg_price": 231201,
+      "min_price": 191629,
+      "max_price": 308370
+    },
+    {
+      "year": 2020,
+      "count": 26,
+      "median_price": 227312,
+      "avg_price": 224721,
+      "min_price": 201762,
+      "max_price": 248459
+    },
+    {
+      "year": 2021,
+      "count": 13,
+      "median_price": 228193,
+      "avg_price": 232094,
+      "min_price": 202643,
+      "max_price": 320704
+    },
+    {
+      "year": 2022,
+      "count": 25,
+      "median_price": 234361,
+      "avg_price": 248993,
+      "min_price": 203524,
+      "max_price": 348017
+    },
+    {
+      "year": 2023,
+      "count": 23,
+      "median_price": 303964,
+      "avg_price": 295954,
+      "min_price": 256387,
+      "max_price": 340000
+    },
+    {
+      "year": 2024,
+      "count": 20,
+      "median_price": 299559,
+      "avg_price": 305099,
+      "min_price": 264273,
+      "max_price": 378000
+    },
+    {
+      "year": 2025,
+      "count": 14,
+      "median_price": 323766,
+      "avg_price": 330842,
+      "min_price": 273127,
+      "max_price": 415000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 370000,
+      "avg_price": 370000,
+      "min_price": 370000,
+      "max_price": 370000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-03-31",
+      "address": "152 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 370000,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": "A92Y44P"
+    },
+    {
+      "date": "2026-02-25",
+      "address": "153 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 370000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-12-08",
+      "address": "96 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 320000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A92X2RN"
+    },
+    {
+      "date": "2025-09-03",
+      "address": "208 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 392070,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-21",
+      "address": "165 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 325947,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-08",
+      "address": "33 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 415000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A92YWH5"
+    },
+    {
+      "date": "2025-06-27",
+      "address": "35 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 397000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A92PCP2"
+    },
+    {
+      "date": "2025-06-27",
+      "address": "167 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 277500,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-20",
+      "address": "168 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 325947,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-13",
+      "address": "201 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 273127,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-17",
+      "address": "88 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 360000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A92TRX8"
+    },
+    {
+      "date": "2025-04-04",
+      "address": "207 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 325947,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-14",
+      "address": "200 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 281894,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-18",
+      "address": "202 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 316256,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-15",
+      "address": "206 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 299515,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-13",
+      "address": "199 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 321586,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-12-12",
+      "address": "203  Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-09",
+      "address": "204 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-22",
+      "address": "171 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 272247,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-05",
+      "address": "169 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 314537,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-31",
+      "address": "176 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 268700,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-30",
+      "address": "174 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-30",
+      "address": "178 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-25",
+      "address": "170 BEAULIEU VILLAGE, TERMONFECKIN RD, DROGHEDA",
+      "price": 272247,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-25",
+      "address": "179 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-23",
+      "address": "175 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-27",
+      "address": "38 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 378000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A92TXE4"
+    },
+    {
+      "date": "2024-07-10",
+      "address": "194, Beaulieu Village, Termonfeckin Road",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-02",
+      "address": "196 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-28",
+      "address": "192 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-25",
+      "address": "195 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-11",
+      "address": "19 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A92NVY7"
+    },
+    {
+      "date": "2024-03-14",
+      "address": "188 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 264273,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-01-09",
+      "address": "182 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-01-04",
+      "address": "189 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-01-04",
+      "address": "9 BEAULIEU VILLAGE, TERMONFECKIN ROAD, NEWTOWNSTALABAN",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A92X59C"
+    },
+    {
+      "date": "2023-12-20",
+      "address": "191 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 306607,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "183 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 264273,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "184 Beaulieu Village, Termonfeckin Rd, Drogheda",
+      "price": 264273,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "187 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 256387,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-14",
+      "address": "180 beaulieu village, termonfeckin road, drogheda",
+      "price": 306608,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-14",
+      "address": "190 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-05",
+      "address": "185 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-20",
+      "address": "71 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGEDA",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A92E93X"
+    },
+    {
+      "date": "2023-09-01",
+      "address": "144 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-18",
+      "address": "143 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 303964,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-18",
+      "address": "149 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 273127,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-20",
+      "address": "141 Beaulieu Village, Termonfeckin Road, Newtownstabalan",
+      "price": 264273,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-12",
+      "address": "150 BEAULIEU VILLAGE, TERMONFECKIN ROAD",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-11",
+      "address": "146 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 160
+}

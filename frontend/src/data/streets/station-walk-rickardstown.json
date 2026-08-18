@@ -1,0 +1,465 @@
+{
+  "slug": "station-walk-rickardstown",
+  "stats": {
+    "count": 261,
+    "median": 383259,
+    "avg": 382766,
+    "min": 268722,
+    "max": 495000,
+    "firstYear": 2021,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2021,
+      "count": 9,
+      "median_price": 286344,
+      "avg_price": 286108,
+      "min_price": 268722,
+      "max_price": 299559
+    },
+    {
+      "year": 2022,
+      "count": 59,
+      "median_price": 352422,
+      "avg_price": 353943,
+      "min_price": 290748,
+      "max_price": 425000
+    },
+    {
+      "year": 2023,
+      "count": 64,
+      "median_price": 370044,
+      "avg_price": 385117,
+      "min_price": 352422,
+      "max_price": 495000
+    },
+    {
+      "year": 2024,
+      "count": 93,
+      "median_price": 387665,
+      "avg_price": 392648,
+      "min_price": 317180,
+      "max_price": 484582
+    },
+    {
+      "year": 2025,
+      "count": 35,
+      "median_price": 418502,
+      "avg_price": 423703,
+      "min_price": 325991,
+      "max_price": 490000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 451000,
+      "avg_price": 451000,
+      "min_price": 451000,
+      "max_price": 451000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-01",
+      "address": "259 STATION WALK, RICKARDSTOWN, NEWBRIDGE",
+      "price": 451000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "W12K461"
+    },
+    {
+      "date": "2025-09-29",
+      "address": "269 STATION WALK, RICKARDSTOWN, NEWBRIDGE",
+      "price": 490000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-30",
+      "address": "327 Station Walk, Rickardstown, Newbridge",
+      "price": 458150,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-04-28",
+      "address": "328 Station Walk, Rickardstown, Newbridge",
+      "price": 422907,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-04-24",
+      "address": "341 Station Walk, Rickardstown, Newbridge",
+      "price": 440529,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-16",
+      "address": "344 Station Walk, Rickardstown, Newbridge",
+      "price": 418502,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-04-11",
+      "address": "334 Station Walk, Rickardstown, Newbridge",
+      "price": 462555,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-09",
+      "address": "339 Station Walk, Rickardstown, Newbridge",
+      "price": 462555,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-09",
+      "address": "345 STATION WALK, RICKARDSTOWN, NEWBRIDGE",
+      "price": 418502,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-07",
+      "address": "333 Station Walk, Rickardstown, Newbridge",
+      "price": 454125,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-07",
+      "address": "346 Station Walk, Rickardstown, Newbridge",
+      "price": 418502,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-04-04",
+      "address": "342 Station Walk, Rickardstown, Newbridge",
+      "price": 418502,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-04-03",
+      "address": "5 Station Walk, Rickardstown, Newbridge",
+      "price": 422907,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-04-03",
+      "address": "364 Station Walk, Rickardstown, Newbridge",
+      "price": 422907,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-02",
+      "address": "330 Station Walk, Rickardstown, Newbridge",
+      "price": 458150,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-01",
+      "address": "360 Station Walk, Rickardstown, Newbridge",
+      "price": 414097,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-03-31",
+      "address": "332 Station Walk, Rickardstown, Newbridge",
+      "price": 462555,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-28",
+      "address": "354 Station Walk, Rickardstown, Newbridge",
+      "price": 414097,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-27",
+      "address": "363 Station Walk, Rickardstown, Newbridge",
+      "price": 414100,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12XE06"
+    },
+    {
+      "date": "2025-03-27",
+      "address": "337 Station Walk, Rickardstown, Newbridge",
+      "price": 462555,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-27",
+      "address": "335 Station Walk, Rickardstown, Newbridge",
+      "price": 462555,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-26",
+      "address": "357 Station Walk, Rickardstown, Newbridge",
+      "price": 414096,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-03-21",
+      "address": "329 Station Walk, Rickardstown, Newbridge",
+      "price": 422907,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-21",
+      "address": "326 Station Walk, Rickardstown, Newbridge",
+      "price": 409691,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-03-21",
+      "address": "347 Station Walk, Rickardstown, Newbridge",
+      "price": 414097,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-11",
+      "address": "352 Station Walk, Rickardstown, Newbridge",
+      "price": 409692,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-10",
+      "address": "358 Station Walk, Rickardstown, Newbridge",
+      "price": 414097,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-03-05",
+      "address": "348 Station Walk, Rickardstown, Newbridge",
+      "price": 400881,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-03-05",
+      "address": "353 STATION WALK, RICKARDSTOWN, NEWBRIDGE",
+      "price": 409692,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-05",
+      "address": "350 Station Walk, Rickardstown, Newbridge",
+      "price": 400881,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-03-03",
+      "address": "359 Station Walk, Rickardstown, Newbridge",
+      "price": 414097,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-03-03",
+      "address": "356 Station Walk, Rickardstown, Newbridge",
+      "price": 409692,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-02-25",
+      "address": "307 Station Walk, Rickardstown, Newbridge",
+      "price": 449339,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-02-24",
+      "address": "No. 355  Station Walk, Rickardstown, Newbridge  Co. Kildare",
+      "price": 409691,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-01-17",
+      "address": "321 Station Walk, Rickardstown, Newbridge",
+      "price": 325991,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-10",
+      "address": "316 STATION WALK, RICKARDSTOWN, NEWBRIDGE",
+      "price": 325991,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2024-12-20",
+      "address": "308 Station Walk, Rickardstown, Newbridge",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-20",
+      "address": "323 Station Walk, Rickardstown, Newbridge",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-20",
+      "address": "324 Station Walk, Rickardstown, Newbridge",
+      "price": 449339,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-19",
+      "address": "314 Station Walk, Rickardstown, Newbridge",
+      "price": 400881,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-18",
+      "address": "320 Station Walk, Rickardstown, Newbridge",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-17",
+      "address": "312 Station Walk, Rickardstown, Newbridge",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-12",
+      "address": "311 Station Walk, Rickardstown, Newbridge",
+      "price": 400811,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-12",
+      "address": "315 Station Walk, Rickardstown, Newbridge",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-11",
+      "address": "310 Station Walk, Rickardstown, Newbridge",
+      "price": 400881,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-11",
+      "address": "325 Station Walk, Rickardstown, Newbridge",
+      "price": 396475,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-09",
+      "address": "318 Station Walk, Rickardstown, Newbridge",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-04",
+      "address": "313 Station Walk, Rickardstown, Newbridge",
+      "price": 400881,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-26",
+      "address": "302 Station Walk, Rickardstown, Newbridge",
+      "price": 405286,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-07",
+      "address": "289 Station Walk, Rickardstown, Newbridge",
+      "price": 394273,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 261
+}

@@ -1,0 +1,345 @@
+{
+  "slug": "wellington-road-ballsbridge",
+  "stats": {
+    "count": 28,
+    "median": 2600000,
+    "avg": 2579685,
+    "min": 1400000,
+    "max": 3524229,
+    "firstYear": 2012,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 2750000,
+      "avg_price": 2750000,
+      "min_price": 2750000,
+      "max_price": 2750000
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 2300000,
+      "avg_price": 2183333,
+      "min_price": 1400000,
+      "max_price": 2850000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 2200000,
+      "avg_price": 2200000,
+      "min_price": 2000000,
+      "max_price": 2400000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 2650000,
+      "avg_price": 2650000,
+      "min_price": 2650000,
+      "max_price": 2650000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 2375000,
+      "avg_price": 2375000,
+      "min_price": 2250000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 3000000,
+      "avg_price": 3041410,
+      "min_price": 2600000,
+      "max_price": 3524229
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 2775000,
+      "avg_price": 2775000,
+      "min_price": 2650000,
+      "max_price": 2900000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 2075000,
+      "avg_price": 2075000,
+      "min_price": 2075000,
+      "max_price": 2075000
+    },
+    {
+      "year": 2021,
+      "count": 4,
+      "median_price": 2875000,
+      "avg_price": 2875000,
+      "min_price": 2500000,
+      "max_price": 3250000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 2553475,
+      "avg_price": 2553475,
+      "min_price": 2450000,
+      "max_price": 2656950
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 2800000,
+      "avg_price": 2800000,
+      "min_price": 2800000,
+      "max_price": 2800000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 2250000,
+      "avg_price": 2250000,
+      "min_price": 2250000,
+      "max_price": 2250000
+    },
+    {
+      "year": 2025,
+      "count": 4,
+      "median_price": 2512500,
+      "avg_price": 2481250,
+      "min_price": 2200000,
+      "max_price": 2700000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-10-31",
+      "address": "32 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2425000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04Y2T7"
+    },
+    {
+      "date": "2025-09-11",
+      "address": "42 WELLINGTON RD, BALLSBRIDGE, DUBLIN",
+      "price": 2700000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04A4E9"
+    },
+    {
+      "date": "2025-04-04",
+      "address": "79 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2600000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04X6C7"
+    },
+    {
+      "date": "2025-03-20",
+      "address": "33 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2200000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D04C5C6"
+    },
+    {
+      "date": "2024-04-03",
+      "address": "3 WELLINGTON RD, BALLSBRIDGE",
+      "price": 2250000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04N8H2"
+    },
+    {
+      "date": "2023-09-30",
+      "address": "30 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X991"
+    },
+    {
+      "date": "2023-04-20",
+      "address": "54 WELLINGTON RD, BALLSBRIDGE, DUBLIN",
+      "price": 2800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04W2W5"
+    },
+    {
+      "date": "2022-12-14",
+      "address": "57 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2656950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04R2P0"
+    },
+    {
+      "date": "2022-03-08",
+      "address": "42 WELLINGTON RD, BALLSBRIDGE, DUBLIN",
+      "price": 2450000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04A4E9"
+    },
+    {
+      "date": "2021-12-08",
+      "address": "55 WELLINGTON ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04W8W9"
+    },
+    {
+      "date": "2021-07-29",
+      "address": "70 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04F6P5"
+    },
+    {
+      "date": "2021-06-02",
+      "address": "34 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-24",
+      "address": "1 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-31",
+      "address": "40 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2075000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-21",
+      "address": "16 WELLINGTON ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-23",
+      "address": "61 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-28",
+      "address": "10 WELLINGTON ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3524229,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-25",
+      "address": "8 WELLINGTON ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-23",
+      "address": "19 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-07",
+      "address": "34 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-19",
+      "address": "68 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-07",
+      "address": "20 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-05-09",
+      "address": "48 Wellington Road, Ballsbridge",
+      "price": 2400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-04-15",
+      "address": "63 Wellington road, Ballsbridge",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-12-11",
+      "address": "5 WELLINGTON RD, BALLSBRIDGE, DUBLIN",
+      "price": 2300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-11-12",
+      "address": "51 WELLINGTON RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-03-11",
+      "address": "7 Wellington Road, Ballsbridge, Dublin 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-08-03",
+      "address": "83 Wellington Road, Ballsbridge",
+      "price": 2750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 28
+}

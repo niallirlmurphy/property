@@ -1,0 +1,481 @@
+{
+  "slug": "drumnigh-manor-portmarnock",
+  "stats": {
+    "count": 226,
+    "median": 557269,
+    "avg": 576942,
+    "min": 435770,
+    "max": 969163,
+    "firstYear": 2019,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2019,
+      "count": 18,
+      "median_price": 502202,
+      "avg_price": 511038,
+      "min_price": 462555,
+      "max_price": 572687
+    },
+    {
+      "year": 2020,
+      "count": 16,
+      "median_price": 482248,
+      "avg_price": 494163,
+      "min_price": 435770,
+      "max_price": 594714
+    },
+    {
+      "year": 2021,
+      "count": 20,
+      "median_price": 486784,
+      "avg_price": 514805,
+      "min_price": 439648,
+      "max_price": 645000
+    },
+    {
+      "year": 2022,
+      "count": 72,
+      "median_price": 528634,
+      "avg_price": 543331,
+      "min_price": 484581,
+      "max_price": 735000
+    },
+    {
+      "year": 2023,
+      "count": 46,
+      "median_price": 579775,
+      "avg_price": 585038,
+      "min_price": 502203,
+      "max_price": 700441
+    },
+    {
+      "year": 2024,
+      "count": 30,
+      "median_price": 615000,
+      "avg_price": 633788,
+      "min_price": 528634,
+      "max_price": 810000
+    },
+    {
+      "year": 2025,
+      "count": 21,
+      "median_price": 722467,
+      "avg_price": 747111,
+      "min_price": 634361,
+      "max_price": 969163
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 765000,
+      "avg_price": 751000,
+      "min_price": 716000,
+      "max_price": 772000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-01",
+      "address": "26 DRUMNIGH MANOR, PORTMARNOCK, DUBLIN",
+      "price": 772000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D13Y9NF"
+    },
+    {
+      "date": "2026-06-17",
+      "address": "62 DRUMNIGH MANOR, PORTMARNOCK, DUBLIN",
+      "price": 716000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D13FDN4"
+    },
+    {
+      "date": "2026-02-03",
+      "address": "160 DRUMNIGH MANOR, PORTMARNOCK, CO DUBLIN",
+      "price": 765000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D13A32R"
+    },
+    {
+      "date": "2025-10-01",
+      "address": "105 DRUMNIGH MANOR, PORTMARNOCK, DUBLIN",
+      "price": 770000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D13RF6H"
+    },
+    {
+      "date": "2025-09-10",
+      "address": "100 DRUMNIGH MANOR, PORTMARNOCK, COUNTY DUBLIN",
+      "price": 755000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D13DF3F"
+    },
+    {
+      "date": "2025-09-03",
+      "address": "9 Drumnigh Manor, Portmarnock, Dublin",
+      "price": 748899,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-01",
+      "address": "239 Drumnigh Manor, Portmarnock, County Dublin",
+      "price": 731278,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D13YW7Y"
+    },
+    {
+      "date": "2025-07-01",
+      "address": "256 drumnigh Manor, portmarnock",
+      "price": 660793,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-30",
+      "address": "247 Drumnigh Manor, Portmarnock",
+      "price": 735683,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-24",
+      "address": "3 DRUMNIGH MANOR, PORTMARNOCK, COUNTY DUBLIN",
+      "price": 634361,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-09",
+      "address": "243 Drumnigh Manor, Portmarnock",
+      "price": 722467,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-06",
+      "address": "244 Drumnigh Manor, Portmarnock",
+      "price": 722466,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-06",
+      "address": "261 Drumnigh Manor, Portmarnock",
+      "price": 740088,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-05",
+      "address": "242 Drumnigh Manor, Portmarnock",
+      "price": 722466,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-05",
+      "address": "245 Drumnigh Manor, Portmarnock, County Dublin",
+      "price": 722466,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-28",
+      "address": "7 Drumnigh Manor, Portmarnock, Dublin",
+      "price": 801762,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-09",
+      "address": "226 Drumnigh Manor, Portmarnock, County Dublin",
+      "price": 709251,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-30",
+      "address": "220 Drumnigh Manor, Portmarnock",
+      "price": 938324,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-17",
+      "address": "231 Drumnigh Manor, Portmarnock, Co Dublin",
+      "price": 969163,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-11",
+      "address": "241 Drumnigh Manor, Portmarnock, Co. Dublin",
+      "price": 722467,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-01",
+      "address": "246 Drumnigh Manor, Portmarnock, County Dublin",
+      "price": 722467,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-18",
+      "address": "237 Drumnigh Manor, Portmarnock",
+      "price": 722467,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-28",
+      "address": "238 DRUMNIGH MANOR, PORTMARNOCK, DUBLIN 13",
+      "price": 722467,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-14",
+      "address": "58 DRUMNIGH MANOR, PORTMARNOCK, CO DUBLIN",
+      "price": 715000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D13Y2YE"
+    },
+    {
+      "date": "2024-12-19",
+      "address": "229 Drumnigh Manor, Portmarnock",
+      "price": 700500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-09",
+      "address": "228 DRUMNIGH MANOR, PORTMARNOCK",
+      "price": 709251,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-27",
+      "address": "227 Drumnigh Manor, Portmarnock, County Dublin",
+      "price": 700440,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-19",
+      "address": "225 Drumnigh Manor, Portmarnock, Co. Dublin",
+      "price": 700441,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-09",
+      "address": "224 Drumnigh Manor, Portmarnock",
+      "price": 700441,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "4 Drumnigh Manor, Portmarnock",
+      "price": 669604,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-08-30",
+      "address": "271 DRUMNIGH MANOR, PORTMARNOCK, CO. DUBLIN",
+      "price": 594714,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-08-16",
+      "address": "277 Drumnigh Manor, Portmarnock",
+      "price": 603524,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-22",
+      "address": "217 Drumnigh Manor, Portmarnock",
+      "price": 709251,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-12",
+      "address": "155 DRUMNIGH MANOR, PORTMARNOCK, CO. DUBLIN",
+      "price": 810000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D13N7FF"
+    },
+    {
+      "date": "2024-06-25",
+      "address": "276 Drumnigh Manor, Portmarnock, Co. Dublin",
+      "price": 594714,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-19",
+      "address": "219 Drumnigh Manor, Portmarnock",
+      "price": 722467,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-07",
+      "address": "278 Drumnigh Manor, Portmarnock",
+      "price": 634361,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D13VYF4"
+    },
+    {
+      "date": "2024-05-30",
+      "address": "37 DRUMNIGH MANOR, PORTMARNOCK, DUBLIN 13",
+      "price": 610000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D13YV3F"
+    },
+    {
+      "date": "2024-05-24",
+      "address": "269 DRUMNIGH MANOR, PORTMARNOCK, CO. DUBLIN",
+      "price": 594714,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-22",
+      "address": "270  Drumnigh Manor, Portmarnock",
+      "price": 594714,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-19",
+      "address": "272 Drumnigh Manor, Portmarnock, Dublin",
+      "price": 621145,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-17",
+      "address": "273 Drumnigh Manor, Portmarnock, County Dublin",
+      "price": 629956,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-16",
+      "address": "267 Drumnigh Manor, Portmarnock",
+      "price": 625550,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-15",
+      "address": "263 Drumnigh Manor, Portmarnock",
+      "price": 594714,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-15",
+      "address": "275 Drumnigh Manor, Portmarnock",
+      "price": 599118,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-14",
+      "address": "268 Drumnigh Manor, Portmarnock",
+      "price": 594714,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-08",
+      "address": "248 Drumnigh Manor, Portmarnock, Co. Dublin",
+      "price": 594714,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-23",
+      "address": "249 Drumnigh Manor, Portmarnock",
+      "price": 528634,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-16",
+      "address": "265 Drumnigh Manor, Portmarnock, County Dublin",
+      "price": 528634,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D13YE0Y"
+    },
+    {
+      "date": "2024-04-04",
+      "address": "266 Drumnigh Manor, Portmarnock, County Dublin",
+      "price": 594714,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 226
+}

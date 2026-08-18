@@ -1,0 +1,449 @@
+{
+  "slug": "newtown-meadows-castletroy",
+  "stats": {
+    "count": 155,
+    "median": 372247,
+    "avg": 372667,
+    "min": 189909,
+    "max": 502203,
+    "firstYear": 2023,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2023,
+      "count": 8,
+      "median_price": 342511,
+      "avg_price": 353485,
+      "min_price": 270370,
+      "max_price": 418502
+    },
+    {
+      "year": 2024,
+      "count": 51,
+      "median_price": 339207,
+      "avg_price": 338850,
+      "min_price": 281938,
+      "max_price": 396476
+    },
+    {
+      "year": 2025,
+      "count": 60,
+      "median_price": 376652,
+      "avg_price": 373145,
+      "min_price": 189909,
+      "max_price": 462555
+    },
+    {
+      "year": 2026,
+      "count": 36,
+      "median_price": 405286,
+      "avg_price": 424042,
+      "min_price": 354202,
+      "max_price": 502203
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-17",
+      "address": "132 Newtown Meadows, Castletroy",
+      "price": 447500,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-07-07",
+      "address": "86 Newtown Meadows, Castletroy",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-07-07",
+      "address": "91 Newtown Meadows, Castletroy",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-07-07",
+      "address": "87 Newtown Meadows, Castletroy",
+      "price": 378855,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-07-07",
+      "address": "89 Newtown Meadows, Castletroy",
+      "price": 374449,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-06-15",
+      "address": "98 Newtown Meadows, Castletroy",
+      "price": 422018,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-06-05",
+      "address": "134 Newtown Meadows, Castletroy",
+      "price": 480176,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-06-04",
+      "address": "128 Newtown Meadows, Castletroy",
+      "price": 386343,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-06-03",
+      "address": "112 Newtown Meadows, Castletroy",
+      "price": 405286,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-05-29",
+      "address": "95 Newtown Meadows, Castletroy, Limerick",
+      "price": 405286,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-05-29",
+      "address": "127 Newtown Meadows, Castletroy, Limerick",
+      "price": 354202,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-05-25",
+      "address": "92 Newtown Meadows, Castletroy",
+      "price": 502203,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-05-22",
+      "address": "97 Newtown Meadows, Castletroy",
+      "price": 405286,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-05-21",
+      "address": "100 Newtown Meadows, Castletroy, Limerick",
+      "price": 440528,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-05-19",
+      "address": "133 Newtown Meadows, Castletroy",
+      "price": 480176,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-05-05",
+      "address": "106 Newtown Meadows, Castletroy, Limerick",
+      "price": 438500,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-05-05",
+      "address": "139 Newtown Meadows, Castletroy",
+      "price": 480176,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-04-24",
+      "address": "107 Newtown Meadows, Castletroy",
+      "price": 398238,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "V9437T8"
+    },
+    {
+      "date": "2026-04-15",
+      "address": "101 Newtown Meadows, Castletroy",
+      "price": 440529,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-04-15",
+      "address": "108 Newtown Meadows, Castletroy",
+      "price": 387665,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-04-14",
+      "address": "110 Newtown Meadows, Castletroy",
+      "price": 394273,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "V94 1A27"
+    },
+    {
+      "date": "2026-04-13",
+      "address": "111 Newtown Meadows, Castletroy",
+      "price": 405286,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-04-10",
+      "address": "130 Newtown Meadows, Castletroy",
+      "price": 452000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "V94 5W42"
+    },
+    {
+      "date": "2026-04-09",
+      "address": "105 Newtown Meadows, Castletroy",
+      "price": 394273,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-04-08",
+      "address": "129 NEWTOWN MEADOWS, CASTLETROY, LIMERICK",
+      "price": 398237,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "V94 43H4"
+    },
+    {
+      "date": "2026-04-01",
+      "address": "113 Newtown Meadows, Castletroy, Limerick",
+      "price": 405286,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "V94 447D"
+    },
+    {
+      "date": "2026-04-01",
+      "address": "104 Newtown Meadows, Castletroy",
+      "price": 480176,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "V94 025T"
+    },
+    {
+      "date": "2026-03-27",
+      "address": "114 Newtown Meadows, Castletroy",
+      "price": 405286,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "V94 330P"
+    },
+    {
+      "date": "2026-03-26",
+      "address": "124 Newtown Meadows, Castletroy, Limerick",
+      "price": 405286,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "V94 960V"
+    },
+    {
+      "date": "2026-03-25",
+      "address": "126 Newtown Meadows, Castletroy",
+      "price": 460000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-03-23",
+      "address": "103 Newtown Meadows, Castletroy",
+      "price": 480176,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-02-23",
+      "address": "235 Newtown Meadows, Castletroy, Limerick",
+      "price": 440529,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-02-19",
+      "address": "135 Newtown Meadows, Castletroy",
+      "price": 460000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-02-18",
+      "address": "149 Newtown Meadows, Castletroy",
+      "price": 405286,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-02-17",
+      "address": "140 Newtown Meadows, Castletroy",
+      "price": 480176,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-01-06",
+      "address": "125 Newtown Meadows, Castletroy",
+      "price": 405286,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-12-12",
+      "address": "123 Newtown Meadows, Castletroy, Limerick",
+      "price": 460000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-11-27",
+      "address": "136 Newtown Meadows, Castletroy, Limerick",
+      "price": 440529,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-11-10",
+      "address": "148 Newtown Meadows, Castletroy",
+      "price": 422018,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-11-07",
+      "address": "137 NEWTOWN MEADOWS, CASTLETROY, LIMERICK",
+      "price": 440529,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-24",
+      "address": "147 Newtown Meadows, Castletroy, Limerick",
+      "price": 405286,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "V945V04"
+    },
+    {
+      "date": "2025-10-23",
+      "address": "138 Newtown Meadows, Castletroy, Limerick",
+      "price": 405286,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-20",
+      "address": "230 Newtown Meadows, Castletroy",
+      "price": 392070,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-08",
+      "address": "229 Newtown Meadows, Castletroy, Limerick",
+      "price": 392070,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-02",
+      "address": "116 Newtown Meadows, Castletroy",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-02",
+      "address": "219 Newtown Meadows, Castletroy",
+      "price": 387665,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-24",
+      "address": "117 Newtown Meadows, Castletroy",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-24",
+      "address": "121 Newtown Meadows, Castletroy, Limerick",
+      "price": 352443,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-24",
+      "address": "228 Newtown Meadows, Castletroy, Limerick",
+      "price": 392070,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-19",
+      "address": "232 Newtown Meadows, Castletroy, Limerick",
+      "price": 392070,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 155
+}

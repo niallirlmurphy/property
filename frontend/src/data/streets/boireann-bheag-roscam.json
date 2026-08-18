@@ -1,0 +1,553 @@
+{
+  "slug": "boireann-bheag-roscam",
+  "stats": {
+    "count": 199,
+    "median": 240000,
+    "avg": 245057,
+    "min": 110000,
+    "max": 492000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 20,
+      "median_price": 187500,
+      "avg_price": 193894,
+      "min_price": 135000,
+      "max_price": 249500
+    },
+    {
+      "year": 2011,
+      "count": 13,
+      "median_price": 162996,
+      "avg_price": 150720,
+      "min_price": 110000,
+      "max_price": 183260
+    },
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 156000,
+      "avg_price": 188667,
+      "min_price": 145000,
+      "max_price": 265000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 180616,
+      "avg_price": 180616,
+      "min_price": 180616,
+      "max_price": 180616
+    },
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 189427,
+      "avg_price": 177585,
+      "min_price": 122000,
+      "max_price": 222000
+    },
+    {
+      "year": 2015,
+      "count": 28,
+      "median_price": 145000,
+      "avg_price": 156122,
+      "min_price": 115000,
+      "max_price": 359000
+    },
+    {
+      "year": 2016,
+      "count": 21,
+      "median_price": 195000,
+      "avg_price": 203571,
+      "min_price": 167250,
+      "max_price": 286000
+    },
+    {
+      "year": 2017,
+      "count": 7,
+      "median_price": 280000,
+      "avg_price": 280000,
+      "min_price": 210000,
+      "max_price": 360000
+    },
+    {
+      "year": 2018,
+      "count": 15,
+      "median_price": 287500,
+      "avg_price": 276867,
+      "min_price": 200000,
+      "max_price": 368000
+    },
+    {
+      "year": 2019,
+      "count": 10,
+      "median_price": 279250,
+      "avg_price": 273550,
+      "min_price": 222000,
+      "max_price": 327000
+    },
+    {
+      "year": 2020,
+      "count": 9,
+      "median_price": 266000,
+      "avg_price": 272111,
+      "min_price": 220000,
+      "max_price": 320000
+    },
+    {
+      "year": 2021,
+      "count": 15,
+      "median_price": 280000,
+      "avg_price": 269133,
+      "min_price": 170000,
+      "max_price": 410000
+    },
+    {
+      "year": 2022,
+      "count": 18,
+      "median_price": 321000,
+      "avg_price": 307872,
+      "min_price": 213500,
+      "max_price": 385000
+    },
+    {
+      "year": 2023,
+      "count": 8,
+      "median_price": 314000,
+      "avg_price": 314375,
+      "min_price": 232500,
+      "max_price": 420000
+    },
+    {
+      "year": 2024,
+      "count": 11,
+      "median_price": 335000,
+      "avg_price": 349409,
+      "min_price": 265000,
+      "max_price": 461000
+    },
+    {
+      "year": 2025,
+      "count": 9,
+      "median_price": 326000,
+      "avg_price": 361611,
+      "min_price": 290000,
+      "max_price": 478000
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 363500,
+      "avg_price": 359833,
+      "min_price": 210000,
+      "max_price": 492000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-15",
+      "address": "APT 175 BOIREANN BHEAG, ROSCAM, GALWAY CITY",
+      "price": 210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91YW28"
+    },
+    {
+      "date": "2026-05-19",
+      "address": "200 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 420000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "H91RK70"
+    },
+    {
+      "date": "2026-04-08",
+      "address": "56 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 492000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H91K24D"
+    },
+    {
+      "date": "2026-01-30",
+      "address": "201 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 315000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "H91EV83"
+    },
+    {
+      "date": "2026-01-13",
+      "address": "208 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 412000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H91ND79"
+    },
+    {
+      "date": "2026-01-09",
+      "address": "109 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 310000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "H91D4V6"
+    },
+    {
+      "date": "2025-09-11",
+      "address": "199 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91YN63"
+    },
+    {
+      "date": "2025-08-22",
+      "address": "30 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 307500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91W6P3"
+    },
+    {
+      "date": "2025-08-21",
+      "address": "368 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 401000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "H91N5RP"
+    },
+    {
+      "date": "2025-07-30",
+      "address": "108 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 326000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "H91K237"
+    },
+    {
+      "date": "2025-06-19",
+      "address": "113 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 323000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "H91A8F1"
+    },
+    {
+      "date": "2025-05-23",
+      "address": "280 BOIREANN BHEAG, ROSCAM, GALWAY CITY",
+      "price": 478000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H91HH2X"
+    },
+    {
+      "date": "2025-05-19",
+      "address": "18 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 381000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "H91YAA9"
+    },
+    {
+      "date": "2025-05-14",
+      "address": "189 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 432000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "H91E7YD"
+    },
+    {
+      "date": "2025-02-17",
+      "address": "116 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 316000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "H91PR82"
+    },
+    {
+      "date": "2024-10-31",
+      "address": "125 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 294000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91N566"
+    },
+    {
+      "date": "2024-10-16",
+      "address": "95 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 401000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91XKE7"
+    },
+    {
+      "date": "2024-09-17",
+      "address": "106 BOIREANN BHEAG, ROSCAM, CO GALWAY",
+      "price": 299000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91R762"
+    },
+    {
+      "date": "2024-08-02",
+      "address": "209 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91C2R6"
+    },
+    {
+      "date": "2024-06-26",
+      "address": "59 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 461000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91N83R"
+    },
+    {
+      "date": "2024-06-14",
+      "address": "39 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91T85X"
+    },
+    {
+      "date": "2024-05-10",
+      "address": "160 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91W7WA"
+    },
+    {
+      "date": "2024-04-24",
+      "address": "342 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91W3CP"
+    },
+    {
+      "date": "2024-04-11",
+      "address": "192 BOIREANN BHEAG, ROSCAM, MERLIN PARK",
+      "price": 381500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91KW5R"
+    },
+    {
+      "date": "2024-03-21",
+      "address": "184 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 317000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91AK44"
+    },
+    {
+      "date": "2024-02-08",
+      "address": "215 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91TW71"
+    },
+    {
+      "date": "2023-12-12",
+      "address": "172 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 293000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91XP66"
+    },
+    {
+      "date": "2023-12-01",
+      "address": "47 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 346000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91RXN0"
+    },
+    {
+      "date": "2023-11-27",
+      "address": "83 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91N28K"
+    },
+    {
+      "date": "2023-08-01",
+      "address": "36 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 283500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91X788"
+    },
+    {
+      "date": "2023-06-09",
+      "address": "138 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 232500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91AC97"
+    },
+    {
+      "date": "2023-06-08",
+      "address": "135 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91YY90"
+    },
+    {
+      "date": "2023-03-28",
+      "address": "376 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91RHC0"
+    },
+    {
+      "date": "2023-03-15",
+      "address": "349 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91XEK2"
+    },
+    {
+      "date": "2022-12-14",
+      "address": "128 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91TC92"
+    },
+    {
+      "date": "2022-11-28",
+      "address": "185 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 213500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91D683"
+    },
+    {
+      "date": "2022-11-15",
+      "address": "32 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 258000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91V621"
+    },
+    {
+      "date": "2022-11-09",
+      "address": "97 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91XK1W"
+    },
+    {
+      "date": "2022-09-09",
+      "address": "190 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 357000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91X2PC"
+    },
+    {
+      "date": "2022-08-29",
+      "address": "171 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91X656"
+    },
+    {
+      "date": "2022-08-22",
+      "address": "378 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91E37F"
+    },
+    {
+      "date": "2022-07-26",
+      "address": "149 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 341000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91X8KV"
+    },
+    {
+      "date": "2022-06-17",
+      "address": "368 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 315000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "H91N5RP"
+    },
+    {
+      "date": "2022-06-08",
+      "address": "9 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 343000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91DX7F"
+    },
+    {
+      "date": "2022-06-07",
+      "address": "173 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91A5N0"
+    },
+    {
+      "date": "2022-05-20",
+      "address": "7 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 327000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91KVT8"
+    },
+    {
+      "date": "2022-05-06",
+      "address": "364 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 348200,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91P7XE"
+    },
+    {
+      "date": "2022-04-22",
+      "address": "358 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 339000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91HAX9"
+    },
+    {
+      "date": "2022-02-23",
+      "address": "179 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91X971"
+    },
+    {
+      "date": "2022-02-17",
+      "address": "34 BOIREANN BHEAG, ROSCAM, GALWAY",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91DR62"
+    }
+  ],
+  "totalTransactions": 199
+}

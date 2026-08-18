@@ -1,0 +1,257 @@
+{
+  "slug": "longford-terrace-monkstown",
+  "stats": {
+    "count": 18,
+    "median": 1885000,
+    "avg": 1929444,
+    "min": 250000,
+    "max": 4025000,
+    "firstYear": 2010,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 2500000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 850000,
+      "avg_price": 1061667,
+      "min_price": 835000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 2000000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 1850000,
+      "avg_price": 1766667,
+      "min_price": 1250000,
+      "max_price": 2200000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1600000,
+      "avg_price": 1600000,
+      "min_price": 1600000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1310000,
+      "avg_price": 1310000,
+      "min_price": 250000,
+      "max_price": 2370000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1680000,
+      "avg_price": 1680000,
+      "min_price": 1680000,
+      "max_price": 1680000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 3250000,
+      "avg_price": 3250000,
+      "min_price": 3250000,
+      "max_price": 3250000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2300000,
+      "avg_price": 2300000,
+      "min_price": 2300000,
+      "max_price": 2300000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 2175000,
+      "avg_price": 2175000,
+      "min_price": 1850000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1920000,
+      "avg_price": 1920000,
+      "min_price": 1920000,
+      "max_price": 1920000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 4025000,
+      "avg_price": 4025000,
+      "min_price": 4025000,
+      "max_price": 4025000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-08-01",
+      "address": "10 LONGFORD TERRACE, MONKSTOWN, DUBLIN",
+      "price": 4025000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "A94XY98"
+    },
+    {
+      "date": "2024-03-26",
+      "address": "1 LONGFORD TERRACE, MONKSTOWN, CO DUBLIN",
+      "price": 1920000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A94HR26"
+    },
+    {
+      "date": "2022-10-27",
+      "address": "16 LONGFORD TERRACE, MONKSTOWN, DUBLIN",
+      "price": 1850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94T0A2"
+    },
+    {
+      "date": "2022-07-20",
+      "address": "26 LONGFORD TERRACE, MONKSTOWN, CO DUBLIN",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94H1K2"
+    },
+    {
+      "date": "2021-09-10",
+      "address": "26 LONGFORD TERRACE, MONKSTOWN, DUBLIN",
+      "price": 2300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94H1K2"
+    },
+    {
+      "date": "2020-11-23",
+      "address": "5 LONGFORD TERRACE, MONKSTOWN, DUBLIN",
+      "price": 3250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-24",
+      "address": "12 LONGFORD TERRACE, MONKSTOWN, DUBLIN",
+      "price": 1680000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-07",
+      "address": "FLAT 27, LONGFORD TERRACE, MONKSTOWN",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2017-03-10",
+      "address": "18 LONGFORD TERRACE, MONKSTOWN, DUBLIN",
+      "price": 2370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-06-10",
+      "address": "28 LONGFORD TERRACE, MONKSTOWN, DUBLIN",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-09-26",
+      "address": "5 LONGFORD TERRACE, MONKSTOWN, DUBLIN",
+      "price": 2200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-07-31",
+      "address": "2 LONGFORD TERRACE, MONKSTOWN, BLACKROCK",
+      "price": 1850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-03-07",
+      "address": "21 Longford Terrace, Monkstown, Co. Dublin",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-11-29",
+      "address": "8 Longford Terrace, Monkstown",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-11-19",
+      "address": "15  Longford Terrace, Monkstown",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-07-12",
+      "address": "25 Longford Terrace, Monkstown",
+      "price": 835000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-03-01",
+      "address": "7 longford terrace, monkstown",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-11-26",
+      "address": "10 Longford Terrace, Monkstown",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 18
+}

@@ -1,0 +1,481 @@
+{
+  "slug": "palmerston-road-rathmines",
+  "stats": {
+    "count": 42,
+    "median": 1950000,
+    "avg": 2157117,
+    "min": 870000,
+    "max": 4650000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 2,
+      "median_price": 1100000,
+      "avg_price": 1100000,
+      "min_price": 900000,
+      "max_price": 1300000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 870000,
+      "avg_price": 870000,
+      "min_price": 870000,
+      "max_price": 870000
+    },
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 1540000,
+      "avg_price": 1538333,
+      "min_price": 1175000,
+      "max_price": 1900000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 1275000,
+      "avg_price": 1275000,
+      "min_price": 1050000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 1680000,
+      "avg_price": 1733333,
+      "min_price": 1650000,
+      "max_price": 1870000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1810000,
+      "avg_price": 1810000,
+      "min_price": 1810000,
+      "max_price": 1810000
+    },
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 1800000,
+      "avg_price": 1616667,
+      "min_price": 1100000,
+      "max_price": 1950000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 1980000,
+      "avg_price": 1760000,
+      "min_price": 1100000,
+      "max_price": 2200000
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 2387500,
+      "avg_price": 2200250,
+      "min_price": 1326000,
+      "max_price": 2700000
+    },
+    {
+      "year": 2019,
+      "count": 4,
+      "median_price": 1388000,
+      "avg_price": 1579000,
+      "min_price": 1250000,
+      "max_price": 2290000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 2050000,
+      "avg_price": 2050000,
+      "min_price": 1800000,
+      "max_price": 2300000
+    },
+    {
+      "year": 2021,
+      "count": 4,
+      "median_price": 2400000,
+      "avg_price": 2725726,
+      "min_price": 2265000,
+      "max_price": 3837904
+    },
+    {
+      "year": 2023,
+      "count": 5,
+      "median_price": 2750000,
+      "avg_price": 2884500,
+      "min_price": 1950000,
+      "max_price": 3750000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 3740750,
+      "avg_price": 3740750,
+      "min_price": 2831500,
+      "max_price": 4650000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 3300000,
+      "avg_price": 3300000,
+      "min_price": 3300000,
+      "max_price": 3300000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 3950000,
+      "avg_price": 3950000,
+      "min_price": 3350000,
+      "max_price": 4550000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-06",
+      "address": "30 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 3350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06N4V2"
+    },
+    {
+      "date": "2026-02-27",
+      "address": "35 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 4550000,
+      "bedrooms": 6,
+      "propertyType": "detached",
+      "eircode": "D06Y6H9"
+    },
+    {
+      "date": "2025-04-04",
+      "address": "71 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 3300000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06E7F7"
+    },
+    {
+      "date": "2024-11-29",
+      "address": "35 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 4650000,
+      "bedrooms": 6,
+      "propertyType": "detached",
+      "eircode": "D06Y6H9"
+    },
+    {
+      "date": "2024-10-30",
+      "address": "64 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 2831500,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06R6W7"
+    },
+    {
+      "date": "2023-12-22",
+      "address": "28 PALMERSTON RD, RATHMINES, DUBLIN",
+      "price": 3580000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06Y9Y0"
+    },
+    {
+      "date": "2023-11-30",
+      "address": "46 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 1950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06F8C4"
+    },
+    {
+      "date": "2023-10-31",
+      "address": "43 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 2750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06R2T9"
+    },
+    {
+      "date": "2023-10-10",
+      "address": "41 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 3750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06R5W0"
+    },
+    {
+      "date": "2023-02-17",
+      "address": "55 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 2392500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06K6P0"
+    },
+    {
+      "date": "2021-10-06",
+      "address": "84 PALMERSTON ROAD, RATHMINES, DUBLIN 6",
+      "price": 2265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06T8X6"
+    },
+    {
+      "date": "2021-10-01",
+      "address": "53 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 2400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06T624"
+    },
+    {
+      "date": "2021-09-14",
+      "address": "8 PALMERSTON ROAD, RATHMINES, DUBLIN 6",
+      "price": 3837904,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06W562"
+    },
+    {
+      "date": "2021-07-14",
+      "address": "43 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 2400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06R2T9"
+    },
+    {
+      "date": "2020-12-04",
+      "address": "14 PALMERSTON ROAD, RATHMINES, DUBLIN 6",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-23",
+      "address": "79 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 2300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-27",
+      "address": "45 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-05",
+      "address": "69  PALMERSTON  RD, RATHMINES, DUBLIN  6",
+      "price": 1326000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-01",
+      "address": "15 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 2290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-01",
+      "address": "56 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-16",
+      "address": "6 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 2675000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-09",
+      "address": "43 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 2100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06R2T9"
+    },
+    {
+      "date": "2018-05-31",
+      "address": "17 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 2700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-22",
+      "address": "69 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 1326000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-16",
+      "address": "8 PALMERSTON ROAD, RATHMINES, DUBLIN 6",
+      "price": 2200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06W562"
+    },
+    {
+      "date": "2017-06-16",
+      "address": "55 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 1980000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06K6P0"
+    },
+    {
+      "date": "2017-01-30",
+      "address": "56 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-25",
+      "address": "66 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-02",
+      "address": "43 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 1950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06R2T9"
+    },
+    {
+      "date": "2016-04-27",
+      "address": "56 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-23",
+      "address": "65 Palmerston Road, Rathmines, Dublin 6",
+      "price": 1810000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-07-25",
+      "address": "79 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 1680000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-05-06",
+      "address": "58 PALMERSTON ROAD, RATHMINES, DUBLIN 6",
+      "price": 1650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-01-13",
+      "address": "53 PALMERSTON RD, RATHMINES, DUBLIN 6",
+      "price": 1870000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06T624"
+    },
+    {
+      "date": "2013-09-26",
+      "address": "3 Palmerston Road, Rathmines",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-06-25",
+      "address": "52 Palmerston Road, Rathmines, Dublin 6",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-10-18",
+      "address": "83 Palmerston Road, Rathmines",
+      "price": 1175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-06-22",
+      "address": "27 Palmerston Road, Rathmines",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-03-07",
+      "address": "39 palmerston Road, rathmines, dublin",
+      "price": 1540000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-04-27",
+      "address": "82 Palmerston Road, Rathmines",
+      "price": 870000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-12-21",
+      "address": "81, Palmerston Road, Rathmines",
+      "price": 900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-08-27",
+      "address": "60 Palmerston Road, Rathmines",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 42
+}

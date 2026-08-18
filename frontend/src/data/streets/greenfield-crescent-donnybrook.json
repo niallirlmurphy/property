@@ -1,0 +1,137 @@
+{
+  "slug": "greenfield-crescent-donnybrook",
+  "stats": {
+    "count": 8,
+    "median": 2650500,
+    "avg": 2453250,
+    "min": 1025000,
+    "max": 3500000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1025000,
+      "avg_price": 1025000,
+      "min_price": 1025000,
+      "max_price": 1025000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 2300000,
+      "avg_price": 2300000,
+      "min_price": 1900000,
+      "max_price": 2700000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 2900000,
+      "avg_price": 2900000,
+      "min_price": 2900000,
+      "max_price": 2900000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 3050000,
+      "avg_price": 3050000,
+      "min_price": 3050000,
+      "max_price": 3050000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1950000,
+      "avg_price": 1950000,
+      "min_price": 1950000,
+      "max_price": 1950000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 3500000,
+      "avg_price": 3500000,
+      "min_price": 3500000,
+      "max_price": 3500000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 2601000,
+      "avg_price": 2601000,
+      "min_price": 2601000,
+      "max_price": 2601000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-04-17",
+      "address": "3 GREENFIELD CRESCENT, DONNYBROOK, DUBLIN 4",
+      "price": 2601000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04R3H9"
+    },
+    {
+      "date": "2024-12-19",
+      "address": "1 GREENFIELD CRESCENT, DONNYBROOK, DUBLIN 4",
+      "price": 3500000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D04C2Y4"
+    },
+    {
+      "date": "2023-11-10",
+      "address": "6 GREENFIELD CRESCENT, DONNYBROOK, DUBLIN 4",
+      "price": 1950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E3Y1"
+    },
+    {
+      "date": "2021-05-28",
+      "address": "5 GREENFIELD CRESCENT, DONNYBROOK, DUBLIN 4",
+      "price": 3050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V2H4"
+    },
+    {
+      "date": "2020-04-02",
+      "address": "10 GREENFIELD CRESCENT, DONNYBROOK, DUBLIN 4",
+      "price": 2900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-12",
+      "address": "7 GREENFIELD CRESCENT, DONNYBROOK, DUBLIN 4",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-26",
+      "address": "11 GREENFIELD CRESCENT, DONNYBROOK, DUBLIN 4",
+      "price": 2700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-09-29",
+      "address": "14 Greenfield Crescent, Donnybrook, Dublin 4",
+      "price": 1025000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 8
+}

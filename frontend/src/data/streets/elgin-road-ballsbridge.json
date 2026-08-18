@@ -1,0 +1,265 @@
+{
+  "slug": "elgin-road-ballsbridge",
+  "stats": {
+    "count": 19,
+    "median": 2700000,
+    "avg": 2972256,
+    "min": 1075000,
+    "max": 5750000,
+    "firstYear": 2010,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 2,
+      "median_price": 2200000,
+      "avg_price": 2200000,
+      "min_price": 1400000,
+      "max_price": 3000000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 1878500,
+      "avg_price": 1878500,
+      "min_price": 1107000,
+      "max_price": 2650000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 4800000,
+      "avg_price": 4800000,
+      "min_price": 4800000,
+      "max_price": 4800000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 2151199,
+      "avg_price": 2151199,
+      "min_price": 2151199,
+      "max_price": 2151199
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 3412500,
+      "avg_price": 3412500,
+      "min_price": 1075000,
+      "max_price": 5750000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 2901000,
+      "avg_price": 2901000,
+      "min_price": 2802001,
+      "max_price": 3000000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 2400000,
+      "avg_price": 2400000,
+      "min_price": 2400000,
+      "max_price": 2400000
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 2950000,
+      "avg_price": 3453165,
+      "min_price": 2442660,
+      "max_price": 5470000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2250000,
+      "avg_price": 2250000,
+      "min_price": 2250000,
+      "max_price": 2250000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 3550000,
+      "avg_price": 3550000,
+      "min_price": 3550000,
+      "max_price": 3550000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 2700000,
+      "avg_price": 2700000,
+      "min_price": 2700000,
+      "max_price": 2700000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 4025000,
+      "avg_price": 4025000,
+      "min_price": 4025000,
+      "max_price": 4025000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-06-27",
+      "address": "23 ELGIN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 4025000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04T6C3"
+    },
+    {
+      "date": "2024-09-02",
+      "address": "13 ELGIN ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2700000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "D04H7X3"
+    },
+    {
+      "date": "2022-07-14",
+      "address": "23 ELGIN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3550000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04T6C3"
+    },
+    {
+      "date": "2021-12-17",
+      "address": "10 ELGIN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V2X7"
+    },
+    {
+      "date": "2020-11-26",
+      "address": "40 ELGIN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 5470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-13",
+      "address": "36 Elgin Road, Ballsbridge, Dublin 4",
+      "price": 2550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-30",
+      "address": "13 ELGIN ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2442660,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "D04H7X3"
+    },
+    {
+      "date": "2020-06-29",
+      "address": "23 ELGIN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3350000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04T6C3"
+    },
+    {
+      "date": "2019-07-04",
+      "address": "17 ELGIN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-10",
+      "address": "5 ELGIN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-16",
+      "address": "22 ELGIN RD, Ballsbridge, Dublin 4",
+      "price": 2802001,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-10",
+      "address": "40 ELGIN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 5750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-25",
+      "address": "NO 5A ELGIN ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1075000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2016-03-11",
+      "address": "9 ELGIN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2151199,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-04-11",
+      "address": "18 Elgin Road, Ballsbridge, Dublin 4",
+      "price": 4800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-07-18",
+      "address": "24 Elgin Road, Ballsbridge",
+      "price": 2650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-05-03",
+      "address": "10 Elgin Road, Ballsbridge",
+      "price": 1107000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-10-07",
+      "address": "12 Elgin Road, Ballsbridge, Dublin 4.",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-06-16",
+      "address": "23 Elgin Road, Ballsbridge, Dublin 4",
+      "price": 3000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04T6C3"
+    }
+  ],
+  "totalTransactions": 19
+}

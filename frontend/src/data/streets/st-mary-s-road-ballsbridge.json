@@ -1,0 +1,217 @@
+{
+  "slug": "st-mary-s-road-ballsbridge",
+  "stats": {
+    "count": 15,
+    "median": 1900000,
+    "avg": 1898028,
+    "min": 525000,
+    "max": 4750000,
+    "firstYear": 2013,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 1156250,
+      "avg_price": 1156250,
+      "min_price": 550000,
+      "max_price": 1762500
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 2000000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 2060000,
+      "avg_price": 2060000,
+      "min_price": 2060000,
+      "max_price": 2060000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 1915000,
+      "avg_price": 1753667,
+      "min_price": 996000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 525000,
+      "avg_price": 525000,
+      "min_price": 525000,
+      "max_price": 525000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1612500,
+      "avg_price": 1612500,
+      "min_price": 1612500,
+      "max_price": 1612500
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1900000,
+      "avg_price": 1900000,
+      "min_price": 1900000,
+      "max_price": 1900000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 4750000,
+      "avg_price": 4750000,
+      "min_price": 4750000,
+      "max_price": 4750000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1700000,
+      "avg_price": 1700000,
+      "min_price": 1700000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 2200000,
+      "avg_price": 2116472,
+      "min_price": 1635000,
+      "max_price": 2514418
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-12-20",
+      "address": "13 ST MARYS RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1635000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04R9W4"
+    },
+    {
+      "date": "2024-11-25",
+      "address": "18 ST MARYS RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2514418,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04TP90"
+    },
+    {
+      "date": "2024-04-25",
+      "address": "35 ST MARYS RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2200000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04N6E5"
+    },
+    {
+      "date": "2023-08-01",
+      "address": "29 ST MARYS RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04K8Y4"
+    },
+    {
+      "date": "2021-12-16",
+      "address": "31 ST MARYS ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 4750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E9E8"
+    },
+    {
+      "date": "2020-01-24",
+      "address": "37 ST MARYS RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-25",
+      "address": "3A ST MARYS RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1612500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-18",
+      "address": "13 ST MARYS RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 525000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04R9W4"
+    },
+    {
+      "date": "2017-10-19",
+      "address": "9 ST MARYS RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1915000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-11",
+      "address": "16 ST MARYS RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A2K8"
+    },
+    {
+      "date": "2017-06-27",
+      "address": "1A ST MARYS ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 996000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-02-02",
+      "address": "6 ST MARYS ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2060000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-10-23",
+      "address": "4 ST MARYS ROAD, BALLSBRIDGE, DUBLIN 4.",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-12-19",
+      "address": "4 ST MARYS ROAD, BALLSBRIDGE, DUBLIN",
+      "price": 1762500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-05-17",
+      "address": "15 ST MARYS RD, BALLSBRIDGE, DUBLIN CITY",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 15
+}

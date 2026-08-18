@@ -1,0 +1,273 @@
+{
+  "slug": "highfield-road-rathgar",
+  "stats": {
+    "count": 22,
+    "median": 1952500,
+    "avg": 2201227,
+    "min": 835000,
+    "max": 3900000,
+    "firstYear": 2011,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1950000,
+      "avg_price": 1950000,
+      "min_price": 1950000,
+      "max_price": 1950000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 1217500,
+      "avg_price": 1217500,
+      "min_price": 835000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 1557500,
+      "avg_price": 1557500,
+      "min_price": 1550000,
+      "max_price": 1565000
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 1877500,
+      "avg_price": 2145000,
+      "min_price": 1525000,
+      "max_price": 3300000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 2000000,
+      "avg_price": 2230000,
+      "min_price": 1290000,
+      "max_price": 3400000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1726000,
+      "avg_price": 1726000,
+      "min_price": 1202000,
+      "max_price": 2250000
+    },
+    {
+      "year": 2019,
+      "count": 3,
+      "median_price": 1580000,
+      "avg_price": 1801667,
+      "min_price": 1100000,
+      "max_price": 2725000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 3280000,
+      "avg_price": 3280000,
+      "min_price": 2800000,
+      "max_price": 3760000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 3900000,
+      "avg_price": 3900000,
+      "min_price": 3900000,
+      "max_price": 3900000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 3170000,
+      "avg_price": 3170000,
+      "min_price": 2725000,
+      "max_price": 3615000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-10-21",
+      "address": "18 HIGHFIELD RD, RATHGAR, DUBLIN",
+      "price": 3615000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06W2R1"
+    },
+    {
+      "date": "2025-07-16",
+      "address": "67 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 2725000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06A2H0"
+    },
+    {
+      "date": "2024-01-15",
+      "address": "23 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 3900000,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "D06R7R9"
+    },
+    {
+      "date": "2021-07-21",
+      "address": "22 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 3760000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06H9K2"
+    },
+    {
+      "date": "2021-07-21",
+      "address": "65 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 2800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06Y5C6"
+    },
+    {
+      "date": "2019-11-20",
+      "address": "27 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 2725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-14",
+      "address": "60 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-21",
+      "address": "73 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 1580000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-31",
+      "address": "72 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 2250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-03",
+      "address": "35 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 1202000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-20",
+      "address": "82 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-06",
+      "address": "29 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 3400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-14",
+      "address": "54 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 1290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-09-11",
+      "address": "18 Highfield Road, Rathgar",
+      "price": 3300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-08-21",
+      "address": "32 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 1525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-05-20",
+      "address": "79 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-03-27",
+      "address": "77 HIGHFIELD RD, RATHGAR, DUBLIN 6",
+      "price": 1955000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-11-22",
+      "address": "40 Highfield Road, Rathgar, Dublin 6",
+      "price": 1565000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-06-07",
+      "address": "19 Highfield Road, Rathgar",
+      "price": 1550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-08-13",
+      "address": "18 Highfield Road, Rathgar",
+      "price": 835000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-07-27",
+      "address": "14 Highfield Road, Rathgar, Dublin 6",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-04-15",
+      "address": "71 Highfield Road, Rathgar",
+      "price": 1950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 22
+}

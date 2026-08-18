@@ -1,0 +1,361 @@
+{
+  "slug": "ailesbury-road-ballsbridge",
+  "stats": {
+    "count": 28,
+    "median": 3875000,
+    "avg": 4281250,
+    "min": 1100000,
+    "max": 11700000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1100000,
+      "avg_price": 1100000,
+      "min_price": 1100000,
+      "max_price": 1100000
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 4137500,
+      "avg_price": 4137500,
+      "min_price": 3650000,
+      "max_price": 4625000
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 2500000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 4750000,
+      "avg_price": 4750000,
+      "min_price": 4750000,
+      "max_price": 4750000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 5000000,
+      "avg_price": 4700000,
+      "min_price": 3100000,
+      "max_price": 6000000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1750000,
+      "avg_price": 1750000,
+      "min_price": 1750000,
+      "max_price": 1750000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 3162500,
+      "avg_price": 3162500,
+      "min_price": 2800000,
+      "max_price": 3525000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 4000000,
+      "avg_price": 4000000,
+      "min_price": 4000000,
+      "max_price": 4000000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 6750000,
+      "avg_price": 6750000,
+      "min_price": 6750000,
+      "max_price": 6750000
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 2400000,
+      "avg_price": 2850000,
+      "min_price": 2400000,
+      "max_price": 3750000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 11700000,
+      "avg_price": 11700000,
+      "min_price": 11700000,
+      "max_price": 11700000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 6250000,
+      "avg_price": 6081250,
+      "min_price": 5325000,
+      "max_price": 6500000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 3100000,
+      "avg_price": 3100000,
+      "min_price": 3100000,
+      "max_price": 3100000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 2100000,
+      "avg_price": 2933333,
+      "min_price": 1500000,
+      "max_price": 5200000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 5375000,
+      "avg_price": 5375000,
+      "min_price": 5000000,
+      "max_price": 5750000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-04-23",
+      "address": "72 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 5000000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": "D04N1W4"
+    },
+    {
+      "date": "2026-03-13",
+      "address": "61 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 5750000,
+      "bedrooms": 7,
+      "propertyType": "semi-detached",
+      "eircode": "D04Y9F7"
+    },
+    {
+      "date": "2025-10-16",
+      "address": "29 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1500000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D04T6N2"
+    },
+    {
+      "date": "2025-04-11",
+      "address": "37 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 5200000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D04K5T3"
+    },
+    {
+      "date": "2025-02-12",
+      "address": "78 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2100000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04X8N1"
+    },
+    {
+      "date": "2024-08-23",
+      "address": "82 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3100000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04F3P1"
+    },
+    {
+      "date": "2024-05-06",
+      "address": "60 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X4E4"
+    },
+    {
+      "date": "2023-12-22",
+      "address": "16 AILESBURY RD, BALLSBRIDGE, DUBLIN",
+      "price": 6500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C8A0"
+    },
+    {
+      "date": "2023-06-16",
+      "address": "27 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 6000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V2H6"
+    },
+    {
+      "date": "2023-05-31",
+      "address": "16 AILESBURY RD, BALLSBRIDGE, DUBLIN",
+      "price": 6500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C8A0"
+    },
+    {
+      "date": "2023-01-27",
+      "address": "32 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 5325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C5V2"
+    },
+    {
+      "date": "2022-02-16",
+      "address": "73 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 11700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y6V9"
+    },
+    {
+      "date": "2021-08-25",
+      "address": "40B AILESBURY ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04T8K8"
+    },
+    {
+      "date": "2021-06-30",
+      "address": "57 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N4A6"
+    },
+    {
+      "date": "2021-04-30",
+      "address": "82 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2400000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04F3P1"
+    },
+    {
+      "date": "2019-04-16",
+      "address": "49 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 6750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-27",
+      "address": "25 AILESBURY ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 4000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-09",
+      "address": "72 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2800000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": "D04N1W4"
+    },
+    {
+      "date": "2016-01-06",
+      "address": "25 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-11-24",
+      "address": "82 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1750000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04F3P1"
+    },
+    {
+      "date": "2014-11-21",
+      "address": "27 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 5000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V2H6"
+    },
+    {
+      "date": "2014-08-29",
+      "address": "25 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-06-10",
+      "address": "73 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 6000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y6V9"
+    },
+    {
+      "date": "2013-10-09",
+      "address": "21 Ailesbury Road, Ballsbridge",
+      "price": 4750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-07-06",
+      "address": "84 Ailesbury Road, Ballsbridge",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-12-21",
+      "address": "14 Ailesbury Road, Ballsbridge",
+      "price": 3650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-08-22",
+      "address": "11 Ailesbury Road, Ballsbridge",
+      "price": 4625000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-01-15",
+      "address": "10 Ailesbury Road, Ballsbridge",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 28
+}

@@ -1,0 +1,161 @@
+{
+  "slug": "clyde-road-ballsbridge",
+  "stats": {
+    "count": 10,
+    "median": 3075000,
+    "avg": 3295000,
+    "min": 1450000,
+    "max": 7000000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 2050000,
+      "avg_price": 2050000,
+      "min_price": 1900000,
+      "max_price": 2200000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 2000000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 3050000,
+      "avg_price": 3050000,
+      "min_price": 3050000,
+      "max_price": 3050000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 3100000,
+      "avg_price": 3100000,
+      "min_price": 3100000,
+      "max_price": 3100000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 3250000,
+      "avg_price": 3250000,
+      "min_price": 1450000,
+      "max_price": 5050000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 3700000,
+      "avg_price": 3700000,
+      "min_price": 3700000,
+      "max_price": 3700000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 3500000,
+      "avg_price": 3500000,
+      "min_price": 3500000,
+      "max_price": 3500000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 7000000,
+      "avg_price": 7000000,
+      "min_price": 7000000,
+      "max_price": 7000000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-01-26",
+      "address": "9 CLYDE RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 7000000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04F6T7"
+    },
+    {
+      "date": "2025-03-26",
+      "address": "26 CLYDE ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3500000,
+      "bedrooms": 1,
+      "propertyType": "semi-detached",
+      "eircode": "D04F838"
+    },
+    {
+      "date": "2024-12-20",
+      "address": "27 CLYDE ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3700000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D04F838"
+    },
+    {
+      "date": "2022-11-10",
+      "address": "18 CLYDE RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 5050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y2F6"
+    },
+    {
+      "date": "2022-08-30",
+      "address": "35 CLYDE RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X2H3"
+    },
+    {
+      "date": "2019-01-14",
+      "address": "2 CLYDE RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-23",
+      "address": "2 CLYDE RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-06",
+      "address": "11 Clyde Road, Ballsbridge, Dublin 4",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-05-25",
+      "address": "16 Clyde Road, Ballsbridge, Dublin 4",
+      "price": 2200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-05-16",
+      "address": "19 Clyde Road, Ballsbridge",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

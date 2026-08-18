@@ -1,0 +1,169 @@
+{
+  "slug": "northbrook-road-ranelagh",
+  "stats": {
+    "count": 10,
+    "median": 2292500,
+    "avg": 2245100,
+    "min": 700000,
+    "max": 3400000,
+    "firstYear": 2012,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 2050000,
+      "avg_price": 2050000,
+      "min_price": 2050000,
+      "max_price": 2050000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1890000,
+      "avg_price": 1890000,
+      "min_price": 1890000,
+      "max_price": 1890000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 2450000,
+      "avg_price": 2450000,
+      "min_price": 2450000,
+      "max_price": 2450000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 3400000,
+      "avg_price": 3400000,
+      "min_price": 3400000,
+      "max_price": 3400000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 2577500,
+      "avg_price": 2577500,
+      "min_price": 2355000,
+      "max_price": 2800000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 700000,
+      "avg_price": 700000,
+      "min_price": 700000,
+      "max_price": 700000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1926000,
+      "avg_price": 1926000,
+      "min_price": 1926000,
+      "max_price": 1926000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 2230000,
+      "avg_price": 2230000,
+      "min_price": 2230000,
+      "max_price": 2230000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2650000,
+      "avg_price": 2650000,
+      "min_price": 2650000,
+      "max_price": 2650000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-05-08",
+      "address": "19 NORTHBROOK RD, RANELAGH, DUBLIN 6",
+      "price": 2650000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D06E367"
+    },
+    {
+      "date": "2023-08-09",
+      "address": "21 NORTHBROOK RD, RANELAGH, DUBLIN 6",
+      "price": 2230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06Y957"
+    },
+    {
+      "date": "2021-02-24",
+      "address": "25 NORTHBROOK ROAD, RANELAGH, DUBLIN 6",
+      "price": 1926000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-21",
+      "address": "1A NORTHBROOK RD, RANELAGH, DUBLIN 6",
+      "price": 700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-24",
+      "address": "24 NORTHBROOK ROAD, RANELAGH, DUBLIN 6",
+      "price": 2355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-19",
+      "address": "22 NORTHBROOK RD, RANELAGH, DUBLIN 6",
+      "price": 2800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-02-26",
+      "address": "16 NORTHBROOK RD, RANELAGH, DUBLIN 6",
+      "price": 3400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-07-02",
+      "address": "2 NORTHBROOK RD, RANELAGH, DUBLIN 6",
+      "price": 2450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-08-09",
+      "address": "3 Northbrook Road, Ranelagh, Dublin 6",
+      "price": 1890000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-11-01",
+      "address": "23 Northbrook Road, Ranelagh",
+      "price": 2050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

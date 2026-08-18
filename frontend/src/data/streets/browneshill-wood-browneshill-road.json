@@ -1,0 +1,545 @@
+{
+  "slug": "browneshill-wood-browneshill-road",
+  "stats": {
+    "count": 139,
+    "median": 233500,
+    "avg": 220714,
+    "min": 92511,
+    "max": 373000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 26,
+      "median_price": 140088,
+      "avg_price": 136016,
+      "min_price": 92511,
+      "max_price": 179000
+    },
+    {
+      "year": 2011,
+      "count": 11,
+      "median_price": 149000,
+      "avg_price": 162958,
+      "min_price": 92511,
+      "max_price": 230000
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 118943,
+      "avg_price": 118943,
+      "min_price": 118943,
+      "max_price": 118943
+    },
+    {
+      "year": 2014,
+      "count": 6,
+      "median_price": 136542,
+      "avg_price": 136046,
+      "min_price": 123348,
+      "max_price": 147092
+    },
+    {
+      "year": 2015,
+      "count": 7,
+      "median_price": 148898,
+      "avg_price": 151250,
+      "min_price": 136564,
+      "max_price": 169950
+    },
+    {
+      "year": 2016,
+      "count": 6,
+      "median_price": 166802,
+      "avg_price": 181720,
+      "min_price": 149736,
+      "max_price": 230000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 221750,
+      "avg_price": 221750,
+      "min_price": 198500,
+      "max_price": 245000
+    },
+    {
+      "year": 2018,
+      "count": 16,
+      "median_price": 233500,
+      "avg_price": 231750,
+      "min_price": 200000,
+      "max_price": 239000
+    },
+    {
+      "year": 2019,
+      "count": 3,
+      "median_price": 210000,
+      "avg_price": 207500,
+      "min_price": 191500,
+      "max_price": 221000
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 216000,
+      "avg_price": 230500,
+      "min_price": 205000,
+      "max_price": 285000
+    },
+    {
+      "year": 2021,
+      "count": 4,
+      "median_price": 221000,
+      "avg_price": 218500,
+      "min_price": 197000,
+      "max_price": 235000
+    },
+    {
+      "year": 2022,
+      "count": 5,
+      "median_price": 330000,
+      "avg_price": 306100,
+      "min_price": 243000,
+      "max_price": 352500
+    },
+    {
+      "year": 2023,
+      "count": 31,
+      "median_price": 281938,
+      "avg_price": 284633,
+      "min_price": 185000,
+      "max_price": 370000
+    },
+    {
+      "year": 2024,
+      "count": 12,
+      "median_price": 292577,
+      "avg_price": 302159,
+      "min_price": 277533,
+      "max_price": 336000
+    },
+    {
+      "year": 2025,
+      "count": 4,
+      "median_price": 330000,
+      "avg_price": 337750,
+      "min_price": 318000,
+      "max_price": 373000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 365000,
+      "avg_price": 365000,
+      "min_price": 365000,
+      "max_price": 365000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-02-05",
+      "address": "65 BROWNESHILL WOOD, BROWNESHILL RD, CARLOW",
+      "price": 365000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "R93Y9K7"
+    },
+    {
+      "date": "2025-12-19",
+      "address": "72 BROWNESHILL WOOD, BROWNESHILL RD, CARLOW",
+      "price": 330000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R93R6C4"
+    },
+    {
+      "date": "2025-11-04",
+      "address": "46 BROWNESHILL WOOD, BROWNESHILL RD, CARLOW",
+      "price": 373000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "R93H9C0"
+    },
+    {
+      "date": "2025-08-27",
+      "address": "103 BROWNESHILL WOOD, BROWNESHILL ROAD, CARLOW",
+      "price": 330000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R93X0D6"
+    },
+    {
+      "date": "2025-07-23",
+      "address": "30 BROWNESHILL WOOD, BROWNESHILL RD, CARLOW",
+      "price": 318000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R93P5X6"
+    },
+    {
+      "date": "2024-10-02",
+      "address": "88 BROWNESHILL WOOD, BROWNESHILL ROAD, CARLOW",
+      "price": 336000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93NY66"
+    },
+    {
+      "date": "2024-09-11",
+      "address": "155 BROWNESHILL WOOD, BROWNESHILL ROAD, CARLOW",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93E3VX"
+    },
+    {
+      "date": "2024-05-08",
+      "address": "152 Browneshill Wood, Browneshill Road",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-19",
+      "address": "156 BROWNESHILL WOOD, BROWNESHILL ROAD, CARLOW",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-19",
+      "address": "67 BROWNESHILL WOOD, BROWNESHILL RD, CARLOW",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93A6X8"
+    },
+    {
+      "date": "2024-02-21",
+      "address": "174 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-02-14",
+      "address": "153 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-02-14",
+      "address": "176 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-02-06",
+      "address": "149 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 321585,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-02-06",
+      "address": "159 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-02-06",
+      "address": "166 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 321585,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-01-12",
+      "address": "158 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 321500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-13",
+      "address": "151 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 290748,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-07",
+      "address": "145 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 281900,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-05",
+      "address": "175 Browneshill Wood, Browneshill Road",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-29",
+      "address": "173 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-21",
+      "address": "169 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-15",
+      "address": "141 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 321585,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-06",
+      "address": "150 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-06",
+      "address": "3 BROWNESHILL WOOD, BROWNESHILL RD, CARLOW",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93A7N5"
+    },
+    {
+      "date": "2023-11-06",
+      "address": "50 BROWNESHILL WOOD, BROWNESHILL RD, CARLOW",
+      "price": 185000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93A3Y6"
+    },
+    {
+      "date": "2023-10-25",
+      "address": "143 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-19",
+      "address": "165 BROWNESHILL WOOD, BROWNESHILL ROAD, CARLOW",
+      "price": 321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-16",
+      "address": "147 Browneshill Wood, Browneshill Road",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-27",
+      "address": "171 BROWNESHILL WOOD, BROWNESHILL ROAD, CARLOW",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "164 BROWNESHILL WOOD, BROWNESHILL ROAD, CARLOW",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-05",
+      "address": "172 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-21",
+      "address": "139 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-28",
+      "address": "161 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-20",
+      "address": "144 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 281939,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-20",
+      "address": "160 BROWNESHILL WOOD, BROWNESHILL ROAD, CARLOW",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-19",
+      "address": "146 Browneshill Wood, Browneshill Road",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-03",
+      "address": "170 Browneshill Wood, Browneshill Road",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-22",
+      "address": "168 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-21",
+      "address": "135 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-20",
+      "address": "182 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 282000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-19",
+      "address": "163 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-15",
+      "address": "162 BROWNESHILL WOOD, BROWNESHILL ROAD, CARLOW",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-13",
+      "address": "136 Browneshill Wood, Browneshill Road",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-07",
+      "address": "167 BROWNESHILL WOOD, BROWNESHILL ROAD, CARLOW TOWN",
+      "price": 276652,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-06",
+      "address": "137 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 273218,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-06",
+      "address": "140 Browneshill Wood, Browneshill Road, Carlow",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-30",
+      "address": "104 BROWNESHILL WOOD, BROWNESHILL ROAD, CO CARLOW",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93N6K1"
+    },
+    {
+      "date": "2022-11-25",
+      "address": "1 BROWNESHILL WOOD, BROWNESHILL ROAD, CARLOW",
+      "price": 352500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93Y0E6"
+    },
+    {
+      "date": "2022-10-17",
+      "address": "64 BROWNESHILL WOOD, BROWNESHILL RD, CARLOW",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93Y9D9"
+    }
+  ],
+  "totalTransactions": 139
+}

@@ -1,0 +1,353 @@
+{
+  "slug": "eglinton-road-donnybrook",
+  "stats": {
+    "count": 30,
+    "median": 2137500,
+    "avg": 2257333,
+    "min": 700000,
+    "max": 4250000,
+    "firstYear": 2011,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 880000,
+      "avg_price": 880000,
+      "min_price": 880000,
+      "max_price": 880000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1800000,
+      "avg_price": 1800000,
+      "min_price": 1800000,
+      "max_price": 1800000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 2600000,
+      "avg_price": 2600000,
+      "min_price": 2600000,
+      "max_price": 2600000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 1255000,
+      "avg_price": 1255000,
+      "min_price": 1220000,
+      "max_price": 1290000
+    },
+    {
+      "year": 2017,
+      "count": 8,
+      "median_price": 2460000,
+      "avg_price": 2401250,
+      "min_price": 700000,
+      "max_price": 4250000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 2480000,
+      "avg_price": 2480000,
+      "min_price": 2480000,
+      "max_price": 2480000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 2175000,
+      "avg_price": 2175000,
+      "min_price": 2175000,
+      "max_price": 2175000
+    },
+    {
+      "year": 2021,
+      "count": 5,
+      "median_price": 1850000,
+      "avg_price": 2105000,
+      "min_price": 1100000,
+      "max_price": 3300000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1475000,
+      "avg_price": 1475000,
+      "min_price": 1475000,
+      "max_price": 1475000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 2487500,
+      "avg_price": 2662500,
+      "min_price": 2050000,
+      "max_price": 3625000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 2265000,
+      "avg_price": 2446667,
+      "min_price": 2000000,
+      "max_price": 3075000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 3037500,
+      "avg_price": 3037500,
+      "min_price": 2975000,
+      "max_price": 3100000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-07-28",
+      "address": "84 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 3100000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D04N2C3"
+    },
+    {
+      "date": "2025-03-31",
+      "address": "66 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 2975000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04P2X9"
+    },
+    {
+      "date": "2024-10-22",
+      "address": "39 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 2265000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D04W3Y4"
+    },
+    {
+      "date": "2024-09-26",
+      "address": "31 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 3075000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E2N5"
+    },
+    {
+      "date": "2024-08-01",
+      "address": "36 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 2000000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D04W2R9"
+    },
+    {
+      "date": "2023-12-21",
+      "address": "58 EGLINTON ROAD, DONNYBROOK, DUBLIN 4",
+      "price": 3625000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04T9T4"
+    },
+    {
+      "date": "2023-12-06",
+      "address": "59 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 2875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X5R3"
+    },
+    {
+      "date": "2023-11-15",
+      "address": "42 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 2050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y0X3"
+    },
+    {
+      "date": "2023-11-03",
+      "address": "74 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 2100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04K2K2"
+    },
+    {
+      "date": "2022-03-11",
+      "address": "43 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 1475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04F5H0"
+    },
+    {
+      "date": "2021-11-26",
+      "address": "56 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 3300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X7N5"
+    },
+    {
+      "date": "2021-08-17",
+      "address": "62 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 2450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04R7P4"
+    },
+    {
+      "date": "2021-07-30",
+      "address": "71 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 1825000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C2W1"
+    },
+    {
+      "date": "2021-07-15",
+      "address": "46 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04F3P2"
+    },
+    {
+      "date": "2021-03-09",
+      "address": "78 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 1850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-28",
+      "address": "80 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 2175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-27",
+      "address": "84 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 2480000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D04N2C3"
+    },
+    {
+      "date": "2017-11-03",
+      "address": "5 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 3520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-03",
+      "address": "7 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 3520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-03",
+      "address": "11 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 3520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-27",
+      "address": "4 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-21",
+      "address": "1 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-21",
+      "address": "3 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-21",
+      "address": "9 EGLINTON ROAD, DONNYBROOK, DUBLIN 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-04",
+      "address": "68 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 4250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-24",
+      "address": "84 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 1220000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D04N2C3"
+    },
+    {
+      "date": "2016-03-03",
+      "address": "69 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 1290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-06-06",
+      "address": "85 EGLINTON RD, DONNYBROOK, DUBLIN",
+      "price": 2600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-08-02",
+      "address": "64 Eglinton Road, Donnybrook",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-10-14",
+      "address": "44 Eglinton Road, Donnybrook",
+      "price": 880000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 30
+}

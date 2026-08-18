@@ -1,0 +1,185 @@
+{
+  "slug": "sydney-parade-avenue-sandymount",
+  "stats": {
+    "count": 11,
+    "median": 2070000,
+    "avg": 1991364,
+    "min": 1150000,
+    "max": 3260000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1575000,
+      "avg_price": 1575000,
+      "min_price": 1575000,
+      "max_price": 1575000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 2225000,
+      "avg_price": 2225000,
+      "min_price": 2225000,
+      "max_price": 2225000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1240000,
+      "avg_price": 1240000,
+      "min_price": 1240000,
+      "max_price": 1240000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 2100000,
+      "avg_price": 2100000,
+      "min_price": 2100000,
+      "max_price": 2100000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1150000,
+      "avg_price": 1150000,
+      "min_price": 1150000,
+      "max_price": 1150000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1560000,
+      "avg_price": 1560000,
+      "min_price": 1560000,
+      "max_price": 1560000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1700000,
+      "avg_price": 1700000,
+      "min_price": 1700000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 2350000,
+      "avg_price": 2350000,
+      "min_price": 2350000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 3260000,
+      "avg_price": 3260000,
+      "min_price": 3260000,
+      "max_price": 3260000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 2372500,
+      "avg_price": 2372500,
+      "min_price": 2070000,
+      "max_price": 2675000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-04-09",
+      "address": "83 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2675000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C2N6"
+    },
+    {
+      "date": "2026-03-18",
+      "address": "39 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2070000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D04E5F9"
+    },
+    {
+      "date": "2024-11-20",
+      "address": "50 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 3260000,
+      "bedrooms": 6,
+      "propertyType": "detached",
+      "eircode": "D04X3V1"
+    },
+    {
+      "date": "2022-01-06",
+      "address": "65 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N8N4"
+    },
+    {
+      "date": "2021-04-15",
+      "address": "81 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-20",
+      "address": "69 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 1560000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-04",
+      "address": "79 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-09",
+      "address": "65 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N8N4"
+    },
+    {
+      "date": "2014-04-09",
+      "address": "75 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 1240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-06-24",
+      "address": "23 Sydney Parade Avenue, Sandymount",
+      "price": 2225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-08-30",
+      "address": "16B Sydney Parade Ave, Sandymount, Dublin 4",
+      "price": 1575000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 11
+}

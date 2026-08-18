@@ -1,0 +1,529 @@
+{
+  "slug": "charlesland-park-greystones",
+  "stats": {
+    "count": 146,
+    "median": 330000,
+    "avg": 335930,
+    "min": 126725,
+    "max": 553000,
+    "firstYear": 2013,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 126725,
+      "avg_price": 126725,
+      "min_price": 126725,
+      "max_price": 126725
+    },
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 297500,
+      "avg_price": 291400,
+      "min_price": 252000,
+      "max_price": 325000
+    },
+    {
+      "year": 2015,
+      "count": 4,
+      "median_price": 270000,
+      "avg_price": 267500,
+      "min_price": 255000,
+      "max_price": 275000
+    },
+    {
+      "year": 2016,
+      "count": 13,
+      "median_price": 265000,
+      "avg_price": 265904,
+      "min_price": 200000,
+      "max_price": 345000
+    },
+    {
+      "year": 2017,
+      "count": 12,
+      "median_price": 281000,
+      "avg_price": 284500,
+      "min_price": 228000,
+      "max_price": 390000
+    },
+    {
+      "year": 2018,
+      "count": 11,
+      "median_price": 308000,
+      "avg_price": 320727,
+      "min_price": 248000,
+      "max_price": 382500
+    },
+    {
+      "year": 2019,
+      "count": 13,
+      "median_price": 295000,
+      "avg_price": 298000,
+      "min_price": 220000,
+      "max_price": 395000
+    },
+    {
+      "year": 2020,
+      "count": 11,
+      "median_price": 310000,
+      "avg_price": 301273,
+      "min_price": 225000,
+      "max_price": 348000
+    },
+    {
+      "year": 2021,
+      "count": 11,
+      "median_price": 344000,
+      "avg_price": 354636,
+      "min_price": 250000,
+      "max_price": 518000
+    },
+    {
+      "year": 2022,
+      "count": 21,
+      "median_price": 360000,
+      "avg_price": 343992,
+      "min_price": 154739,
+      "max_price": 480000
+    },
+    {
+      "year": 2023,
+      "count": 18,
+      "median_price": 375000,
+      "avg_price": 379778,
+      "min_price": 295000,
+      "max_price": 450000
+    },
+    {
+      "year": 2024,
+      "count": 15,
+      "median_price": 390000,
+      "avg_price": 391867,
+      "min_price": 155000,
+      "max_price": 553000
+    },
+    {
+      "year": 2025,
+      "count": 7,
+      "median_price": 463000,
+      "avg_price": 452714,
+      "min_price": 325000,
+      "max_price": 510000
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 448750,
+      "avg_price": 449375,
+      "min_price": 415000,
+      "max_price": 485000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-08",
+      "address": "147 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+      "price": 452500,
+      "bedrooms": 3,
+      "propertyType": "duplex",
+      "eircode": "A63HP66"
+    },
+    {
+      "date": "2026-06-12",
+      "address": "276 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+      "price": 485000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63E785"
+    },
+    {
+      "date": "2026-05-29",
+      "address": "57 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 415000,
+      "bedrooms": 2,
+      "propertyType": null,
+      "eircode": "A63YF75"
+    },
+    {
+      "date": "2026-02-17",
+      "address": "193 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 445000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "A63W891"
+    },
+    {
+      "date": "2025-12-19",
+      "address": "5 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 482000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A63FT20"
+    },
+    {
+      "date": "2025-12-18",
+      "address": "252 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 463000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "A63TW50"
+    },
+    {
+      "date": "2025-12-08",
+      "address": "189 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 475000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63K064"
+    },
+    {
+      "date": "2025-08-15",
+      "address": "12 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 510000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A63F342"
+    },
+    {
+      "date": "2025-04-15",
+      "address": "84 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 460000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63XC42"
+    },
+    {
+      "date": "2025-02-17",
+      "address": "103 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 454000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63TP83"
+    },
+    {
+      "date": "2025-01-10",
+      "address": "258 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 325000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A63H398"
+    },
+    {
+      "date": "2024-12-18",
+      "address": "196 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 553000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63K268"
+    },
+    {
+      "date": "2024-11-15",
+      "address": "116 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DA29"
+    },
+    {
+      "date": "2024-11-14",
+      "address": "223 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 155000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63XH39"
+    },
+    {
+      "date": "2024-10-31",
+      "address": "102 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+      "price": 525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KV59"
+    },
+    {
+      "date": "2024-10-24",
+      "address": "140 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63F437"
+    },
+    {
+      "date": "2024-10-10",
+      "address": "81 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+      "price": 515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63Y242"
+    },
+    {
+      "date": "2024-08-23",
+      "address": "59 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63HH77"
+    },
+    {
+      "date": "2024-07-19",
+      "address": "80 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63VH29"
+    },
+    {
+      "date": "2024-06-07",
+      "address": "179 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YV08"
+    },
+    {
+      "date": "2024-05-10",
+      "address": "136 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63FP62"
+    },
+    {
+      "date": "2024-03-04",
+      "address": "247 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NW80"
+    },
+    {
+      "date": "2024-02-02",
+      "address": "168 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NX09"
+    },
+    {
+      "date": "2024-01-25",
+      "address": "244 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63WE29"
+    },
+    {
+      "date": "2024-01-22",
+      "address": "265 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63PP22"
+    },
+    {
+      "date": "2024-01-19",
+      "address": "159 CHARLESLAND PARK, GREYSTONES, COUNTY WICKLOW",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KX01"
+    },
+    {
+      "date": "2023-12-20",
+      "address": "142 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63E440"
+    },
+    {
+      "date": "2023-11-28",
+      "address": "54 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63W866"
+    },
+    {
+      "date": "2023-11-16",
+      "address": "28 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63AR27"
+    },
+    {
+      "date": "2023-09-11",
+      "address": "128 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 362000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KC03"
+    },
+    {
+      "date": "2023-09-04",
+      "address": "149 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63TF40"
+    },
+    {
+      "date": "2023-08-31",
+      "address": "242 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63P211"
+    },
+    {
+      "date": "2023-08-30",
+      "address": "229 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63PN50"
+    },
+    {
+      "date": "2023-07-26",
+      "address": "219 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63T957"
+    },
+    {
+      "date": "2023-07-13",
+      "address": "107 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63V563"
+    },
+    {
+      "date": "2023-07-10",
+      "address": "222 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63T297"
+    },
+    {
+      "date": "2023-07-10",
+      "address": "53 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63W289"
+    },
+    {
+      "date": "2023-06-16",
+      "address": "256 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63A313"
+    },
+    {
+      "date": "2023-06-02",
+      "address": "178 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63E168"
+    },
+    {
+      "date": "2023-06-02",
+      "address": "98 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63P594"
+    },
+    {
+      "date": "2023-04-28",
+      "address": "281 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KV67"
+    },
+    {
+      "date": "2023-04-28",
+      "address": "296 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 389000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63W012"
+    },
+    {
+      "date": "2023-04-20",
+      "address": "112 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63EW73"
+    },
+    {
+      "date": "2023-03-31",
+      "address": "233 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NW59"
+    },
+    {
+      "date": "2022-12-15",
+      "address": "154 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63HY27"
+    },
+    {
+      "date": "2022-12-07",
+      "address": "220 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KW40"
+    },
+    {
+      "date": "2022-12-02",
+      "address": "197 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YV82"
+    },
+    {
+      "date": "2022-11-07",
+      "address": "279 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X803"
+    },
+    {
+      "date": "2022-11-03",
+      "address": "62 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63A009"
+    },
+    {
+      "date": "2022-10-26",
+      "address": "52 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X825"
+    }
+  ],
+  "totalTransactions": 146
+}

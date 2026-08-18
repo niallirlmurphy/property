@@ -1,0 +1,553 @@
+{
+  "slug": "ard-uisce-whiterock-hill",
+  "stats": {
+    "count": 185,
+    "median": 253911,
+    "avg": 231606,
+    "min": 105000,
+    "max": 342000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 145162,
+      "avg_price": 139459,
+      "min_price": 112511,
+      "max_price": 155000
+    },
+    {
+      "year": 2011,
+      "count": 4,
+      "median_price": 105727,
+      "avg_price": 111052,
+      "min_price": 105000,
+      "max_price": 127753
+    },
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 122500,
+      "avg_price": 124814,
+      "min_price": 118943,
+      "max_price": 133000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 127471,
+      "avg_price": 127471,
+      "min_price": 118943,
+      "max_price": 136000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 118899,
+      "avg_price": 118966,
+      "min_price": 118000,
+      "max_price": 120000
+    },
+    {
+      "year": 2015,
+      "count": 6,
+      "median_price": 138744,
+      "avg_price": 141238,
+      "min_price": 120000,
+      "max_price": 168000
+    },
+    {
+      "year": 2016,
+      "count": 9,
+      "median_price": 149780,
+      "avg_price": 152212,
+      "min_price": 140926,
+      "max_price": 170000
+    },
+    {
+      "year": 2017,
+      "count": 14,
+      "median_price": 203846,
+      "avg_price": 199410,
+      "min_price": 162996,
+      "max_price": 229075
+    },
+    {
+      "year": 2018,
+      "count": 6,
+      "median_price": 207048,
+      "avg_price": 208517,
+      "min_price": 193833,
+      "max_price": 229075
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 180000,
+      "avg_price": 180000,
+      "min_price": 180000,
+      "max_price": 180000
+    },
+    {
+      "year": 2020,
+      "count": 7,
+      "median_price": 205000,
+      "avg_price": 200099,
+      "min_price": 174000,
+      "max_price": 210000
+    },
+    {
+      "year": 2021,
+      "count": 10,
+      "median_price": 209692,
+      "avg_price": 209901,
+      "min_price": 195000,
+      "max_price": 225000
+    },
+    {
+      "year": 2022,
+      "count": 28,
+      "median_price": 242291,
+      "avg_price": 240828,
+      "min_price": 205000,
+      "max_price": 285000
+    },
+    {
+      "year": 2023,
+      "count": 23,
+      "median_price": 263877,
+      "avg_price": 260222,
+      "min_price": 132159,
+      "max_price": 342000
+    },
+    {
+      "year": 2024,
+      "count": 23,
+      "median_price": 268722,
+      "avg_price": 273058,
+      "min_price": 263877,
+      "max_price": 300909
+    },
+    {
+      "year": 2025,
+      "count": 27,
+      "median_price": 277533,
+      "avg_price": 280495,
+      "min_price": 273128,
+      "max_price": 331000
+    },
+    {
+      "year": 2026,
+      "count": 14,
+      "median_price": 299559,
+      "avg_price": 296920,
+      "min_price": 277533,
+      "max_price": 309720
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-02",
+      "address": "397 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-06-16",
+      "address": "400 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "Y35FH9E"
+    },
+    {
+      "date": "2026-06-12",
+      "address": "479 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 303965,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "Y35RX0C"
+    },
+    {
+      "date": "2026-06-11",
+      "address": "399 Ard Uisce, Whiterock Hill",
+      "price": 303965,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-05-29",
+      "address": "402 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 305315,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "Y35AK6W"
+    },
+    {
+      "date": "2026-05-28",
+      "address": "401 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 303965,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-05-20",
+      "address": "477 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 286344,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-05-08",
+      "address": "478 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "Y35EP4F"
+    },
+    {
+      "date": "2026-04-21",
+      "address": "476 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 286344,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "Y35DYY1"
+    },
+    {
+      "date": "2026-03-03",
+      "address": "386 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 295154,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "Y35P9RV"
+    },
+    {
+      "date": "2026-02-19",
+      "address": "384 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 295154,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "Y35E39D"
+    },
+    {
+      "date": "2026-02-18",
+      "address": "383 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "Y35VNK3"
+    },
+    {
+      "date": "2026-01-08",
+      "address": "385 ard uisce, whiterock hill, wexford",
+      "price": 309720,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-01-06",
+      "address": "411 Ard Uisce, Whiterock Hill",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-12-18",
+      "address": "415 ARD UISCE, WHITEROCK HILL, WEXFORD",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-12-17",
+      "address": "412 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 277533,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "Y35RH2Y"
+    },
+    {
+      "date": "2025-12-15",
+      "address": "414 Ard Uisce, Whiterock Hill",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-12-11",
+      "address": "412A Ard Uisce, Whiterock Hill, Wexford",
+      "price": 277533,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-12-08",
+      "address": "416 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 277533,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-11-26",
+      "address": "443 Ard Uisce, Whiterock Hill",
+      "price": 283288,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-11-26",
+      "address": "418 Ard Uisce, Whiterock Hill",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-11-12",
+      "address": "417 ARD UISCE, WHITEROCK HILL, WEXFORD",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-20",
+      "address": "407 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-06",
+      "address": "408 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 277533,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-06",
+      "address": "77 ARD UISCE, WHITEROCK HILL, WEXFORD",
+      "price": 331000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "Y35KH59"
+    },
+    {
+      "date": "2025-07-04",
+      "address": "71 ARD UISCE, WHITEROCK HILL, WEXFORD",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": "Y35D29N"
+    },
+    {
+      "date": "2025-06-26",
+      "address": "406 Ard Uisce, Whiterock Hill",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "Y35AX6X"
+    },
+    {
+      "date": "2025-06-18",
+      "address": "419 Ard Uisce, Whiterock Hill",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "Y35A03R"
+    },
+    {
+      "date": "2025-06-16",
+      "address": "424 Ard Uisce, Whiterock Hill, White Rock",
+      "price": 277533,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-13",
+      "address": "405 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 277533,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-05",
+      "address": "420 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-30",
+      "address": "404 Ard Uisce, Whiterock Hill",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "Y35K44V"
+    },
+    {
+      "date": "2025-05-27",
+      "address": "403 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-26",
+      "address": "423 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-25",
+      "address": "472 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "Y35Y9WT"
+    },
+    {
+      "date": "2025-03-07",
+      "address": "425 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-04",
+      "address": "473 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 273128,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-03",
+      "address": "426 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-29",
+      "address": "471 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-28",
+      "address": "464 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": "Y35AHR0"
+    },
+    {
+      "date": "2025-01-17",
+      "address": "37 ARD UISCE, WHITEROCK HILL, WEXFORD",
+      "price": 277000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "Y35VK4H"
+    },
+    {
+      "date": "2024-12-12",
+      "address": "427 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-05",
+      "address": "441 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 300909,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-22",
+      "address": "467 Ard Uisce, Whiterock Hill",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-21",
+      "address": "466 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-13",
+      "address": "463 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-16",
+      "address": "462 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-06",
+      "address": "456 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 268727,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-06",
+      "address": "461 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-02",
+      "address": "460 Ard Uisce, Whiterock Hill, Whiterock",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 185
+}

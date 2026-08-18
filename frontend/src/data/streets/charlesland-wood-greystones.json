@@ -1,0 +1,553 @@
+{
+  "slug": "charlesland-wood-greystones",
+  "stats": {
+    "count": 148,
+    "median": 332500,
+    "avg": 340809,
+    "min": 120000,
+    "max": 580000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 295000,
+      "avg_price": 295000,
+      "min_price": 295000,
+      "max_price": 295000
+    },
+    {
+      "year": 2011,
+      "count": 3,
+      "median_price": 300000,
+      "avg_price": 300000,
+      "min_price": 295000,
+      "max_price": 305000
+    },
+    {
+      "year": 2012,
+      "count": 4,
+      "median_price": 212500,
+      "avg_price": 218750,
+      "min_price": 190000,
+      "max_price": 260000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 149773,
+      "avg_price": 162555,
+      "min_price": 120000,
+      "max_price": 215000
+    },
+    {
+      "year": 2014,
+      "count": 10,
+      "median_price": 220000,
+      "avg_price": 245700,
+      "min_price": 208000,
+      "max_price": 350000
+    },
+    {
+      "year": 2015,
+      "count": 5,
+      "median_price": 300000,
+      "avg_price": 306100,
+      "min_price": 260500,
+      "max_price": 365000
+    },
+    {
+      "year": 2016,
+      "count": 8,
+      "median_price": 268750,
+      "avg_price": 271062,
+      "min_price": 255000,
+      "max_price": 300000
+    },
+    {
+      "year": 2017,
+      "count": 9,
+      "median_price": 292500,
+      "avg_price": 290667,
+      "min_price": 250000,
+      "max_price": 350000
+    },
+    {
+      "year": 2018,
+      "count": 11,
+      "median_price": 323500,
+      "avg_price": 315636,
+      "min_price": 205000,
+      "max_price": 410000
+    },
+    {
+      "year": 2019,
+      "count": 16,
+      "median_price": 320000,
+      "avg_price": 327812,
+      "min_price": 245000,
+      "max_price": 415000
+    },
+    {
+      "year": 2020,
+      "count": 7,
+      "median_price": 320000,
+      "avg_price": 321786,
+      "min_price": 237500,
+      "max_price": 400000
+    },
+    {
+      "year": 2021,
+      "count": 12,
+      "median_price": 342500,
+      "avg_price": 336167,
+      "min_price": 150000,
+      "max_price": 451000
+    },
+    {
+      "year": 2022,
+      "count": 15,
+      "median_price": 410000,
+      "avg_price": 412367,
+      "min_price": 325000,
+      "max_price": 495000
+    },
+    {
+      "year": 2023,
+      "count": 15,
+      "median_price": 370000,
+      "avg_price": 409600,
+      "min_price": 303000,
+      "max_price": 555000
+    },
+    {
+      "year": 2024,
+      "count": 12,
+      "median_price": 370500,
+      "avg_price": 366167,
+      "min_price": 300000,
+      "max_price": 430000
+    },
+    {
+      "year": 2025,
+      "count": 9,
+      "median_price": 440000,
+      "avg_price": 452000,
+      "min_price": 350000,
+      "max_price": 531000
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 512500,
+      "avg_price": 498333,
+      "min_price": 375000,
+      "max_price": 580000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-25",
+      "address": "255 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 455000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63D439"
+    },
+    {
+      "date": "2026-05-29",
+      "address": "268 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 580000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YH11"
+    },
+    {
+      "date": "2026-05-29",
+      "address": "268 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 580000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A63YH11"
+    },
+    {
+      "date": "2026-04-21",
+      "address": "69 CHARLESLAND WOOD, GREYSTONES, CO WICKLOW",
+      "price": 570000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A63FT92"
+    },
+    {
+      "date": "2026-02-13",
+      "address": "94 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 430000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A63CW41"
+    },
+    {
+      "date": "2026-01-06",
+      "address": "116 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 375000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A63R6P5"
+    },
+    {
+      "date": "2025-12-19",
+      "address": "122 CHARLESLAND WOOD, GREYSTONES, CO WICKLOW",
+      "price": 520000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63E295"
+    },
+    {
+      "date": "2025-12-05",
+      "address": "246 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 350000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A63E5C8"
+    },
+    {
+      "date": "2025-11-19",
+      "address": "53 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 440000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63W803"
+    },
+    {
+      "date": "2025-09-25",
+      "address": "204 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 435000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "A63E512"
+    },
+    {
+      "date": "2025-09-25",
+      "address": "262 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 505000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63A342"
+    },
+    {
+      "date": "2025-08-19",
+      "address": "227 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 531000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A63KC65"
+    },
+    {
+      "date": "2025-06-12",
+      "address": "241 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 500000,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": "A63VH04"
+    },
+    {
+      "date": "2025-03-14",
+      "address": "23 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 355000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A63A6R6"
+    },
+    {
+      "date": "2025-02-26",
+      "address": "77 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 432000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63XT59"
+    },
+    {
+      "date": "2024-12-20",
+      "address": "1 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63T712"
+    },
+    {
+      "date": "2024-12-18",
+      "address": "97 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 394000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63W8W9"
+    },
+    {
+      "date": "2024-12-13",
+      "address": "110 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 338000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63VT69"
+    },
+    {
+      "date": "2024-12-06",
+      "address": "230 CHARLESLAND WOOD, GREYSTONES, CO WICKLOW",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63ER69"
+    },
+    {
+      "date": "2024-12-02",
+      "address": "271 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63PK60"
+    },
+    {
+      "date": "2024-12-02",
+      "address": "7 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63CR16"
+    },
+    {
+      "date": "2024-10-15",
+      "address": "213 CHARLESLAND WOOD, GREYSTONES, CO WICKLOW",
+      "price": 376000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63T049"
+    },
+    {
+      "date": "2024-08-08",
+      "address": "177 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63T252"
+    },
+    {
+      "date": "2024-05-29",
+      "address": "183 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 408000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63TW20"
+    },
+    {
+      "date": "2024-04-17",
+      "address": "216 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NX73"
+    },
+    {
+      "date": "2024-03-15",
+      "address": "25 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63C7K6"
+    },
+    {
+      "date": "2024-03-07",
+      "address": "23 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 318000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A63A6R6"
+    },
+    {
+      "date": "2023-10-31",
+      "address": "215 CHARLESLAND WOOD, GREYSTONES, CO WICKLOW",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63K602"
+    },
+    {
+      "date": "2023-10-27",
+      "address": "212 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 490000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NH63"
+    },
+    {
+      "date": "2023-10-10",
+      "address": "11 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63P355"
+    },
+    {
+      "date": "2023-09-15",
+      "address": "236 CHARLESLAND WOOD, GREYSTONES, CO WICKLOW",
+      "price": 303000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X9X9"
+    },
+    {
+      "date": "2023-08-31",
+      "address": "170 CHARLESLAND WOOD, GREYSTONES, CO WICKLOW",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63CX39"
+    },
+    {
+      "date": "2023-08-11",
+      "address": "82 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 540000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63CF65"
+    },
+    {
+      "date": "2023-08-04",
+      "address": "79 CHARLESLAND WOOD, GREYSTONES, CO WICKLOW",
+      "price": 369000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63V180"
+    },
+    {
+      "date": "2023-07-25",
+      "address": "234 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63VT37"
+    },
+    {
+      "date": "2023-07-12",
+      "address": "271 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63PK60"
+    },
+    {
+      "date": "2023-07-03",
+      "address": "249 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63R7W5"
+    },
+    {
+      "date": "2023-06-21",
+      "address": "50 CHARLESLAND WOOD, GREYSTONES, CO WICKLOW",
+      "price": 358000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63FX53"
+    },
+    {
+      "date": "2023-06-02",
+      "address": "184 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 555000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DW92"
+    },
+    {
+      "date": "2023-05-25",
+      "address": "45 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 357000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KC04"
+    },
+    {
+      "date": "2023-04-05",
+      "address": "155 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 517000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63HT91"
+    },
+    {
+      "date": "2023-01-31",
+      "address": "224 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63Y578"
+    },
+    {
+      "date": "2022-12-22",
+      "address": "231 CHARLESLAND WOOD, GREYSTONES, CO WICKLOW",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63RA12"
+    },
+    {
+      "date": "2022-12-07",
+      "address": "180 CHARLESLAND WOOD, GREYSTONES, CO. WICKLOW",
+      "price": 421000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YX85"
+    },
+    {
+      "date": "2022-12-06",
+      "address": "41 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63XD37"
+    },
+    {
+      "date": "2022-10-20",
+      "address": "241 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 470000,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": "A63VH04"
+    },
+    {
+      "date": "2022-09-27",
+      "address": "264 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63EV18"
+    },
+    {
+      "date": "2022-09-01",
+      "address": "138 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DD80"
+    },
+    {
+      "date": "2022-08-25",
+      "address": "17 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63T3Y7"
+    },
+    {
+      "date": "2022-08-19",
+      "address": "194 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63R762"
+    }
+  ],
+  "totalTransactions": 148
+}

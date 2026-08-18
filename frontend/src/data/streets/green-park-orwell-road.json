@@ -1,0 +1,169 @@
+{
+  "slug": "green-park-orwell-road",
+  "stats": {
+    "count": 11,
+    "median": 1915000,
+    "avg": 1971030,
+    "min": 696332,
+    "max": 2850000,
+    "firstYear": 2011,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 1598166,
+      "avg_price": 1598166,
+      "min_price": 696332,
+      "max_price": 2500000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1875000,
+      "avg_price": 1875000,
+      "min_price": 1875000,
+      "max_price": 1875000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 2850000,
+      "avg_price": 2850000,
+      "min_price": 2850000,
+      "max_price": 2850000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1725000,
+      "avg_price": 1725000,
+      "min_price": 1650000,
+      "max_price": 1800000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 2350000,
+      "avg_price": 2350000,
+      "min_price": 2250000,
+      "max_price": 2450000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1970000,
+      "avg_price": 1970000,
+      "min_price": 1970000,
+      "max_price": 1970000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1725000,
+      "avg_price": 1725000,
+      "min_price": 1725000,
+      "max_price": 1725000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1915000,
+      "avg_price": 1915000,
+      "min_price": 1915000,
+      "max_price": 1915000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-11-18",
+      "address": "21 GREEN PARK, ORWELL RD, DUBLIN 14",
+      "price": 1915000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D14T928"
+    },
+    {
+      "date": "2023-06-01",
+      "address": "9 GREEN PARK, ORWELL ROAD, RATHGAR",
+      "price": 1725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14XD34"
+    },
+    {
+      "date": "2021-10-19",
+      "address": "5 GREEN PARK, ORWELL RD, DUBLIN 14",
+      "price": 1970000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14E782"
+    },
+    {
+      "date": "2020-10-29",
+      "address": "16 GREEN PARK, ORWELL RD, DUBLIN 14",
+      "price": 2250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-28",
+      "address": "3 GREEN PARK, ORWELL RD, RATHGAR",
+      "price": 2450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-02",
+      "address": "22 GREEN PARK, ORWELL RD, RATHGAR DUBLIN 14",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-12",
+      "address": "2 GREEN PARK, ORWELL RD, RATHGAR DUBLIN 14",
+      "price": 1650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-22",
+      "address": "19 GREEN PARK, ORWELL ROAD, RATHGAR",
+      "price": 2850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-16",
+      "address": "12 GREEN PARK, ORWELL RD, DUBLIN 14",
+      "price": 1875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-11-11",
+      "address": "3 Green Park, Orwell Road, Rathagr",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-09-29",
+      "address": "23 Green Park, Orwell Road, Rathgar",
+      "price": 696332,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 11
+}

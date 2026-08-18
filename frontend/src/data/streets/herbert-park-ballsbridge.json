@@ -1,0 +1,201 @@
+{
+  "slug": "herbert-park-ballsbridge",
+  "stats": {
+    "count": 16,
+    "median": 3100000,
+    "avg": 3077911,
+    "min": 776580,
+    "max": 4700000,
+    "firstYear": 2011,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 2425000,
+      "avg_price": 2425000,
+      "min_price": 2425000,
+      "max_price": 2425000
+    },
+    {
+      "year": 2016,
+      "count": 6,
+      "median_price": 3437500,
+      "avg_price": 3445825,
+      "min_price": 2999950,
+      "max_price": 3800000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 2725000,
+      "avg_price": 2725000,
+      "min_price": 2725000,
+      "max_price": 2725000
+    },
+    {
+      "year": 2019,
+      "count": 3,
+      "median_price": 3000000,
+      "avg_price": 2990017,
+      "min_price": 2770050,
+      "max_price": 3200000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 776580,
+      "avg_price": 776580,
+      "min_price": 776580,
+      "max_price": 776580
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 2540000,
+      "avg_price": 3141667,
+      "min_price": 2185000,
+      "max_price": 4700000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 4250000,
+      "avg_price": 4250000,
+      "min_price": 4250000,
+      "max_price": 4250000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-05-27",
+      "address": "18 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 4250000,
+      "bedrooms": 6,
+      "propertyType": "semi-detached",
+      "eircode": "D04V9X7"
+    },
+    {
+      "date": "2023-09-05",
+      "address": "17 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 2185000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04K7E5"
+    },
+    {
+      "date": "2023-08-23",
+      "address": "26 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 4700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X4E8"
+    },
+    {
+      "date": "2023-07-26",
+      "address": "7 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 2540000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04XX87"
+    },
+    {
+      "date": "2021-10-15",
+      "address": "40A HERBERT PARK, BALLSBRIDGE, DUBLIN",
+      "price": 776580,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V5X4"
+    },
+    {
+      "date": "2019-12-23",
+      "address": "38 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 3200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-23",
+      "address": "36 HERBERT PARK, BALLSBRIDGE, DUBLIN",
+      "price": 3000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-20",
+      "address": "40 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 2770050,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04R8F7"
+    },
+    {
+      "date": "2018-01-03",
+      "address": "40 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 2725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04R8F7"
+    },
+    {
+      "date": "2016-12-21",
+      "address": "36 HERBERT PARK, BALLSBRIDGE, DUBLIN",
+      "price": 2999950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-21",
+      "address": "38 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 3200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-09",
+      "address": "12 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 3675000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-25",
+      "address": "38 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 3200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-12",
+      "address": "10 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 3800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-04-08",
+      "address": "8 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 3800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-05-11",
+      "address": "19 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 2425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 16
+}

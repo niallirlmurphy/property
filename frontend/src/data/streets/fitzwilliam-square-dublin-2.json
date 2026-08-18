@@ -1,0 +1,169 @@
+{
+  "slug": "fitzwilliam-square-dublin-2",
+  "stats": {
+    "count": 10,
+    "median": 2365000,
+    "avg": 2283000,
+    "min": 75000,
+    "max": 6475000,
+    "firstYear": 2010,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 75000,
+      "avg_price": 75000,
+      "min_price": 75000,
+      "max_price": 75000
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 2650000,
+      "avg_price": 2650000,
+      "min_price": 2650000,
+      "max_price": 2650000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 1750000,
+      "avg_price": 1750000,
+      "min_price": 300000,
+      "max_price": 3200000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 350000,
+      "avg_price": 350000,
+      "min_price": 350000,
+      "max_price": 350000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 3250000,
+      "avg_price": 3250000,
+      "min_price": 3250000,
+      "max_price": 3250000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 2080000,
+      "avg_price": 2080000,
+      "min_price": 2080000,
+      "max_price": 2080000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 3650000,
+      "avg_price": 3650000,
+      "min_price": 3650000,
+      "max_price": 3650000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 800000,
+      "avg_price": 800000,
+      "min_price": 800000,
+      "max_price": 800000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 6475000,
+      "avg_price": 6475000,
+      "min_price": 6475000,
+      "max_price": 6475000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-04-16",
+      "address": "2 FITZWILLIAM SQ, DUBLIN 2, DUBLIN",
+      "price": 6475000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D02VK25"
+    },
+    {
+      "date": "2023-08-01",
+      "address": "23B FITZWILLIAM SQ, DUBLIN 2, DUBLIN",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D02W209"
+    },
+    {
+      "date": "2021-11-30",
+      "address": "28 FITZWILLIAM SQ, DUBLIN 2, DUBLIN",
+      "price": 3650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D02XF88"
+    },
+    {
+      "date": "2019-06-21",
+      "address": "1 FITZWILLIAM SQUARE, DUBLIN 2, D02XY95",
+      "price": 2080000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-14",
+      "address": "64 FITZWILLIAM SQ, DUBLIN 2, DUBLIN",
+      "price": 3250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-22",
+      "address": "35 FITZWILLIAM SQ, DUBLIN 2, DUBLIN",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-19",
+      "address": "56 Fitzwilliam Square, Dublin 2",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-08-20",
+      "address": "2 Fitzwilliam Square, Dublin 2",
+      "price": 3200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-04-13",
+      "address": "24 Fitzwilliam Square, Dublin 2",
+      "price": 2650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-05-21",
+      "address": "36 Fitzwilliam Square, Dublin 2",
+      "price": 75000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

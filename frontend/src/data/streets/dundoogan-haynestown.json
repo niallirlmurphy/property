@@ -1,0 +1,473 @@
+{
+  "slug": "dundoogan-haynestown",
+  "stats": {
+    "count": 156,
+    "median": 227300,
+    "avg": 228813,
+    "min": 185845,
+    "max": 395000,
+    "firstYear": 2019,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2019,
+      "count": 40,
+      "median_price": 227300,
+      "avg_price": 229119,
+      "min_price": 200264,
+      "max_price": 253100
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 209647,
+      "avg_price": 210551,
+      "min_price": 199956,
+      "max_price": 222953
+    },
+    {
+      "year": 2021,
+      "count": 29,
+      "median_price": 229030,
+      "avg_price": 221937,
+      "min_price": 185845,
+      "max_price": 269950
+    },
+    {
+      "year": 2022,
+      "count": 74,
+      "median_price": 225528,
+      "avg_price": 228438,
+      "min_price": 198193,
+      "max_price": 284938
+    },
+    {
+      "year": 2023,
+      "count": 7,
+      "median_price": 230000,
+      "avg_price": 228898,
+      "min_price": 198194,
+      "max_price": 264273
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 395000,
+      "avg_price": 395000,
+      "min_price": 395000,
+      "max_price": 395000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 350000,
+      "avg_price": 350000,
+      "min_price": 350000,
+      "max_price": 350000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-04-15",
+      "address": "125 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91RHE1"
+    },
+    {
+      "date": "2025-04-30",
+      "address": "242 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 395000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A91YR0A"
+    },
+    {
+      "date": "2023-05-30",
+      "address": "10 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91HV0P"
+    },
+    {
+      "date": "2023-04-20",
+      "address": "3 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 264273,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91EA2K"
+    },
+    {
+      "date": "2023-03-09",
+      "address": "148 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 244938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91T18E"
+    },
+    {
+      "date": "2023-02-16",
+      "address": "159 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 202400,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91DY6C"
+    },
+    {
+      "date": "2023-02-02",
+      "address": "113 DUndoogan, Haynestown, Dundalk",
+      "price": 237841,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-01-17",
+      "address": "112 Dundoogan, Haynestown, Dundalk",
+      "price": 198194,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-01-16",
+      "address": "108 Dundoogan, Haynestown, Dundalk",
+      "price": 224637,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-22",
+      "address": "143 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 259779,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91HHN8"
+    },
+    {
+      "date": "2022-12-15",
+      "address": "170 Dundoogan, Haynestown, Dundalk",
+      "price": 211321,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-14",
+      "address": "146 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 202511,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91FYP1"
+    },
+    {
+      "date": "2022-12-13",
+      "address": "161 Dundoogan, Haynestown, Dundalk",
+      "price": 216770,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-12",
+      "address": "166 Dundoogan, Haynestown, DUNDALK",
+      "price": 247938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-12",
+      "address": "163 Dundoogan, Haynestown",
+      "price": 233436,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-09",
+      "address": "156 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 198193,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91HCN4"
+    },
+    {
+      "date": "2022-11-30",
+      "address": "168 Dundoogan, Haynestown, Dundalk",
+      "price": 215827,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-29",
+      "address": "169 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 202599,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91CC8D"
+    },
+    {
+      "date": "2022-11-28",
+      "address": "171 Dundoogan, Haynestown, Dundalk",
+      "price": 215727,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-25",
+      "address": "109 Dundoogan, Haynestown, Dundalk",
+      "price": 215815,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-18",
+      "address": "167 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 247950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-18",
+      "address": "160 Dundoogan, Haynestown, Dundalk",
+      "price": 202599,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-11",
+      "address": "107 Dundoogan, Haynestown, Dundalk",
+      "price": 217577,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-10",
+      "address": "164 Dundoogan, Haynestown, DUNDALK",
+      "price": 279938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-04",
+      "address": "110 Dundoogan, Haynestown, Dundalk",
+      "price": 207004,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-03",
+      "address": "6 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 212061,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91YH9T"
+    },
+    {
+      "date": "2022-11-03",
+      "address": "162 Dundoogan, Haynestown, Dundalk",
+      "price": 220220,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-20",
+      "address": "158 Dundoogan, Haynestown, Dundalk",
+      "price": 259850,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-18",
+      "address": "157 DUNDOOGAN, Haynestown, DUNDALK",
+      "price": 244938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-14",
+      "address": "153 DUNDOOGAN, Haynestown, DUNDALK",
+      "price": 284938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-06",
+      "address": "152 Dundoogan, Haynestown, Dundalk",
+      "price": 242246,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-05",
+      "address": "155 Dundoogan, Haynestown, Dundalk",
+      "price": 202599,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-04",
+      "address": "140 Dundoogan, Haynestown, Dundalk",
+      "price": 242247,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-09-27",
+      "address": "144 Dundoogan, Haynestown, Dundalk",
+      "price": 215814,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-09-20",
+      "address": "147 Dundoogan, Haynestown, Dundalk",
+      "price": 215814,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-09-15",
+      "address": "150 Dundoogan, Haynestown, Dundalk",
+      "price": 202599,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-08-19",
+      "address": "115 Dundoogan, Haynestown, Dundalk",
+      "price": 215815,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-08-19",
+      "address": "129  Dundoogan, Haynestown, Dundalk",
+      "price": 251145,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-08-11",
+      "address": "142 Dundoogan, Haynestown, Dundalk",
+      "price": 242300,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-08-11",
+      "address": "151 Dundoogan, Haynestown, Dundalk",
+      "price": 215815,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-07-20",
+      "address": "5 Dundoogan, Haynestown, Dundalk",
+      "price": 227269,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-07-13",
+      "address": "7 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 229950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91W7TC"
+    },
+    {
+      "date": "2022-06-30",
+      "address": "114 Dundoogan, Haynestown, Dundalk",
+      "price": 207000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-30",
+      "address": "128 Dundoogan, Haynestown, DUNDALK",
+      "price": 264950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-28",
+      "address": "127 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 233436,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-27",
+      "address": "123 Dundoogan, Haynestown, Dundalk",
+      "price": 233436,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-21",
+      "address": "117 dundoogan, HAYNESTOWN, dundalk",
+      "price": 207004,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-14",
+      "address": "120 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 229031,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-14",
+      "address": "138 Dundoogan, Haynestown, Dundalk",
+      "price": 246652,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-10",
+      "address": "124 dundoogan, haynestown, Dundalk",
+      "price": 242246,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 156
+}

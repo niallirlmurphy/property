@@ -1,0 +1,521 @@
+{
+  "slug": "the-links-elm-park",
+  "stats": {
+    "count": 175,
+    "median": 209682,
+    "avg": 662322,
+    "min": 111008,
+    "max": 49315625,
+    "firstYear": 2013,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 361000,
+      "avg_price": 361000,
+      "min_price": 361000,
+      "max_price": 361000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 350000,
+      "avg_price": 350000,
+      "min_price": 350000,
+      "max_price": 350000
+    },
+    {
+      "year": 2016,
+      "count": 122,
+      "median_price": 167117,
+      "avg_price": 743948,
+      "min_price": 111008,
+      "max_price": 49315625
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 323000,
+      "avg_price": 323000,
+      "min_price": 292000,
+      "max_price": 354000
+    },
+    {
+      "year": 2018,
+      "count": 19,
+      "median_price": 361000,
+      "avg_price": 396842,
+      "min_price": 295000,
+      "max_price": 865000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 387500,
+      "avg_price": 387500,
+      "min_price": 325000,
+      "max_price": 450000
+    },
+    {
+      "year": 2020,
+      "count": 3,
+      "median_price": 475000,
+      "avg_price": 538333,
+      "min_price": 425000,
+      "max_price": 715000
+    },
+    {
+      "year": 2021,
+      "count": 7,
+      "median_price": 460000,
+      "avg_price": 473605,
+      "min_price": 357000,
+      "max_price": 599119
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 475000,
+      "avg_price": 443333,
+      "min_price": 355000,
+      "max_price": 500000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 627500,
+      "avg_price": 627500,
+      "min_price": 475000,
+      "max_price": 780000
+    },
+    {
+      "year": 2024,
+      "count": 7,
+      "median_price": 512500,
+      "avg_price": 527786,
+      "min_price": 413000,
+      "max_price": 810000
+    },
+    {
+      "year": 2025,
+      "count": 4,
+      "median_price": 655000,
+      "avg_price": 648250,
+      "min_price": 421000,
+      "max_price": 862000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 835000,
+      "avg_price": 835000,
+      "min_price": 820000,
+      "max_price": 850000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-03-23",
+      "address": "APT 178 THE LINKS, ELM PARK, DUBLIN 4",
+      "price": 820000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D04V329"
+    },
+    {
+      "date": "2026-01-13",
+      "address": "APARTMENT 24, THE LINKS, ELM PARK",
+      "price": 850000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D04H426"
+    },
+    {
+      "date": "2025-07-24",
+      "address": "APARTMENT 131, THE LINKS, ELM PARK",
+      "price": 862000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D04XK22"
+    },
+    {
+      "date": "2025-07-10",
+      "address": "APT 154 THE LINKS, ELM PARK, DUBLIN 4",
+      "price": 825000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D04E3X6"
+    },
+    {
+      "date": "2025-06-06",
+      "address": "APT 160, THE LINKS, ELM PARK",
+      "price": 421000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04DX01"
+    },
+    {
+      "date": "2025-04-10",
+      "address": "208 THE LINKS, ELM PARK, MERRION RD",
+      "price": 485000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04K235"
+    },
+    {
+      "date": "2024-11-21",
+      "address": "APT 6 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 518000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04RX22"
+    },
+    {
+      "date": "2024-11-15",
+      "address": "164 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04TX93"
+    },
+    {
+      "date": "2024-10-21",
+      "address": "196 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04YY18"
+    },
+    {
+      "date": "2024-08-02",
+      "address": "195 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 413000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04VH63"
+    },
+    {
+      "date": "2024-07-19",
+      "address": "APARTMENT 69, THE LINKS, ELM PARK",
+      "price": 810000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D04HR53"
+    },
+    {
+      "date": "2024-07-01",
+      "address": "53 THE LINKS, ELM PARK, BALLSBRIDGE DUBLIN 4",
+      "price": 512500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C7X4"
+    },
+    {
+      "date": "2024-04-04",
+      "address": "172 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 416000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04DK52"
+    },
+    {
+      "date": "2023-10-12",
+      "address": "APT 224 THE LINKS, ELM PARK, DUBLIN 4",
+      "price": 780000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04XN90"
+    },
+    {
+      "date": "2023-08-30",
+      "address": "194 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04WE19"
+    },
+    {
+      "date": "2022-08-10",
+      "address": "191 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04TF43"
+    },
+    {
+      "date": "2022-06-03",
+      "address": "186 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04XY01"
+    },
+    {
+      "date": "2022-05-03",
+      "address": "150 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04FV52"
+    },
+    {
+      "date": "2021-11-03",
+      "address": "APT 1 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2021-09-28",
+      "address": "67 THE LINKS, ELM PARK, MERRION RD",
+      "price": 357000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H7R6"
+    },
+    {
+      "date": "2021-08-16",
+      "address": "APT 102 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04FC65"
+    },
+    {
+      "date": "2021-06-04",
+      "address": "APT 22 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04FF80"
+    },
+    {
+      "date": "2021-05-21",
+      "address": "53 THE LINKS, ELM PARK, BALLSBRIDGE DUBLIN 4",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C7X4"
+    },
+    {
+      "date": "2021-02-19",
+      "address": "APARTMENT 201, THE LINKS, ELM PARK",
+      "price": 599118,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2021-01-29",
+      "address": "200 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 599119,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-18",
+      "address": "APARTMENT 92, THE LINKS, ELM PARK",
+      "price": 715000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2020-09-02",
+      "address": "APT 4 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2020-02-12",
+      "address": "APT 20 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2019-10-01",
+      "address": "APT 2 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2019-07-17",
+      "address": "150 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04FV52"
+    },
+    {
+      "date": "2018-12-20",
+      "address": "APARTMENT 70, THE LINKS, ELM PARK",
+      "price": 865000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-12-18",
+      "address": "APT 21 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04A0F6"
+    },
+    {
+      "date": "2018-12-18",
+      "address": "APT 18 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04K447"
+    },
+    {
+      "date": "2018-12-12",
+      "address": "APT 8 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 362500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04YD43"
+    },
+    {
+      "date": "2018-12-12",
+      "address": "APT 5 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 362500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04TF96"
+    },
+    {
+      "date": "2018-09-17",
+      "address": "APT 6 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04RX22"
+    },
+    {
+      "date": "2018-08-22",
+      "address": "Apartment 131, The Links, Elm Park",
+      "price": 815000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D04XK22"
+    },
+    {
+      "date": "2018-07-24",
+      "address": "APT 15 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-05-04",
+      "address": "APT 15 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-05-04",
+      "address": "APT 21 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04A0F6"
+    },
+    {
+      "date": "2018-05-04",
+      "address": "APT 2 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-05-04",
+      "address": "APT 22 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 361000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04FF80"
+    },
+    {
+      "date": "2018-05-04",
+      "address": "APT 20 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 361000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-05-04",
+      "address": "APT 4 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 361000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-05-04",
+      "address": "APT 8 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04YD43"
+    },
+    {
+      "date": "2018-05-04",
+      "address": "APT 5 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04TF96"
+    },
+    {
+      "date": "2018-05-04",
+      "address": "APT 18 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04K447"
+    },
+    {
+      "date": "2018-05-04",
+      "address": "APT 6 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 361000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04RX22"
+    },
+    {
+      "date": "2018-05-04",
+      "address": "APT 1 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 361000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2017-12-15",
+      "address": "128 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 354000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 175
+}

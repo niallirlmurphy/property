@@ -1,0 +1,553 @@
+{
+  "slug": "kildare-road-crumlin",
+  "stats": {
+    "count": 156,
+    "median": 267500,
+    "avg": 262154,
+    "min": 70000,
+    "max": 528000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 5,
+      "median_price": 200000,
+      "avg_price": 200400,
+      "min_price": 122000,
+      "max_price": 290000
+    },
+    {
+      "year": 2011,
+      "count": 8,
+      "median_price": 95010,
+      "avg_price": 136502,
+      "min_price": 76000,
+      "max_price": 305000
+    },
+    {
+      "year": 2012,
+      "count": 8,
+      "median_price": 130000,
+      "avg_price": 121375,
+      "min_price": 84000,
+      "max_price": 165000
+    },
+    {
+      "year": 2013,
+      "count": 7,
+      "median_price": 115000,
+      "avg_price": 123286,
+      "min_price": 70000,
+      "max_price": 180000
+    },
+    {
+      "year": 2014,
+      "count": 9,
+      "median_price": 170000,
+      "avg_price": 165222,
+      "min_price": 117000,
+      "max_price": 200000
+    },
+    {
+      "year": 2015,
+      "count": 5,
+      "median_price": 185000,
+      "avg_price": 213600,
+      "min_price": 155000,
+      "max_price": 280000
+    },
+    {
+      "year": 2016,
+      "count": 7,
+      "median_price": 210000,
+      "avg_price": 213857,
+      "min_price": 178000,
+      "max_price": 280000
+    },
+    {
+      "year": 2017,
+      "count": 12,
+      "median_price": 257500,
+      "avg_price": 266250,
+      "min_price": 200000,
+      "max_price": 345000
+    },
+    {
+      "year": 2018,
+      "count": 11,
+      "median_price": 292500,
+      "avg_price": 284793,
+      "min_price": 172225,
+      "max_price": 372000
+    },
+    {
+      "year": 2019,
+      "count": 10,
+      "median_price": 252500,
+      "avg_price": 253000,
+      "min_price": 215000,
+      "max_price": 287000
+    },
+    {
+      "year": 2020,
+      "count": 15,
+      "median_price": 260000,
+      "avg_price": 263600,
+      "min_price": 205000,
+      "max_price": 425000
+    },
+    {
+      "year": 2021,
+      "count": 9,
+      "median_price": 291000,
+      "avg_price": 297911,
+      "min_price": 227000,
+      "max_price": 362200
+    },
+    {
+      "year": 2022,
+      "count": 14,
+      "median_price": 308000,
+      "avg_price": 321357,
+      "min_price": 262000,
+      "max_price": 486000
+    },
+    {
+      "year": 2023,
+      "count": 10,
+      "median_price": 323500,
+      "avg_price": 328550,
+      "min_price": 241000,
+      "max_price": 395000
+    },
+    {
+      "year": 2024,
+      "count": 9,
+      "median_price": 370000,
+      "avg_price": 359556,
+      "min_price": 220000,
+      "max_price": 465000
+    },
+    {
+      "year": 2025,
+      "count": 11,
+      "median_price": 365000,
+      "avg_price": 394364,
+      "min_price": 323000,
+      "max_price": 528000
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 322250,
+      "avg_price": 344083,
+      "min_price": 250000,
+      "max_price": 450000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-09",
+      "address": "347 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 250000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12E89Y"
+    },
+    {
+      "date": "2026-05-14",
+      "address": "332 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12H6C6"
+    },
+    {
+      "date": "2026-05-14",
+      "address": "332 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "D12H6C6"
+    },
+    {
+      "date": "2026-04-28",
+      "address": "203 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12T8X6"
+    },
+    {
+      "date": "2026-01-28",
+      "address": "252 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 369500,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12VFW6"
+    },
+    {
+      "date": "2026-01-13",
+      "address": "75 KILDARE ROAD, CRUMLIN, DUBLIN 12",
+      "price": 445000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12H7R6"
+    },
+    {
+      "date": "2025-12-05",
+      "address": "346 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 357000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D12X06N"
+    },
+    {
+      "date": "2025-11-26",
+      "address": "201 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 340000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D12E2W1"
+    },
+    {
+      "date": "2025-08-01",
+      "address": "313 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 323000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12Y1K0"
+    },
+    {
+      "date": "2025-07-31",
+      "address": "334A KILDARE ROAD, CRUMLIN, DUBLIN 12",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E2V9"
+    },
+    {
+      "date": "2025-07-29",
+      "address": "50 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 528000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12NPW0"
+    },
+    {
+      "date": "2025-07-17",
+      "address": "248 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 365000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12V2T2"
+    },
+    {
+      "date": "2025-07-03",
+      "address": "346 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 410000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D12X06N"
+    },
+    {
+      "date": "2025-05-02",
+      "address": "276 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 420000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12H3K8"
+    },
+    {
+      "date": "2025-04-08",
+      "address": "310 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12X9F8"
+    },
+    {
+      "date": "2025-03-28",
+      "address": "385 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 400000,
+      "bedrooms": 2,
+      "propertyType": null,
+      "eircode": "D12X0P4"
+    },
+    {
+      "date": "2025-02-13",
+      "address": "170 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 330000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12W2R6"
+    },
+    {
+      "date": "2024-11-15",
+      "address": "55 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12C6P8"
+    },
+    {
+      "date": "2024-11-12",
+      "address": "107 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 321000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P5N0"
+    },
+    {
+      "date": "2024-10-17",
+      "address": "145 KILDARE ROAD, CRUMLIN, DUBLIN 12",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P6P3"
+    },
+    {
+      "date": "2024-10-02",
+      "address": "220 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12DRN3"
+    },
+    {
+      "date": "2024-09-16",
+      "address": "191 KILDARE RD, CRUMLIN, DUBLIN",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12X6Y2"
+    },
+    {
+      "date": "2024-08-15",
+      "address": "54 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12H7XC"
+    },
+    {
+      "date": "2024-08-08",
+      "address": "258 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12H2W5"
+    },
+    {
+      "date": "2024-04-15",
+      "address": "309 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y7W4"
+    },
+    {
+      "date": "2024-01-02",
+      "address": "147 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E7P2"
+    },
+    {
+      "date": "2023-10-27",
+      "address": "93 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12H5K6"
+    },
+    {
+      "date": "2023-07-17",
+      "address": "9A KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 327000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12VW80"
+    },
+    {
+      "date": "2023-07-07",
+      "address": "300 KILDARE ROAD, CRUMLIN, DUBLIN 12",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12FC2P"
+    },
+    {
+      "date": "2023-06-30",
+      "address": "17 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 241000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12W5P1"
+    },
+    {
+      "date": "2023-06-06",
+      "address": "3 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 392501,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12W8H1"
+    },
+    {
+      "date": "2023-04-26",
+      "address": "85 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12R7F6"
+    },
+    {
+      "date": "2023-04-06",
+      "address": "90 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E4C6"
+    },
+    {
+      "date": "2023-02-23",
+      "address": "158 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12NA7N"
+    },
+    {
+      "date": "2023-02-14",
+      "address": "9 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12YK4K"
+    },
+    {
+      "date": "2023-02-02",
+      "address": "11 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P8Y4"
+    },
+    {
+      "date": "2022-11-11",
+      "address": "380 KILDARE RD, CRUMLIN, DUBLIN",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12X6V3"
+    },
+    {
+      "date": "2022-11-09",
+      "address": "95 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 338000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y5V2"
+    },
+    {
+      "date": "2022-07-13",
+      "address": "115 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y7P8"
+    },
+    {
+      "date": "2022-06-23",
+      "address": "1 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12C8W2"
+    },
+    {
+      "date": "2022-06-10",
+      "address": "165 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12W1X2"
+    },
+    {
+      "date": "2022-06-01",
+      "address": "374 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 301000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12H2YD"
+    },
+    {
+      "date": "2022-05-11",
+      "address": "137 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 486000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12C2Y3"
+    },
+    {
+      "date": "2022-04-07",
+      "address": "317 KILDARE ROAD, CRUMLIN, DUBLIN 12",
+      "price": 262000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y7Y3"
+    },
+    {
+      "date": "2022-03-16",
+      "address": "311 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12W5X6"
+    },
+    {
+      "date": "2022-03-03",
+      "address": "182 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12V5Y9"
+    },
+    {
+      "date": "2022-02-28",
+      "address": "82 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12N5P5"
+    },
+    {
+      "date": "2022-01-26",
+      "address": "304 KILDARE RD, CRUMLIN, DUBLIN",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12RFF9"
+    },
+    {
+      "date": "2022-01-26",
+      "address": "318 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 297000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12T9C6"
+    },
+    {
+      "date": "2022-01-18",
+      "address": "350 KILDARE RD, CRUMLIN, DUBLIN CITY",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E5W7"
+    }
+  ],
+  "totalTransactions": 156
+}

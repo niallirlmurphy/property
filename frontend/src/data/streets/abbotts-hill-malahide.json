@@ -1,0 +1,265 @@
+{
+  "slug": "abbotts-hill-malahide",
+  "stats": {
+    "count": 20,
+    "median": 1970000,
+    "avg": 2062400,
+    "min": 1150000,
+    "max": 3675000,
+    "firstYear": 2013,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 2100000,
+      "avg_price": 2100000,
+      "min_price": 2100000,
+      "max_price": 2100000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 2300000,
+      "avg_price": 2300000,
+      "min_price": 2300000,
+      "max_price": 2300000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1150000,
+      "avg_price": 1150000,
+      "min_price": 1150000,
+      "max_price": 1150000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1750000,
+      "avg_price": 1750000,
+      "min_price": 1400000,
+      "max_price": 2100000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 2147500,
+      "avg_price": 2147500,
+      "min_price": 1900000,
+      "max_price": 2395000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1634000,
+      "avg_price": 1634000,
+      "min_price": 1450000,
+      "max_price": 1818000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1630000,
+      "avg_price": 1630000,
+      "min_price": 1630000,
+      "max_price": 1630000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 2150000,
+      "avg_price": 2150000,
+      "min_price": 1900000,
+      "max_price": 2400000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 2150000,
+      "avg_price": 2133333,
+      "min_price": 1650000,
+      "max_price": 2600000
+    },
+    {
+      "year": 2024,
+      "count": 4,
+      "median_price": 1945000,
+      "avg_price": 2157500,
+      "min_price": 1740000,
+      "max_price": 3000000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 3675000,
+      "avg_price": 3675000,
+      "min_price": 3675000,
+      "max_price": 3675000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-02-04",
+      "address": "39 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 3675000,
+      "bedrooms": 6,
+      "propertyType": "detached",
+      "eircode": "K36E190"
+    },
+    {
+      "date": "2024-10-03",
+      "address": "18 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 1850000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "K36PX60"
+    },
+    {
+      "date": "2024-09-30",
+      "address": "22 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 2040000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "K36H046"
+    },
+    {
+      "date": "2024-08-01",
+      "address": "3 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 1740000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "K36FP38"
+    },
+    {
+      "date": "2024-04-11",
+      "address": "35 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 3000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36TV08"
+    },
+    {
+      "date": "2023-10-31",
+      "address": "29 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 2150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36RT91"
+    },
+    {
+      "date": "2023-03-27",
+      "address": "27 ABBOTTS HILL, MALAHIDE, CO DUBLIN",
+      "price": 2600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36XY47"
+    },
+    {
+      "date": "2023-02-01",
+      "address": "3 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 1650000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "K36FP38"
+    },
+    {
+      "date": "2022-11-15",
+      "address": "9 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36HX07"
+    },
+    {
+      "date": "2022-02-04",
+      "address": "37 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 2400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36XY65"
+    },
+    {
+      "date": "2021-03-11",
+      "address": "16 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 1630000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-05",
+      "address": "20 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 1818000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-21",
+      "address": "6 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-01",
+      "address": "21 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-31",
+      "address": "26 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 2395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-31",
+      "address": "16 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-28",
+      "address": "34 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 2100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-30",
+      "address": "18 ABBOTTS HILL, MALAHIDE, DUBLIN",
+      "price": 1150000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "K36PX60"
+    },
+    {
+      "date": "2014-05-16",
+      "address": "27 ABBOTTS HILL, MALAHIDE, CO DUBLIN",
+      "price": 2300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36XY47"
+    },
+    {
+      "date": "2013-04-10",
+      "address": "25 Abbotts Hill, Malahide",
+      "price": 2100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 20
+}

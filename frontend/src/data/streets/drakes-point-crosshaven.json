@@ -1,0 +1,513 @@
+{
+  "slug": "drakes-point-crosshaven",
+  "stats": {
+    "count": 165,
+    "median": 290749,
+    "avg": 301237,
+    "min": 123348,
+    "max": 625000,
+    "firstYear": 2014,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 123348,
+      "avg_price": 123348,
+      "min_price": 123348,
+      "max_price": 123348
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 287647,
+      "avg_price": 287647,
+      "min_price": 287647,
+      "max_price": 287647
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 295154,
+      "avg_price": 295154,
+      "min_price": 281938,
+      "max_price": 308370
+    },
+    {
+      "year": 2018,
+      "count": 27,
+      "median_price": 286344,
+      "avg_price": 270493,
+      "min_price": 193831,
+      "max_price": 465000
+    },
+    {
+      "year": 2019,
+      "count": 42,
+      "median_price": 295182,
+      "avg_price": 271405,
+      "min_price": 202643,
+      "max_price": 338000
+    },
+    {
+      "year": 2020,
+      "count": 22,
+      "median_price": 303965,
+      "avg_price": 312224,
+      "min_price": 242291,
+      "max_price": 462500
+    },
+    {
+      "year": 2021,
+      "count": 38,
+      "median_price": 264317,
+      "avg_price": 279190,
+      "min_price": 220263,
+      "max_price": 418502
+    },
+    {
+      "year": 2022,
+      "count": 21,
+      "median_price": 310000,
+      "avg_price": 351728,
+      "min_price": 226872,
+      "max_price": 542000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 625000,
+      "avg_price": 625000,
+      "min_price": 625000,
+      "max_price": 625000
+    },
+    {
+      "year": 2024,
+      "count": 5,
+      "median_price": 460000,
+      "avg_price": 417000,
+      "min_price": 315000,
+      "max_price": 515000
+    },
+    {
+      "year": 2025,
+      "count": 4,
+      "median_price": 510000,
+      "avg_price": 492750,
+      "min_price": 420000,
+      "max_price": 531000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 455000,
+      "avg_price": 455000,
+      "min_price": 455000,
+      "max_price": 455000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-22",
+      "address": "165 DRAKES POINT, CROSSHAVEN, CO CORK",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43VC42"
+    },
+    {
+      "date": "2025-12-16",
+      "address": "11 DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 490000,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "P43HP23"
+    },
+    {
+      "date": "2025-11-13",
+      "address": "66 DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 420000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "P43PF83"
+    },
+    {
+      "date": "2025-09-11",
+      "address": "92 DRAKES POINT, CROSSHAVEN, CO. CORK",
+      "price": 530000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "P43A667"
+    },
+    {
+      "date": "2025-03-14",
+      "address": "128 DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 531000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "P43A392"
+    },
+    {
+      "date": "2024-10-03",
+      "address": "139 DRAKES POINT, CROSSHAVEN, CO. CORK",
+      "price": 515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43YV99"
+    },
+    {
+      "date": "2024-08-16",
+      "address": "135 DRAKES POINT, CROSSHAVEN, CO CORK",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43EE70"
+    },
+    {
+      "date": "2024-07-01",
+      "address": "16 DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43T256"
+    },
+    {
+      "date": "2024-05-20",
+      "address": "4  DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43F589"
+    },
+    {
+      "date": "2024-05-14",
+      "address": "62 DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43K120"
+    },
+    {
+      "date": "2023-04-27",
+      "address": "117 DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 625000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43WF40"
+    },
+    {
+      "date": "2022-12-19",
+      "address": "176 DRAKES POINT, CROSSHAVEN, CO CORK",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43DW67"
+    },
+    {
+      "date": "2022-10-28",
+      "address": "82 DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43YK54"
+    },
+    {
+      "date": "2022-06-29",
+      "address": "120 Drakes Point, Crosshaven",
+      "price": 436123,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-22",
+      "address": "119 Drakes Point, Crosshaven",
+      "price": 431718,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-04-26",
+      "address": "117 Drakes Point, Crosshaven, Co. Cork",
+      "price": 431717,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-04-25",
+      "address": "118 Drakes Point, Crosshaven",
+      "price": 431718,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-04-14",
+      "address": "163 DRAKES POINT, CROSSHAVEN, CO. CORK",
+      "price": 235280,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-29",
+      "address": "115 Drakes Point, Crosshaven",
+      "price": 496476,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-28",
+      "address": "116 Drakes Point, Crosshaven, Co. Cork",
+      "price": 431718,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-11",
+      "address": "171 Drakes Point, Crosshaven, Cork",
+      "price": 288987,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-11",
+      "address": "88 DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43HD52"
+    },
+    {
+      "date": "2022-03-08",
+      "address": "170 Drakes Point, Crosshaven, Co. Cork",
+      "price": 231276,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-22",
+      "address": "169 Drakes Point, Crosshaven, Co. Cork",
+      "price": 237885,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-11",
+      "address": "105 Drakes Point, Crosshaven, Cork",
+      "price": 542000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-10",
+      "address": "167 Drakes Point, Crosshaven",
+      "price": 229075,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-07",
+      "address": "114 Drakes Point, Crosshaven, Co. Cork",
+      "price": 427311,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-02",
+      "address": "165 DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 270925,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-01-28",
+      "address": "168 Drakes Point, Crosshaven, Co. Cork",
+      "price": 273127,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-01-21",
+      "address": "166 Drakes Point, Crosshaven, Co. Cork",
+      "price": 229075,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-01-17",
+      "address": "162 Drakes Point, Crosshaven",
+      "price": 226872,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-01-13",
+      "address": "157 Drakes Point, Crosshaven, Cork",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-23",
+      "address": "87  DRAKES  POINT, CROSSHAVEN, COUNTY CORK",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43DH24"
+    },
+    {
+      "date": "2021-12-21",
+      "address": "123 Drakes Point, Crosshaven",
+      "price": 301762,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-21",
+      "address": "122 Drakes Point, Crosshaven",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-09",
+      "address": "164 DRAKES POINT, Crosshaven, Co. Cork",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-06",
+      "address": "158 Drakes Point, Crosshaven, Cork",
+      "price": 224670,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-03",
+      "address": "113 Drakes Point, Crosshaven, Co. Cork",
+      "price": 418502,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-02",
+      "address": "159 Drakes Point, Crosshaven",
+      "price": 224671,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-26",
+      "address": "112 Drakes Point, Crosshaven, Co. Cork",
+      "price": 418502,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-24",
+      "address": "111 Drakes Point, Crosshaven, County Cork",
+      "price": 414096,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-22",
+      "address": "185 drakes point, crosshaven",
+      "price": 281939,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-05",
+      "address": "184 Drakes Point, Crosshaven",
+      "price": 226872,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-28",
+      "address": "151 Drakes Point, Crosshaven",
+      "price": 220263,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43FH56"
+    },
+    {
+      "date": "2021-10-26",
+      "address": "179 Drakes Point, Crosshaven",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-08",
+      "address": "155 Drakes Point, Crosshaven, Co. Cork",
+      "price": 222466,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-04",
+      "address": "180  Drakes Point, Crosshaven, Co Cork",
+      "price": 224670,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-30",
+      "address": "181 Drakes Point, Crosshaven",
+      "price": 224669,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-30",
+      "address": "182 Drakes Point, Crosshaven",
+      "price": 274164,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-29",
+      "address": "153 Drakes Point, Crosshaven, Cork",
+      "price": 264316,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43F754"
+    }
+  ],
+  "totalTransactions": 165
+}

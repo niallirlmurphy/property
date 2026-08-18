@@ -1,0 +1,145 @@
+{
+  "slug": "raglan-road-ballsbridge",
+  "stats": {
+    "count": 10,
+    "median": 2837500,
+    "avg": 3650500,
+    "min": 905000,
+    "max": 10400000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 1850000,
+      "avg_price": 1960000,
+      "min_price": 905000,
+      "max_price": 3125000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 2300000,
+      "avg_price": 2300000,
+      "min_price": 2300000,
+      "max_price": 2300000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 4000000,
+      "avg_price": 4100000,
+      "min_price": 2800000,
+      "max_price": 5500000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 2750000,
+      "avg_price": 2750000,
+      "min_price": 2750000,
+      "max_price": 2750000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2875000,
+      "avg_price": 2875000,
+      "min_price": 2875000,
+      "max_price": 2875000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 10400000,
+      "avg_price": 10400000,
+      "min_price": 10400000,
+      "max_price": 10400000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-04-02",
+      "address": "6 RAGLAN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 10400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C8N8"
+    },
+    {
+      "date": "2025-06-26",
+      "address": "7 RAGLAN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2875000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D04V0N0"
+    },
+    {
+      "date": "2023-04-28",
+      "address": "11 RAGLAN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V4P1"
+    },
+    {
+      "date": "2022-07-21",
+      "address": "17 RAGLAN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 5500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C3C2"
+    },
+    {
+      "date": "2022-05-23",
+      "address": "1 RAGLAN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 4000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04CV40"
+    },
+    {
+      "date": "2022-03-08",
+      "address": "4 RAGLAN RD, BALLSBRIDGE, DUBLIN CITY",
+      "price": 2800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X2K2"
+    },
+    {
+      "date": "2013-12-13",
+      "address": "31 RAGLAN RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-06-08",
+      "address": "4 Raglan Road, Ballsbridge",
+      "price": 1850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-05-02",
+      "address": "3 Raglan Road, Ballsbridge",
+      "price": 905000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-01-13",
+      "address": "33 Raglan Road, Ballsbridge",
+      "price": 3125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

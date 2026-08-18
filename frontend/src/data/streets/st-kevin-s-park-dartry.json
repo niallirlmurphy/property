@@ -1,0 +1,305 @@
+{
+  "slug": "st-kevin-s-park-dartry",
+  "stats": {
+    "count": 21,
+    "median": 2050000,
+    "avg": 2184048,
+    "min": 925000,
+    "max": 3500000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1550000,
+      "avg_price": 1550000,
+      "min_price": 1550000,
+      "max_price": 1550000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1440000,
+      "avg_price": 1440000,
+      "min_price": 1440000,
+      "max_price": 1440000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1505000,
+      "avg_price": 1505000,
+      "min_price": 1505000,
+      "max_price": 1505000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 1975000,
+      "avg_price": 1650000,
+      "min_price": 925000,
+      "max_price": 2050000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 3500000,
+      "avg_price": 3500000,
+      "min_price": 3500000,
+      "max_price": 3500000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 2500000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1650000,
+      "avg_price": 1650000,
+      "min_price": 1650000,
+      "max_price": 1650000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1567500,
+      "avg_price": 1567500,
+      "min_price": 1210000,
+      "max_price": 1925000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1950000,
+      "avg_price": 1950000,
+      "min_price": 1950000,
+      "max_price": 1950000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2750000,
+      "avg_price": 2750000,
+      "min_price": 2750000,
+      "max_price": 2750000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 2950000,
+      "avg_price": 2950000,
+      "min_price": 2900000,
+      "max_price": 3000000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 2200000,
+      "avg_price": 2200000,
+      "min_price": 2200000,
+      "max_price": 2200000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 2837500,
+      "avg_price": 2837500,
+      "min_price": 2275000,
+      "max_price": 3400000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 2575000,
+      "avg_price": 2575000,
+      "min_price": 2500000,
+      "max_price": 2650000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 2010000,
+      "avg_price": 2010000,
+      "min_price": 2010000,
+      "max_price": 2010000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-10",
+      "address": "50 ST KEVINS PARK, DARTRY, DUBLIN",
+      "price": 2010000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06C5P8"
+    },
+    {
+      "date": "2025-10-31",
+      "address": "12 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 2650000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06TD35"
+    },
+    {
+      "date": "2025-05-08",
+      "address": "33 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 2500000,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": "D06PH27"
+    },
+    {
+      "date": "2024-11-12",
+      "address": "41 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 2275000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06HF54"
+    },
+    {
+      "date": "2024-10-30",
+      "address": "51 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 3400000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D06R5X5"
+    },
+    {
+      "date": "2023-04-05",
+      "address": "39 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 2200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06N998"
+    },
+    {
+      "date": "2022-12-14",
+      "address": "15 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 2900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06HW63"
+    },
+    {
+      "date": "2022-07-19",
+      "address": "24 ST KEVINS PARK, DARTRY, DUBLIN",
+      "price": 3000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06V8V0"
+    },
+    {
+      "date": "2021-07-16",
+      "address": "24 ST KEVINS PARK, DARTRY, DUBLIN",
+      "price": 2750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06V8V0"
+    },
+    {
+      "date": "2020-01-31",
+      "address": "4 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 1950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-02",
+      "address": "32 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 1925000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-23",
+      "address": "19 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 1210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-09",
+      "address": "38 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 1650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-30",
+      "address": "25 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-27",
+      "address": "30 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 3500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-09-29",
+      "address": "31 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 1975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-07-11",
+      "address": "49 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 2050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-06-06",
+      "address": "21 ST KEVINS PARK, DARTRY, DUBLIN CITY",
+      "price": 925000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-07-04",
+      "address": "40 St Kevins Park, Dartry",
+      "price": 1505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-09-09",
+      "address": "16 St Kevins Park, Dartry, Dublin 6",
+      "price": 1440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-05-31",
+      "address": "52 St Kevins Park, Dartry",
+      "price": 1550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 21
+}

@@ -1,0 +1,121 @@
+{
+  "slug": "temple-gardens-rathmines",
+  "stats": {
+    "count": 8,
+    "median": 4200000,
+    "avg": 4259375,
+    "min": 1100000,
+    "max": 6500000,
+    "firstYear": 2013,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 4500000,
+      "avg_price": 4500000,
+      "min_price": 4500000,
+      "max_price": 4500000
+    },
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 5850000,
+      "avg_price": 4483333,
+      "min_price": 1100000,
+      "max_price": 6500000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 3900000,
+      "avg_price": 3900000,
+      "min_price": 3900000,
+      "max_price": 3900000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 5000000,
+      "avg_price": 5000000,
+      "min_price": 5000000,
+      "max_price": 5000000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 3612500,
+      "avg_price": 3612500,
+      "min_price": 3575000,
+      "max_price": 3650000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-26",
+      "address": "11 TEMPLE GARDENS, RATHMINES, DUBLIN 6",
+      "price": 3575000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06E5W4"
+    },
+    {
+      "date": "2026-05-01",
+      "address": "24 TEMPLE GARDENS, RATHMINES, DUBLIN 6",
+      "price": 3650000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06A780"
+    },
+    {
+      "date": "2025-03-31",
+      "address": "20 TEMPLE GARDENS, RATHMINES, DUBLIN 6",
+      "price": 5000000,
+      "bedrooms": 6,
+      "propertyType": "detached",
+      "eircode": "D06NV63"
+    },
+    {
+      "date": "2019-11-12",
+      "address": "15 TEMPLE GARDENS, RATHMINES, DUBLIN 6",
+      "price": 3900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-28",
+      "address": "26 TEMPLE GARDENS, RATHMINES, DUBLIN 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-01",
+      "address": "1 TEMPLE GARDENS, RATHMINES, DUBLIN 6",
+      "price": 5850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-04-22",
+      "address": "5 TEMPLE GARDENS, RATHMINES, DUBLIN 6",
+      "price": 6500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-11-28",
+      "address": "23 TEMPLE GARDENS, RATHMINES, DUBLIN 6",
+      "price": 4500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 8
+}

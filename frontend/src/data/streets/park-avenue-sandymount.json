@@ -1,0 +1,393 @@
+{
+  "slug": "park-avenue-sandymount",
+  "stats": {
+    "count": 33,
+    "median": 2700000,
+    "avg": 2384182,
+    "min": 10000,
+    "max": 4500000,
+    "firstYear": 2011,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1705000,
+      "avg_price": 1705000,
+      "min_price": 1705000,
+      "max_price": 1705000
+    },
+    {
+      "year": 2012,
+      "count": 5,
+      "median_price": 2600000,
+      "avg_price": 1971600,
+      "min_price": 858000,
+      "max_price": 2800000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 2275000,
+      "avg_price": 2275000,
+      "min_price": 1500000,
+      "max_price": 3050000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1050000,
+      "avg_price": 1050000,
+      "min_price": 1050000,
+      "max_price": 1050000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 2132500,
+      "avg_price": 2132500,
+      "min_price": 1465000,
+      "max_price": 2800000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 3439000,
+      "avg_price": 3439000,
+      "min_price": 3128000,
+      "max_price": 3750000
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 3675000,
+      "avg_price": 3556250,
+      "min_price": 2375000,
+      "max_price": 4500000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 2800000,
+      "avg_price": 2800000,
+      "min_price": 2700000,
+      "max_price": 2900000
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 912500,
+      "avg_price": 958750,
+      "min_price": 10000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 2770000,
+      "avg_price": 3256667,
+      "min_price": 2500000,
+      "max_price": 4500000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 2750000,
+      "avg_price": 2750000,
+      "min_price": 2750000,
+      "max_price": 2750000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 1370000,
+      "avg_price": 2061667,
+      "min_price": 1090000,
+      "max_price": 3725000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 2003500,
+      "avg_price": 2003500,
+      "min_price": 757000,
+      "max_price": 3250000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 4000000,
+      "avg_price": 4000000,
+      "min_price": 4000000,
+      "max_price": 4000000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-02-18",
+      "address": "31 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 4000000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D04R156"
+    },
+    {
+      "date": "2024-12-20",
+      "address": "40 PARK AVENUE, SANDYMOUNT, DUBLIN 4",
+      "price": 757000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-04-29",
+      "address": "51 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 3250000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04X2E1"
+    },
+    {
+      "date": "2023-09-01",
+      "address": "38 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 1090000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C6T1"
+    },
+    {
+      "date": "2023-04-13",
+      "address": "50 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 1370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04YW01"
+    },
+    {
+      "date": "2023-03-31",
+      "address": "80 PARK AVENUE, SANDYMOUNT, DUBLIN 4",
+      "price": 3725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V3Y7"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "35 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04HY40"
+    },
+    {
+      "date": "2021-10-08",
+      "address": "29 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 4500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04RY63"
+    },
+    {
+      "date": "2021-08-05",
+      "address": "45 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04F2A3"
+    },
+    {
+      "date": "2021-01-15",
+      "address": "63 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2770000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-09",
+      "address": "56 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-08",
+      "address": "11 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-10",
+      "address": "54 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 10000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-03",
+      "address": "48 PARK AVENUE, SANDYMOUNT, DUBLIN 4",
+      "price": 1175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-29",
+      "address": "31 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2700000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D04R156"
+    },
+    {
+      "date": "2019-01-22",
+      "address": "78 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-12",
+      "address": "29 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 3250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04RY63"
+    },
+    {
+      "date": "2018-09-25",
+      "address": "59 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-27",
+      "address": "81 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 4500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-10",
+      "address": "11 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 4100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-19",
+      "address": "69 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 3750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-26",
+      "address": "76 PARK AVENUE, SANDYMOUNT, DUBLIN 4",
+      "price": 3128000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-22",
+      "address": "68 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 2800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-06-22",
+      "address": "23 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 1465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-05-06",
+      "address": "2 Park Avenue, Sandymount",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-10-09",
+      "address": "72 Park Avenue, Sandymount",
+      "price": 3050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-04-03",
+      "address": "33 Park Avenue, Sandymount, Dublin 4",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-12-20",
+      "address": "30A Park Avenue, Sandymount",
+      "price": 858000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-11-15",
+      "address": "34 Park Avenue, Sandymount",
+      "price": 875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-07-19",
+      "address": "71 Park Avenue, Sandymount",
+      "price": 2600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-06-07",
+      "address": "79 Park Avenue, Sandymount",
+      "price": 2800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-04-27",
+      "address": "70 Park Avenue, Sandymount",
+      "price": 2725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-10-20",
+      "address": "37 Park Avenue, Sandymount, Dublin 4",
+      "price": 1705000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 33
+}

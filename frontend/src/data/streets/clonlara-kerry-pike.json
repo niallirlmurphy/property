@@ -1,0 +1,497 @@
+{
+  "slug": "clonlara-kerry-pike",
+  "stats": {
+    "count": 147,
+    "median": 330396,
+    "avg": 376058,
+    "min": 255174,
+    "max": 820000,
+    "firstYear": 2017,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 286344,
+      "avg_price": 286344,
+      "min_price": 286344,
+      "max_price": 286344
+    },
+    {
+      "year": 2018,
+      "count": 33,
+      "median_price": 295154,
+      "avg_price": 324247,
+      "min_price": 255174,
+      "max_price": 458438
+    },
+    {
+      "year": 2019,
+      "count": 37,
+      "median_price": 306607,
+      "avg_price": 335821,
+      "min_price": 256721,
+      "max_price": 462555
+    },
+    {
+      "year": 2020,
+      "count": 38,
+      "median_price": 321586,
+      "avg_price": 343950,
+      "min_price": 277532,
+      "max_price": 453744
+    },
+    {
+      "year": 2021,
+      "count": 21,
+      "median_price": 455947,
+      "avg_price": 409504,
+      "min_price": 283700,
+      "max_price": 515418
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 465000,
+      "avg_price": 530667,
+      "min_price": 432000,
+      "max_price": 695000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 700000,
+      "avg_price": 677333,
+      "min_price": 625000,
+      "max_price": 707000
+    },
+    {
+      "year": 2024,
+      "count": 5,
+      "median_price": 635000,
+      "avg_price": 590200,
+      "min_price": 440000,
+      "max_price": 700000
+    },
+    {
+      "year": 2025,
+      "count": 4,
+      "median_price": 514000,
+      "avg_price": 563500,
+      "min_price": 481000,
+      "max_price": 745000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 685000,
+      "avg_price": 685000,
+      "min_price": 550000,
+      "max_price": 820000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-29",
+      "address": "109 CLONLARA, KERRY PIKE, CORK",
+      "price": 820000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23P30X"
+    },
+    {
+      "date": "2026-01-12",
+      "address": "37 CLONLARA, KERRY PIKE, CO. CORK",
+      "price": 550000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "T23A6KN"
+    },
+    {
+      "date": "2025-10-06",
+      "address": "12 CLONLARA, KERRY PIKE, CORK",
+      "price": 510000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "T23YX5Y"
+    },
+    {
+      "date": "2025-08-14",
+      "address": "125 CLONLARA, KERRY PIKE, CORK",
+      "price": 745000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-13",
+      "address": "24 CLONLARA, KERRY PIKE, CO CORK",
+      "price": 481000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "T23Y3YA"
+    },
+    {
+      "date": "2025-07-31",
+      "address": "79 CLONLARA, KERRY PIKE, CORK",
+      "price": 518000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "T23HD0X"
+    },
+    {
+      "date": "2024-12-05",
+      "address": "128 CLONLARA, KERRY PIKE, CORK",
+      "price": 670000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23KN8H"
+    },
+    {
+      "date": "2024-05-03",
+      "address": "113 CLONLARA, KERRY PIKE, CO CORK",
+      "price": 635000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23WY0A"
+    },
+    {
+      "date": "2024-05-02",
+      "address": "65 CLONLARA, KERRY PIKE, CORK",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23A7XP"
+    },
+    {
+      "date": "2024-03-12",
+      "address": "62  CLONLARA, KERRY PIKE, COUNTY  CORK",
+      "price": 506000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23XH0F"
+    },
+    {
+      "date": "2024-03-12",
+      "address": "74 CLONLARA, KERRY PIKE, COUNTY CORK",
+      "price": 700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23PKR8"
+    },
+    {
+      "date": "2023-12-21",
+      "address": "111 CLONLARA, KERRY PIKE, CORK",
+      "price": 707000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23HX4F"
+    },
+    {
+      "date": "2023-09-19",
+      "address": "17 CLONLARA, KERRY PIKE, CO. CORK",
+      "price": 625000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23CH2X"
+    },
+    {
+      "date": "2023-07-25",
+      "address": "34 CLONLARA, KERRY PIKE, CO. CORK",
+      "price": 700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23KN5E"
+    },
+    {
+      "date": "2022-09-20",
+      "address": "70 CLONLARA, KERRY PIKE, CORK",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23E8PA"
+    },
+    {
+      "date": "2022-08-05",
+      "address": "77 CLONLARA, KERRY PIKE, CORK",
+      "price": 695000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23H6PY"
+    },
+    {
+      "date": "2022-03-14",
+      "address": "27 CLONLARA, KERRY PIKE, CORK",
+      "price": 432000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23ETW7"
+    },
+    {
+      "date": "2021-10-22",
+      "address": "127 Clonlara, Kerry Pike, Co. Cork",
+      "price": 484581,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-16",
+      "address": "124 Clonlara, Kerry Pike, Cork",
+      "price": 466960,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-02",
+      "address": "125 Clonlara, Kerry Pike, Cork",
+      "price": 483158,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2021-08-26",
+      "address": "123 Clonlara, Kerry Pike",
+      "price": 466960,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-16",
+      "address": "96 CLONLARA, KERRY PIKE, CORK",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23VYA5"
+    },
+    {
+      "date": "2021-07-13",
+      "address": "122 Clonlara, Kerry Pike, Cork",
+      "price": 458149,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-08",
+      "address": "121 Clonlara, Kerry Pike",
+      "price": 426977,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-03",
+      "address": "6 Clonlara, Kerry Pike, Co. Cork",
+      "price": 515418,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-14",
+      "address": "143 Clonlara, Kerry Pike, Cork",
+      "price": 306167,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-13",
+      "address": "144 Clonlara, Kerry Pike, Co. Cork",
+      "price": 475771,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-19",
+      "address": "142  Clonlara, Kerry Pike",
+      "price": 303964,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-15",
+      "address": "10 Clonlara, Kerry Pike, Co. Cork",
+      "price": 458150,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-06",
+      "address": "141 Clonlara, Kerry Pike, Cork",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-26",
+      "address": "105  Clonlara, Kerry Pike",
+      "price": 475770,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-08",
+      "address": "109 Clonlara, Kerry Pike, Cork",
+      "price": 455947,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23P30X"
+    },
+    {
+      "date": "2021-03-02",
+      "address": "138 Clonlara, Kerry Pike, Co. Cork",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-25",
+      "address": "137 Clonlara, Kerry Pike, Cork",
+      "price": 283700,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-24",
+      "address": "139 Clonlara, Kerry Pike, Cork",
+      "price": 328193,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-27",
+      "address": "111 Clonlara, Kerry Pike",
+      "price": 460351,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-25",
+      "address": "132 Clonlara, Kerry Pike",
+      "price": 325911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-05",
+      "address": "129 Clonlara, Kerry Pike",
+      "price": 414096,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-18",
+      "address": "136 Clonlara, Kerry Pike, Cork",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-17",
+      "address": "133 Clonlara, Kerry Pike",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-16",
+      "address": "131 Clonlara, Kerry Pike",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-11",
+      "address": "135 Clonlara, Kerry Pike",
+      "price": 299560,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-08",
+      "address": "113 Clonlara, Kerry Pike",
+      "price": 416300,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-08",
+      "address": "128 Clonlara, Kerry PIke",
+      "price": 409692,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-08",
+      "address": "134 Clonlara, Kerry Pike, Cork",
+      "price": 294100,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-01",
+      "address": "130 Clonlara, Kerry Pike, County Cork",
+      "price": 325990,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-30",
+      "address": "114 Clonlara, Kerry Pike",
+      "price": 416299,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-05",
+      "address": "108  Clonlara, Kerry Pike, Cork",
+      "price": 453743,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-30",
+      "address": "64 CLONLARA, KERRY PIKE, CO CORK",
+      "price": 314000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-11",
+      "address": "1 Clonlara, Kerry Pike",
+      "price": 453744,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 147
+}

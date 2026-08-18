@@ -1,0 +1,169 @@
+{
+  "slug": "leeson-park-dublin-6",
+  "stats": {
+    "count": 12,
+    "median": 1875000,
+    "avg": 1707250,
+    "min": 170000,
+    "max": 3300000,
+    "firstYear": 2013,
+    "lastYear": 2023
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 4,
+      "median_price": 2050000,
+      "avg_price": 2062500,
+      "min_price": 1800000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1750000,
+      "avg_price": 1750000,
+      "min_price": 1750000,
+      "max_price": 1750000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1647000,
+      "avg_price": 1647000,
+      "min_price": 1647000,
+      "max_price": 1647000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1247500,
+      "avg_price": 1247500,
+      "min_price": 170000,
+      "max_price": 2325000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 2925000,
+      "avg_price": 2925000,
+      "min_price": 2550000,
+      "max_price": 3300000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 240000,
+      "avg_price": 240000,
+      "min_price": 240000,
+      "max_price": 240000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 255000,
+      "avg_price": 255000,
+      "min_price": 255000,
+      "max_price": 255000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2023-04-20",
+      "address": "21A LEESON PARK, DUBLIN 6",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-27",
+      "address": "21A LEESON PARK, DUBLIN 6",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-23",
+      "address": "23 LEESON PARK, DUBLIN 6, DUBLIN",
+      "price": 3300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-09",
+      "address": "27 LEESON PARK, DUBLIN 6",
+      "price": 2550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-08",
+      "address": "21A LEESON PARK, DUBLIN 6",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-25",
+      "address": "52 LEESON PARK, DUBLIN 6, DUBLIN",
+      "price": 2325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-03-11",
+      "address": "15 LEESON PARK, DUBLIN 6, DUBLIN",
+      "price": 1647000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-25",
+      "address": "55 LEESON PARK, DUBLIN 6, DUBLIN",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-10-17",
+      "address": "49 Leeson Park, Dublin 6",
+      "price": 2150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-08-07",
+      "address": "5 Leeson Park, Dublin 6",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-05-22",
+      "address": "1 Leeson Park, Dublin 6",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-05-14",
+      "address": "49  Leeson Park, Dublin 6",
+      "price": 1950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 12
+}

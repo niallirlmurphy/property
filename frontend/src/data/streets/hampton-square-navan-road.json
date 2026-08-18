@@ -1,0 +1,553 @@
+{
+  "slug": "hampton-square-navan-road",
+  "stats": {
+    "count": 139,
+    "median": 280000,
+    "avg": 332888,
+    "min": 137500,
+    "max": 2682500,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 195000,
+      "avg_price": 230000,
+      "min_price": 150000,
+      "max_price": 345000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 173000,
+      "avg_price": 173000,
+      "min_price": 173000,
+      "max_price": 173000
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 250000,
+      "avg_price": 250000,
+      "min_price": 250000,
+      "max_price": 250000
+    },
+    {
+      "year": 2013,
+      "count": 9,
+      "median_price": 180000,
+      "avg_price": 196889,
+      "min_price": 172000,
+      "max_price": 325000
+    },
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 223000,
+      "avg_price": 208600,
+      "min_price": 150000,
+      "max_price": 275000
+    },
+    {
+      "year": 2015,
+      "count": 7,
+      "median_price": 170000,
+      "avg_price": 180429,
+      "min_price": 155000,
+      "max_price": 253000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 177778,
+      "avg_price": 190639,
+      "min_price": 175000,
+      "max_price": 232000
+    },
+    {
+      "year": 2017,
+      "count": 8,
+      "median_price": 262500,
+      "avg_price": 254875,
+      "min_price": 210000,
+      "max_price": 280000
+    },
+    {
+      "year": 2018,
+      "count": 9,
+      "median_price": 262058,
+      "avg_price": 283840,
+      "min_price": 207500,
+      "max_price": 400000
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 247250,
+      "avg_price": 237479,
+      "min_price": 137500,
+      "max_price": 295000
+    },
+    {
+      "year": 2020,
+      "count": 38,
+      "median_price": 280000,
+      "avg_price": 296393,
+      "min_price": 225000,
+      "max_price": 405000
+    },
+    {
+      "year": 2021,
+      "count": 7,
+      "median_price": 313000,
+      "avg_price": 323282,
+      "min_price": 250000,
+      "max_price": 420000
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "median_price": 308000,
+      "avg_price": 308500,
+      "min_price": 250000,
+      "max_price": 368000
+    },
+    {
+      "year": 2023,
+      "count": 9,
+      "median_price": 337000,
+      "avg_price": 320500,
+      "min_price": 215000,
+      "max_price": 395000
+    },
+    {
+      "year": 2024,
+      "count": 15,
+      "median_price": 385000,
+      "avg_price": 745467,
+      "min_price": 210000,
+      "max_price": 2682500
+    },
+    {
+      "year": 2025,
+      "count": 5,
+      "median_price": 465000,
+      "avg_price": 495000,
+      "min_price": 425000,
+      "max_price": 577000
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 401000,
+      "avg_price": 420500,
+      "min_price": 326000,
+      "max_price": 608000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-03",
+      "address": "71 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 326000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07EDR9"
+    },
+    {
+      "date": "2026-06-18",
+      "address": "77 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 422000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D07AE94"
+    },
+    {
+      "date": "2026-05-27",
+      "address": "97 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 422000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D07XD5N"
+    },
+    {
+      "date": "2026-04-29",
+      "address": "26 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 608000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07X312"
+    },
+    {
+      "date": "2026-03-31",
+      "address": "175 HAMPTON SQUARE, NAVAN ROAD, DUBLIN 7",
+      "price": 365000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07C9NY"
+    },
+    {
+      "date": "2026-01-22",
+      "address": "57 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 380000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D07PC70"
+    },
+    {
+      "date": "2025-12-02",
+      "address": "60 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 443000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D07E2XY"
+    },
+    {
+      "date": "2025-11-14",
+      "address": "32 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 465000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D07N262"
+    },
+    {
+      "date": "2025-11-07",
+      "address": "1 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 565000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D07A500"
+    },
+    {
+      "date": "2025-07-23",
+      "address": "104 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 425000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D07V655"
+    },
+    {
+      "date": "2025-01-29",
+      "address": "22 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 577000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D07TP89"
+    },
+    {
+      "date": "2024-10-21",
+      "address": "31 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07YX40"
+    },
+    {
+      "date": "2024-10-01",
+      "address": "51 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07N88A"
+    },
+    {
+      "date": "2024-09-27",
+      "address": "52 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 451000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07YWF6"
+    },
+    {
+      "date": "2024-09-23",
+      "address": "120 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07RK8E"
+    },
+    {
+      "date": "2024-08-27",
+      "address": "244 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07VNK2"
+    },
+    {
+      "date": "2024-08-13",
+      "address": "129 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 1992500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D07CX28"
+    },
+    {
+      "date": "2024-08-13",
+      "address": "130 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 1975000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D07AE70"
+    },
+    {
+      "date": "2024-08-13",
+      "address": "131 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 2682500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D07TP90"
+    },
+    {
+      "date": "2024-07-25",
+      "address": "48 HAMPTON SQUARE, NAVAN ROAD, DUBLIN 7",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07K25D"
+    },
+    {
+      "date": "2024-06-26",
+      "address": "211 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07X3WD"
+    },
+    {
+      "date": "2024-04-17",
+      "address": "118 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 361000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07YY6R"
+    },
+    {
+      "date": "2024-03-28",
+      "address": "240 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07YWX4"
+    },
+    {
+      "date": "2024-03-08",
+      "address": "97 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 355000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D07XD5N"
+    },
+    {
+      "date": "2024-02-13",
+      "address": "61 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07EH5W"
+    },
+    {
+      "date": "2024-01-25",
+      "address": "17 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07HD77"
+    },
+    {
+      "date": "2023-10-24",
+      "address": "122 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07YH9H"
+    },
+    {
+      "date": "2023-10-10",
+      "address": "234 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07N5CY"
+    },
+    {
+      "date": "2023-10-03",
+      "address": "243 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07FYT9"
+    },
+    {
+      "date": "2023-09-13",
+      "address": "59 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 215000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07AHR3"
+    },
+    {
+      "date": "2023-08-31",
+      "address": "178 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07P94V"
+    },
+    {
+      "date": "2023-06-02",
+      "address": "157 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 337000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07WKH9"
+    },
+    {
+      "date": "2023-03-03",
+      "address": "223 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07W6NN"
+    },
+    {
+      "date": "2023-02-14",
+      "address": "APT 176 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D07EVX7"
+    },
+    {
+      "date": "2023-02-01",
+      "address": "125 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 347500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07R5DP"
+    },
+    {
+      "date": "2022-12-21",
+      "address": "104 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 290000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D07V655"
+    },
+    {
+      "date": "2022-10-20",
+      "address": "98 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 368000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07VP2W"
+    },
+    {
+      "date": "2022-04-21",
+      "address": "209 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 326000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07RY22"
+    },
+    {
+      "date": "2022-02-22",
+      "address": "49 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07C2RK"
+    },
+    {
+      "date": "2021-12-13",
+      "address": "55 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07RH2K"
+    },
+    {
+      "date": "2021-11-23",
+      "address": "159 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 313000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07DPF6"
+    },
+    {
+      "date": "2021-11-22",
+      "address": "228 HAMPTON SQUARE, NAVAN ROAD, DUBLIN 7",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07T9WH"
+    },
+    {
+      "date": "2021-10-13",
+      "address": "191 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07E721"
+    },
+    {
+      "date": "2021-08-05",
+      "address": "179 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07FX7X"
+    },
+    {
+      "date": "2021-06-28",
+      "address": "10 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07V2HD"
+    },
+    {
+      "date": "2021-02-12",
+      "address": "66 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 379976,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-14",
+      "address": "233 HAMPTON SQ, NAVAN RD, DUBLIN 17",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-11",
+      "address": "165 HAMPTON SQUARE, NAVAN ROAD, DUBLIN 7",
+      "price": 304069,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-30",
+      "address": "132 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-30",
+      "address": "133 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 139
+}
