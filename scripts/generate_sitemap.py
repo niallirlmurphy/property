@@ -4,12 +4,16 @@ Generate sitemap.xml for homeiq.ie
 Includes all static pages, county pages, area pages, and Dublin postcodes.
 """
 
+import json
 import os
 from datetime import datetime
 from pathlib import Path
 
 # Base URL
 BASE_URL = "https://homeiq.ie"
+
+_REG = Path(__file__).parent.parent / "frontend" / "src" / "data" / "streets_registry.json"
+STREET_SLUGS = [e["slug"] for e in json.load(open(_REG))]
 
 # Change frequency and priority for different page types
 STATIC_PAGES = [
@@ -104,6 +108,25 @@ def generate_sitemap():
             f"    <lastmod>{today}</lastmod>",
             f"    <changefreq>weekly</changefreq>",
             f"    <priority>0.7</priority>",
+            "  </url>",
+        ])
+
+    # Add streets index + individual street pages
+    lines.extend([
+        "  <url>",
+        f"    <loc>{BASE_URL}/streets</loc>",
+        f"    <lastmod>{today}</lastmod>",
+        "    <changefreq>weekly</changefreq>",
+        "    <priority>0.7</priority>",
+        "  </url>",
+    ])
+    for slug in STREET_SLUGS:
+        lines.extend([
+            "  <url>",
+            f"    <loc>{BASE_URL}/street/{slug}</loc>",
+            f"    <lastmod>{today}</lastmod>",
+            "    <changefreq>weekly</changefreq>",
+            "    <priority>0.6</priority>",
             "  </url>",
         ])
 
