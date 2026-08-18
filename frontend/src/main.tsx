@@ -24,11 +24,16 @@ import BlogListPage from "./pages/BlogListPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import StreetPage from "./pages/StreetPage";
 import StreetsIndexPage from "./pages/StreetsIndexPage";
+import ScrollToTopLayout from "./components/ScrollToTopLayout";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
 import "./styles/county-template.css";
 
 export const routes = [
+  {
+    // Pathless layout: scrolls to top on every navigation, renders route via <Outlet />
+    element: <ScrollToTopLayout />,
+    children: [
   { path: "/", element: <App /> },
   { path: "/s1", element: <ExactSearchPage /> },
   { path: "/polygon", element: <PolygonSearchPage /> },
@@ -58,6 +63,8 @@ export const routes = [
   { path: "/blog/:slug", element: <BlogPostPage /> },
   // Catch-all: send unknown paths home instead of rendering a blank page
   { path: "*", element: <Navigate to="/" replace /> },
+    ],
+  },
 ];
 
 // NOTE: the SSG route list (which dynamic county/area/eircode/blog URLs get
