@@ -22,6 +22,8 @@ import SpanishWayPage from "./pages/SpanishWayPage";
 import BeforeYouGoPage from "./pages/BeforeYouGoPage";
 import BlogListPage from "./pages/BlogListPage";
 import BlogPostPage from "./pages/BlogPostPage";
+import StreetPage from "./pages/StreetPage";
+import StreetsIndexPage from "./pages/StreetsIndexPage";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
 import "./styles/county-template.css";
@@ -33,6 +35,8 @@ export const routes = [
   { path: "/valuation", element: <ValuationPage /> },
   { path: "/areaguides", element: <AreaGuidesPage /> },
   { path: "/area/:slug", element: <AreaPage /> },
+  { path: "/streets", element: <StreetsIndexPage /> },
+  { path: "/street/:slug", element: <StreetPage /> },
   { path: "/county/dublin", element: <DublinCountyPage /> },
   { path: "/county/:slug", element: <CountyPage /> },
   { path: "/eircode/:code", element: <EircodePage /> },
