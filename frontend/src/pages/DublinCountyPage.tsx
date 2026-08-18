@@ -3,6 +3,7 @@ import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import MapSearchThumb from "../components/MapSearchThumb";
+import NotableStreets from "../components/NotableStreets";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 function formatPrice(n: number) {
@@ -149,6 +150,8 @@ export default function DublinCountyPage() {
           in Blanchardstown and Sandyford/Foxrock.
         </p>
       </section>
+
+      <NotableStreets countySlug="dublin" />
 
       <section className="content-section">
         <h2>Search Dublin Properties</h2>

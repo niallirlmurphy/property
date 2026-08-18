@@ -8,8 +8,8 @@ import CountyPageTemplate from "../components/CountyPageTemplate";
 import MapSearchThumb from "../components/MapSearchThumb";
 import type { CountySummary } from "../types";
 import { countyFromSlug, areasForCounty, provinceForCounty, PROVINCES } from "../areas";
-import { streetsForCounty } from "../streets";
 import Breadcrumbs from "../components/Breadcrumbs";
+import NotableStreets from "../components/NotableStreets";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { getCountyContent } from "../content/counties";
 import {
@@ -263,19 +263,7 @@ export default function CountyPage() {
             </section>
           )}
 
-          {streetsForCounty(slug ?? "").length > 0 && (
-            <section className="content-section">
-              <h2>Notable Streets in {county}</h2>
-              <ul className="street-links">
-                {streetsForCounty(slug ?? "").map(s => (
-                  <li key={s.slug}>
-                    <Link to={`/street/${s.slug}`}>{s.name}, {s.area}</Link>
-                  </li>
-                ))}
-              </ul>
-              <p><Link to="/streets">Browse all notable streets in Ireland →</Link></p>
-            </section>
-          )}
+          <NotableStreets countySlug={slug ?? ""} />
 
           {siblingCountySlugs.length > 0 && (
             <section className="content-section">

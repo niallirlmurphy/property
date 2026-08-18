@@ -6,7 +6,6 @@ export interface StreetConfig {
   area: string;
   county: string;
   countySlug: string;
-  areaSlug?: string;
   category: "value" | "volume";
   rank: number;
   normalizedKey: string;

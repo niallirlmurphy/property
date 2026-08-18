@@ -12,6 +12,7 @@ import {
 } from "../utils/countyDataCache";
 import Breadcrumbs from "./Breadcrumbs";
 import MapSearchThumb from "./MapSearchThumb";
+import NotableStreets from "./NotableStreets";
 import { countySlug } from "../areas";
 
 function formatPrice(n: number | null) {
@@ -147,6 +148,8 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
                 </div>
               </section>
             )}
+
+            <NotableStreets countySlug={countySlug(content.name)} />
 
             {/* Price Trends */}
             {data.trends.length > 0 && (
