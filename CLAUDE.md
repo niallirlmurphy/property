@@ -95,8 +95,36 @@ Keep local secrets in `.env`/`.env.local`; never commit filled secret files.
 2. `python3 geocode.py --export` — write `PPR-ALL-geocoded.csv`
 3. `python3 db/import.py` — import into Postgres/Supabase (requires `DATABASE_URL`)
 
-### Biweekly Updates (Automated)
-**Schedule:** 1st and 15th of each month at 2:47 AM
+### Biweekly Updates - Streamlined Pipeline (2026-07-09 Enhanced)
+**Recommended approach:** Use the complete pipeline script that includes all 2026-07-09 enhancements:
+
+```bash
+# Full pipeline (import → geocode → enrich)
+python3 scripts/ppr_full_pipeline.py --csv "source data/PPR-ALL.csv"
+
+# Or run individual steps:
+python3 scripts/ppr_full_pipeline.py --skip-import        # Just geocode + enrich
+python3 scripts/ppr_full_pipeline.py --skip-enrichment    # Just import + geocode
+python3 scripts/ppr_full_pipeline.py --dry-run            # Preview without changes
+```
+
+**Pipeline enhancements (2026-07-09):**
+1. **HTML entity cleaning** - Fixes malformed addresses (Tandy&#039;s → Tandy's)
+2. **Eircode-first geocoding** - Tries postal codes before addresses (more accurate)
+3. **Bulk sale extraction** - Extracts base address (Units 1-76 Bridge Hall → Bridge Hall)
+4. **Address normalization** - Consistent formatting for reliable searches
+5. **Improved DuckDuckGo scraping** - Full-page text extraction (not just snippets)
+6. **MapboxClient wrapper** - Automatic usage tracking with 50k/month limit enforcement
+
+**Expected results:**
+- Import: All new sales from CSV with address normalization
+- Geocoding: ~98% success rate (was 70-80%)
+- Enrichment: ~90% success rate for recent properties (was 2% with old method)
+- Processing time: ~10-20 minutes per 100 properties
+
+**Manual step-by-step (if needed):**
+
+1. **Import new sales:**
 ```bash
 python3 scripts/sync_ppr_updates.py --skip-geocoding
 ```
@@ -105,28 +133,44 @@ python3 scripts/sync_ppr_updates.py --skip-geocoding
 - Optimized: backward CSV scanning (only reads new rows)
 - Logs to `logs/ppr_sync.log`
 
-**Then geocode new imports:**
+2. **Geocode new imports:**
 ```bash
 python3 scripts/geocode_mapbox_batch.py --needs-geocoding --apply
 ```
-- Batch geocoding via Mapbox API (1,000 properties per request)
-- Comprehensive validation (Ireland bounds + county + precision)
-- Expected success: 70-80% with quality 85-90/100
-- Cost: FREE (within 100k/month tier)
+- Uses MapboxClient with HTML cleaning, Eircode-first, bulk extraction
+- Expected success: ~98% with quality 78-80/100
+- Mapbox usage tracked automatically (50k/month limit enforced)
 
-**Property enrichment (automatic):**
-The sync script automatically enriches new properties with bedroom counts and property types by searching the web. This happens after import and geocoding complete. Properties from the last month are enriched (limit: 100 per run).
-
-**Manual enrichment:**
+3. **Enrich properties:**
 ```bash
-python3 scripts/enrich_recent_properties.py --months 3
+python3 scripts/enrich_batch6_2026.py --batch-size 100 --rate-limit 5
 ```
-- Searches DuckDuckGo for property details
+- DuckDuckGo full-page text scraping (not snippet-based)
 - Extracts bedroom counts and property types
-- 10-second rate limiting to avoid blocking
-- Expected success: 60-90% for recent high-value properties
+- 5-second rate limiting to avoid blocking
+- Expected success: ~90% for recent high-value properties
 
-**Result:** Database stays current with 2-week lag, 70-80% of new properties geocoded automatically, and recent properties enriched with bedroom/type data.
+4. **Regenerate street landing-page data (after sync):**
+```bash
+export $(grep '^DATABASE_URL=' backend/.env | xargs)
+python3 scripts/generate_street_data.py     # writes frontend/src/data/streets/*.json
+python3 scripts/generate_sitemap.py          # refresh sitemap
+git add frontend/src/data/streets frontend/public/sitemap.xml
+git commit -m "chore: refresh street page data" && git push origin main
+```
+This refreshes the 50 static street pages (`/street/:slug`). Data is baked into
+the SSG build, so a redeploy (automatic on push) is required for changes to show.
+To change *which* streets get pages, re-run `python3 scripts/analyze_top_streets.py`
+then `python3 scripts/build_street_registry.py` and review the registry diff.
+
+**Monitoring:**
+```bash
+# Check Mapbox usage
+python3 scripts/mapbox_usage_tracker.py --current-month
+
+# Check enrichment progress
+tail -f logs/enrichment_batch6_*.log
+```
 
 ## Running the geocoder
 ```bash
@@ -509,7 +553,12 @@ python3 scripts/security_monitor.py --fix
 - **Frontend**: React + TypeScript on Vercel (https://homeiq.ie).
   - Pages: Home (text search), `/polygon` (map search), `/county/:slug`, `/area/:slug`, `/eircode/:code`
   - Map library: Leaflet 1.9.4 with Leaflet Draw for drawing tools
-- **Geocoding API**: Mapbox (~100k/100k requests used this month, resets next month). Reserve 2k/month for biweekly PPR sync.
+- **Geocoding API**: Mapbox with **strict 50k/month limit** (safety margin from 100k free tier).
+  - **Usage tracking**: All Mapbox requests tracked in `mapbox_usage` table via `MapboxClient` wrapper
+  - **Quota enforcement**: Pre-flight checks prevent exceeding monthly limit
+  - **Monitoring**: `python3 scripts/mapbox_usage_tracker.py --current-month`
+  - **Monthly allocation**: 2k for PPR sync, 5k for API, 43k for batch operations
+  - See [MAPBOX_USAGE_TRACKING.md](docs/MAPBOX_USAGE_TRACKING.md) for complete documentation
 
 ## Troubleshooting
 
