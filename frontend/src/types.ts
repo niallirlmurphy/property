@@ -162,3 +162,28 @@ export interface ValuationResponse {
     processing_time_ms: number;
   };
 }
+
+export interface StreetTransaction {
+  date: string;            // YYYY-MM-DD
+  address: string;
+  price: number;
+  bedrooms: number | null;
+  propertyType: string | null;
+  eircode: string | null;
+}
+
+export interface StreetData {
+  slug: string;
+  stats: {
+    count: number;
+    median: number;
+    avg: number;
+    min: number;
+    max: number;
+    firstYear: number | null;
+    lastYear: number | null;
+  };
+  trends: TrendPoint[];         // reuses existing TrendPoint (year, count, median_price, avg_price, min_price, max_price)
+  transactions: StreetTransaction[];
+  totalTransactions: number;
+}
