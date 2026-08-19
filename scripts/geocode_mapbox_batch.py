@@ -44,19 +44,22 @@ import asyncpg
 import httpx
 import os
 import sys
+import html
 from datetime import datetime
 from typing import Optional, Tuple, List, Dict
 from dotenv import load_dotenv
 
 # Add scripts directory to path for imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
-from county_validator import validate_county
+sys.path.insert(0, os.path.dirname(__file__))
+from county_validator import validate_county, normalize_county, COUNTY_BOUNDS
 from canonical_geocoding import (
     initialize_cache,
     get_canonical_coordinates,
     cache_coordinates
 )
 from duplicate_handler import update_geocoding_for_duplicates
+from mapbox_client import MapboxClient
+from extract_base_address import is_bulk_sale, extract_base_address
 
 load_dotenv("backend/.env")
 
@@ -100,12 +103,16 @@ async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = No
     limit_clause = f"LIMIT {limit}" if limit else ""
 
     query = f"""
-        SELECT id, address, address_normalized, county, price, sale_date
+        SELECT id, address, address_normalized, county, price, sale_date,
+               eircode, routing_key
         FROM properties
         WHERE {where}
         ORDER BY
-            sale_date DESC,
-            price DESC
+            -- Eircode-holders re-geocode most reliably (eircode-first, ~1 request each)
+            -- and are validated against the routing-key centroid, so process them first.
+            (eircode IS NOT NULL AND eircode <> '') DESC,
+            price DESC,
+            sale_date DESC
         {limit_clause}
     """
 
@@ -173,12 +180,54 @@ async def fetch_centroid_properties(pool: asyncpg.Pool, limit: int = None,
     return properties
 
 
-def validate_coordinates(lat: float, lon: float, county: str, feature_type: str, precision: Optional[str]) -> Tuple[bool, str, int]:
+def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    """Great-circle distance in km."""
+    import math
+    r = 6371.0
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dl = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * r * math.asin(math.sqrt(a))
+
+
+# Hard-reject a geocode whose eircode routing key sits this far from the coordinate.
+# A routing key is an AREA, not a point: rural keys sprawl (a legitimate address can
+# sit ~20km from its key's centroid — e.g. Nobber is 19km from the A82/Kells centroid
+# at its CORRECT coordinates). A tight 10km threshold therefore rejects legitimate
+# rural matches. 40km only fires on confident cross-region errors. The precise
+# wrong-town signal is the county-box check below.
+ROUTING_KEY_MAX_KM = 40.0
+
+# County bounding boxes are tight; pad them by this margin before treating "outside
+# the box" as a wrong-county rejection, so genuine edge-of-county towns (e.g. Fingal
+# reaches ~53.63N, above County Dublin's 53.50 box) are not rejected.
+COUNTY_MARGIN_DEG = 0.2
+
+
+def _outside_county_box(lat: float, lon: float, county: str) -> bool:
+    """True if (lat, lon) is outside the stored county's margin-padded box.
+
+    Conservative, low-false-positive wrong-county signal: a Kerry-county address that
+    Mapbox matched to a Dublin street is wrong regardless of precision/distance.
+    """
+    norm = normalize_county(county) if county else ""
+    bounds = COUNTY_BOUNDS.get(norm)
+    if not bounds:
+        return False  # unknown county -> cannot judge
+    min_lat, max_lat, min_lon, max_lon = bounds
+    m = COUNTY_MARGIN_DEG
+    return not (min_lat - m <= lat <= max_lat + m and min_lon - m <= lon <= max_lon + m)
+
+
+def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
+                         precision: Optional[str], routing_key: Optional[str] = None,
+                         rk_centroids: Optional[dict] = None) -> Tuple[bool, str, int]:
     """
     Validate Mapbox coordinates.
 
     Returns: (is_valid, reason, quality_score)
-    - quality_score: 100=rooftop, 90=parcel, 80=point, 70=locality, <70=rejected
+    - quality_score: 100=rooftop, 90=parcel, 80=point, 75=address/street, 70=locality
     """
 
     # Validation 1: Ireland bounds (CRITICAL)
@@ -186,32 +235,60 @@ def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
     if not (min_lat <= lat <= max_lat and min_lon <= lon <= max_lon):
         return False, f"out_of_bounds({lat:.2f},{lon:.2f})", 0
 
+    # Validation 1b: Routing-key distance (CRITICAL, hard reject).
+    # The eircode's routing key is an independent ground truth for location.
+    # If the geocoded point is far from that key's centroid, the geocoder matched
+    # the wrong place (e.g. a generic street name in the wrong town) -> reject.
+    if routing_key and rk_centroids:
+        centroid = rk_centroids.get(routing_key)
+        if centroid:
+            dist_km = _haversine_km(lat, lon, centroid[0], centroid[1])
+            if dist_km > ROUTING_KEY_MAX_KM:
+                return False, f"routing_key_far({routing_key}:{dist_km:.0f}km)", 0
+
+    # Validation 1c: Wrong county (CRITICAL, hard reject).
+    # If the coordinate lands outside the stored county's (padded) box, Mapbox matched
+    # a same-named street/place in a different county -> reject.
+    if county and _outside_county_box(lat, lon, county):
+        return False, f"wrong_county({county})", 0
+
     # Validation 2: Feature type and precision level
-    quality_score = 70  # Default for locality/place without precision
+    # Note: MapboxClient v5 API returns place_type (address, postcode, poi, locality)
+    # not the v6 precision level (rooftop, parcel, point)
+    quality_score = 70  # Default
 
-    if feature_type == 'address' and precision:
-        # Address results with precision info
-        if precision not in ACCEPTABLE_PRECISION:
-            return False, f"precision_{precision}", 0
+    if feature_type == 'address':
+        # Address-level results - good quality
+        # Check if precision has detailed accuracy (v6 API)
+        if precision in ACCEPTABLE_PRECISION:
+            quality_map = {
+                'rooftop': 100,
+                'parcel': 90,
+                'point': 80
+            }
+            quality_score = quality_map.get(precision, 80)
+        else:
+            # v5 API or no precision - assume good address quality
+            quality_score = 80
 
-        quality_map = {
-            'rooftop': 100,
-            'parcel': 90,
-            'point': 80
-        }
-        quality_score = quality_map.get(precision, 70)
+    elif feature_type == 'postcode':
+        # Postcode/Eircode - good quality for Irish addresses
+        quality_score = 85
+
+    elif feature_type == 'poi':
+        # Point of interest - acceptable
+        quality_score = 75
 
     elif feature_type in ('locality', 'place'):
         # Rural areas without street addresses - acceptable but lower quality
         quality_score = 70
 
     elif feature_type == 'street':
-        # Street-level results - acceptable for properties without Eircodes
-        # Better than nothing, especially with improved Mapbox Irish coverage
+        # Street-level results - acceptable
         quality_score = 75
 
     else:
-        # Other feature types (postcode, etc.) - may be too imprecise
+        # Other feature types - may be too imprecise
         return False, f"feature_type_{feature_type}", 0
 
     # Validation 3: County boundary (optional, downgrades quality but doesn't reject)
@@ -224,9 +301,14 @@ def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
 
 
 async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
-                                client: httpx.AsyncClient) -> List[Tuple[int, Optional[float], Optional[float], int]]:
+                                client: httpx.AsyncClient,
+                                rk_centroids: Optional[dict] = None) -> List[Tuple[int, Optional[float], Optional[float], int]]:
     """
-    Batch geocode using Mapbox API (up to 1,000 at a time) with canonical cache.
+    Batch geocode using Mapbox API with improved logic:
+    - HTML entity cleaning (Tandy&#039;s → Tandy's)
+    - Eircode-first strategy (try postal code before address)
+    - Bulk sale extraction (Units 1-76 Bridge Hall → Bridge Hall)
+    - Canonical cache
 
     Returns list of (property_id, lat, lon, quality_score)
     """
@@ -234,106 +316,78 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
         print("❌ MAPBOX_TOKEN not set in backend/.env")
         return []
 
-    # Check cache first - filter to properties needing geocoding
-    properties_needing_geocoding = []
-    cached_results = []
+    # Process all properties (cache is too large to load)
+    print(f"Geocoding {len(properties)} properties with improved logic:")
+    print(f"  - HTML entity cleaning (Tandy&#039;s → Tandy's)")
+    print(f"  - Eircode-first strategy (try postal code before address)")
+    print(f"  - Bulk sale extraction (Units 1-76 → base address)")
 
-    for prop in properties:
-        address_normalized = prop.get('address_normalized')
-        if address_normalized:
-            cached_coords = get_canonical_coordinates(address_normalized)
-            if cached_coords:
-                # Use cached coordinates
-                cached_results.append((prop['id'], cached_coords[0], cached_coords[1], 90))
-                continue
+    results = []
 
-        # Need to geocode
-        properties_needing_geocoding.append(prop)
+    # Use MapboxClient for tracking and eircode-first strategy
+    async with MapboxClient(source='geocode_mapbox_batch', operation='needs_geocoding') as mapbox:
+        # Process individually to use eircode-first and bulk extraction logic
+        bulk_count = 0
+        eircode_count = 0
 
-    if cached_results:
-        print(f"✓ Cache hits: {len(cached_results)} properties (skipping Mapbox API)")
+        for i, prop in enumerate(properties):
+            if i % 100 == 0 and i > 0:
+                print(f"  Progress: {i}/{len(properties)} properties...")
 
-    if not properties_needing_geocoding:
-        return cached_results
-
-    print(f"Cache misses: {len(properties_needing_geocoding)} properties need geocoding")
-
-    results = cached_results
-    batch_size = 1000  # Mapbox max
-
-    for batch_start in range(0, len(properties_needing_geocoding), batch_size):
-        batch = properties_needing_geocoding[batch_start:batch_start + batch_size]
-
-        print(f"\nBatch {batch_start//batch_size + 1}: Processing {len(batch)} properties...")
-
-        # Build batch request
-        queries = []
-        for prop in batch:
-            # Use normalized address if available, fallback to original
+            # Get address and clean HTML entities
             address = prop.get('address_normalized') or prop['address']
-            query_text = f"{address}, {prop['county']}, Ireland" if prop['county'] else f"{address}, Ireland"
-            queries.append({
-                "q": query_text,
-                "country": "ie"  # Limit to Ireland
-            })
+            address = html.unescape(address)
 
-        try:
-            response = await client.post(
-                MAPBOX_BATCH_URL,
-                params={"access_token": MAPBOX_TOKEN},
-                json=queries,
-                timeout=60.0
-            )
+            # Check if bulk sale and extract base address
+            if is_bulk_sale(address):
+                address = extract_base_address(address)
+                bulk_count += 1
 
-            if response.status_code != 200:
-                print(f"  ❌ Mapbox API error: HTTP {response.status_code}")
-                print(f"     {response.text[:200]}")
-                continue
+            # Build query with county
+            query = f"{address}, {prop['county']}, Ireland" if prop['county'] else f"{address}, Ireland"
 
-            data = response.json()
-            batch_results = data.get("batch", [])
+            try:
+                # Geocode by ADDRESS only. Mapbox cannot resolve Irish unit-level
+                # eircodes (proprietary An Post data) — the pre-lookup returns
+                # nothing (or coarse routing-key level) and wastes a request. The
+                # eircode's routing key is instead used purely for validation below
+                # (rejecting matches that land far from where the routing key says).
+                result = await mapbox.geocode(query, country='ie')
 
-            # Process results
-            for i, result_wrapper in enumerate(batch_results):
-                prop = batch[i]
-                features = result_wrapper.get("features", [])
+                if result:
+                    lat = result['latitude']
+                    lon = result['longitude']
+                    # MapboxClient returns place_type as 'precision'
+                    place_type = result.get('precision', 'unknown')
 
-                if not features:
-                    results.append((prop['id'], None, None, 0))
-                    continue
+                    if result.get('method') == 'eircode':
+                        eircode_count += 1
 
-                # Take first result
-                feature = features[0]
-                coords = feature.get("geometry", {}).get("coordinates", [])
+                    # Validate - use place_type for both feature_type and precision.
+                    # Pass routing key + centroids for the hard distance check.
+                    is_valid, reason, quality_score = validate_coordinates(
+                        lat, lon, prop['county'], place_type, place_type,
+                        routing_key=prop.get('routing_key'), rk_centroids=rk_centroids
+                    )
 
-                if len(coords) != 2:
-                    results.append((prop['id'], None, None, 0))
-                    continue
-
-                lon, lat = coords  # Mapbox returns [lon, lat]
-                properties_obj = feature.get("properties", {})
-                feature_type = properties_obj.get("feature_type", "unknown")
-                precision = properties_obj.get("coordinates", {}).get("accuracy")
-
-                # Validate
-                is_valid, reason, quality_score = validate_coordinates(lat, lon, prop['county'], feature_type, precision)
-
-                if is_valid and quality_score >= 70:
-                    results.append((prop['id'], lat, lon, quality_score))
-                    # Update cache with successful geocoding
-                    address_normalized = prop.get('address_normalized')
-                    if address_normalized:
-                        cache_coordinates(address_normalized, lat, lon)
+                    if is_valid and quality_score >= 70:
+                        results.append((prop['id'], lat, lon, quality_score))
+                    else:
+                        if len(results) < 5:  # Log first few failures
+                            print(f"  ⚠️  Rejected {prop['address'][:40]}: {reason}")
+                        results.append((prop['id'], None, None, 0))
                 else:
-                    if i < 5:  # Log first few failures
-                        print(f"  ⚠️  Rejected {prop['address'][:40]}: {reason}")
                     results.append((prop['id'], None, None, 0))
 
-        except Exception as e:
-            print(f"  ❌ Batch geocoding error: {e}")
-            # Mark all in batch as failed
-            for prop in batch:
+            except Exception as e:
+                if len(results) < 5:
+                    print(f"  ❌ Error geocoding {prop['address'][:40]}: {e}")
                 results.append((prop['id'], None, None, 0))
+
+    print(f"\n✓ Geocoding complete:")
+    print(f"  Bulk sales extracted: {bulk_count}")
+    print(f"  Eircode-first hits: {eircode_count}")
+    print(f"  Total geocoded: {sum(1 for r in results if r[1] is not None)}/{len(results)}")
 
     return results
 
@@ -394,8 +448,20 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         if dry_run:
             print("⚠️  DRY RUN MODE - No database changes will be made\n")
 
+        # Load routing-key centroids once for the hard distance validation.
+        rk_centroids = {}
+        try:
+            rk_rows = await pool.fetch(
+                "SELECT routing_key, centroid_lat, centroid_lon FROM routing_key_stats "
+                "WHERE geocoded_count >= 20 AND centroid_lat IS NOT NULL"
+            )
+            rk_centroids = {r['routing_key']: (r['centroid_lat'], r['centroid_lon']) for r in rk_rows}
+            print(f"Loaded {len(rk_centroids):,} routing-key centroids for validation")
+        except Exception as e:
+            print(f"⚠️  Could not load routing_key_stats centroids ({e}); skipping distance validation")
+
         async with httpx.AsyncClient() as client:
-            results = await batch_geocode_mapbox(properties, pool, client)
+            results = await batch_geocode_mapbox(properties, pool, client, rk_centroids=rk_centroids)
 
         # Process results
         success_count = 0
@@ -412,7 +478,8 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                         UPDATE properties
                         SET latitude = $1, longitude = $2,
                             geog = ST_MakePoint($2, $1)::geography,
-                            needs_geocoding = FALSE
+                            needs_geocoding = FALSE,
+                            geocode_suspect = FALSE
                         WHERE id = $3
                     """, lat, lon, prop_id)
             else:
@@ -440,10 +507,9 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
 
 
 async def main():
-    # Initialize canonical coordinate cache
-    print("Initializing canonical coordinate cache...")
-    initialize_cache(DATABASE_URL)
-    print("Cache initialized\n")
+    # Skip canonical cache for batch operations (too large to load into memory)
+    # Cache will be checked per-address during geocoding
+    print("Starting batch geocoding with improved logic...\n")
 
     dry_run = "--apply" not in sys.argv
     needs_geocoding = "--needs-geocoding" in sys.argv

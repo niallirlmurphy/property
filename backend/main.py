@@ -1109,7 +1109,11 @@ async def search(
 
     # Try with county filter first (if provided)
     if county:
-        filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)"]
+        # geocode_suspect: hide rows whose stored coordinate is known-wrong
+        # (eircode routing key far from the point, or a fallback street/locality
+        # centroid shared by many distinct addresses). Prevents e.g. a Kerry
+        # property surfacing in a Howth radius search until it is re-geocoded.
+        filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)", "geocode_suspect IS NOT TRUE"]
         params  = [lat, lon, radius_km * 1000]
         idx     = 4
 
@@ -1150,7 +1154,7 @@ async def search(
             if attempt_radius > MAX_RADIUS_KM:
                 attempt_radius = MAX_RADIUS_KM
 
-            filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)"]
+            filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)", "geocode_suspect IS NOT TRUE"]
             params  = [lat, lon, attempt_radius * 1000]
             idx     = 4
 
@@ -1455,7 +1459,9 @@ async def search_polygon(
         raise HTTPException(status_code=400, detail=f"Invalid coordinate format: {str(e)}")
 
     # Build query (polygon_wkt is now safe - all values are validated floats)
-    filters = [f"ST_Within(geog::geometry, ST_GeomFromText('{polygon_wkt}', 4326))"]
+    # geocode_suspect: exclude known-wrong coordinates from spatial results.
+    filters = [f"ST_Within(geog::geometry, ST_GeomFromText('{polygon_wkt}', 4326))",
+               "geocode_suspect IS NOT TRUE"]
     params: list = []
     idx = 1
 
@@ -1529,6 +1535,8 @@ async def trends(
     if q:
         lat, lon, _source = await resolve_location(q)
         filters.append(f"ST_DWithin(geog, ST_MakePoint(${idx+1}, ${idx})::geography, ${idx+2})")
+        # Exclude known-wrong coordinates from spatial trends (see /search guard).
+        filters.append("geocode_suspect IS NOT TRUE")
         params.extend([lat, lon, radius_km * 1000])
         idx += 3
     elif county:
