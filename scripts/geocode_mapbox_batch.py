@@ -460,8 +460,19 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         except Exception as e:
             print(f"⚠️  Could not load routing_key_stats centroids ({e}); skipping distance validation")
 
+        # Release the DB pool during the (potentially long) geocoding phase. Holding
+        # idle connections open across a multi-minute Mapbox run lets Supabase close
+        # them server-side, so the later write phase would fail with
+        # ConnectionDoesNotExistError and lose the whole batch's results. We reopen a
+        # fresh pool for the writes below.
+        await pool.close()
+        pool = None
+
         async with httpx.AsyncClient() as client:
-            results = await batch_geocode_mapbox(properties, pool, client, rk_centroids=rk_centroids)
+            results = await batch_geocode_mapbox(properties, None, client, rk_centroids=rk_centroids)
+
+        if not dry_run:
+            pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3)
 
         # Process results
         success_count = 0
@@ -503,7 +514,8 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
             print(f"\n⚠️  DRY RUN - No changes made. Run with --apply to commit.")
 
     finally:
-        await pool.close()
+        if pool is not None:
+            await pool.close()
 
 
 async def main():
