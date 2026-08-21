@@ -24,8 +24,10 @@ for i in $(seq 1 "$ROUNDS"); do
     echo "sub-batch $i exited rc=$rc — stopping sweep"
     break
   fi
-  # Stop early if the cap was hit (client prints a limit message)
-  if grep -qi "monthly limit\|quota\|cap reached" "$LOGDIR/regeocode_sweep_${STAMP}_b${i}.log"; then
+  # Stop early if the cap was hit. Match ONLY the genuine cap markers
+  # (the MapboxLimitExceeded exception / "limit exceeded" message) -- NOT the
+  # harmless "83.6% of Mapbox quota used" warning, which contains "quota".
+  if grep -qi "MapboxLimitExceeded\|limit exceeded" "$LOGDIR/regeocode_sweep_${STAMP}_b${i}.log"; then
     echo "Mapbox cap reached — stopping sweep"
     break
   fi
