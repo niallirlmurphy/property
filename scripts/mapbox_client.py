@@ -117,7 +117,8 @@ class MapboxClient:
         address: str,
         country: str = 'ie',
         limit: int = 1,
-        eircode: Optional[str] = None
+        eircode: Optional[str] = None,
+        proximity: Optional[Tuple[float, float]] = None
     ) -> Optional[Dict]:
         """
         Geocode single address using Mapbox Geocoding API.
@@ -129,6 +130,10 @@ class MapboxClient:
             country: ISO country code (default: 'ie' for Ireland)
             limit: Maximum results to return
             eircode: Irish postal code (if available, will try first)
+            proximity: Optional (latitude, longitude) to bias results toward. Critical for
+                Irish addresses with generic street names ("Main Street", "Harbour Road"):
+                passing the eircode routing-key centroid stops Mapbox snapping to the wrong
+                district. See scripts/geocode_mapbox_batch.py.
 
         Returns:
             Dict with 'latitude', 'longitude', 'full_address', 'precision' or None if no results
@@ -138,13 +143,13 @@ class MapboxClient:
         """
         # Try Eircode first if available (more accurate)
         if eircode:
-            result = await self._geocode_query(eircode, country, limit)
+            result = await self._geocode_query(eircode, country, limit, proximity)
             if result:
                 result['method'] = 'eircode'
                 return result
 
         # Fallback to address (or primary if no eircode)
-        result = await self._geocode_query(address, country, limit)
+        result = await self._geocode_query(address, country, limit, proximity)
         if result:
             result['method'] = 'address'
         return result
@@ -153,7 +158,8 @@ class MapboxClient:
         self,
         query: str,
         country: str,
-        limit: int
+        limit: int,
+        proximity: Optional[Tuple[float, float]] = None
     ) -> Optional[Dict]:
         """Internal method to geocode a single query."""
         await self._check_limit(required_requests=1)
@@ -165,6 +171,9 @@ class MapboxClient:
             'limit': limit,
             'types': 'address,poi,postcode'
         }
+        if proximity is not None:
+            # Mapbox expects proximity as "longitude,latitude"
+            params['proximity'] = f"{proximity[1]},{proximity[0]}"
 
         try:
             response = await self._client.get(url, params=params)

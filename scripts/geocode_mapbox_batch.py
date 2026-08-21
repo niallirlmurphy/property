@@ -78,7 +78,8 @@ ACCEPTABLE_PRECISION = {'rooftop', 'parcel', 'point'}
 
 async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = None,
                                              county: str = None, no_eircode: bool = False,
-                                             min_price: int = None) -> List[Dict]:
+                                             min_price: int = None, suspect: bool = False,
+                                             eircode_only: bool = False) -> List[Dict]:
     """Fetch properties flagged as needing geocoding (priority order)."""
     print("Fetching properties needing geocoding...")
 
@@ -93,6 +94,17 @@ async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = No
 
     if no_eircode:
         where_clauses.append("(eircode IS NULL OR eircode = '')")
+
+    if eircode_only:
+        # Only rows with an eircode — these carry a routing key we can use as a
+        # proximity bias, so they benefit most from the proximity-steered geocode.
+        where_clauses.append("eircode IS NOT NULL AND eircode <> ''")
+
+    if suspect:
+        # Only rows currently flagged as bad geocodes (hidden from search). These
+        # are the mislocated/wrong-town rows users actually see leaking into area
+        # pages, so they are the highest-impact target for a budget-limited run.
+        where_clauses.append("geocode_suspect = TRUE")
 
     if min_price:
         where_clauses.append(f"price >= ${idx}")
@@ -346,13 +358,23 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
             # Build query with county
             query = f"{address}, {prop['county']}, Ireland" if prop['county'] else f"{address}, Ireland"
 
+            # If the property has an eircode routing key with a known centroid, bias
+            # Mapbox toward it. This is the key fix for generic street names
+            # ("Main Street", "Harbour Road"): without a bias Mapbox picks whichever
+            # matching street ranks highest and lands in the wrong district (e.g.
+            # "Main Street, Donnybrook D04" resolving to D11, 8km away). Passing the
+            # routing-key centroid as proximity snaps the match back to the right area.
+            proximity = None
+            if rk_centroids:
+                proximity = rk_centroids.get(prop.get('routing_key'))
+
             try:
                 # Geocode by ADDRESS only. Mapbox cannot resolve Irish unit-level
                 # eircodes (proprietary An Post data) — the pre-lookup returns
                 # nothing (or coarse routing-key level) and wastes a request. The
-                # eircode's routing key is instead used purely for validation below
-                # (rejecting matches that land far from where the routing key says).
-                result = await mapbox.geocode(query, country='ie')
+                # eircode's routing key is instead used as a proximity bias here and
+                # for the hard distance check in validate_coordinates below.
+                result = await mapbox.geocode(query, country='ie', proximity=proximity)
 
                 if result:
                     lat = result['latitude']
@@ -395,7 +417,8 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
 async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                                county: str = None, needs_geocoding: bool = False,
                                no_eircode: bool = False, min_price: int = None,
-                               centroid: bool = False):
+                               centroid: bool = False, suspect: bool = False,
+                               eircode_only: bool = False):
     """
     Batch geocode properties using Mapbox.
 
@@ -424,7 +447,8 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
             )
         else:
             properties = await fetch_properties_needing_geocoding(
-                pool, limit=limit, county=county, no_eircode=no_eircode, min_price=min_price
+                pool, limit=limit, county=county, no_eircode=no_eircode,
+                min_price=min_price, suspect=suspect, eircode_only=eircode_only
             )
 
         print(f"\n{'='*70}")
@@ -527,6 +551,8 @@ async def main():
     needs_geocoding = "--needs-geocoding" in sys.argv
     no_eircode = "--no-eircode" in sys.argv
     centroid = "--centroid" in sys.argv
+    suspect = "--suspect" in sys.argv
+    eircode_only = "--eircode-only" in sys.argv
     limit = None
     county = None
     min_price = None
@@ -546,7 +572,9 @@ async def main():
         needs_geocoding=needs_geocoding,
         no_eircode=no_eircode,
         min_price=min_price,
-        centroid=centroid
+        centroid=centroid,
+        suspect=suspect,
+        eircode_only=eircode_only
     )
 
 

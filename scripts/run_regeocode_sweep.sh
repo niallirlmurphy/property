@@ -7,15 +7,16 @@ set -u
 cd "$(dirname "$0")/.."
 export $(grep '^DATABASE_URL=' backend/.env | xargs)
 
-SUB=${SUB:-3000}      # rows per sub-batch
-ROUNDS=${ROUNDS:-10}  # number of sub-batches (SUB*ROUNDS total target)
+SUB=${SUB:-3000}          # rows per sub-batch
+ROUNDS=${ROUNDS:-10}      # number of sub-batches (SUB*ROUNDS total target)
+EXTRA_ARGS=${EXTRA_ARGS:-}  # extra filters, e.g. "--suspect --eircode-only --county Dublin"
 LOGDIR=logs
 mkdir -p "$LOGDIR"
 STAMP=$(date +%Y%m%d_%H%M%S)
 
 for i in $(seq 1 "$ROUNDS"); do
   echo "===== sub-batch $i/$ROUNDS ($SUB rows) at $(date) ====="
-  python3 -u scripts/geocode_mapbox_batch.py --needs-geocoding --limit "$SUB" --apply \
+  python3 -u scripts/geocode_mapbox_batch.py --needs-geocoding --limit "$SUB" --apply $EXTRA_ARGS \
       > "$LOGDIR/regeocode_sweep_${STAMP}_b${i}.log" 2>&1
   rc=$?
   tail -8 "$LOGDIR/regeocode_sweep_${STAMP}_b${i}.log"
