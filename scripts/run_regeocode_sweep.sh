@@ -6,6 +6,10 @@
 set -u
 cd "$(dirname "$0")/.."
 export $(grep '^DATABASE_URL=' backend/.env | xargs)
+# Export the monthly cap override (if set in .env) into the real environment so
+# MapboxClient picks it up at import — its own load_dotenv() reads the root .env,
+# not backend/.env, so relying on dotenv alone would silently keep the 50k default.
+grep -q '^MAPBOX_MONTHLY_LIMIT=' backend/.env && export $(grep '^MAPBOX_MONTHLY_LIMIT=' backend/.env | xargs)
 
 SUB=${SUB:-3000}          # rows per sub-batch
 ROUNDS=${ROUNDS:-10}      # number of sub-batches (SUB*ROUNDS total target)
