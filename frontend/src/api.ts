@@ -1,4 +1,5 @@
 import type { Property, SearchParams, SearchResponse, TrendPoint, EircodeResponse, AreaSummary, CountySummary, ValuationRequest, ValuationResponse } from "./types";
+import { areaFromSlug } from "./areas";
 
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 
@@ -101,9 +102,16 @@ export async function fetchEircode(
 }
 
 export async function fetchAreaSummary(slug: string, name: string, radiusKm = 2): Promise<AreaSummary> {
+  // Scope results to the area: keep only sales whose address names one of the curated
+  // locality terms OR whose eircode routing key belongs to the area. Excludes properties
+  // mis-geocoded onto a same-named street elsewhere. Backend applies the matching (no
+  // client-side filtering); we just pass the area's config as query params.
+  const cfg = areaFromSlug(slug);
+  const locality = cfg?.match?.length ? cfg.match.join(",") : undefined;
+  const routing_keys = cfg?.routing_keys?.length ? cfg.routing_keys.join(",") : undefined;
   const [searchRes, trendsRes] = await Promise.all([
-    fetch(buildUrl("/search", { q: name, radius_km: radiusKm, limit: 10 })),
-    fetch(buildUrl("/trends", { q: name, radius_km: radiusKm })),
+    fetch(buildUrl("/search", { q: name, radius_km: radiusKm, limit: 10, locality, routing_keys })),
+    fetch(buildUrl("/trends", { q: name, radius_km: radiusKm, locality, routing_keys })),
   ]);
   if (!searchRes.ok) {
     const err = await searchRes.json().catch(() => ({}));

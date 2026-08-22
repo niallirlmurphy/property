@@ -11,6 +11,7 @@ import re
 import time
 import hashlib
 import json
+import unicodedata
 import httpx
 import logging
 import secrets
@@ -495,6 +496,64 @@ def normalize_query(q: str) -> str:
     q = q.rstrip('.,;')
 
     return q
+
+
+def _locality_tsquery(locality: Optional[str]) -> Optional[str]:
+    """Build a to_tsquery('simple', ...) string from a comma-separated list of an
+    area's curated locality terms (e.g. "Howth,Sutton,Baldoyle").
+
+    Each term becomes an adjacency (phrase) match so multi-word names only match in
+    order ("Dun Laoghaire" -> dun<->laoghaire); terms are OR-combined. Accents are
+    stripped and everything is lowercased to match the 'simple' tsvector of the
+    stored address. Returns None when no usable term is present.
+
+    Used by area pages to keep only results whose address names the area (OR whose
+    routing key matches), so a generic street name mis-geocoded from another town is
+    excluded. Input is sanitised to alphanumerics -> safe to embed as a tsquery.
+    """
+    if not locality:
+        return None
+    parts = []
+    for term in locality.split(","):
+        norm = unicodedata.normalize("NFKD", term)
+        norm = "".join(c for c in norm if not unicodedata.combining(c))
+        words = [w for w in re.split(r"[^a-z0-9]+", norm.lower()) if w]
+        if words:
+            parts.append(" <-> ".join(words))
+    if not parts:
+        return None
+    return " | ".join(parts)
+
+
+def _parse_routing_keys(routing_keys: Optional[str]) -> Optional[list]:
+    """Parse a comma-separated routing-key list (e.g. "D13,A96") into a clean
+    uppercased list, or None if empty. Routing keys are the first three eircode
+    characters; sanitised to alphanumerics."""
+    if not routing_keys:
+        return None
+    keys = []
+    for k in routing_keys.split(","):
+        k = re.sub(r"[^A-Za-z0-9]", "", k).upper()
+        if k:
+            keys.append(k)
+    return keys or None
+
+
+def _append_area_filter(filters: list, params: list, idx: int,
+                        ts: Optional[str], rk_list: Optional[list]) -> int:
+    """Append the area locality filter: keep rows whose routing key is in rk_list OR
+    whose address full-text-matches the locality terms. Mutates filters/params and
+    returns the next positional-parameter index. No-op when both inputs are empty."""
+    ors = []
+    if rk_list:
+        ors.append(f"routing_key = ANY(${idx})")
+        params.append(rk_list); idx += 1
+    if ts:
+        ors.append(f"to_tsvector('simple', address) @@ to_tsquery('simple', ${idx})")
+        params.append(ts); idx += 1
+    if ors:
+        filters.append("(" + " OR ".join(ors) + ")")
+    return idx
 
 
 _STOP_WORDS = {"the", "a", "an", "of", "and", "co", "no", "st", "dublin", "ireland"}
@@ -1072,17 +1131,25 @@ async def search(
     min_year: Optional[int] = None,
     max_year: Optional[int] = None,
     county: Optional[str] = None,
+    locality: Optional[str] = Query(None, description="Comma-separated area locality terms; keep results whose address matches one (OR a routing_keys match). Used by area pages."),
+    routing_keys: Optional[str] = Query(None, description="Comma-separated eircode routing keys; keep results in one (OR a locality match). Used by area pages."),
     limit: int = Query(200, ge=1, le=500),
     sort: str = Query("date", regex="^(date|distance)$"),
 ):
     start_time = time.time()
     _rate_limit_check(request, 60, "search")
 
+    # Area-page locality filter (see _append_area_filter). Parsed once, reused by
+    # both the county-first block and the radius-expansion loop below.
+    area_ts = _locality_tsquery(locality)
+    area_rk = _parse_routing_keys(routing_keys)
+
     # Normalize query for consistent caching (case-insensitive, whitespace normalized)
     normalized_q = normalize_query(q)
     cache_params = {"q": normalized_q, "radius_km": radius_km, "min_price": min_price,
                     "max_price": max_price, "min_year": min_year, "max_year": max_year,
-                    "county": county, "limit": limit, "sort": sort}
+                    "county": county, "locality": locality, "routing_keys": routing_keys,
+                    "limit": limit, "sort": sort}
     cached = cache.get("search", cache_params)
     if cached is not None:
         # Return cached result with proper headers
@@ -1126,6 +1193,7 @@ async def search(
         if max_year is not None:
             filters.append(f"EXTRACT(YEAR FROM sale_date) <= ${idx}"); params.append(max_year); idx += 1
         filters.append(f"LOWER(county) = LOWER(${idx})"); params.append(county); idx += 1
+        idx = _append_area_filter(filters, params, idx, area_ts, area_rk)
 
         where = " AND ".join(filters)
         params.append(limit)
@@ -1169,6 +1237,7 @@ async def search(
             # Only add county filter if not removed
             if county and not county_filter_removed:
                 filters.append(f"LOWER(county) = LOWER(${idx})"); params.append(county); idx += 1
+            idx = _append_area_filter(filters, params, idx, area_ts, area_rk)
 
             where = " AND ".join(filters)
             params.append(limit)
@@ -1314,6 +1383,15 @@ async def search_exact(
         return ' '.join(result_words).strip()
 
     search_normalized = normalize_for_search(address)
+
+    # Golden rule: a bare street-level address with no county always resolves to
+    # Dublin. If the caller passed no county and the query text mentions no other
+    # county, assume Dublin — and keep that filter for the full-text fallback too.
+    # We never silently surface a match from another county for an unspecified
+    # query; if the address isn't in Dublin we simply return no results, which is
+    # far more likely to match the user's intent than a same-name street elsewhere.
+    if not county and not COUNTY_KEYWORDS.search(address.lower()):
+        county = "Dublin"
 
     # Check cache first (include county in cache key)
     cache_key = {"address": search_normalized, "county": county}
@@ -1513,12 +1591,15 @@ async def trends(
     q: Optional[str] = None,
     radius_km: float = Query(5.0, ge=0.5, le=50.0),
     county: Optional[str] = None,
+    locality: Optional[str] = Query(None, description="Comma-separated area locality terms (area pages); scopes the spatial q= branch to matching addresses OR routing_keys."),
+    routing_keys: Optional[str] = Query(None, description="Comma-separated eircode routing keys (area pages); scopes the spatial q= branch."),
 ):
     """Median price by year, with optional geographic or county filter."""
     _rate_limit_check(request, 60, "trends")
     # Cache all trends queries (county-only AND area q= queries, both used
     # heavily by content/area guide pages) so repeat renders skip the DB.
-    cache_params = {"q": q, "radius_km": radius_km, "county": county}
+    cache_params = {"q": q, "radius_km": radius_km, "county": county,
+                    "locality": locality, "routing_keys": routing_keys}
     cached = cache.get("trends", cache_params)
     if cached is not None:
         # Return cached result with proper headers
@@ -1539,6 +1620,10 @@ async def trends(
         filters.append("geocode_suspect IS NOT TRUE")
         params.extend([lat, lon, radius_km * 1000])
         idx += 3
+        # Scope area-page trends to the area (same locality filter as /search) so a
+        # mis-geocoded wrong-town sale can't skew the median/average.
+        idx = _append_area_filter(filters, params, idx,
+                                  _locality_tsquery(locality), _parse_routing_keys(routing_keys))
     elif county:
         filters.append(f"LOWER(county) = LOWER(${idx})")
         params.append(county)
