@@ -106,8 +106,9 @@ partial regeneration), consistent with existing script conventions.
 - `frontend/src/data/counties/<slug>.json` → `CountySummary`
 - `frontend/src/data/eircodes/<CODE>.json` → `{ eircode: EircodeResponse; trends: TrendPoint[] }`
 
-Recent-sales counts baked per page (match current live limits so pages look
-identical): **area 20, county 10, eircode 10**.
+Recent-sales counts baked per page: **10 for all three** — this is the exact
+current live limit in each `fetch*` function, so pages (and the `avg_price`
+computed from the fetched sample) look identical.
 
 No `types.ts` changes required.
 
