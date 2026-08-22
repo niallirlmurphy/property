@@ -55,6 +55,52 @@ function ConfidenceBadge({ level }: { level: "high" | "medium" | "low" }) {
   );
 }
 
+// The four points explaining how the valuation is produced. Shared between the
+// left-column info box (shown once a query has been made) and the right-pane
+// hero (shown in the initial empty state, to make use of the results space).
+const HOW_IT_WORKS_STEPS = [
+  "We find similar properties sold nearby",
+  "Prices are adjusted for time differences",
+  "Weighted average based on distance & recency",
+  "Confidence level reflects data quality",
+];
+
+// Compact version for the left sidebar after a valuation is requested.
+function HowItWorksBox() {
+  return (
+    <div className="val-info-box">
+      <h3>How it works</h3>
+      <ul>
+        {HOW_IT_WORKS_STEPS.map((step, i) => (
+          <li key={i}>{step}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+// Roomier version that fills the empty right pane before a query is made.
+function HowItWorksHero() {
+  return (
+    <div className="val-empty-hero">
+      <div className="val-empty-icon" aria-hidden="true">🏠</div>
+      <h2>How your valuation is calculated</h2>
+      <p className="val-empty-lead">
+        Enter your property details on the left to get a free estimate based on
+        real Property Price Register sales.
+      </p>
+      <ol className="val-how-steps">
+        {HOW_IT_WORKS_STEPS.map((step, i) => (
+          <li key={i}>
+            <span className="val-how-step-num">{i + 1}</span>
+            <span>{step}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 function WarningBox({ warnings }: { warnings: Array<{ level: string; message: string }> }) {
   if (!warnings.length) return null;
 
@@ -286,25 +332,9 @@ export default function ValuationPage() {
             </button>
           </form>
 
-          {/* Info box */}
-          <div className="val-info-box">
-            <h3>How it works</h3>
-            <ul>
-              <li>We find similar properties sold nearby</li>
-              <li>Prices are adjusted for time differences</li>
-              <li>Weighted average based on distance &amp; recency</li>
-              <li>Confidence level reflects data quality</li>
-            </ul>
-          </div>
-
-          <div className="val-info-box">
-            <h3>What addresses work?</h3>
-            <ul>
-              <li><strong>In database:</strong> Any property in the PPR (2010-present)</li>
-              <li><strong>Not in database:</strong> Provide full address + Eircode</li>
-              <li><strong>Tip:</strong> Include area name (e.g., "Crumlin")</li>
-            </ul>
-          </div>
+          {/* "How it works" lives here once a valuation has been requested.
+              Before then it occupies the empty results pane on the right. */}
+          {(loading || error || result) && <HowItWorksBox />}
         </aside>
 
         {/* ── Results ── */}
@@ -487,11 +517,7 @@ export default function ValuationPage() {
             </div>
           )}
 
-          {!loading && !error && !result && (
-            <div className="val-empty">
-              <p>Enter a property address to get a valuation estimate</p>
-            </div>
-          )}
+          {!loading && !error && !result && <HowItWorksHero />}
         </main>
       </div>
 
