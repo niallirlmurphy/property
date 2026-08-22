@@ -79,7 +79,11 @@ async def test_search_respects_county_filter(query, county, expected_county, min
     ("36 fairfield road", "Dublin", "Dublin", 0),  # No match in Dublin
     ("36 fairfield road", "Cork", "Cork", 1),      # Exact match in Cork
     ("19 fairfield road", "Dublin", "Dublin", 2),  # Multiple sales at same address
-    ("36 fairfield road", None, "Cork", 1),        # No filter returns all
+    # Golden rule: with no county specified, a bare address assumes Dublin — so it
+    # must NOT leak the Cork "36 Fairfield Road"; it returns 0 (no such Dublin address).
+    ("36 fairfield road", None, "Dublin", 0),
+    # ...unless the query text itself names another county, which is honoured.
+    ("36 fairfield road cork", None, "Cork", 1),
 ])
 async def test_exact_search_respects_county_filter(address, county, expected_county, exact_count):
     """Verify exact search endpoint respects county filter."""
