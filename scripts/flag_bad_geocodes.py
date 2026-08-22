@@ -13,21 +13,21 @@ Two flags, two purposes:
   needs_geocoding = TRUE   -> the re-geocode worklist (drives geocode_mapbox_batch.py)
                              union of: no coordinates
                                        coordinate outside its stored county's box
-                                       eircode >40km from its routing-key centroid
+                                       eircode beyond its routing-key's adaptive extent
                                        on a coordinate shared by >=30 distinct addresses
 
   geocode_suspect = TRUE   -> hide from /search and /trends until re-geocoded
                              (coordinate is known-wrong / untrustworthy)
                              union of: coordinate outside its stored county's box
-                                       eircode >40km from its routing-key centroid
+                                       eircode beyond its routing-key's adaptive extent
                                        on a coordinate shared by >=50 distinct addresses
                              (only rows that HAVE coordinates)
 
   Why county-first: a routing-key centroid is a single point but keys are AREAS —
-  rural ones sprawl (Nobber is 19km from the A82 centroid at its CORRECT coords), so
-  distance-from-centroid conflated key-size with error. The county-box check is the
-  reliable wrong-town signal; the (relaxed) 40km distance and the cluster check catch
-  the rest.
+  rural ones sprawl (Nobber is 19km from the A82 centroid at its CORRECT coords), so a
+  flat distance-from-centroid conflated key-size with error. The county-box check is the
+  reliable wrong-town signal; the per-key adaptive distance rule and the cluster check
+  catch the rest.
 
 Idempotent: safe to re-run. Use --apply to write; default is dry-run.
 """
@@ -41,12 +41,20 @@ from county_validator import COUNTY_BOUNDS
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", "backend", ".env"))
 
-# A routing key is an AREA, not a point. Rural keys sprawl: Nobber is genuinely in
-# A82 (Kells) but sits ~19km from that key's centroid at its CORRECT coordinates.
-# A tight 10km threshold therefore mis-flags legitimate rural addresses (60% of the
-# 10km flags fell in the 10-20km band = rural sprawl). 40km only fires on confident
-# cross-region errors (an address cannot be 40km from its own eircode region).
-RK_DISTANCE_KM = 40      # eircode centroid distance -> confident misplacement
+# A routing key is an AREA, not a point, and areas vary hugely in size. A single flat
+# distance threshold can't fit both: 40km misses errors inside compact urban keys
+# (A96/Dun Laoghaire is ~2km p75, so a row geocoded 12.6km away -- the Howth bug --
+# slips under 40km and is never flagged), while a tight threshold mis-flags genuinely
+# sprawling rural keys (A82/Kells: Nobber is ~19km from centroid at its CORRECT coords).
+# Fix: derive each key's threshold from its OWN distance distribution --
+#   threshold_km = clamp(p75_of_member_distances * RK_MULT, RK_FLOOR_KM, RK_CEIL_KM)
+# p75 (not max) is the robust "core extent": far outliers don't inflate a key's own
+# threshold and so can't hide its errors. Floor protects compact keys from noise; ceiling
+# keeps the largest keys from becoming un-flaggable. Verified: A96 -> 8km (flags 12.6km),
+# A82 -> 31km (spares 19km). See scripts/analyze_adaptive_rk.py.
+RK_MULT = 2.0            # multiple of a key's p75 extent that counts as misplaced
+RK_FLOOR_KM = 8.0        # minimum threshold (compact urban keys)
+RK_CEIL_KM = 45.0        # maximum threshold (largest sprawling keys)
 
 # County bounding boxes (county_validator.COUNTY_BOUNDS) are the strongest wrong-town
 # signal: a Kerry-county row sitting in Dublin is wrong regardless of eircode/cluster.
@@ -83,7 +91,8 @@ def main():
     cur.execute("SET statement_timeout = '900s'")
 
     print(f"Mode: {'APPLY (writing)' if APPLY else 'DRY RUN (no writes)'}")
-    print(f"Thresholds: county-box margin {COUNTY_MARGIN_DEG}deg, routing-key >{RK_DISTANCE_KM}km, "
+    print(f"Thresholds: county-box margin {COUNTY_MARGIN_DEG}deg, routing-key adaptive "
+          f"(p75*{RK_MULT}, clamp {RK_FLOOR_KM}-{RK_CEIL_KM}km), "
           f"suspect cluster >={SUSPECT_CLUSTER} distinct, worklist cluster >={WORKLIST_CLUSTER} distinct\n")
 
     # 1. Add geocode_suspect column + partial index (idempotent, committed immediately)
@@ -113,15 +122,34 @@ def main():
         FROM routing_key_stats
         WHERE geocoded_count >= 20 AND centroid_lat IS NOT NULL
     ),
+    rk_extent AS (
+        -- Each key's "core extent": 75th percentile of its member-property distances
+        -- from the key centroid. Robust to far outliers (they can't inflate the p75),
+        -- so a key polluted with wrong-town rows still gets a tight threshold.
+        SELECT p.routing_key,
+               percentile_cont(0.75) WITHIN GROUP (ORDER BY
+                 ST_Distance(
+                   ST_SetSRID(ST_MakePoint(p.longitude, p.latitude), 4326)::geography,
+                   ST_SetSRID(ST_MakePoint(k.centroid_lon, k.centroid_lat), 4326)::geography
+                 ) / 1000.0
+               ) AS p75_km
+        FROM properties p
+        JOIN good_keys k ON k.routing_key = p.routing_key
+        WHERE p.latitude IS NOT NULL
+        GROUP BY p.routing_key
+    ),
     rk_bad AS (
+        -- Adaptive per-key threshold = clamp(p75 * RK_MULT, RK_FLOOR_KM, RK_CEIL_KM).
         SELECT p.id
         FROM properties p
         JOIN good_keys k ON k.routing_key = p.routing_key
+        JOIN rk_extent e ON e.routing_key = p.routing_key
         WHERE p.latitude IS NOT NULL
           AND ST_Distance(
                 ST_SetSRID(ST_MakePoint(p.longitude, p.latitude), 4326)::geography,
                 ST_SetSRID(ST_MakePoint(k.centroid_lon, k.centroid_lat), 4326)::geography
-              ) / 1000.0 > {RK_DISTANCE_KM}
+              ) / 1000.0
+              > GREATEST({RK_FLOOR_KM}, LEAST({RK_CEIL_KM}, e.p75_km * {RK_MULT}))
     ),
     cluster_suspect_pts AS (
         SELECT latitude, longitude
