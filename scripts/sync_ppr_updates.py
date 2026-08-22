@@ -8,14 +8,20 @@ Process:
 1. Query database for most recent sale date
 2. Download PPR CSV data (full dataset or recent subset)
 3. Filter to sales newer than most recent in DB
-4. Normalize format to match existing schema
-5. Geocode new properties (using existing geocode.py logic)
+4. Normalize addresses for better geocoding/matching
+5. Geocode new properties using MapboxClient (with quota tracking)
 6. Import to database
+7. Enrich with property type and bedroom data (web scraping)
 
 Schedule: Biweekly cron (every 2 weeks)
 
+Mapbox Usage: Enforces 50k/month limit via MapboxClient wrapper.
+If quota insufficient, properties imported with needs_geocoding=TRUE for later processing.
+
 Usage:
     python3 scripts/sync_ppr_updates.py [--dry-run] [--since YYYY-MM-DD]
+    python3 scripts/sync_ppr_updates.py --manual-csv "source data/PPR-ALL.csv"
+    python3 scripts/sync_ppr_updates.py --skip-geocoding  # Import only, geocode later
 """
 
 import asyncpg
@@ -77,16 +83,27 @@ def normalize_address(address: str) -> str:
     Normalize Irish property address for better geocoding and matching.
 
     Rules:
-    1. Title case (except common words)
-    2. Remove "No." prefix from house numbers
-    3. Standardize apartment/unit formatting
-    4. Standardize street type abbreviations
-    5. Clean up punctuation and whitespace
+    1. Clean HTML entities (&#039; -> ', &amp; -> &, etc.)
+    2. Title case (except common words)
+    3. Remove "No." prefix from house numbers
+    4. Standardize apartment/unit formatting
+    5. Standardize street type abbreviations
+    6. Clean up punctuation and whitespace
     """
     if not address:
         return address
 
-    normalized = address.strip()
+    # FIRST: Clean HTML entities (critical for geocoding)
+    import html
+    normalized = html.unescape(address)
+
+    # Also clean common XML/HTML entities that html.unescape might miss
+    normalized = normalized.replace('&amp;', '&')
+    normalized = normalized.replace('&quot;', '"')
+    normalized = normalized.replace('&lt;', '<')
+    normalized = normalized.replace('&gt;', '>')
+
+    normalized = normalized.strip()
 
     # Basic cleanup
     normalized = re.sub(r'\s+', ' ', normalized)
@@ -327,29 +344,149 @@ async def filter_new_sales(csv_path: str, since_date: datetime.date) -> List[Dic
 
 async def geocode_new_sales(sales: List[Dict], output_csv: str):
     """
-    Geocode new sales using existing geocode.py infrastructure.
+    Geocode new sales using MapboxClient with usage tracking.
 
-    Writes sales to temp CSV, runs geocode.py, reads geocoded CSV.
+    Writes sales to CSV with coordinates from Mapbox API.
     """
 
     if not sales:
         print("No sales to geocode")
         return []
 
-    print(f"\nGeocoding {len(sales)} new properties...")
+    print(f"\n4. Geocoding {len(sales)} new properties with Mapbox (tracked usage)...")
+    print()
 
-    # Write to temp CSV in PPR format for geocode.py
-    temp_input = output_csv.replace('.csv', '_input.csv')
+    # Import MapboxClient for tracked geocoding
+    try:
+        from scripts.mapbox_client import MapboxClient, MapboxLimitExceeded, check_quota_before_run
+    except ImportError:
+        print("  ⚠️  MapboxClient not found. Run: python3 scripts/setup_mapbox_tracking.py")
+        print("  Importing without coordinates (needs_geocoding=TRUE)...")
+        # Write CSV without coordinates
+        _write_csv_without_coordinates(sales, output_csv)
+        return output_csv
 
-    with open(temp_input, 'w', newline='', encoding='utf-8') as f:
+    # Check quota before proceeding
+    print(f"  Checking Mapbox quota for {len(sales)} requests...")
+    can_proceed = await check_quota_before_run(len(sales), 'sync_ppr_updates')
+
+    if not can_proceed:
+        print()
+        print("  ⚠️  Insufficient Mapbox quota!")
+        print("  Options:")
+        print("    1. Wait until next month for quota reset")
+        print("    2. Process high-priority properties only")
+        print()
+        print("  Importing without coordinates (needs_geocoding=TRUE)...")
+        _write_csv_without_coordinates(sales, output_csv)
+        return output_csv
+
+    # Geocode with MapboxClient (automatic tracking)
+    geocoded_count = 0
+    failed_count = 0
+
+    # Import bulk address extractor
+    from scripts.extract_base_address import is_bulk_sale, extract_base_address
+
+    async with MapboxClient(source='sync_ppr_updates', operation='batch_geocode') as client:
+        print(f"  Geocoding {len(sales)} addresses...")
+        print(f"  (Using Eircode-first strategy + bulk sale extraction)")
+
+        # Batch geocode for efficiency (process in chunks)
+        batch_size = 50
+        results = []
+        bulk_count = 0
+        eircode_count = 0
+
+        for i in range(0, len(sales), batch_size):
+            batch = sales[i:i + batch_size]
+
+            # Process each sale individually to handle eircode/bulk logic
+            batch_results = []
+            for sale in batch:
+                addr = sale['address_normalized'] or sale['address']
+
+                # Check if bulk sale and extract base address
+                if is_bulk_sale(addr):
+                    addr = extract_base_address(addr)
+                    bulk_count += 1
+
+                # Build query with county
+                query = f"{addr}, {sale['county']}, Ireland"
+
+                # Geocode with eircode-first strategy
+                result = await client.geocode(
+                    query,
+                    country='ie',
+                    eircode=sale.get('eircode')
+                )
+
+                if result and result.get('method') == 'eircode':
+                    eircode_count += 1
+
+                batch_results.append(result)
+
+            results.extend(batch_results)
+
+            geocoded_in_batch = sum(1 for r in batch_results if r is not None)
+            print(f"    Batch {i//batch_size + 1}: {geocoded_in_batch}/{len(batch)} succeeded")
+
+        # Count successes
+        geocoded_count = sum(1 for r in results if r is not None)
+        failed_count = len(results) - geocoded_count
+
+        print()
+        print(f"  ✓ Geocoding complete: {geocoded_count}/{len(sales)} succeeded ({geocoded_count/len(sales)*100:.1f}%)")
+        print(f"  Strategy stats:")
+        print(f"    - Bulk sales extracted: {bulk_count}")
+        print(f"    - Geocoded via Eircode: {eircode_count}")
+        print(f"    - Geocoded via address: {geocoded_count - eircode_count}")
+        print(f"  Strategy stats:")
+        print(f"    - Bulk sales extracted: {bulk_count}")
+        print(f"    - Geocoded via Eircode: {eircode_count}")
+        print(f"    - Geocoded via address: {geocoded_count - eircode_count}")
+
+        # Write output CSV with coordinates
+        with open(output_csv, 'w', newline='', encoding='utf-8') as f:
+            fieldnames = [
+                'Date of Sale (dd/mm/yyyy)', 'Address', 'Postal Code',
+                'County', 'Price (€)', 'Not Full Market Price',
+                'VAT Exclusive', 'Description of Property', 'Property Size Description',
+                'Latitude', 'Longitude'
+            ]
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+
+            for sale, result in zip(sales, results):
+                row = {
+                    'Date of Sale (dd/mm/yyyy)': sale['sale_date'].strftime('%d/%m/%Y'),
+                    'Address': sale['address'],
+                    'Postal Code': sale['eircode'] or '',
+                    'County': sale['county'],
+                    'Price (€)': f"€{sale['price']:.2f}",
+                    'Not Full Market Price': 'Yes' if sale['not_full_market_price'] else 'No',
+                    'VAT Exclusive': 'Yes' if sale['vat_exclusive'] else 'No',
+                    'Description of Property': sale['description'],
+                    'Property Size Description': sale['size_description'] or '',
+                    'Latitude': result['latitude'] if result else '',
+                    'Longitude': result['longitude'] if result else '',
+                }
+                writer.writerow(row)
+
+    return output_csv
+
+
+def _write_csv_without_coordinates(sales: List[Dict], output_csv: str):
+    """Helper to write CSV without coordinates (for quota failures)."""
+    with open(output_csv, 'w', newline='', encoding='utf-8') as f:
         fieldnames = [
             'Date of Sale (dd/mm/yyyy)', 'Address', 'Postal Code',
             'County', 'Price (€)', 'Not Full Market Price',
-            'VAT Exclusive', 'Description of Property', 'Property Size Description'
+            'VAT Exclusive', 'Description of Property', 'Property Size Description',
+            'Latitude', 'Longitude'
         ]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
-
         for sale in sales:
             writer.writerow({
                 'Date of Sale (dd/mm/yyyy)': sale['sale_date'].strftime('%d/%m/%Y'),
@@ -361,44 +498,9 @@ async def geocode_new_sales(sales: List[Dict], output_csv: str):
                 'VAT Exclusive': 'Yes' if sale['vat_exclusive'] else 'No',
                 'Description of Property': sale['description'],
                 'Property Size Description': sale['size_description'] or '',
+                'Latitude': '',
+                'Longitude': '',
             })
-
-    print(f"  Wrote {len(sales)} sales to {temp_input}")
-    print(f"  Running geocoder (this may take a while)...")
-
-    # Run geocode.py on temp file
-    # Note: This requires geocode.py to accept custom input/output paths
-    # May need to adapt geocode.py or implement geocoding directly here
-
-    geocode_script = PROJECT_ROOT / "geocode.py"
-
-    if geocode_script.exists():
-        try:
-            # Run geocode.py with temp file
-            # TODO: Adapt geocode.py to accept --input and --output flags
-            result = subprocess.run([
-                sys.executable,
-                str(geocode_script),
-                "--input", temp_input,
-                "--output", output_csv,
-            ], capture_output=True, text=True, timeout=3600)
-
-            if result.returncode == 0:
-                print(f"  ✓ Geocoding complete")
-            else:
-                print(f"  ⚠️  Geocoding had errors: {result.stderr}")
-        except subprocess.TimeoutExpired:
-            print(f"  ⚠️  Geocoding timed out (>1 hour)")
-        except Exception as e:
-            print(f"  ⚠️  Geocoding failed: {e}")
-    else:
-        print(f"  ⚠️  geocode.py not found, skipping geocoding")
-        print(f"     Sales will be imported without coordinates")
-        # Just copy input to output for now
-        import shutil
-        shutil.copy(temp_input, output_csv)
-
-    return output_csv
 
 
 IRELAND_BOUNDS = (51.4, 55.5, -10.7, -5.4)  # min_lat, max_lat, min_lon, max_lon

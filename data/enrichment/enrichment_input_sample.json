@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "address": "12 Fitzwilliam Square",
+    "county": "Dublin",
+    "price": 850000
+  },
+  {
+    "id": 2,
+    "address": "45 Merrion Road",
+    "county": "Dublin",
+    "price": 725000
+  },
+  {
+    "id": 3,
+    "address": "8 Monastery Walk, Clondalkin",
+    "county": "Dublin",
+    "price": 425000
+  },
+  {
+    "id": 4,
+    "address": "23 The Crescent, Galway City",
+    "county": "Galway",
+    "price": 395000
+  },
+  {
+    "id": 5,
+    "address": "16 Sarsfield Street",
+    "county": "Cork",
+    "price": 380000
+  },
+  {
+    "id": 6,
+    "address": "7 Riverview, Castletroy",
+    "county": "Limerick",
+    "price": 340000
+  },
+  {
+    "id": 7,
+    "address": "34 Willow Park, Athlone",
+    "county": "Westmeath",
+    "price": 285000
+  },
+  {
+    "id": 8,
+    "address": "19 Main Street, Letterkenny",
+    "county": "Donegal",
+    "price": 265000
+  },
+  {
+    "id": 9,
+    "address": "42 Church Road, Kilkenny",
+    "county": "Kilkenny",
+    "price": 315000
+  },
+  {
+    "id": 10,
+    "address": "11 Oakfield, Drogheda",
+    "county": "Louth",
+    "price": 295000
+  }
+]

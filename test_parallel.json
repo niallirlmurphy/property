@@ -1,0 +1,243 @@
+[
+  {
+    "id": "705287",
+    "address": "FLAT C19 BLOCK C, THE POINT CAMPUS, MAIN STREET UPR",
+    "eircode": "",
+    "price": "142337000.00",
+    "sale_date": "2024-12-19",
+    "latitude": "53.399047",
+    "longitude": "-6.127611"
+  },
+  {
+    "id": "749466",
+    "address": "Blocks L   J  I  K  F, H1 & H2 Southwest Gate, Naas Road",
+    "eircode": "",
+    "price": "169325000.00",
+    "sale_date": "2025-09-30",
+    "latitude": "53.315499",
+    "longitude": "-6.379587"
+  },
+  {
+    "id": "706110",
+    "address": "Cooper Square, Seven Mills, Clonburris",
+    "eircode": "",
+    "price": "221942731.00",
+    "sale_date": "2024-12-23",
+    "latitude": "53.291443",
+    "longitude": "-6.139087"
+  },
+  {
+    "id": "720469",
+    "address": "Site for Blocks B and C, Woodbrook, Shankill",
+    "eircode": "",
+    "price": "127920140.00",
+    "sale_date": "2025-04-11",
+    "latitude": "53.323075",
+    "longitude": "-6.231252"
+  },
+  {
+    "id": "690660",
+    "address": "24 Tinakilly Grove, Tinakilly Park, Rathnew",
+    "eircode": "",
+    "price": "387665198.00",
+    "sale_date": "2024-10-17",
+    "latitude": "52.7509",
+    "longitude": "-6.148696",
+    "bedrooms": 2,
+    "property_type": "apartment",
+    "enrichment_source": "duckduckgo",
+    "enriched_at": "2026-06-15T15:45:30.546217"
+  },
+  {
+    "id": "761287",
+    "address": "189 units Block D, Stonemount Park, Ballyfermot",
+    "eircode": "",
+    "price": "80161133.12",
+    "sale_date": "2025-12-03",
+    "latitude": "53.351827",
+    "longitude": "-6.296435"
+  },
+  {
+    "id": "671018",
+    "address": "Blocks 5A-5D (including basement), Belmayne Avenue and Walker Lane, Parkside",
+    "eircode": "",
+    "price": "79735682.82",
+    "sale_date": "2024-06-27",
+    "latitude": "53.404613",
+    "longitude": "-6.16957"
+  },
+  {
+    "id": "757322",
+    "address": "Birchwood Morton Square, Northwood Business Park, Santry Demesne",
+    "eircode": "",
+    "price": "71592322.02",
+    "sale_date": "2025-11-13",
+    "latitude": "53.403706",
+    "longitude": "-6.262581"
+  },
+  {
+    "id": "649622",
+    "address": "Barnwell Park, Hansfield",
+    "eircode": "",
+    "price": "78866709.00",
+    "sale_date": "2024-02-12",
+    "latitude": "53.38853",
+    "longitude": "-6.44264"
+  },
+  {
+    "id": "739065",
+    "address": "202 Residential Units, Block 1  Spencer Place (North), Mayor Street  Spencer Dock",
+    "eircode": "D01F2H9",
+    "price": "88452722.47",
+    "sale_date": "2025-08-01",
+    "latitude": "53.338383",
+    "longitude": "-6.247178",
+    "bedrooms": null,
+    "property_type": "apartment",
+    "enrichment_source": "duckduckgo",
+    "enriched_at": "2026-06-15T15:46:31.751782"
+  },
+  {
+    "id": "759860",
+    "address": "Park West, Dublin 12",
+    "eircode": "",
+    "price": "63000000.00",
+    "sale_date": "2025-11-26",
+    "latitude": "53.280845",
+    "longitude": "-6.1415"
+  },
+  {
+    "id": "740096",
+    "address": "Stoneview, Walkinstown House, Ballymount Road Lower",
+    "eircode": "",
+    "price": "60768277.00",
+    "sale_date": "2025-08-08",
+    "latitude": "53.3174328053391",
+    "longitude": "-6.33984915291265"
+  },
+  {
+    "id": "663667",
+    "address": "COOKSTOWN GATEWAY, SECOND AVENUE, COOKSTOWN INDUSTRIAL ESTATE",
+    "eircode": "",
+    "price": "67875154.00",
+    "sale_date": "2024-05-16",
+    "latitude": "53.3930506556354",
+    "longitude": "-6.26508803309365"
+  },
+  {
+    "id": "695316",
+    "address": "Apartments 1 to 10 and 41 to 184, Block G  The Sidings, Adamstown Station Town Centre",
+    "eircode": "",
+    "price": "69480099.93",
+    "sale_date": "2024-11-11",
+    "latitude": "53.336674",
+    "longitude": "-6.456214"
+  },
+  {
+    "id": "701258",
+    "address": "BLOCK B, AIRTON PLAZA, TALLAGHT",
+    "eircode": "",
+    "price": "70375000.00",
+    "sale_date": "2024-12-09",
+    "latitude": "53.286705",
+    "longitude": "-6.376989",
+    "bedrooms": null,
+    "property_type": "apartment",
+    "enrichment_source": "duckduckgo",
+    "enriched_at": "2026-06-15T15:47:32.923274"
+  },
+  {
+    "id": "766078",
+    "address": "1 CUIRT NA COIRIBE, HEADFORD RD, GALWAY",
+    "eircode": "H91P032",
+    "price": "50391276.00",
+    "sale_date": "2025-12-18",
+    "latitude": "53.284561",
+    "longitude": "-9.049491"
+  },
+  {
+    "id": "755281",
+    "address": "Block C  Stonemount Park, Ballyfermot, Dublin 10",
+    "eircode": "",
+    "price": "46829332.16",
+    "sale_date": "2025-10-31",
+    "latitude": "53.339769",
+    "longitude": "-6.367718"
+  },
+  {
+    "id": "695114",
+    "address": "D2024LR163639P, D2024LR163442A, D2024LR163409Y",
+    "eircode": "",
+    "price": "48407260.00",
+    "sale_date": "2024-11-08",
+    "latitude": "53.396257",
+    "longitude": "-6.129651"
+  },
+  {
+    "id": "714226",
+    "address": "128 units  Block B, Stonemount Park, Ballyfermot",
+    "eircode": "",
+    "price": "57152723.34",
+    "sale_date": "2025-03-05",
+    "latitude": "53.286705",
+    "longitude": "-6.376989"
+  },
+  {
+    "id": "684569",
+    "address": "Scape Dublin, 71-75 Aungier Street, 17-19 Longford Street Great",
+    "eircode": "",
+    "price": "59789058.00",
+    "sale_date": "2024-09-13",
+    "latitude": "53.340789",
+    "longitude": "-6.265792"
+  },
+  {
+    "id": "760123",
+    "address": "Apartment 1 - 10 Beckett, 11 - 20 Joyce, 21 - 31 Wilde Carman Hall",
+    "eircode": "",
+    "price": "43192661.00",
+    "sale_date": "2025-11-27",
+    "latitude": "53.372837",
+    "longitude": "-6.259198"
+  },
+  {
+    "id": "687534",
+    "address": "Block C, Brickfield Drive  Crumlin",
+    "eircode": "",
+    "price": "43173612.34",
+    "sale_date": "2024-10-01",
+    "latitude": "53.2789149393546",
+    "longitude": "-6.14738933113535"
+  },
+  {
+    "id": "717499",
+    "address": "111 APARTMENTS AT, THE LOCK KEEPER'S QUAY  BLOCK 6, GRAND CANAL HARBOUR",
+    "eircode": "D08HE9A",
+    "price": "45228495.71",
+    "sale_date": "2025-03-27",
+    "latitude": "53.324916",
+    "longitude": "-6.23227"
+  },
+  {
+    "id": "743180",
+    "address": "1 SHACKLETON EXCHANGE, SHACKLETON DRIVE, LUCAN",
+    "eircode": "K78F9C5",
+    "price": "43185177.00",
+    "sale_date": "2025-08-28",
+    "latitude": "53.349838",
+    "longitude": "-6.468303"
+  },
+  {
+    "id": "761459",
+    "address": "83-188 First Lock, Davitt Road, Drimnagh",
+    "eircode": "",
+    "price": "46680321.10",
+    "sale_date": "2025-12-03",
+    "latitude": "53.335369",
+    "longitude": "-6.317453",
+    "bedrooms": null,
+    "property_type": "apartment",
+    "enrichment_source": "duckduckgo",
+    "enriched_at": "2026-06-15T15:49:35.066001"
+  }
+]

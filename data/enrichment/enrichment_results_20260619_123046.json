@@ -1,0 +1,502 @@
+[
+  {
+    "id": 586385,
+    "address": "O'Devaney Gardens, Arbour Hill, Dublin 7",
+    "county": "Dublin",
+    "price": 225000000.0,
+    "bedrooms": 2,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:18:44.990038"
+  },
+  {
+    "id": 706110,
+    "address": "Cooper Square, Seven Mills, Clonburris",
+    "county": "Dublin",
+    "price": 221942731.0,
+    "bedrooms": 2,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:18:59.947878"
+  },
+  {
+    "id": 431217,
+    "address": "Apartments 1 - 186 Cheevers Court, Apartments 1-182 Haliday House, Cualanor",
+    "county": "Dublin",
+    "price": 182378854.63,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:19:18.711631"
+  },
+  {
+    "id": 473382,
+    "address": "8th Lock, Ratoath Road, Pelletstown",
+    "county": "Dublin",
+    "price": 170142820.0,
+    "bedrooms": null,
+    "property_type": "apartment",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:19:40.088614"
+  },
+  {
+    "id": 749466,
+    "address": "Blocks L   J  I  K  F, H1 & H2 Southwest Gate, Naas Road",
+    "county": "Dublin",
+    "price": 169325000.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:19:55.117143"
+  },
+  {
+    "id": 705287,
+    "address": "FLAT C19 BLOCK C, THE POINT CAMPUS, MAIN STREET UPR",
+    "county": "Dublin",
+    "price": 142337000.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:20:12.652795"
+  },
+  {
+    "id": 575864,
+    "address": "Apartment Development, at Castleview, Carriglea",
+    "county": "Dublin",
+    "price": 135859819.26,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:20:26.564374"
+  },
+  {
+    "id": 456199,
+    "address": "Block A and Block C, THE POINT CAMPUS, DUBLIN 1",
+    "county": "Dublin",
+    "price": 134261047.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:20:40.561622"
+  },
+  {
+    "id": 429403,
+    "address": "Residential & Commercial Units, Heuston South Quarter, St Johns Road West",
+    "county": "Dublin",
+    "price": 123800000.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:20:54.666344"
+  },
+  {
+    "id": 416240,
+    "address": "APARTMENT 1 - 197 NEPTUNE BLOCK, HONEYPARK, DUN LAOGHAIRE",
+    "county": "Dublin",
+    "price": 114440820.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:21:08.973881"
+  },
+  {
+    "id": 560137,
+    "address": "Davitt PRS Development, Davitt Road, Drimnagh",
+    "county": "Dublin",
+    "price": 111280172.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:21:23.210926"
+  },
+  {
+    "id": 546679,
+    "address": "Apartments 1 - 297, Blackwood Square, Northwood",
+    "county": "Dublin",
+    "price": 109055078.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:21:37.313902"
+  },
+  {
+    "id": 535341,
+    "address": "Site at Barnoaks development, Citywest road, Citywest",
+    "county": "Dublin",
+    "price": 107488987.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:21:51.457009"
+  },
+  {
+    "id": 518211,
+    "address": "ST CLARES PARK, HAROLDS CROSS ROAD",
+    "county": "Dublin",
+    "price": 107488987.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:22:05.594173"
+  },
+  {
+    "id": 416156,
+    "address": "189 APARTMENTS AT ELMFIELD, BALLYOGAN, DUBLIN 18",
+    "county": "Dublin",
+    "price": 99762972.37,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:22:25.138444"
+  },
+  {
+    "id": 593592,
+    "address": "Opus  6 Hanover Quay, Dublin 2",
+    "county": "Dublin",
+    "price": 93813416.4,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:22:43.059712"
+  },
+  {
+    "id": 643560,
+    "address": "Blocks D1  D2  D3 and D4, C\ufffdil D\ufffdin Avenue, Citywest",
+    "county": "Dublin",
+    "price": 92511013.22,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:22:57.228319"
+  },
+  {
+    "id": 610502,
+    "address": "Block 3, Wyckham Point, Dundrum",
+    "county": "Dublin",
+    "price": 90100000.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:23:11.239075"
+  },
+  {
+    "id": 739065,
+    "address": "202 Residential Units, Block 1  Spencer Place (North), Mayor Street  Spencer Dock",
+    "county": "Dublin",
+    "price": 88452722.47,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:23:25.327455"
+  },
+  {
+    "id": 507600,
+    "address": "Blocks 1B  1C  1D  2A & 2B, St Edmunds, Palmerstown",
+    "county": "Dublin",
+    "price": 84513385.4,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:23:42.308629"
+  },
+  {
+    "id": 533152,
+    "address": "Student Accommodation Building, 35-38 Cork Street",
+    "county": "Dublin",
+    "price": 80685721.46,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:23:56.439329"
+  },
+  {
+    "id": 761287,
+    "address": "189 units Block D, Stonemount Park, Ballyfermot",
+    "county": "Dublin",
+    "price": 80161133.12,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:24:10.502005"
+  },
+  {
+    "id": 671018,
+    "address": "Blocks 5A-5D (including basement), Belmayne Avenue and Walker Lane, Parkside",
+    "county": "Dublin",
+    "price": 79735682.82,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:24:24.769497"
+  },
+  {
+    "id": 563998,
+    "address": "Apartments 1 - 190, Balroy House, Carpenterstown Road",
+    "county": "Dublin",
+    "price": 74078760.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:24:39.125876"
+  },
+  {
+    "id": 529116,
+    "address": "Apts 1-160, Glencairn Gate, Woodward Square",
+    "county": "Dublin",
+    "price": 73997601.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:24:53.138885"
+  },
+  {
+    "id": 611615,
+    "address": "Apartment Blocks E01-E06, The East Village, Clay Farm",
+    "county": "Dublin",
+    "price": 73427703.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:25:07.141435"
+  },
+  {
+    "id": 701258,
+    "address": "BLOCK B, AIRTON PLAZA, TALLAGHT",
+    "county": "Dublin",
+    "price": 70375000.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:25:21.338881"
+  },
+  {
+    "id": 663667,
+    "address": "COOKSTOWN GATEWAY, SECOND AVENUE, COOKSTOWN INDUSTRIAL ESTATE",
+    "county": "Dublin",
+    "price": 67875154.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:25:35.341630"
+  },
+  {
+    "id": 553246,
+    "address": "Block E7 and Block G Clay Farm, Part of Folio DN79535F, Leopardstown",
+    "county": "Dublin",
+    "price": 64471885.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:25:49.458619"
+  },
+  {
+    "id": 770928,
+    "address": "18 Newmarket Square, Dublin",
+    "county": "Dublin",
+    "price": 64368821.05,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:26:03.469350"
+  },
+  {
+    "id": 765965,
+    "address": "Block D  The Crossings  Adamstown, Station Town Centre  Adamstown, Lucan  Part Folio DN246162F",
+    "county": "Dublin",
+    "price": 64148109.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:26:17.458982"
+  },
+  {
+    "id": 565263,
+    "address": "Apartments 1 - 142, Roselawn, Stillorgan Road",
+    "county": "Dublin",
+    "price": 62269305.7,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:26:31.662815"
+  },
+  {
+    "id": 432053,
+    "address": "Cedar Place  Strand View, Brookwood  Verville, Swords  Killester  Raheny  Clontarf",
+    "county": "Dublin",
+    "price": 61340949.8,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:26:45.630910"
+  },
+  {
+    "id": 740096,
+    "address": "Stoneview, Walkinstown House, Ballymount Road Lower",
+    "county": "Dublin",
+    "price": 60768277.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:26:59.566754"
+  },
+  {
+    "id": 624287,
+    "address": "Seafield Strand, Sutton",
+    "county": "Dublin",
+    "price": 59949113.65,
+    "bedrooms": 2,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:27:14.706595"
+  },
+  {
+    "id": 684569,
+    "address": "Scape Dublin, 71-75 Aungier Street, 17-19 Longford Street Great",
+    "county": "Dublin",
+    "price": 59789058.0,
+    "bedrooms": 2,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:27:29.073142"
+  },
+  {
+    "id": 509982,
+    "address": "151 Apartments, Beech Park, Cabinteely",
+    "county": "Dublin",
+    "price": 57928634.0,
+    "bedrooms": 2,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:27:43.160338"
+  },
+  {
+    "id": 498068,
+    "address": "Blocks A and C and the Common Areas, Santry Place, Swords Road",
+    "county": "Dublin",
+    "price": 57761218.0,
+    "bedrooms": 2,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:27:57.170932"
+  },
+  {
+    "id": 517275,
+    "address": "37 53 39 49 and 51 Montpelier Hill, 55 rere Montpelier Hill  41 rere, and 43  45 and 47 Montpelier Hill",
+    "county": "Dublin",
+    "price": 57028345.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:28:11.249354"
+  },
+  {
+    "id": 516308,
+    "address": "Contract for Sale  Adderrig 1, Adamstown",
+    "county": "Dublin",
+    "price": 56409691.63,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:28:25.651358"
+  },
+  {
+    "id": 639598,
+    "address": "1-120 Crofters Quarter, Deansgrange, Blackrock",
+    "county": "Dublin",
+    "price": 56035242.3,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:28:40.007044"
+  },
+  {
+    "id": 774246,
+    "address": "Block A  The Crossings  Adamstown, Station Town Centre  Adamstown, Lucan  Part Folio DN246162F",
+    "county": "Dublin",
+    "price": 55760299.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:28:53.959668"
+  },
+  {
+    "id": 497852,
+    "address": "The Gate Lodge and Rostrevor Place, (comprising Block F and Block G), 75 Orwell Road  Rathgar",
+    "county": "Dublin",
+    "price": 54587444.93,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:29:08.196471"
+  },
+  {
+    "id": 557874,
+    "address": "1 HAMPTON WOOD SQUARE, HAMPTON WOOD, FINGLAS",
+    "county": "Dublin",
+    "price": 54500000.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:29:22.067461"
+  },
+  {
+    "id": 418662,
+    "address": "159 Apartments at Block 33, One Three North, Marrsfield Avenue",
+    "county": "Dublin",
+    "price": 52113844.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:29:36.260152"
+  },
+  {
+    "id": 517268,
+    "address": "36 36 1/2 35 34 33  rear of 33, 32  rear of 32 and 30 Thomas St, 10 Hanbury Lane and adjacent",
+    "county": "Dublin",
+    "price": 51105793.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:29:50.393261"
+  },
+  {
+    "id": 766629,
+    "address": "APT 1.1, NATIONAL COLLEGE OF IRELAND, MAYOR ST",
+    "county": "Dublin",
+    "price": 50648130.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:30:04.652422"
+  },
+  {
+    "id": 695114,
+    "address": "D2024LR163639P, D2024LR163442A, D2024LR163409Y",
+    "county": "Dublin",
+    "price": 48407260.0,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:30:18.592521"
+  },
+  {
+    "id": 482081,
+    "address": "Block B5 Dublin Landings, North Wall Quay  Dublin 1",
+    "county": "Dublin",
+    "price": 48162991.66,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:30:32.566049"
+  },
+  {
+    "id": 755281,
+    "address": "Block C  Stonemount Park, Ballyfermot, Dublin 10",
+    "county": "Dublin",
+    "price": 46829332.16,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-19T12:30:46.671405"
+  }
+]

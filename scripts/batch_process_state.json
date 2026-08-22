@@ -1,0 +1,19 @@
+{
+  "last_updated": "2026-06-04T16:20:08.845362",
+  "normalization": {
+    "completed": 446886,
+    "total": 784854,
+    "percent": 56.9,
+    "batches_run": 21,
+    "last_batch_time": "2026-06-04T16:20:07.233747"
+  },
+  "enrichment": {
+    "completed": 89,
+    "total": 8727,
+    "percent": 1.0,
+    "batches_run": 18,
+    "last_batch_time": "2026-06-04T16:16:42.615645"
+  },
+  "started_at": "2026-06-04T12:05:00",
+  "status": "running"
+}

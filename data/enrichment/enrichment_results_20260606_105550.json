@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "address": "12 Fitzwilliam Square",
+    "county": "Dublin",
+    "price": 850000,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:55:21.382115"
+  },
+  {
+    "id": 2,
+    "address": "45 Merrion Road",
+    "county": "Dublin",
+    "price": 725000,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:55:36.023131"
+  },
+  {
+    "id": 3,
+    "address": "8 Monastery Walk, Clondalkin",
+    "county": "Dublin",
+    "price": 425000,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:55:50.596535"
+  }
+]

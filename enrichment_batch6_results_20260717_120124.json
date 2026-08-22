@@ -1,0 +1,3502 @@
+[
+  {
+    "id": 787504,
+    "address": "CORRAINE, BALLYBOFEY, CO. DONEGAL",
+    "sale_date": "2026-06-17",
+    "bedrooms": null,
+    "property_type": null
+  },
+  {
+    "id": 787308,
+    "address": "APT 37, THE LIGHTHOUSE, CHURCH RD DUBLIN 3",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787197,
+    "address": "10 The Cross, Baile na M\ufffdna Glen, Mooretown",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787337,
+    "address": "POLLBOY, BALLAGHADERREEN, ROSCOMMON",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787286,
+    "address": "62 PRIMROSE HILL, TOWER, BLARNEY",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787271,
+    "address": "47 Bawnogue Park, Boycetown, Kilcock",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787262,
+    "address": "4 Mill Brook Lane, Baile Na Mona, Glen Balle na Mona",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 787330,
+    "address": "HOUSE B, BATTLESTOWN, RAMSGRANGE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787242,
+    "address": "261 Gleann An Ghairdin, Ballytegan, Gorey",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787274,
+    "address": "5 Meadow View, Broom Heights, Midleton",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787228,
+    "address": "20 Meadow View, Broom Heights, Midleton",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 787216,
+    "address": "143 Arderrow, Ballyvolane, Cork City",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787199,
+    "address": "10 WOODLANE, HILLSIDE, BIRR",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787268,
+    "address": "45 Mercer Manor, Tuily Village Centre West, Cherrywood",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "house"
+  },
+  {
+    "id": 787283,
+    "address": "6 ST DOMMICK TERRACE, CROSSES GREEN, CORK",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787203,
+    "address": "11 Lios an Chnoic, CARNAMUGGAGH, LETTERKENNY",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787264,
+    "address": "400 Ard Uisce, Whiterock Hill, Wexford",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787269,
+    "address": "45 OLD WINDMILL COURT, LOWER GERALD GRIFFIN ST, LIMERICK",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787251,
+    "address": "33 MARIAN PARK, WATERFORD, WATERFORD",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787222,
+    "address": "18 BARTRA GREEN, KILLALA, CO MAYO",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787258,
+    "address": "4 Canal Bank Way, Clonburris, Dublin 22",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "house"
+  },
+  {
+    "id": 787248,
+    "address": "30 Macartan View, Latlorcan, Monaghan",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787277,
+    "address": "59 THE LAWNS, ABBEYLANDS, CLANE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787260,
+    "address": "4 ISLAND VIEW, KILRUSH, CLARE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787250,
+    "address": "32 ARDLEIGH, BRACKEN GROVE, WATERFORD",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787278,
+    "address": "59 THORNFIELD SQ, WATERY LANE, CLONDALKIN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787334,
+    "address": "No. 37 The Meadows, Cnoc Na Greine, Greenville Road",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 787343,
+    "address": "THE ROCK, YOUGHAL RD, MIDLETON",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787344,
+    "address": "THOMASTOWN, ARKLOW, CO WICKLOW",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787246,
+    "address": "3 VILLAGE GATE, TINAHELY, WICKLOW",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787259,
+    "address": "4 HILLVIEW CRESCENT, DOON RD, BALLYBUNION",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787207,
+    "address": "122B Springfort Meadows, Nenagh",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787211,
+    "address": "13 HIGHFIELD RD, CAVAN, CAVAN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787253,
+    "address": "35 RADHARC NA MBHAILE, KILBROGAN HILL, BANDON",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787244,
+    "address": "3 FEITHLEANN GEAL, FARRANCOUSH, SHERKIN ISLAND",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787320,
+    "address": "BRIDGE ST, HEADFORD, GALWAY",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787331,
+    "address": "KILLYCRUM, CASTLEBLANEY, COUNTY MONAGHAN",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787219,
+    "address": "17 MOUNT PLEASANT AVE, LIMERICK CITY, LIMERICK",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787239,
+    "address": "24 BARRYS AVE, TARMONBARRY, ROSCOMMON",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787338,
+    "address": "ROSHINE ACRES, BURTONPORT, LETTERKENNY",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787316,
+    "address": "BALLYDREHID, BALLISODARE, CO. SLIGO",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787217,
+    "address": "16 SLIABH NA MBAN, YOUGHALS, CLONAKILTY",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787192,
+    "address": "1 Aderrig Crescent, Adamstown, Lucan",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787193,
+    "address": "1 ROCKEY RD, WICKLOW, WICKLOW",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787194,
+    "address": "1 SHANOWEN GROVE, SANTRY, DUBLIN 9",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787196,
+    "address": "1 THE MONASTERY, KINSALE, CO CORK",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787198,
+    "address": "10 THE FERNS, FOXWOOD, GARYDUFF",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787200,
+    "address": "101 CAPWELL RD, CORK, CORK",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787201,
+    "address": "103 HAMPTON LODGE BLOCK B, GRACE PARK RD, DRUMCONDRA DUBLIN 9",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787202,
+    "address": "11 Ardan View, Longview, Ballyvolane",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "house"
+  },
+  {
+    "id": 787204,
+    "address": "12 CRECENT AVE, LIMERICK, LIMERICK",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787205,
+    "address": "12 Lockhouse View, Seven Mills  Clonburris, Dublin 22",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787206,
+    "address": "12 Robinrath Close, Robinrath",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787208,
+    "address": "122c Springfort Meadows, Nenagh",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787209,
+    "address": "123 MONKSFIELD, ABBEYSIDE, DUNGARVAN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787210,
+    "address": "128 DOLPHIN RD, DRIMNAGH, DUBLIN 12",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787212,
+    "address": "13 Oak Tree Park, Swellan Upper, Cavan",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787214,
+    "address": "14 HILLCREST, TULLA RD, ENNIS",
+    "sale_date": "2026-06-16",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 787215,
+    "address": "14 Tullyvale Crescent, Tullyvale, Cherrywood",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787218,
+    "address": "17 HOWTH JUNCTION COTTAGES, KILBARRACK, DUBLIN 5",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787221,
+    "address": "17 The Orchard, Carleton, Castletreasure",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787223,
+    "address": "18 CLAIRVILLE LODGE, MALAHIDE, CO DUBLIN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 5,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787224,
+    "address": "18 RATHLIN RD, GLASNEVIN, DUBLIN 9",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787225,
+    "address": "2 Regles, Ministers Road, Lusk",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787226,
+    "address": "2 The Woods, Ballycullen Gate, Ballycullen",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787227,
+    "address": "20 AVOCA PARK, BLACKROCK, DUBLIN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 1,
+    "property_type": "detached"
+  },
+  {
+    "id": 787229,
+    "address": "20 potters Field Court, Cappocks Green, Ardee",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787230,
+    "address": "20 THE SYCAMORES, GROVE RD, MALAHIDE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787231,
+    "address": "21 GRACEMEADOW COURT, STAMULLEN, MEATH",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787232,
+    "address": "21 MCGOVERNS CORNER, CORK ST, DUBLIN 8",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787233,
+    "address": "22 CLIFTONVILLE RD, GLASNEVIN, DUBLIN 9",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787234,
+    "address": "22 MAC OISIN PLACE, DROMOD, CO. LEITRIM",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787235,
+    "address": "23 COLTHURST MEWS, HUNTINGTON GLEN, LUCAN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 787236,
+    "address": "23 Lockhouse View, Seven Mills, Clonburris",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787240,
+    "address": "24 Clonrath Hill, Lusk",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787238,
+    "address": "23 UPPER NEWCASTLE, NEWCASTLE, GALWAY",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787247,
+    "address": "30 Charterschool Park, The Charter School, Trim",
+    "sale_date": "2026-06-16",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787249,
+    "address": "31 Ardan View, Lahardane, Ballyvolane",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787252,
+    "address": "34 QUINNS RD, SHANKILL, DUBLIN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787254,
+    "address": "36 CLUAIN AOIBHEANN, CAVAN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787281,
+    "address": "6 MAPLE GROVE, SMITHBOROUGH, MONAGHAN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787257,
+    "address": "39 RATHSILLAN, CARLOW RD, TULLOW",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787261,
+    "address": "4 LATCHFORD ROW, CASTAHEANY, DUBLIN 15",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787263,
+    "address": "40 Sea Scape, Wicklow Town, COUNTY WICKLOW",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787265,
+    "address": "43 THE OLD MILL RACE, ATHGARVAN, NEWBRIDGE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 787266,
+    "address": "44 Rock Gate, Baneshane, Midleton",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787267,
+    "address": "45 Cushina Avenue, Portarlington",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787270,
+    "address": "46 CLONATTIN, GOREY, WEXFORD",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787256,
+    "address": "39 KNOCKNALYRE, BALLINA, CO MAYO",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787273,
+    "address": "5 Clontaff Close, Union Hall",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787275,
+    "address": "51 GLASLYNN, HOWTH RD, CLONTARF DUBLIN 3",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787279,
+    "address": "597 WOODVIEW COTTAGES, CHURCH LANE, RATHFARNHAM",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "detached"
+  },
+  {
+    "id": 787280,
+    "address": "6 IONA PARK, GLASNEVIN, DUBLIN 9",
+    "sale_date": "2026-06-16",
+    "bedrooms": 5,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787282,
+    "address": "6 Mill Brook View, Baile Na Mona Glen, Mooretown",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "house"
+  },
+  {
+    "id": 787284,
+    "address": "6 Tower Green, Old Connell, Naas Road",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "house"
+  },
+  {
+    "id": 787285,
+    "address": "61 Willow Close, The Orchard, Watergrasshill",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787276,
+    "address": "558A PIERCETOWN, NEWBRIDGE, CO. KILDARE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787287,
+    "address": "62 ST FIACCS TERRACE, GRAIGUECULLEN, CARLOW",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787289,
+    "address": "64 Radharc Fhlannain, Sil Na Manach, Mungret",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787290,
+    "address": "65 ST IGNATIUS RD, DRUMCONDRA, DUBLIN 9",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787292,
+    "address": "75 OLD CARAGH COURT, NAAS, KILDARE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787293,
+    "address": "79 Summerseat Crescent, Clonee",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787294,
+    "address": "8 The Crescent, Baile na Mona Glen, Mooretown",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "house"
+  },
+  {
+    "id": 787295,
+    "address": "84 MOUNTAIN VIEW PARK, RATHFARNHAM, DUBLIN 14",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787309,
+    "address": "APT 38 COIS TEAMPAILL, NEWCASTLE WEST, CO LIMERICK",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787297,
+    "address": "9 ACADEMY COURT, ACADEMY ST, KILDARE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787298,
+    "address": "9 Lakeview, Carrick on Suir",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787299,
+    "address": "9 Lockhouse View, Seven Mills, Clonburris",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787300,
+    "address": "9 Merton, Model Farm Road, Cork",
+    "sale_date": "2026-06-16",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 787301,
+    "address": "9 oak way, the willows, dunshauglin",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787302,
+    "address": "96 Ras an Mhuilinn, Gurteenroe, Macroom",
+    "sale_date": "2026-06-16",
+    "bedrooms": 5,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787303,
+    "address": "99 COUNTESS GROVE, KILLARNEY, KERRY",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787291,
+    "address": "7 STATION ROAD, BAGENALSTOWN, COUNTY CARLOW",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787305,
+    "address": "APT 14 COPLEY HALL, COTTERS ST, CORK",
+    "sale_date": "2026-06-16",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787306,
+    "address": "APT 18, BARNA VILLAGE CENTRE, BARNA",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "detached"
+  },
+  {
+    "id": 787307,
+    "address": "APT 1, NEWTOWN HOUSE, CHURCHTOWN DUBLIN 14",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787310,
+    "address": "APT 46, BLOCK B, CITY GATE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787311,
+    "address": "APT 7B -  EMMET LODGE, ST VINCENTS STREET WEST, DUBLIN 8",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787312,
+    "address": "Apt 87 Meadow View, Clayfarm, Leopardstown",
+    "sale_date": "2026-06-16",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787313,
+    "address": "Apt 96 The Avenue, Pairc Na Manach, Newbridge",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787314,
+    "address": "APT 96, 20 CHRIST CHURCH PLACE, DUBLIN 1",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787315,
+    "address": "AUGHNAGADDY, GLEBE, RAMELTON",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787317,
+    "address": "BALLYMACAW, DUNMORE EAST, CO WATERFORD",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787318,
+    "address": "BALLYVOREEN, WOODSTOWN, WATERFORD",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787321,
+    "address": "CAHIR ODOHERTY AVE, BUNCRANA, DONEGAL",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787322,
+    "address": "CANUIG, BALLINSKELLIGS, CO. KERRY",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": null
+  },
+  {
+    "id": 787323,
+    "address": "CARNDORE, CASTLEFIN, DONEGAL",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787328,
+    "address": "GLENLAHAN, STRADBALLY RD, PORTLAOISE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 787329,
+    "address": "HARTLEY COTTAGE/GINELLS WAY, ADDINSTOWN, DELVIN",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787332,
+    "address": "KILMOYLEY SOUTH, ARDFERT, KERRY",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787333,
+    "address": "No 7 The Way  Grattan Park, Shackleton Road, Celbridge",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787335,
+    "address": "OAKLANDS, NEW ROSS, CO WEXFORD",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787339,
+    "address": "SAN MICHELLE, 30 EARLWOOD ESTATE, THE LOUGH",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787341,
+    "address": "ST JOSEPHS, LEOPARDSTOWN RD, DUBLIN 18",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787342,
+    "address": "SUNMOUNT, RAHANISKEY, WHITECHURCH",
+    "sale_date": "2026-06-16",
+    "bedrooms": 6,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787324,
+    "address": "COOLBAWN, CORLISMORE, CAVAN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 787326,
+    "address": "FORMER CREAMERY AT, BRUREE, LIMERICK",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787336,
+    "address": "PALMFIELD, CARRACASTLE, BALLAGHADERREEN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787340,
+    "address": "SHANDON, BURTONPORT, DONEGAL",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787319,
+    "address": "BEACH HALT, LISFANNON, FAHAN",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787272,
+    "address": "49 ST ALBANS PARK, BALLSBRIDGE, DUBLIN 4",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787237,
+    "address": "23 THE CRESCENT, ROBSWALL, MALAHIDE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 5,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787304,
+    "address": "APARTMENT 1, 10 EDWARD STREET, TRALEE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787245,
+    "address": "3 THE DOWNS, LIFFEY HALL, NEWBRIDGE",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787220,
+    "address": "17 ROCHFORD HOUSE, BRENNANSTOWN, DUBLIN 18",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787288,
+    "address": "63 GLENDINE DR, ABBEYSIDE, DUNGARVAN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 5,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787213,
+    "address": "14 CLOGHANBOY, ATHLONE, CO WESTMEATH",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787325,
+    "address": "DORE, BUNBEG, LETTERKENNY",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787243,
+    "address": "27 LOWER HATCH STREET, DUBLIN 2, DUBLIN2",
+    "sale_date": "2026-06-16",
+    "bedrooms": null,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787255,
+    "address": "38 LIMEKILN DR, MANOR ESTATE, DUBLIN 12",
+    "sale_date": "2026-06-16",
+    "bedrooms": 4,
+    "property_type": "bungalow"
+  },
+  {
+    "id": 787327,
+    "address": "GLENGRARRIFF, PROUDSTOWN HILL, NAVAN",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787296,
+    "address": "87 AN DUIRLING, ROSCAM, GALWAY CITY",
+    "sale_date": "2026-06-16",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787110,
+    "address": "3 SWEENEY MEWS, ONGAR VILLAGE, DUBLIN 15",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787136,
+    "address": "44 WOODVIEW, ASHFORD, CO WICKLOW",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787167,
+    "address": "APARTMENT 8, LIBERTY VIEW, LONG'S PLACE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787056,
+    "address": "119 CLIFDEN COURT, ELLIS QUAY, DUBLIN 7",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787146,
+    "address": "58 Rowan Avenue, Kilcarbery Grange, Dublin 22",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787155,
+    "address": "79 CUSHLAWN PARK, KILLINARDEN, TALLAGHT DUBLIN 24",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787103,
+    "address": "28 ACADEMY COURT, ACADEMY ST, KILDARE",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787141,
+    "address": "48 Rowan Green, Kilcarbery Grange",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787082,
+    "address": "2 Canal Bank Close, Canal Bankj, Clonburris",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787145,
+    "address": "55 ARD ODONNELL, LETTERKENNY, DONEGAL",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787153,
+    "address": "7 THE CRESCENT, CURRAGH GRANGE, NEWBRIDGE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787048,
+    "address": "1 NEWMAN PLACE, MAYNOOTH, KILDARE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787053,
+    "address": "10 Canal Bank View, Clonburris",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787047,
+    "address": "1 CHURCHVIEW, CLAREGALWAY, CO GALWAY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 787049,
+    "address": "1 OFFALY ST, TULLAMORE, OFFALY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787050,
+    "address": "1 OUGHAM BAWN, BALLYMOTE ROAD, TUBBERCURRY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 787051,
+    "address": "1 RIVER OAKS, CLAREGALWAY, GALWAY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787052,
+    "address": "10 ABBOTSWOOD DOWNS, MONASTERY RD, ROCHESTOWN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787054,
+    "address": "11 RINAWADE PARK, LEIXLIP, KILDARE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787055,
+    "address": "11 TUAIRIN, ROSCAM, GALWAY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787059,
+    "address": "120A PINEBROOK RD, ARTANE, DUBLIN 5",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787058,
+    "address": "12 WALNUT RISE, DUBLIN 9, DUBLIN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787060,
+    "address": "121 BRANDON RD, DRIMNAGH, DUBLIN 12",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787061,
+    "address": "121 HILLSIDE, GREYSTONES, CO WICKLOW",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787062,
+    "address": "13 MOY GLAS WAY, LUCAN, DUBLIN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "house"
+  },
+  {
+    "id": 787063,
+    "address": "133 PRIORY SQ, ST RAPHAELS MANOR, CELBRIDGE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787067,
+    "address": "14 MOUNT PROSPECT LAWNS, CLONTARF, DUBLIN 3",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787068,
+    "address": "15 Church Fields Way, Church Fields East",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787069,
+    "address": "15 Silverbrook, Whitechurch Road, Rathfarnham",
+    "sale_date": "2026-06-15",
+    "bedrooms": 5,
+    "property_type": "house"
+  },
+  {
+    "id": 787070,
+    "address": "16 ST BRIGIDS TERRACE, LONGFORD, LONGFORD",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787071,
+    "address": "16 The Boulevard Red Rock, Field Balmoston, Donabate",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787073,
+    "address": "167 COILL TIRE, DOUGHISKA, GALWAY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787074,
+    "address": "17 The Close, Grattan Park, Shackleton Road",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787072,
+    "address": "16 THE MEWS, CASTLEWHITE, WHITECHURCH",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787076,
+    "address": "18 GAZELLE VILLAGE, TYRRELSTOWN, DUBLIN 15",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787077,
+    "address": "18 The Boulevard, Red Rock Reid, Balmoston",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787078,
+    "address": "19 Aldborough Manor, Baltinglass",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787081,
+    "address": "2 and 4 Dean Street, 25A  26  and 25 Vicar Street",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787080,
+    "address": "1A Hillcrest Drive, Greystone, Limerick",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787079,
+    "address": "190 ST JOHNS PARK, WATERFORD, WATERFORD",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787083,
+    "address": "2 WARRANT OFFICERS QUARTERS, RERRIN, BERE ISLAND",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787066,
+    "address": "14 MAIN ST, CARNEW, WICKLOW",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787065,
+    "address": "14 GLASSAN LODGE, PROSPECT WOOD, LONGFORD",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787084,
+    "address": "2 Wren Terrace, Auburn Woods, Malahide",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787085,
+    "address": "20 MOYGLARE RISE, MARIAVILLA, MAYNOOTH",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787086,
+    "address": "20 TURNSTONE, BARNAGEERAGH COVE, SKERRIES",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787087,
+    "address": "21 MAPLE WOODS, BALLINACURRA, MIDLETON",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787098,
+    "address": "25 The Boulevard Redrock Field, Balmoston, Donabate",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787091,
+    "address": "22 HAZELWOOD CRESCENT, CLONDALKIN, DUBLIN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787093,
+    "address": "221 BEECHWOOD COURT, STILLORGAN, CO DUBLIN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787094,
+    "address": "23 The Boulevard, Red Rock Field, Balmoston",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 787090,
+    "address": "216  Arderrow, Ballyhooly Road, Ballyvolane",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "house"
+  },
+  {
+    "id": 787097,
+    "address": "25 MELVILLE CLOSE BLOCK 1, CITYDIDE, MEAKSTOWN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787100,
+    "address": "26 MONKSFIELD LAWNS, CLONDALKIN, DUBLIN 22",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787102,
+    "address": "27 LIOS EALTAN, NILE LODGE, GALWAY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787104,
+    "address": "28 ASHFIELD PARK, MULHUDDART, DUBLIN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787106,
+    "address": "3 GRANGE GLEN, GRANGE MANOR, OVENS",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787107,
+    "address": "3 LIFFEY GLEN, LIFFEY VALLEY PARK, LUCAN",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787108,
+    "address": "3 Mill Brook View, Baile Na Mona Glen, Swords",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "house"
+  },
+  {
+    "id": 787109,
+    "address": "3 Regles, Ministers Road, Lusk",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787111,
+    "address": "30 COUNTRY MEADOWS, TUAM, CO GALWAY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787101,
+    "address": "26 TAMARISK PARK, KILNAMANAGH, TALLAGHT",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787095,
+    "address": "24 HAWTHORN MEWS, DUBLIN HILL, CORK",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787089,
+    "address": "21 SWELLAN LOWER, CAVAN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787099,
+    "address": "25B ASHGROVE, MOUNTMELLICK, ASHGROVE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787105,
+    "address": "3 BRU NA CUILLE, REDGATE RD, LIMERICK",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787092,
+    "address": "22 THE MILL, CLONDRA, LONGFORD",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787112,
+    "address": "30 MALAHIDE VILLAGE, MALAHIDE MARINA, MALAHIDE",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787113,
+    "address": "30 MARYBOROUGH CRESCENT, PORTLAOISE, LAOIS",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787114,
+    "address": "30 OAKWOOD AVE, SWORDS, DUBLIN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787115,
+    "address": "30 WOODSTOWN HEATH, KNOCKLYON, DUBLIN 16",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787116,
+    "address": "31 ARDARRA, PORTROE, NENAGH",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787117,
+    "address": "31 CLONBRUSK WEST, COOSAN, ATHLONE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "detached"
+  },
+  {
+    "id": 787118,
+    "address": "32 Coill an Easpaig, Portarlington",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787122,
+    "address": "34 HAZELGROVE, TALLAGHT, DUBLIN 24",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787125,
+    "address": "37 CASTLE VIEW HOUSE, CASTLE ROAD, SHANKILL",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787126,
+    "address": "4 DEAN SWIFT RD, GLASNEVIN, DUBLIN 11",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787127,
+    "address": "4 GARDEN VILLAGE AVE, KILPEDDAR, WICKLOW",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "bungalow"
+  },
+  {
+    "id": 787128,
+    "address": "4 ROCHFORD HALL CAVAN RD KELLS, MEATH",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787129,
+    "address": "4 THE GLEN, GREENVALLEY, DONNYBROOK DOUGLAS",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787130,
+    "address": "40 Bay View, Red Barns Road, Dundalk",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": null
+  },
+  {
+    "id": 787133,
+    "address": "41 OAKDALE CLOSE, BALLYCULLEN, DUBLIN 24",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787135,
+    "address": "44 BOROIMHE MAPLES, FORREST RD, SWORDS",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787144,
+    "address": "50 Rose Bank, Rose Hill, Annabella",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787140,
+    "address": "48 CLOONFAD, CO ROSCOMMON",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787142,
+    "address": "5 AN TOILEAN, CRAANFORD, GOREY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787147,
+    "address": "58 THE LAWNS, ABBEYLANDS, CLANE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787131,
+    "address": "40 Mercer Manor, Tully Village, Centre West",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787139,
+    "address": "47 Ushers Mill Avenue, Ushers Mill, Drogheda",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787134,
+    "address": "43 Copper Close, Kilbarry",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787123,
+    "address": "36 KINGS INNS COURT, PHIBSBORO, DUBLIN 7",
+    "sale_date": "2026-06-15",
+    "bedrooms": 1,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787143,
+    "address": "5 Cul Gharrai, Rahoon",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787138,
+    "address": "47 GRANGE HALL, MOUNTMELLICK, CO LAOIS",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787119,
+    "address": "32 Macartan View, Latlorcan, Dublin Road",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787121,
+    "address": "34 BRIDLE WALK, KILMINCHY, PORTLAOISE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787120,
+    "address": "33 KENNYSWELL ROAD, KILKENNY, CO KILKENNY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787148,
+    "address": "6 MAOLBUILLE RD, GLASNEVIN, DUBLIN 11",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787158,
+    "address": "8 ROWLAGH GARDENS, CLONDALKIN, DUBLIN 22",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787150,
+    "address": "6 units at Miller's Glen, Swords, Co Dublin",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 787151,
+    "address": "64 Drayton, Dundalk",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "house"
+  },
+  {
+    "id": 787166,
+    "address": "Apartment 12, Meadow View, Clay Farm Place",
+    "sale_date": "2026-06-15",
+    "bedrooms": 1,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787154,
+    "address": "73 Ard na Deirge, Killaloe",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787156,
+    "address": "8 HAWTHORN, FOXBURROW, PORTLAOISE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787157,
+    "address": "8 Rickardstown Villa, Newbridge, Co. Kildare",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 787159,
+    "address": "81 CLYBAUN HEIGHTS, KNOCKNACARA, GALWAY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 787160,
+    "address": "9 WHITESTOWN GROVE, BLANCHARDSTOWN, DUBLIN15",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787161,
+    "address": "90 SHREWSBURY, BALLSBRIDGE, DUBLIN 4",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787162,
+    "address": "94 AUGHNASKERRY DR, CAVAN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787163,
+    "address": "98 Glenwood, Strawhall, Fermoy",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787164,
+    "address": "98 Newtown Meadows, Castletroy",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787165,
+    "address": "ABBEY TOWN, BOYLE, CO ROSCOMMON",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "house"
+  },
+  {
+    "id": 787168,
+    "address": "Apartment 95, Meadow View, Clay Farm",
+    "sale_date": "2026-06-15",
+    "bedrooms": 1,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787169,
+    "address": "APT 12, RICHMOND HOUSE, RICHMOND HILL",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787170,
+    "address": "APT 76 BLOCK D, SMITHFIELD VILLAGE, DUBLIN 7",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787172,
+    "address": "BALLYMACOWEN, CLONAKILTY, CO CORK",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787173,
+    "address": "BOOLA, BROADFORD, CHARLEVILLE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787174,
+    "address": "BRITTAS, MURROE, LIMERICK",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787175,
+    "address": "CASTLEAFFY, KILMEENA, WESTPORT",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "detached"
+  },
+  {
+    "id": 787176,
+    "address": "CLUEN, INISTIOGE, CO KILKENNY",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787187,
+    "address": "RATHGLASS, NEW INN, BALLINASLOE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787178,
+    "address": "DOCTORS LANE, RUSH, DUBLIN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787179,
+    "address": "DRUNG, QUIGLEYS POINT, DONEGAL",
+    "sale_date": "2026-06-15",
+    "bedrooms": 1,
+    "property_type": "detached"
+  },
+  {
+    "id": 787181,
+    "address": "HILLSIDE COTTAGE, SHRAHEENS, ACHILL",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787184,
+    "address": "MASTERGEEHA, KILCUMMIN, KILLARNEY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787186,
+    "address": "No.3 The Elm, Pierce Park, Station Road",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787183,
+    "address": "KILMINION SOUTH, BALLINROAD, DUNGARVAN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787171,
+    "address": "BALLINVARRIG, YOUGHAL, CORK",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787180,
+    "address": "FLEMING'S TAVERN, MULLAGHROE, CULLEN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787182,
+    "address": "INCHINTESKIN, EYERIES, BEARA",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "detached"
+  },
+  {
+    "id": 787189,
+    "address": "SUMMERDALE, RAHOON, GALWAY",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "detached"
+  },
+  {
+    "id": 787190,
+    "address": "Zone 3A, Baile na Mona, Mooretown",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "house"
+  },
+  {
+    "id": 787188,
+    "address": "SHEEAUN, SPIDDAL, CO GALWAY",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787191,
+    "address": "Zone 4A and Zone 4B, Baile na Mona, Mooretown",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 787075,
+    "address": "170 SEAPARK, MALAHIDE, DUBLIN",
+    "sale_date": "2026-06-15",
+    "bedrooms": 5,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787152,
+    "address": "66 GLENARD CRESCENT, SALTHILL, GALWAY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 6,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787088,
+    "address": "21 ORLAGH COURT, KNOCKLYON, DUBLIN 16",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787132,
+    "address": "405 Daneswell Place, Botanic Road, Glasnevin",
+    "sale_date": "2026-06-15",
+    "bedrooms": 5,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787064,
+    "address": "14 ALBERT COURT EAST, LOWER GRAND CANAL ST, DUBLIN 2",
+    "sale_date": "2026-06-15",
+    "bedrooms": 2,
+    "property_type": "detached"
+  },
+  {
+    "id": 787137,
+    "address": "47 BALLYMANY MANOR, NEWBRIDGE, KILDARE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787177,
+    "address": "C/O SIMONS BAR, CLONOULTY HILL, CLONOULTY",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787124,
+    "address": "36 WOODLANDS, GREYSTONES, WICKLOW",
+    "sale_date": "2026-06-15",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 787057,
+    "address": "12 AN LUMANN, STRAFFAN, KILDARE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787149,
+    "address": "6 THE DOWNS, STRADBALLY ROAD, PORTLAOISE",
+    "sale_date": "2026-06-15",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 787096,
+    "address": "25 FORTH RD, EAST WALL, DUBLIN",
+    "sale_date": "2026-06-15",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787185,
+    "address": "MOUNTGARRETT, NEW ROSS, CO WEXFORD",
+    "sale_date": "2026-06-15",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 786982,
+    "address": "APARTMENT 29, LIBERTY VIEW, LONG'S PLACE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786977,
+    "address": "91 COIS ABHAINN, TRALEE, KERRY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786984,
+    "address": "APT 1 JORDANS PUB, STATION ROAD, BALLINA",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786985,
+    "address": "APT 2 CLARE VILLAS, CLARE ROAD, ENNIS",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786991,
+    "address": "APT.45, BOWBRIDGE PLACE, KILMAINHAM",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786992,
+    "address": "BALTINGLASS CREDIT UNION LIMITED, CREDIT UNION HOUSE, 5 THE THATCHED COTTAGES",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "bungalow"
+  },
+  {
+    "id": 786993,
+    "address": "BARNADOWN, HUGGINSTOWN, KILKENNY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 786997,
+    "address": "CARRICKBANAGHER, DRUMFIN, VIA BOYLE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787004,
+    "address": "CROSSLOW, TULLOW, CARLOW",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 786999,
+    "address": "CASHEL, CLOONLOO, VIA BOYLE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787001,
+    "address": "CEDARCREST, LATLURCAN, MONAGHAN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787003,
+    "address": "CORCLOGH WEST, BELMULLET, CO. MAYO",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 786994,
+    "address": "BOTHAR NA SOP, FARNAHOE, INNISHANNON",
+    "sale_date": "2026-06-12",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 787002,
+    "address": "CLASHGANNY, BORRIS, CARLOW",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "house"
+  },
+  {
+    "id": 786996,
+    "address": "CARRAVILLEEN, KILCROHANE, BANTRY",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787011,
+    "address": "DUNANY, TOGHER, COUNTY LOUTH",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "cottage"
+  },
+  {
+    "id": 787012,
+    "address": "EAST END, BOHERBUE, MALLOW",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787028,
+    "address": "RAHARA, ATHLEAGUE, ROSCOMMON",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787016,
+    "address": "GLENDAN HOUSE, KIPPAGH, KANTURK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787017,
+    "address": "GLOUMAGUILLAGH, CARAGH LAKE, KILLORGLIN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787018,
+    "address": "GORTBOY, GRANGE, COUNTY LIMERICK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787019,
+    "address": "KILCAVAN LOWER, TARA HILL, GOREY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787026,
+    "address": "No 9 The Rowans, Blossom Hill, Knockbrogan",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "house"
+  },
+  {
+    "id": 787027,
+    "address": "No. 51 Hamilton Park Green, Clane",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787029,
+    "address": "RATHROANE, ENFIELD, CO MEATH",
+    "sale_date": "2026-06-12",
+    "bedrooms": 6,
+    "property_type": "detached"
+  },
+  {
+    "id": 787013,
+    "address": "EMO HOUSE, LUGDUFF, TINAHELY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787008,
+    "address": "DERRYCARNA HOUSE, CASTLEMAINE RD, MILLTOWN  (KILLARNEY)",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787022,
+    "address": "KILLERORAN, BALLYGAR, CO. GALWAY",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "house"
+  },
+  {
+    "id": 787025,
+    "address": "MULLAGHGARVE, AGHACASHEL, LEITRIM",
+    "sale_date": "2026-06-12",
+    "bedrooms": 1,
+    "property_type": "detached"
+  },
+  {
+    "id": 787024,
+    "address": "MOUNTKEEFFE, NEWMARKET, CORK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 5,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787005,
+    "address": "CROWHEY, MAGHERY, BUNGLOE",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787010,
+    "address": "DRUMCASK, SWANLINBAR, CO. CAVAN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 787023,
+    "address": "LACKABAWN, DONAGHMORE, CORK",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787020,
+    "address": "KILLAVRICK, LURGACLOGHAN, FANAD",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787030,
+    "address": "ROOAUNMORE, ARDRAHAN, GALWAY",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787031,
+    "address": "SANCTA MARIA, PUTLAND VILLAS, VEVAY RD",
+    "sale_date": "2026-06-12",
+    "bedrooms": 5,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787034,
+    "address": "SMEAR HILL, AUGHNACLIFFE, CO LONGFORD",
+    "sale_date": "2026-06-12",
+    "bedrooms": 6,
+    "property_type": "detached"
+  },
+  {
+    "id": 787035,
+    "address": "SPRING LODGE, KILFINANE, CO LIMERICK",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787036,
+    "address": "ST MARYS, LABURNUM PARK, MODEL FARM RD",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787040,
+    "address": "THE RANCH HOUSE, TULLIGMORE, BALLINHASSIG",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787041,
+    "address": "TIGIN, KILMORE AVE, KILLINEY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787043,
+    "address": "TONAPHUBBLE, SLIGO",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 787044,
+    "address": "TULLYNAMOLTRA, SWANLINABAR, CO. CAVAN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "detached"
+  },
+  {
+    "id": 787037,
+    "address": "STEEPLE VILLAGE, MEELICK, SWINFORD",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787046,
+    "address": "UNIT 170 GLASAN STUDENT VILLAGE, BALLYBANE RD, MERVUE",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "terraced"
+  },
+  {
+    "id": 787032,
+    "address": "SEACREST, BALLINATRAY LOWER, COURTOWN HARBOUR",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787033,
+    "address": "SKEHEEN KILMOVEE, BALAGHADREEN, KILMOVEE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787039,
+    "address": "THE GROVE, CASTLETOWNROCHE, MALLOW",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786814,
+    "address": "139 141 Adamstown Boulevard, 25 Tandys Park  9 & 11 Tandys Lawns, Tandys Lane  Adamstown",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 787042,
+    "address": "TOCHAR, BALLYNERRIN UPPER, WICKLOW",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787015,
+    "address": "FLAT 1, 19 RICHMOND HILL, RATHMINES",
+    "sale_date": "2026-06-12",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786916,
+    "address": "46 BEECH PARK RD, FOXROCK, DUBLIN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 786902,
+    "address": "4 CUIL CHLUTHAIR, SARSFIELD COURT, GLANMIRE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 786990,
+    "address": "APT. 29 BERANGER HOUSE, ROEBUCK ROAD, CLONSKEAGH",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786998,
+    "address": "CARROWBAWN, WESTPORT, MAYO",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 786813,
+    "address": "137 Adamstown Boulevard, Tandys Lane, Adamstown",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786995,
+    "address": "BROOKSIDE COTTAGE, HERMITAGE LANE, SUMMERCOVE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786869,
+    "address": "26 RICHDALE COURT, DUBLIN RD, MULLINGAR",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 787038,
+    "address": "THE COTTAGE, RAHEENAVINE, RATHDRUM",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 786969,
+    "address": "8 The Cross, Baile na Mona Glen, Mooretown",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786898,
+    "address": "39 BAY MEADOWS PARK, HOLLYSTOWN, DUBLIN 15",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786799,
+    "address": "12 The Cross, Baile Na Mona Glen, Swords",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786968,
+    "address": "8 ENNIS RD, NEWMARKET ON FERGUS, CO CLARE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 5,
+    "property_type": "detached"
+  },
+  {
+    "id": 786777,
+    "address": "10 CLUAIN DOIRE, KILTILLANE, TEMPLEMORE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786861,
+    "address": "23 ROCHES HEIGHTS, MITCHELSTOWN, CO CORK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 787014,
+    "address": "FLAT 1, 1 WILLIAMS PARK, DUBLIN 6",
+    "sale_date": "2026-06-12",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786821,
+    "address": "14 Wren Terrace, Auburn Woods, Malahide",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786912,
+    "address": "42 ARCHERS WOOD AVENUE, ARCHERS WOOD, DELGANY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786956,
+    "address": "69 BEECH HILL AVENUE, DONNYBROOK, DUBLIN 4",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786797,
+    "address": "12 ELMWOOD PARK, SWORDS, DUBLIN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786881,
+    "address": "3 TAOBH NA COILLE, OLD KNOCKLYON ROAD, KNOCKLYON DUBLIN 16",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786989,
+    "address": "APT 89, MILLTOWN HALL, MOUNT DSAINT ANNES MILLTOWN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786866,
+    "address": "256 LORETO ABBEY, GRANGE RD, RATHFARNHAM DUBLIN 16",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786839,
+    "address": "17 Lockhouse View, Seven Mills, Clonburris",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786948,
+    "address": "63 AGHNAHARNA DRIVE, STRADBALLY ROAD, PORTLAOISE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 786808,
+    "address": "13 KILLALA ROAD, CABRA WEST, DUBLIN 7",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786935,
+    "address": "55 FORTLAWN AVENUE, BLANCHARDSTOWN, DUBLIN 15",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786772,
+    "address": "1 COIS INBHIR, BEAVERSTONN RD, DONABATE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786773,
+    "address": "1 Meadow View, Broom Heights, Midleton",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 786776,
+    "address": "1 STATION ROAD, BORRIS, CARLOW",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786778,
+    "address": "10 ESTUARY WALK, BALLYNOE, COBH",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "detached"
+  },
+  {
+    "id": 786779,
+    "address": "10 MILL HOUSE, MILL RD, ENNIS",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786780,
+    "address": "10 Silverbrook, Rathfarnham, Dublin 16",
+    "sale_date": "2026-06-12",
+    "bedrooms": 5,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786781,
+    "address": "103 CEDAR HOUSE, MESPIL HOUSE FLATS ESTATE, SUSSEX RD DUBLIN 4",
+    "sale_date": "2026-06-12",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786783,
+    "address": "105 Pairc Brouen, Coolmucky, Cloughduv",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786784,
+    "address": "109 KEEPER RD, DRIMNAGH, DUBLIN 12",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786787,
+    "address": "11 AMBERLEY PARK, GRANGE, DOUGLAS",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 786788,
+    "address": "11 The Cross, Baile na Mona Glen, Mooretown",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786790,
+    "address": "112 RATHLIN HOUSE, CUSTOM HOUSE SQ, MAYOR ST LOWER DUBLIN 1",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786791,
+    "address": "114 KESTRAL MANOR, DROGHEDA",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786793,
+    "address": "117 FITZWILLIAM QUAY, RINGSEND, DUBLIN 4",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786796,
+    "address": "12 DUN EMER AVENUE, LUSK, CO. DUBLIN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786792,
+    "address": "116 Kestrel Manor, Platin Road, Drogheda",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 786798,
+    "address": "12 RATH MORE GREEN, BARRACK GREEN, KINSALE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786785,
+    "address": "109 THORNDALE EST, DUBLIN HILL, CORK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786801,
+    "address": "126 SHANLISS AVE, SANTRY, DUBLIN 9",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786802,
+    "address": "127 MOUNT PROSPECT GLEN, CLONARD, WEXFORD",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786803,
+    "address": "128 Ardview, Knockadosan, Rathdrum",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786804,
+    "address": "13 ARDAGH RD, CRUMLIN, DUBLIN 12",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786805,
+    "address": "13 BOROIMHE ELMS, SWORDS, DUBLIN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786807,
+    "address": "13 HAZEL CROFT GARDEN, FINGLAS SOUTH, DUBLIN 11",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786806,
+    "address": "13 COIS ABHANN, LYSTER ST, ATHLONE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786809,
+    "address": "13 Meadowbank View, Millers Glen, Swords",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786810,
+    "address": "13 Merton, Model Farm Road, Cork City",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786811,
+    "address": "133 CLUAIN RIOCAIRD, BOTHAR NA COISTE, GALWAY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786812,
+    "address": "135 Adamstown Boulevard, Tandys Lane, Adamstown",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786782,
+    "address": "104 RICHMOND COURT, MOUNT KENNETT PLACE, LIMERICK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786786,
+    "address": "10A CLOVERWELL, EDGEWORTHSTOWN, CO LONGFORD",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786829,
+    "address": "15 WILLISON LAWN, BLARNEY, CORK",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "detached"
+  },
+  {
+    "id": 786815,
+    "address": "14 Ballycarn Road, Ballycarn Lodge, Enfield",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786818,
+    "address": "14 HILLCREST, CLAREMORRIS, CO MAYO",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786819,
+    "address": "14 TIERACLEA PARK, TARBERT, KERRY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786820,
+    "address": "14 VERONA, QUEENSPARK, MONKSTOWN RD",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786817,
+    "address": "14 HARBOUR VIEW, GLENGARRIFF, CO CORK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 786822,
+    "address": "148 EAST WALL RD, EAST WALL, DUBLIN 3",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786824,
+    "address": "15 ACHILL RD, DRUMCONDRA, DUBLIN 9",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786825,
+    "address": "15 CASEMENT SQ, COBH, CORK",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786826,
+    "address": "15 CRUAGH MANOR, STEPASIDE, DUBLIN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786827,
+    "address": "15 LISIEUX PARK, GLASHEEN RD, CORK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786828,
+    "address": "15 THE TANNERY, CAIRNS HILL, SLIGO",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786830,
+    "address": "16 ANNADALE CRESCENT, DUBLIN 9, DUBLIN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786831,
+    "address": "16 DUN UISCE, CAHIR, TIPPERARY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786832,
+    "address": "16 SEAPOINT COURT APTS, SEAPOINT ROAD, BRAY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786833,
+    "address": "16 SOUTHDENE, MONKSTOWN VALLEY, MONKSTOWN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786836,
+    "address": "17 Belvedere View, Knocksedan Demesne, Swords",
+    "sale_date": "2026-06-12",
+    "bedrooms": 5,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786837,
+    "address": "17 CASTLE TERRACE COURT, ST MARGARETS AVE, MALAHIDE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786838,
+    "address": "17 COMERSFORD CROSS, PORTMARNOCK, DUBLIN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786816,
+    "address": "14 Church View, Dangan, Kilmacow",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786840,
+    "address": "17 The Boulevard, Red Rock Field, Balmoston",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "detached"
+  },
+  {
+    "id": 786841,
+    "address": "17 THE GREEN, MULHUDDART WOOD, DUBLIN 15",
+    "sale_date": "2026-06-12",
+    "bedrooms": 6,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786842,
+    "address": "18 RYEBRIDGE AVE, KILCOCK, KILDARE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786843,
+    "address": "19 Lockhouse View, Seven Mills, Clonburris",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786844,
+    "address": "19 MOUNT EUSTACE CRESCENT, TYRRELSTOWN, DUBLIN 15",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786835,
+    "address": "160 Cois Farraige, Blackrock",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786845,
+    "address": "19 The Boulevard, Red Rock Field, Baimoston",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786848,
+    "address": "2 HAWTHORN COTTAGES, UMLAGH, CARRIGART",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 786849,
+    "address": "2 Mason Cross Row, Newcastle",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786852,
+    "address": "20 Clonrath Hill, Lusk, County Dublin",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 786854,
+    "address": "21 BIRCH CLOSE JOHNSTOWN WOOD NAVAN, MEATH",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786855,
+    "address": "21 REDARCHES RD THE COAST, BALDOYLE DUBLIN 13, DUBLIN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "duplex"
+  },
+  {
+    "id": 786856,
+    "address": "21 Regles Green, Ministers Road, Lusk",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786858,
+    "address": "22 HAYSTOWN, RUSH, DUBLIN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786868,
+    "address": "26 LIFFORD GARDENS, BALLINACURRA, LIMERICK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786859,
+    "address": "22 The Boulevard, Red Rock Field, Balmoston",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 786860,
+    "address": "23 Liffey Hall, Liffey Valley Park, Lucan",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786847,
+    "address": "2 CHAFF ST, BALLINAGORE, WESTMEATH",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786863,
+    "address": "24 The Laurels, Cois Caislean, Maglin Road",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "cottage"
+  },
+  {
+    "id": 786865,
+    "address": "25 HIGHFIELD COURT, BOLLARNEY, WICKLOW",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786846,
+    "address": "2 BEACH COTTAGES, ROSSNOWLAGH, CO DONEGAL",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "cottage"
+  },
+  {
+    "id": 786867,
+    "address": "26 Bayly Close, Bayly, Douglas",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786874,
+    "address": "3 BELLS TERRACE, PEARSE RD LOWER, SLIGO",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786870,
+    "address": "26 WATERSIDE WALK, SWORDS RD, MALAHIDE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 786871,
+    "address": "276 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786872,
+    "address": "28 SAINT DAVID'S TERRACE, BLACKHORSE AVENUE, DUBLIN 7",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786873,
+    "address": "3-6 glen oir, cullen",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786875,
+    "address": "3 BROOKVALE, BROOKVALE ROAD, DONNYBROOK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786876,
+    "address": "3 Clonturk Mews, Drumcondra",
+    "sale_date": "2026-06-12",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786877,
+    "address": "3 Dalton Court, Garristown",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786878,
+    "address": "3 Kennan Drive, Luttrellstown Gate",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786879,
+    "address": "3 PORTAVOLLA, MAIN ST, BANAGHER",
+    "sale_date": "2026-06-12",
+    "bedrooms": 9,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786880,
+    "address": "3 RIVER VALE, RIVER RD, RATHBORNE DUBLIN 15",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786882,
+    "address": "3 The Crescent, Baile Na Mona Glen, Swords",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786883,
+    "address": "3 Tower Green, Old Connell, Naas Road",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "house"
+  },
+  {
+    "id": 786884,
+    "address": "32 ARASAIN NA MARA, SALTHILL, GALWAY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786886,
+    "address": "32 TEMPLE MILLS, RATHANGAN, KILDARE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786887,
+    "address": "33 BARGY RD, EAST WALL, DUBLIN 3",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786890,
+    "address": "337 THE DISTILLERY, DISTILLERY RD, DUBLIN 3",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786891,
+    "address": "36 FERNHILL PARK, TERENURE, DUBLIN 12",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786892,
+    "address": "36 MURPHYSTOWN RD, LEOPARDSTOWN, DUBLIN 18",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786893,
+    "address": "37 DUN EMER DR, DUN EMER, LUSK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786896,
+    "address": "37 WILLOW PARK CRESCENT, GLASNEVIN, DUBLIN 11",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786888,
+    "address": "33 Charterschool Park, Trim",
+    "sale_date": "2026-06-12",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786901,
+    "address": "4 Ballisk Park Avenue, New Road, Ballisk",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786900,
+    "address": "4 AVON LODGE, THE PLAZA, MAIN ST",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786904,
+    "address": "4 ELM GARDENS, BALLA, MAYO",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786905,
+    "address": "4 FRIARSLAND CRESCENT, ROEBUCK ROAD, CLONSKEAGH",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786906,
+    "address": "4 Tower Green, Old Connell, Naas Road",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "house"
+  },
+  {
+    "id": 786907,
+    "address": "40 Cul Dara, Williamstown",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786909,
+    "address": "41 Mercer Manor, Tully Village Centre West, Cherrywood",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786895,
+    "address": "37 SLI BHEARU, COIS BHEARU, MONASTEREVIN RD  ATHY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786908,
+    "address": "41 MARYVILLE, BALLINTEMPLE, CORK CITY",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786903,
+    "address": "4 DEERPARK, BANDON, CO CORK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "detached"
+  },
+  {
+    "id": 786910,
+    "address": "41 THE CLIFFS, KELLYS BAY, SKERRIES",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786911,
+    "address": "41 The Wood, Coach Road Meadows, Clane",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786925,
+    "address": "50 INNISHFREE COURT, TONAPHUBBLE LANE, SLIGO",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786914,
+    "address": "42 FITZROY AVE, DRUMCONDRA, DUBLIN",
+    "sale_date": "2026-06-12",
+    "bedrooms": 4,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786915,
+    "address": "44 MAYESTON COURT, ST MARGARETS, FINGLAS DUBLIN 11",
+    "sale_date": "2026-06-12",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786918,
+    "address": "46 KILWARDEN COURT, CLONDALKIN, DUBLIN 22",
+    "sale_date": "2026-06-12",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786917,
+    "address": "46 CLARKESWOOD MOUNT OVAL, ROCHESTOWN, CORK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786919,
+    "address": "46 ROSETREE GREEN, CURRAGH FARM, NEWBRIDGE",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786921,
+    "address": "48 POOLBEG QUAY, RINGSEND, DUBLIN 4",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786926,
+    "address": "50 LEIX RD, CABRA, DUBLIN 7",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786930,
+    "address": "52 THE GREEN, WOODBROOK GLEN, BRAY",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786932,
+    "address": "53TandysDrive, Tandys Lane, Adamstown",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "house"
+  },
+  {
+    "id": 786933,
+    "address": "54 IRISHTOWN, NEW ROSS, WEXFORD",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 786934,
+    "address": "54 The Drive, Hawks bay, Keatingstown",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "house"
+  },
+  {
+    "id": 786931,
+    "address": "52 WILLOW DALE, BAY ESTATE, DUNDALK",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786936,
+    "address": "55 LINDSAY RD, GLASNEVIN, DUBLIN 9",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "semi-detached"
+  },
+  {
+    "id": 786937,
+    "address": "55 Mercer Manor Tully Village, Centre west Cherrywood Dublin",
+    "sale_date": "2026-06-12",
+    "bedrooms": null,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786929,
+    "address": "52 DEERPARK PLACE, KILTIPPER, DUBLIN 24",
+    "sale_date": "2026-06-12",
+    "bedrooms": 1,
+    "property_type": "apartment"
+  },
+  {
+    "id": 786922,
+    "address": "49 Sandyhill Lane, Glenconnor Village, Glencnnor",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "terraced"
+  },
+  {
+    "id": 786928,
+    "address": "516 AISHLING PARK, DUNDALK, LOUTH",
+    "sale_date": "2026-06-12",
+    "bedrooms": 3,
+    "property_type": "detached"
+  },
+  {
+    "id": 786927,
+    "address": "503 BROOKFIELD HALL, CASTLETROY, LIMERICK",
+    "sale_date": "2026-06-12",
+    "bedrooms": 2,
+    "property_type": "apartment"
+  }
+]

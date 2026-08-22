@@ -1,0 +1,94 @@
+name: Mapbox Quota Check
+
+on:
+  schedule:
+    # Run daily at 9 AM UTC (10 AM Irish time)
+    - cron: '0 9 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  check-quota:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install asyncpg python-dotenv
+
+      - name: Check Mapbox quota
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          python3 scripts/mapbox_usage_tracker.py --current-month
+
+      - name: Check if quota exceeded 80%
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          python3 -c "
+          import asyncio
+          from scripts.mapbox_usage_tracker import MapboxUsageTracker
+
+          async def check():
+              usage = await MapboxUsageTracker.get_current_month_usage()
+              percentage = usage['percentage_used']
+
+              if percentage >= 90:
+                  print(f'🚨 CRITICAL: Mapbox usage at {percentage:.1f}%')
+                  exit(1)
+              elif percentage >= 80:
+                  print(f'⚠️  WARNING: Mapbox usage at {percentage:.1f}%')
+                  # Don't fail, just warn
+              else:
+                  print(f'✓ Mapbox usage OK: {percentage:.1f}%')
+
+          asyncio.run(check())
+          "
+
+      - name: Create issue if quota critical
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const title = '🚨 Mapbox Quota Critical (>90% used)';
+            const body = `
+            Mapbox API usage has exceeded 90% of monthly limit (50,000 requests).
+
+            **Action Required:**
+            1. Check usage breakdown: \`python3 scripts/mapbox_usage_tracker.py --current-month\`
+            2. Stop non-critical geocoding scripts
+            3. Consider deferring centroid cleanup to next month
+
+            **Monthly Budget:**
+            - 2k: PPR sync (critical)
+            - 5k: API /geocode endpoint (critical)
+            - 43k: Batch operations (deferrable)
+
+            See [MAPBOX_USAGE_TRACKING.md](docs/MAPBOX_USAGE_TRACKING.md) for details.
+            `;
+
+            // Check if issue already exists
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'mapbox-quota'
+            });
+
+            if (issues.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['mapbox-quota', 'priority:high']
+              });
+            }

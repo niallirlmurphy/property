@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "address": "12 Fitzwilliam Square",
+    "county": "Dublin",
+    "price": 850000,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:56:39.796802"
+  },
+  {
+    "id": 2,
+    "address": "45 Merrion Road",
+    "county": "Dublin",
+    "price": 725000,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:56:54.253817"
+  },
+  {
+    "id": 3,
+    "address": "8 Monastery Walk, Clondalkin",
+    "county": "Dublin",
+    "price": 425000,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:57:07.941374"
+  },
+  {
+    "id": 4,
+    "address": "23 The Crescent, Galway City",
+    "county": "Galway",
+    "price": 395000,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:57:22.721255"
+  },
+  {
+    "id": 5,
+    "address": "16 Sarsfield Street",
+    "county": "Cork",
+    "price": 380000,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:57:37.206154"
+  },
+  {
+    "id": 6,
+    "address": "7 Riverview, Castletroy",
+    "county": "Limerick",
+    "price": 340000,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:57:51.733880"
+  },
+  {
+    "id": 7,
+    "address": "34 Willow Park, Athlone",
+    "county": "Westmeath",
+    "price": 285000,
+    "bedrooms": 4,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:58:06.472268"
+  },
+  {
+    "id": 8,
+    "address": "19 Main Street, Letterkenny",
+    "county": "Donegal",
+    "price": 265000,
+    "bedrooms": 3,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:58:20.833935"
+  },
+  {
+    "id": 9,
+    "address": "42 Church Road, Kilkenny",
+    "county": "Kilkenny",
+    "price": 315000,
+    "bedrooms": 3,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:58:35.313612"
+  },
+  {
+    "id": 10,
+    "address": "11 Oakfield, Drogheda",
+    "county": "Louth",
+    "price": 295000,
+    "bedrooms": 3,
+    "property_type": "semi-detached",
+    "source": "myhome",
+    "enriched_at": "2026-06-06T10:58:49.969438"
+  }
+]
