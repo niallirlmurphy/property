@@ -15,7 +15,6 @@ import json
 import os
 import re
 import sys
-import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -100,18 +99,6 @@ def _get(api_url, path, params):
         return json.load(resp)
 
 
-def _get_optional(api_url, path, params, default):
-    """Like _get, but tolerates an HTTP error the frontend also tolerates.
-    Mirrors api.ts's `res.ok ? json : default` for optional calls. On an
-    HTTPError (e.g. the /search radius_km=200 -> 422 cap), returns `default`
-    so the page renders identically to live instead of failing the whole file.
-    Non-HTTP errors (connection failures) still propagate."""
-    try:
-        return _get(api_url, path, params)
-    except urllib.error.HTTPError:
-        return default
-
-
 RECENT_LIMIT = 10  # matches the live fetch* limits in frontend/src/api.ts
 
 
@@ -153,9 +140,10 @@ def build_eircode(api_url, code):
 
 def build_county(api_url, name, counties):
     trends = _get(api_url, "/trends", {"county": name}).get("data", [])
-    search = _get_optional(api_url, "/search", {
-        "q": "53.5,-7.5", "radius_km": 200, "county": name, "limit": RECENT_LIMIT,
-    }, {"results": []})
+    # /county-recent returns the latest sales across the whole county (no radius,
+    # unlike /search which is capped at 20km). A transient failure raises so
+    # main() warns and skips rather than baking empty recent.
+    search = _get(api_url, "/county-recent", {"county": name, "limit": RECENT_LIMIT})
     row = next((c for c in counties if c["county"].lower() == name.lower()), None)
     if row and row["count"] > 0 and not trends:
         raise ValueError(f"{name}: /counties count={row['count']} but /trends returned empty")
