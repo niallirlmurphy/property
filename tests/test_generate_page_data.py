@@ -118,3 +118,41 @@ def test_build_county_matches_county_summary_shape(monkeypatch):
     assert out["median_price"] == 300000
     assert out["avg_price"] == 320000
     assert len(out["recent"]) == 1
+
+
+def test_build_county_tolerates_search_failure(monkeypatch):
+    import urllib.error
+    counties = [{"county": "Cork", "count": 12345}]
+
+    def fake_get(api_url, path, params):
+        if path == "/trends":
+            return {"data": [{"year": 2024, "count": 100, "median_price": 300000, "avg_price": 320000, "min_price": 100000, "max_price": 900000}]}
+        if path == "/search":
+            raise urllib.error.HTTPError(api_url + path, 422, "Unprocessable Entity", {}, None)
+        raise AssertionError(path)
+
+    monkeypatch.setattr(g, "_get", fake_get)
+    out = g.build_county("http://x", "Cork", counties)
+    assert out["recent"] == []            # search 422 tolerated, not a crash
+    assert out["total_count"] == 12345    # still from counties row
+    assert out["median_price"] == 300000  # trends still applied
+
+
+def test_build_area_tolerates_trends_failure(monkeypatch):
+    import urllib.error
+
+    def fake_get(api_url, path, params):
+        if path == "/search":
+            return {"center": {"lat": 1, "lon": 2}, "count": 5,
+                    "results": [{"id": 1, "price": 400000, "address": "a", "sale_date": "2024-01-01", "county": "Dublin"}]}
+        if path == "/trends":
+            raise urllib.error.HTTPError(api_url + path, 422, "Unprocessable Entity", {}, None)
+        raise AssertionError(path)
+
+    monkeypatch.setattr(g, "_get", fake_get)
+    target = {"slug": "x", "query": "X", "radius_km": 2, "match": [], "routing_keys": []}
+    out = g.build_area("http://x", target)
+    assert out["trends"] == []            # trends 422 tolerated
+    assert out["median_price"] is None    # no trends -> None
+    assert out["total_count"] == 5        # search still applied
+    assert len(out["recent"]) == 1
