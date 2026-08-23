@@ -89,3 +89,119 @@ def county_targets():
 
 def county_slug(name):
     return re.sub(r"\s+", "-", name.lower())
+
+
+def _get(api_url, path, params):
+    clean = {k: v for k, v in params.items() if v is not None}
+    url = api_url.rstrip("/") + path + "?" + urllib.parse.urlencode(clean)
+    req = urllib.request.Request(url, headers={"Accept": "application/json"})
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        return json.load(resp)
+
+
+RECENT_LIMIT = 10  # matches the live fetch* limits in frontend/src/api.ts
+
+
+def build_area(api_url, target):
+    locality = ",".join(target["match"]) if target["match"] else None
+    routing_keys = ",".join(target["routing_keys"]) if target["routing_keys"] else None
+    search = _get(api_url, "/search", {
+        "q": target["query"], "radius_km": target["radius_km"],
+        "limit": RECENT_LIMIT, "locality": locality, "routing_keys": routing_keys,
+    })
+    trends = _get(api_url, "/trends", {
+        "q": target["query"], "radius_km": target["radius_km"],
+        "locality": locality, "routing_keys": routing_keys,
+    }).get("data", [])
+
+    prices = [r["price"] for r in search["results"]]
+    years = [t["year"] for t in trends]
+    return {
+        "name": target["query"],
+        "slug": target["slug"],
+        "center": search["center"],
+        "radius_km": target["radius_km"],
+        "total_count": search["count"],
+        "median_price": trends[-1]["median_price"] if trends else None,
+        "avg_price": round(sum(prices) / len(prices)) if prices else None,
+        "min_year": min(years) if years else None,
+        "max_year": max(years) if years else None,
+        "recent": search["results"],
+        "trends": trends,
+    }
+
+
+def build_eircode(api_url, code):
+    eircode = _get(api_url, "/eircode", {"code": code, "limit": RECENT_LIMIT})
+    county = eircode["results"][0]["county"] if eircode["results"] else None
+    trends = _get(api_url, "/trends", {"radius_km": 5, "county": county}).get("data", []) if county else []
+    return {"eircode": eircode, "trends": trends}
+
+
+def build_county(api_url, name, counties):
+    trends = _get(api_url, "/trends", {"county": name}).get("data", [])
+    search = _get(api_url, "/search", {
+        "q": "53.5,-7.5", "radius_km": 200, "county": name, "limit": RECENT_LIMIT,
+    })
+    row = next((c for c in counties if c["county"].lower() == name.lower()), None)
+    latest = trends[-1] if trends else None
+    return {
+        "county": name,
+        "total_count": row["count"] if row else 0,
+        "median_price": latest["median_price"] if latest else None,
+        "avg_price": latest["avg_price"] if latest else None,
+        "trends": trends,
+        "recent": search["results"],
+    }
+
+
+def _write(subdir, slug, obj):
+    out_dir = os.path.join(DATA_DIR, subdir)
+    os.makedirs(out_dir, exist_ok=True)
+    with open(os.path.join(out_dir, slug + ".json"), "w", encoding="utf-8") as fh:
+        json.dump(obj, fh, indent=2, ensure_ascii=False)
+
+
+def main():
+    ap = argparse.ArgumentParser(description="Generate static area/eircode/county page JSON.")
+    ap.add_argument("--api-url", default=os.getenv("PAGE_DATA_API_URL", "http://localhost:8000"))
+    ap.add_argument("--only", help="comma list of: areas,eircodes,counties")
+    args = ap.parse_args()
+    only = set(s.strip() for s in args.only.split(",")) if args.only else {"areas", "eircodes", "counties"}
+
+    written = 0
+    if "areas" in only:
+        for t in area_targets():
+            try:
+                _write("areas", t["slug"], build_area(args.api_url, t))
+                written += 1
+            except Exception as e:  # noqa: BLE001 - per-target isolation
+                print(f"WARNING: area {t['slug']} failed: {e}")
+
+    if "eircodes" in only:
+        for code in eircode_targets():
+            try:
+                _write("eircodes", code, build_eircode(args.api_url, code))
+                written += 1
+            except Exception as e:  # noqa: BLE001
+                print(f"WARNING: eircode {code} failed: {e}")
+
+    if "counties" in only:
+        try:
+            counties = _get(args.api_url, "/counties", {})
+        except Exception as e:  # noqa: BLE001
+            print(f"ERROR: could not fetch /counties from {args.api_url}: {e}")
+            return 1
+        for name in county_targets():
+            try:
+                _write("counties", county_slug(name), build_county(args.api_url, name, counties))
+                written += 1
+            except Exception as e:  # noqa: BLE001
+                print(f"WARNING: county {name} failed: {e}")
+
+    print(f"wrote {written} page data files under {DATA_DIR}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
