@@ -1,8 +1,145 @@
 {
   "county": "Roscommon",
   "total_count": 11258,
-  "median_price": null,
-  "avg_price": null,
-  "trends": [],
+  "median_price": 232250.0,
+  "avg_price": 241456.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 271,
+      "median_price": 130000.0,
+      "avg_price": 141276.0,
+      "min_price": 10000.0,
+      "max_price": 568550.0
+    },
+    {
+      "year": 2011,
+      "count": 219,
+      "median_price": 100000.0,
+      "avg_price": 109977.0,
+      "min_price": 10000.0,
+      "max_price": 430000.0
+    },
+    {
+      "year": 2012,
+      "count": 346,
+      "median_price": 77500.0,
+      "avg_price": 89143.0,
+      "min_price": 10000.0,
+      "max_price": 920600.0
+    },
+    {
+      "year": 2013,
+      "count": 500,
+      "median_price": 61837.0,
+      "avg_price": 77965.0,
+      "min_price": 10000.0,
+      "max_price": 640000.0
+    },
+    {
+      "year": 2014,
+      "count": 555,
+      "median_price": 60000.0,
+      "avg_price": 75849.0,
+      "min_price": 10000.0,
+      "max_price": 375000.0
+    },
+    {
+      "year": 2015,
+      "count": 675,
+      "median_price": 67500.0,
+      "avg_price": 86077.0,
+      "min_price": 10000.0,
+      "max_price": 550000.0
+    },
+    {
+      "year": 2016,
+      "count": 655,
+      "median_price": 70000.0,
+      "avg_price": 91045.0,
+      "min_price": 10000.0,
+      "max_price": 960000.0
+    },
+    {
+      "year": 2017,
+      "count": 682,
+      "median_price": 85000.0,
+      "avg_price": 109244.0,
+      "min_price": 10000.0,
+      "max_price": 1075000.0
+    },
+    {
+      "year": 2018,
+      "count": 838,
+      "median_price": 95000.0,
+      "avg_price": 113047.0,
+      "min_price": 10000.0,
+      "max_price": 605000.0
+    },
+    {
+      "year": 2019,
+      "count": 736,
+      "median_price": 110000.0,
+      "avg_price": 128472.0,
+      "min_price": 10000.0,
+      "max_price": 1670000.0
+    },
+    {
+      "year": 2020,
+      "count": 718,
+      "median_price": 100500.0,
+      "avg_price": 121935.0,
+      "min_price": 10000.0,
+      "max_price": 900000.0
+    },
+    {
+      "year": 2021,
+      "count": 902,
+      "median_price": 130000.0,
+      "avg_price": 147516.0,
+      "min_price": 10000.0,
+      "max_price": 820000.0
+    },
+    {
+      "year": 2022,
+      "count": 906,
+      "median_price": 152000.0,
+      "avg_price": 175497.0,
+      "min_price": 13000.0,
+      "max_price": 3000000.0
+    },
+    {
+      "year": 2023,
+      "count": 861,
+      "median_price": 165000.0,
+      "avg_price": 177844.0,
+      "min_price": 15000.0,
+      "max_price": 840000.0
+    },
+    {
+      "year": 2024,
+      "count": 762,
+      "median_price": 185000.0,
+      "avg_price": 208779.0,
+      "min_price": 20000.0,
+      "max_price": 3850000.0
+    },
+    {
+      "year": 2025,
+      "count": 718,
+      "median_price": 200000.0,
+      "avg_price": 216076.0,
+      "min_price": 15000.0,
+      "max_price": 1483840.0
+    },
+    {
+      "year": 2026,
+      "count": 358,
+      "median_price": 232250.0,
+      "avg_price": 241456.0,
+      "min_price": 10000.0,
+      "max_price": 1252863.44
+    }
+  ],
   "recent": []
 }

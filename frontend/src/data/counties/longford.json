@@ -1,8 +1,145 @@
 {
   "county": "Longford",
   "total_count": 6751,
-  "median_price": null,
-  "avg_price": null,
-  "trends": [],
+  "median_price": 190500.0,
+  "avg_price": 206287.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 143,
+      "median_price": 127000.0,
+      "avg_price": 137558.0,
+      "min_price": 20000.0,
+      "max_price": 350000.0
+    },
+    {
+      "year": 2011,
+      "count": 132,
+      "median_price": 87053.0,
+      "avg_price": 104321.0,
+      "min_price": 11427.64,
+      "max_price": 385000.0
+    },
+    {
+      "year": 2012,
+      "count": 190,
+      "median_price": 67979.0,
+      "avg_price": 87437.0,
+      "min_price": 15000.0,
+      "max_price": 735000.0
+    },
+    {
+      "year": 2013,
+      "count": 229,
+      "median_price": 55066.0,
+      "avg_price": 70215.0,
+      "min_price": 10000.0,
+      "max_price": 360000.0
+    },
+    {
+      "year": 2014,
+      "count": 437,
+      "median_price": 52500.0,
+      "avg_price": 69425.0,
+      "min_price": 10000.0,
+      "max_price": 498000.0
+    },
+    {
+      "year": 2015,
+      "count": 467,
+      "median_price": 60000.0,
+      "avg_price": 74410.0,
+      "min_price": 10000.0,
+      "max_price": 300000.0
+    },
+    {
+      "year": 2016,
+      "count": 456,
+      "median_price": 68250.0,
+      "avg_price": 83563.0,
+      "min_price": 10000.0,
+      "max_price": 550000.0
+    },
+    {
+      "year": 2017,
+      "count": 388,
+      "median_price": 83500.0,
+      "avg_price": 97376.0,
+      "min_price": 11000.0,
+      "max_price": 531200.0
+    },
+    {
+      "year": 2018,
+      "count": 420,
+      "median_price": 90000.0,
+      "avg_price": 104871.0,
+      "min_price": 14500.0,
+      "max_price": 895110.13
+    },
+    {
+      "year": 2019,
+      "count": 389,
+      "median_price": 110000.0,
+      "avg_price": 126904.0,
+      "min_price": 19000.0,
+      "max_price": 600000.0
+    },
+    {
+      "year": 2020,
+      "count": 359,
+      "median_price": 105000.0,
+      "avg_price": 122237.0,
+      "min_price": 10000.0,
+      "max_price": 1250000.0
+    },
+    {
+      "year": 2021,
+      "count": 546,
+      "median_price": 124500.0,
+      "avg_price": 144583.0,
+      "min_price": 11969.2,
+      "max_price": 2490000.0
+    },
+    {
+      "year": 2022,
+      "count": 505,
+      "median_price": 145000.0,
+      "avg_price": 160314.0,
+      "min_price": 13000.0,
+      "max_price": 755000.0
+    },
+    {
+      "year": 2023,
+      "count": 446,
+      "median_price": 165000.0,
+      "avg_price": 187476.0,
+      "min_price": 10000.0,
+      "max_price": 2400000.0
+    },
+    {
+      "year": 2024,
+      "count": 408,
+      "median_price": 180500.0,
+      "avg_price": 192888.0,
+      "min_price": 15000.0,
+      "max_price": 550000.0
+    },
+    {
+      "year": 2025,
+      "count": 438,
+      "median_price": 185000.0,
+      "avg_price": 207616.0,
+      "min_price": 18750.0,
+      "max_price": 3937256.0
+    },
+    {
+      "year": 2026,
+      "count": 202,
+      "median_price": 190500.0,
+      "avg_price": 206287.0,
+      "min_price": 30000.0,
+      "max_price": 585000.0
+    }
+  ],
   "recent": []
 }

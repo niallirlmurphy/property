@@ -1,8 +1,145 @@
 {
   "county": "Laois",
   "total_count": 13256,
-  "median_price": null,
-  "avg_price": null,
-  "trends": [],
+  "median_price": 327000.0,
+  "avg_price": 337033.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 309,
+      "median_price": 154186.0,
+      "avg_price": 167144.0,
+      "min_price": 10000.0,
+      "max_price": 620000.0
+    },
+    {
+      "year": 2011,
+      "count": 298,
+      "median_price": 110419.0,
+      "avg_price": 129900.0,
+      "min_price": 18000.0,
+      "max_price": 970000.0
+    },
+    {
+      "year": 2012,
+      "count": 383,
+      "median_price": 80000.0,
+      "avg_price": 100004.0,
+      "min_price": 11500.0,
+      "max_price": 700000.0
+    },
+    {
+      "year": 2013,
+      "count": 370,
+      "median_price": 76912.0,
+      "avg_price": 107752.0,
+      "min_price": 10000.0,
+      "max_price": 2350000.0
+    },
+    {
+      "year": 2014,
+      "count": 625,
+      "median_price": 85000.0,
+      "avg_price": 103325.0,
+      "min_price": 13500.0,
+      "max_price": 560000.0
+    },
+    {
+      "year": 2015,
+      "count": 622,
+      "median_price": 105863.0,
+      "avg_price": 128642.0,
+      "min_price": 12000.0,
+      "max_price": 4246000.0
+    },
+    {
+      "year": 2016,
+      "count": 736,
+      "median_price": 127753.0,
+      "avg_price": 132131.0,
+      "min_price": 16000.0,
+      "max_price": 955000.0
+    },
+    {
+      "year": 2017,
+      "count": 719,
+      "median_price": 142500.0,
+      "avg_price": 158206.0,
+      "min_price": 20000.0,
+      "max_price": 1255000.0
+    },
+    {
+      "year": 2018,
+      "count": 780,
+      "median_price": 155000.0,
+      "avg_price": 165223.0,
+      "min_price": 10000.0,
+      "max_price": 2200000.0
+    },
+    {
+      "year": 2019,
+      "count": 835,
+      "median_price": 175000.0,
+      "avg_price": 178487.0,
+      "min_price": 11667.0,
+      "max_price": 600000.0
+    },
+    {
+      "year": 2020,
+      "count": 701,
+      "median_price": 180000.0,
+      "avg_price": 205703.0,
+      "min_price": 18650.0,
+      "max_price": 3395434.88
+    },
+    {
+      "year": 2021,
+      "count": 1034,
+      "median_price": 195279.0,
+      "avg_price": 243596.0,
+      "min_price": 16000.0,
+      "max_price": 11500000.0
+    },
+    {
+      "year": 2022,
+      "count": 985,
+      "median_price": 220000.0,
+      "avg_price": 254219.0,
+      "min_price": 10000.0,
+      "max_price": 11563056.0
+    },
+    {
+      "year": 2023,
+      "count": 1162,
+      "median_price": 249000.0,
+      "avg_price": 292702.0,
+      "min_price": 11000.0,
+      "max_price": 11694389.0
+    },
+    {
+      "year": 2024,
+      "count": 1144,
+      "median_price": 266536.0,
+      "avg_price": 269221.0,
+      "min_price": 27500.0,
+      "max_price": 2824792.95
+    },
+    {
+      "year": 2025,
+      "count": 1150,
+      "median_price": 300000.0,
+      "avg_price": 321684.0,
+      "min_price": 18750.0,
+      "max_price": 8458149.76
+    },
+    {
+      "year": 2026,
+      "count": 553,
+      "median_price": 327000.0,
+      "avg_price": 337033.0,
+      "min_price": 20000.0,
+      "max_price": 4395783.26
+    }
+  ],
   "recent": []
 }

@@ -1,8 +1,145 @@
 {
   "county": "Wicklow",
   "total_count": 26960,
-  "median_price": null,
-  "avg_price": null,
-  "trends": [],
+  "median_price": 462555.0,
+  "avg_price": 535183.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 689,
+      "median_price": 257500.0,
+      "avg_price": 298994.0,
+      "min_price": 15000.0,
+      "max_price": 1850000.0
+    },
+    {
+      "year": 2011,
+      "count": 539,
+      "median_price": 216740.0,
+      "avg_price": 255764.0,
+      "min_price": 14000.0,
+      "max_price": 1010000.0
+    },
+    {
+      "year": 2012,
+      "count": 721,
+      "median_price": 195000.0,
+      "avg_price": 248125.0,
+      "min_price": 18000.0,
+      "max_price": 7225000.0
+    },
+    {
+      "year": 2013,
+      "count": 920,
+      "median_price": 189464.0,
+      "avg_price": 257589.0,
+      "min_price": 10000.0,
+      "max_price": 5850000.0
+    },
+    {
+      "year": 2014,
+      "count": 1309,
+      "median_price": 217000.0,
+      "avg_price": 265721.0,
+      "min_price": 25000.0,
+      "max_price": 4925000.0
+    },
+    {
+      "year": 2015,
+      "count": 1367,
+      "median_price": 247500.0,
+      "avg_price": 294326.0,
+      "min_price": 15000.0,
+      "max_price": 6350000.0
+    },
+    {
+      "year": 2016,
+      "count": 1392,
+      "median_price": 265000.0,
+      "avg_price": 314433.0,
+      "min_price": 10000.0,
+      "max_price": 5000000.0
+    },
+    {
+      "year": 2017,
+      "count": 1616,
+      "median_price": 295000.0,
+      "avg_price": 334568.0,
+      "min_price": 10000.0,
+      "max_price": 5000000.0
+    },
+    {
+      "year": 2018,
+      "count": 1533,
+      "median_price": 301000.0,
+      "avg_price": 342020.0,
+      "min_price": 10000.0,
+      "max_price": 2400000.0
+    },
+    {
+      "year": 2019,
+      "count": 1843,
+      "median_price": 306500.0,
+      "avg_price": 352666.0,
+      "min_price": 15000.0,
+      "max_price": 11585000.0
+    },
+    {
+      "year": 2020,
+      "count": 1641,
+      "median_price": 320000.0,
+      "avg_price": 371596.0,
+      "min_price": 25000.0,
+      "max_price": 14176211.45
+    },
+    {
+      "year": 2021,
+      "count": 2054,
+      "median_price": 380000.0,
+      "avg_price": 431260.0,
+      "min_price": 10000.0,
+      "max_price": 10500000.0
+    },
+    {
+      "year": 2022,
+      "count": 2076,
+      "median_price": 392070.0,
+      "avg_price": 471782.0,
+      "min_price": 18750.0,
+      "max_price": 15344065.66
+    },
+    {
+      "year": 2023,
+      "count": 2222,
+      "median_price": 405000.0,
+      "avg_price": 474492.0,
+      "min_price": 12000.0,
+      "max_price": 15244931.23
+    },
+    {
+      "year": 2024,
+      "count": 2506,
+      "median_price": 418451.0,
+      "avg_price": 469990.0,
+      "min_price": 20000.0,
+      "max_price": 5644235.58
+    },
+    {
+      "year": 2025,
+      "count": 2272,
+      "median_price": 418726.0,
+      "avg_price": 506790.0,
+      "min_price": 10000.0,
+      "max_price": 12672278.74
+    },
+    {
+      "year": 2026,
+      "count": 946,
+      "median_price": 462555.0,
+      "avg_price": 535183.0,
+      "min_price": 20000.0,
+      "max_price": 4000000.0
+    }
+  ],
   "recent": []
 }

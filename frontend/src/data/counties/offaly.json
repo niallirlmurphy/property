@@ -1,8 +1,145 @@
 {
   "county": "Offaly",
   "total_count": 10182,
-  "median_price": null,
-  "avg_price": null,
-  "trends": [],
+  "median_price": 285000.0,
+  "avg_price": 283576.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 237,
+      "median_price": 145000.0,
+      "avg_price": 162670.0,
+      "min_price": 25000.0,
+      "max_price": 830000.0
+    },
+    {
+      "year": 2011,
+      "count": 196,
+      "median_price": 111725.0,
+      "avg_price": 136483.0,
+      "min_price": 10000.0,
+      "max_price": 750000.0
+    },
+    {
+      "year": 2012,
+      "count": 283,
+      "median_price": 105000.0,
+      "avg_price": 122446.0,
+      "min_price": 10000.0,
+      "max_price": 800000.0
+    },
+    {
+      "year": 2013,
+      "count": 314,
+      "median_price": 84750.0,
+      "avg_price": 102667.0,
+      "min_price": 15000.0,
+      "max_price": 450000.0
+    },
+    {
+      "year": 2014,
+      "count": 495,
+      "median_price": 100000.0,
+      "avg_price": 117586.0,
+      "min_price": 11000.0,
+      "max_price": 530000.0
+    },
+    {
+      "year": 2015,
+      "count": 562,
+      "median_price": 95000.0,
+      "avg_price": 112410.0,
+      "min_price": 25000.0,
+      "max_price": 530000.0
+    },
+    {
+      "year": 2016,
+      "count": 577,
+      "median_price": 100000.0,
+      "avg_price": 118732.0,
+      "min_price": 20000.0,
+      "max_price": 1145000.0
+    },
+    {
+      "year": 2017,
+      "count": 639,
+      "median_price": 135000.0,
+      "avg_price": 145694.0,
+      "min_price": 10000.0,
+      "max_price": 1460000.0
+    },
+    {
+      "year": 2018,
+      "count": 608,
+      "median_price": 150000.0,
+      "avg_price": 155670.0,
+      "min_price": 10000.0,
+      "max_price": 1000000.0
+    },
+    {
+      "year": 2019,
+      "count": 622,
+      "median_price": 150000.0,
+      "avg_price": 160672.0,
+      "min_price": 12000.0,
+      "max_price": 1200000.0
+    },
+    {
+      "year": 2020,
+      "count": 596,
+      "median_price": 165000.0,
+      "avg_price": 170788.0,
+      "min_price": 15000.0,
+      "max_price": 850000.0
+    },
+    {
+      "year": 2021,
+      "count": 740,
+      "median_price": 180000.0,
+      "avg_price": 193963.0,
+      "min_price": 10000.0,
+      "max_price": 670000.0
+    },
+    {
+      "year": 2022,
+      "count": 852,
+      "median_price": 216000.0,
+      "avg_price": 217629.0,
+      "min_price": 10000.0,
+      "max_price": 770000.0
+    },
+    {
+      "year": 2023,
+      "count": 809,
+      "median_price": 229075.0,
+      "avg_price": 234798.0,
+      "min_price": 15000.0,
+      "max_price": 1200000.0
+    },
+    {
+      "year": 2024,
+      "count": 774,
+      "median_price": 249000.0,
+      "avg_price": 279346.0,
+      "min_price": 22855.2,
+      "max_price": 10975107.0
+    },
+    {
+      "year": 2025,
+      "count": 740,
+      "median_price": 270000.0,
+      "avg_price": 291457.0,
+      "min_price": 25000.0,
+      "max_price": 12984237.89
+    },
+    {
+      "year": 2026,
+      "count": 373,
+      "median_price": 285000.0,
+      "avg_price": 283576.0,
+      "min_price": 11971.0,
+      "max_price": 2400000.0
+    }
+  ],
   "recent": []
 }

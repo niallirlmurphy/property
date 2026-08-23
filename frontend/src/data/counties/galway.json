@@ -1,8 +1,145 @@
 {
   "county": "Galway",
   "total_count": 38503,
-  "median_price": null,
-  "avg_price": null,
-  "trends": [],
+  "median_price": 374449.0,
+  "avg_price": 403826.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 890,
+      "median_price": 210000.0,
+      "avg_price": 230606.0,
+      "min_price": 17500.0,
+      "max_price": 1850000.0
+    },
+    {
+      "year": 2011,
+      "count": 904,
+      "median_price": 165000.0,
+      "avg_price": 202113.0,
+      "min_price": 11000.0,
+      "max_price": 2725361.9
+    },
+    {
+      "year": 2012,
+      "count": 1098,
+      "median_price": 150000.0,
+      "avg_price": 171016.0,
+      "min_price": 10000.0,
+      "max_price": 1400000.0
+    },
+    {
+      "year": 2013,
+      "count": 1486,
+      "median_price": 134500.0,
+      "avg_price": 162415.0,
+      "min_price": 10000.0,
+      "max_price": 2100000.0
+    },
+    {
+      "year": 2014,
+      "count": 2379,
+      "median_price": 135000.0,
+      "avg_price": 156948.0,
+      "min_price": 10000.0,
+      "max_price": 1444933.9
+    },
+    {
+      "year": 2015,
+      "count": 2772,
+      "median_price": 137750.0,
+      "avg_price": 170034.0,
+      "min_price": 10000.0,
+      "max_price": 2200000.0
+    },
+    {
+      "year": 2016,
+      "count": 2489,
+      "median_price": 160139.0,
+      "avg_price": 191813.0,
+      "min_price": 10000.0,
+      "max_price": 6161484.58
+    },
+    {
+      "year": 2017,
+      "count": 2725,
+      "median_price": 184000.0,
+      "avg_price": 213693.0,
+      "min_price": 10000.0,
+      "max_price": 4750000.0
+    },
+    {
+      "year": 2018,
+      "count": 2546,
+      "median_price": 207024.0,
+      "avg_price": 232382.0,
+      "min_price": 10000.0,
+      "max_price": 5112416.0
+    },
+    {
+      "year": 2019,
+      "count": 2627,
+      "median_price": 220000.0,
+      "avg_price": 242396.0,
+      "min_price": 10000.0,
+      "max_price": 4874986.78
+    },
+    {
+      "year": 2020,
+      "count": 2197,
+      "median_price": 231000.0,
+      "avg_price": 254854.0,
+      "min_price": 12000.0,
+      "max_price": 4229391.18
+    },
+    {
+      "year": 2021,
+      "count": 2723,
+      "median_price": 250000.0,
+      "avg_price": 272607.0,
+      "min_price": 12000.0,
+      "max_price": 4411013.22
+    },
+    {
+      "year": 2022,
+      "count": 2732,
+      "median_price": 275000.0,
+      "avg_price": 303665.0,
+      "min_price": 10000.0,
+      "max_price": 7452011.0
+    },
+    {
+      "year": 2023,
+      "count": 2740,
+      "median_price": 295000.0,
+      "avg_price": 324813.0,
+      "min_price": 10000.0,
+      "max_price": 5709251.1
+    },
+    {
+      "year": 2024,
+      "count": 2505,
+      "median_price": 320000.0,
+      "avg_price": 351147.0,
+      "min_price": 15000.0,
+      "max_price": 6181096.31
+    },
+    {
+      "year": 2025,
+      "count": 2678,
+      "median_price": 350000.0,
+      "avg_price": 371598.0,
+      "min_price": 10000.0,
+      "max_price": 5646714.0
+    },
+    {
+      "year": 2026,
+      "count": 1324,
+      "median_price": 374449.0,
+      "avg_price": 403826.0,
+      "min_price": 10000.0,
+      "max_price": 11596998.17
+    }
+  ],
   "recent": []
 }

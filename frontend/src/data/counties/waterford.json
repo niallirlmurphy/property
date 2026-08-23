@@ -1,8 +1,145 @@
 {
   "county": "Waterford",
   "total_count": 21832,
-  "median_price": null,
-  "avg_price": null,
-  "trends": [],
+  "median_price": 297500.0,
+  "avg_price": 316024.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 423,
+      "median_price": 174000.0,
+      "avg_price": 186930.0,
+      "min_price": 18000.0,
+      "max_price": 925000.0
+    },
+    {
+      "year": 2011,
+      "count": 479,
+      "median_price": 132500.0,
+      "avg_price": 152682.0,
+      "min_price": 16506.0,
+      "max_price": 800000.0
+    },
+    {
+      "year": 2012,
+      "count": 548,
+      "median_price": 105194.0,
+      "avg_price": 128974.0,
+      "min_price": 10000.0,
+      "max_price": 2000000.0
+    },
+    {
+      "year": 2013,
+      "count": 706,
+      "median_price": 95000.0,
+      "avg_price": 120520.0,
+      "min_price": 10000.0,
+      "max_price": 2181000.0
+    },
+    {
+      "year": 2014,
+      "count": 1102,
+      "median_price": 95000.0,
+      "avg_price": 123849.0,
+      "min_price": 10000.0,
+      "max_price": 1100000.0
+    },
+    {
+      "year": 2015,
+      "count": 1263,
+      "median_price": 108000.0,
+      "avg_price": 130365.0,
+      "min_price": 14500.0,
+      "max_price": 1575000.0
+    },
+    {
+      "year": 2016,
+      "count": 1435,
+      "median_price": 123000.0,
+      "avg_price": 139845.0,
+      "min_price": 11668.0,
+      "max_price": 2000000.0
+    },
+    {
+      "year": 2017,
+      "count": 1341,
+      "median_price": 141000.0,
+      "avg_price": 157094.0,
+      "min_price": 10000.0,
+      "max_price": 970000.0
+    },
+    {
+      "year": 2018,
+      "count": 1468,
+      "median_price": 160000.0,
+      "avg_price": 178747.0,
+      "min_price": 10000.0,
+      "max_price": 1700000.0
+    },
+    {
+      "year": 2019,
+      "count": 1446,
+      "median_price": 170000.0,
+      "avg_price": 194985.0,
+      "min_price": 14000.0,
+      "max_price": 7929515.41
+    },
+    {
+      "year": 2020,
+      "count": 1293,
+      "median_price": 185000.0,
+      "avg_price": 201964.0,
+      "min_price": 10000.0,
+      "max_price": 950000.0
+    },
+    {
+      "year": 2021,
+      "count": 1591,
+      "median_price": 187000.0,
+      "avg_price": 224971.0,
+      "min_price": 10000.0,
+      "max_price": 6591988.0
+    },
+    {
+      "year": 2022,
+      "count": 1765,
+      "median_price": 235000.0,
+      "avg_price": 269008.0,
+      "min_price": 13620.0,
+      "max_price": 7859678.0
+    },
+    {
+      "year": 2023,
+      "count": 1609,
+      "median_price": 250000.0,
+      "avg_price": 271425.0,
+      "min_price": 25000.0,
+      "max_price": 2341424.67
+    },
+    {
+      "year": 2024,
+      "count": 1603,
+      "median_price": 265695.0,
+      "avg_price": 284828.0,
+      "min_price": 10000.0,
+      "max_price": 3704850.0
+    },
+    {
+      "year": 2025,
+      "count": 1561,
+      "median_price": 296150.0,
+      "avg_price": 324440.0,
+      "min_price": 20000.0,
+      "max_price": 10422730.0
+    },
+    {
+      "year": 2026,
+      "count": 766,
+      "median_price": 297500.0,
+      "avg_price": 316024.0,
+      "min_price": 30000.0,
+      "max_price": 3476211.53
+    }
+  ],
   "recent": []
 }

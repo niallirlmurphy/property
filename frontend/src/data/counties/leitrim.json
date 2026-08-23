@@ -1,8 +1,145 @@
 {
   "county": "Leitrim",
   "total_count": 7035,
-  "median_price": null,
-  "avg_price": null,
-  "trends": [],
+  "median_price": 227500.0,
+  "avg_price": 225003.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 135,
+      "median_price": 125704.0,
+      "avg_price": 129953.0,
+      "min_price": 25000.0,
+      "max_price": 349965.0
+    },
+    {
+      "year": 2011,
+      "count": 177,
+      "median_price": 107500.0,
+      "avg_price": 110887.0,
+      "min_price": 15000.0,
+      "max_price": 465000.0
+    },
+    {
+      "year": 2012,
+      "count": 198,
+      "median_price": 80000.0,
+      "avg_price": 99277.0,
+      "min_price": 10000.0,
+      "max_price": 670000.0
+    },
+    {
+      "year": 2013,
+      "count": 325,
+      "median_price": 61674.0,
+      "avg_price": 74474.0,
+      "min_price": 10000.0,
+      "max_price": 250000.0
+    },
+    {
+      "year": 2014,
+      "count": 382,
+      "median_price": 60000.0,
+      "avg_price": 78832.0,
+      "min_price": 14000.0,
+      "max_price": 431000.0
+    },
+    {
+      "year": 2015,
+      "count": 481,
+      "median_price": 70000.0,
+      "avg_price": 90073.0,
+      "min_price": 10000.0,
+      "max_price": 840000.0
+    },
+    {
+      "year": 2016,
+      "count": 491,
+      "median_price": 75000.0,
+      "avg_price": 87074.0,
+      "min_price": 10000.0,
+      "max_price": 605000.0
+    },
+    {
+      "year": 2017,
+      "count": 484,
+      "median_price": 86172.0,
+      "avg_price": 101669.0,
+      "min_price": 10000.0,
+      "max_price": 510000.0
+    },
+    {
+      "year": 2018,
+      "count": 464,
+      "median_price": 100000.0,
+      "avg_price": 113514.0,
+      "min_price": 14900.0,
+      "max_price": 350000.0
+    },
+    {
+      "year": 2019,
+      "count": 449,
+      "median_price": 100000.0,
+      "avg_price": 111612.0,
+      "min_price": 10000.0,
+      "max_price": 700000.0
+    },
+    {
+      "year": 2020,
+      "count": 418,
+      "median_price": 101500.0,
+      "avg_price": 124667.0,
+      "min_price": 10000.0,
+      "max_price": 720000.0
+    },
+    {
+      "year": 2021,
+      "count": 529,
+      "median_price": 130000.0,
+      "avg_price": 140651.0,
+      "min_price": 10000.0,
+      "max_price": 470000.0
+    },
+    {
+      "year": 2022,
+      "count": 542,
+      "median_price": 155000.0,
+      "avg_price": 166231.0,
+      "min_price": 12500.0,
+      "max_price": 1620000.0
+    },
+    {
+      "year": 2023,
+      "count": 513,
+      "median_price": 157500.0,
+      "avg_price": 171276.0,
+      "min_price": 10000.0,
+      "max_price": 685000.0
+    },
+    {
+      "year": 2024,
+      "count": 477,
+      "median_price": 171000.0,
+      "avg_price": 188839.0,
+      "min_price": 15000.0,
+      "max_price": 950000.0
+    },
+    {
+      "year": 2025,
+      "count": 443,
+      "median_price": 200000.0,
+      "avg_price": 220229.0,
+      "min_price": 10000.0,
+      "max_price": 1775000.0
+    },
+    {
+      "year": 2026,
+      "count": 235,
+      "median_price": 227500.0,
+      "avg_price": 225003.0,
+      "min_price": 13800.0,
+      "max_price": 720000.0
+    }
+  ],
   "recent": []
 }

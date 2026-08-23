@@ -1,8 +1,145 @@
 {
   "county": "Kerry",
   "total_count": 21679,
-  "median_price": null,
-  "avg_price": null,
-  "trends": [],
+  "median_price": 300000.0,
+  "avg_price": 393396.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 578,
+      "median_price": 180000.0,
+      "avg_price": 195200.0,
+      "min_price": 10000.0,
+      "max_price": 1378724.0
+    },
+    {
+      "year": 2011,
+      "count": 513,
+      "median_price": 156388.0,
+      "avg_price": 172128.0,
+      "min_price": 10000.0,
+      "max_price": 1057268.0
+    },
+    {
+      "year": 2012,
+      "count": 702,
+      "median_price": 134538.0,
+      "avg_price": 151615.0,
+      "min_price": 18000.0,
+      "max_price": 1475000.0
+    },
+    {
+      "year": 2013,
+      "count": 820,
+      "median_price": 115000.0,
+      "avg_price": 137483.0,
+      "min_price": 10000.0,
+      "max_price": 1600000.0
+    },
+    {
+      "year": 2014,
+      "count": 1182,
+      "median_price": 107750.0,
+      "avg_price": 128805.0,
+      "min_price": 10000.0,
+      "max_price": 1293000.0
+    },
+    {
+      "year": 2015,
+      "count": 1379,
+      "median_price": 112000.0,
+      "avg_price": 139666.0,
+      "min_price": 11400.0,
+      "max_price": 2925000.0
+    },
+    {
+      "year": 2016,
+      "count": 1426,
+      "median_price": 125000.0,
+      "avg_price": 149294.0,
+      "min_price": 10000.0,
+      "max_price": 2700000.0
+    },
+    {
+      "year": 2017,
+      "count": 1566,
+      "median_price": 135000.0,
+      "avg_price": 156763.0,
+      "min_price": 10000.0,
+      "max_price": 1495000.0
+    },
+    {
+      "year": 2018,
+      "count": 1524,
+      "median_price": 150000.0,
+      "avg_price": 171330.0,
+      "min_price": 10000.0,
+      "max_price": 2178000.0
+    },
+    {
+      "year": 2019,
+      "count": 1488,
+      "median_price": 169000.0,
+      "avg_price": 191818.0,
+      "min_price": 10000.0,
+      "max_price": 1779859.03
+    },
+    {
+      "year": 2020,
+      "count": 1312,
+      "median_price": 170000.0,
+      "avg_price": 207318.0,
+      "min_price": 10000.0,
+      "max_price": 4096916.28
+    },
+    {
+      "year": 2021,
+      "count": 1583,
+      "median_price": 195000.0,
+      "avg_price": 231196.0,
+      "min_price": 10000.0,
+      "max_price": 9410000.0
+    },
+    {
+      "year": 2022,
+      "count": 1637,
+      "median_price": 220265.0,
+      "avg_price": 256931.0,
+      "min_price": 10000.0,
+      "max_price": 3445000.0
+    },
+    {
+      "year": 2023,
+      "count": 1454,
+      "median_price": 240000.0,
+      "avg_price": 281454.0,
+      "min_price": 10000.0,
+      "max_price": 5770000.0
+    },
+    {
+      "year": 2024,
+      "count": 1340,
+      "median_price": 250000.0,
+      "avg_price": 290252.0,
+      "min_price": 15000.0,
+      "max_price": 4636528.63
+    },
+    {
+      "year": 2025,
+      "count": 1235,
+      "median_price": 285000.0,
+      "avg_price": 363402.0,
+      "min_price": 10000.0,
+      "max_price": 16472967.28
+    },
+    {
+      "year": 2026,
+      "count": 583,
+      "median_price": 300000.0,
+      "avg_price": 393396.0,
+      "min_price": 30000.0,
+      "max_price": 12954570.86
+    }
+  ],
   "recent": []
 }
