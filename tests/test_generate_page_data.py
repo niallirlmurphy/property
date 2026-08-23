@@ -1,5 +1,8 @@
 import os
 import sys
+import urllib.error
+
+import pytest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 import generate_page_data as g
@@ -138,9 +141,7 @@ def test_build_county_tolerates_search_failure(monkeypatch):
     assert out["median_price"] == 300000  # trends still applied
 
 
-def test_build_area_tolerates_trends_failure(monkeypatch):
-    import urllib.error
-
+def test_build_area_raises_on_trends_http_error(monkeypatch):
     def fake_get(api_url, path, params):
         if path == "/search":
             return {"center": {"lat": 1, "lon": 2}, "count": 5,
@@ -151,8 +152,35 @@ def test_build_area_tolerates_trends_failure(monkeypatch):
 
     monkeypatch.setattr(g, "_get", fake_get)
     target = {"slug": "x", "query": "X", "radius_km": 2, "match": [], "routing_keys": []}
-    out = g.build_area("http://x", target)
-    assert out["trends"] == []            # trends 422 tolerated
-    assert out["median_price"] is None    # no trends -> None
-    assert out["total_count"] == 5        # search still applied
-    assert len(out["recent"]) == 1
+    with pytest.raises(urllib.error.HTTPError):
+        g.build_area("http://x", target)
+
+
+def test_build_county_raises_on_trends_http_error(monkeypatch):
+    counties = [{"county": "Cork", "count": 12345}]
+
+    def fake_get(api_url, path, params):
+        if path == "/trends":
+            raise urllib.error.HTTPError(api_url + path, 503, "Service Unavailable", {}, None)
+        if path == "/search":
+            return {"results": [{"id": 9, "price": 300000, "address": "y", "sale_date": "2024-03-01", "county": "Cork"}]}
+        raise AssertionError(path)
+
+    monkeypatch.setattr(g, "_get", fake_get)
+    with pytest.raises(urllib.error.HTTPError):
+        g.build_county("http://x", "Cork", counties)
+
+
+def test_build_county_raises_when_count_positive_but_trends_empty(monkeypatch):
+    counties = [{"county": "Cork", "count": 12345}]
+
+    def fake_get(api_url, path, params):
+        if path == "/trends":
+            return {"data": []}
+        if path == "/search":
+            return {"results": [{"id": 9, "price": 300000, "address": "y", "sale_date": "2024-03-01", "county": "Cork"}]}
+        raise AssertionError(path)
+
+    monkeypatch.setattr(g, "_get", fake_get)
+    with pytest.raises(ValueError):
+        g.build_county("http://x", "Cork", counties)

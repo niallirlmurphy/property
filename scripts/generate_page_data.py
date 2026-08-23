@@ -122,10 +122,10 @@ def build_area(api_url, target):
         "q": target["query"], "radius_km": target["radius_km"],
         "limit": RECENT_LIMIT, "locality": locality, "routing_keys": routing_keys,
     })
-    trends = _get_optional(api_url, "/trends", {
+    trends = _get(api_url, "/trends", {
         "q": target["query"], "radius_km": target["radius_km"],
         "locality": locality, "routing_keys": routing_keys,
-    }, {"data": []}).get("data", [])
+    }).get("data", [])
 
     prices = [r["price"] for r in search["results"]]
     years = [t["year"] for t in trends]
@@ -152,11 +152,13 @@ def build_eircode(api_url, code):
 
 
 def build_county(api_url, name, counties):
-    trends = _get_optional(api_url, "/trends", {"county": name}, {"data": []}).get("data", [])
+    trends = _get(api_url, "/trends", {"county": name}).get("data", [])
     search = _get_optional(api_url, "/search", {
         "q": "53.5,-7.5", "radius_km": 200, "county": name, "limit": RECENT_LIMIT,
     }, {"results": []})
     row = next((c for c in counties if c["county"].lower() == name.lower()), None)
+    if row and row["count"] > 0 and not trends:
+        raise ValueError(f"{name}: /counties count={row['count']} but /trends returned empty")
     latest = trends[-1] if trends else None
     return {
         "county": name,
