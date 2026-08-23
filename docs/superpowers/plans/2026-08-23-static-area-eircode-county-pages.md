@@ -516,11 +516,23 @@ function bakedArea(slug: string): AreaSummary | undefined {
 }
 ```
 
-- [ ] **Step 2: Use baked data first in the effect**
+- [ ] **Step 2: Read baked data synchronously; fetch only as fallback**
 
-Replace the effect (lines 28-35):
+**Why synchronous (not in the effect):** React effects do NOT run during SSG
+prerender, so baked data set via `useEffect` would be absent from the
+prerendered HTML — defeating the SEO goal. `StreetPage.tsx:28` reads its baked
+data in the render body for exactly this reason. Mirror that: `baked` is
+computed each render (available at prerender), and the live fetch populates a
+separate `fetched` state only when there is no baked file.
+
+Replace the state declarations + effect (lines 23-35):
 
 ```tsx
+  const [data, setData] = useState<AreaSummary | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [showTrends, setShowTrends] = useState(true);
+
   useEffect(() => {
     if (!config) return;
     setLoading(true);
@@ -534,21 +546,26 @@ Replace the effect (lines 28-35):
 with:
 
 ```tsx
+  const baked = config ? bakedArea(config.slug) : undefined;
+  const [fetched, setFetched] = useState<AreaSummary | null>(null);
+  const data = baked ?? fetched;
+  const [loading, setLoading] = useState(!baked);
+  const [error, setError] = useState<string | null>(null);
+  const [showTrends, setShowTrends] = useState(true);
+
   useEffect(() => {
-    if (!config) return;
-    const baked = bakedArea(config.slug);
-    if (baked) {
-      setData(baked);
-      setLoading(false);
-      return;
-    }
+    if (!config || baked) return;   // baked data is already rendered; no fetch needed
     setLoading(true);
     fetchAreaSummary(config.slug, config.query, config.radius_km)
-      .then(setData)
+      .then(setFetched)
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
   }, [slug]);
 ```
+
+Leave the rest of the component unchanged — it already reads `data`, `loading`,
+`error`, and `showTrends`; only the source of `data` changed. There must be no
+remaining references to `setData` (it is gone).
 
 - [ ] **Step 3: Type-check**
 
@@ -558,11 +575,16 @@ Expected: no errors.
 - [ ] **Step 4: Build and verify baking**
 
 Run: `cd frontend && npm run build`
-Expected: build succeeds. Then confirm a known area's data is inlined into its prerendered HTML:
+Expected: build succeeds. Then confirm the baked **data** (not just the static
+heading) is inlined into the prerendered HTML — the `stats-grid` block only
+renders when `data` is present at render time, so its presence proves the
+synchronous baked read worked at prerender:
 ```bash
-grep -rl "Rathmines" frontend/dist/area/rathmines/index.html >/dev/null && echo "OK: area prerendered"
+grep -q 'stats-grid' frontend/dist/area/rathmines/index.html \
+  && ! grep -q 'Loading data' frontend/dist/area/rathmines/index.html \
+  && echo "OK: area data baked into HTML"
 ```
-Expected: `OK: area prerendered`.
+Expected: `OK: area data baked into HTML`.
 
 - [ ] **Step 5: Commit**
 
@@ -615,11 +637,20 @@ function bakedEircode(code: string): EircodePageData | undefined {
 }
 ```
 
-- [ ] **Step 3: Use baked data first in the effect**
+- [ ] **Step 3: Read baked data synchronously; fetch only as fallback**
 
-Replace the effect (lines 38-53):
+**Why synchronous:** same reason as AreaPage — effects don't run at SSG
+prerender, so baked data must be read in the render body to be inlined into the
+HTML.
+
+Replace the state declarations + effect (lines 33-53):
 
 ```tsx
+  const [data, setData] = useState<EircodeResponse | null>(null);
+  const [trends, setTrends] = useState<TrendPoint[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
     if (!upperCode) return;
     setLoading(true);
@@ -641,28 +672,33 @@ Replace the effect (lines 38-53):
 with:
 
 ```tsx
+  const baked = bakedEircode(upperCode);
+  const [fetchedData, setFetchedData] = useState<EircodeResponse | null>(null);
+  const [fetchedTrends, setFetchedTrends] = useState<TrendPoint[]>([]);
+  const data = baked?.eircode ?? fetchedData;
+  const trends = baked?.trends ?? fetchedTrends;
+  const [loading, setLoading] = useState(!baked);
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
-    if (!upperCode) return;
-    const baked = bakedEircode(upperCode);
-    if (baked) {
-      setData(baked.eircode);
-      setTrends(baked.trends);
-      setLoading(false);
-      return;
-    }
+    if (!upperCode || baked) return;   // baked data already rendered; no fetch
     setLoading(true);
     fetchEircode(upperCode, { limit: 10 })
       .then(eircodeData => {
-        setData(eircodeData);
+        setFetchedData(eircodeData);
         const county = eircodeData.results[0]?.county;
-        if (county) return fetchTrends(undefined, 5, county).then(setTrends);
+        if (county) return fetchTrends(undefined, 5, county).then(setFetchedTrends);
       })
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
   }, [upperCode]);
 ```
 
-(This also removes the pre-existing bug where the live path read `data?.results[0]` before `data` was set — the fallback now fetches the eircode first, then its county trends.)
+`data` and `trends` remain the names the rest of the component reads — only
+their source changed. This also removes the pre-existing bug where the live
+path read `data?.results[0]` before `data` was set: the fallback now fetches the
+eircode first, then its county trends. There must be no remaining references to
+`setData` or `setTrends`.
 
 - [ ] **Step 4: Type-check**
 
@@ -672,11 +708,14 @@ Expected: no errors.
 - [ ] **Step 5: Build and verify baking**
 
 Run: `cd frontend && npm run build`
-Expected: build succeeds.
+Expected: build succeeds. Confirm baked data is inlined (stats-grid renders only
+when `data` is present at prerender):
 ```bash
-grep -rl "Dublin 2" frontend/dist/eircode/D02/index.html >/dev/null && echo "OK: eircode prerendered"
+grep -q 'stats-grid' frontend/dist/eircode/D02/index.html \
+  && ! grep -q 'Loading data' frontend/dist/eircode/D02/index.html \
+  && echo "OK: eircode data baked into HTML"
 ```
-Expected: `OK: eircode prerendered`.
+Expected: `OK: eircode data baked into HTML`.
 
 - [ ] **Step 6: Commit**
 
@@ -712,11 +751,19 @@ function bakedCounty(slug: string): CountySummary | undefined {
 }
 ```
 
-- [ ] **Step 2: Use baked data first in the effect**
+- [ ] **Step 2: Read baked data synchronously; cache/fetch only as fallback**
 
-Replace the effect (lines 112-131):
+**Why synchronous:** same reason as AreaPage — effects don't run at SSG
+prerender. Baked static data comes first (built from the PPR import), then the
+existing localStorage cache, then the live API fallback.
+
+Replace the state declarations + effect (lines 108-131):
 
 ```tsx
+  const [data, setData] = useState<CountySummary | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
     if (!county) return;
 
@@ -742,27 +789,25 @@ Replace the effect (lines 112-131):
 with:
 
 ```tsx
+  const baked = slug ? bakedCounty(slug) : undefined;
+  const [fetched, setFetched] = useState<CountySummary | null>(null);
+  const data = baked ?? fetched;
+  const [loading, setLoading] = useState(!baked);
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
-    if (!county) return;
+    if (!county || baked) return;   // baked data already rendered; no cache/fetch
 
-    // Baked static data first (built from the PPR import), then localStorage
-    // cache, then a live API fallback.
-    const baked = slug ? bakedCounty(slug) : undefined;
-    if (baked) {
-      setData(baked);
-      setLoading(false);
-      return;
-    }
-
+    // localStorage cache, then a live API fallback.
     const cached = getCachedCountyData(county);
     if (cached) {
-      setData(cached);
+      setFetched(cached);
       setLoading(false);
     } else {
       setLoading(true);
       fetchCountySummary(county)
         .then((freshData) => {
-          setData(freshData);
+          setFetched(freshData);
           setCachedCountyData(county, freshData);
         })
         .catch((e) => setError(e.message))
@@ -770,6 +815,9 @@ with:
     }
   }, [county, slug]);
 ```
+
+`data` remains the name the rest of the component reads. There must be no
+remaining references to `setData`.
 
 - [ ] **Step 3: Type-check**
 
@@ -779,11 +827,14 @@ Expected: no errors.
 - [ ] **Step 4: Build and verify baking**
 
 Run: `cd frontend && npm run build`
-Expected: build succeeds. Verify a default (non-custom-template) county — e.g. Meath:
+Expected: build succeeds. Verify a default (non-custom-template) county — e.g.
+Meath — has its baked data inlined:
 ```bash
-grep -rl "County Meath" frontend/dist/county/meath/index.html >/dev/null && echo "OK: county prerendered"
+grep -q 'stats-grid' frontend/dist/county/meath/index.html \
+  && echo "OK: county data baked into HTML"
 ```
-Expected: `OK: county prerendered`.
+Expected: `OK: county data baked into HTML`. (Cork/Galway/Dublin use the custom
+`CountyPageTemplate` and are intentionally not converted.)
 
 - [ ] **Step 5: Commit**
 
