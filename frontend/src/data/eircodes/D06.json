@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D06",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 3065,
+      "median_price": 665000.0,
+      "avg_price": 910168.0,
+      "earliest_sale": "2010-02-03",
+      "latest_sale": "2026-07-21"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 790992,
+        "sale_date": "2026-07-21",
+        "address": "34 BALNAGOWAN, PALMERSTON PARK, DUBLIN 6",
+        "county": "Dublin",
+        "eircode": "D06Y328",
+        "price": 450000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.312191,
+        "longitude": -6.256412,
+        "routing_key": "D06",
+        "bedrooms": 1,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790989,
+        "sale_date": "2026-07-21",
+        "address": "30 CHARLESTON AVE, RANELAGH, DUBLIN 6",
+        "county": "Dublin",
+        "eircode": "D06EY68",
+        "price": 1800000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.323085,
+        "longitude": -6.258269,
+        "routing_key": "D06",
+        "bedrooms": 4,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790946,
+        "sale_date": "2026-07-21",
+        "address": "10 ANNA VILLA, RANELAGH, DUBLIN 6",
+        "county": "Dublin",
+        "eircode": "D06EK46",
+        "price": 1254800.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.322685,
+        "longitude": -6.250963,
+        "routing_key": "D06",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790628,
+        "sale_date": "2026-07-16",
+        "address": "FLAT 1, 5 WILLIAMS PARK, RATHMINES",
+        "county": "Dublin",
+        "eircode": "D06FF95",
+        "price": 1720000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.325107,
+        "longitude": -6.267381,
+        "routing_key": "D06",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 790420,
+        "sale_date": "2026-07-15",
+        "address": "58  GROSVENOR LODGE, RATHMINES, DUBLIN  6",
+        "county": "Dublin",
+        "eircode": "D06D849",
+        "price": 651000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396598,
+        "longitude": -6.128542,
+        "routing_key": "D06",
+        "bedrooms": 2,
+        "property_type": "duplex"
+      },
+      {
+        "id": 790379,
+        "sale_date": "2026-07-15",
+        "address": "24 HAROLDS CROSS COTTAGES, DUBLIN 6, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D06K292",
+        "price": 330000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.32891,
+        "longitude": -6.274217,
+        "routing_key": "D06",
+        "bedrooms": 1,
+        "property_type": "cottage"
+      },
+      {
+        "id": 790444,
+        "sale_date": "2026-07-15",
+        "address": "APT 17 - CULLENSWOOD HOUSE, NORTHBROOK AVENUE, RANELAGH",
+        "county": "Dublin",
+        "eircode": "D06R889",
+        "price": 535000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.32497,
+        "longitude": -6.249985,
+        "routing_key": "D06",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790229,
+        "sale_date": "2026-07-14",
+        "address": "15 BERYSTEDE, LEESON PARK, DUBLIN 6",
+        "county": "Dublin",
+        "eircode": "D06K757",
+        "price": 520000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.327873,
+        "longitude": -6.252379,
+        "routing_key": "D06",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790317,
+        "sale_date": "2026-07-14",
+        "address": "FLAT 1, 7 WILLIAMS PARK, RATHMINES",
+        "county": "Dublin",
+        "eircode": "D06P386",
+        "price": 1720000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.325229,
+        "longitude": -6.267369,
+        "routing_key": "D06",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 790316,
+        "sale_date": "2026-07-14",
+        "address": "FLAT 1, 6 WILLIAMS PARK, RATHMINES",
+        "county": "Dublin",
+        "eircode": "D06H702",
+        "price": 1860000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.325168,
+        "longitude": -6.267374,
+        "routing_key": "D06",
+        "bedrooms": null,
+        "property_type": null
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

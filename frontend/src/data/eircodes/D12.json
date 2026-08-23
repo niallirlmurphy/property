@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D12",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 3627,
+      "median_price": 395000.0,
+      "avg_price": 408455.0,
+      "earliest_sale": "2010-01-21",
+      "latest_sale": "2026-07-24"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 791237,
+        "sale_date": "2026-07-24",
+        "address": "27 PARNELL COURT, HAROLDS CROSS, DUBLIN 12",
+        "county": "Dublin",
+        "eircode": "D12NR22",
+        "price": 488000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.329429,
+        "longitude": -6.28071,
+        "routing_key": "D12",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 791054,
+        "sale_date": "2026-07-22",
+        "address": "126 PARNELL RD, CRUMLIN, DUBLIN 12",
+        "county": "Dublin",
+        "eircode": "D12WN23",
+        "price": 539000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.331302,
+        "longitude": -6.290676,
+        "routing_key": "D12",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 791111,
+        "sale_date": "2026-07-22",
+        "address": "66 DOLPHIN RD, DUBLIN 12, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D12W142",
+        "price": 380000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.333976,
+        "longitude": -6.300476,
+        "routing_key": "D12",
+        "bedrooms": 2,
+        "property_type": "detached"
+      },
+      {
+        "id": 790910,
+        "sale_date": "2026-07-20",
+        "address": "87 AUGHAVANNAGH RD, CRUMLIN, DUBLIN 12",
+        "county": "Dublin",
+        "eircode": "D12VY99",
+        "price": 481000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.328563,
+        "longitude": -6.288021,
+        "routing_key": "D12",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790752,
+        "sale_date": "2026-07-17",
+        "address": "55 ST PETER'S CRESCENT, GREENHILLS, DUBLIN 12",
+        "county": "Dublin",
+        "eircode": "D12K2C4",
+        "price": 440000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.315113,
+        "longitude": -6.330632,
+        "routing_key": "D12",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 790376,
+        "sale_date": "2026-07-15",
+        "address": "23 BEECHFIELD CLOSE, WALKINSTOWN, DUBLIN 12",
+        "county": "Dublin",
+        "eircode": "D12EVT8",
+        "price": 890000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.314865,
+        "longitude": -6.320823,
+        "routing_key": "D12",
+        "bedrooms": 4,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790121,
+        "sale_date": "2026-07-13",
+        "address": "2 FERNHILL RD, MANOR ESTATE, DUBLIN 12",
+        "county": "Dublin",
+        "eircode": "D12Y651",
+        "price": 1005000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.30688,
+        "longitude": -6.326768,
+        "routing_key": "D12",
+        "bedrooms": 4,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 789927,
+        "sale_date": "2026-07-10",
+        "address": "200 KIMMAGE RD WEST, DUBLIN 12, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D12VW31",
+        "price": 530000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.316429,
+        "longitude": -6.316496,
+        "routing_key": "D12",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 789889,
+        "sale_date": "2026-07-10",
+        "address": "126 DOWLAND RD, DUBLIN 12, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D12X7A4",
+        "price": 529000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.318256,
+        "longitude": -6.317344,
+        "routing_key": "D12",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 789757,
+        "sale_date": "2026-07-09",
+        "address": "347 KILDARE RD, CRUMLIN, DUBLIN 12",
+        "county": "Dublin",
+        "eircode": "D12E89Y",
+        "price": 250000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.324764,
+        "longitude": -6.314726,
+        "routing_key": "D12",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

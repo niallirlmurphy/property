@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D17",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 803,
+      "median_price": 292000.0,
+      "avg_price": 307804.0,
+      "earliest_sale": "2010-10-22",
+      "latest_sale": "2026-07-23"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 791195,
+        "sale_date": "2026-07-23",
+        "address": "4 RIVERSIDE DRIVE, CLONSHAUGH, DUBLIN 17",
+        "county": "Dublin",
+        "eircode": "D17XT18",
+        "price": 445000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.400154,
+        "longitude": -6.211627,
+        "routing_key": "D17",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 791056,
+        "sale_date": "2026-07-22",
+        "address": "15 RIVERSIDE CRESCENT, CLONSHAUGH, DUBLIN 17",
+        "county": "Dublin",
+        "eircode": "D17WT29",
+        "price": 470000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.398319,
+        "longitude": -6.211773,
+        "routing_key": "D17",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 790575,
+        "sale_date": "2026-07-16",
+        "address": "67 THE SQUARE, LARCH HILL, SANTRY DUBLIN 9",
+        "county": "Dublin",
+        "eircode": "D17KP76",
+        "price": 270000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.297653,
+        "longitude": -6.490629,
+        "routing_key": "D17",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 789635,
+        "sale_date": "2026-07-08",
+        "address": "82 BELCAMP GARDENS, PRIORSWOOD, DUBLIN 17",
+        "county": "Dublin",
+        "eircode": "D17HY04",
+        "price": 250000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.403919,
+        "longitude": -6.196076,
+        "routing_key": "D17",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 797725,
+        "sale_date": "2026-07-02",
+        "address": "APARTMENT 77 BURNELL COURT, MALAHIDE ROAD, NORTHERN CROSS",
+        "county": "Dublin",
+        "eircode": "D17C523",
+        "price": 270000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.392834,
+        "longitude": -6.192502,
+        "routing_key": "D17",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 797551,
+        "sale_date": "2026-07-01",
+        "address": "214 BURNELL SQ, NORTHERN CROSS, DUBLIN 17",
+        "county": "Dublin",
+        "eircode": "D17AX96",
+        "price": 334500.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396404,
+        "longitude": -6.129703,
+        "routing_key": "D17",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 797325,
+        "sale_date": "2026-06-29",
+        "address": "13 LARCHWOOD, OSCAR TRAYNOR RD, SANTRY DUBLIN 9",
+        "county": "Dublin",
+        "eircode": "D17C133",
+        "price": 310000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396568,
+        "longitude": -6.128739,
+        "routing_key": "D17",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 797179,
+        "sale_date": "2026-06-25",
+        "address": "97 SNOWDROP WALK, DUBLIN 17, D17 AX70",
+        "county": "Dublin",
+        "eircode": "D17AX70",
+        "price": 230000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.401344,
+        "longitude": -6.186808,
+        "routing_key": "D17",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 788329,
+        "sale_date": "2026-06-24",
+        "address": "6 BARRYSCOURT RD, COOLOCK, DUBLIN 17",
+        "county": "Dublin",
+        "eircode": "D17E983",
+        "price": 300000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.395553,
+        "longitude": -6.211301,
+        "routing_key": "D17",
+        "bedrooms": null,
+        "property_type": "apartment"
+      },
+      {
+        "id": 797039,
+        "sale_date": "2026-06-23",
+        "address": "69 ADARE RD, COOLOCK, DUBLIN 7",
+        "county": "Dublin",
+        "eircode": "D17YE39",
+        "price": 416000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396011,
+        "longitude": -6.208014,
+        "routing_key": "D17",
+        "bedrooms": null,
+        "property_type": null
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

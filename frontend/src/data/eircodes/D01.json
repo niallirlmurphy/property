@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D01",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 2061,
+      "median_price": 315000.0,
+      "avg_price": 377116.0,
+      "earliest_sale": "2010-02-10",
+      "latest_sale": "2026-07-16"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 790497,
+        "sale_date": "2026-07-16",
+        "address": "13 LONGFORD HOUSE, SPENCER DOCK, DUBLIN 1",
+        "county": "Dublin",
+        "eircode": "D01R227",
+        "price": 415000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396598,
+        "longitude": -6.128542,
+        "routing_key": "D01",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790382,
+        "sale_date": "2026-07-15",
+        "address": "25 PORTLAND LOCK, PORTLAND PLACE, DUBLIN 1",
+        "county": "Dublin",
+        "eircode": "D01Y684",
+        "price": 400000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.360654,
+        "longitude": -6.257218,
+        "routing_key": "D01",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790249,
+        "sale_date": "2026-07-14",
+        "address": "21 MONTGOMERY COURT, FOLEY ST, DUBLIN 1",
+        "county": "Dublin",
+        "eircode": "D01DP83",
+        "price": 405000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396598,
+        "longitude": -6.128542,
+        "routing_key": "D01",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790284,
+        "sale_date": "2026-07-14",
+        "address": "515 NORTH CIRCULAR RD, DUBLIN 1, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D01H2N8",
+        "price": 500000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.359622,
+        "longitude": -6.259878,
+        "routing_key": "D01",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 790119,
+        "sale_date": "2026-07-13",
+        "address": "19 COPEBRIDGE HOUSE, SPENCER DOCK, DUBLIN 1",
+        "county": "Dublin",
+        "eircode": "D01KF82",
+        "price": 610091.74,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.386192,
+        "longitude": -6.139309,
+        "routing_key": "D01",
+        "bedrooms": 3,
+        "property_type": "apartment"
+      },
+      {
+        "id": 789830,
+        "sale_date": "2026-07-09",
+        "address": "APT 4, THE MILLHOUSE, STEELWORKS DUBLIN 1",
+        "county": "Dublin",
+        "eircode": "D01KV12",
+        "price": 271000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396598,
+        "longitude": -6.128542,
+        "routing_key": "D01",
+        "bedrooms": 1,
+        "property_type": "apartment"
+      },
+      {
+        "id": 789828,
+        "sale_date": "2026-07-09",
+        "address": "APT 215 BACHELORS WALK, NORTHS LOTTS, DUBLIN 1",
+        "county": "Dublin",
+        "eircode": "D01W251",
+        "price": 257000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.347461,
+        "longitude": -6.259638,
+        "routing_key": "D01",
+        "bedrooms": null,
+        "property_type": "apartment"
+      },
+      {
+        "id": 789648,
+        "sale_date": "2026-07-08",
+        "address": "APT 9 BLOCK 6, CLARION QUAY, EXCISE WALK IFSC NORTH WALL",
+        "county": "Dublin",
+        "eircode": "D01CF58",
+        "price": 380000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.408798,
+        "longitude": -6.346457,
+        "routing_key": "D01",
+        "bedrooms": null,
+        "property_type": "apartment"
+      },
+      {
+        "id": 789616,
+        "sale_date": "2026-07-08",
+        "address": "6 THOMASTOWN HOUSE, SPENCER DOCK, I F S C DUBLIN 1",
+        "county": "Dublin",
+        "eircode": "D01FR58",
+        "price": 285000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.5214,
+        "longitude": -6.168772,
+        "routing_key": "D01",
+        "bedrooms": 1,
+        "property_type": "duplex"
+      },
+      {
+        "id": 789227,
+        "sale_date": "2026-07-06",
+        "address": "18 THE MEWS, 41 NORTH GREAT GEORGES, DUBLIN 1",
+        "county": "Dublin",
+        "eircode": "D01DP38",
+        "price": 316000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.354576,
+        "longitude": -6.260516,
+        "routing_key": "D01",
+        "bedrooms": null,
+        "property_type": null
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

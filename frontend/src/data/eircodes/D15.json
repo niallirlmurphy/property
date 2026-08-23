@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D15",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 7959,
+      "median_price": 356000.0,
+      "avg_price": 406661.0,
+      "earliest_sale": "2010-01-19",
+      "latest_sale": "2026-07-23"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 791180,
+        "sale_date": "2026-07-23",
+        "address": "25 WILLOW WOOD GROVE, HARTSTOWN, CLONSILLA DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15HC6F",
+        "price": 435000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.389846,
+        "longitude": -6.415201,
+        "routing_key": "D15",
+        "bedrooms": 4,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 791130,
+        "sale_date": "2026-07-22",
+        "address": "APT 15 WATERVILLE HALL, BLANCHARDSTOWN, DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15CX61",
+        "price": 343000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.392608,
+        "longitude": -6.377761,
+        "routing_key": "D15",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 791079,
+        "sale_date": "2026-07-22",
+        "address": "3 ROSELAWN WALK, CASTLEKNOCK, DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15CK7H",
+        "price": 665000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.383945,
+        "longitude": -6.380937,
+        "routing_key": "D15",
+        "bedrooms": 4,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 790961,
+        "sale_date": "2026-07-21",
+        "address": "130 HAZELBURY PARK, CLONEE, DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15Y3VT",
+        "price": 603000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.402599,
+        "longitude": -6.431,
+        "routing_key": "D15",
+        "bedrooms": 4,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 790972,
+        "sale_date": "2026-07-21",
+        "address": "192 CASTLECURRAGH VALE, BLANCHARDSTOWN, DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15P8P2",
+        "price": 375000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.403434,
+        "longitude": -6.389334,
+        "routing_key": "D15",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790872,
+        "sale_date": "2026-07-20",
+        "address": "32 BEECHFIELD MEADOWS, CLONEE, DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15C7F9",
+        "price": 414000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.405632,
+        "longitude": -6.436537,
+        "routing_key": "D15",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790829,
+        "sale_date": "2026-07-20",
+        "address": "101 WESTEND VILLAGE, SNUGBOROUGH RD, BLANCHARDSTOWN DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15P863",
+        "price": 292000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.397704,
+        "longitude": -6.371511,
+        "routing_key": "D15",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 790761,
+        "sale_date": "2026-07-17",
+        "address": "67 ORBY, PHOENIX PARK AVENUE, PHOENIX PARK RACECOURSE",
+        "county": "Dublin",
+        "eircode": "D15Y19K",
+        "price": 406233.48,
+        "not_full_market_price": false,
+        "vat_exclusive": true,
+        "description": "New Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.373382,
+        "longitude": -6.342124,
+        "routing_key": "D15",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 790696,
+        "sale_date": "2026-07-17",
+        "address": "20 CASTLEWOOD, HUNTSTOWN, CLONSILLA DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15Y26W",
+        "price": 366000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.398323,
+        "longitude": -6.416915,
+        "routing_key": "D15",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790724,
+        "sale_date": "2026-07-17",
+        "address": "29 STONEBRIDGE DR, CLONSILLA, DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15H5VC",
+        "price": 398000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.390876,
+        "longitude": -6.424315,
+        "routing_key": "D15",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

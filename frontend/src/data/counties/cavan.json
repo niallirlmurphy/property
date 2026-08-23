@@ -1,0 +1,145 @@
+{
+  "county": "Cavan",
+  "total_count": 11803,
+  "median_price": 250000.0,
+  "avg_price": 261357.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 294,
+      "median_price": 132159.0,
+      "avg_price": 143546.0,
+      "min_price": 12000.0,
+      "max_price": 638766.0
+    },
+    {
+      "year": 2011,
+      "count": 264,
+      "median_price": 115000.0,
+      "avg_price": 134334.0,
+      "min_price": 10000.0,
+      "max_price": 1150000.0
+    },
+    {
+      "year": 2012,
+      "count": 316,
+      "median_price": 87250.0,
+      "avg_price": 106235.0,
+      "min_price": 10000.0,
+      "max_price": 545000.0
+    },
+    {
+      "year": 2013,
+      "count": 496,
+      "median_price": 65000.0,
+      "avg_price": 82911.0,
+      "min_price": 10000.0,
+      "max_price": 459000.0
+    },
+    {
+      "year": 2014,
+      "count": 825,
+      "median_price": 60000.0,
+      "avg_price": 76647.0,
+      "min_price": 10000.0,
+      "max_price": 1455524.0
+    },
+    {
+      "year": 2015,
+      "count": 792,
+      "median_price": 76932.0,
+      "avg_price": 96099.0,
+      "min_price": 10000.0,
+      "max_price": 2050000.0
+    },
+    {
+      "year": 2016,
+      "count": 769,
+      "median_price": 85250.0,
+      "avg_price": 107550.0,
+      "min_price": 10000.0,
+      "max_price": 2104000.0
+    },
+    {
+      "year": 2017,
+      "count": 827,
+      "median_price": 105000.0,
+      "avg_price": 123428.0,
+      "min_price": 10000.0,
+      "max_price": 880000.0
+    },
+    {
+      "year": 2018,
+      "count": 836,
+      "median_price": 120395.0,
+      "avg_price": 134014.0,
+      "min_price": 10000.0,
+      "max_price": 1000000.0
+    },
+    {
+      "year": 2019,
+      "count": 817,
+      "median_price": 136563.0,
+      "avg_price": 146219.0,
+      "min_price": 10000.0,
+      "max_price": 1320000.0
+    },
+    {
+      "year": 2020,
+      "count": 714,
+      "median_price": 140000.0,
+      "avg_price": 162653.0,
+      "min_price": 10000.0,
+      "max_price": 4200000.0
+    },
+    {
+      "year": 2021,
+      "count": 894,
+      "median_price": 157500.0,
+      "avg_price": 181379.0,
+      "min_price": 10000.0,
+      "max_price": 5400000.0
+    },
+    {
+      "year": 2022,
+      "count": 879,
+      "median_price": 177000.0,
+      "avg_price": 203018.0,
+      "min_price": 10000.0,
+      "max_price": 5775477.0
+    },
+    {
+      "year": 2023,
+      "count": 820,
+      "median_price": 190000.0,
+      "avg_price": 206130.0,
+      "min_price": 10000.0,
+      "max_price": 1553636.3
+    },
+    {
+      "year": 2024,
+      "count": 770,
+      "median_price": 205000.0,
+      "avg_price": 218113.0,
+      "min_price": 10000.0,
+      "max_price": 1039647.57
+    },
+    {
+      "year": 2025,
+      "count": 752,
+      "median_price": 240000.0,
+      "avg_price": 262590.0,
+      "min_price": 10000.0,
+      "max_price": 8474268.49
+    },
+    {
+      "year": 2026,
+      "count": 376,
+      "median_price": 250000.0,
+      "avg_price": 261357.0,
+      "min_price": 15000.0,
+      "max_price": 1285000.0
+    }
+  ],
+  "recent": []
+}

@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D09",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 3780,
+      "median_price": 422000.0,
+      "avg_price": 473717.0,
+      "earliest_sale": "2010-04-15",
+      "latest_sale": "2026-07-23"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 791182,
+        "sale_date": "2026-07-23",
+        "address": "2A ALBERT COLLEGE GROVE, GLASNEVIN, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D09F8P3",
+        "price": 552000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.386375,
+        "longitude": -6.263631,
+        "routing_key": "D09",
+        "bedrooms": 3,
+        "property_type": "detached"
+      },
+      {
+        "id": 791151,
+        "sale_date": "2026-07-23",
+        "address": "101 BALLYMUN RD, GLASNEVIN, DUBLIN 9",
+        "county": "Dublin",
+        "eircode": "D09AY18",
+        "price": 1255000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.384277,
+        "longitude": -6.265776,
+        "routing_key": "D09",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 791063,
+        "sale_date": "2026-07-22",
+        "address": "2 THE GATEWAY, MAIN ST, BALLYMUN",
+        "county": "Dublin",
+        "eircode": "D09FF25",
+        "price": 270000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.387584,
+        "longitude": -6.297865,
+        "routing_key": "D09",
+        "bedrooms": 3,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790832,
+        "sale_date": "2026-07-20",
+        "address": "121 LYMEWOOD MEUSE, NORTHWOOD, SANTRY",
+        "county": "Dublin",
+        "eircode": "D09Y138",
+        "price": 352000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.403706,
+        "longitude": -6.262581,
+        "routing_key": "D09",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790852,
+        "sale_date": "2026-07-20",
+        "address": "23 TEMPLE COURT, NORTH WOOD, SANTRY DUBLIN 9",
+        "county": "Dublin",
+        "eircode": "D09E3T1",
+        "price": 275000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.351623,
+        "longitude": -6.289823,
+        "routing_key": "D09",
+        "bedrooms": 1,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790789,
+        "sale_date": "2026-07-17",
+        "address": "APT 43 BLOCKF, MILLNERS SQ SANTRY, DUBLIN 9",
+        "county": "Dublin",
+        "eircode": "D09AE82",
+        "price": 482000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396568,
+        "longitude": -6.128739,
+        "routing_key": "D09",
+        "bedrooms": 3,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790658,
+        "sale_date": "2026-07-17",
+        "address": "12 BARRON PLACE, DRUMCONDRA, DUBLIN 9",
+        "county": "Dublin",
+        "eircode": "D09V8P9",
+        "price": 552000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.371818,
+        "longitude": -6.260011,
+        "routing_key": "D09",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790529,
+        "sale_date": "2026-07-16",
+        "address": "216 TEMPLE COURT, NORTHWOOD, SANTRY DEMESNE DUBLIN 9",
+        "county": "Dublin",
+        "eircode": "D09TX2R",
+        "price": 370000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.406022,
+        "longitude": -6.248493,
+        "routing_key": "D09",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790602,
+        "sale_date": "2026-07-16",
+        "address": "APARTMENT 49, SHANGAN HALL, BALLYMUN",
+        "county": "Dublin",
+        "eircode": "D09TY09",
+        "price": 217000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.394916,
+        "longitude": -6.255622,
+        "routing_key": "D09",
+        "bedrooms": 1,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790521,
+        "sale_date": "2026-07-16",
+        "address": "1A CARLINGFORD ROAD, DUBLIN 9",
+        "county": "Dublin",
+        "eircode": "D09P768",
+        "price": 273600.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.366359,
+        "longitude": -6.25663,
+        "routing_key": "D09",
+        "bedrooms": null,
+        "property_type": null
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

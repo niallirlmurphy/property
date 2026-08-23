@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D11",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 3155,
+      "median_price": 301000.0,
+      "avg_price": 344264.0,
+      "earliest_sale": "2010-03-02",
+      "latest_sale": "2026-07-20"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 790828,
+        "sale_date": "2026-07-20",
+        "address": "10 DUNSOGHLY COURT, FINGLAS, DUBLIN 11",
+        "county": "Dublin",
+        "eircode": "D11YFK3",
+        "price": 375000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.391605,
+        "longitude": -6.323551,
+        "routing_key": "D11",
+        "bedrooms": 2,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 790483,
+        "sale_date": "2026-07-16",
+        "address": "10 THE HAMPTON, SANTRY CROSS, BALLYMUN DUBLIN 11",
+        "county": "Dublin",
+        "eircode": "D11E024",
+        "price": 280000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.453269,
+        "longitude": -6.224063,
+        "routing_key": "D11",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790230,
+        "sale_date": "2026-07-14",
+        "address": "15 SEAGRAVE WAY, MEAKSTOWN, DUBLIN 11",
+        "county": "Dublin",
+        "eircode": "D11H223",
+        "price": 241000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.405872,
+        "longitude": -6.295494,
+        "routing_key": "D11",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790260,
+        "sale_date": "2026-07-14",
+        "address": "3 CARRIGALLEN DR, FINGLAS, DUBLIN 11",
+        "county": "Dublin",
+        "eircode": "D11E9T7",
+        "price": 392000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.379238,
+        "longitude": -6.300938,
+        "routing_key": "D11",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790178,
+        "sale_date": "2026-07-13",
+        "address": "84 MAYESTON SQ, MAYESTON HALL, ST MARGARETS RD DUBLIN 11",
+        "county": "Dublin",
+        "eircode": "D11K033",
+        "price": 315000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.446587,
+        "longitude": -6.156077,
+        "routing_key": "D11",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790012,
+        "sale_date": "2026-07-10",
+        "address": "62 VIOLET HILL RD, GLASNEVIN, DUBLIN 11",
+        "county": "Dublin",
+        "eircode": "D11N2H1",
+        "price": 455000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.376827,
+        "longitude": -6.284443,
+        "routing_key": "D11",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 789706,
+        "sale_date": "2026-07-09",
+        "address": "149 PREMIER SQ, FINGLAS RD, GLASNEVIN DUBLIN 11",
+        "county": "Dublin",
+        "eircode": "D11NA72",
+        "price": 240000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.377773,
+        "longitude": -6.283701,
+        "routing_key": "D11",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 789306,
+        "sale_date": "2026-07-06",
+        "address": "7 GRIFFITH DRIVE, FINGLAS EAST, DUBLIN 11",
+        "county": "Dublin",
+        "eircode": "D11E2R7",
+        "price": 475000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.383296,
+        "longitude": -6.280089,
+        "routing_key": "D11",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 789213,
+        "sale_date": "2026-07-06",
+        "address": "134 ABBOTSTOWN AVE, FINGLAS WEST, DUBLIN 11",
+        "county": "Dublin",
+        "eircode": "D11Y8X8",
+        "price": 230000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.389064,
+        "longitude": -6.318484,
+        "routing_key": "D11",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 789163,
+        "sale_date": "2026-07-03",
+        "address": "24 BALLYGALL PLACE, FINGLAS EAST, DUBLIN 11",
+        "county": "Dublin",
+        "eircode": "D11H5W7",
+        "price": 400000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.387748,
+        "longitude": -6.292707,
+        "routing_key": "D11",
+        "bedrooms": 3,
+        "property_type": "detached"
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

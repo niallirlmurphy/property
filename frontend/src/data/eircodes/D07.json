@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D07",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 3889,
+      "median_price": 390000.0,
+      "avg_price": 437886.0,
+      "earliest_sale": "2010-02-18",
+      "latest_sale": "2026-07-24"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 791239,
+        "sale_date": "2026-07-24",
+        "address": "30 HAMPTON GREEN, NAVAN RD, DUBLIN 7",
+        "county": "Dublin",
+        "eircode": "D07E0A8",
+        "price": 590125.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396568,
+        "longitude": -6.128739,
+        "routing_key": "D07",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 791163,
+        "sale_date": "2026-07-23",
+        "address": "182 NAVAN RD, DUBLIN 7, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D07R5W4",
+        "price": 595000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.366153,
+        "longitude": -6.312811,
+        "routing_key": "D07",
+        "bedrooms": 3,
+        "property_type": "house"
+      },
+      {
+        "id": 791075,
+        "sale_date": "2026-07-22",
+        "address": "24 ROSS ST, OXMANTOWN RD, DUBLIN 7",
+        "county": "Dublin",
+        "eircode": "D07F6K3",
+        "price": 225000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.34643,
+        "longitude": -6.252028,
+        "routing_key": "D07",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 791093,
+        "sale_date": "2026-07-22",
+        "address": "469 CARNLOUGH RD, CABRA WEST, DUBLIN 7",
+        "county": "Dublin",
+        "eircode": "D07H766",
+        "price": 195000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.369895,
+        "longitude": -6.29791,
+        "routing_key": "D07",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790885,
+        "sale_date": "2026-07-20",
+        "address": "43 ST IGNATIUS RD, PHIBSBOROUGH, DUBLIN 7",
+        "county": "Dublin",
+        "eircode": "D07FW28",
+        "price": 485000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.362071,
+        "longitude": -6.263885,
+        "routing_key": "D07",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790826,
+        "sale_date": "2026-07-20",
+        "address": "1 ASHTOWN GROVE, NAVAN RD, DUBLIN 7",
+        "county": "Dublin",
+        "eircode": "D07H527",
+        "price": 595000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.371013,
+        "longitude": -6.325977,
+        "routing_key": "D07",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 790903,
+        "sale_date": "2026-07-20",
+        "address": "69 ANNAMOE DR, CABRA, DUBLIN 7",
+        "county": "Dublin",
+        "eircode": "D07VK60",
+        "price": 60000.0,
+        "not_full_market_price": true,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.358963,
+        "longitude": -6.2846,
+        "routing_key": "D07",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 790604,
+        "sale_date": "2026-07-16",
+        "address": "APARTMENTS 1, 19/20 BLACKHALL STREET, DUBLIN 7",
+        "county": "Dublin",
+        "eircode": "D07X28W",
+        "price": 17750000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.348369,
+        "longitude": -6.281313,
+        "routing_key": "D07",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 790505,
+        "sale_date": "2026-07-16",
+        "address": "15 SHANDON MILL, PHIBSBORO, DUBLIN 7",
+        "county": "Dublin",
+        "eircode": "D07XN52",
+        "price": 277000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.364353,
+        "longitude": -6.28121,
+        "routing_key": "D07",
+        "bedrooms": 1,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790252,
+        "sale_date": "2026-07-14",
+        "address": "22 CONVENT WAY, RIVERSTON ABBEY, NAVAN RD DUBLIN 7",
+        "county": "Dublin",
+        "eircode": "D07N6Y1",
+        "price": 628000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.369689,
+        "longitude": -6.312584,
+        "routing_key": "D07",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

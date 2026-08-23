@@ -1,0 +1,145 @@
+{
+  "county": "Donegal",
+  "total_count": 21167,
+  "median_price": 210000.0,
+  "avg_price": 245950.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 591,
+      "median_price": 140000.0,
+      "avg_price": 157302.0,
+      "min_price": 16500.0,
+      "max_price": 1434000.0
+    },
+    {
+      "year": 2011,
+      "count": 492,
+      "median_price": 120000.0,
+      "avg_price": 133614.0,
+      "min_price": 12500.0,
+      "max_price": 750000.0
+    },
+    {
+      "year": 2012,
+      "count": 641,
+      "median_price": 95000.0,
+      "avg_price": 110801.0,
+      "min_price": 10000.0,
+      "max_price": 530000.0
+    },
+    {
+      "year": 2013,
+      "count": 705,
+      "median_price": 82000.0,
+      "avg_price": 97116.0,
+      "min_price": 10000.0,
+      "max_price": 665000.0
+    },
+    {
+      "year": 2014,
+      "count": 1167,
+      "median_price": 80000.0,
+      "avg_price": 93452.0,
+      "min_price": 10000.0,
+      "max_price": 710000.0
+    },
+    {
+      "year": 2015,
+      "count": 1445,
+      "median_price": 88000.0,
+      "avg_price": 104821.0,
+      "min_price": 10000.0,
+      "max_price": 1197000.0
+    },
+    {
+      "year": 2016,
+      "count": 1407,
+      "median_price": 90000.0,
+      "avg_price": 108320.0,
+      "min_price": 10000.0,
+      "max_price": 941000.0
+    },
+    {
+      "year": 2017,
+      "count": 1235,
+      "median_price": 105000.0,
+      "avg_price": 122277.0,
+      "min_price": 10000.0,
+      "max_price": 2700000.0
+    },
+    {
+      "year": 2018,
+      "count": 1399,
+      "median_price": 101810.0,
+      "avg_price": 116325.0,
+      "min_price": 10000.0,
+      "max_price": 835000.0
+    },
+    {
+      "year": 2019,
+      "count": 1444,
+      "median_price": 112000.0,
+      "avg_price": 126058.0,
+      "min_price": 10000.0,
+      "max_price": 675000.0
+    },
+    {
+      "year": 2020,
+      "count": 1293,
+      "median_price": 126000.0,
+      "avg_price": 142176.0,
+      "min_price": 10000.0,
+      "max_price": 1600000.0
+    },
+    {
+      "year": 2021,
+      "count": 1604,
+      "median_price": 132000.0,
+      "avg_price": 153371.0,
+      "min_price": 10000.0,
+      "max_price": 2108862.0
+    },
+    {
+      "year": 2022,
+      "count": 1582,
+      "median_price": 160000.0,
+      "avg_price": 183126.0,
+      "min_price": 10000.0,
+      "max_price": 1420000.0
+    },
+    {
+      "year": 2023,
+      "count": 1463,
+      "median_price": 172000.0,
+      "avg_price": 191438.0,
+      "min_price": 10000.0,
+      "max_price": 2688105.72
+    },
+    {
+      "year": 2024,
+      "count": 1445,
+      "median_price": 177581.0,
+      "avg_price": 205617.0,
+      "min_price": 10000.0,
+      "max_price": 2300000.0
+    },
+    {
+      "year": 2025,
+      "count": 1358,
+      "median_price": 185000.0,
+      "avg_price": 229111.0,
+      "min_price": 19500.0,
+      "max_price": 19963676.0
+    },
+    {
+      "year": 2026,
+      "count": 712,
+      "median_price": 210000.0,
+      "avg_price": 245950.0,
+      "min_price": 11000.0,
+      "max_price": 6655556.0
+    }
+  ],
+  "recent": []
+}

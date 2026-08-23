@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D24",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 5455,
+      "median_price": 320000.0,
+      "avg_price": 349481.0,
+      "earliest_sale": "2010-01-15",
+      "latest_sale": "2026-07-23"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 791222,
+        "sale_date": "2026-07-23",
+        "address": "SITE 3  THE HILL, CITYWEST VILLAGE, CITYWEST",
+        "county": "Dublin",
+        "eircode": "D24RX4W",
+        "price": 536000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.375194,
+        "longitude": -6.251723,
+        "routing_key": "D24",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 791189,
+        "sale_date": "2026-07-23",
+        "address": "35 OLD COURT LODGE, FIRHOUSE, DUBLIN 24",
+        "county": "Dublin",
+        "eircode": "D24HD36",
+        "price": 270000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396366,
+        "longitude": -6.130421,
+        "routing_key": "D24",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 791165,
+        "sale_date": "2026-07-23",
+        "address": "19 BROADFIELD AVE, RATHCOOLE, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D24HK71",
+        "price": 501000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.278488,
+        "longitude": -6.482778,
+        "routing_key": "D24",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 791173,
+        "sale_date": "2026-07-23",
+        "address": "20 FORTUNES WALK, CITYPARK, CITYWEST",
+        "county": "Dublin",
+        "eircode": "D24Y803",
+        "price": 379000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.283481,
+        "longitude": -6.424432,
+        "routing_key": "D24",
+        "bedrooms": 3,
+        "property_type": "apartment"
+      },
+      {
+        "id": 791058,
+        "sale_date": "2026-07-22",
+        "address": "16 ELY DR, OLD COURT RD, FIRHOUSE DUBLIN 24",
+        "county": "Dublin",
+        "eircode": "D24PP4V",
+        "price": 550000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.381774,
+        "longitude": -6.226383,
+        "routing_key": "D24",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 791026,
+        "sale_date": "2026-07-21",
+        "address": "83 HUNTERS AVE, BALLYCULLEN, DUBLIN 24",
+        "county": "Dublin",
+        "eircode": "D24NYW4",
+        "price": 500000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.272491,
+        "longitude": -6.332425,
+        "routing_key": "D24",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790879,
+        "sale_date": "2026-07-20",
+        "address": "4 DE SELBY CRESCENT, TALLAGHT, DUBLIN 24",
+        "county": "Dublin",
+        "eircode": "D24E9X9",
+        "price": 400000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.277362,
+        "longitude": -6.410307,
+        "routing_key": "D24",
+        "bedrooms": null,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 790886,
+        "sale_date": "2026-07-20",
+        "address": "44 HUNTERS WALK, BALLYCULLEN, DUBLIN 24",
+        "county": "Dublin",
+        "eircode": "D24X2T4",
+        "price": 530000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.270874,
+        "longitude": -6.33092,
+        "routing_key": "D24",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790707,
+        "sale_date": "2026-07-17",
+        "address": "22 FERNWOOD PK, DUBLIN 24, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D24A7N5",
+        "price": 345000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.288265,
+        "longitude": -6.38492,
+        "routing_key": "D24",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790744,
+        "sale_date": "2026-07-17",
+        "address": "43 RATHMILL GREEN, RATHMILL MANOR, RATHCOOLE",
+        "county": "Dublin",
+        "eircode": "D24DV2F",
+        "price": 550000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.275485,
+        "longitude": -6.485956,
+        "routing_key": "D24",
+        "bedrooms": 4,
+        "property_type": "semi-detached"
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

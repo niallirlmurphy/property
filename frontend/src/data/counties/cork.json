@@ -1,0 +1,145 @@
+{
+  "county": "Cork",
+  "total_count": 88455,
+  "median_price": 374449.0,
+  "avg_price": 397855.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 2128,
+      "median_price": 216875.0,
+      "avg_price": 237912.0,
+      "min_price": 10000.0,
+      "max_price": 4563876.65
+    },
+    {
+      "year": 2011,
+      "count": 1989,
+      "median_price": 180616.0,
+      "avg_price": 203679.0,
+      "min_price": 10000.0,
+      "max_price": 1726844.0
+    },
+    {
+      "year": 2012,
+      "count": 2584,
+      "median_price": 158450.0,
+      "avg_price": 180719.0,
+      "min_price": 10000.0,
+      "max_price": 3700000.0
+    },
+    {
+      "year": 2013,
+      "count": 3051,
+      "median_price": 145000.0,
+      "avg_price": 181269.0,
+      "min_price": 10000.0,
+      "max_price": 18441109.0
+    },
+    {
+      "year": 2014,
+      "count": 4566,
+      "median_price": 148000.0,
+      "avg_price": 180551.0,
+      "min_price": 10000.0,
+      "max_price": 7973000.0
+    },
+    {
+      "year": 2015,
+      "count": 5296,
+      "median_price": 161000.0,
+      "avg_price": 195929.0,
+      "min_price": 10000.0,
+      "max_price": 15176000.0
+    },
+    {
+      "year": 2016,
+      "count": 5448,
+      "median_price": 180000.0,
+      "avg_price": 207830.0,
+      "min_price": 10000.0,
+      "max_price": 5950000.0
+    },
+    {
+      "year": 2017,
+      "count": 5583,
+      "median_price": 200000.0,
+      "avg_price": 235149.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 5745,
+      "median_price": 225000.0,
+      "avg_price": 260417.0,
+      "min_price": 10000.0,
+      "max_price": 15418502.0
+    },
+    {
+      "year": 2019,
+      "count": 6111,
+      "median_price": 237000.0,
+      "avg_price": 270180.0,
+      "min_price": 10000.0,
+      "max_price": 20000000.0
+    },
+    {
+      "year": 2020,
+      "count": 5063,
+      "median_price": 248000.0,
+      "avg_price": 264849.0,
+      "min_price": 10000.0,
+      "max_price": 8744428.59
+    },
+    {
+      "year": 2021,
+      "count": 6133,
+      "median_price": 260000.0,
+      "avg_price": 285736.0,
+      "min_price": 10000.0,
+      "max_price": 7797040.0
+    },
+    {
+      "year": 2022,
+      "count": 6341,
+      "median_price": 285000.0,
+      "avg_price": 321902.0,
+      "min_price": 10000.0,
+      "max_price": 7739124.92
+    },
+    {
+      "year": 2023,
+      "count": 6591,
+      "median_price": 300000.0,
+      "avg_price": 336557.0,
+      "min_price": 10000.0,
+      "max_price": 16872246.7
+    },
+    {
+      "year": 2024,
+      "count": 6417,
+      "median_price": 321586.0,
+      "avg_price": 361167.0,
+      "min_price": 14000.0,
+      "max_price": 11226290.7
+    },
+    {
+      "year": 2025,
+      "count": 6845,
+      "median_price": 350000.0,
+      "avg_price": 380615.0,
+      "min_price": 10000.0,
+      "max_price": 13009204.05
+    },
+    {
+      "year": 2026,
+      "count": 3416,
+      "median_price": 374449.0,
+      "avg_price": 397855.0,
+      "min_price": 10000.0,
+      "max_price": 8359311.59
+    }
+  ],
+  "recent": []
+}
