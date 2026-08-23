@@ -1844,6 +1844,42 @@ async def counties(request: Request):
     return result
 
 
+@app.get("/county-recent")
+async def county_recent(
+    request: Request,
+    county: str = Query(..., description="County name, e.g. 'Kerry'"),
+    limit: int = Query(10, ge=1, le=100),
+):
+    """Most recent sales in a whole county, ordered by sale_date.
+
+    County pages need the latest sales across the entire county. /search is
+    radius-based (capped at 20km), so it cannot cover a county — this endpoint
+    filters by county alone with no geographic radius. Returns the same row
+    shape as /search (minus distance_m) so the frontend reuses its row type.
+    """
+    _rate_limit_check(request, 60, "county_recent")
+    cache_params = {"county": county.lower(), "limit": limit}
+    cached = cache.get("county_recent", cache_params)
+    if cached is not None:
+        return SafeJSONResponse(content=cached)
+
+    rows = await db_pool.fetch("""
+        SELECT
+            id, sale_date, address, county, eircode, price,
+            not_full_market_price, vat_exclusive, description,
+            size_description, latitude, longitude,
+            routing_key, bedrooms, property_type
+        FROM properties
+        WHERE LOWER(county) = LOWER($1)
+        ORDER BY sale_date DESC, id DESC
+        LIMIT $2
+    """, county, limit)
+
+    result = {"count": len(rows), "results": [serialize_row(r) for r in rows]}
+    cache.set("county_recent", cache_params, result, TTL_SEARCH)
+    return SafeJSONResponse(content=result)
+
+
 # ---------------------------------------------------------------------------
 # Manual geocoding endpoints — admin workflow for hard-to-geocode addresses
 # ---------------------------------------------------------------------------

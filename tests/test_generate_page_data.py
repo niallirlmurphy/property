@@ -109,7 +109,7 @@ def test_build_county_matches_county_summary_shape(monkeypatch):
         if path == "/trends":
             assert params["county"] == "Cork"
             return {"data": [{"year": 2024, "count": 100, "median_price": 300000, "avg_price": 320000, "min_price": 100000, "max_price": 900000}]}
-        if path == "/search":
+        if path == "/county-recent":
             assert params["county"] == "Cork" and params["limit"] == 10
             return {"results": [{"id": 9, "price": 300000, "address": "y", "sale_date": "2024-03-01", "county": "Cork"}]}
         raise AssertionError(path)
@@ -123,22 +123,22 @@ def test_build_county_matches_county_summary_shape(monkeypatch):
     assert len(out["recent"]) == 1
 
 
-def test_build_county_tolerates_search_failure(monkeypatch):
-    import urllib.error
+def test_build_county_raises_on_recent_http_error(monkeypatch):
+    # /county-recent is a real endpoint (not the old radius_km=200 hack), so a
+    # failure is transient and must raise -> main() warns and skips rather than
+    # baking empty recent (the old, permanently-broken behavior).
     counties = [{"county": "Cork", "count": 12345}]
 
     def fake_get(api_url, path, params):
         if path == "/trends":
             return {"data": [{"year": 2024, "count": 100, "median_price": 300000, "avg_price": 320000, "min_price": 100000, "max_price": 900000}]}
-        if path == "/search":
-            raise urllib.error.HTTPError(api_url + path, 422, "Unprocessable Entity", {}, None)
+        if path == "/county-recent":
+            raise urllib.error.HTTPError(api_url + path, 503, "Service Unavailable", {}, None)
         raise AssertionError(path)
 
     monkeypatch.setattr(g, "_get", fake_get)
-    out = g.build_county("http://x", "Cork", counties)
-    assert out["recent"] == []            # search 422 tolerated, not a crash
-    assert out["total_count"] == 12345    # still from counties row
-    assert out["median_price"] == 300000  # trends still applied
+    with pytest.raises(urllib.error.HTTPError):
+        g.build_county("http://x", "Cork", counties)
 
 
 def test_build_area_raises_on_trends_http_error(monkeypatch):
@@ -162,7 +162,7 @@ def test_build_county_raises_on_trends_http_error(monkeypatch):
     def fake_get(api_url, path, params):
         if path == "/trends":
             raise urllib.error.HTTPError(api_url + path, 503, "Service Unavailable", {}, None)
-        if path == "/search":
+        if path == "/county-recent":
             return {"results": [{"id": 9, "price": 300000, "address": "y", "sale_date": "2024-03-01", "county": "Cork"}]}
         raise AssertionError(path)
 
@@ -177,7 +177,7 @@ def test_build_county_raises_when_count_positive_but_trends_empty(monkeypatch):
     def fake_get(api_url, path, params):
         if path == "/trends":
             return {"data": []}
-        if path == "/search":
+        if path == "/county-recent":
             return {"results": [{"id": 9, "price": 300000, "address": "y", "sale_date": "2024-03-01", "county": "Cork"}]}
         raise AssertionError(path)
 
