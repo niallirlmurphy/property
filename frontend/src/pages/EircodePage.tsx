@@ -4,10 +4,17 @@ import { fetchEircode, fetchTrends } from "../api";
 import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
-import type { EircodeResponse, TrendPoint } from "../types";
+import type { EircodeResponse, TrendPoint, EircodePageData } from "../types";
 import { DUBLIN_EIRCODE_AREAS, countySlug } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
 import Breadcrumbs from "../components/Breadcrumbs";
+
+// Eager glob: eircode data is bundled for synchronous access at SSG prerender time.
+const EIRCODE_DATA = import.meta.glob<{ default: EircodePageData }>("../data/eircodes/*.json", { eager: true });
+
+function bakedEircode(code: string): EircodePageData | undefined {
+  return EIRCODE_DATA[`../data/eircodes/${code}.json`]?.default;
+}
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -30,23 +37,22 @@ export default function EircodePage() {
     ]
   );
 
-  const [data, setData] = useState<EircodeResponse | null>(null);
-  const [trends, setTrends] = useState<TrendPoint[]>([]);
-  const [loading, setLoading] = useState(true);
+  const baked = bakedEircode(upperCode);
+  const [fetchedData, setFetchedData] = useState<EircodeResponse | null>(null);
+  const [fetchedTrends, setFetchedTrends] = useState<TrendPoint[]>([]);
+  const data = baked?.eircode ?? fetchedData;
+  const trends = baked?.trends ?? fetchedTrends;
+  const [loading, setLoading] = useState(!baked);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!upperCode) return;
+    if (!upperCode || baked) return;   // baked data already rendered; no fetch
     setLoading(true);
-    Promise.all([
-      fetchEircode(upperCode, { limit: 10 }),
-      fetchTrends(undefined, 5, data?.results[0]?.county ?? undefined),
-    ])
-      .then(([eircodeData, trendData]) => {
-        setData(eircodeData);
-        // Fetch county trends once we have the county
+    fetchEircode(upperCode, { limit: 10 })
+      .then(eircodeData => {
+        setFetchedData(eircodeData);
         const county = eircodeData.results[0]?.county;
-        if (county) return fetchTrends(undefined, 5, county).then(setTrends);
+        if (county) return fetchTrends(undefined, 5, county).then(setFetchedTrends);
       })
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
