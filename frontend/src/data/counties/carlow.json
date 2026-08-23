@@ -1,0 +1,145 @@
+{
+  "county": "Carlow",
+  "total_count": 8721,
+  "median_price": 290500.0,
+  "avg_price": 299981.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 218,
+      "median_price": 157709.0,
+      "avg_price": 178090.0,
+      "min_price": 35000.0,
+      "max_price": 1453745.0
+    },
+    {
+      "year": 2011,
+      "count": 172,
+      "median_price": 130000.0,
+      "avg_price": 143096.0,
+      "min_price": 20000.0,
+      "max_price": 865878.0
+    },
+    {
+      "year": 2012,
+      "count": 247,
+      "median_price": 101500.0,
+      "avg_price": 113951.0,
+      "min_price": 12500.0,
+      "max_price": 540000.0
+    },
+    {
+      "year": 2013,
+      "count": 331,
+      "median_price": 96916.0,
+      "avg_price": 121384.0,
+      "min_price": 20000.0,
+      "max_price": 2097577.0
+    },
+    {
+      "year": 2014,
+      "count": 423,
+      "median_price": 110000.0,
+      "avg_price": 114691.0,
+      "min_price": 20000.0,
+      "max_price": 600000.0
+    },
+    {
+      "year": 2015,
+      "count": 503,
+      "median_price": 120000.0,
+      "avg_price": 128376.0,
+      "min_price": 10000.0,
+      "max_price": 800000.0
+    },
+    {
+      "year": 2016,
+      "count": 503,
+      "median_price": 135000.0,
+      "avg_price": 139214.0,
+      "min_price": 10000.0,
+      "max_price": 470000.0
+    },
+    {
+      "year": 2017,
+      "count": 483,
+      "median_price": 145000.0,
+      "avg_price": 153122.0,
+      "min_price": 15000.0,
+      "max_price": 550000.0
+    },
+    {
+      "year": 2018,
+      "count": 623,
+      "median_price": 169500.0,
+      "avg_price": 176461.0,
+      "min_price": 10000.0,
+      "max_price": 1350000.0
+    },
+    {
+      "year": 2019,
+      "count": 600,
+      "median_price": 171635.0,
+      "avg_price": 180619.0,
+      "min_price": 22200.0,
+      "max_price": 1950820.0
+    },
+    {
+      "year": 2020,
+      "count": 495,
+      "median_price": 175000.0,
+      "avg_price": 207431.0,
+      "min_price": 10000.0,
+      "max_price": 5101321.59
+    },
+    {
+      "year": 2021,
+      "count": 678,
+      "median_price": 195000.0,
+      "avg_price": 212742.0,
+      "min_price": 10000.0,
+      "max_price": 4473184.14
+    },
+    {
+      "year": 2022,
+      "count": 691,
+      "median_price": 211410.0,
+      "avg_price": 240664.0,
+      "min_price": 20000.0,
+      "max_price": 3917600.0
+    },
+    {
+      "year": 2023,
+      "count": 659,
+      "median_price": 235000.0,
+      "avg_price": 250824.0,
+      "min_price": 10294.31,
+      "max_price": 1590000.0
+    },
+    {
+      "year": 2024,
+      "count": 617,
+      "median_price": 252000.0,
+      "avg_price": 257404.0,
+      "min_price": 30000.0,
+      "max_price": 1300000.0
+    },
+    {
+      "year": 2025,
+      "count": 614,
+      "median_price": 270000.0,
+      "avg_price": 299994.0,
+      "min_price": 25000.0,
+      "max_price": 6295000.0
+    },
+    {
+      "year": 2026,
+      "count": 254,
+      "median_price": 290500.0,
+      "avg_price": 299981.0,
+      "min_price": 55000.0,
+      "max_price": 2725000.0
+    }
+  ],
+  "recent": []
+}

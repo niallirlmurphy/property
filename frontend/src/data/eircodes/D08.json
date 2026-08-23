@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D08",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 4522,
+      "median_price": 355000.0,
+      "avg_price": 409416.0,
+      "earliest_sale": "2010-04-21",
+      "latest_sale": "2026-07-23"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 791179,
+        "sale_date": "2026-07-23",
+        "address": "241 KESTREL BUILDING, HEUSTON SOUTH QUARTER, ST JOHNS ROAD WEST",
+        "county": "Dublin",
+        "eircode": "D08HD79",
+        "price": 412000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.345485,
+        "longitude": -6.296648,
+        "routing_key": "D08",
+        "bedrooms": 1,
+        "property_type": "apartment"
+      },
+      {
+        "id": 791123,
+        "sale_date": "2026-07-22",
+        "address": "APARTMENT 138, ADELAIDE SQUARE, WHITEFRIAR STREET",
+        "county": "Dublin",
+        "eircode": "D08F677",
+        "price": 370000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.322701,
+        "longitude": -6.207141,
+        "routing_key": "D08",
+        "bedrooms": 1,
+        "property_type": "apartment"
+      },
+      {
+        "id": 791055,
+        "sale_date": "2026-07-22",
+        "address": "14 THOMAS DAVIS STREET WEST, INCHICORE, DUBLIN 8",
+        "county": "Dublin",
+        "eircode": "D08C7YA",
+        "price": 391000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.338111,
+        "longitude": -6.320507,
+        "routing_key": "D08",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790969,
+        "sale_date": "2026-07-21",
+        "address": "18 LR CLANBRASSIL ST, DUBLIN 8, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D08T448",
+        "price": 530000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.335086,
+        "longitude": -6.27358,
+        "routing_key": "D08",
+        "bedrooms": 3,
+        "property_type": null
+      },
+      {
+        "id": 791005,
+        "sale_date": "2026-07-21",
+        "address": "5 ST JOHNS AVE, PIMLICO, DUBLIN 8",
+        "county": "Dublin",
+        "eircode": "D08EP0A",
+        "price": 450000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.339469,
+        "longitude": -6.281051,
+        "routing_key": "D08",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790880,
+        "sale_date": "2026-07-20",
+        "address": "4 HUXLEY COURT, CORK ST, DUBLIN 8",
+        "county": "Dublin",
+        "eircode": "D08TV05",
+        "price": 380000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.336307,
+        "longitude": -6.289321,
+        "routing_key": "D08",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790655,
+        "sale_date": "2026-07-17",
+        "address": "11 RIALTO ST, RIALTO, DUBLIN 8",
+        "county": "Dublin",
+        "eircode": "D08CYN1",
+        "price": 535000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.336914,
+        "longitude": -6.296092,
+        "routing_key": "D08",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790786,
+        "sale_date": "2026-07-17",
+        "address": "APT 1, 30 JAMESS ST, DUBLIN 8",
+        "county": "Dublin",
+        "eircode": "D08XD42",
+        "price": 800000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.342983,
+        "longitude": -6.290736,
+        "routing_key": "D08",
+        "bedrooms": null,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790734,
+        "sale_date": "2026-07-17",
+        "address": "32 JAMESS ST, APT 1, DUBLIN 8",
+        "county": "Dublin",
+        "eircode": "D08HP78",
+        "price": 1000000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.343021,
+        "longitude": -6.290539,
+        "routing_key": "D08",
+        "bedrooms": null,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790530,
+        "sale_date": "2026-07-16",
+        "address": "218 THE TRAMYARD, SPA RD, INCHICORE DUBLIN 8",
+        "county": "Dublin",
+        "eircode": "D08X6V9",
+        "price": 325000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396568,
+        "longitude": -6.128739,
+        "routing_key": "D08",
+        "bedrooms": null,
+        "property_type": "apartment"
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

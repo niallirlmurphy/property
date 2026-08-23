@@ -1,0 +1,145 @@
+{
+  "county": "Mayo",
+  "total_count": 19007,
+  "median_price": 231500.0,
+  "avg_price": 258145.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 400,
+      "median_price": 150000.0,
+      "avg_price": 161981.0,
+      "min_price": 14000.0,
+      "max_price": 693200.0
+    },
+    {
+      "year": 2011,
+      "count": 406,
+      "median_price": 126000.0,
+      "avg_price": 150131.0,
+      "min_price": 11000.0,
+      "max_price": 800000.0
+    },
+    {
+      "year": 2012,
+      "count": 510,
+      "median_price": 105000.0,
+      "avg_price": 116893.0,
+      "min_price": 10000.0,
+      "max_price": 470000.0
+    },
+    {
+      "year": 2013,
+      "count": 540,
+      "median_price": 92255.0,
+      "avg_price": 118250.0,
+      "min_price": 10000.0,
+      "max_price": 1000000.0
+    },
+    {
+      "year": 2014,
+      "count": 1020,
+      "median_price": 85000.0,
+      "avg_price": 101503.0,
+      "min_price": 10000.0,
+      "max_price": 956000.0
+    },
+    {
+      "year": 2015,
+      "count": 1284,
+      "median_price": 90000.0,
+      "avg_price": 110099.0,
+      "min_price": 10000.0,
+      "max_price": 825000.0
+    },
+    {
+      "year": 2016,
+      "count": 1205,
+      "median_price": 95000.0,
+      "avg_price": 113811.0,
+      "min_price": 10000.0,
+      "max_price": 585000.0
+    },
+    {
+      "year": 2017,
+      "count": 1258,
+      "median_price": 109500.0,
+      "avg_price": 133147.0,
+      "min_price": 10000.0,
+      "max_price": 5854801.0
+    },
+    {
+      "year": 2018,
+      "count": 1258,
+      "median_price": 120000.0,
+      "avg_price": 134837.0,
+      "min_price": 10000.0,
+      "max_price": 966000.0
+    },
+    {
+      "year": 2019,
+      "count": 1275,
+      "median_price": 130000.0,
+      "avg_price": 142432.0,
+      "min_price": 10000.0,
+      "max_price": 1960000.0
+    },
+    {
+      "year": 2020,
+      "count": 1211,
+      "median_price": 130000.0,
+      "avg_price": 147123.0,
+      "min_price": 10000.0,
+      "max_price": 2800000.0
+    },
+    {
+      "year": 2021,
+      "count": 1544,
+      "median_price": 150000.0,
+      "avg_price": 168671.0,
+      "min_price": 10000.0,
+      "max_price": 2865000.0
+    },
+    {
+      "year": 2022,
+      "count": 1506,
+      "median_price": 175000.0,
+      "avg_price": 197760.0,
+      "min_price": 14000.0,
+      "max_price": 4327867.36
+    },
+    {
+      "year": 2023,
+      "count": 1457,
+      "median_price": 190000.0,
+      "avg_price": 207473.0,
+      "min_price": 10000.0,
+      "max_price": 1360000.0
+    },
+    {
+      "year": 2024,
+      "count": 1378,
+      "median_price": 200000.0,
+      "avg_price": 225792.0,
+      "min_price": 10000.0,
+      "max_price": 3300000.0
+    },
+    {
+      "year": 2025,
+      "count": 1376,
+      "median_price": 220000.0,
+      "avg_price": 238554.0,
+      "min_price": 10000.0,
+      "max_price": 3926606.0
+    },
+    {
+      "year": 2026,
+      "count": 622,
+      "median_price": 231500.0,
+      "avg_price": 258145.0,
+      "min_price": 10000.0,
+      "max_price": 5418503.0
+    }
+  ],
+  "recent": []
+}

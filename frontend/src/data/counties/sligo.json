@@ -1,0 +1,145 @@
+{
+  "county": "Sligo",
+  "total_count": 11635,
+  "median_price": 258750.0,
+  "avg_price": 283537.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 304,
+      "median_price": 145833.0,
+      "avg_price": 165883.0,
+      "min_price": 15000.0,
+      "max_price": 1324505.0
+    },
+    {
+      "year": 2011,
+      "count": 223,
+      "median_price": 120000.0,
+      "avg_price": 171760.0,
+      "min_price": 15000.0,
+      "max_price": 5559481.0
+    },
+    {
+      "year": 2012,
+      "count": 359,
+      "median_price": 90000.0,
+      "avg_price": 114721.0,
+      "min_price": 14000.0,
+      "max_price": 505000.0
+    },
+    {
+      "year": 2013,
+      "count": 400,
+      "median_price": 90000.0,
+      "avg_price": 111994.0,
+      "min_price": 10000.0,
+      "max_price": 900000.0
+    },
+    {
+      "year": 2014,
+      "count": 685,
+      "median_price": 95000.0,
+      "avg_price": 117531.0,
+      "min_price": 10000.0,
+      "max_price": 837004.4
+    },
+    {
+      "year": 2015,
+      "count": 649,
+      "median_price": 97000.0,
+      "avg_price": 125492.0,
+      "min_price": 10000.0,
+      "max_price": 1900440.5
+    },
+    {
+      "year": 2016,
+      "count": 777,
+      "median_price": 87000.0,
+      "avg_price": 117139.0,
+      "min_price": 10000.0,
+      "max_price": 2393000.0
+    },
+    {
+      "year": 2017,
+      "count": 756,
+      "median_price": 110000.0,
+      "avg_price": 137130.0,
+      "min_price": 10625.0,
+      "max_price": 875000.0
+    },
+    {
+      "year": 2018,
+      "count": 926,
+      "median_price": 110000.0,
+      "avg_price": 141343.0,
+      "min_price": 10000.0,
+      "max_price": 1890000.0
+    },
+    {
+      "year": 2019,
+      "count": 815,
+      "median_price": 135000.0,
+      "avg_price": 155160.0,
+      "min_price": 10000.0,
+      "max_price": 875000.0
+    },
+    {
+      "year": 2020,
+      "count": 663,
+      "median_price": 122500.0,
+      "avg_price": 148319.0,
+      "min_price": 10000.0,
+      "max_price": 1017000.0
+    },
+    {
+      "year": 2021,
+      "count": 925,
+      "median_price": 150000.0,
+      "avg_price": 178662.0,
+      "min_price": 13000.0,
+      "max_price": 1455000.0
+    },
+    {
+      "year": 2022,
+      "count": 950,
+      "median_price": 179000.0,
+      "avg_price": 201345.0,
+      "min_price": 10000.0,
+      "max_price": 945000.0
+    },
+    {
+      "year": 2023,
+      "count": 844,
+      "median_price": 185000.0,
+      "avg_price": 218987.0,
+      "min_price": 15859.0,
+      "max_price": 3000000.0
+    },
+    {
+      "year": 2024,
+      "count": 716,
+      "median_price": 225000.0,
+      "avg_price": 254038.0,
+      "min_price": 11000.0,
+      "max_price": 2200000.0
+    },
+    {
+      "year": 2025,
+      "count": 827,
+      "median_price": 250000.0,
+      "avg_price": 272231.0,
+      "min_price": 20000.0,
+      "max_price": 1950000.0
+    },
+    {
+      "year": 2026,
+      "count": 408,
+      "median_price": 258750.0,
+      "avg_price": 283537.0,
+      "min_price": 13500.0,
+      "max_price": 2155000.0
+    }
+  ],
+  "recent": []
+}

@@ -1,0 +1,145 @@
+{
+  "county": "Kildare",
+  "total_count": 43454,
+  "median_price": 418502.0,
+  "avg_price": 464307.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1007,
+      "median_price": 227500.0,
+      "avg_price": 244517.0,
+      "min_price": 10000.0,
+      "max_price": 2325000.0
+    },
+    {
+      "year": 2011,
+      "count": 769,
+      "median_price": 200000.0,
+      "avg_price": 229027.0,
+      "min_price": 10000.0,
+      "max_price": 3250000.0
+    },
+    {
+      "year": 2012,
+      "count": 1031,
+      "median_price": 171806.0,
+      "avg_price": 197766.0,
+      "min_price": 17857.0,
+      "max_price": 5205926.0
+    },
+    {
+      "year": 2013,
+      "count": 1284,
+      "median_price": 175000.0,
+      "avg_price": 203026.0,
+      "min_price": 10000.0,
+      "max_price": 4875000.0
+    },
+    {
+      "year": 2014,
+      "count": 1828,
+      "median_price": 205000.0,
+      "avg_price": 226748.0,
+      "min_price": 14375.0,
+      "max_price": 2867100.0
+    },
+    {
+      "year": 2015,
+      "count": 2201,
+      "median_price": 225000.0,
+      "avg_price": 239139.0,
+      "min_price": 17776.0,
+      "max_price": 6250000.0
+    },
+    {
+      "year": 2016,
+      "count": 2166,
+      "median_price": 245000.0,
+      "avg_price": 264801.0,
+      "min_price": 15000.0,
+      "max_price": 12073334.0
+    },
+    {
+      "year": 2017,
+      "count": 2683,
+      "median_price": 255000.0,
+      "avg_price": 269260.0,
+      "min_price": 10000.0,
+      "max_price": 3065000.0
+    },
+    {
+      "year": 2018,
+      "count": 2787,
+      "median_price": 275000.0,
+      "avg_price": 294435.0,
+      "min_price": 16765.0,
+      "max_price": 8261055.0
+    },
+    {
+      "year": 2019,
+      "count": 3110,
+      "median_price": 280000.0,
+      "avg_price": 305157.0,
+      "min_price": 17000.0,
+      "max_price": 8336145.77
+    },
+    {
+      "year": 2020,
+      "count": 2574,
+      "median_price": 295154.0,
+      "avg_price": 321524.0,
+      "min_price": 10000.0,
+      "max_price": 13053375.14
+    },
+    {
+      "year": 2021,
+      "count": 3263,
+      "median_price": 310500.0,
+      "avg_price": 352415.0,
+      "min_price": 10000.0,
+      "max_price": 12684156.56
+    },
+    {
+      "year": 2022,
+      "count": 3719,
+      "median_price": 341000.0,
+      "avg_price": 390862.0,
+      "min_price": 30000.0,
+      "max_price": 13910000.0
+    },
+    {
+      "year": 2023,
+      "count": 3909,
+      "median_price": 361154.0,
+      "avg_price": 392940.0,
+      "min_price": 10000.0,
+      "max_price": 15795529.52
+    },
+    {
+      "year": 2024,
+      "count": 3062,
+      "median_price": 378855.0,
+      "avg_price": 414192.0,
+      "min_price": 20000.0,
+      "max_price": 6000000.0
+    },
+    {
+      "year": 2025,
+      "count": 3285,
+      "median_price": 405286.0,
+      "avg_price": 437591.0,
+      "min_price": 10000.0,
+      "max_price": 6318942.73
+    },
+    {
+      "year": 2026,
+      "count": 1669,
+      "median_price": 418502.0,
+      "avg_price": 464307.0,
+      "min_price": 15000.0,
+      "max_price": 14396475.77
+    }
+  ],
+  "recent": []
+}

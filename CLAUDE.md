@@ -155,13 +155,19 @@ python3 scripts/enrich_batch6_2026.py --batch-size 100 --rate-limit 5
 export $(grep '^DATABASE_URL=' backend/.env | xargs)
 python3 scripts/generate_street_data.py     # writes frontend/src/data/streets/*.json
 python3 scripts/generate_sitemap.py          # refresh sitemap
+python3 scripts/generate_page_data.py        # writes frontend/src/data/{areas,eircodes,counties}/*.json
 git add frontend/src/data/streets frontend/public/sitemap.xml
+git add frontend/src/data/areas frontend/src/data/eircodes frontend/src/data/counties
 git commit -m "chore: refresh street page data" && git push origin main
 ```
 This refreshes the 50 static street pages (`/street/:slug`). Data is baked into
 the SSG build, so a redeploy (automatic on push) is required for changes to show.
 To change *which* streets get pages, re-run `python3 scripts/analyze_top_streets.py`
 then `python3 scripts/build_street_registry.py` and review the registry diff.
+`generate_page_data.py` refreshes the baked `/area/:slug`, `/eircode/:code`, and `/county/:slug`
+page data by calling the backend API (defaults to `http://localhost:8000`; override with
+`--api-url`) — it needs the backend reachable, and it also runs automatically as Step 4 of
+`scripts/ppr_full_pipeline.py` (skip with `--skip-page-data`).
 
 **Monitoring:**
 ```bash

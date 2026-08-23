@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D05",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 2650,
+      "median_price": 450000.0,
+      "avg_price": 481371.0,
+      "earliest_sale": "2010-02-26",
+      "latest_sale": "2026-07-23"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 791190,
+        "sale_date": "2026-07-23",
+        "address": "36 EDENMORE CRESCENT, RAHENY, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05HW66",
+        "price": 555000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.3843,
+        "longitude": -6.179077,
+        "routing_key": "D05",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 791051,
+        "sale_date": "2026-07-22",
+        "address": "12 CRAIGFORD AVE, KILLESTER, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05A3V2",
+        "price": 475000.0,
+        "not_full_market_price": true,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.378273,
+        "longitude": -6.211637,
+        "routing_key": "D05",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 791028,
+        "sale_date": "2026-07-21",
+        "address": "9 GRANGE PARK GROVE, RAHENY, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05PX62",
+        "price": 580000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.387462,
+        "longitude": -6.172291,
+        "routing_key": "D05",
+        "bedrooms": 4,
+        "property_type": "detached"
+      },
+      {
+        "id": 790900,
+        "sale_date": "2026-07-20",
+        "address": "66 FOXFIELD PARK, RAHENY, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05AP92",
+        "price": 861200.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.382236,
+        "longitude": -6.156124,
+        "routing_key": "D05",
+        "bedrooms": 4,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 790567,
+        "sale_date": "2026-07-16",
+        "address": "59 CROMCASTLE DRIVE, COOLOCK, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05YT68",
+        "price": 375000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.394577,
+        "longitude": -6.217044,
+        "routing_key": "D05",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790238,
+        "sale_date": "2026-07-14",
+        "address": "166 BELMONT PARK, RAHENY, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05HR25",
+        "price": 530000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.383983,
+        "longitude": -6.170355,
+        "routing_key": "D05",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790120,
+        "sale_date": "2026-07-13",
+        "address": "2 CEIDE AINNIN, ARTANE, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05W7R2",
+        "price": 500000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.384738,
+        "longitude": -6.194044,
+        "routing_key": "D05",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 789971,
+        "sale_date": "2026-07-10",
+        "address": "33 BROOKWOOD DR, ARTANE, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05N9K4",
+        "price": 730000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.381187,
+        "longitude": -6.202408,
+        "routing_key": "D05",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 789999,
+        "sale_date": "2026-07-10",
+        "address": "54 MONTROSE GROVE, ARTANE, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05CK09",
+        "price": 510000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.386577,
+        "longitude": -6.221557,
+        "routing_key": "D05",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 789684,
+        "sale_date": "2026-07-09",
+        "address": "104 BRIARFIELD GROVE, KILBARRACK, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05R598",
+        "price": 435000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.388008,
+        "longitude": -6.157113,
+        "routing_key": "D05",
+        "bedrooms": 3,
+        "property_type": "detached"
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

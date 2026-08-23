@@ -22,6 +22,13 @@ function formatPrice(n: number | null) {
   return "€" + Math.round(n).toLocaleString("en-IE");
 }
 
+// Eager glob: county data is bundled for synchronous access at SSG prerender time.
+const COUNTY_DATA = import.meta.glob<{ default: CountySummary }>("../data/counties/*.json", { eager: true });
+
+function bakedCounty(slug: string): CountySummary | undefined {
+  return COUNTY_DATA[`../data/counties/${slug}.json`]?.default;
+}
+
 // Optional hero photo per county slug (used on the default dynamic page).
 // Counties with a custom template (Cork/Galway/Dublin) manage their own imagery.
 const COUNTY_HERO_IMAGES: Record<string, { src: string; alt: string; width: number; height: number }> = {
@@ -105,24 +112,25 @@ export default function CountyPage() {
   }
 
   // Otherwise, fall back to the default dynamic page
-  const [data, setData] = useState<CountySummary | null>(null);
-  const [loading, setLoading] = useState(true);
+  const baked = slug ? bakedCounty(slug) : undefined;
+  const [fetched, setFetched] = useState<CountySummary | null>(null);
+  const data = baked ?? fetched;
+  const [loading, setLoading] = useState(!baked);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!county) return;
+    if (!county || baked) return;   // baked data already rendered; no cache/fetch
 
-    // Try cache first
+    // localStorage cache, then a live API fallback.
     const cached = getCachedCountyData(county);
-
     if (cached) {
-      setData(cached);
+      setFetched(cached);
       setLoading(false);
     } else {
       setLoading(true);
       fetchCountySummary(county)
         .then((freshData) => {
-          setData(freshData);
+          setFetched(freshData);
           setCachedCountyData(county, freshData);
         })
         .catch((e) => setError(e.message))

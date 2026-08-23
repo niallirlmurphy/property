@@ -1,0 +1,145 @@
+{
+  "county": "Tipperary",
+  "total_count": 21335,
+  "median_price": 260000.0,
+  "avg_price": 315742.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 505,
+      "median_price": 152000.0,
+      "avg_price": 166967.0,
+      "min_price": 15000.0,
+      "max_price": 1069986.0
+    },
+    {
+      "year": 2011,
+      "count": 468,
+      "median_price": 130000.0,
+      "avg_price": 145098.0,
+      "min_price": 10000.0,
+      "max_price": 581150.0
+    },
+    {
+      "year": 2012,
+      "count": 559,
+      "median_price": 100340.0,
+      "avg_price": 130358.0,
+      "min_price": 10792.77,
+      "max_price": 2010000.0
+    },
+    {
+      "year": 2013,
+      "count": 706,
+      "median_price": 90000.0,
+      "avg_price": 113915.0,
+      "min_price": 10000.0,
+      "max_price": 850000.0
+    },
+    {
+      "year": 2014,
+      "count": 931,
+      "median_price": 90000.0,
+      "avg_price": 112510.0,
+      "min_price": 10000.0,
+      "max_price": 665700.0
+    },
+    {
+      "year": 2015,
+      "count": 1200,
+      "median_price": 100000.0,
+      "avg_price": 123409.0,
+      "min_price": 11333.0,
+      "max_price": 3000000.0
+    },
+    {
+      "year": 2016,
+      "count": 1290,
+      "median_price": 102000.0,
+      "avg_price": 127593.0,
+      "min_price": 10000.0,
+      "max_price": 1250000.0
+    },
+    {
+      "year": 2017,
+      "count": 1465,
+      "median_price": 117750.0,
+      "avg_price": 135147.0,
+      "min_price": 10000.0,
+      "max_price": 1612000.0
+    },
+    {
+      "year": 2018,
+      "count": 1407,
+      "median_price": 136564.0,
+      "avg_price": 152146.0,
+      "min_price": 10000.0,
+      "max_price": 2600000.0
+    },
+    {
+      "year": 2019,
+      "count": 1493,
+      "median_price": 145000.0,
+      "avg_price": 166552.0,
+      "min_price": 10000.0,
+      "max_price": 6230344.0
+    },
+    {
+      "year": 2020,
+      "count": 1301,
+      "median_price": 147000.0,
+      "avg_price": 159574.0,
+      "min_price": 10000.0,
+      "max_price": 1938317.0
+    },
+    {
+      "year": 2021,
+      "count": 1570,
+      "median_price": 170000.0,
+      "avg_price": 184219.0,
+      "min_price": 10000.0,
+      "max_price": 1400000.0
+    },
+    {
+      "year": 2022,
+      "count": 1604,
+      "median_price": 185000.0,
+      "avg_price": 210338.0,
+      "min_price": 10000.0,
+      "max_price": 3242290.75
+    },
+    {
+      "year": 2023,
+      "count": 1554,
+      "median_price": 200000.0,
+      "avg_price": 220711.0,
+      "min_price": 10000.0,
+      "max_price": 2250000.0
+    },
+    {
+      "year": 2024,
+      "count": 1435,
+      "median_price": 220000.0,
+      "avg_price": 237997.0,
+      "min_price": 12500.0,
+      "max_price": 4038117.56
+    },
+    {
+      "year": 2025,
+      "count": 1464,
+      "median_price": 251101.0,
+      "avg_price": 280235.0,
+      "min_price": 10000.0,
+      "max_price": 14050971.0
+    },
+    {
+      "year": 2026,
+      "count": 724,
+      "median_price": 260000.0,
+      "avg_price": 315742.0,
+      "min_price": 17553.33,
+      "max_price": 19077531.0
+    }
+  ],
+  "recent": []
+}

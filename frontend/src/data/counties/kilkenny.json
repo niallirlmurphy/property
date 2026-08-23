@@ -1,0 +1,145 @@
+{
+  "county": "Kilkenny",
+  "total_count": 12840,
+  "median_price": 317181.0,
+  "avg_price": 358652.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 329,
+      "median_price": 170000.0,
+      "avg_price": 214077.0,
+      "min_price": 10000.0,
+      "max_price": 5141700.0
+    },
+    {
+      "year": 2011,
+      "count": 340,
+      "median_price": 139104.0,
+      "avg_price": 169999.0,
+      "min_price": 10000.0,
+      "max_price": 1746500.0
+    },
+    {
+      "year": 2012,
+      "count": 435,
+      "median_price": 123000.0,
+      "avg_price": 141689.0,
+      "min_price": 10000.0,
+      "max_price": 1500000.0
+    },
+    {
+      "year": 2013,
+      "count": 443,
+      "median_price": 111000.0,
+      "avg_price": 135619.0,
+      "min_price": 14000.0,
+      "max_price": 730000.0
+    },
+    {
+      "year": 2014,
+      "count": 655,
+      "median_price": 116000.0,
+      "avg_price": 140847.0,
+      "min_price": 12000.0,
+      "max_price": 1400000.0
+    },
+    {
+      "year": 2015,
+      "count": 730,
+      "median_price": 136000.0,
+      "avg_price": 167182.0,
+      "min_price": 13333.3,
+      "max_price": 2125110.1
+    },
+    {
+      "year": 2016,
+      "count": 669,
+      "median_price": 160000.0,
+      "avg_price": 182615.0,
+      "min_price": 10000.0,
+      "max_price": 1940000.0
+    },
+    {
+      "year": 2017,
+      "count": 731,
+      "median_price": 160000.0,
+      "avg_price": 183281.0,
+      "min_price": 13333.0,
+      "max_price": 1196000.0
+    },
+    {
+      "year": 2018,
+      "count": 771,
+      "median_price": 180000.0,
+      "avg_price": 207759.0,
+      "min_price": 10000.0,
+      "max_price": 2820000.0
+    },
+    {
+      "year": 2019,
+      "count": 841,
+      "median_price": 185000.0,
+      "avg_price": 222602.0,
+      "min_price": 10000.0,
+      "max_price": 12600000.0
+    },
+    {
+      "year": 2020,
+      "count": 677,
+      "median_price": 200000.0,
+      "avg_price": 228523.0,
+      "min_price": 10000.0,
+      "max_price": 6881057.2
+    },
+    {
+      "year": 2021,
+      "count": 878,
+      "median_price": 219192.0,
+      "avg_price": 259936.0,
+      "min_price": 10000.0,
+      "max_price": 4250000.0
+    },
+    {
+      "year": 2022,
+      "count": 906,
+      "median_price": 239800.0,
+      "avg_price": 282057.0,
+      "min_price": 20000.0,
+      "max_price": 1765000.0
+    },
+    {
+      "year": 2023,
+      "count": 940,
+      "median_price": 268787.0,
+      "avg_price": 316714.0,
+      "min_price": 20000.0,
+      "max_price": 11839728.63
+    },
+    {
+      "year": 2024,
+      "count": 997,
+      "median_price": 300000.0,
+      "avg_price": 330478.0,
+      "min_price": 22500.0,
+      "max_price": 3775770.9
+    },
+    {
+      "year": 2025,
+      "count": 955,
+      "median_price": 312776.0,
+      "avg_price": 348602.0,
+      "min_price": 10000.0,
+      "max_price": 3013215.86
+    },
+    {
+      "year": 2026,
+      "count": 491,
+      "median_price": 317181.0,
+      "avg_price": 358652.0,
+      "min_price": 10000.0,
+      "max_price": 2200000.0
+    }
+  ],
+  "recent": []
+}

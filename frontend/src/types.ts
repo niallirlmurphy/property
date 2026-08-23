@@ -79,6 +79,11 @@ export interface EircodeResponse {
   results: Omit<Property, "distance_m">[];
 }
 
+export interface EircodePageData {
+  eircode: EircodeResponse;
+  trends: TrendPoint[];
+}
+
 // Valuation types
 export interface ValuationRequest {
   address: string;

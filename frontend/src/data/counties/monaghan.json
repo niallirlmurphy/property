@@ -1,0 +1,145 @@
+{
+  "county": "Monaghan",
+  "total_count": 6294,
+  "median_price": 240000.0,
+  "avg_price": 240532.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 186,
+      "median_price": 143250.0,
+      "avg_price": 151087.0,
+      "min_price": 25000.0,
+      "max_price": 405000.0
+    },
+    {
+      "year": 2011,
+      "count": 116,
+      "median_price": 109780.0,
+      "avg_price": 134694.0,
+      "min_price": 18750.0,
+      "max_price": 850000.0
+    },
+    {
+      "year": 2012,
+      "count": 147,
+      "median_price": 95000.0,
+      "avg_price": 113999.0,
+      "min_price": 13000.0,
+      "max_price": 375000.0
+    },
+    {
+      "year": 2013,
+      "count": 225,
+      "median_price": 75000.0,
+      "avg_price": 92563.0,
+      "min_price": 10000.0,
+      "max_price": 525000.0
+    },
+    {
+      "year": 2014,
+      "count": 326,
+      "median_price": 80000.0,
+      "avg_price": 100260.0,
+      "min_price": 13000.0,
+      "max_price": 1725000.0
+    },
+    {
+      "year": 2015,
+      "count": 336,
+      "median_price": 100000.0,
+      "avg_price": 113592.0,
+      "min_price": 12000.0,
+      "max_price": 500000.0
+    },
+    {
+      "year": 2016,
+      "count": 375,
+      "median_price": 108000.0,
+      "avg_price": 119921.0,
+      "min_price": 10000.0,
+      "max_price": 508000.0
+    },
+    {
+      "year": 2017,
+      "count": 413,
+      "median_price": 125000.0,
+      "avg_price": 126272.0,
+      "min_price": 10000.0,
+      "max_price": 382501.0
+    },
+    {
+      "year": 2018,
+      "count": 388,
+      "median_price": 134000.0,
+      "avg_price": 146259.0,
+      "min_price": 16000.0,
+      "max_price": 700000.0
+    },
+    {
+      "year": 2019,
+      "count": 341,
+      "median_price": 148000.0,
+      "avg_price": 153174.0,
+      "min_price": 10000.0,
+      "max_price": 450000.0
+    },
+    {
+      "year": 2020,
+      "count": 323,
+      "median_price": 132000.0,
+      "avg_price": 154895.0,
+      "min_price": 10000.0,
+      "max_price": 2151174.45
+    },
+    {
+      "year": 2021,
+      "count": 430,
+      "median_price": 160000.0,
+      "avg_price": 174970.0,
+      "min_price": 15000.0,
+      "max_price": 1452274.89
+    },
+    {
+      "year": 2022,
+      "count": 523,
+      "median_price": 192500.0,
+      "avg_price": 207675.0,
+      "min_price": 15000.0,
+      "max_price": 2176211.45
+    },
+    {
+      "year": 2023,
+      "count": 496,
+      "median_price": 190500.0,
+      "avg_price": 220445.0,
+      "min_price": 10000.0,
+      "max_price": 2537444.93
+    },
+    {
+      "year": 2024,
+      "count": 425,
+      "median_price": 210000.0,
+      "avg_price": 222170.0,
+      "min_price": 10000.0,
+      "max_price": 1757709.25
+    },
+    {
+      "year": 2025,
+      "count": 440,
+      "median_price": 240000.0,
+      "avg_price": 252602.0,
+      "min_price": 15000.0,
+      "max_price": 2504646.7
+    },
+    {
+      "year": 2026,
+      "count": 223,
+      "median_price": 240000.0,
+      "avg_price": 240532.0,
+      "min_price": 24126.09,
+      "max_price": 835000.0
+    }
+  ],
+  "recent": []
+}

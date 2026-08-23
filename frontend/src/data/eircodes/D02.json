@@ -1,0 +1,324 @@
+{
+  "eircode": {
+    "code": "D02",
+    "match_type": "routing_key",
+    "stats": {
+      "total_count": 1425,
+      "median_price": 444000.0,
+      "avg_price": 579341.0,
+      "earliest_sale": "2010-03-01",
+      "latest_sale": "2026-07-17"
+    },
+    "count": 10,
+    "results": [
+      {
+        "id": 790787,
+        "sale_date": "2026-07-17",
+        "address": "APT 1, 78 LEESON ST LOWER, DUBLIN 2",
+        "county": "Dublin",
+        "eircode": "D02RX94",
+        "price": 1650000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.334659,
+        "longitude": -6.255198,
+        "routing_key": "D02",
+        "bedrooms": 9,
+        "property_type": "terraced"
+      },
+      {
+        "id": 790741,
+        "sale_date": "2026-07-17",
+        "address": "42 GRAFTON HALL, AUNGIER ST, DUBLIN 2",
+        "county": "Dublin",
+        "eircode": "D02A079",
+        "price": 343760.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.338516,
+        "longitude": -6.265893,
+        "routing_key": "D02",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 790186,
+        "sale_date": "2026-07-13",
+        "address": "APT 8 BLOCK B, BUTLERS PLACE, BENSON STREET",
+        "county": "Dublin",
+        "eircode": "D02DX71",
+        "price": 475000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.344783,
+        "longitude": -6.233272,
+        "routing_key": "D02",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 789795,
+        "sale_date": "2026-07-09",
+        "address": "59 HYDE COURT, TOWNSEND ST, DUBLIN 2",
+        "county": "Dublin",
+        "eircode": "D02E192",
+        "price": 655000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.531023,
+        "longitude": -6.098986,
+        "routing_key": "D02",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 789563,
+        "sale_date": "2026-07-08",
+        "address": "20 APARTMENT BLOCK, 2 GEORGES QUAY, DUBLIN 2",
+        "county": "Dublin",
+        "eircode": "D02Y959",
+        "price": 400000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.347366,
+        "longitude": -6.255648,
+        "routing_key": "D02",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 797877,
+        "sale_date": "2026-07-03",
+        "address": "6 CORN EXHCANGE BUILDING, POOLBEG ST, DUBLIN 2",
+        "county": "Dublin",
+        "eircode": "D02TN93",
+        "price": 675000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396598,
+        "longitude": -6.128542,
+        "routing_key": "D02",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 789024,
+        "sale_date": "2026-07-01",
+        "address": "19 SCARLET ROW, EAST ESSEX ST, TEMPLE BAR DUBLIN 8",
+        "county": "Dublin",
+        "eircode": "D02YH29",
+        "price": 200000.0,
+        "not_full_market_price": true,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.345548,
+        "longitude": -6.264008,
+        "routing_key": "D02",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 797251,
+        "sale_date": "2026-06-26",
+        "address": "38 TRINITY PLAZA, PEARSE ST, DUBLIN 2",
+        "county": "Dublin",
+        "eircode": "D02YW97",
+        "price": 394000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.344825,
+        "longitude": -6.252045,
+        "routing_key": "D02",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 788719,
+        "sale_date": "2026-06-26",
+        "address": "92 TOWNSEND ST, DUBLIN 2, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D02KX45",
+        "price": 400000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.345275,
+        "longitude": -6.246765,
+        "routing_key": "D02",
+        "bedrooms": null,
+        "property_type": "apartment"
+      },
+      {
+        "id": 788654,
+        "sale_date": "2026-06-26",
+        "address": "32 THE NORTHUMBERLANDS, LOVE LANE, MOUNT STREET LOWER",
+        "county": "Dublin",
+        "eircode": "D02ND23",
+        "price": 348000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.339404,
+        "longitude": -6.241299,
+        "routing_key": "D02",
+        "bedrooms": 1,
+        "property_type": "apartment"
+      }
+    ]
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6627,
+      "median_price": 270000.0,
+      "avg_price": 333724.0,
+      "min_price": 10000.0,
+      "max_price": 7333121.0
+    },
+    {
+      "year": 2011,
+      "count": 5573,
+      "median_price": 245000.0,
+      "avg_price": 318505.0,
+      "min_price": 10000.0,
+      "max_price": 11315000.0
+    },
+    {
+      "year": 2012,
+      "count": 8329,
+      "median_price": 214668.0,
+      "avg_price": 290013.0,
+      "min_price": 10000.0,
+      "max_price": 15785185.0
+    },
+    {
+      "year": 2013,
+      "count": 9669,
+      "median_price": 233000.0,
+      "avg_price": 320036.0,
+      "min_price": 10000.0,
+      "max_price": 11603965.0
+    },
+    {
+      "year": 2014,
+      "count": 13815,
+      "median_price": 257000.0,
+      "avg_price": 348819.0,
+      "min_price": 10000.0,
+      "max_price": 19946964.28
+    },
+    {
+      "year": 2015,
+      "count": 14788,
+      "median_price": 274798.0,
+      "avg_price": 354469.0,
+      "min_price": 10000.0,
+      "max_price": 12100050.0
+    },
+    {
+      "year": 2016,
+      "count": 15239,
+      "median_price": 300000.0,
+      "avg_price": 396810.0,
+      "min_price": 10000.0,
+      "max_price": 18150000.0
+    },
+    {
+      "year": 2017,
+      "count": 17147,
+      "median_price": 327500.0,
+      "avg_price": 424979.0,
+      "min_price": 10000.0,
+      "max_price": 18300000.0
+    },
+    {
+      "year": 2018,
+      "count": 17765,
+      "median_price": 343612.0,
+      "avg_price": 440016.0,
+      "min_price": 10000.0,
+      "max_price": 15778531.0
+    },
+    {
+      "year": 2019,
+      "count": 17458,
+      "median_price": 345000.0,
+      "avg_price": 445300.0,
+      "min_price": 10000.0,
+      "max_price": 15898188.0
+    },
+    {
+      "year": 2020,
+      "count": 14219,
+      "median_price": 360000.0,
+      "avg_price": 475830.0,
+      "min_price": 10000.0,
+      "max_price": 17913114.0
+    },
+    {
+      "year": 2021,
+      "count": 16497,
+      "median_price": 380000.0,
+      "avg_price": 508224.0,
+      "min_price": 10000.0,
+      "max_price": 18537271.4
+    },
+    {
+      "year": 2022,
+      "count": 17705,
+      "median_price": 405000.0,
+      "avg_price": 544521.0,
+      "min_price": 10000.0,
+      "max_price": 19552000.41
+    },
+    {
+      "year": 2023,
+      "count": 18043,
+      "median_price": 418502.0,
+      "avg_price": 541376.0,
+      "min_price": 11655.0,
+      "max_price": 18457115.0
+    },
+    {
+      "year": 2024,
+      "count": 18163,
+      "median_price": 445881.0,
+      "avg_price": 593076.0,
+      "min_price": 10000.0,
+      "max_price": 17328212.34
+    },
+    {
+      "year": 2025,
+      "count": 18491,
+      "median_price": 475000.0,
+      "avg_price": 608781.0,
+      "min_price": 15000.0,
+      "max_price": 19363876.65
+    },
+    {
+      "year": 2026,
+      "count": 8711,
+      "median_price": 478000.0,
+      "avg_price": 616495.0,
+      "min_price": 10000.0,
+      "max_price": 19475231.28
+    }
+  ]
+}

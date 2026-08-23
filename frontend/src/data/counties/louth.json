@@ -1,0 +1,145 @@
+{
+  "county": "Louth",
+  "total_count": 22385,
+  "median_price": 348018.0,
+  "avg_price": 355720.0,
+  "trends": [
+    {
+      "year": 2010,
+      "count": 503,
+      "median_price": 176210.0,
+      "avg_price": 195454.0,
+      "min_price": 25000.0,
+      "max_price": 1108356.72
+    },
+    {
+      "year": 2011,
+      "count": 441,
+      "median_price": 140000.0,
+      "avg_price": 160105.0,
+      "min_price": 20000.0,
+      "max_price": 1200000.0
+    },
+    {
+      "year": 2012,
+      "count": 574,
+      "median_price": 120000.0,
+      "avg_price": 146156.0,
+      "min_price": 10000.0,
+      "max_price": 6013215.8
+    },
+    {
+      "year": 2013,
+      "count": 722,
+      "median_price": 108000.0,
+      "avg_price": 132841.0,
+      "min_price": 10000.0,
+      "max_price": 1900000.0
+    },
+    {
+      "year": 2014,
+      "count": 1144,
+      "median_price": 115000.0,
+      "avg_price": 131172.0,
+      "min_price": 15000.0,
+      "max_price": 900000.0
+    },
+    {
+      "year": 2015,
+      "count": 1220,
+      "median_price": 130000.0,
+      "avg_price": 145694.0,
+      "min_price": 10415.82,
+      "max_price": 1075000.0
+    },
+    {
+      "year": 2016,
+      "count": 1196,
+      "median_price": 150000.0,
+      "avg_price": 168072.0,
+      "min_price": 10000.0,
+      "max_price": 2250000.0
+    },
+    {
+      "year": 2017,
+      "count": 1333,
+      "median_price": 180000.0,
+      "avg_price": 234192.0,
+      "min_price": 12000.0,
+      "max_price": 2300000.0
+    },
+    {
+      "year": 2018,
+      "count": 1543,
+      "median_price": 200000.0,
+      "avg_price": 206593.0,
+      "min_price": 15000.0,
+      "max_price": 1050000.0
+    },
+    {
+      "year": 2019,
+      "count": 1667,
+      "median_price": 207048.0,
+      "avg_price": 220413.0,
+      "min_price": 10000.0,
+      "max_price": 7200000.0
+    },
+    {
+      "year": 2020,
+      "count": 1307,
+      "median_price": 198000.0,
+      "avg_price": 221006.0,
+      "min_price": 20000.0,
+      "max_price": 4200000.0
+    },
+    {
+      "year": 2021,
+      "count": 1637,
+      "median_price": 224669.0,
+      "avg_price": 260380.0,
+      "min_price": 10000.0,
+      "max_price": 19003114.54
+    },
+    {
+      "year": 2022,
+      "count": 1750,
+      "median_price": 240000.0,
+      "avg_price": 258430.0,
+      "min_price": 20000.0,
+      "max_price": 2355000.0
+    },
+    {
+      "year": 2023,
+      "count": 1656,
+      "median_price": 275463.0,
+      "avg_price": 294734.0,
+      "min_price": 10000.0,
+      "max_price": 7895885.46
+    },
+    {
+      "year": 2024,
+      "count": 1632,
+      "median_price": 297561.0,
+      "avg_price": 311315.0,
+      "min_price": 10000.0,
+      "max_price": 15572687.22
+    },
+    {
+      "year": 2025,
+      "count": 1924,
+      "median_price": 330396.0,
+      "avg_price": 380545.0,
+      "min_price": 13000.0,
+      "max_price": 19885952.49
+    },
+    {
+      "year": 2026,
+      "count": 934,
+      "median_price": 348018.0,
+      "avg_price": 355720.0,
+      "min_price": 38000.0,
+      "max_price": 8000000.0
+    }
+  ],
+  "recent": []
+}

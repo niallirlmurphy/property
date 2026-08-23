@@ -10,6 +10,14 @@ import { usePageMeta } from "../hooks/usePageMeta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import MapSearchThumb from "../components/MapSearchThumb";
 
+// Eager glob: area data is bundled so the correct file is available synchronously
+// at SSG prerender time (inlined into HTML for SEO). Missing file → live fallback.
+const AREA_DATA = import.meta.glob<{ default: AreaSummary }>("../data/areas/*.json", { eager: true });
+
+function bakedArea(slug: string): AreaSummary | undefined {
+  return AREA_DATA[`../data/areas/${slug}.json`]?.default;
+}
+
 function formatPrice(n: number | null) {
   if (n == null) return "—";
   return "€" + Math.round(n).toLocaleString("en-IE");
@@ -20,16 +28,18 @@ export default function AreaPage() {
   const config = areaFromSlug(slug ?? "");
   const parentCountySlug = countyForArea(config?.slug ?? "");
   const parentCountyName = parentCountySlug ? countyFromSlug(parentCountySlug) : undefined;
-  const [data, setData] = useState<AreaSummary | null>(null);
-  const [loading, setLoading] = useState(true);
+  const baked = config ? bakedArea(config.slug) : undefined;
+  const [fetched, setFetched] = useState<AreaSummary | null>(null);
+  const data = baked ?? fetched;
+  const [loading, setLoading] = useState(!baked);
   const [error, setError] = useState<string | null>(null);
   const [showTrends, setShowTrends] = useState(true);
 
   useEffect(() => {
-    if (!config) return;
+    if (!config || baked) return;   // baked data is already rendered; no fetch needed
     setLoading(true);
     fetchAreaSummary(config.slug, config.query, config.radius_km)
-      .then(setData)
+      .then(setFetched)
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
   }, [slug]);

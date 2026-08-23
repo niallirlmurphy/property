@@ -6,6 +6,7 @@ This script runs the full pipeline:
 1. Import new sales from CSV (with address normalization)
 2. Geocode addresses (with HTML cleaning, Eircode-first, bulk extraction)
 3. Enrich properties (bedrooms, property types via DuckDuckGo)
+4. Regenerate static area/eircode/county page data (backend API required)
 
 Enhancements included:
 - HTML entity cleaning (Tandy&#039;s → Tandy's)
@@ -30,6 +31,7 @@ Options:
     --skip-import           Skip import step (just geocode + enrich)
     --skip-geocoding        Skip geocoding step
     --skip-enrichment       Skip enrichment step
+    --skip-page-data        Skip static page-data generation step
     --geocode-limit N       Limit geocoding to N properties (default: all)
     --enrich-limit N        Limit enrichment to N properties (default: 100)
     --enrich-rate-limit N   Seconds between enrichment requests (default: 5)
@@ -78,6 +80,7 @@ def main():
     parser.add_argument('--skip-import', action='store_true', help='Skip import step')
     parser.add_argument('--skip-geocoding', action='store_true', help='Skip geocoding step')
     parser.add_argument('--skip-enrichment', action='store_true', help='Skip enrichment step')
+    parser.add_argument('--skip-page-data', action='store_true', help='Skip static page-data generation step')
     parser.add_argument('--geocode-limit', type=int, help='Limit geocoding to N properties')
     parser.add_argument('--enrich-limit', type=int, default=100, help='Limit enrichment (default: 100)')
     parser.add_argument('--enrich-rate-limit', type=int, default=5, help='Seconds between enrichment (default: 5)')
@@ -105,6 +108,7 @@ def main():
     print(f"  1. Import:     {'SKIP' if args.skip_import else 'YES'}")
     print(f"  2. Geocode:    {'SKIP' if args.skip_geocoding else 'YES'}")
     print(f"  3. Enrich:     {'SKIP' if args.skip_enrichment else 'YES'}")
+    print(f"  4. Page data:  {'SKIP' if args.skip_page_data else 'YES'}")
     print()
 
     # Step 1: Import new sales from CSV
@@ -158,6 +162,17 @@ def main():
 
         if not success:
             print("\n⚠️  Warning: Enrichment had errors")
+
+    # Step 4: Regenerate static area/eircode/county page data (calls the backend API)
+    if not args.skip_page_data:
+        success = run_command(
+            ['python3', 'scripts/generate_page_data.py'],
+            "STEP 4: Generate static page data (area / eircode / county)",
+            dry_run=args.dry_run
+        )
+
+        if not success:
+            print("\n⚠️  Warning: Page-data generation had errors")
 
     # Summary
     print("\n" + "="*80)
