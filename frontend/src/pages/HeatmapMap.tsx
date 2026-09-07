@@ -15,7 +15,13 @@ export interface HeatmapData {
   breaks: number[];               // 6 interior breakpoints (% change) -> 7 buckets
   // [lat, lon, pct_change, early_median_k, late_median_k, late_sale_count]
   cells: [number, number, number, number, number, number][];
+  loc_min_count: number;
+  // [name, county, pct_change, early_median_k, late_median_k, late_sale_count]
+  top_localities: LocalityRow[];
+  bottom_localities: LocalityRow[];
 }
+
+export type LocalityRow = [string, string, number, number, number, number];
 
 // Bucket a value into a palette colour using the pre-computed breaks.
 export function colorFor(value: number, breaks: number[], palette: string[]): string {

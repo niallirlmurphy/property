@@ -4,7 +4,7 @@ import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { usePageMeta } from "../hooks/usePageMeta";
-import type { HeatmapData } from "./HeatmapMap";
+import type { HeatmapData, LocalityRow } from "./HeatmapMap";
 
 const HeatmapMap = lazy(() => import("./HeatmapMap"));
 
@@ -14,6 +14,51 @@ const mapFallback = (
 
 // Whole-percent label for the legend, e.g. 19.6 -> "20%".
 const pctLabel = (n: number) => `${Math.round(n)}%`;
+
+// €thousands -> "€185k" / "€1.25m" (local copy so this page stays out of the
+// Leaflet bundle that HeatmapMap pulls in).
+function euroK(k: number): string {
+  if (k >= 1000) return `€${(k / 1000).toFixed(2).replace(/\.?0+$/, "")}m`;
+  return `€${Math.round(k)}k`;
+}
+
+const signedPct = (n: number) => `${n > 0 ? "+" : ""}${n.toFixed(1)}%`;
+
+// A ranked table of localities (top or bottom price growth).
+function LocalityTable({ title, rows }: { title: string; rows: LocalityRow[] }) {
+  return (
+    <div className="heatmap-loc-table">
+      <h3>{title}</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Locality</th>
+            <th>County</th>
+            <th style={{ textAlign: "right" }}>Change</th>
+            <th style={{ textAlign: "right" }}>Median</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r, i) => {
+            const [name, county, pct, early, late] = r;
+            return (
+              <tr key={i}>
+                <td>{name}</td>
+                <td>{county}</td>
+                <td style={{ textAlign: "right", color: pct >= 0 ? "#b2182b" : "#2166ac", fontWeight: 600 }}>
+                  {signedPct(pct)}
+                </td>
+                <td style={{ textAlign: "right", whiteSpace: "nowrap" }}>
+                  {euroK(early)} → {euroK(late)}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
 // Build human labels for each palette bucket from the interior % breaks.
 function bucketLabels(breaks: number[]): string[] {
@@ -105,6 +150,23 @@ export default function HeatmapPage() {
             sales, which is why sparse rural areas do not appear. Colour buckets are set by
             quantile, so roughly half of areas fall on each side of the national median growth.
           </p>
+        )}
+
+        {data && (data.top_localities?.length > 0 || data.bottom_localities?.length > 0) && (
+          <>
+            <h2 style={{ marginTop: "1.5rem" }}>Fastest- and slowest-growing localities</h2>
+            <p className="area-info" style={{ marginTop: 0 }}>
+              Named places ranked by the change in median full-market sale price between
+              {" "}{data.early_window} and {data.late_window}, limited to localities with at least
+              {" "}{data.loc_min_count} sales in <em>both</em> periods so each figure is a stable
+              comparison. A locality is attributed from each sale's address; entries where no clean
+              place name could be resolved are excluded.
+            </p>
+            <div className="heatmap-loc-tables">
+              <LocalityTable title="Highest price growth" rows={data.top_localities} />
+              <LocalityTable title="Lowest price growth" rows={data.bottom_localities} />
+            </div>
+          </>
         )}
       </div>
       <Footer />

@@ -22,7 +22,10 @@ Output: frontend/public/data/heatmap.json
 import argparse
 import json
 import os
+import re
+import statistics
 import sys
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -39,6 +42,107 @@ LON_MIN, LON_MAX = -10.7, -5.4
 
 REPO = Path(__file__).resolve().parent.parent
 OUT_PATH = REPO / "frontend" / "public" / "data" / "heatmap.json"
+
+# --- Named-locality ranking (top/bottom price growth) ------------------------
+# The grid cells have no names, so for the ranked tables we attribute a place
+# name to each sale from its address and aggregate by locality. We only keep
+# rows where a real place name can be attributed (user requirement).
+COUNTIES = {
+    "carlow", "cavan", "clare", "cork", "donegal", "dublin", "galway", "kerry",
+    "kildare", "kilkenny", "laois", "leitrim", "limerick", "longford", "louth",
+    "mayo", "meath", "monaghan", "offaly", "roscommon", "sligo", "tipperary",
+    "waterford", "westmeath", "wexford", "wicklow",
+}
+DUBLIN_PC = re.compile(r"\bDublin\s+\d{1,2}\b", re.I)
+# A candidate whose final word is one of these is a street/estate/feature name,
+# not an attributable place — dropped. Single-word places ("Fairhill") survive.
+NON_PLACE_SUFFIX = {
+    "road", "street", "st", "avenue", "ave", "lane", "ln", "drive", "dr",
+    "terrace", "close", "court", "ct", "grove", "crescent", "cres", "way",
+    "boulevard", "square", "sq", "row", "walk", "rise", "heights", "height",
+    "park", "view", "gardens", "garden", "green", "manor", "wood", "woods",
+    "hall", "place", "downs", "meadows", "vale", "quay", "mews", "racecourse",
+    "estate", "villas", "cottages", "point", "demesne", "lawn", "lawns", "grange",
+}
+
+
+def _is_county_tok(tok: str) -> bool:
+    return tok.replace("Co.", "").replace("County", "").strip().lower() in COUNTIES
+
+
+def attribute_locality(address: str, county: str):
+    """Best-effort place name from an address, or None if not attributable.
+
+    Dublin uses its postal district (clean, high volume); elsewhere the token
+    before the county/postcode is the town. Street/estate names are rejected."""
+    if not address:
+        return None
+    if county and county.strip().lower() == "dublin":
+        m = DUBLIN_PC.search(address)
+        if m:
+            return re.sub(r"\s+", " ", m.group(0).title())
+    parts = [p.strip() for p in address.split(",") if p.strip()]
+    if len(parts) < 2:
+        return None
+    idx = len(parts) - 1
+    while idx >= 0 and (_is_county_tok(parts[idx]) or DUBLIN_PC.fullmatch(parts[idx] or "")):
+        idx -= 1
+    if idx < 0:
+        return None
+    words = parts[idx].split()
+    while len(words) > 1 and words[-1].lower().strip(".") in COUNTIES:
+        words = words[:-1]  # strip a county glued onto the same comma-part
+    loc = " ".join(words)
+    if not loc or len(loc) < 3 or re.search(r"\d", loc):
+        return None
+    if words[-1].lower().strip(".") in NON_PLACE_SUFFIX:
+        return None
+    return loc
+
+
+def build_locality_tables(conn, early_start, early_end, late_end, args):
+    """Return (top, bottom) lists of [name, county, pct, early_k, late_k, n]."""
+    cur = conn.cursor(name="loc_stream")  # server-side cursor to stream
+    cur.itersize = 20000
+    cur.execute(
+        """
+        SELECT county, address_normalized, price::float, sale_date
+        FROM properties
+        WHERE not_full_market_price = FALSE AND price > 0
+          AND address_normalized IS NOT NULL
+          AND sale_date >= %s AND sale_date < %s
+        """,
+        (early_start, late_end),
+    )
+    early_cut = datetime.strptime(early_end, "%Y-%m-%d").date()
+    early = defaultdict(list)
+    late = defaultdict(list)
+    meta = {}
+    for county, addr, price, sd in cur:
+        loc = attribute_locality(addr, county)
+        if not loc:
+            continue
+        key = (loc.lower(), (county or "").strip())
+        meta.setdefault(key, (loc, county))
+        (early if sd < early_cut else late)[key].append(price)
+    cur.close()
+
+    ranked = []
+    for key in set(early) & set(late):
+        if len(early[key]) < args.loc_min_count or len(late[key]) < args.loc_min_count:
+            continue
+        em, lm = statistics.median(early[key]), statistics.median(late[key])
+        if em < args.min_median or lm < args.min_median:
+            continue
+        pct = round((lm - em) / em * 100, 1)
+        if pct < args.min_growth or pct > args.max_growth:
+            continue
+        loc, county = meta[key]
+        ranked.append([loc, county, pct, int(round(em / 1000)), int(round(lm / 1000)),
+                       len(late[key])])
+    ranked.sort(key=lambda r: r[2], reverse=True)
+    n = args.loc_top
+    return ranked[:n], list(reversed(ranked[-n:]))
 
 
 def load_database_url() -> str:
@@ -104,6 +208,11 @@ def main():
                     help="Drop cells whose median in either window is below this (€). Excludes "
                          "cells dominated by non-home sales — sites, derelict, parking, shares — "
                          "whose changing mix otherwise produces absurd growth %% (default 50000)")
+    ap.add_argument("--loc-min-count", type=int, default=30,
+                    help="Minimum sales per named locality IN EACH window for the ranked tables "
+                         "(default 30 — higher than the grid because localities pool more sales)")
+    ap.add_argument("--loc-top", type=int, default=15,
+                    help="How many localities to list in each of the top/bottom tables (default 15)")
     ap.add_argument("--out", type=str, default=str(OUT_PATH), help="Output JSON path")
     args = ap.parse_args()
 
@@ -150,6 +259,11 @@ def main():
         },
     )
     rows = cur.fetchall()
+
+    # Ranked named-locality tables (top/bottom growth) share the same windows as
+    # the map but aggregate by attributed place name rather than by grid cell.
+    top_localities, bottom_localities = build_locality_tables(
+        conn, early_start, early_end, late_end, args)
     conn.close()
 
     if not rows:
@@ -193,6 +307,10 @@ def main():
         "palette": PALETTE,
         "breaks": breaks,     # 6 interior breakpoints (% change) -> 7 buckets
         "cells": cells,       # [lat, lon, pct_change, early_median_k, late_median_k, late_sale_count]
+        "loc_min_count": args.loc_min_count,
+        # [name, county, pct_change, early_median_k, late_median_k, late_sale_count]
+        "top_localities": top_localities,
+        "bottom_localities": bottom_localities,
     }
 
     out = Path(args.out)
@@ -204,6 +322,14 @@ def main():
     print(f"  Early: {payload['early_window']}  Late: {payload['late_window']}  "
           f"cell={args.cell}°  min_count={args.min_count} each window")
     print(f"  Growth buckets (%): {breaks}")
+    print(f"  Locality tables: {len(top_localities)} top / {len(bottom_localities)} bottom "
+          f"(>= {args.loc_min_count}/window)")
+    if top_localities:
+        t = top_localities[0]
+        print(f"    Fastest: {t[0]} ({t[1]}) {t[2]:+.1f}%  €{t[3]}k→€{t[4]}k  n={t[5]}")
+    if bottom_localities:
+        b = bottom_localities[0]
+        print(f"    Slowest: {b[0]} ({b[1]}) {b[2]:+.1f}%  €{b[3]}k→€{b[4]}k  n={b[5]}")
 
 
 if __name__ == "__main__":
