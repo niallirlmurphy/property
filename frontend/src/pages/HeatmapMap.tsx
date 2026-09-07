@@ -33,15 +33,16 @@ export function euroK(k: number): string {
 
 const pct = (n: number) => `${n > 0 ? "+" : ""}${n.toFixed(1)}%`;
 
-// Default view centred on Leinster / the east, where transaction volume — and so
-// the number of cells that clear the min-count in both windows — is highest.
-// Users can pan/zoom out to the rest of the country.
-const CENTER: [number, number] = [53.3, -6.6];
+// Default view zoomed in on Greater Dublin / the Leinster east, where transaction
+// volume — and so the number of cells that clear the min-count in both windows —
+// is highest and the map is most information-dense. Users can pan/zoom out to the
+// rest of the country.
+const CENTER: [number, number] = [53.36, -6.32];
 
 export default function HeatmapMap({ data }: { data: HeatmapData }) {
   const half = data.cell_half_deg;
   return (
-    <MapContainer center={CENTER} zoom={9} minZoom={6} maxZoom={15} style={{ height: "100%", width: "100%" }} scrollWheelZoom>
+    <MapContainer center={CENTER} zoom={10} minZoom={6} maxZoom={15} style={{ height: "100%", width: "100%" }} scrollWheelZoom>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
