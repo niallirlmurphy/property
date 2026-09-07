@@ -13,6 +13,8 @@ export interface AreaConfig {
   info?: string;   // one-paragraph factual overview (setting, population, landmarks)
   image?: string;  // optional hero photo path under /images (public/)
   imageAlt?: string; // alt text for the hero photo
+  image2?: string;  // optional second photo, shown lower in the page body
+  imageAlt2?: string; // alt text for the second photo
 }
 
 export const AREAS: AreaConfig[] = [
@@ -34,7 +36,9 @@ export const AREAS: AreaConfig[] = [
   { slug: "malahide", match: ["Malahide"], routing_keys: ["K36"], name: "Malahide", query: "Malahide, Dublin", radius_km: 2, description: "a coastal village north of Dublin known for its castle and marina", county: "dublin",
     info: "Malahide is a coastal settlement roughly 14km north of Dublin city, with a village centre bordered by suburban housing and an estuary where the Broadmeadow River meets the sea. Census 2022 recorded a population of 18,608. The area is dominated by Malahide Castle, dating from the 12th century, set within a demesne that includes an international cricket ground. A marina and sandy beach line the shorefront." },
   { slug: "stillorgan", match: ["Stillorgan"], routing_keys: ["A94"], name: "Stillorgan", query: "Stillorgan, Dublin", radius_km: 1.5, description: "a suburban area in south County Dublin", county: "dublin",
-    info: "Stillorgan is a suburban area in Dun Laoghaire-Rathdown, south Co. Dublin, with a population of 18,212 recorded in the 2022 census. Once a village in its own right, it retains an old village centre alongside later housing estates. Notable features include the 18th-century Stillorgan Obelisk, designed by Edward Lovett Pearce, and Stillorgan Shopping Centre, which opened in 1966 as Ireland's first shopping centre." },
+    info: "Stillorgan is a suburban area in Dun Laoghaire-Rathdown, south Co. Dublin, with a population of 18,212 recorded in the 2022 census. Once a village in its own right, it retains an old village centre alongside later housing estates. Notable features include the 18th-century Stillorgan Obelisk, designed by Edward Lovett Pearce, and Stillorgan Shopping Centre, which opened in 1966 as Ireland's first shopping centre.",
+    image: "/images/stillorgan-shopping-centre.jpg", imageAlt: "Stillorgan Shopping Centre, with its landmark orange sign, seen across the junction at the village centre, with a Permanent TSB branch and shoppers crossing to the right",
+    image2: "/images/stillorgan-new-apartments.jpg", imageAlt2: "Recently completed apartment blocks at a road junction in Stillorgan, part of the higher-density housing built around the older suburb in recent years" },
   { slug: "sandymount", match: ["Sandymount"], routing_keys: ["D04"], name: "Sandymount", query: "Sandymount, Dublin", radius_km: 1, description: "a coastal village close to Dublin city centre", county: "dublin",
     info: "Sandymount is a coastal suburb in the Dublin 4 district, three to four kilometres south-east of Dublin city centre. The area is fronted by Sandymount Strand, an extensive beach forming part of the southern shore of Dublin Bay, and includes a Martello tower built as part of early 19th-century coastal defences against a feared Napoleonic invasion. Sandymount Green, a triangular park bordered by shops and cafes, sits at the centre of the village.",
     image: "/images/sandymount-strand-sunset.jpg", imageAlt: "Sunset over Sandymount Strand at low tide, with the Poolbeg chimneys and Dublin Port cranes on the horizon reflected in the wet sand" },

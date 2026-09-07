@@ -95,6 +95,17 @@ export default function AreaPage() {
         <p className="area-info">{config.info}</p>
       )}
 
+      {config.image2 && (
+        <img
+          className="area-hero"
+          src={config.image2}
+          alt={config.imageAlt2 ?? config.name}
+          width={2000}
+          height={1500}
+          loading="lazy"
+        />
+      )}
+
       {loading && <div className="content-loading">Loading data…</div>}
       {error && <div className="error-msg">{error}</div>}
 
