@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 365000.0,
-  "avg_price": 391950,
+  "median_price": 360000.0,
+  "avg_price": 379850,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 801495,
+      "sale_date": "2026-08-19",
+      "address": "7 RIVERSIDE WHARF, WEST BEACH, COBH",
+      "county": "Cork",
+      "eircode": "P24V210",
+      "price": 204000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.850185,
+      "longitude": -8.292288,
+      "routing_key": "P24",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 191.40879145
+    },
     {
       "id": 791192,
       "sale_date": "2026-07-23",
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": null,
       "distance_m": 1594.5464285
-    },
-    {
-      "id": 797574,
-      "sale_date": "2026-07-01",
-      "address": "38 GARDINERS WALK, RUSHBROOKE LINKS, COBH",
-      "county": "Cork",
-      "eircode": "P24T256",
-      "price": 325000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.853397,
-      "longitude": -8.319322,
-      "routing_key": "P24",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1708.20195997
     }
   ],
   "trends": [
@@ -284,49 +284,49 @@
     },
     {
       "year": 2021,
-      "count": 121,
-      "median_price": 222500.0,
-      "avg_price": 240861.0,
+      "count": 122,
+      "median_price": 222750.0,
+      "avg_price": 241633.0,
       "min_price": 42173.43,
       "max_price": 761000.0
     },
     {
       "year": 2022,
-      "count": 138,
+      "count": 139,
       "median_price": 270000.0,
-      "avg_price": 382938.0,
+      "avg_price": 382449.0,
       "min_price": 100000.0,
       "max_price": 4387665.2
     },
     {
       "year": 2023,
-      "count": 145,
+      "count": 146,
       "median_price": 260000.0,
-      "avg_price": 287194.0,
+      "avg_price": 287487.0,
       "min_price": 20000.0,
       "max_price": 750000.0
     },
     {
       "year": 2024,
-      "count": 150,
+      "count": 151,
       "median_price": 281938.0,
-      "avg_price": 332204.0,
+      "avg_price": 332057.0,
       "min_price": 32703.22,
       "max_price": 3726872.25
     },
     {
       "year": 2025,
-      "count": 59,
-      "median_price": 390000.0,
-      "avg_price": 404923.0,
+      "count": 70,
+      "median_price": 357500.0,
+      "avg_price": 392621.0,
       "min_price": 10000.0,
       "max_price": 1100000.0
     },
     {
       "year": 2026,
-      "count": 53,
-      "median_price": 365000.0,
-      "avg_price": 385857.0,
+      "count": 57,
+      "median_price": 360000.0,
+      "avg_price": 380060.0,
       "min_price": 175000.0,
       "max_price": 795000.0
     }

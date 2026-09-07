@@ -8,7 +8,7 @@
   "radius_km": 5.0,
   "total_count": 10,
   "median_price": 266250.0,
-  "avg_price": 318450,
+  "avg_price": 290950,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -157,6 +157,24 @@
       "distance_m": 2454.84091763
     },
     {
+      "id": 766714,
+      "sale_date": "2025-12-18",
+      "address": "HOSPITAL ROAD, CLIFDEN, CO. GALWAY",
+      "county": "Galway",
+      "eircode": "H71XV10",
+      "price": 375000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.494728,
+      "longitude": -10.018401,
+      "routing_key": "H71",
+      "bedrooms": 4,
+      "property_type": "detached",
+      "distance_m": 716.28855643
+    },
+    {
       "id": 765076,
       "sale_date": "2025-12-16",
       "address": "25 HARBOUR VIEW, SEAVIEW, CLIFDEN",
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "apartment",
       "distance_m": 280.26478929
-    },
-    {
-      "id": 738984,
-      "sale_date": "2025-07-31",
-      "address": "THE STONE HOUSE, LETTERNOOSH, WESTPORT RD",
-      "county": "Galway",
-      "eircode": "H71VY45",
-      "price": 650000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.494293,
-      "longitude": -10.024247,
-      "routing_key": "H71",
-      "bedrooms": 5,
-      "property_type": "detached",
-      "distance_m": 679.28580548
     }
   ],
   "trends": [
@@ -308,17 +308,17 @@
     },
     {
       "year": 2024,
-      "count": 27,
-      "median_price": 250000.0,
-      "avg_price": 364204.0,
+      "count": 28,
+      "median_price": 255000.0,
+      "avg_price": 373875.0,
       "min_price": 140000.0,
       "max_price": 1950000.0
     },
     {
       "year": 2025,
-      "count": 12,
-      "median_price": 282500.0,
-      "avg_price": 305000.0,
+      "count": 18,
+      "median_price": 325000.0,
+      "avg_price": 325278.0,
       "min_price": 100000.0,
       "max_price": 650000.0
     },
