@@ -338,6 +338,8 @@ def main():
         "cell_deg": args.cell,
         "cell_half_deg": half,
         "min_count": args.min_count,
+        "price_floor": PRICE_FLOOR,
+        "price_ceil": PRICE_CEIL,
         "count": len(cells),
         "total_sales": sum(c[5] for c in cells),
         "palette": PALETTE,

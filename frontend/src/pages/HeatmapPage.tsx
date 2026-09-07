@@ -142,15 +142,12 @@ export default function HeatmapPage() {
 
         {data && (
           <p className="area-info">
-            Growth is the change in median <strong>second-hand</strong> sale price between
-            {" "}{data.early_window} and {data.late_window}, computed for {data.count.toLocaleString()} areas
-            (each roughly 4&nbsp;km across) that had at least {data.min_count} sales in <em>both</em> periods —
-            {" "}{data.total_sales.toLocaleString()} sales in the later window. New-build sales are
-            excluded so a bulk scheme completing does not masquerade as a price change; individual
-            price extremes and bulk multi-unit sales are dropped for the same reason. Requiring
-            volume in both periods keeps each figure a stable comparison rather than the noise of a
-            few sales, which is why sparse rural areas do not appear. Colour buckets are set by
-            quantile, so roughly half of areas fall on each side of the national median growth.
+            Change in median <strong>second-hand</strong> sale price between {data.early_window} and
+            {" "}{data.late_window}, across {data.count.toLocaleString()} areas (each roughly 4&nbsp;km)
+            with at least {data.min_count} sales in <em>both</em> periods —
+            {" "}{data.total_sales.toLocaleString()} sales in the later window. See the
+            {" "}<a href="#methodology">methodology</a> below for how new-builds and outliers are
+            handled.
           </p>
         )}
 
@@ -170,6 +167,63 @@ export default function HeatmapPage() {
               <LocalityTable title="Lowest price growth" rows={data.bottom_localities} />
             </div>
           </>
+        )}
+
+        {data && (
+          <section className="heatmap-methodology" id="methodology">
+            <h2>Methodology</h2>
+            <p>
+              This map and the tables above measure price <em>movement</em>, not a change in the
+              type of property that happened to sell. To do that they use a like-for-like
+              second-hand price index built from Ireland's Property Price Register, with the
+              following steps:
+            </p>
+            <ol>
+              <li>
+                <strong>Two time windows.</strong> The median sale price in an early window
+                ({data.early_window}) is compared with a late window ({data.late_window}); growth is
+                the percentage change between the two medians.
+              </li>
+              <li>
+                <strong>Second-hand sales only.</strong> New-build sales are excluded. A new
+                development completes and sells in bulk within a single window, which would swamp a
+                small area with cheaper units and collapse its median — a change in what sold, not a
+                change in prices. (For example, this is why an all-sales measure showed Donnybrook
+                “falling” when its resale market actually rose.)
+              </li>
+              <li>
+                <strong>Price extremes removed.</strong> Individual sales below {euroK(data.price_floor / 1000)}
+                {" "}(car-parking spaces, share and part-interest transfers, sites) or above
+                {" "}{euroK(data.price_ceil / 1000)} (trophy homes) are dropped, as they are not
+                representative of a local market.
+              </li>
+              <li>
+                <strong>Bulk sales removed.</strong> A single Register entry covering a range of
+                units (“Apartments 1–10”, “Units 1 to 76”) records many dwellings at one combined
+                price, so these rows are excluded rather than counted as one enormous sale.
+              </li>
+              <li>
+                <strong>Minimum volume.</strong> A grid square appears only if it had at least
+                {" "}{data.min_count} qualifying sales in <em>both</em> windows; a named locality is
+                ranked only with at least {data.loc_min_count} in both. Below these thresholds a
+                median swings on which few homes happened to sell, producing misleading extremes, so
+                sparse rural areas do not appear.
+              </li>
+              <li>
+                <strong>Relative colour scale.</strong> Because prices rose almost everywhere, the
+                map's colour buckets are set by quantile — roughly half of areas fall on each side of
+                the national median growth — so the map highlights where growth out- or
+                under-performed rather than simply where prices went up.
+              </li>
+            </ol>
+            <p className="heatmap-methodology-note">
+              Limitation: within a single area the mix of houses and apartments can still shift
+              between the two windows, which a median cannot fully separate from genuine price
+              change. Figures are indicative of local trends, not a valuation of any individual
+              property. Source: Property Services Regulatory Authority — Residential Property Price
+              Register. Data regenerated after each Register update.
+            </p>
+          </section>
         )}
       </div>
       <Footer />

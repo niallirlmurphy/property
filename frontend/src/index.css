@@ -892,6 +892,29 @@ body {
   background: #f6f8fa;
 }
 
+.heatmap-methodology {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e3e8ec;
+  font-size: 14px;
+  color: #3a4650;
+  line-height: 1.55;
+}
+.heatmap-methodology h2 {
+  margin: 0 0 0.5rem;
+}
+.heatmap-methodology ol {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0.75rem;
+}
+.heatmap-methodology li {
+  margin-bottom: 0.5rem;
+}
+.heatmap-methodology-note {
+  font-size: 13px;
+  color: #667;
+}
+
 .back-link {
   display: inline-block;
   font-size: 13px;

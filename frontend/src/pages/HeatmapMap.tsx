@@ -9,6 +9,8 @@ export interface HeatmapData {
   cell_deg: number;
   cell_half_deg: number;
   min_count: number;
+  price_floor: number;
+  price_ceil: number;
   count: number;
   total_sales: number;
   palette: string[];
