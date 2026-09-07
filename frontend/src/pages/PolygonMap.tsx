@@ -85,7 +85,7 @@ function DrawTools({
 
     map.addControl(drawControl);
 
-    map.on(L.Draw.Event.CREATED, (e: any) => {
+    const handleCreated = (e: any) => {
       const layer = e.layer;
       const type = e.layerType;
 
@@ -95,6 +95,16 @@ function DrawTools({
 
       if (type === 'polygon') {
         coordinates = layer.getLatLngs()[0].map((ll: L.LatLng) => [ll.lat, ll.lng]);
+        // Leaflet omits the closing vertex, but PostGIS requires a closed ring
+        // (first point == last point). Without this, ST_GeomFromText rejects the
+        // WKT and every freehand polygon search fails with a 500.
+        if (coordinates.length > 0) {
+          const [fLat, fLon] = coordinates[0];
+          const [lLat, lLon] = coordinates[coordinates.length - 1];
+          if (fLat !== lLat || fLon !== lLon) {
+            coordinates.push([fLat, fLon]);
+          }
+        }
       } else if (type === 'rectangle') {
         const bounds = layer.getBounds();
         coordinates = [
@@ -112,13 +122,20 @@ function DrawTools({
       }
 
       onShapeCreated(type, coordinates);
-    });
+    };
 
-    map.on(L.Draw.Event.DELETED, () => {
+    const handleDeleted = () => {
       onShapeDeleted();
-    });
+    };
+
+    map.on(L.Draw.Event.CREATED, handleCreated);
+    map.on(L.Draw.Event.DELETED, handleDeleted);
 
     return () => {
+      // Remove our specific listeners so they don't stack across re-renders,
+      // which otherwise fires duplicate searches and trips the rate limit.
+      map.off(L.Draw.Event.CREATED, handleCreated);
+      map.off(L.Draw.Event.DELETED, handleDeleted);
       map.removeControl(drawControl);
       map.removeLayer(drawnItems);
     };

@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from "react";
+import { useState, useCallback, lazy, Suspense } from "react";
 import { ClientOnly } from "vite-react-ssg";
 import WaffleMenu from "../components/WaffleMenu";
 import PageHeader from "../components/PageHeader";
@@ -11,6 +11,16 @@ const PolygonMap = lazy(() => import("./PolygonMap"));
 // Maximum allowed search area width (4km)
 const MAX_SEARCH_WIDTH_KM = 4;
 const MAX_RESULTS = 50;
+
+// Approximate width of a drawn shape in km (pure — kept at module scope so the
+// search callbacks below can be memoized without it becoming a dependency).
+function calculatePolygonBounds(coordinates: number[][]): number {
+  const lats = coordinates.map(c => c[0]);
+  const lngs = coordinates.map(c => c[1]);
+  const latWidth = (Math.max(...lats) - Math.min(...lats)) * 111;   // 1° lat ≈ 111km
+  const lngWidth = (Math.max(...lngs) - Math.min(...lngs)) * 85;    // 1° lng ≈ 85km at Irish latitudes
+  return Math.max(latWidth, lngWidth);
+}
 
 // County and Dublin postcode centroids for quick navigation
 const REGION_CENTROIDS: Record<string, [number, number]> = {
@@ -203,44 +213,7 @@ export default function PolygonSearchPage() {
     setSelectedRegion(region);
   };
 
-  const handleShapeCreated = async (type: string, coordinates: number[][]) => {
-    if (type === 'circle' && coordinates[0] && coordinates[0].length === 3) {
-      // Circle search
-      const lat = coordinates[0][0];
-      const lng = coordinates[0][1];
-      const radius = coordinates[0][2];
-      await searchInCircle(lat, lng, radius);
-    } else {
-      // Polygon/rectangle search - convert to proper format
-      const polyCoords: [number, number][] = coordinates.map(c => [c[0], c[1]]);
-      await searchInPolygon(polyCoords);
-    }
-  };
-
-  const handleShapeDeleted = () => {
-    setSearchResults([]);
-    setActiveProperty(null);
-    setError(null);
-  };
-
-  const calculatePolygonBounds = (coordinates: number[][]): number => {
-    // Calculate width in kilometers
-    const lats = coordinates.map(c => c[0]);
-    const lngs = coordinates.map(c => c[1]);
-
-    const minLat = Math.min(...lats);
-    const maxLat = Math.max(...lats);
-    const minLng = Math.min(...lngs);
-    const maxLng = Math.max(...lngs);
-
-    // Rough calculation: 1 degree lat ≈ 111km, 1 degree lng ≈ 85km at Ireland latitude
-    const latWidth = (maxLat - minLat) * 111;
-    const lngWidth = (maxLng - minLng) * 85;
-
-    return Math.max(latWidth, lngWidth);
-  };
-
-  const searchInPolygon = async (coordinates: [number, number][]) => {
+  const searchInPolygon = useCallback(async (coordinates: [number, number][]) => {
     setLoading(true);
     setError(null);
     setActiveProperty(null);
@@ -268,9 +241,10 @@ export default function PolygonSearchPage() {
       if (!response.ok) throw new Error('Polygon search failed');
 
       const data = await response.json();
-      setSearchResults(data.results || []);
+      const results = data.results || [];
+      setSearchResults(results);
 
-      if (data.results.length === 0) {
+      if (results.length === 0) {
         setError('No properties found in this area.');
       }
     } catch (error) {
@@ -280,9 +254,9 @@ export default function PolygonSearchPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
-  const searchInCircle = async (lat: number, lng: number, radiusKm: number) => {
+  const searchInCircle = useCallback(async (lat: number, lng: number, radiusKm: number) => {
     setLoading(true);
     setError(null);
     setActiveProperty(null);
@@ -302,9 +276,10 @@ export default function PolygonSearchPage() {
       if (!response.ok) throw new Error('Circle search failed');
 
       const data = await response.json();
-      setSearchResults(data.results || []);
+      const results = data.results || [];
+      setSearchResults(results);
 
-      if (data.results.length === 0) {
+      if (results.length === 0) {
         setError('No properties found in this area.');
       }
     } catch (error) {
@@ -314,7 +289,27 @@ export default function PolygonSearchPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
+
+  const handleShapeCreated = useCallback(async (type: string, coordinates: number[][]) => {
+    if (type === 'circle' && coordinates[0] && coordinates[0].length === 3) {
+      // Circle search
+      const lat = coordinates[0][0];
+      const lng = coordinates[0][1];
+      const radius = coordinates[0][2];
+      await searchInCircle(lat, lng, radius);
+    } else {
+      // Polygon/rectangle search - convert to proper format
+      const polyCoords: [number, number][] = coordinates.map(c => [c[0], c[1]]);
+      await searchInPolygon(polyCoords);
+    }
+  }, [searchInPolygon, searchInCircle]);
+
+  const handleShapeDeleted = useCallback(() => {
+    setSearchResults([]);
+    setActiveProperty(null);
+    setError(null);
+  }, []);
 
   const formatPrice = (price: number) => {
     return "€" + Math.round(price).toLocaleString("en-IE");

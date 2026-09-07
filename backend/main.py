@@ -1530,6 +1530,12 @@ async def search_polygon(
                 raise ValueError(f"Coordinates out of bounds: ({lat_f}, {lon_f})")
             validated_coords.append((lat_f, lon_f))
 
+        # PostGIS/GEOS requires a closed linear ring (first point == last point).
+        # Leaflet omits the closing vertex, so close it here defensively; without
+        # this ST_GeomFromText raises and the request 500s.
+        if validated_coords and validated_coords[0] != validated_coords[-1]:
+            validated_coords.append(validated_coords[0])
+
         # Build WKT string with validated float values
         points_str = ", ".join([f"{lon} {lat}" for lat, lon in validated_coords])
         polygon_wkt = f"POLYGON(({points_str}))"
@@ -1563,17 +1569,23 @@ async def search_polygon(
     where = " AND ".join(filters)
     params.append(search_request.limit)
 
-    rows = await db_pool.fetch(f"""
-        SELECT
-            id, sale_date, address, county, eircode, price,
-            not_full_market_price, vat_exclusive, description,
-            size_description, latitude, longitude,
-            routing_key, bedrooms, property_type
-        FROM properties
-        WHERE {where}
-        ORDER BY sale_date DESC
-        LIMIT ${idx}
-    """, *params)
+    try:
+        rows = await db_pool.fetch(f"""
+            SELECT
+                id, sale_date, address, county, eircode, price,
+                not_full_market_price, vat_exclusive, description,
+                size_description, latitude, longitude,
+                routing_key, bedrooms, property_type
+            FROM properties
+            WHERE {where}
+            ORDER BY sale_date DESC
+            LIMIT ${idx}
+        """, *params)
+    except Exception as e:
+        # Most likely an invalid polygon geometry (e.g. self-intersecting or
+        # degenerate ring). Return a clean 400 rather than a raw 500.
+        logger.warning(f"Polygon search query failed: {e}")
+        raise HTTPException(status_code=400, detail="Invalid polygon geometry — please redraw the area.")
 
     results = [serialize_row(r) for r in rows]
 
