@@ -9,6 +9,14 @@ cooling — the non-obvious insight buyers/investors actually want.
 
 Cells need enough sales in BOTH windows (min-count each) so the two medians are
 stable, which naturally restricts the map to areas with real transaction volume.
+
+To measure price movement rather than a change in *what* sold, the query is a
+like-for-like RESALE index: new-build sales are excluded (bulk scheme completions
+otherwise collapse a small area's median), as are individual price extremes
+(parking/share transfers below the floor, trophy homes above the ceiling) and
+bulk unit-range sales recorded as one high price. See PRICE_FLOOR / PRICE_CEIL /
+BULK_ADDR_RE and the description filter.
+
 The output is a small static file rendered by the /heatmap page — no per-visitor
 database load. Regenerate after each PPR sync, like the other page data.
 
@@ -39,6 +47,18 @@ PALETTE = ["#2166ac", "#67a9cf", "#d1e5f0", "#f7f7f7", "#fddbc7", "#ef8a62", "#b
 # Ireland bounds (same box used by the geocoder's validation layer).
 LAT_MIN, LAT_MAX = 51.4, 55.5
 LON_MIN, LON_MAX = -10.7, -5.4
+
+# Row-level sanity band on individual sale prices. Below the floor are parking
+# spaces, share/partial-interest transfers and sites masquerading as full-market
+# sales; above the ceiling are trophy homes and multi-property deals. Both are
+# unrepresentative of the local market and skew a small area's median. Together
+# these bounds plus the bulk filter touch ~2% of rows.
+PRICE_FLOOR = 50_000
+PRICE_CEIL = 3_000_000
+# A single row whose address spans a unit range ("Apt 1-10", "Units 1 to 76") is
+# a bulk/portfolio sale recorded as one high price — not a single-dwelling sale.
+# Postgres POSIX regex (case-insensitive via !~*): digits, dash or "to", digits.
+BULK_ADDR_RE = r'[0-9]+ *(-|to) *[0-9]+'
 
 REPO = Path(__file__).resolve().parent.parent
 OUT_PATH = REPO / "frontend" / "public" / "data" / "heatmap.json"
@@ -108,11 +128,15 @@ def build_locality_tables(conn, early_start, early_end, late_end, args):
         """
         SELECT county, address_normalized, price::float, sale_date
         FROM properties
-        WHERE not_full_market_price = FALSE AND price > 0
+        WHERE not_full_market_price = FALSE
           AND address_normalized IS NOT NULL
+          -- Resale only, matching the map (exclude bulk new-build schemes).
+          AND description NOT ILIKE %s AND description NOT ILIKE %s
+          AND price BETWEEN %s AND %s              -- drop non-home / trophy extremes
+          AND address_normalized !~* %s            -- drop bulk unit-range sales
           AND sale_date >= %s AND sale_date < %s
         """,
-        (early_start, late_end),
+        ("%new%", "%nua%", PRICE_FLOOR, PRICE_CEIL, BULK_ADDR_RE, early_start, late_end),
     )
     early_cut = datetime.strptime(early_end, "%Y-%m-%d").date()
     early = defaultdict(list)
@@ -208,9 +232,11 @@ def main():
                     help="Drop cells whose median in either window is below this (€). Excludes "
                          "cells dominated by non-home sales — sites, derelict, parking, shares — "
                          "whose changing mix otherwise produces absurd growth %% (default 50000)")
-    ap.add_argument("--loc-min-count", type=int, default=30,
+    ap.add_argument("--loc-min-count", type=int, default=100,
                     help="Minimum sales per named locality IN EACH window for the ranked tables "
-                         "(default 30 — higher than the grid because localities pool more sales)")
+                         "(default 100). Named localities pool far more sales than a grid cell, and "
+                         "a high bar is what makes the ranking meaningful: below it the median swings "
+                         "on which few properties happened to sell, producing spurious ±extremes")
     ap.add_argument("--loc-top", type=int, default=15,
                     help="How many localities to list in each of the top/bottom tables (default 15)")
     ap.add_argument("--out", type=str, default=str(OUT_PATH), help="Output JSON path")
@@ -241,7 +267,15 @@ def main():
         FROM properties
         WHERE latitude IS NOT NULL AND longitude IS NOT NULL
           AND not_full_market_price = FALSE
-          AND price > 0
+          -- Resale market only. New-build schemes complete and sell in bulk in a
+          -- single window, swamping a small area with cheaper apartments and
+          -- collapsing its median — a composition shift, not a price move. The PPR
+          -- 'description' distinguishes New vs Second-Hand ('Nua' = Irish 'new').
+          AND description NOT ILIKE '%%new%%' AND description NOT ILIKE '%%nua%%'
+          -- Drop non-home/trophy price extremes and bulk unit-range sales that
+          -- would skew a cell's median (see PRICE_FLOOR/PRICE_CEIL/BULK_ADDR_RE).
+          AND price BETWEEN %(price_floor)s AND %(price_ceil)s
+          AND (address_normalized IS NULL OR address_normalized !~* %(bulk_re)s)
           AND sale_date >= %(early_start)s AND sale_date < %(late_end)s
           AND latitude  BETWEEN %(lat_min)s AND %(lat_max)s
           AND longitude BETWEEN %(lon_min)s AND %(lon_max)s
@@ -256,6 +290,8 @@ def main():
             "lat_min": LAT_MIN, "lat_max": LAT_MAX,
             "lon_min": LON_MIN, "lon_max": LON_MAX,
             "min_count": args.min_count,
+            "price_floor": PRICE_FLOOR, "price_ceil": PRICE_CEIL,
+            "bulk_re": BULK_ADDR_RE,
         },
     )
     rows = cur.fetchall()

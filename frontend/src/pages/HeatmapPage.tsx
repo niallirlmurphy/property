@@ -103,9 +103,9 @@ export default function HeatmapPage() {
         <h1>Ireland House Price Growth Map</h1>
         {data ? (
           <p className="content-intro">
-            Every coloured square shows how much the <strong>median sale price changed</strong> in
-            that area between {data.early_window} and {data.late_window}, drawn from residential
-            sales on Ireland's Property Price Register. <span style={{ color: "#b2182b", fontWeight: 600 }}>Red</span> areas
+            Every coloured square shows how much the <strong>median resale price changed</strong> in
+            that area between {data.early_window} and {data.late_window}, drawn from second-hand
+            residential sales on Ireland's Property Price Register. <span style={{ color: "#b2182b", fontWeight: 600 }}>Red</span> areas
             are appreciating fastest; <span style={{ color: "#2166ac", fontWeight: 600 }}>blue</span> areas
             are lagging or cooling. Because prices rose almost everywhere, the scale is set relative
             to the national picture — so this shows where growth <em>out- or under-performed</em>,
@@ -142,12 +142,14 @@ export default function HeatmapPage() {
 
         {data && (
           <p className="area-info">
-            Growth is the change in median full-market sale price between {data.early_window} and
-            {" "}{data.late_window}, computed for {data.count.toLocaleString()} areas (each roughly
-            4&nbsp;km across) that had at least {data.min_count} sales in <em>both</em> periods —
-            {" "}{data.total_sales.toLocaleString()} sales in the later window. Requiring volume in
-            both periods keeps each figure a stable comparison rather than the noise of one or two
-            sales, which is why sparse rural areas do not appear. Colour buckets are set by
+            Growth is the change in median <strong>second-hand</strong> sale price between
+            {" "}{data.early_window} and {data.late_window}, computed for {data.count.toLocaleString()} areas
+            (each roughly 4&nbsp;km across) that had at least {data.min_count} sales in <em>both</em> periods —
+            {" "}{data.total_sales.toLocaleString()} sales in the later window. New-build sales are
+            excluded so a bulk scheme completing does not masquerade as a price change; individual
+            price extremes and bulk multi-unit sales are dropped for the same reason. Requiring
+            volume in both periods keeps each figure a stable comparison rather than the noise of a
+            few sales, which is why sparse rural areas do not appear. Colour buckets are set by
             quantile, so roughly half of areas fall on each side of the national median growth.
           </p>
         )}
@@ -156,11 +158,12 @@ export default function HeatmapPage() {
           <>
             <h2 style={{ marginTop: "1.5rem" }}>Fastest- and slowest-growing localities</h2>
             <p className="area-info" style={{ marginTop: 0 }}>
-              Named places ranked by the change in median full-market sale price between
-              {" "}{data.early_window} and {data.late_window}, limited to localities with at least
-              {" "}{data.loc_min_count} sales in <em>both</em> periods so each figure is a stable
-              comparison. A locality is attributed from each sale's address; entries where no clean
-              place name could be resolved are excluded.
+              Named places ranked by the change in median second-hand sale price between
+              {" "}{data.early_window} and {data.late_window}, on the same resale-only basis as the
+              map above and limited to localities with at least {data.loc_min_count} sales in
+              {" "}<em>both</em> periods so each figure is a stable comparison rather than the swing
+              of a few sales. A locality is attributed from each sale's address; entries where no
+              clean place name could be resolved are excluded.
             </p>
             <div className="heatmap-loc-tables">
               <LocalityTable title="Highest price growth" rows={data.top_localities} />
