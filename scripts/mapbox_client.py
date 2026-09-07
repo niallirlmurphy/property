@@ -136,7 +136,10 @@ class MapboxClient:
                 district. See scripts/geocode_mapbox_batch.py.
 
         Returns:
-            Dict with 'latitude', 'longitude', 'full_address', 'precision' or None if no results
+            Dict with 'latitude', 'longitude', 'full_address', 'feature_type'
+            (address/street/postcode/locality/place) and 'precision' (v6
+            coordinate accuracy: rooftop/parcel/point/interpolated/…), plus
+            'method' (eircode/address). None if no results.
 
         Raises:
             MapboxLimitExceeded: If monthly limit exceeded
@@ -161,15 +164,24 @@ class MapboxClient:
         limit: int,
         proximity: Optional[Tuple[float, float]] = None
     ) -> Optional[Dict]:
-        """Internal method to geocode a single query."""
+        """Internal method to geocode a single query.
+
+        Uses the Mapbox Geocoding v6 API (search/geocode/v6/forward). Unlike the
+        legacy v5 API, v6 returns a coordinate-level accuracy (rooftop / parcel /
+        point / interpolated / …) at properties.coordinates.accuracy, which is what
+        the quality scoring in geocode_mapbox_batch.py needs to distinguish exact
+        building matches from coarser address points. v5 only exposed place_type,
+        so every address flat-scored 80 and rooftop/parcel were unreachable.
+        """
         await self._check_limit(required_requests=1)
 
-        url = f"https://api.mapbox.com/geocoding/v5/mapbox.places/{query}.json"
+        url = "https://api.mapbox.com/search/geocode/v6/forward"
         params = {
+            'q': query,
             'access_token': self.token,
             'country': country,
             'limit': limit,
-            'types': 'address,poi,postcode'
+            'types': 'address,street,postcode,locality,place'
         }
         if proximity is not None:
             # Mapbox expects proximity as "longitude,latitude"
@@ -185,11 +197,13 @@ class MapboxClient:
             if data.get('features'):
                 feature = data['features'][0]
                 coords = feature['geometry']['coordinates']
+                props = feature.get('properties', {})
                 return {
                     'longitude': coords[0],
                     'latitude': coords[1],
-                    'full_address': feature.get('place_name', ''),
-                    'precision': feature.get('place_type', ['unknown'])[0]
+                    'full_address': props.get('full_address') or props.get('place_formatted', ''),
+                    'feature_type': props.get('feature_type', 'unknown'),
+                    'precision': (props.get('coordinates') or {}).get('accuracy', 'unknown')
                 }
 
             self.tracker.record_request(success=False)

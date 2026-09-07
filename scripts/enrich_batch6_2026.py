@@ -165,9 +165,15 @@ def search_web_for_property(address, county, max_retries=2, eircode=None):
 
     return None, None
 
-def fetch_properties_to_enrich(conn, limit=100, year=2026):
-    """Fetch properties from the given year missing enrichment data, most recent first."""
+def fetch_properties_to_enrich(conn, limit=100, year=2026, since=None):
+    """Fetch properties missing enrichment data, most recent first.
+
+    By default targets the whole `year`; if `since` (YYYY-MM-DD) is given it is
+    used as the lower date bound instead — e.g. to enrich only a fresh import
+    window rather than the full year.
+    """
     cur = conn.cursor()
+    start_date = since if since else f'{year}-01-01'
 
     # Prioritize most recent sales first (December → January of the year).
     # Only fetch properties missing BOTH fields to maximize impact.
@@ -197,7 +203,7 @@ def fetch_properties_to_enrich(conn, limit=100, year=2026):
             END,
             sale_date DESC
         LIMIT %s
-    """, (f'{year}-01-01', f'{year + 1}-01-01', limit))
+    """, (start_date, f'{year + 1}-01-01', limit))
 
     properties = []
     for row in cur.fetchall():
@@ -336,13 +342,16 @@ def mark_enrichment_attempted(address):
         conn.close()
 
 
-def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=5, year=2026):
+def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=5, year=2026, since=None):
     """Run batch enrichment process."""
     print("=" * 70)
     print(f"BATCH 6 ENRICHMENT: {year} Properties")
     print("=" * 70)
     print(f"Target: Properties missing both bedrooms AND property_type")
-    print(f"Priority: December {year} → January {year} (most recent first)")
+    if since:
+        print(f"Window: sale_date >= {since} (most recent first)")
+    else:
+        print(f"Priority: December {year} → January {year} (most recent first)")
     print(f"Batch size: {batch_size}")
     print(f"Rate limit: {rate_limit_seconds}s between requests")
     print(f"Progress reports: Every {report_interval} properties")
@@ -352,7 +361,7 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=
 
     # Fetch properties to enrich
     print("📊 Fetching properties to enrich...")
-    properties = fetch_properties_to_enrich(conn, limit=batch_size, year=year)
+    properties = fetch_properties_to_enrich(conn, limit=batch_size, year=year, since=since)
 
     if not properties:
         print("✅ No properties to enrich!")
@@ -485,6 +494,8 @@ if __name__ == '__main__':
     parser.add_argument('--rate-limit', type=int, default=10, help='Seconds between requests')
     parser.add_argument('--report-interval', type=int, default=5, help='Progress report every N properties')
     parser.add_argument('--year', type=int, default=2026, help='Sale year to target (default: 2026)')
+    parser.add_argument('--since', type=str, default=None,
+                        help='Lower sale_date bound YYYY-MM-DD (overrides year start; e.g. a fresh import window)')
 
     args = parser.parse_args()
 
@@ -492,5 +503,6 @@ if __name__ == '__main__':
         batch_size=args.batch_size,
         rate_limit_seconds=args.rate_limit,
         report_interval=args.report_interval,
-        year=args.year
+        year=args.year,
+        since=args.since
     )

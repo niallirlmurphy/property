@@ -79,7 +79,9 @@ ACCEPTABLE_PRECISION = {'rooftop', 'parcel', 'point'}
 async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = None,
                                              county: str = None, no_eircode: bool = False,
                                              min_price: int = None, suspect: bool = False,
-                                             eircode_only: bool = False) -> List[Dict]:
+                                             eircode_only: bool = False,
+                                             since: str = None,
+                                             before: str = None) -> List[Dict]:
     """Fetch properties flagged as needing geocoding (priority order)."""
     print("Fetching properties needing geocoding...")
 
@@ -109,6 +111,21 @@ async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = No
     if min_price:
         where_clauses.append(f"price >= ${idx}")
         params.append(min_price)
+        idx += 1
+
+    if since:
+        # Scope to sales on/after this date — used to geocode only a fresh import
+        # window rather than the whole needs_geocoding backlog.
+        where_clauses.append(f"sale_date >= ${idx}")
+        params.append(datetime.strptime(since, "%Y-%m-%d").date())
+        idx += 1
+
+    if before:
+        # Scope to sales strictly before this date — used to work the needs_geocoding
+        # backlog while a separate run handles the fresh import window (>= that date),
+        # so the two runs target disjoint rows.
+        where_clauses.append(f"sale_date < ${idx}")
+        params.append(datetime.strptime(before, "%Y-%m-%d").date())
         idx += 1
 
     where = " AND ".join(where_clauses)
@@ -265,13 +282,12 @@ def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
         return False, f"wrong_county({county})", 0
 
     # Validation 2: Feature type and precision level
-    # Note: MapboxClient v5 API returns place_type (address, postcode, poi, locality)
-    # not the v6 precision level (rooftop, parcel, point)
+    # v6 API returns feature_type (address, postcode, street, place, locality) and a
+    # separate coordinate accuracy in `precision` (rooftop, parcel, point, interpolated, …).
     quality_score = 70  # Default
 
     if feature_type == 'address':
-        # Address-level results - good quality
-        # Check if precision has detailed accuracy (v6 API)
+        # Address-level results - good quality. Reward exact accuracy tiers.
         if precision in ACCEPTABLE_PRECISION:
             quality_map = {
                 'rooftop': 100,
@@ -280,7 +296,8 @@ def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
             }
             quality_score = quality_map.get(precision, 80)
         else:
-            # v5 API or no precision - assume good address quality
+            # interpolated/approximate/unknown accuracy - still an address match,
+            # treat as baseline address quality.
             quality_score = 80
 
     elif feature_type == 'postcode':
@@ -379,16 +396,19 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                 if result:
                     lat = result['latitude']
                     lon = result['longitude']
-                    # MapboxClient returns place_type as 'precision'
-                    place_type = result.get('precision', 'unknown')
+                    # v6 API returns feature_type (address/street/postcode/…) and a
+                    # separate coordinate accuracy (rooftop/parcel/point/…) as 'precision'.
+                    feature_type = result.get('feature_type', 'unknown')
+                    precision = result.get('precision', 'unknown')
 
                     if result.get('method') == 'eircode':
                         eircode_count += 1
 
-                    # Validate - use place_type for both feature_type and precision.
-                    # Pass routing key + centroids for the hard distance check.
+                    # Validate with real feature_type + precision so rooftop (100) /
+                    # parcel (90) / point (80) score distinctly. Pass routing key +
+                    # centroids for the hard distance check.
                     is_valid, reason, quality_score = validate_coordinates(
-                        lat, lon, prop['county'], place_type, place_type,
+                        lat, lon, prop['county'], feature_type, precision,
                         routing_key=prop.get('routing_key'), rk_centroids=rk_centroids
                     )
 
@@ -418,7 +438,8 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                                county: str = None, needs_geocoding: bool = False,
                                no_eircode: bool = False, min_price: int = None,
                                centroid: bool = False, suspect: bool = False,
-                               eircode_only: bool = False):
+                               eircode_only: bool = False, since: str = None,
+                               before: str = None):
     """
     Batch geocode properties using Mapbox.
 
@@ -448,7 +469,8 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         else:
             properties = await fetch_properties_needing_geocoding(
                 pool, limit=limit, county=county, no_eircode=no_eircode,
-                min_price=min_price, suspect=suspect, eircode_only=eircode_only
+                min_price=min_price, suspect=suspect, eircode_only=eircode_only,
+                since=since, before=before
             )
 
         print(f"\n{'='*70}")
@@ -462,6 +484,10 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                 filters.append("WITHOUT Eircodes")
             if min_price:
                 filters.append(f"Price >= €{min_price:,}")
+            if since:
+                filters.append(f"Sale date >= {since}")
+            if before:
+                filters.append(f"Sale date < {before}")
             if filters:
                 print(f"Filters: {', '.join(filters)}")
         print(f"Properties to process: {len(properties):,}")
@@ -556,6 +582,8 @@ async def main():
     limit = None
     county = None
     min_price = None
+    since = None
+    before = None
 
     for i, arg in enumerate(sys.argv):
         if arg == "--limit" and i + 1 < len(sys.argv):
@@ -564,6 +592,10 @@ async def main():
             county = sys.argv[i + 1]
         elif arg == "--min-price" and i + 1 < len(sys.argv):
             min_price = int(sys.argv[i + 1])
+        elif arg == "--since" and i + 1 < len(sys.argv):
+            since = sys.argv[i + 1]
+        elif arg == "--before" and i + 1 < len(sys.argv):
+            before = sys.argv[i + 1]
 
     await geocode_with_mapbox(
         limit=limit,
@@ -574,7 +606,9 @@ async def main():
         min_price=min_price,
         centroid=centroid,
         suspect=suspect,
-        eircode_only=eircode_only
+        eircode_only=eircode_only,
+        since=since,
+        before=before
     )
 
 
