@@ -12,19 +12,16 @@ const mapFallback = (
   <div style={{ height: "100%", width: "100%", position: "absolute", background: "#eef2f6" }} aria-hidden="true" />
 );
 
-// Compact euro label for the legend, e.g. 170000 -> "€170k", 1250000 -> "€1.25m".
-function shortEuro(n: number): string {
-  if (n >= 1_000_000) return `€${(n / 1_000_000).toFixed(2).replace(/\.?0+$/, "")}m`;
-  return `€${Math.round(n / 1000)}k`;
-}
+// Whole-percent label for the legend, e.g. 19.6 -> "20%".
+const pctLabel = (n: number) => `${Math.round(n)}%`;
 
-// Build human labels for each palette bucket from the interior breaks.
+// Build human labels for each palette bucket from the interior % breaks.
 function bucketLabels(breaks: number[]): string[] {
   const labels: string[] = [];
   for (let i = 0; i <= breaks.length; i++) {
-    if (i === 0) labels.push(`< ${shortEuro(breaks[0])}`);
-    else if (i === breaks.length) labels.push(`${shortEuro(breaks[i - 1])}+`);
-    else labels.push(`${shortEuro(breaks[i - 1])}–${shortEuro(breaks[i])}`);
+    if (i === 0) labels.push(`< ${pctLabel(breaks[0])}`);
+    else if (i === breaks.length) labels.push(`${pctLabel(breaks[i - 1])}+`);
+    else labels.push(`${pctLabel(breaks[i - 1])}–${pctLabel(breaks[i])}`);
   }
   return labels;
 }
@@ -43,10 +40,10 @@ export default function HeatmapPage() {
       .catch(e => setError(e.message));
   }, []);
 
-  const crumbs = [{ name: "House Price Heat Map", url: "/heatmap" }];
+  const crumbs = [{ name: "House Price Growth Map", url: "/heatmap" }];
   const meta = usePageMeta(
-    "Ireland House Price Heat Map",
-    "An interactive heat map of residential property prices across Ireland, showing the median sale price in every area from the Property Price Register. See at a glance where it is cheapest and most expensive to buy.",
+    "Ireland House Price Growth Map",
+    "An interactive map showing where house prices are rising fastest across Ireland. Each area is coloured by the change in median sale price between two periods of the Property Price Register — revealing the hottest and coolest local markets.",
     crumbs,
   );
 
@@ -55,21 +52,30 @@ export default function HeatmapPage() {
   return (
     <>
       {meta}
-      <PageHeader title="Ireland House Price Heat Map" titleAsHeading={false} />
+      <PageHeader title="Ireland House Price Growth Map" titleAsHeading={false} />
       <div className="content-page">
         <Breadcrumbs items={crumbs} />
-        <h1>Ireland House Price Heat Map</h1>
-        <p className="content-intro">
-          Every coloured square shows the <strong>median sale price</strong> of homes in that
-          area, drawn from residential sales on Ireland's Property Price Register. Darker means
-          more expensive. Hover a square for the exact figure. Zoom and pan to explore anywhere
-          in the country.
-        </p>
+        <h1>Ireland House Price Growth Map</h1>
+        {data ? (
+          <p className="content-intro">
+            Every coloured square shows how much the <strong>median sale price changed</strong> in
+            that area between {data.early_window} and {data.late_window}, drawn from residential
+            sales on Ireland's Property Price Register. <span style={{ color: "#b2182b", fontWeight: 600 }}>Red</span> areas
+            are appreciating fastest; <span style={{ color: "#2166ac", fontWeight: 600 }}>blue</span> areas
+            are lagging or cooling. Because prices rose almost everywhere, the scale is set relative
+            to the national picture — so this shows where growth <em>out- or under-performed</em>,
+            not simply where prices went up. Hover a square for the figures. Zoom and pan to explore.
+          </p>
+        ) : (
+          <p className="content-intro">
+            A map of where house prices are rising fastest across Ireland, from the Property Price Register.
+          </p>
+        )}
 
         {error && <div className="error-msg">{error}</div>}
 
         {data && (
-          <div className="heatmap-legend" aria-label="Price scale">
+          <div className="heatmap-legend" aria-label="Price-growth scale">
             {data.palette.map((c, i) => (
               <div className="heatmap-legend-item" key={i}>
                 <span className="heatmap-legend-swatch" style={{ background: c }} />
@@ -91,11 +97,13 @@ export default function HeatmapPage() {
 
         {data && (
           <p className="area-info">
-            Based on {data.total_sales.toLocaleString()} full-market sales from {data.since_year}
-            {" "}onward, grouped into {data.count.toLocaleString()} areas (each roughly one square
-            kilometre, minimum {data.min_count} sales). Sparse areas are omitted so every figure is
-            a stable median rather than a single sale. Prices reflect recent sales only, so the map
-            shows current values rather than historical ones.
+            Growth is the change in median full-market sale price between {data.early_window} and
+            {" "}{data.late_window}, computed for {data.count.toLocaleString()} areas (each roughly
+            4&nbsp;km across) that had at least {data.min_count} sales in <em>both</em> periods —
+            {" "}{data.total_sales.toLocaleString()} sales in the later window. Requiring volume in
+            both periods keeps each figure a stable comparison rather than the noise of one or two
+            sales, which is why sparse rural areas do not appear. Colour buckets are set by
+            quantile, so roughly half of areas fall on each side of the national median growth.
           </p>
         )}
       </div>

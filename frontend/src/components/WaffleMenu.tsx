@@ -51,8 +51,8 @@ const ITEMS = [
         <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
       </svg>
     ),
-    label: "House Price Map",
-    desc: "Heat map of prices across Ireland",
+    label: "Price Growth Map",
+    desc: "Where prices are rising fastest",
   },
   {
     href: "/mortgage",
