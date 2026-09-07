@@ -837,6 +837,31 @@ body {
   margin: 0 0 24px;
 }
 
+.heatmap-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  align-items: center;
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #444;
+}
+.heatmap-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.heatmap-legend-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  flex: 0 0 auto;
+}
+.heatmap-legend-label {
+  white-space: nowrap;
+}
+
 .back-link {
   display: inline-block;
   font-size: 13px;

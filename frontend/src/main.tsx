@@ -13,6 +13,7 @@ import ContactPage from "./pages/ContactPage";
 import PropertyPriceRegisterPage from "./pages/PropertyPriceRegisterPage";
 import ManualGeocodePage from "./pages/ManualGeocodePage";
 import PolygonSearchPage from "./pages/PolygonSearchPage";
+import HeatmapPage from "./pages/HeatmapPage";
 import ExactSearchPage from "./pages/ExactSearchPage";
 import ValuationPage from "./pages/ValuationPage";
 import AreaGuidesPage from "./pages/AreaGuidesPage";
@@ -37,6 +38,7 @@ export const routes = [
   { path: "/", element: <App /> },
   { path: "/s1", element: <ExactSearchPage /> },
   { path: "/polygon", element: <PolygonSearchPage /> },
+  { path: "/heatmap", element: <HeatmapPage /> },
   { path: "/valuation", element: <ValuationPage /> },
   { path: "/areaguides", element: <AreaGuidesPage /> },
   { path: "/area/:slug", element: <AreaPage /> },
