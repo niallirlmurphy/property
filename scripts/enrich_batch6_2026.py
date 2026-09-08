@@ -6,6 +6,7 @@ Prioritizes June 2026 properties first, then works backwards through the year.
 
 import os
 import sys
+import functools
 import psycopg2
 import requests
 import time
@@ -18,6 +19,37 @@ from bs4 import BeautifulSoup
 
 load_dotenv('backend/.env')
 DATABASE_URL = os.getenv('DATABASE_URL')
+
+# Supabase periodically drops long-running connections (SSL SYSCALL error: EOF
+# detected / server closed the connection unexpectedly). Each DB helper below
+# opens its own fresh connection, so retrying the whole call transparently
+# reconnects. Without this a single transient blip during a multi-hour run
+# raised and killed the entire batch, losing the remaining work.
+DB_RETRY_ATTEMPTS = 4
+DB_RETRY_BACKOFF = 3  # seconds, grows linearly per attempt
+
+
+def with_db_retry(fn):
+    """Retry a self-contained DB operation on transient connection errors.
+
+    The wrapped function must open (and close) its own connection so a retry
+    starts cleanly. All DB writes here are idempotent, so re-running is safe."""
+    @functools.wraps(fn)
+    def wrapper(*args, **kwargs):
+        last = None
+        for attempt in range(1, DB_RETRY_ATTEMPTS + 1):
+            try:
+                return fn(*args, **kwargs)
+            except (psycopg2.OperationalError, psycopg2.InterfaceError) as e:
+                last = e
+                if attempt == DB_RETRY_ATTEMPTS:
+                    break
+                wait = DB_RETRY_BACKOFF * attempt
+                print(f"  ⏳ DB connection error ({e.__class__.__name__}); "
+                      f"reconnecting, retry {attempt}/{DB_RETRY_ATTEMPTS - 1} in {wait}s")
+                time.sleep(wait)
+        raise last
+    return wrapper
 
 def extract_bedrooms(text):
     """Extract bedroom count from text."""
@@ -218,6 +250,7 @@ def fetch_properties_to_enrich(conn, limit=100, year=2026, since=None):
 
     return properties
 
+@with_db_retry
 def update_property_enrichment(property_id, address, bedrooms, property_type):
     """Update property with enrichment data, applying to all sales of the same address.
 
@@ -317,6 +350,7 @@ def update_property_enrichment(property_id, address, bedrooms, property_type):
     finally:
         conn.close()
 
+@with_db_retry
 def mark_enrichment_attempted(address):
     """Record that an address was scraped but yielded nothing.
 
@@ -362,10 +396,13 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=
     # Fetch properties to enrich
     print("📊 Fetching properties to enrich...")
     properties = fetch_properties_to_enrich(conn, limit=batch_size, year=year, since=since)
+    # Close immediately: the loop below uses its own short-lived connections per
+    # write, so there is no reason to hold this one idle for the whole run (idle
+    # connections are exactly what Supabase drops).
+    conn.close()
 
     if not properties:
         print("✅ No properties to enrich!")
-        conn.close()
         return
 
     print(f"Found {len(properties)} properties to enrich")
@@ -454,8 +491,6 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=
         # Rate limiting
         if i < len(properties):
             time.sleep(rate_limit_seconds)
-
-    conn.close()
 
     # Save results to logs/enrichment_results/ (resolved relative to the
     # project root so it works regardless of the current working directory)
