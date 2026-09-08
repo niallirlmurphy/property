@@ -75,6 +75,10 @@ IRELAND_BBOX = (51.4, 55.5, -10.7, -5.4)  # min_lat, max_lat, min_lon, max_lon
 # Acceptable precision levels (reject interpolated/approximate)
 ACCEPTABLE_PRECISION = {'rooftop', 'parcel', 'point'}
 
+# Persist geocode results to the database every this many properties, so an
+# interruption loses at most one chunk instead of the whole run.
+CHUNK_SIZE = 1000
+
 
 async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = None,
                                              county: str = None, no_eircode: bool = False,
@@ -518,40 +522,66 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         await pool.close()
         pool = None
 
-        async with httpx.AsyncClient() as client:
-            results = await batch_geocode_mapbox(properties, None, client, rk_centroids=rk_centroids)
-
-        if not dry_run:
-            pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3)
-
-        # Process results
+        # Geocode and persist in chunks. Previously the whole batch was geocoded into
+        # memory and written only at the very end, so any interruption (crash, Supabase
+        # disconnect, machine sleep) threw away EVERY geocode — and the Mapbox spend with
+        # it. Persisting each chunk as it completes caps the loss to at most one chunk.
         success_count = 0
         failed_count = 0
+        written = 0
         quality_scores = []
+        total = len(properties)
+        n_chunks = (total + CHUNK_SIZE - 1) // CHUNK_SIZE
 
-        for prop_id, lat, lon, quality_score in results:
-            if lat and lon and quality_score >= 70:
-                success_count += 1
-                quality_scores.append(quality_score)
+        async with httpx.AsyncClient() as client:
+            for ci, start in enumerate(range(0, total, CHUNK_SIZE), 1):
+                chunk = properties[start:start + CHUNK_SIZE]
+                print(f"\n--- Chunk {ci}/{n_chunks}: properties {start + 1:,}–{start + len(chunk):,} of {total:,} ---")
+                results = await batch_geocode_mapbox(chunk, None, client, rk_centroids=rk_centroids)
 
-                if not dry_run:
-                    await pool.execute("""
-                        UPDATE properties
-                        SET latitude = $1, longitude = $2,
-                            geog = ST_MakePoint($2, $1)::geography,
-                            needs_geocoding = FALSE,
-                            geocode_suspect = FALSE
-                        WHERE id = $3
-                    """, lat, lon, prop_id)
-            else:
-                failed_count += 1
+                # Tally this chunk and collect the rows to persist.
+                chunk_updates = []
+                for prop_id, lat, lon, quality_score in results:
+                    if lat and lon and quality_score >= 70:
+                        success_count += 1
+                        quality_scores.append(quality_score)
+                        chunk_updates.append((lat, lon, prop_id))
+                    else:
+                        failed_count += 1
+
+                # Persist immediately with a short-lived pool (opened only for the write
+                # so no idle connection is held across the next chunk's long geocode).
+                if not dry_run and chunk_updates:
+                    pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3)
+                    try:
+                        await pool.executemany("""
+                            UPDATE properties
+                            SET latitude = $1, longitude = $2,
+                                geog = ST_MakePoint($2, $1)::geography,
+                                needs_geocoding = FALSE,
+                                geocode_suspect = FALSE
+                            WHERE id = $3
+                        """, chunk_updates)
+                        written += len(chunk_updates)
+                        print(f"  💾 Saved {len(chunk_updates):,} geocodes this chunk "
+                              f"(total saved: {written:,})")
+                    except Exception as e:
+                        # Don't let one failed write abort the whole run — later chunks
+                        # can still save. These properties stay flagged for a re-run.
+                        print(f"  ⚠️  Chunk write failed ({e}); {len(chunk_updates):,} "
+                              f"geocodes not saved, will remain flagged for re-run")
+                    finally:
+                        await pool.close()
+                        pool = None
 
         print(f"\n{'='*70}")
         print(f"COMPLETE")
         print(f"{'='*70}")
-        print(f"Processed: {len(results):,}")
-        print(f"✓ Success: {success_count:,} ({100*success_count/len(results):.1f}%)")
+        print(f"Processed: {total:,}")
+        print(f"✓ Success: {success_count:,} ({100*success_count/total:.1f}%)" if total else "✓ Success: 0")
         print(f"✗ Failed: {failed_count:,}")
+        if not dry_run:
+            print(f"💾 Saved to database: {written:,}")
 
         if quality_scores:
             avg_quality = sum(quality_scores) / len(quality_scores)
