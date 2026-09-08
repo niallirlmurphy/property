@@ -20,13 +20,16 @@ from bs4 import BeautifulSoup
 load_dotenv('backend/.env')
 DATABASE_URL = os.getenv('DATABASE_URL')
 
-# Supabase periodically drops long-running connections (SSL SYSCALL error: EOF
-# detected / server closed the connection unexpectedly). Each DB helper below
-# opens its own fresh connection, so retrying the whole call transparently
-# reconnects. Without this a single transient blip during a multi-hour run
-# raised and killed the entire batch, losing the remaining work.
-DB_RETRY_ATTEMPTS = 4
-DB_RETRY_BACKOFF = 3  # seconds, grows linearly per attempt
+# DB writes can fail two ways during a multi-hour run: Supabase drops a
+# long/idle connection (SSL SYSCALL error: EOF), or this machine briefly loses
+# network/DNS entirely (No route to host / could not translate host name —
+# WiFi sleep, VPN drop). Each helper opens its own fresh connection, so retrying
+# the whole call transparently reconnects. The backoff is deliberately patient
+# (exponential, ~2.5 min total) so a short network outage is ridden out rather
+# than killing the batch and losing the remaining work.
+DB_RETRY_ATTEMPTS = 6
+DB_RETRY_BASE = 5     # seconds; wait = min(BASE * 2**(attempt-1), CAP)
+DB_RETRY_CAP = 120    # cap any single wait
 
 
 def with_db_retry(fn):
@@ -44,8 +47,8 @@ def with_db_retry(fn):
                 last = e
                 if attempt == DB_RETRY_ATTEMPTS:
                     break
-                wait = DB_RETRY_BACKOFF * attempt
-                print(f"  ⏳ DB connection error ({e.__class__.__name__}); "
+                wait = min(DB_RETRY_BASE * (2 ** (attempt - 1)), DB_RETRY_CAP)
+                print(f"  ⏳ DB/network error ({e.__class__.__name__}); "
                       f"reconnecting, retry {attempt}/{DB_RETRY_ATTEMPTS - 1} in {wait}s")
                 time.sleep(wait)
         raise last
