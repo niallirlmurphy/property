@@ -2,6 +2,6 @@ User-agent: *
 Allow: /
 
 # Block internal/admin tools
-Disallow: /manual-geocode
+Disallow: /geocodes
 
 Sitemap: https://homeiq.ie/sitemap.xml

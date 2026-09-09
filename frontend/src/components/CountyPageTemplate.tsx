@@ -20,15 +20,27 @@ function formatPrice(n: number | null) {
   return "€" + Math.round(n).toLocaleString("en-IE");
 }
 
+// Eager glob: county stats/trends/recent-sales are bundled so custom-template
+// counties (Cork/Galway) render their full content into static HTML at SSG
+// prerender time. Without this the stats block was client-fetched and gated
+// behind `{data && …}`, so crawlers saw an almost-empty page.
+const COUNTY_DATA = import.meta.glob<{ default: CountySummary }>("../data/counties/*.json", { eager: true });
+
+function bakedCounty(slug: string): CountySummary | undefined {
+  return COUNTY_DATA[`../data/counties/${slug}.json`]?.default;
+}
+
 interface CountyPageTemplateProps {
   content: CountyContent;
 }
 
 export default function CountyPageTemplate({ content }: CountyPageTemplateProps) {
-  const [data, setData] = useState<CountySummary | null>(null);
-  const [loading, setLoading] = useState(true);
+  const slug = countySlug(content.name);
+  const baked = bakedCounty(slug);
+  const [fetched, setFetched] = useState<CountySummary | null>(null);
+  const data = baked ?? fetched;
+  const [loading, setLoading] = useState(!baked);
   const [error, setError] = useState<string | null>(null);
-  const [usingCache, setUsingCache] = useState(false);
 
   // SEO meta tags
   const meta = usePageMeta(content.metaTitle, content.metaDescription, [
@@ -37,28 +49,24 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
   ]);
 
   useEffect(() => {
-    // Try to get cached data first
+    if (baked) return;   // fully baked at build time; no cache/fetch needed
+
+    // localStorage cache, then a live API fallback.
     const cached = getCachedCountyData(content.name);
-
     if (cached) {
-      // Use cached data immediately
-      setData(cached);
+      setFetched(cached);
       setLoading(false);
-      setUsingCache(true);
     } else {
-      // No cache or expired - fetch from API
       setLoading(true);
-      setUsingCache(false);
-
       fetchCountySummary(content.name)
         .then((freshData) => {
-          setData(freshData);
-          // Save to cache for next time
+          setFetched(freshData);
           setCachedCountyData(content.name, freshData);
         })
         .catch((e) => setError(e.message))
         .finally(() => setLoading(false));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [content.name]);
 
   const latestTrend = data?.trends[data.trends.length - 1];

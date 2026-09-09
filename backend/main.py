@@ -240,6 +240,17 @@ TREND_MIN_PRICE = 10_000
 TREND_MAX_PRICE = 20_000_000
 TREND_PRICE_FILTER = f"price >= {TREND_MIN_PRICE} AND price <= {TREND_MAX_PRICE}"
 
+# Multi-unit/portfolio sales (e.g. "Apartments 1-10", "Units 1 to 76") record many
+# dwellings at one combined price that sits inside the price band above, so they
+# survive TREND_PRICE_FILTER and badly skew the median in low-volume areas/years
+# (e.g. a single €3.9M "Apt 1-10" row pushing an area's median to ~€1M). Exclude
+# these address ranges from aggregates — the same rule the price-growth heatmap
+# uses. Row-listing queries (search, alerts) are NOT filtered by this.
+BULK_ADDR_RE = r"[0-9]+ *(-|to) *[0-9]+"
+BULK_ADDR_FILTER = (
+    f"(address_normalized IS NULL OR address_normalized !~* '{BULK_ADDR_RE}')"
+)
+
 
 async def _heartbeat_loop():
     """Ping the DB if there has been no activity for _HEARTBEAT_INTERVAL seconds.
@@ -1621,7 +1632,7 @@ async def trends(
         }
         return SafeJSONResponse(content=cached, headers=headers)
 
-    filters = ["not_full_market_price = FALSE", TREND_PRICE_FILTER]
+    filters = ["not_full_market_price = FALSE", TREND_PRICE_FILTER, BULK_ADDR_FILTER]
     params: list = []
     idx = 1
 
@@ -1739,6 +1750,7 @@ async def eircode_search(
         WHERE {where}
           AND not_full_market_price = FALSE
           AND {TREND_PRICE_FILTER}
+          AND {BULK_ADDR_FILTER}
     """, *params)
 
     result = {

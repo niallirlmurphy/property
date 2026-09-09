@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
+import { Head } from "vite-react-ssg";
 import { usePageMeta } from "../hooks/usePageMeta";
 import WaffleMenu from "../components/WaffleMenu";
 import Footer from "../components/Footer";
@@ -49,9 +50,33 @@ export default function BlogPostPage() {
     [{ name: "Blog", url: "/blog" }]
   );
 
+  // BlogPosting structured data for rich results (Google Article eligibility).
+  const articleJson = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: { "@type": "Organization", name: post.author, url: "https://homeiq.ie" },
+    publisher: {
+      "@type": "Organization",
+      name: "HomeIQ",
+      url: "https://homeiq.ie",
+      logo: { "@type": "ImageObject", url: "https://homeiq.ie/images/ppr-og-image.jpg" },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://homeiq.ie/blog/${post.slug}` },
+    image: "https://homeiq.ie/images/ppr-og-image.jpg",
+    keywords: post.tags.join(", "),
+  });
+
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#f8f9fa" }}>
       {meta}
+      <Head>
+        <meta property="og:type" content="article" />
+        <script type="application/ld+json">{articleJson}</script>
+      </Head>
       <WaffleMenu />
 
       {/* Header */}
