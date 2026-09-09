@@ -1,0 +1,201 @@
+{
+  "slug": "grosvenor-road-rathgar",
+  "stats": {
+    "count": 13,
+    "median": 1650000,
+    "avg": 1874346,
+    "min": 780000,
+    "max": 3220000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 780000,
+      "avg_price": 780000,
+      "min_price": 780000,
+      "max_price": 780000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1450000,
+      "avg_price": 1450000,
+      "min_price": 1450000,
+      "max_price": 1450000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1685000,
+      "avg_price": 1685000,
+      "min_price": 1685000,
+      "max_price": 1685000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1440000,
+      "avg_price": 1440000,
+      "min_price": 1230000,
+      "max_price": 1650000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 2300000,
+      "avg_price": 2300000,
+      "min_price": 2300000,
+      "max_price": 2300000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2750000,
+      "avg_price": 2750000,
+      "min_price": 2750000,
+      "max_price": 2750000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 1900750,
+      "avg_price": 1900750,
+      "min_price": 1250000,
+      "max_price": 2551501
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1550000,
+      "avg_price": 1550000,
+      "min_price": 1550000,
+      "max_price": 1550000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 1975000,
+      "avg_price": 1975000,
+      "min_price": 1600000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 3220000,
+      "avg_price": 3220000,
+      "min_price": 3220000,
+      "max_price": 3220000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-08",
+      "address": "71 GROSVENOR RD, RATHGAR, DUBLIN 6",
+      "price": 3220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06XN56"
+    },
+    {
+      "date": "2024-12-19",
+      "address": "35 GROSVENOR RD, RATHGAR, DUBLIN 6",
+      "price": 1600000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06PK54"
+    },
+    {
+      "date": "2024-05-09",
+      "address": "28 GROSVENOR RD, RATHGAR, DUBLIN 6",
+      "price": 2350000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D06FP99"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "42 GROSVENOR RD, RATHGAR, DUBLIN",
+      "price": 1550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06HX95"
+    },
+    {
+      "date": "2022-12-15",
+      "address": "52 GROSVENOR RD, RATHGAR, DUBLIN 6",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-30",
+      "address": "59 GROSVENOR RD, RATHGAR, DUBLIN 6",
+      "price": 2551501,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06DP40"
+    },
+    {
+      "date": "2021-11-15",
+      "address": "19 GROSVENOR RD, RATHGAR, DUBLIN 6",
+      "price": 2750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06Y523"
+    },
+    {
+      "date": "2019-11-29",
+      "address": "59 GROSVENOR RD, RATHGAR, DUBLIN 6",
+      "price": 2300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06DP40"
+    },
+    {
+      "date": "2017-08-08",
+      "address": "68 GROSVENOR RD, RATHGAR, DUBLIN",
+      "price": 1650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-16",
+      "address": "32 GROSVENOR RD, RATHGAR, DUBLIN 6",
+      "price": 1230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-06-30",
+      "address": "50 GROSVENOR RD, RATHGAR, DUBLIN 6",
+      "price": 1685000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-19",
+      "address": "16 Grosvenor Road, Rathgar",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-04-02",
+      "address": "32 Grosvenor Road, Rathgar",
+      "price": 780000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 13
+}

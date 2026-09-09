@@ -1,0 +1,145 @@
+{
+  "slug": "morehampton-road-dublin-4",
+  "stats": {
+    "count": 8,
+    "median": 1500000,
+    "avg": 1595375,
+    "min": 1070000,
+    "max": 2680000,
+    "firstYear": 2014,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1125000,
+      "avg_price": 1125000,
+      "min_price": 1125000,
+      "max_price": 1125000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1200000,
+      "avg_price": 1200000,
+      "min_price": 1200000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1070000,
+      "avg_price": 1070000,
+      "min_price": 1070000,
+      "max_price": 1070000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 2680000,
+      "avg_price": 2680000,
+      "min_price": 2680000,
+      "max_price": 2680000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2188000,
+      "avg_price": 2188000,
+      "min_price": 2188000,
+      "max_price": 2188000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-09-24",
+      "address": "7 Morehampton Road, Dublin 4",
+      "price": 2188000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04A7P8"
+    },
+    {
+      "date": "2024-03-11",
+      "address": "32 MOREHAMPTON ROAD, DUBLIN 4",
+      "price": 1500000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D04K6N6"
+    },
+    {
+      "date": "2019-11-29",
+      "address": "APT 1 44, MOREHAMPTON RD, DUBLIN 4",
+      "price": 2680000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-05-28",
+      "address": "129 MOREHAMPTON RD, DUBLIN 4",
+      "price": 1070000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-23",
+      "address": "APT 1 44, MOREHAMPTON RD, DUBLIN 4",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2016-12-14",
+      "address": "14 MOREHAMPTON RD, DUBLIN 4, DUBLIN",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-23",
+      "address": "15 MOREHAMPTON RD, DUBLIN 4, DUBLIN",
+      "price": 1125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-08-29",
+      "address": "7  Morehampton Road, Dublin 4",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A7P8"
+    }
+  ],
+  "totalTransactions": 8
+}

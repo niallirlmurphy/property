@@ -422,19 +422,19 @@
     },
     {
       "date": "2023-09-05",
-      "address": "14 Oldtown Woods, Celbridge",
-      "price": 422906,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-05",
       "address": "241 Oldtown Woods, Celbridge",
       "price": 308370,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "W23V40V"
+    },
+    {
+      "date": "2023-09-05",
+      "address": "14 Oldtown Woods, Celbridge",
+      "price": 422906,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2023-08-30",

@@ -7,7 +7,7 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 457000.0,
+  "median_price": 455000.0,
   "avg_price": 549157,
   "min_year": 2010,
   "max_year": 2026,
@@ -62,8 +62,8 @@
       "latitude": 53.218857,
       "longitude": -6.639471,
       "routing_key": "W91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "detached",
       "distance_m": 1232.91615281
     },
     {
@@ -117,7 +117,7 @@
       "longitude": -6.677727,
       "routing_key": "W91",
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "apartment",
       "distance_m": 1394.40546003
     },
     {
@@ -135,7 +135,7 @@
       "longitude": -6.66852,
       "routing_key": null,
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "detached",
       "distance_m": 975.29659724
     },
     {
@@ -170,8 +170,8 @@
       "latitude": 53.222732,
       "longitude": -6.660504,
       "routing_key": "W91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 6,
+      "property_type": "detached",
       "distance_m": 250.04679234
     },
     {
@@ -188,8 +188,8 @@
       "latitude": 53.238816,
       "longitude": -6.659786,
       "routing_key": "W91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 1937.21536938
     }
   ],
@@ -252,25 +252,25 @@
     },
     {
       "year": 2017,
-      "count": 173,
+      "count": 175,
       "median_price": 300000.0,
-      "avg_price": 303525.0,
+      "avg_price": 303530.0,
       "min_price": 37000.0,
       "max_price": 745000.0
     },
     {
       "year": 2018,
-      "count": 237,
-      "median_price": 312775.0,
-      "avg_price": 321254.0,
+      "count": 245,
+      "median_price": 310000.0,
+      "avg_price": 320347.0,
       "min_price": 145000.0,
       "max_price": 1090000.0
     },
     {
       "year": 2019,
-      "count": 289,
+      "count": 290,
       "median_price": 290000.0,
-      "avg_price": 293228.0,
+      "avg_price": 293250.0,
       "min_price": 80000.0,
       "max_price": 700000.0
     },
@@ -284,49 +284,49 @@
     },
     {
       "year": 2021,
-      "count": 329,
+      "count": 333,
       "median_price": 317181.0,
-      "avg_price": 340990.0,
+      "avg_price": 340449.0,
       "min_price": 90000.0,
       "max_price": 1953261.67
     },
     {
       "year": 2022,
-      "count": 332,
-      "median_price": 374449.0,
-      "avg_price": 405058.0,
+      "count": 335,
+      "median_price": 374448.0,
+      "avg_price": 404059.0,
       "min_price": 160000.0,
       "max_price": 4048639.65
     },
     {
       "year": 2023,
-      "count": 259,
-      "median_price": 370000.0,
-      "avg_price": 398698.0,
+      "count": 261,
+      "median_price": 365000.0,
+      "avg_price": 397955.0,
       "min_price": 130000.0,
       "max_price": 2860000.0
     },
     {
       "year": 2024,
-      "count": 253,
-      "median_price": 430000.0,
-      "avg_price": 452551.0,
+      "count": 255,
+      "median_price": 428770.0,
+      "avg_price": 451268.0,
       "min_price": 20000.0,
       "max_price": 2500000.0
     },
     {
       "year": 2025,
-      "count": 250,
-      "median_price": 450000.0,
-      "avg_price": 470024.0,
+      "count": 261,
+      "median_price": 440529.0,
+      "avg_price": 462745.0,
       "min_price": 70000.0,
       "max_price": 1368610.0
     },
     {
       "year": 2026,
-      "count": 127,
-      "median_price": 457000.0,
-      "avg_price": 479560.0,
+      "count": 129,
+      "median_price": 455000.0,
+      "avg_price": 476614.0,
       "min_price": 130000.0,
       "max_price": 1050000.0
     }

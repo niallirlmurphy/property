@@ -1,0 +1,289 @@
+{
+  "slug": "abington-malahide",
+  "stats": {
+    "count": 21,
+    "median": 1800000,
+    "avg": 1888559,
+    "min": 1300000,
+    "max": 2900000,
+    "firstYear": 2010,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1363636,
+      "avg_price": 1363636,
+      "min_price": 1363636,
+      "max_price": 1363636
+    },
+    {
+      "year": 2012,
+      "count": 4,
+      "median_price": 1428056,
+      "avg_price": 1489028,
+      "min_price": 1300000,
+      "max_price": 1800000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1655000,
+      "avg_price": 1655000,
+      "min_price": 1655000,
+      "max_price": 1655000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 2450000,
+      "avg_price": 2450000,
+      "min_price": 2450000,
+      "max_price": 2450000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1700000,
+      "avg_price": 1700000,
+      "min_price": 1700000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 2000000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 2550000,
+      "avg_price": 2550000,
+      "min_price": 2550000,
+      "max_price": 2550000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1325000,
+      "avg_price": 1325000,
+      "min_price": 1325000,
+      "max_price": 1325000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2350000,
+      "avg_price": 2350000,
+      "min_price": 2350000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 1600000,
+      "avg_price": 1720000,
+      "min_price": 1575000,
+      "max_price": 1985000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 2137500,
+      "avg_price": 2137500,
+      "min_price": 2100000,
+      "max_price": 2175000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 2587500,
+      "avg_price": 2587500,
+      "min_price": 2275000,
+      "max_price": 2900000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 1850000,
+      "avg_price": 1850000,
+      "min_price": 1450000,
+      "max_price": 2250000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-02-18",
+      "address": "12 ABINGTON, MALAHIDE, CO DUBLIN",
+      "price": 1450000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "K36NT72"
+    },
+    {
+      "date": "2025-02-13",
+      "address": "32 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 2250000,
+      "bedrooms": 6,
+      "propertyType": "detached",
+      "eircode": "K36D998"
+    },
+    {
+      "date": "2024-12-13",
+      "address": "26 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 2900000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "K36YX90"
+    },
+    {
+      "date": "2024-03-25",
+      "address": "47 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 2275000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "K36K227"
+    },
+    {
+      "date": "2023-11-21",
+      "address": "32 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 2100000,
+      "bedrooms": 6,
+      "propertyType": "detached",
+      "eircode": "K36D998"
+    },
+    {
+      "date": "2023-02-24",
+      "address": "45 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 2175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36AW89"
+    },
+    {
+      "date": "2022-07-01",
+      "address": "15 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36DW93"
+    },
+    {
+      "date": "2022-04-27",
+      "address": "48 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 1985000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36E335"
+    },
+    {
+      "date": "2022-01-20",
+      "address": "13 ABINGTON, MALAHIDE, CO. DUBLIN",
+      "price": 1575000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36X611"
+    },
+    {
+      "date": "2021-07-16",
+      "address": "17 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36PC59"
+    },
+    {
+      "date": "2019-12-19",
+      "address": "11 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 1325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-21",
+      "address": "49 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 2550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-22",
+      "address": "42 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-11-19",
+      "address": "27 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-09",
+      "address": "50 ABINGTON, MALAHIDE, DUBLIN",
+      "price": 2450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-10-31",
+      "address": "34 Abington, Malahide",
+      "price": 1655000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-11-02",
+      "address": "20 Abington, Malahide",
+      "price": 1431111,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-07-17",
+      "address": "44 Abington, Malahide",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-05-21",
+      "address": "50 Abington, Malahide",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-01-12",
+      "address": "28  Abington, Malahide",
+      "price": 1425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-10-15",
+      "address": "45 Abington, Malahide",
+      "price": 1363636,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 21
+}

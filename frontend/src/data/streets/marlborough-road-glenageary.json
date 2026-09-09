@@ -1,0 +1,145 @@
+{
+  "slug": "marlborough-road-glenageary",
+  "stats": {
+    "count": 9,
+    "median": 1750000,
+    "avg": 2700972,
+    "min": 1453744,
+    "max": 6500000,
+    "firstYear": 2013,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1700000,
+      "avg_price": 1700000,
+      "min_price": 1700000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 1650000,
+      "avg_price": 1650000,
+      "min_price": 1550000,
+      "max_price": 1750000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1580000,
+      "avg_price": 1580000,
+      "min_price": 1580000,
+      "max_price": 1580000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1975000,
+      "avg_price": 1975000,
+      "min_price": 1975000,
+      "max_price": 1975000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1453744,
+      "avg_price": 1453744,
+      "min_price": 1453744,
+      "max_price": 1453744
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 6500000,
+      "avg_price": 6500000,
+      "min_price": 6500000,
+      "max_price": 6500000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 3900000,
+      "avg_price": 3900000,
+      "min_price": 3200000,
+      "max_price": 4600000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-08-16",
+      "address": "3 MARLBOROUGH RD, GLENAGEARY, DUBLIN",
+      "price": 4600000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "A96Y0T0"
+    },
+    {
+      "date": "2024-05-31",
+      "address": "11 MARLBOROUGH RD, GLENAGEARY, DUBLIN",
+      "price": 3200000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A96T6N7"
+    },
+    {
+      "date": "2023-01-12",
+      "address": "8 MARLBOROUGH RD, GLENAGEARY, DUBLIN",
+      "price": 6500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96X2X3"
+    },
+    {
+      "date": "2021-10-20",
+      "address": "23B Marlborough Road, Glenageary, County Dublin",
+      "price": 1453744,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-30",
+      "address": "27 MARLBOROUGH RD, GLENAGEARY, DUBLIN",
+      "price": 1975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-14",
+      "address": "16 MARLBOROUGH RD, GLENAGEARY, DUN LAOGHAIRE",
+      "price": 1580000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-15",
+      "address": "23 MARLBOROUGH RD, GLENAGEARY, DUBLIN",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-29",
+      "address": "12 MARLBOROUGH RD, GLENAGEARY, DUBLIN",
+      "price": 1550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-11-12",
+      "address": "20 Marlborough Road, Glenageary, Co. Dublin",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

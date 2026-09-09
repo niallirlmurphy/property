@@ -1,0 +1,161 @@
+{
+  "slug": "dartry-park-dartry",
+  "stats": {
+    "count": 10,
+    "median": 1530000,
+    "avg": 1492500,
+    "min": 860000,
+    "max": 1800000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 860000,
+      "avg_price": 860000,
+      "min_price": 860000,
+      "max_price": 860000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1325000,
+      "avg_price": 1325000,
+      "min_price": 1325000,
+      "max_price": 1325000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1435000,
+      "avg_price": 1435000,
+      "min_price": 1435000,
+      "max_price": 1435000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1315000,
+      "avg_price": 1315000,
+      "min_price": 1315000,
+      "max_price": 1315000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1512500,
+      "avg_price": 1512500,
+      "min_price": 1400000,
+      "max_price": 1625000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1717500,
+      "avg_price": 1717500,
+      "min_price": 1710000,
+      "max_price": 1725000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1800000,
+      "avg_price": 1800000,
+      "min_price": 1800000,
+      "max_price": 1800000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1730000,
+      "avg_price": 1730000,
+      "min_price": 1730000,
+      "max_price": 1730000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-04-10",
+      "address": "20 DARTRY PARK, DARTRY, DUBLIN 6",
+      "price": 1730000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D06HR53"
+    },
+    {
+      "date": "2025-06-19",
+      "address": "13 DARTRY PARK, DARTRY, DUBLIN 6",
+      "price": 1800000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D06EF96"
+    },
+    {
+      "date": "2021-08-26",
+      "address": "4 DARTRY PARK, DARTRY, DUBLIN 6",
+      "price": 1710000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06KW11"
+    },
+    {
+      "date": "2021-04-14",
+      "address": "7 DARTRY PARK, DARTRY, DUBLIN 6",
+      "price": 1725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06PP86"
+    },
+    {
+      "date": "2019-08-28",
+      "address": "7 DARTRY PARK, DARTRY, DUBLIN 6",
+      "price": 1625000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06PP86"
+    },
+    {
+      "date": "2019-05-30",
+      "address": "8 DARTRY PARK, DARTRY, DUBLIN 6",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-16",
+      "address": "22 DARTRY PARK, DARTRY, DUBLIN 6",
+      "price": 1315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-25",
+      "address": "6 Dartry Park, Dartry, Dublin 6",
+      "price": 1435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-10-30",
+      "address": "14 Dartry Park, Dartry, Dublin 6",
+      "price": 1325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-03-30",
+      "address": "23 Dartry Park, Dartry, Dublin 6",
+      "price": 860000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

@@ -1,0 +1,217 @@
+{
+  "slug": "woodlands-park-blackrock",
+  "stats": {
+    "count": 16,
+    "median": 1500000,
+    "avg": 1902513,
+    "min": 792000,
+    "max": 4150000,
+    "firstYear": 2015,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 2050000,
+      "avg_price": 2050000,
+      "min_price": 2050000,
+      "max_price": 2050000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 1950000,
+      "avg_price": 1850000,
+      "min_price": 1000000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 860000,
+      "avg_price": 900667,
+      "min_price": 792000,
+      "max_price": 1050000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 4000000,
+      "avg_price": 4000000,
+      "min_price": 4000000,
+      "max_price": 4000000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1225000,
+      "avg_price": 1225000,
+      "min_price": 850000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 4150000,
+      "avg_price": 4150000,
+      "min_price": 4150000,
+      "max_price": 4150000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 3225000,
+      "avg_price": 3225000,
+      "min_price": 3225000,
+      "max_price": 3225000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 1725000,
+      "avg_price": 1725000,
+      "min_price": 1250000,
+      "max_price": 2200000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1013216,
+      "avg_price": 1013216,
+      "min_price": 1013216,
+      "max_price": 1013216
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-29",
+      "address": "19 woodlands park, blackrock",
+      "price": 1013216,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-11-04",
+      "address": "16A WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 1250000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "A94HF96"
+    },
+    {
+      "date": "2025-08-25",
+      "address": "39 WOODLANDS PARK, BLACKROCK, CO DUBLIN",
+      "price": 2200000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A94W279"
+    },
+    {
+      "date": "2023-10-17",
+      "address": "7 WOODLANDS PARK, BLACKROCK, CO DUBLIN",
+      "price": 3225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94V447"
+    },
+    {
+      "date": "2022-11-16",
+      "address": "45 WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 4150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94F248"
+    },
+    {
+      "date": "2021-11-26",
+      "address": "50 WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94HF58"
+    },
+    {
+      "date": "2021-07-27",
+      "address": "3 WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94FW73"
+    },
+    {
+      "date": "2018-08-31",
+      "address": "45 WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 4000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94F248"
+    },
+    {
+      "date": "2017-08-29",
+      "address": "16 WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-12",
+      "address": "20A WOODLANDS PK, BLACKROCK, DUBLIN",
+      "price": 792000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-02",
+      "address": "17A WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 860000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-20",
+      "address": "2 WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-09",
+      "address": "29 WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-22",
+      "address": "21 WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-03-09",
+      "address": "1 WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-01",
+      "address": "38 WOODLANDS PARK, BLACKROCK, DUBLIN",
+      "price": 2050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 16
+}

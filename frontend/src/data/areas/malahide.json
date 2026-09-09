@@ -8,7 +8,7 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 450000.0,
-  "avg_price": 546615,
+  "avg_price": 547056,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -44,8 +44,8 @@
       "latitude": 53.408386,
       "longitude": -6.180846,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "house",
       "distance_m": 1600.16207191
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 53.400646,
       "longitude": -6.169779,
       "routing_key": "D13",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1633.80707404
     },
     {
@@ -157,12 +157,12 @@
       "distance_m": 1429.33070503
     },
     {
-      "id": 797349,
+      "id": 797356,
       "sale_date": "2026-06-29",
-      "address": "3 Newenham Terrace, Belcamp, Malahide Road",
+      "address": "4 Newenham Terrace, Belcamp, Malahide Road",
       "county": "Dublin",
       "eircode": null,
-      "price": 488986.78,
+      "price": 493392.07,
       "not_full_market_price": false,
       "vat_exclusive": true,
       "description": "New Dwelling house /Apartment",
@@ -236,17 +236,17 @@
     },
     {
       "year": 2015,
-      "count": 24,
+      "count": 25,
       "median_price": 132787.0,
-      "avg_price": 140426.0,
+      "avg_price": 145889.0,
       "min_price": 106230.0,
       "max_price": 295000.0
     },
     {
       "year": 2016,
-      "count": 13,
-      "median_price": 283700.0,
-      "avg_price": 306314.0,
+      "count": 14,
+      "median_price": 285022.0,
+      "avg_price": 305359.0,
       "min_price": 160000.0,
       "max_price": 950000.0
     },
@@ -260,9 +260,9 @@
     },
     {
       "year": 2018,
-      "count": 41,
+      "count": 43,
       "median_price": 359024.0,
-      "avg_price": 433248.0,
+      "avg_price": 425796.0,
       "min_price": 185000.0,
       "max_price": 969163.0
     },

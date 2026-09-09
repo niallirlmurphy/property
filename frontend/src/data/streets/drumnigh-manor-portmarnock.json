@@ -1,9 +1,9 @@
 {
   "slug": "drumnigh-manor-portmarnock",
   "stats": {
-    "count": 226,
-    "median": 557269,
-    "avg": 576942,
+    "count": 227,
+    "median": 559471,
+    "avg": 578431,
     "min": 435770,
     "max": 969163,
     "firstYear": 2019,
@@ -68,14 +68,22 @@
     },
     {
       "year": 2026,
-      "count": 3,
-      "median_price": 765000,
-      "avg_price": 751000,
+      "count": 4,
+      "median_price": 768500,
+      "avg_price": 792000,
       "min_price": 716000,
-      "max_price": 772000
+      "max_price": 915000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-07-31",
+      "address": "47 DRUMNIGH MANOR, PORTMARNOCK, DUBLIN 24",
+      "price": 915000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D13XNR0"
+    },
     {
       "date": "2026-07-01",
       "address": "26 DRUMNIGH MANOR, PORTMARNOCK, DUBLIN",
@@ -467,15 +475,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D13YE0Y"
-    },
-    {
-      "date": "2024-04-04",
-      "address": "266 Drumnigh Manor, Portmarnock, County Dublin",
-      "price": 594714,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 226
+  "totalTransactions": 227
 }

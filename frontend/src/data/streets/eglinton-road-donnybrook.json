@@ -246,14 +246,6 @@
     },
     {
       "date": "2017-11-03",
-      "address": "5 EGLINTON RD, DONNYBROOK, DUBLIN 4",
-      "price": 3520000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-11-03",
       "address": "7 EGLINTON RD, DONNYBROOK, DUBLIN 4",
       "price": 3520000,
       "bedrooms": null,
@@ -269,9 +261,25 @@
       "eircode": null
     },
     {
+      "date": "2017-11-03",
+      "address": "5 EGLINTON RD, DONNYBROOK, DUBLIN 4",
+      "price": 3520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2017-06-27",
       "address": "4 EGLINTON RD, DONNYBROOK, DUBLIN 4",
       "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-21",
+      "address": "9 EGLINTON ROAD, DONNYBROOK, DUBLIN 4",
+      "price": 1400000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -288,14 +296,6 @@
       "date": "2017-06-21",
       "address": "3 EGLINTON RD, DONNYBROOK, DUBLIN 4",
       "price": 1200000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-06-21",
-      "address": "9 EGLINTON ROAD, DONNYBROOK, DUBLIN 4",
-      "price": 1400000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

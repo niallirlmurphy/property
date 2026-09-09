@@ -2,8 +2,8 @@
   "name": "Athenry, Galway",
   "slug": "athenry",
   "center": {
-    "lat": 53.301501,
-    "lon": -8.7485558
+    "lat": 53.3014446,
+    "lon": -8.7489089
   },
   "radius_km": 2.0,
   "total_count": 10,
@@ -26,9 +26,9 @@
       "latitude": 53.3073,
       "longitude": -8.755531,
       "routing_key": "H65",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 795.44888169
+      "bedrooms": 4,
+      "property_type": "semi-detached",
+      "distance_m": 787.11085023
     },
     {
       "id": 800514,
@@ -44,9 +44,9 @@
       "latitude": 53.29441,
       "longitude": -8.748372,
       "routing_key": "H65",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 789.26580492
+      "bedrooms": 3,
+      "property_type": "apartment",
+      "distance_m": 783.71177561
     },
     {
       "id": 798829,
@@ -64,7 +64,7 @@
       "routing_key": "H65",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1450.58423425
+      "distance_m": 1470.22750455
     },
     {
       "id": 790947,
@@ -82,7 +82,7 @@
       "routing_key": "H65",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 171.5912695
+      "distance_m": 154.51364574
     },
     {
       "id": 797856,
@@ -100,25 +100,7 @@
       "routing_key": "H65",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 450.69268059
-    },
-    {
-      "id": 788121,
-      "sale_date": "2026-06-23",
-      "address": "13 THE CLARIN, ATHENRY, GALWAY",
-      "county": "Galway",
-      "eircode": "H65TP62",
-      "price": 220000.0,
-      "not_full_market_price": true,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.29441,
-      "longitude": -8.748372,
-      "routing_key": "H65",
-      "bedrooms": null,
-      "property_type": "apartment",
-      "distance_m": 789.26580492
+      "distance_m": 463.4960937
     },
     {
       "id": 797011,
@@ -136,7 +118,25 @@
       "routing_key": "H65",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 789.26580492
+      "distance_m": 783.71177561
+    },
+    {
+      "id": 788121,
+      "sale_date": "2026-06-23",
+      "address": "13 THE CLARIN, ATHENRY, GALWAY",
+      "county": "Galway",
+      "eircode": "H65TP62",
+      "price": 220000.0,
+      "not_full_market_price": true,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.29441,
+      "longitude": -8.748372,
+      "routing_key": "H65",
+      "bedrooms": null,
+      "property_type": "apartment",
+      "distance_m": 783.71177561
     },
     {
       "id": 786468,
@@ -154,7 +154,7 @@
       "routing_key": "H65",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 549.82140223
+      "distance_m": 574.16358291
     },
     {
       "id": 796604,
@@ -172,7 +172,7 @@
       "routing_key": "H65",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 716.30257876
+      "distance_m": 719.01799356
     },
     {
       "id": 796389,
@@ -190,7 +190,7 @@
       "routing_key": "H65",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 497.82790936
+      "distance_m": 474.32465832
     }
   ],
   "trends": [
@@ -292,17 +292,17 @@
     },
     {
       "year": 2022,
-      "count": 47,
-      "median_price": 271000.0,
-      "avg_price": 278488.0,
+      "count": 48,
+      "median_price": 272000.0,
+      "avg_price": 278457.0,
       "min_price": 82500.0,
       "max_price": 630000.0
     },
     {
       "year": 2023,
-      "count": 64,
-      "median_price": 290500.0,
-      "avg_price": 288237.0,
+      "count": 65,
+      "median_price": 290000.0,
+      "avg_price": 288034.0,
       "min_price": 66666.66,
       "max_price": 468057.0
     },
@@ -316,9 +316,9 @@
     },
     {
       "year": 2025,
-      "count": 70,
+      "count": 75,
       "median_price": 378855.0,
-      "avg_price": 364885.0,
+      "avg_price": 360005.0,
       "min_price": 130000.0,
       "max_price": 546000.0
     },

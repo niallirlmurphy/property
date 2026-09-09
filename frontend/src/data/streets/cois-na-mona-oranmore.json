@@ -1,0 +1,89 @@
+{
+  "slug": "cois-na-mona-oranmore",
+  "stats": {
+    "count": 8,
+    "median": 1462500,
+    "avg": 1462500,
+    "min": 1175000,
+    "max": 1750000,
+    "firstYear": 2015,
+    "lastYear": 2015
+  },
+  "trends": [
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 1462500,
+      "avg_price": 1462500,
+      "min_price": 1175000,
+      "max_price": 1750000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2015-03-27",
+      "address": "6 COIS NA MONA, ORANMORE, GALWAY",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-27",
+      "address": "10 COIS NA MONA, ORANMORE, CO. GALWAY",
+      "price": 1175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-27",
+      "address": "9 COIS NA MONA, ORANMORE, CO GALWAY",
+      "price": 1175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-27",
+      "address": "7 COIS NA MONA, ORANMORE, CO. GALWAY",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-27",
+      "address": "12 COIS NA MONA, ORANMORE, GALWAY",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-27",
+      "address": "8 COIS NA MONA, ORANMORE, CO GALWAY",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-27",
+      "address": "3 COIS NA MONA, ORANMORE, GALWAY",
+      "price": 1175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-27",
+      "address": "11 COIS NA MONA, ORANMORE, GALWAY",
+      "price": 1175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 8
+}

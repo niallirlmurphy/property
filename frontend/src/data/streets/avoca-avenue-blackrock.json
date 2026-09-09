@@ -1,0 +1,129 @@
+{
+  "slug": "avoca-avenue-blackrock",
+  "stats": {
+    "count": 9,
+    "median": 1530000,
+    "avg": 1878833,
+    "min": 280000,
+    "max": 4355000,
+    "firstYear": 2012,
+    "lastYear": 2021
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 975000,
+      "avg_price": 975000,
+      "min_price": 975000,
+      "max_price": 975000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 1840000,
+      "avg_price": 1840000,
+      "min_price": 280000,
+      "max_price": 3400000
+    },
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 2125000,
+      "avg_price": 2826667,
+      "min_price": 2000000,
+      "max_price": 4355000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1530000,
+      "avg_price": 1530000,
+      "min_price": 1530000,
+      "max_price": 1530000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1122250,
+      "avg_price": 1122250,
+      "min_price": 909500,
+      "max_price": 1335000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2021-12-15",
+      "address": "40 AVOCA AVENUE, BLACKROCK, CO DUBLIN",
+      "price": 909500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94W211"
+    },
+    {
+      "date": "2021-02-01",
+      "address": "42 AVOCA AVE, BLACKROCK, DUBLIN",
+      "price": 1335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-26",
+      "address": "38 AVOCA AVE, BLACKROCK, DUBLIN",
+      "price": 1530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-16",
+      "address": "14 AVOCA AVE, BLACKROCK, DUBLIN",
+      "price": 4355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-06-17",
+      "address": "31 AVOCA AVE, BLACKROCK, DUBLIN",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-04-08",
+      "address": "17B AVOCA AVE, BLACKROCK, DUBLIN",
+      "price": 2125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-08",
+      "address": "3 AVOCA AVE, BLACKROCK, DUBLIN",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-11-07",
+      "address": "23 AVOCA AVE, BLACKROCK, DUBLIN",
+      "price": 3400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-01-31",
+      "address": "7 Avoca Avenue, Blackrock",
+      "price": 975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

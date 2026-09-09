@@ -1,0 +1,145 @@
+{
+  "slug": "st-thomas-road-mount-merrion",
+  "stats": {
+    "count": 9,
+    "median": 1460000,
+    "avg": 1285000,
+    "min": 650000,
+    "max": 1900000,
+    "firstYear": 2012,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 735000,
+      "avg_price": 735000,
+      "min_price": 735000,
+      "max_price": 735000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 650000,
+      "avg_price": 650000,
+      "min_price": 650000,
+      "max_price": 650000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 860000,
+      "avg_price": 860000,
+      "min_price": 860000,
+      "max_price": 860000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1190000,
+      "avg_price": 1190000,
+      "min_price": 1190000,
+      "max_price": 1190000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1490000,
+      "avg_price": 1490000,
+      "min_price": 1460000,
+      "max_price": 1520000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 1825000,
+      "avg_price": 1825000,
+      "min_price": 1750000,
+      "max_price": 1900000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-07-14",
+      "address": "14 ST THOMAS ROAD, MOUNT MERRION, BLACKROCK",
+      "price": 1750000,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "A94AE89"
+    },
+    {
+      "date": "2025-03-26",
+      "address": "32 ST THOMAS RD, MOUNT MERRION, DUBLIN",
+      "price": 1900000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A94F973"
+    },
+    {
+      "date": "2023-05-18",
+      "address": "23 ST THOMAS ROAD, MOUNT MERRION, CO DUBLIN",
+      "price": 1460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94H778"
+    },
+    {
+      "date": "2023-02-09",
+      "address": "19 ST THOMAS RD, MOUNT MERRION, DUBLIN",
+      "price": 1520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94FH75"
+    },
+    {
+      "date": "2020-10-22",
+      "address": "22 ST THOMAS RD, MOUNT MERRION, DUBLIN",
+      "price": 1190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-20",
+      "address": "26 ST THOMAS RD, MOUNT MERRION, DUBLIN",
+      "price": 860000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-05-21",
+      "address": "20 ST THOMAS RD, MOUNT MERRION, DUBLIN",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-03-27",
+      "address": "31 St Thomas Road, Mount Merrion",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-10-05",
+      "address": "4 St Thomas Road, Mount Merrion",
+      "price": 735000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

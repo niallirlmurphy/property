@@ -44,8 +44,8 @@
       "latitude": 53.283123,
       "longitude": -6.129464,
       "routing_key": "A96",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 1108.54905195
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 53.293724,
       "longitude": -6.142984,
       "routing_key": "A96",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 492.17814465
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 53.284193,
       "longitude": -6.150751,
       "routing_key": "A96",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 1332.89280444
     },
     {
@@ -98,8 +98,8 @@
       "latitude": 53.295318,
       "longitude": -6.147991,
       "routing_key": "A96",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 867.65495229
     },
     {
@@ -117,7 +117,7 @@
       "longitude": -6.114531,
       "routing_key": "A96",
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "house",
       "distance_m": 1562.95790857
     },
     {
@@ -134,8 +134,8 @@
       "latitude": 53.28186,
       "longitude": -6.122102,
       "routing_key": "A96",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "semi-detached",
       "distance_m": 1484.83136609
     },
     {
@@ -152,8 +152,8 @@
       "latitude": 53.276256,
       "longitude": -6.146804,
       "routing_key": "A96",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1923.1549503
     },
     {
@@ -170,8 +170,8 @@
       "latitude": 53.292385,
       "longitude": -6.161375,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "house",
       "distance_m": 1691.59210394
     },
     {
@@ -188,8 +188,8 @@
       "latitude": 53.2882,
       "longitude": -6.126126,
       "routing_key": "A96",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 800.2383211
     }
   ],

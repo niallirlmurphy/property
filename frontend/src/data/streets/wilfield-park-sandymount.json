@@ -1,0 +1,217 @@
+{
+  "slug": "wilfield-park-sandymount",
+  "stats": {
+    "count": 14,
+    "median": 1500000,
+    "avg": 1456786,
+    "min": 300000,
+    "max": 2600000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 300000,
+      "avg_price": 300000,
+      "min_price": 300000,
+      "max_price": 300000
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 750000,
+      "avg_price": 750000,
+      "min_price": 750000,
+      "max_price": 750000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 960000,
+      "avg_price": 960000,
+      "min_price": 960000,
+      "max_price": 960000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 600000,
+      "avg_price": 600000,
+      "min_price": 600000,
+      "max_price": 600000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1025000,
+      "avg_price": 1025000,
+      "min_price": 1025000,
+      "max_price": 1025000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1715000,
+      "avg_price": 1715000,
+      "min_price": 1580000,
+      "max_price": 1850000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 2300000,
+      "avg_price": 2300000,
+      "min_price": 2000000,
+      "max_price": 2600000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1420000,
+      "avg_price": 1420000,
+      "min_price": 1420000,
+      "max_price": 1420000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 2500000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1400000,
+      "avg_price": 1400000,
+      "min_price": 1400000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 1705000,
+      "avg_price": 1705000,
+      "min_price": 1700000,
+      "max_price": 1710000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-06",
+      "address": "23 WILFIELD PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1710000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04YP20"
+    },
+    {
+      "date": "2026-04-23",
+      "address": "10 WILFIELD PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04DT91"
+    },
+    {
+      "date": "2025-02-28",
+      "address": "44 WILFIELD PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1400000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D04AY26"
+    },
+    {
+      "date": "2024-11-15",
+      "address": "4 WILFIELD PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 2500000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04TP60"
+    },
+    {
+      "date": "2023-08-04",
+      "address": "23 WILFIELD PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1420000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04YP20"
+    },
+    {
+      "date": "2022-08-26",
+      "address": "16 WILFIELD PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 2600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04P866"
+    },
+    {
+      "date": "2022-02-28",
+      "address": "4 WILFIELD PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 2000000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04TP60"
+    },
+    {
+      "date": "2018-10-02",
+      "address": "10 WILFIELD PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04DT91"
+    },
+    {
+      "date": "2018-01-25",
+      "address": "21 WILFIELD PARK, SANDYMOUNT, DUBLIN",
+      "price": 1580000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-08",
+      "address": "38 WILFIELD PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1025000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-06-19",
+      "address": "23 WILFIELD PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 600000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04YP20"
+    },
+    {
+      "date": "2013-04-22",
+      "address": "26 Wilfield Park, Sandymount",
+      "price": 960000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-09-07",
+      "address": "36 wilfield park, sandymount",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-01-27",
+      "address": "23 Wilfield Park, Sandymount",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 14
+}

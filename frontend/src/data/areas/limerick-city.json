@@ -8,7 +8,7 @@
   "radius_km": 3.0,
   "total_count": 10,
   "median_price": 221250.0,
-  "avg_price": 233550,
+  "avg_price": 235250,
   "min_year": 2014,
   "max_year": 2025,
   "recent": [
@@ -47,6 +47,24 @@
       "bedrooms": 3,
       "property_type": "detached",
       "distance_m": 2892.15268579
+    },
+    {
+      "id": 687260,
+      "sale_date": "2024-09-30",
+      "address": "ANNAGH, LISNAGRY, LIMERICK",
+      "county": "Limerick",
+      "eircode": "V94KRW3",
+      "price": 297000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.671165,
+      "longitude": -8.468155,
+      "routing_key": "V94",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 2730.51155166
     },
     {
       "id": 648963,
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": null,
       "distance_m": 2590.1343169
-    },
-    {
-      "id": 451018,
-      "sale_date": "2020-11-27",
-      "address": "KNOCKNAGORTEENY, MURROE, CO LIMERICK",
-      "county": "Limerick",
-      "eircode": null,
-      "price": 280000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.657627,
-      "longitude": -8.432387,
-      "routing_key": null,
-      "bedrooms": null,
-      "property_type": "house",
-      "distance_m": 1682.08168916
     }
   ],
   "trends": [
@@ -268,11 +268,11 @@
     },
     {
       "year": 2024,
-      "count": 1,
-      "median_price": 205000.0,
-      "avg_price": 205000.0,
+      "count": 2,
+      "median_price": 251000.0,
+      "avg_price": 251000.0,
       "min_price": 205000.0,
-      "max_price": 205000.0
+      "max_price": 297000.0
     },
     {
       "year": 2025,

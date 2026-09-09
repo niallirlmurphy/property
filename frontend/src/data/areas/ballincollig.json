@@ -26,8 +26,8 @@
       "latitude": 51.89085,
       "longitude": -8.586025,
       "routing_key": "P31",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 493.07559069
     },
     {
@@ -44,8 +44,8 @@
       "latitude": 51.890029,
       "longitude": -8.594451,
       "routing_key": "P31",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 266.1438883
     },
     {
@@ -81,7 +81,7 @@
       "longitude": -8.595327,
       "routing_key": "P31",
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "house",
       "distance_m": 313.9055626
     },
     {
@@ -98,8 +98,8 @@
       "latitude": 51.883632,
       "longitude": -8.614708,
       "routing_key": "P31",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1656.63858816
     },
     {
@@ -116,8 +116,8 @@
       "latitude": 51.890636,
       "longitude": -8.607441,
       "routing_key": "P31",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1105.93129444
     },
     {
@@ -134,8 +134,8 @@
       "latitude": 51.89019,
       "longitude": -8.600614,
       "routing_key": "P31",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 640.85058614
     },
     {
@@ -152,8 +152,8 @@
       "latitude": 51.883304,
       "longitude": -8.604944,
       "routing_key": "P31",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 1057.58017641
     },
     {
@@ -170,8 +170,8 @@
       "latitude": 51.880905,
       "longitude": -8.61709,
       "routing_key": "P31",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1921.66592712
     },
     {
@@ -188,8 +188,8 @@
       "latitude": 51.889068,
       "longitude": -8.57164,
       "routing_key": "P31",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "semi-detached",
       "distance_m": 1393.70302587
     }
   ],
@@ -260,9 +260,9 @@
     },
     {
       "year": 2018,
-      "count": 129,
-      "median_price": 308370.0,
-      "avg_price": 379915.0,
+      "count": 130,
+      "median_price": 306185.0,
+      "avg_price": 379263.0,
       "min_price": 10000.0,
       "max_price": 7841410.0
     },
@@ -284,41 +284,41 @@
     },
     {
       "year": 2021,
-      "count": 113,
+      "count": 116,
       "median_price": 310000.0,
-      "avg_price": 339327.0,
+      "avg_price": 337414.0,
       "min_price": 105000.0,
       "max_price": 810000.0
     },
     {
       "year": 2022,
-      "count": 88,
-      "median_price": 330000.0,
-      "avg_price": 368959.0,
+      "count": 91,
+      "median_price": 328000.0,
+      "avg_price": 365725.0,
       "min_price": 180000.0,
       "max_price": 1050000.0
     },
     {
       "year": 2023,
-      "count": 101,
-      "median_price": 331000.0,
-      "avg_price": 344093.0,
+      "count": 103,
+      "median_price": 330000.0,
+      "avg_price": 343082.0,
       "min_price": 130000.0,
       "max_price": 645000.0
     },
     {
       "year": 2024,
-      "count": 101,
-      "median_price": 360000.0,
-      "avg_price": 380122.0,
+      "count": 103,
+      "median_price": 355749.0,
+      "avg_price": 378420.0,
       "min_price": 120000.0,
       "max_price": 1050000.0
     },
     {
       "year": 2025,
-      "count": 129,
-      "median_price": 431718.0,
-      "avg_price": 452056.0,
+      "count": 133,
+      "median_price": 428175.0,
+      "avg_price": 447126.0,
       "min_price": 180000.0,
       "max_price": 1200000.0
     },

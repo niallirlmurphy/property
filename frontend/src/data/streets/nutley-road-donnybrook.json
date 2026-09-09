@@ -1,0 +1,361 @@
+{
+  "slug": "nutley-road-donnybrook",
+  "stats": {
+    "count": 28,
+    "median": 1505000,
+    "avg": 1605826,
+    "min": 890000,
+    "max": 3400000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1209000,
+      "avg_price": 1209000,
+      "min_price": 1209000,
+      "max_price": 1209000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 915000,
+      "avg_price": 915000,
+      "min_price": 890000,
+      "max_price": 940000
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 1150000,
+      "avg_price": 1276667,
+      "min_price": 1080000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 1400000,
+      "avg_price": 1524000,
+      "min_price": 1190000,
+      "max_price": 2150000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1275000,
+      "avg_price": 1275000,
+      "min_price": 1275000,
+      "max_price": 1275000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 1427500,
+      "avg_price": 1427500,
+      "min_price": 1295000,
+      "max_price": 1560000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1595000,
+      "avg_price": 1595000,
+      "min_price": 1595000,
+      "max_price": 1595000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1700000,
+      "avg_price": 1700000,
+      "min_price": 1700000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1435000,
+      "avg_price": 1435000,
+      "min_price": 1435000,
+      "max_price": 1435000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1375000,
+      "avg_price": 1375000,
+      "min_price": 1375000,
+      "max_price": 1375000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 1904124,
+      "avg_price": 2193041,
+      "min_price": 1775000,
+      "max_price": 2900000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1800000,
+      "avg_price": 1800000,
+      "min_price": 1800000,
+      "max_price": 1800000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 1600000,
+      "max_price": 3400000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 1780000,
+      "avg_price": 1780000,
+      "min_price": 1510000,
+      "max_price": 2050000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-10",
+      "address": "36 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 2050000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04N2H0"
+    },
+    {
+      "date": "2026-04-01",
+      "address": "39 NUTLEY ROAD, DONNYBROOK, DUBLIN 4",
+      "price": 1510000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D04W1C9"
+    },
+    {
+      "date": "2024-09-09",
+      "address": "57 NUTLEY ROAD, DONNYBROOK, DUBLIN 4",
+      "price": 1600000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04F7P2"
+    },
+    {
+      "date": "2024-08-09",
+      "address": "33 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 3400000,
+      "bedrooms": null,
+      "propertyType": "detached",
+      "eircode": "D04F6C3"
+    },
+    {
+      "date": "2023-06-06",
+      "address": "2 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N1K2"
+    },
+    {
+      "date": "2023-05-24",
+      "address": "53 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V5Y3"
+    },
+    {
+      "date": "2022-12-08",
+      "address": "5 NUTLEY ROAD, DONNYBROOK, DUBLIN 4",
+      "price": 1775000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04W2P1"
+    },
+    {
+      "date": "2022-06-30",
+      "address": "4 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 2900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H5W8"
+    },
+    {
+      "date": "2022-01-28",
+      "address": "32 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1904124,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04K7F3"
+    },
+    {
+      "date": "2021-05-05",
+      "address": "6 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A4A7"
+    },
+    {
+      "date": "2020-12-18",
+      "address": "34 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-11",
+      "address": "37 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-18",
+      "address": "6 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A4A7"
+    },
+    {
+      "date": "2017-12-04",
+      "address": "2A NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1595000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-05-06",
+      "address": "43 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-05-06",
+      "address": "6 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1560000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A4A7"
+    },
+    {
+      "date": "2015-10-02",
+      "address": "46 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-10-31",
+      "address": "55 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-09-08",
+      "address": "53 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V5Y3"
+    },
+    {
+      "date": "2014-07-24",
+      "address": "33 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": "detached",
+      "eircode": "D04F6C3"
+    },
+    {
+      "date": "2014-07-04",
+      "address": "63 NUTLEY RD, DONNYBROOK, DUBLIN 4",
+      "price": 2150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-06-13",
+      "address": "30 Nutley Road, Donnybrook",
+      "price": 1380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-06-28",
+      "address": "28 NUTLEY ROAD, DONNYBROOK",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-06-19",
+      "address": "25 Nutley Road, Donnybrook, Dublin 4",
+      "price": 1080000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-01-21",
+      "address": "46 Nutley Road, Donnybrook",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-11-15",
+      "address": "15 Nutley Road, Donnybrook",
+      "price": 940000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-10-05",
+      "address": "33 Nutley Road, Donnybrook, Dublin 4",
+      "price": 890000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04F6C3"
+    },
+    {
+      "date": "2010-08-31",
+      "address": "49 Nutley Road, Donnybrook",
+      "price": 1209000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 28
+}

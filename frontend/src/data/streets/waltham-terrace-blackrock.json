@@ -1,0 +1,329 @@
+{
+  "slug": "waltham-terrace-blackrock",
+  "stats": {
+    "count": 26,
+    "median": 1732500,
+    "avg": 1804308,
+    "min": 565000,
+    "max": 3100000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 1640000,
+      "avg_price": 1816667,
+      "min_price": 1300000,
+      "max_price": 2510000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 1032500,
+      "avg_price": 1032500,
+      "min_price": 565000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 1987500,
+      "avg_price": 1987500,
+      "min_price": 1750000,
+      "max_price": 2225000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 2045000,
+      "avg_price": 2045000,
+      "min_price": 1715000,
+      "max_price": 2375000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 975000,
+      "avg_price": 975000,
+      "min_price": 975000,
+      "max_price": 975000
+    },
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 1800000,
+      "avg_price": 1846000,
+      "min_price": 1463000,
+      "max_price": 2275000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 1875000,
+      "avg_price": 1763333,
+      "min_price": 1495000,
+      "max_price": 1920000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1680000,
+      "avg_price": 1680000,
+      "min_price": 1680000,
+      "max_price": 1680000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 2275000,
+      "avg_price": 2275000,
+      "min_price": 2200000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 1557500,
+      "avg_price": 1659750,
+      "min_price": 1399000,
+      "max_price": 2125000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1360000,
+      "avg_price": 1360000,
+      "min_price": 1360000,
+      "max_price": 1360000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2200000,
+      "avg_price": 2200000,
+      "min_price": 2200000,
+      "max_price": 2200000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 3100000,
+      "avg_price": 3100000,
+      "min_price": 3100000,
+      "max_price": 3100000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-02-23",
+      "address": "30 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 3100000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "A94H1K7"
+    },
+    {
+      "date": "2025-05-28",
+      "address": "54 WALTHAM TERRACE, BLACKROCK, CO. DUBLIN",
+      "price": 2200000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A94X7V0"
+    },
+    {
+      "date": "2024-09-25",
+      "address": "47 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 1360000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A94X6R0"
+    },
+    {
+      "date": "2023-12-19",
+      "address": "23A WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94X0R9"
+    },
+    {
+      "date": "2023-09-19",
+      "address": "73 WALTHAM TERRACE, BLACKROCK, CO DUBLIN",
+      "price": 1399000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94Y0H6"
+    },
+    {
+      "date": "2023-07-17",
+      "address": "21 WALTHAM TERRACE, BLACKROCK, CO DUBLIN",
+      "price": 2125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94F9K4"
+    },
+    {
+      "date": "2023-03-31",
+      "address": "15 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 1715000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94W9E4"
+    },
+    {
+      "date": "2020-12-08",
+      "address": "20 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-12",
+      "address": "25 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 2200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-04",
+      "address": "1 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 1680000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-20",
+      "address": "37 WALTHAM TERRACE, BLACKROCK, CO DUBLIN",
+      "price": 1920000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-17",
+      "address": "28 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 1875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-08",
+      "address": "63 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 1495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-29",
+      "address": "6 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 2275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-06-30",
+      "address": "52 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 1463000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-04-28",
+      "address": "23 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-29",
+      "address": "57 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-05",
+      "address": "69 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 1715000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-03-21",
+      "address": "31 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 2375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-07-31",
+      "address": "22 Waltham Terrace, Blackrock",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-03-28",
+      "address": "16 Waltham Terrace, Blackrock",
+      "price": 2225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-05-31",
+      "address": "6 Waltham Terrace, Blackrock",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-03-02",
+      "address": "44 waltham terrace, blackrock",
+      "price": 565000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-09-10",
+      "address": "19 Waltham Terrace, Blackrock",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-07-05",
+      "address": "3, Waltham Terrace, Blackrock",
+      "price": 2510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-06-30",
+      "address": "26 WALTHAM TERRACE, BLACKROCK, CO. DUBLIN",
+      "price": 1640000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 26
+}

@@ -1,0 +1,153 @@
+{
+  "slug": "sandymount-avenue-dublin-4",
+  "stats": {
+    "count": 10,
+    "median": 1607500,
+    "avg": 1557500,
+    "min": 235000,
+    "max": 2500000,
+    "firstYear": 2016,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 2000000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 2000000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1210000,
+      "avg_price": 1210000,
+      "min_price": 1210000,
+      "max_price": 1210000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 2007500,
+      "avg_price": 2007500,
+      "min_price": 1515000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 1300000,
+      "avg_price": 1216667,
+      "min_price": 235000,
+      "max_price": 2115000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1700000,
+      "avg_price": 1700000,
+      "min_price": 1700000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1000000,
+      "avg_price": 1000000,
+      "min_price": 1000000,
+      "max_price": 1000000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-06",
+      "address": "80 SANDYMOUNT AVE, DUBLIN 4, DUBLIN",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04KT04"
+    },
+    {
+      "date": "2024-01-19",
+      "address": "44 SANDYMOUNT AVE, DUBLIN 4, DUBLIN",
+      "price": 1700000,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "D04PX34"
+    },
+    {
+      "date": "2023-05-18",
+      "address": "17 SANDYMOUNT AVE, DUBLIN 4, DUBLIN",
+      "price": 2115000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C967"
+    },
+    {
+      "date": "2023-05-18",
+      "address": "15 SANDYMOUNT AVE, DUBLIN 4, DUBLIN",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04RK02"
+    },
+    {
+      "date": "2023-03-15",
+      "address": "80 SANDYMOUNT AVE, DUBLIN 4, DUBLIN",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04KT04"
+    },
+    {
+      "date": "2021-12-14",
+      "address": "105 SANDYMOUNT AVE, DUBLIN 4, DUBLIN",
+      "price": 1515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04VY32"
+    },
+    {
+      "date": "2021-01-15",
+      "address": "45 SANDYMOUNT AVE, DUBLIN 4, DUBLIN",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-30",
+      "address": "89 SANDYMOUNT AVE, DUBLIN 4, DUBLIN",
+      "price": 1210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-27",
+      "address": "15 SANDYMOUNT AVE, DUBLIN 4, DUBLIN",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04RK02"
+    },
+    {
+      "date": "2016-10-21",
+      "address": "15 SANDYMOUNT AVE, DUBLIN 4, DUBLIN",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04RK02"
+    }
+  ],
+  "totalTransactions": 10
+}

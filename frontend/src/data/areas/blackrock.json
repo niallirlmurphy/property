@@ -44,8 +44,8 @@
       "latitude": 53.295444,
       "longitude": -6.196226,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "detached",
       "distance_m": 1362.01119875
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 53.298329,
       "longitude": -6.177349,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 405.67592918
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 53.299884,
       "longitude": -6.173357,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 426.49323914
     },
     {
@@ -98,8 +98,8 @@
       "latitude": 53.298877,
       "longitude": -6.175857,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 387.1695873
     },
     {
@@ -116,8 +116,8 @@
       "latitude": 53.291698,
       "longitude": -6.193397,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 1490.9203753
     },
     {
@@ -134,8 +134,8 @@
       "latitude": 53.292644,
       "longitude": -6.182521,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1055.1338257
     },
     {
@@ -152,8 +152,8 @@
       "latitude": 53.294925,
       "longitude": -6.189507,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "detached",
       "distance_m": 1050.1062675
     },
     {
@@ -171,7 +171,7 @@
       "longitude": -6.193138,
       "routing_key": "A94",
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "apartment",
       "distance_m": 1477.18020135
     },
     {
@@ -188,8 +188,8 @@
       "latitude": 53.296047,
       "longitude": -6.172358,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "bungalow",
       "distance_m": 778.15872827
     }
   ],

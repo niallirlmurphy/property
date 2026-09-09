@@ -1,0 +1,121 @@
+{
+  "slug": "balure-balure-lane",
+  "stats": {
+    "count": 8,
+    "median": 1476872,
+    "avg": 1626911,
+    "min": 1277533,
+    "max": 2350000,
+    "firstYear": 2016,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 1281938,
+      "avg_price": 1281938,
+      "min_price": 1277533,
+      "max_price": 1286344
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1420705,
+      "avg_price": 1420705,
+      "min_price": 1387666,
+      "max_price": 1453744
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1660000,
+      "avg_price": 1660000,
+      "min_price": 1660000,
+      "max_price": 1660000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 2225000,
+      "avg_price": 2225000,
+      "min_price": 2100000,
+      "max_price": 2350000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-04",
+      "address": "4 BALURE, BALURE LANE, CHURCH ROAD",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96X5Y0"
+    },
+    {
+      "date": "2026-01-06",
+      "address": "1 BALURE, BALURE LANE, CHURCH ROAD",
+      "price": 2100000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A96N5P8"
+    },
+    {
+      "date": "2021-01-20",
+      "address": "4 BALURE, BALURE LANE, CHURCH ROAD",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96X5Y0"
+    },
+    {
+      "date": "2018-10-25",
+      "address": "1 BALURE, BALURE LANE, CHURCH ROAD",
+      "price": 1660000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A96N5P8"
+    },
+    {
+      "date": "2017-12-21",
+      "address": "6 Balure, Balure Lane, Church Road",
+      "price": 1387666,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-18",
+      "address": "4 Balure, Balure Lane, Church Road",
+      "price": 1453744,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96X5Y0"
+    },
+    {
+      "date": "2016-07-22",
+      "address": "3 Balure, Balure Lane, Church Road",
+      "price": 1286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-06-13",
+      "address": "1 Balure, Balure Lane, Church Road",
+      "price": 1277533,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A96N5P8"
+    }
+  ],
+  "totalTransactions": 8
+}

@@ -62,8 +62,8 @@
       "latitude": 53.295444,
       "longitude": -6.196226,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "detached",
       "distance_m": 748.64579353
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 53.280487,
       "longitude": -6.189343,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 1106.36355868
     },
     {
@@ -98,8 +98,8 @@
       "latitude": 53.29087,
       "longitude": -6.200574,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 270.71470982
     },
     {
@@ -116,8 +116,8 @@
       "latitude": 53.297439,
       "longitude": -6.214249,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "detached",
       "distance_m": 1428.72904745
     },
     {
@@ -134,8 +134,8 @@
       "latitude": 53.299034,
       "longitude": -6.201921,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1159.56322413
     },
     {
@@ -152,8 +152,8 @@
       "latitude": 53.291698,
       "longitude": -6.193397,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 458.38074291
     },
     {
@@ -170,8 +170,8 @@
       "latitude": 53.287021,
       "longitude": -6.185727,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 865.31237247
     },
     {
@@ -188,8 +188,8 @@
       "latitude": 53.284713,
       "longitude": -6.180719,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "bungalow",
       "distance_m": 1261.83620216
     }
   ],
@@ -260,9 +260,9 @@
     },
     {
       "year": 2018,
-      "count": 130,
-      "median_price": 560000.0,
-      "avg_price": 663082.0,
+      "count": 131,
+      "median_price": 555000.0,
+      "avg_price": 660157.0,
       "min_price": 200000.0,
       "max_price": 4138200.0
     },

@@ -1,0 +1,161 @@
+{
+  "slug": "brendan-road-donnybrook",
+  "stats": {
+    "count": 11,
+    "median": 1491500,
+    "avg": 1423773,
+    "min": 350000,
+    "max": 2400000,
+    "firstYear": 2015,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1491500,
+      "avg_price": 1491500,
+      "min_price": 1491500,
+      "max_price": 1491500
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 710000,
+      "avg_price": 710000,
+      "min_price": 350000,
+      "max_price": 1070000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 1412500,
+      "avg_price": 1456250,
+      "min_price": 1250000,
+      "max_price": 1750000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1460000,
+      "avg_price": 1460000,
+      "min_price": 1460000,
+      "max_price": 1460000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 2400000,
+      "avg_price": 2400000,
+      "min_price": 2400000,
+      "max_price": 2400000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1565000,
+      "avg_price": 1565000,
+      "min_price": 1565000,
+      "max_price": 1565000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-13",
+      "address": "9 BRENDAN ROAD, DONNYBROOK, DUBLIN 4",
+      "price": 1565000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D04E2V1"
+    },
+    {
+      "date": "2024-09-06",
+      "address": "6 BRENDAN RD, DONNYBROOK, DUBLIN 4",
+      "price": 2400000,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "D04N7F3"
+    },
+    {
+      "date": "2022-05-25",
+      "address": "10 BRENDAN RD, DONNYBROOK, DUBLIN 4",
+      "price": 1460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C1H5"
+    },
+    {
+      "date": "2021-06-14",
+      "address": "27 BRENDAN RD, DONNYBROOK, DUBLIN 4",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E4C0"
+    },
+    {
+      "date": "2017-11-29",
+      "address": "19 BRENDAN ROAD, DONNYBROOK, DUBLIN 4",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-04",
+      "address": "7 BRENDAN RD, DONNYBROOK, DUBLIN 4",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-13",
+      "address": "9 BRENDAN ROAD, DONNYBROOK, DUBLIN 4",
+      "price": 1525000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D04E2V1"
+    },
+    {
+      "date": "2017-03-31",
+      "address": "17 BRENDAN RD, DONNYBROOK, DUBLIN 4",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-24",
+      "address": "12 BRENDAN RD, DONNYBROOK, DUBLIN 4",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-03-09",
+      "address": "23 BRENDAN ROAD, DONNYBROOK, DUBLIN 4",
+      "price": 1070000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-02-27",
+      "address": "5 BRENDAN RD, DONNYBROOK, DUBLIN 4",
+      "price": 1491500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 11
+}

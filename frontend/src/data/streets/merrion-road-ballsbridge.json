@@ -1,0 +1,537 @@
+{
+  "slug": "merrion-road-ballsbridge",
+  "stats": {
+    "count": 51,
+    "median": 1750000,
+    "avg": 1822267,
+    "min": 297000,
+    "max": 4300000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 663500,
+      "avg_price": 663500,
+      "min_price": 297000,
+      "max_price": 1030000
+    },
+    {
+      "year": 2012,
+      "count": 4,
+      "median_price": 620000,
+      "avg_price": 1008750,
+      "min_price": 345000,
+      "max_price": 2450000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 1325000,
+      "avg_price": 1590000,
+      "min_price": 1100000,
+      "max_price": 2260000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 595000,
+      "avg_price": 595000,
+      "min_price": 590000,
+      "max_price": 600000
+    },
+    {
+      "year": 2015,
+      "count": 3,
+      "median_price": 1775000,
+      "avg_price": 1674333,
+      "min_price": 740000,
+      "max_price": 2508000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 1412500,
+      "avg_price": 1386875,
+      "min_price": 362500,
+      "max_price": 2360000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 1250000,
+      "avg_price": 1340000,
+      "min_price": 1150000,
+      "max_price": 1620000
+    },
+    {
+      "year": 2018,
+      "count": 5,
+      "median_price": 1325000,
+      "avg_price": 1435000,
+      "min_price": 925000,
+      "max_price": 1975000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1600000,
+      "avg_price": 1600000,
+      "min_price": 1600000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1400000,
+      "avg_price": 1400000,
+      "min_price": 1400000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 2500000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "median_price": 2657500,
+      "avg_price": 2753750,
+      "min_price": 2200000,
+      "max_price": 3500000
+    },
+    {
+      "year": 2023,
+      "count": 6,
+      "median_price": 2975000,
+      "avg_price": 2766667,
+      "min_price": 1300000,
+      "max_price": 3950000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 1343750,
+      "avg_price": 1690333,
+      "min_price": 707000,
+      "max_price": 3575000
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 3450000,
+      "avg_price": 3352780,
+      "min_price": 2211119,
+      "max_price": 4300000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-12",
+      "address": "142 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3250000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D04H6W4"
+    },
+    {
+      "date": "2026-05-01",
+      "address": "73 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3650000,
+      "bedrooms": 6,
+      "propertyType": "semi-detached",
+      "eircode": "D04E7F9"
+    },
+    {
+      "date": "2026-03-19",
+      "address": "128 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2211119,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "D04V5W0"
+    },
+    {
+      "date": "2026-03-12",
+      "address": "64 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 4300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N276"
+    },
+    {
+      "date": "2024-12-06",
+      "address": "67 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 937500,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D04RD40"
+    },
+    {
+      "date": "2024-12-06",
+      "address": "67 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 937500,
+      "bedrooms": 1,
+      "propertyType": "detached",
+      "eircode": "D04RD40"
+    },
+    {
+      "date": "2024-09-30",
+      "address": "79 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2235000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D04YK77"
+    },
+    {
+      "date": "2024-08-02",
+      "address": "86 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1750000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D04K8Y8"
+    },
+    {
+      "date": "2024-02-28",
+      "address": "262 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 707000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N231"
+    },
+    {
+      "date": "2024-01-09",
+      "address": "154 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3575000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D04C5H0"
+    },
+    {
+      "date": "2023-12-22",
+      "address": "142 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3250000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D04H6W4"
+    },
+    {
+      "date": "2023-08-28",
+      "address": "172 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04FF29"
+    },
+    {
+      "date": "2023-07-31",
+      "address": "122 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H9V3"
+    },
+    {
+      "date": "2023-05-12",
+      "address": "68 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04AC80"
+    },
+    {
+      "date": "2023-03-28",
+      "address": "106 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H6X9"
+    },
+    {
+      "date": "2023-01-28",
+      "address": "59 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N6P9"
+    },
+    {
+      "date": "2022-11-22",
+      "address": "122 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H9V3"
+    },
+    {
+      "date": "2022-06-21",
+      "address": "104 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04HF61"
+    },
+    {
+      "date": "2022-06-02",
+      "address": "126 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E2P5"
+    },
+    {
+      "date": "2022-02-03",
+      "address": "51 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 3500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A4P6"
+    },
+    {
+      "date": "2021-12-01",
+      "address": "102 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04XE12"
+    },
+    {
+      "date": "2020-09-14",
+      "address": "45 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-30",
+      "address": "150 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-04",
+      "address": "244 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 925000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-21",
+      "address": "118 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-28",
+      "address": "92 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-17",
+      "address": "72 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-20",
+      "address": "48 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-22",
+      "address": "128B MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1620000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-26",
+      "address": "176 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-01-04",
+      "address": "128B MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-16",
+      "address": "68 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04AC80"
+    },
+    {
+      "date": "2016-10-05",
+      "address": "152 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-18",
+      "address": "150 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 362500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-04-07",
+      "address": "92 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1075000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-10-13",
+      "address": "134 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1775000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-06-26",
+      "address": "76 Merrion Road, Ballsbridge, Dublin 4",
+      "price": 2508000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-01",
+      "address": "178 MERRION RD, BALLSBRIDGE, DUBLIN",
+      "price": 740000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-08-29",
+      "address": "270 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 590000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-04-29",
+      "address": "92 MERRION RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-10-14",
+      "address": "174 Merrion Road, Ballsbridge",
+      "price": 1325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-09-24",
+      "address": "156  Merrion Road, Ballsbridge",
+      "price": 1965000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-06-21",
+      "address": "86 merrion road, ballsbridge",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-06-07",
+      "address": "90 Merrion Road, Ballsbridge",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-03-21",
+      "address": "55 Merrion Road, Ballsbridge",
+      "price": 2260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-12-21",
+      "address": "128B Merrion Road, Ballsbridge",
+      "price": 710000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-12-19",
+      "address": "63 Merrion Road, Ballsbridge",
+      "price": 2450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-12-07",
+      "address": "258 Merrion Road, Ballsbridge",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-02-20",
+      "address": "178 Merrion Road, Ballsbridge",
+      "price": 530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-08-19",
+      "address": "140 Merrion Road, Ballsbridge, Dublin 4",
+      "price": 297000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 51
+}

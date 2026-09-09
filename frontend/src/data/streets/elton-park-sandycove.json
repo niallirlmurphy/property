@@ -1,0 +1,249 @@
+{
+  "slug": "elton-park-sandycove",
+  "stats": {
+    "count": 18,
+    "median": 1825000,
+    "avg": 1720067,
+    "min": 15500,
+    "max": 2950000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1800000,
+      "avg_price": 1800000,
+      "min_price": 1800000,
+      "max_price": 1800000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1440000,
+      "avg_price": 1440000,
+      "min_price": 1440000,
+      "max_price": 1440000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1610000,
+      "avg_price": 1610000,
+      "min_price": 1610000,
+      "max_price": 1610000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1578950,
+      "avg_price": 1578950,
+      "min_price": 1578950,
+      "max_price": 1578950
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1850000,
+      "avg_price": 1850000,
+      "min_price": 1850000,
+      "max_price": 1850000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 996250,
+      "avg_price": 996250,
+      "min_price": 560000,
+      "max_price": 1432500
+    },
+    {
+      "year": 2021,
+      "count": 5,
+      "median_price": 2089750,
+      "avg_price": 1822950,
+      "min_price": 650000,
+      "max_price": 2300000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 2462500,
+      "avg_price": 2462500,
+      "min_price": 2425000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 2000000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2950000,
+      "avg_price": 2950000,
+      "min_price": 2950000,
+      "max_price": 2950000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 850000,
+      "avg_price": 850000,
+      "min_price": 15500,
+      "max_price": 1684500
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-01-16",
+      "address": "18 ELTON PARK, SANDYCOVE, DUBLIN",
+      "price": 1684500,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A96XV00"
+    },
+    {
+      "date": "2026-01-14",
+      "address": "18 ELTON PARK, SANDYCOVE, DUBLIN",
+      "price": 15500,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A96XV00"
+    },
+    {
+      "date": "2025-04-10",
+      "address": "26 ELTON PARK, SANDYCOVE, CO. DUBLIN",
+      "price": 2950000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A96V213"
+    },
+    {
+      "date": "2023-12-11",
+      "address": "6 ELTON PARK, SANDYCOVE, DUBLIN",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96KD34"
+    },
+    {
+      "date": "2022-11-02",
+      "address": "2 ELTON PARK, SANDYCOVE, DUN LAOGHAIRE",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96YK61"
+    },
+    {
+      "date": "2022-09-29",
+      "address": "5 ELTON PARK, SANDYCOVE, DUBLIN",
+      "price": 2425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96TW32"
+    },
+    {
+      "date": "2021-11-17",
+      "address": "1 ELTON PARK, SANDYCOVE, CO DUBLIN",
+      "price": 2089750,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96E186"
+    },
+    {
+      "date": "2021-11-05",
+      "address": "20 ELTON PARK, SANDYCOVE, CO DUBLIN",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96X382"
+    },
+    {
+      "date": "2021-09-24",
+      "address": "5 ELTON PARK, SANDYCOVE, DUBLIN",
+      "price": 2300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96TW32"
+    },
+    {
+      "date": "2021-08-25",
+      "address": "35 ELTON PARK, SANDYCOVE, DUBLIN",
+      "price": 1975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96KX43"
+    },
+    {
+      "date": "2021-05-27",
+      "address": "4 ELTON PARK, SANDYCOVE, DUN LAOIGHAIRE",
+      "price": 2100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96NP74"
+    },
+    {
+      "date": "2020-12-17",
+      "address": "20 ELTON PARK, SANDYCOVE, CO DUBLIN",
+      "price": 560000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96X382"
+    },
+    {
+      "date": "2020-01-16",
+      "address": "16 ELTON PARK, SANDYCOVE, DUBLIN",
+      "price": 1432500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-08",
+      "address": "8 ELTON PARK, SANDYCOVE, DUBLIN",
+      "price": 1850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-07",
+      "address": "3 ELTON PARK, SANDYCOVE, DUBLIN",
+      "price": 1578950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-07",
+      "address": "5 ELTON PARK, SANDYCOVE, DUBLIN",
+      "price": 1610000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96TW32"
+    },
+    {
+      "date": "2014-03-26",
+      "address": "2 Elton Park, Sandycove",
+      "price": 1440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-01-04",
+      "address": "23 Elton Park, Sandycove",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 18
+}

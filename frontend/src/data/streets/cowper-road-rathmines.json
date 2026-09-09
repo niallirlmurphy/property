@@ -1,0 +1,321 @@
+{
+  "slug": "cowper-road-rathmines",
+  "stats": {
+    "count": 25,
+    "median": 1825000,
+    "avg": 2224723,
+    "min": 291278,
+    "max": 5800000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1650000,
+      "avg_price": 1650000,
+      "min_price": 1650000,
+      "max_price": 1650000
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 1750000,
+      "avg_price": 1750000,
+      "min_price": 1750000,
+      "max_price": 1750000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1514750,
+      "avg_price": 1514750,
+      "min_price": 1514750,
+      "max_price": 1514750
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 820000,
+      "avg_price": 1203759,
+      "min_price": 291278,
+      "max_price": 2500000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 2700000,
+      "avg_price": 2700000,
+      "min_price": 2700000,
+      "max_price": 2700000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 2079500,
+      "avg_price": 2079500,
+      "min_price": 909000,
+      "max_price": 3250000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 1120000,
+      "avg_price": 1560000,
+      "min_price": 710000,
+      "max_price": 2850000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 4700000,
+      "avg_price": 4700000,
+      "min_price": 4700000,
+      "max_price": 4700000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1957500,
+      "avg_price": 1957500,
+      "min_price": 1115000,
+      "max_price": 2800000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 2950000,
+      "avg_price": 2950000,
+      "min_price": 2950000,
+      "max_price": 2950000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 4025000,
+      "avg_price": 3695000,
+      "min_price": 1260000,
+      "max_price": 5800000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 2420000,
+      "avg_price": 2506667,
+      "min_price": 1750000,
+      "max_price": 3350000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 1825000,
+      "avg_price": 1794350,
+      "min_price": 1608050,
+      "max_price": 1950000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-05",
+      "address": "4 COWPER ROAD, RATHMINES, DUBLIN 6",
+      "price": 1608050,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06X2K1"
+    },
+    {
+      "date": "2026-04-24",
+      "address": "72 COWPER ROAD, RATHMINES, DUBLIN 6",
+      "price": 1825000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06H0X3"
+    },
+    {
+      "date": "2026-03-27",
+      "address": "35 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 1950000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D06CF24"
+    },
+    {
+      "date": "2025-11-26",
+      "address": "48 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 3350000,
+      "bedrooms": 6,
+      "propertyType": "detached",
+      "eircode": "D06K4K0"
+    },
+    {
+      "date": "2025-09-22",
+      "address": "10 COWPER ROAD, RATHMINES, DUBLIN 6",
+      "price": 1750000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06R5Y3"
+    },
+    {
+      "date": "2025-09-05",
+      "address": "69 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 2420000,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": "D06W6P8"
+    },
+    {
+      "date": "2024-05-16",
+      "address": "56 COWPER RD, RATHMINES, DUBLIN",
+      "price": 5800000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06R9V3"
+    },
+    {
+      "date": "2024-04-18",
+      "address": "28 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 4025000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D06N2W6"
+    },
+    {
+      "date": "2024-04-10",
+      "address": "11 COWPER ROAD, RATHMINES, DUBLIN 6",
+      "price": 1260000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D06E627"
+    },
+    {
+      "date": "2022-11-30",
+      "address": "50 COWPER RD, RATHMINES, DUBLIN",
+      "price": 2950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06T8X2"
+    },
+    {
+      "date": "2019-10-30",
+      "address": "54 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 2800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-08",
+      "address": "67 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 1115000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-18",
+      "address": "41 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 4700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-20",
+      "address": "1 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 1120000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-22",
+      "address": "52 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 2850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-23",
+      "address": "78 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 710000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-02",
+      "address": "51 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 3250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-24",
+      "address": "21 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 909000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-14",
+      "address": "29 Cowper Road, Rathmines, Dublin 6",
+      "price": 2700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-10-15",
+      "address": "46 Cowper Road, Rathmines",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-03-07",
+      "address": "45 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 291278,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-01-21",
+      "address": "18 COWPER RD, RATHMINES, DUBLIN 6",
+      "price": 820000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-08-23",
+      "address": "34 Cowper Road, Rathmines",
+      "price": 1514750,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-09-14",
+      "address": "50 Cowper Road, Rathmines",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-11-30",
+      "address": "30 Cowper Road, Rathmines, Dublin 6",
+      "price": 1650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 25
+}

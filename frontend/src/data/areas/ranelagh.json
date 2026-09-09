@@ -7,7 +7,7 @@
   },
   "radius_km": 1.0,
   "total_count": 10,
-  "median_price": 960000.0,
+  "median_price": 955000.0,
   "avg_price": 1520105,
   "min_year": 2010,
   "max_year": 2026,
@@ -98,8 +98,8 @@
       "latitude": 53.320285,
       "longitude": -6.260163,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "bungalow",
       "distance_m": 646.16639771
     },
     {
@@ -116,8 +116,8 @@
       "latitude": 53.328433,
       "longitude": -6.251338,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 434.93529932
     },
     {
@@ -134,8 +134,8 @@
       "latitude": 53.318447,
       "longitude": -6.253619,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "terraced",
       "distance_m": 759.62827603
     },
     {
@@ -152,8 +152,8 @@
       "latitude": 53.32545,
       "longitude": -6.257108,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "terraced",
       "distance_m": 139.50074481
     },
     {
@@ -188,8 +188,8 @@
       "latitude": 53.32069,
       "longitude": -6.244837,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 846.86553702
     }
   ],
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 73,
-      "median_price": 960000.0,
-      "avg_price": 1120313.0,
+      "count": 74,
+      "median_price": 955000.0,
+      "avg_price": 1117674.0,
       "min_price": 95000.0,
       "max_price": 4550000.0
     }

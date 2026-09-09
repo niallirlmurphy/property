@@ -26,8 +26,8 @@
       "latitude": 53.386337,
       "longitude": -6.069187,
       "routing_key": "D13",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 276.432887
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 53.384822,
       "longitude": -6.066627,
       "routing_key": "D13",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 150.83464457
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 53.386528,
       "longitude": -6.063478,
       "routing_key": "D13",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "terraced",
       "distance_m": 133.74129059
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "year": 2018,
-      "count": 64,
-      "median_price": 736250.0,
-      "avg_price": 765112.0,
+      "count": 65,
+      "median_price": 722500.0,
+      "avg_price": 757746.0,
       "min_price": 24000.0,
       "max_price": 3000000.0
     },

@@ -44,8 +44,8 @@
       "latitude": 53.285373,
       "longitude": -9.037833,
       "routing_key": "H91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "detached",
       "distance_m": 251.10144716
     },
     {
@@ -292,33 +292,33 @@
     },
     {
       "year": 2022,
-      "count": 23,
-      "median_price": 325000.0,
-      "avg_price": 290210.0,
+      "count": 26,
+      "median_price": 296250.0,
+      "avg_price": 290744.0,
       "min_price": 60000.0,
       "max_price": 440000.0
     },
     {
       "year": 2023,
-      "count": 15,
-      "median_price": 240000.0,
-      "avg_price": 280545.0,
+      "count": 20,
+      "median_price": 300000.0,
+      "avg_price": 284934.0,
       "min_price": 205000.0,
       "max_price": 472000.0
     },
     {
       "year": 2024,
-      "count": 26,
-      "median_price": 356000.0,
-      "avg_price": 385272.0,
+      "count": 27,
+      "median_price": 352000.0,
+      "avg_price": 382114.0,
       "min_price": 200000.0,
       "max_price": 690000.0
     },
     {
       "year": 2025,
-      "count": 24,
-      "median_price": 415000.0,
-      "avg_price": 418526.0,
+      "count": 32,
+      "median_price": 393750.0,
+      "avg_price": 383118.0,
       "min_price": 67500.0,
       "max_price": 670000.0
     },

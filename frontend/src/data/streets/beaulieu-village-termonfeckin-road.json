@@ -1,11 +1,11 @@
 {
   "slug": "beaulieu-village-termonfeckin-road",
   "stats": {
-    "count": 160,
-    "median": 237925,
-    "avg": 261756,
+    "count": 161,
+    "median": 238009,
+    "avg": 262921,
     "min": 191629,
-    "max": 415000,
+    "max": 449339,
     "firstYear": 2018,
     "lastYear": 2026
   },
@@ -76,14 +76,22 @@
     },
     {
       "year": 2026,
-      "count": 2,
+      "count": 3,
       "median_price": 370000,
-      "avg_price": 370000,
+      "avg_price": 396446,
       "min_price": 370000,
-      "max_price": 370000
+      "max_price": 449339
     }
   ],
   "transactions": [
+    {
+      "date": "2026-08-14",
+      "address": "197 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 449339,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": null
+    },
     {
       "date": "2026-03-31",
       "address": "152 Beaulieu Village, Termonfeckin Road, Drogheda",
@@ -475,15 +483,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2023-05-11",
-      "address": "146 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
-      "price": 303965,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 160
+  "totalTransactions": 161
 }

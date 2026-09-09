@@ -8,7 +8,8 @@
     "category": "value",
     "rank": 1,
     "normalizedKey": "temple road|dartry|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €4,927,500 across 10 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €4,927,500 across 10 recorded sales on the Property Price Register.",
+    "info": "Temple Road was the final home of the Trinity College botanist Henry Horatio Dixon (1869–1953), co-author of the cohesion-tension theory of how water rises in plants."
   },
   {
     "slug": "temple-gardens-rathmines",
@@ -54,7 +55,7 @@
     "rank": 5,
     "normalizedKey": "herbert park|ballsbridge|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €3,100,000 across 16 recorded sales on the Property Price Register.",
-    "info": "Herbert Park is a residential road in Ballsbridge, Dublin 4, running alongside the public park of the same name, which was laid out for the 1907 Irish International Exhibition. The road is lined with substantial Edwardian red-brick houses."
+    "info": "Herbert Park is a residential road in Ballsbridge, Dublin 4, running alongside the public park of the same name, which was laid out for the 1907 Irish International Exhibition. The road is lined with substantial Edwardian red-brick houses. No. 40 was the home of The O'Rahilly (1875–1916), a leader of the Irish Volunteers killed in the 1916 Easter Rising, and his wife Nancy O'Rahilly, a founding member of Cumann na mBan; the house was demolished in 2020."
   },
   {
     "slug": "clyde-road-ballsbridge",
@@ -77,7 +78,8 @@
     "category": "value",
     "rank": 7,
     "normalizedKey": "leeson park|ranelagh|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €2,900,000 across 20 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €2,900,000 across 20 recorded sales on the Property Price Register.",
+    "info": "The barrister and judge Michael Comyn lived on Leeson Park, where the republican leader Erskine Childers is said to have sheltered before his capture in 1922; the architectural historian Alistair Rowan and archivist Ann Martha Rowan lived at No. 22."
   },
   {
     "slug": "raglan-road-ballsbridge",
@@ -88,18 +90,8 @@
     "category": "value",
     "rank": 8,
     "normalizedKey": "raglan road|ballsbridge|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €2,837,500 across 10 recorded sales on the Property Price Register."
-  },
-  {
-    "slug": "elgin-road-ballsbridge",
-    "name": "Elgin Road",
-    "area": "Ballsbridge",
-    "county": "Dublin",
-    "countySlug": "dublin",
-    "category": "value",
-    "rank": 9,
-    "normalizedKey": "elgin road|ballsbridge|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €2,700,000 across 19 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €2,837,500 across 10 recorded sales on the Property Price Register.",
+    "info": "Raglan Road gives its name to Patrick Kavanagh's celebrated song “On Raglan Road”, though the poet did not live on the street himself. The Celtic scholar Cecile O'Rahilly — the first woman appointed a full professor at the Dublin Institute for Advanced Studies — lived at No. 17 from 1951 until her death in 1980."
   },
   {
     "slug": "park-avenue-sandymount",
@@ -108,9 +100,20 @@
     "county": "Dublin",
     "countySlug": "dublin",
     "category": "value",
-    "rank": 10,
+    "rank": 9,
     "normalizedKey": "park avenue|sandymount|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €2,700,000 across 33 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "elgin-road-ballsbridge",
+    "name": "Elgin Road",
+    "area": "Ballsbridge",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 10,
+    "normalizedKey": "elgin road|ballsbridge|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €2,700,000 across 19 recorded sales on the Property Price Register."
   },
   {
     "slug": "greenfield-crescent-donnybrook",
@@ -132,7 +135,8 @@
     "category": "value",
     "rank": 12,
     "normalizedKey": "wellington road|ballsbridge|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €2,600,000 across 28 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €2,600,000 across 28 recorded sales on the Property Price Register.",
+    "info": "No. 40 Wellington Road was the birthplace of the pioneering medical physicist Edith Anne Stoney (1869–1938), and No. 19 was later the home of P. J. Mara (1942–2016), the Fianna Fáil senator and adviser to Taoiseach Charles Haughey."
   },
   {
     "slug": "fitzwilliam-square-dublin-2",
@@ -144,7 +148,7 @@
     "rank": 13,
     "normalizedKey": "fitzwilliam square|dublin 2|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €2,365,000 across 10 recorded sales on the Property Price Register.",
-    "info": "Fitzwilliam Square is one of the last and best-preserved of Dublin's great Georgian squares, laid out in the early 19th century in Dublin 2. Its four terraces of red-brick townhouses surround a private garden that remains accessible only to residents and keyholders."
+    "info": "Fitzwilliam Square is one of the last and best-preserved of Dublin's great Georgian squares, laid out in the early 19th century in Dublin 2. Its four terraces of red-brick townhouses surround a private garden that remains accessible only to residents and keyholders. Former residents include the painter Jack B. Yeats, who worked at No. 18 from 1930, the railway engineer William Dargan (No. 2), and the artist Mainie Jellett (No. 36)."
   },
   {
     "slug": "palmerston-park-rathmines",
@@ -155,7 +159,8 @@
     "category": "value",
     "rank": 14,
     "normalizedKey": "palmerston park|rathmines|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €2,350,000 across 9 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €2,350,000 across 9 recorded sales on the Property Price Register.",
+    "info": "Palmerston Park's residents have included Charles Dawson (1842–1917), Lord Mayor of Dublin, at No. 13, and the writer and soldier C. Morton Horne (1885–1916), killed in the First World War, at No. 16."
   },
   {
     "slug": "northbrook-road-ranelagh",
@@ -166,7 +171,8 @@
     "category": "value",
     "rank": 15,
     "normalizedKey": "northbrook road|ranelagh|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €2,292,500 across 10 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €2,292,500 across 10 recorded sales on the Property Price Register.",
+    "info": "No. 21 Northbrook Road was the family home of Thomas Crean (1873–1923), an Irish rugby international who won the Victoria Cross in the Boer War; the botanist Henry Horatio Dixon also lived for a time at No. 23."
   },
   {
     "slug": "orwell-park-rathgar",
@@ -177,7 +183,8 @@
     "category": "value",
     "rank": 16,
     "normalizedKey": "orwell park|rathgar|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €2,215,000 across 48 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €2,215,000 across 48 recorded sales on the Property Price Register.",
+    "info": "The playwright J. M. Synge (1871–1909) grew up at 4 Orwell Park, his family home until 1890."
   },
   {
     "slug": "eglinton-road-donnybrook",
@@ -188,7 +195,8 @@
     "category": "value",
     "rank": 17,
     "normalizedKey": "eglinton road|donnybrook|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €2,137,500 across 30 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €2,137,500 across 30 recorded sales on the Property Price Register.",
+    "info": "No. 75 Eglinton Road was the family home of Garret FitzGerald (1926–2011), who twice served as Taoiseach."
   },
   {
     "slug": "edward-square-bloomfield",
@@ -210,7 +218,8 @@
     "category": "value",
     "rank": 19,
     "normalizedKey": "sydney parade avenue|sandymount|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €2,070,000 across 11 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €2,070,000 across 11 recorded sales on the Property Price Register.",
+    "info": "14 Sydney Parade Avenue was the family home of the brothers Jack and Walter Peterson, who won silver in field hockey for Ireland at the 1908 London Olympics."
   },
   {
     "slug": "st-kevin-s-park-dartry",
@@ -232,7 +241,8 @@
     "category": "value",
     "rank": 21,
     "normalizedKey": "lansdowne road|ballsbridge|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €2,050,000 across 12 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €2,050,000 across 12 recorded sales on the Property Price Register.",
+    "info": "No. 73 Lansdowne Road was the home of the architect George F. Beckett (1877–1961), president of the RIAI and a relative of the writer Samuel Beckett."
   },
   {
     "slug": "abbotts-hill-malahide",
@@ -254,7 +264,8 @@
     "category": "value",
     "rank": 23,
     "normalizedKey": "highfield road|rathgar|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €1,952,500 across 22 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,952,500 across 22 recorded sales on the Property Price Register.",
+    "info": "28 Highfield Road was a childhood home of Dr Dorothy Price (1890–1954), the physician who pioneered tuberculosis control and BCG vaccination in Ireland."
   },
   {
     "slug": "palmerston-road-rathmines",
@@ -266,7 +277,7 @@
     "rank": 24,
     "normalizedKey": "palmerston road|rathmines|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €1,950,000 across 42 recorded sales on the Property Price Register.",
-    "info": "Palmerston Road is a broad, tree-lined Victorian avenue in Rathmines, Dublin 6, developed largely in the second half of the 19th century. It is known for its large red-brick and granite houses set back behind mature front gardens."
+    "info": "Palmerston Road is a broad, tree-lined Victorian avenue in Rathmines, Dublin 6, developed largely in the second half of the 19th century. It is known for its large red-brick and granite houses set back behind mature front gardens. No. 97 was the childhood home of the Gifford sisters, among them Grace Gifford, who married the 1916 leader Joseph Plunkett, and Muriel Gifford, who married the executed signatory Thomas MacDonagh."
   },
   {
     "slug": "sydney-parade-avenue-dublin-4",
@@ -277,7 +288,8 @@
     "category": "value",
     "rank": 25,
     "normalizedKey": "sydney parade avenue|dublin 4|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €1,925,000 across 9 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,925,000 across 9 recorded sales on the Property Price Register.",
+    "info": "14 Sydney Parade Avenue was the family home of the brothers Jack and Walter Peterson, who won silver in field hockey for Ireland at the 1908 London Olympics."
   },
   {
     "slug": "green-park-orwell-road",
@@ -322,7 +334,7 @@
     "rank": 29,
     "normalizedKey": "longford terrace|monkstown|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €1,885,000 across 18 recorded sales on the Property Price Register.",
-    "info": "Longford Terrace is a seafront Victorian terrace in Monkstown, south County Dublin, overlooking Dublin Bay. Its tall, stucco-fronted houses form one of the best-known 19th-century terraces on the coast."
+    "info": "Longford Terrace is a seafront Victorian terrace in Monkstown, south County Dublin, overlooking Dublin Bay. Its tall, stucco-fronted houses form one of the best-known 19th-century terraces on the coast. The astronomer and spectroscopist Margaret Lindsay Huggins (1848–1915) grew up at No. 23, where a commemorative plaque was installed in 1997."
   },
   {
     "slug": "leeson-park-dublin-6",
@@ -333,7 +345,570 @@
     "category": "value",
     "rank": 30,
     "normalizedKey": "leeson park|dublin 6|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €1,875,000 across 12 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,875,000 across 12 recorded sales on the Property Price Register.",
+    "info": "The barrister and judge Michael Comyn lived on Leeson Park, where the republican leader Erskine Childers is said to have sheltered before his capture in 1922; the architectural historian Alistair Rowan and archivist Ann Martha Rowan lived at No. 22."
+  },
+  {
+    "slug": "cowper-road-rathmines",
+    "name": "Cowper Road",
+    "area": "Rathmines",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 31,
+    "normalizedKey": "cowper road|rathmines|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,825,000 across 25 recorded sales on the Property Price Register.",
+    "info": "No. 12 Cowper Road was the birthplace, in 1884, of Muriel Gifford MacDonagh, the nationalist activist and widow of the executed 1916 leader Thomas MacDonagh."
+  },
+  {
+    "slug": "elton-park-sandycove",
+    "name": "Elton Park",
+    "area": "Sandycove",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 32,
+    "normalizedKey": "elton park|sandycove|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,825,000 across 18 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "ailesbury-park-ballsbridge",
+    "name": "Ailesbury Park",
+    "area": "Ballsbridge",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 33,
+    "normalizedKey": "ailesbury park|ballsbridge|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,825,000 across 8 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "coliemore-road-dalkey",
+    "name": "Coliemore Road",
+    "area": "Dalkey",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 34,
+    "normalizedKey": "coliemore road|dalkey|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,825,000 across 12 recorded sales on the Property Price Register.",
+    "info": "The actor Norman Rodway (1929–2001) was born at “Elsinore”, his family home on Coliemore Road."
+  },
+  {
+    "slug": "greenfield-park-donnybrook",
+    "name": "Greenfield Park",
+    "area": "Donnybrook",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 35,
+    "normalizedKey": "greenfield park|donnybrook|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,800,000 across 10 recorded sales on the Property Price Register.",
+    "info": "No. 23 Greenfield Park, “The Pavilion”, was the final home of the newspaper magnate Cecil Harmsworth King (1901–1987), chairman of the Daily Mirror, who moved there from London in 1974."
+  },
+  {
+    "slug": "abington-malahide",
+    "name": "Abington",
+    "area": "Malahide",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 36,
+    "normalizedKey": "abington|malahide|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,800,000 across 21 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "zion-road-rathgar",
+    "name": "Zion Road",
+    "area": "Rathgar",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 37,
+    "normalizedKey": "zion road|rathgar|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,762,500 across 10 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "maple-road-clonskeagh",
+    "name": "Maple Road",
+    "area": "Clonskeagh",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 38,
+    "normalizedKey": "maple road|clonskeagh|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,755,000 across 12 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "merrion-road-ballsbridge",
+    "name": "Merrion Road",
+    "area": "Ballsbridge",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 39,
+    "normalizedKey": "merrion road|ballsbridge|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,750,000 across 51 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "marlborough-road-glenageary",
+    "name": "Marlborough Road",
+    "area": "Glenageary",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 40,
+    "normalizedKey": "marlborough road|glenageary|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,750,000 across 9 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "waltham-terrace-blackrock",
+    "name": "Waltham Terrace",
+    "area": "Blackrock",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 41,
+    "normalizedKey": "waltham terrace|blackrock|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,732,500 across 26 recorded sales on the Property Price Register.",
+    "info": "The architect Patrick Byrne (d. 1864) lived at No. 3 Waltham Terrace, and the suffragette Norah Elam (1878–1961) was born at No. 13."
+  },
+  {
+    "slug": "park-drive-ranelagh",
+    "name": "Park Drive",
+    "area": "Ranelagh",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 42,
+    "normalizedKey": "park drive|ranelagh|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,720,000 across 9 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "glenvar-park-blackrock",
+    "name": "Glenvar Park",
+    "area": "Blackrock",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 43,
+    "normalizedKey": "glenvar park|blackrock|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,675,000 across 8 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "nutley-avenue-ballsbridge",
+    "name": "Nutley Avenue",
+    "area": "Ballsbridge",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 44,
+    "normalizedKey": "nutley avenue|ballsbridge|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,665,000 across 9 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "nutley-avenue-donnybrook",
+    "name": "Nutley Avenue",
+    "area": "Donnybrook",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 45,
+    "normalizedKey": "nutley avenue|donnybrook|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,650,000 across 17 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "grosvenor-road-rathgar",
+    "name": "Grosvenor Road",
+    "area": "Rathgar",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 46,
+    "normalizedKey": "grosvenor road|rathgar|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,650,000 across 13 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "bushy-park-road-rathgar",
+    "name": "Bushy Park Road",
+    "area": "Rathgar",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 47,
+    "normalizedKey": "bushy park road|rathgar|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,610,000 across 15 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "the-blake-lansdowne-place",
+    "name": "The Blake",
+    "area": "Lansdowne Place",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 48,
+    "normalizedKey": "the blake|lansdowne place|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,607,720 across 14 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "sandymount-avenue-dublin-4",
+    "name": "Sandymount Avenue",
+    "area": "Dublin 4",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 49,
+    "normalizedKey": "sandymount avenue|dublin 4|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,607,500 across 10 recorded sales on the Property Price Register.",
+    "info": "The poet W. B. Yeats (1865–1939) was born in Sandymount in 1865, traditionally at a house called “Georgeville” on Sandymount Avenue."
+  },
+  {
+    "slug": "alma-road-monkstown",
+    "name": "Alma Road",
+    "area": "Monkstown",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 50,
+    "normalizedKey": "alma road|monkstown|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,587,500 across 18 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "healthfield-road-terenure",
+    "name": "Healthfield Road",
+    "area": "Terenure",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 51,
+    "normalizedKey": "healthfield road|terenure|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,567,500 across 10 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "glensavage-avoca-road",
+    "name": "Glensavage",
+    "area": "Avoca Road",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 52,
+    "normalizedKey": "glensavage|avoca road|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,563,877 across 10 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "spencer-villas-glenageary",
+    "name": "Spencer Villas",
+    "area": "Glenageary",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 53,
+    "normalizedKey": "spencer villas|glenageary|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,550,000 across 15 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "merrion-square-dublin-2",
+    "name": "Merrion Square",
+    "area": "Dublin 2",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 54,
+    "normalizedKey": "merrion square|dublin 2|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,542,500 across 10 recorded sales on the Property Price Register.",
+    "info": "Merrion Square has been home to many of Ireland's most celebrated figures: Oscar Wilde grew up at No. 1, the poet W. B. Yeats lived at No. 82, and Daniel O'Connell lived at No. 58. Later residents included the writer Sheridan Le Fanu and the physicist Erwin Schrödinger."
+  },
+  {
+    "slug": "dartmouth-square-ranelagh",
+    "name": "Dartmouth Square",
+    "area": "Ranelagh",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 55,
+    "normalizedKey": "dartmouth square|ranelagh|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,535,000 across 18 recorded sales on the Property Price Register.",
+    "info": "The geologist Grenville Cole (1859–1924), director of the Geological Survey of Ireland, lived at No. 3 Dartmouth Square around the turn of the 20th century."
+  },
+  {
+    "slug": "dartry-park-dartry",
+    "name": "Dartry Park",
+    "area": "Dartry",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 56,
+    "normalizedKey": "dartry park|dartry|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,530,000 across 10 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "avoca-avenue-blackrock",
+    "name": "Avoca Avenue",
+    "area": "Blackrock",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 57,
+    "normalizedKey": "avoca avenue|blackrock|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,530,000 across 9 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "albany-road-ranelagh",
+    "name": "Albany Road",
+    "area": "Ranelagh",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 58,
+    "normalizedKey": "albany road|ranelagh|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,530,000 across 12 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "anglesea-road-ballsbridge",
+    "name": "Anglesea Road",
+    "area": "Ballsbridge",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 59,
+    "normalizedKey": "anglesea road|ballsbridge|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,525,000 across 31 recorded sales on the Property Price Register.",
+    "info": "No. 5 Anglesea Road was the home of the artist Beatrice Behan, widow of the playwright Brendan Behan, and where their son, the actor Paudge Behan, grew up."
+  },
+  {
+    "slug": "glenart-avenue-blackrock",
+    "name": "Glenart Avenue",
+    "area": "Blackrock",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 60,
+    "normalizedKey": "glenart avenue|blackrock|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,525,000 across 17 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "the-hutchins-lansdowne-place",
+    "name": "The Hutchins",
+    "area": "Lansdowne Place",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 61,
+    "normalizedKey": "the hutchins|lansdowne place|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,522,900 across 24 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "morehampton-lane-donnybrook",
+    "name": "Morehampton Lane",
+    "area": "Donnybrook",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 62,
+    "normalizedKey": "morehampton lane|donnybrook|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,522,500 across 12 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "annabasky-glen-berryfield-avenue",
+    "name": "Annabasky Glen",
+    "area": "Berryfield Avenue",
+    "county": "Wicklow",
+    "countySlug": "wicklow",
+    "category": "value",
+    "rank": 63,
+    "normalizedKey": "annabasky glen|berryfield avenue|wicklow",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,519,824 across 9 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "harcourt-terrace-dublin-2",
+    "name": "Harcourt Terrace",
+    "area": "Dublin 2",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 64,
+    "normalizedKey": "harcourt terrace|dublin 2|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,510,000 across 11 recorded sales on the Property Price Register.",
+    "info": "No. 4 Harcourt Terrace was for many years the home of the actor-directors Micheál Mac Liammóir and Hilton Edwards, founders of the Gate Theatre, and the artist Sarah Purser kept a studio at No. 11."
+  },
+  {
+    "slug": "mount-eden-road-donnybrook",
+    "name": "Mount Eden Road",
+    "area": "Donnybrook",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 65,
+    "normalizedKey": "mount eden road|donnybrook|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,507,500 across 10 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "nutley-road-donnybrook",
+    "name": "Nutley Road",
+    "area": "Donnybrook",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 66,
+    "normalizedKey": "nutley road|donnybrook|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,505,000 across 28 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "ailesbury-drive-donnybrook",
+    "name": "Ailesbury Drive",
+    "area": "Donnybrook",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 67,
+    "normalizedKey": "ailesbury drive|donnybrook|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,500,000 across 9 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "wilfield-park-sandymount",
+    "name": "Wilfield Park",
+    "area": "Sandymount",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 68,
+    "normalizedKey": "wilfield park|sandymount|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,500,000 across 14 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "morehampton-road-dublin-4",
+    "name": "Morehampton Road",
+    "area": "Dublin 4",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 69,
+    "normalizedKey": "morehampton road|dublin 4|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,500,000 across 8 recorded sales on the Property Price Register.",
+    "info": "Morehampton Road has been home to several writers and artists, including the writer Kathleen Goodfellow (No. 4) and the artist and printer Cecil ffrench Salkeld (No. 43), who ran the Gayfield Press from a garden studio there in the 1930s and 1940s."
+  },
+  {
+    "slug": "woodlands-park-blackrock",
+    "name": "Woodlands Park",
+    "area": "Blackrock",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 70,
+    "normalizedKey": "woodlands park|blackrock|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,500,000 across 16 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "thormanby-hill-howth",
+    "name": "Thormanby Hill",
+    "area": "Howth",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 71,
+    "normalizedKey": "thormanby hill|howth|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,497,797 across 9 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "brendan-road-donnybrook",
+    "name": "Brendan Road",
+    "area": "Donnybrook",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 72,
+    "normalizedKey": "brendan road|donnybrook|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,491,500 across 11 recorded sales on the Property Price Register.",
+    "info": "Brendan Road was built and named by Batt O'Connor (1870–1935), a builder, IRB member and later TD, who lived at No. 1 — Michael Collins was a frequent visitor during the War of Independence. Fellow republicans Diarmuid O'Hegarty (No. 9) and Sinéad Derrig (No. 23) also lived on the road."
+  },
+  {
+    "slug": "kenilworth-square-north-rathgar",
+    "name": "Kenilworth Square North",
+    "area": "Rathgar",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 73,
+    "normalizedKey": "kenilworth square north|rathgar|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,490,000 across 8 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "belgrave-road-rathmines",
+    "name": "Belgrave Road",
+    "area": "Rathmines",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 74,
+    "normalizedKey": "belgrave road|rathmines|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,480,000 across 17 recorded sales on the Property Price Register.",
+    "info": "No. 9 Belgrave Road was the home and medical practice of Dr Kathleen Lynn (1874–1955), the 1916 Rising figure and co-founder of St Ultan's children's hospital, who lived there with her partner Madeleine ffrench-Mullen for some fifty years."
+  },
+  {
+    "slug": "annesley-gardens-ranelagh",
+    "name": "Annesley Gardens",
+    "area": "Ranelagh",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 75,
+    "normalizedKey": "annesley gardens|ranelagh|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,480,000 across 19 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "balure-balure-lane",
+    "name": "Balure",
+    "area": "Balure Lane",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 76,
+    "normalizedKey": "balure|balure lane|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,476,872 across 8 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "vesey-place-dun-laoghaire",
+    "name": "Vesey Place",
+    "area": "Dun Laoghaire",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 77,
+    "normalizedKey": "vesey place|dun laoghaire|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,470,000 across 9 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "percy-place-dublin-4",
+    "name": "Percy Place",
+    "area": "Dublin 4",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 78,
+    "normalizedKey": "percy place|dublin 4|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,465,000 across 8 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "cois-na-mona-oranmore",
+    "name": "Cois na Mona",
+    "area": "Oranmore",
+    "county": "Galway",
+    "countySlug": "galway",
+    "category": "value",
+    "rank": 79,
+    "normalizedKey": "cois na mona|oranmore|galway",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,462,500 across 8 recorded sales on the Property Price Register."
+  },
+  {
+    "slug": "st-thomas-road-mount-merrion",
+    "name": "St Thomas Road",
+    "area": "Mount Merrion",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "category": "value",
+    "rank": 80,
+    "normalizedKey": "street thomas road|mount merrion|dublin",
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,460,000 across 9 recorded sales on the Property Price Register."
   },
   {
     "slug": "station-walk-rickardstown",
@@ -355,7 +930,7 @@
     "category": "volume",
     "rank": 2,
     "normalizedKey": "drumnigh manor|portmarnock|dublin",
-    "description": "One of Ireland's most active streets, with 226 recorded sales on the Property Price Register and a median price of €557,269."
+    "description": "One of Ireland's most active streets, with 227 recorded sales on the Property Price Register and a median price of €559,471."
   },
   {
     "slug": "oldtown-woods-celbridge",
@@ -377,7 +952,7 @@
     "category": "volume",
     "rank": 4,
     "normalizedKey": "millquarter|knockmullen|wexford",
-    "description": "One of Ireland's most active streets, with 206 recorded sales on the Property Price Register and a median price of €303,514."
+    "description": "One of Ireland's most active streets, with 207 recorded sales on the Property Price Register and a median price of €303,900."
   },
   {
     "slug": "boireann-bheag-roscam",
@@ -410,7 +985,7 @@
     "category": "volume",
     "rank": 7,
     "normalizedKey": "ard uisce|whiterock hill|wexford",
-    "description": "One of Ireland's most active streets, with 185 recorded sales on the Property Price Register and a median price of €253,911."
+    "description": "One of Ireland's most active streets, with 186 recorded sales on the Property Price Register and a median price of €254,456."
   },
   {
     "slug": "the-links-elm-park",
@@ -432,7 +1007,7 @@
     "category": "volume",
     "rank": 9,
     "normalizedKey": "drakes point|crosshaven|cork",
-    "description": "One of Ireland's most active streets, with 165 recorded sales on the Property Price Register and a median price of €290,749."
+    "description": "One of Ireland's most active streets, with 167 recorded sales on the Property Price Register and a median price of €292,142."
   },
   {
     "slug": "cluain-larach-knockenduff",
@@ -443,7 +1018,7 @@
     "category": "volume",
     "rank": 10,
     "normalizedKey": "cluain larach|knockenduff|waterford",
-    "description": "One of Ireland's most active streets, with 161 recorded sales on the Property Price Register and a median price of €232,500."
+    "description": "One of Ireland's most active streets, with 162 recorded sales on the Property Price Register and a median price of €232,990."
   },
   {
     "slug": "beaulieu-village-termonfeckin-road",
@@ -454,7 +1029,7 @@
     "category": "volume",
     "rank": 11,
     "normalizedKey": "beaulieu village|termonfeckin road|louth",
-    "description": "One of Ireland's most active streets, with 160 recorded sales on the Property Price Register and a median price of €237,925."
+    "description": "One of Ireland's most active streets, with 161 recorded sales on the Property Price Register and a median price of €238,009."
   },
   {
     "slug": "kildare-road-crumlin",
@@ -465,18 +1040,7 @@
     "category": "volume",
     "rank": 12,
     "normalizedKey": "kildare road|crumlin|dublin",
-    "description": "One of Ireland's most active streets, with 156 recorded sales on the Property Price Register and a median price of €267,500."
-  },
-  {
-    "slug": "dundoogan-haynestown",
-    "name": "Dundoogan",
-    "area": "Haynestown",
-    "county": "Louth",
-    "countySlug": "louth",
-    "category": "volume",
-    "rank": 13,
-    "normalizedKey": "dundoogan|haynestown|louth",
-    "description": "One of Ireland's most active streets, with 156 recorded sales on the Property Price Register and a median price of €227,300."
+    "description": "One of Ireland's most active streets, with 159 recorded sales on the Property Price Register and a median price of €272,000."
   },
   {
     "slug": "newtown-meadows-castletroy",
@@ -485,9 +1049,20 @@
     "county": "Limerick",
     "countySlug": "limerick",
     "category": "volume",
-    "rank": 14,
+    "rank": 13,
     "normalizedKey": "newtown meadows|castletroy|limerick",
-    "description": "One of Ireland's most active streets, with 155 recorded sales on the Property Price Register and a median price of €372,247."
+    "description": "One of Ireland's most active streets, with 156 recorded sales on the Property Price Register and a median price of €372,247."
+  },
+  {
+    "slug": "dundoogan-haynestown",
+    "name": "Dundoogan",
+    "area": "Haynestown",
+    "county": "Louth",
+    "countySlug": "louth",
+    "category": "volume",
+    "rank": 14,
+    "normalizedKey": "dundoogan|haynestown|louth",
+    "description": "One of Ireland's most active streets, with 156 recorded sales on the Property Price Register and a median price of €227,300."
   },
   {
     "slug": "charlesland-wood-greystones",
@@ -531,18 +1106,7 @@
     "category": "volume",
     "rank": 18,
     "normalizedKey": "crieve mor avenue|crievesmith|donegal",
-    "description": "One of Ireland's most active streets, with 142 recorded sales on the Property Price Register and a median price of €255,283."
-  },
-  {
-    "slug": "browneshill-wood-browneshill-road",
-    "name": "Browneshill Wood",
-    "area": "Browneshill Road",
-    "county": "Carlow",
-    "countySlug": "carlow",
-    "category": "volume",
-    "rank": 19,
-    "normalizedKey": "browneshill wood|browneshill road|carlow",
-    "description": "One of Ireland's most active streets, with 139 recorded sales on the Property Price Register and a median price of €233,500."
+    "description": "One of Ireland's most active streets, with 143 recorded sales on the Property Price Register and a median price of €255,066."
   },
   {
     "slug": "hampton-square-navan-road",
@@ -551,8 +1115,19 @@
     "county": "Dublin",
     "countySlug": "dublin",
     "category": "volume",
-    "rank": 20,
+    "rank": 19,
     "normalizedKey": "hampton square|navan road|dublin",
     "description": "One of Ireland's most active streets, with 139 recorded sales on the Property Price Register and a median price of €280,000."
+  },
+  {
+    "slug": "browneshill-wood-browneshill-road",
+    "name": "Browneshill Wood",
+    "area": "Browneshill Road",
+    "county": "Carlow",
+    "countySlug": "carlow",
+    "category": "volume",
+    "rank": 20,
+    "normalizedKey": "browneshill wood|browneshill road|carlow",
+    "description": "One of Ireland's most active streets, with 139 recorded sales on the Property Price Register and a median price of €233,500."
   }
 ]

@@ -1,0 +1,161 @@
+{
+  "slug": "maple-road-clonskeagh",
+  "stats": {
+    "count": 12,
+    "median": 1755000,
+    "avg": 1966984,
+    "min": 1300000,
+    "max": 3000000,
+    "firstYear": 2011,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 2125000,
+      "avg_price": 2125000,
+      "min_price": 1600000,
+      "max_price": 2650000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1796310,
+      "avg_price": 1796310,
+      "min_price": 1796310,
+      "max_price": 1796310
+    },
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 1550000,
+      "avg_price": 1950000,
+      "min_price": 1300000,
+      "max_price": 3000000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1770000,
+      "avg_price": 1770000,
+      "min_price": 1770000,
+      "max_price": 1770000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 1640000,
+      "avg_price": 1666667,
+      "min_price": 1620000,
+      "max_price": 1740000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 2468750,
+      "avg_price": 2468750,
+      "min_price": 2200000,
+      "max_price": 2737500
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-10-23",
+      "address": "8 MAPLE RD, CLONSKEAGH, DUBLIN 14",
+      "price": 2737500,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D14TN22"
+    },
+    {
+      "date": "2024-08-16",
+      "address": "5 MAPLE ROAD, CLONSKEAGH, DUBLIN 14",
+      "price": 2200000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D14VN28"
+    },
+    {
+      "date": "2022-12-13",
+      "address": "24 MAPLE RD, CLONSKEAGH, DUBLIN 14",
+      "price": 1620000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14H603"
+    },
+    {
+      "date": "2022-12-02",
+      "address": "16 MAPLE ROAD, CLONSKEAGH, DUBLIN 14",
+      "price": 1640000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14R602"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "20 MAPLE ROAD, CLONSKEAGH, DUBLIN 14",
+      "price": 1740000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14DA38"
+    },
+    {
+      "date": "2019-08-30",
+      "address": "2 MAPLE RD, CLONSKEAGH, DUBLIN 14",
+      "price": 1770000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-01",
+      "address": "22 MAPLE RD, CLONSKEAGH, DUBLIN 14",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-27",
+      "address": "24 MAPLE RD, CLONSKEAGH, DUBLIN 14",
+      "price": 1550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14H603"
+    },
+    {
+      "date": "2016-01-15",
+      "address": "9 MAPLE ROAD, CLONSKEAGH",
+      "price": 3000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-10-11",
+      "address": "3 Maple Road, Clonskeagh",
+      "price": 1796310,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-11-28",
+      "address": "1 maple road, clonskeagh",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-10-10",
+      "address": "11  Maple Road, Clonskeagh",
+      "price": 2650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 12
+}

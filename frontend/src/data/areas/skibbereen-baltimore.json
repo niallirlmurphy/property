@@ -7,7 +7,7 @@
   },
   "radius_km": 12.0,
   "total_count": 10,
-  "median_price": 335000.0,
+  "median_price": 330000.0,
   "avg_price": 419800,
   "min_year": 2010,
   "max_year": 2026,
@@ -26,8 +26,8 @@
       "latitude": 51.548873,
       "longitude": -9.257889,
       "routing_key": "P81",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 588.96301791
     },
     {
@@ -44,8 +44,8 @@
       "latitude": 51.544311,
       "longitude": -9.264778,
       "routing_key": "P81",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "detached",
       "distance_m": 403.20733797
     },
     {
@@ -244,11 +244,11 @@
     },
     {
       "year": 2016,
-      "count": 56,
+      "count": 57,
       "median_price": 155000.0,
-      "avg_price": 163997.0,
+      "avg_price": 180471.0,
       "min_price": 30000.0,
-      "max_price": 420000.0
+      "max_price": 1103000.0
     },
     {
       "year": 2017,
@@ -284,49 +284,49 @@
     },
     {
       "year": 2021,
-      "count": 60,
-      "median_price": 272500.0,
-      "avg_price": 362080.0,
+      "count": 67,
+      "median_price": 270000.0,
+      "avg_price": 365870.0,
       "min_price": 25000.0,
       "max_price": 2549990.0
     },
     {
       "year": 2022,
-      "count": 84,
+      "count": 86,
       "median_price": 289000.0,
-      "avg_price": 368532.0,
+      "avg_price": 366822.0,
       "min_price": 57000.0,
       "max_price": 1280000.0
     },
     {
       "year": 2023,
-      "count": 65,
+      "count": 67,
       "median_price": 350000.0,
-      "avg_price": 371305.0,
+      "avg_price": 368654.0,
       "min_price": 38000.0,
       "max_price": 1400000.0
     },
     {
       "year": 2024,
-      "count": 89,
+      "count": 91,
       "median_price": 300000.0,
-      "avg_price": 341868.0,
+      "avg_price": 352069.0,
       "min_price": 60000.0,
       "max_price": 1775000.0
     },
     {
       "year": 2025,
-      "count": 48,
-      "median_price": 400000.0,
-      "avg_price": 446851.0,
+      "count": 51,
+      "median_price": 395000.0,
+      "avg_price": 437918.0,
       "min_price": 50000.0,
       "max_price": 2397000.0
     },
     {
       "year": 2026,
-      "count": 31,
-      "median_price": 335000.0,
-      "avg_price": 413489.0,
+      "count": 34,
+      "median_price": 330000.0,
+      "avg_price": 401857.0,
       "min_price": 100000.0,
       "max_price": 1903404.49
     }

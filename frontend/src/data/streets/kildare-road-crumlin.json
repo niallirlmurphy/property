@@ -1,11 +1,11 @@
 {
   "slug": "kildare-road-crumlin",
   "stats": {
-    "count": 156,
-    "median": 267500,
-    "avg": 262154,
+    "count": 159,
+    "median": 272000,
+    "avg": 266088,
     "min": 70000,
-    "max": 528000,
+    "max": 530000,
     "firstYear": 2010,
     "lastYear": 2026
   },
@@ -140,14 +140,38 @@
     },
     {
       "year": 2026,
-      "count": 6,
-      "median_price": 322250,
-      "avg_price": 344083,
+      "count": 9,
+      "median_price": 432000,
+      "avg_price": 386278,
       "min_price": 250000,
-      "max_price": 450000
+      "max_price": 530000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-08-27",
+      "address": "100 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 450000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D12K5R3"
+    },
+    {
+      "date": "2026-08-11",
+      "address": "119 KILDARE ROAD, CRUMLIN, DUBLIN 12",
+      "price": 432000,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "D12N2V8"
+    },
+    {
+      "date": "2026-08-07",
+      "address": "28 KILDARE RD, CRUMLIN, DUBLIN 12",
+      "price": 530000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12Y4E2"
+    },
     {
       "date": "2026-07-09",
       "address": "347 KILDARE RD, CRUMLIN, DUBLIN 12",
@@ -523,31 +547,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D12N5P5"
-    },
-    {
-      "date": "2022-01-26",
-      "address": "304 KILDARE RD, CRUMLIN, DUBLIN",
-      "price": 285000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D12RFF9"
-    },
-    {
-      "date": "2022-01-26",
-      "address": "318 KILDARE RD, CRUMLIN, DUBLIN 12",
-      "price": 297000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D12T9C6"
-    },
-    {
-      "date": "2022-01-18",
-      "address": "350 KILDARE RD, CRUMLIN, DUBLIN CITY",
-      "price": 320000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D12E5W7"
     }
   ],
-  "totalTransactions": 156
+  "totalTransactions": 159
 }

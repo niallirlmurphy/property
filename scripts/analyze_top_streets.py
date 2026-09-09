@@ -19,7 +19,7 @@ from street_key import street_key, APT_NAME_RE
 
 MIN_TX_FOR_VALUE = 8      # streets need enough sales to be a credible "high value" page
 MIN_TX_FLOOR = 3          # ignore near-unique addresses entirely
-N_VALUE = 30              # top-N by median price
+N_VALUE = 80              # top-N by median price
 N_VOLUME = 20             # top-N by transaction count
 
 APT_FRACTION_THRESHOLD = 0.5  # >=50% of sales flagged as apartments -> exclude as a block

@@ -1,0 +1,225 @@
+{
+  "slug": "glenart-avenue-blackrock",
+  "stats": {
+    "count": 17,
+    "median": 1525000,
+    "avg": 1480845,
+    "min": 625000,
+    "max": 2150000,
+    "firstYear": 2011,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 825000,
+      "avg_price": 825000,
+      "min_price": 625000,
+      "max_price": 1025000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 745000,
+      "avg_price": 745000,
+      "min_price": 745000,
+      "max_price": 745000
+    },
+    {
+      "year": 2015,
+      "count": 2,
+      "median_price": 1477500,
+      "avg_price": 1477500,
+      "min_price": 805000,
+      "max_price": 2150000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1082500,
+      "avg_price": 1082500,
+      "min_price": 915000,
+      "max_price": 1250000
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 1963216,
+      "avg_price": 1839733,
+      "min_price": 1382500,
+      "max_price": 2050000
+    },
+    {
+      "year": 2019,
+      "count": 3,
+      "median_price": 1806168,
+      "avg_price": 1741814,
+      "min_price": 1525000,
+      "max_price": 1894273
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1350000,
+      "avg_price": 1350000,
+      "min_price": 1350000,
+      "max_price": 1350000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1825000,
+      "avg_price": 1825000,
+      "min_price": 1825000,
+      "max_price": 1825000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1900000,
+      "avg_price": 1900000,
+      "min_price": 1900000,
+      "max_price": 1900000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-08-29",
+      "address": "5 GLENART AVENUE, BLACKROCK, CO DUBLIN",
+      "price": 1900000,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "A94K4A6"
+    },
+    {
+      "date": "2024-09-20",
+      "address": "39 GLENART AVE, BLACKROCK, DUBLIN",
+      "price": 1825000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A94H996"
+    },
+    {
+      "date": "2023-09-13",
+      "address": "1 GLENART AVENUE, BLACKROCK, CO DUBLIN",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94C6A2"
+    },
+    {
+      "date": "2019-11-21",
+      "address": "3 GLENART AVE, BLACKROCK, DUBLIN",
+      "price": 1525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-04",
+      "address": "24 Glenart Avenue, Blackrock",
+      "price": 1894273,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-04",
+      "address": "20 Glenart Avenue, Blackrock",
+      "price": 1806168,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-09",
+      "address": "22 glenart avenue, blackrock",
+      "price": 2050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-06",
+      "address": "17 GLENART AVE, BLACKROCK, DUBLIN",
+      "price": 1382500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-01",
+      "address": "6 GLENART AVE, BLACKROCK, DUBLIN",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-20",
+      "address": "4 GLENART AVE, BLACKROCK, DUBLIN",
+      "price": 2026432,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-23",
+      "address": "39 GLENART AVE, BLACKROCK, DUBLIN",
+      "price": 1250000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A94H996"
+    },
+    {
+      "date": "2017-01-13",
+      "address": "10 GLENART AVE, BLACKROCK, DUBLIN",
+      "price": 915000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-07",
+      "address": "4 GLENART AVE, BLACKROCK, DUBLIN",
+      "price": 805000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-06-12",
+      "address": "31 GLENART AVE, BLACKROCK, DUBLIN",
+      "price": 2150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-09-30",
+      "address": "39 Glenart Avenue, Blackrock",
+      "price": 745000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-07-29",
+      "address": "12 Glenart Avenue, Blackrock, Dun Laoghaire",
+      "price": 625000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-03-08",
+      "address": "27 Glenart Avenue, Blackrock",
+      "price": 1025000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 17
+}

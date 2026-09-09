@@ -1,0 +1,161 @@
+{
+  "slug": "merrion-square-dublin-2",
+  "stats": {
+    "count": 10,
+    "median": 1542500,
+    "avg": 2205822,
+    "min": 266666,
+    "max": 9246550,
+    "firstYear": 2014,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1735000,
+      "avg_price": 1735000,
+      "min_price": 1735000,
+      "max_price": 1735000
+    },
+    {
+      "year": 2015,
+      "count": 3,
+      "median_price": 760000,
+      "avg_price": 1353333,
+      "min_price": 400000,
+      "max_price": 2900000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1350000,
+      "avg_price": 1350000,
+      "min_price": 1350000,
+      "max_price": 1350000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 2200000,
+      "avg_price": 2200000,
+      "min_price": 2200000,
+      "max_price": 2200000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 266666,
+      "avg_price": 266666,
+      "min_price": 266666,
+      "max_price": 266666
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2650000,
+      "avg_price": 2650000,
+      "min_price": 2650000,
+      "max_price": 2650000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 9246550,
+      "avg_price": 9246550,
+      "min_price": 9246550,
+      "max_price": 9246550
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 550000,
+      "avg_price": 550000,
+      "min_price": 550000,
+      "max_price": 550000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-09-23",
+      "address": "67 MERRION SQUARE, DUBLIN 2",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D02CK11"
+    },
+    {
+      "date": "2023-06-13",
+      "address": "71 MERRION SQ, DUBLIN 2, DUBLIN",
+      "price": 9246550,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D02K223"
+    },
+    {
+      "date": "2021-07-28",
+      "address": "52 MERRION SQ, DUBLIN 2, DUBLIN",
+      "price": 2650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D02RR98"
+    },
+    {
+      "date": "2019-01-25",
+      "address": "6 MERRION SQ, DUBLIN 2, DUBLIN",
+      "price": 266666,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-05",
+      "address": "31 MERRION SQ, DUBLIN 2, DUBLIN",
+      "price": 2200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-26",
+      "address": "14 Merrion Square, Dublin 2",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-06-05",
+      "address": "4 Merrion Square, Dublin 2",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-08",
+      "address": "13 Merrion Square, Dublin 2",
+      "price": 760000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-26",
+      "address": "52 Merrion Square, Dublin 2",
+      "price": 2900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-06-09",
+      "address": "31 Merrion Square, Dublin 2",
+      "price": 1735000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

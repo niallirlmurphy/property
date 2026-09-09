@@ -1,0 +1,233 @@
+{
+  "slug": "the-hutchins-lansdowne-place",
+  "stats": {
+    "count": 24,
+    "median": 1522900,
+    "avg": 1643391,
+    "min": 969162,
+    "max": 3480176,
+    "firstYear": 2023,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2023,
+      "count": 10,
+      "median_price": 1145374,
+      "avg_price": 1430154,
+      "min_price": 969162,
+      "max_price": 3480176
+    },
+    {
+      "year": 2024,
+      "count": 13,
+      "median_price": 1588825,
+      "avg_price": 1790757,
+      "min_price": 1160006,
+      "max_price": 3348018
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1860000,
+      "avg_price": 1860000,
+      "min_price": 1860000,
+      "max_price": 1860000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-01-15",
+      "address": "26 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1860000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04E4H3"
+    },
+    {
+      "date": "2024-09-19",
+      "address": "25 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 2466960,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2024-07-12",
+      "address": "21 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1629956,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04F8K1"
+    },
+    {
+      "date": "2024-05-13",
+      "address": "27 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 2296296,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04F1T2"
+    },
+    {
+      "date": "2024-03-15",
+      "address": "28 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 3348018,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04W4A8"
+    },
+    {
+      "date": "2024-03-07",
+      "address": "3 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1680871,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D04Y7N0"
+    },
+    {
+      "date": "2024-03-07",
+      "address": "1 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1540676,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04Y9H0"
+    },
+    {
+      "date": "2024-03-07",
+      "address": "15 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1505124,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04H1R9"
+    },
+    {
+      "date": "2024-03-07",
+      "address": "16 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1588825,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04X9C6"
+    },
+    {
+      "date": "2024-03-07",
+      "address": "18 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1588825,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04F2P2"
+    },
+    {
+      "date": "2024-03-07",
+      "address": "19 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1672525,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04R3W9"
+    },
+    {
+      "date": "2024-03-07",
+      "address": "2 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1160006,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04C2F8"
+    },
+    {
+      "date": "2024-03-07",
+      "address": "24 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1365639,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04E9K4"
+    },
+    {
+      "date": "2024-03-04",
+      "address": "26 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1436123,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04E4H3"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "12 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04W5X5"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "9 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1189427,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04P2V1"
+    },
+    {
+      "date": "2023-12-14",
+      "address": "10 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1057268,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H6F8"
+    },
+    {
+      "date": "2023-12-04",
+      "address": "13 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1409692,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X3E7"
+    },
+    {
+      "date": "2023-12-01",
+      "address": "5 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1035242,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C3X2"
+    },
+    {
+      "date": "2023-12-01",
+      "address": "8 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 969162,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N9F6"
+    },
+    {
+      "date": "2023-11-29",
+      "address": "22 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1740088,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04P2W9"
+    },
+    {
+      "date": "2023-11-17",
+      "address": "14 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 3480176,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X2T8"
+    },
+    {
+      "date": "2023-11-17",
+      "address": "6 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 969163,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V3K7"
+    },
+    {
+      "date": "2023-11-10",
+      "address": "7 THE HUTCHINS, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1101321,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04R5F2"
+    }
+  ],
+  "totalTransactions": 24
+}

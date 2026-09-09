@@ -1,0 +1,145 @@
+{
+  "slug": "thormanby-hill-howth",
+  "stats": {
+    "count": 9,
+    "median": 1497797,
+    "avg": 1461745,
+    "min": 1189427,
+    "max": 1800000,
+    "firstYear": 2015,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1189427,
+      "avg_price": 1189427,
+      "min_price": 1189427,
+      "max_price": 1189427
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1223975,
+      "avg_price": 1223975,
+      "min_price": 1223975,
+      "max_price": 1223975
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1299559,
+      "avg_price": 1299559,
+      "min_price": 1299559,
+      "max_price": 1299559
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1497797,
+      "avg_price": 1497797,
+      "min_price": 1497797,
+      "max_price": 1497797
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1499787,
+      "avg_price": 1499787,
+      "min_price": 1404574,
+      "max_price": 1595000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 1572687,
+      "avg_price": 1572687,
+      "min_price": 1563877,
+      "max_price": 1581498
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1800000,
+      "avg_price": 1800000,
+      "min_price": 1800000,
+      "max_price": 1800000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-02-07",
+      "address": "4 THORMANBY HILL, HOWTH, CO. DUBLIN",
+      "price": 1800000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D13C9W6"
+    },
+    {
+      "date": "2024-08-08",
+      "address": "24 THORMANBY HILL, HOWTH, CO DUBLIN",
+      "price": 1581498,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D13KPK3"
+    },
+    {
+      "date": "2024-05-20",
+      "address": "25 THORMANBY HILL, HOWTH, CO DUBLIN",
+      "price": 1563877,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D13HF6Y"
+    },
+    {
+      "date": "2023-10-26",
+      "address": "27, Thormanby Hill, Howth",
+      "price": 1595000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D13CCN9"
+    },
+    {
+      "date": "2023-02-22",
+      "address": "10 Thormanby Hill, Howth, Co.Dublin",
+      "price": 1404574,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-04",
+      "address": "14 Thormanby Hill, Howth, Co.Dublin",
+      "price": 1497797,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-26",
+      "address": "7 THORMANBY HILL, HOWTH, DUBLIN",
+      "price": 1299559,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-06",
+      "address": "4 Thormanby Hill, Howth, Co. Dublin",
+      "price": 1223975,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D13C9W6"
+    },
+    {
+      "date": "2015-12-19",
+      "address": "2 Thormanby Hill, Howth",
+      "price": 1189427,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

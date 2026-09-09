@@ -1,0 +1,257 @@
+{
+  "slug": "belgrave-road-rathmines",
+  "stats": {
+    "count": 17,
+    "median": 1480000,
+    "avg": 1447195,
+    "min": 386667,
+    "max": 2600000,
+    "firstYear": 2010,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 2,
+      "median_price": 1040000,
+      "avg_price": 1040000,
+      "min_price": 880000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 386667,
+      "avg_price": 386667,
+      "min_price": 386667,
+      "max_price": 386667
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1100000,
+      "avg_price": 1100000,
+      "min_price": 1100000,
+      "max_price": 1100000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1230000,
+      "avg_price": 1230000,
+      "min_price": 1230000,
+      "max_price": 1230000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1450000,
+      "avg_price": 1450000,
+      "min_price": 1450000,
+      "max_price": 1450000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1120000,
+      "avg_price": 1120000,
+      "min_price": 1120000,
+      "max_price": 1120000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1210000,
+      "avg_price": 1210000,
+      "min_price": 1210000,
+      "max_price": 1210000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1600000,
+      "avg_price": 1600000,
+      "min_price": 1600000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1480000,
+      "avg_price": 1480000,
+      "min_price": 1480000,
+      "max_price": 1480000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1505140,
+      "avg_price": 1505140,
+      "min_price": 1505140,
+      "max_price": 1505140
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 2600000,
+      "avg_price": 2600000,
+      "min_price": 2600000,
+      "max_price": 2600000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1725000,
+      "avg_price": 1725000,
+      "min_price": 1725000,
+      "max_price": 1725000
+    },
+    {
+      "year": 2025,
+      "count": 4,
+      "median_price": 1777750,
+      "avg_price": 1778875,
+      "min_price": 1610000,
+      "max_price": 1950000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-12-17",
+      "address": "6 BELGRAVE ROAD, RATHMINES, DUBLIN 6",
+      "price": 1900000,
+      "bedrooms": 7,
+      "propertyType": "terraced",
+      "eircode": "D06T9T4"
+    },
+    {
+      "date": "2025-11-07",
+      "address": "16 Belgrave Road, Rathmines, Dublin 6",
+      "price": 1655500,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D06C4A4"
+    },
+    {
+      "date": "2025-02-13",
+      "address": "18 BELGRAVE RD, RATHMINES, DUBLIN 6",
+      "price": 1950000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06K6F6"
+    },
+    {
+      "date": "2025-01-23",
+      "address": "37 BELGRAVE RD, RATHMINES, DUBLIN 6",
+      "price": 1610000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D06KR22"
+    },
+    {
+      "date": "2024-09-24",
+      "address": "28 BELGRAVE RD, RATHMINES, DUBLIN 6",
+      "price": 1725000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06EF89"
+    },
+    {
+      "date": "2023-10-31",
+      "address": "17 BELGRAVE RD, RATHMINES, DUBLIN 6",
+      "price": 2600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06HY67"
+    },
+    {
+      "date": "2022-12-05",
+      "address": "31 BELGRAVE RD, RATHMINES, DUBLIN 6",
+      "price": 1505140,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06HR02"
+    },
+    {
+      "date": "2021-06-14",
+      "address": "21 BELGRAVE RD, RATHMINES, DUBLIN 6",
+      "price": 1480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06A7N3"
+    },
+    {
+      "date": "2020-07-31",
+      "address": "23 BELGRAVE RD, RATHMINES, DUBLIN 6",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-26",
+      "address": "11 BELGRAVE RD, RATHMINES, DUBLIN 6",
+      "price": 1210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-02",
+      "address": "36 BELGRAVE RD, RATHMINES, DUBLIN 6",
+      "price": 1120000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-29",
+      "address": "1 BELGRAVE RD, RATHMINES, DUBLIN 6",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-02-13",
+      "address": "27 Belgrave Road, Rathmines",
+      "price": 1230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-22",
+      "address": "17 BELGRAVE RD, RATHMINES, DUBLIN 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06HY67"
+    },
+    {
+      "date": "2013-06-07",
+      "address": "15 Belgrave Road, Rathmines",
+      "price": 386667,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-12-22",
+      "address": "3 Belgrave Road, Rathmines",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-08-10",
+      "address": "9 Belgrave Road, Rathmines",
+      "price": 880000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 17
+}

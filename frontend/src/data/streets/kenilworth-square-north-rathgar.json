@@ -1,0 +1,121 @@
+{
+  "slug": "kenilworth-square-north-rathgar",
+  "stats": {
+    "count": 8,
+    "median": 1490000,
+    "avg": 1463750,
+    "min": 970000,
+    "max": 2100000,
+    "firstYear": 2014,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 970000,
+      "avg_price": 970000,
+      "min_price": 970000,
+      "max_price": 970000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 1165000,
+      "avg_price": 1165000,
+      "min_price": 1000000,
+      "max_price": 1330000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1367500,
+      "avg_price": 1367500,
+      "min_price": 1065000,
+      "max_price": 1670000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 2100000,
+      "avg_price": 2100000,
+      "min_price": 2100000,
+      "max_price": 2100000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 1787500,
+      "avg_price": 1787500,
+      "min_price": 1650000,
+      "max_price": 1925000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-10-17",
+      "address": "17 KENILWORTH SQ NORTH, RATHGAR, DUBLIN 6",
+      "price": 1925000,
+      "bedrooms": 7,
+      "propertyType": "apartment",
+      "eircode": "D06RH57"
+    },
+    {
+      "date": "2024-03-28",
+      "address": "5 KENILWORTH SQ NORTH, RATHGAR, DUBLIN 6",
+      "price": 1650000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06NY58"
+    },
+    {
+      "date": "2023-08-31",
+      "address": "5 KENILWORTH SQ NORTH, RATHGAR, DUBLIN 6",
+      "price": 2100000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06NY58"
+    },
+    {
+      "date": "2021-07-29",
+      "address": "26 KENILWORTH SQ NORTH, RATHGAR, DUBLIN 6",
+      "price": 1065000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06CA46"
+    },
+    {
+      "date": "2021-07-21",
+      "address": "6 KENILWORTH SQ NORTH, RATHGAR, DUBLIN 6",
+      "price": 1670000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06X033"
+    },
+    {
+      "date": "2020-12-04",
+      "address": "8 KENILWORTH SQ NORTH, RATHGAR, DUBLIN 6",
+      "price": 1330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-31",
+      "address": "10 KENILWORTH SQUARE NORTH, RATHGAR, DUBLIN 6",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-07-31",
+      "address": "9 KENILWORTH SQUARE NORTH, RATHGAR, DUBLIN 6",
+      "price": 970000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 8
+}

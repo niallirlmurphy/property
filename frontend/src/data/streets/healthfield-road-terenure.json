@@ -1,0 +1,153 @@
+{
+  "slug": "healthfield-road-terenure",
+  "stats": {
+    "count": 10,
+    "median": 1567500,
+    "avg": 1465200,
+    "min": 302000,
+    "max": 2100000,
+    "firstYear": 2013,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 865000,
+      "avg_price": 865000,
+      "min_price": 865000,
+      "max_price": 865000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 302000,
+      "avg_price": 302000,
+      "min_price": 302000,
+      "max_price": 302000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1617500,
+      "avg_price": 1617500,
+      "min_price": 1250000,
+      "max_price": 1985000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1460000,
+      "avg_price": 1460000,
+      "min_price": 1460000,
+      "max_price": 1460000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 1387500,
+      "avg_price": 1387500,
+      "min_price": 1100000,
+      "max_price": 1675000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 2100000,
+      "avg_price": 2100000,
+      "min_price": 2100000,
+      "max_price": 2100000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1815000,
+      "avg_price": 1815000,
+      "min_price": 1815000,
+      "max_price": 1815000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-21",
+      "address": "5 HEALTHFIELD ROAD, TERENURE, DUBLIN 6",
+      "price": 1815000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06E279"
+    },
+    {
+      "date": "2024-09-17",
+      "address": "1 HEALTHFIELD RD, TERENURE, DUBLIN 6",
+      "price": 2100000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06HX20"
+    },
+    {
+      "date": "2024-03-01",
+      "address": "15 HEALTHFIELD RD, TERENURE, DUBLIN 6",
+      "price": 2100000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06H924"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "20 HEALTHFIELD RD, TERENURE, DUBLIN 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06F611"
+    },
+    {
+      "date": "2022-08-26",
+      "address": "2 HEALTHFIELD RD, TERENURE, DUBLIN 6",
+      "price": 1675000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06WN72"
+    },
+    {
+      "date": "2019-05-14",
+      "address": "9 HEALTHFIELD RD, TERENURE, DUBLIN 6",
+      "price": 1460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-23",
+      "address": "19 HEALTHFIELD RD, TERENURE, DUBLIN 6",
+      "price": 1985000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-05",
+      "address": "4 HEALTHFIELD RD, TERENURE, DUBLIN 6",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-08-15",
+      "address": "APT 1, HEALTHFIELD RD, TERENURE",
+      "price": 302000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2013-10-07",
+      "address": "3 Healthfield Road, Terenure, Dublin 6W",
+      "price": 865000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

@@ -1,0 +1,113 @@
+{
+  "slug": "annabasky-glen-berryfield-avenue",
+  "stats": {
+    "count": 9,
+    "median": 1519824,
+    "avg": 1574523,
+    "min": 1409692,
+    "max": 1900000,
+    "firstYear": 2024,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2024,
+      "count": 7,
+      "median_price": 1519824,
+      "avg_price": 1551573,
+      "min_price": 1453745,
+      "max_price": 1675000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1409692,
+      "avg_price": 1409692,
+      "min_price": 1409692,
+      "max_price": 1409692
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1900000,
+      "avg_price": 1900000,
+      "min_price": 1900000,
+      "max_price": 1900000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-04-30",
+      "address": "12 ANNABASKY GLEN, BERRYFIELD AVENUE, ENNISKERRY",
+      "price": 1900000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A98X3H3"
+    },
+    {
+      "date": "2025-05-22",
+      "address": "5 ANNABASKY GLEN, BERRYFIELD AVENUE, ENNISKERRY",
+      "price": 1409692,
+      "bedrooms": null,
+      "propertyType": "detached",
+      "eircode": "A98V4X9"
+    },
+    {
+      "date": "2024-09-02",
+      "address": "6 Annabasky Glen, Berryfield Avenue, Enniskerry",
+      "price": 1675000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-08-02",
+      "address": "9 Annabasky Glen, Berryfield Avenue, Enniskerry",
+      "price": 1497797,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-05-28",
+      "address": "12 ANNABASKY GLEN, BERRYFIELD AVENUE, ENNISKERRY",
+      "price": 1541849,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A98X3H3"
+    },
+    {
+      "date": "2024-05-08",
+      "address": "11 Annabasky Glen, Berryfield Avenue, Enniskerry",
+      "price": 1519824,
+      "bedrooms": null,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-04-05",
+      "address": "8 Annabasky Glen, Berryfield Avenue, Enniskerry",
+      "price": 1674999,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-03-22",
+      "address": "10 Annabasky Glen, Berryfield Avenue, Enniskerry",
+      "price": 1497798,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A98R2W0"
+    },
+    {
+      "date": "2024-03-21",
+      "address": "2 ANNABASKY GLEN, BERRYFIELD AVENUE, ENNISKERRY",
+      "price": 1453745,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

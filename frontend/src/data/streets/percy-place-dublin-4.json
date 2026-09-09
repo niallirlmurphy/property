@@ -1,0 +1,113 @@
+{
+  "slug": "percy-place-dublin-4",
+  "stats": {
+    "count": 8,
+    "median": 1465000,
+    "avg": 2023747,
+    "min": 670000,
+    "max": 5814978,
+    "firstYear": 2016,
+    "lastYear": 2023
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 1200000,
+      "avg_price": 1190000,
+      "min_price": 670000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 2440000,
+      "avg_price": 2440000,
+      "min_price": 2440000,
+      "max_price": 2440000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1790000,
+      "avg_price": 1790000,
+      "min_price": 1230000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 3299989,
+      "avg_price": 3299989,
+      "min_price": 785000,
+      "max_price": 5814978
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2023-05-24",
+      "address": "53 Percy Place, Dublin 4",
+      "price": 5814978,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-10",
+      "address": "48 PERCY PLACE, DUBLIN 4",
+      "price": 785000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A5F2"
+    },
+    {
+      "date": "2021-11-04",
+      "address": "19 PERCY PLACE, DUBLIN 4",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04F3P3"
+    },
+    {
+      "date": "2021-03-03",
+      "address": "39 PERCY PLACE, DUBLIN 4, DUBLIN",
+      "price": 1230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-21",
+      "address": "53 PERCY PLACE, DUBLIN 4",
+      "price": 2440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-24",
+      "address": "48 PERCY PLACE, DUBLIN 4",
+      "price": 670000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A5F2"
+    },
+    {
+      "date": "2016-09-06",
+      "address": "2 PERCY PLACE, DUBLIN 4, DUBLIN",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-02-04",
+      "address": "53 Percy Place, Dublin 4",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 8
+}

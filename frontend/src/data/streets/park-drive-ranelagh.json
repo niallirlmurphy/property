@@ -1,0 +1,145 @@
+{
+  "slug": "park-drive-ranelagh",
+  "stats": {
+    "count": 9,
+    "median": 1720000,
+    "avg": 1453499,
+    "min": 900000,
+    "max": 2050000,
+    "firstYear": 2010,
+    "lastYear": 2022
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1721500,
+      "avg_price": 1721500,
+      "min_price": 1721500,
+      "max_price": 1721500
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 999990,
+      "avg_price": 999990,
+      "min_price": 999990,
+      "max_price": 999990
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 990000,
+      "avg_price": 990000,
+      "min_price": 990000,
+      "max_price": 990000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1025000,
+      "avg_price": 1025000,
+      "min_price": 900000,
+      "max_price": 1150000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 1760000,
+      "avg_price": 1760000,
+      "min_price": 1720000,
+      "max_price": 1800000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2050000,
+      "avg_price": 2050000,
+      "min_price": 2050000,
+      "max_price": 2050000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1750000,
+      "avg_price": 1750000,
+      "min_price": 1750000,
+      "max_price": 1750000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2022-11-09",
+      "address": "28 PARK DRIVE, RANELAGH, DUBLIN 6",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06Y0A6"
+    },
+    {
+      "date": "2021-03-15",
+      "address": "35 PARK DR, RANELAGH, DUBLIN 6",
+      "price": 2050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-30",
+      "address": "19 PARK DRIVE, RANELAGH, DUBLIN 6",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-31",
+      "address": "11 PARK DR, RANELAGH, DUBLIN 6",
+      "price": 1720000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-26",
+      "address": "25 PARK DR, RANELAGH, DUBLIN 6",
+      "price": 900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-14",
+      "address": "12 PARK DR, RANELAGH, DUBLIN 6",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-27",
+      "address": "14 PARK DR, RANELAGH, DUBLIN 6",
+      "price": 990000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-08-05",
+      "address": "44 Park Drive, Ranelagh, Dublin 6",
+      "price": 999990,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-12-08",
+      "address": "23 Park drive, Ranelagh",
+      "price": 1721500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

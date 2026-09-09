@@ -1,0 +1,161 @@
+{
+  "slug": "albany-road-ranelagh",
+  "stats": {
+    "count": 12,
+    "median": 1530000,
+    "avg": 1560417,
+    "min": 790000,
+    "max": 3100000,
+    "firstYear": 2010,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 900000,
+      "avg_price": 1070000,
+      "min_price": 850000,
+      "max_price": 1460000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 3100000,
+      "avg_price": 3100000,
+      "min_price": 3100000,
+      "max_price": 3100000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 790000,
+      "avg_price": 790000,
+      "min_price": 790000,
+      "max_price": 790000
+    },
+    {
+      "year": 2019,
+      "count": 3,
+      "median_price": 1645000,
+      "avg_price": 1540000,
+      "min_price": 1300000,
+      "max_price": 1675000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 1825000,
+      "avg_price": 1825000,
+      "min_price": 1350000,
+      "max_price": 2300000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 1677500,
+      "avg_price": 1677500,
+      "min_price": 1600000,
+      "max_price": 1755000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-12-08",
+      "address": "16 ALBANY RD, RANELAGH, DUBLIN 6",
+      "price": 1755000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06K0F2"
+    },
+    {
+      "date": "2025-01-03",
+      "address": "36 ALBANY ROAD, RANELAGH, DUBLIN 6",
+      "price": 1600000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D06N6F7"
+    },
+    {
+      "date": "2024-12-12",
+      "address": "8 ALBANY RD, RANELAGH, DUBLIN 6",
+      "price": 2300000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06R7P2"
+    },
+    {
+      "date": "2024-05-15",
+      "address": "21 ALBANY ROAD, RANELAGH, DUBLIN 6",
+      "price": 1350000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D06N6W6"
+    },
+    {
+      "date": "2019-07-16",
+      "address": "12 ALBANY RD, RANELAGH, DUBLIN 6",
+      "price": 1675000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-30",
+      "address": "9 ALBANY RD, RANELAGH, DUBLIN 6",
+      "price": 1645000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-04",
+      "address": "36 ALBANY RD, RANELAGH, DUBLIN 6",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06N6F7"
+    },
+    {
+      "date": "2017-02-13",
+      "address": "34 ALBANY RD, RANELAGH, DUBLIN 6",
+      "price": 790000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-12-18",
+      "address": "5 ALBANY RD, RANELAGH, DUBLIN 6",
+      "price": 3100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-09-14",
+      "address": "23  Albany Road, Ranelagh",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-09-07",
+      "address": "29 albany road, ranelagh",
+      "price": 900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-08-06",
+      "address": "28 Albany Road, Ranelagh, Dublin 6",
+      "price": 1460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 12
+}

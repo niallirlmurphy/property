@@ -1,0 +1,177 @@
+{
+  "slug": "harcourt-terrace-dublin-2",
+  "stats": {
+    "count": 11,
+    "median": 1510000,
+    "avg": 1767727,
+    "min": 825000,
+    "max": 3340000,
+    "firstYear": 2013,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1230000,
+      "avg_price": 1230000,
+      "min_price": 1230000,
+      "max_price": 1230000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 2500000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 825000,
+      "avg_price": 825000,
+      "min_price": 825000,
+      "max_price": 825000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 1237500,
+      "avg_price": 1237500,
+      "min_price": 965000,
+      "max_price": 1510000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1000000,
+      "avg_price": 1000000,
+      "min_price": 1000000,
+      "max_price": 1000000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1000000,
+      "avg_price": 1000000,
+      "min_price": 1000000,
+      "max_price": 1000000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 2300000,
+      "avg_price": 2300000,
+      "min_price": 2300000,
+      "max_price": 2300000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 2387500,
+      "avg_price": 2387500,
+      "min_price": 2075000,
+      "max_price": 2700000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 3340000,
+      "avg_price": 3340000,
+      "min_price": 3340000,
+      "max_price": 3340000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-04-21",
+      "address": "2 HARCOURT TERRACE, DUBLIN 2, DUBLIN",
+      "price": 3340000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D02E722"
+    },
+    {
+      "date": "2025-02-14",
+      "address": "9 HARCOURT TERRACE, DUBLIN 2",
+      "price": 2700000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "D02F677"
+    },
+    {
+      "date": "2025-01-10",
+      "address": "17 HARCOURT TERRACE, DUBLIN 2",
+      "price": 2075000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D02AD70"
+    },
+    {
+      "date": "2024-08-15",
+      "address": "19 HARCOURT TERRACE, DUBLIN 2, DUBLIN",
+      "price": 2300000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D02AE97"
+    },
+    {
+      "date": "2019-11-13",
+      "address": "19 HARCOURT TERRACE, DUBLIN 2, DUBLIN",
+      "price": 1000000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D02AE97"
+    },
+    {
+      "date": "2017-03-10",
+      "address": "1 HARCOURT TERRACE, DUBLIN 2",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-03-16",
+      "address": "17 Harcourt Terrace, Dublin 2",
+      "price": 965000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D02AD70"
+    },
+    {
+      "date": "2016-02-24",
+      "address": "18 HARCOURT TERRACE, DUBLIN 2, DUBLIN",
+      "price": 1510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-30",
+      "address": "18 HARCOURT TERRACE, DUBLIN 2, DUBLIN",
+      "price": 825000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-06-13",
+      "address": "9 HARCOURT TERRACE, DUBLIN 2, DUBLIN",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-08-20",
+      "address": "3 HARCOURT TERRACE, DUBLIN 2",
+      "price": 1230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 11
+}

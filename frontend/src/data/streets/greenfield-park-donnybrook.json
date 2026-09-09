@@ -1,0 +1,145 @@
+{
+  "slug": "greenfield-park-donnybrook",
+  "stats": {
+    "count": 10,
+    "median": 1800000,
+    "avg": 2075000,
+    "min": 875000,
+    "max": 4750000,
+    "firstYear": 2012,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 1737500,
+      "avg_price": 1737500,
+      "min_price": 875000,
+      "max_price": 2600000
+    },
+    {
+      "year": 2015,
+      "count": 2,
+      "median_price": 1150000,
+      "avg_price": 1150000,
+      "min_price": 1100000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 2362500,
+      "avg_price": 2362500,
+      "min_price": 1725000,
+      "max_price": 3000000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 1812500,
+      "avg_price": 1812500,
+      "min_price": 1050000,
+      "max_price": 2575000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1875000,
+      "avg_price": 1875000,
+      "min_price": 1875000,
+      "max_price": 1875000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 4750000,
+      "avg_price": 4750000,
+      "min_price": 4750000,
+      "max_price": 4750000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-07-25",
+      "address": "21 GREENFIELD PARK, DONNYBROOK, DUBLIN 4",
+      "price": 4750000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D04X7H1"
+    },
+    {
+      "date": "2023-04-19",
+      "address": "24 GREENFIELD PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H1F9"
+    },
+    {
+      "date": "2022-12-06",
+      "address": "28 GREENFIELD PARK, DONNYBROOK, DUBLIN 4",
+      "price": 2575000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N8V0"
+    },
+    {
+      "date": "2022-07-08",
+      "address": "19A GREENFIELD PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04K6F6"
+    },
+    {
+      "date": "2021-12-17",
+      "address": "23 GREENFIELD PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X0X9"
+    },
+    {
+      "date": "2021-08-12",
+      "address": "1 GREENFIELD PARK, DONNYBROOK, DUBLIN 1",
+      "price": 3000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H1X7"
+    },
+    {
+      "date": "2015-11-17",
+      "address": "20 GREENFIELD PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-04",
+      "address": "10 GREENFIELD PARK, DONNYBROOK, DUBLIN4",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-02-13",
+      "address": "13 Greenfield Park, Donnybrook, Dublin",
+      "price": 875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-01-20",
+      "address": "25 Greenfield Park, Donnybrook",
+      "price": 2600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

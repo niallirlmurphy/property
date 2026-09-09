@@ -1,0 +1,161 @@
+{
+  "slug": "the-blake-lansdowne-place",
+  "stats": {
+    "count": 14,
+    "median": 1607720,
+    "avg": 1832832,
+    "min": 770925,
+    "max": 5726872,
+    "firstYear": 2021,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2021,
+      "count": 6,
+      "median_price": 1541850,
+      "avg_price": 2205971,
+      "min_price": 1297500,
+      "max_price": 5726872
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "median_price": 1784504,
+      "avg_price": 1795231,
+      "min_price": 1629538,
+      "max_price": 1982379
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 1365639,
+      "avg_price": 1445965,
+      "min_price": 770925,
+      "max_price": 2201331
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 905000,
+      "avg_price": 905000,
+      "min_price": 905000,
+      "max_price": 905000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-29",
+      "address": "13 THE BLAKE, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 905000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D04V0V8"
+    },
+    {
+      "date": "2024-12-05",
+      "address": "13 THE BLAKE, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 770925,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D04V0V8"
+    },
+    {
+      "date": "2024-07-30",
+      "address": "17 The Blake, Lansdowne Place, Lansdowne Road",
+      "price": 2201331,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04H6H2"
+    },
+    {
+      "date": "2024-07-05",
+      "address": "6 THE BLAKE, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1365639,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D04R6T4"
+    },
+    {
+      "date": "2022-11-07",
+      "address": "22 THE BLAKE, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1982379,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H5F6"
+    },
+    {
+      "date": "2022-08-12",
+      "address": "2  The Blake, Lansdowne Place, Dublin 4",
+      "price": 1629538,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04F5K8"
+    },
+    {
+      "date": "2022-07-07",
+      "address": "1 THE BLAKE, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1674008,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X9R9"
+    },
+    {
+      "date": "2022-02-01",
+      "address": "20 The Blake, Lansdowne Place",
+      "price": 1895000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-02",
+      "address": "23 THE BLAKE, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 5726872,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C3Y9"
+    },
+    {
+      "date": "2021-06-30",
+      "address": "No 7  The Blake, Lansdowne Place, Lansdowne Road",
+      "price": 1409691,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-10",
+      "address": "4 The Blake, Lansdowne Place, Ballsbridge",
+      "price": 1297500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-22",
+      "address": "12 The Blake, Lansdowne Place, Ballsbridge",
+      "price": 1497797,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-07",
+      "address": "18 The Blake, Lansdowne Place, Ballsbridge",
+      "price": 1585903,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-06",
+      "address": "17 The Blake, Lansdowne Place, Lansdowne Road",
+      "price": 1718061,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04H6H2"
+    }
+  ],
+  "totalTransactions": 14
+}

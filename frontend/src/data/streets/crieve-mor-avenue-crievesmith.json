@@ -1,9 +1,9 @@
 {
   "slug": "crieve-mor-avenue-crievesmith",
   "stats": {
-    "count": 142,
-    "median": 255283,
-    "avg": 257553,
+    "count": 143,
+    "median": 255066,
+    "avg": 257535,
     "min": 155700,
     "max": 445000,
     "firstYear": 2020,
@@ -60,14 +60,22 @@
     },
     {
       "year": 2026,
-      "count": 10,
+      "count": 11,
       "median_price": 334361,
-      "avg_price": 317025,
+      "avg_price": 311392,
       "min_price": 235365,
       "max_price": 347805
     }
   ],
   "transactions": [
+    {
+      "date": "2026-08-07",
+      "address": "133 Crieve Mor Avenue, Crievesmith, Donegal",
+      "price": 255066,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
     {
       "date": "2026-06-11",
       "address": "47 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
@@ -350,19 +358,19 @@
     },
     {
       "date": "2024-12-10",
-      "address": "62 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
-      "price": 342000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "F92A8PE"
-    },
-    {
-      "date": "2024-12-10",
       "address": "67 Crieve Mor Avenue, Crievesmith, Letterkenny",
       "price": 245000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2024-12-10",
+      "address": "62 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
+      "price": 342000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "F92A8PE"
     },
     {
       "date": "2024-12-06",
@@ -459,15 +467,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2024-06-04",
-      "address": "169 Crieve Mor Avenue, Crievesmith, Letterkenny",
-      "price": 285903,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 142
+  "totalTransactions": 143
 }

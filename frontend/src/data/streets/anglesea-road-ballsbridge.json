@@ -1,0 +1,385 @@
+{
+  "slug": "anglesea-road-ballsbridge",
+  "stats": {
+    "count": 31,
+    "median": 1525000,
+    "avg": 1590315,
+    "min": 600000,
+    "max": 2800000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1400000,
+      "avg_price": 1400000,
+      "min_price": 1400000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 810000,
+      "avg_price": 810000,
+      "min_price": 770000,
+      "max_price": 850000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 900000,
+      "avg_price": 900000,
+      "min_price": 900000,
+      "max_price": 900000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1100000,
+      "avg_price": 1100000,
+      "min_price": 1100000,
+      "max_price": 1100000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 1700000,
+      "avg_price": 1700000,
+      "min_price": 1050000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 1375000,
+      "avg_price": 1500000,
+      "min_price": 1050000,
+      "max_price": 2200000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1187500,
+      "avg_price": 1187500,
+      "min_price": 850000,
+      "max_price": 1525000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1985000,
+      "avg_price": 1985000,
+      "min_price": 1985000,
+      "max_price": 1985000
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 1697500,
+      "avg_price": 1873750,
+      "min_price": 1300000,
+      "max_price": 2800000
+    },
+    {
+      "year": 2021,
+      "count": 4,
+      "median_price": 1595000,
+      "avg_price": 1372688,
+      "min_price": 600000,
+      "max_price": 1700750
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 1900000,
+      "avg_price": 1900000,
+      "min_price": 1350000,
+      "max_price": 2450000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 1750000,
+      "max_price": 2250000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 1512000,
+      "avg_price": 1512000,
+      "min_price": 1500000,
+      "max_price": 1524000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2450000,
+      "avg_price": 2450000,
+      "min_price": 2450000,
+      "max_price": 2450000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 2130000,
+      "avg_price": 2130000,
+      "min_price": 2060000,
+      "max_price": 2200000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-14",
+      "address": "97 ANGLESEA ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2200000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04V3A3"
+    },
+    {
+      "date": "2026-07-31",
+      "address": "57 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2060000,
+      "bedrooms": 6,
+      "propertyType": "semi-detached",
+      "eircode": "D04H7T2"
+    },
+    {
+      "date": "2025-11-24",
+      "address": "109 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2450000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04T1W7"
+    },
+    {
+      "date": "2024-12-10",
+      "address": "7 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1524000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D04P8F5"
+    },
+    {
+      "date": "2024-05-28",
+      "address": "3 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1500000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D04R2P5"
+    },
+    {
+      "date": "2023-05-25",
+      "address": "46 ANGLESEA ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04P2P7"
+    },
+    {
+      "date": "2023-02-17",
+      "address": "83 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H2H7"
+    },
+    {
+      "date": "2022-07-04",
+      "address": "10 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N2F5"
+    },
+    {
+      "date": "2022-03-01",
+      "address": "109 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2450000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04T1W7"
+    },
+    {
+      "date": "2021-11-04",
+      "address": "99 ANGLESEA ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04RD80"
+    },
+    {
+      "date": "2021-07-01",
+      "address": "93 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1700750,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X8N0"
+    },
+    {
+      "date": "2021-02-05",
+      "address": "57 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1540000,
+      "bedrooms": 6,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2021-01-13",
+      "address": "43 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-20",
+      "address": "83 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H2H7"
+    },
+    {
+      "date": "2020-08-24",
+      "address": "115 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-20",
+      "address": "29 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1995000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-18",
+      "address": "125 ANGLESEA RD, BALLSBRIDGE, DUBLIN",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-01",
+      "address": "22 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1985000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-29",
+      "address": "5 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-07",
+      "address": "45 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-14",
+      "address": "9 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-29",
+      "address": "83 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H2H7"
+    },
+    {
+      "date": "2017-04-12",
+      "address": "89 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-08",
+      "address": "10 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N2F5"
+    },
+    {
+      "date": "2016-11-28",
+      "address": "67 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-25",
+      "address": "119 ANGLESEA RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-12-22",
+      "address": "125 Anglesea Road, Ballsbridge",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-07-05",
+      "address": "63 Anglesea Road, Ballsbridge, Dublin 4",
+      "price": 900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-07-31",
+      "address": "99 Anglesea Road, Ballsbridge",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-02-22",
+      "address": "13 Anglesea Road, Ballsbridge, Dublin 4",
+      "price": 770000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-08-18",
+      "address": "18 Anglesea Road, Ballsbridge",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 31
+}

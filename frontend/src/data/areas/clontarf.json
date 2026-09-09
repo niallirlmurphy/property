@@ -44,8 +44,8 @@
       "latitude": 53.364826,
       "longitude": -6.203134,
       "routing_key": "D03",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 6,
+      "property_type": "detached",
       "distance_m": 611.71088787
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 53.366897,
       "longitude": -6.193922,
       "routing_key": "D03",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 704.58970487
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 53.361106,
       "longitude": -6.186247,
       "routing_key": "D03",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 706.90632882
     },
     {
@@ -98,8 +98,8 @@
       "latitude": 53.359947,
       "longitude": -6.194515,
       "routing_key": "D03",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 183.17158005
     },
     {
@@ -116,8 +116,8 @@
       "latitude": 53.360107,
       "longitude": -6.192853,
       "routing_key": "D03",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 277.73273087
     },
     {
@@ -134,8 +134,8 @@
       "latitude": 53.368858,
       "longitude": -6.185407,
       "routing_key": "D03",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "detached",
       "distance_m": 1175.65347906
     },
     {
@@ -152,8 +152,8 @@
       "latitude": 53.367874,
       "longitude": -6.209837,
       "routing_key": "D03",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "detached",
       "distance_m": 1168.08439184
     },
     {
@@ -188,17 +188,17 @@
       "latitude": 53.364276,
       "longitude": -6.203392,
       "routing_key": "D03",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "terraced",
       "distance_m": 581.31862566
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 82,
-      "median_price": 516000.0,
-      "avg_price": 542110.0,
+      "count": 83,
+      "median_price": 512000.0,
+      "avg_price": 539205.0,
       "min_price": 155000.0,
       "max_price": 1250000.0
     },
@@ -236,9 +236,9 @@
     },
     {
       "year": 2015,
-      "count": 131,
-      "median_price": 567000.0,
-      "avg_price": 597987.0,
+      "count": 132,
+      "median_price": 563500.0,
+      "avg_price": 595616.0,
       "min_price": 143333.0,
       "max_price": 2350000.0
     },
@@ -292,9 +292,9 @@
     },
     {
       "year": 2022,
-      "count": 218,
-      "median_price": 627500.0,
-      "avg_price": 739718.0,
+      "count": 219,
+      "median_price": 625000.0,
+      "avg_price": 737733.0,
       "min_price": 50000.0,
       "max_price": 6750000.0
     },
@@ -316,9 +316,9 @@
     },
     {
       "year": 2025,
-      "count": 213,
-      "median_price": 750000.0,
-      "avg_price": 850017.0,
+      "count": 214,
+      "median_price": 745000.0,
+      "avg_price": 847424.0,
       "min_price": 153333.31,
       "max_price": 3450000.0
     },

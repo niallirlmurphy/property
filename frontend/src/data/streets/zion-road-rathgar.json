@@ -1,0 +1,169 @@
+{
+  "slug": "zion-road-rathgar",
+  "stats": {
+    "count": 10,
+    "median": 1762500,
+    "avg": 1733850,
+    "min": 700000,
+    "max": 3078500,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 715000,
+      "avg_price": 715000,
+      "min_price": 700000,
+      "max_price": 730000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1605000,
+      "avg_price": 1605000,
+      "min_price": 1605000,
+      "max_price": 1605000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1145000,
+      "avg_price": 1145000,
+      "min_price": 1145000,
+      "max_price": 1145000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 2050000,
+      "avg_price": 2050000,
+      "min_price": 2050000,
+      "max_price": 2050000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2900000,
+      "avg_price": 2900000,
+      "min_price": 2900000,
+      "max_price": 2900000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1260000,
+      "avg_price": 1260000,
+      "min_price": 1260000,
+      "max_price": 1260000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1920000,
+      "avg_price": 1920000,
+      "min_price": 1920000,
+      "max_price": 1920000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 3078500,
+      "avg_price": 3078500,
+      "min_price": 3078500,
+      "max_price": 3078500
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1950000,
+      "avg_price": 1950000,
+      "min_price": 1950000,
+      "max_price": 1950000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-04-24",
+      "address": "23 ZION RD, RATHGAR, DUBLIN 6",
+      "price": 1950000,
+      "bedrooms": 9,
+      "propertyType": "semi-detached",
+      "eircode": "D06VW89"
+    },
+    {
+      "date": "2025-10-22",
+      "address": "20 ZION RD, RATHGAR, DUBLIN 6",
+      "price": 3078500,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06FF65"
+    },
+    {
+      "date": "2024-09-06",
+      "address": "30 ZION RD, RATHGAR, DUBLIN 6",
+      "price": 1920000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D06V2T1"
+    },
+    {
+      "date": "2022-01-11",
+      "address": "12 ZION RD, RATHGAR, DUBLIN 6",
+      "price": 1260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06K766"
+    },
+    {
+      "date": "2021-08-05",
+      "address": "28 ZION RD, RATHGAR, DUBLIN 6",
+      "price": 2900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06X2N0"
+    },
+    {
+      "date": "2018-03-27",
+      "address": "19 ZION RD, RATHGAR, DUBLIN 6",
+      "price": 2050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-30",
+      "address": "15 ZION RD, RATHGAR, DUBLIN 6",
+      "price": 1145000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-04-24",
+      "address": "34 Zion Road, Rathgar",
+      "price": 1605000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-12-14",
+      "address": "11 Zion Road, Rathgar",
+      "price": 730000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-12-05",
+      "address": "10 ZION ROAD, RATHGAR, DUBLIN 6",
+      "price": 700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

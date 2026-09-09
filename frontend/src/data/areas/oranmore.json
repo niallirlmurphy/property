@@ -7,7 +7,7 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 425000.0,
+  "median_price": 423954.0,
   "avg_price": 467900,
   "min_year": 2010,
   "max_year": 2026,
@@ -44,8 +44,8 @@
       "latitude": 53.2739,
       "longitude": -8.927896,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "duplex",
       "distance_m": 1304.5013738
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 53.273864,
       "longitude": -8.927601,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "duplex",
       "distance_m": 1324.54347578
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 53.263282,
       "longitude": -8.931097,
       "routing_key": "H91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "detached",
       "distance_m": 1734.85609392
     },
     {
@@ -98,8 +98,8 @@
       "latitude": 53.265987,
       "longitude": -8.926009,
       "routing_key": "H91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "duplex",
       "distance_m": 1769.23078046
     },
     {
@@ -116,8 +116,8 @@
       "latitude": 53.277542,
       "longitude": -8.971466,
       "routing_key": "H91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "detached",
       "distance_m": 1630.1338864
     },
     {
@@ -134,8 +134,8 @@
       "latitude": 53.27479,
       "longitude": -8.927606,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "duplex",
       "distance_m": 1314.10393139
     },
     {
@@ -152,8 +152,8 @@
       "latitude": 53.267833,
       "longitude": -8.924648,
       "routing_key": "H91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1733.10801583
     },
     {
@@ -170,8 +170,8 @@
       "latitude": 53.27421,
       "longitude": -8.975793,
       "routing_key": "H91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "semi-detached",
       "distance_m": 1908.05484017
     },
     {
@@ -188,8 +188,8 @@
       "latitude": 53.2739,
       "longitude": -8.927896,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "duplex",
       "distance_m": 1304.5013738
     }
   ],
@@ -260,9 +260,9 @@
     },
     {
       "year": 2018,
-      "count": 60,
-      "median_price": 251000.0,
-      "avg_price": 286752.0,
+      "count": 61,
+      "median_price": 252000.0,
+      "avg_price": 286641.0,
       "min_price": 90629.1,
       "max_price": 1230000.0
     },
@@ -284,9 +284,9 @@
     },
     {
       "year": 2021,
-      "count": 99,
+      "count": 100,
       "median_price": 310000.0,
-      "avg_price": 326374.0,
+      "avg_price": 325860.0,
       "min_price": 130000.0,
       "max_price": 684054.62
     },
@@ -308,25 +308,25 @@
     },
     {
       "year": 2024,
-      "count": 101,
-      "median_price": 381000.0,
-      "avg_price": 401647.0,
+      "count": 102,
+      "median_price": 380500.0,
+      "avg_price": 400552.0,
       "min_price": 125000.0,
       "max_price": 854000.0
     },
     {
       "year": 2025,
-      "count": 83,
-      "median_price": 440000.0,
-      "avg_price": 470511.0,
+      "count": 85,
+      "median_price": 432000.0,
+      "avg_price": 466469.0,
       "min_price": 180000.0,
       "max_price": 1175000.0
     },
     {
       "year": 2026,
-      "count": 59,
-      "median_price": 425000.0,
-      "avg_price": 449832.0,
+      "count": 60,
+      "median_price": 423954.0,
+      "avg_price": 447168.0,
       "min_price": 210000.0,
       "max_price": 916740.0
     }

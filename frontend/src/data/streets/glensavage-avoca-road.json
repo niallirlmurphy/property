@@ -1,0 +1,129 @@
+{
+  "slug": "glensavage-avoca-road",
+  "stats": {
+    "count": 10,
+    "median": 1563877,
+    "avg": 1470540,
+    "min": 656388,
+    "max": 3000000,
+    "firstYear": 2016,
+    "lastYear": 2023
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 3000000,
+      "avg_price": 3000000,
+      "min_price": 3000000,
+      "max_price": 3000000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 671806,
+      "avg_price": 671806,
+      "min_price": 656388,
+      "max_price": 687224
+    },
+    {
+      "year": 2022,
+      "count": 6,
+      "median_price": 1656388,
+      "avg_price": 1585297,
+      "min_price": 660793,
+      "max_price": 2071366
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 850000,
+      "avg_price": 850000,
+      "min_price": 850000,
+      "max_price": 850000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2023-07-14",
+      "address": "1 GLENSAVAGE, AVOCA ROAD, BLACKROCK",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94E0V9"
+    },
+    {
+      "date": "2022-04-08",
+      "address": "6 GLENSAVAGE, AVOCA ROAD, BLACKROCK",
+      "price": 1585903,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94N5N8"
+    },
+    {
+      "date": "2022-03-03",
+      "address": "5 GLENSAVAGE, AVOCA ROAD, BLACKROCK",
+      "price": 2071366,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94X0W8"
+    },
+    {
+      "date": "2022-02-23",
+      "address": "2 GLENSAVAGE, AVOCA ROAD, BLACKROCK",
+      "price": 660793,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94Y0C0"
+    },
+    {
+      "date": "2022-02-21",
+      "address": "8 GLENSAVAGE, AVOCA ROAD, BLACKROCK",
+      "price": 1726872,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94HF67"
+    },
+    {
+      "date": "2022-02-04",
+      "address": "7 GLENSAVAGE, AVOCA ROAD, BLACKROCK",
+      "price": 1925000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94Y2R0"
+    },
+    {
+      "date": "2022-01-27",
+      "address": "4 GLENSAVAGE, AVOCA ROAD, BLACKROCK",
+      "price": 1541850,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94A6X5"
+    },
+    {
+      "date": "2021-12-22",
+      "address": "3 GLENSAVAGE, AVOCA ROAD, BLACKROCK",
+      "price": 656388,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94K0F3"
+    },
+    {
+      "date": "2021-11-01",
+      "address": "1 GLENSAVAGE, AVOCA ROAD, BLACKROCK",
+      "price": 687224,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94E0V9"
+    },
+    {
+      "date": "2016-12-01",
+      "address": "GLENSAVAGE, AVOCA RD, BLACKROCK",
+      "price": 3000000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

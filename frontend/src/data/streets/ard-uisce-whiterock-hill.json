@@ -1,9 +1,9 @@
 {
   "slug": "ard-uisce-whiterock-hill",
   "stats": {
-    "count": 185,
-    "median": 253911,
-    "avg": 231606,
+    "count": 186,
+    "median": 254456,
+    "avg": 231834,
     "min": 105000,
     "max": 342000,
     "firstYear": 2010,
@@ -140,14 +140,22 @@
     },
     {
       "year": 2026,
-      "count": 14,
-      "median_price": 299559,
-      "avg_price": 296920,
-      "min_price": 277533,
+      "count": 15,
+      "median_price": 295154,
+      "avg_price": 295392,
+      "min_price": 274000,
       "max_price": 309720
     }
   ],
   "transactions": [
+    {
+      "date": "2026-07-30",
+      "address": "26 ARD UISCE, WHITEROCK HILL, WEXFORD",
+      "price": 274000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "Y35H5V9"
+    },
     {
       "date": "2026-07-02",
       "address": "397 Ard Uisce, Whiterock Hill, Wexford",
@@ -302,17 +310,17 @@
     },
     {
       "date": "2025-11-26",
-      "address": "443 Ard Uisce, Whiterock Hill",
-      "price": 283288,
-      "bedrooms": 3,
+      "address": "418 Ard Uisce, Whiterock Hill",
+      "price": 277533,
+      "bedrooms": null,
       "propertyType": "semi-detached",
       "eircode": null
     },
     {
       "date": "2025-11-26",
-      "address": "418 Ard Uisce, Whiterock Hill",
-      "price": 277533,
-      "bedrooms": null,
+      "address": "443 Ard Uisce, Whiterock Hill",
+      "price": 283288,
+      "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": null
     },
@@ -539,15 +547,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2024-09-02",
-      "address": "460 Ard Uisce, Whiterock Hill, Whiterock",
-      "price": 268722,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 185
+  "totalTransactions": 186
 }

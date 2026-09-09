@@ -7,7 +7,7 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 360000.0,
+  "median_price": 332989.0,
   "avg_price": 379850,
   "min_year": 2010,
   "max_year": 2026,
@@ -26,8 +26,8 @@
       "latitude": 51.850185,
       "longitude": -8.292288,
       "routing_key": "P24",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 191.40879145
     },
     {
@@ -244,9 +244,9 @@
     },
     {
       "year": 2016,
-      "count": 55,
-      "median_price": 121500.0,
-      "avg_price": 134105.0,
+      "count": 56,
+      "median_price": 120750.0,
+      "avg_price": 133853.0,
       "min_price": 12143.0,
       "max_price": 395000.0
     },
@@ -284,49 +284,49 @@
     },
     {
       "year": 2021,
-      "count": 122,
-      "median_price": 222750.0,
-      "avg_price": 241633.0,
-      "min_price": 42173.43,
+      "count": 123,
+      "median_price": 222500.0,
+      "avg_price": 239993.0,
+      "min_price": 40000.0,
       "max_price": 761000.0
     },
     {
       "year": 2022,
-      "count": 139,
+      "count": 141,
       "median_price": 270000.0,
-      "avg_price": 382449.0,
+      "avg_price": 381145.0,
       "min_price": 100000.0,
       "max_price": 4387665.2
     },
     {
       "year": 2023,
-      "count": 146,
+      "count": 147,
       "median_price": 260000.0,
-      "avg_price": 287487.0,
+      "avg_price": 287606.0,
       "min_price": 20000.0,
       "max_price": 750000.0
     },
     {
       "year": 2024,
-      "count": 151,
+      "count": 152,
       "median_price": 281938.0,
-      "avg_price": 332057.0,
+      "avg_price": 331846.0,
       "min_price": 32703.22,
       "max_price": 3726872.25
     },
     {
       "year": 2025,
-      "count": 70,
-      "median_price": 357500.0,
-      "avg_price": 392621.0,
+      "count": 84,
+      "median_price": 335000.0,
+      "avg_price": 375907.0,
       "min_price": 10000.0,
       "max_price": 1100000.0
     },
     {
       "year": 2026,
-      "count": 57,
-      "median_price": 360000.0,
-      "avg_price": 380060.0,
+      "count": 62,
+      "median_price": 332989.0,
+      "avg_price": 372814.0,
       "min_price": 175000.0,
       "max_price": 795000.0
     }

@@ -1,0 +1,193 @@
+{
+  "slug": "annesley-gardens-ranelagh",
+  "stats": {
+    "count": 19,
+    "median": 1480000,
+    "avg": 1393950,
+    "min": 1164758,
+    "max": 1650000,
+    "firstYear": 2022,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2022,
+      "count": 16,
+      "median_price": 1253304,
+      "avg_price": 1360933,
+      "min_price": 1164758,
+      "max_price": 1650000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1576058,
+      "avg_price": 1576058,
+      "min_price": 1535375,
+      "max_price": 1616740
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1558000,
+      "avg_price": 1558000,
+      "min_price": 1558000,
+      "max_price": 1558000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-06-18",
+      "address": "11 ANNESLEY GARDENS, RANELAGH, DUBLIN 6",
+      "price": 1558000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D06P5V6"
+    },
+    {
+      "date": "2023-09-12",
+      "address": "1 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1535375,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-01-12",
+      "address": "18 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1616740,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-20",
+      "address": "12 ANNESLEY GARDENS, RANELAGH, DUBLIN 6",
+      "price": 1480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06Y1Y9"
+    },
+    {
+      "date": "2022-10-03",
+      "address": "3 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1607930,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-09-02",
+      "address": "9 ANNESLEY GARDENS, RANELAGH, DUBLIN 6",
+      "price": 1215859,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06W6K5"
+    },
+    {
+      "date": "2022-08-17",
+      "address": "12 ANNESLEY GARDENS, RANELAGH, DUBLIN 6",
+      "price": 1233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06Y1Y9"
+    },
+    {
+      "date": "2022-07-22",
+      "address": "4 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1577093,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-30",
+      "address": "6 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1497798,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-30",
+      "address": "7 Annesley Gardens, Ranelagh",
+      "price": 1650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-17",
+      "address": "16 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1189427,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-15",
+      "address": "19 Annesley Gardens, Ranelagh",
+      "price": 1541841,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-13",
+      "address": "17 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1189427,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-07",
+      "address": "13 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1164758,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-07",
+      "address": "10 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1251101,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-02",
+      "address": "20 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1497798,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-01",
+      "address": "14 Annesley Gardens, Ranelagh",
+      "price": 1233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-31",
+      "address": "11 Annesley gardens, ranelagh, Dublin 6",
+      "price": 1255507,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D06P5V6"
+    },
+    {
+      "date": "2022-05-30",
+      "address": "15 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1189427,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 19
+}

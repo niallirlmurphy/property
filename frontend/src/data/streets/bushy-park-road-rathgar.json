@@ -1,0 +1,209 @@
+{
+  "slug": "bushy-park-road-rathgar",
+  "stats": {
+    "count": 15,
+    "median": 1610000,
+    "avg": 1682885,
+    "min": 775000,
+    "max": 3250000,
+    "firstYear": 2014,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1260000,
+      "avg_price": 1260000,
+      "min_price": 1260000,
+      "max_price": 1260000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 1237500,
+      "avg_price": 1237500,
+      "min_price": 775000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1870000,
+      "avg_price": 1870000,
+      "min_price": 1870000,
+      "max_price": 1870000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1937500,
+      "avg_price": 1937500,
+      "min_price": 1937500,
+      "max_price": 1937500
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1855000,
+      "avg_price": 1855000,
+      "min_price": 1610000,
+      "max_price": 2100000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 1150000,
+      "avg_price": 1610000,
+      "min_price": 930000,
+      "max_price": 2750000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1552500,
+      "avg_price": 1552500,
+      "min_price": 905000,
+      "max_price": 2200000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 2327885,
+      "avg_price": 2327885,
+      "min_price": 1405770,
+      "max_price": 3250000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1400000,
+      "avg_price": 1400000,
+      "min_price": 1400000,
+      "max_price": 1400000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-01-10",
+      "address": "26 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 1400000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06W9R6"
+    },
+    {
+      "date": "2024-12-12",
+      "address": "10 BUSHY PARK ROAD, RATHGAR, DUBLIN 6",
+      "price": 3250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06C5F2"
+    },
+    {
+      "date": "2024-05-22",
+      "address": "96 BUSHY PARK ROAD, RATHGAR, DUBLIN 6",
+      "price": 1405770,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06K6Y5"
+    },
+    {
+      "date": "2023-12-01",
+      "address": "68A BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 905000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06XA61"
+    },
+    {
+      "date": "2023-10-16",
+      "address": "42 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 2200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06FR66"
+    },
+    {
+      "date": "2022-12-20",
+      "address": "6 BUSHY PARK ROAD, RATHGAR, DUBLIN 6",
+      "price": 2750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06T9H2"
+    },
+    {
+      "date": "2022-12-02",
+      "address": "80 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 930000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06XA99"
+    },
+    {
+      "date": "2022-02-02",
+      "address": "60 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06V1W8"
+    },
+    {
+      "date": "2021-11-05",
+      "address": "31 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 2100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06N9R2"
+    },
+    {
+      "date": "2021-08-31",
+      "address": "57 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 1610000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06Y8W9"
+    },
+    {
+      "date": "2019-07-10",
+      "address": "11 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 1937500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-01",
+      "address": "12 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 1870000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-06",
+      "address": "13 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-05-17",
+      "address": "62 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 775000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-10-16",
+      "address": "96 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 1260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06K6Y5"
+    }
+  ],
+  "totalTransactions": 15
+}

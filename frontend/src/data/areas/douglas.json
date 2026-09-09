@@ -26,8 +26,8 @@
       "latitude": 51.871585,
       "longitude": -8.439543,
       "routing_key": "T12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 710.14633711
     },
     {
@@ -44,8 +44,8 @@
       "latitude": 51.887546,
       "longitude": -8.423789,
       "routing_key": "T12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1389.48128064
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 51.889957,
       "longitude": -8.440883,
       "routing_key": "T12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1422.0788375
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 51.887855,
       "longitude": -8.43205,
       "routing_key": "T12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1176.25561947
     },
     {
@@ -98,8 +98,8 @@
       "latitude": 51.889953,
       "longitude": -8.436643,
       "routing_key": "T12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 1380.48430778
     },
     {
@@ -116,8 +116,8 @@
       "latitude": 51.88359,
       "longitude": -8.437781,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "detached",
       "distance_m": 683.99498128
     },
     {
@@ -134,8 +134,8 @@
       "latitude": 51.878883,
       "longitude": -8.427708,
       "routing_key": "T12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 582.78666064
     },
     {
@@ -152,8 +152,8 @@
       "latitude": 51.875164,
       "longitude": -8.429624,
       "routing_key": "T12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 507.14787773
     },
     {
@@ -170,8 +170,8 @@
       "latitude": 51.878192,
       "longitude": -8.452017,
       "routing_key": "T12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1112.56288344
     },
     {
@@ -188,8 +188,8 @@
       "latitude": 51.878257,
       "longitude": -8.453725,
       "routing_key": "T12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1230.4048232
     }
   ],
@@ -260,17 +260,17 @@
     },
     {
       "year": 2018,
-      "count": 89,
-      "median_price": 295154.0,
-      "avg_price": 441895.0,
+      "count": 90,
+      "median_price": 295077.0,
+      "avg_price": 440041.0,
       "min_price": 102500.0,
       "max_price": 9115000.0
     },
     {
       "year": 2019,
-      "count": 126,
+      "count": 127,
       "median_price": 292000.0,
-      "avg_price": 615240.0,
+      "avg_price": 612561.0,
       "min_price": 122000.0,
       "max_price": 15507048.0
     },
@@ -284,25 +284,25 @@
     },
     {
       "year": 2021,
-      "count": 175,
-      "median_price": 343612.0,
-      "avg_price": 423297.0,
+      "count": 176,
+      "median_price": 342806.0,
+      "avg_price": 422585.0,
       "min_price": 100000.0,
       "max_price": 4000000.0
     },
     {
       "year": 2022,
-      "count": 191,
+      "count": 192,
       "median_price": 350000.0,
-      "avg_price": 406393.0,
+      "avg_price": 405813.0,
       "min_price": 43750.0,
       "max_price": 1800000.0
     },
     {
       "year": 2023,
-      "count": 220,
+      "count": 221,
       "median_price": 372000.0,
-      "avg_price": 482982.0,
+      "avg_price": 482109.0,
       "min_price": 14209.57,
       "max_price": 14684004.4
     },
@@ -316,9 +316,9 @@
     },
     {
       "year": 2025,
-      "count": 269,
-      "median_price": 440529.0,
-      "avg_price": 484189.0,
+      "count": 272,
+      "median_price": 440528.0,
+      "avg_price": 482054.0,
       "min_price": 168000.0,
       "max_price": 2250000.0
     },

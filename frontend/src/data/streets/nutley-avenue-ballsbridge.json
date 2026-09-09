@@ -1,0 +1,153 @@
+{
+  "slug": "nutley-avenue-ballsbridge",
+  "stats": {
+    "count": 9,
+    "median": 1665000,
+    "avg": 1587444,
+    "min": 732000,
+    "max": 2300000,
+    "firstYear": 2011,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1030000,
+      "avg_price": 1030000,
+      "min_price": 1030000,
+      "max_price": 1030000
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 732000,
+      "avg_price": 732000,
+      "min_price": 732000,
+      "max_price": 732000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1665000,
+      "avg_price": 1665000,
+      "min_price": 1665000,
+      "max_price": 1665000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1675000,
+      "avg_price": 1675000,
+      "min_price": 1350000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2300000,
+      "avg_price": 2300000,
+      "min_price": 2300000,
+      "max_price": 2300000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1275000,
+      "avg_price": 1275000,
+      "min_price": 1275000,
+      "max_price": 1275000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1935000,
+      "avg_price": 1935000,
+      "min_price": 1935000,
+      "max_price": 1935000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 2000000,
+      "max_price": 2000000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-01-21",
+      "address": "33 NUTLEY AVE, BALLSBRIDGE, DUBLIN 4",
+      "price": 2000000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D04X0N1"
+    },
+    {
+      "date": "2024-12-09",
+      "address": "36 NUTLEY AVE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1935000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04X3E6"
+    },
+    {
+      "date": "2022-03-04",
+      "address": "57 NUTLEY AVE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A2A3"
+    },
+    {
+      "date": "2021-01-14",
+      "address": "60 NUTLEY AVE, BALLSBRIDGE, DUBLIN",
+      "price": 2300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-04",
+      "address": "59 NUTLEY AVE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-23",
+      "address": "18 NUTLEY AVE, BALLSBRIDGE, DUBLIN 4",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-10-31",
+      "address": "55 Nutley Avenue, Ballsbridge",
+      "price": 1665000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-10-09",
+      "address": "42 Nutley Avenue, Ballsbridge, Dublin 4",
+      "price": 732000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-12-20",
+      "address": "28 Nutley Avenue, Ballsbridge",
+      "price": 1030000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}
