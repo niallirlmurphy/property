@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 // ---------------------------------------------------------------------------
 // Guide post — how to use HomeIQ's mortgage calculator to plan around
-// affordability and interest-rate risk, plus a 2026 mortgage-application
+// affordability and interest-rate risk, plus a mortgage-application
 // checklist. Prose + real calculator screenshots; no dataset analysis.
 // Figures quoted match the calculator screenshots (€350k / 30-year loan):
 //   3.00% → €1,475.61/mo, €181,221 total interest
@@ -89,7 +89,7 @@ export function MortgageCalculatorGuideContent() {
         This guide shows how to use{" "}
         <Link to="/mortgage" style={{ color: "#1d4ed8", fontWeight: 600 }}>HomeIQ's free mortgage calculator</Link>{" "}
         to plan around <strong>affordability</strong> and the <strong>impact of interest rates</strong>, and finishes
-        with a practical checklist for making a strong mortgage application in 2026.
+        with a practical checklist for making a strong mortgage application.
 
       </p>
 
@@ -210,7 +210,7 @@ export function MortgageCalculatorGuideContent() {
         years and watch the total-interest figure fall.
       </p>
 
-      <SectionHeading>Making a strong mortgage application in 2026</SectionHeading>
+      <SectionHeading>Making a strong mortgage application</SectionHeading>
       <p style={{ marginBottom: "1rem" }}>
         Modelling the loan is half the battle; the other half is presenting yourself as a low-risk borrower. Lenders
         typically scrutinise the <strong>six months of bank statements immediately before your application</strong>, so
