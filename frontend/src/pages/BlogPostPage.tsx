@@ -14,9 +14,11 @@ import { BestMonthToSellContent } from "../blog-posts/best-month-to-sell-propert
 import { TransportPremiumContent } from "../blog-posts/does-being-near-a-luas-or-dart-add-value";
 import { SchoolPremiumContent } from "../blog-posts/does-living-near-a-good-school-add-value";
 import { SolarValueContent } from "../blog-posts/do-solar-panels-add-value-to-your-home-ireland";
+import { MortgageCalculatorGuideContent } from "../blog-posts/how-to-use-a-mortgage-calculator-affordability-interest-rates";
 
 // Map slugs to content components
 const BLOG_CONTENT: Record<string, React.ComponentType> = {
+  "how-to-use-a-mortgage-calculator-affordability-interest-rates": MortgageCalculatorGuideContent,
   "do-solar-panels-add-value-to-your-home-ireland": SolarValueContent,
   "does-living-near-a-good-school-add-value": SchoolPremiumContent,
   "does-being-near-a-luas-or-dart-add-value": TransportPremiumContent,

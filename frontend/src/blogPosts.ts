@@ -16,6 +16,15 @@ export interface BlogPost {
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "how-to-use-a-mortgage-calculator-affordability-interest-rates",
+    title: "How to Use a Mortgage Calculator: Affordability, Interest Rates & Application Tips (2026)",
+    description: "Plan your mortgage before you apply. See how to use HomeIQ's calculator to work out what you can afford, why a small interest-rate change costs tens of thousands over the term, plus the DOs and DON'Ts of a strong 2026 mortgage application.",
+    date: "2026-09-21",
+    author: "HomeIQ Team",
+    tags: ["Guide", "Mortgage", "Affordability", "Interest Rates", "First Time Buyer"],
+    readTime: "9 min read"
+  },
+  {
     slug: "do-solar-panels-add-value-to-your-home-ireland",
     title: "Do Solar Panels Add Value to Your Home? An Irish Guide",
     description: "Solar can genuinely add value to an Irish home — but only if it's installed and documented right. How to avoid scams, choose an SEAI-registered installer, and the paperwork checklist buyers and sellers must not skip.",
