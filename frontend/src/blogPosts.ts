@@ -17,7 +17,7 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-to-use-a-mortgage-calculator-affordability-interest-rates",
-    title: "How to Use a Mortgage Calculator: Affordability, Interest Rates & Application Tips (2026)",
+    title: "How to Use a Mortgage Calculator: Affordability, Interest Rates & Application Tips",
     description: "Plan your mortgage before you apply. See how to use HomeIQ's calculator to work out what you can afford, why a small interest-rate change costs tens of thousands over the term, plus the DOs and DON'Ts of a strong 2026 mortgage application.",
     date: "2026-09-21",
     author: "HomeIQ Team",
