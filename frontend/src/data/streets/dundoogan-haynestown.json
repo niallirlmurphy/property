@@ -1,9 +1,9 @@
 {
   "slug": "dundoogan-haynestown",
   "stats": {
-    "count": 156,
+    "count": 157,
     "median": 227300,
-    "avg": 228813,
+    "avg": 229171,
     "min": 185845,
     "max": 395000,
     "firstYear": 2019,
@@ -60,14 +60,22 @@
     },
     {
       "year": 2026,
-      "count": 1,
-      "median_price": 350000,
-      "avg_price": 350000,
-      "min_price": 350000,
+      "count": 2,
+      "median_price": 317500,
+      "avg_price": 317500,
+      "min_price": 285000,
       "max_price": 350000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-04",
+      "address": "27 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A91YFF1"
+    },
     {
       "date": "2026-04-15",
       "address": "125 DUNDOOGAN, HAYNESTOWN, DUNDALK",
@@ -459,15 +467,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2022-06-10",
-      "address": "124 dundoogan, haynestown, Dundalk",
-      "price": 242246,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 156
+  "totalTransactions": 157
 }

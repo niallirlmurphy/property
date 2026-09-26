@@ -1,9 +1,9 @@
 {
   "slug": "charlesland-park-greystones",
   "stats": {
-    "count": 146,
+    "count": 147,
     "median": 330000,
-    "avg": 335930,
+    "avg": 336720,
     "min": 126725,
     "max": 553000,
     "firstYear": 2013,
@@ -116,14 +116,22 @@
     },
     {
       "year": 2026,
-      "count": 4,
-      "median_price": 448750,
-      "avg_price": 449375,
+      "count": 5,
+      "median_price": 452000,
+      "avg_price": 449900,
       "min_price": 415000,
       "max_price": 485000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-02",
+      "address": "77 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 452000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KC81"
+    },
     {
       "date": "2026-07-08",
       "address": "147 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
@@ -515,15 +523,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "A63A009"
-    },
-    {
-      "date": "2022-10-26",
-      "address": "52 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
-      "price": 360000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "A63X825"
     }
   ],
-  "totalTransactions": 146
+  "totalTransactions": 147
 }

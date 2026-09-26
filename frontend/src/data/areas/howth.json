@@ -8,10 +8,46 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 800000.0,
-  "avg_price": 882600,
+  "avg_price": 968700,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 802965,
+      "sale_date": "2026-09-02",
+      "address": "HEATH HOUSE, THORMANBY RD, HOWTH",
+      "county": "Dublin",
+      "eircode": "D13PX79",
+      "price": 2250000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.379831,
+      "longitude": -6.057374,
+      "routing_key": "D13",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 843.73060653
+    },
+    {
+      "id": 802512,
+      "sale_date": "2026-08-31",
+      "address": "APT 28 VENETIAN HALL, HOWTH RD, DUBLIN",
+      "county": "Dublin",
+      "eircode": "D05YH02",
+      "price": 381000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.391031,
+      "longitude": -6.093309,
+      "routing_key": "D05",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 1962.76233415
+    },
     {
       "id": 801321,
       "sale_date": "2026-08-18",
@@ -155,42 +191,6 @@
       "bedrooms": 3,
       "property_type": "terraced",
       "distance_m": 283.4274596
-    },
-    {
-      "id": 784090,
-      "sale_date": "2026-05-11",
-      "address": "3A DUNBO HILL, HOWTH, DUBLIN 13",
-      "county": "Dublin",
-      "eircode": "D13P029",
-      "price": 550000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.387607,
-      "longitude": -6.070056,
-      "routing_key": "D13",
-      "bedrooms": 5,
-      "property_type": "detached",
-      "distance_m": 383.23764398
-    },
-    {
-      "id": 793944,
-      "sale_date": "2026-05-08",
-      "address": "69 THORMANBY LAWNS, HOWTH, DUBLIN",
-      "county": "Dublin",
-      "eircode": "D13R6K4",
-      "price": 1220000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.382339,
-      "longitude": -6.060616,
-      "routing_key": "D13",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 490.95212298
     }
   ],
   "trends": [
@@ -260,17 +260,17 @@
     },
     {
       "year": 2018,
-      "count": 65,
-      "median_price": 722500.0,
-      "avg_price": 757746.0,
+      "count": 64,
+      "median_price": 716250.0,
+      "avg_price": 722711.0,
       "min_price": 24000.0,
-      "max_price": 3000000.0
+      "max_price": 2150000.0
     },
     {
       "year": 2019,
-      "count": 56,
+      "count": 55,
       "median_price": 675000.0,
-      "avg_price": 786921.0,
+      "avg_price": 783138.0,
       "min_price": 133389.0,
       "max_price": 2895000.0
     },
@@ -284,11 +284,11 @@
     },
     {
       "year": 2021,
-      "count": 61,
+      "count": 60,
       "median_price": 680000.0,
-      "avg_price": 1028901.0,
+      "avg_price": 771783.0,
       "min_price": 295000.0,
-      "max_price": 16456020.0
+      "max_price": 1885000.0
     },
     {
       "year": 2022,
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 27,
+      "count": 29,
       "median_price": 800000.0,
-      "avg_price": 1080037.0,
+      "avg_price": 1096276.0,
       "min_price": 30000.0,
       "max_price": 4650000.0
     }

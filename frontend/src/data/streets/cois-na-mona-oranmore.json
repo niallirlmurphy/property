@@ -22,6 +22,14 @@
   "transactions": [
     {
       "date": "2015-03-27",
+      "address": "11 COIS NA MONA, ORANMORE, GALWAY",
+      "price": 1175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-27",
       "address": "6 COIS NA MONA, ORANMORE, GALWAY",
       "price": 1750000,
       "bedrooms": null,
@@ -71,14 +79,6 @@
     {
       "date": "2015-03-27",
       "address": "3 COIS NA MONA, ORANMORE, GALWAY",
-      "price": 1175000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-03-27",
-      "address": "11 COIS NA MONA, ORANMORE, GALWAY",
       "price": 1175000,
       "bedrooms": null,
       "propertyType": null,

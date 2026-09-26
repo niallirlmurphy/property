@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 435000.0,
-  "avg_price": 503868,
+  "median_price": 434681.0,
+  "avg_price": 509868,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 803726,
+      "sale_date": "2026-09-09",
+      "address": "1 HAMMONDTOWN, ASHBOURNE, MEATH",
+      "county": "Meath",
+      "eircode": "A84WV30",
+      "price": 420000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.51064,
+      "longitude": -6.396964,
+      "routing_key": "A84",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 134.95381879
+    },
     {
       "id": 802148,
       "sale_date": "2026-08-26",
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "semi-detached",
       "distance_m": 599.89952382
-    },
-    {
-      "id": 799479,
-      "sale_date": "2026-08-05",
-      "address": "13A ST JOHNS WOOD COURT, ASHBOURNE, MEATH",
-      "county": "Meath",
-      "eircode": "A84YD58",
-      "price": 360000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.51625,
-      "longitude": -6.407036,
-      "routing_key": "A84",
-      "bedrooms": 3,
-      "property_type": "duplex",
-      "distance_m": 782.13475651
     }
   ],
   "trends": [
@@ -268,11 +268,11 @@
     },
     {
       "year": 2019,
-      "count": 233,
+      "count": 232,
       "median_price": 299559.0,
-      "avg_price": 309837.0,
+      "avg_price": 299537.0,
       "min_price": 21000.0,
-      "max_price": 2699472.25
+      "max_price": 750000.0
     },
     {
       "year": 2020,
@@ -292,17 +292,17 @@
     },
     {
       "year": 2022,
-      "count": 137,
-      "median_price": 295000.0,
-      "avg_price": 331789.0,
+      "count": 139,
+      "median_price": 296000.0,
+      "avg_price": 335792.0,
       "min_price": 100575.0,
       "max_price": 785000.0
     },
     {
       "year": 2023,
-      "count": 191,
-      "median_price": 340000.0,
-      "avg_price": 341033.0,
+      "count": 192,
+      "median_price": 342500.0,
+      "avg_price": 342004.0,
       "min_price": 80000.0,
       "max_price": 775000.0
     },
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 163,
-      "median_price": 435000.0,
-      "avg_price": 430179.0,
+      "count": 164,
+      "median_price": 434681.0,
+      "avg_price": 430117.0,
       "min_price": 187500.0,
       "max_price": 975000.0
     }

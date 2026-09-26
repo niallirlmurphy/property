@@ -1,9 +1,9 @@
 {
   "slug": "hampton-square-navan-road",
   "stats": {
-    "count": 139,
+    "count": 140,
     "median": 280000,
-    "avg": 332888,
+    "avg": 333295,
     "min": 137500,
     "max": 2682500,
     "firstYear": 2010,
@@ -140,14 +140,22 @@
     },
     {
       "year": 2026,
-      "count": 6,
-      "median_price": 401000,
-      "avg_price": 420500,
+      "count": 7,
+      "median_price": 390000,
+      "avg_price": 416143,
       "min_price": 326000,
       "max_price": 608000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-10",
+      "address": "50 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07CVK5"
+    },
     {
       "date": "2026-07-03",
       "address": "71 HAMPTON SQ, NAVAN RD, DUBLIN 7",
@@ -534,20 +542,12 @@
     },
     {
       "date": "2020-10-30",
-      "address": "143 HAMPTON SQ, NAVAN RD, DUBLIN 7",
-      "price": 280000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-30",
-      "address": "146 HAMPTON SQ, NAVAN RD, DUBLIN 7",
-      "price": 280000,
+      "address": "132 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 255000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     }
   ],
-  "totalTransactions": 139
+  "totalTransactions": 140
 }

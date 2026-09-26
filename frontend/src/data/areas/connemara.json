@@ -8,10 +8,28 @@
   "radius_km": 5.0,
   "total_count": 10,
   "median_price": 285000.0,
-  "avg_price": 274450,
+  "avg_price": 275450,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 803801,
+      "sale_date": "2026-09-09",
+      "address": "29 CLIFDEN GLEN, CLIFDEN, GALWAY",
+      "county": "Galway",
+      "eircode": "H71HP22",
+      "price": 285000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.488033,
+      "longitude": -9.983782,
+      "routing_key": "H71",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 2475.42676033
+    },
     {
       "id": 790965,
       "sale_date": "2026-07-21",
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "semi-detached",
       "distance_m": 483.7956598
-    },
-    {
-      "id": 778075,
-      "sale_date": "2026-03-18",
-      "address": "3 CLIFDEN GLEN, CLIFDEN, GALWAY",
-      "county": "Galway",
-      "eircode": "H71TN12",
-      "price": 275000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.487781,
-      "longitude": -9.98603,
-      "routing_key": "H71",
-      "bedrooms": 3,
-      "property_type": "detached",
-      "distance_m": 2327.03536449
     }
   ],
   "trends": [
@@ -292,25 +292,25 @@
     },
     {
       "year": 2022,
-      "count": 43,
-      "median_price": 222500.0,
-      "avg_price": 296564.0,
+      "count": 44,
+      "median_price": 226250.0,
+      "avg_price": 304142.0,
       "min_price": 60000.0,
       "max_price": 1994000.0
     },
     {
       "year": 2023,
-      "count": 30,
+      "count": 31,
       "median_price": 180000.0,
-      "avg_price": 233667.0,
+      "avg_price": 241774.0,
       "min_price": 60000.0,
       "max_price": 1000000.0
     },
     {
       "year": 2024,
-      "count": 29,
-      "median_price": 260000.0,
-      "avg_price": 370810.0,
+      "count": 31,
+      "median_price": 283000.0,
+      "avg_price": 396968.0,
       "min_price": 140000.0,
       "max_price": 1950000.0
     },
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 11,
+      "count": 12,
       "median_price": 285000.0,
-      "avg_price": 276773.0,
+      "avg_price": 277458.0,
       "min_price": 127000.0,
       "max_price": 565000.0
     }

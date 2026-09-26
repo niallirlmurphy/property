@@ -8,10 +8,28 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 395000.0,
-  "avg_price": 350500,
+  "avg_price": 363500,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 803529,
+      "sale_date": "2026-09-07",
+      "address": "88 MULLAN MOR, TUAM RD, GALWAY",
+      "county": "Galway",
+      "eircode": "H91HDX3",
+      "price": 380000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.290523,
+      "longitude": -9.028066,
+      "routing_key": "H91",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 1009.38262289
+    },
     {
       "id": 801221,
       "sale_date": "2026-08-17",
@@ -173,24 +191,6 @@
       "bedrooms": 5,
       "property_type": "detached",
       "distance_m": 1670.47578861
-    },
-    {
-      "id": 765377,
-      "sale_date": "2025-12-16",
-      "address": "BULLAUN, CUMMER, TUAM",
-      "county": "Galway",
-      "eircode": "H91A4E6",
-      "price": 250000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.29085585760993,
-      "longitude": -9.018126390507328,
-      "routing_key": "H91",
-      "bedrooms": 2,
-      "property_type": "detached",
-      "distance_m": 1518.42416595
     }
   ],
   "trends": [
@@ -284,9 +284,9 @@
     },
     {
       "year": 2021,
-      "count": 20,
-      "median_price": 347500.0,
-      "avg_price": 420752.0,
+      "count": 19,
+      "median_price": 345000.0,
+      "avg_price": 419213.0,
       "min_price": 50000.0,
       "max_price": 1752274.0
     },
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 9,
+      "count": 10,
       "median_price": 395000.0,
-      "avg_price": 361667.0,
+      "avg_price": 363500.0,
       "min_price": 95000.0,
       "max_price": 460000.0
     }
