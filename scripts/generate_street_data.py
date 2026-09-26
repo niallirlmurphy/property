@@ -26,6 +26,7 @@ def main():
         WHERE address_normalized IS NOT NULL
           AND not_full_market_price = FALSE
           AND price > 0 AND county IS NOT NULL
+          AND stats_excluded = FALSE   -- keep out-of-band price outliers off street pages
     """)
     for addr, county, price, sale_date, raw_addr, beds, ptype, eircode in cur:
         r = street_key(addr, county)

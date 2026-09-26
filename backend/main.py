@@ -234,11 +234,20 @@ TTL_EXACT_SEARCH = 86400   # 24 hours — exact address search results are deter
 # cases the PPR records verbatim — multi-unit/portfolio sales filed at a shared
 # price (well above €20M) or nominal transfers (below €10k) — that aren't flagged
 # not_full_market_price. They're kept in the DB (they're genuine PPR records) but
-# excluded from median/average calculations so they don't skew trends. Row-listing
-# queries (search, alerts) are NOT filtered by these bounds.
+# excluded from median/average calculations so they don't skew trends.
 TREND_MIN_PRICE = 10_000
 TREND_MAX_PRICE = 20_000_000
 TREND_PRICE_FILTER = f"price >= {TREND_MIN_PRICE} AND price <= {TREND_MAX_PRICE}"
+
+# Persistent outlier flag. `stats_excluded` is a STORED generated column on
+# properties: TRUE when price IS NULL OR price < 10_000 OR price > 20_000_000 —
+# i.e. exactly the rows TREND_PRICE_FILTER drops, materialised once and kept in
+# sync automatically on insert/update. Applied to the row-listing queries that
+# feed landing pages (area/eircode/county) and general search results so these
+# out-of-band prices don't appear as if they were normal comparable sales. The
+# individual-property sales-history page (/search/exact) is intentionally NOT
+# filtered: it shows that one property's real records, outlier or not.
+STATS_EXCLUDE_FILTER = "stats_excluded = FALSE"
 
 # Multi-unit/portfolio sales (e.g. "Apartments 1-10", "Units 1 to 76") record many
 # dwellings at one combined price that sits inside the price band above, so they
@@ -1191,7 +1200,7 @@ async def search(
         # (eircode routing key far from the point, or a fallback street/locality
         # centroid shared by many distinct addresses). Prevents e.g. a Kerry
         # property surfacing in a Howth radius search until it is re-geocoded.
-        filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)", "geocode_suspect IS NOT TRUE"]
+        filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)", "geocode_suspect IS NOT TRUE", STATS_EXCLUDE_FILTER]
         params  = [lat, lon, radius_km * 1000]
         idx     = 4
 
@@ -1233,7 +1242,7 @@ async def search(
             if attempt_radius > MAX_RADIUS_KM:
                 attempt_radius = MAX_RADIUS_KM
 
-            filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)", "geocode_suspect IS NOT TRUE"]
+            filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)", "geocode_suspect IS NOT TRUE", STATS_EXCLUDE_FILTER]
             params  = [lat, lon, attempt_radius * 1000]
             idx     = 4
 
@@ -1556,7 +1565,7 @@ async def search_polygon(
     # Build query (polygon_wkt is now safe - all values are validated floats)
     # geocode_suspect: exclude known-wrong coordinates from spatial results.
     filters = [f"ST_Within(geog::geometry, ST_GeomFromText('{polygon_wkt}', 4326))",
-               "geocode_suspect IS NOT TRUE"]
+               "geocode_suspect IS NOT TRUE", STATS_EXCLUDE_FILTER]
     params: list = []
     idx = 1
 
@@ -1710,7 +1719,8 @@ async def eircode_search(
 
     filters = [
         "REPLACE(UPPER(eircode), ' ', '') = $1" if is_full
-        else "REPLACE(UPPER(eircode), ' ', '') LIKE $1"
+        else "REPLACE(UPPER(eircode), ' ', '') LIKE $1",
+        STATS_EXCLUDE_FILTER,  # keep out-of-band prices out of the row list
     ]
     params = [norm if is_full else norm[:3] + "%"]
     idx = 2
@@ -1895,9 +1905,10 @@ async def county_recent(
             routing_key, bedrooms, property_type
         FROM properties
         WHERE LOWER(county) = LOWER($1)
+          AND {STATS_EXCLUDE_FILTER}
         ORDER BY sale_date DESC, id DESC
         LIMIT $2
-    """, county, limit)
+    """.format(STATS_EXCLUDE_FILTER=STATS_EXCLUDE_FILTER), county, limit)
 
     result = {"count": len(rows), "results": [serialize_row(r) for r in rows]}
     cache.set("county_recent", cache_params, result, TTL_SEARCH)

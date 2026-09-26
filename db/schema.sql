@@ -22,6 +22,15 @@ CREATE TABLE IF NOT EXISTS properties (
 CREATE INDEX IF NOT EXISTS properties_geog_idx
     ON properties USING GIST (geog);
 
+-- Persistent price-outlier flag. TRUE for records outside the trend price band
+-- (NULL, < €10k, or > €20M) — nominal transfers and multi-unit/portfolio sales
+-- filed at a shared price. Kept in the DB (genuine PPR records) but excluded from
+-- landing-page lists, aggregates, and valuations. STORED generated column so it
+-- stays in sync automatically on insert/update. Idempotent for existing databases.
+ALTER TABLE properties
+    ADD COLUMN IF NOT EXISTS stats_excluded BOOLEAN
+    GENERATED ALWAYS AS (price IS NULL OR price < 10000 OR price > 20000000) STORED;
+
 -- Form submissions (feedback + contact)
 CREATE TABLE IF NOT EXISTS submissions (
     id            BIGSERIAL PRIMARY KEY,
