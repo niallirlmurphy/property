@@ -157,24 +157,6 @@
       "distance_m": 183.71778558
     },
     {
-      "id": 803864,
-      "sale_date": "2026-09-09",
-      "address": "APT 3, 9 THE MALL, WATERFORD",
-      "county": "Waterford",
-      "eircode": "X91TK49",
-      "price": 133750.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.260055,
-      "longitude": -7.105983,
-      "routing_key": "X91",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 696.79527447
-    },
-    {
       "id": 803862,
       "sale_date": "2026-09-09",
       "address": "APT 2, 9 THE MALL, WATERFORD",
@@ -189,7 +171,25 @@
       "longitude": -7.105983,
       "routing_key": "X91",
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "apartment",
+      "distance_m": 696.79527447
+    },
+    {
+      "id": 803864,
+      "sale_date": "2026-09-09",
+      "address": "APT 3, 9 THE MALL, WATERFORD",
+      "county": "Waterford",
+      "eircode": "X91TK49",
+      "price": 133750.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.260055,
+      "longitude": -7.105983,
+      "routing_key": "X91",
+      "bedrooms": null,
+      "property_type": "apartment",
       "distance_m": 696.79527447
     }
   ],

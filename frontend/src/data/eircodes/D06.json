@@ -80,23 +80,6 @@
         "property_type": "apartment"
       },
       {
-        "id": 803901,
-        "sale_date": "2026-09-10",
-        "address": "11 UPPER CHERRYFIELD AVE, RANELAGH, DUBLIN 6",
-        "county": "Dublin",
-        "eircode": "D06N9C2",
-        "price": 815000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.396598,
-        "longitude": -6.128542,
-        "routing_key": "D06",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
         "id": 804035,
         "sale_date": "2026-09-10",
         "address": "UNIT 1, 14 RICHMOND HILL, RATHMINES",
@@ -110,8 +93,25 @@
         "latitude": 53.32685,
         "longitude": -6.262926,
         "routing_key": "D06",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 8,
+        "property_type": "terraced"
+      },
+      {
+        "id": 803901,
+        "sale_date": "2026-09-10",
+        "address": "11 UPPER CHERRYFIELD AVE, RANELAGH, DUBLIN 6",
+        "county": "Dublin",
+        "eircode": "D06N9C2",
+        "price": 815000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396598,
+        "longitude": -6.128542,
+        "routing_key": "D06",
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 803816,
@@ -127,8 +127,8 @@
         "latitude": 53.342693,
         "longitude": -6.227877,
         "routing_key": "D06",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 803782,

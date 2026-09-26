@@ -85,12 +85,12 @@
       "distance_m": 1947.33378867
     },
     {
-      "id": 804269,
+      "id": 804234,
       "sale_date": "2026-09-14",
-      "address": "4 Ushers Mill Row, Drogheda",
+      "address": "14 Ushers Mill Row, Drogheda",
       "county": "Louth",
       "eircode": null,
-      "price": 370044.05,
+      "price": 370044.0,
       "not_full_market_price": false,
       "vat_exclusive": true,
       "description": "New Dwelling house /Apartment",
@@ -103,12 +103,12 @@
       "distance_m": 458.96067056
     },
     {
-      "id": 804234,
+      "id": 804269,
       "sale_date": "2026-09-14",
-      "address": "14 Ushers Mill Row, Drogheda",
+      "address": "4 Ushers Mill Row, Drogheda",
       "county": "Louth",
       "eircode": null,
-      "price": 370044.0,
+      "price": 370044.05,
       "not_full_market_price": false,
       "vat_exclusive": true,
       "description": "New Dwelling house /Apartment",

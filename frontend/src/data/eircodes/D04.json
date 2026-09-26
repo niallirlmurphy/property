@@ -97,23 +97,6 @@
         "property_type": "terraced"
       },
       {
-        "id": 804161,
-        "sale_date": "2026-09-11",
-        "address": "7 LANSDOWN CRESENT, BALLSBRIDGE, DUBLIN 4",
-        "county": "Dublin",
-        "eircode": "D04H7A4",
-        "price": 600000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.334407,
-        "longitude": -6.232416,
-        "routing_key": "D04",
-        "bedrooms": 2,
-        "property_type": "terraced"
-      },
-      {
         "id": 804172,
         "sale_date": "2026-09-11",
         "address": "92 SOUTH LOTTS RD, RINGSEND, DUBLIN",
@@ -148,21 +131,21 @@
         "property_type": null
       },
       {
-        "id": 803900,
-        "sale_date": "2026-09-10",
-        "address": "107 PEMBROKE COTTAGES, DONNYBROOK, DUBLIN 4",
+        "id": 804161,
+        "sale_date": "2026-09-11",
+        "address": "7 LANSDOWN CRESENT, BALLSBRIDGE, DUBLIN 4",
         "county": "Dublin",
-        "eircode": "D04H5Y8",
-        "price": 500000.0,
+        "eircode": "D04H7A4",
+        "price": 600000.0,
         "not_full_market_price": false,
         "vat_exclusive": false,
         "description": "Second-Hand Dwelling house /Apartment",
         "size_description": null,
-        "latitude": 53.322639,
-        "longitude": -6.235456,
+        "latitude": 53.334407,
+        "longitude": -6.232416,
         "routing_key": "D04",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "terraced"
       },
       {
         "id": 803907,
@@ -178,8 +161,25 @@
         "latitude": 53.335919,
         "longitude": -6.242253,
         "routing_key": "D04",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 803900,
+        "sale_date": "2026-09-10",
+        "address": "107 PEMBROKE COTTAGES, DONNYBROOK, DUBLIN 4",
+        "county": "Dublin",
+        "eircode": "D04H5Y8",
+        "price": 500000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.322639,
+        "longitude": -6.235456,
+        "routing_key": "D04",
+        "bedrooms": 2,
+        "property_type": "terraced"
       }
     ]
   },

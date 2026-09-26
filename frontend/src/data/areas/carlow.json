@@ -44,8 +44,8 @@
       "latitude": 52.836372,
       "longitude": -6.933411,
       "routing_key": "R93",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "duplex",
       "distance_m": 698.89574792
     },
     {

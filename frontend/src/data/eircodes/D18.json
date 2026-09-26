@@ -165,21 +165,21 @@
         "property_type": "apartment"
       },
       {
-        "id": 803946,
+        "id": 803942,
         "sale_date": "2026-09-10",
-        "address": "32 GLENCAIRN DR, THE GALLOPS, LEOPARDSTOWN DUBLIN 18",
+        "address": "30 SPRINGFIELD PARK, FOXROCK, DUBLIN 18",
         "county": "Dublin",
-        "eircode": "D18W935",
-        "price": 1276000.0,
+        "eircode": "D18T8P5",
+        "price": 1500000.0,
         "not_full_market_price": false,
         "vat_exclusive": false,
         "description": "Second-Hand Dwelling house /Apartment",
         "size_description": null,
-        "latitude": 53.263885,
-        "longitude": -6.204668,
+        "latitude": 53.271678,
+        "longitude": -6.175151,
         "routing_key": "D18",
-        "bedrooms": 5,
-        "property_type": "detached"
+        "bedrooms": null,
+        "property_type": null
       }
     ]
   },

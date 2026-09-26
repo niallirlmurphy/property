@@ -309,8 +309,8 @@
       "latitude": 54.112941,
       "longitude": -6.741162,
       "routing_key": "A75",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 3,
+      "property_type": "semi-detached"
     }
   ]
 }

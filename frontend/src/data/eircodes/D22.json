@@ -131,6 +131,23 @@
         "property_type": "semi-detached"
       },
       {
+        "id": 804116,
+        "sale_date": "2026-09-11",
+        "address": "32 GLENFIELD PK, CLONDALKIN, DUBLIN 22",
+        "county": "Dublin",
+        "eircode": "D22Y667",
+        "price": 330000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.347686,
+        "longitude": -6.403972,
+        "routing_key": "D22",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
         "id": 804040,
         "sale_date": "2026-09-11",
         "address": "1 OAK RISE, CLONDALKIN, DUBLIN 22",
@@ -160,23 +177,6 @@
         "size_description": null,
         "latitude": 53.330696,
         "longitude": -6.397385,
-        "routing_key": "D22",
-        "bedrooms": 3,
-        "property_type": "terraced"
-      },
-      {
-        "id": 804116,
-        "sale_date": "2026-09-11",
-        "address": "32 GLENFIELD PK, CLONDALKIN, DUBLIN 22",
-        "county": "Dublin",
-        "eircode": "D22Y667",
-        "price": 330000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.347686,
-        "longitude": -6.403972,
         "routing_key": "D22",
         "bedrooms": 3,
         "property_type": "terraced"

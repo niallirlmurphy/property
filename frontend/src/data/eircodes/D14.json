@@ -127,8 +127,8 @@
         "latitude": 53.337593,
         "longitude": -6.287325,
         "routing_key": "D14",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "apartment"
       },
       {
         "id": 803968,
@@ -161,22 +161,22 @@
         "latitude": 53.311565,
         "longitude": -6.274197,
         "routing_key": "D14",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 4,
+        "property_type": "semi-detached"
       },
       {
-        "id": 803536,
+        "id": 803459,
         "sale_date": "2026-09-07",
-        "address": "95 BUTTERFIELD AVE, RATHFARNHAM, DUBLIN 14",
+        "address": "19 HOLLYWOOD DR, GOATSTOWN, DUBLIN 14",
         "county": "Dublin",
-        "eircode": "D14Y8K1",
-        "price": 149850.0,
-        "not_full_market_price": true,
+        "eircode": "D14PD29",
+        "price": 925000.0,
+        "not_full_market_price": false,
         "vat_exclusive": false,
         "description": "Second-Hand Dwelling house /Apartment",
         "size_description": null,
-        "latitude": 53.296661,
-        "longitude": -6.295786,
+        "latitude": 53.29417,
+        "longitude": -6.229079,
         "routing_key": "D14",
         "bedrooms": null,
         "property_type": null

@@ -152,7 +152,7 @@
       "latitude": 51.896793,
       "longitude": -8.428338,
       "routing_key": "T12",
-      "bedrooms": null,
+      "bedrooms": 2,
       "property_type": null,
       "distance_m": 2667.0500341
     },

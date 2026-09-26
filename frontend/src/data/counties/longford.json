@@ -258,8 +258,8 @@
       "latitude": 53.769311,
       "longitude": -7.834159,
       "routing_key": "N39",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 1,
+      "property_type": "apartment"
     },
     {
       "id": 803696,

@@ -12,23 +12,6 @@
     "count": 10,
     "results": [
       {
-        "id": 804615,
-        "sale_date": "2026-09-18",
-        "address": "21 MOUNT SYMON PARK, CLONSILLA, DUBLIN 15",
-        "county": "Dublin",
-        "eircode": "D15V2R3",
-        "price": 635000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.388713,
-        "longitude": -6.420319,
-        "routing_key": "D15",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
         "id": 804603,
         "sale_date": "2026-09-18",
         "address": "1 CHARNWOOD PARK, CLONSILLA, DUBLIN 15",
@@ -44,6 +27,23 @@
         "routing_key": "D15",
         "bedrooms": 5,
         "property_type": "semi-detached"
+      },
+      {
+        "id": 804615,
+        "sale_date": "2026-09-18",
+        "address": "21 MOUNT SYMON PARK, CLONSILLA, DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15V2R3",
+        "price": 635000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.388713,
+        "longitude": -6.420319,
+        "routing_key": "D15",
+        "bedrooms": null,
+        "property_type": null
       },
       {
         "id": 804538,

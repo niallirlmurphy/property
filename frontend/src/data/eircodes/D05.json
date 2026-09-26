@@ -93,8 +93,8 @@
         "latitude": 53.373527,
         "longitude": -6.197427,
         "routing_key": "D05",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 803596,
@@ -148,6 +148,23 @@
         "property_type": null
       },
       {
+        "id": 802932,
+        "sale_date": "2026-09-02",
+        "address": "95 GRANGE PARK RD, RAHENY, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05HH61",
+        "price": 750000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.385269,
+        "longitude": -6.165657,
+        "routing_key": "D05",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
         "id": 802904,
         "sale_date": "2026-09-02",
         "address": "63 THE VILLAGE, BETTYGLEN, RAHENY DUBLIN 5",
@@ -160,23 +177,6 @@
         "size_description": null,
         "latitude": 53.376209,
         "longitude": -6.164848,
-        "routing_key": "D05",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
-        "id": 802784,
-        "sale_date": "2026-09-02",
-        "address": "12 RIBH ROAD, ARTANE, DUBLIN 5",
-        "county": "Dublin",
-        "eircode": "D05F638",
-        "price": 440000.0,
-        "not_full_market_price": true,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.380264,
-        "longitude": -6.190134,
         "routing_key": "D05",
         "bedrooms": null,
         "property_type": null

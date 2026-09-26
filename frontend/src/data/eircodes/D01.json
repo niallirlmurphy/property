@@ -42,8 +42,8 @@
         "latitude": 53.348312,
         "longitude": -6.232333,
         "routing_key": "D01",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "apartment"
       },
       {
         "id": 803540,
@@ -148,6 +148,23 @@
         "property_type": "apartment"
       },
       {
+        "id": 801625,
+        "sale_date": "2026-08-20",
+        "address": "509 THE LIFFEY TRUST, 117 126 UPPER SHERIFF ST, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D01TN24",
+        "price": 567000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.408798,
+        "longitude": -6.346457,
+        "routing_key": "D01",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
         "id": 801659,
         "sale_date": "2026-08-20",
         "address": "APT 24, 55 MOUNTJOY SQ WEST, DUBLIN 1",
@@ -163,23 +180,6 @@
         "routing_key": "D01",
         "bedrooms": 1,
         "property_type": "terraced"
-      },
-      {
-        "id": 801567,
-        "sale_date": "2026-08-20",
-        "address": "159 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
-        "county": "Dublin",
-        "eircode": "D01HP64",
-        "price": 445000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.353088,
-        "longitude": -6.260752,
-        "routing_key": "D01",
-        "bedrooms": 2,
-        "property_type": "apartment"
       }
     ]
   },

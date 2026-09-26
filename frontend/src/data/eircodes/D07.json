@@ -114,6 +114,23 @@
         "property_type": "semi-detached"
       },
       {
+        "id": 803936,
+        "sale_date": "2026-09-10",
+        "address": "28, DUNARD AVENUE, BLACKHORSE AVENUE DUBLIN 7",
+        "county": "Dublin",
+        "eircode": "D07E2K8",
+        "price": 237000.0,
+        "not_full_market_price": true,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.359844,
+        "longitude": -6.303192,
+        "routing_key": "D07",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
         "id": 803963,
         "sale_date": "2026-09-10",
         "address": "43 ARD RIGH ROAD, ARBOUR HILL, DUBLIN 7",
@@ -148,23 +165,6 @@
         "property_type": null
       },
       {
-        "id": 803936,
-        "sale_date": "2026-09-10",
-        "address": "28, DUNARD AVENUE, BLACKHORSE AVENUE DUBLIN 7",
-        "county": "Dublin",
-        "eircode": "D07E2K8",
-        "price": 237000.0,
-        "not_full_market_price": true,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.359844,
-        "longitude": -6.303192,
-        "routing_key": "D07",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
         "id": 803835,
         "sale_date": "2026-09-09",
         "address": "54 BROOMBRIDGE RD, CABRA, DUBLIN 7",
@@ -178,8 +178,8 @@
         "latitude": 53.369396,
         "longitude": -6.301461,
         "routing_key": "D07",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "terraced"
       }
     ]
   },

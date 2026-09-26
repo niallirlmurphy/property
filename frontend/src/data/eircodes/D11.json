@@ -97,23 +97,6 @@
         "property_type": "terraced"
       },
       {
-        "id": 804134,
-        "sale_date": "2026-09-11",
-        "address": "47 BOTANIC HALL, ADDISON PARK, GLASNEVIN DUBLIN 11",
-        "county": "Dublin",
-        "eircode": "D11H0X8",
-        "price": 488100.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.376861,
-        "longitude": -6.277998,
-        "routing_key": "D11",
-        "bedrooms": 2,
-        "property_type": "apartment"
-      },
-      {
         "id": 804091,
         "sale_date": "2026-09-11",
         "address": "21 CASEMENT GROVE, FINGLAS WEST, DUBLIN 11",
@@ -131,6 +114,23 @@
         "property_type": "terraced"
       },
       {
+        "id": 804134,
+        "sale_date": "2026-09-11",
+        "address": "47 BOTANIC HALL, ADDISON PARK, GLASNEVIN DUBLIN 11",
+        "county": "Dublin",
+        "eircode": "D11H0X8",
+        "price": 488100.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.376861,
+        "longitude": -6.277998,
+        "routing_key": "D11",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
         "id": 803820,
         "sale_date": "2026-09-09",
         "address": "40 TOLKA VALE, FINGLAS RD, DUBLIN 11",
@@ -144,8 +144,8 @@
         "latitude": 53.363288,
         "longitude": -6.24504,
         "routing_key": "D11",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "apartment"
       },
       {
         "id": 803589,

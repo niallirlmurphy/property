@@ -26,7 +26,7 @@
       "latitude": 53.045452,
       "longitude": -7.280291,
       "routing_key": null,
-      "bedrooms": null,
+      "bedrooms": 3,
       "property_type": null,
       "distance_m": 1838.41504949
     },

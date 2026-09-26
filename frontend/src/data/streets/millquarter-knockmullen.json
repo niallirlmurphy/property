@@ -398,19 +398,19 @@
     },
     {
       "date": "2025-07-03",
-      "address": "16 MILLQUARTER, KNOCKMULLEN, GOREY",
-      "price": 406000,
-      "bedrooms": 4,
-      "propertyType": "semi-detached",
-      "eircode": "Y25E6F3"
-    },
-    {
-      "date": "2025-07-03",
       "address": "287 Millquarter, Knockmullen, Gorey",
       "price": 348017,
       "bedrooms": 5,
       "propertyType": "semi-detached",
       "eircode": null
+    },
+    {
+      "date": "2025-07-03",
+      "address": "16 MILLQUARTER, KNOCKMULLEN, GOREY",
+      "price": 406000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "Y25E6F3"
     },
     {
       "date": "2025-06-27",

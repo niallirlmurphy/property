@@ -44,8 +44,8 @@
       "latitude": 53.329998,
       "longitude": -6.269389,
       "routing_key": "D08",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 145.86590762
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 53.330528,
       "longitude": -6.27338,
       "routing_key": "D08",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 314.30959895
     },
     {

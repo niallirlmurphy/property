@@ -117,7 +117,7 @@
       "longitude": -6.668171,
       "routing_key": null,
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "detached",
       "distance_m": 961.36213097
     },
     {

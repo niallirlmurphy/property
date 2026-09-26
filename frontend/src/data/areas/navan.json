@@ -44,8 +44,8 @@
       "latitude": 53.658439,
       "longitude": -6.683108,
       "routing_key": "C15",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 598.08584215
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 53.645088,
       "longitude": -6.665954,
       "routing_key": "C15",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "detached",
       "distance_m": 1491.59191219
     },
     {
