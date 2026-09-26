@@ -110,7 +110,16 @@ async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = No
         # Only rows currently flagged as bad geocodes (hidden from search). These
         # are the mislocated/wrong-town rows users actually see leaking into area
         # pages, so they are the highest-impact target for a budget-limited run.
+        # This is also the deliberate RETRY path for previously-failed rows (a
+        # failed geocode sets geocode_suspect = TRUE below), so a --suspect run
+        # re-attempts them; a success clears the flag.
         where_clauses.append("geocode_suspect = TRUE")
+    else:
+        # Exclude rows a prior run already tried and failed (geocode_suspect = TRUE).
+        # Failed rows stay needs_geocoding = TRUE but are marked suspect on failure,
+        # so this keeps the worklist to genuinely un-attempted rows and stops the
+        # same failing addresses being re-geocoded (and re-billed) every run.
+        where_clauses.append("geocode_suspect = FALSE")
 
     if min_price:
         where_clauses.append(f"price >= ${idx}")
@@ -541,6 +550,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
 
                 # Tally this chunk and collect the rows to persist.
                 chunk_updates = []
+                failed_ids = []
                 for prop_id, lat, lon, quality_score in results:
                     if lat and lon and quality_score >= 70:
                         success_count += 1
@@ -548,23 +558,39 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                         chunk_updates.append((lat, lon, prop_id))
                     else:
                         failed_count += 1
+                        failed_ids.append(prop_id)
+
+                # Mark failures as geocode_suspect so they leave the worklist and are
+                # not re-attempted next run (the sweep previously re-billed the same
+                # failing rows every sub-batch). Skipped for centroid mode: those rows
+                # keep their existing (centroid) coordinates and flipping suspect would
+                # hide them from search rather than just de-queue them.
+                mark_failed = failed_ids and not centroid
 
                 # Persist immediately with a short-lived pool (opened only for the write
                 # so no idle connection is held across the next chunk's long geocode).
-                if not dry_run and chunk_updates:
+                if not dry_run and (chunk_updates or mark_failed):
                     pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3)
                     try:
-                        await pool.executemany("""
-                            UPDATE properties
-                            SET latitude = $1, longitude = $2,
-                                geog = ST_MakePoint($2, $1)::geography,
-                                needs_geocoding = FALSE,
-                                geocode_suspect = FALSE
-                            WHERE id = $3
-                        """, chunk_updates)
-                        written += len(chunk_updates)
-                        print(f"  💾 Saved {len(chunk_updates):,} geocodes this chunk "
-                              f"(total saved: {written:,})")
+                        if chunk_updates:
+                            await pool.executemany("""
+                                UPDATE properties
+                                SET latitude = $1, longitude = $2,
+                                    geog = ST_MakePoint($2, $1)::geography,
+                                    needs_geocoding = FALSE,
+                                    geocode_suspect = FALSE
+                                WHERE id = $3
+                            """, chunk_updates)
+                            written += len(chunk_updates)
+                            print(f"  💾 Saved {len(chunk_updates):,} geocodes this chunk "
+                                  f"(total saved: {written:,})")
+                        if mark_failed:
+                            await pool.executemany(
+                                "UPDATE properties SET geocode_suspect = TRUE WHERE id = $1",
+                                [(fid,) for fid in failed_ids]
+                            )
+                            print(f"  🚩 Flagged {len(failed_ids):,} failed rows as "
+                                  f"geocode_suspect (removed from worklist)")
                     except Exception as e:
                         # Don't let one failed write abort the whole run — later chunks
                         # can still save. These properties stay flagged for a re-run.

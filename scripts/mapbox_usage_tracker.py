@@ -59,9 +59,19 @@ class MapboxUsageTracker:
         self.source = source
         self.operation = operation
         self.notes = notes
+        # request_count/success_count/error_count hold the UNFLUSHED delta: counts
+        # recorded since the last successful save(). save() persists them and resets
+        # these to 0, so periodic flushing writes non-overlapping delta rows that SUM
+        # to the true total. session_* hold the lifetime totals for logging only.
         self.request_count = 0
         self.success_count = 0
         self.error_count = 0
+        self.session_requests = 0
+        self.session_success = 0
+        self.session_errors = 0
+        # Persist incrementally so a killed process loses at most this many
+        # already-billed calls (previously an entire chunk was lost on kill).
+        self._flush_every = max(1, int(os.getenv("MAPBOX_FLUSH_EVERY", "50")))
         self.start_time = None
         self._lock = asyncio.Lock()
         self._conn = None
@@ -102,10 +112,24 @@ class MapboxUsageTracker:
             count: Number of requests (for batch operations)
         """
         self.request_count += count
+        self.session_requests += count
         if success:
             self.success_count += count
+            self.session_success += count
         else:
             self.error_count += count
+            self.session_errors += count
+
+    async def maybe_flush(self):
+        """Persist accumulated counts once the unflushed delta hits the flush threshold.
+
+        Called from the async request path (MapboxClient) after each recorded call so
+        that persistence happens continuously during a long run, not only at context
+        exit. A process killed mid-run therefore loses at most `_flush_every` calls
+        instead of an entire chunk.
+        """
+        if self.request_count >= self._flush_every:
+            await self.save()
 
     def record_batch(self, total: int, succeeded: int):
         """
@@ -128,20 +152,29 @@ class MapboxUsageTracker:
         ConnectionDoesNotExistError. Opening a fresh connection here (as the read-only
         summary helpers already do) makes the save robust regardless of run length.
         """
-        if self.request_count == 0:
-            return  # Nothing to save
-
         async with self._lock:
+            # Snapshot the current delta so any records added while we await the DB
+            # are preserved: we only subtract what we actually persisted.
+            req, succ, err = self.request_count, self.success_count, self.error_count
+            if req == 0:
+                return  # Nothing to save
+
             conn = await asyncpg.connect(os.getenv('DATABASE_URL'))
             try:
                 await conn.execute("""
                     INSERT INTO mapbox_usage
                     (source, request_count, success_count, error_count, operation, notes)
                     VALUES ($1, $2, $3, $4, $5, $6)
-                """, self.source, self.request_count, self.success_count,
-                     self.error_count, self.operation, self.notes)
+                """, self.source, req, succ, err, self.operation, self.notes)
             finally:
                 await conn.close()
+
+            # Reached only if the INSERT above did not raise. Subtract the persisted
+            # delta (not a hard reset) so concurrent records aren't dropped; on a
+            # failed insert the counts are retained for the next flush/save attempt.
+            self.request_count -= req
+            self.success_count -= succ
+            self.error_count -= err
 
     async def close(self):
         """Persist usage (best-effort) and close the connection.
@@ -155,7 +188,8 @@ class MapboxUsageTracker:
             await self.save()
         except Exception as e:
             print(f"⚠️  Failed to persist Mapbox usage "
-                  f"({self.request_count} requests, {self.success_count} ok): {e}")
+                  f"({self.request_count} unflushed of {self.session_requests} total "
+                  f"requests, {self.session_success} ok): {e}")
         if self._conn:
             try:
                 await self._conn.close()

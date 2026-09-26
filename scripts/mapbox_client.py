@@ -192,9 +192,13 @@ class MapboxClient:
             response.raise_for_status()
             data = response.json()
 
-            self.tracker.record_request(success=True)
-
+            # Record exactly ONE request per HTTP call. (Previously a 200 with no
+            # features was recorded twice — success here + error below — inflating
+            # the count for empty results.) success=True means the call returned a
+            # usable feature; a 200 with no match counts as a request but not a hit.
             if data.get('features'):
+                self.tracker.record_request(success=True)
+                await self.tracker.maybe_flush()
                 feature = data['features'][0]
                 coords = feature['geometry']['coordinates']
                 props = feature.get('properties', {})
@@ -207,10 +211,12 @@ class MapboxClient:
                 }
 
             self.tracker.record_request(success=False)
+            await self.tracker.maybe_flush()
             return None
 
         except Exception as e:
             self.tracker.record_request(success=False)
+            await self.tracker.maybe_flush()
             print(f"Mapbox geocoding error for '{query}': {e}")
             return None
 
