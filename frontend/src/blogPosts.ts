@@ -17,7 +17,7 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "valuing-ires-reit-property-portfolio",
-    title: "Valuing the Property Portfolio of IRES REIT Using Our Enriched PPR Data",
+    title: "Valuing the Property Portfolio of IRES REIT plc Using Our Enriched PPR Data",
     description: "We pointed our valuation engine at Ireland's largest residential landlord and valued all 3,615 IRES-owned apartments, unit by unit, from public sold-price data. The result: about €2.0 billion — and a look at how property-type-aware valuation works.",
     date: "2026-09-27",
     author: "HomeIQ Team",
