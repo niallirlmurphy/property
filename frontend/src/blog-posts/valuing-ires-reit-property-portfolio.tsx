@@ -445,8 +445,7 @@ export function IresReitValuationContent() {
       <p style={{ marginBottom: "2rem" }}>
         The spread is coherent from top to bottom: a two-bed runs from about <strong>€314k</strong> in Camac Crescent
         (Inchicore) and Charlestown (Finglas) up to roughly <strong>€550k–€600k</strong> in the Dublin&nbsp;4 schemes
-        (Elmpark Green, Tara View) and at Beechwood Court in Stillorgan. There are no seven-figure apartments any more — the
-        apartment-price ceiling removed them — leaving a clean picture of a mid-market apartment book with a modest premium
+        (Elmpark Green, Tara View) and at Beechwood Court in Stillorgan — a mid-market apartment book with a modest premium
         tail in Dublin&nbsp;4 and the affluent southside.
       </p>
 
