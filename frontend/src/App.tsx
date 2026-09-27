@@ -491,22 +491,13 @@ export default function App() {
 
       <div className="map-container">
         {mapEl}
-        {showTrends ? (
-          <TrendsChart
-            data={trends}
-            onClose={() => setShowTrends(false)}
-          />
-        ) : trends.length > 0 ? (
-          <button className="trends-toggle" onClick={() => setShowTrends(true)}>
-            📈 Show price trends
-          </button>
-        ) : null}
+        {/* Price-trends chart temporarily removed: the client-side
+            calculateTrendsFromProperties series is broken (plots a flat line
+            over only the latest 1–2 years instead of the full sale-date range).
+            See docs/geocoding-todo.md backlog. Re-enable once the series is fixed. */}
       </div>
 
       <div className="trends-pane">
-        {trends.length > 0 && (
-          <TrendsChart data={trends} onClose={() => {}} inline />
-        )}
         {resultsPanel}
       </div>
 
@@ -529,14 +520,6 @@ export default function App() {
           {resultCount > 0 && (
             <span className="tab-badge">{resultCount > 999 ? "999+" : resultCount}</span>
           )}
-        </button>
-        <button
-          className={mobileTab === "trends" ? "active" : ""}
-          onClick={() => setMobileTab("trends")}
-          disabled={trends.length === 0}
-        >
-          <span className="tab-icon">📈</span>
-          Trends
         </button>
       </nav>
     </div>
