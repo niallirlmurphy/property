@@ -107,6 +107,7 @@ def main():
     print("\nPipeline steps:")
     print(f"  1. Import:     {'SKIP' if args.skip_import else 'YES'}")
     print(f"  2. Geocode:    {'SKIP' if args.skip_geocoding else 'YES'}")
+    print(f"  2b. geog fill: {'SKIP' if args.skip_geocoding else 'YES'}")
     print(f"  3. Enrich:     {'SKIP' if args.skip_enrichment else 'YES'}")
     print(f"  4. Page data:  {'SKIP' if args.skip_page_data else 'YES'}")
     print()
@@ -145,6 +146,19 @@ def main():
 
         if not success:
             print("\n⚠️  Warning: Geocoding had errors, continuing to enrichment...")
+
+    # Step 2b: Backfill any lat/lon rows missing a PostGIS geog. Radius/polygon
+    # search matches on geog (ST_DWithin/ST_Within), so a row geocoded without it
+    # keeps correct coordinates yet is invisible to search. Self-heals regardless
+    # of which write path set the coordinates. Cheap no-op when already populated.
+    if not args.skip_geocoding:
+        success = run_command(
+            ['python3', 'scripts/backfill_geog.py'] + (['--dry-run'] if args.dry_run else []),
+            "STEP 2b: Backfill PostGIS geog from lat/lon (make new rows searchable)",
+            dry_run=False,  # backfill_geog.py handles dry-run itself
+        )
+        if not success:
+            print("\n⚠️  Warning: geog backfill had errors")
 
     # Step 3: Enrich properties (bedrooms, types via DuckDuckGo full-page scraping)
     if not args.skip_enrichment:
