@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
 import WaffleMenu from "../components/WaffleMenu";
 import Footer from "../components/Footer";
-import { BLOG_POSTS } from "../blogPosts";
+import { BLOG_POSTS, publishedPosts } from "../blogPosts";
 
 // Re-export so existing importers of BlogListPage keep working.
 export { BLOG_POSTS } from "../blogPosts";
@@ -63,7 +63,7 @@ export default function BlogListPage() {
           display: "grid",
           gap: "2rem"
         }}>
-          {BLOG_POSTS.map((post) => (
+          {publishedPosts().map((post) => (
             <article
               key={post.slug}
               style={{

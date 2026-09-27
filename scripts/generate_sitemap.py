@@ -74,14 +74,19 @@ def _street_slugs() -> list[tuple[str, str]]:
 
 
 def _blog_posts() -> list[tuple[str, str]]:
-    """Parse (slug, date) pairs from blogPosts.ts in file order."""
+    """Parse (slug, date) pairs from blogPosts.ts in file order.
+
+    Future-dated (scheduled) posts are skipped — they are not yet published, so
+    they must not appear in the sitemap. They re-enter automatically once the
+    sitemap is regenerated on or after their publication date.
+    """
     ts = SRC / "blogPosts.ts"
     if not ts.is_file():
         return []
     text = ts.read_text(encoding="utf-8")
     slugs = re.findall(r'slug:\s*"([^"]+)"', text)
     dates = re.findall(r'date:\s*"([^"]+)"', text)
-    return list(zip(slugs, dates))
+    return [(s, d) for s, d in zip(slugs, dates) if d <= TODAY]
 
 
 def _url(loc: str, lastmod: str, changefreq: str, priority: str) -> list[str]:

@@ -25,7 +25,7 @@ from dotenv import load_dotenv
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend"))
 from valuation.geocoder import ValuationGeocoder  # noqa: E402
 from valuation.comparable_search import ComparableSearcher  # noqa: E402
-from valuation.adjustments import MVPAdjuster  # noqa: E402
+from valuation.adjustments import MVPAdjuster, trim_price_outliers  # noqa: E402
 from valuation.calculator import ValuationCalculator  # noqa: E402
 from valuation.validator import MVPValidator  # noqa: E402
 
@@ -35,6 +35,25 @@ load_dotenv("backend/.env")
 # Used verbatim for every bedroom lookup of that development.
 GEOCODE_OVERRIDES = {
     "Richmond Gardens": (53.3643046, -6.2450984),
+    # "Castleknock, Dublin 15" geocodes ~1.3km west into Castleknock's pricey
+    # detached-house core, not the racecourse-grounds apartment complex. Pinned to
+    # the median of the development's own PPR sales (Phoenix Park Avenue / Orby /
+    # Danehill / Cedarhurst), where its 2-bed apartments actually sold ~€435–520k.
+    "Phoenix Park Racecourse": (53.3737, -6.3440),
+    # Coordinate audit (own-sales centroid + Mapbox verification) found the DB
+    # street/routing-key match had drifted several schemes into the wrong district
+    # — three of them to shared geocoder-fallback points. Corrected below.
+    # User-confirmed exact coordinates:
+    "Kings Court": (53.3500544, -6.2756032),          # North King St, Dublin 7
+    "Rockbrook South Central": (53.2793323, -6.2129697),   # Sandyford, Dublin 18
+    "Rockbrook Grande Central": (53.2793323, -6.2129697),  # Sandyford, Dublin 18
+    "Grande Central": (53.2793323, -6.2129697),            # Sandyford, Dublin 18
+    "Time Place": (53.2764544, -6.2146378),           # Corrig Rd, Sandyford, D18
+    # Own-sales centroids, corroborated by Mapbox forward-geocode:
+    "Carrington Park": (53.4037, -6.2529),   # Northwood, Santry, Dublin 9
+    "Heywood Court": (53.4013, -6.2580),     # Northwood, Santry, Dublin 9
+    "Coldcut Park": (53.3461, -6.3845),      # Coldcut Rd, Clondalkin, Dublin 22
+    "Northern Cross": (53.3790, -6.2145),    # Burnell Sq, Malahide Rd, Dublin 17
 }
 
 # IRES is overwhelmingly an apartment landlord; only two schemes are traditional
@@ -147,8 +166,24 @@ async def value_at(searcher, adjuster, calculator, validator, lat, lon, beds,
                                              target_date=target_date, county=c["county"])
         c["adjusted_price"] = adj["adjusted_price"]
         c["adjustment_factor"] = adj["adjustment_factor"]
-    weights = adjuster.calculate_all_weights(comps, beds, property_type)
+    # Match backend/valuation/api.py: trim local price outliers, then use the
+    # bedroom ladder for apartments (falls back to the weighted average for
+    # houses / unknown bedroom counts).
+    comps = trim_price_outliers(comps)
+    if len(comps) < 3:
+        return None
+    apt_ceiling = None
+    if property_type == "apartment":
+        apt_ceiling = await adjuster.apartment_price_ceiling(lat, lon)
+    ladder = adjuster.bedroom_ladder_valuation(comps, beds, property_type,
+                                               max_2bed_equiv=apt_ceiling)
+    if ladder is not None:
+        weights = ladder["weights"]
+    else:
+        weights = adjuster.calculate_all_weights(comps, beds, property_type)
     val = calculator.calculate_valuation(comps, weights)
+    if ladder is not None:
+        val["estimate"] = ladder["estimate"]
     validation = validator.validate(val, comps)
     return {
         "estimate": val["estimate"],
@@ -166,6 +201,21 @@ async def main():
     calculator = ValuationCalculator()
     validator = MVPValidator()
     target_date = datetime.now()
+
+    # Speed: _get_price_index only varies by (county, year-month), but the
+    # portfolio triggers thousands of temporal adjustments against a remote
+    # Supabase (~30s/row uncached). Memoize it so each (county, month) index is
+    # fetched once. Script-only wrapper — the backend module is untouched.
+    _orig_get_index = adjuster._get_price_index
+    _index_cache: dict = {}
+
+    async def _cached_get_price_index(county, when):
+        key = (county, when.year, when.month)
+        if key not in _index_cache:
+            _index_cache[key] = await _orig_get_index(county, when)
+        return _index_cache[key]
+
+    adjuster._get_price_index = _cached_get_price_index
 
     results = []
     for name, region, address, rk, county, types in PORTFOLIO:

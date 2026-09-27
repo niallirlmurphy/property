@@ -20,7 +20,7 @@ from .models import (
 )
 from .geocoder import ValuationGeocoder
 from .comparable_search import ComparableSearcher
-from .adjustments import MVPAdjuster, property_bucket
+from .adjustments import MVPAdjuster, property_bucket, trim_price_outliers
 from .calculator import ValuationCalculator
 from .validator import MVPValidator
 from .nearby_amenities import get_nearby_amenities
@@ -238,10 +238,46 @@ async def estimate_property_value(
             comp['adjustment_factor'] = temporal_adj['adjustment_factor']
             comp['temporal_adjustment'] = temporal_adj
 
-        # Calculate weights (with bedroom + property-type matching if known)
-        weights = adjuster.calculate_all_weights(
-            comparables, subject_bedrooms, subject_property_type
+        # Remove local price outliers (e.g. a lone multi-million sale amid a
+        # cluster of ordinary ones) before weighting — otherwise they dominate
+        # the average and inflate the estimate. See trim_price_outliers.
+        comparables = trim_price_outliers(comparables)
+        print(f"[Valuation] {len(comparables)} comparables after outlier trim")
+
+        # Apartment-price ceiling: for apartment subjects, learn what an apartment
+        # actually costs in this locality (from confirmed apartment sales) and use
+        # it to drop house-priced comparables the type filter can't catch — the
+        # unlabelled pricey houses that dominate house-heavy areas. See
+        # MVPAdjuster.apartment_price_ceiling. None (skipped) for houses or where
+        # local apartment data is too thin to trust.
+        apt_ceiling = None
+        if property_bucket(subject_property_type) == "apartment":
+            apt_ceiling = await adjuster.apartment_price_ceiling(
+                location.latitude, location.longitude
+            )
+            if apt_ceiling is not None:
+                print(f"[Valuation] Apartment price ceiling (2-bed-equiv): €{apt_ceiling:,.0f}")
+
+        # Bedroom-ladder valuation for apartments: normalise every comparable to a
+        # 2-bed-equivalent, then re-expand to the subject's bedroom count. This
+        # guarantees larger units are never valued below smaller ones and grounds
+        # thin-data bedroom types in the wider local pool. Returns None for houses
+        # or unknown bedroom counts, in which case we fall back to the plain
+        # weighted average. See MVPAdjuster.bedroom_ladder_valuation.
+        ladder = adjuster.bedroom_ladder_valuation(
+            comparables, subject_bedrooms, subject_property_type,
+            max_2bed_equiv=apt_ceiling,
         )
+
+        # Calculate weights (ladder weights when it applies; otherwise bedroom +
+        # property-type matching)
+        if ladder is not None:
+            weights = ladder['weights']
+            print(f"[Valuation] Bedroom ladder applied: 2-bed base €{ladder['base_2bed']:,}")
+        else:
+            weights = adjuster.calculate_all_weights(
+                comparables, subject_bedrooms, subject_property_type
+            )
 
         # Log bedroom matching info
         if subject_bedrooms is not None:
@@ -261,6 +297,19 @@ async def estimate_property_value(
         # Step 4: Calculate valuation
         calculator = ValuationCalculator()
         valuation = calculator.calculate_valuation(comparables, weights)
+
+        if ladder is not None:
+            # Override the raw weighted average with the bedroom-ladder estimate
+            # and recentre the confidence interval on it (keep the half-width).
+            new_est = ladder['estimate']
+            ci = valuation['confidence_interval']
+            half = (ci['upper'] - ci['lower']) / 2
+            ci['lower'] = int(max(0, new_est - half))
+            ci['upper'] = int(new_est + half)
+            ci['width_pct'] = (
+                round((ci['upper'] - ci['lower']) / new_est * 100, 1) if new_est > 0 else 0.0
+            )
+            valuation['estimate'] = new_est
 
         # Step 5: Validate and assign confidence
         validator = MVPValidator()
@@ -311,8 +360,12 @@ async def estimate_property_value(
                     'address_matched': location.address_matched
                 },
                 'valuation_date': target_date.isoformat(),
-                'algorithm_version': '1.0.0-mvp',
+                'algorithm_version': '1.1.0-ladder',
                 'processing_time_ms': processing_time_ms,
+                'bedroom_ladder': {
+                    'applied': ladder is not None,
+                    'base_2bed': ladder['base_2bed'] if ladder is not None else None
+                },
                 'bedroom_matching': {
                     'enabled': subject_bedrooms is not None,
                     'subject_bedrooms': subject_bedrooms,

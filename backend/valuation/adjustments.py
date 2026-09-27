@@ -50,6 +50,62 @@ _TYPE_FACTOR_SAME = 3.0
 _TYPE_FACTOR_UNKNOWN = 0.35
 _TYPE_FACTOR_DIFFERENT = 0.05
 
+# Bedroom price ladder --------------------------------------------------------
+# Dublin apartment/duplex bedroom price ratios (relative to a 2-bed), derived
+# from ~7,000 PPR sales 2022+ (median sale price by bedroom count):
+#   1-bed 0.796 · 2-bed 1.000 · 3-bed 1.275 · 4-bed 1.500  (studio ≈ 0.62).
+# These let us (a) normalise every comparable to a common "2-bed-equivalent" so
+# sales of any size inform one base, and (b) re-expand that base to the subject's
+# bedroom count. This guarantees a larger unit is never valued below a smaller
+# one at the same location — a plain weighted average of raw sale prices does
+# not, and in thin-data areas would occasionally invert (a lone pricey 1-bed
+# sale outranking the local 2-beds).
+_BEDROOM_RATIO = {0: 0.62, 1: 0.796, 2: 1.0, 3: 1.275, 4: 1.5}
+_ANCHOR_BEDROOMS = 2
+# Weight applied to a comparable whose bedroom count is unknown when building the
+# normalised base: it can't be size-normalised, so it contributes only weakly.
+_UNKNOWN_BEDROOM_SIZE_WEIGHT = 0.2
+
+
+def bedroom_ratio(bedrooms: Optional[int]) -> Optional[float]:
+    """Price of a `bedrooms`-bed apartment relative to a 2-bed, or None if the
+    count is unknown/invalid. Counts above 4 clamp to the 4-bed ratio (data on
+    larger apartments is thin)."""
+    if bedrooms is None or bedrooms < 0:
+        return None
+    if bedrooms in _BEDROOM_RATIO:
+        return _BEDROOM_RATIO[bedrooms]
+    return _BEDROOM_RATIO[4] if bedrooms > 4 else _BEDROOM_RATIO[0]
+
+
+def trim_price_outliers(
+    comparables: list,
+    price_key: str = "adjusted_price",
+    k: float = 1.5,
+    min_pool: int = 8,
+    min_keep: int = 5,
+) -> list:
+    """Drop comparables whose price is a Tukey outlier relative to the local
+    pool — outside ``[Q1 − k·IQR, Q3 + k·IQR]``.
+
+    A single very large sale (e.g. a €2m apartment or €4.3m house recorded amid a
+    cluster of €300–500k sales) would otherwise dominate the weighted average and
+    inflate the estimate. Only trims when there are enough comparables to define a
+    stable fence (``min_pool``) and always keeps at least ``min_keep``.
+    """
+    comps = list(comparables)
+    if len(comps) < min_pool:
+        return comps
+    prices = sorted(c[price_key] for c in comps)
+    n = len(prices)
+    q1 = prices[n // 4]
+    q3 = prices[(3 * n) // 4]
+    iqr = q3 - q1
+    lo = q1 - k * iqr
+    hi = q3 + k * iqr
+    kept = [c for c in comps if lo <= c[price_key] <= hi]
+    return kept if len(kept) >= min_keep else comps
+
 
 class MVPAdjuster:
     """Phase 1 MVP adjuster - temporal adjustments only."""
@@ -256,6 +312,12 @@ class MVPAdjuster:
                     # 2+ bedroom difference: heavy penalty
                     # 3-bed vs 5-bed should have very low weight
                     bedroom_factor = 0.2
+            else:
+                # Unknown bedroom count: soft down-weight (mirrors unknown type).
+                # Without this an unlabelled unit — which may be a huge, pricey
+                # one — competes at full strength against a small subject and can
+                # dominate the estimate. Not a free pass at 1.0.
+                bedroom_factor = 0.35
 
         # Property-type matching factor (apartment vs house are separate markets)
         type_factor = 1.0
@@ -274,6 +336,153 @@ class MVPAdjuster:
 
         # Note: Not clamping to [0, 1] here since we normalize after
         return max(0.0, weight)
+
+    async def apartment_price_ceiling(
+        self,
+        latitude: float,
+        longitude: float,
+        radius_m: float = 2000.0,
+        min_n: int = 15,
+        k: float = 3.0,
+    ) -> Optional[float]:
+        """Local ceiling for a plausible apartment price, in 2-bed-equivalent €.
+
+        Built from *confirmed* apartment/duplex sales near (latitude, longitude)
+        since 2022, each normalised to a 2-bed-equivalent via ``bedroom_ratio``.
+        Returns the Tukey far-outlier upper fence ``Q3 + k·IQR`` of that local
+        apartment distribution, or None when there aren't enough confirmed
+        apartment sales (``min_n``) to trust the band.
+
+        This is our "understanding of apartment prices across Dublin": in a house-
+        heavy area, a comparable pool is dominated by houses that are far pricier
+        than any apartment — and many of them carry no (or a wrong) property_type,
+        so the type filter alone can't suppress them. Anything above this ceiling
+        is priced like a house, not an apartment, whatever its label, so callers
+        exclude it from an apartment valuation. Because the fence scales with local
+        variance it stays tight in uniform low-priced areas yet generous in premium
+        central districts (Grand Canal Dock, Clontarf) where €1m+ apartments are
+        genuinely normal — so it removes contamination without over-trimming.
+        """
+        rows = await self.db.fetch(
+            """
+            SELECT price, bedrooms
+            FROM properties
+            WHERE geog IS NOT NULL
+              AND ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)
+              AND sale_date >= '2022-01-01'
+              AND lower(property_type) = ANY($4::text[])
+            """,
+            latitude, longitude, radius_m, sorted(_APARTMENT_TYPES),
+        )
+        if len(rows) < min_n:
+            return None
+        vals = []
+        for r in rows:
+            r_ratio = bedroom_ratio(r["bedrooms"])
+            # Unknown bedroom count among confirmed apartments: use the raw price
+            # (already an apartment, so it belongs in the band as ~a 2-bed).
+            factor = (_BEDROOM_RATIO[_ANCHOR_BEDROOMS] / r_ratio) if r_ratio else 1.0
+            vals.append(float(r["price"]) * factor)
+        vals.sort()
+        n = len(vals)
+        q1 = vals[n // 4]
+        q3 = vals[(3 * n) // 4]
+        return q3 + k * (q3 - q1)
+
+    def bedroom_ladder_valuation(
+        self,
+        comparables: list,
+        subject_bedrooms: Optional[int],
+        subject_property_type: Optional[str],
+        max_2bed_equiv: Optional[float] = None,
+    ) -> Optional[Dict]:
+        """Estimate value via a bedroom-normalised base (see ``bedroom_ratio``).
+
+        Each comparable is normalised to a "2-bed-equivalent" price by dividing
+        out its own bedroom ratio, so sales of any size inform a single base;
+        that base is then re-expanded to the subject's bedroom count. Because the
+        final figure is ``base × ratio[subject]``, a larger unit can never be
+        valued below a smaller one at the same location.
+
+        Only applies to apartment-type subjects with a known bedroom count (the
+        ratios are apartment-specific). Returns None otherwise, so callers fall
+        back to the plain weighted average.
+
+        Returns dict with:
+            - estimate: subject-bedroom estimate (int)
+            - base_2bed: the location's 2-bed-equivalent base (int)
+            - weights: per-comparable normalised weights (same order as input)
+        """
+        subj_ratio = bedroom_ratio(subject_bedrooms)
+        if subj_ratio is None or not comparables:
+            return None
+        if property_bucket(subject_property_type) != "apartment":
+            return None
+
+        # Per-comparable 2-bed-equivalent price (used both for the base and for the
+        # apartment-price ceiling below).
+        normalised_prices = []
+        for c in comparables:
+            r = bedroom_ratio(c.get("bedrooms"))
+            if r is not None:
+                normalised_prices.append(
+                    float(c["adjusted_price"]) * (_BEDROOM_RATIO[_ANCHOR_BEDROOMS] / r)
+                )
+            else:
+                # Unknown size: can't normalise; treat the raw price as ~a 2-bed.
+                normalised_prices.append(float(c["adjusted_price"]))
+
+        # Apartment-price ceiling: drop comparables whose 2-bed-equivalent is
+        # priced like a house, not an apartment (see ``apartment_price_ceiling``).
+        # In house-heavy areas these are the pricey houses — often unlabelled, so
+        # the type factor alone can't suppress them — that otherwise inflate the
+        # base. Only apply the ceiling if at least ``min_keep`` comparables survive,
+        # so we never over-trim a genuinely sparse or uniformly-premium pool.
+        excluded = [False] * len(comparables)
+        if max_2bed_equiv is not None:
+            min_keep = 5
+            survivors = sum(1 for p in normalised_prices if p <= max_2bed_equiv)
+            if survivors >= min(min_keep, len(comparables)):
+                excluded = [p > max_2bed_equiv for p in normalised_prices]
+
+        max_distance = max(c["distance_m"] for c in comparables)
+        raw_weights = []
+        weighted_sum = 0.0
+        for c, normalised, is_excluded in zip(comparables, normalised_prices, excluded):
+            if is_excluded:
+                raw_weights.append(0.0)
+                continue
+            if max_distance > 0:
+                distance_factor = 1.0 - (float(c["distance_m"]) / max_distance)
+            else:
+                distance_factor = 1.0
+            base = (distance_factor ** 2) * float(c.get("recency_score", 0.5))
+
+            comp_bucket = property_bucket(c.get("property_type"))
+            if comp_bucket == "apartment":
+                type_factor = _TYPE_FACTOR_SAME
+            elif comp_bucket is None:
+                type_factor = _TYPE_FACTOR_UNKNOWN
+            else:
+                type_factor = _TYPE_FACTOR_DIFFERENT
+
+            size_weight = 1.0 if bedroom_ratio(c.get("bedrooms")) is not None \
+                else _UNKNOWN_BEDROOM_SIZE_WEIGHT
+
+            w = max(0.0, base * type_factor * size_weight)
+            raw_weights.append(w)
+            weighted_sum += w * normalised
+
+        total = sum(raw_weights)
+        if total <= 0:
+            return None
+        base_2bed = weighted_sum / total
+        estimate = base_2bed * subj_ratio / _BEDROOM_RATIO[_ANCHOR_BEDROOMS]
+        return {
+            "estimate": int(estimate),
+            "base_2bed": int(base_2bed),
+            "weights": [w / total for w in raw_weights],
+        }
 
     def calculate_all_weights(
         self,

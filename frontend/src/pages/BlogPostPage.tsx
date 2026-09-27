@@ -3,7 +3,7 @@ import { Head } from "vite-react-ssg";
 import { usePageMeta } from "../hooks/usePageMeta";
 import WaffleMenu from "../components/WaffleMenu";
 import Footer from "../components/Footer";
-import { BLOG_POSTS } from "../blogPosts";
+import { BLOG_POSTS, isPublished } from "../blogPosts";
 
 // Blog post content - import from individual files
 import { HowToUsePPRContent } from "../blog-posts/how-to-use-property-price-register";
@@ -16,9 +16,11 @@ import { SchoolPremiumContent } from "../blog-posts/does-living-near-a-good-scho
 import { SolarValueContent } from "../blog-posts/do-solar-panels-add-value-to-your-home-ireland";
 import { MortgageCalculatorGuideContent } from "../blog-posts/how-to-use-a-mortgage-calculator-affordability-interest-rates";
 import { IresReitValuationContent } from "../blog-posts/valuing-ires-reit-property-portfolio";
+import { HowHomeIqValuesContent } from "../blog-posts/how-homeiq-values-a-home";
 
 // Map slugs to content components
 const BLOG_CONTENT: Record<string, React.ComponentType> = {
+  "how-homeiq-values-a-home": HowHomeIqValuesContent,
   "valuing-ires-reit-property-portfolio": IresReitValuationContent,
   "how-to-use-a-mortgage-calculator-affordability-interest-rates": MortgageCalculatorGuideContent,
   "do-solar-panels-add-value-to-your-home-ireland": SolarValueContent,
@@ -42,8 +44,8 @@ export default function BlogPostPage() {
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   const ContentComponent = BLOG_CONTENT[slug];
 
-  // 404 if post not found
-  if (!post || !ContentComponent) {
+  // 404 if post not found, or not yet published (future-dated / scheduled)
+  if (!post || !ContentComponent || !isPublished(post)) {
     return <Navigate to="/blog" replace />;
   }
 

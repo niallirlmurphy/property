@@ -13,12 +13,38 @@ export interface BlogPost {
   readTime: string;
 }
 
+/**
+ * A post is live once its `date` (publication date) is today or earlier.
+ * Future-dated posts are "scheduled": hidden from the blog list, the sitemap and
+ * prerendering, and they 404 on direct access until the date arrives. The check
+ * runs at render time (string compare on YYYY-MM-DD), so a scheduled post goes
+ * live on its date even without a redeploy — and bakes into the static build on
+ * the next deploy after that date.
+ */
+export function isPublished(post: BlogPost, now: Date = new Date()): boolean {
+  return post.date <= now.toISOString().slice(0, 10);
+}
+
+/** BLOG_POSTS with any future-dated (scheduled) posts removed. */
+export function publishedPosts(now: Date = new Date()): BlogPost[] {
+  return BLOG_POSTS.filter((p) => isPublished(p, now));
+}
+
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "how-homeiq-values-a-home",
+    title: "How HomeIQ Values a Home: From Raw PPR Data to a Number You Can Trust",
+    description: "A plain-English look inside our valuation engine: why the Property Price Register is the perfect base, how we enrich it with location, property type and bedroom counts, and the recent work on outliers and size relationships that makes each estimate more trustworthy.",
+    date: "2026-10-11",
+    author: "HomeIQ Team",
+    tags: ["Guide", "Valuation", "PPR", "Methodology"],
+    readTime: "7 min read"
+  },
+  {
     slug: "valuing-ires-reit-property-portfolio",
     title: "Valuing the Property Portfolio of IRES REIT plc Using Our Enriched PPR Data",
-    description: "We pointed our valuation engine at Ireland's largest residential landlord and valued all 3,615 IRES-owned apartments, unit by unit, from public sold-price data. The result: about €2.0 billion — and a look at how property-type-aware valuation works.",
+    description: "We pointed our valuation engine at Ireland's largest residential landlord and valued all 3,615 IRES-owned apartments, unit by unit, from public sold-price data. The result: about €1.52 billion — roughly 19% above book, and a look at how apartment-aware valuation works.",
     date: "2026-09-27",
     author: "HomeIQ Team",
     tags: ["Analysis", "Dublin", "IRES REIT", "Apartments", "Valuation"],

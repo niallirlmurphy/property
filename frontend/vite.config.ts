@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { COUNTIES, AREAS, DUBLIN_EIRCODE_AREAS, countySlug } from "./src/areas";
-import { BLOG_POSTS } from "./src/blogPosts";
+import { publishedPosts } from "./src/blogPosts";
 import { STREETS } from "./src/streets";
 
 export default defineConfig({
@@ -23,7 +23,8 @@ export default defineConfig({
         .map((c) => `/county/${countySlug(c)}`);
       const areas = AREAS.map((a) => `/area/${a.slug}`);
       const eircodes = Object.keys(DUBLIN_EIRCODE_AREAS).map((k) => `/eircode/${k}`);
-      const posts = BLOG_POSTS.map((p) => `/blog/${p.slug}`);
+      // Scheduled (future-dated) posts are not prerendered until their date.
+      const posts = publishedPosts().map((p) => `/blog/${p.slug}`);
       const streets = STREETS.map((s) => `/street/${s.slug}`);
       return [...staticPaths, ...counties, ...areas, ...eircodes, ...posts, ...streets];
     },

@@ -28,11 +28,11 @@ const NEUTRAL = "#9ca3af";
 
 // Estimated value by region (€ millions) — docs/ires_reit_valuation.md
 const REGIONS = [
-  { label: "South Dublin", devs: 12, units: 1086, value: 757 },
-  { label: "North Dublin", devs: 9, units: 841, value: 393 },
-  { label: "West Dublin", devs: 4, units: 805, value: 355 },
-  { label: "City Centre", devs: 7, units: 474, value: 348 },
-  { label: "West City", devs: 3, units: 409, value: 151 },
+  { label: "South Dublin", devs: 12, units: 1086, value: 498 },
+  { label: "North Dublin", devs: 9, units: 841, value: 344 },
+  { label: "West Dublin", devs: 4, units: 805, value: 308 },
+  { label: "City Centre", devs: 7, units: 474, value: 219 },
+  { label: "West City", devs: 3, units: 409, value: 153 },
 ];
 
 // Property-type weighting multipliers used by the engine.
@@ -46,48 +46,49 @@ const TYPE_WEIGHTS = [
 // that size. Ordered roughly by region. Some adjacent schemes share a valuation
 // coordinate and therefore an estimate (see note under the table).
 const SCHEMES: { name: string; region: string; oneBed: number | null; twoBed: number | null }[] = [
-  { name: "The Marker", region: "City Centre", oneBed: null, twoBed: 460872 },
-  { name: "Xavier Court", region: "City Centre", oneBed: 306210, twoBed: 316402 },
-  { name: "Richmond Gardens", region: "City Centre", oneBed: 1381052, twoBed: 1368537 },
-  { name: "Bakers Yard", region: "City Centre", oneBed: 804058, twoBed: 799015 },
-  { name: "Kings Court", region: "City Centre", oneBed: 534651, twoBed: 537256 },
-  { name: "City Square", region: "City Centre", oneBed: 485882, twoBed: 499768 },
-  { name: "The School Yard", region: "City Centre", oneBed: 486673, twoBed: 521186 },
-  { name: "Rockbrook South Central", region: "South Dublin", oneBed: 690279, twoBed: 625835 },
-  { name: "Tara View", region: "South Dublin", oneBed: 1149868, twoBed: 1087839 },
-  { name: "The Maple", region: "South Dublin", oneBed: 402102, twoBed: 483311 },
-  { name: "The Forum", region: "South Dublin", oneBed: 490017, twoBed: 496273 },
-  { name: "Rockbrook Grande Central", region: "South Dublin", oneBed: 690279, twoBed: 625835 },
-  { name: "Grande Central", region: "South Dublin", oneBed: 690279, twoBed: 625835 },
-  { name: "Elmpark Green", region: "South Dublin", oneBed: 1149858, twoBed: 1087831 },
-  { name: "Beacon South Quarter", region: "South Dublin", oneBed: 402102, twoBed: 483310 },
-  { name: "Bessboro", region: "South Dublin", oneBed: 488751, twoBed: 483454 },
-  { name: "Belville Court", region: "South Dublin", oneBed: 440371, twoBed: 441742 },
-  { name: "Beechwood Court", region: "South Dublin", oneBed: 591830, twoBed: 591830 },
-  { name: "Time Place", region: "South Dublin", oneBed: 503377, twoBed: 581121 },
-  { name: "The Coast", region: "North Dublin", oneBed: 510382, twoBed: 554625 },
-  { name: "Carrington Park", region: "North Dublin", oneBed: 435536, twoBed: 426906 },
-  { name: "Taylor Hill", region: "North Dublin", oneBed: null, twoBed: 341636 },
-  { name: "Northern Cross", region: "North Dublin", oneBed: 686055, twoBed: 686059 },
-  { name: "Heywood Court", region: "North Dublin", oneBed: 435536, twoBed: 426906 },
-  { name: "Charlestown", region: "North Dublin", oneBed: 337321, twoBed: 346112 },
-  { name: "Ashbrook", region: "North Dublin", oneBed: 449821, twoBed: 455144 },
-  { name: "Waterside", region: "North Dublin", oneBed: 603264, twoBed: 620992 },
+  { name: "The Marker", region: "City Centre", oneBed: null, twoBed: 456331 },
+  { name: "Xavier Court", region: "City Centre", oneBed: 253147, twoBed: 318024 },
+  { name: "Richmond Gardens", region: "City Centre", oneBed: 395344, twoBed: 496664 },
+  { name: "Bakers Yard", region: "City Centre", oneBed: 459858, twoBed: 577711 },
+  { name: "Kings Court", region: "City Centre", oneBed: 319796, twoBed: 401754 },
+  { name: "City Square", region: "City Centre", oneBed: 383191, twoBed: 481396 },
+  { name: "The School Yard", region: "City Centre", oneBed: 409937, twoBed: 514996 },
+  { name: "Rockbrook South Central", region: "South Dublin", oneBed: 328139, twoBed: 412235 },
+  { name: "Tara View", region: "South Dublin", oneBed: 436621, twoBed: 548519 },
+  { name: "The Maple", region: "South Dublin", oneBed: 357139, twoBed: 448667 },
+  { name: "The Forum", region: "South Dublin", oneBed: 400853, twoBed: 503585 },
+  { name: "Rockbrook Grande Central", region: "South Dublin", oneBed: 328139, twoBed: 412235 },
+  { name: "Grande Central", region: "South Dublin", oneBed: 328139, twoBed: 412235 },
+  { name: "Elmpark Green", region: "South Dublin", oneBed: 436621, twoBed: 548519 },
+  { name: "Beacon South Quarter", region: "South Dublin", oneBed: 357139, twoBed: 448667 },
+  { name: "Bessboro", region: "South Dublin", oneBed: 393466, twoBed: 494304 },
+  { name: "Belville Court", region: "South Dublin", oneBed: 358657, twoBed: 450574 },
+  { name: "Beechwood Court", region: "South Dublin", oneBed: 474680, twoBed: 596332 },
+  { name: "Time Place", region: "South Dublin", oneBed: 289532, twoBed: 363733 },
+  { name: "The Coast", region: "North Dublin", oneBed: 307790, twoBed: 386671 },
+  { name: "Carrington Park", region: "North Dublin", oneBed: 325007, twoBed: 408300 },
+  { name: "Taylor Hill", region: "North Dublin", oneBed: null, twoBed: 338314 },
+  { name: "Northern Cross", region: "North Dublin", oneBed: 409399, twoBed: 514321 },
+  { name: "Heywood Court", region: "North Dublin", oneBed: 306374, twoBed: 384892 },
+  { name: "Charlestown", region: "North Dublin", oneBed: 251905, twoBed: 316463 },
+  { name: "Ashbrook", region: "North Dublin", oneBed: 382890, twoBed: 481018 },
+  { name: "Waterside", region: "North Dublin", oneBed: 390626, twoBed: 490736 },
   { name: "Semple Woods", region: "North Dublin", oneBed: null, twoBed: null },
-  { name: "Coldcut Park", region: "West Dublin", oneBed: 505804, twoBed: 541526 },
-  { name: "Tallaght Cross West", region: "West Dublin", oneBed: 309316, twoBed: 318688 },
-  { name: "Priorsgate", region: "West Dublin", oneBed: 357086, twoBed: 365584 },
-  { name: "Phoenix Park Racecourse", region: "West Dublin", oneBed: 790893, twoBed: 830789 },
-  { name: "Lansdowne Gate", region: "West City", oneBed: 349011, twoBed: 357217 },
-  { name: "Tyrone Court", region: "West City", oneBed: 366514, twoBed: 400949 },
-  { name: "Camac Crescent", region: "West City", oneBed: 317051, twoBed: 377979 },
+  { name: "Coldcut Park", region: "West Dublin", oneBed: 330484, twoBed: 415180 },
+  { name: "Tallaght Cross West", region: "West Dublin", oneBed: 259280, twoBed: 325729 },
+  { name: "Priorsgate", region: "West Dublin", oneBed: 382681, twoBed: 480755 },
+  { name: "Phoenix Park Racecourse", region: "West Dublin", oneBed: 401239, twoBed: 504069 },
+  { name: "Lansdowne Gate", region: "West City", oneBed: 290491, twoBed: 364939 },
+  { name: "Tyrone Court", region: "West City", oneBed: 336446, twoBed: 422671 },
+  { name: "Camac Crescent", region: "West City", oneBed: 249889, twoBed: 313932 },
 ];
 
-// NAV-per-share scenarios (as at 30 June 2026 reported base).
+// NAV-per-share scenarios (as at 30 June 2026 reported base). Debt (€533.6m) and
+// share count (524.4m) held constant, so ΔNAV = Δportfolio value.
 const NAV_ROWS = [
   { label: "IRES reported (IFRS)", portfolio: "€1,276.7m", nav: "€727.9m", perShare: 138.8, delta: "—" },
-  { label: "80% of our estimate", portfolio: "€1,603.8m", nav: "€1,055.0m", perShare: 201.2, delta: "+45%" },
-  { label: "100% of our estimate", portfolio: "€2,004.8m", nav: "€1,456.0m", perShare: 277.6, delta: "+100%" },
+  { label: "Our open-market estimate", portfolio: "€1,522.9m", nav: "€974.1m", perShare: 185.7, delta: "+34%" },
+  { label: "At IRES's realised +25% resale premium", portfolio: "€1,595.9m", nav: "€1,047.1m", perShare: 199.7, delta: "+44%" },
 ];
 
 function euro(v: number | null): string {
@@ -108,8 +109,8 @@ function StatCards() {
   const cards = [
     { big: "35", small: "developments" },
     { big: "3,615", small: "IRES-owned units" },
-    { big: "≈ €2.0bn", small: "modelled gross value" },
-    { big: "€554k", small: "average per unit" },
+    { big: "≈ €1.52bn", small: "modelled gross value" },
+    { big: "€421k", small: "average per unit" },
   ];
   return (
     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "1rem", margin: "1.5rem 0 2rem" }}>
@@ -127,7 +128,7 @@ function StatCards() {
 function RegionValueChart() {
   const W = 720, H = 340, padL = 130, padR = 64, padT = 20, padB = 34;
   const plotW = W - padL - padR, plotH = H - padT - padB;
-  const hi = 800;
+  const hi = 600;
   const rowH = plotH / REGIONS.length;
   const barH = rowH * 0.56;
   const x = (v: number) => padL + (v / hi) * plotW;
@@ -135,9 +136,9 @@ function RegionValueChart() {
   return (
     <figure style={{ margin: "1.5rem 0 2.5rem" }}>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img"
-           aria-label="Horizontal bar chart of estimated IRES portfolio value by Dublin region. South Dublin is largest at about 757 million euro, then North Dublin 393 million, West Dublin 355 million, City Centre 348 million, and West City 151 million."
+           aria-label="Horizontal bar chart of estimated IRES portfolio value by Dublin region. South Dublin is largest at about 498 million euro, then North Dublin 344 million, West Dublin 308 million, City Centre 219 million, and West City 153 million."
            style={{ background: SURFACE, borderRadius: "0.5rem", border: `1px solid ${GRID}` }}>
-        {[0, 200, 400, 600, 800].map((g) => (
+        {[0, 200, 400, 600].map((g) => (
           <g key={g}>
             <line x1={x(g)} x2={x(g)} y1={padT} y2={padT + plotH} stroke={GRID} strokeWidth={1} />
             <text x={x(g)} y={H - padB + 22} textAnchor="middle" fontSize={11} fill={INK_MUTED}>€{g}m</text>
@@ -158,7 +159,7 @@ function RegionValueChart() {
       </svg>
       <figcaption style={{ fontSize: "0.9rem", color: INK_MUTED, marginTop: "0.5rem" }}>
         Estimated gross value of the IRES-owned units by region. South Dublin — anchored by big Sandyford and
-        Dublin&nbsp;4 schemes — carries more than a third of the book. Source: HomeIQ valuation of the Property Price
+        Dublin&nbsp;4 schemes — carries roughly a third of the book. Source: HomeIQ valuation of the Property Price
         Register.
       </figcaption>
     </figure>
@@ -212,18 +213,18 @@ function TypeWeightChart() {
 function NavScenarioChart() {
   const W = 720, H = 320, padL = 48, padR = 16, padT = 24, padB = 74;
   const plotW = W - padL - padR, plotH = H - padT - padB;
-  const hi = 300;
+  const hi = 250;
   const y = (v: number) => padT + plotH - (v / hi) * plotH;
   const groupW = plotW / NAV_ROWS.length;
   const barW = groupW * 0.44;
-  const colors = [NEUTRAL, AQUA, BLUE];
+  const colors = [NEUTRAL, BLUE, AQUA];
 
   return (
     <figure style={{ margin: "1.5rem 0 2.5rem" }}>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img"
-           aria-label="Bar chart of IFRS NAV per share under three bases. Reported at 30 June 2026 is 138.8 cents; at 80 percent of our estimate it rises to 201 cents; at 100 percent it rises to 278 cents."
+           aria-label="Bar chart of IFRS NAV per share under three bases. Reported at 30 June 2026 is 138.8 cents; at our open-market estimate it rises to 186 cents; at IRES's realised 25 percent resale premium it rises to 200 cents."
            style={{ background: SURFACE, borderRadius: "0.5rem", border: `1px solid ${GRID}` }}>
-        {[0, 100, 200, 300].map((g) => (
+        {[0, 100, 200].map((g) => (
           <g key={g}>
             <line x1={padL} x2={W - padR} y1={y(g)} y2={y(g)} stroke={GRID} strokeWidth={1} />
             <text x={padL - 8} y={y(g) + 4} textAnchor="end" fontSize={11} fill={INK_MUTED}>{g}c</text>
@@ -239,7 +240,7 @@ function NavScenarioChart() {
               </rect>
               <text x={cx} y={top - 8} textAnchor="middle" fontSize={13} fontWeight={700} fill={colors[i]}>{r.perShare}c</text>
               <text x={cx} y={H - padB + 20} textAnchor="middle" fontSize={11.5} fontWeight={600} fill={INK}>
-                {i === 0 ? "Reported" : i === 1 ? "80% of estimate" : "100% of estimate"}
+                {i === 0 ? "Reported" : i === 1 ? "Our estimate" : "IRES's +25% resale"}
               </text>
               <text x={cx} y={H - padB + 38} textAnchor="middle" fontSize={10.5} fill={INK_MUTED}>
                 {i === 0 ? "30 Jun 2026" : r.delta + " vs reported"}
@@ -249,9 +250,9 @@ function NavScenarioChart() {
         })}
       </svg>
       <figcaption style={{ fontSize: "0.9rem", color: INK_MUTED, marginTop: "0.5rem" }}>
-        IFRS NAV per share as reported, versus what it would be if the portfolio were marked to 80% or 100% of our
-        open-market estimate — holding IRES's ~€534m net debt and 524.4m shares constant. Reported figure: IRES H1 2026
-        Interim Report (30 June 2026).
+        IFRS NAV per share as reported, versus what it would be if the portfolio were marked to our open-market estimate,
+        or to the ~25% premium IRES itself realises when it sells individual vacant units — holding IRES's ~€534m net debt
+        and 524.4m shares constant. Reported figure: IRES H1 2026 Interim Report (30 June 2026).
       </figcaption>
     </figure>
   );
@@ -294,8 +295,9 @@ function SchemeTable() {
       <figcaption style={{ fontSize: "0.9rem", color: INK_MUTED, marginTop: "0.5rem" }}>
         Indicative open-market value of a one-bed and a two-bed unit in each scheme, from HomeIQ's comparable-sales
         model (rounded). "—" means the scheme has no unit of that size in IRES's ownership (e.g. Semple Woods and Taylor
-        Hill are houses). A few adjacent schemes — the three Rockbrook blocks, and Elmpark Green with Tara View — resolve
-        to a shared valuation point and so return the same figures.
+        Hill are houses). A few adjacent schemes sharing one street or complex resolve to a shared valuation point and so
+        return the same figures — the three Rockbrook blocks, Elmpark Green with Tara View (both on Merrion Road), and The
+        Maple with Beacon South Quarter (both in Sandyford).
       </figcaption>
     </figure>
   );
@@ -315,10 +317,11 @@ export function IresReitValuationContent() {
       <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>The headline:</strong> across <strong>35 developments</strong> and <strong>3,615 IRES-owned units</strong>,
-          our model puts the open-market resale value of the portfolio at roughly <strong>€2.0 billion</strong> — an average
-          of about <strong>€554,000 per unit</strong>. That is around <strong>57% above</strong> the €1.28bn IRES carries on
-          its own balance sheet — and, as we'll show, it would roughly <strong>double</strong> the group's net asset value
-          per share.
+          our model puts the open-market resale value of the portfolio at roughly <strong>€1.52 billion</strong> — an average
+          of about <strong>€421,000 per unit</strong>. That is around <strong>19% above</strong> the €1.28bn IRES carries on
+          its own balance sheet — and, as we'll show, it would lift the group's net asset value per share by about a{" "}
+          <strong>third</strong>. Strikingly, that 19% premium is <em>smaller</em> than the 25–30% IRES itself achieves when
+          it sells vacant units individually — so if anything our independent estimate is on the conservative side.
         </p>
       </div>
 
@@ -392,42 +395,75 @@ export function IresReitValuationContent() {
         all but discards an opposite-type one — a house counts for just <strong>0.05×</strong> when valuing an apartment.
       </p>
       <TypeWeightChart />
+      <p style={{ marginBottom: "1rem" }}>
+        Type weighting alone isn't enough, though, because the PPR leaves property type <strong>blank on about 69% of
+        sales</strong>. In a house-heavy area an expensive but <em>unlabelled</em> semi slips past the type filter and quietly
+        inflates an apartment estimate. So this project drove three further upgrades to the engine — all of which now run on
+        every valuation, not just this one:
+      </p>
+      <ul style={{ marginBottom: "1rem", paddingLeft: "1.25rem" }}>
+        <li style={{ marginBottom: "0.6rem" }}>
+          <strong>A bedroom price ladder.</strong> Every comparable is first converted to a "two-bed equivalent" using
+          Dublin apartment bedroom ratios, then re-expanded to the size we're valuing. This produces one consistent base per
+          location and <strong>guarantees a larger unit is never valued below a smaller one</strong> in the same scheme — the
+          per-bedroom ladder you see in the table.
+        </li>
+        <li style={{ marginBottom: "0.6rem" }}>
+          <strong>A local outlier trim.</strong> A statistical fence removes lone extreme sales — a trophy home, or a
+          multi-unit deal recorded among ordinary transactions — before anything is averaged.
+        </li>
+        <li style={{ marginBottom: "0.6rem" }}>
+          <strong>An apartment-price ceiling.</strong> For apartment schemes the engine now <em>learns what an apartment
+          actually costs locally</em>, from confirmed nearby apartment sales, and discards any comparable priced like a
+          house — catching exactly the unlabelled houses the type filter misses. Crucially the ceiling adapts to the area: it
+          sits tight in uniform suburbs but stays generous in genuinely premium districts, so it trims house contamination
+          without capping real luxury flats.
+        </li>
+      </ul>
+      <p style={{ marginBottom: "1rem" }}>
+        Finally, we ran a <strong>coordinate audit</strong>. Cross-checking each scheme's map pin against its own PPR sales
+        and against Mapbox geocoding exposed nine developments that had drifted into the wrong district — three of them onto a
+        single shared geocoder-fallback point. Left uncorrected, that drift can be dramatic: Phoenix Park Racecourse had
+        landed 1.3&nbsp;km away in Castleknock's detached-house belt, pushing its two-beds to a false €0.87m before the
+        ceiling and a corrected coordinate brought them back to a credible €0.50m. All nine are now pinned to verified
+        coordinates.
+      </p>
       <p style={{ marginBottom: "2rem" }}>
-        The effect is exactly what you'd want: apartment schemes that used to borrow value from expensive nearby houses came
-        down to earth. Under our earlier type-blind model the portfolio came out at €2.10&nbsp;billion; with type-aware
-        weighting it falls to <strong>€2.00&nbsp;billion</strong>, with the biggest corrections on apartment schemes sitting
-        among pricey houses (The Marker dropped from €555k to €461k per unit, for example).
+        Together these changes stripped out the implausible seven-figure apartment values our earlier, cruder run contained
+        and brought the portfolio total down from about €2.0&nbsp;billion to <strong>€1.52&nbsp;billion</strong> — with the
+        per-unit estimates now sitting in a tight, believable €0.31m–€0.60m band right across the book.
       </p>
 
       <SectionHeading>The results — scheme by scheme</SectionHeading>
       <p style={{ marginBottom: "1rem" }}>
         Rolling the per-unit estimates back up across all 35 developments gives an open-market resale value of
-        approximately <strong>€2.0&nbsp;billion</strong>. But the more interesting output is the per-scheme detail. The table
+        approximately <strong>€1.52&nbsp;billion</strong>. But the more interesting output is the per-scheme detail. The table
         below shows our indicative value for a <strong>one-bed</strong> and a <strong>two-bed</strong> apartment in each
         development — the two sizes that make up ~86% of the portfolio.
       </p>
       <SchemeTable />
       <p style={{ marginBottom: "2rem" }}>
-        The spread is stark: a two-bed runs from about <strong>€317k</strong> in Tallaght Cross West and Camac Crescent
-        (Inchicore) up past <strong>€1m</strong> in the Dublin&nbsp;4 schemes (Elmpark Green, Tara View) and at Richmond
-        Gardens. Those seven-figure apartment figures are the model straining at the edges of the data — see the caveats
-        below — but the broad picture is sound: this is a mid-market apartment book with a valuable Dublin&nbsp;4 tail.
+        The spread is coherent from top to bottom: a two-bed runs from about <strong>€314k</strong> in Camac Crescent
+        (Inchicore) and Charlestown (Finglas) up to roughly <strong>€550k–€600k</strong> in the Dublin&nbsp;4 schemes
+        (Elmpark Green, Tara View) and at Beechwood Court in Stillorgan. There are no seven-figure apartments any more — the
+        apartment-price ceiling removed them — leaving a clean picture of a mid-market apartment book with a modest premium
+        tail in Dublin&nbsp;4 and the affluent southside.
       </p>
 
       <SectionHeading>How our figure compares to IRES's own books</SectionHeading>
       <p style={{ marginBottom: "1rem" }}>
         In its <strong>H1 2026 interim report</strong> (as at 30 June 2026), IRES carried its investment property at an IFRS
-        fair value of <strong>€1,276.7 million</strong>. Our open-market model comes out at <strong>€2,004.8 million</strong>{" "}
-        — a difference of <strong>€728 million</strong>, or roughly <strong>57% higher</strong>.
+        fair value of <strong>€1,276.7 million</strong>. Our open-market model comes out at <strong>€1,522.9 million</strong>{" "}
+        — a difference of <strong>€246 million</strong>, or roughly <strong>19% higher</strong>.
       </p>
       <p style={{ marginBottom: "1rem" }}>
-        A gap that large deserves scrutiny, and there's a strong reason to think the <em>truth sits between the two</em>.
-        IRES has been quietly selling individual units, and it discloses what it gets: in FY2025 it sold 315 units at over
-        <strong> 25% above book value</strong>, and in H1 2026 a further tranche at around <strong>30% above book</strong>.
-        In other words, <strong>IRES's own vacant-unit sales confirm that individual apartments fetch well more than the
-        block-basis carrying value</strong>. Apply that realised ~25% premium to the whole portfolio and you get about
-        €1.60bn — which is almost exactly our <strong>80% scenario</strong> (€1,603.8m). Our headline 100% figure (a 57%
-        premium) is higher than IRES has actually realised, which is consistent with the upward bias we flag below.
+        A 19% premium is exactly the kind of gap you'd expect between a rented-block accounting value and the sum of what
+        each flat would fetch sold individually — and there's a clean external check on it. IRES has been quietly selling
+        individual units, and it discloses what it gets: in FY2025 it sold 315 units at over <strong>25% above book
+        value</strong>, and in H1 2026 a further tranche at around <strong>30% above book</strong>. In other words,{" "}
+        <strong>IRES's own vacant-unit sales fetch a larger premium than our whole-portfolio estimate implies</strong>. Our
+        independent, comparable-based figure therefore sits <em>below</em> what IRES actually realises unit by unit — a
+        reassuring sign that, if anything, we're being conservative rather than exuberant.
       </p>
 
       <SectionHeading>Why the accounting value is lower: a note on IFRS</SectionHeading>
@@ -497,32 +533,36 @@ export function IresReitValuationContent() {
       <NavScenarioChart />
 
       <p style={{ marginBottom: "2rem" }}>
-        The symmetry is striking: our headline uplift (€728m) is almost identical to IRES's entire current NAV (€728m), so
-        at 100% of our estimate the NAV per share would roughly <strong>double, to ~278 cents</strong>. Even on the more
-        defensible <strong>80% scenario</strong> — the one that matches IRES's own realised disposal premium — NAV per share
-        would rise about <strong>45%, to ~201 cents</strong>. That is the mechanical power of gearing: modest-looking moves
-        in a leveraged property value become large moves in equity value.
+        Gearing does the amplifying: a <strong>€246m</strong> uplift in the property — only about 19% — lifts NAV per share by
+        roughly a <strong>third, to ~186 cents</strong>, because that gain lands entirely on the smaller equity slice. And
+        because our estimate is more conservative than IRES's own disposal record, the realistic ceiling is arguably higher
+        still: marking the book to the ~25% premium IRES actually achieves on unit sales would put NAV per share near{" "}
+        <strong>200 cents</strong>. Either way the direction is clear — the shares' <strong>138.8-cent</strong> reported NAV
+        looks conservative against what the underlying flats would fetch sold individually.
       </p>
 
       <SectionHeading>Read the number honestly</SectionHeading>
       <p style={{ marginBottom: "1rem" }}>
-        We would rather show the limitations than bury them. Three things mean the 100% figure is an <em>upper</em> bound,
-        and the 80% scenario is the more realistic read:
+        We would rather show the limitations than bury them. Our <strong>€1.52bn</strong> is a specific construct — the sum of
+        what each flat would fetch sold individually, with vacant possession, on the open market today — and a few things
+        shape how to read it:
       </p>
       <ul style={{ marginBottom: "1rem", paddingLeft: "1.25rem" }}>
         <li style={{ marginBottom: "0.6rem" }}>
-          <strong>No block discount.</strong> We value each apartment as an individual open-market resale. A single buyer
-          taking a whole scheme — or the whole portfolio — normally pays <em>less</em> per unit, not more.
+          <strong>No block discount.</strong> We value each apartment as an individual resale. A single buyer taking a whole
+          scheme — or the whole portfolio in one line — would normally pay <em>less</em> per unit. This is genuinely a
+          sum-of-parts figure, not a block-sale price.
         </li>
         <li style={{ marginBottom: "0.6rem" }}>
-          <strong>Type labels are incomplete.</strong> The PPR doesn't record property type for about 69% of sales. Where
-          an apartment scheme sits in an area where the unlabelled sales are mostly expensive houses (classic Dublin&nbsp;4),
-          the estimate is still pulled up. Richmond Gardens (~€1.38m/unit) is the clearest outlier and should be read as an
-          upper bound, not a real apartment price.
+          <strong>Incomplete type labels — now largely handled.</strong> The PPR omits property type on about 69% of sales,
+          which used to let expensive unlabelled houses inflate apartment estimates. The apartment-price ceiling now catches
+          those, which is why the earlier seven-figure Dublin&nbsp;4 apartment values have disappeared. It isn't perfect in
+          the very sparsest areas, but it removes the largest source of upward bias.
         </li>
         <li style={{ marginBottom: "0.6rem" }}>
           <strong>Different valuation bases.</strong> Our sum-of-individual-resales is not the same construct as an IAS 40
-          investment-basis fair value; the two are answering related but distinct questions.
+          investment-basis fair value; the two answer related but distinct questions, which is exactly why a gap between them
+          is expected.
         </li>
       </ul>
       <p style={{ marginBottom: "2rem" }}>
@@ -533,12 +573,13 @@ export function IresReitValuationContent() {
 
       <SectionHeading>The takeaway</SectionHeading>
       <p style={{ marginBottom: "2rem" }}>
-        With nothing but public sold-price data, we independently valued a €2&nbsp;billion, 3,615-unit residential portfolio
-        down to the individual apartment — landed within touching distance of IRES's own realised disposal premiums, and
-        showed how, on the more conservative read, the group's NAV per share could be closer to <strong>200 cents</strong>{" "}
-        than the <strong>139 cents</strong> on its books. The property-type-aware logic that made those apartment estimates
-        credible is the very same logic that runs when you value <em>your</em> home. If our engine can take on a listed
-        REIT's entire book, it can certainly price a single address.
+        With nothing but public sold-price data, we independently valued a <strong>€1.52&nbsp;billion</strong>, 3,615-unit
+        residential portfolio right down to the individual apartment — landing about <strong>19% above</strong> IRES's book
+        value, comfortably inside the 25–30% premiums IRES itself realises on unit sales, and implying a NAV per share nearer{" "}
+        <strong>186 cents</strong> than the <strong>139 cents</strong> on its books. The apartment-price intelligence that
+        made those estimates credible — the bedroom ladder, the type weighting and the local apartment ceiling — is the very
+        same logic that runs when you value <em>your</em> home. If our engine can take on a listed REIT's entire book, it can
+        certainly price a single address.
       </p>
 
       <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
