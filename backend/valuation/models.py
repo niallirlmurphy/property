@@ -62,6 +62,14 @@ class ValuationRequest(BaseModel):
         description="BER energy rating (optional, A1-G)"
     )
 
+    property_type: Optional[str] = Field(
+        None,
+        max_length=40,
+        example="apartment",
+        description="Property type (optional, e.g. apartment/house). Comparables of "
+                    "the same type (apartment vs house) are weighted far more heavily."
+    )
+
     county: Optional[str] = Field(
         None,
         max_length=50,
@@ -284,6 +292,7 @@ class GeocodingResult(BaseModel):
     method: str = Field(..., description="Geocoding method used")
     address_matched: Optional[str] = Field(None, description="Matched address")
     bedrooms: Optional[int] = Field(None, description="Bedrooms from database match (if found)")
+    property_type: Optional[str] = Field(None, description="Property type from database match (if found)")
 
 
 class NearbyAmenity(BaseModel):

@@ -7,8 +7,48 @@ Phase 2: Feature-based adjustments (bedrooms, property type, BER)
 Weighting formula: distance + recency
 """
 
-from typing import Dict
+from typing import Dict, Optional
 from datetime import datetime
+
+
+# Property-type buckets. Apartments and houses are effectively separate markets,
+# so a comparable is only "type-matched" if it falls in the subject's bucket.
+_APARTMENT_TYPES = {"apartment", "apartments", "flat", "duplex", "studio"}
+_HOUSE_TYPES = {
+    "house", "semi-detached", "semi detached", "detached", "terraced", "terrace",
+    "end of terrace", "bungalow", "cottage", "townhouse", "town house",
+}
+
+
+def property_bucket(property_type: Optional[str]) -> Optional[str]:
+    """Collapse a raw property_type string to 'apartment', 'house', or None.
+
+    None means the type is unknown/unclassifiable (~69% of PPR rows have no
+    property_type), which we treat as a soft down-weight rather than excluding.
+    """
+    if not property_type:
+        return None
+    p = property_type.strip().lower()
+    if p in _APARTMENT_TYPES:
+        return "apartment"
+    if p in _HOUSE_TYPES:
+        return "house"
+    # Substring fallbacks for compound/enriched labels ("2 bed apartment",
+    # "semi-detached house", "mid-terrace house", etc.).
+    if "apart" in p or "duplex" in p or "flat" in p:
+        return "apartment"
+    if any(k in p for k in ("house", "detach", "terrac", "bungalow", "cottage", "town")):
+        return "house"
+    return None
+
+
+# Type-match multipliers applied to a comparable's weight. Same-type comparables
+# dominate; opposite-type (e.g. a house when valuing an apartment) are almost
+# fully suppressed; unknown-type sit in between so they still contribute where
+# same-type data is thin but never outweigh confirmed same-type sales.
+_TYPE_FACTOR_SAME = 3.0
+_TYPE_FACTOR_UNKNOWN = 0.35
+_TYPE_FACTOR_DIFFERENT = 0.05
 
 
 class MVPAdjuster:
@@ -143,13 +183,14 @@ class MVPAdjuster:
         self,
         comparable: Dict,
         max_distance_m: float,
-        subject_bedrooms: int = None
+        subject_bedrooms: int = None,
+        subject_property_type: Optional[str] = None
     ) -> float:
         """
         Calculate weight for a comparable property.
 
         Weight formula:
-            weight = distance_factor² × recency_score × bedroom_factor
+            weight = distance_factor² × recency_score × bedroom_factor × type_factor
 
         Where:
             distance_factor = (1 - distance / max_distance)
@@ -158,17 +199,26 @@ class MVPAdjuster:
                 - Same bedrooms: 1.5× (50% bonus)
                 - 1 bedroom difference: 0.7× (30% penalty)
                 - 2+ bedroom difference: 0.2× (80% penalty)
+            type_factor depends on property-type match (apartment vs house):
+                - Same bucket: 3.0× (heavy bonus)
+                - Unknown type: 0.35× (soft down-weight, keeps sparse areas valuable)
+                - Different bucket: 0.05× (near-exclude — separate market)
 
         This ensures properties with significantly different sizes (e.g., 3-bed vs 5-bed)
-        receive very low weight, preventing inappropriate comparisons.
+        receive very low weight, and — crucially — that an apartment is valued off
+        apartment sales rather than nearby (often far pricier) houses.
 
         Args:
             comparable: Comparable property dict with keys:
                 - distance_m: Distance in meters
                 - recency_score: Recency score (0-1)
                 - bedrooms: Number of bedrooms (optional)
+                - property_type: Property type string (optional)
             max_distance_m: Maximum distance among all comparables
             subject_bedrooms: Subject property bedroom count (optional)
+            subject_property_type: Subject property type (optional). When set,
+                comparables of a matching type (apartment vs house) are weighted
+                far more heavily than mismatched ones.
 
         Returns:
             Weight value (0-1+, normalized later)
@@ -207,8 +257,20 @@ class MVPAdjuster:
                     # 3-bed vs 5-bed should have very low weight
                     bedroom_factor = 0.2
 
-        # Apply bedroom factor
-        weight = base_weight * bedroom_factor
+        # Property-type matching factor (apartment vs house are separate markets)
+        type_factor = 1.0
+        subject_bucket = property_bucket(subject_property_type)
+        if subject_bucket is not None:
+            comp_bucket = property_bucket(comparable.get('property_type'))
+            if comp_bucket is None:
+                type_factor = _TYPE_FACTOR_UNKNOWN
+            elif comp_bucket == subject_bucket:
+                type_factor = _TYPE_FACTOR_SAME
+            else:
+                type_factor = _TYPE_FACTOR_DIFFERENT
+
+        # Apply bedroom and type factors
+        weight = base_weight * bedroom_factor * type_factor
 
         # Note: Not clamping to [0, 1] here since we normalize after
         return max(0.0, weight)
@@ -216,7 +278,8 @@ class MVPAdjuster:
     def calculate_all_weights(
         self,
         comparables: list,
-        subject_bedrooms: int = None
+        subject_bedrooms: int = None,
+        subject_property_type: Optional[str] = None
     ) -> list:
         """
         Calculate weights for all comparables.
@@ -224,6 +287,8 @@ class MVPAdjuster:
         Args:
             comparables: List of comparable property dicts
             subject_bedrooms: Subject property bedroom count (optional)
+            subject_property_type: Subject property type (optional); matching
+                types (apartment vs house) are weighted far more heavily.
 
         Returns:
             List of weight values (same order as input)
@@ -238,7 +303,9 @@ class MVPAdjuster:
         # Calculate weight for each comparable
         weights = []
         for comparable in comparables:
-            weight = self.calculate_weight(comparable, max_distance, subject_bedrooms)
+            weight = self.calculate_weight(
+                comparable, max_distance, subject_bedrooms, subject_property_type
+            )
             weights.append(weight)
 
         # Normalize weights to sum to 1.0

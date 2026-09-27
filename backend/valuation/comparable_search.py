@@ -134,6 +134,12 @@ class ComparableSearcher:
                 AND p.not_full_market_price = FALSE
                 AND p.price IS NOT NULL
                 AND p.price BETWEEN 50000 AND 5000000
+                -- Exclude bulk/multi-unit sales (e.g. "23 to 45", "A1-A7"):
+                -- their price is for many units, so a single such row would
+                -- enter as one grossly over-priced comparable. Mirrors the
+                -- BULK_ADDR_FILTER used for trends/lists in main.py.
+                AND (p.address_normalized IS NULL
+                     OR p.address_normalized !~* '[0-9]+ *(-|to) *[0-9]+')
                 AND p.sale_date >= $5
                 AND ST_DWithin(p.geog, sp.geog, $3)  -- Uses GIST index
                 AND ($6::INTEGER IS NULL OR p.id != $6)  -- Exclude property if specified

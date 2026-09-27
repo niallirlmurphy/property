@@ -16,6 +16,15 @@ export interface BlogPost {
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "valuing-ires-reit-property-portfolio",
+    title: "Valuing the Property Portfolio of IRES REIT Using Our Enriched PPR Data",
+    description: "We pointed our valuation engine at Ireland's largest residential landlord and valued all 3,615 IRES-owned apartments, unit by unit, from public sold-price data. The result: about €2.0 billion — and a look at how property-type-aware valuation works.",
+    date: "2026-09-27",
+    author: "HomeIQ Team",
+    tags: ["Analysis", "Dublin", "IRES REIT", "Apartments", "Valuation"],
+    readTime: "9 min read"
+  },
+  {
     slug: "how-to-use-a-mortgage-calculator-affordability-interest-rates",
     title: "How to Use a Mortgage Calculator: Affordability, Interest Rates & Application Tips",
     description: "Plan your mortgage before you apply. See how to use HomeIQ's calculator to work out what you can afford, why a small interest-rate change costs tens of thousands over the term, plus the DOs and DON'Ts of a strong mortgage application.",

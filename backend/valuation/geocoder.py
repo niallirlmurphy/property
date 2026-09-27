@@ -358,59 +358,75 @@ class ValuationGeocoder:
 
         # Try exact prefix match first (fast, for S1 page compatibility).
         # Scope to county so e.g. a Cork "36 Fairfield Road" is not returned
-        # for a Dublin request.
+        # for a Dublin request. Screen out bulk/multi-unit rows and coordinates
+        # already flagged as low-quality so they can never win a match.
         query_exact = """
             SELECT
                 latitude,
                 longitude,
                 address,
-                bedrooms
+                bedrooms,
+                property_type
             FROM properties
             WHERE
                 starts_with(COALESCE(address_normalized, address), $1)
                 AND county ILIKE $2
                 AND latitude IS NOT NULL
                 AND longitude IS NOT NULL
+                AND (address_normalized IS NULL
+                     OR address_normalized !~* '[0-9]+ *(-|to) *[0-9]+')
+                AND geocode_suspect IS NOT TRUE
+                AND geocode_quality_issue IS NOT TRUE
             LIMIT 1;
         """
 
         row = await self.db.fetchrow(query_exact, address_norm, county_name)
 
-        # If no exact prefix match, try flexible matching for partial addresses
-        # e.g., "28 Slane Road, Dublin 12" should match "28 Slane Road, Crumlin, Dublin 12"
+        # If no exact prefix match, fall back to full-text search for partial
+        # addresses, e.g. "28 Slane Road, Dublin 12" -> "28 Slane Road, Crumlin,
+        # Dublin 12".
+        #
+        # We use plainto_tsquery (AND semantics) rather than a LIKE/ILIKE token
+        # match. Per the project's query rules (CLAUDE.md "NEVER use LIKE" /
+        # memory feedback_no_like_queries) this hits the GIN index
+        # idx_properties_address_fts instead of seq-scanning, AND its AND
+        # semantics keep the match precise: every significant token must be
+        # present, so a partially-overlapping street (e.g. "Bath Avenue
+        # Gardens" for "Richmond Gardens, Richmond Avenue") can't match, and a
+        # scheme whose marketing name is absent from the PPR (e.g. "The
+        # Marker") simply returns nothing here and falls through to the more
+        # reliable Eircode routing-key centroid instead of a confident wrong
+        # rooftop. Same bulk/quality screens as the exact query above.
         if not row:
-            # Extract significant tokens (alphanumeric only, skip very common words)
-            # Include house numbers, street names, but skip generic terms
-            words = re.findall(r'\w+', address_norm)  # Extract all alphanumeric tokens
+            # Skip pure filler words; plainto_tsquery handles tokenising, but we
+            # guard against a query so generic it would match half the county.
+            words = re.findall(r'\w+', address_norm)
             skip_words = {'the', 'and', 'dublin', 'ireland', 'co', 'county'}
             tokens = [w for w in words if len(w) >= 2 and w.lower() not in skip_words]
 
-            # Build query that matches all significant tokens
-            if len(tokens) >= 3:  # Need at least 3 tokens for reliable match (e.g., "28", "Slane", "Road")
-                token_conditions = []
-                for i, token in enumerate(tokens[:6]):  # Limit to first 6 tokens
-                    token_conditions.append(f"COALESCE(address_normalized, address) ILIKE ${i+1}")
-
-                county_param_idx = len(tokens[:6]) + 1
-                query_flexible = f"""
+            if len(tokens) >= 2:
+                query_fts = """
                     SELECT
                         latitude,
                         longitude,
                         address,
                         bedrooms,
-                        COALESCE(address_normalized, address) as matched_address
+                        property_type
                     FROM properties
                     WHERE
-                        {' AND '.join(token_conditions)}
-                        AND county ILIKE ${county_param_idx}
+                        to_tsvector('simple', COALESCE(address_normalized, address))
+                            @@ plainto_tsquery('simple', $1)
+                        AND county ILIKE $2
                         AND latitude IS NOT NULL
                         AND longitude IS NOT NULL
+                        AND (address_normalized IS NULL
+                             OR address_normalized !~* '[0-9]+ *(-|to) *[0-9]+')
+                        AND geocode_suspect IS NOT TRUE
+                        AND geocode_quality_issue IS NOT TRUE
                     ORDER BY LENGTH(COALESCE(address_normalized, address))  -- Prefer shorter (more specific) matches
                     LIMIT 1;
                 """
-
-                params = [f'%{token}%' for token in tokens[:6]] + [county_name]
-                row = await self.db.fetchrow(query_flexible, *params)
+                row = await self.db.fetchrow(query_fts, address_norm, county_name)
 
         if row:
             result = GeocodingResult(
@@ -420,8 +436,9 @@ class ValuationGeocoder:
                 method="database_exact",
                 address_matched=row['address']
             )
-            # Store bedrooms for later use (if available)
+            # Store bedrooms and property type for later use (if available)
             result.bedrooms = row['bedrooms']
+            result.property_type = row['property_type']
             return result
 
         return None

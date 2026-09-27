@@ -20,7 +20,7 @@ from .models import (
 )
 from .geocoder import ValuationGeocoder
 from .comparable_search import ComparableSearcher
-from .adjustments import MVPAdjuster
+from .adjustments import MVPAdjuster, property_bucket
 from .calculator import ValuationCalculator
 from .validator import MVPValidator
 from .nearby_amenities import get_nearby_amenities
@@ -109,8 +109,9 @@ async def estimate_property_value(
             detail="Database connection not available. Please try again later."
         )
 
-    # Initialize subject_bedrooms (will be determined after geocoding)
+    # Initialize subject attributes (bedrooms/type determined after geocoding)
     subject_bedrooms = request.bedrooms
+    subject_property_type = request.property_type
 
     try:
         # Step 1: Geocode address
@@ -133,6 +134,16 @@ async def estimate_property_value(
                     print(f"[Valuation] Using bedrooms from database: {subject_bedrooms}")
             elif subject_bedrooms is not None:
                 print(f"[Valuation] Using bedrooms from user input: {subject_bedrooms}")
+
+            # Determine subject property type (apartment vs house).
+            # Priority: user input > database match. Used to weight comparables
+            # of the same type far more heavily (separate markets).
+            if subject_property_type is None and hasattr(location, 'property_type'):
+                subject_property_type = location.property_type
+                if subject_property_type is not None:
+                    print(f"[Valuation] Using property_type from database: {subject_property_type}")
+            elif subject_property_type is not None:
+                print(f"[Valuation] Using property_type from user input: {subject_property_type}")
         except ValueError as e:
             print(f"[Valuation] Geocoding failed: {str(e)}")
             # Log geocoding failures to Sentry
@@ -227,13 +238,21 @@ async def estimate_property_value(
             comp['adjustment_factor'] = temporal_adj['adjustment_factor']
             comp['temporal_adjustment'] = temporal_adj
 
-        # Calculate weights (with bedroom matching if known)
-        weights = adjuster.calculate_all_weights(comparables, subject_bedrooms)
+        # Calculate weights (with bedroom + property-type matching if known)
+        weights = adjuster.calculate_all_weights(
+            comparables, subject_bedrooms, subject_property_type
+        )
 
         # Log bedroom matching info
         if subject_bedrooms is not None:
             matching_beds = sum(1 for c in comparables if c.get('bedrooms') == subject_bedrooms)
             print(f"[Valuation] Bedroom matching: {matching_beds}/{len(comparables)} comparables match {subject_bedrooms} bedrooms")
+
+        # Log property-type matching info
+        if subject_property_type is not None:
+            subj_bucket = property_bucket(subject_property_type)
+            matching_type = sum(1 for c in comparables if property_bucket(c.get('property_type')) == subj_bucket)
+            print(f"[Valuation] Type matching: {matching_type}/{len(comparables)} comparables match bucket '{subj_bucket}'")
 
         # Add weights to comparables
         for comp, weight in zip(comparables, weights):
@@ -298,6 +317,11 @@ async def estimate_property_value(
                     'enabled': subject_bedrooms is not None,
                     'subject_bedrooms': subject_bedrooms,
                     'matching_comparables': sum(1 for c in comparables if c.get('bedrooms') == subject_bedrooms) if subject_bedrooms is not None else 0
+                },
+                'property_type_matching': {
+                    'enabled': subject_property_type is not None,
+                    'subject_property_type': subject_property_type,
+                    'subject_bucket': property_bucket(subject_property_type) if subject_property_type is not None else None
                 }
             }
         )

@@ -50,6 +50,13 @@ CREATE INDEX IF NOT EXISTS properties_sale_date_idx ON properties (sale_date);
 CREATE INDEX IF NOT EXISTS properties_price_idx   ON properties (price);
 CREATE INDEX IF NOT EXISTS properties_eircode_idx ON properties (eircode);
 
+-- Full-text index backing the valuation geocoder's fuzzy address match
+-- (backend/valuation/geocoder.py uses plainto_tsquery, NOT LIKE/ILIKE, per the
+-- project's query rules). Without this the tsvector match seq-scans ~784k rows.
+CREATE INDEX IF NOT EXISTS idx_properties_address_fts
+    ON properties
+    USING gin (to_tsvector('simple', COALESCE(address_normalized, address)));
+
 -- Search query analytics log
 CREATE TABLE IF NOT EXISTS search_log (
     id               BIGSERIAL PRIMARY KEY,

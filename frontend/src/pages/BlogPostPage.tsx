@@ -15,9 +15,11 @@ import { TransportPremiumContent } from "../blog-posts/does-being-near-a-luas-or
 import { SchoolPremiumContent } from "../blog-posts/does-living-near-a-good-school-add-value";
 import { SolarValueContent } from "../blog-posts/do-solar-panels-add-value-to-your-home-ireland";
 import { MortgageCalculatorGuideContent } from "../blog-posts/how-to-use-a-mortgage-calculator-affordability-interest-rates";
+import { IresReitValuationContent } from "../blog-posts/valuing-ires-reit-property-portfolio";
 
 // Map slugs to content components
 const BLOG_CONTENT: Record<string, React.ComponentType> = {
+  "valuing-ires-reit-property-portfolio": IresReitValuationContent,
   "how-to-use-a-mortgage-calculator-affordability-interest-rates": MortgageCalculatorGuideContent,
   "do-solar-panels-add-value-to-your-home-ireland": SolarValueContent,
   "does-living-near-a-good-school-add-value": SchoolPremiumContent,
