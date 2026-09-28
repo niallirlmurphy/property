@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
-import WaffleMenu from "../components/WaffleMenu";
+import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import { BLOG_POSTS, publishedPosts } from "../blogPosts";
 
@@ -17,7 +17,7 @@ export default function BlogListPage() {
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#f8f9fa" }}>
       {meta}
-      <WaffleMenu />
+      <PageHeader title="Blog" titleAsHeading={false} />
 
       {/* Header */}
       <header style={{

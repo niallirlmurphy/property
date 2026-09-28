@@ -1,7 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Head } from "vite-react-ssg";
 import { usePageMeta } from "../hooks/usePageMeta";
-import WaffleMenu from "../components/WaffleMenu";
+import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import ShareButtons from "../components/ShareButtons";
 import { BLOG_POSTS, isPublished } from "../blogPosts";
@@ -90,7 +90,7 @@ export default function BlogPostPage() {
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{articleJson}</script>
       </Head>
-      <WaffleMenu />
+      <PageHeader title="Blog" titleAsHeading={false} />
 
       {/* Header */}
       <header style={{
