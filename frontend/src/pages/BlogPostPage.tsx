@@ -3,6 +3,7 @@ import { Head } from "vite-react-ssg";
 import { usePageMeta } from "../hooks/usePageMeta";
 import WaffleMenu from "../components/WaffleMenu";
 import Footer from "../components/Footer";
+import ShareButtons from "../components/ShareButtons";
 import { BLOG_POSTS, isPublished } from "../blogPosts";
 
 // Blog post content - import from individual files
@@ -50,6 +51,10 @@ export default function BlogPostPage() {
   if (!post || !ContentComponent || !isPublished(post)) {
     return <Navigate to="/blog" replace />;
   }
+
+  // Canonical URL for this post, built from the slug so it's identical during
+  // SSG prerender and client hydration (no reliance on window.location).
+  const shareUrl = `https://homeiq.ie/blog/${post.slug}`;
 
   // Set SEO meta tags
   const meta = usePageMeta(
@@ -149,13 +154,18 @@ export default function BlogPostPage() {
           }}>
             <span>{post.author}</span>
             <span>•</span>
-            <time>{new Date(post.date).toLocaleDateString("en-IE", {
+            <time dateTime={post.date}>{new Date(post.date).toLocaleDateString("en-IE", {
               year: "numeric",
               month: "long",
               day: "numeric"
             })}</time>
             <span>•</span>
             <span>{post.readTime}</span>
+          </div>
+
+          {/* Share row */}
+          <div style={{ marginTop: "1.5rem" }}>
+            <ShareButtons url={shareUrl} title={post.title} />
           </div>
         </div>
       </header>
@@ -172,11 +182,18 @@ export default function BlogPostPage() {
           <ContentComponent />
         </div>
 
-        {/* Copyright notice - applies to all blog posts */}
-        <p style={{
+        {/* Share row - "finished reading, now share it" */}
+        <div style={{
           borderTop: "1px solid #e5e7eb",
           marginTop: "2.5rem",
           paddingTop: "1.5rem",
+        }}>
+          <ShareButtons url={shareUrl} title={post.title} />
+        </div>
+
+        {/* Copyright notice - applies to all blog posts */}
+        <p style={{
+          marginTop: "1.5rem",
           fontSize: "0.8125rem",
           color: "#9ca3af",
           lineHeight: 1.6,
