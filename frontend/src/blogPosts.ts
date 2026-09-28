@@ -33,6 +33,15 @@ export function publishedPosts(now: Date = new Date()): BlogPost[] {
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "barings-ires-reit-takeover-offer-fair-value",
+    title: "Barings' €727m Bid for IRES REIT: Fair Price, or Is the Portfolio Undervalued?",
+    description: "Barings has offered €1.386 a share in cash for IRES REIT — a ~20% premium to the share price, but almost exactly book NAV. We revisit our PPR-based valuation of the portfolio (~€1.52bn, or ~186c a share) and ask whether shareholders should accept or hold out.",
+    date: "2026-09-28",
+    author: "HomeIQ Team",
+    tags: ["Analysis", "IRES REIT", "Takeover", "Valuation", "Dublin"],
+    readTime: "8 min read"
+  },
+  {
     slug: "how-homeiq-values-a-home",
     title: "How HomeIQ Values a Home: From Raw PPR Data to a Number You Can Trust",
     description: "A plain-English look inside our valuation engine: why the Property Price Register is the perfect base, how we enrich it with location, property type and bedroom counts, and the recent work on outliers and size relationships that makes each estimate more trustworthy.",

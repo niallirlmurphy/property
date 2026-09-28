@@ -17,9 +17,11 @@ import { SolarValueContent } from "../blog-posts/do-solar-panels-add-value-to-yo
 import { MortgageCalculatorGuideContent } from "../blog-posts/how-to-use-a-mortgage-calculator-affordability-interest-rates";
 import { IresReitValuationContent } from "../blog-posts/valuing-ires-reit-property-portfolio";
 import { HowHomeIqValuesContent } from "../blog-posts/how-homeiq-values-a-home";
+import { BaringsIresTakeoverContent } from "../blog-posts/barings-ires-reit-takeover-offer-fair-value";
 
 // Map slugs to content components
 const BLOG_CONTENT: Record<string, React.ComponentType> = {
+  "barings-ires-reit-takeover-offer-fair-value": BaringsIresTakeoverContent,
   "how-homeiq-values-a-home": HowHomeIqValuesContent,
   "valuing-ires-reit-property-portfolio": IresReitValuationContent,
   "how-to-use-a-mortgage-calculator-affordability-interest-rates": MortgageCalculatorGuideContent,
