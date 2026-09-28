@@ -19,6 +19,15 @@ import httpx
 logger = logging.getLogger(__name__)
 from typing import Dict, Optional, Tuple
 from .models import GeocodingResult
+from .cache import TTLCache
+
+
+# Addresses don't move, so a resolved (address, eircode, county) -> location is
+# stable. ValuationGeocoder is created per request, so this module-level cache is
+# what lets repeated valuations of the same address skip the DB/Nominatim work
+# entirely. 24h TTL, matching the search-layer geocode cache in main.py. Only
+# successful results are cached (failures may be transient Nominatim errors).
+_GEOCODE_CACHE = TTLCache(ttl_seconds=86400)
 
 
 # A database coordinate further than this from the Eircode routing-key
@@ -63,12 +72,15 @@ class ValuationGeocoder:
         county: Optional[str] = None
     ) -> GeocodingResult:
         """
-        Geocode an address using multiple methods.
+        Geocode an address using multiple methods (cached).
 
         Priority:
         1. Database lookup (check existing properties first!)
         2. Eircode routing key (if provided)
         3. Nominatim API (only if not in database)
+
+        Successful results are memoised per (address, eircode, county) for 24h;
+        the resolution work itself lives in ``_geocode_address_uncached``.
 
         Args:
             address: Property address
@@ -81,6 +93,28 @@ class ValuationGeocoder:
         Raises:
             ValueError: If geocoding fails completely
         """
+        cache_key = (
+            (address or "").strip().lower(),
+            (eircode or "").strip().upper(),
+            (county or "").strip().lower(),
+        )
+        hit, cached = _GEOCODE_CACHE.get(cache_key)
+        if hit:
+            return cached
+
+        # A failed geocode raises ValueError and is deliberately not cached
+        # (Nominatim timeouts etc. are often transient); only cache successes.
+        result = await self._geocode_address_uncached(address, eircode, county)
+        _GEOCODE_CACHE.set(cache_key, result)
+        return result
+
+    async def _geocode_address_uncached(
+        self,
+        address: str,
+        eircode: Optional[str] = None,
+        county: Optional[str] = None
+    ) -> GeocodingResult:
+        """Resolve an address to a GeocodingResult (see geocode_address)."""
 
         # When an Eircode is supplied, resolve its routing-key centroid up
         # front so we can sanity-check the (less trusted) database coordinate

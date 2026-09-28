@@ -10,6 +10,22 @@ Weighting formula: distance + recency
 from typing import Dict, Optional
 from datetime import datetime
 
+from .cache import TTLCache
+
+
+# County price indices change at most once a month, but adjust_temporal looks
+# one up twice per comparable — up to ~60 sequential DB round-trips per
+# valuation, all for a handful of distinct (county, year-month) values (and one
+# repeated target month). This module-level cache collapses those to one fetch
+# per distinct key, shared across requests. 6h TTL so a monthly index refresh
+# is picked up without a restart.
+_PRICE_INDEX_CACHE = TTLCache(ttl_seconds=6 * 3600)
+
+# Local apartment-price ceiling is a 2km spatial aggregate that is identical for
+# neighbouring points, so cache it per ~110m grid cell (lat/lon rounded to 3dp).
+# Sales data changes only every couple of weeks, so a 6h TTL self-heals quickly.
+_APT_CEILING_CACHE = TTLCache(ttl_seconds=6 * 3600)
+
 
 # Property-type buckets. Apartments and houses are effectively separate markets,
 # so a comparable is only "type-matched" if it falls in the subject's bucket.
@@ -197,6 +213,15 @@ class MVPAdjuster:
             Price index (1.0 = baseline) or None if not available
         """
 
+        # Memoised by (county, year-month): the index is constant within a month,
+        # so this turns the per-comparable lookups into one fetch per distinct
+        # month. A cached None (county/month with no index) is a valid hit and
+        # still short-circuits the query.
+        cache_key = (county, target_date.year, target_date.month)
+        hit, cached = _PRICE_INDEX_CACHE.get(cache_key)
+        if hit:
+            return cached
+
         query = """
             SELECT price_index
             FROM county_monthly_price_indices
@@ -212,28 +237,24 @@ class MVPAdjuster:
             target_date
         )
 
-        if row:
-            return float(row['price_index'])
+        if not row:
+            # Fallback: try nearest available month
+            query_fallback = """
+                SELECT price_index
+                FROM county_monthly_price_indices
+                WHERE county = $1
+                ORDER BY ABS(EXTRACT(EPOCH FROM (month - $2::timestamp)))
+                LIMIT 1;
+            """
+            row = await self.db.fetchrow(
+                query_fallback,
+                county,
+                target_date
+            )
 
-        # Fallback: try nearest available month
-        query_fallback = """
-            SELECT price_index
-            FROM county_monthly_price_indices
-            WHERE county = $1
-            ORDER BY ABS(EXTRACT(EPOCH FROM (month - $2::timestamp)))
-            LIMIT 1;
-        """
-
-        row = await self.db.fetchrow(
-            query_fallback,
-            county,
-            target_date
-        )
-
-        if row:
-            return float(row['price_index'])
-
-        return None
+        result = float(row['price_index']) if row else None
+        _PRICE_INDEX_CACHE.set(cache_key, result)
+        return result
 
     def calculate_weight(
         self,
@@ -363,6 +384,14 @@ class MVPAdjuster:
         central districts (Grand Canal Dock, Clontarf) where €1m+ apartments are
         genuinely normal — so it removes contamination without over-trimming.
         """
+        # Cache per ~110m grid cell: the 2km pool (and hence the ceiling) is
+        # effectively identical for neighbouring subjects, so nearby apartment
+        # valuations reuse one spatial aggregation instead of re-running it.
+        cache_key = (round(latitude, 3), round(longitude, 3), radius_m, min_n, k)
+        hit, cached = _APT_CEILING_CACHE.get(cache_key)
+        if hit:
+            return cached
+
         rows = await self.db.fetch(
             """
             SELECT price, bedrooms
@@ -375,6 +404,7 @@ class MVPAdjuster:
             latitude, longitude, radius_m, sorted(_APARTMENT_TYPES),
         )
         if len(rows) < min_n:
+            _APT_CEILING_CACHE.set(cache_key, None)
             return None
         vals = []
         for r in rows:
@@ -387,7 +417,9 @@ class MVPAdjuster:
         n = len(vals)
         q1 = vals[n // 4]
         q3 = vals[(3 * n) // 4]
-        return q3 + k * (q3 - q1)
+        ceiling = q3 + k * (q3 - q1)
+        _APT_CEILING_CACHE.set(cache_key, ceiling)
+        return ceiling
 
     def bedroom_ladder_valuation(
         self,

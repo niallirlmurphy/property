@@ -55,14 +55,26 @@ Tracked issues and deferred work. Newest first.
 ## Performance
 
 ### Valuation engine latency — temporal-adjustment round-trips
-- **Finding (2026-09-27, `scripts/bench_valuation.py`):** in-process per-stage
-  timing shows the temporal-adjustment loop dominates. Each valuation calls
-  `adjust_temporal` per comparable (up to 30), and each does **two**
-  `_get_price_index` DB round-trips → up to ~60 sequential remote-Supabase
+- **Status:** ADDRESSED 2026-09-28 — added module-level TTL caches in the
+  valuation pipeline (`backend/valuation/cache.py`). Measured with
+  `scripts/bench_valuation.py`: average total **21,596 ms → 9,909 ms (−54%)**,
+  temporal-adjust stage **12,405 ms → 1,710 ms (−86%)**. (Absolute ms inflated
+  by local→remote Supabase latency; the round-trip reduction is what carries to
+  prod.)
+- **Finding (2026-09-27):** the temporal-adjustment loop dominated. Each
+  valuation called `adjust_temporal` per comparable (up to 30), each doing
+  **two** `_get_price_index` DB round-trips → up to ~60 sequential remote
   queries per valuation, even though the target index is identical for all
   comparables and the sale index only varies by (county, sale-month).
-- **Fix direction:** preload `county_monthly_price_indices` for the relevant
-  county once per request (or an in-memory TTL cache), then adjust in memory —
-  the same memoisation already used in `scripts/value_ires_portfolio.py`.
-  Secondary: cache `apartment_price_ceiling` per rounded lat/lon grid cell, and
-  cache geocode results per address.
+- **What shipped:**
+  1. `_PRICE_INDEX_CACHE` — memoises `_get_price_index` by (county, year-month),
+     6h TTL, shared across requests. Collapses the ~60 round-trips to one per
+     distinct month. (Same idea `scripts/value_ires_portfolio.py` monkeypatched;
+     now native so that wrapper is redundant.)
+  2. `_APT_CEILING_CACHE` — caches `apartment_price_ceiling` per ~110m lat/lon
+     grid cell (rounded to 3dp) + params, 6h TTL.
+  3. `_GEOCODE_CACHE` — caches successful `geocode_address` results per
+     (address, eircode, county), 24h TTL (matches the search-layer geocode TTL).
+- **Remaining largest stage:** geocode (~6.6s in the bench) — but that is mostly
+  a test artifact (fake eircodes force a Nominatim fallback; real eircodes
+  resolve from the DB, and repeat addresses now hit the 24h cache).

@@ -23,8 +23,10 @@ import sys
 sys.path.insert(0, 'backend')
 
 from valuation.geocoder import ValuationGeocoder
+import valuation.geocoder as geocoder_mod
 from valuation.comparable_search import ComparableSearcher
 from valuation.adjustments import MVPAdjuster
+import valuation.adjustments as adjustments_mod
 from valuation.calculator import ValuationCalculator
 from valuation.validator import MVPValidator
 from valuation.models import (
@@ -38,6 +40,26 @@ from valuation.models import (
 # ============================================================================
 # Fixtures
 # ============================================================================
+
+@pytest.fixture(autouse=True)
+def clear_valuation_caches():
+    """Clear the module-level valuation caches around every test.
+
+    adjustments.py and geocoder.py memoise price indices, apartment-price
+    ceilings and geocode results in process-lifetime TTL caches to cut DB
+    round-trips. That global state would otherwise leak between tests — a
+    cached (county, month) index would satisfy a later test instead of
+    consuming its mocked ``fetchrow`` side_effect. Clear before and after so
+    each test sees a cold cache.
+    """
+    adjustments_mod._PRICE_INDEX_CACHE.clear()
+    adjustments_mod._APT_CEILING_CACHE.clear()
+    geocoder_mod._GEOCODE_CACHE.clear()
+    yield
+    adjustments_mod._PRICE_INDEX_CACHE.clear()
+    adjustments_mod._APT_CEILING_CACHE.clear()
+    geocoder_mod._GEOCODE_CACHE.clear()
+
 
 @pytest.fixture
 def mock_db_pool():
@@ -159,7 +181,8 @@ class TestGeocoder:
         mock_db_pool.fetchrow.side_effect = [
             {'centroid_lat': 53.32, 'centroid_lon': -6.32, 'property_count': 100},
             {'latitude': 53.34, 'longitude': -6.26,  # ~5km away, same area
-             'address': '28 Somewhere Road, Dublin 2', 'bedrooms': 3},
+             'address': '28 Somewhere Road, Dublin 2', 'bedrooms': 3,
+             'property_type': 'apartment'},
         ]
 
         geocoder = ValuationGeocoder(mock_db_pool)
@@ -178,6 +201,7 @@ class TestGeocoder:
             'longitude': -6.3167,
             'address': '28 Slane Road, Crumlin, Dublin 12',
             'bedrooms': 3,
+            'property_type': 'Terraced house',
         }
 
         geocoder = ValuationGeocoder(mock_db_pool)
@@ -383,6 +407,32 @@ class TestAdjustments:
         assert result['adjusted_price'] == 400000
         assert result['adjustment_factor'] == 1.0
         assert result['fallback'] is True
+
+    @pytest.mark.asyncio
+    async def test_price_index_is_memoised_across_comparables(self, mock_db_pool):
+        """Repeated (county, year-month) lookups hit the cache, not the DB.
+
+        This is the core valuation-latency fix: adjust_temporal is called once
+        per comparable and looks the index up twice, so a naive implementation
+        does ~2N DB round-trips. With memoisation each distinct (county, month)
+        is fetched exactly once regardless of how many comparables share it.
+        """
+        mock_db_pool.fetchrow.return_value = {'price_index': 1.10}
+        adjuster = MVPAdjuster(mock_db_pool)
+
+        # Ten comparables that all sold in the same month, valued to one target
+        # month => only two distinct keys (Dublin/2024-01, Dublin/2026-06).
+        for _ in range(10):
+            await adjuster.adjust_temporal(
+                sale_price=400000,
+                sale_date=datetime(2024, 1, 15),
+                target_date=datetime(2026, 6, 1),
+                county='Dublin',
+            )
+
+        # Without the cache this would be 20 fetches (2 per comparable);
+        # memoised it is exactly 2 — one per distinct (county, month).
+        assert mock_db_pool.fetchrow.await_count == 2
 
     def test_calculate_weight_close_and_recent(self):
         """Test weight calculation for close and recent property."""
