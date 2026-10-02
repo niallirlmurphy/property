@@ -2203,6 +2203,7 @@ async def subscribe_email_alert(
                     SELECT id, address, price, sale_date, county
                     FROM properties
                     WHERE geog IS NOT NULL
+                      AND geocode_suspect IS NOT TRUE
                       AND ST_DWithin(geog, ST_MakePoint($1, $2)::geography, $3 * 1000)
                       AND not_full_market_price = FALSE
                 """
@@ -2366,6 +2367,7 @@ async def cron_send_monthly_alerts(request: Request):
                     SELECT id, address, price, sale_date, county, description
                     FROM properties
                     WHERE geog IS NOT NULL
+                      AND geocode_suspect IS NOT TRUE
                       AND ST_DWithin(geog, ST_MakePoint($1, $2)::geography, $3 * 1000)
                       AND created_at > $4
                       AND not_full_market_price = FALSE

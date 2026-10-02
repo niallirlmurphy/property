@@ -44,7 +44,9 @@ import asyncpg
 import httpx
 import os
 import sys
+import difflib
 import html
+import re
 from datetime import datetime
 from typing import Optional, Tuple, List, Dict
 from dotenv import load_dotenv
@@ -110,9 +112,11 @@ async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = No
         # Only rows currently flagged as bad geocodes (hidden from search). These
         # are the mislocated/wrong-town rows users actually see leaking into area
         # pages, so they are the highest-impact target for a budget-limited run.
-        # This is also the deliberate RETRY path for previously-failed rows (a
-        # failed geocode sets geocode_suspect = TRUE below), so a --suspect run
-        # re-attempts them; a success clears the flag.
+        # Combined with needs_geocoding = TRUE (always required), this naturally
+        # EXCLUDES rows we already attempted: a failed geocode now sets
+        # needs_geocoding = FALSE (see the write phase below), so an address is
+        # never re-fetched or re-billed on a later sub-batch/run. To deliberately
+        # retry a failed row, re-flag it (needs_geocoding = TRUE) first.
         where_clauses.append("geocode_suspect = TRUE")
     else:
         # Exclude rows a prior run already tried and failed (geocode_suspect = TRUE).
@@ -150,8 +154,14 @@ async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = No
         FROM properties
         WHERE {where}
         ORDER BY
-            -- Eircode-holders re-geocode most reliably (eircode-first, ~1 request each)
-            -- and are validated against the routing-key centroid, so process them first.
+            -- Budget-limited sweeps must maximise fixes-per-credit, so geocode the
+            -- rows Mapbox can actually resolve FIRST. Addresses that start with a
+            -- house number are street-level (e.g. "17 Dun Aengus") and geocode
+            -- reliably; rural named houses / townlands ("Sea Breeze, Shrule") have no
+            -- resolvable street and are near-uniformly rejected by validation, so
+            -- they sink to the end where a capped run simply won't reach them.
+            (address ~ '^[0-9]') DESC,
+            -- Then eircode-holders (steerable via routing-key proximity + validatable).
             (eircode IS NOT NULL AND eircode <> '') DESC,
             price DESC,
             sale_date DESC
@@ -190,7 +200,10 @@ async def fetch_centroid_properties(pool: asyncpg.Pool, limit: int = None,
 
         where_clauses = [
             "ABS(latitude - $1) < 0.000001",
-            "ABS(longitude - $2) < 0.000001"
+            "ABS(longitude - $2) < 0.000001",
+            # Skip rows already attempted: failures keep their centroid coords, so
+            # without this every sub-batch would re-select (and re-bill) them.
+            "geocode_attempts = 0"
         ]
         params = [lat, lon]
         idx = 3
@@ -203,7 +216,7 @@ async def fetch_centroid_properties(pool: asyncpg.Pool, limit: int = None,
         where = " AND ".join(where_clauses)
 
         query = f"""
-            SELECT id, address, address_normalized, county, eircode,
+            SELECT id, address, address_normalized, county, eircode, routing_key,
                    latitude, longitude, price, sale_date
             FROM properties
             WHERE {where}
@@ -241,6 +254,70 @@ def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 # wrong-town signal is the county-box check below.
 ROUTING_KEY_MAX_KM = 40.0
 
+# Adaptive per-key threshold (same formula as scripts/flag_bad_geocodes.py):
+# clamp(p75 of the key's member distances * RK_MULT, RK_FLOOR_KM, RK_CEIL_KM).
+# A flat 40km let compact urban keys accept wrong-district matches (D04 → Baldoyle
+# is only ~10km); used in place of ROUTING_KEY_MAX_KM when a key's extent is known.
+RK_MULT = 2.0
+RK_FLOOR_KM = 8.0
+RK_CEIL_KM = 45.0
+
+# Dublin postal district ("Dublin 4", "DUBLIN 6W"). Mapbox parses this as house
+# number + street, e.g. "..., Dublin 4" → "4 Dublin Street, Baldoyle" (rooftop!).
+DUBLIN_DISTRICT_RE = re.compile(r'\bDUBLIN\s+\d{1,2}[A-Z]?\b', re.IGNORECASE)
+
+# Generic street-type words ignored when checking a match's street name against
+# the input address (only the distinctive part, e.g. "SHELBOURNE", must match).
+STREET_GENERIC_WORDS = {
+    'STREET', 'ST', 'ROAD', 'RD', 'AVENUE', 'AVE', 'DRIVE', 'DR', 'LANE', 'PARK',
+    'CLOSE', 'COURT', 'CRESCENT', 'GROVE', 'PLACE', 'SQUARE', 'TERRACE', 'WAY',
+    'VIEW', 'HILL', 'UPPER', 'LOWER', 'NORTH', 'SOUTH', 'EAST', 'WEST', 'THE',
+    'GREEN', 'GARDENS', 'WALK', 'ROW', 'QUAY', 'MEWS', 'LAWN', 'LAWNS', 'RISE',
+    'HEIGHTS', 'VALE', 'WOOD', 'WOODS', 'MANOR', 'DOWNS', 'GLEN', 'OF', 'AND',
+    'APARTMENTS', 'APTS', 'APT',
+}
+
+
+def strip_dublin_district(address: str) -> str:
+    """Remove the 'Dublin N' postal district from an address for querying."""
+    cleaned = DUBLIN_DISTRICT_RE.sub('', address)
+    cleaned = re.sub(r'\s*,\s*(,\s*)+', ', ', cleaned)   # collapse empty components
+    return re.sub(r'\s+', ' ', cleaned).strip(' ,')
+
+
+def street_matches(full_address: Optional[str], input_address: str) -> bool:
+    """True if the matched street's distinctive words all appear in the input.
+
+    Catches Mapbox matching a different street entirely (e.g. "4 Dublin Street,
+    Baldoyle" for "... South Lotts Road, Dublin 4"). Compares against the input
+    with the Dublin district already stripped, so "DUBLIN" can't match itself.
+    """
+    if not full_address:
+        return True  # nothing to compare -> don't reject on this check
+    street = full_address.split(',')[0].upper()
+    tokens = [t for t in re.findall(r'[A-Z]+', street)
+              if t not in STREET_GENERIC_WORDS and len(t) > 1]
+    if not tokens:
+        return True
+    inp = input_address.upper()
+    words = set(re.findall(r'[A-Z]+', inp))
+    # Normalisation expands "St" to "Street", so "Mount St Annes" is stored as
+    # "Mount Street Annes" — let a matched "Saint" accept either form.
+    if words & {'ST', 'STREET'}:
+        words.add('SAINT')
+    compact = re.sub(r'[^A-Z0-9]', '', inp)   # "MC AULEY" vs "MCAULEY"
+
+    def found(t: str) -> bool:
+        if t in words or t in compact:
+            return True
+        # Tolerate small spelling variants (Anglesa/Anglesea, Charlemount/
+        # Charlemont) but not different names (Hook/Cook, Burton/Barton,
+        # Kilross/Kinross): short words must match exactly, longer ones >= 0.9.
+        return len(t) >= 6 and any(
+            difflib.SequenceMatcher(None, t, w).ratio() >= 0.9 for w in words)
+
+    return all(found(t) for t in tokens)
+
 # County bounding boxes are tight; pad them by this margin before treating "outside
 # the box" as a wrong-county rejection, so genuine edge-of-county towns (e.g. Fingal
 # reaches ~53.63N, above County Dublin's 53.50 box) are not rejected.
@@ -264,7 +341,8 @@ def _outside_county_box(lat: float, lon: float, county: str) -> bool:
 
 def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
                          precision: Optional[str], routing_key: Optional[str] = None,
-                         rk_centroids: Optional[dict] = None) -> Tuple[bool, str, int]:
+                         rk_centroids: Optional[dict] = None,
+                         rk_thresholds: Optional[dict] = None) -> Tuple[bool, str, int]:
     """
     Validate Mapbox coordinates.
 
@@ -285,7 +363,8 @@ def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
         centroid = rk_centroids.get(routing_key)
         if centroid:
             dist_km = _haversine_km(lat, lon, centroid[0], centroid[1])
-            if dist_km > ROUTING_KEY_MAX_KM:
+            max_km = (rk_thresholds or {}).get(routing_key, ROUTING_KEY_MAX_KM)
+            if dist_km > max_km:
                 return False, f"routing_key_far({routing_key}:{dist_km:.0f}km)", 0
 
     # Validation 1c: Wrong county (CRITICAL, hard reject).
@@ -344,7 +423,8 @@ def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
 
 async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                                 client: httpx.AsyncClient,
-                                rk_centroids: Optional[dict] = None) -> List[Tuple[int, Optional[float], Optional[float], int]]:
+                                rk_centroids: Optional[dict] = None,
+                               rk_thresholds: Optional[dict] = None) -> List[Tuple[int, Optional[float], Optional[float], int]]:
     """
     Batch geocode using Mapbox API with improved logic:
     - HTML entity cleaning (Tandy&#039;s → Tandy's)
@@ -385,9 +465,6 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                 address = extract_base_address(address)
                 bulk_count += 1
 
-            # Build query with county
-            query = f"{address}, {prop['county']}, Ireland" if prop['county'] else f"{address}, Ireland"
-
             # If the property has an eircode routing key with a known centroid, bias
             # Mapbox toward it. This is the key fix for generic street names
             # ("Main Street", "Harbour Road"): without a bias Mapbox picks whichever
@@ -397,6 +474,15 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
             proximity = None
             if rk_centroids:
                 proximity = rk_centroids.get(prop.get('routing_key'))
+
+            # Drop "Dublin N" when proximity already carries the district — Mapbox
+            # otherwise reads it as "N Dublin Street" (e.g. Baldoyle). Without a
+            # routing key it's our only district signal, so keep it.
+            if proximity:
+                address = strip_dublin_district(address)
+
+            # Build query with county
+            query = f"{address}, {prop['county']}, Ireland" if prop['county'] else f"{address}, Ireland"
 
             try:
                 # Geocode by ADDRESS only. Mapbox cannot resolve Irish unit-level
@@ -422,16 +508,22 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                     # centroids for the hard distance check.
                     is_valid, reason, quality_score = validate_coordinates(
                         lat, lon, prop['county'], feature_type, precision,
-                        routing_key=prop.get('routing_key'), rk_centroids=rk_centroids
+                        routing_key=prop.get('routing_key'), rk_centroids=rk_centroids,
+                        rk_thresholds=rk_thresholds
                     )
+                    if (is_valid and feature_type in ('address', 'street')
+                            and not street_matches(result.get('full_address'),
+                                                   strip_dublin_district(address))):
+                        is_valid, reason = False, f"street_mismatch({result.get('full_address', '')[:40]})"
 
                     if is_valid and quality_score >= 70:
                         results.append((prop['id'], lat, lon, quality_score))
                     else:
-                        if len(results) < 5:  # Log first few failures
-                            print(f"  ⚠️  Rejected {prop['address'][:40]}: {reason}")
+                        # Log every rejection so batch reports can tally reasons.
+                        print(f"  ⚠️  Rejected {prop['address'][:40]}: {reason}")
                         results.append((prop['id'], None, None, 0))
                 else:
+                    print(f"  ⚠️  Rejected {prop['address'][:40]}: no_result")
                     results.append((prop['id'], None, None, 0))
 
             except Exception as e:
@@ -452,7 +544,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                                no_eircode: bool = False, min_price: int = None,
                                centroid: bool = False, suspect: bool = False,
                                eircode_only: bool = False, since: str = None,
-                               before: str = None):
+                               before: str = None, ids_file: str = None):
     """
     Batch geocode properties using Mapbox.
 
@@ -475,7 +567,17 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
 
     try:
         # Fetch properties
-        if centroid:
+        if ids_file:
+            # Exact rows from a file (one id per line) — used to re-run a specific
+            # batch so before/after results can be compared like-for-like.
+            ids = [int(x) for x in open(ids_file).read().split()]
+            rows = await pool.fetch("""
+                SELECT id, address, address_normalized, county, eircode, routing_key,
+                       latitude, longitude, price, sale_date
+                FROM properties WHERE id = ANY($1::bigint[]) ORDER BY id
+            """, ids)
+            properties = [dict(r) for r in rows]
+        elif centroid:
             properties = await fetch_centroid_properties(
                 pool, limit=limit, county=county
             )
@@ -523,6 +625,33 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         except Exception as e:
             print(f"⚠️  Could not load routing_key_stats centroids ({e}); skipping distance validation")
 
+        # Adaptive per-key distance thresholds (p75 extent formula, as in
+        # flag_bad_geocodes.py). Keys missing here fall back to ROUTING_KEY_MAX_KM.
+        rk_thresholds = {}
+        try:
+            async with pool.acquire() as conn:
+                await conn.execute("SET statement_timeout = '600s'")
+                ext_rows = await conn.fetch("""
+                    SELECT p.routing_key,
+                           percentile_cont(0.75) WITHIN GROUP (ORDER BY
+                             ST_Distance(
+                               ST_SetSRID(ST_MakePoint(p.longitude, p.latitude), 4326)::geography,
+                               ST_SetSRID(ST_MakePoint(k.centroid_lon, k.centroid_lat), 4326)::geography
+                             ) / 1000.0) AS p75_km
+                    FROM properties p
+                    JOIN routing_key_stats k ON k.routing_key = p.routing_key
+                    WHERE p.latitude IS NOT NULL
+                      AND k.geocoded_count >= 20 AND k.centroid_lat IS NOT NULL
+                    GROUP BY p.routing_key
+                """)
+            rk_thresholds = {
+                r['routing_key']: max(RK_FLOOR_KM, min(RK_CEIL_KM, r['p75_km'] * RK_MULT))
+                for r in ext_rows
+            }
+            print(f"Loaded {len(rk_thresholds):,} adaptive routing-key thresholds")
+        except Exception as e:
+            print(f"⚠️  Could not compute adaptive thresholds ({e}); using flat {ROUTING_KEY_MAX_KM:.0f}km")
+
         # Release the DB pool during the (potentially long) geocoding phase. Holding
         # idle connections open across a multi-minute Mapbox run lets Supabase close
         # them server-side, so the later write phase would fail with
@@ -546,7 +675,8 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
             for ci, start in enumerate(range(0, total, CHUNK_SIZE), 1):
                 chunk = properties[start:start + CHUNK_SIZE]
                 print(f"\n--- Chunk {ci}/{n_chunks}: properties {start + 1:,}–{start + len(chunk):,} of {total:,} ---")
-                results = await batch_geocode_mapbox(chunk, None, client, rk_centroids=rk_centroids)
+                results = await batch_geocode_mapbox(chunk, None, client, rk_centroids=rk_centroids,
+                                                   rk_thresholds=rk_thresholds)
 
                 # Tally this chunk and collect the rows to persist.
                 chunk_updates = []
@@ -565,11 +695,12 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                 # failing rows every sub-batch). Skipped for centroid mode: those rows
                 # keep their existing (centroid) coordinates and flipping suspect would
                 # hide them from search rather than just de-queue them.
-                mark_failed = failed_ids and not centroid
+                keep_coords = centroid or bool(ids_file)
+                mark_failed = failed_ids and not keep_coords
 
                 # Persist immediately with a short-lived pool (opened only for the write
                 # so no idle connection is held across the next chunk's long geocode).
-                if not dry_run and (chunk_updates or mark_failed):
+                if not dry_run and (chunk_updates or failed_ids):
                     pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3)
                     try:
                         if chunk_updates:
@@ -578,19 +709,47 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                                 SET latitude = $1, longitude = $2,
                                     geog = ST_MakePoint($2, $1)::geography,
                                     needs_geocoding = FALSE,
-                                    geocode_suspect = FALSE
+                                    geocode_suspect = FALSE,
+                                    geocode_attempts = geocode_attempts + 1,
+                                    geocode_last_attempt = now()
                                 WHERE id = $3
                             """, chunk_updates)
                             written += len(chunk_updates)
                             print(f"  💾 Saved {len(chunk_updates):,} geocodes this chunk "
                                   f"(total saved: {written:,})")
                         if mark_failed:
+                            # De-queue failures: set needs_geocoding = FALSE so NO worklist
+                            # fetch re-selects them — including the --suspect path, which
+                            # requires geocode_suspect = TRUE and previously re-billed the
+                            # same failing addresses every sub-batch. Record the attempt so
+                            # we have a persistent, auditable trail of what we've tried.
                             await pool.executemany(
-                                "UPDATE properties SET geocode_suspect = TRUE WHERE id = $1",
+                                """
+                                UPDATE properties
+                                SET geocode_suspect = TRUE,
+                                    needs_geocoding = FALSE,
+                                    geocode_attempts = geocode_attempts + 1,
+                                    geocode_last_attempt = now()
+                                WHERE id = $1
+                                """,
                                 [(fid,) for fid in failed_ids]
                             )
-                            print(f"  🚩 Flagged {len(failed_ids):,} failed rows as "
-                                  f"geocode_suspect (removed from worklist)")
+                            print(f"  🚩 Flagged {len(failed_ids):,} failed rows "
+                                  f"(needs_geocoding=FALSE, attempt recorded — not re-billed)")
+                        elif failed_ids and keep_coords:
+                            # Centroid failures keep their coords and visibility; just
+                            # record the attempt so the centroid fetch skips them.
+                            await pool.executemany(
+                                """
+                                UPDATE properties
+                                SET geocode_attempts = geocode_attempts + 1,
+                                    geocode_last_attempt = now()
+                                WHERE id = $1
+                                """,
+                                [(fid,) for fid in failed_ids]
+                            )
+                            print(f"  📝 Recorded {len(failed_ids):,} failed centroid attempts "
+                                  f"(coords kept, not re-billed)")
                     except Exception as e:
                         # Don't let one failed write abort the whole run — later chunks
                         # can still save. These properties stay flagged for a re-run.
@@ -640,6 +799,7 @@ async def main():
     min_price = None
     since = None
     before = None
+    ids_file = None
 
     for i, arg in enumerate(sys.argv):
         if arg == "--limit" and i + 1 < len(sys.argv):
@@ -652,6 +812,8 @@ async def main():
             since = sys.argv[i + 1]
         elif arg == "--before" and i + 1 < len(sys.argv):
             before = sys.argv[i + 1]
+        elif arg == "--ids-file" and i + 1 < len(sys.argv):
+            ids_file = sys.argv[i + 1]
 
     await geocode_with_mapbox(
         limit=limit,
@@ -664,7 +826,8 @@ async def main():
         suspect=suspect,
         eircode_only=eircode_only,
         since=since,
-        before=before
+        before=before,
+        ids_file=ids_file
     )
 
 

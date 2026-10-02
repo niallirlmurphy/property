@@ -131,6 +131,8 @@ class ComparableSearcher:
             CROSS JOIN subject_point sp
             WHERE
                 p.geog IS NOT NULL
+                -- Known-wrong coordinates must not enter as "nearby" comparables.
+                AND p.geocode_suspect IS NOT TRUE
                 AND p.not_full_market_price = FALSE
                 AND p.price IS NOT NULL
                 AND p.price BETWEEN 50000 AND 5000000

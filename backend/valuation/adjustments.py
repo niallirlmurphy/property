@@ -397,6 +397,7 @@ class MVPAdjuster:
             SELECT price, bedrooms
             FROM properties
             WHERE geog IS NOT NULL
+              AND geocode_suspect IS NOT TRUE
               AND ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)
               AND sale_date >= '2022-01-01'
               AND lower(property_type) = ANY($4::text[])
