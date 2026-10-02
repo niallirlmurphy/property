@@ -174,63 +174,46 @@ async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = No
 
 async def fetch_centroid_properties(pool: asyncpg.Pool, limit: int = None,
                                     county: str = None) -> List[Dict]:
-    """Fetch properties at centroid coordinates (100+ addresses at same point)."""
-    print("Identifying centroid coordinates...")
+    """Fetch un-attempted properties at centroid coordinates (100+ addresses at same point).
 
-    # Find centroid coordinates
-    centroid_query = """
-        SELECT latitude, longitude, COUNT(DISTINCT address) as addr_count
-        FROM properties
-        WHERE latitude IS NOT NULL AND longitude IS NOT NULL
-        GROUP BY latitude, longitude
-        HAVING COUNT(DISTINCT address) >= 100
-        ORDER BY COUNT(DISTINCT address) DESC
+    Ordered numbered-street-addresses first: rural named houses / townlands at a
+    town centroid almost always come back from Mapbox as that same town centre, so
+    a budget-limited run should reach the resolvable rows first.
     """
+    print("Identifying centroid coordinates...")
+    params = []
+    county_clause = ""
+    if county:
+        county_clause = "AND LOWER(p.county) = LOWER($1)"
+        params.append(county)
+    limit_clause = f"LIMIT {int(limit)}" if limit else ""
 
-    centroids = await pool.fetch(centroid_query)
-    print(f"Found {len(centroids)} centroid coordinates")
-
-    if not centroids:
-        return []
-
-    # Fetch properties at those centroids
-    properties = []
-    for centroid in centroids:
-        lat, lon = centroid['latitude'], centroid['longitude']
-
-        where_clauses = [
-            "ABS(latitude - $1) < 0.000001",
-            "ABS(longitude - $2) < 0.000001",
-            # Skip rows already attempted: failures keep their centroid coords, so
-            # without this every sub-batch would re-select (and re-bill) them.
-            "geocode_attempts = 0"
-        ]
-        params = [lat, lon]
-        idx = 3
-
-        if county:
-            where_clauses.append(f"LOWER(county) = LOWER(${idx})")
-            params.append(county)
-            idx += 1
-
-        where = " AND ".join(where_clauses)
-
-        query = f"""
-            SELECT id, address, address_normalized, county, eircode, routing_key,
-                   latitude, longitude, price, sale_date
-            FROM properties
-            WHERE {where}
+    async with pool.acquire() as conn:
+        await conn.execute("SET statement_timeout = '600s'")
+        rows = await conn.fetch(f"""
+            WITH centroids AS (
+                SELECT latitude, longitude
+                FROM properties
+                WHERE latitude IS NOT NULL AND longitude IS NOT NULL
+                GROUP BY latitude, longitude
+                HAVING COUNT(DISTINCT address) >= 100
+            )
+            SELECT p.id, p.address, p.address_normalized, p.county, p.eircode, p.routing_key,
+                   p.latitude, p.longitude, p.price, p.sale_date
+            FROM properties p
+            JOIN centroids c ON ABS(p.latitude - c.latitude) < 0.000001
+                            AND ABS(p.longitude - c.longitude) < 0.000001
+            -- Skip rows already attempted: failures keep their centroid coords, so
+            -- without this every sub-batch would re-select (and re-bill) them.
+            WHERE p.geocode_attempts = 0 {county_clause}
             ORDER BY
-                CASE WHEN eircode IS NOT NULL THEN 0 ELSE 1 END,
-                sale_date DESC
-            LIMIT 500
-        """
-
-        rows = await pool.fetch(query, *params)
-        for row in rows:
-            properties.append(dict(row))
-            if limit and len(properties) >= limit:
-                return properties
+                (p.address ~ '^[0-9]') DESC,
+                (p.eircode IS NOT NULL AND p.eircode <> '') DESC,
+                p.sale_date DESC
+            {limit_clause}
+        """, *params)
+    print(f"Found {len(rows):,} centroid properties to process")
+    return [dict(r) for r in rows]
 
     return properties
 
@@ -421,10 +404,27 @@ def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
     return True, "validated", quality_score
 
 
+async def _create_pool_with_retry(attempts: int = 10, delay_s: float = 30.0) -> asyncpg.Pool:
+    """Open a DB pool, retrying through transient network/DNS drops.
+
+    The write phase runs after a chunk's Mapbox lookups are already paid for, so a
+    momentary outage here must not discard them (a DNS blip lost a whole batch).
+    """
+    for attempt in range(1, attempts + 1):
+        try:
+            return await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3)
+        except (OSError, asyncpg.PostgresError) as e:
+            if attempt == attempts:
+                raise
+            print(f"  ⚠️  DB connect failed ({e}); retry {attempt}/{attempts - 1} in {delay_s:.0f}s")
+            await asyncio.sleep(delay_s)
+
+
 async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                                 client: httpx.AsyncClient,
                                 rk_centroids: Optional[dict] = None,
-                               rk_thresholds: Optional[dict] = None) -> List[Tuple[int, Optional[float], Optional[float], int]]:
+                               rk_thresholds: Optional[dict] = None,
+                               centroid_mode: bool = False) -> List[Tuple[int, Optional[float], Optional[float], int]]:
     """
     Batch geocode using Mapbox API with improved logic:
     - HTML entity cleaning (Tandy&#039;s → Tandy's)
@@ -516,6 +516,17 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                                                    strip_dublin_district(address))):
                         is_valid, reason = False, f"street_mismatch({result.get('full_address', '')[:40]})"
 
+                    # Centroid mode: a town-level answer (or one that lands back on the
+                    # row's current point) can't fix a town-level centroid — it just
+                    # re-saves the same pile as a "success" (Donegal town, batch 3).
+                    if is_valid and centroid_mode:
+                        if feature_type in ('locality', 'place', 'postcode', 'region',
+                                            'district', 'neighborhood'):
+                            is_valid, reason = False, f"centroid_level({feature_type})"
+                        elif prop.get('latitude') is not None and _haversine_km(
+                                lat, lon, prop['latitude'], prop['longitude']) < 0.1:
+                            is_valid, reason = False, "same_point"
+
                     if is_valid and quality_score >= 70:
                         results.append((prop['id'], lat, lon, quality_score))
                     else:
@@ -529,7 +540,9 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
             except Exception as e:
                 if len(results) < 5:
                     print(f"  ❌ Error geocoding {prop['address'][:40]}: {e}")
-                results.append((prop['id'], None, None, 0))
+                # quality -1 = request error (e.g. network drop), not a rejection:
+                # the row was never really tried, so don't record an attempt.
+                results.append((prop['id'], None, None, -1))
 
     print(f"\n✓ Geocoding complete:")
     print(f"  Bulk sales extracted: {bulk_count}")
@@ -666,6 +679,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         # it. Persisting each chunk as it completes caps the loss to at most one chunk.
         success_count = 0
         failed_count = 0
+        error_count = 0
         written = 0
         quality_scores = []
         total = len(properties)
@@ -676,7 +690,8 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                 chunk = properties[start:start + CHUNK_SIZE]
                 print(f"\n--- Chunk {ci}/{n_chunks}: properties {start + 1:,}–{start + len(chunk):,} of {total:,} ---")
                 results = await batch_geocode_mapbox(chunk, None, client, rk_centroids=rk_centroids,
-                                                   rk_thresholds=rk_thresholds)
+                                                   rk_thresholds=rk_thresholds,
+                                                   centroid_mode=centroid)
 
                 # Tally this chunk and collect the rows to persist.
                 chunk_updates = []
@@ -686,6 +701,8 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                         success_count += 1
                         quality_scores.append(quality_score)
                         chunk_updates.append((lat, lon, prop_id))
+                    elif quality_score == -1:
+                        error_count += 1  # left untouched -> retried next run
                     else:
                         failed_count += 1
                         failed_ids.append(prop_id)
@@ -701,7 +718,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                 # Persist immediately with a short-lived pool (opened only for the write
                 # so no idle connection is held across the next chunk's long geocode).
                 if not dry_run and (chunk_updates or failed_ids):
-                    pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3)
+                    pool = await _create_pool_with_retry()
                     try:
                         if chunk_updates:
                             await pool.executemany("""
@@ -765,6 +782,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         print(f"Processed: {total:,}")
         print(f"✓ Success: {success_count:,} ({100*success_count/total:.1f}%)" if total else "✓ Success: 0")
         print(f"✗ Failed: {failed_count:,}")
+        print(f"⚠ Request errors (not attempted, will retry): {error_count:,}")
         if not dry_run:
             print(f"💾 Saved to database: {written:,}")
 
