@@ -244,7 +244,6 @@ ROUTING_KEY_MAX_KM = 40.0
 RK_MULT = 2.0
 RK_FLOOR_KM = 8.0
 RK_CEIL_KM = 45.0
-CENTROID_MAX_MOVE_KM = 20.0  # centroid mode, rows without a routing key
 
 # Dublin postal district ("Dublin 4", "DUBLIN 6W"). Mapbox parses this as house
 # number + street, e.g. "..., Dublin 4" → "4 Dublin Street, Baldoyle" (rooftop!).
@@ -267,6 +266,14 @@ def strip_dublin_district(address: str) -> str:
     cleaned = DUBLIN_DISTRICT_RE.sub('', address)
     cleaned = re.sub(r'\s*,\s*(,\s*)+', ', ', cleaned)   # collapse empty components
     return re.sub(r'\s+', ' ', cleaned).strip(' ,')
+
+
+def district_routing_key(address: str) -> Optional[str]:
+    """Routing key implied by a 'Dublin N' postal district ("Dublin 6W" -> D6W, "Dublin 8" -> D08)."""
+    m = re.search(r'\bDUBLIN\s+(\d{1,2})(W)?\b', address, re.IGNORECASE)
+    if not m:
+        return None
+    return 'D6W' if m.group(2) else f"D{int(m.group(1)):02d}"
 
 
 def street_matches(full_address: Optional[str], input_address: str) -> bool:
@@ -481,9 +488,12 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
             # matching street ranks highest and lands in the wrong district (e.g.
             # "Main Street, Donnybrook D04" resolving to D11, 8km away). Passing the
             # routing-key centroid as proximity snaps the match back to the right area.
+            # No eircode? A "Dublin N" district still pins the routing key, giving the
+            # same proximity bias + distance check (and letting us strip the district).
+            routing_key = prop.get('routing_key') or district_routing_key(address)
             proximity = None
             if rk_centroids:
-                proximity = rk_centroids.get(prop.get('routing_key'))
+                proximity = rk_centroids.get(routing_key)
 
             # Drop "Dublin N" when proximity already carries the district — Mapbox
             # otherwise reads it as "N Dublin Street" (e.g. Baldoyle). Without a
@@ -518,7 +528,7 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                     # centroids for the hard distance check.
                     is_valid, reason, quality_score = validate_coordinates(
                         lat, lon, prop['county'], feature_type, precision,
-                        routing_key=prop.get('routing_key'), rk_centroids=rk_centroids,
+                        routing_key=routing_key, rk_centroids=rk_centroids,
                         rk_thresholds=rk_thresholds
                     )
                     if (is_valid and feature_type in ('address', 'street')
@@ -537,15 +547,6 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                             moved_km = _haversine_km(lat, lon, prop['latitude'], prop['longitude'])
                             if moved_km < 0.1:
                                 is_valid, reason = False, "same_point"
-                            elif (not prop.get('routing_key') and moved_km > CENTROID_MAX_MOVE_KM
-                                  and not _outside_county_box(prop['latitude'], prop['longitude'],
-                                                              prop['county'])):
-                                # No eircode → no routing-key check. If the current centroid
-                                # is inside the row's county it's (roughly) the town centre,
-                                # so a jump far beyond it is a same-named estate elsewhere in
-                                # the county. A current point outside the county is a bogus
-                                # pile, and moving far away from it is the fix.
-                                is_valid, reason = False, f"far_from_centroid({moved_km:.0f}km)"
 
                     if is_valid and quality_score >= 70:
                         results.append((prop['id'], lat, lon, quality_score))
