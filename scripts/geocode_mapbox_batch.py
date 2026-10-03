@@ -244,6 +244,7 @@ ROUTING_KEY_MAX_KM = 40.0
 RK_MULT = 2.0
 RK_FLOOR_KM = 8.0
 RK_CEIL_KM = 45.0
+CENTROID_MAX_MOVE_KM = 20.0  # centroid mode, rows without a routing key
 
 # Dublin postal district ("Dublin 4", "DUBLIN 6W"). Mapbox parses this as house
 # number + street, e.g. "..., Dublin 4" → "4 Dublin Street, Baldoyle" (rooftop!).
@@ -532,9 +533,19 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                         if feature_type in ('locality', 'place', 'postcode', 'region',
                                             'district', 'neighborhood'):
                             is_valid, reason = False, f"centroid_level({feature_type})"
-                        elif prop.get('latitude') is not None and _haversine_km(
-                                lat, lon, prop['latitude'], prop['longitude']) < 0.1:
-                            is_valid, reason = False, "same_point"
+                        elif prop.get('latitude') is not None:
+                            moved_km = _haversine_km(lat, lon, prop['latitude'], prop['longitude'])
+                            if moved_km < 0.1:
+                                is_valid, reason = False, "same_point"
+                            elif (not prop.get('routing_key') and moved_km > CENTROID_MAX_MOVE_KM
+                                  and not _outside_county_box(prop['latitude'], prop['longitude'],
+                                                              prop['county'])):
+                                # No eircode → no routing-key check. If the current centroid
+                                # is inside the row's county it's (roughly) the town centre,
+                                # so a jump far beyond it is a same-named estate elsewhere in
+                                # the county. A current point outside the county is a bogus
+                                # pile, and moving far away from it is the fix.
+                                is_valid, reason = False, f"far_from_centroid({moved_km:.0f}km)"
 
                     if is_valid and quality_score >= 70:
                         results.append((prop['id'], lat, lon, quality_score))
