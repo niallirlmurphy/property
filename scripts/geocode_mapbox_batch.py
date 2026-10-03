@@ -62,6 +62,7 @@ from canonical_geocoding import (
 from duplicate_handler import update_geocoding_for_duplicates
 from mapbox_client import MapboxClient
 from extract_base_address import is_bulk_sale, extract_base_address
+from geocode_query_prep import fold, prepare_geocode_address, load_town_gazetteer
 
 load_dotenv("backend/.env")
 
@@ -257,7 +258,7 @@ STREET_GENERIC_WORDS = {
     'VIEW', 'HILL', 'UPPER', 'LOWER', 'NORTH', 'SOUTH', 'EAST', 'WEST', 'THE',
     'GREEN', 'GARDENS', 'WALK', 'ROW', 'QUAY', 'MEWS', 'LAWN', 'LAWNS', 'RISE',
     'HEIGHTS', 'VALE', 'WOOD', 'WOODS', 'MANOR', 'DOWNS', 'GLEN', 'OF', 'AND',
-    'APARTMENTS', 'APTS', 'APT',
+    'APARTMENTS', 'APTS', 'APT', 'SAINT',
 }
 
 
@@ -268,12 +269,27 @@ def strip_dublin_district(address: str) -> str:
     return re.sub(r'\s+', ' ', cleaned).strip(' ,')
 
 
+RESULT_RK_RE = re.compile(r'\b([AC-FHKNPR-TV-Y]\d{2}|D6W)(?:\s+[0-9AC-FHKNPR-TV-Y]{4})?\b')
+
+
+def result_routing_key(full_address: Optional[str]) -> Optional[str]:
+    """Routing key of the eircode Mapbox put in its answer ("42 Park Court, Cork,
+    T23 R9W7, Ireland" -> T23). Skips the first component (house number/street)."""
+    if not full_address or ',' not in full_address:
+        return None
+    keys = RESULT_RK_RE.findall(full_address.split(',', 1)[1].upper())
+    return keys[-1] if keys else None
+
+
 def district_routing_key(address: str) -> Optional[str]:
     """Routing key implied by a 'Dublin N' postal district ("Dublin 6W" -> D6W, "Dublin 8" -> D08)."""
     m = re.search(r'\bDUBLIN\s+(\d{1,2})(W)?\b', address, re.IGNORECASE)
     if not m:
         return None
     return 'D6W' if m.group(2) else f"D{int(m.group(1)):02d}"
+
+
+COUNTY_NAMES = {fold(c) for c in COUNTY_BOUNDS}
 
 
 def street_matches(full_address: Optional[str], input_address: str) -> bool:
@@ -285,12 +301,13 @@ def street_matches(full_address: Optional[str], input_address: str) -> bool:
     """
     if not full_address:
         return True  # nothing to compare -> don't reject on this check
-    street = full_address.split(',')[0].upper()
+    result = fold(full_address)            # fadas/apostrophes: Ard Áilinn, Kineth's
+    street = result.split(',')[0]
     tokens = [t for t in re.findall(r'[A-Z]+', street)
               if t not in STREET_GENERIC_WORDS and len(t) > 1]
     if not tokens:
         return True
-    inp = input_address.upper()
+    inp = fold(input_address)
     words = set(re.findall(r'[A-Z]+', inp))
     # Normalisation expands "St" to "Street", so "Mount St Annes" is stored as
     # "Mount Street Annes" — let a matched "Saint" accept either form.
@@ -298,14 +315,30 @@ def street_matches(full_address: Optional[str], input_address: str) -> bool:
         words.add('SAINT')
     compact = re.sub(r'[^A-Z0-9]', '', inp)   # "MC AULEY" vs "MCAULEY"
 
+    # Irish names are spelt many ways (Alainn/Ailinn, Cois/Cius). When the house
+    # number and the locality both agree, accept words whose consonants match.
+    num_res = re.match(r'\s*(\d+[A-Z]?)\b', street)
+    num_inp = re.match(r'\s*(\d+[A-Z]?)\b', inp)
+    locality = result.split(',')[1].strip() if ',' in result else ''
+    # A county ("Dublin", "County Cork") is too broad to corroborate anything.
+    locality_is_county = fold(re.sub(r'^(COUNTY|CO\.?)\s+', '', locality)) in COUNTY_NAMES
+    corroborated = (bool(num_res and num_inp) and num_res.group(1) == num_inp.group(1)
+                    and bool(locality) and not locality_is_county and locality in inp)
+
+    def skeleton(w: str) -> str:
+        return re.sub(r'[AEIOU]', '', w)   # keep Y: Kellys != Kells
+
     def found(t: str) -> bool:
         if t in words or t in compact:
             return True
         # Tolerate small spelling variants (Anglesa/Anglesea, Charlemount/
         # Charlemont) but not different names (Hook/Cook, Burton/Barton,
         # Kilross/Kinross): short words must match exactly, longer ones >= 0.9.
-        return len(t) >= 6 and any(
-            difflib.SequenceMatcher(None, t, w).ratio() >= 0.9 for w in words)
+        if len(t) >= 6 and any(
+                difflib.SequenceMatcher(None, t, w).ratio() >= 0.9 for w in words):
+            return True
+        return corroborated and len(t) >= 4 and any(
+            len(w) >= 4 and skeleton(w) == skeleton(t) for w in words)
 
     return all(found(t) for t in tokens)
 
@@ -441,7 +474,8 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                                 client: httpx.AsyncClient,
                                 rk_centroids: Optional[dict] = None,
                                rk_thresholds: Optional[dict] = None,
-                               centroid_mode: bool = False) -> List[Tuple[int, Optional[float], Optional[float], int]]:
+                               centroid_mode: bool = False,
+                               gazetteer: Optional[dict] = None) -> List[Tuple[int, Optional[float], Optional[float], int]]:
     """
     Batch geocode using Mapbox API with improved logic:
     - HTML entity cleaning (Tandy&#039;s → Tandy's)
@@ -468,6 +502,8 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
         # Process individually to use eircode-first and bulk extraction logic
         bulk_count = 0
         eircode_count = 0
+        retry_count = 0
+        retry_hits = 0
 
         for i, prop in enumerate(properties):
             if i % 100 == 0 and i > 0:
@@ -501,8 +537,58 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
             if proximity:
                 address = strip_dublin_district(address)
 
-            # Build query with county
-            query = f"{address}, {prop['county']}, Ireland" if prop['county'] else f"{address}, Ireland"
+            # Geocoding-specific cleanup (noise words, duplicate county, town typos).
+            address = prepare_geocode_address(address, prop['county'], gazetteer)
+            compare_to = strip_dublin_district(address)
+
+            def evaluate(result: dict) -> Tuple[Optional[float], Optional[float], int, Optional[str]]:
+                """Validate one Mapbox answer -> (lat, lon, quality, reject_reason)."""
+                lat, lon = result['latitude'], result['longitude']
+                # v6 API returns feature_type (address/street/postcode/…) and a
+                # separate coordinate accuracy (rooftop/parcel/point/…) as 'precision'.
+                feature_type = result.get('feature_type', 'unknown')
+                full_address = result.get('full_address') or ''
+                # Validate with real feature_type + precision so rooftop (100) /
+                # parcel (90) / point (80) score distinctly. Pass routing key +
+                # centroids for the hard distance check.
+                is_valid, reason, quality_score = validate_coordinates(
+                    lat, lon, prop['county'], feature_type, result.get('precision', 'unknown'),
+                    routing_key=routing_key, rk_centroids=rk_centroids,
+                    rk_thresholds=rk_thresholds
+                )
+                # Mapbox usually names the answer's eircode; a different routing key
+                # is a different place even when it's close ("42 Park Court, T23"
+                # for 42 Pine Court, T12 — inside T12's distance threshold).
+                got_rk = result_routing_key(full_address)
+                if is_valid and routing_key and got_rk and got_rk != routing_key:
+                    is_valid, reason = False, f"routing_key_mismatch({got_rk}!={routing_key})"
+                if (is_valid and feature_type in ('address', 'street')
+                        and not street_matches(full_address, compare_to)):
+                    is_valid, reason = False, f"street_mismatch({full_address[:40]})"
+
+                # Centroid mode: a town-level answer (or one that lands back on the
+                # row's current point) can't fix a town-level centroid — it just
+                # re-saves the same pile as a "success" (Donegal town, batch 3).
+                if is_valid and centroid_mode:
+                    if feature_type in ('locality', 'place', 'postcode', 'region',
+                                        'district', 'neighborhood'):
+                        is_valid, reason = False, f"centroid_level({feature_type})"
+                    elif prop.get('latitude') is not None and _haversine_km(
+                            lat, lon, prop['latitude'], prop['longitude']) < 0.1:
+                        is_valid, reason = False, "same_point"
+
+                if is_valid and quality_score >= 70:
+                    return lat, lon, quality_score, None
+                return None, None, 0, reason
+
+            # Urban retry: in a long query one strong word can pull Mapbox to a
+            # same-named place ("…, Blackrock" -> Blackrock, Dublin). If the full query
+            # fails, retry with just number + estate/street + county. Only when the
+            # routing key is known, since that's what makes a shorter query safe.
+            queries = [address]
+            core = address.split(',')[0].strip()
+            if proximity and re.match(r'\d', core) and core != address:
+                queries.append(core)
 
             try:
                 # Geocode by ADDRESS only. Mapbox cannot resolve Irish unit-level
@@ -510,52 +596,35 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                 # nothing (or coarse routing-key level) and wastes a request. The
                 # eircode's routing key is instead used as a proximity bias here and
                 # for the hard distance check in validate_coordinates below.
-                result = await mapbox.geocode(query, country='ie', proximity=proximity)
-
-                if result:
-                    lat = result['latitude']
-                    lon = result['longitude']
-                    # v6 API returns feature_type (address/street/postcode/…) and a
-                    # separate coordinate accuracy (rooftop/parcel/point/…) as 'precision'.
-                    feature_type = result.get('feature_type', 'unknown')
-                    precision = result.get('precision', 'unknown')
-
-                    if result.get('method') == 'eircode':
-                        eircode_count += 1
-
-                    # Validate with real feature_type + precision so rooftop (100) /
-                    # parcel (90) / point (80) score distinctly. Pass routing key +
-                    # centroids for the hard distance check.
-                    is_valid, reason, quality_score = validate_coordinates(
-                        lat, lon, prop['county'], feature_type, precision,
-                        routing_key=routing_key, rk_centroids=rk_centroids,
-                        rk_thresholds=rk_thresholds
-                    )
-                    if (is_valid and feature_type in ('address', 'street')
-                            and not street_matches(result.get('full_address'),
-                                                   strip_dublin_district(address))):
-                        is_valid, reason = False, f"street_mismatch({result.get('full_address', '')[:40]})"
-
-                    # Centroid mode: a town-level answer (or one that lands back on the
-                    # row's current point) can't fix a town-level centroid — it just
-                    # re-saves the same pile as a "success" (Donegal town, batch 3).
-                    if is_valid and centroid_mode:
-                        if feature_type in ('locality', 'place', 'postcode', 'region',
-                                            'district', 'neighborhood'):
-                            is_valid, reason = False, f"centroid_level({feature_type})"
-                        elif prop.get('latitude') is not None:
-                            moved_km = _haversine_km(lat, lon, prop['latitude'], prop['longitude'])
-                            if moved_km < 0.1:
-                                is_valid, reason = False, "same_point"
-
-                    if is_valid and quality_score >= 70:
-                        results.append((prop['id'], lat, lon, quality_score))
+                lat = lon = None
+                for attempt, q_address in enumerate(queries):
+                    query = (f"{q_address}, {prop['county']}, Ireland" if prop['county']
+                             else f"{q_address}, Ireland")
+                    if attempt:
+                        retry_count += 1
+                    result = await mapbox.geocode(query, country='ie', proximity=proximity)
+                    if result:
+                        if result.get('method') == 'eircode':
+                            eircode_count += 1
+                        lat, lon, quality_score, reason = evaluate(result)
                     else:
-                        # Log every rejection so batch reports can tally reasons.
-                        print(f"  ⚠️  Rejected {prop['address'][:40]}: {reason}")
-                        results.append((prop['id'], None, None, 0))
+                        reason = 'no_result'
+                    if lat is not None:
+                        if attempt:
+                            retry_hits += 1
+                            print(f"  ↻ Retry placed #{prop['id']} {query[:60]}")
+                        break
+                    # Log the query actually sent, so reports show what really failed.
+                    # ("Rejected" = first query, tallied by batch reports; "Retry
+                    # rejected" = the stripped retry.)
+                    label = "Retry rejected" if attempt else "Rejected"
+                    print(f"  ⚠️  {label} #{prop['id']} {query[:60]}: {reason}")
+                    if reason == 'same_point':
+                        break  # already sits where Mapbox puts it; nothing to retry
+
+                if lat is not None:
+                    results.append((prop['id'], lat, lon, quality_score))
                 else:
-                    print(f"  ⚠️  Rejected {prop['address'][:40]}: no_result")
                     results.append((prop['id'], None, None, 0))
 
             except Exception as e:
@@ -567,6 +636,7 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
 
     print(f"\n✓ Geocoding complete:")
     print(f"  Bulk sales extracted: {bulk_count}")
+    print(f"  Stripped-query retries: {retry_count} ({retry_hits} placed)")
     print(f"  Eircode-first hits: {eircode_count}")
     print(f"  Total geocoded: {sum(1 for r in results if r[1] is not None)}/{len(results)}")
 
@@ -686,6 +756,14 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         except Exception as e:
             print(f"⚠️  Could not compute adaptive thresholds ({e}); using flat {ROUTING_KEY_MAX_KM:.0f}km")
 
+        # Known town names per county, for correcting PPR typos in queries.
+        gazetteer = {}
+        try:
+            gazetteer = await load_town_gazetteer(pool)
+            print(f"Loaded town gazetteer for {len(gazetteer):,} counties")
+        except Exception as e:
+            print(f"⚠️  Could not load town gazetteer ({e}); skipping typo correction")
+
         # Release the DB pool during the (potentially long) geocoding phase. Holding
         # idle connections open across a multi-minute Mapbox run lets Supabase close
         # them server-side, so the later write phase would fail with
@@ -712,7 +790,8 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                 print(f"\n--- Chunk {ci}/{n_chunks}: properties {start + 1:,}–{start + len(chunk):,} of {total:,} ---")
                 results = await batch_geocode_mapbox(chunk, None, client, rk_centroids=rk_centroids,
                                                    rk_thresholds=rk_thresholds,
-                                                   centroid_mode=centroid)
+                                                   centroid_mode=centroid,
+                                                   gazetteer=gazetteer)
 
                 # Tally this chunk and collect the rows to persist.
                 chunk_updates = []
