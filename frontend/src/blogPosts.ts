@@ -34,7 +34,7 @@ export function publishedPosts(now: Date = new Date()): BlogPost[] {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "irish-property-market-health-36-months",
-    title: "How Healthy Is Ireland's Property Market? 36 Months of Sold-Price Data",
+    title: "Ireland's Property Market Is Stable but Stretched: Price Growth Has Halved and Sales Have Plateaued",
     description: "We analysed 166,000 cleaned Property Price Register sales from October 2023 to September 2026: sales volumes, median and average prices, the slowdown in growth, Dublin vs the regions, urban vs rural, Dublin postcodes and the rise of new builds — with charts.",
     date: "2026-10-03",
     author: "HomeIQ Team",
