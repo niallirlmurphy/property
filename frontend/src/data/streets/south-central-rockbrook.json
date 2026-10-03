@@ -22,375 +22,7 @@
   "transactions": [
     {
       "date": "2015-01-28",
-      "address": "1 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "163 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "18 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "19 South Central, Rockbrook, Sandyford",
-      "price": 278745,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "198 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "199 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "5 South Central, Rockbrook, Sandyford",
-      "price": 208260,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "132 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "222 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "186 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "2 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "161 South Central, Rockbrook, Sandyford",
-      "price": 208260,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "169 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "184 South Central, Rockbrook, Sandyford",
-      "price": 208260,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "187 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "196 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "215 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "221 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "223 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "25 South Central, Rockbrook, Sandyford",
-      "price": 208260,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "26 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "27 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "32 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "40 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "41 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "42 South Central, Rockbrook, Sandyford",
-      "price": 208260,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "44 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "66 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "67 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "71 South Central, Rockbrook, Sandyford",
-      "price": 278745,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "45 South Central, Rockbrook, Sandyford",
-      "price": 208260,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "46 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "47 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "48 South Central, Rockbrook, Sandyford",
-      "price": 208260,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "49 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "216 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "10 South Central, Rockbrook, Sandyford",
-      "price": 208260,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "133 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "137 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "138 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "139 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "14 South Central, Rockbrook, Sandyford",
-      "price": 278745,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "15 South Central, Rockbrook, Sandyford",
-      "price": 208260,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "150 South Central, Rockbrook, Sandyford",
-      "price": 208260,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "154 South Central, Rockbrook, Sandyford",
-      "price": 252313,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "155 South Central, Rockbrook, Sandyford",
-      "price": 208260,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2015-01-28",
-      "address": "156 South Central, Rockbrook, Sandyford",
+      "address": "17 South Central, Rockbrook, Sandyford",
       "price": 252313,
       "bedrooms": null,
       "propertyType": null,
@@ -406,8 +38,64 @@
     },
     {
       "date": "2015-01-28",
-      "address": "17 South Central, Rockbrook, Sandyford",
+      "address": "156 South Central, Rockbrook, Sandyford",
       "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "155 South Central, Rockbrook, Sandyford",
+      "price": 208260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "154 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "150 South Central, Rockbrook, Sandyford",
+      "price": 208260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "15 South Central, Rockbrook, Sandyford",
+      "price": 208260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "139 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "138 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "14 South Central, Rockbrook, Sandyford",
+      "price": 278745,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -416,6 +104,318 @@
       "date": "2015-01-28",
       "address": "173 South Central, Rockbrook, Sandyford",
       "price": 208260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "183 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "20 South Central, Rockbrook, Sandyford",
+      "price": 208260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "197 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "194 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "193 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "192 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "191 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "189 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "188 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "204 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "203 South Central, Rockbrook, Sandyford",
+      "price": 278745,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "202 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "201 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "200 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "209 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "210 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "21 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "219 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "218 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "214 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "213 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "224 South Central, Rockbrook, Sandyford",
+      "price": 278745,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "220 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "37 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "34 South Central, Rockbrook, Sandyford",
+      "price": 208260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "33 South Central, Rockbrook, Sandyford",
+      "price": 278745,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "31 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "30 South Central, Rockbrook, Sandyford",
+      "price": 208260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "28 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "23 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "22 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "24 South Central, Rockbrook, Sandyford",
+      "price": 278745,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "39 South Central, Rockbrook, Sandyford",
+      "price": 208260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "74 South Central, Rockbrook, Sandyford",
+      "price": 208260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "65 South Central, Rockbrook, Sandyford",
+      "price": 208260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "52 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "51 South Central, Rockbrook, Sandyford",
+      "price": 208260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "50 South Central, Rockbrook, Sandyford",
+      "price": 252313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-28",
+      "address": "43 South Central, Rockbrook, Sandyford",
+      "price": 252313,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

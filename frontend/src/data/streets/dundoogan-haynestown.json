@@ -72,8 +72,8 @@
       "date": "2026-09-04",
       "address": "27 DUNDOOGAN, HAYNESTOWN, DUNDALK",
       "price": 285000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "terraced",
       "eircode": "A91YFF1"
     },
     {

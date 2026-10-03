@@ -7,7 +7,7 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 415000.0,
+  "median_price": 426156.0,
   "avg_price": 372300,
   "min_year": 2010,
   "max_year": 2026,
@@ -44,8 +44,8 @@
       "latitude": 51.821109,
       "longitude": -8.404561,
       "routing_key": "P43",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1089.66200831
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 51.8169,
       "longitude": -8.391287,
       "routing_key": "P43",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 226.66132459
     },
     {
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 97,
-      "median_price": 415000.0,
-      "avg_price": 435033.0,
+      "count": 102,
+      "median_price": 426156.0,
+      "avg_price": 437384.0,
       "min_price": 160000.0,
       "max_price": 1000000.0
     }

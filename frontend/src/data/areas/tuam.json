@@ -8,7 +8,7 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 395000.0,
-  "avg_price": 363500,
+  "avg_price": 339000,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -26,8 +26,8 @@
       "latitude": 53.290523,
       "longitude": -9.028066,
       "routing_key": "H91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "house",
       "distance_m": 1009.38262289
     },
     {
@@ -103,6 +103,24 @@
       "distance_m": 841.88459866
     },
     {
+      "id": 788249,
+      "sale_date": "2026-06-23",
+      "address": "UPPER DUBLIN ROAD, TUAM, CO GALWAY",
+      "county": "Galway",
+      "eircode": null,
+      "price": 150000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.278722,
+      "longitude": -9.020131,
+      "routing_key": null,
+      "bedrooms": 4,
+      "property_type": "apartment",
+      "distance_m": 1226.59286096
+    },
+    {
       "id": 792009,
       "sale_date": "2026-03-27",
       "address": "ARDSKEA MORE, COROFIN, TUAM",
@@ -173,24 +191,6 @@
       "bedrooms": 4,
       "property_type": "bungalow",
       "distance_m": 224.24077342
-    },
-    {
-      "id": 769127,
-      "sale_date": "2026-01-14",
-      "address": "BELMONT, CLOGHANS HILL, TUAM",
-      "county": "Galway",
-      "eircode": "H54NC43",
-      "price": 395000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.279462,
-      "longitude": -9.012685,
-      "routing_key": "H54",
-      "bedrooms": 5,
-      "property_type": "detached",
-      "distance_m": 1670.47578861
     }
   ],
   "trends": [
@@ -268,17 +268,17 @@
     },
     {
       "year": 2019,
-      "count": 21,
-      "median_price": 165000.0,
-      "avg_price": 169076.0,
+      "count": 22,
+      "median_price": 167500.0,
+      "avg_price": 170481.0,
       "min_price": 40000.0,
       "max_price": 345000.0
     },
     {
       "year": 2020,
-      "count": 16,
-      "median_price": 185000.0,
-      "avg_price": 182506.0,
+      "count": 17,
+      "median_price": 180000.0,
+      "avg_price": 182065.0,
       "min_price": 51000.0,
       "max_price": 297000.0
     },
@@ -292,9 +292,9 @@
     },
     {
       "year": 2022,
-      "count": 26,
-      "median_price": 296250.0,
-      "avg_price": 290744.0,
+      "count": 27,
+      "median_price": 295500.0,
+      "avg_price": 289679.0,
       "min_price": 60000.0,
       "max_price": 440000.0
     },
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 10,
+      "count": 11,
       "median_price": 395000.0,
-      "avg_price": 363500.0,
+      "avg_price": 344091.0,
       "min_price": 95000.0,
       "max_price": 460000.0
     }

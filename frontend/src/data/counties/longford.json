@@ -1,8 +1,8 @@
 {
   "county": "Longford",
-  "total_count": 6790,
-  "median_price": 196000.0,
-  "avg_price": 209546.0,
+  "total_count": 6793,
+  "median_price": 195000.0,
+  "avg_price": 208540.0,
   "trends": [
     {
       "year": 2010,
@@ -134,14 +134,65 @@
     },
     {
       "year": 2026,
-      "count": 240,
-      "median_price": 196000.0,
-      "avg_price": 209546.0,
+      "count": 243,
+      "median_price": 195000.0,
+      "avg_price": 208540.0,
       "min_price": 30000.0,
       "max_price": 585000.0
     }
   ],
   "recent": [
+    {
+      "id": 805082,
+      "sale_date": "2026-09-25",
+      "address": "4 SAINT MEL'S ROAD, LONGFORD",
+      "county": "Longford",
+      "eircode": "N39R2R2",
+      "price": 111000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.729881,
+      "longitude": -7.796873,
+      "routing_key": "N39",
+      "bedrooms": 2,
+      "property_type": "terraced"
+    },
+    {
+      "id": 804948,
+      "sale_date": "2026-09-23",
+      "address": "53 ESKER GLEN, DRUMLISH, LONGFORD",
+      "county": "Longford",
+      "eircode": "N39RT68",
+      "price": 198000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.82236,
+      "longitude": -7.765362,
+      "routing_key": "N39",
+      "bedrooms": 2,
+      "property_type": "semi-detached"
+    },
+    {
+      "id": 804756,
+      "sale_date": "2026-09-21",
+      "address": "CLOONMACART, DRUMLISH, CO LONGFORD",
+      "county": "Longford",
+      "eircode": null,
+      "price": 75000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.804726,
+      "longitude": -7.764499,
+      "routing_key": null,
+      "bedrooms": 3,
+      "property_type": "detached"
+    },
     {
       "id": 804595,
       "sale_date": "2026-09-17",
@@ -260,57 +311,6 @@
       "routing_key": "N39",
       "bedrooms": 1,
       "property_type": "apartment"
-    },
-    {
-      "id": 803696,
-      "sale_date": "2026-09-08",
-      "address": "AUGHEREA OFF STROKESTOWN RD, LONGFORD",
-      "county": "Longford",
-      "eircode": "N39H2X3",
-      "price": 379000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.724228,
-      "longitude": -7.815941,
-      "routing_key": "N39",
-      "bedrooms": null,
-      "property_type": null
-    },
-    {
-      "id": 803384,
-      "sale_date": "2026-09-04",
-      "address": "BALLAGH, NEWTOWNFORBES, LONGFORD",
-      "county": "Longford",
-      "eircode": "N39V0D6",
-      "price": 326000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.730683,
-      "longitude": -7.902506,
-      "routing_key": "N39",
-      "bedrooms": null,
-      "property_type": null
-    },
-    {
-      "id": 803050,
-      "sale_date": "2026-09-03",
-      "address": "27 ARDNACASSA AVE, LONGFORD, LONGFORD",
-      "county": "Longford",
-      "eircode": "N39P7E2",
-      "price": 240000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.728267,
-      "longitude": -7.783274,
-      "routing_key": "N39",
-      "bedrooms": null,
-      "property_type": null
     }
   ]
 }

@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 380000.0,
-  "avg_price": 325853,
+  "median_price": 389000.0,
+  "avg_price": 336353,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805041,
+      "sale_date": "2026-09-24",
+      "address": "BALLYGURRANE, ATHENRY, CO GALWAY",
+      "county": "Galway",
+      "eircode": "H65XW97",
+      "price": 250000.0,
+      "not_full_market_price": true,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.29886,
+      "longitude": -8.745403,
+      "routing_key": "H65",
+      "bedrooms": null,
+      "property_type": "house",
+      "distance_m": 370.64060586
+    },
     {
       "id": 804631,
       "sale_date": "2026-09-18",
@@ -62,8 +80,8 @@
       "latitude": 53.290721,
       "longitude": -8.746741,
       "routing_key": "H65",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1202.17107803
     },
     {
@@ -80,8 +98,8 @@
       "latitude": 53.307979,
       "longitude": -8.748823,
       "routing_key": "H65",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 727.24897996
     },
     {
@@ -98,8 +116,8 @@
       "latitude": 53.305404,
       "longitude": -8.747932,
       "routing_key": "H65",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 445.4360552
     },
     {
@@ -116,8 +134,8 @@
       "latitude": 53.305068,
       "longitude": -8.744889,
       "routing_key": "H65",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 484.18339975
     },
     {
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": null,
       "distance_m": 1470.22750455
-    },
-    {
-      "id": 790947,
-      "sale_date": "2026-07-21",
-      "address": "10 ARD AOIBHINN, ATHENRY, CO GALWAY",
-      "county": "Galway",
-      "eircode": "H65Y300",
-      "price": 145000.0,
-      "not_full_market_price": true,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.302215,
-      "longitude": -8.750837,
-      "routing_key": "H65",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 154.51364574
     }
   ],
   "trends": [
@@ -324,11 +324,11 @@
     },
     {
       "year": 2026,
-      "count": 29,
-      "median_price": 380000.0,
-      "avg_price": 390541.0,
+      "count": 32,
+      "median_price": 389000.0,
+      "avg_price": 415606.0,
       "min_price": 137500.0,
-      "max_price": 535000.0
+      "max_price": 933333.33
     }
   ]
 }

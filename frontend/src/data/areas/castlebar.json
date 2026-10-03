@@ -7,11 +7,65 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 291000.0,
-  "avg_price": 298356,
+  "median_price": 290000.0,
+  "avg_price": 317606,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804718,
+      "sale_date": "2026-09-21",
+      "address": "49 ROWAN DR, CASTLEBAR, MAYO",
+      "county": "Mayo",
+      "eircode": "F23AW74",
+      "price": 270000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.860862,
+      "longitude": -9.291738,
+      "routing_key": "F23",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "distance_m": 606.79252118
+    },
+    {
+      "id": 804652,
+      "sale_date": "2026-09-21",
+      "address": "10 CASTLEGROVE, CASTLEBAR, CO MAYO",
+      "county": "Mayo",
+      "eircode": "F23EF22",
+      "price": 245000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.862407,
+      "longitude": -9.296853,
+      "routing_key": "F23",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "distance_m": 623.74163158
+    },
+    {
+      "id": 804735,
+      "sale_date": "2026-09-21",
+      "address": "60 THE OAKS, TURLOUGH RD, CASTLEBAR",
+      "county": "Mayo",
+      "eircode": "F23WN50",
+      "price": 450000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.862815,
+      "longitude": -9.28686,
+      "routing_key": "F23",
+      "bedrooms": 6,
+      "property_type": "detached",
+      "distance_m": 987.95840269
+    },
     {
       "id": 804556,
       "sale_date": "2026-09-17",
@@ -62,8 +116,8 @@
       "latitude": 53.8591,
       "longitude": -9.319517,
       "routing_key": "F23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "detached",
       "distance_m": 1440.06762585
     },
     {
@@ -80,8 +134,8 @@
       "latitude": 53.854511,
       "longitude": -9.315685,
       "routing_key": "F23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 1194.40037431
     },
     {
@@ -99,7 +153,7 @@
       "longitude": -9.302016,
       "routing_key": null,
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "house",
       "distance_m": 539.91353474
     },
     {
@@ -117,7 +171,7 @@
       "longitude": -9.292727,
       "routing_key": null,
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "detached",
       "distance_m": 854.24994981
     },
     {
@@ -134,63 +188,9 @@
       "latitude": 53.852672,
       "longitude": -9.27043,
       "routing_key": "F23",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1870.53081652
-    },
-    {
-      "id": 802308,
-      "sale_date": "2026-08-28",
-      "address": "10 MARIAN ROW, CASTLEBAR, MAYO",
-      "county": "Mayo",
-      "eircode": "F23CD51",
-      "price": 255000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.859054,
-      "longitude": -9.30373,
-      "routing_key": "F23",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 452.12541297
-    },
-    {
-      "id": 802338,
-      "sale_date": "2026-08-28",
-      "address": "90 SPRINGFIELD COURT, CASTLEBAR, CO MAYO",
-      "county": "Mayo",
-      "eircode": "F23V662",
-      "price": 237500.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.861,
-      "longitude": -9.285933,
-      "routing_key": "F23",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 917.14485473
-    },
-    {
-      "id": 801582,
-      "sale_date": "2026-08-20",
-      "address": "23 CHESTNUT GROVE, THE CURRAGH, CASTLEBAR",
-      "county": "Mayo",
-      "eircode": "F23XD61",
-      "price": 280000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.849353,
-      "longitude": -9.290949,
-      "routing_key": "F23",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 952.91277746
+      "distance_m": 1870.53081652
     }
   ],
   "trends": [
@@ -284,51 +284,51 @@
     },
     {
       "year": 2021,
-      "count": 180,
-      "median_price": 153000.0,
-      "avg_price": 155830.0,
+      "count": 181,
+      "median_price": 152500.0,
+      "avg_price": 155649.0,
       "min_price": 50000.0,
       "max_price": 455000.0
     },
     {
       "year": 2022,
-      "count": 152,
-      "median_price": 185500.0,
-      "avg_price": 187902.0,
+      "count": 156,
+      "median_price": 184500.0,
+      "avg_price": 187603.0,
       "min_price": 40000.0,
       "max_price": 440000.0
     },
     {
       "year": 2023,
-      "count": 161,
+      "count": 167,
       "median_price": 205000.0,
-      "avg_price": 208389.0,
+      "avg_price": 208037.0,
       "min_price": 22500.0,
       "max_price": 450000.0
     },
     {
       "year": 2024,
-      "count": 180,
-      "median_price": 233500.0,
-      "avg_price": 232464.0,
+      "count": 186,
+      "median_price": 231000.0,
+      "avg_price": 230922.0,
       "min_price": 57500.0,
       "max_price": 731277.52
     },
     {
       "year": 2025,
-      "count": 89,
-      "median_price": 310000.0,
-      "avg_price": 317120.0,
+      "count": 125,
+      "median_price": 277533.0,
+      "avg_price": 292054.0,
       "min_price": 97000.0,
       "max_price": 684850.15
     },
     {
       "year": 2026,
-      "count": 70,
-      "median_price": 291000.0,
-      "avg_price": 306550.0,
+      "count": 85,
+      "median_price": 290000.0,
+      "avg_price": 324020.0,
       "min_price": 120000.0,
-      "max_price": 682820.0
+      "max_price": 2200000.0
     }
   ]
 }

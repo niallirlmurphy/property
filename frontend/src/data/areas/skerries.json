@@ -7,11 +7,47 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 589000.0,
-  "avg_price": 609229,
+  "median_price": 575000.0,
+  "avg_price": 587200,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804919,
+      "sale_date": "2026-09-23",
+      "address": "28 KELLYS BAY STRAND, SKERRIES, DUBLIN",
+      "county": "Dublin",
+      "eircode": "K34VH36",
+      "price": 510000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.58348,
+      "longitude": -6.129282,
+      "routing_key": "K34",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "distance_m": 1250.62143476
+    },
+    {
+      "id": 804911,
+      "sale_date": "2026-09-23",
+      "address": "20 KELLYS BAY HEIGHTS, SKERRIES, DUBLIN",
+      "county": "Dublin",
+      "eircode": "K34AA21",
+      "price": 310000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.581348,
+      "longitude": -6.133584,
+      "routing_key": "K34",
+      "bedrooms": 2,
+      "property_type": "apartment",
+      "distance_m": 1257.697305
+    },
     {
       "id": 804115,
       "sale_date": "2026-09-11",
@@ -44,8 +80,8 @@
       "latitude": 53.576637,
       "longitude": -6.116737,
       "routing_key": "K34",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "detached",
       "distance_m": 336.08836844
     },
     {
@@ -62,8 +98,8 @@
       "latitude": 53.578693,
       "longitude": -6.118327,
       "routing_key": "K34",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 526.57872491
     },
     {
@@ -155,42 +191,6 @@
       "bedrooms": 3,
       "property_type": "semi-detached",
       "distance_m": 1119.77809503
-    },
-    {
-      "id": 790338,
-      "sale_date": "2026-07-15",
-      "address": "1 FOX COURT, BALBRIGGAN STREET, SKERRIES",
-      "county": "Dublin",
-      "eircode": "K34CV59",
-      "price": 405000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.579315,
-      "longitude": -6.111163,
-      "routing_key": "K34",
-      "bedrooms": 2,
-      "property_type": "apartment",
-      "distance_m": 795.65018426
-    },
-    {
-      "id": 790255,
-      "sale_date": "2026-07-14",
-      "address": "25 ST PATRICKS CLOSE, SKERRIES, CO DUBLIN",
-      "county": "Dublin",
-      "eircode": "K34E023",
-      "price": 635290.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.574432,
-      "longitude": -6.118247,
-      "routing_key": "K34",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 78.81895402
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 50,
-      "median_price": 589000.0,
-      "avg_price": 607696.0,
+      "count": 59,
+      "median_price": 575000.0,
+      "avg_price": 595124.0,
       "min_price": 78000.0,
       "max_price": 1550000.0
     }

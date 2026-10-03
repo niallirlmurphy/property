@@ -1,8 +1,8 @@
 {
   "county": "Leitrim",
-  "total_count": 7083,
+  "total_count": 7085,
   "median_price": 225000.0,
-  "avg_price": 223913.0,
+  "avg_price": 224482.0,
   "trends": [
     {
       "year": 2010,
@@ -134,14 +134,48 @@
     },
     {
       "year": 2026,
-      "count": 283,
+      "count": 285,
       "median_price": 225000.0,
-      "avg_price": 223913.0,
+      "avg_price": 224482.0,
       "min_price": 13800.0,
       "max_price": 720000.0
     }
   ],
   "recent": [
+    {
+      "id": 805103,
+      "sale_date": "2026-09-25",
+      "address": "SEANTEACH CHURCH ST, CARRIGALLEN, LEITRIM",
+      "county": "Leitrim",
+      "eircode": "H12DP30",
+      "price": 265000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": null,
+      "longitude": null,
+      "routing_key": "H12",
+      "bedrooms": null,
+      "property_type": "detached"
+    },
+    {
+      "id": 804784,
+      "sale_date": "2026-09-22",
+      "address": "12 CHURCH VIEW, TULLYLANNAN, LEITRIM VILLAGE",
+      "county": "Leitrim",
+      "eircode": "N41XH68",
+      "price": 345000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.989944,
+      "longitude": -8.060462,
+      "routing_key": "N41",
+      "bedrooms": null,
+      "property_type": "house"
+    },
     {
       "id": 804522,
       "sale_date": "2026-09-16",
@@ -258,8 +292,8 @@
       "latitude": 53.979335,
       "longitude": -8.279759,
       "routing_key": "N41",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 4,
+      "property_type": "detached"
     },
     {
       "id": 803547,
@@ -274,40 +308,6 @@
       "size_description": null,
       "latitude": 54.061337,
       "longitude": -7.834972,
-      "routing_key": "N41",
-      "bedrooms": null,
-      "property_type": null
-    },
-    {
-      "id": 803530,
-      "sale_date": "2026-09-07",
-      "address": "9 B�THAIR SAIL�ACH, LIS CARA, CARRICK ON SHANNON",
-      "county": "Leitrim",
-      "eircode": "N41E166",
-      "price": 220000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.949451,
-      "longitude": -8.079679,
-      "routing_key": "N41",
-      "bedrooms": null,
-      "property_type": null
-    },
-    {
-      "id": 803403,
-      "sale_date": "2026-09-04",
-      "address": "CORDERRY, KESHCARRIGAN, CO. LEITRIM",
-      "county": "Leitrim",
-      "eircode": "N41D603",
-      "price": 50000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.992172,
-      "longitude": -7.948439,
       "routing_key": "N41",
       "bedrooms": null,
       "property_type": null

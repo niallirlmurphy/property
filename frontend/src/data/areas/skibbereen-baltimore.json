@@ -80,8 +80,8 @@
       "latitude": 51.48579,
       "longitude": -9.368881,
       "routing_key": "P81",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 9920.95241133
     },
     {
@@ -98,8 +98,8 @@
       "latitude": 51.54913,
       "longitude": -9.2679,
       "routing_key": "P81",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "detached",
       "distance_m": 186.72796152
     },
     {
@@ -116,8 +116,8 @@
       "latitude": 51.538814,
       "longitude": -9.274807,
       "routing_key": "P81",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 1166.33775347
     },
     {
@@ -134,8 +134,8 @@
       "latitude": 51.554413,
       "longitude": -9.262972,
       "routing_key": "P81",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 766.82125394
     },
     {
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 43,
+      "count": 44,
       "median_price": 330000.0,
-      "avg_price": 397954.0,
+      "avg_price": 395466.0,
       "min_price": 100000.0,
       "max_price": 1903404.49
     }

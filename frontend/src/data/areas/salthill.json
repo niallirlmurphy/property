@@ -7,11 +7,29 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 520000.0,
-  "avg_price": 603600,
+  "median_price": 498500.0,
+  "avg_price": 559100,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804816,
+      "sale_date": "2026-09-22",
+      "address": "23 CRESCENT COURT, FATHER GRIFFIN RD, GALWAY",
+      "county": "Galway",
+      "eircode": "H91KP93",
+      "price": 375000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.267426,
+      "longitude": -9.061006,
+      "routing_key": "H91",
+      "bedrooms": 3,
+      "property_type": "apartment",
+      "distance_m": 1089.52982177
+    },
     {
       "id": 804470,
       "sale_date": "2026-09-16",
@@ -62,8 +80,8 @@
       "latitude": 53.265464,
       "longitude": -9.07903,
       "routing_key": "H91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "detached",
       "distance_m": 482.48136574
     },
     {
@@ -80,8 +98,8 @@
       "latitude": 53.269229,
       "longitude": -9.078806,
       "routing_key": "H91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 848.79479499
     },
     {
@@ -98,8 +116,8 @@
       "latitude": 53.259414,
       "longitude": -9.090743,
       "routing_key": "H91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 1114.13306996
     },
     {
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": null,
       "distance_m": 391.05485808
-    },
-    {
-      "id": 799322,
-      "sale_date": "2026-08-04",
-      "address": "117 DUN NA CARRAIGE, BLACKROCK, SALTHILL",
-      "county": "Galway",
-      "eircode": "H91APF6",
-      "price": 820000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.259372,
-      "longitude": -9.092187,
-      "routing_key": "H91",
-      "bedrooms": 4,
-      "property_type": "terraced",
-      "distance_m": 1208.5530771
     }
   ],
   "trends": [
@@ -252,9 +252,9 @@
     },
     {
       "year": 2017,
-      "count": 106,
-      "median_price": 222250.0,
-      "avg_price": 307215.0,
+      "count": 107,
+      "median_price": 222500.0,
+      "avg_price": 306587.0,
       "min_price": 40000.0,
       "max_price": 3925000.0
     },
@@ -284,49 +284,49 @@
     },
     {
       "year": 2021,
-      "count": 127,
-      "median_price": 320000.0,
-      "avg_price": 390837.0,
+      "count": 131,
+      "median_price": 300000.0,
+      "avg_price": 385552.0,
       "min_price": 25833.0,
       "max_price": 1542500.0
     },
     {
       "year": 2022,
-      "count": 173,
-      "median_price": 373000.0,
-      "avg_price": 449731.0,
+      "count": 177,
+      "median_price": 370000.0,
+      "avg_price": 444879.0,
       "min_price": 100000.0,
       "max_price": 2250000.0
     },
     {
       "year": 2023,
-      "count": 222,
+      "count": 223,
       "median_price": 395000.0,
-      "avg_price": 458639.0,
+      "avg_price": 457613.0,
       "min_price": 49000.0,
       "max_price": 2200000.0
     },
     {
       "year": 2024,
-      "count": 183,
-      "median_price": 425000.0,
-      "avg_price": 512949.0,
+      "count": 189,
+      "median_price": 420000.0,
+      "avg_price": 501363.0,
       "min_price": 47000.0,
       "max_price": 1800000.0
     },
     {
       "year": 2025,
-      "count": 149,
-      "median_price": 481000.0,
-      "avg_price": 550317.0,
+      "count": 150,
+      "median_price": 480500.0,
+      "avg_price": 548081.0,
       "min_price": 155000.0,
       "max_price": 1720000.0
     },
     {
       "year": 2026,
-      "count": 71,
-      "median_price": 520000.0,
-      "avg_price": 615657.0,
+      "count": 78,
+      "median_price": 498500.0,
+      "avg_price": 602239.0,
       "min_price": 200000.0,
       "max_price": 1880000.0
     }

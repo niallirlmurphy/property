@@ -8,10 +8,46 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 351000.0,
-  "avg_price": 340976,
+  "avg_price": 320576,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804994,
+      "sale_date": "2026-09-24",
+      "address": "127 ROSSVALE, PORTLAOISE, LAOIS",
+      "county": "Laois",
+      "eircode": "R32YPC6",
+      "price": 296000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.047286,
+      "longitude": -7.312096,
+      "routing_key": "R32",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "distance_m": 1683.72116638
+    },
+    {
+      "id": 804916,
+      "sale_date": "2026-09-23",
+      "address": "24 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "county": "Laois",
+      "eircode": "R32WVW2",
+      "price": 280000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.029731,
+      "longitude": -7.271322,
+      "routing_key": "R32",
+      "bedrooms": 2,
+      "property_type": "semi-detached",
+      "distance_m": 1985.82954119
+    },
     {
       "id": 803825,
       "sale_date": "2026-09-09",
@@ -44,8 +80,8 @@
       "latitude": 53.034048,
       "longitude": -7.300163,
       "routing_key": "R32",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "bungalow",
       "distance_m": 8.19331816
     },
     {
@@ -62,8 +98,8 @@
       "latitude": 53.045973,
       "longitude": -7.284133,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1706.98197829
     },
     {
@@ -80,8 +116,8 @@
       "latitude": 53.032498,
       "longitude": -7.316992,
       "routing_key": "R32",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 1148.33763717
     },
     {
@@ -98,8 +134,8 @@
       "latitude": 53.044586,
       "longitude": -7.280883,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1743.53439768
     },
     {
@@ -116,7 +152,7 @@
       "latitude": 53.044639,
       "longitude": -7.280846,
       "routing_key": null,
-      "bedrooms": null,
+      "bedrooms": 3,
       "property_type": null,
       "distance_m": 1749.3486304
     },
@@ -134,8 +170,8 @@
       "latitude": 53.044689,
       "longitude": -7.280741,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1758.29950782
     },
     {
@@ -152,45 +188,9 @@
       "latitude": 53.04824,
       "longitude": -7.312583,
       "routing_key": "R32",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 1792.68427279
-    },
-    {
-      "id": 802886,
-      "sale_date": "2026-09-02",
-      "address": "47 ASHEWOOD WALK, PORTLAOISE, LAOIS",
-      "county": "Laois",
-      "eircode": "R32EH21",
-      "price": 380000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.02864,
-      "longitude": -7.273054,
-      "routing_key": "R32",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1907.72874006
-    },
-    {
-      "id": 802364,
-      "sale_date": "2026-08-31",
-      "address": "105 NEWPARK, PORTLAOISE, LAOIS",
-      "county": "Laois",
-      "eircode": "R32VNE6",
-      "price": 400000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.040008,
-      "longitude": -7.310016,
-      "routing_key": "R32",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 944.3298422
     }
   ],
   "trends": [
@@ -236,9 +236,9 @@
     },
     {
       "year": 2015,
-      "count": 119,
-      "median_price": 102000.0,
-      "avg_price": 115652.0,
+      "count": 120,
+      "median_price": 102500.0,
+      "avg_price": 115571.0,
       "min_price": 15000.0,
       "max_price": 435000.0
     },
@@ -252,9 +252,9 @@
     },
     {
       "year": 2017,
-      "count": 130,
-      "median_price": 141250.0,
-      "avg_price": 152520.0,
+      "count": 131,
+      "median_price": 140000.0,
+      "avg_price": 152394.0,
       "min_price": 42500.0,
       "max_price": 600000.0
     },
@@ -268,65 +268,65 @@
     },
     {
       "year": 2019,
-      "count": 188,
-      "median_price": 180000.0,
-      "avg_price": 183844.0,
+      "count": 190,
+      "median_price": 180500.0,
+      "avg_price": 184331.0,
       "min_price": 62500.0,
       "max_price": 550000.0
     },
     {
       "year": 2020,
-      "count": 175,
-      "median_price": 175000.0,
-      "avg_price": 176481.0,
+      "count": 176,
+      "median_price": 175500.0,
+      "avg_price": 176855.0,
       "min_price": 52000.0,
       "max_price": 425000.0
     },
     {
       "year": 2021,
-      "count": 251,
+      "count": 268,
       "median_price": 195382.0,
-      "avg_price": 203372.0,
+      "avg_price": 202883.0,
       "min_price": 30000.0,
       "max_price": 517500.0
     },
     {
       "year": 2022,
-      "count": 268,
-      "median_price": 230000.0,
-      "avg_price": 243990.0,
+      "count": 282,
+      "median_price": 226500.0,
+      "avg_price": 240349.0,
       "min_price": 68400.0,
       "max_price": 810000.0
     },
     {
       "year": 2023,
-      "count": 297,
-      "median_price": 260000.0,
-      "avg_price": 268408.0,
+      "count": 309,
+      "median_price": 255000.0,
+      "avg_price": 263954.0,
       "min_price": 82000.0,
       "max_price": 715000.0
     },
     {
       "year": 2024,
-      "count": 330,
+      "count": 332,
       "median_price": 285185.0,
-      "avg_price": 276888.0,
+      "avg_price": 276431.0,
       "min_price": 60000.0,
       "max_price": 620000.0
     },
     {
       "year": 2025,
-      "count": 376,
-      "median_price": 306000.0,
-      "avg_price": 331697.0,
+      "count": 379,
+      "median_price": 307000.0,
+      "avg_price": 331547.0,
       "min_price": 76524.47,
       "max_price": 8458149.76
     },
     {
       "year": 2026,
-      "count": 201,
+      "count": 218,
       "median_price": 351000.0,
-      "avg_price": 350392.0,
+      "avg_price": 352444.0,
       "min_price": 20000.0,
       "max_price": 875000.0
     }

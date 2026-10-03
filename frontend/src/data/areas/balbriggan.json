@@ -7,11 +7,47 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 328750.0,
-  "avg_price": 361682,
+  "median_price": 350000.0,
+  "avg_price": 370382,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804674,
+      "sale_date": "2026-09-21",
+      "address": "17 CASTLELAND PARK PLACE, BALBRIGGAN, DUBLIN",
+      "county": "Dublin",
+      "eircode": "K32H598",
+      "price": 472000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.598869,
+      "longitude": -6.179414,
+      "routing_key": "K32",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "distance_m": 395.13312424
+    },
+    {
+      "id": 804690,
+      "sale_date": "2026-09-21",
+      "address": "22 WESTBROOK GROVE, BALBRIGGAN, DUBLIN",
+      "county": "Dublin",
+      "eircode": "K32P039",
+      "price": 385000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.610958,
+      "longitude": -6.195049,
+      "routing_key": "K32",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "distance_m": 1880.38442849
+    },
     {
       "id": 804135,
       "sale_date": "2026-09-11",
@@ -44,8 +80,8 @@
       "latitude": 53.60221,
       "longitude": -6.176937,
       "routing_key": "K32",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "duplex",
       "distance_m": 800.10430143
     },
     {
@@ -80,8 +116,8 @@
       "latitude": 53.611186,
       "longitude": -6.194209,
       "routing_key": "K32",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 1879.46866569
     },
     {
@@ -155,42 +191,6 @@
       "bedrooms": null,
       "property_type": null,
       "distance_m": 1506.12376662
-    },
-    {
-      "id": 800298,
-      "sale_date": "2026-08-11",
-      "address": "19 CASTELLAND, PARK WAY, BALBRIGGAN",
-      "county": "Dublin",
-      "eircode": "K32DY89",
-      "price": 420000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.599063,
-      "longitude": -6.179769,
-      "routing_key": "K32",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 402.9472666
-    },
-    {
-      "id": 799901,
-      "sale_date": "2026-08-07",
-      "address": "2 TUDOR VIEW, COACH RD, BALROTHERY",
-      "county": "Dublin",
-      "eircode": "K32YR71",
-      "price": 350000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.588829,
-      "longitude": -6.187353,
-      "routing_key": "K32",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 842.37045848
     }
   ],
   "trends": [
@@ -316,17 +316,17 @@
     },
     {
       "year": 2025,
-      "count": 137,
-      "median_price": 360000.0,
-      "avg_price": 361856.0,
+      "count": 138,
+      "median_price": 358500.0,
+      "avg_price": 361147.0,
       "min_price": 35000.0,
       "max_price": 950000.0
     },
     {
       "year": 2026,
-      "count": 38,
-      "median_price": 328750.0,
-      "avg_price": 372350.0,
+      "count": 43,
+      "median_price": 350000.0,
+      "avg_price": 378868.0,
       "min_price": 180000.0,
       "max_price": 915000.0
     }

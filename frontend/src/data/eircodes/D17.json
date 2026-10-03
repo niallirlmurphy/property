@@ -3,14 +3,48 @@
     "code": "D17",
     "match_type": "routing_key",
     "stats": {
-      "total_count": 814,
+      "total_count": 816,
       "median_price": 295000.0,
-      "avg_price": 308602.0,
+      "avg_price": 308646.0,
       "earliest_sale": "2010-10-22",
-      "latest_sale": "2026-09-15"
+      "latest_sale": "2026-09-23"
     },
     "count": 10,
     "results": [
+      {
+        "id": 804926,
+        "sale_date": "2026-09-23",
+        "address": "38 CASTLE ELMS COURT, COOLOCK, DUBLIN",
+        "county": "Dublin",
+        "eircode": "D17DR62",
+        "price": 295000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.394723,
+        "longitude": -6.197267,
+        "routing_key": "D17",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 804738,
+        "sale_date": "2026-09-21",
+        "address": "64 FERRYCARRIG RD, BONNYBROOK, COOLOCK DUBLIN 17",
+        "county": "Dublin",
+        "eircode": "D17RD40",
+        "price": 358000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.398597,
+        "longitude": -6.199589,
+        "routing_key": "D17",
+        "bedrooms": 3,
+        "property_type": "house"
+      },
       {
         "id": 804365,
         "sale_date": "2026-09-15",
@@ -27,23 +61,6 @@
         "routing_key": "D17",
         "bedrooms": 3,
         "property_type": "semi-detached"
-      },
-      {
-        "id": 804092,
-        "sale_date": "2026-09-11",
-        "address": "21 KILKEE HOUSE, CLARE VILLAGE, CLARE HALL DUBLIN 17",
-        "county": "Dublin",
-        "eircode": "D17XV67",
-        "price": 307000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.396404,
-        "longitude": -6.129703,
-        "routing_key": "D17",
-        "bedrooms": 2,
-        "property_type": "apartment"
       },
       {
         "id": 804143,
@@ -63,6 +80,23 @@
         "property_type": "apartment"
       },
       {
+        "id": 804092,
+        "sale_date": "2026-09-11",
+        "address": "21 KILKEE HOUSE, CLARE VILLAGE, CLARE HALL DUBLIN 17",
+        "county": "Dublin",
+        "eircode": "D17XV67",
+        "price": 307000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.396404,
+        "longitude": -6.129703,
+        "routing_key": "D17",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
         "id": 803607,
         "sale_date": "2026-09-08",
         "address": "20 GLIN PARK, PRIORSWOOD, DUBLIN 17",
@@ -76,8 +110,8 @@
         "latitude": 53.401226,
         "longitude": -6.207053,
         "routing_key": "D17",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "house"
       },
       {
         "id": 803464,
@@ -93,8 +127,8 @@
         "latitude": 53.401977,
         "longitude": -6.202651,
         "routing_key": "D17",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 802656,
@@ -110,8 +144,8 @@
         "latitude": 53.400562,
         "longitude": -6.21255,
         "routing_key": "D17",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 801904,
@@ -143,40 +177,6 @@
         "size_description": null,
         "latitude": 53.375881,
         "longitude": -6.218568,
-        "routing_key": "D17",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
-        "id": 801154,
-        "sale_date": "2026-08-17",
-        "address": "54 BURNELL COURT, NORTHERN CROSS, MALAHIDE",
-        "county": "Dublin",
-        "eircode": "D17YY80",
-        "price": 250000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.370292,
-        "longitude": -6.385846,
-        "routing_key": "D17",
-        "bedrooms": 1,
-        "property_type": "apartment"
-      },
-      {
-        "id": 801081,
-        "sale_date": "2026-08-17",
-        "address": "13 THE MAPLES, CLONSHAUGH WOODS, CLONSHAUGH",
-        "county": "Dublin",
-        "eircode": "D17Y567",
-        "price": 315000.0,
-        "not_full_market_price": true,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.305892,
-        "longitude": -6.241365,
         "routing_key": "D17",
         "bedrooms": null,
         "property_type": null
@@ -314,9 +314,9 @@
     },
     {
       "year": 2026,
-      "count": 10868,
+      "count": 11029,
       "median_price": 476000.0,
-      "avg_price": 604286.0,
+      "avg_price": 604287.0,
       "min_price": 10000.0,
       "max_price": 18481040.37
     }

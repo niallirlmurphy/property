@@ -1,8 +1,8 @@
 {
   "county": "Monaghan",
-  "total_count": 6330,
-  "median_price": 245000.0,
-  "avg_price": 243508.0,
+  "total_count": 6333,
+  "median_price": 246000.0,
+  "avg_price": 243179.0,
   "trends": [
     {
       "year": 2010,
@@ -134,14 +134,65 @@
     },
     {
       "year": 2026,
-      "count": 257,
-      "median_price": 245000.0,
-      "avg_price": 243508.0,
+      "count": 260,
+      "median_price": 246000.0,
+      "avg_price": 243179.0,
       "min_price": 24126.09,
       "max_price": 900000.0
     }
   ],
   "recent": [
+    {
+      "id": 805081,
+      "sale_date": "2026-09-25",
+      "address": "4 LAKE VIEW HEIGHTS, BALLYBAY, MONAGHAN",
+      "county": "Monaghan",
+      "eircode": "A75W968",
+      "price": 250000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 54.123432,
+      "longitude": -6.895463,
+      "routing_key": "A75",
+      "bedrooms": 3,
+      "property_type": "semi-detached"
+    },
+    {
+      "id": 805077,
+      "sale_date": "2026-09-25",
+      "address": "31 DEVIN REILLY TERRACE, MONAGHAN, MONAGHAN",
+      "county": "Monaghan",
+      "eircode": "H18K582",
+      "price": 120000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 54.244445,
+      "longitude": -6.965447,
+      "routing_key": "H18",
+      "bedrooms": 4,
+      "property_type": "terraced"
+    },
+    {
+      "id": 804699,
+      "sale_date": "2026-09-21",
+      "address": "29 OLD CROSS SQUARE, MONAGHAN, CO MONAGHAN",
+      "county": "Monaghan",
+      "eircode": "H18EW96",
+      "price": 275000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 54.24699,
+      "longitude": -6.965086,
+      "routing_key": "H18",
+      "bedrooms": 3,
+      "property_type": "terraced"
+    },
     {
       "id": 804641,
       "sale_date": "2026-09-18",
@@ -260,57 +311,6 @@
       "routing_key": "A75",
       "bedrooms": null,
       "property_type": null
-    },
-    {
-      "id": 803980,
-      "sale_date": "2026-09-10",
-      "address": "55  GLEANN DROIMNIN, CARRICKMACROSS",
-      "county": "Monaghan",
-      "eircode": "A81K592",
-      "price": 299559.0,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.982929,
-      "longitude": -6.71999,
-      "routing_key": "A81",
-      "bedrooms": null,
-      "property_type": null
-    },
-    {
-      "id": 803975,
-      "sale_date": "2026-09-10",
-      "address": "50 Gleann Droimnin, CARRICKMACROSS",
-      "county": "Monaghan",
-      "eircode": null,
-      "price": 328370.0,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.983116,
-      "longitude": -6.720252,
-      "routing_key": null,
-      "bedrooms": 4,
-      "property_type": "terraced"
-    },
-    {
-      "id": 803899,
-      "sale_date": "2026-09-10",
-      "address": "10 ROSEVALE, CASTLEBLAYNEY, CO. MONAGHAN",
-      "county": "Monaghan",
-      "eircode": "A75X766",
-      "price": 302000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 54.112941,
-      "longitude": -6.741162,
-      "routing_key": "A75",
-      "bedrooms": 3,
-      "property_type": "semi-detached"
     }
   ]
 }

@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 372500.0,
-  "avg_price": 321450,
+  "median_price": 390000.0,
+  "avg_price": 292300,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804865,
+      "sale_date": "2026-09-22",
+      "address": "97 BARRADUFF APPARTMENTS, KILLARNEY, KERRY",
+      "county": "Kerry",
+      "eircode": "V93CF50",
+      "price": 140000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.058426,
+      "longitude": -9.509054,
+      "routing_key": "V93",
+      "bedrooms": null,
+      "property_type": "apartment",
+      "distance_m": 286.10114028
+    },
     {
       "id": 804425,
       "sale_date": "2026-09-15",
@@ -81,7 +99,7 @@
       "longitude": -9.509651,
       "routing_key": "V93",
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "apartment",
       "distance_m": 302.74861714
     },
     {
@@ -98,8 +116,8 @@
       "latitude": 52.050384,
       "longitude": -9.500098,
       "routing_key": "V93",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 1083.58752886
     },
     {
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "terraced",
       "distance_m": 1070.87992384
-    },
-    {
-      "id": 800562,
-      "sale_date": "2026-08-12",
-      "address": "6 YORK TERRACE LEWIS RD, KILLARNEY, KERRY",
-      "county": "Kerry",
-      "eircode": "V93YKR1",
-      "price": 431500.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.061359,
-      "longitude": -9.506408,
-      "routing_key": "V93",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 212.05883871
     }
   ],
   "trends": [
@@ -284,9 +284,9 @@
     },
     {
       "year": 2021,
-      "count": 164,
-      "median_price": 252500.0,
-      "avg_price": 278272.0,
+      "count": 166,
+      "median_price": 251551.0,
+      "avg_price": 276460.0,
       "min_price": 10000.0,
       "max_price": 1990000.0
     },
@@ -324,11 +324,11 @@
     },
     {
       "year": 2026,
-      "count": 61,
-      "median_price": 372500.0,
-      "avg_price": 388338.0,
-      "min_price": 167500.0,
-      "max_price": 760000.0
+      "count": 67,
+      "median_price": 390000.0,
+      "avg_price": 411771.0,
+      "min_price": 140000.0,
+      "max_price": 1800000.0
     }
   ]
 }

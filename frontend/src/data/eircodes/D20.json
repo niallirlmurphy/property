@@ -3,14 +3,31 @@
     "code": "D20",
     "match_type": "routing_key",
     "stats": {
-      "total_count": 756,
+      "total_count": 757,
       "median_price": 375000.0,
-      "avg_price": 395515.0,
+      "avg_price": 395521.0,
       "earliest_sale": "2010-11-22",
-      "latest_sale": "2026-09-11"
+      "latest_sale": "2026-09-22"
     },
     "count": 10,
     "results": [
+      {
+        "id": 804790,
+        "sale_date": "2026-09-22",
+        "address": "156 OAKCOURT DR, PALMERSTOWN, DUBLIN 20",
+        "county": "Dublin",
+        "eircode": "D20XR12",
+        "price": 400000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.348987,
+        "longitude": -6.371589,
+        "routing_key": "D20",
+        "bedrooms": 2,
+        "property_type": "detached"
+      },
       {
         "id": 804069,
         "sale_date": "2026-09-11",
@@ -42,8 +59,8 @@
         "latitude": 53.401306,
         "longitude": -6.23889,
         "routing_key": "D20",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "bungalow"
       },
       {
         "id": 803101,
@@ -59,8 +76,8 @@
         "latitude": 53.307406,
         "longitude": -6.265723,
         "routing_key": "D20",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 1,
+        "property_type": "apartment"
       },
       {
         "id": 802896,
@@ -76,8 +93,8 @@
         "latitude": 53.358283,
         "longitude": -6.376193,
         "routing_key": "D20",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 802857,
@@ -110,8 +127,8 @@
         "latitude": 53.228318,
         "longitude": -6.124304,
         "routing_key": "D20",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "apartment"
       },
       {
         "id": 802393,
@@ -163,23 +180,6 @@
         "routing_key": "D20",
         "bedrooms": null,
         "property_type": null
-      },
-      {
-        "id": 801764,
-        "sale_date": "2026-08-21",
-        "address": "28 GLENAULIN RD, PALMERSTOWN, DUBLIN 20",
-        "county": "Dublin",
-        "eircode": "D20X998",
-        "price": 508000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.350162,
-        "longitude": -6.364489,
-        "routing_key": "D20",
-        "bedrooms": 3,
-        "property_type": "terraced"
       }
     ]
   },
@@ -314,9 +314,9 @@
     },
     {
       "year": 2026,
-      "count": 10868,
+      "count": 11029,
       "median_price": 476000.0,
-      "avg_price": 604286.0,
+      "avg_price": 604287.0,
       "min_price": 10000.0,
       "max_price": 18481040.37
     }

@@ -3,14 +3,48 @@
     "code": "D16",
     "match_type": "routing_key",
     "stats": {
-      "total_count": 3337,
+      "total_count": 3339,
       "median_price": 550000.0,
-      "avg_price": 564795.0,
+      "avg_price": 564768.0,
       "earliest_sale": "2010-01-14",
-      "latest_sale": "2026-09-16"
+      "latest_sale": "2026-09-22"
     },
     "count": 10,
     "results": [
+      {
+        "id": 804834,
+        "sale_date": "2026-09-22",
+        "address": "4 BALLINTYRE DOWNS, BALLINTEER, DUBLIN 16",
+        "county": "Dublin",
+        "eircode": "D16FN79",
+        "price": 675000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.273082,
+        "longitude": -6.253186,
+        "routing_key": "D16",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 804707,
+        "sale_date": "2026-09-21",
+        "address": "32 MARLAY HOUSE, TAYLORS HILL, RATHFARNHAM DUBLIN 16",
+        "county": "Dublin",
+        "eircode": "D16Y522",
+        "price": 363000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": null,
+        "longitude": null,
+        "routing_key": "D16",
+        "bedrooms": null,
+        "property_type": "apartment"
+      },
       {
         "id": 804477,
         "sale_date": "2026-09-16",
@@ -59,8 +93,8 @@
         "latitude": 53.281051,
         "longitude": -6.323473,
         "routing_key": "D16",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 803485,
@@ -73,11 +107,11 @@
         "vat_exclusive": false,
         "description": "Second-Hand Dwelling house /Apartment",
         "size_description": null,
-        "latitude": 53.39643,
-        "longitude": -6.129797,
+        "latitude": 53.275467,
+        "longitude": -6.205361,
         "routing_key": "D16",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 803493,
@@ -93,8 +127,8 @@
         "latitude": 53.285755,
         "longitude": -6.290533,
         "routing_key": "D16",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 4,
+        "property_type": "semi-detached"
       },
       {
         "id": 803047,
@@ -110,8 +144,8 @@
         "latitude": 53.273365,
         "longitude": -6.247552,
         "routing_key": "D16",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 802880,
@@ -127,8 +161,8 @@
         "latitude": 53.269981,
         "longitude": -6.250984,
         "routing_key": "D16",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 802648,
@@ -143,40 +177,6 @@
         "size_description": null,
         "latitude": 53.279544,
         "longitude": -6.256825,
-        "routing_key": "D16",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
-        "id": 802361,
-        "sale_date": "2026-08-31",
-        "address": "10 PINE VALLEY AVENUE, RATHFARNHAM, DUBLIN 16",
-        "county": "Dublin",
-        "eircode": "D16AP60",
-        "price": 902000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.2728,
-        "longitude": -6.260622,
-        "routing_key": "D16",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
-        "id": 802449,
-        "sale_date": "2026-08-31",
-        "address": "38 EDEN CRESCENT, GRANGE RD, RATHFARNHAM DUBLIN 16",
-        "county": "Dublin",
-        "eircode": "D16V1H2",
-        "price": 840000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.283184,
-        "longitude": -6.275927,
         "routing_key": "D16",
         "bedrooms": null,
         "property_type": null
@@ -314,9 +314,9 @@
     },
     {
       "year": 2026,
-      "count": 10868,
+      "count": 11029,
       "median_price": 476000.0,
-      "avg_price": 604286.0,
+      "avg_price": 604287.0,
       "min_price": 10000.0,
       "max_price": 18481040.37
     }

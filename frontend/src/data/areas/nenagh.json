@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 292874.0,
-  "avg_price": 496850,
+  "median_price": 285000.0,
+  "avg_price": 470100,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804999,
+      "sale_date": "2026-09-24",
+      "address": "15 CONNOLLY ST, NENAGH, TIPPERARY",
+      "county": "Tipperary",
+      "eircode": "E45Y159",
+      "price": 130000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.862019,
+      "longitude": -8.201345,
+      "routing_key": "E45",
+      "bedrooms": 3,
+      "property_type": "house",
+      "distance_m": 315.17908512
+    },
     {
       "id": 804149,
       "sale_date": "2026-09-11",
@@ -81,7 +99,7 @@
       "longitude": -8.200531,
       "routing_key": "E45",
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "apartment",
       "distance_m": 269.09544537
     },
     {
@@ -98,8 +116,8 @@
       "latitude": 52.871597,
       "longitude": -8.203607,
       "routing_key": "E45",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "detached",
       "distance_m": 1171.48774701
     },
     {
@@ -116,8 +134,8 @@
       "latitude": 52.85572,
       "longitude": -8.192037,
       "routing_key": "E45",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "detached",
       "distance_m": 759.59909066
     },
     {
@@ -134,8 +152,8 @@
       "latitude": 52.858386,
       "longitude": -8.20506,
       "routing_key": "E45",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "detached",
       "distance_m": 690.17392534
     },
     {
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": "terraced",
       "distance_m": 1656.02257167
-    },
-    {
-      "id": 802121,
-      "sale_date": "2026-08-25",
-      "address": "BREFFNI, GORTLANDROE, NENAGH",
-      "county": "Tipperary",
-      "eircode": "E45X585",
-      "price": 397500.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.870091,
-      "longitude": -8.21768,
-      "routing_key": "E45",
-      "bedrooms": 5,
-      "property_type": "detached",
-      "distance_m": 1680.63500955
     }
   ],
   "trends": [
@@ -236,97 +236,97 @@
     },
     {
       "year": 2015,
-      "count": 88,
-      "median_price": 99738.0,
-      "avg_price": 127581.0,
+      "count": 89,
+      "median_price": 99475.0,
+      "avg_price": 126513.0,
       "min_price": 20000.0,
       "max_price": 3000000.0
     },
     {
       "year": 2016,
-      "count": 96,
-      "median_price": 111500.0,
-      "avg_price": 106475.0,
+      "count": 101,
+      "median_price": 110000.0,
+      "avg_price": 105394.0,
       "min_price": 10000.0,
       "max_price": 255000.0
     },
     {
       "year": 2017,
-      "count": 87,
-      "median_price": 127754.0,
-      "avg_price": 123858.0,
+      "count": 101,
+      "median_price": 129515.0,
+      "avg_price": 124340.0,
       "min_price": 30000.0,
       "max_price": 270000.0
     },
     {
       "year": 2018,
-      "count": 97,
+      "count": 111,
       "median_price": 154250.0,
-      "avg_price": 146838.0,
+      "avg_price": 147815.0,
       "min_price": 35000.0,
       "max_price": 335000.0
     },
     {
       "year": 2019,
-      "count": 113,
-      "median_price": 164500.0,
-      "avg_price": 157916.0,
+      "count": 120,
+      "median_price": 162500.0,
+      "avg_price": 157368.0,
       "min_price": 22500.0,
       "max_price": 425000.0
     },
     {
       "year": 2020,
-      "count": 103,
-      "median_price": 162000.0,
-      "avg_price": 177240.0,
+      "count": 110,
+      "median_price": 162250.0,
+      "avg_price": 176652.0,
       "min_price": 28000.0,
       "max_price": 1938317.0
     },
     {
       "year": 2021,
-      "count": 93,
+      "count": 111,
       "median_price": 187000.0,
-      "avg_price": 192331.0,
+      "avg_price": 188766.0,
       "min_price": 22700.0,
       "max_price": 520000.0
     },
     {
       "year": 2022,
-      "count": 136,
+      "count": 148,
       "median_price": 201250.0,
-      "avg_price": 212323.0,
+      "avg_price": 209527.0,
       "min_price": 35000.0,
       "max_price": 525000.0
     },
     {
       "year": 2023,
-      "count": 95,
+      "count": 113,
       "median_price": 200000.0,
-      "avg_price": 211108.0,
+      "avg_price": 207168.0,
       "min_price": 56000.0,
       "max_price": 580000.0
     },
     {
       "year": 2024,
-      "count": 65,
-      "median_price": 198750.0,
-      "avg_price": 215542.0,
+      "count": 79,
+      "median_price": 208000.0,
+      "avg_price": 215037.0,
       "min_price": 12500.0,
       "max_price": 462000.0
     },
     {
       "year": 2025,
-      "count": 71,
-      "median_price": 320000.0,
-      "avg_price": 318369.0,
-      "min_price": 60000.0,
+      "count": 103,
+      "median_price": 290000.0,
+      "avg_price": 274565.0,
+      "min_price": 25000.0,
       "max_price": 556000.0
     },
     {
       "year": 2026,
-      "count": 64,
-      "median_price": 292874.0,
-      "avg_price": 319178.0,
+      "count": 75,
+      "median_price": 285000.0,
+      "avg_price": 303746.0,
       "min_price": 80000.0,
       "max_price": 1650000.0
     }

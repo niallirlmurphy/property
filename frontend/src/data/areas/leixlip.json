@@ -7,7 +7,7 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 476500.0,
+  "median_price": 478000.0,
   "avg_price": 426310,
   "min_year": 2010,
   "max_year": 2026,
@@ -44,8 +44,8 @@
       "latitude": 53.363697,
       "longitude": -6.510797,
       "routing_key": "W23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "terraced",
       "distance_m": 1404.2175214
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 53.367717,
       "longitude": -6.508194,
       "routing_key": "W23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 1280.0441279
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 53.368122,
       "longitude": -6.486879,
       "routing_key": "W23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "detached",
       "distance_m": 448.29305039
     },
     {
@@ -268,9 +268,9 @@
     },
     {
       "year": 2019,
-      "count": 70,
-      "median_price": 302500.0,
-      "avg_price": 314402.0,
+      "count": 71,
+      "median_price": 300000.0,
+      "avg_price": 312828.0,
       "min_price": 125000.0,
       "max_price": 755000.0
     },
@@ -308,25 +308,25 @@
     },
     {
       "year": 2024,
-      "count": 104,
-      "median_price": 436123.0,
-      "avg_price": 440697.0,
+      "count": 119,
+      "median_price": 440000.0,
+      "avg_price": 443598.0,
       "min_price": 176500.0,
       "max_price": 865000.0
     },
     {
       "year": 2025,
-      "count": 185,
+      "count": 189,
       "median_price": 436123.0,
-      "avg_price": 441377.0,
+      "avg_price": 442664.0,
       "min_price": 160000.0,
       "max_price": 1072500.0
     },
     {
       "year": 2026,
-      "count": 48,
-      "median_price": 476500.0,
-      "avg_price": 478728.0,
+      "count": 56,
+      "median_price": 478000.0,
+      "avg_price": 476892.0,
       "min_price": 196000.0,
       "max_price": 830000.0
     }

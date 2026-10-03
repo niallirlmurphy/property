@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 434681.0,
-  "avg_price": 509868,
+  "median_price": 436123.0,
+  "avg_price": 501368,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804781,
+      "sale_date": "2026-09-22",
+      "address": "113 CLUAIN RI, ASHBOURNE, MEATH",
+      "county": "Meath",
+      "eircode": "A84XT65",
+      "price": 350000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.513725,
+      "longitude": -6.405596,
+      "routing_key": "A84",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 545.50595749
+    },
     {
       "id": 803726,
       "sale_date": "2026-09-09",
@@ -173,24 +191,6 @@
       "bedrooms": 5,
       "property_type": "detached",
       "distance_m": 297.64619216
-    },
-    {
-      "id": 799459,
-      "sale_date": "2026-08-05",
-      "address": "10 CASTLE CLOSE, ASHBOURNE, MEATH",
-      "county": "Meath",
-      "eircode": "A84DT92",
-      "price": 435000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.506237,
-      "longitude": -6.397558,
-      "routing_key": "A84",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 599.89952382
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 164,
-      "median_price": 434681.0,
-      "avg_price": 430117.0,
+      "count": 175,
+      "median_price": 436123.0,
+      "avg_price": 429736.0,
       "min_price": 187500.0,
       "max_price": 975000.0
     }

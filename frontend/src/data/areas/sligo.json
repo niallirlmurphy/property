@@ -8,10 +8,46 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 260000.0,
-  "avg_price": 265591,
+  "avg_price": 242307,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804895,
+      "sale_date": "2026-09-23",
+      "address": "1 THE MALL, SLIGO",
+      "county": "Sligo",
+      "eircode": "F91WKH7",
+      "price": 260000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 54.272527,
+      "longitude": -8.471381,
+      "routing_key": "F91",
+      "bedrooms": 4,
+      "property_type": "terraced",
+      "distance_m": 249.85014467
+    },
+    {
+      "id": 804813,
+      "sale_date": "2026-09-22",
+      "address": "22 ST JOSEPHS TERRACE, SLIGO, SLIGO",
+      "county": "Sligo",
+      "eircode": "F91DHN3",
+      "price": 167500.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 54.265811,
+      "longitude": -8.473093,
+      "routing_key": "F91",
+      "bedrooms": 2,
+      "property_type": "terraced",
+      "distance_m": 709.24331003
+    },
     {
       "id": 804501,
       "sale_date": "2026-09-16",
@@ -98,8 +134,8 @@
       "latitude": 54.265969,
       "longitude": -8.469508,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "semi-detached",
       "distance_m": 771.72347308
     },
     {
@@ -134,8 +170,8 @@
       "latitude": 54.265969,
       "longitude": -8.469508,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 771.72347308
     },
     {
@@ -153,44 +189,8 @@
       "longitude": -8.466906,
       "routing_key": null,
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "house",
       "distance_m": 976.65338709
-    },
-    {
-      "id": 803494,
-      "sale_date": "2026-09-07",
-      "address": "36 MARKIEVICZ HEIGHTS, SLIGO, SLIGO",
-      "county": "Sligo",
-      "eircode": "F91F5TT",
-      "price": 374000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 54.25634,
-      "longitude": -8.463833,
-      "routing_key": "F91",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1899.45212342
-    },
-    {
-      "id": 802974,
-      "sale_date": "2026-09-02",
-      "address": "No. 3 Dartry Way, Caltragh, Sligo",
-      "county": "Sligo",
-      "eircode": null,
-      "price": 286343.61,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 54.258819,
-      "longitude": -8.476683,
-      "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1478.36524931
     }
   ],
   "trends": [
@@ -268,65 +268,65 @@
     },
     {
       "year": 2019,
-      "count": 171,
-      "median_price": 141000.0,
-      "avg_price": 148106.0,
+      "count": 173,
+      "median_price": 142000.0,
+      "avg_price": 149689.0,
       "min_price": 22200.0,
-      "max_price": 400000.0
+      "max_price": 417000.0
     },
     {
       "year": 2020,
-      "count": 179,
-      "median_price": 132000.0,
-      "avg_price": 146532.0,
+      "count": 180,
+      "median_price": 132500.0,
+      "avg_price": 147496.0,
       "min_price": 10000.0,
       "max_price": 570000.0
     },
     {
       "year": 2021,
-      "count": 243,
-      "median_price": 162500.0,
-      "avg_price": 181532.0,
+      "count": 244,
+      "median_price": 162250.0,
+      "avg_price": 181161.0,
       "min_price": 20000.0,
       "max_price": 590000.0
     },
     {
       "year": 2022,
-      "count": 253,
-      "median_price": 200000.0,
-      "avg_price": 217198.0,
+      "count": 257,
+      "median_price": 198000.0,
+      "avg_price": 215261.0,
       "min_price": 30000.0,
       "max_price": 800000.0
     },
     {
       "year": 2023,
-      "count": 265,
-      "median_price": 185000.0,
-      "avg_price": 210147.0,
+      "count": 271,
+      "median_price": 183000.0,
+      "avg_price": 208781.0,
       "min_price": 35000.0,
       "max_price": 3000000.0
     },
     {
       "year": 2024,
-      "count": 228,
+      "count": 232,
       "median_price": 248000.0,
-      "avg_price": 266874.0,
+      "avg_price": 266231.0,
       "min_price": 11000.0,
       "max_price": 990000.0
     },
     {
       "year": 2025,
-      "count": 215,
+      "count": 216,
       "median_price": 260000.0,
-      "avg_price": 265781.0,
+      "avg_price": 265801.0,
       "min_price": 23000.0,
       "max_price": 1000000.0
     },
     {
       "year": 2026,
-      "count": 159,
+      "count": 163,
       "median_price": 260000.0,
-      "avg_price": 269835.0,
+      "avg_price": 268732.0,
       "min_price": 50000.0,
       "max_price": 885000.0
     }

@@ -7,7 +7,7 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 497500.0,
+  "median_price": 518500.0,
   "avg_price": 453897,
   "min_year": 2010,
   "max_year": 2026,
@@ -80,8 +80,8 @@
       "latitude": 53.368434,
       "longitude": -6.587273,
       "routing_key": "W23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 1657.60704828
     },
     {
@@ -98,8 +98,8 @@
       "latitude": 53.388633,
       "longitude": -6.603104,
       "routing_key": "W23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 953.06069821
     },
     {
@@ -116,8 +116,8 @@
       "latitude": 53.392684,
       "longitude": -6.592337,
       "routing_key": "W23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1075.11345336
     },
     {
@@ -135,7 +135,7 @@
       "longitude": -6.581741,
       "routing_key": null,
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "house",
       "distance_m": 1430.46659173
     },
     {
@@ -308,9 +308,9 @@
     },
     {
       "year": 2024,
-      "count": 191,
-      "median_price": 450000.0,
-      "avg_price": 494608.0,
+      "count": 192,
+      "median_price": 448825.0,
+      "avg_price": 494115.0,
       "min_price": 202500.0,
       "max_price": 2480176.21
     },
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 74,
-      "median_price": 497500.0,
-      "avg_price": 540546.0,
+      "count": 80,
+      "median_price": 518500.0,
+      "avg_price": 542293.0,
       "min_price": 150000.0,
       "max_price": 1520000.0
     }

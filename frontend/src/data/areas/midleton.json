@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 385000.0,
-  "avg_price": 361790,
+  "median_price": 383130.0,
+  "avg_price": 320290,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804689,
+      "sale_date": "2026-09-21",
+      "address": "22 CORABBEY COURT, DISTILLERY WALK, MIDLETON",
+      "county": "Cork",
+      "eircode": "P25HE17",
+      "price": 245000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.914112,
+      "longitude": -8.17056,
+      "routing_key": "P25",
+      "bedrooms": 2,
+      "property_type": "apartment",
+      "distance_m": 863.81390434
+    },
     {
       "id": 804583,
       "sale_date": "2026-09-17",
@@ -62,8 +80,8 @@
       "latitude": 51.92358,
       "longitude": -8.198336,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1579.83012039
     },
     {
@@ -80,8 +98,8 @@
       "latitude": 51.922676,
       "longitude": -8.170082,
       "routing_key": "P25",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 420.0426723
     },
     {
@@ -98,8 +116,8 @@
       "latitude": 51.924819,
       "longitude": -8.177997,
       "routing_key": "P25",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 433.07502282
     },
     {
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "semi-detached",
       "distance_m": 1561.7311928
-    },
-    {
-      "id": 800378,
-      "sale_date": "2026-08-11",
-      "address": "6 HAWTHORN DRIVE, CASTLEREDMOND, MIDLETON",
-      "county": "Cork",
-      "eircode": "P25RK82",
-      "price": 660000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.906959,
-      "longitude": -8.158653,
-      "routing_key": "P25",
-      "bedrooms": 5,
-      "property_type": "detached",
-      "distance_m": 1970.99526318
     }
   ],
   "trends": [
@@ -276,11 +276,11 @@
     },
     {
       "year": 2020,
-      "count": 57,
-      "median_price": 226950.0,
-      "avg_price": 219209.0,
+      "count": 58,
+      "median_price": 226975.0,
+      "avg_price": 231047.0,
       "min_price": 90000.0,
-      "max_price": 418501.0
+      "max_price": 905806.0
     },
     {
       "year": 2021,
@@ -316,17 +316,17 @@
     },
     {
       "year": 2025,
-      "count": 168,
-      "median_price": 398839.0,
-      "avg_price": 390618.0,
+      "count": 175,
+      "median_price": 392070.0,
+      "avg_price": 383765.0,
       "min_price": 130000.0,
       "max_price": 735000.0
     },
     {
       "year": 2026,
-      "count": 115,
-      "median_price": 385000.0,
-      "avg_price": 379788.0,
+      "count": 132,
+      "median_price": 383130.0,
+      "avg_price": 373365.0,
       "min_price": 28129.66,
       "max_price": 660000.0
     }

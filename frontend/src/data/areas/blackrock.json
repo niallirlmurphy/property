@@ -7,11 +7,47 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 861778.0,
-  "avg_price": 876400,
+  "median_price": 865000.0,
+  "avg_price": 1059000,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805006,
+      "sale_date": "2026-09-24",
+      "address": "18 SHANDON PARK, BLACKROCK, DUBLIN",
+      "county": "Dublin",
+      "eircode": "A94AV62",
+      "price": 960000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.294849,
+      "longitude": -6.167048,
+      "routing_key": "A94",
+      "bedrooms": 3,
+      "property_type": "bungalow",
+      "distance_m": 1107.70891747
+    },
+    {
+      "id": 805049,
+      "sale_date": "2026-09-24",
+      "address": "DAWSON LODGE, CROSS AVE, BLACKROCK",
+      "county": "Dublin",
+      "eircode": "A94Y3E9",
+      "price": 2300000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.302936,
+      "longitude": -6.196663,
+      "routing_key": "A94",
+      "bedrooms": 3,
+      "property_type": "terraced",
+      "distance_m": 1194.56990165
+    },
     {
       "id": 803771,
       "sale_date": "2026-09-09",
@@ -26,8 +62,8 @@
       "latitude": 53.296371,
       "longitude": -6.169453,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 874.59386189
     },
     {
@@ -44,8 +80,8 @@
       "latitude": 53.307701,
       "longitude": -6.196941,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 1370.76959452
     },
     {
@@ -62,8 +98,8 @@
       "latitude": 53.29216,
       "longitude": -6.193042,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 1436.56787649
     },
     {
@@ -80,8 +116,8 @@
       "latitude": 53.302936,
       "longitude": -6.196663,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 1194.56990165
     },
     {
@@ -98,8 +134,8 @@
       "latitude": 53.29993,
       "longitude": -6.176838,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 253.05073117
     },
     {
@@ -116,8 +152,8 @@
       "latitude": 53.306358,
       "longitude": -6.189577,
       "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 873.52613354
     },
     {
@@ -155,42 +191,6 @@
       "bedrooms": 5,
       "property_type": "detached",
       "distance_m": 1362.01119875
-    },
-    {
-      "id": 801543,
-      "sale_date": "2026-08-20",
-      "address": "1 ROCK HALL, 42 44 SWEETMANS AVE, BLACKROCK",
-      "county": "Dublin",
-      "eircode": "A94D721",
-      "price": 350000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.298329,
-      "longitude": -6.177349,
-      "routing_key": "A94",
-      "bedrooms": 2,
-      "property_type": "apartment",
-      "distance_m": 405.67592918
-    },
-    {
-      "id": 801556,
-      "sale_date": "2026-08-20",
-      "address": "12 MARETIMO VILLAS, NEWTOWN AVE, BLACKROCK",
-      "county": "Dublin",
-      "eircode": "A94H7P3",
-      "price": 1084000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.299884,
-      "longitude": -6.173357,
-      "routing_key": "A94",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 426.49323914
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 112,
-      "median_price": 861778.0,
-      "avg_price": 1065391.0,
+      "count": 125,
+      "median_price": 865000.0,
+      "avg_price": 1074782.0,
       "min_price": 321170.0,
       "max_price": 3875000.0
     }

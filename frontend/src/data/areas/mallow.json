@@ -7,7 +7,7 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 305000.0,
+  "median_price": 297500.0,
   "avg_price": 273263,
   "min_year": 2010,
   "max_year": 2026,
@@ -26,8 +26,8 @@
       "latitude": 52.140571,
       "longitude": -8.638166,
       "routing_key": "P51",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 1174.65560198
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 52.126307,
       "longitude": -8.648549,
       "routing_key": "P51",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "detached",
       "distance_m": 1472.7557487
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 52.149559,
       "longitude": -8.639987,
       "routing_key": "P51",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1573.31113018
     },
     {
@@ -292,17 +292,17 @@
     },
     {
       "year": 2022,
-      "count": 159,
+      "count": 161,
       "median_price": 215000.0,
-      "avg_price": 224757.0,
+      "avg_price": 224813.0,
       "min_price": 23000.0,
       "max_price": 875000.0
     },
     {
       "year": 2023,
-      "count": 131,
-      "median_price": 217000.0,
-      "avg_price": 232715.0,
+      "count": 132,
+      "median_price": 216000.0,
+      "avg_price": 232528.0,
       "min_price": 50000.0,
       "max_price": 1012500.0
     },
@@ -316,17 +316,17 @@
     },
     {
       "year": 2025,
-      "count": 130,
+      "count": 131,
       "median_price": 260000.0,
-      "avg_price": 256853.0,
+      "avg_price": 257373.0,
       "min_price": 35000.0,
       "max_price": 715000.0
     },
     {
       "year": 2026,
-      "count": 63,
-      "median_price": 305000.0,
-      "avg_price": 293737.0,
+      "count": 66,
+      "median_price": 297500.0,
+      "avg_price": 289885.0,
       "min_price": 60000.0,
       "max_price": 715000.0
     }

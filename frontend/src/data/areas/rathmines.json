@@ -7,11 +7,47 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 952500.0,
-  "avg_price": 732450,
+  "median_price": 975000.0,
+  "avg_price": 946150,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804899,
+      "sale_date": "2026-09-23",
+      "address": "11 OAKLANDS, YORK RD, RATHMINES DUBLIN 6",
+      "county": "Dublin",
+      "eircode": "D06Y886",
+      "price": 675000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.318588,
+      "longitude": -6.267069,
+      "routing_key": "D06",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 894.97985542
+    },
+    {
+      "id": 804704,
+      "sale_date": "2026-09-21",
+      "address": "30 ANNESLEY PARK, RANELAGH, DUBLIN 6",
+      "county": "Dublin",
+      "eircode": "D06V2A8",
+      "price": 2750000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.319583,
+      "longitude": -6.256392,
+      "routing_key": "D06",
+      "bedrooms": 3,
+      "property_type": null,
+      "distance_m": 956.13717598
+    },
     {
       "id": 804475,
       "sale_date": "2026-09-16",
@@ -80,8 +116,8 @@
       "latitude": 53.322227,
       "longitude": -6.250717,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "terraced",
       "distance_m": 1056.4072794
     },
     {
@@ -98,8 +134,8 @@
       "latitude": 53.326534,
       "longitude": -6.261086,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 251.27185748
     },
     {
@@ -134,8 +170,8 @@
       "latitude": 53.321269,
       "longitude": -6.255344,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "terraced",
       "distance_m": 862.16386291
     },
     {
@@ -152,45 +188,9 @@
       "latitude": 53.316959,
       "longitude": -6.265989,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1066.72471282
-    },
-    {
-      "id": 803167,
-      "sale_date": "2026-09-03",
-      "address": "THE COACH HOUSE, BEECHWOOD COTTAGE, BEECHWOOD AVE LOWER",
-      "county": "Dublin",
-      "eircode": "D06F2H0",
-      "price": 850000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.322774,
-      "longitude": -6.254455,
-      "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 808.83280701
-    },
-    {
-      "id": 802941,
-      "sale_date": "2026-09-02",
-      "address": "APT 1, BELGRAVE VIEW, BELGRAVE SQ",
-      "county": "Dublin",
-      "eircode": "D06H5K8",
-      "price": 438000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.321426,
-      "longitude": -6.25912,
-      "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 683.76176489
     }
   ],
   "trends": [
@@ -228,9 +228,9 @@
     },
     {
       "year": 2014,
-      "count": 111,
+      "count": 112,
       "median_price": 530000.0,
-      "avg_price": 661647.0,
+      "avg_price": 658401.0,
       "min_price": 17057.0,
       "max_price": 2500000.0
     },
@@ -268,9 +268,9 @@
     },
     {
       "year": 2019,
-      "count": 126,
-      "median_price": 675000.0,
-      "avg_price": 875095.0,
+      "count": 127,
+      "median_price": 670000.0,
+      "avg_price": 871945.0,
       "min_price": 10000.0,
       "max_price": 3900000.0
     },
@@ -284,49 +284,49 @@
     },
     {
       "year": 2021,
-      "count": 255,
-      "median_price": 650000.0,
-      "avg_price": 876022.0,
+      "count": 256,
+      "median_price": 645000.0,
+      "avg_price": 874768.0,
       "min_price": 23611.0,
       "max_price": 4440000.0
     },
     {
       "year": 2022,
-      "count": 278,
+      "count": 280,
       "median_price": 875000.0,
-      "avg_price": 1044100.0,
+      "avg_price": 1042060.0,
       "min_price": 10000.0,
       "max_price": 4724500.0
     },
     {
       "year": 2023,
-      "count": 301,
-      "median_price": 806000.0,
-      "avg_price": 1010180.0,
+      "count": 303,
+      "median_price": 800000.0,
+      "avg_price": 1006631.0,
       "min_price": 18750.0,
       "max_price": 4200000.0
     },
     {
       "year": 2024,
-      "count": 308,
+      "count": 310,
       "median_price": 750000.0,
-      "avg_price": 976559.0,
+      "avg_price": 973210.0,
       "min_price": 35000.0,
       "max_price": 6500000.0
     },
     {
       "year": 2025,
-      "count": 253,
-      "median_price": 880000.0,
-      "avg_price": 1053661.0,
+      "count": 260,
+      "median_price": 871500.0,
+      "avg_price": 1044278.0,
       "min_price": 90000.0,
       "max_price": 6000000.0
     },
     {
       "year": 2026,
-      "count": 132,
-      "median_price": 952500.0,
-      "avg_price": 1171027.0,
+      "count": 158,
+      "median_price": 975000.0,
+      "avg_price": 1170677.0,
       "min_price": 95000.0,
       "max_price": 4550000.0
     }

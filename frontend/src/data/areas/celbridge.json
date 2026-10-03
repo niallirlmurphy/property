@@ -8,10 +8,28 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 440529.0,
-  "avg_price": 445468,
+  "avg_price": 461178,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804809,
+      "sale_date": "2026-09-22",
+      "address": "20 The Close, Grattan Park, Celbridge",
+      "county": "Kildare",
+      "eircode": "W23HHR4",
+      "price": 577093.0,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.337512,
+      "longitude": -6.558786,
+      "routing_key": "W23",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 1279.542258
+    },
     {
       "id": 804341,
       "sale_date": "2026-09-15",
@@ -80,8 +98,8 @@
       "latitude": 53.33374,
       "longitude": -6.524548,
       "routing_key": "W23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1125.14744054
     },
     {
@@ -98,8 +116,8 @@
       "latitude": 53.345527,
       "longitude": -6.555498,
       "routing_key": "W23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1328.51993897
     },
     {
@@ -116,8 +134,8 @@
       "latitude": 53.344886,
       "longitude": -6.537093,
       "routing_key": "W23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 752.04137726
     },
     {
@@ -134,8 +152,8 @@
       "latitude": 53.342319,
       "longitude": -6.550588,
       "routing_key": "W23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 856.45526394
     },
     {
@@ -152,8 +170,8 @@
       "latitude": 53.349147,
       "longitude": -6.540785,
       "routing_key": "W23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1209.62905945
     },
     {
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": "apartment",
       "distance_m": 919.58132272
-    },
-    {
-      "id": 802199,
-      "sale_date": "2026-08-26",
-      "address": "53 WILLOWBROOK PARK, CELBRIDGE, LAOIS",
-      "county": "Kildare",
-      "eircode": "W23Y992",
-      "price": 420000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.347061,
-      "longitude": -6.547791,
-      "routing_key": "W23",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 1116.52200771
     }
   ],
   "trends": [
@@ -324,11 +324,11 @@
     },
     {
       "year": 2026,
-      "count": 138,
+      "count": 157,
       "median_price": 440529.0,
-      "avg_price": 473759.0,
+      "avg_price": 479831.0,
       "min_price": 240000.0,
-      "max_price": 907000.0
+      "max_price": 935000.0
     }
   ]
 }

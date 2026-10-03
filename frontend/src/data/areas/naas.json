@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 455000.0,
-  "avg_price": 447755,
+  "median_price": 459000.0,
+  "avg_price": 420883,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804963,
+      "sale_date": "2026-09-23",
+      "address": "Apartment 14, Cearbhall Court, Naas",
+      "county": "Kildare",
+      "eircode": null,
+      "price": 273127.75,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.215843,
+      "longitude": -6.668057,
+      "routing_key": null,
+      "bedrooms": null,
+      "property_type": "duplex",
+      "distance_m": 947.47428538
+    },
     {
       "id": 804632,
       "sale_date": "2026-09-18",
@@ -152,8 +170,8 @@
       "latitude": 53.218857,
       "longitude": -6.639471,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "semi-detached",
       "distance_m": 1232.91615281
     },
     {
@@ -170,27 +188,9 @@
       "latitude": 53.228172,
       "longitude": -6.657657,
       "routing_key": "W91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "semi-detached",
       "distance_m": 746.30826717
-    },
-    {
-      "id": 803489,
-      "sale_date": "2026-09-07",
-      "address": "30 Tipperstown Walk, Tipper Road, Naas",
-      "county": "Kildare",
-      "eircode": null,
-      "price": 541850.22,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.218857,
-      "longitude": -6.639471,
-      "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1232.91615281
     }
   ],
   "trends": [
@@ -276,57 +276,57 @@
     },
     {
       "year": 2020,
-      "count": 169,
-      "median_price": 298000.0,
-      "avg_price": 312244.0,
+      "count": 170,
+      "median_price": 296500.0,
+      "avg_price": 311649.0,
       "min_price": 41000.0,
       "max_price": 670000.0
     },
     {
       "year": 2021,
-      "count": 333,
+      "count": 339,
       "median_price": 317181.0,
-      "avg_price": 340449.0,
+      "avg_price": 338302.0,
       "min_price": 90000.0,
       "max_price": 1953261.67
     },
     {
       "year": 2022,
-      "count": 332,
-      "median_price": 372500.0,
-      "avg_price": 388086.0,
+      "count": 335,
+      "median_price": 371806.0,
+      "avg_price": 386819.0,
       "min_price": 160000.0,
       "max_price": 1250000.0
     },
     {
       "year": 2023,
-      "count": 260,
-      "median_price": 365000.0,
-      "avg_price": 388485.0,
+      "count": 262,
+      "median_price": 364000.0,
+      "avg_price": 386779.0,
       "min_price": 130000.0,
       "max_price": 1155000.0
     },
     {
       "year": 2024,
-      "count": 255,
+      "count": 257,
       "median_price": 428770.0,
-      "avg_price": 451268.0,
+      "avg_price": 451836.0,
       "min_price": 20000.0,
       "max_price": 2500000.0
     },
     {
       "year": 2025,
-      "count": 261,
-      "median_price": 440529.0,
-      "avg_price": 462745.0,
+      "count": 264,
+      "median_price": 440000.0,
+      "avg_price": 460168.0,
       "min_price": 70000.0,
       "max_price": 1368610.0
     },
     {
       "year": 2026,
-      "count": 143,
-      "median_price": 455000.0,
-      "avg_price": 479278.0,
+      "count": 161,
+      "median_price": 459000.0,
+      "avg_price": 484765.0,
       "min_price": 130000.0,
       "max_price": 1050000.0
     }

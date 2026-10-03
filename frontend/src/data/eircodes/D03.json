@@ -3,14 +3,48 @@
     "code": "D03",
     "match_type": "routing_key",
     "stats": {
-      "total_count": 3442,
-      "median_price": 445250.0,
-      "avg_price": 554399.0,
+      "total_count": 3444,
+      "median_price": 445000.0,
+      "avg_price": 554276.0,
       "earliest_sale": "2010-02-05",
-      "latest_sale": "2026-09-18"
+      "latest_sale": "2026-09-23"
     },
     "count": 10,
     "results": [
+      {
+        "id": 804944,
+        "sale_date": "2026-09-23",
+        "address": "50 MERCHANTS SQ, EAST WALL, DUBLIN 3",
+        "county": "Dublin",
+        "eircode": "D03K6C8",
+        "price": 371000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.351871,
+        "longitude": -6.229534,
+        "routing_key": "D03",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 804728,
+        "sale_date": "2026-09-21",
+        "address": "58 CRESCENT HOUSE, HOWTH ROAD, CO. DUBLIN",
+        "county": "Dublin",
+        "eircode": "D03X1A5",
+        "price": 315000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.366127,
+        "longitude": -6.224002,
+        "routing_key": "D03",
+        "bedrooms": 1,
+        "property_type": "apartment"
+      },
       {
         "id": 804617,
         "sale_date": "2026-09-18",
@@ -146,40 +180,6 @@
         "routing_key": "D03",
         "bedrooms": null,
         "property_type": null
-      },
-      {
-        "id": 804224,
-        "sale_date": "2026-09-14",
-        "address": "110 HOWTH RD, CLONTARF, DUBLIN 3",
-        "county": "Dublin",
-        "eircode": "D03KV60",
-        "price": 4250000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.367946,
-        "longitude": -6.215373,
-        "routing_key": "D03",
-        "bedrooms": 5,
-        "property_type": "detached"
-      },
-      {
-        "id": 804101,
-        "sale_date": "2026-09-11",
-        "address": "24 ST DECLANS TERRACE, MARINO, DUBLIN 3",
-        "county": "Dublin",
-        "eircode": "D03E2P3",
-        "price": 120000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.368854,
-        "longitude": -6.232162,
-        "routing_key": "D03",
-        "bedrooms": null,
-        "property_type": "terraced"
       }
     ]
   },
@@ -314,9 +314,9 @@
     },
     {
       "year": 2026,
-      "count": 10868,
+      "count": 11029,
       "median_price": 476000.0,
-      "avg_price": 604286.0,
+      "avg_price": 604287.0,
       "min_price": 10000.0,
       "max_price": 18481040.37
     }

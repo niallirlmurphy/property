@@ -3,30 +3,30 @@
     "code": "D10",
     "match_type": "routing_key",
     "stats": {
-      "total_count": 878,
+      "total_count": 879,
       "median_price": 280000.0,
-      "avg_price": 280218.0,
+      "avg_price": 280201.0,
       "earliest_sale": "2010-03-12",
-      "latest_sale": "2026-09-11"
+      "latest_sale": "2026-09-23"
     },
     "count": 10,
     "results": [
       {
-        "id": 804090,
-        "sale_date": "2026-09-11",
-        "address": "200 SEVEN OAKS, SARSFIELD ROAD, BALLYFERMOT",
+        "id": 804933,
+        "sale_date": "2026-09-23",
+        "address": "41 CEDAR BROOK WAY, CHERRY ORCHARD, DUBLIN 10",
         "county": "Dublin",
-        "eircode": "D10AT26",
-        "price": 20000.0,
+        "eircode": "D10A187",
+        "price": 265000.0,
         "not_full_market_price": false,
         "vat_exclusive": false,
         "description": "Second-Hand Dwelling house /Apartment",
         "size_description": null,
-        "latitude": 53.342634,
-        "longitude": -6.331696,
+        "latitude": 53.337299,
+        "longitude": -6.379332,
         "routing_key": "D10",
         "bedrooms": 2,
-        "property_type": "apartment"
+        "property_type": "duplex"
       },
       {
         "id": 804049,
@@ -52,6 +52,23 @@
         "county": "Dublin",
         "eircode": "D10AT26",
         "price": 275000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.342634,
+        "longitude": -6.331696,
+        "routing_key": "D10",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 804090,
+        "sale_date": "2026-09-11",
+        "address": "200 SEVEN OAKS, SARSFIELD ROAD, BALLYFERMOT",
+        "county": "Dublin",
+        "eircode": "D10AT26",
+        "price": 20000.0,
         "not_full_market_price": false,
         "vat_exclusive": false,
         "description": "Second-Hand Dwelling house /Apartment",
@@ -162,23 +179,6 @@
         "longitude": -6.381039,
         "routing_key": "D10",
         "bedrooms": 3,
-        "property_type": "terraced"
-      },
-      {
-        "id": 799387,
-        "sale_date": "2026-08-04",
-        "address": "51 BALLYFERMOT AVENUE, BALLYFERMOT, DUBLIN 10",
-        "county": "Dublin",
-        "eircode": "D10XW83",
-        "price": 319000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.340518,
-        "longitude": -6.351138,
-        "routing_key": "D10",
-        "bedrooms": 2,
         "property_type": "terraced"
       }
     ]
@@ -314,9 +314,9 @@
     },
     {
       "year": 2026,
-      "count": 10868,
+      "count": 11029,
       "median_price": 476000.0,
-      "avg_price": 604286.0,
+      "avg_price": 604287.0,
       "min_price": 10000.0,
       "max_price": 18481040.37
     }

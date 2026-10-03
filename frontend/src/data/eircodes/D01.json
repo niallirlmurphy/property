@@ -3,14 +3,48 @@
     "code": "D01",
     "match_type": "routing_key",
     "stats": {
-      "total_count": 2064,
+      "total_count": 2069,
       "median_price": 316000.0,
-      "avg_price": 372865.0,
+      "avg_price": 372777.0,
       "earliest_sale": "2010-02-10",
-      "latest_sale": "2026-09-18"
+      "latest_sale": "2026-09-24"
     },
     "count": 10,
     "results": [
+      {
+        "id": 804993,
+        "sale_date": "2026-09-24",
+        "address": "12 RUTLAND PLACE NORTH, NORTH CIRCULAR ROAD, DUBLIN 1",
+        "county": "Dublin",
+        "eircode": "D01R5C6",
+        "price": 438000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.356922,
+        "longitude": -6.251741,
+        "routing_key": "D01",
+        "bedrooms": 4,
+        "property_type": "terraced"
+      },
+      {
+        "id": 804870,
+        "sale_date": "2026-09-22",
+        "address": "APT 3 BLOCK 5, CLARION QUAY, EXCISE WALK DUBLIN 1",
+        "county": "Dublin",
+        "eircode": "D01H006",
+        "price": 380000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.348487,
+        "longitude": -6.24362,
+        "routing_key": "D01",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
       {
         "id": 804616,
         "sale_date": "2026-09-18",
@@ -56,11 +90,11 @@
         "vat_exclusive": false,
         "description": "Second-Hand Dwelling house /Apartment",
         "size_description": null,
-        "latitude": 53.396598,
-        "longitude": -6.128542,
+        "latitude": 53.357491,
+        "longitude": -6.248787,
         "routing_key": "D01",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 1,
+        "property_type": "apartment"
       },
       {
         "id": 803280,
@@ -73,11 +107,11 @@
         "vat_exclusive": false,
         "description": "Second-Hand Dwelling house /Apartment",
         "size_description": null,
-        "latitude": 53.396598,
-        "longitude": -6.128542,
+        "latitude": 53.3502,
+        "longitude": -6.241281,
         "routing_key": "D01",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "apartment"
       },
       {
         "id": 802604,
@@ -90,11 +124,11 @@
         "vat_exclusive": false,
         "description": "Second-Hand Dwelling house /Apartment",
         "size_description": null,
-        "latitude": 53.396598,
-        "longitude": -6.128542,
+        "latitude": 53.349781,
+        "longitude": -6.268597,
         "routing_key": "D01",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 1,
+        "property_type": "apartment"
       },
       {
         "id": 802674,
@@ -128,7 +162,7 @@
         "longitude": -6.128542,
         "routing_key": "D01",
         "bedrooms": null,
-        "property_type": null
+        "property_type": "apartment"
       },
       {
         "id": 801849,
@@ -146,40 +180,6 @@
         "routing_key": "D01",
         "bedrooms": 1,
         "property_type": "apartment"
-      },
-      {
-        "id": 801625,
-        "sale_date": "2026-08-20",
-        "address": "509 THE LIFFEY TRUST, 117 126 UPPER SHERIFF ST, DUBLIN",
-        "county": "Dublin",
-        "eircode": "D01TN24",
-        "price": 567000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.408798,
-        "longitude": -6.346457,
-        "routing_key": "D01",
-        "bedrooms": 2,
-        "property_type": "apartment"
-      },
-      {
-        "id": 801659,
-        "sale_date": "2026-08-20",
-        "address": "APT 24, 55 MOUNTJOY SQ WEST, DUBLIN 1",
-        "county": "Dublin",
-        "eircode": "D01XD92",
-        "price": 275000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.355772,
-        "longitude": -6.258414,
-        "routing_key": "D01",
-        "bedrooms": 1,
-        "property_type": "terraced"
       }
     ]
   },
@@ -314,9 +314,9 @@
     },
     {
       "year": 2026,
-      "count": 10868,
+      "count": 11029,
       "median_price": 476000.0,
-      "avg_price": 604286.0,
+      "avg_price": 604287.0,
       "min_price": 10000.0,
       "max_price": 18481040.37
     }

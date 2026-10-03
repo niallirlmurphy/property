@@ -7,11 +7,47 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 312500.0,
-  "avg_price": 282161,
+  "median_price": 308370.0,
+  "avg_price": 266761,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804912,
+      "sale_date": "2026-09-23",
+      "address": "20 THE MILLRACE, BURRIN RD, CARLOW",
+      "county": "Carlow",
+      "eircode": "R93H0A4",
+      "price": 265000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.825168,
+      "longitude": -6.920208,
+      "routing_key": "R93",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 1788.25397825
+    },
+    {
+      "id": 804688,
+      "sale_date": "2026-09-21",
+      "address": "20 FERRYBANK, LEIGHLIN RD, GRAIGUECULLEN",
+      "county": "Carlow",
+      "eircode": "R93E952",
+      "price": 145000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.827301,
+      "longitude": -6.942903,
+      "routing_key": "R93",
+      "bedrooms": 2,
+      "property_type": "apartment",
+      "distance_m": 1883.75860206
+    },
     {
       "id": 804518,
       "sale_date": "2026-09-16",
@@ -62,8 +98,8 @@
       "latitude": 52.834312,
       "longitude": -6.899934,
       "routing_key": "R93",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1907.66061124
     },
     {
@@ -80,8 +116,8 @@
       "latitude": 52.836166,
       "longitude": -6.929292,
       "routing_key": "R93",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 561.94733321
     },
     {
@@ -98,8 +134,8 @@
       "latitude": 52.840183,
       "longitude": -6.899003,
       "routing_key": "R93",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 1828.23458093
     },
     {
@@ -116,8 +152,8 @@
       "latitude": 52.831222,
       "longitude": -6.903617,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1855.43428516
     },
     {
@@ -152,45 +188,9 @@
       "latitude": 52.834308,
       "longitude": -6.929048,
       "routing_key": "R93",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 752.72678902
-    },
-    {
-      "id": 803204,
-      "sale_date": "2026-09-04",
-      "address": "14 BARROWVILLE, KILKENNY ROAD, CARLOW",
-      "county": "Carlow",
-      "eircode": "R93XH98",
-      "price": 385000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.833213,
-      "longitude": -6.929669,
-      "routing_key": "R93",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 881.33650072
-    },
-    {
-      "id": 802999,
-      "sale_date": "2026-09-03",
-      "address": "12 CAISLEAN CUIRT, STAPLESTOWN RD, CARLOW",
-      "county": "Carlow",
-      "eircode": "R93KW21",
-      "price": 179000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.835843,
-      "longitude": -6.921307,
-      "routing_key": "R93",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 642.98363705
     }
   ],
   "trends": [
@@ -292,41 +292,41 @@
     },
     {
       "year": 2022,
-      "count": 266,
+      "count": 269,
       "median_price": 210000.0,
-      "avg_price": 215133.0,
+      "avg_price": 215206.0,
       "min_price": 30000.0,
       "max_price": 700000.0
     },
     {
       "year": 2023,
-      "count": 276,
+      "count": 281,
       "median_price": 235000.0,
-      "avg_price": 247136.0,
+      "avg_price": 246201.0,
       "min_price": 50000.0,
       "max_price": 1590000.0
     },
     {
       "year": 2024,
-      "count": 246,
-      "median_price": 248000.0,
-      "avg_price": 249773.0,
-      "min_price": 42000.0,
+      "count": 250,
+      "median_price": 245500.0,
+      "avg_price": 247736.0,
+      "min_price": 30000.0,
       "max_price": 716000.0
     },
     {
       "year": 2025,
-      "count": 266,
-      "median_price": 255000.0,
-      "avg_price": 291877.0,
+      "count": 276,
+      "median_price": 250000.0,
+      "avg_price": 288810.0,
       "min_price": 60000.0,
       "max_price": 6295000.0
     },
     {
       "year": 2026,
-      "count": 136,
-      "median_price": 312500.0,
-      "avg_price": 315785.0,
+      "count": 148,
+      "median_price": 308370.0,
+      "avg_price": 313684.0,
       "min_price": 130000.0,
       "max_price": 2725000.0
     }

@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 500000.0,
-  "avg_price": 491931,
+  "median_price": 505000.0,
+  "avg_price": 507431,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804797,
+      "sale_date": "2026-09-22",
+      "address": "18 HERMITAGE VALLEY, LUCAN, DUBLIN",
+      "county": "Dublin",
+      "eircode": "K78X048",
+      "price": 560000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.357418,
+      "longitude": -6.42322,
+      "routing_key": "K78",
+      "bedrooms": 4,
+      "property_type": "semi-detached",
+      "distance_m": 1794.98300016
+    },
     {
       "id": 804504,
       "sale_date": "2026-09-16",
@@ -135,7 +153,7 @@
       "longitude": -6.463225,
       "routing_key": null,
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "house",
       "distance_m": 1941.2512561
     },
     {
@@ -152,8 +170,8 @@
       "latitude": 53.344921,
       "longitude": -6.467396,
       "routing_key": "K78",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1743.98683181
     },
     {
@@ -170,27 +188,9 @@
       "latitude": 53.34972,
       "longitude": -6.46273,
       "routing_key": "K78",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "house",
       "distance_m": 1143.45889502
-    },
-    {
-      "id": 803031,
-      "sale_date": "2026-09-03",
-      "address": "2 SHACKLETON MALL, SHACKLETON PARK, LUCAN",
-      "county": "Dublin",
-      "eircode": "K78N5Y0",
-      "price": 405000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.346992,
-      "longitude": -6.46597,
-      "routing_key": "K78",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1510.10053975
     }
   ],
   "trends": [
@@ -220,9 +220,9 @@
     },
     {
       "year": 2013,
-      "count": 117,
+      "count": 118,
       "median_price": 235000.0,
-      "avg_price": 250792.0,
+      "avg_price": 253539.0,
       "min_price": 20000.0,
       "max_price": 750000.0
     },
@@ -292,9 +292,9 @@
     },
     {
       "year": 2022,
-      "count": 289,
+      "count": 290,
       "median_price": 383259.0,
-      "avg_price": 402706.0,
+      "avg_price": 402791.0,
       "min_price": 198000.0,
       "max_price": 1409500.0
     },
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 121,
-      "median_price": 500000.0,
-      "avg_price": 545285.0,
+      "count": 129,
+      "median_price": 505000.0,
+      "avg_price": 543322.0,
       "min_price": 278000.0,
       "max_price": 1650000.0
     }

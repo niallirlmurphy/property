@@ -1,11 +1,11 @@
 {
   "slug": "st-kevin-s-park-dartry",
   "stats": {
-    "count": 21,
-    "median": 2050000,
-    "avg": 2184048,
+    "count": 22,
+    "median": 2125000,
+    "avg": 2284773,
     "min": 925000,
-    "max": 3500000,
+    "max": 4400000,
     "firstYear": 2010,
     "lastYear": 2026
   },
@@ -124,14 +124,22 @@
     },
     {
       "year": 2026,
-      "count": 1,
-      "median_price": 2010000,
-      "avg_price": 2010000,
+      "count": 2,
+      "median_price": 3205000,
+      "avg_price": 3205000,
       "min_price": 2010000,
-      "max_price": 2010000
+      "max_price": 4400000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-22",
+      "address": "51 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "price": 4400000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D06R5X5"
+    },
     {
       "date": "2026-07-10",
       "address": "50 ST KEVINS PARK, DARTRY, DUBLIN",
@@ -301,5 +309,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 21
+  "totalTransactions": 22
 }

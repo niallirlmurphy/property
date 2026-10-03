@@ -7,11 +7,29 @@
   },
   "radius_km": 1.0,
   "total_count": 10,
-  "median_price": 935000.0,
-  "avg_price": 759450,
+  "median_price": 960000.0,
+  "avg_price": 949450,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 804704,
+      "sale_date": "2026-09-21",
+      "address": "30 ANNESLEY PARK, RANELAGH, DUBLIN 6",
+      "county": "Dublin",
+      "eircode": "D06V2A8",
+      "price": 2750000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.319583,
+      "longitude": -6.256392,
+      "routing_key": "D06",
+      "bedrooms": 3,
+      "property_type": null,
+      "distance_m": 633.52731946
+    },
     {
       "id": 804475,
       "sale_date": "2026-09-16",
@@ -80,8 +98,8 @@
       "latitude": 53.322227,
       "longitude": -6.250717,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "terraced",
       "distance_m": 440.70473362
     },
     {
@@ -98,8 +116,8 @@
       "latitude": 53.326534,
       "longitude": -6.261086,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 427.97639378
     },
     {
@@ -116,8 +134,8 @@
       "latitude": 53.321269,
       "longitude": -6.255344,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "terraced",
       "distance_m": 439.9842938
     },
     {
@@ -152,8 +170,8 @@
       "latitude": 53.322774,
       "longitude": -6.254455,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 274.93175605
     },
     {
@@ -170,27 +188,9 @@
       "latitude": 53.321426,
       "longitude": -6.25912,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 501.68205392
-    },
-    {
-      "id": 802318,
-      "sale_date": "2026-08-28",
-      "address": "19 NORTHBROOK WALK, RANELAGH, DUBLIN 6",
-      "county": "Dublin",
-      "eircode": "D06DD51",
-      "price": 850000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.328243,
-      "longitude": -6.253181,
-      "routing_key": "D06",
-      "bedrooms": 2,
-      "property_type": "terraced",
-      "distance_m": 358.91027514
     }
   ],
   "trends": [
@@ -228,9 +228,9 @@
     },
     {
       "year": 2014,
-      "count": 80,
-      "median_price": 586000.0,
-      "avg_price": 715079.0,
+      "count": 81,
+      "median_price": 585000.0,
+      "avg_price": 709930.0,
       "min_price": 150000.0,
       "max_price": 3778483.0
     },
@@ -268,9 +268,9 @@
     },
     {
       "year": 2019,
-      "count": 120,
+      "count": 121,
       "median_price": 750000.0,
-      "avg_price": 871762.0,
+      "avg_price": 868483.0,
       "min_price": 10000.0,
       "max_price": 4935000.0
     },
@@ -284,17 +284,17 @@
     },
     {
       "year": 2021,
-      "count": 163,
-      "median_price": 595000.0,
-      "avg_price": 819155.0,
+      "count": 164,
+      "median_price": 592500.0,
+      "avg_price": 817544.0,
       "min_price": 23611.0,
       "max_price": 4440000.0
     },
     {
       "year": 2022,
-      "count": 203,
-      "median_price": 940033.0,
-      "avg_price": 1050807.0,
+      "count": 204,
+      "median_price": 946267.0,
+      "avg_price": 1050950.0,
       "min_price": 10000.0,
       "max_price": 4724500.0
     },
@@ -308,25 +308,25 @@
     },
     {
       "year": 2024,
-      "count": 202,
+      "count": 203,
       "median_price": 820000.0,
-      "avg_price": 964880.0,
+      "avg_price": 962098.0,
       "min_price": 35000.0,
       "max_price": 6500000.0
     },
     {
       "year": 2025,
-      "count": 160,
-      "median_price": 1000000.0,
-      "avg_price": 1106083.0,
+      "count": 165,
+      "median_price": 999999.0,
+      "avg_price": 1096565.0,
       "min_price": 90000.0,
       "max_price": 6000000.0
     },
     {
       "year": 2026,
-      "count": 83,
-      "median_price": 935000.0,
-      "avg_price": 1077739.0,
+      "count": 101,
+      "median_price": 960000.0,
+      "avg_price": 1125375.0,
       "min_price": 95000.0,
       "max_price": 4550000.0
     }

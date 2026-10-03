@@ -128,8 +128,8 @@
       "date": "2026-09-02",
       "address": "77 CHARLESLAND PARK, GREYSTONES, WICKLOW",
       "price": 452000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "terraced",
       "eircode": "A63KC81"
     },
     {

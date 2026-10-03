@@ -3,14 +3,31 @@
     "code": "D11",
     "match_type": "routing_key",
     "stats": {
-      "total_count": 3219,
+      "total_count": 3220,
       "median_price": 305000.0,
-      "avg_price": 343770.0,
+      "avg_price": 343838.0,
       "earliest_sale": "2010-03-02",
-      "latest_sale": "2026-09-15"
+      "latest_sale": "2026-09-22"
     },
     "count": 10,
     "results": [
+      {
+        "id": 804815,
+        "sale_date": "2026-09-22",
+        "address": "23 CLONMEL RD, GLASNEVIN AVE, DUBLIN 9",
+        "county": "Dublin",
+        "eircode": "D11C3H7",
+        "price": 565000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.388252,
+        "longitude": -6.268368,
+        "routing_key": "D11",
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
       {
         "id": 804336,
         "sale_date": "2026-09-15",
@@ -161,25 +178,8 @@
         "latitude": 53.389324,
         "longitude": -6.27277,
         "routing_key": "D11",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
-        "id": 803319,
-        "sale_date": "2026-09-04",
-        "address": "50 HEATHFIELD WAY, CAPPAGH, DUBLIN 11",
-        "county": "Dublin",
-        "eircode": "D11X0H2",
-        "price": 415000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.394805,
-        "longitude": -6.324501,
-        "routing_key": "D11",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       }
     ]
   },
@@ -314,9 +314,9 @@
     },
     {
       "year": 2026,
-      "count": 10868,
+      "count": 11029,
       "median_price": 476000.0,
-      "avg_price": 604286.0,
+      "avg_price": 604287.0,
       "min_price": 10000.0,
       "max_price": 18481040.37
     }
