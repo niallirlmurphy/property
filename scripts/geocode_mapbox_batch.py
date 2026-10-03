@@ -404,6 +404,15 @@ def validate_coordinates(lat: float, lon: float, county: str, feature_type: str,
     return True, "validated", quality_score
 
 
+async def _close_pool(pool: asyncpg.Pool, timeout_s: float = 30.0) -> None:
+    """Close a pool without hanging: graceful close can wait forever on a stalled
+    connection (batch 6 sat 9h after its writes had committed), so fall back to terminate."""
+    try:
+        await asyncio.wait_for(pool.close(), timeout=timeout_s)
+    except (asyncio.TimeoutError, OSError, asyncpg.PostgresError):
+        pool.terminate()
+
+
 async def _create_pool_with_retry(attempts: int = 10, delay_s: float = 30.0) -> asyncpg.Pool:
     """Open a DB pool, retrying through transient network/DNS drops.
 
@@ -670,7 +679,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         # them server-side, so the later write phase would fail with
         # ConnectionDoesNotExistError and lose the whole batch's results. We reopen a
         # fresh pool for the writes below.
-        await pool.close()
+        await _close_pool(pool)
         pool = None
 
         # Geocode and persist in chunks. Previously the whole batch was geocoded into
@@ -773,7 +782,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                         print(f"  ⚠️  Chunk write failed ({e}); {len(chunk_updates):,} "
                               f"geocodes not saved, will remain flagged for re-run")
                     finally:
-                        await pool.close()
+                        await _close_pool(pool)
                         pool = None
 
         print(f"\n{'='*70}")
@@ -798,7 +807,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
 
     finally:
         if pool is not None:
-            await pool.close()
+            await _close_pool(pool)
 
 
 async def main():
