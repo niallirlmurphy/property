@@ -33,6 +33,15 @@ export function publishedPosts(now: Date = new Date()): BlogPost[] {
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "irish-property-market-health-36-months",
+    title: "How Healthy Is Ireland's Property Market? 36 Months of Sold-Price Data",
+    description: "We analysed 166,000 cleaned Property Price Register sales from October 2023 to September 2026: sales volumes, median and average prices, the slowdown in growth, Dublin vs the regions, urban vs rural, Dublin postcodes and the rise of new builds — with charts.",
+    date: "2026-10-03",
+    author: "HomeIQ Team",
+    tags: ["Analysis", "Market Report", "PPR", "Dublin", "New Builds"],
+    readTime: "9 min read"
+  },
+  {
     slug: "barings-ires-reit-takeover-offer-fair-value",
     title: "Barings' €727m Bid for IRES REIT: Fair Price, or Is the Portfolio Undervalued?",
     description: "Barings has offered €1.386 a share in cash for IRES REIT — a ~20% premium to the share price, but almost exactly book NAV. We revisit our PPR-based valuation of the portfolio (~€1.52bn, or ~186c a share) and ask whether shareholders should accept or hold out.",
