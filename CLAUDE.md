@@ -373,17 +373,15 @@ Monitor new content performance:
 
 **Domain & DNS**
 - **Domain:** homeiq.ie
-- **Registrar:** Letshost.ie (Team Blue Internet Services IE Ltd)
-- **DNS Management:** https://www.letshost.ie (client login required)
-- **Nameservers:** Irish domain registry (.ie TLD servers)
-- **Current Setup:** Domain points to Vercel edge network
+- **Registrar:** Letshost.ie (Team Blue Internet Services IE Ltd) — registration only
+- **DNS hosting:** Vercel (nameservers `ns1.vercel-dns.com` / `ns2.vercel-dns.com`), *not* Letshost
+- `www.homeiq.ie` redirects to the apex `homeiq.ie`, which is canonical
 
 To modify DNS records (TXT for verification, A/CNAME for routing):
-1. Log in to https://www.letshost.ie
-2. Navigate to Domain Management → homeiq.ie
-3. Access DNS Settings/Records section
-4. Add/modify records as needed
-5. DNS propagation typically takes 5-15 minutes
+1. Vercel dashboard → team/account (not the project) → **Domains** → homeiq.ie
+2. Add/edit under **DNS Records** (blank name = apex)
+3. Propagation is usually a minute or two
+4. Verify with `dig +short TXT homeiq.ie`
 
 **Database (Supabase/Postgres)**
 1. Create project/instance and copy connection string.

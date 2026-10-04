@@ -37,6 +37,7 @@ Flags:
     --apply              Actually update database (default is dry-run)
     --limit N            Process at most N properties
     --county COUNTY      Filter to specific county
+    --retry              Re-query rejected addresses as "number + street" (extra request each)
 """
 
 import asyncio
@@ -84,6 +85,10 @@ ACCEPTABLE_PRECISION = {'rooftop', 'parcel', 'point'}
 # interruption loses at most one chunk instead of the whole run. Override with
 # --chunk-size (e.g. 25 for small, closely monitored runs).
 CHUNK_SIZE = 1000
+
+# Second "number + street" query when the full address is rejected. Opt-in via
+# --retry: on a 500-row pilot it added 289 requests (+58%) for 17 placements.
+RETRY_STRIPPED = False
 
 
 async def fetch_properties_needing_geocoding(pool: asyncpg.Pool, limit: int = None,
@@ -614,9 +619,10 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
             # same-named place ("…, Blackrock" -> Blackrock, Dublin). If the full query
             # fails, retry with just number + estate/street + county. Only when the
             # routing key is known, since that's what makes a shorter query safe.
+            # Off unless --retry (see RETRY_STRIPPED).
             queries = [address]
             core = address.split(',')[0].strip()
-            if proximity and re.match(r'\d', core) and core != address:
+            if RETRY_STRIPPED and proximity and re.match(r'\d', core) and core != address:
                 queries.append(core)
 
             try:
@@ -891,19 +897,22 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                             print(f"  🚩 Flagged {len(failed_ids):,} failed rows "
                                   f"(needs_geocoding=FALSE, attempt recorded — not re-billed)")
                         elif failed_ids and keep_coords:
-                            # Centroid failures keep their coords and visibility; just
-                            # record the attempt so the centroid fetch skips them.
+                            # Centroid / --ids-file failures keep their coords and
+                            # visibility (geocode_suspect untouched), but still leave the
+                            # worklist: without needs_geocoding = FALSE an --ids-file run
+                            # over suspect rows left them for --suspect to re-bill.
                             await pool.executemany(
                                 """
                                 UPDATE properties
-                                SET geocode_attempts = geocode_attempts + 1,
+                                SET needs_geocoding = FALSE,
+                                    geocode_attempts = geocode_attempts + 1,
                                     geocode_last_attempt = now()
                                 WHERE id = $1
                                 """,
                                 [(fid,) for fid in failed_ids]
                             )
-                            print(f"  📝 Recorded {len(failed_ids):,} failed centroid attempts "
-                                  f"(coords kept, not re-billed)")
+                            print(f"  📝 Recorded {len(failed_ids):,} failed attempts "
+                                  f"(coords kept, needs_geocoding=FALSE — not re-billed)")
                     except Exception as e:
                         # Don't let one failed write abort the whole run — later chunks
                         # can still save. These properties stay flagged for a re-run.
@@ -939,7 +948,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
 
 
 async def main():
-    global CHUNK_SIZE
+    global CHUNK_SIZE, RETRY_STRIPPED
     # Skip canonical cache for batch operations (too large to load into memory)
     # Cache will be checked per-address during geocoding
     print("Starting batch geocoding with improved logic...\n")
@@ -950,6 +959,7 @@ async def main():
     centroid = "--centroid" in sys.argv
     suspect = "--suspect" in sys.argv
     eircode_only = "--eircode-only" in sys.argv
+    RETRY_STRIPPED = "--retry" in sys.argv
     limit = None
     county = None
     min_price = None
