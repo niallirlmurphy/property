@@ -6,6 +6,13 @@ import { COUNTIES, AREAS, DUBLIN_EIRCODE_AREAS, countySlug } from "./src/areas";
 import { publishedPosts } from "./src/blogPosts";
 import { STREET_CONFIGS, STREET_LINK_FIELDS } from "./src/streetRegistry";
 
+// vite-react-ssg evaluates this config separately for its client and SSR builds.
+// Pin the build instant in the environment on first load so both builds share
+// it; otherwise a minute boundary between them makes __BUILD_TIME__ differ and
+// every page fails hydration.
+process.env.HOMEIQ_BUILD_INSTANT ??= new Date().toISOString();
+const BUILD_INSTANT = new Date(process.env.HOMEIQ_BUILD_INSTANT);
+
 const REGISTRY = fileURLToPath(new URL("./src/data/streets_registry.json", import.meta.url));
 
 // `virtual:street-links`: the street registry with only the link fields, for
@@ -32,10 +39,10 @@ export default defineConfig({
     // Formatted once at build time so the prerendered HTML and the hydrated
     // client render the same string (a render-time `new Date()` mismatches).
     __BUILD_TIME__: JSON.stringify(
-      new Date().toLocaleString("en-IE", { dateStyle: "medium", timeStyle: "short", timeZone: "Europe/Dublin" })
+      BUILD_INSTANT.toLocaleString("en-IE", { dateStyle: "medium", timeStyle: "short", timeZone: "Europe/Dublin" })
     ),
     // YYYY-MM-DD, for content gated on a date (e.g. links to scheduled posts)
-    __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)),
+    __BUILD_DATE__: JSON.stringify(BUILD_INSTANT.toISOString().slice(0, 10)),
   },
   // vite-react-ssg reads its build-time SSG options from here (the plugin
   // augments vite's UserConfig with `ssgOptions`). `includedRoutes` decides
