@@ -1,0 +1,473 @@
+{
+  "slug": "church-green-ballinglanna",
+  "stats": {
+    "count": 107,
+    "median": 343612,
+    "avg": 421532,
+    "min": 222028,
+    "max": 4588106,
+    "firstYear": 2020,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2020,
+      "count": 21,
+      "median_price": 275331,
+      "avg_price": 296343,
+      "min_price": 222028,
+      "max_price": 436123
+    },
+    {
+      "year": 2021,
+      "count": 13,
+      "median_price": 339207,
+      "avg_price": 370244,
+      "min_price": 328745,
+      "max_price": 458150
+    },
+    {
+      "year": 2022,
+      "count": 34,
+      "median_price": 343612,
+      "avg_price": 492123,
+      "min_price": 312775,
+      "max_price": 4588106
+    },
+    {
+      "year": 2023,
+      "count": 30,
+      "median_price": 400881,
+      "avg_price": 417304,
+      "min_price": 312775,
+      "max_price": 560000
+    },
+    {
+      "year": 2024,
+      "count": 4,
+      "median_price": 475771,
+      "avg_price": 490385,
+      "min_price": 365000,
+      "max_price": 645000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 500000,
+      "avg_price": 524908,
+      "min_price": 402225,
+      "max_price": 672500
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 640000,
+      "avg_price": 640000,
+      "min_price": 510000,
+      "max_price": 770000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-02",
+      "address": "4 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "T45ET21"
+    },
+    {
+      "date": "2026-01-22",
+      "address": "30 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 770000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "T45E309"
+    },
+    {
+      "date": "2025-10-13",
+      "address": "41  CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 500000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "T45TY22"
+    },
+    {
+      "date": "2025-05-30",
+      "address": "18 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 672500,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "T45A293"
+    },
+    {
+      "date": "2025-01-15",
+      "address": "5 Church Green, Ballinglanna, Glanmire",
+      "price": 402225,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-11-12",
+      "address": "6 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45A620"
+    },
+    {
+      "date": "2024-09-20",
+      "address": "4 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 444934,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "T45ET21"
+    },
+    {
+      "date": "2024-08-29",
+      "address": "12 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 506608,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45HR28"
+    },
+    {
+      "date": "2024-04-16",
+      "address": "10 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 645000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45AY95"
+    },
+    {
+      "date": "2023-09-11",
+      "address": "144 Church Green, Ballinglanna, Glanmire",
+      "price": 493400,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-24",
+      "address": "143 Church Green, Ballinglanna, Glanmire",
+      "price": 488987,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-30",
+      "address": "142 Church Green, Ballinglanna, Glanmire",
+      "price": 488987,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-30",
+      "address": "141 Church Green, Ballinglanna, Glanmire",
+      "price": 488986,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-27",
+      "address": "140 Church Green, Ballinglanna, Glanmire",
+      "price": 489386,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-22",
+      "address": "139 Church Green, Ballinglanna, Glanmire",
+      "price": 560000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-15",
+      "address": "132 Church Green, Ballinglanna, Glanmire",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-08",
+      "address": "7 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45W735"
+    },
+    {
+      "date": "2023-05-04",
+      "address": "131 Church Green, Ballinglanna, Glanmire",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-04-27",
+      "address": "129 Church Green, Ballinglanna, Glanmire",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-04-26",
+      "address": "130 Church Green, Ballinglanna, Glanmire",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-04-24",
+      "address": "128 Church Green, Ballinglanna, Glanmire",
+      "price": 341581,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45YR22"
+    },
+    {
+      "date": "2023-04-21",
+      "address": "35 Church Green, Ballinglanna, Glanmire",
+      "price": 502202,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-04-19",
+      "address": "127 Church Green, Ballinglanna, Glanmire",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-04-17",
+      "address": "34 Church Green, Ballinglanna, Glanmire",
+      "price": 493392,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-03-31",
+      "address": "24 Church Green, Ballinglanna, Glanmire",
+      "price": 475770,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-03-29",
+      "address": "23 Church Green, Ballinglanna, Glanmire",
+      "price": 506608,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-03-29",
+      "address": "126 Church Green, Ballinglanna, Glanmire",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-03-28",
+      "address": "125 Church Green, Ballinglanna, Glanmire",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-03-24",
+      "address": "124 Church Green, Ballinglanna, Glanmire",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-03-09",
+      "address": "33 Church Green, Ballinglanna, Glanmire",
+      "price": 462555,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-03-03",
+      "address": "32 Church Green, Ballinglanna, Glanmire",
+      "price": 475750,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-23",
+      "address": "121 Church Green, Ballinglanna, Glanmire",
+      "price": 396475,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-20",
+      "address": "22 Church Green, Ballinglanna, Glanmire",
+      "price": 458149,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-17",
+      "address": "123 Church Green, Ballinglanna, Glanmire",
+      "price": 400881,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-14",
+      "address": "122 Church Green, Ballinglanna, Glanmire",
+      "price": 400881,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-01-26",
+      "address": "120 Church Green, Ballinglanna, Glanmire",
+      "price": 396475,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-01-25",
+      "address": "115 Church Green, Ballinglanna, Glanmire",
+      "price": 348018,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-01-16",
+      "address": "119 Church Green, Ballinglanna, Glanmire",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-01-10",
+      "address": "21 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 487176,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-27",
+      "address": "114 Church Green, Ballinglanna, Glanmire",
+      "price": 334096,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-22",
+      "address": "116 Church Green, Ballinglanna, Glanmire",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-19",
+      "address": "20 Church Green, Ballinglanna, Glanmire",
+      "price": 453744,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-15",
+      "address": "118 Church Green, Ballinglanna, Glanmire",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-14",
+      "address": "138 Church Green, Ballinglanna, Glanmire",
+      "price": 370043,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-08",
+      "address": "79  Church Green, Ballinglanna, Glanmire",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-07",
+      "address": "136 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 370044,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-07",
+      "address": "90-105 Church Green, Ballinglanna, Glanmire",
+      "price": 4588106,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-01",
+      "address": "137 Church Green, Ballinglanna, Glanmire",
+      "price": 370043,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-29",
+      "address": "81 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 343612,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-25",
+      "address": "80 Church Green, Ballinglanna, Glamire",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 107
+}

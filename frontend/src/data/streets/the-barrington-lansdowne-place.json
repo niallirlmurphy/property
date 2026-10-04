@@ -1,0 +1,289 @@
+{
+  "slug": "the-barrington-lansdowne-place",
+  "stats": {
+    "count": 27,
+    "median": 1211454,
+    "avg": 1259917,
+    "min": 726872,
+    "max": 2251982,
+    "firstYear": 2020,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2020,
+      "count": 3,
+      "median_price": 859031,
+      "avg_price": 976505,
+      "min_price": 859031,
+      "max_price": 1211454
+    },
+    {
+      "year": 2021,
+      "count": 10,
+      "median_price": 1112334,
+      "avg_price": 1257357,
+      "min_price": 726872,
+      "max_price": 2251982
+    },
+    {
+      "year": 2022,
+      "count": 5,
+      "median_price": 1061947,
+      "avg_price": 1102785,
+      "min_price": 748898,
+      "max_price": 1629956
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1409691,
+      "avg_price": 1409691,
+      "min_price": 1409691,
+      "max_price": 1409691
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 1629956,
+      "avg_price": 1411637,
+      "min_price": 975000,
+      "max_price": 1629956
+    },
+    {
+      "year": 2025,
+      "count": 4,
+      "median_price": 1541850,
+      "avg_price": 1544038,
+      "min_price": 1500000,
+      "max_price": 1592450
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1180000,
+      "avg_price": 1180000,
+      "min_price": 1180000,
+      "max_price": 1180000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-01",
+      "address": "8 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1180000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04X8R2"
+    },
+    {
+      "date": "2025-10-02",
+      "address": "2 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1541850,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04N4C0"
+    },
+    {
+      "date": "2025-08-15",
+      "address": "5 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1541850,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04V1Y2"
+    },
+    {
+      "date": "2025-04-15",
+      "address": "10 The Barrington, Lansdowne Place, Lansdowne Road",
+      "price": 1592450,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04H2X2"
+    },
+    {
+      "date": "2025-02-14",
+      "address": "13 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1500000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04V9X4"
+    },
+    {
+      "date": "2024-11-08",
+      "address": "1 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1629956,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04A0F1"
+    },
+    {
+      "date": "2024-09-11",
+      "address": "43 THE BARRINGTON, LANSDOWNE PLACE, LANSDOWNE ROAD",
+      "price": 975000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04K5C6"
+    },
+    {
+      "date": "2024-06-10",
+      "address": "6 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1629956,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "D04N9W0"
+    },
+    {
+      "date": "2023-03-31",
+      "address": "44 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1409691,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04P6V0"
+    },
+    {
+      "date": "2022-11-03",
+      "address": "18 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1061947,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E6P8"
+    },
+    {
+      "date": "2022-10-14",
+      "address": "41 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H5W4"
+    },
+    {
+      "date": "2022-08-09",
+      "address": "45 The Barrington, Lansdowne Place, Ballsbridge",
+      "price": 748898,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-29",
+      "address": "9 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 973125,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E8C3"
+    },
+    {
+      "date": "2022-05-11",
+      "address": "4 The Barrington, Lansdowne Place, Ballsbridge",
+      "price": 1629956,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-15",
+      "address": "16 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1444934,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04C6Y8"
+    },
+    {
+      "date": "2021-12-15",
+      "address": "17 THE BARRINGTON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 859031,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X4T0"
+    },
+    {
+      "date": "2021-10-11",
+      "address": "Apartment 19, THe Barrington, Lansdowne Place",
+      "price": 1453744,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2021-09-07",
+      "address": "10 The Barrington, Lansdowne Place, Lansdowne Road",
+      "price": 1255506,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04H2X2"
+    },
+    {
+      "date": "2021-05-31",
+      "address": "43 The Barrington, Lansdowne Place, Lansdowne Road",
+      "price": 881057,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04K5C6"
+    },
+    {
+      "date": "2021-04-09",
+      "address": "49 The Barrington, Lansdowne Place, Lansdowne Road",
+      "price": 1806167,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-18",
+      "address": "Apartment 42 The Barrington, Lansdowne Place, Ballsbridge",
+      "price": 925110,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2021-02-26",
+      "address": "20 The Barrington, Lansdowne Place, Lansdowne Road",
+      "price": 726872,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-09",
+      "address": "Apartment 38 The Barrington, Lansdowne Place, Dublin 4",
+      "price": 969162,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2021-01-11",
+      "address": "26 The Barrington, Lansdowne Place, Lansdowne Road",
+      "price": 2251982,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-18",
+      "address": "30 The Barrington, Lansdowne Place, Lansdowne Road",
+      "price": 859031,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-18",
+      "address": "Apartment 7  The Barrington, Lansdowne Place, Lansdowne Road",
+      "price": 1211454,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2020-12-18",
+      "address": "Apartment 40, The Barrington, Lansdowne Place",
+      "price": 859031,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 27
+}

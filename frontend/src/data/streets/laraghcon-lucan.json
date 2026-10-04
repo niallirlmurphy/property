@@ -1,0 +1,553 @@
+{
+  "slug": "laraghcon-lucan",
+  "stats": {
+    "count": 91,
+    "median": 520000,
+    "avg": 522331,
+    "min": 205000,
+    "max": 895000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 505000,
+      "avg_price": 496833,
+      "min_price": 418000,
+      "max_price": 567500
+    },
+    {
+      "year": 2011,
+      "count": 7,
+      "median_price": 447750,
+      "avg_price": 449357,
+      "min_price": 205000,
+      "max_price": 609750
+    },
+    {
+      "year": 2012,
+      "count": 6,
+      "median_price": 337500,
+      "avg_price": 421333,
+      "min_price": 318000,
+      "max_price": 615000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 505000,
+      "avg_price": 505000,
+      "min_price": 390000,
+      "max_price": 630000
+    },
+    {
+      "year": 2014,
+      "count": 8,
+      "median_price": 577500,
+      "avg_price": 549250,
+      "min_price": 322000,
+      "max_price": 665000
+    },
+    {
+      "year": 2015,
+      "count": 11,
+      "median_price": 535000,
+      "avg_price": 535833,
+      "min_price": 330000,
+      "max_price": 756657
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 383500,
+      "avg_price": 388750,
+      "min_price": 305000,
+      "max_price": 483000
+    },
+    {
+      "year": 2017,
+      "count": 10,
+      "median_price": 557000,
+      "avg_price": 589300,
+      "min_price": 389000,
+      "max_price": 750000
+    },
+    {
+      "year": 2018,
+      "count": 7,
+      "median_price": 485000,
+      "avg_price": 524286,
+      "min_price": 350000,
+      "max_price": 715000
+    },
+    {
+      "year": 2019,
+      "count": 4,
+      "median_price": 407500,
+      "avg_price": 426250,
+      "min_price": 370000,
+      "max_price": 520000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 460000,
+      "avg_price": 529800,
+      "min_price": 350000,
+      "max_price": 745000
+    },
+    {
+      "year": 2021,
+      "count": 6,
+      "median_price": 521500,
+      "avg_price": 513833,
+      "min_price": 360000,
+      "max_price": 740000
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "median_price": 595000,
+      "avg_price": 648750,
+      "min_price": 510000,
+      "max_price": 895000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 511250,
+      "avg_price": 511250,
+      "min_price": 422500,
+      "max_price": 600000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 615000,
+      "avg_price": 584000,
+      "min_price": 432000,
+      "max_price": 705000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 663000,
+      "avg_price": 637667,
+      "min_price": 580000,
+      "max_price": 670000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 510000,
+      "avg_price": 572500,
+      "min_price": 467500,
+      "max_price": 740000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-24",
+      "address": "206 LARAGHCON, LUCAN, DUBLIN",
+      "price": 740000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78YA97"
+    },
+    {
+      "date": "2026-07-02",
+      "address": "220 LARAGHCON, LUCAN, DUBLIN",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78YR74"
+    },
+    {
+      "date": "2026-06-18",
+      "address": "69 LARAGHCON, LUCAN, CO DUBLIN",
+      "price": 467500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78YT44"
+    },
+    {
+      "date": "2025-12-19",
+      "address": "62 LARAGHCON, LUCAN, DUBLIN",
+      "price": 670000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "K78H510"
+    },
+    {
+      "date": "2025-08-29",
+      "address": "92 LARAGHCON, LUCAN, DUBLIN",
+      "price": 663000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "K78DY09"
+    },
+    {
+      "date": "2025-04-30",
+      "address": "41 LARAGHCON, LUCAN, DUBLIN",
+      "price": 580000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "K78YH68"
+    },
+    {
+      "date": "2024-11-22",
+      "address": "24 LARAGHCON, LUCAN, DUBLIN",
+      "price": 705000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78FR50"
+    },
+    {
+      "date": "2024-07-31",
+      "address": "47 LARAGHCON, LUCAN, DUBLIN",
+      "price": 432000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78CY81"
+    },
+    {
+      "date": "2024-04-24",
+      "address": "218 LARAGHCON, LUCAN, DUBLIN",
+      "price": 615000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78KR13"
+    },
+    {
+      "date": "2023-10-20",
+      "address": "235 LARAGHCON, LUCAN, DUBLIN",
+      "price": 600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78PX01"
+    },
+    {
+      "date": "2023-07-25",
+      "address": "113 LARAGHCON, LUCAN, DUBLIN",
+      "price": 422500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78FH33"
+    },
+    {
+      "date": "2022-11-22",
+      "address": "130 LARAGHCON, LUCAN, DUBLIN",
+      "price": 540000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78RK59"
+    },
+    {
+      "date": "2022-11-04",
+      "address": "213 LARAGHCON, LUCAN, CO DUBLIN",
+      "price": 895000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78D362"
+    },
+    {
+      "date": "2022-09-19",
+      "address": "234 LARAGHCON, LUCAN, DUBLIN",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78HV09"
+    },
+    {
+      "date": "2022-04-05",
+      "address": "20 LARAGHCON, LUCAN, DUBLIN",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K78F540"
+    },
+    {
+      "date": "2021-06-21",
+      "address": "250 LARAGHCON, LUCAN, CO DUBLIN",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-03",
+      "address": "62 LARAGHCON, LUCAN, DUBLIN",
+      "price": 565000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "K78H510"
+    },
+    {
+      "date": "2021-04-13",
+      "address": "91 LARAGHCON, LUCAN, DUBLIN",
+      "price": 493000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-12",
+      "address": "152 LARAGHCON, LUCAN, CO DUBLIN",
+      "price": 740000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-01",
+      "address": "29 LARAGHCON, LUCAN, DUBLIN",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-29",
+      "address": "35 LARAGHCON, LUCAN, DUBLIN",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-27",
+      "address": "15 LARAGHCON, LUCAN, DUBLIN",
+      "price": 715000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-24",
+      "address": "121 LARAGHCON, LUCAN, DUBLIN",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-19",
+      "address": "223 LARAGHCON, LUCAN, DUBLIN",
+      "price": 379000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-17",
+      "address": "57 LARAGHCON, LUCAN, DUBLIN",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-21",
+      "address": "171 LARAGHCON, LUCAN, DUBLIN",
+      "price": 745000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-17",
+      "address": "127 LARAGHCON, LUCAN, DUBLIN",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-05",
+      "address": "65 LARAGHCON, LUCAN, DUBLIN",
+      "price": 520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-04",
+      "address": "126 LARAGHCON, LUCAN, DUBLIN",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-24",
+      "address": "223 LARAGHCON, LUCAN, DUBLIN",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-14",
+      "address": "63 LARAGHCON, LUCAN, DUBLIN",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-25",
+      "address": "40 LARAGHCON, LUCAN, DUBLIN",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-22",
+      "address": "LARAGHCON, LUCAN, DUBLIN",
+      "price": 610000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2018-03-21",
+      "address": "102 LARAGHCON, LUCAN, DUBLIN",
+      "price": 600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-14",
+      "address": "138 LARAGHCON, LUCAN, DUBLIN",
+      "price": 715000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-14",
+      "address": "57 LARAGHCON, LUCAN, DUBLIN",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-26",
+      "address": "122 LARAGHCON, LUCAN, DUBLIN",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-13",
+      "address": "60 LARAGHCON, LUCAN, DUBLIN",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-30",
+      "address": "181 LARAGHCON, LUCAN, DUBLIN",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-28",
+      "address": "82 LARAGHCON, LUCAN, DUBLIN",
+      "price": 546000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-24",
+      "address": "96 LARAGHCON, LUCAN, DUBLIN",
+      "price": 730000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-29",
+      "address": "222 LARAGHCON, LUCAN, DUBLIN",
+      "price": 389000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-31",
+      "address": "5 LARAGHCON, LUCAN, DUBLIN",
+      "price": 535000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-24",
+      "address": "205 LARAGHCON, LUCAN, DUBLIN",
+      "price": 568000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-22",
+      "address": "265 LARAGHCON, LUCAN, DUBLIN",
+      "price": 525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-22",
+      "address": "146 LARAGHCON, LUCAN, DUBLIN",
+      "price": 705000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-01-04",
+      "address": "184 LARAGHCON, LUCAN, DUBLIN",
+      "price": 735000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-23",
+      "address": "37 LARAGHCON, LUCAN, DUBLIN",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-13",
+      "address": "18 LARAGHCON, LUCAN, DUBLIN",
+      "price": 483000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-06-16",
+      "address": "70 LARAGHCON, LUCAN, DUBLIN",
+      "price": 347000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 91
+}

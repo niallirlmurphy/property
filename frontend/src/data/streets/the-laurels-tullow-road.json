@@ -1,0 +1,545 @@
+{
+  "slug": "the-laurels-tullow-road",
+  "stats": {
+    "count": 91,
+    "median": 117000,
+    "avg": 115544,
+    "min": 23435,
+    "max": 271496,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 88000,
+      "avg_price": 88000,
+      "min_price": 88000,
+      "max_price": 88000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 52500,
+      "avg_price": 52500,
+      "min_price": 50000,
+      "max_price": 55000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 44000,
+      "avg_price": 44000,
+      "min_price": 38000,
+      "max_price": 50000
+    },
+    {
+      "year": 2014,
+      "count": 7,
+      "median_price": 49500,
+      "avg_price": 49571,
+      "min_price": 44000,
+      "max_price": 55000
+    },
+    {
+      "year": 2015,
+      "count": 6,
+      "median_price": 51250,
+      "avg_price": 53667,
+      "min_price": 46000,
+      "max_price": 65000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 72500,
+      "avg_price": 72500,
+      "min_price": 72500,
+      "max_price": 72500
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 82500,
+      "avg_price": 78126,
+      "min_price": 49706,
+      "max_price": 97800
+    },
+    {
+      "year": 2018,
+      "count": 7,
+      "median_price": 90000,
+      "avg_price": 82943,
+      "min_price": 50000,
+      "max_price": 121000
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 114500,
+      "avg_price": 99179,
+      "min_price": 23435,
+      "max_price": 120000
+    },
+    {
+      "year": 2020,
+      "count": 8,
+      "median_price": 116250,
+      "avg_price": 122750,
+      "min_price": 105000,
+      "max_price": 152000
+    },
+    {
+      "year": 2021,
+      "count": 13,
+      "median_price": 120000,
+      "avg_price": 121538,
+      "min_price": 100000,
+      "max_price": 150000
+    },
+    {
+      "year": 2022,
+      "count": 12,
+      "median_price": 148000,
+      "avg_price": 146995,
+      "min_price": 57435,
+      "max_price": 187500
+    },
+    {
+      "year": 2023,
+      "count": 6,
+      "median_price": 144500,
+      "avg_price": 141333,
+      "min_price": 108000,
+      "max_price": 155000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 169000,
+      "avg_price": 168000,
+      "min_price": 145000,
+      "max_price": 190000
+    },
+    {
+      "year": 2025,
+      "count": 9,
+      "median_price": 178000,
+      "avg_price": 191944,
+      "min_price": 141000,
+      "max_price": 271496
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 200000,
+      "avg_price": 200000,
+      "min_price": 190000,
+      "max_price": 210000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-07",
+      "address": "131 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93F5C0"
+    },
+    {
+      "date": "2026-05-21",
+      "address": "106 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93W7P1"
+    },
+    {
+      "date": "2025-08-27",
+      "address": "40 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": "R93KA65"
+    },
+    {
+      "date": "2025-06-19",
+      "address": "163 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 271496,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93AW70"
+    },
+    {
+      "date": "2025-05-07",
+      "address": "95 THE LAURELS, TULLOW ROAD, CARLOW",
+      "price": 195000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R93Y2H7"
+    },
+    {
+      "date": "2025-04-25",
+      "address": "164 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 141000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "R93DK03"
+    },
+    {
+      "date": "2025-04-07",
+      "address": "5 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 225000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R93P8H3"
+    },
+    {
+      "date": "2025-03-12",
+      "address": "108 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 178000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "R93DW52"
+    },
+    {
+      "date": "2025-03-11",
+      "address": "71 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 211000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "R93F7P6"
+    },
+    {
+      "date": "2025-02-26",
+      "address": "17 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 176000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": "R93F4W6"
+    },
+    {
+      "date": "2025-01-22",
+      "address": "99 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 160000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R93P7W3"
+    },
+    {
+      "date": "2024-09-26",
+      "address": "122 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 145000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93CH19"
+    },
+    {
+      "date": "2024-03-26",
+      "address": "121 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 169000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93H819"
+    },
+    {
+      "date": "2024-01-25",
+      "address": "98 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93Y7N6"
+    },
+    {
+      "date": "2023-12-11",
+      "address": "147 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 143000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93C9P3"
+    },
+    {
+      "date": "2023-04-05",
+      "address": "96 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 155000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93E3P6"
+    },
+    {
+      "date": "2023-04-05",
+      "address": "72 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 153000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93K564"
+    },
+    {
+      "date": "2023-03-09",
+      "address": "142 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 144000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93Y9E2"
+    },
+    {
+      "date": "2023-02-07",
+      "address": "151 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 108000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93D6X6"
+    },
+    {
+      "date": "2023-01-18",
+      "address": "118 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 145000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93H9F5"
+    },
+    {
+      "date": "2022-12-23",
+      "address": "33 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 140000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93Y6F2"
+    },
+    {
+      "date": "2022-11-24",
+      "address": "156 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 140000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93H1X3"
+    },
+    {
+      "date": "2022-11-17",
+      "address": "152 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 57435,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93F2X4"
+    },
+    {
+      "date": "2022-08-30",
+      "address": "105 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 163000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93D3T8"
+    },
+    {
+      "date": "2022-07-07",
+      "address": "10 THE LAURELS, TULLOW ROAD, CARLOW",
+      "price": 155000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93X6N1"
+    },
+    {
+      "date": "2022-06-28",
+      "address": "107 THE LAURELS, TULLOW ROAD, CO. CARLOW.",
+      "price": 162000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93X6Y0"
+    },
+    {
+      "date": "2022-05-31",
+      "address": "4 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 140000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93N4X7"
+    },
+    {
+      "date": "2022-05-24",
+      "address": "16 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 143000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93N2T5"
+    },
+    {
+      "date": "2022-05-03",
+      "address": "2 THE LAURELS, TULLOW ROAD, CARLOW",
+      "price": 153000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-10",
+      "address": "169 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 187500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93EY86"
+    },
+    {
+      "date": "2022-03-10",
+      "address": "163 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 187500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93AW70"
+    },
+    {
+      "date": "2022-02-22",
+      "address": "5 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 135500,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R93P8H3"
+    },
+    {
+      "date": "2021-12-14",
+      "address": "39 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 136000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93D9Y4"
+    },
+    {
+      "date": "2021-12-10",
+      "address": "123 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93P2X0"
+    },
+    {
+      "date": "2021-10-11",
+      "address": "38 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 135000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93V8D3"
+    },
+    {
+      "date": "2021-09-09",
+      "address": "114 THE LAURELS, TULLOW ROAD, CO. CARLOW",
+      "price": 146000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93H5Y0"
+    },
+    {
+      "date": "2021-08-10",
+      "address": "63 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 133000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93C2F5"
+    },
+    {
+      "date": "2021-04-21",
+      "address": "131 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93F5C0"
+    },
+    {
+      "date": "2021-03-29",
+      "address": "112 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 126000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-05",
+      "address": "65 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 110500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-03",
+      "address": "163 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 110000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93AW70"
+    },
+    {
+      "date": "2021-03-03",
+      "address": "169 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93EY86"
+    },
+    {
+      "date": "2021-02-04",
+      "address": "3 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 107500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-03",
+      "address": "43 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 120000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-28",
+      "address": "127 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 106000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-16",
+      "address": "1 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 152000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-21",
+      "address": "103 THE LAURELS, TULLOW ROAD, CARLOW",
+      "price": 115000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-15",
+      "address": "73 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 115000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-23",
+      "address": "1 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 147500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-19",
+      "address": "131 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 110000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93F5C0"
+    }
+  ],
+  "totalTransactions": 91
+}

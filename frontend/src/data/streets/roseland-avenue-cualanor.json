@@ -1,0 +1,505 @@
+{
+  "slug": "roseland-avenue-cualanor",
+  "stats": {
+    "count": 92,
+    "median": 669331,
+    "avg": 747892,
+    "min": 339500,
+    "max": 1541850,
+    "firstYear": 2016,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 23,
+      "median_price": 674009,
+      "avg_price": 675478,
+      "min_price": 638766,
+      "max_price": 753304
+    },
+    {
+      "year": 2017,
+      "count": 50,
+      "median_price": 651982,
+      "avg_price": 651957,
+      "min_price": 339500,
+      "max_price": 748898
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1101321,
+      "avg_price": 1101321,
+      "min_price": 660792,
+      "max_price": 1541850
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 837500,
+      "avg_price": 837500,
+      "min_price": 820000,
+      "max_price": 855000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 832599,
+      "avg_price": 832599,
+      "min_price": 832599,
+      "max_price": 832599
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 990000,
+      "avg_price": 945668,
+      "min_price": 837004,
+      "max_price": 1010000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 1050000,
+      "avg_price": 1065000,
+      "min_price": 995000,
+      "max_price": 1150000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 1220000,
+      "avg_price": 1215000,
+      "min_price": 1075000,
+      "max_price": 1350000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 1210000,
+      "avg_price": 1208333,
+      "min_price": 1205000,
+      "max_price": 1210000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1210000,
+      "avg_price": 1210000,
+      "min_price": 1210000,
+      "max_price": 1210000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1450000,
+      "avg_price": 1450000,
+      "min_price": 1450000,
+      "max_price": 1450000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-03-13",
+      "address": "33 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
+      "price": 1450000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "A96X7Y8"
+    },
+    {
+      "date": "2025-09-23",
+      "address": "57 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
+      "price": 1210000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "A96P5P0"
+    },
+    {
+      "date": "2024-09-13",
+      "address": "76 ROSELAND AVENUE, CUALANOR, DUN LAOGHAIRE",
+      "price": 1210000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "A96C7K5"
+    },
+    {
+      "date": "2024-08-27",
+      "address": "72 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
+      "price": 1210000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "A96P2K2"
+    },
+    {
+      "date": "2024-08-22",
+      "address": "48 ROSELAND AVENUE, CUALANOR, DUN LAOGHAIRE",
+      "price": 1205000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "A96N6Y9"
+    },
+    {
+      "date": "2023-09-28",
+      "address": "8 ROSELAND AVE, CUALANOR, DUN LAOGHAIRE",
+      "price": 1075000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96E8C3"
+    },
+    {
+      "date": "2023-06-22",
+      "address": "30 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96P6K8"
+    },
+    {
+      "date": "2023-04-21",
+      "address": "11 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
+      "price": 1220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96P2F3"
+    },
+    {
+      "date": "2022-12-20",
+      "address": "81 ROSELAND AVENUE, CUALANOR, UPPER GLENANGEARY ROAD",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96C3K4"
+    },
+    {
+      "date": "2022-10-20",
+      "address": "28 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
+      "price": 995000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96H9N3"
+    },
+    {
+      "date": "2022-08-18",
+      "address": "49 ROSELAND AVENUE, CUALANOR, DUN LAOGHAIRE",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96X9V9"
+    },
+    {
+      "date": "2021-11-30",
+      "address": "67 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
+      "price": 990000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96V9K2"
+    },
+    {
+      "date": "2021-09-29",
+      "address": "24 ROSELAND AVENUE, CUALANOR, DUN LAOGHAIRE",
+      "price": 1010000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96R2X0"
+    },
+    {
+      "date": "2021-03-01",
+      "address": "70 Roseland Avenue, Cualanor, Dun Laoghaire",
+      "price": 837004,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-30",
+      "address": "70 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 832599,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-20",
+      "address": "3 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
+      "price": 855000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-31",
+      "address": "54 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 820000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-27",
+      "address": "90 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 1541850,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-22",
+      "address": "28 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 660792,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96H9N3"
+    },
+    {
+      "date": "2017-12-01",
+      "address": "39 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 638767,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-21",
+      "address": "29 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 638766,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-10",
+      "address": "24 Roseland Avenue, Cualanor, Dun Laoghaire",
+      "price": 638710,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96R2X0"
+    },
+    {
+      "date": "2017-11-03",
+      "address": "23 roseland avenue, CUALANOR, upper glenageary road",
+      "price": 647576,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-03",
+      "address": "66 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 638767,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-18",
+      "address": "63 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 683999,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-16",
+      "address": "No. 67 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 638767,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": "A96V9K2"
+    },
+    {
+      "date": "2017-10-13",
+      "address": "30 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 748898,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96P6K8"
+    },
+    {
+      "date": "2017-10-05",
+      "address": "32 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 707965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-04",
+      "address": "11 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 656388,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96P2F3"
+    },
+    {
+      "date": "2017-09-21",
+      "address": "58 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 650540,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-31",
+      "address": "19 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 665199,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-31",
+      "address": "57 ROSELAND AVENUE, CUALANOR, upper glenageary road",
+      "price": 673998,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "A96P5P0"
+    },
+    {
+      "date": "2017-08-29",
+      "address": "10 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 339500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-24",
+      "address": "25 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 704846,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-23",
+      "address": "12 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 739576,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-18",
+      "address": "31 Roseland Avenue, Cualanor, Dun Laoghaire",
+      "price": 629956,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-21",
+      "address": "37 ROSELAND AVENUE, CUALANOR, DUN LAOGHAIRE",
+      "price": 651982,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-21",
+      "address": "35 Roseland Avenue, Cualanor, Upper Glengeary Road",
+      "price": 638766,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-20",
+      "address": "20 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 704846,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-20",
+      "address": "26 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 643172,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-20",
+      "address": "38 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
+      "price": 683998,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-17",
+      "address": "64 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 643172,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-12",
+      "address": "21 Roseland Avenue, Cualanor, Dun Laoghaire",
+      "price": 643171,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-11",
+      "address": "14 Roseland Avenue, Cualanor, Dun Laoghaire",
+      "price": 665198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-07",
+      "address": "61 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 629956,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-04",
+      "address": "3 ROSELAND AVENUE, CUALANOR, upper glenageary road",
+      "price": 665198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-22",
+      "address": "44 Roseland Avenue, Cualanor, Upper Glenageary Road",
+      "price": 638767,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-16",
+      "address": "62 Roseland Avenue, Cualanor",
+      "price": 370281,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-14",
+      "address": "8 Roseland Ave, Cualanor, Dun Laoghaire",
+      "price": 647577,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96E8C3"
+    },
+    {
+      "date": "2017-05-31",
+      "address": "33 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
+      "price": 704846,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "A96X7Y8"
+    }
+  ],
+  "totalTransactions": 92
+}

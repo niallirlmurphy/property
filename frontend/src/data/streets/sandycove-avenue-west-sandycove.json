@@ -1,0 +1,177 @@
+{
+  "slug": "sandycove-avenue-west-sandycove",
+  "stats": {
+    "count": 11,
+    "median": 1330000,
+    "avg": 1279697,
+    "min": 211666,
+    "max": 2810000,
+    "firstYear": 2012,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 650000,
+      "avg_price": 650000,
+      "min_price": 650000,
+      "max_price": 650000
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 645000,
+      "avg_price": 668889,
+      "min_price": 211666,
+      "max_price": 1150000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1330000,
+      "avg_price": 1330000,
+      "min_price": 1330000,
+      "max_price": 1330000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1400000,
+      "avg_price": 1400000,
+      "min_price": 1400000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1485000,
+      "avg_price": 1485000,
+      "min_price": 1485000,
+      "max_price": 1485000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 895000,
+      "avg_price": 895000,
+      "min_price": 895000,
+      "max_price": 895000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1825000,
+      "avg_price": 1825000,
+      "min_price": 1825000,
+      "max_price": 1825000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1675000,
+      "avg_price": 1675000,
+      "min_price": 1675000,
+      "max_price": 1675000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2810000,
+      "avg_price": 2810000,
+      "min_price": 2810000,
+      "max_price": 2810000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-05-20",
+      "address": "5 SANDYCOVE AVENUE WEST, SANDYCOVE, CO DUBLIN",
+      "price": 2810000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "A96RV10"
+    },
+    {
+      "date": "2023-12-20",
+      "address": "29 SANDYCOVE AVE WEST, SANDYCOVE, DUBLIN",
+      "price": 1675000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96X327"
+    },
+    {
+      "date": "2022-02-10",
+      "address": "4 SANDYCOVE AVENUE WEST, SANDYCOVE, CO DUBLIN",
+      "price": 1825000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96YK23"
+    },
+    {
+      "date": "2020-12-16",
+      "address": "27 SANDYCOVE AVE WEST, SANDYCOVE, DUBLIN",
+      "price": 895000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-11",
+      "address": "5 SANDYCOVE AVE WEST, SANDYCOVE, DUBLIN",
+      "price": 1485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-25",
+      "address": "6 SANDYCOVE AVE WEST, SANDYCOVE, DUN LAOGHAIRE",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-08-01",
+      "address": "1 SANDYCOVE AVE WEST, SANDYCOVE, DUBLIN",
+      "price": 1330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-10-25",
+      "address": "27 Sandycove Avenue West, Sandycove, Dun Laoghaire",
+      "price": 211666,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-08-16",
+      "address": "29 SANDYCOVE AVENUE WEST, SANDYCOVE",
+      "price": 645000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-02-05",
+      "address": "14 Sandycove Avenue West, Sandycove, County Dublin",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-02-13",
+      "address": "25 Sandycove Avenue West, Sandycove, County Dublin",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 11
+}

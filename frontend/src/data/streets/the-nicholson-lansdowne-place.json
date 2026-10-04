@@ -1,0 +1,257 @@
+{
+  "slug": "the-nicholson-lansdowne-place",
+  "stats": {
+    "count": 27,
+    "median": 1453744,
+    "avg": 1550049,
+    "min": 704846,
+    "max": 6343612,
+    "firstYear": 2023,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2023,
+      "count": 7,
+      "median_price": 859031,
+      "avg_price": 992644,
+      "min_price": 748899,
+      "max_price": 1629955
+    },
+    {
+      "year": 2024,
+      "count": 13,
+      "median_price": 1519823,
+      "avg_price": 1394694,
+      "min_price": 704846,
+      "max_price": 2511013
+    },
+    {
+      "year": 2025,
+      "count": 7,
+      "median_price": 1762114,
+      "avg_price": 2395969,
+      "min_price": 825000,
+      "max_price": 6343612
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-12-08",
+      "address": "5 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1453744,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D04F9C5"
+    },
+    {
+      "date": "2025-11-20",
+      "address": "17 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 825000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D04A7K8"
+    },
+    {
+      "date": "2025-08-28",
+      "address": "4 THE NICHOLSON, LANSDOWNE PLACE, LANSDOWNE RD. BALLSBRIDGE",
+      "price": 1960000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04W6T8"
+    },
+    {
+      "date": "2025-08-14",
+      "address": "27 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 6343612,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04N9Y2"
+    },
+    {
+      "date": "2025-06-11",
+      "address": "1 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1762114,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04K1V3"
+    },
+    {
+      "date": "2025-05-12",
+      "address": "6 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1563877,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04R2X0"
+    },
+    {
+      "date": "2025-01-03",
+      "address": "51 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 2863436,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04E7F4"
+    },
+    {
+      "date": "2024-12-23",
+      "address": "22 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1519823,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04R6C6"
+    },
+    {
+      "date": "2024-11-22",
+      "address": "3 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1629956,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04P3C2"
+    },
+    {
+      "date": "2024-11-22",
+      "address": "48 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 748899,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D04K8N6"
+    },
+    {
+      "date": "2024-11-19",
+      "address": "45 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 726872,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X7K7"
+    },
+    {
+      "date": "2024-10-16",
+      "address": "17 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 704846,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D04A7K8"
+    },
+    {
+      "date": "2024-10-02",
+      "address": "20 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 726872,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04T8X6"
+    },
+    {
+      "date": "2024-08-12",
+      "address": "47 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1541850,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04N9C4"
+    },
+    {
+      "date": "2024-08-02",
+      "address": "49 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1938326,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D04A0V2"
+    },
+    {
+      "date": "2024-07-26",
+      "address": "46 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1800761,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D04V1W4"
+    },
+    {
+      "date": "2024-07-18",
+      "address": "39 THE NICHOLSON, LANSDOWNE PLACE, DUBLIN 4",
+      "price": 1110000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04X8C7"
+    },
+    {
+      "date": "2024-07-10",
+      "address": "26 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 2511013,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04C2N1"
+    },
+    {
+      "date": "2024-05-14",
+      "address": "43 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1718062,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04X7Y0"
+    },
+    {
+      "date": "2024-02-09",
+      "address": "44 THE NICHOLSON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1453744,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04X0A3"
+    },
+    {
+      "date": "2023-09-29",
+      "address": "37 The Nicholson, Lansdowne Place, Ballsbridge",
+      "price": 1045425,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-30",
+      "address": "23 The Nicholson, Lansdowne Place, Ballsbridge",
+      "price": 748899,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-23",
+      "address": "32 The Nicholson, Lansdowne Place, Lansdowne Road",
+      "price": 837004,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-04-27",
+      "address": "4 The Nicholson, Lansdowne Place, Lansdowne Road",
+      "price": 1629955,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-03-30",
+      "address": "39 The Nicholson, Lansdowne Place, Dublin 4",
+      "price": 859031,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04X8C7"
+    },
+    {
+      "date": "2023-03-10",
+      "address": "Apartment 11 The Nicholson, Lansdowne Place, Lansdowne Road",
+      "price": 837004,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2023-01-26",
+      "address": "9 The Nicholson, Lansdowne Place, Lansdowne Road",
+      "price": 991189,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 27
+}

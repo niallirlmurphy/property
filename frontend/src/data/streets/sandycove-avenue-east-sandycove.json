@@ -1,0 +1,161 @@
+{
+  "slug": "sandycove-avenue-east-sandycove",
+  "stats": {
+    "count": 10,
+    "median": 1262500,
+    "avg": 1396500,
+    "min": 600000,
+    "max": 2400000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 875000,
+      "avg_price": 875000,
+      "min_price": 875000,
+      "max_price": 875000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1275000,
+      "avg_price": 1275000,
+      "min_price": 1275000,
+      "max_price": 1275000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1215000,
+      "avg_price": 1215000,
+      "min_price": 1215000,
+      "max_price": 1215000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 600000,
+      "avg_price": 600000,
+      "min_price": 600000,
+      "max_price": 600000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1425000,
+      "avg_price": 1425000,
+      "min_price": 1425000,
+      "max_price": 1425000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 1250000,
+      "avg_price": 1250000,
+      "min_price": 1250000,
+      "max_price": 1250000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2400000,
+      "avg_price": 2400000,
+      "min_price": 2400000,
+      "max_price": 2400000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 2250000,
+      "avg_price": 2250000,
+      "min_price": 2250000,
+      "max_price": 2250000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-03",
+      "address": "16 SANDYCOVE AVE EAST, SANDYCOVE, DUBLIN",
+      "price": 2250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96YP30"
+    },
+    {
+      "date": "2025-10-20",
+      "address": "11 SANDYCOVE AVE EAST, SANDYCOVE, DUBLIN",
+      "price": 2400000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "A96FW50"
+    },
+    {
+      "date": "2024-11-12",
+      "address": "4 SANDYCOVE AVE EAST, SANDYCOVE, DUBLIN",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "A96YH96"
+    },
+    {
+      "date": "2024-09-02",
+      "address": "6 SANDYCOVE AVE EAST, SANDYCOVE, DUBLIN",
+      "price": 1250000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A96NA72"
+    },
+    {
+      "date": "2023-08-31",
+      "address": "16 SANDYCOVE AVE EAST, SANDYCOVE, DUBLIN",
+      "price": 1425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96YP30"
+    },
+    {
+      "date": "2023-05-08",
+      "address": "11 SANDYCOVE AVE EAST, SANDYCOVE, DUBLIN",
+      "price": 1425000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "A96FW50"
+    },
+    {
+      "date": "2022-07-13",
+      "address": "4 SANDYCOVE AVE EAST, SANDYCOVE, DUBLIN",
+      "price": 600000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "A96YH96"
+    },
+    {
+      "date": "2020-09-03",
+      "address": "11 SANDYCOVE AVE EAST, SANDYCOVE, DUBLIN",
+      "price": 1215000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "A96FW50"
+    },
+    {
+      "date": "2015-03-13",
+      "address": "1 SANDYCOVE AVE EAST, SANDYCOVE, DUBLIN",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-09-20",
+      "address": "11 SANDYCOVE AVENUE EAST, SANDYCOVE",
+      "price": 875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

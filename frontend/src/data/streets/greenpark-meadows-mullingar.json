@@ -1,0 +1,553 @@
+{
+  "slug": "greenpark-meadows-mullingar",
+  "stats": {
+    "count": 111,
+    "median": 200000,
+    "avg": 214262,
+    "min": 70000,
+    "max": 430000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 12,
+      "median_price": 160000,
+      "avg_price": 160367,
+      "min_price": 137000,
+      "max_price": 192000
+    },
+    {
+      "year": 2011,
+      "count": 3,
+      "median_price": 141000,
+      "avg_price": 137000,
+      "min_price": 100000,
+      "max_price": 170000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 164000,
+      "avg_price": 164000,
+      "min_price": 140000,
+      "max_price": 188000
+    },
+    {
+      "year": 2013,
+      "count": 7,
+      "median_price": 110000,
+      "avg_price": 115857,
+      "min_price": 70000,
+      "max_price": 180000
+    },
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 128500,
+      "avg_price": 134850,
+      "min_price": 120250,
+      "max_price": 165000
+    },
+    {
+      "year": 2015,
+      "count": 6,
+      "median_price": 159000,
+      "avg_price": 150917,
+      "min_price": 107500,
+      "max_price": 194000
+    },
+    {
+      "year": 2016,
+      "count": 5,
+      "median_price": 185000,
+      "avg_price": 187400,
+      "min_price": 170000,
+      "max_price": 212000
+    },
+    {
+      "year": 2017,
+      "count": 5,
+      "median_price": 180000,
+      "avg_price": 182300,
+      "min_price": 175000,
+      "max_price": 189000
+    },
+    {
+      "year": 2018,
+      "count": 8,
+      "median_price": 217000,
+      "avg_price": 216750,
+      "min_price": 175000,
+      "max_price": 250000
+    },
+    {
+      "year": 2019,
+      "count": 12,
+      "median_price": 204750,
+      "avg_price": 200625,
+      "min_price": 105000,
+      "max_price": 271000
+    },
+    {
+      "year": 2020,
+      "count": 13,
+      "median_price": 212500,
+      "avg_price": 209592,
+      "min_price": 148000,
+      "max_price": 271000
+    },
+    {
+      "year": 2021,
+      "count": 9,
+      "median_price": 239400,
+      "avg_price": 241578,
+      "min_price": 211800,
+      "max_price": 283000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 246250,
+      "avg_price": 246250,
+      "min_price": 242500,
+      "max_price": 250000
+    },
+    {
+      "year": 2023,
+      "count": 8,
+      "median_price": 310000,
+      "avg_price": 294562,
+      "min_price": 237500,
+      "max_price": 352000
+    },
+    {
+      "year": 2024,
+      "count": 8,
+      "median_price": 337500,
+      "avg_price": 340875,
+      "min_price": 280000,
+      "max_price": 405000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 350000,
+      "avg_price": 336667,
+      "min_price": 310000,
+      "max_price": 350000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 415000,
+      "avg_price": 418000,
+      "min_price": 409000,
+      "max_price": 430000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-16",
+      "address": "284 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91H9Y3"
+    },
+    {
+      "date": "2026-05-05",
+      "address": "151 GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 430000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "N91D9D6"
+    },
+    {
+      "date": "2026-02-16",
+      "address": "142 GREENPARK MEADOWS, MULLINGAR, CO. WESTMEATH",
+      "price": 409000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "N91PK7C"
+    },
+    {
+      "date": "2025-11-25",
+      "address": "249 GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 350000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "N91K4X0"
+    },
+    {
+      "date": "2025-08-18",
+      "address": "145B GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 310000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "N91TP4V"
+    },
+    {
+      "date": "2025-08-06",
+      "address": "161A GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 350000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "N91A2H3"
+    },
+    {
+      "date": "2024-12-13",
+      "address": "185 GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 326000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91N8K5"
+    },
+    {
+      "date": "2024-12-02",
+      "address": "59 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91N6C8"
+    },
+    {
+      "date": "2024-11-07",
+      "address": "56 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91F5X0"
+    },
+    {
+      "date": "2024-10-16",
+      "address": "275B GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 286000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91E4X9"
+    },
+    {
+      "date": "2024-09-23",
+      "address": "99 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91E7N2"
+    },
+    {
+      "date": "2024-07-01",
+      "address": "101 GREENPARK MEADOWS, MULLINGAR, CO. WESTMEATH",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91WDW0"
+    },
+    {
+      "date": "2024-06-14",
+      "address": "117 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91C4A9"
+    },
+    {
+      "date": "2024-02-13",
+      "address": "194 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91A2R6"
+    },
+    {
+      "date": "2023-11-17",
+      "address": "80 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91E8X4"
+    },
+    {
+      "date": "2023-10-27",
+      "address": "147A GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91K5P7"
+    },
+    {
+      "date": "2023-09-13",
+      "address": "273A GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 322000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91T8F8"
+    },
+    {
+      "date": "2023-06-20",
+      "address": "264A GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91X0D9"
+    },
+    {
+      "date": "2023-06-09",
+      "address": "111 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91R3P6"
+    },
+    {
+      "date": "2023-05-31",
+      "address": "236A GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91CPD3"
+    },
+    {
+      "date": "2023-05-30",
+      "address": "91 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 237500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91C4V6"
+    },
+    {
+      "date": "2023-04-14",
+      "address": "1 GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 352000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91D368"
+    },
+    {
+      "date": "2022-12-09",
+      "address": "280B GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91C7K7"
+    },
+    {
+      "date": "2022-09-22",
+      "address": "123 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 242500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91V0D4"
+    },
+    {
+      "date": "2021-12-22",
+      "address": "178B GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 259000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91C9C8"
+    },
+    {
+      "date": "2021-12-10",
+      "address": "225 GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 283000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91K6F5"
+    },
+    {
+      "date": "2021-11-19",
+      "address": "156 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 231000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91R8D8"
+    },
+    {
+      "date": "2021-10-29",
+      "address": "180B GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91T9W3"
+    },
+    {
+      "date": "2021-09-21",
+      "address": "213 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 239400,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91N5C3"
+    },
+    {
+      "date": "2021-07-05",
+      "address": "288 GREENPARK MEADOWS, MULLINGAR, CO. WESTMEATH",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91P7N1"
+    },
+    {
+      "date": "2021-03-31",
+      "address": "16 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 215000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-22",
+      "address": "66 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 211800,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-18",
+      "address": "267 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-21",
+      "address": "236A GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 164747,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91CPD3"
+    },
+    {
+      "date": "2020-11-20",
+      "address": "228 GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 194000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-23",
+      "address": "293 GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 271000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-08",
+      "address": "19 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-16",
+      "address": "71 GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 239950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-11",
+      "address": "17 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-29",
+      "address": "109 GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-21",
+      "address": "280B GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91C7K7"
+    },
+    {
+      "date": "2020-03-10",
+      "address": "176 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 148000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-06",
+      "address": "213 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 172000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91N5C3"
+    },
+    {
+      "date": "2020-03-06",
+      "address": "12 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-31",
+      "address": "181 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 222500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-17",
+      "address": "250 GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 212500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-23",
+      "address": "73 GREENPARK MEADOWS, MULLINGAR, CO.WESTMEATH",
+      "price": 180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-16",
+      "address": "286 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-14",
+      "address": "249 GREENPARK MEADOWS, MULLINGAR, CO WESTMEATH",
+      "price": 210000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "N91K4X0"
+    },
+    {
+      "date": "2019-08-09",
+      "address": "154 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 160000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 111
+}

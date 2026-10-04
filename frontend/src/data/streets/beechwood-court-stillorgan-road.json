@@ -1,0 +1,529 @@
+{
+  "slug": "beechwood-court-stillorgan-road",
+  "stats": {
+    "count": 129,
+    "median": 268329,
+    "avg": 302979,
+    "min": 184001,
+    "max": 773000,
+    "firstYear": 2010,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 2,
+      "median_price": 204000,
+      "avg_price": 204000,
+      "min_price": 184001,
+      "max_price": 224000
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 275000,
+      "avg_price": 258333,
+      "min_price": 220000,
+      "max_price": 280000
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 522500,
+      "avg_price": 532000,
+      "min_price": 457998,
+      "max_price": 625000
+    },
+    {
+      "year": 2015,
+      "count": 101,
+      "median_price": 268329,
+      "avg_price": 266993,
+      "min_price": 185462,
+      "max_price": 585000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 560000,
+      "avg_price": 560000,
+      "min_price": 560000,
+      "max_price": 560000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 382000,
+      "avg_price": 446000,
+      "min_price": 360000,
+      "max_price": 660000
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 405000,
+      "avg_price": 477500,
+      "min_price": 400000,
+      "max_price": 700000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 393000,
+      "avg_price": 393000,
+      "min_price": 393000,
+      "max_price": 393000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 395000,
+      "avg_price": 395000,
+      "min_price": 395000,
+      "max_price": 395000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 365000,
+      "avg_price": 365000,
+      "min_price": 365000,
+      "max_price": 365000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 773000,
+      "avg_price": 773000,
+      "min_price": 773000,
+      "max_price": 773000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 445000,
+      "avg_price": 445000,
+      "min_price": 445000,
+      "max_price": 445000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 410000,
+      "avg_price": 416667,
+      "min_price": 400000,
+      "max_price": 440000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 466000,
+      "avg_price": 466000,
+      "min_price": 415000,
+      "max_price": 517000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-12-18",
+      "address": "273 BEECHWOOD COURT, STILLORGAN RD, COUNTY DUBLIN",
+      "price": 415000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-06",
+      "address": "201 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 517000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A94A076"
+    },
+    {
+      "date": "2024-09-17",
+      "address": "35 BEECHWOOD COURT, STILLORGAN RD, BLACKROCK",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94PD1A"
+    },
+    {
+      "date": "2024-07-11",
+      "address": "201 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 440000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A94A076"
+    },
+    {
+      "date": "2024-01-12",
+      "address": "189 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94NY71"
+    },
+    {
+      "date": "2023-08-23",
+      "address": "210 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94E272"
+    },
+    {
+      "date": "2022-09-02",
+      "address": "16 BEECHWOOD COURT, STILLORGAN RD, DUBLIN",
+      "price": 773000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94D210"
+    },
+    {
+      "date": "2021-06-01",
+      "address": "87 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94T7E0"
+    },
+    {
+      "date": "2020-03-18",
+      "address": "204 BEECHWOOD COURT, STILLORGAN RD, DUBLIN",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-13",
+      "address": "159 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 393000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-19",
+      "address": "109 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-27",
+      "address": "141 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-31",
+      "address": "44 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-12",
+      "address": "8 BEECHWOOD COURT, STILLORGAN RD, BLACKROCK",
+      "price": 700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-01",
+      "address": "28 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 660000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-06",
+      "address": "158 BEECHWOOD COURT, STILLORGAN RD, BLACKROCK",
+      "price": 399000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-02",
+      "address": "209 BEECHWOOD COURT, STILLORGAN RD, DUBLIN",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-07",
+      "address": "173 BEECHWOOD COURT, STILLORGAN RD, DUBLIN",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-19",
+      "address": "24 BEECHWOOD COURT, STILLORGAN RD, DUBLIN",
+      "price": 560000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-11-27",
+      "address": "138 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-28",
+      "address": "22 BEECHWOOD COURT, STILLORGAN RD, STILLORGAN",
+      "price": 585000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "315 Beechwood Court, Stillorgan Road",
+      "price": 394601,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "289 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "94 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "233 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "313 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "293 Beechwood Court, Stillorgan Road",
+      "price": 185462,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "310 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "262 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "279 Beechwood Court, Stillorgan Road",
+      "price": 185462,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "304 Beechwood Court, Stillorgan Road",
+      "price": 394601,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "266 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "222 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "303 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "274 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "299 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "142 Beechwood Court, Stillorgan Road",
+      "price": 185462,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "309 Beechwood Court, Stillorgan Road",
+      "price": 185462,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "287 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "114 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "161 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "300 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "61 Beechwood Court, Stillorgan Road, County Dublin",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "265 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "283 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "316 Beechwood Court, Stillorgan Road",
+      "price": 185462,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "243 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "37 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "232 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-15",
+      "address": "38 Beechwood Court, Stillorgan Road",
+      "price": 268329,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 129
+}

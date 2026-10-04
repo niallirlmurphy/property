@@ -1,0 +1,553 @@
+{
+  "slug": "cashel-road-crumlin",
+  "stats": {
+    "count": 103,
+    "median": 273000,
+    "avg": 270720,
+    "min": 57821,
+    "max": 765000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 200000,
+      "avg_price": 188333,
+      "min_price": 155000,
+      "max_price": 210000
+    },
+    {
+      "year": 2011,
+      "count": 8,
+      "median_price": 146000,
+      "avg_price": 125250,
+      "min_price": 65000,
+      "max_price": 157000
+    },
+    {
+      "year": 2012,
+      "count": 6,
+      "median_price": 116525,
+      "avg_price": 115508,
+      "min_price": 95000,
+      "max_price": 135000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 107500,
+      "avg_price": 107500,
+      "min_price": 80000,
+      "max_price": 135000
+    },
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 175000,
+      "avg_price": 179620,
+      "min_price": 157000,
+      "max_price": 227000
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 197500,
+      "avg_price": 204312,
+      "min_price": 180000,
+      "max_price": 240000
+    },
+    {
+      "year": 2016,
+      "count": 5,
+      "median_price": 210000,
+      "avg_price": 214800,
+      "min_price": 170000,
+      "max_price": 265000
+    },
+    {
+      "year": 2017,
+      "count": 5,
+      "median_price": 262000,
+      "avg_price": 243800,
+      "min_price": 192000,
+      "max_price": 277000
+    },
+    {
+      "year": 2018,
+      "count": 7,
+      "median_price": 250000,
+      "avg_price": 274214,
+      "min_price": 228500,
+      "max_price": 360000
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 298000,
+      "avg_price": 298656,
+      "min_price": 231000,
+      "max_price": 359250
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 338250,
+      "avg_price": 338250,
+      "min_price": 276500,
+      "max_price": 400000
+    },
+    {
+      "year": 2021,
+      "count": 8,
+      "median_price": 318000,
+      "avg_price": 314625,
+      "min_price": 235000,
+      "max_price": 356000
+    },
+    {
+      "year": 2022,
+      "count": 10,
+      "median_price": 317500,
+      "avg_price": 312600,
+      "min_price": 235000,
+      "max_price": 343500
+    },
+    {
+      "year": 2023,
+      "count": 9,
+      "median_price": 295000,
+      "avg_price": 294758,
+      "min_price": 57821,
+      "max_price": 501000
+    },
+    {
+      "year": 2024,
+      "count": 7,
+      "median_price": 460000,
+      "avg_price": 436207,
+      "min_price": 360000,
+      "max_price": 518950
+    },
+    {
+      "year": 2025,
+      "count": 8,
+      "median_price": 371500,
+      "avg_price": 418000,
+      "min_price": 280000,
+      "max_price": 765000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 452500,
+      "avg_price": 452500,
+      "min_price": 425000,
+      "max_price": 480000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-04-02",
+      "address": "145A CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12V88C"
+    },
+    {
+      "date": "2026-01-27",
+      "address": "119 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 480000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12K0Y9"
+    },
+    {
+      "date": "2025-12-12",
+      "address": "152 CASHEL ROAD, CRUMLIN, DUBLIN 12",
+      "price": 280000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D12H7W4"
+    },
+    {
+      "date": "2025-12-04",
+      "address": "179 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 375000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D12K2Y5"
+    },
+    {
+      "date": "2025-10-16",
+      "address": "214 CASHEL ROAD, CRUMLIN, DUBLIN 12",
+      "price": 765000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12VR4R"
+    },
+    {
+      "date": "2025-06-25",
+      "address": "266 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 496000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D12W3P0"
+    },
+    {
+      "date": "2025-06-05",
+      "address": "161 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 438000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12K6A0"
+    },
+    {
+      "date": "2025-05-02",
+      "address": "176 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 368000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12W6T2"
+    },
+    {
+      "date": "2025-04-24",
+      "address": "277 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 320000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12X9H7"
+    },
+    {
+      "date": "2025-01-10",
+      "address": "214 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 302000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D12VR4R"
+    },
+    {
+      "date": "2024-11-28",
+      "address": "302 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 518950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12H9P2"
+    },
+    {
+      "date": "2024-08-20",
+      "address": "28 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12C3F8"
+    },
+    {
+      "date": "2024-07-29",
+      "address": "122 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 462000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F6Y6"
+    },
+    {
+      "date": "2024-05-09",
+      "address": "318 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 470500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12KT3Y"
+    },
+    {
+      "date": "2024-03-13",
+      "address": "215 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 362000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12T1X0"
+    },
+    {
+      "date": "2024-02-23",
+      "address": "164 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y8W8"
+    },
+    {
+      "date": "2024-01-30",
+      "address": "256 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12PX5T"
+    },
+    {
+      "date": "2023-10-31",
+      "address": "217 CASHEL RD, CRUMLIN, DUBLIN",
+      "price": 57821,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K5V9"
+    },
+    {
+      "date": "2023-10-27",
+      "address": "167 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 376000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12H5K2"
+    },
+    {
+      "date": "2023-09-27",
+      "address": "195 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F9Y8"
+    },
+    {
+      "date": "2023-07-11",
+      "address": "179 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 242000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D12K2Y5"
+    },
+    {
+      "date": "2023-05-05",
+      "address": "179 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 200000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D12K2Y5"
+    },
+    {
+      "date": "2023-04-24",
+      "address": "126 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 277000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12X4E9"
+    },
+    {
+      "date": "2023-04-03",
+      "address": "199 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 344000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12N4F5"
+    },
+    {
+      "date": "2023-03-16",
+      "address": "352 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 501000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12VW5D"
+    },
+    {
+      "date": "2023-02-07",
+      "address": "204 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12A9W2"
+    },
+    {
+      "date": "2022-12-21",
+      "address": "16 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F9K1"
+    },
+    {
+      "date": "2022-12-01",
+      "address": "71 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 321500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E9A2"
+    },
+    {
+      "date": "2022-11-03",
+      "address": "344 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12W9NF"
+    },
+    {
+      "date": "2022-10-17",
+      "address": "265 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 307500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12R9T4"
+    },
+    {
+      "date": "2022-10-11",
+      "address": "201 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K6H9"
+    },
+    {
+      "date": "2022-09-27",
+      "address": "238 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 313500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12V6R3"
+    },
+    {
+      "date": "2022-09-16",
+      "address": "187 CASHEL ROAD, CRUMLIN, DUBLIN 12",
+      "price": 343500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12C6C5"
+    },
+    {
+      "date": "2022-06-30",
+      "address": "352 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12VW5D"
+    },
+    {
+      "date": "2022-05-25",
+      "address": "133 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12C1W8"
+    },
+    {
+      "date": "2022-05-03",
+      "address": "2 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F5W6"
+    },
+    {
+      "date": "2021-12-09",
+      "address": "69 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y5F9"
+    },
+    {
+      "date": "2021-11-17",
+      "address": "190 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 346000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P6P2"
+    },
+    {
+      "date": "2021-09-17",
+      "address": "145A CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12V88C"
+    },
+    {
+      "date": "2021-08-17",
+      "address": "92 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 356000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12C5Y6"
+    },
+    {
+      "date": "2021-07-05",
+      "address": "4 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12RKA0"
+    },
+    {
+      "date": "2021-03-05",
+      "address": "150 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-29",
+      "address": "31 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-13",
+      "address": "364 CASHEL ROAD, CRUMLIN, DUBLIN 12",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-11",
+      "address": "224 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-23",
+      "address": "35 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 276500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-06",
+      "address": "160 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 287000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-28",
+      "address": "105 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 231000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-19",
+      "address": "157 CASHEL ROAD, CRUMLIN, DUBLIN 12",
+      "price": 296000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-09",
+      "address": "217 CASHEL RD, CRUMLIN, DUBLIN",
+      "price": 359250,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K5V9"
+    }
+  ],
+  "totalTransactions": 103
+}

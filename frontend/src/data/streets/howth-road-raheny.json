@@ -1,0 +1,553 @@
+{
+  "slug": "howth-road-raheny",
+  "stats": {
+    "count": 129,
+    "median": 662201,
+    "avg": 699850,
+    "min": 10000,
+    "max": 1800000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 513000,
+      "avg_price": 493000,
+      "min_price": 311000,
+      "max_price": 635000
+    },
+    {
+      "year": 2011,
+      "count": 7,
+      "median_price": 400000,
+      "avg_price": 422929,
+      "min_price": 265000,
+      "max_price": 575000
+    },
+    {
+      "year": 2012,
+      "count": 11,
+      "median_price": 510000,
+      "avg_price": 540455,
+      "min_price": 320000,
+      "max_price": 875000
+    },
+    {
+      "year": 2013,
+      "count": 7,
+      "median_price": 434200,
+      "avg_price": 446671,
+      "min_price": 305000,
+      "max_price": 575000
+    },
+    {
+      "year": 2014,
+      "count": 6,
+      "median_price": 595000,
+      "avg_price": 688333,
+      "min_price": 365000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2015,
+      "count": 5,
+      "median_price": 525000,
+      "avg_price": 546000,
+      "min_price": 500000,
+      "max_price": 610000
+    },
+    {
+      "year": 2016,
+      "count": 8,
+      "median_price": 670000,
+      "avg_price": 663776,
+      "min_price": 425000,
+      "max_price": 823789
+    },
+    {
+      "year": 2017,
+      "count": 10,
+      "median_price": 773438,
+      "avg_price": 818076,
+      "min_price": 640000,
+      "max_price": 1450000
+    },
+    {
+      "year": 2018,
+      "count": 10,
+      "median_price": 625000,
+      "avg_price": 629220,
+      "min_price": 10000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2019,
+      "count": 9,
+      "median_price": 665000,
+      "avg_price": 613722,
+      "min_price": 300000,
+      "max_price": 910000
+    },
+    {
+      "year": 2020,
+      "count": 7,
+      "median_price": 780000,
+      "avg_price": 741621,
+      "min_price": 582500,
+      "max_price": 814978
+    },
+    {
+      "year": 2021,
+      "count": 9,
+      "median_price": 800000,
+      "avg_price": 843000,
+      "min_price": 450000,
+      "max_price": 1750000
+    },
+    {
+      "year": 2022,
+      "count": 11,
+      "median_price": 809000,
+      "avg_price": 852727,
+      "min_price": 540000,
+      "max_price": 1160000
+    },
+    {
+      "year": 2023,
+      "count": 7,
+      "median_price": 785000,
+      "avg_price": 680214,
+      "min_price": 350000,
+      "max_price": 960000
+    },
+    {
+      "year": 2024,
+      "count": 8,
+      "median_price": 813000,
+      "avg_price": 971375,
+      "min_price": 645000,
+      "max_price": 1640000
+    },
+    {
+      "year": 2025,
+      "count": 6,
+      "median_price": 907000,
+      "avg_price": 842333,
+      "min_price": 635000,
+      "max_price": 965000
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 935000,
+      "avg_price": 1091250,
+      "min_price": 695000,
+      "max_price": 1800000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-31",
+      "address": "507 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 910000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D05RY88"
+    },
+    {
+      "date": "2026-06-01",
+      "address": "722 HOWTH ROAD, RAHENY, DUBLIN 5",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D05H342"
+    },
+    {
+      "date": "2026-04-29",
+      "address": "541 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 960000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05N276"
+    },
+    {
+      "date": "2026-03-05",
+      "address": "446 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 695000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D05TR66"
+    },
+    {
+      "date": "2025-12-07",
+      "address": "684 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 900000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D05P223"
+    },
+    {
+      "date": "2025-09-17",
+      "address": "554 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 635000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D05KR59"
+    },
+    {
+      "date": "2025-07-16",
+      "address": "682 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 965000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D05PC95"
+    },
+    {
+      "date": "2025-05-29",
+      "address": "788 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 915000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D05DV78"
+    },
+    {
+      "date": "2025-05-08",
+      "address": "377 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 914000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D05KN63"
+    },
+    {
+      "date": "2025-03-26",
+      "address": "449 HOWTH ROAD, RAHENY, DUBLIN 5",
+      "price": 725000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D05YW53"
+    },
+    {
+      "date": "2024-12-18",
+      "address": "466 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 720000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05Y8R9"
+    },
+    {
+      "date": "2024-10-24",
+      "address": "627 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 1405000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D05HY98"
+    },
+    {
+      "date": "2024-08-12",
+      "address": "420 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 815000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D05NW61"
+    },
+    {
+      "date": "2024-04-25",
+      "address": "668 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 810000,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "D05EH61"
+    },
+    {
+      "date": "2024-04-16",
+      "address": "585 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 925000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D05Y425"
+    },
+    {
+      "date": "2024-03-22",
+      "address": "627 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 1640000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D05HY98"
+    },
+    {
+      "date": "2024-02-15",
+      "address": "632 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 645000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05DP38"
+    },
+    {
+      "date": "2024-01-24",
+      "address": "497 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 811000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D05KP22"
+    },
+    {
+      "date": "2023-12-21",
+      "address": "470 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 785000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05R9F7"
+    },
+    {
+      "date": "2023-11-14",
+      "address": "561 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05YV80"
+    },
+    {
+      "date": "2023-06-08",
+      "address": "345 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05PR84"
+    },
+    {
+      "date": "2023-06-07",
+      "address": "521 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05XT85"
+    },
+    {
+      "date": "2023-04-06",
+      "address": "806 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 960000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05A060"
+    },
+    {
+      "date": "2023-03-06",
+      "address": "444 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 528500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05V2K5"
+    },
+    {
+      "date": "2023-02-14",
+      "address": "332 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 488000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05ET72"
+    },
+    {
+      "date": "2022-12-08",
+      "address": "615A HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 540000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05YR52"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "503 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 809000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05P089"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "798 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 1125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05RT99"
+    },
+    {
+      "date": "2022-08-12",
+      "address": "645B HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 1160000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05AX01"
+    },
+    {
+      "date": "2022-07-07",
+      "address": "323 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 795000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05AD68"
+    },
+    {
+      "date": "2022-05-10",
+      "address": "674 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 751000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05N293"
+    },
+    {
+      "date": "2022-04-19",
+      "address": "339 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 735000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05TX28"
+    },
+    {
+      "date": "2022-03-14",
+      "address": "383 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 755000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05H688"
+    },
+    {
+      "date": "2022-02-18",
+      "address": "494 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 870000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05N9K3"
+    },
+    {
+      "date": "2022-02-04",
+      "address": "623 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 980000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05E2R5"
+    },
+    {
+      "date": "2022-01-21",
+      "address": "588 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 860000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05WN35"
+    },
+    {
+      "date": "2021-10-29",
+      "address": "529 HOWTH RD, RAHENY, DUBLIN",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05A525"
+    },
+    {
+      "date": "2021-06-22",
+      "address": "389 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 825000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05H985"
+    },
+    {
+      "date": "2021-06-15",
+      "address": "501 HOWTH ROAD, RAHENY, DUBLIN 5",
+      "price": 660000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05V227"
+    },
+    {
+      "date": "2021-04-29",
+      "address": "511 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 810000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05RH51"
+    },
+    {
+      "date": "2021-04-23",
+      "address": "434 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05W520"
+    },
+    {
+      "date": "2021-04-16",
+      "address": "726A HOWTH ROAD, RAHENY, DUBLIN5",
+      "price": 860000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-19",
+      "address": "621 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D05X231"
+    },
+    {
+      "date": "2021-03-12",
+      "address": "371 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 707000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-05",
+      "address": "454 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-30",
+      "address": "570A Howth Road, Raheny, Dublin 5",
+      "price": 814978,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-30",
+      "address": "570B Howth Road, Raheny",
+      "price": 806867,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-16",
+      "address": "462 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 582500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-04",
+      "address": "589 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 812000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-22",
+      "address": "570 HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 770000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 129
+}

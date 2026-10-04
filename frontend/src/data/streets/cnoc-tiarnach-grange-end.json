@@ -1,0 +1,489 @@
+{
+  "slug": "cnoc-tiarnach-grange-end",
+  "stats": {
+    "count": 94,
+    "median": 339207,
+    "avg": 361959,
+    "min": 286343,
+    "max": 650000,
+    "firstYear": 2018,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2018,
+      "count": 9,
+      "median_price": 321585,
+      "avg_price": 317207,
+      "min_price": 286343,
+      "max_price": 353650
+    },
+    {
+      "year": 2019,
+      "count": 59,
+      "median_price": 330396,
+      "avg_price": 328302,
+      "min_price": 286344,
+      "max_price": 497797
+    },
+    {
+      "year": 2020,
+      "count": 15,
+      "median_price": 414100,
+      "avg_price": 403361,
+      "min_price": 295154,
+      "max_price": 535000
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 500000,
+      "avg_price": 494000,
+      "min_price": 475000,
+      "max_price": 507000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 522000,
+      "avg_price": 522000,
+      "min_price": 502000,
+      "max_price": 542000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 433000,
+      "avg_price": 433000,
+      "min_price": 433000,
+      "max_price": 433000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 550000,
+      "avg_price": 550000,
+      "min_price": 550000,
+      "max_price": 550000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 560000,
+      "avg_price": 560000,
+      "min_price": 560000,
+      "max_price": 560000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 525000,
+      "avg_price": 560000,
+      "min_price": 505000,
+      "max_price": 650000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-01",
+      "address": "67 CNOC TIARNACH, GRANGE END, DUNSHAUGHLIN",
+      "price": 650000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A85CT82"
+    },
+    {
+      "date": "2026-04-30",
+      "address": "19 CNOC TIARNACH, GRANGE END, DUNSHAUGHLIN",
+      "price": 525000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A85XY97"
+    },
+    {
+      "date": "2026-02-24",
+      "address": "10 CNOC TIARNACH, GRANGE END, DUNSHAUGHLIN",
+      "price": 505000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A85X224"
+    },
+    {
+      "date": "2025-05-20",
+      "address": "22 CNOC TIARNACH, GRANGE END, DUBSHAUGHLIN",
+      "price": 560000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": "A85WY01"
+    },
+    {
+      "date": "2024-07-30",
+      "address": "17 CNOC TIARNACH, GRANGE END, DUNSHAUGHLIN",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A85YV81"
+    },
+    {
+      "date": "2023-02-10",
+      "address": "81 CNOC TIARNACH, GRANGE END, DUNSHAUGHLIN",
+      "price": 433000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A85RK46"
+    },
+    {
+      "date": "2022-06-29",
+      "address": "98 CNOC TIARNACH, GRANGE END, DUNSHAUGHLIN",
+      "price": 502000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A85E377"
+    },
+    {
+      "date": "2022-02-28",
+      "address": "33 CNOC TIARNACH, GRANGE END, DUNSHAUGHLIN",
+      "price": 542000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A85XW88"
+    },
+    {
+      "date": "2021-11-15",
+      "address": "46 CNOC TIARNACH, GRANGE END, DUNSHAUGHLIN",
+      "price": 507000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A85A998"
+    },
+    {
+      "date": "2021-11-04",
+      "address": "82 CNOC TIARNACH, GRANGE END, DUNSHAUGHLIN",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A85F727"
+    },
+    {
+      "date": "2021-10-29",
+      "address": "59 CNOC TIARNACH, GRANGE END, DUNSHAUGHLIN",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A85KW40"
+    },
+    {
+      "date": "2020-12-22",
+      "address": "1 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 431718,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-30",
+      "address": "Site 35, Cnoc Tiarnach, Grange End",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2020-11-17",
+      "address": "3 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 436123,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-28",
+      "address": "6 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 418503,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-10",
+      "address": "4 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 431718,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-10",
+      "address": "67 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 409691,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-26",
+      "address": "9 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 440528,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-03",
+      "address": "7 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 440528,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-16",
+      "address": "101 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 414100,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-20",
+      "address": "55 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 409692,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-28",
+      "address": "115 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 370044,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-21",
+      "address": "5 cnoc tiarnach, grange end, dunshaughlin",
+      "price": 535000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-07",
+      "address": "44 CNOC TIARNACH, GRANGE END, DUNSHAUGHLIN",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-07",
+      "address": "72 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-02",
+      "address": "53 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-19",
+      "address": "69  Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-18",
+      "address": "63 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-06",
+      "address": "59 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A85KW40"
+    },
+    {
+      "date": "2019-12-06",
+      "address": "12 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-27",
+      "address": "33 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 378855,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A85XW88"
+    },
+    {
+      "date": "2019-11-22",
+      "address": "74 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 333025,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-13",
+      "address": "54 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 346599,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-08",
+      "address": "50 cnoc Tiarnach, grange end, dunshaughlin",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-31",
+      "address": "52 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-24",
+      "address": "51 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-24",
+      "address": "48 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-18",
+      "address": "45 cnoc tiarnach, grange end, dunshaughlin",
+      "price": 370044,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-09",
+      "address": "70 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 339200,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-02",
+      "address": "46 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A85A998"
+    },
+    {
+      "date": "2019-10-01",
+      "address": "47 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-26",
+      "address": "49 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-22",
+      "address": "81 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 298678,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A85RK46"
+    },
+    {
+      "date": "2019-08-21",
+      "address": "75 cnoc tiarnach, grange end, dunshaughlin",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-20",
+      "address": "80 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-06",
+      "address": "36 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 296460,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-02",
+      "address": "39 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-31",
+      "address": "31 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-30",
+      "address": "37 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-29",
+      "address": "34 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 356828,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 94
+}

@@ -1,0 +1,185 @@
+{
+  "slug": "cambridge-road-rathmines",
+  "stats": {
+    "count": 12,
+    "median": 1400000,
+    "avg": 1702208,
+    "min": 762000,
+    "max": 3550000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 762000,
+      "avg_price": 762000,
+      "min_price": 762000,
+      "max_price": 762000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1400000,
+      "avg_price": 1400000,
+      "min_price": 1400000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 795000,
+      "avg_price": 795000,
+      "min_price": 795000,
+      "max_price": 795000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 965000,
+      "avg_price": 965000,
+      "min_price": 965000,
+      "max_price": 965000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 2467500,
+      "avg_price": 2467500,
+      "min_price": 1385000,
+      "max_price": 3550000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1655000,
+      "avg_price": 1655000,
+      "min_price": 1655000,
+      "max_price": 1655000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 1400000,
+      "avg_price": 1420833,
+      "min_price": 862500,
+      "max_price": 2000000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 3500000,
+      "avg_price": 3500000,
+      "min_price": 3500000,
+      "max_price": 3500000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 2152000,
+      "avg_price": 2152000,
+      "min_price": 2152000,
+      "max_price": 2152000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-09",
+      "address": "4 CAMBRIDGE RD, RATHMINES, DUBLIN 6",
+      "price": 2152000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D06HH76"
+    },
+    {
+      "date": "2025-09-04",
+      "address": "15 CAMBRIDGE ROAD, RATHMINES, DUBLIN 6",
+      "price": 3500000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D06E6X5"
+    },
+    {
+      "date": "2024-09-10",
+      "address": "1 CAMBRIDGE RD, RATHMINES, DUBLIN 6",
+      "price": 862500,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D06HA89"
+    },
+    {
+      "date": "2024-03-05",
+      "address": "3 CAMBRIDGE RD, RATHMINES, DUBLIN 6",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "D06V3W6"
+    },
+    {
+      "date": "2024-01-15",
+      "address": "14 CAMBRIDGE RD, RATHMINES, DUBLIN 6",
+      "price": 2000000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D06R2K2"
+    },
+    {
+      "date": "2023-02-07",
+      "address": "6 CAMBRIDGE RD, RATHMINES, DUBLIN 6",
+      "price": 1655000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06X8H2"
+    },
+    {
+      "date": "2022-10-25",
+      "address": "21 CAMBRIDGE ROAD, RATHMINES, DUBLIN 6",
+      "price": 1385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06A3H7"
+    },
+    {
+      "date": "2022-03-04",
+      "address": "CAMBRIDGE RD, RATHMINES, DUBLIN 6",
+      "price": 3550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06E6X5"
+    },
+    {
+      "date": "2021-10-14",
+      "address": "18 CAMBRIDGE RD, RATHMINES, DUBLIN 6",
+      "price": 965000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06R2V4"
+    },
+    {
+      "date": "2015-04-17",
+      "address": "6 CAMBRIDGE RD, RATHMINES, DUBLIN 6",
+      "price": 795000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06X8H2"
+    },
+    {
+      "date": "2014-09-01",
+      "address": "14 CAMBRIDGE RD, RATHMINES, DUBLIN 6",
+      "price": 1400000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D06R2K2"
+    },
+    {
+      "date": "2012-12-06",
+      "address": "23 Cambridge Road, Rathmines, Dublin 6",
+      "price": 762000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 12
+}

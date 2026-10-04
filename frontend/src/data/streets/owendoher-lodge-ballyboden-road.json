@@ -1,0 +1,505 @@
+{
+  "slug": "owendoher-lodge-ballyboden-road",
+  "stats": {
+    "count": 91,
+    "median": 350000,
+    "avg": 349872,
+    "min": 132687,
+    "max": 582000,
+    "firstYear": 2016,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 58,
+      "median_price": 289482,
+      "avg_price": 302132,
+      "min_price": 224670,
+      "max_price": 400000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 377500,
+      "avg_price": 377500,
+      "min_price": 375000,
+      "max_price": 380000
+    },
+    {
+      "year": 2018,
+      "count": 3,
+      "median_price": 420000,
+      "avg_price": 392000,
+      "min_price": 326000,
+      "max_price": 430000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 410000,
+      "avg_price": 410000,
+      "min_price": 410000,
+      "max_price": 410000
+    },
+    {
+      "year": 2020,
+      "count": 3,
+      "median_price": 412000,
+      "avg_price": 380000,
+      "min_price": 313000,
+      "max_price": 415000
+    },
+    {
+      "year": 2021,
+      "count": 4,
+      "median_price": 381500,
+      "avg_price": 393250,
+      "min_price": 362000,
+      "max_price": 448000
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "median_price": 452500,
+      "avg_price": 390672,
+      "min_price": 132687,
+      "max_price": 525000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 449000,
+      "avg_price": 449000,
+      "min_price": 370000,
+      "max_price": 528000
+    },
+    {
+      "year": 2024,
+      "count": 9,
+      "median_price": 465000,
+      "avg_price": 474889,
+      "min_price": 420000,
+      "max_price": 555000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 520500,
+      "avg_price": 520500,
+      "min_price": 459000,
+      "max_price": 582000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 537500,
+      "avg_price": 537500,
+      "min_price": 515000,
+      "max_price": 560000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-03-26",
+      "address": "61 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 515000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D16A4E9"
+    },
+    {
+      "date": "2026-02-19",
+      "address": "21 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 560000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D16XT31"
+    },
+    {
+      "date": "2025-11-28",
+      "address": "42 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 582000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D16T191"
+    },
+    {
+      "date": "2025-05-07",
+      "address": "22 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 459000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16C9V6"
+    },
+    {
+      "date": "2024-11-22",
+      "address": "19 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16R9F4"
+    },
+    {
+      "date": "2024-10-25",
+      "address": "29 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 546000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16HC58"
+    },
+    {
+      "date": "2024-10-25",
+      "address": "66 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 555000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16VX70"
+    },
+    {
+      "date": "2024-10-09",
+      "address": "48 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 431000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16PT66"
+    },
+    {
+      "date": "2024-07-30",
+      "address": "44 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16F5X6"
+    },
+    {
+      "date": "2024-07-16",
+      "address": "8 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16EY77"
+    },
+    {
+      "date": "2024-06-28",
+      "address": "65 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16E540"
+    },
+    {
+      "date": "2024-06-25",
+      "address": "41 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 422000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16T191"
+    },
+    {
+      "date": "2024-04-03",
+      "address": "3 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16X4K2"
+    },
+    {
+      "date": "2023-10-05",
+      "address": "56 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16AE38"
+    },
+    {
+      "date": "2023-09-13",
+      "address": "67 OWENDOHER LODGE, BALLYBODEN ROAD, RATHFARNHAM",
+      "price": 528000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16YX91"
+    },
+    {
+      "date": "2022-11-22",
+      "address": "19 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16R9F4"
+    },
+    {
+      "date": "2022-10-18",
+      "address": "2 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16KR26"
+    },
+    {
+      "date": "2022-02-16",
+      "address": "37 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 132687,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16NC97"
+    },
+    {
+      "date": "2022-01-31",
+      "address": "20 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16H0C9"
+    },
+    {
+      "date": "2021-11-01",
+      "address": "53 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16A3P1"
+    },
+    {
+      "date": "2021-09-13",
+      "address": "15 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 378000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16F671"
+    },
+    {
+      "date": "2021-04-07",
+      "address": "27 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 362000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-22",
+      "address": "1 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 448000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-11",
+      "address": "31 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 313000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-30",
+      "address": "38 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-25",
+      "address": "25 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 412000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-06",
+      "address": "39 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-21",
+      "address": "12 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-09",
+      "address": "35 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 326000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-18",
+      "address": "33 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-16",
+      "address": "32 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-23",
+      "address": "16 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-14",
+      "address": "36 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-18",
+      "address": "65 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16E540"
+    },
+    {
+      "date": "2016-11-07",
+      "address": "61 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 270000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D16A4E9"
+    },
+    {
+      "date": "2016-10-18",
+      "address": "31 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 237885,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-11",
+      "address": "37 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16NC97"
+    },
+    {
+      "date": "2016-10-03",
+      "address": "34 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-07",
+      "address": "35 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 262000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-30",
+      "address": "28 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-26",
+      "address": "64 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-19",
+      "address": "67 OWENDOHER LODGE, BALLYBODEN ROAD, RATHFARNHAM",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16YX91"
+    },
+    {
+      "date": "2016-08-19",
+      "address": "39 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-16",
+      "address": "59 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-10",
+      "address": "11 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-09",
+      "address": "20 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16H0C9"
+    },
+    {
+      "date": "2016-08-03",
+      "address": "21 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 345000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D16XT31"
+    },
+    {
+      "date": "2016-07-29",
+      "address": "30 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-22",
+      "address": "68 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-20",
+      "address": "60 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 91
+}

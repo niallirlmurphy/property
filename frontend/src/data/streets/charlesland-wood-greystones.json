@@ -160,16 +160,16 @@
       "date": "2026-05-29",
       "address": "268 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
       "price": 580000,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
+      "bedrooms": null,
+      "propertyType": null,
       "eircode": "A63YH11"
     },
     {
       "date": "2026-05-29",
       "address": "268 CHARLESLAND WOOD, GREYSTONES, WICKLOW",
       "price": 580000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
       "eircode": "A63YH11"
     },
     {

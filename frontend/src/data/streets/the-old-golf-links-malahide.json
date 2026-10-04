@@ -1,0 +1,129 @@
+{
+  "slug": "the-old-golf-links-malahide",
+  "stats": {
+    "count": 8,
+    "median": 1235000,
+    "avg": 1298125,
+    "min": 815000,
+    "max": 1750000,
+    "firstYear": 2011,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 815000,
+      "avg_price": 815000,
+      "min_price": 815000,
+      "max_price": 815000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1125000,
+      "avg_price": 1125000,
+      "min_price": 1125000,
+      "max_price": 1125000
+    },
+    {
+      "year": 2015,
+      "count": 2,
+      "median_price": 1060000,
+      "avg_price": 1060000,
+      "min_price": 920000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1475000,
+      "avg_price": 1475000,
+      "min_price": 1270000,
+      "max_price": 1680000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1750000,
+      "avg_price": 1750000,
+      "min_price": 1750000,
+      "max_price": 1750000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1625000,
+      "avg_price": 1625000,
+      "min_price": 1625000,
+      "max_price": 1625000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-11-22",
+      "address": "17 THE OLD GOLF LINKS, MALAHIDE, DUBLIN",
+      "price": 1625000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36DA56"
+    },
+    {
+      "date": "2020-10-30",
+      "address": "7 THE OLD GOLF LINKS, MALAHIDE, CO DUBLIN",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-31",
+      "address": "14 THE OLD GOLF LINKS, MALAHIDE, DUBLIN",
+      "price": 1680000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-14",
+      "address": "53 THE OLD GOLF LINKS, MALAHIDE, DUBLIN",
+      "price": 1270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-28",
+      "address": "52 THE OLD GOLF LINKS, MALAHIDE, DUBLIN",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-06-08",
+      "address": "19 THE OLD GOLF LINKS, MALAHIDE, DUBLIN",
+      "price": 920000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-05-09",
+      "address": "15 THE OLD GOLF LINKS, MALAHIDE, DUBLIN",
+      "price": 1125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-10-07",
+      "address": "17 The old golf links, Malahide, Co. Dublin",
+      "price": 815000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 8
+}

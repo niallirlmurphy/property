@@ -1,0 +1,545 @@
+{
+  "slug": "crosbies-yard-ossory-road",
+  "stats": {
+    "count": 104,
+    "median": 220174,
+    "avg": 238462,
+    "min": 77973,
+    "max": 605000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6,
+      "median_price": 196493,
+      "avg_price": 212889,
+      "min_price": 129848,
+      "max_price": 341500
+    },
+    {
+      "year": 2012,
+      "count": 22,
+      "median_price": 119317,
+      "avg_price": 126210,
+      "min_price": 77973,
+      "max_price": 213348
+    },
+    {
+      "year": 2013,
+      "count": 14,
+      "median_price": 125292,
+      "avg_price": 134724,
+      "min_price": 77974,
+      "max_price": 210000
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 179000,
+      "avg_price": 182176,
+      "min_price": 120705,
+      "max_price": 250000
+    },
+    {
+      "year": 2015,
+      "count": 2,
+      "median_price": 198750,
+      "avg_price": 198750,
+      "min_price": 187500,
+      "max_price": 210000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 186250,
+      "avg_price": 191125,
+      "min_price": 165000,
+      "max_price": 227000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 265000,
+      "avg_price": 254000,
+      "min_price": 195000,
+      "max_price": 302000
+    },
+    {
+      "year": 2018,
+      "count": 5,
+      "median_price": 300000,
+      "avg_price": 299500,
+      "min_price": 242500,
+      "max_price": 335000
+    },
+    {
+      "year": 2019,
+      "count": 3,
+      "median_price": 302000,
+      "avg_price": 301833,
+      "min_price": 293500,
+      "max_price": 310000
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 304000,
+      "avg_price": 305250,
+      "min_price": 295000,
+      "max_price": 318000
+    },
+    {
+      "year": 2021,
+      "count": 9,
+      "median_price": 305000,
+      "avg_price": 292222,
+      "min_price": 145000,
+      "max_price": 467000
+    },
+    {
+      "year": 2022,
+      "count": 8,
+      "median_price": 320000,
+      "avg_price": 299750,
+      "min_price": 230000,
+      "max_price": 340000
+    },
+    {
+      "year": 2023,
+      "count": 7,
+      "median_price": 360000,
+      "avg_price": 370571,
+      "min_price": 325000,
+      "max_price": 465000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 360000,
+      "avg_price": 356667,
+      "min_price": 330000,
+      "max_price": 380000
+    },
+    {
+      "year": 2025,
+      "count": 6,
+      "median_price": 371250,
+      "avg_price": 392500,
+      "min_price": 172500,
+      "max_price": 605000
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 386000,
+      "avg_price": 384062,
+      "min_price": 376250,
+      "max_price": 388000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-10",
+      "address": "134 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 388000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D03C9H3"
+    },
+    {
+      "date": "2026-06-30",
+      "address": "98 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 376250,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D03YA62"
+    },
+    {
+      "date": "2026-04-30",
+      "address": "182 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 386000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D03R292"
+    },
+    {
+      "date": "2026-03-13",
+      "address": "202 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 386000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D03TY44"
+    },
+    {
+      "date": "2025-11-28",
+      "address": "146 CROSBIES YARD, OSSORY RD, EAST WALL",
+      "price": 260000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D03PX99"
+    },
+    {
+      "date": "2025-10-14",
+      "address": "33 CROSBIES YARD, OSSORY ROAD, DUBLIN 3",
+      "price": 575000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D03AY26"
+    },
+    {
+      "date": "2025-09-19",
+      "address": "20 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 410000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D03N838"
+    },
+    {
+      "date": "2025-03-04",
+      "address": "108 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 172500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03F202"
+    },
+    {
+      "date": "2025-02-24",
+      "address": "145 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 332500,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D03TC64"
+    },
+    {
+      "date": "2025-01-22",
+      "address": "43 CROSBIES YARD, OSSORY RD, NORTH STRAND DUBLIN 3",
+      "price": 605000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03Y497"
+    },
+    {
+      "date": "2024-07-17",
+      "address": "169 CROSBIES YARD, OSSORY RD, EAST WALL DUBLIN 3",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03NX26"
+    },
+    {
+      "date": "2024-06-11",
+      "address": "49 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03E2Y2"
+    },
+    {
+      "date": "2024-02-09",
+      "address": "150 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03R978"
+    },
+    {
+      "date": "2023-11-08",
+      "address": "54 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 417000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03H226"
+    },
+    {
+      "date": "2023-09-14",
+      "address": "APARTMENT 137 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D03T3K5"
+    },
+    {
+      "date": "2023-09-13",
+      "address": "30 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 362000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03WP73"
+    },
+    {
+      "date": "2023-07-21",
+      "address": "181 CROSBIES YARD, OSSORY RD, EAST WALL DUBLIN 3",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03KD92"
+    },
+    {
+      "date": "2023-07-20",
+      "address": "127 CROSBIES YARD, OSSORY RD, DUBLIN",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03R585"
+    },
+    {
+      "date": "2023-05-05",
+      "address": "157 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03ET71"
+    },
+    {
+      "date": "2023-03-21",
+      "address": "144 CROSBIES YARD, OSSORY RD, DUBLIN 1",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03N2Y4"
+    },
+    {
+      "date": "2022-10-10",
+      "address": "170 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 337000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03R3H9"
+    },
+    {
+      "date": "2022-08-30",
+      "address": "180 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03XP76"
+    },
+    {
+      "date": "2022-07-08",
+      "address": "197 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03TF98"
+    },
+    {
+      "date": "2022-06-30",
+      "address": "187 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 271000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03VH04"
+    },
+    {
+      "date": "2022-06-10",
+      "address": "60 CROSBIES YARD, OSSORY ROAD, EAST WALL",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03A8P8"
+    },
+    {
+      "date": "2022-04-08",
+      "address": "46 CROSBIES YARD, OSSORY RD, NORTH STRAND",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03DV29"
+    },
+    {
+      "date": "2022-04-07",
+      "address": "110 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03KT63"
+    },
+    {
+      "date": "2022-02-08",
+      "address": "203 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03N9Y2"
+    },
+    {
+      "date": "2021-12-17",
+      "address": "99 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 145000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03E780"
+    },
+    {
+      "date": "2021-11-05",
+      "address": "101 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03NY71"
+    },
+    {
+      "date": "2021-10-26",
+      "address": "145 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 308000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D03TC64"
+    },
+    {
+      "date": "2021-09-21",
+      "address": "42 CROSBIES YARD, OSSORY RD, NORTH STRAND DUBLIN 3",
+      "price": 299000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03DD39"
+    },
+    {
+      "date": "2021-06-25",
+      "address": "38 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03AP21"
+    },
+    {
+      "date": "2021-05-28",
+      "address": "189 CROSBIES YARD, OSSORY RD, DUBLIN 1",
+      "price": 306000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03HR98"
+    },
+    {
+      "date": "2021-05-28",
+      "address": "138 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03A2Y5"
+    },
+    {
+      "date": "2021-05-27",
+      "address": "168 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03K750"
+    },
+    {
+      "date": "2021-03-03",
+      "address": "103 CROSBIES YARD, OSSORY RD, NORTH STRAND DUBLIN 3",
+      "price": 467000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-15",
+      "address": "NO. 4 CROSBIES YARD, OSSORY ROAD, NORTH STRAND",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2020-10-16",
+      "address": "181 CROSBIES YARD, OSSORY RD, EAST WALL DUBLIN 3",
+      "price": 308000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03KD92"
+    },
+    {
+      "date": "2020-09-23",
+      "address": "75 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-29",
+      "address": "179 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 318000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-20",
+      "address": "100 CROSBIES YARD, OSSORY RD, NORTH STRAND DUBLIN 3",
+      "price": 293500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-13",
+      "address": "206 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-04",
+      "address": "169 CROSBIES YARD, OSSORY RD, EAST WALL DUBLIN 3",
+      "price": 302000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03NX26"
+    },
+    {
+      "date": "2018-09-06",
+      "address": "APARTMENT 21, CROSBIES YARD, OSSORY ROAD",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-08-20",
+      "address": "114 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-18",
+      "address": "49 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03E2Y2"
+    },
+    {
+      "date": "2018-05-15",
+      "address": "203 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03N9Y2"
+    },
+    {
+      "date": "2018-02-23",
+      "address": "APT 141 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 242500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2017-12-18",
+      "address": "64 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 302000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 104
+}

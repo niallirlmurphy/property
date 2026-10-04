@@ -1,0 +1,153 @@
+{
+  "slug": "burrow-road-sutton",
+  "stats": {
+    "count": 9,
+    "median": 1300000,
+    "avg": 1346833,
+    "min": 1000000,
+    "max": 1750000,
+    "firstYear": 2012,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 1250000,
+      "avg_price": 1250000,
+      "min_price": 1250000,
+      "max_price": 1250000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 1033250,
+      "avg_price": 1033250,
+      "min_price": 1000000,
+      "max_price": 1066500
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1075000,
+      "avg_price": 1075000,
+      "min_price": 1075000,
+      "max_price": 1075000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1700000,
+      "avg_price": 1700000,
+      "min_price": 1700000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1530000,
+      "avg_price": 1530000,
+      "min_price": 1530000,
+      "max_price": 1530000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1300000,
+      "avg_price": 1300000,
+      "min_price": 1300000,
+      "max_price": 1300000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1750000,
+      "avg_price": 1750000,
+      "min_price": 1750000,
+      "max_price": 1750000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1450000,
+      "avg_price": 1450000,
+      "min_price": 1450000,
+      "max_price": 1450000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-05-16",
+      "address": "12 BURROW RD, SUTTON, DUBLIN 13",
+      "price": 1450000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D13P9E8"
+    },
+    {
+      "date": "2024-01-31",
+      "address": "17A BURROW RD, SUTTON, DUBLIN 13",
+      "price": 1750000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D13Y1F9"
+    },
+    {
+      "date": "2023-04-18",
+      "address": "5 BURROW RD, SUTTON, DUBLIN 13",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D13Y7V0"
+    },
+    {
+      "date": "2022-10-18",
+      "address": "26 BURROW RD, SUTTON, DUBLIN 13",
+      "price": 1530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D13P2N5"
+    },
+    {
+      "date": "2021-10-06",
+      "address": "17 BURROW RD, SUTTON, DUBLIN 13",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D13Y5W4"
+    },
+    {
+      "date": "2020-03-12",
+      "address": "19 BURROW RD, SUTTON, DUBLIN 13",
+      "price": 1075000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-10-14",
+      "address": "23 BURROW ROAD, SUTTON, DUBLIN 13",
+      "price": 1066500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-07-14",
+      "address": "12 Burrow Road, Sutton",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-12-19",
+      "address": "9a burrow rd, sutton",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

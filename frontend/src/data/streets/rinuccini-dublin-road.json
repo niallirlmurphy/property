@@ -1,0 +1,529 @@
+{
+  "slug": "rinuccini-dublin-road",
+  "stats": {
+    "count": 91,
+    "median": 185500,
+    "avg": 160252,
+    "min": 36667,
+    "max": 537867,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 78500,
+      "avg_price": 78500,
+      "min_price": 78500,
+      "max_price": 78500
+    },
+    {
+      "year": 2013,
+      "count": 30,
+      "median_price": 36667,
+      "avg_price": 66707,
+      "min_price": 36667,
+      "max_price": 537867
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 75000,
+      "avg_price": 75000,
+      "min_price": 75000,
+      "max_price": 75000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 143000,
+      "avg_price": 143000,
+      "min_price": 143000,
+      "max_price": 143000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 103000,
+      "avg_price": 103000,
+      "min_price": 91000,
+      "max_price": 115000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 145000,
+      "avg_price": 126667,
+      "min_price": 85000,
+      "max_price": 150000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 173975,
+      "avg_price": 173975,
+      "min_price": 97951,
+      "max_price": 250000
+    },
+    {
+      "year": 2020,
+      "count": 3,
+      "median_price": 125000,
+      "avg_price": 150000,
+      "min_price": 105000,
+      "max_price": 220000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 320000,
+      "avg_price": 320000,
+      "min_price": 320000,
+      "max_price": 320000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 235000,
+      "avg_price": 235000,
+      "min_price": 235000,
+      "max_price": 235000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 222026,
+      "avg_price": 275675,
+      "min_price": 195000,
+      "max_price": 410000
+    },
+    {
+      "year": 2024,
+      "count": 31,
+      "median_price": 230000,
+      "avg_price": 233195,
+      "min_price": 185000,
+      "max_price": 375000
+    },
+    {
+      "year": 2025,
+      "count": 9,
+      "median_price": 192000,
+      "avg_price": 210574,
+      "min_price": 169163,
+      "max_price": 382000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 245000,
+      "avg_price": 245000,
+      "min_price": 245000,
+      "max_price": 245000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-03",
+      "address": "102 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32DK57"
+    },
+    {
+      "date": "2025-09-16",
+      "address": "83 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 195000,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-25",
+      "address": "29 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
+      "price": 382000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "R32D4VF"
+    },
+    {
+      "date": "2025-05-23",
+      "address": "82 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 192000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-15",
+      "address": "95 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 192000,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-11",
+      "address": "96 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 192000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-04",
+      "address": "86 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 192000,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-03",
+      "address": "97 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 192000,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-07",
+      "address": "91 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 189000,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-24",
+      "address": "103 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 169163,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-12-20",
+      "address": "99 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 192000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-17",
+      "address": "92 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 192000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-08",
+      "address": "85 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 192000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-22",
+      "address": "100 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 189000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-15",
+      "address": "45 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32K8YT"
+    },
+    {
+      "date": "2024-09-10",
+      "address": "40 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32DT3F"
+    },
+    {
+      "date": "2024-09-10",
+      "address": "102 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 189000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32DK57"
+    },
+    {
+      "date": "2024-09-09",
+      "address": "87 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 189000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-05",
+      "address": "46 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 242500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32AY0E"
+    },
+    {
+      "date": "2024-08-26",
+      "address": "63 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32H6YN"
+    },
+    {
+      "date": "2024-08-23",
+      "address": "90 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 195000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-08-22",
+      "address": "60 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32C9WC"
+    },
+    {
+      "date": "2024-08-12",
+      "address": "89 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 189000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-08-02",
+      "address": "93 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 185000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-23",
+      "address": "98 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 189000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-21",
+      "address": "31 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
+      "price": 252500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32NYV5"
+    },
+    {
+      "date": "2024-06-12",
+      "address": "41 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32N5KF"
+    },
+    {
+      "date": "2024-05-28",
+      "address": "57 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 207048,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32P5KX"
+    },
+    {
+      "date": "2024-05-24",
+      "address": "33 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32FFP4"
+    },
+    {
+      "date": "2024-05-09",
+      "address": "75 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32XFN3"
+    },
+    {
+      "date": "2024-04-25",
+      "address": "84 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 185500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-25",
+      "address": "94 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 185500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-22",
+      "address": "32 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
+      "price": 252500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32Y9CK"
+    },
+    {
+      "date": "2024-04-19",
+      "address": "30 RINUCCINI, DUBLIN ROAD, PORTLAOIS CO LAOIS",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32E1XN"
+    },
+    {
+      "date": "2024-04-19",
+      "address": "73 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32T9CN"
+    },
+    {
+      "date": "2024-04-19",
+      "address": "76 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32EEX7"
+    },
+    {
+      "date": "2024-04-17",
+      "address": "44 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32D8PA"
+    },
+    {
+      "date": "2024-04-15",
+      "address": "38 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32KXN1"
+    },
+    {
+      "date": "2024-03-26",
+      "address": "49 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 192500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32E5XY"
+    },
+    {
+      "date": "2024-03-08",
+      "address": "70 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32HX9R"
+    },
+    {
+      "date": "2024-01-31",
+      "address": "43 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32N2DP"
+    },
+    {
+      "date": "2023-12-19",
+      "address": "42 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 222026,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32XWD8"
+    },
+    {
+      "date": "2023-09-07",
+      "address": "101 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 195000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-02",
+      "address": "39 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32WC8W"
+    },
+    {
+      "date": "2022-11-14",
+      "address": "55 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32F9HH"
+    },
+    {
+      "date": "2021-03-26",
+      "address": "37 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-07",
+      "address": "50 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 105000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-28",
+      "address": "39 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32WC8W"
+    },
+    {
+      "date": "2020-01-28",
+      "address": "55 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32F9HH"
+    },
+    {
+      "date": "2018-12-19",
+      "address": "88 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
+      "price": 97951,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 91
+}

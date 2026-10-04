@@ -1,0 +1,249 @@
+{
+  "slug": "clyde-lane-ballsbridge",
+  "stats": {
+    "count": 21,
+    "median": 1300000,
+    "avg": 1476909,
+    "min": 770000,
+    "max": 3050000,
+    "firstYear": 2014,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 810000,
+      "avg_price": 807000,
+      "min_price": 770000,
+      "max_price": 830000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1200000,
+      "avg_price": 1200000,
+      "min_price": 1200000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 1700000,
+      "avg_price": 1465000,
+      "min_price": 995000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2018,
+      "count": 3,
+      "median_price": 1140085,
+      "avg_price": 1511695,
+      "min_price": 1125000,
+      "max_price": 2270000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 2125000,
+      "avg_price": 2125000,
+      "min_price": 1200000,
+      "max_price": 3050000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 1750000,
+      "avg_price": 1750000,
+      "min_price": 1750000,
+      "max_price": 1750000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 2225000,
+      "avg_price": 2225000,
+      "min_price": 1900000,
+      "max_price": 2550000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 1600000,
+      "avg_price": 1550000,
+      "min_price": 1300000,
+      "max_price": 1750000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-10-16",
+      "address": "1 CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1600000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D04C7X0"
+    },
+    {
+      "date": "2025-06-27",
+      "address": "2 CLYDE LANE, BALLSBRIDGE, DUBLIN",
+      "price": 1750000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D04A5V6"
+    },
+    {
+      "date": "2025-06-13",
+      "address": "2A CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1300000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D04E7D0"
+    },
+    {
+      "date": "2023-06-19",
+      "address": "15B CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04R7P3"
+    },
+    {
+      "date": "2023-06-01",
+      "address": "16 CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 2550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A2X6"
+    },
+    {
+      "date": "2022-12-23",
+      "address": "1 CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1750000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D04C7X0"
+    },
+    {
+      "date": "2022-10-13",
+      "address": "2 CLYDE LANE, BALLSBRIDGE, DUBLIN",
+      "price": 1750000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D04A5V6"
+    },
+    {
+      "date": "2021-08-04",
+      "address": "6 CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 3050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X9P8"
+    },
+    {
+      "date": "2021-01-15",
+      "address": "2 CLYDE LANE, BALLSBRIDGE, DUBLIN",
+      "price": 1200000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D04A5V6"
+    },
+    {
+      "date": "2018-10-26",
+      "address": "16 CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 2270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A2X6"
+    },
+    {
+      "date": "2018-10-02",
+      "address": "11B CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1140085,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-23",
+      "address": "11B CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-04",
+      "address": "14 CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-02",
+      "address": "15C CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 995000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-02-12",
+      "address": "12C Clyde Lane, Ballsbridge",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-12-14",
+      "address": "9D Clyde Lane, Ballsbridge, Dublin 4",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-23",
+      "address": "8 CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 815000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-01-31",
+      "address": "2 Clyde Lane, Ballsbridge",
+      "price": 830000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-01-27",
+      "address": "2A CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 810000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D04E7D0"
+    },
+    {
+      "date": "2014-01-27",
+      "address": "2B CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 810000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-01-06",
+      "address": "14 Clyde Lane, Ballsbridge, Dublin 4",
+      "price": 770000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 21
+}

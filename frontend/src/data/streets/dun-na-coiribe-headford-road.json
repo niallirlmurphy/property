@@ -1,0 +1,553 @@
+{
+  "slug": "dun-na-coiribe-headford-road",
+  "stats": {
+    "count": 92,
+    "median": 245000,
+    "avg": 272060,
+    "min": 110000,
+    "max": 700000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 276000,
+      "avg_price": 276000,
+      "min_price": 276000,
+      "max_price": 276000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 140000,
+      "avg_price": 140000,
+      "min_price": 140000,
+      "max_price": 140000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 193750,
+      "avg_price": 193750,
+      "min_price": 142500,
+      "max_price": 245000
+    },
+    {
+      "year": 2013,
+      "count": 6,
+      "median_price": 146750,
+      "avg_price": 157250,
+      "min_price": 130000,
+      "max_price": 205000
+    },
+    {
+      "year": 2014,
+      "count": 11,
+      "median_price": 155000,
+      "avg_price": 165909,
+      "min_price": 110000,
+      "max_price": 240000
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 216000,
+      "avg_price": 230062,
+      "min_price": 170000,
+      "max_price": 370000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 281000,
+      "avg_price": 281000,
+      "min_price": 281000,
+      "max_price": 281000
+    },
+    {
+      "year": 2017,
+      "count": 13,
+      "median_price": 162500,
+      "avg_price": 189154,
+      "min_price": 162500,
+      "max_price": 250000
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 237000,
+      "avg_price": 243125,
+      "min_price": 198500,
+      "max_price": 300000
+    },
+    {
+      "year": 2019,
+      "count": 5,
+      "median_price": 265000,
+      "avg_price": 281400,
+      "min_price": 220000,
+      "max_price": 385000
+    },
+    {
+      "year": 2020,
+      "count": 7,
+      "median_price": 248000,
+      "avg_price": 268786,
+      "min_price": 235000,
+      "max_price": 378500
+    },
+    {
+      "year": 2021,
+      "count": 4,
+      "median_price": 266500,
+      "avg_price": 267250,
+      "min_price": 256000,
+      "max_price": 280000
+    },
+    {
+      "year": 2022,
+      "count": 6,
+      "median_price": 275000,
+      "avg_price": 310583,
+      "min_price": 236000,
+      "max_price": 432500
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 353500,
+      "avg_price": 349250,
+      "min_price": 240000,
+      "max_price": 450000
+    },
+    {
+      "year": 2024,
+      "count": 11,
+      "median_price": 378000,
+      "avg_price": 404773,
+      "min_price": 280000,
+      "max_price": 580000
+    },
+    {
+      "year": 2025,
+      "count": 5,
+      "median_price": 550000,
+      "avg_price": 521000,
+      "min_price": 330000,
+      "max_price": 700000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 368000,
+      "avg_price": 409667,
+      "min_price": 347000,
+      "max_price": 514000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-17",
+      "address": "142 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 514000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H91D1WC"
+    },
+    {
+      "date": "2026-05-15",
+      "address": "127 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 368000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91H738"
+    },
+    {
+      "date": "2026-02-11",
+      "address": "25 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 347000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "H91XE40"
+    },
+    {
+      "date": "2025-10-17",
+      "address": "83 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 415000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "H91W657"
+    },
+    {
+      "date": "2025-08-12",
+      "address": "118 DUN NA COIRIBE, HEADFORD ROAD, GALWAY",
+      "price": 330000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "H91K037"
+    },
+    {
+      "date": "2025-07-23",
+      "address": "151 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 700000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "H91E63A"
+    },
+    {
+      "date": "2025-06-10",
+      "address": "189 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 610000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "H91V44X"
+    },
+    {
+      "date": "2025-05-07",
+      "address": "190 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 550000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "H91W20C"
+    },
+    {
+      "date": "2024-12-11",
+      "address": "138 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91P5CP"
+    },
+    {
+      "date": "2024-10-21",
+      "address": "125 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91AR25"
+    },
+    {
+      "date": "2024-10-04",
+      "address": "122 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 317500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91TD62"
+    },
+    {
+      "date": "2024-08-29",
+      "address": "144 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91W9PF"
+    },
+    {
+      "date": "2024-08-23",
+      "address": "62 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91D6P5"
+    },
+    {
+      "date": "2024-06-27",
+      "address": "143 DUN NA COIRIBE, HEADFORD ROAD, CO GALWAY",
+      "price": 477000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91H31T"
+    },
+    {
+      "date": "2024-06-12",
+      "address": "70 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 378000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91FD85"
+    },
+    {
+      "date": "2024-05-10",
+      "address": "154 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91XEP1"
+    },
+    {
+      "date": "2024-04-26",
+      "address": "69 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91XE24"
+    },
+    {
+      "date": "2024-02-09",
+      "address": "127 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91H738"
+    },
+    {
+      "date": "2024-01-29",
+      "address": "188 DUN NA COIRIBE, HEADFORD RD, GALWAY CITY",
+      "price": 580000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91TPF3"
+    },
+    {
+      "date": "2023-08-04",
+      "address": "111 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91AH34"
+    },
+    {
+      "date": "2023-07-19",
+      "address": "56 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 377000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91FK30"
+    },
+    {
+      "date": "2023-07-14",
+      "address": "126 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91N2X2"
+    },
+    {
+      "date": "2023-05-18",
+      "address": "69 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91XE24"
+    },
+    {
+      "date": "2022-12-22",
+      "address": "214 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91YHX0"
+    },
+    {
+      "date": "2022-12-09",
+      "address": "120 DUN NA COIRIBE, HEADFORD ROAD, GALWAY",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91HN20"
+    },
+    {
+      "date": "2022-11-17",
+      "address": "168 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 432500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91AC2P"
+    },
+    {
+      "date": "2022-10-20",
+      "address": "88 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91ED82"
+    },
+    {
+      "date": "2022-10-19",
+      "address": "212 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 236000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91VK6N"
+    },
+    {
+      "date": "2022-05-03",
+      "address": "159 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91WN8P"
+    },
+    {
+      "date": "2021-09-13",
+      "address": "25 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 262000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "H91XE40"
+    },
+    {
+      "date": "2021-05-26",
+      "address": "30 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 256000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91D421"
+    },
+    {
+      "date": "2021-04-20",
+      "address": "172 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91E20H"
+    },
+    {
+      "date": "2021-02-22",
+      "address": "79 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 271000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-03",
+      "address": "86 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-10",
+      "address": "55 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-06",
+      "address": "85 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 248000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-12",
+      "address": "29 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-27",
+      "address": "12 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-28",
+      "address": "71 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-16",
+      "address": "182 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 378500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-20",
+      "address": "166 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-16",
+      "address": "136 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-11",
+      "address": "14 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-05",
+      "address": "7 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-17",
+      "address": "123 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 227000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-19",
+      "address": "124 DUN NA COIRIBE, HEADFORD RD, GALWAY CITY",
+      "price": 229000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-17",
+      "address": "130 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-25",
+      "address": "119 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-01",
+      "address": "APT 104 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 198500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2017-12-12",
+      "address": "197 DUN NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 162500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 92
+}

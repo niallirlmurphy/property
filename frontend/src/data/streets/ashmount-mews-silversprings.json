@@ -1,0 +1,537 @@
+{
+  "slug": "ashmount-mews-silversprings",
+  "stats": {
+    "count": 123,
+    "median": 149779,
+    "avg": 164534,
+    "min": 88758,
+    "max": 385000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 160352,
+      "avg_price": 160352,
+      "min_price": 153303,
+      "max_price": 167401
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 163000,
+      "avg_price": 163000,
+      "min_price": 163000,
+      "max_price": 163000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 136563,
+      "avg_price": 136563,
+      "min_price": 136563,
+      "max_price": 136563
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 145500,
+      "avg_price": 145500,
+      "min_price": 139000,
+      "max_price": 152000
+    },
+    {
+      "year": 2015,
+      "count": 13,
+      "median_price": 140969,
+      "avg_price": 147500,
+      "min_price": 125000,
+      "max_price": 170800
+    },
+    {
+      "year": 2016,
+      "count": 60,
+      "median_price": 132159,
+      "avg_price": 140130,
+      "min_price": 118943,
+      "max_price": 198238
+    },
+    {
+      "year": 2017,
+      "count": 13,
+      "median_price": 158590,
+      "avg_price": 158979,
+      "min_price": 88758,
+      "max_price": 215859
+    },
+    {
+      "year": 2018,
+      "count": 6,
+      "median_price": 171000,
+      "avg_price": 175729,
+      "min_price": 140907,
+      "max_price": 247500
+    },
+    {
+      "year": 2019,
+      "count": 9,
+      "median_price": 162995,
+      "avg_price": 182724,
+      "min_price": 149779,
+      "max_price": 255000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 170000,
+      "avg_price": 170000,
+      "min_price": 170000,
+      "max_price": 170000
+    },
+    {
+      "year": 2021,
+      "count": 5,
+      "median_price": 225000,
+      "avg_price": 237800,
+      "min_price": 200000,
+      "max_price": 282000
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "median_price": 254000,
+      "avg_price": 252000,
+      "min_price": 230000,
+      "max_price": 270000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 273000,
+      "avg_price": 273000,
+      "min_price": 261000,
+      "max_price": 285000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 300000,
+      "avg_price": 300000,
+      "min_price": 300000,
+      "max_price": 300000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 345000,
+      "avg_price": 340833,
+      "min_price": 292500,
+      "max_price": 385000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-25",
+      "address": "43 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 292500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23ND35"
+    },
+    {
+      "date": "2026-02-10",
+      "address": "29 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 345000,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "T23X223"
+    },
+    {
+      "date": "2026-01-28",
+      "address": "50 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 385000,
+      "bedrooms": 1,
+      "propertyType": "terraced",
+      "eircode": "T23W8WE"
+    },
+    {
+      "date": "2025-12-05",
+      "address": "78 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 300000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "T23P92N"
+    },
+    {
+      "date": "2023-12-22",
+      "address": "54 ASHMOUNT MEWS, SILVERSPRINGS, TIVOLI",
+      "price": 261000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23XE44"
+    },
+    {
+      "date": "2023-05-22",
+      "address": "83 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23AXW2"
+    },
+    {
+      "date": "2022-09-07",
+      "address": "40 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 257000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23CF40"
+    },
+    {
+      "date": "2022-06-29",
+      "address": "58 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 251000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23HR92"
+    },
+    {
+      "date": "2022-02-10",
+      "address": "17 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23AE65"
+    },
+    {
+      "date": "2022-01-14",
+      "address": "15 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23RX97"
+    },
+    {
+      "date": "2021-07-28",
+      "address": "66 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 282000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23D66X"
+    },
+    {
+      "date": "2021-05-17",
+      "address": "61 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 262000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-04",
+      "address": "1 ASHMOUNT MEWS, SILVERSPRINGS, TIVOLI",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23H242"
+    },
+    {
+      "date": "2021-02-24",
+      "address": "37 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-11",
+      "address": "18 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-14",
+      "address": "23 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-27",
+      "address": "21 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 149780,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-12",
+      "address": "51 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-23",
+      "address": "66 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23D66X"
+    },
+    {
+      "date": "2019-10-19",
+      "address": "22 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 149779,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23ED71"
+    },
+    {
+      "date": "2019-10-09",
+      "address": "22 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 149779,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23ED71"
+    },
+    {
+      "date": "2019-10-09",
+      "address": "37 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 162995,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-04",
+      "address": "41 ASHMOUNT MEWS, SILVERSPRINGS, TIVOLI",
+      "price": 193000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-30",
+      "address": "40 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 185000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23CF40"
+    },
+    {
+      "date": "2019-07-10",
+      "address": "16 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 154185,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-23",
+      "address": "32 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 183000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-25",
+      "address": "25 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 182000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-04",
+      "address": "17 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 140969,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23AE65"
+    },
+    {
+      "date": "2018-03-09",
+      "address": "70 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 140907,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-06",
+      "address": "72 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 160000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-19",
+      "address": "68  ASHMOUNT MEWS, SILVERSPRINGS, TIVOLI",
+      "price": 247500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-13",
+      "address": "46 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 88758,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-14",
+      "address": "59 Ashmount Mews, Silversprings",
+      "price": 215859,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-17",
+      "address": "102 Ashmount Mews, Silversprings",
+      "price": 158590,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-17",
+      "address": "104 Ashmount Mews, Silversprings",
+      "price": 158590,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-17",
+      "address": "95 Ashmount Mews, Silversprings",
+      "price": 162996,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-17",
+      "address": "96 Ashmount Mews, Silversprings",
+      "price": 158590,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-17",
+      "address": "97 Ashmount Mews, Silversprings",
+      "price": 158590,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-17",
+      "address": "98 Ashmount Mews, Silversprings",
+      "price": 158590,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-17",
+      "address": "103 Ashmount Mews, Silversprings",
+      "price": 158590,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-17",
+      "address": "105 Ashmount Mews, Silversprings",
+      "price": 162996,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-17",
+      "address": "99 Ashmount Mews, Silversprings",
+      "price": 158590,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-17",
+      "address": "101 Ashmount Mews, Silversprings",
+      "price": 162996,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-17",
+      "address": "100 Ashmount Mews, Silversprings",
+      "price": 162996,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-16",
+      "address": "47 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 195000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-14",
+      "address": "94 ASHMOUNT MEWS, SILVERSPRINGS, MAYFIELD",
+      "price": 198238,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-05",
+      "address": "73 ASHMOUNT MEWS, SILVERSPRINGS, CORK",
+      "price": 160000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-28",
+      "address": "85 Ashmount Mews, Silversprings, Cork",
+      "price": 183000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-02",
+      "address": "86 Ashmount Mews, Silversprings, Tivoli",
+      "price": 155700,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-28",
+      "address": "83 Ashmount Mews, Silversprings, Cork",
+      "price": 180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23AXW2"
+    }
+  ],
+  "totalTransactions": 123
+}

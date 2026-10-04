@@ -1,0 +1,553 @@
+{
+  "slug": "eagle-valley-sarsfield-road",
+  "stats": {
+    "count": 100,
+    "median": 248000,
+    "avg": 256840,
+    "min": 120000,
+    "max": 413000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 251000,
+      "avg_price": 247125,
+      "min_price": 227000,
+      "max_price": 259500
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 207500,
+      "avg_price": 207500,
+      "min_price": 195000,
+      "max_price": 220000
+    },
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 200000,
+      "avg_price": 210000,
+      "min_price": 190000,
+      "max_price": 240000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 175000,
+      "avg_price": 177900,
+      "min_price": 170000,
+      "max_price": 192000
+    },
+    {
+      "year": 2014,
+      "count": 10,
+      "median_price": 187500,
+      "avg_price": 188850,
+      "min_price": 160000,
+      "max_price": 215000
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 221500,
+      "avg_price": 220750,
+      "min_price": 176000,
+      "max_price": 275000
+    },
+    {
+      "year": 2016,
+      "count": 11,
+      "median_price": 230000,
+      "avg_price": 218455,
+      "min_price": 120000,
+      "max_price": 260000
+    },
+    {
+      "year": 2017,
+      "count": 8,
+      "median_price": 257500,
+      "avg_price": 265744,
+      "min_price": 227000,
+      "max_price": 315000
+    },
+    {
+      "year": 2018,
+      "count": 10,
+      "median_price": 225000,
+      "avg_price": 226300,
+      "min_price": 197000,
+      "max_price": 275000
+    },
+    {
+      "year": 2019,
+      "count": 3,
+      "median_price": 255000,
+      "avg_price": 258667,
+      "min_price": 236000,
+      "max_price": 285000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 260000,
+      "avg_price": 260000,
+      "min_price": 260000,
+      "max_price": 260000
+    },
+    {
+      "year": 2021,
+      "count": 4,
+      "median_price": 256250,
+      "avg_price": 251375,
+      "min_price": 180000,
+      "max_price": 313000
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "median_price": 292000,
+      "avg_price": 301875,
+      "min_price": 272500,
+      "max_price": 351000
+    },
+    {
+      "year": 2023,
+      "count": 5,
+      "median_price": 294000,
+      "avg_price": 297400,
+      "min_price": 280000,
+      "max_price": 328000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 315000,
+      "avg_price": 313250,
+      "min_price": 295000,
+      "max_price": 332500
+    },
+    {
+      "year": 2025,
+      "count": 10,
+      "median_price": 365000,
+      "avg_price": 345100,
+      "min_price": 257000,
+      "max_price": 412500
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 372500,
+      "avg_price": 374667,
+      "min_price": 350000,
+      "max_price": 413000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-09",
+      "address": "37 EAGLE VALLEY, SARSFIELD ROAD, WILTON",
+      "price": 362000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T12TKN7"
+    },
+    {
+      "date": "2026-06-29",
+      "address": "95 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 413000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12N9PA"
+    },
+    {
+      "date": "2026-06-23",
+      "address": "213 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 383000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12CPY8"
+    },
+    {
+      "date": "2026-03-19",
+      "address": "157 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 357000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T12R28N"
+    },
+    {
+      "date": "2026-01-27",
+      "address": "4 EAGLE VALLEY, SARSFIELD ROAD, WILTON",
+      "price": 350000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T12H3FR"
+    },
+    {
+      "date": "2026-01-06",
+      "address": "189 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 383000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T12YP7N"
+    },
+    {
+      "date": "2025-12-11",
+      "address": "53 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "T12FKX3"
+    },
+    {
+      "date": "2025-12-02",
+      "address": "231 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 375000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "T12E70X"
+    },
+    {
+      "date": "2025-10-30",
+      "address": "107 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 412500,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T12F5NP"
+    },
+    {
+      "date": "2025-10-06",
+      "address": "143A EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 379500,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "T12W44E"
+    },
+    {
+      "date": "2025-08-25",
+      "address": "221 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 275000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T12NT3P"
+    },
+    {
+      "date": "2025-08-15",
+      "address": "143 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 390000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "T12TF6Y"
+    },
+    {
+      "date": "2025-06-16",
+      "address": "164 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 342000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T12KWC8"
+    },
+    {
+      "date": "2025-06-16",
+      "address": "66 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 403000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "T12H5KF"
+    },
+    {
+      "date": "2025-05-29",
+      "address": "239A EAGLE VALLEY, SARSFIELD ROAD, WILTON",
+      "price": 262000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12YHW3"
+    },
+    {
+      "date": "2025-05-23",
+      "address": "223A EAGLE VALLEY, SARSFIELD ROAD, WILTON",
+      "price": 257000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "T12R9WT"
+    },
+    {
+      "date": "2024-12-09",
+      "address": "36 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12N6YR"
+    },
+    {
+      "date": "2024-10-30",
+      "address": "225 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 332500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12T1FY"
+    },
+    {
+      "date": "2024-10-18",
+      "address": "176 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12K72N"
+    },
+    {
+      "date": "2024-08-28",
+      "address": "185 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 302000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12X79V"
+    },
+    {
+      "date": "2024-07-03",
+      "address": "89 EAGLE VALLEY, SARSFIELD RD, CORK",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12X5WY"
+    },
+    {
+      "date": "2024-02-07",
+      "address": "206 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12EE3X"
+    },
+    {
+      "date": "2023-09-12",
+      "address": "191 EAGLE VALLEY, SARSFIELD ROAD, WILTON",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12E036"
+    },
+    {
+      "date": "2023-07-11",
+      "address": "214 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12VHH4"
+    },
+    {
+      "date": "2023-04-13",
+      "address": "145 EAGLE VALLEY, SARSFIELD ROAD, WILTON",
+      "price": 294000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12X2XA"
+    },
+    {
+      "date": "2023-03-16",
+      "address": "50 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12D5FV"
+    },
+    {
+      "date": "2023-03-09",
+      "address": "158 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 328000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12K2PA"
+    },
+    {
+      "date": "2022-10-20",
+      "address": "102 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 272500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12HW0C"
+    },
+    {
+      "date": "2022-04-01",
+      "address": "128 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12YY9T"
+    },
+    {
+      "date": "2022-02-25",
+      "address": "198 EAGLE VALLEY, SARSFIELD RD, CORK",
+      "price": 351000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12NVK7"
+    },
+    {
+      "date": "2022-02-11",
+      "address": "224 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 284000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12YYD8"
+    },
+    {
+      "date": "2021-08-17",
+      "address": "84 EAGLE VALLEY, SARSFIELD RD, CORK",
+      "price": 313000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12PV3V"
+    },
+    {
+      "date": "2021-06-04",
+      "address": "173 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12K5CR"
+    },
+    {
+      "date": "2021-03-15",
+      "address": "83 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 257500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-05",
+      "address": "97 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-08",
+      "address": "136 EAGLE VALLEY, SARSFIELD RD, CORK",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-05",
+      "address": "96 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 236000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-29",
+      "address": "191 EAGLE VALLEY, SARSFIELD ROAD, WILTON",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12E036"
+    },
+    {
+      "date": "2019-01-18",
+      "address": "41 EAGLE VALLEY, SARSFIELD RD, CORK",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-11",
+      "address": "102 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12HW0C"
+    },
+    {
+      "date": "2018-08-07",
+      "address": "44 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 248000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-23",
+      "address": "29 EAGLE VALLEY, SARSFIELD RD, CORK",
+      "price": 237000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-23",
+      "address": "133 EAGLE VALLEY, SARSFIELD RD, CORK",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-15",
+      "address": "73 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-26",
+      "address": "272 EAGLE VALLEY, SARSFIELD RD, CORK",
+      "price": 207000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-26",
+      "address": "273 EAGLE VALLEY, SARSFIELD RD, CORK",
+      "price": 207000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-26",
+      "address": "274 EAGLE VALLEY, SARSFIELD RD, CORK",
+      "price": 207000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-26",
+      "address": "274A EAGLE VALLEY, SARSFIELD ROAD, CORK",
+      "price": 197000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-19",
+      "address": "122 EAGLE VALLEY, SARSFIELD RD, CORK",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-04",
+      "address": "160 EAGLE VALLEY, SARSFIELD RD, WILTON",
+      "price": 229950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 100
+}

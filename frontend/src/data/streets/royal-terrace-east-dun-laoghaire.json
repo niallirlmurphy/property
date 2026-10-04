@@ -1,0 +1,153 @@
+{
+  "slug": "royal-terrace-east-dun-laoghaire",
+  "stats": {
+    "count": 10,
+    "median": 1330000,
+    "avg": 1534000,
+    "min": 1050000,
+    "max": 2500000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1100000,
+      "avg_price": 1100000,
+      "min_price": 1100000,
+      "max_price": 1100000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1140000,
+      "avg_price": 1140000,
+      "min_price": 1140000,
+      "max_price": 1140000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 1175000,
+      "avg_price": 1202500,
+      "min_price": 1050000,
+      "max_price": 1410000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1615000,
+      "avg_price": 1615000,
+      "min_price": 1615000,
+      "max_price": 1615000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1800000,
+      "avg_price": 1800000,
+      "min_price": 1800000,
+      "max_price": 1800000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2375000,
+      "avg_price": 2375000,
+      "min_price": 2375000,
+      "max_price": 2375000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 2500000,
+      "max_price": 2500000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-29",
+      "address": "7 ROYAL TERRACE EAST, DUN LAOGHAIRE, DUBLIN",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96P7F3"
+    },
+    {
+      "date": "2025-09-05",
+      "address": "6 ROYAL TERRACE EAST, DUN LAOGHAIRE, DUBLIN",
+      "price": 2375000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "A96PN81"
+    },
+    {
+      "date": "2022-02-11",
+      "address": "7 ROYAL TERRACE EAST, DUN LAOGHAIRE, DUBLIN",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96P7F3"
+    },
+    {
+      "date": "2021-09-30",
+      "address": "9 ROYAL TERRACE EAST, DUN LAOGHAIRE, DUBLIN",
+      "price": 1615000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96R5V6"
+    },
+    {
+      "date": "2017-07-21",
+      "address": "2 ROYAL TERRACE EAST, DUN LAOGHAIRE, DUBLIN",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-28",
+      "address": "16 ROYAL TERRACE EAST, DUN LAOGHAIRE, DUBLIN",
+      "price": 1410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-14",
+      "address": "7 ROYAL TERRACE EAST, DUN LAOGHAIRE, DUBLIN",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96P7F3"
+    },
+    {
+      "date": "2017-03-03",
+      "address": "9 ROYAL TERRACE EAST, DUN LAOGHAIRE, DUBLIN",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96R5V6"
+    },
+    {
+      "date": "2011-01-31",
+      "address": "3 royal terrace east, dun laoghaire, co dublin",
+      "price": 1140000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-11-05",
+      "address": "4 Royal Terrace East, Dun Laoghaire",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

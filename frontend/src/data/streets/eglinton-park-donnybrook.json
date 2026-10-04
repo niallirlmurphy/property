@@ -1,0 +1,193 @@
+{
+  "slug": "eglinton-park-donnybrook",
+  "stats": {
+    "count": 13,
+    "median": 1345000,
+    "avg": 1268615,
+    "min": 520000,
+    "max": 1950000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 650000,
+      "avg_price": 650000,
+      "min_price": 650000,
+      "max_price": 650000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 520000,
+      "avg_price": 520000,
+      "min_price": 520000,
+      "max_price": 520000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 925000,
+      "avg_price": 925000,
+      "min_price": 925000,
+      "max_price": 925000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 990000,
+      "avg_price": 990000,
+      "min_price": 990000,
+      "max_price": 990000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1378500,
+      "avg_price": 1378500,
+      "min_price": 1057000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1685000,
+      "avg_price": 1685000,
+      "min_price": 1685000,
+      "max_price": 1685000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1310000,
+      "avg_price": 1310000,
+      "min_price": 900000,
+      "max_price": 1720000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 1497500,
+      "avg_price": 1497500,
+      "min_price": 1345000,
+      "max_price": 1650000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 1675000,
+      "avg_price": 1675000,
+      "min_price": 1400000,
+      "max_price": 1950000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-27",
+      "address": "8 EGLINTON PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A8N8"
+    },
+    {
+      "date": "2026-03-10",
+      "address": "4 EGLINTON PARK, DONNYBROOK, DUBLIN",
+      "price": 1950000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D04C6F6"
+    },
+    {
+      "date": "2025-06-27",
+      "address": "14 EGLINTON PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1345000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04C7W7"
+    },
+    {
+      "date": "2025-04-04",
+      "address": "15 EGLINTON PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1650000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D04A6P8"
+    },
+    {
+      "date": "2023-05-18",
+      "address": "20 EGLINTON PARK, DONNYBROOK, DUBLIN 4",
+      "price": 900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N8K1"
+    },
+    {
+      "date": "2023-05-17",
+      "address": "19 EGLINTON PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1720000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y2X4"
+    },
+    {
+      "date": "2022-05-16",
+      "address": "4 EGLINTON PARK, DONNYBROOK, DUBLIN",
+      "price": 1685000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D04C6F6"
+    },
+    {
+      "date": "2018-08-31",
+      "address": "4 EGLINTON PARK, DONNYBROOK, DUBLIN",
+      "price": 1057000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D04C6F6"
+    },
+    {
+      "date": "2018-02-28",
+      "address": "6 EGLINTON PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-04",
+      "address": "16 EGLINTON PARK, DONNYBROOK, DUBLIN 4",
+      "price": 990000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-30",
+      "address": "15 EGLINTON PARK, DONNYBROOK, DUBLIN 4",
+      "price": 925000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D04A6P8"
+    },
+    {
+      "date": "2013-08-19",
+      "address": "22 EGLINTON PARK, DONNYBROOK, DUBLIN 4",
+      "price": 520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-04-12",
+      "address": "1 Eglinton Park, Donnybrook",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 13
+}

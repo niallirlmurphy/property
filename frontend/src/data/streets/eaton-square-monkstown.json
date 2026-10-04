@@ -1,0 +1,241 @@
+{
+  "slug": "eaton-square-monkstown",
+  "stats": {
+    "count": 17,
+    "median": 1340000,
+    "avg": 1384588,
+    "min": 285000,
+    "max": 2600000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 285000,
+      "avg_price": 285000,
+      "min_price": 285000,
+      "max_price": 285000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1340000,
+      "avg_price": 1340000,
+      "min_price": 1340000,
+      "max_price": 1340000
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 630000,
+      "avg_price": 630000,
+      "min_price": 630000,
+      "max_price": 630000
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 1260000,
+      "avg_price": 1206667,
+      "min_price": 975000,
+      "max_price": 1385000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1335000,
+      "avg_price": 1335000,
+      "min_price": 1335000,
+      "max_price": 1335000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1450000,
+      "avg_price": 1450000,
+      "min_price": 1450000,
+      "max_price": 1450000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 1275000,
+      "avg_price": 1329333,
+      "min_price": 1200000,
+      "max_price": 1513000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1262500,
+      "avg_price": 1262500,
+      "min_price": 1175000,
+      "max_price": 1350000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1365000,
+      "avg_price": 1365000,
+      "min_price": 1365000,
+      "max_price": 1365000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 2000000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 2400000,
+      "max_price": 2600000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-02-03",
+      "address": "15 EATON SQ, MONKSTOWN, DUBLIN",
+      "price": 2600000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "A94W897"
+    },
+    {
+      "date": "2026-01-15",
+      "address": "29 EATON SQ, MONKSTOWN, DUBLIN",
+      "price": 2400000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A94VX22"
+    },
+    {
+      "date": "2025-11-13",
+      "address": "13 EATON SQ, MONKSTOWN, DUBLIN",
+      "price": 2000000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A94KP52"
+    },
+    {
+      "date": "2021-03-18",
+      "address": "14 EATON SQ, MONKSTOWN, DUBLIN",
+      "price": 1365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-07",
+      "address": "5 EATON SQ, MONKSTOWN, DUBLIN",
+      "price": 1175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-25",
+      "address": "26 EATON SQ, MONKSTOWN, DUBLIN",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-07",
+      "address": "25 EATON SQ, MONKSTOWN, DUBLIN",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-06",
+      "address": "10 EATON SQ, MONKSTOWN, DUBLIN",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-01",
+      "address": "15 EATON SQ, MONKSTOWN, DUBLIN",
+      "price": 1513000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "A94W897"
+    },
+    {
+      "date": "2016-07-25",
+      "address": "12 EATON SQ, MONKSTOWN, DUBLIN",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-08-22",
+      "address": "22 EATON SQ, MONKSTOWN, DUBLIN",
+      "price": 1335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-10-04",
+      "address": "13 Eaton Square, Monkstown",
+      "price": 1260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-10-04",
+      "address": "15 Eaton Square, Monkstown",
+      "price": 975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-10-01",
+      "address": "23 Eaton Square, Monkstown",
+      "price": 1385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-07-03",
+      "address": "11 Eaton Square, Monkstown",
+      "price": 630000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-02-11",
+      "address": "3 Eaton Square, Monkstown",
+      "price": 1340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-08-19",
+      "address": "29 Eaton Square, Monkstown",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 17
+}

@@ -1,0 +1,553 @@
+{
+  "slug": "river-forest-leixlip",
+  "stats": {
+    "count": 101,
+    "median": 315000,
+    "avg": 323602,
+    "min": 60000,
+    "max": 620000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 5,
+      "median_price": 220000,
+      "avg_price": 215000,
+      "min_price": 170000,
+      "max_price": 240000
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 183000,
+      "avg_price": 183000,
+      "min_price": 180000,
+      "max_price": 186000
+    },
+    {
+      "year": 2012,
+      "count": 4,
+      "median_price": 170000,
+      "avg_price": 166750,
+      "min_price": 140000,
+      "max_price": 187000
+    },
+    {
+      "year": 2013,
+      "count": 6,
+      "median_price": 187250,
+      "avg_price": 194000,
+      "min_price": 142500,
+      "max_price": 251500
+    },
+    {
+      "year": 2014,
+      "count": 8,
+      "median_price": 250000,
+      "avg_price": 240625,
+      "min_price": 170000,
+      "max_price": 275000
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 277500,
+      "avg_price": 270188,
+      "min_price": 200000,
+      "max_price": 322500
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 237500,
+      "avg_price": 215000,
+      "min_price": 60000,
+      "max_price": 325000
+    },
+    {
+      "year": 2017,
+      "count": 6,
+      "median_price": 301750,
+      "avg_price": 297667,
+      "min_price": 260000,
+      "max_price": 325000
+    },
+    {
+      "year": 2018,
+      "count": 5,
+      "median_price": 330000,
+      "avg_price": 322500,
+      "min_price": 280000,
+      "max_price": 350000
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 325500,
+      "avg_price": 324959,
+      "min_price": 280000,
+      "max_price": 390000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 290000,
+      "avg_price": 288700,
+      "min_price": 262500,
+      "max_price": 305000
+    },
+    {
+      "year": 2021,
+      "count": 5,
+      "median_price": 370000,
+      "avg_price": 357000,
+      "min_price": 300000,
+      "max_price": 425000
+    },
+    {
+      "year": 2022,
+      "count": 6,
+      "median_price": 380000,
+      "avg_price": 371167,
+      "min_price": 270000,
+      "max_price": 445000
+    },
+    {
+      "year": 2023,
+      "count": 6,
+      "median_price": 395000,
+      "avg_price": 395167,
+      "min_price": 316000,
+      "max_price": 465000
+    },
+    {
+      "year": 2024,
+      "count": 8,
+      "median_price": 433000,
+      "avg_price": 421750,
+      "min_price": 342000,
+      "max_price": 495000
+    },
+    {
+      "year": 2025,
+      "count": 11,
+      "median_price": 485000,
+      "avg_price": 483237,
+      "min_price": 400000,
+      "max_price": 620000
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 453000,
+      "avg_price": 487750,
+      "min_price": 440000,
+      "max_price": 605000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-26",
+      "address": "11 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 461000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W23Y0C5"
+    },
+    {
+      "date": "2026-06-03",
+      "address": "663 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23X6D0"
+    },
+    {
+      "date": "2026-05-12",
+      "address": "386 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23Y2R4"
+    },
+    {
+      "date": "2026-03-13",
+      "address": "614 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 605000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W23W0Y8"
+    },
+    {
+      "date": "2025-11-12",
+      "address": "235 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 500000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W23WC84"
+    },
+    {
+      "date": "2025-10-16",
+      "address": "340 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 415000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W23F516"
+    },
+    {
+      "date": "2025-09-09",
+      "address": "7 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 530125,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W23C9D3"
+    },
+    {
+      "date": "2025-08-29",
+      "address": "147 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 620000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W23FD60"
+    },
+    {
+      "date": "2025-07-25",
+      "address": "354 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 445000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W23R6V4"
+    },
+    {
+      "date": "2025-05-30",
+      "address": "112A RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 415485,
+      "bedrooms": 3,
+      "propertyType": "bungalow",
+      "eircode": "W23D4E9"
+    },
+    {
+      "date": "2025-05-22",
+      "address": "547 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23Y0P2"
+    },
+    {
+      "date": "2025-05-19",
+      "address": "508 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 485000,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "W23W3F1"
+    },
+    {
+      "date": "2025-04-29",
+      "address": "129 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 515000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W23P9H7"
+    },
+    {
+      "date": "2025-04-03",
+      "address": "608 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23K2T7"
+    },
+    {
+      "date": "2025-01-16",
+      "address": "530 RIVER FOREST, LEIXLIP, CO KILDARE",
+      "price": 540000,
+      "bedrooms": 4,
+      "propertyType": "bungalow",
+      "eircode": "W23X2N1"
+    },
+    {
+      "date": "2024-12-03",
+      "address": "584 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 483000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23X6K4"
+    },
+    {
+      "date": "2024-11-22",
+      "address": "218 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 373000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23E436"
+    },
+    {
+      "date": "2024-11-12",
+      "address": "226 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23PN32"
+    },
+    {
+      "date": "2024-07-23",
+      "address": "71 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 441000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23V2D2"
+    },
+    {
+      "date": "2024-07-19",
+      "address": "194 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23PE06"
+    },
+    {
+      "date": "2024-06-07",
+      "address": "570 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 342000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23Y8R9"
+    },
+    {
+      "date": "2024-01-25",
+      "address": "319 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23H9T1"
+    },
+    {
+      "date": "2024-01-05",
+      "address": "641 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23RH28"
+    },
+    {
+      "date": "2023-09-21",
+      "address": "63 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23K8W8"
+    },
+    {
+      "date": "2023-09-14",
+      "address": "374 RIVER FOREST, LEIXLIP, CO. KILDARE",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23A5F3"
+    },
+    {
+      "date": "2023-08-29",
+      "address": "170 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23E3H7"
+    },
+    {
+      "date": "2023-08-03",
+      "address": "280 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23E7N6"
+    },
+    {
+      "date": "2023-05-26",
+      "address": "504 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 316000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23C3W7"
+    },
+    {
+      "date": "2023-04-28",
+      "address": "174 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23E2A3"
+    },
+    {
+      "date": "2022-10-20",
+      "address": "560 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23A7P6"
+    },
+    {
+      "date": "2022-09-19",
+      "address": "501 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23W2N6"
+    },
+    {
+      "date": "2022-08-12",
+      "address": "242 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23H638"
+    },
+    {
+      "date": "2022-06-08",
+      "address": "517 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 351000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23V2W9"
+    },
+    {
+      "date": "2022-02-18",
+      "address": "302 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 401000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23Y5R3"
+    },
+    {
+      "date": "2022-02-14",
+      "address": "340 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 370000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W23F516"
+    },
+    {
+      "date": "2021-11-17",
+      "address": "359 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23F7V7"
+    },
+    {
+      "date": "2021-11-16",
+      "address": "66 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23D7A4"
+    },
+    {
+      "date": "2021-10-11",
+      "address": "290 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23P2C7"
+    },
+    {
+      "date": "2021-03-18",
+      "address": "520 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-26",
+      "address": "395 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-23",
+      "address": "171 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 301000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-06",
+      "address": "539 RIVER FOREST, LEIXLIP, CO. KILDARE",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-29",
+      "address": "659 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-19",
+      "address": "130 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-23",
+      "address": "656 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 262500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-06",
+      "address": "209 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-06",
+      "address": "130 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-15",
+      "address": "296 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 343670,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-17",
+      "address": "189 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-11",
+      "address": "314 RIVER FOREST, LEIXLIP, KILDARE",
+      "price": 316000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 101
+}

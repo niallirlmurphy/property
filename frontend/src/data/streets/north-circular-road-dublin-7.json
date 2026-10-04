@@ -1,0 +1,553 @@
+{
+  "slug": "north-circular-road-dublin-7",
+  "stats": {
+    "count": 94,
+    "median": 448100,
+    "avg": 496118,
+    "min": 97500,
+    "max": 1425000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 550000,
+      "avg_price": 511667,
+      "min_price": 435000,
+      "max_price": 550000
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 148750,
+      "avg_price": 148750,
+      "min_price": 97500,
+      "max_price": 200000
+    },
+    {
+      "year": 2012,
+      "count": 5,
+      "median_price": 280000,
+      "avg_price": 255300,
+      "min_price": 140000,
+      "max_price": 340000
+    },
+    {
+      "year": 2013,
+      "count": 9,
+      "median_price": 220000,
+      "avg_price": 268333,
+      "min_price": 155000,
+      "max_price": 420000
+    },
+    {
+      "year": 2014,
+      "count": 11,
+      "median_price": 315000,
+      "avg_price": 289593,
+      "min_price": 157000,
+      "max_price": 360000
+    },
+    {
+      "year": 2015,
+      "count": 11,
+      "median_price": 343000,
+      "avg_price": 346291,
+      "min_price": 200000,
+      "max_price": 500000
+    },
+    {
+      "year": 2016,
+      "count": 7,
+      "median_price": 470000,
+      "avg_price": 428714,
+      "min_price": 150000,
+      "max_price": 805000
+    },
+    {
+      "year": 2017,
+      "count": 11,
+      "median_price": 650000,
+      "avg_price": 602718,
+      "min_price": 110900,
+      "max_price": 1100000
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 625000,
+      "avg_price": 572500,
+      "min_price": 300000,
+      "max_price": 740000
+    },
+    {
+      "year": 2019,
+      "count": 5,
+      "median_price": 850000,
+      "avg_price": 800000,
+      "min_price": 650000,
+      "max_price": 920000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 450000,
+      "avg_price": 460000,
+      "min_price": 285000,
+      "max_price": 650000
+    },
+    {
+      "year": 2021,
+      "count": 6,
+      "median_price": 737500,
+      "avg_price": 734000,
+      "min_price": 319000,
+      "max_price": 1160000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 947500,
+      "avg_price": 947500,
+      "min_price": 910000,
+      "max_price": 985000
+    },
+    {
+      "year": 2023,
+      "count": 7,
+      "median_price": 525000,
+      "avg_price": 667497,
+      "min_price": 127481,
+      "max_price": 1425000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 467000,
+      "avg_price": 467000,
+      "min_price": 464000,
+      "max_price": 470000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 912500,
+      "avg_price": 912500,
+      "min_price": 800000,
+      "max_price": 1025000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 1082500,
+      "avg_price": 1082500,
+      "min_price": 895000,
+      "max_price": 1270000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-03",
+      "address": "NO 588 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 895000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01K6C6"
+    },
+    {
+      "date": "2026-06-03",
+      "address": "243 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 1270000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D07H1K7"
+    },
+    {
+      "date": "2025-12-12",
+      "address": "418 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 800000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D07A4E2"
+    },
+    {
+      "date": "2025-09-15",
+      "address": "262B, NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 1025000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D07K162"
+    },
+    {
+      "date": "2024-07-23",
+      "address": "417 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07AH30"
+    },
+    {
+      "date": "2024-03-26",
+      "address": "340 NORTH CIRCULAR RD, DUBLIN 7",
+      "price": 464000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07A589"
+    },
+    {
+      "date": "2023-09-06",
+      "address": "416 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07W207"
+    },
+    {
+      "date": "2023-09-04",
+      "address": "183 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 785000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07HFR6"
+    },
+    {
+      "date": "2023-08-02",
+      "address": "159 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 127481,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07Y7T3"
+    },
+    {
+      "date": "2023-07-24",
+      "address": "383 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07NX30"
+    },
+    {
+      "date": "2023-06-13",
+      "address": "418 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 525000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D07A4E2"
+    },
+    {
+      "date": "2023-03-30",
+      "address": "16 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 930000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07HD93"
+    },
+    {
+      "date": "2023-01-10",
+      "address": "327 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 1425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07Y8NV"
+    },
+    {
+      "date": "2022-07-12",
+      "address": "NO 588 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 910000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01K6C6"
+    },
+    {
+      "date": "2022-06-14",
+      "address": "242 NORTH CIRCULAR RD, DUBLIN 7",
+      "price": 985000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07FC86"
+    },
+    {
+      "date": "2021-10-22",
+      "address": "384 North Circular Road, Dublin 7",
+      "price": 1160000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-21",
+      "address": "66 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07H0XR"
+    },
+    {
+      "date": "2021-07-08",
+      "address": "44 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-29",
+      "address": "113 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07Y9C1"
+    },
+    {
+      "date": "2021-05-07",
+      "address": "2 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-09",
+      "address": "NO 96  NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 319000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-23",
+      "address": "163 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-21",
+      "address": "18A NORTH CIRCULAR ROAD, DUBLIN 7, CO. DUBLIN",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-27",
+      "address": "433 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-30",
+      "address": "401 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-14",
+      "address": "73 NORTH CIRCULAR ROAD, DUBLIN 7, DUBLIN",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-23",
+      "address": "93 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-17",
+      "address": "197 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-18",
+      "address": "67, NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 880000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-18",
+      "address": "69, NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 920000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-16",
+      "address": "73 NORTH CIRCULAR ROAD, DUBLIN 7, DUBLIN",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-18",
+      "address": "57A  NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 630000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-26",
+      "address": "428 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-16",
+      "address": "239 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 740000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-24",
+      "address": "50 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 620000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-22",
+      "address": "141 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 690000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-07",
+      "address": "205 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-16",
+      "address": "NO 96  NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 319000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2017-10-09",
+      "address": "APT 1, NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 110900,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2017-10-06",
+      "address": "540 NORTH CIRCULAR RD, DUBLIN 7",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-18",
+      "address": "57A  NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 920000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-08",
+      "address": "327 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07Y8NV"
+    },
+    {
+      "date": "2017-05-04",
+      "address": "115 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-25",
+      "address": "19 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-13",
+      "address": "540 NORTH CIRCULAR RD, DUBLIN 7",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-10",
+      "address": "55 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 690000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-21",
+      "address": "439 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-26",
+      "address": "205 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 805000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-23",
+      "address": "60 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-29",
+      "address": "428 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
+      "price": 150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 94
+}

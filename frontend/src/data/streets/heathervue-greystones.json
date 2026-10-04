@@ -1,0 +1,553 @@
+{
+  "slug": "heathervue-greystones",
+  "stats": {
+    "count": 94,
+    "median": 500000,
+    "avg": 497828,
+    "min": 248500,
+    "max": 865000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 350000,
+      "avg_price": 360375,
+      "min_price": 297500,
+      "max_price": 444000
+    },
+    {
+      "year": 2011,
+      "count": 4,
+      "median_price": 273750,
+      "avg_price": 285625,
+      "min_price": 255000,
+      "max_price": 340000
+    },
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 265000,
+      "avg_price": 287833,
+      "min_price": 248500,
+      "max_price": 350000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 365000,
+      "avg_price": 339200,
+      "min_price": 270000,
+      "max_price": 396000
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 333000,
+      "avg_price": 336000,
+      "min_price": 270000,
+      "max_price": 408000
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 468000,
+      "avg_price": 450750,
+      "min_price": 335000,
+      "max_price": 542000
+    },
+    {
+      "year": 2016,
+      "count": 6,
+      "median_price": 385500,
+      "avg_price": 400583,
+      "min_price": 350000,
+      "max_price": 472500
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 375000,
+      "avg_price": 375000,
+      "min_price": 375000,
+      "max_price": 375000
+    },
+    {
+      "year": 2018,
+      "count": 8,
+      "median_price": 472500,
+      "avg_price": 471250,
+      "min_price": 395000,
+      "max_price": 540000
+    },
+    {
+      "year": 2019,
+      "count": 7,
+      "median_price": 480000,
+      "avg_price": 488929,
+      "min_price": 390000,
+      "max_price": 600000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 495000,
+      "avg_price": 495000,
+      "min_price": 385000,
+      "max_price": 605000
+    },
+    {
+      "year": 2021,
+      "count": 7,
+      "median_price": 572000,
+      "avg_price": 572332,
+      "min_price": 407000,
+      "max_price": 705000
+    },
+    {
+      "year": 2022,
+      "count": 12,
+      "median_price": 618500,
+      "avg_price": 632333,
+      "min_price": 580000,
+      "max_price": 720000
+    },
+    {
+      "year": 2023,
+      "count": 8,
+      "median_price": 570000,
+      "avg_price": 568750,
+      "min_price": 450000,
+      "max_price": 686000
+    },
+    {
+      "year": 2024,
+      "count": 9,
+      "median_price": 630000,
+      "avg_price": 626333,
+      "min_price": 520000,
+      "max_price": 727000
+    },
+    {
+      "year": 2025,
+      "count": 5,
+      "median_price": 600000,
+      "avg_price": 619000,
+      "min_price": 540000,
+      "max_price": 725000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 865000,
+      "avg_price": 865000,
+      "min_price": 865000,
+      "max_price": 865000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-01-21",
+      "address": "22 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 865000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A63P284"
+    },
+    {
+      "date": "2025-11-24",
+      "address": "98 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 550000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "A63PR28"
+    },
+    {
+      "date": "2025-11-18",
+      "address": "140 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 680000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "A63WV96"
+    },
+    {
+      "date": "2025-09-30",
+      "address": "148 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 725000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A63YY53"
+    },
+    {
+      "date": "2025-07-04",
+      "address": "73 HEATHERVUE, GREYSTONES, CO WICKOW",
+      "price": 600000,
+      "bedrooms": 3,
+      "propertyType": "bungalow",
+      "eircode": "A63WT38"
+    },
+    {
+      "date": "2025-06-04",
+      "address": "61 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 540000,
+      "bedrooms": 3,
+      "propertyType": "bungalow",
+      "eircode": "A63HY11"
+    },
+    {
+      "date": "2024-12-19",
+      "address": "107 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 727000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63AE35"
+    },
+    {
+      "date": "2024-09-11",
+      "address": "127 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 630000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63FC79"
+    },
+    {
+      "date": "2024-09-05",
+      "address": "209 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63N990"
+    },
+    {
+      "date": "2024-08-26",
+      "address": "32 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 630000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63EK03"
+    },
+    {
+      "date": "2024-08-01",
+      "address": "29 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 672000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63RX89"
+    },
+    {
+      "date": "2024-07-19",
+      "address": "155 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 610000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X662"
+    },
+    {
+      "date": "2024-03-26",
+      "address": "138 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63VA47"
+    },
+    {
+      "date": "2024-02-08",
+      "address": "188 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 558000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YE18"
+    },
+    {
+      "date": "2024-01-30",
+      "address": "31 HEATHERVUE, GREYSTONES, CO. WICKLOW",
+      "price": 590000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63P640"
+    },
+    {
+      "date": "2023-11-30",
+      "address": "107 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63AE35"
+    },
+    {
+      "date": "2023-09-21",
+      "address": "146 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 555000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63FW96"
+    },
+    {
+      "date": "2023-09-15",
+      "address": "166 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 635000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63PX52"
+    },
+    {
+      "date": "2023-09-04",
+      "address": "167 HEATHERVUE, GREYSTONES, CO WICKLOW",
+      "price": 614000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YY95"
+    },
+    {
+      "date": "2023-07-12",
+      "address": "194 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 686000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63HD34"
+    },
+    {
+      "date": "2023-05-02",
+      "address": "88 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63CA36"
+    },
+    {
+      "date": "2023-04-21",
+      "address": "121 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63FA03"
+    },
+    {
+      "date": "2023-04-11",
+      "address": "205 HEATHERVUE, GREYSTONES, CO WICKLOW",
+      "price": 585000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KW24"
+    },
+    {
+      "date": "2022-11-04",
+      "address": "41 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 690000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63TY88"
+    },
+    {
+      "date": "2022-10-17",
+      "address": "63 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 580000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63E430"
+    },
+    {
+      "date": "2022-10-12",
+      "address": "141 HEATHERVUE, GREYSTONES, CO WICKLOW",
+      "price": 615000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63F750"
+    },
+    {
+      "date": "2022-09-02",
+      "address": "7 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 585000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63Y762"
+    },
+    {
+      "date": "2022-08-31",
+      "address": "170 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 620000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63RY71"
+    },
+    {
+      "date": "2022-08-31",
+      "address": "35 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 720000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63XD23"
+    },
+    {
+      "date": "2022-08-30",
+      "address": "209 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 685000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63N990"
+    },
+    {
+      "date": "2022-06-17",
+      "address": "92 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 630000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63EC61"
+    },
+    {
+      "date": "2022-06-07",
+      "address": "168 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 617000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KV84"
+    },
+    {
+      "date": "2022-05-16",
+      "address": "194 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 661000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63HD34"
+    },
+    {
+      "date": "2022-02-11",
+      "address": "204 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 590000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63H563"
+    },
+    {
+      "date": "2022-01-12",
+      "address": "116 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 595000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NY06"
+    },
+    {
+      "date": "2021-11-26",
+      "address": "177 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 565323,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63AC63"
+    },
+    {
+      "date": "2021-11-26",
+      "address": "23 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 607000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YD26"
+    },
+    {
+      "date": "2021-11-12",
+      "address": "6 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 620000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DX36"
+    },
+    {
+      "date": "2021-10-29",
+      "address": "142 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NN99"
+    },
+    {
+      "date": "2021-10-26",
+      "address": "53 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 705000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X763"
+    },
+    {
+      "date": "2021-09-22",
+      "address": "195 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 572000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63WC91"
+    },
+    {
+      "date": "2021-05-25",
+      "address": "140 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 407000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "A63WV96"
+    },
+    {
+      "date": "2020-01-24",
+      "address": "147 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-23",
+      "address": "53 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 605000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X763"
+    },
+    {
+      "date": "2019-11-22",
+      "address": "116 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NY06"
+    },
+    {
+      "date": "2019-10-25",
+      "address": "200 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-20",
+      "address": "167 HEATHERVUE, GREYSTONES, CO WICKLOW",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YY95"
+    },
+    {
+      "date": "2019-09-20",
+      "address": "54 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-28",
+      "address": "36 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 512500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-07",
+      "address": "132 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 590000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 94
+}

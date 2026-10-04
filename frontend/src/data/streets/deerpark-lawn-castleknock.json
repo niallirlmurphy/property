@@ -1,0 +1,161 @@
+{
+  "slug": "deerpark-lawn-castleknock",
+  "stats": {
+    "count": 10,
+    "median": 1417500,
+    "avg": 1447500,
+    "min": 1200000,
+    "max": 2120000,
+    "firstYear": 2014,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1200000,
+      "avg_price": 1200000,
+      "min_price": 1200000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1230000,
+      "avg_price": 1230000,
+      "min_price": 1230000,
+      "max_price": 1230000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1285000,
+      "avg_price": 1285000,
+      "min_price": 1285000,
+      "max_price": 1285000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1425000,
+      "avg_price": 1425000,
+      "min_price": 1425000,
+      "max_price": 1425000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1550000,
+      "avg_price": 1550000,
+      "min_price": 1550000,
+      "max_price": 1550000
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 1475000,
+      "avg_price": 1418333,
+      "min_price": 1200000,
+      "max_price": 1580000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1410000,
+      "avg_price": 1410000,
+      "min_price": 1410000,
+      "max_price": 1410000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 2120000,
+      "avg_price": 2120000,
+      "min_price": 2120000,
+      "max_price": 2120000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-01-15",
+      "address": "16 DEERPARK LAWN, CASTLEKNOCK, DUBLIN 15",
+      "price": 2120000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D15HEC2"
+    },
+    {
+      "date": "2022-01-14",
+      "address": "11 DEERPARK LAWN, CASTLEKNOCK, DUBLIN 15",
+      "price": 1410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15R9YE"
+    },
+    {
+      "date": "2021-05-17",
+      "address": "2 DEERPARK LAWN, CASTLEKNOCK, DUBLIN",
+      "price": 1475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15EE9N"
+    },
+    {
+      "date": "2021-03-19",
+      "address": "10 DEERPARK LAWN, CASTLEKNOCK, DUBLIN 15",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-05",
+      "address": "18 DEERPARK LAWN, CASTLEKNOCK, DUBLIN 15",
+      "price": 1580000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-22",
+      "address": "19 DEERPARK LAWN, CASTLEKNOCK, DUBLIN 15",
+      "price": 1550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-12",
+      "address": "12 DEERPARK LAWN, CASTLEKNOCK, DUBLIN 15",
+      "price": 1425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-20",
+      "address": "9 DEERPARK LAWN, CASTLEKNOCK, DUBLIN 15",
+      "price": 1285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-30",
+      "address": "11 Deerpark Lawn, Castleknock, Co Dublin",
+      "price": 1230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-07-25",
+      "address": "12 DEERPARK LAWN, CASTLEKNOCK, DUBLIN 15",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

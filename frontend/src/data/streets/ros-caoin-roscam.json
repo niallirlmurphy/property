@@ -1,0 +1,553 @@
+{
+  "slug": "ros-caoin-roscam",
+  "stats": {
+    "count": 98,
+    "median": 294500,
+    "avg": 310237,
+    "min": 130000,
+    "max": 627500,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 9,
+      "median_price": 270000,
+      "avg_price": 268333,
+      "min_price": 231000,
+      "max_price": 310000
+    },
+    {
+      "year": 2011,
+      "count": 5,
+      "median_price": 230000,
+      "avg_price": 221300,
+      "min_price": 187500,
+      "max_price": 255000
+    },
+    {
+      "year": 2012,
+      "count": 5,
+      "median_price": 215000,
+      "avg_price": 233000,
+      "min_price": 175000,
+      "max_price": 345000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 209250,
+      "avg_price": 209250,
+      "min_price": 209000,
+      "max_price": 209500
+    },
+    {
+      "year": 2014,
+      "count": 8,
+      "median_price": 222500,
+      "avg_price": 224500,
+      "min_price": 210000,
+      "max_price": 245000
+    },
+    {
+      "year": 2015,
+      "count": 10,
+      "median_price": 237500,
+      "avg_price": 247920,
+      "min_price": 195000,
+      "max_price": 370000
+    },
+    {
+      "year": 2016,
+      "count": 5,
+      "median_price": 294000,
+      "avg_price": 293400,
+      "min_price": 210000,
+      "max_price": 375000
+    },
+    {
+      "year": 2017,
+      "count": 6,
+      "median_price": 278500,
+      "avg_price": 286667,
+      "min_price": 233000,
+      "max_price": 370000
+    },
+    {
+      "year": 2018,
+      "count": 6,
+      "median_price": 270000,
+      "avg_price": 272333,
+      "min_price": 190000,
+      "max_price": 340000
+    },
+    {
+      "year": 2019,
+      "count": 4,
+      "median_price": 298500,
+      "avg_price": 273000,
+      "min_price": 130000,
+      "max_price": 365000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 355000,
+      "avg_price": 334800,
+      "min_price": 275000,
+      "max_price": 385000
+    },
+    {
+      "year": 2021,
+      "count": 9,
+      "median_price": 360000,
+      "avg_price": 345111,
+      "min_price": 295000,
+      "max_price": 380000
+    },
+    {
+      "year": 2022,
+      "count": 5,
+      "median_price": 410000,
+      "avg_price": 409400,
+      "min_price": 345000,
+      "max_price": 470000
+    },
+    {
+      "year": 2023,
+      "count": 6,
+      "median_price": 367500,
+      "avg_price": 375583,
+      "min_price": 340000,
+      "max_price": 441000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 405000,
+      "avg_price": 426667,
+      "min_price": 365000,
+      "max_price": 535000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 480000,
+      "avg_price": 464000,
+      "min_price": 427000,
+      "max_price": 485000
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 535000,
+      "avg_price": 519375,
+      "min_price": 380000,
+      "max_price": 627500
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-13",
+      "address": "68 ROS CAOIN, ROSCAM, DOUGHISKA",
+      "price": 600000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "H91VY6F"
+    },
+    {
+      "date": "2026-03-11",
+      "address": "130 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 380000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H91T9HE"
+    },
+    {
+      "date": "2026-01-27",
+      "address": "225 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 627500,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "H91NP2X"
+    },
+    {
+      "date": "2026-01-12",
+      "address": "47 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 470000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H91E9DY"
+    },
+    {
+      "date": "2025-10-16",
+      "address": "52 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 480000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H91K83K"
+    },
+    {
+      "date": "2025-07-18",
+      "address": "128 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 427000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H91VH2V"
+    },
+    {
+      "date": "2025-05-26",
+      "address": "8 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 485000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "H91ETN1"
+    },
+    {
+      "date": "2024-12-11",
+      "address": "116 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91X7EK"
+    },
+    {
+      "date": "2024-11-29",
+      "address": "64 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 535000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91D9PW"
+    },
+    {
+      "date": "2024-07-12",
+      "address": "97 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91CKR3"
+    },
+    {
+      "date": "2024-06-04",
+      "address": "116 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91X7EK"
+    },
+    {
+      "date": "2024-04-29",
+      "address": "130 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 375000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H91T9HE"
+    },
+    {
+      "date": "2024-03-12",
+      "address": "191 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91ANX8"
+    },
+    {
+      "date": "2023-12-06",
+      "address": "184 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91C5EF"
+    },
+    {
+      "date": "2023-10-25",
+      "address": "220 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91H0XE"
+    },
+    {
+      "date": "2023-09-22",
+      "address": "177 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 441000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91W3RY"
+    },
+    {
+      "date": "2023-08-28",
+      "address": "13 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 362500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91H26T"
+    },
+    {
+      "date": "2023-05-05",
+      "address": "125 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91V6TT"
+    },
+    {
+      "date": "2023-03-29",
+      "address": "63 ROS CAOIN, ROSCAM, DUBLIN RD",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91KRA0"
+    },
+    {
+      "date": "2022-11-16",
+      "address": "218 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91RFF8"
+    },
+    {
+      "date": "2022-10-25",
+      "address": "145 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 397000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91NDF3"
+    },
+    {
+      "date": "2022-09-09",
+      "address": "178 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91EHD2"
+    },
+    {
+      "date": "2022-04-20",
+      "address": "254 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91X7KX"
+    },
+    {
+      "date": "2022-02-09",
+      "address": "82 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91E9KW"
+    },
+    {
+      "date": "2021-12-22",
+      "address": "194 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91DNH3"
+    },
+    {
+      "date": "2021-12-17",
+      "address": "242 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91XF7T"
+    },
+    {
+      "date": "2021-10-29",
+      "address": "144 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 376000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91W3XP"
+    },
+    {
+      "date": "2021-10-08",
+      "address": "212 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91C2CR"
+    },
+    {
+      "date": "2021-10-08",
+      "address": "35 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91Y2PY"
+    },
+    {
+      "date": "2021-06-18",
+      "address": "107 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91T0XP"
+    },
+    {
+      "date": "2021-06-16",
+      "address": "186 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91D5KC"
+    },
+    {
+      "date": "2021-05-31",
+      "address": "227 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91W1HX"
+    },
+    {
+      "date": "2021-02-05",
+      "address": "34 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-23",
+      "address": "112 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-07",
+      "address": "128 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 275000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H91VH2V"
+    },
+    {
+      "date": "2020-05-12",
+      "address": "65 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-02",
+      "address": "160 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 382500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-24",
+      "address": "30 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 276500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-09",
+      "address": "252 ROS CAOIN, ROSCAM, GALWAY CITY",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-26",
+      "address": "115 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 130000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-12",
+      "address": "218 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 297000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91RFF8"
+    },
+    {
+      "date": "2019-03-15",
+      "address": "125 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91V6TT"
+    },
+    {
+      "date": "2018-12-18",
+      "address": "247 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-22",
+      "address": "61 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 324000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-26",
+      "address": "182 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-11",
+      "address": "116 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91X7EK"
+    },
+    {
+      "date": "2018-06-13",
+      "address": "96 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-13",
+      "address": "15 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-20",
+      "address": "107 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91T0XP"
+    },
+    {
+      "date": "2017-10-05",
+      "address": "192 ROS CAOIN, ROSCAM, GALWAY",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 98
+}

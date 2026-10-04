@@ -23,7 +23,7 @@ import SpanishWayPage from "./pages/SpanishWayPage";
 import BeforeYouGoPage from "./pages/BeforeYouGoPage";
 import BlogListPage from "./pages/BlogListPage";
 import BlogPostPage from "./pages/BlogPostPage";
-import StreetPage from "./pages/StreetPage";
+import StreetPage, { streetLoader } from "./pages/StreetPage";
 import StreetsIndexPage from "./pages/StreetsIndexPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ScrollToTopLayout from "./components/ScrollToTopLayout";
@@ -44,7 +44,7 @@ export const routes = [
   { path: "/areaguides", element: <AreaGuidesPage /> },
   { path: "/area/:slug", element: <AreaPage /> },
   { path: "/streets", element: <StreetsIndexPage /> },
-  { path: "/street/:slug", element: <StreetPage /> },
+  { path: "/street/:slug", element: <StreetPage />, loader: streetLoader },
   { path: "/county/dublin", element: <DublinCountyPage /> },
   { path: "/county/:slug", element: <CountyPage /> },
   { path: "/eircode/:code", element: <EircodePage /> },

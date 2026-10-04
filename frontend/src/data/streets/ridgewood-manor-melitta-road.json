@@ -1,0 +1,497 @@
+{
+  "slug": "ridgewood-manor-melitta-road",
+  "stats": {
+    "count": 100,
+    "median": 255554,
+    "avg": 271092,
+    "min": 72600,
+    "max": 502000,
+    "firstYear": 2016,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 15,
+      "median_price": 235683,
+      "avg_price": 238116,
+      "min_price": 224619,
+      "max_price": 264950
+    },
+    {
+      "year": 2017,
+      "count": 18,
+      "median_price": 253656,
+      "avg_price": 253242,
+      "min_price": 234472,
+      "max_price": 303965
+    },
+    {
+      "year": 2018,
+      "count": 10,
+      "median_price": 269823,
+      "avg_price": 271795,
+      "min_price": 255507,
+      "max_price": 307929
+    },
+    {
+      "year": 2019,
+      "count": 14,
+      "median_price": 259912,
+      "avg_price": 267292,
+      "min_price": 248898,
+      "max_price": 320000
+    },
+    {
+      "year": 2020,
+      "count": 14,
+      "median_price": 259905,
+      "avg_price": 265322,
+      "min_price": 233480,
+      "max_price": 345000
+    },
+    {
+      "year": 2021,
+      "count": 18,
+      "median_price": 257268,
+      "avg_price": 264155,
+      "min_price": 248898,
+      "max_price": 359000
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "median_price": 262115,
+      "avg_price": 277533,
+      "min_price": 255507,
+      "max_price": 330396
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 256300,
+      "avg_price": 256300,
+      "min_price": 72600,
+      "max_price": 440000
+    },
+    {
+      "year": 2025,
+      "count": 4,
+      "median_price": 480000,
+      "avg_price": 481250,
+      "min_price": 470000,
+      "max_price": 495000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 502000,
+      "avg_price": 502000,
+      "min_price": 502000,
+      "max_price": 502000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-31",
+      "address": "1 RIDGEWOOD MANOR, MELITTA ROAD, KILDARE",
+      "price": 502000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "R51HP57"
+    },
+    {
+      "date": "2025-11-21",
+      "address": "64 RIDGEWOOD MANOR, MELITTA ROAD, KILDARE",
+      "price": 480000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R51E768"
+    },
+    {
+      "date": "2025-11-17",
+      "address": "25 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 495000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "R51AT21"
+    },
+    {
+      "date": "2025-03-02",
+      "address": "4 RIDGEWOOD MANOR, MELITTA ROAD, KILDARE",
+      "price": 480000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "R51FY27"
+    },
+    {
+      "date": "2025-02-04",
+      "address": "70 RIDGEWOOD MANOR, MELITTA ROAD, KILDARE",
+      "price": 470000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R51RH67"
+    },
+    {
+      "date": "2023-09-26",
+      "address": "35 RIDGEWOOD MANOR, MELITTA ROAD, KILDARE",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51TK23"
+    },
+    {
+      "date": "2023-03-30",
+      "address": "69 RIDGEWOOD MANOR, MELITTA ROAD, KILDARE",
+      "price": 72600,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51NR79"
+    },
+    {
+      "date": "2022-10-13",
+      "address": "39 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-03",
+      "address": "40 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 255507,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-03",
+      "address": "No. 41 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-02",
+      "address": "42 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-17",
+      "address": "44 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 259911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-10",
+      "address": "45 Ridgewood Manor, Melitta Road, Kildare Town",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-02",
+      "address": "48 Ridgewood  Manor, Melitta Road, Kildare",
+      "price": 254300,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-02",
+      "address": "47 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 253304,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-07",
+      "address": "50 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 259911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-01",
+      "address": "49 RIDGEWOOD MANOR, MELITTA ROAD, KILDARE",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-27",
+      "address": "51 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-16",
+      "address": "52 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-09",
+      "address": "53 Ridgewood Manor, Melitta Road, Kildare Town",
+      "price": 254626,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-07",
+      "address": "54 Ridgewood Manor, Melitta Road, The Curragh",
+      "price": 254626,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-24",
+      "address": "15 RIDGEWOOD MANOR, MELITTA ROAD, KILDARE",
+      "price": 359000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-20",
+      "address": "56 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 254626,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-07",
+      "address": "57 Ridgewood Manor, Melitta Road, Kildare Town",
+      "price": 248898,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-07",
+      "address": "58 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 248898,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-26",
+      "address": "59 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 254626,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-19",
+      "address": "84, Ridgewood Manor, Melitta Road",
+      "price": 290307,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-29",
+      "address": "81 Ridgewood Manor, Melitta Road, Kildare Town",
+      "price": 248899,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-28",
+      "address": "95 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-21",
+      "address": "99  RIDGEWOOD  MANOR, MELITTA  ROAD, NEWBRIDGE",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-18",
+      "address": "65 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 259900,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-17",
+      "address": "83 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 243802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-11",
+      "address": "61 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 254600,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-11",
+      "address": "82 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 248900,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-04",
+      "address": "62 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 254600,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-13",
+      "address": "64 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 264141,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51E768"
+    },
+    {
+      "date": "2020-10-23",
+      "address": "63 Ridgewood Manor, Melitta Road, Curragh",
+      "price": 260785,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-14",
+      "address": "80 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 259910,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-05",
+      "address": "78 Ridgewood manor, melitta road, kildare",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-14",
+      "address": "66 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 257269,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-21",
+      "address": "77 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 290308,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-20",
+      "address": "79 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 264316,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-13",
+      "address": "68 Ridgewood Manor, Melitta Road, Kildare Town",
+      "price": 277500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-18",
+      "address": "99  RIDGEWOOD  MANOR, MELITTA  ROAD, NEWBRIDGE",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-17",
+      "address": "76 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 248899,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-30",
+      "address": "86 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-08",
+      "address": "67 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 287004,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-07",
+      "address": "75 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 248898,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-17",
+      "address": "87 Ridgewood Manor, Melitta Road, Kildare",
+      "price": 259911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-30",
+      "address": "88 RIDGEWOOD MANOR, MELITTA ROAD",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 100
+}

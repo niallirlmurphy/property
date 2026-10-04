@@ -1,0 +1,137 @@
+{
+  "slug": "the-templeton-lansdowne-place",
+  "stats": {
+    "count": 10,
+    "median": 1381938,
+    "avg": 1774182,
+    "min": 704846,
+    "max": 5814978,
+    "firstYear": 2019,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2019,
+      "count": 3,
+      "median_price": 1277533,
+      "avg_price": 1138032,
+      "min_price": 704846,
+      "max_price": 1431718
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1453744,
+      "avg_price": 1453744,
+      "min_price": 1453744,
+      "max_price": 1453744
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2810573,
+      "avg_price": 2810573,
+      "min_price": 2810573,
+      "max_price": 2810573
+    },
+    {
+      "year": 2024,
+      "count": 4,
+      "median_price": 1381938,
+      "avg_price": 2337445,
+      "min_price": 770925,
+      "max_price": 5814978
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 713625,
+      "avg_price": 713625,
+      "min_price": 713625,
+      "max_price": 713625
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-06-06",
+      "address": "APT 3 THE TEMPLETON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 713625,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04K6F5"
+    },
+    {
+      "date": "2024-11-11",
+      "address": "11 THE TEMPLETON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 770925,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04F5K8"
+    },
+    {
+      "date": "2024-10-23",
+      "address": "8 THE TEMPLETON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1398238,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04Y0X8"
+    },
+    {
+      "date": "2024-07-18",
+      "address": "4 THE TEMPLETON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1365639,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04A5X8"
+    },
+    {
+      "date": "2024-05-22",
+      "address": "21 THE TEMPLETON, LANSDOWNE PLACE, BALLSBRIDGE",
+      "price": 5814978,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04F9W8"
+    },
+    {
+      "date": "2021-05-19",
+      "address": "Apt 19 The Templeton, Lansdowne Place, Lansdowne Road",
+      "price": 2810573,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2020-07-30",
+      "address": "1 The Templeton, Lansdowne Place, Lansdowne",
+      "price": 1453744,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-24",
+      "address": "Apartment 7 The Templeton, Lansdowne Place, Ballsbridge",
+      "price": 704846,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2019-09-13",
+      "address": "Apartment 10 The Templeton, Lansdowne Place, Dublin 4",
+      "price": 1277533,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2019-08-29",
+      "address": "12 The Templeton, Lansdowne Place, Ballsbridge",
+      "price": 1431718,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

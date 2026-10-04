@@ -1,0 +1,553 @@
+{
+  "slug": "mourne-road-drimnagh",
+  "stats": {
+    "count": 137,
+    "median": 295000,
+    "avg": 289261,
+    "min": 30000,
+    "max": 550000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 192500,
+      "avg_price": 192500,
+      "min_price": 125000,
+      "max_price": 260000
+    },
+    {
+      "year": 2011,
+      "count": 7,
+      "median_price": 147000,
+      "avg_price": 158429,
+      "min_price": 135000,
+      "max_price": 185000
+    },
+    {
+      "year": 2012,
+      "count": 9,
+      "median_price": 122500,
+      "avg_price": 127222,
+      "min_price": 105000,
+      "max_price": 155000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 110000,
+      "avg_price": 121700,
+      "min_price": 95000,
+      "max_price": 155000
+    },
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 203000,
+      "avg_price": 171000,
+      "min_price": 30000,
+      "max_price": 217000
+    },
+    {
+      "year": 2015,
+      "count": 7,
+      "median_price": 220000,
+      "avg_price": 215429,
+      "min_price": 185000,
+      "max_price": 252000
+    },
+    {
+      "year": 2016,
+      "count": 10,
+      "median_price": 241750,
+      "avg_price": 231250,
+      "min_price": 200000,
+      "max_price": 250000
+    },
+    {
+      "year": 2017,
+      "count": 9,
+      "median_price": 272000,
+      "avg_price": 280139,
+      "min_price": 205000,
+      "max_price": 366250
+    },
+    {
+      "year": 2018,
+      "count": 8,
+      "median_price": 297000,
+      "avg_price": 295472,
+      "min_price": 220000,
+      "max_price": 355000
+    },
+    {
+      "year": 2019,
+      "count": 6,
+      "median_price": 315000,
+      "avg_price": 316833,
+      "min_price": 250000,
+      "max_price": 400000
+    },
+    {
+      "year": 2020,
+      "count": 6,
+      "median_price": 289750,
+      "avg_price": 296083,
+      "min_price": 250000,
+      "max_price": 395000
+    },
+    {
+      "year": 2021,
+      "count": 11,
+      "median_price": 360000,
+      "avg_price": 338583,
+      "min_price": 157164,
+      "max_price": 475000
+    },
+    {
+      "year": 2022,
+      "count": 11,
+      "median_price": 351000,
+      "avg_price": 368545,
+      "min_price": 280000,
+      "max_price": 475000
+    },
+    {
+      "year": 2023,
+      "count": 16,
+      "median_price": 352500,
+      "avg_price": 346922,
+      "min_price": 270000,
+      "max_price": 398000
+    },
+    {
+      "year": 2024,
+      "count": 8,
+      "median_price": 372500,
+      "avg_price": 386125,
+      "min_price": 330000,
+      "max_price": 465000
+    },
+    {
+      "year": 2025,
+      "count": 12,
+      "median_price": 411000,
+      "avg_price": 413250,
+      "min_price": 280000,
+      "max_price": 550000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 429000,
+      "avg_price": 460333,
+      "min_price": 422000,
+      "max_price": 530000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-25",
+      "address": "89 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 429000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12EH31"
+    },
+    {
+      "date": "2026-02-18",
+      "address": "79 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 530000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12T6C9"
+    },
+    {
+      "date": "2026-01-15",
+      "address": "314 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 422000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12DC53"
+    },
+    {
+      "date": "2025-12-16",
+      "address": "167 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 470000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12FX62"
+    },
+    {
+      "date": "2025-11-28",
+      "address": "202 MOURNE ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 475000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12X8C1"
+    },
+    {
+      "date": "2025-09-10",
+      "address": "245 MOURNE ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 280000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12YY7R"
+    },
+    {
+      "date": "2025-09-02",
+      "address": "235 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 425000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12ND25"
+    },
+    {
+      "date": "2025-08-29",
+      "address": "416 Mourne Road, Drimnagh, Dublin 12",
+      "price": 550000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12WC90"
+    },
+    {
+      "date": "2025-08-20",
+      "address": "348 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 466000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12EH9X"
+    },
+    {
+      "date": "2025-08-05",
+      "address": "133 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 360000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12P5X4"
+    },
+    {
+      "date": "2025-07-21",
+      "address": "298 MOURNE RD, DRIMNAGH, DUBLIN",
+      "price": 397000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12X635"
+    },
+    {
+      "date": "2025-05-01",
+      "address": "186 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 496000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12EC43"
+    },
+    {
+      "date": "2025-02-26",
+      "address": "586 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12XN70"
+    },
+    {
+      "date": "2025-01-28",
+      "address": "279 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 370000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12EW95"
+    },
+    {
+      "date": "2025-01-15",
+      "address": "155 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 375000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12E129"
+    },
+    {
+      "date": "2024-10-23",
+      "address": "375 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12AH50"
+    },
+    {
+      "date": "2024-09-12",
+      "address": "309 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12NN20"
+    },
+    {
+      "date": "2024-09-12",
+      "address": "75 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 369000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12N6F2"
+    },
+    {
+      "date": "2024-08-23",
+      "address": "131 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P304"
+    },
+    {
+      "date": "2024-08-02",
+      "address": "286 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 382000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12YW74"
+    },
+    {
+      "date": "2024-06-07",
+      "address": "217 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K2FD"
+    },
+    {
+      "date": "2024-04-26",
+      "address": "54 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 448000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12RP40"
+    },
+    {
+      "date": "2024-02-08",
+      "address": "205 MOURNE ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F797"
+    },
+    {
+      "date": "2023-12-12",
+      "address": "240 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12FX56"
+    },
+    {
+      "date": "2023-12-05",
+      "address": "187 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12KC81"
+    },
+    {
+      "date": "2023-11-15",
+      "address": "74 MOURNE ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12R5R3"
+    },
+    {
+      "date": "2023-10-03",
+      "address": "127 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12VY77"
+    },
+    {
+      "date": "2023-09-05",
+      "address": "303 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 362000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12AY92"
+    },
+    {
+      "date": "2023-08-23",
+      "address": "402 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12A786"
+    },
+    {
+      "date": "2023-08-22",
+      "address": "612 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12HX07"
+    },
+    {
+      "date": "2023-08-02",
+      "address": "462 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12VK16"
+    },
+    {
+      "date": "2023-07-03",
+      "address": "441 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12DR92"
+    },
+    {
+      "date": "2023-06-26",
+      "address": "301 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 347000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12X857"
+    },
+    {
+      "date": "2023-05-15",
+      "address": "182 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 398000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12RX50"
+    },
+    {
+      "date": "2023-04-25",
+      "address": "365 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 288000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E262"
+    },
+    {
+      "date": "2023-04-25",
+      "address": "476 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 381000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12NY88"
+    },
+    {
+      "date": "2023-04-24",
+      "address": "447 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 372000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12YN29"
+    },
+    {
+      "date": "2023-03-08",
+      "address": "35 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 336750,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12WP23"
+    },
+    {
+      "date": "2023-02-28",
+      "address": "407 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 371000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12VF65"
+    },
+    {
+      "date": "2022-10-12",
+      "address": "200 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P2R1"
+    },
+    {
+      "date": "2022-09-27",
+      "address": "162 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 351000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F822"
+    },
+    {
+      "date": "2022-06-28",
+      "address": "340 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12RR62"
+    },
+    {
+      "date": "2022-05-11",
+      "address": "546 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12CY54"
+    },
+    {
+      "date": "2022-04-28",
+      "address": "129 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12V2H7"
+    },
+    {
+      "date": "2022-04-27",
+      "address": "552A MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12FH02"
+    },
+    {
+      "date": "2022-04-14",
+      "address": "206 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 302000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E5X0"
+    },
+    {
+      "date": "2022-04-01",
+      "address": "238 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 321000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P26P"
+    },
+    {
+      "date": "2022-03-22",
+      "address": "118 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 443000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12EDP7"
+    },
+    {
+      "date": "2022-02-11",
+      "address": "554 MOURNE RD, DRIMNAGH, DUBLIN 12",
+      "price": 322000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12NV27"
+    },
+    {
+      "date": "2022-01-31",
+      "address": "202 MOURNE ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 365000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12X8C1"
+    }
+  ],
+  "totalTransactions": 137
+}

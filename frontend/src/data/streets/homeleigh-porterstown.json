@@ -1,0 +1,161 @@
+{
+  "slug": "homeleigh-porterstown",
+  "stats": {
+    "count": 10,
+    "median": 1282159,
+    "avg": 1336432,
+    "min": 800000,
+    "max": 2350000,
+    "firstYear": 2014,
+    "lastYear": 2023
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1050000,
+      "avg_price": 1050000,
+      "min_price": 1050000,
+      "max_price": 1050000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1475000,
+      "avg_price": 1475000,
+      "min_price": 1475000,
+      "max_price": 1475000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1300000,
+      "avg_price": 1300000,
+      "min_price": 1300000,
+      "max_price": 1300000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1050000,
+      "avg_price": 1050000,
+      "min_price": 1050000,
+      "max_price": 1050000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 1050000,
+      "avg_price": 1050000,
+      "min_price": 800000,
+      "max_price": 1300000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1257159,
+      "avg_price": 1257159,
+      "min_price": 1250000,
+      "max_price": 1264318
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 2350000,
+      "avg_price": 2350000,
+      "min_price": 2350000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1525000,
+      "avg_price": 1525000,
+      "min_price": 1525000,
+      "max_price": 1525000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2023-12-20",
+      "address": "8 HOMELEIGH, PORTERSTOWN, CASTLEKNOCK DUBLIN 15",
+      "price": 1525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15YV0P"
+    },
+    {
+      "date": "2022-07-07",
+      "address": "6 HOMELEIGH, PORTERSTOWN, DUBLIN 15",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15FHK4"
+    },
+    {
+      "date": "2021-11-11",
+      "address": "9 HOMELEIGH, PORTERSTOWN, CASTLEKNOCK",
+      "price": 1264318,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-05",
+      "address": "7 HOMELEIGH, PORTERSTOWN, DUBLIN 15",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15PF5C"
+    },
+    {
+      "date": "2020-08-28",
+      "address": "4 HOMELEIGH, PORTERSTOWN, DUBLIN 15",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15C79P"
+    },
+    {
+      "date": "2020-03-30",
+      "address": "13 HOMELEIGH, PORTERSTOWN, DUBLIN 15",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-29",
+      "address": "9 HOMELEIGH, PORTERSTOWN, CASTLEKNOCK DUBLIN 15",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-21",
+      "address": "18 HOMELEIGH, PORTERSTOWN, DUBLIN 15",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-02",
+      "address": "5 HOMELEIGH, PORTERSTOWN, DUBLIN 15",
+      "price": 1475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-05-14",
+      "address": "7 HOMELEIGH, PORTERSTOWN, DUBLIN 15",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15PF5C"
+    }
+  ],
+  "totalTransactions": 10
+}

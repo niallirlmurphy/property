@@ -1,0 +1,233 @@
+{
+  "slug": "idrone-terrace-blackrock",
+  "stats": {
+    "count": 16,
+    "median": 1410000,
+    "avg": 1579375,
+    "min": 450000,
+    "max": 2950000,
+    "firstYear": 2010,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1200000,
+      "avg_price": 1200000,
+      "min_price": 1200000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1370000,
+      "avg_price": 1370000,
+      "min_price": 1370000,
+      "max_price": 1370000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 1540000,
+      "avg_price": 1540000,
+      "min_price": 1110000,
+      "max_price": 1970000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1050000,
+      "avg_price": 1050000,
+      "min_price": 1050000,
+      "max_price": 1050000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 2127500,
+      "avg_price": 2127500,
+      "min_price": 1305000,
+      "max_price": 2950000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 1315000,
+      "avg_price": 1315000,
+      "min_price": 1180000,
+      "max_price": 1450000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1435000,
+      "avg_price": 1435000,
+      "min_price": 1270000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1900000,
+      "avg_price": 1900000,
+      "min_price": 1900000,
+      "max_price": 1900000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 1482500,
+      "avg_price": 1482500,
+      "min_price": 450000,
+      "max_price": 2515000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2450000,
+      "avg_price": 2450000,
+      "min_price": 2450000,
+      "max_price": 2450000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-01-31",
+      "address": "10 IDRONE TERRACE, BLACKROCK, DUBLIN",
+      "price": 2450000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "A94C3C2"
+    },
+    {
+      "date": "2024-10-01",
+      "address": "20 IDRONE TERRACE, BLACKROCK, DUBLIN",
+      "price": 2515000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "A94NN93"
+    },
+    {
+      "date": "2024-04-12",
+      "address": "8 IDRONE TERRACE, BLACKROCK, DUBLIN",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94RH97"
+    },
+    {
+      "date": "2022-03-04",
+      "address": "13 IDRONE TERRACE, BLACKROCK, DUBLIN",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94XV82"
+    },
+    {
+      "date": "2021-12-15",
+      "address": "19 IDRONE TERRACE, BLACKROCK, DUBLIN",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94N9C4"
+    },
+    {
+      "date": "2021-12-02",
+      "address": "15  IDRONE TERRACE, BLACKROCK, COUNTY DUBLIN",
+      "price": 1270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94F240"
+    },
+    {
+      "date": "2020-11-25",
+      "address": "17 IDRONE TERRACE, BLACKROCK, DUBLIN",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-30",
+      "address": "7 IDRONE TERRACE, BLACKROCK, DUBLIN",
+      "price": 1180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-09",
+      "address": "19 IDRONE TERRACE, BLACKROCK, DUBLIN",
+      "price": 1305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94N9C4"
+    },
+    {
+      "date": "2019-06-24",
+      "address": "1 IDRONE TERRACE, BLACKROCK, DUBLIN",
+      "price": 2950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-02",
+      "address": "6 IDRONE TERRACE, BLACKROCK, CO DUBLIN",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-11-16",
+      "address": "11 IDRONE TERRACE, BLACKROCK, DUN LAOGHAIRE",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-03",
+      "address": "11 IDRONE TERRACE, BLACKROCK, DUN LAOGHAIRE",
+      "price": 1110000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-07-03",
+      "address": "25 IDRONE TERRACE, BLACKROCK, DUBLIN",
+      "price": 1970000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-03-11",
+      "address": "4 IDRONE TERRACE, BLACKROCK",
+      "price": 1370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-12-17",
+      "address": "1 Idrone Terrace, Blackrock",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 16
+}

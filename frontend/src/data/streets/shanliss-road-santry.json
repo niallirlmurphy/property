@@ -1,0 +1,553 @@
+{
+  "slug": "shanliss-road-santry",
+  "stats": {
+    "count": 91,
+    "median": 350000,
+    "avg": 345802,
+    "min": 100000,
+    "max": 602500,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 5,
+      "median_price": 245000,
+      "avg_price": 249100,
+      "min_price": 223000,
+      "max_price": 280000
+    },
+    {
+      "year": 2011,
+      "count": 3,
+      "median_price": 217500,
+      "avg_price": 211833,
+      "min_price": 198000,
+      "max_price": 220000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 190000,
+      "avg_price": 190000,
+      "min_price": 170000,
+      "max_price": 210000
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 198000,
+      "avg_price": 202667,
+      "min_price": 170000,
+      "max_price": 240000
+    },
+    {
+      "year": 2014,
+      "count": 7,
+      "median_price": 258117,
+      "avg_price": 266302,
+      "min_price": 240000,
+      "max_price": 316000
+    },
+    {
+      "year": 2015,
+      "count": 4,
+      "median_price": 190000,
+      "avg_price": 195000,
+      "min_price": 100000,
+      "max_price": 300000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 306500,
+      "avg_price": 308500,
+      "min_price": 291000,
+      "max_price": 330000
+    },
+    {
+      "year": 2017,
+      "count": 12,
+      "median_price": 366500,
+      "avg_price": 363333,
+      "min_price": 276000,
+      "max_price": 415000
+    },
+    {
+      "year": 2018,
+      "count": 8,
+      "median_price": 342500,
+      "avg_price": 341250,
+      "min_price": 200000,
+      "max_price": 490000
+    },
+    {
+      "year": 2019,
+      "count": 7,
+      "median_price": 365000,
+      "avg_price": 364500,
+      "min_price": 320000,
+      "max_price": 435000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 362000,
+      "avg_price": 342600,
+      "min_price": 242000,
+      "max_price": 387500
+    },
+    {
+      "year": 2021,
+      "count": 4,
+      "median_price": 373750,
+      "avg_price": 354375,
+      "min_price": 260000,
+      "max_price": 410000
+    },
+    {
+      "year": 2022,
+      "count": 5,
+      "median_price": 457000,
+      "avg_price": 442300,
+      "min_price": 395000,
+      "max_price": 472500
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 405000,
+      "avg_price": 413333,
+      "min_price": 390000,
+      "max_price": 445000
+    },
+    {
+      "year": 2024,
+      "count": 9,
+      "median_price": 462589,
+      "avg_price": 461658,
+      "min_price": 313333,
+      "max_price": 550000
+    },
+    {
+      "year": 2025,
+      "count": 6,
+      "median_price": 465200,
+      "avg_price": 415400,
+      "min_price": 192500,
+      "max_price": 602500
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 455000,
+      "avg_price": 462500,
+      "min_price": 450000,
+      "max_price": 490000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-15",
+      "address": "99 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09P2R6"
+    },
+    {
+      "date": "2026-05-15",
+      "address": "99 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09P2R6"
+    },
+    {
+      "date": "2026-03-18",
+      "address": "152 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 490000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D09V6P3"
+    },
+    {
+      "date": "2026-03-03",
+      "address": "121 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 450000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09T2F9"
+    },
+    {
+      "date": "2025-11-07",
+      "address": "200 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 192500,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "D09E1W7"
+    },
+    {
+      "date": "2025-08-27",
+      "address": "16 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 512000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09AH51"
+    },
+    {
+      "date": "2025-08-14",
+      "address": "7 SHANLISS ROAD, SANTRY, DUBLIN 9",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09KP73"
+    },
+    {
+      "date": "2025-08-08",
+      "address": "161 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 430000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09E5F3"
+    },
+    {
+      "date": "2025-05-23",
+      "address": "56 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 602500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09AR22"
+    },
+    {
+      "date": "2025-01-21",
+      "address": "80 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 500400,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09H425"
+    },
+    {
+      "date": "2024-12-11",
+      "address": "174 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09N8F8"
+    },
+    {
+      "date": "2024-11-15",
+      "address": "150 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09Y7H1"
+    },
+    {
+      "date": "2024-11-08",
+      "address": "143 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 490000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09R8C8"
+    },
+    {
+      "date": "2024-10-04",
+      "address": "202 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 462589,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09T9W4"
+    },
+    {
+      "date": "2024-08-22",
+      "address": "71 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09YP71"
+    },
+    {
+      "date": "2024-04-29",
+      "address": "37 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 313333,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09W132"
+    },
+    {
+      "date": "2024-02-06",
+      "address": "63 SHANLISS RD, SANTRY, DUBLIN",
+      "price": 454000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09X883"
+    },
+    {
+      "date": "2024-01-25",
+      "address": "176 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09A3K8"
+    },
+    {
+      "date": "2024-01-04",
+      "address": "117 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09W9A2"
+    },
+    {
+      "date": "2023-12-01",
+      "address": "81 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09WN60"
+    },
+    {
+      "date": "2023-04-05",
+      "address": "9 SHANLISS ROAD, SANTRY, DUBLIN 9",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09W544"
+    },
+    {
+      "date": "2023-03-07",
+      "address": "128 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09P8X8"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "16 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 395000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09AH51"
+    },
+    {
+      "date": "2022-09-29",
+      "address": "18 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 463000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09N2F3"
+    },
+    {
+      "date": "2022-07-04",
+      "address": "20A SHANLISS ROAD, SANTRY, DUBLIN 9",
+      "price": 472500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09RPT0"
+    },
+    {
+      "date": "2022-03-14",
+      "address": "57 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 424000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09N622"
+    },
+    {
+      "date": "2022-01-28",
+      "address": "98 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 457000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09K4H6"
+    },
+    {
+      "date": "2021-09-30",
+      "address": "14 SHANLISS ROAD, SANTRY, DUBLIN 9",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09X324"
+    },
+    {
+      "date": "2021-06-23",
+      "address": "112 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09K8R2"
+    },
+    {
+      "date": "2021-02-19",
+      "address": "113 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 347500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-20",
+      "address": "206A SHANLISS RD, SANTRY, DUBLIN",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-02",
+      "address": "50 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 387500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-05",
+      "address": "93 SHANLISS RD, SANTRY, DUBLIN 11",
+      "price": 242000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-29",
+      "address": "10 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-17",
+      "address": "95 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 336500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-07",
+      "address": "155 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 362000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-19",
+      "address": "91 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-11",
+      "address": "71 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 384000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09YP71"
+    },
+    {
+      "date": "2019-10-09",
+      "address": "133A Shanliss Road, Santry",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-05",
+      "address": "108 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-01",
+      "address": "20 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-05",
+      "address": "62 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-05",
+      "address": "88 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 347500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-21",
+      "address": "149 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-30",
+      "address": "1A SHANLISS RD, SANTRY, DUBLIN",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-19",
+      "address": "164 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-08",
+      "address": "77 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-05",
+      "address": "169 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-22",
+      "address": "143 SHANLISS RD, SANTRY, DUBLIN 9",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09R8C8"
+    },
+    {
+      "date": "2018-04-16",
+      "address": "135A Shanliss Road, Santry, Dublin 9",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 91
+}

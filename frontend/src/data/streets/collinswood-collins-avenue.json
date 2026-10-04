@@ -1,0 +1,553 @@
+{
+  "slug": "collinswood-collins-avenue",
+  "stats": {
+    "count": 107,
+    "median": 415112,
+    "avg": 413409,
+    "min": 197500,
+    "max": 710000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 338000,
+      "avg_price": 325250,
+      "min_price": 275000,
+      "max_price": 350000
+    },
+    {
+      "year": 2011,
+      "count": 8,
+      "median_price": 247500,
+      "avg_price": 258125,
+      "min_price": 230000,
+      "max_price": 310000
+    },
+    {
+      "year": 2012,
+      "count": 5,
+      "median_price": 265000,
+      "avg_price": 283422,
+      "min_price": 220000,
+      "max_price": 415112
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 248500,
+      "avg_price": 243833,
+      "min_price": 220000,
+      "max_price": 263000
+    },
+    {
+      "year": 2014,
+      "count": 8,
+      "median_price": 351500,
+      "avg_price": 349875,
+      "min_price": 264000,
+      "max_price": 434000
+    },
+    {
+      "year": 2015,
+      "count": 9,
+      "median_price": 345000,
+      "avg_price": 358511,
+      "min_price": 310000,
+      "max_price": 435000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 378000,
+      "avg_price": 378000,
+      "min_price": 378000,
+      "max_price": 378000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 413750,
+      "avg_price": 413375,
+      "min_price": 400000,
+      "max_price": 426000
+    },
+    {
+      "year": 2018,
+      "count": 3,
+      "median_price": 405000,
+      "avg_price": 410000,
+      "min_price": 390000,
+      "max_price": 435000
+    },
+    {
+      "year": 2019,
+      "count": 16,
+      "median_price": 427000,
+      "avg_price": 430031,
+      "min_price": 197500,
+      "max_price": 560000
+    },
+    {
+      "year": 2020,
+      "count": 6,
+      "median_price": 401000,
+      "avg_price": 416917,
+      "min_price": 380000,
+      "max_price": 470000
+    },
+    {
+      "year": 2021,
+      "count": 15,
+      "median_price": 450000,
+      "avg_price": 448000,
+      "min_price": 366000,
+      "max_price": 525000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 501000,
+      "avg_price": 502000,
+      "min_price": 485000,
+      "max_price": 520000
+    },
+    {
+      "year": 2023,
+      "count": 6,
+      "median_price": 505000,
+      "avg_price": 510333,
+      "min_price": 495000,
+      "max_price": 530000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 700000,
+      "avg_price": 635667,
+      "min_price": 497000,
+      "max_price": 710000
+    },
+    {
+      "year": 2025,
+      "count": 7,
+      "median_price": 500000,
+      "avg_price": 495857,
+      "min_price": 450000,
+      "max_price": 531000
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 555000,
+      "avg_price": 564167,
+      "min_price": 525000,
+      "max_price": 640000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-07",
+      "address": "115 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 545000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09E2Y2"
+    },
+    {
+      "date": "2026-08-13",
+      "address": "26 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 525000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09E3F4"
+    },
+    {
+      "date": "2026-08-12",
+      "address": "134 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 560000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09E2F9"
+    },
+    {
+      "date": "2026-07-03",
+      "address": "224 COLLINSWOOD, COLLINS AVE, DRUMCONDRA DUBLIN 9",
+      "price": 550000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09C7P2"
+    },
+    {
+      "date": "2026-06-23",
+      "address": "312 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 640000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09E7C9"
+    },
+    {
+      "date": "2026-03-06",
+      "address": "359 COLLINSWOOD, COLLINS AVE, WHITEHALL DUBLIN 9",
+      "price": 565000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09H9C0"
+    },
+    {
+      "date": "2025-12-17",
+      "address": "325 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 450000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D09F8P2"
+    },
+    {
+      "date": "2025-11-12",
+      "address": "212 COLLINSWOOD, COLLINS AVE, BEAUMONT DUBLIN 9",
+      "price": 515000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D09Y9H0"
+    },
+    {
+      "date": "2025-10-30",
+      "address": "246 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 500000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09V5W9"
+    },
+    {
+      "date": "2025-08-07",
+      "address": "89 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 510000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09A2W1"
+    },
+    {
+      "date": "2025-04-17",
+      "address": "423 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 531000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09T2N4"
+    },
+    {
+      "date": "2025-02-25",
+      "address": "264 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 485000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09A8X3"
+    },
+    {
+      "date": "2025-01-31",
+      "address": "235 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09P9T3"
+    },
+    {
+      "date": "2024-10-17",
+      "address": "231 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 497000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09V6X0"
+    },
+    {
+      "date": "2024-07-01",
+      "address": "110 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 710000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09N4T2"
+    },
+    {
+      "date": "2024-06-28",
+      "address": "326 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
+      "price": 700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09KTW8"
+    },
+    {
+      "date": "2023-11-06",
+      "address": "369 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 529000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09X9C3"
+    },
+    {
+      "date": "2023-09-20",
+      "address": "148 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 498000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09T2C9"
+    },
+    {
+      "date": "2023-08-18",
+      "address": "57 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09K2H3"
+    },
+    {
+      "date": "2023-07-20",
+      "address": "223 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09Y5P2"
+    },
+    {
+      "date": "2023-03-29",
+      "address": "175 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09V3K6"
+    },
+    {
+      "date": "2023-01-19",
+      "address": "339 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09Y2N0"
+    },
+    {
+      "date": "2022-11-03",
+      "address": "214 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09N9Y0"
+    },
+    {
+      "date": "2022-09-29",
+      "address": "46 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09T9Y7"
+    },
+    {
+      "date": "2022-01-28",
+      "address": "384 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 501000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09K6X4"
+    },
+    {
+      "date": "2021-11-05",
+      "address": "238 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 512000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09W8N3"
+    },
+    {
+      "date": "2021-10-29",
+      "address": "60 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09R6K3"
+    },
+    {
+      "date": "2021-09-23",
+      "address": "151 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09X9Y4"
+    },
+    {
+      "date": "2021-09-09",
+      "address": "139 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 496000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09T9C2"
+    },
+    {
+      "date": "2021-08-18",
+      "address": "57 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
+      "price": 422000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09K2H3"
+    },
+    {
+      "date": "2021-07-27",
+      "address": "386 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09C8Y2"
+    },
+    {
+      "date": "2021-07-15",
+      "address": "326 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09KTW8"
+    },
+    {
+      "date": "2021-07-15",
+      "address": "254 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09Y2R3"
+    },
+    {
+      "date": "2021-07-07",
+      "address": "70 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
+      "price": 525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09N5K3"
+    },
+    {
+      "date": "2021-06-11",
+      "address": "165 COLLINSWOOD, COLLINS AVE, BEAUMONT DUBLIN 9",
+      "price": 463000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09V4A6"
+    },
+    {
+      "date": "2021-06-11",
+      "address": "287 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09P2F7"
+    },
+    {
+      "date": "2021-03-11",
+      "address": "59 COLLINSWOOD, COLLINS AVE, WHITEHALL DUBLIN 9",
+      "price": 386000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-28",
+      "address": "141 COLLINSWOOD, COLLINS AVE, BEAUMOUNT DUBLIN 9",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-15",
+      "address": "164 COLLINSWOOD, COLLINS AVE, DUBLIN",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-12",
+      "address": "293 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 366000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-17",
+      "address": "391 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-07",
+      "address": "377 COLLINSWOOD, COLLINS AVE, BEAUMOUNT DUBLIN 9",
+      "price": 384000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-13",
+      "address": "357 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-09",
+      "address": "143 COLLINSWOOD, COLLINS AVE, BEAUMONT DUBLIN 9",
+      "price": 465500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-13",
+      "address": "63 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 412000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-17",
+      "address": "354 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-18",
+      "address": "380 COLLINSWOOD, COLLINS AVE, SANTRY DUBLIN 9",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-11",
+      "address": "421 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-03",
+      "address": "336 COLLINSWOOD, COLLINS AVE, DUBLIN 9",
+      "price": 466000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-24",
+      "address": "73 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
+      "price": 490000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 107
+}

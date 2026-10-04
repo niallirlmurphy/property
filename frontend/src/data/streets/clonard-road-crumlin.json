@@ -1,0 +1,553 @@
+{
+  "slug": "clonard-road-crumlin",
+  "stats": {
+    "count": 102,
+    "median": 275000,
+    "avg": 285013,
+    "min": 70000,
+    "max": 612000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6,
+      "median_price": 214750,
+      "avg_price": 211583,
+      "min_price": 129500,
+      "max_price": 332000
+    },
+    {
+      "year": 2011,
+      "count": 4,
+      "median_price": 117500,
+      "avg_price": 126250,
+      "min_price": 100000,
+      "max_price": 170000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 110000,
+      "avg_price": 110000,
+      "min_price": 100000,
+      "max_price": 120000
+    },
+    {
+      "year": 2013,
+      "count": 6,
+      "median_price": 142000,
+      "avg_price": 145583,
+      "min_price": 95000,
+      "max_price": 217000
+    },
+    {
+      "year": 2014,
+      "count": 6,
+      "median_price": 206500,
+      "avg_price": 206775,
+      "min_price": 127500,
+      "max_price": 275000
+    },
+    {
+      "year": 2015,
+      "count": 3,
+      "median_price": 195000,
+      "avg_price": 195000,
+      "min_price": 160000,
+      "max_price": 230000
+    },
+    {
+      "year": 2016,
+      "count": 6,
+      "median_price": 217500,
+      "avg_price": 231250,
+      "min_price": 180000,
+      "max_price": 323000
+    },
+    {
+      "year": 2017,
+      "count": 5,
+      "median_price": 265000,
+      "avg_price": 273220,
+      "min_price": 249950,
+      "max_price": 315000
+    },
+    {
+      "year": 2018,
+      "count": 10,
+      "median_price": 277500,
+      "avg_price": 292500,
+      "min_price": 250000,
+      "max_price": 408000
+    },
+    {
+      "year": 2019,
+      "count": 6,
+      "median_price": 252500,
+      "avg_price": 250000,
+      "min_price": 165000,
+      "max_price": 315000
+    },
+    {
+      "year": 2020,
+      "count": 8,
+      "median_price": 261000,
+      "avg_price": 261602,
+      "min_price": 183820,
+      "max_price": 346000
+    },
+    {
+      "year": 2021,
+      "count": 6,
+      "median_price": 317000,
+      "avg_price": 300500,
+      "min_price": 252000,
+      "max_price": 330000
+    },
+    {
+      "year": 2022,
+      "count": 6,
+      "median_price": 352500,
+      "avg_price": 372667,
+      "min_price": 306000,
+      "max_price": 525000
+    },
+    {
+      "year": 2023,
+      "count": 7,
+      "median_price": 385000,
+      "avg_price": 368714,
+      "min_price": 270000,
+      "max_price": 450000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 387500,
+      "avg_price": 343333,
+      "min_price": 70000,
+      "max_price": 485000
+    },
+    {
+      "year": 2025,
+      "count": 8,
+      "median_price": 380500,
+      "avg_price": 379777,
+      "min_price": 268215,
+      "max_price": 450000
+    },
+    {
+      "year": 2026,
+      "count": 7,
+      "median_price": 475000,
+      "avg_price": 484000,
+      "min_price": 355000,
+      "max_price": 612000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-18",
+      "address": "219A CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 540000,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "D12F993"
+    },
+    {
+      "date": "2026-05-13",
+      "address": "9 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12HF80"
+    },
+    {
+      "date": "2026-04-09",
+      "address": "116 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 453000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12X3R2"
+    },
+    {
+      "date": "2026-02-12",
+      "address": "142 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 355000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12H9E4"
+    },
+    {
+      "date": "2026-02-03",
+      "address": "111 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 475000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D12V6X5"
+    },
+    {
+      "date": "2026-01-30",
+      "address": "304 CLONARD ROAD, CRUMLIN, DUBLIN 12",
+      "price": 612000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12H6W7"
+    },
+    {
+      "date": "2026-01-13",
+      "address": "72 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 453000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12XNX9"
+    },
+    {
+      "date": "2025-10-31",
+      "address": "59 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 426000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12E3X0"
+    },
+    {
+      "date": "2025-10-10",
+      "address": "75 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 345000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12W8X5"
+    },
+    {
+      "date": "2025-08-28",
+      "address": "13 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12HV06"
+    },
+    {
+      "date": "2025-05-30",
+      "address": "192 CLONARD ROAD, CRUMLIN, DUBLIN 12",
+      "price": 268215,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y5C7"
+    },
+    {
+      "date": "2025-04-29",
+      "address": "238 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 403000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D12H5N0"
+    },
+    {
+      "date": "2025-03-25",
+      "address": "117 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 343000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12X3N0"
+    },
+    {
+      "date": "2025-03-23",
+      "address": "178 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 445000,
+      "bedrooms": 2,
+      "propertyType": "house",
+      "eircode": "D12P8C5"
+    },
+    {
+      "date": "2025-01-30",
+      "address": "208 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 358000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12X7TK"
+    },
+    {
+      "date": "2024-09-12",
+      "address": "70 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 70000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F5PC"
+    },
+    {
+      "date": "2024-08-20",
+      "address": "25 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12DC44"
+    },
+    {
+      "date": "2024-06-05",
+      "address": "42 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12H7VY"
+    },
+    {
+      "date": "2024-04-25",
+      "address": "234 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12N5K6"
+    },
+    {
+      "date": "2024-04-04",
+      "address": "146 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F2R8"
+    },
+    {
+      "date": "2024-01-24",
+      "address": "280 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12A2V3"
+    },
+    {
+      "date": "2023-11-13",
+      "address": "16 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12TK74"
+    },
+    {
+      "date": "2023-10-31",
+      "address": "77 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12T0H1"
+    },
+    {
+      "date": "2023-10-19",
+      "address": "90 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K4P2"
+    },
+    {
+      "date": "2023-10-10",
+      "address": "217 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12C2C2"
+    },
+    {
+      "date": "2023-05-17",
+      "address": "252 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12V090"
+    },
+    {
+      "date": "2023-01-16",
+      "address": "190 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F58H"
+    },
+    {
+      "date": "2023-01-13",
+      "address": "185 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 346000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12A5Y6"
+    },
+    {
+      "date": "2022-12-12",
+      "address": "290 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 306000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E9C3"
+    },
+    {
+      "date": "2022-09-26",
+      "address": "25 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12DC44"
+    },
+    {
+      "date": "2022-09-21",
+      "address": "120 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y2V6"
+    },
+    {
+      "date": "2022-04-07",
+      "address": "11 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12RF83"
+    },
+    {
+      "date": "2022-03-10",
+      "address": "113 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12A0E0"
+    },
+    {
+      "date": "2022-03-10",
+      "address": "58 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12N5YE"
+    },
+    {
+      "date": "2021-11-15",
+      "address": "62 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y5DA"
+    },
+    {
+      "date": "2021-11-05",
+      "address": "111 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 314000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D12V6X5"
+    },
+    {
+      "date": "2021-09-22",
+      "address": "37 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 262000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12AC64"
+    },
+    {
+      "date": "2021-06-25",
+      "address": "200 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12H2V8"
+    },
+    {
+      "date": "2021-03-04",
+      "address": "244 CLONARD ROAD, CRUMLIN, DUBLIN 12",
+      "price": 252000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-18",
+      "address": "149 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-23",
+      "address": "158 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-27",
+      "address": "236 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-26",
+      "address": "25 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 267000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12DC44"
+    },
+    {
+      "date": "2020-10-22",
+      "address": "93 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 183820,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-06",
+      "address": "33 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-02",
+      "address": "65 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 276000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-12",
+      "address": "216 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-16",
+      "address": "304 CLONARD ROAD, CRUMLIN, DUBLIN 12",
+      "price": 346000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12H6W7"
+    },
+    {
+      "date": "2019-11-20",
+      "address": "182 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-10",
+      "address": "149 CLONARD RD, CRUMLIN, DUBLIN 12",
+      "price": 165000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 102
+}

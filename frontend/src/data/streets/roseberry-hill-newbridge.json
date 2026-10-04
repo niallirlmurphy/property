@@ -1,0 +1,545 @@
+{
+  "slug": "roseberry-hill-newbridge",
+  "stats": {
+    "count": 116,
+    "median": 275500,
+    "avg": 290985,
+    "min": 140000,
+    "max": 552000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 176211,
+      "avg_price": 176211,
+      "min_price": 176211,
+      "max_price": 176211
+    },
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 165000,
+      "avg_price": 165000,
+      "min_price": 160000,
+      "max_price": 170000
+    },
+    {
+      "year": 2013,
+      "count": 4,
+      "median_price": 182500,
+      "avg_price": 178681,
+      "min_price": 142725,
+      "max_price": 207000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 175000,
+      "avg_price": 178333,
+      "min_price": 140000,
+      "max_price": 220000
+    },
+    {
+      "year": 2015,
+      "count": 3,
+      "median_price": 200000,
+      "avg_price": 198333,
+      "min_price": 170000,
+      "max_price": 225000
+    },
+    {
+      "year": 2016,
+      "count": 8,
+      "median_price": 227500,
+      "avg_price": 225312,
+      "min_price": 169000,
+      "max_price": 270000
+    },
+    {
+      "year": 2017,
+      "count": 21,
+      "median_price": 235000,
+      "avg_price": 246109,
+      "min_price": 185000,
+      "max_price": 334500
+    },
+    {
+      "year": 2018,
+      "count": 5,
+      "median_price": 265000,
+      "avg_price": 269800,
+      "min_price": 220500,
+      "max_price": 350000
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 261250,
+      "avg_price": 267688,
+      "min_price": 220500,
+      "max_price": 327000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 254000,
+      "avg_price": 250600,
+      "min_price": 180000,
+      "max_price": 325000
+    },
+    {
+      "year": 2021,
+      "count": 10,
+      "median_price": 323750,
+      "avg_price": 313150,
+      "min_price": 214000,
+      "max_price": 370000
+    },
+    {
+      "year": 2022,
+      "count": 9,
+      "median_price": 280000,
+      "avg_price": 285278,
+      "min_price": 213000,
+      "max_price": 380000
+    },
+    {
+      "year": 2023,
+      "count": 11,
+      "median_price": 342000,
+      "avg_price": 362091,
+      "min_price": 279000,
+      "max_price": 490000
+    },
+    {
+      "year": 2024,
+      "count": 13,
+      "median_price": 351000,
+      "avg_price": 354923,
+      "min_price": 285000,
+      "max_price": 444000
+    },
+    {
+      "year": 2025,
+      "count": 7,
+      "median_price": 420000,
+      "avg_price": 422857,
+      "min_price": 345000,
+      "max_price": 552000
+    },
+    {
+      "year": 2026,
+      "count": 5,
+      "median_price": 470000,
+      "avg_price": 453600,
+      "min_price": 405000,
+      "max_price": 495000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-02",
+      "address": "110 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 405000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W12KR91"
+    },
+    {
+      "date": "2026-03-18",
+      "address": "257 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 470000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W12TY30"
+    },
+    {
+      "date": "2026-03-09",
+      "address": "162 ROSEBERRY HILL, NEWBRIDGE, COUNTY KIILDARE",
+      "price": 495000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W12A9W4"
+    },
+    {
+      "date": "2026-01-26",
+      "address": "196 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 480000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "W12VY73"
+    },
+    {
+      "date": "2026-01-12",
+      "address": "107 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 418000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W12XT91"
+    },
+    {
+      "date": "2025-12-19",
+      "address": "40 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 552000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "W12Y429"
+    },
+    {
+      "date": "2025-12-04",
+      "address": "111 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 420000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W12R766"
+    },
+    {
+      "date": "2025-11-13",
+      "address": "79 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 365000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W12NY33"
+    },
+    {
+      "date": "2025-10-20",
+      "address": "22 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 436000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W12EC81"
+    },
+    {
+      "date": "2025-10-01",
+      "address": "192 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 472000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "W12HY54"
+    },
+    {
+      "date": "2025-06-19",
+      "address": "76 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 370000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W12F892"
+    },
+    {
+      "date": "2025-02-06",
+      "address": "86 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 345000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W12K544"
+    },
+    {
+      "date": "2024-11-01",
+      "address": "24 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 327000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12AH32"
+    },
+    {
+      "date": "2024-10-23",
+      "address": "55 ROSEBERRY HILL, NEWBRIDGE, CO KILDARE",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12TK51"
+    },
+    {
+      "date": "2024-10-02",
+      "address": "149 ROSEBERRY HILL, NEWBRIDGE, CO KILDARE",
+      "price": 444000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12VK71"
+    },
+    {
+      "date": "2024-08-21",
+      "address": "212 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12X771"
+    },
+    {
+      "date": "2024-08-14",
+      "address": "116 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12NN79"
+    },
+    {
+      "date": "2024-08-02",
+      "address": "184 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12K753"
+    },
+    {
+      "date": "2024-05-29",
+      "address": "91 ROSEBERRY HILL, NEWBRIDGE, CO KILDARE",
+      "price": 303000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12DX57"
+    },
+    {
+      "date": "2024-04-26",
+      "address": "282 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12X228"
+    },
+    {
+      "date": "2024-04-08",
+      "address": "127 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12AN23"
+    },
+    {
+      "date": "2024-01-30",
+      "address": "52 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 312000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12A314"
+    },
+    {
+      "date": "2024-01-16",
+      "address": "89 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 288000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12W258"
+    },
+    {
+      "date": "2024-01-12",
+      "address": "84 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 351000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12P4W3"
+    },
+    {
+      "date": "2024-01-04",
+      "address": "159 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 434000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12T320"
+    },
+    {
+      "date": "2023-12-19",
+      "address": "19 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 342000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12AR41"
+    },
+    {
+      "date": "2023-09-11",
+      "address": "37 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 490000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12KW11"
+    },
+    {
+      "date": "2023-08-23",
+      "address": "219 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 327000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12YH31"
+    },
+    {
+      "date": "2023-07-28",
+      "address": "15 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 279000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12K681"
+    },
+    {
+      "date": "2023-07-28",
+      "address": "221 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12NP59"
+    },
+    {
+      "date": "2023-06-26",
+      "address": "158 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12N541"
+    },
+    {
+      "date": "2023-05-26",
+      "address": "244 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12TY28"
+    },
+    {
+      "date": "2023-02-28",
+      "address": "104 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12A335"
+    },
+    {
+      "date": "2023-02-23",
+      "address": "38 ROSEBERRY HILL, NEWBRIDGE",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12W520"
+    },
+    {
+      "date": "2023-02-22",
+      "address": "185 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12H950"
+    },
+    {
+      "date": "2023-02-07",
+      "address": "35 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12WP97"
+    },
+    {
+      "date": "2022-10-18",
+      "address": "243 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12T206"
+    },
+    {
+      "date": "2022-09-13",
+      "address": "87 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 276000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12K248"
+    },
+    {
+      "date": "2022-08-16",
+      "address": "181 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 322500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12F880"
+    },
+    {
+      "date": "2022-07-29",
+      "address": "197 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 224000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12CF96"
+    },
+    {
+      "date": "2022-07-01",
+      "address": "130 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 267000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12DR90"
+    },
+    {
+      "date": "2022-05-05",
+      "address": "194 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 302000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12TC79"
+    },
+    {
+      "date": "2022-02-21",
+      "address": "3 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12E162"
+    },
+    {
+      "date": "2022-01-12",
+      "address": "93 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 303000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12Y732"
+    },
+    {
+      "date": "2022-01-05",
+      "address": "23 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 213000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12X236"
+    },
+    {
+      "date": "2021-10-28",
+      "address": "150 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12AY20"
+    },
+    {
+      "date": "2021-10-20",
+      "address": "179 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12CH56"
+    },
+    {
+      "date": "2021-09-28",
+      "address": "100 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12P082"
+    },
+    {
+      "date": "2021-09-28",
+      "address": "162 ROSEBERRY HILL, NEWBRIDGE, COUNTY KIILDARE",
+      "price": 352000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W12A9W4"
+    },
+    {
+      "date": "2021-07-23",
+      "address": "146 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 341000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12X017"
+    }
+  ],
+  "totalTransactions": 116
+}

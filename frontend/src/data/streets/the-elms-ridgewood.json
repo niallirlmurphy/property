@@ -1,0 +1,513 @@
+{
+  "slug": "the-elms-ridgewood",
+  "stats": {
+    "count": 93,
+    "median": 315000,
+    "avg": 313095,
+    "min": 193760,
+    "max": 535000,
+    "firstYear": 2014,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 17,
+      "median_price": 254625,
+      "avg_price": 250966,
+      "min_price": 193760,
+      "max_price": 365000
+    },
+    {
+      "year": 2015,
+      "count": 33,
+      "median_price": 268722,
+      "avg_price": 276982,
+      "min_price": 207048,
+      "max_price": 330400
+    },
+    {
+      "year": 2016,
+      "count": 10,
+      "median_price": 287312,
+      "avg_price": 294984,
+      "min_price": 249985,
+      "max_price": 382500
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 324229,
+      "avg_price": 324229,
+      "min_price": 324229,
+      "max_price": 324229
+    },
+    {
+      "year": 2019,
+      "count": 18,
+      "median_price": 350220,
+      "avg_price": 362296,
+      "min_price": 342731,
+      "max_price": 418502
+    },
+    {
+      "year": 2020,
+      "count": 6,
+      "median_price": 383832,
+      "avg_price": 377111,
+      "min_price": 270000,
+      "max_price": 435000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 318000,
+      "avg_price": 318000,
+      "min_price": 318000,
+      "max_price": 318000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 455000,
+      "avg_price": 455000,
+      "min_price": 435000,
+      "max_price": 475000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 455000,
+      "avg_price": 455000,
+      "min_price": 455000,
+      "max_price": 455000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 455000,
+      "avg_price": 455000,
+      "min_price": 425000,
+      "max_price": 485000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 535000,
+      "avg_price": 535000,
+      "min_price": 535000,
+      "max_price": 535000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 525000,
+      "avg_price": 525000,
+      "min_price": 525000,
+      "max_price": 525000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-02-10",
+      "address": "42 THE ELMS, RIDGEWOOD, FOREST ROAD SWORDS",
+      "price": 525000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "K67AE64"
+    },
+    {
+      "date": "2025-12-19",
+      "address": "55 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 535000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "K67C7F3"
+    },
+    {
+      "date": "2024-11-26",
+      "address": "19 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67A4T1"
+    },
+    {
+      "date": "2024-11-06",
+      "address": "37 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67VX45"
+    },
+    {
+      "date": "2023-12-14",
+      "address": "29 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67WR98"
+    },
+    {
+      "date": "2022-12-05",
+      "address": "46 THE ELMS, RIDGEWOOD, FORREST ROAD",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67E7R0"
+    },
+    {
+      "date": "2022-10-19",
+      "address": "65 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67W9K1"
+    },
+    {
+      "date": "2021-08-23",
+      "address": "3 THE ELMS, RIDGEWOOD, FOREST ROAD SWORDS",
+      "price": 318000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67XE02"
+    },
+    {
+      "date": "2020-12-02",
+      "address": "26 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-18",
+      "address": "47 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-22",
+      "address": "53 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-25",
+      "address": "7 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-10",
+      "address": "75 The Elms, Ridgewood, Swords",
+      "price": 387665,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-22",
+      "address": "25 THE ELMS, RIDGEWOOD, FORREST ROAD SWORDS",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-25",
+      "address": "92  The Elms, Ridgewood, Forrest Road",
+      "price": 374449,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-21",
+      "address": "64 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-25",
+      "address": "76 The Elms, Ridgewood, Forest Road",
+      "price": 418502,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-22",
+      "address": "48 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 346500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-26",
+      "address": "91 The Elms, Ridgewood, Forrest  Road",
+      "price": 374449,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-20",
+      "address": "79 the elms, ridgewood, swords",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-13",
+      "address": "84 The Elms, Ridgewood, Swords",
+      "price": 348018,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-10",
+      "address": "89 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 374449,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-05",
+      "address": "78 The Elms, Ridgewood, Swords",
+      "price": 388986,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-25",
+      "address": "86 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 348018,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-23",
+      "address": "77 The Elms, Ridgewood, Swords",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-23",
+      "address": "83 The Elms, Ridgewood, Swords",
+      "price": 348018,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-28",
+      "address": "82 The Elms, Ridgewood, Swords",
+      "price": 348017,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-27",
+      "address": "80 the elms, ridgewood, swords",
+      "price": 348017,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-21",
+      "address": "88 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 348018,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-06",
+      "address": "90 The Elms, Ridgewood, Forrest Road",
+      "price": 374449,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-31",
+      "address": "81 the elms, ridgewood, forrest road",
+      "price": 348017,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-10",
+      "address": "85 THE ELMS, ridgewood, swords",
+      "price": 342731,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-03",
+      "address": "10 The Elms, Ridgewood, Swords",
+      "price": 324229,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-02",
+      "address": "58 The Elms, Ridgewood, Swords",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-05-13",
+      "address": "20 The Elms, Ridgewood, Forest Road",
+      "price": 382500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-04-28",
+      "address": "11 The Elms, Ridgewood, Forrest Road",
+      "price": 324229,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-04-28",
+      "address": "25 The Elms, Ridgewood, Forrest Road",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-03-09",
+      "address": "12 The Elms, Ridgewood, Forrest Road",
+      "price": 324230,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-02-23",
+      "address": "44 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 254625,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-02-05",
+      "address": "51 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 254625,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-02-05",
+      "address": "59 The Elms, Ridgewood, Swords",
+      "price": 249985,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-02-05",
+      "address": "56 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 254625,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-01-22",
+      "address": "47 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 254625,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-12-22",
+      "address": "48 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 254625,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-12-21",
+      "address": "68 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 254625,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-11-12",
+      "address": "14 The Elms, Ridgewood, Swords",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-10-20",
+      "address": "52  The Elms, Ridgewood, Swords",
+      "price": 249985,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-10-16",
+      "address": "60 THE ELMS, RIDGEWOOD, SWORDS",
+      "price": 254625,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67H9W3"
+    },
+    {
+      "date": "2015-10-09",
+      "address": "55 the elms, ridgewood, swords",
+      "price": 254625,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "K67C7F3"
+    },
+    {
+      "date": "2015-10-06",
+      "address": "45 The Elms, Ridgewood, Swords",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 93
+}

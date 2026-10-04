@@ -1,0 +1,425 @@
+{
+  "slug": "ashley-hall-st-edmund-s",
+  "stats": {
+    "count": 103,
+    "median": 191000,
+    "avg": 188981,
+    "min": 165000,
+    "max": 191000,
+    "firstYear": 2016,
+    "lastYear": 2016
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 103,
+      "median_price": 191000,
+      "avg_price": 188981,
+      "min_price": 165000,
+      "max_price": 191000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2016-12-19",
+      "address": "87 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "19 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "1 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "10 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "102 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "105 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "112 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "113 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "114 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 165000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "119 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "13 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "14 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "17 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "18 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "2 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "25 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "26 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "31 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "39 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "4 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "40 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "43 ASHLEY HALL, ST EDMUND'S, PARLMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "42 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "44 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "45 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "46 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "5 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "6 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "67 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "68 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 165000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "70 ASHLEY HALL, ST EDMUND'S, PARMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "71 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "79 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "8 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "80 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "82 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "83 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "88 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "116  ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "16 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "20 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "21 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "22 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "23 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "24 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 165000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "30 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "69 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "73 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "74 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
+      "address": "77 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 103
+}

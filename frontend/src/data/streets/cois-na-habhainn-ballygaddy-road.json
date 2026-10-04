@@ -1,0 +1,529 @@
+{
+  "slug": "cois-na-habhainn-ballygaddy-road",
+  "stats": {
+    "count": 91,
+    "median": 150000,
+    "avg": 167746,
+    "min": 67000,
+    "max": 338000,
+    "firstYear": 2011,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 70000,
+      "avg_price": 70000,
+      "min_price": 70000,
+      "max_price": 70000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 80000,
+      "avg_price": 80000,
+      "min_price": 80000,
+      "max_price": 80000
+    },
+    {
+      "year": 2014,
+      "count": 6,
+      "median_price": 77500,
+      "avg_price": 78724,
+      "min_price": 70000,
+      "max_price": 86344
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 97000,
+      "avg_price": 100625,
+      "min_price": 80000,
+      "max_price": 125000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 122500,
+      "avg_price": 122500,
+      "min_price": 85000,
+      "max_price": 160000
+    },
+    {
+      "year": 2017,
+      "count": 10,
+      "median_price": 122500,
+      "avg_price": 109657,
+      "min_price": 67000,
+      "max_price": 135567
+    },
+    {
+      "year": 2018,
+      "count": 7,
+      "median_price": 131500,
+      "avg_price": 140714,
+      "min_price": 125000,
+      "max_price": 187000
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 140500,
+      "avg_price": 146938,
+      "min_price": 120000,
+      "max_price": 181000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 140000,
+      "avg_price": 152400,
+      "min_price": 139500,
+      "max_price": 177500
+    },
+    {
+      "year": 2021,
+      "count": 13,
+      "median_price": 170000,
+      "avg_price": 176769,
+      "min_price": 150000,
+      "max_price": 230000
+    },
+    {
+      "year": 2022,
+      "count": 8,
+      "median_price": 182500,
+      "avg_price": 184938,
+      "min_price": 150000,
+      "max_price": 215000
+    },
+    {
+      "year": 2023,
+      "count": 5,
+      "median_price": 205000,
+      "avg_price": 191000,
+      "min_price": 127000,
+      "max_price": 265000
+    },
+    {
+      "year": 2024,
+      "count": 8,
+      "median_price": 240000,
+      "avg_price": 252375,
+      "min_price": 220000,
+      "max_price": 315000
+    },
+    {
+      "year": 2025,
+      "count": 9,
+      "median_price": 317000,
+      "avg_price": 313556,
+      "min_price": 275000,
+      "max_price": 338000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-12-19",
+      "address": "121 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 320000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H54E732"
+    },
+    {
+      "date": "2025-11-27",
+      "address": "168 COIS NA HABHAINN, BALLYGADDY ROAD, TUAM",
+      "price": 317000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H54FA02"
+    },
+    {
+      "date": "2025-11-18",
+      "address": "150 COIS NA HABHAINN, BALLYGADDY ROAD, TUAM",
+      "price": 295000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H54CK29"
+    },
+    {
+      "date": "2025-10-17",
+      "address": "103 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 335000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H54AE39"
+    },
+    {
+      "date": "2025-09-18",
+      "address": "194 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 275000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H54FT65"
+    },
+    {
+      "date": "2025-08-07",
+      "address": "138 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 338000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-03",
+      "address": "100 COIS NA HABHAINN, BALLYGADDY ROAD, TUAM",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54NX49"
+    },
+    {
+      "date": "2025-06-03",
+      "address": "162 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 311000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H54K659"
+    },
+    {
+      "date": "2025-05-28",
+      "address": "117 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 306000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H54KN83"
+    },
+    {
+      "date": "2024-12-06",
+      "address": "141 COIS NA HABHAINN, BALLYGADDY ROAD, TUAM",
+      "price": 273000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-24",
+      "address": "28 COIS NA HABHAINN, BALLYGADDY ROAD, TUAM",
+      "price": 276000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54F952"
+    },
+    {
+      "date": "2024-07-26",
+      "address": "23 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54Y393"
+    },
+    {
+      "date": "2024-03-08",
+      "address": "72 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54K236"
+    },
+    {
+      "date": "2024-03-08",
+      "address": "29 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54HT66"
+    },
+    {
+      "date": "2024-02-16",
+      "address": "33 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54FX27"
+    },
+    {
+      "date": "2024-02-16",
+      "address": "34 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54YX65"
+    },
+    {
+      "date": "2024-01-18",
+      "address": "134 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54D782"
+    },
+    {
+      "date": "2023-11-16",
+      "address": "89 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 205000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54C564"
+    },
+    {
+      "date": "2023-10-18",
+      "address": "139 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54XY31"
+    },
+    {
+      "date": "2023-07-28",
+      "address": "34 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 128000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54YX65"
+    },
+    {
+      "date": "2023-07-28",
+      "address": "33 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 127000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54FX27"
+    },
+    {
+      "date": "2023-04-26",
+      "address": "111 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54HW53"
+    },
+    {
+      "date": "2022-07-15",
+      "address": "25 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54TN60"
+    },
+    {
+      "date": "2022-07-13",
+      "address": "74 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 174000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54NX51"
+    },
+    {
+      "date": "2022-07-12",
+      "address": "88 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 207000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54TP96"
+    },
+    {
+      "date": "2022-06-17",
+      "address": "148 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 215000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54RX98"
+    },
+    {
+      "date": "2022-06-15",
+      "address": "51 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 196000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54A363"
+    },
+    {
+      "date": "2022-05-04",
+      "address": "76 COIS NA HABHAINN, BALLYGADDY RD, GALWAY",
+      "price": 175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54NV04"
+    },
+    {
+      "date": "2022-03-29",
+      "address": "65 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54XP94"
+    },
+    {
+      "date": "2022-02-04",
+      "address": "193 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 172500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54X771"
+    },
+    {
+      "date": "2021-12-13",
+      "address": "126 COIS NA HABHAINN, BALLYGADDY ROAD, TUAM",
+      "price": 150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54Y922"
+    },
+    {
+      "date": "2021-09-14",
+      "address": "113 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 185000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54YR88"
+    },
+    {
+      "date": "2021-09-06",
+      "address": "181 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 205000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54NN73"
+    },
+    {
+      "date": "2021-07-02",
+      "address": "152 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 152000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54EV60"
+    },
+    {
+      "date": "2021-06-15",
+      "address": "128 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54EW94"
+    },
+    {
+      "date": "2021-06-11",
+      "address": "163 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 155000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54PV26"
+    },
+    {
+      "date": "2021-04-30",
+      "address": "168 COIS NA HABHAINN, BALLYGADDY ROAD, TUAM",
+      "price": 165000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H54FA02"
+    },
+    {
+      "date": "2021-04-14",
+      "address": "81 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 155000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-07",
+      "address": "121 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 166000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H54E732"
+    },
+    {
+      "date": "2021-03-30",
+      "address": "47 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-30",
+      "address": "112 COIS NA HABHAINN, BALLYGADDY ROAD, TUAM",
+      "price": 174000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54TR66"
+    },
+    {
+      "date": "2021-03-16",
+      "address": "36  COIS NA HABHAINN, BALLYGADDY ROAD, TUAM",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-12",
+      "address": "24 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 216000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-10",
+      "address": "115 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 140000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-08",
+      "address": "117 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 177500,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H54KN83"
+    },
+    {
+      "date": "2020-03-23",
+      "address": "50 COIS NA HABHAINN, BALLYGADDY RD, TUAM GALWAY",
+      "price": 165000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-24",
+      "address": "103 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 139500,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H54AE39"
+    },
+    {
+      "date": "2020-02-03",
+      "address": "69 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 140000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-21",
+      "address": "15 COIS NA HABHAINN, BALLYGADDY RD, GALWAY",
+      "price": 181000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-08",
+      "address": "121 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 166000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H54E732"
+    }
+  ],
+  "totalTransactions": 91
+}

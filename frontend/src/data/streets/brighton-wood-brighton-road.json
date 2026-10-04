@@ -1,0 +1,489 @@
+{
+  "slug": "brighton-wood-brighton-road",
+  "stats": {
+    "count": 95,
+    "median": 740088,
+    "avg": 824387,
+    "min": 506025,
+    "max": 1825000,
+    "firstYear": 2018,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2018,
+      "count": 20,
+      "median_price": 695294,
+      "avg_price": 812071,
+      "min_price": 583875,
+      "max_price": 1365639
+    },
+    {
+      "year": 2019,
+      "count": 12,
+      "median_price": 733480,
+      "avg_price": 788749,
+      "min_price": 629956,
+      "max_price": 1250000
+    },
+    {
+      "year": 2020,
+      "count": 16,
+      "median_price": 678414,
+      "avg_price": 794047,
+      "min_price": 594713,
+      "max_price": 1233480
+    },
+    {
+      "year": 2021,
+      "count": 31,
+      "median_price": 704975,
+      "avg_price": 746761,
+      "min_price": 506025,
+      "max_price": 1383260
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 837004,
+      "avg_price": 837004,
+      "min_price": 528634,
+      "max_price": 1145374
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 800000,
+      "avg_price": 802333,
+      "min_price": 795000,
+      "max_price": 812000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 1075000,
+      "avg_price": 1075000,
+      "min_price": 1000000,
+      "max_price": 1150000
+    },
+    {
+      "year": 2025,
+      "count": 6,
+      "median_price": 1071250,
+      "avg_price": 1238333,
+      "min_price": 915000,
+      "max_price": 1825000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 1000000,
+      "avg_price": 1031667,
+      "min_price": 940000,
+      "max_price": 1155000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-13",
+      "address": "79 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 1155000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D18EYH5"
+    },
+    {
+      "date": "2026-05-28",
+      "address": "48 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 940000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18YCC6"
+    },
+    {
+      "date": "2026-05-21",
+      "address": "18 Brighton Wood, Brighton Road, Foxrock",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18NYP9"
+    },
+    {
+      "date": "2025-11-14",
+      "address": "6 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 1825000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D18TX0H"
+    },
+    {
+      "date": "2025-10-02",
+      "address": "74 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 987500,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "D18HXA3"
+    },
+    {
+      "date": "2025-07-31",
+      "address": "19 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 1080000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D18E04V"
+    },
+    {
+      "date": "2025-07-18",
+      "address": "11 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 1560000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D18CX7V"
+    },
+    {
+      "date": "2025-07-08",
+      "address": "70 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 915000,
+      "bedrooms": 6,
+      "propertyType": "detached",
+      "eircode": "D18AP8H"
+    },
+    {
+      "date": "2025-05-16",
+      "address": "90 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 1062500,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "D18PP6Y"
+    },
+    {
+      "date": "2024-12-11",
+      "address": "32 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 1150000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D18TFC1"
+    },
+    {
+      "date": "2024-09-02",
+      "address": "51 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D18N2TD"
+    },
+    {
+      "date": "2023-10-13",
+      "address": "69 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 812000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18YX4C"
+    },
+    {
+      "date": "2023-03-23",
+      "address": "33 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18T92A"
+    },
+    {
+      "date": "2023-02-16",
+      "address": "49 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 795000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18W1XD"
+    },
+    {
+      "date": "2022-07-05",
+      "address": "63 Brighton Wood, Brighton Road, Foxrock Dublin 18",
+      "price": 528634,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-02",
+      "address": "15 Brighton Wood, Brighton Road, Foxrock",
+      "price": 1145374,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-16",
+      "address": "62 Brighton Wood, Brighton Road, Foxrock",
+      "price": 515418,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-16",
+      "address": "77 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 753304,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-08",
+      "address": "65 Brighton Wood, Brighton Road, Foxroxk",
+      "price": 555066,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-26",
+      "address": "APT 61 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 528634,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2021-11-26",
+      "address": "59 Brighton Wood, Brighton Road, Foxrock",
+      "price": 506025,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-24",
+      "address": "96 Brighton wood, brighton road, foxrock",
+      "price": 704846,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-15",
+      "address": "Apt 60 Brighton Wood, Brighton Road, Foxrock",
+      "price": 515418,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2021-11-15",
+      "address": "81 Brighton Wood, Brighton Road, Foxrock",
+      "price": 744493,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-29",
+      "address": "6 Brighton Wood, Brighton Road, Foxrock",
+      "price": 1299559,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D18TX0H"
+    },
+    {
+      "date": "2021-10-20",
+      "address": "18 Brighton Wood, Brighton Road, Foxrock",
+      "price": 643172,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18NYP9"
+    },
+    {
+      "date": "2021-10-18",
+      "address": "17 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 647577,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-15",
+      "address": "75 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 651982,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-17",
+      "address": "32 Brighton Wood, Brighton Road, Foxrock",
+      "price": 881057,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D18TFC1"
+    },
+    {
+      "date": "2021-09-16",
+      "address": "39 Brighton Wood, Brighton Road, Foxrock",
+      "price": 870050,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-31",
+      "address": "30 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18DFA3"
+    },
+    {
+      "date": "2021-08-23",
+      "address": "68 Brighton Wood, Brighton Road, Foxrock",
+      "price": 625550,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-16",
+      "address": "69 Brighton Wood, Brighton Road, Foxrock",
+      "price": 629956,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18YX4C"
+    },
+    {
+      "date": "2021-07-30",
+      "address": "67 Brighton Wood, Brighton Road, Foxrock",
+      "price": 638733,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-28",
+      "address": "19  Brighton Wood, Brighton Road, Foxrock",
+      "price": 721813,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18E04V"
+    },
+    {
+      "date": "2021-07-19",
+      "address": "50 Brighton Wood, Brighton Road, Foxrock",
+      "price": 859030,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-19",
+      "address": "90 Brighton Wood, Brighton Road, Foxrock",
+      "price": 704975,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "D18PP6Y"
+    },
+    {
+      "date": "2021-07-09",
+      "address": "72 BRIGHTON WOOD, BRIGHTON ROAD, FOXROCK",
+      "price": 795000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-07",
+      "address": "86 Brighton Wood, Brighton Road, Foxrock",
+      "price": 621145,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-25",
+      "address": "42 Brighton Wood, Brighton Road, Foxrock",
+      "price": 1101322,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-24",
+      "address": "82 Brighton Wood, Brighton Road, Foxrock",
+      "price": 700441,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-23",
+      "address": "16 Brighton Wood, Brighton Road, Foxrock",
+      "price": 770925,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-11",
+      "address": "38 Brighton Wood, Brighton Road, Foxrock",
+      "price": 925110,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-11",
+      "address": "94 Brighton Wood, Brighton Road, Foxrock",
+      "price": 753304,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-10",
+      "address": "85 Brighton Wood, Brighton Road, Foxrock",
+      "price": 625551,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-19",
+      "address": "8 Brighton Wood, Brighton Road, Foxrock",
+      "price": 1383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-07",
+      "address": "92 Brighton Wood, Brighton Road, Foxrock",
+      "price": 726872,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-23",
+      "address": "10 Brighton Wood, Brighton Road, Foxrock",
+      "price": 1233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-22",
+      "address": "3 Brighton Wood, Brighton Road, Foxrock",
+      "price": 638766,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-17",
+      "address": "99 Brighton Wood, Brighton Road, Foxrock",
+      "price": 616740,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 95
+}

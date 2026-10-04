@@ -1,0 +1,553 @@
+{
+  "slug": "charlesland-court-greystones",
+  "stats": {
+    "count": 134,
+    "median": 325000,
+    "avg": 335379,
+    "min": 11000,
+    "max": 541000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 300000,
+      "avg_price": 300000,
+      "min_price": 300000,
+      "max_price": 300000
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 202500,
+      "avg_price": 202500,
+      "min_price": 185000,
+      "max_price": 220000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 231500,
+      "avg_price": 231500,
+      "min_price": 205000,
+      "max_price": 258000
+    },
+    {
+      "year": 2013,
+      "count": 4,
+      "median_price": 226500,
+      "avg_price": 215125,
+      "min_price": 132500,
+      "max_price": 275000
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 266500,
+      "avg_price": 270750,
+      "min_price": 235000,
+      "max_price": 315000
+    },
+    {
+      "year": 2015,
+      "count": 11,
+      "median_price": 283000,
+      "avg_price": 295250,
+      "min_price": 210000,
+      "max_price": 377000
+    },
+    {
+      "year": 2016,
+      "count": 10,
+      "median_price": 261000,
+      "avg_price": 246950,
+      "min_price": 11000,
+      "max_price": 377500
+    },
+    {
+      "year": 2017,
+      "count": 6,
+      "median_price": 282500,
+      "avg_price": 281500,
+      "min_price": 244000,
+      "max_price": 315000
+    },
+    {
+      "year": 2018,
+      "count": 10,
+      "median_price": 309250,
+      "avg_price": 317250,
+      "min_price": 250000,
+      "max_price": 400000
+    },
+    {
+      "year": 2019,
+      "count": 13,
+      "median_price": 300000,
+      "avg_price": 304615,
+      "min_price": 240000,
+      "max_price": 406000
+    },
+    {
+      "year": 2020,
+      "count": 7,
+      "median_price": 325000,
+      "avg_price": 300643,
+      "min_price": 155000,
+      "max_price": 397500
+    },
+    {
+      "year": 2021,
+      "count": 13,
+      "median_price": 370000,
+      "avg_price": 354385,
+      "min_price": 96000,
+      "max_price": 438500
+    },
+    {
+      "year": 2022,
+      "count": 10,
+      "median_price": 408000,
+      "avg_price": 399800,
+      "min_price": 308000,
+      "max_price": 485000
+    },
+    {
+      "year": 2023,
+      "count": 12,
+      "median_price": 370000,
+      "avg_price": 358333,
+      "min_price": 300000,
+      "max_price": 410000
+    },
+    {
+      "year": 2024,
+      "count": 12,
+      "median_price": 386000,
+      "avg_price": 391125,
+      "min_price": 317000,
+      "max_price": 450000
+    },
+    {
+      "year": 2025,
+      "count": 11,
+      "median_price": 455000,
+      "avg_price": 440318,
+      "min_price": 330000,
+      "max_price": 541000
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 482500,
+      "avg_price": 457333,
+      "min_price": 372000,
+      "max_price": 492500
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-31",
+      "address": "211 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 480000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63KN60"
+    },
+    {
+      "date": "2026-05-19",
+      "address": "3 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 372000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63E6V9"
+    },
+    {
+      "date": "2026-04-01",
+      "address": "104 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 492500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KD81"
+    },
+    {
+      "date": "2026-03-27",
+      "address": "199 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 485000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63XD88"
+    },
+    {
+      "date": "2026-02-12",
+      "address": "136 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 427000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63ER26"
+    },
+    {
+      "date": "2026-01-14",
+      "address": "1 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 487500,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63H0X3"
+    },
+    {
+      "date": "2025-12-18",
+      "address": "159 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 350000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A63W1W7"
+    },
+    {
+      "date": "2025-11-10",
+      "address": "13 CHARLESLAND COURT, GREYSTONES, CO WICKLOW",
+      "price": 505000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A63R264"
+    },
+    {
+      "date": "2025-11-07",
+      "address": "112 CHARLESLAND COURT, GREYSTONES, CO WICKLOW",
+      "price": 427500,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "A63DA37"
+    },
+    {
+      "date": "2025-10-20",
+      "address": "100 CHARLESLAND COURT, GREYSTONES, CO WICKLOW",
+      "price": 541000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63EE39"
+    },
+    {
+      "date": "2025-10-16",
+      "address": "257 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 470000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A63H3K5"
+    },
+    {
+      "date": "2025-09-29",
+      "address": "6 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 420000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "A63TP17"
+    },
+    {
+      "date": "2025-04-24",
+      "address": "216 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63CT93"
+    },
+    {
+      "date": "2025-03-21",
+      "address": "251 CHARLESLAND COURT, GREYSTONES, CO WICKLOW",
+      "price": 338000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63N223"
+    },
+    {
+      "date": "2025-03-10",
+      "address": "213 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 530000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A63RH57"
+    },
+    {
+      "date": "2025-03-06",
+      "address": "220 CHARLESLAND COURT, GREYSTONES, CO WICKLOW",
+      "price": 455000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63WK18"
+    },
+    {
+      "date": "2025-01-30",
+      "address": "183 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 477000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63XT22"
+    },
+    {
+      "date": "2024-12-20",
+      "address": "101 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X317"
+    },
+    {
+      "date": "2024-12-10",
+      "address": "161 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 327500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63N087"
+    },
+    {
+      "date": "2024-11-26",
+      "address": "108 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63ND86"
+    },
+    {
+      "date": "2024-09-24",
+      "address": "67 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 382000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X938"
+    },
+    {
+      "date": "2024-07-16",
+      "address": "185 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63R668"
+    },
+    {
+      "date": "2024-07-04",
+      "address": "141 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 317000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63N8Y4"
+    },
+    {
+      "date": "2024-06-05",
+      "address": "148 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63A6N4"
+    },
+    {
+      "date": "2024-05-24",
+      "address": "191 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63W021"
+    },
+    {
+      "date": "2024-04-15",
+      "address": "27 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 409000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63Y654"
+    },
+    {
+      "date": "2024-03-08",
+      "address": "215 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63WC63"
+    },
+    {
+      "date": "2024-03-06",
+      "address": "32 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 428000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DV29"
+    },
+    {
+      "date": "2024-02-01",
+      "address": "240 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63Y623"
+    },
+    {
+      "date": "2023-12-11",
+      "address": "44 CHARLESLAND COURT, GREYSTONES, CO WICKLOW",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63FX33"
+    },
+    {
+      "date": "2023-11-23",
+      "address": "253 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63V9K7"
+    },
+    {
+      "date": "2023-11-22",
+      "address": "49 CHARLESLAND COURT, GREYSTONES, CO WICKLOW",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63RD98"
+    },
+    {
+      "date": "2023-08-14",
+      "address": "249 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63CC17"
+    },
+    {
+      "date": "2023-08-02",
+      "address": "131 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YH29"
+    },
+    {
+      "date": "2023-07-31",
+      "address": "57 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63AF54"
+    },
+    {
+      "date": "2023-07-20",
+      "address": "156 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63C101"
+    },
+    {
+      "date": "2023-07-17",
+      "address": "257 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 355000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A63H3K5"
+    },
+    {
+      "date": "2023-07-06",
+      "address": "169 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63K683"
+    },
+    {
+      "date": "2023-06-02",
+      "address": "145 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63A837"
+    },
+    {
+      "date": "2023-02-21",
+      "address": "192 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X594"
+    },
+    {
+      "date": "2023-01-11",
+      "address": "252 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63A665"
+    },
+    {
+      "date": "2022-10-05",
+      "address": "187 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 416000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NW95"
+    },
+    {
+      "date": "2022-09-06",
+      "address": "202 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NY36"
+    },
+    {
+      "date": "2022-08-09",
+      "address": "147 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63N6W9"
+    },
+    {
+      "date": "2022-08-05",
+      "address": "227 CHARLESLAND COURT, GREYSTONES, CO WICKLOW",
+      "price": 399000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NY01"
+    },
+    {
+      "date": "2022-07-07",
+      "address": "21 CHARLESLAND COURT, GREYSTONES, CO WICKLOW",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63WY83"
+    },
+    {
+      "date": "2022-06-24",
+      "address": "236 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 438000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63V102"
+    },
+    {
+      "date": "2022-06-17",
+      "address": "78 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 308000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63T1X7"
+    },
+    {
+      "date": "2022-06-10",
+      "address": "120 CHARLESLAND COURT, GREYSTONES, WICKLOW",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DY73"
+    },
+    {
+      "date": "2022-04-13",
+      "address": "71 CHARLESLAND COURT, GREYSTONES, CO WICKLOW",
+      "price": 432000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63K303"
+    }
+  ],
+  "totalTransactions": 134
+}

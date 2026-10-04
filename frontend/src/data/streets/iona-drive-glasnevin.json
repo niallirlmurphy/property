@@ -1,0 +1,137 @@
+{
+  "slug": "iona-drive-glasnevin",
+  "stats": {
+    "count": 9,
+    "median": 1305000,
+    "avg": 1476333,
+    "min": 1052000,
+    "max": 2500000,
+    "firstYear": 2017,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1176000,
+      "avg_price": 1176000,
+      "min_price": 1052000,
+      "max_price": 1300000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1670000,
+      "avg_price": 1670000,
+      "min_price": 1670000,
+      "max_price": 1670000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1170000,
+      "avg_price": 1170000,
+      "min_price": 1130000,
+      "max_price": 1210000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1650000,
+      "avg_price": 1650000,
+      "min_price": 1650000,
+      "max_price": 1650000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 2500000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 1387500,
+      "avg_price": 1387500,
+      "min_price": 1305000,
+      "max_price": 1470000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-04",
+      "address": "24 IONA DRIVE, GLASNEVIN, DUBLIN 9",
+      "price": 1470000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09Y0E3"
+    },
+    {
+      "date": "2026-08-25",
+      "address": "4 IONA DR, GLASNEVIN, DUBLIN 9",
+      "price": 1305000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D09K6H2"
+    },
+    {
+      "date": "2025-07-30",
+      "address": "5 IONA DR, GLASNEVIN, DUBLIN 9",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": "detached",
+      "eircode": "D09E7Y7"
+    },
+    {
+      "date": "2024-02-15",
+      "address": "15 IONA DR, GLASNEVIN, DUBLIN 9",
+      "price": 1650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09W7R6"
+    },
+    {
+      "date": "2023-11-30",
+      "address": "24 IONA DRIVE, GLASNEVIN, DUBLIN 9",
+      "price": 1210000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09Y0E3"
+    },
+    {
+      "date": "2023-04-04",
+      "address": "18 IONA DR, GLASNEVIN, DUBLIN 9",
+      "price": 1130000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09VW71"
+    },
+    {
+      "date": "2022-09-23",
+      "address": "9  IONA DRIVE, GLASNEVIN, DUBLIN 9",
+      "price": 1670000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09H7K8"
+    },
+    {
+      "date": "2017-09-22",
+      "address": "9 IONA DR, GLASNEVIN, DUBLIN 9",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09H7K8"
+    },
+    {
+      "date": "2017-04-27",
+      "address": "6 IONA DR, GLASNEVIN, DUBLIN 9",
+      "price": 1052000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

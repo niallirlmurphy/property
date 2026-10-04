@@ -1,0 +1,553 @@
+{
+  "slug": "trimbleston-goatstown-road",
+  "stats": {
+    "count": 119,
+    "median": 495000,
+    "avg": 563918,
+    "min": 241000,
+    "max": 1167401,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 2,
+      "median_price": 385022,
+      "avg_price": 385022,
+      "min_price": 370044,
+      "max_price": 400000
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 286469,
+      "avg_price": 286469,
+      "min_price": 281938,
+      "max_price": 291000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 355500,
+      "avg_price": 355500,
+      "min_price": 241000,
+      "max_price": 470000
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 285000,
+      "avg_price": 284000,
+      "min_price": 270000,
+      "max_price": 297000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 484581,
+      "avg_price": 504677,
+      "min_price": 374449,
+      "max_price": 655000
+    },
+    {
+      "year": 2015,
+      "count": 11,
+      "median_price": 387665,
+      "avg_price": 417798,
+      "min_price": 310000,
+      "max_price": 780000
+    },
+    {
+      "year": 2016,
+      "count": 20,
+      "median_price": 390682,
+      "avg_price": 447513,
+      "min_price": 370044,
+      "max_price": 750000
+    },
+    {
+      "year": 2017,
+      "count": 6,
+      "median_price": 455000,
+      "avg_price": 494167,
+      "min_price": 395000,
+      "max_price": 750000
+    },
+    {
+      "year": 2018,
+      "count": 5,
+      "median_price": 495000,
+      "avg_price": 550000,
+      "min_price": 450000,
+      "max_price": 725000
+    },
+    {
+      "year": 2019,
+      "count": 11,
+      "median_price": 572000,
+      "avg_price": 563161,
+      "min_price": 406000,
+      "max_price": 800000
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 512500,
+      "avg_price": 522250,
+      "min_price": 450000,
+      "max_price": 614000
+    },
+    {
+      "year": 2021,
+      "count": 12,
+      "median_price": 614000,
+      "avg_price": 676967,
+      "min_price": 426000,
+      "max_price": 969163
+    },
+    {
+      "year": 2022,
+      "count": 15,
+      "median_price": 876652,
+      "avg_price": 831334,
+      "min_price": 450000,
+      "max_price": 1167401
+    },
+    {
+      "year": 2023,
+      "count": 7,
+      "median_price": 525000,
+      "avg_price": 539571,
+      "min_price": 450000,
+      "max_price": 637000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 621750,
+      "avg_price": 691545,
+      "min_price": 475770,
+      "max_price": 970000
+    },
+    {
+      "year": 2025,
+      "count": 5,
+      "median_price": 562500,
+      "avg_price": 580700,
+      "min_price": 525000,
+      "max_price": 695000
+    },
+    {
+      "year": 2026,
+      "count": 5,
+      "median_price": 685000,
+      "avg_price": 743600,
+      "min_price": 587000,
+      "max_price": 1115000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-15",
+      "address": "385 TRIMBLESTON, GOATSTOWN ROAD, DUBLIN14",
+      "price": 631000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D14WW69"
+    },
+    {
+      "date": "2026-08-24",
+      "address": "210 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN DUBLIN 14",
+      "price": 1115000,
+      "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": "D14HE61"
+    },
+    {
+      "date": "2026-06-03",
+      "address": "8 TRIMBLESTON, GOATSTOWN RD, DUBLIN 14",
+      "price": 587000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D14FK46"
+    },
+    {
+      "date": "2026-04-20",
+      "address": "199 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN",
+      "price": 700000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D14HK07"
+    },
+    {
+      "date": "2026-04-17",
+      "address": "83 TRIMBLESTON, GOATSTOWN RD, DUBLIN 14",
+      "price": 685000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-12-03",
+      "address": "47 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN DUBLIN 14",
+      "price": 550000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D14CK68"
+    },
+    {
+      "date": "2025-10-22",
+      "address": "40 TRIMBLESTON, GOATSTOWN RD, DUBLIN 8",
+      "price": 695000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D14RX37"
+    },
+    {
+      "date": "2025-05-30",
+      "address": "58 TRIMBLESTON, GOATSTOWN ROAD, DUBLIN 14",
+      "price": 562500,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-09",
+      "address": "APARTMENT 15, TRIMBLESTON, GOATSTOWN ROAD",
+      "price": 571000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D14KC95"
+    },
+    {
+      "date": "2025-01-17",
+      "address": "116 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN DUBLIN 14",
+      "price": 525000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2024-09-13",
+      "address": "169 TRIMBLESTON, GOATSTOWN ROAD, DUBLIN 14",
+      "price": 950000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D14PH42"
+    },
+    {
+      "date": "2024-09-06",
+      "address": "174 TRIMBLESTON, GOATSTOWN ROAD, DUBLIN 14",
+      "price": 970000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D14HT96"
+    },
+    {
+      "date": "2024-07-25",
+      "address": "137 TRIMBLESTON, GOATSTOWN RD, DUBLIN 14",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14W566"
+    },
+    {
+      "date": "2024-06-11",
+      "address": "152 TRIMBLESTON, GOATSTOWN RD, DUBLIN",
+      "price": 475770,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-02",
+      "address": "164 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN DUBLIN 14",
+      "price": 691500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14Y584"
+    },
+    {
+      "date": "2024-01-19",
+      "address": "117 TRIMBLESTON, GOATSTOWN RD, DUBLIN 14",
+      "price": 552000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14NX27"
+    },
+    {
+      "date": "2023-12-20",
+      "address": "101 TRIMBLESTON, GOATSTOWN RD, DUBLIN 14",
+      "price": 635000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14K124"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "160 TRIMBLESTON, GOATSTOWN RD, CLONSKEAGH DUBLIN 14",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14DD43"
+    },
+    {
+      "date": "2023-09-15",
+      "address": "33 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN DUBLIN 14",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14X585"
+    },
+    {
+      "date": "2023-08-20",
+      "address": "162 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN DUBLIN 14",
+      "price": 637000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14X2W6"
+    },
+    {
+      "date": "2023-06-22",
+      "address": "125 TRIMBLESTON, GOATSTOWN RD, DUBLIN 14",
+      "price": 525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14HC65"
+    },
+    {
+      "date": "2023-05-05",
+      "address": "202 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14WK30"
+    },
+    {
+      "date": "2023-03-30",
+      "address": "73 TRIMBLESTON, GOATSTOWN RD, DUBLIN 16",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-27",
+      "address": "113 TRIMBLESTON, GOATSTOWN RD, CLONSKEAGH DUBLIN 14",
+      "price": 467000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14PK80"
+    },
+    {
+      "date": "2022-10-13",
+      "address": "APARTMENT 340 TRIMBLESTON, GOATSTOWN ROAD, DUBLIN",
+      "price": 546000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D14CV13"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "223 Trimbleston, Goatstown Road, Dublin 14",
+      "price": 1167401,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-08-17",
+      "address": "238 Trimbleston, Goatstown Road, Goatstown",
+      "price": 991189,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-08-04",
+      "address": "239 TRIMBLESTON, GOATSTOWN ROAD, GOATSTOWN",
+      "price": 1079295,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-29",
+      "address": "228 Trimbleston, Goatstown Road, Goatstown",
+      "price": 1013216,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-24",
+      "address": "240 Trimbleston, Goatstown Road",
+      "price": 1101322,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-15",
+      "address": "144 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN DUBLIN 14",
+      "price": 585000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D14YX21"
+    },
+    {
+      "date": "2022-06-08",
+      "address": "147 TRIMBLESTON, GOATSTOWN ROAD, DUBLIN 14",
+      "price": 585000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-07",
+      "address": "97 TRIMBLESTON, GOATSTOWN RD, DUBLIN",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-27",
+      "address": "234 Trimbleston, Goatstown Road, Goatstown",
+      "price": 969163,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-19",
+      "address": "236 Trimbleston, Goatstown Road, Goatstown",
+      "price": 876652,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-31",
+      "address": "235 Trimbleston, Goatstown Road, Goatstown",
+      "price": 876652,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-18",
+      "address": "233 Trimbleston, Goatstown Road, Goatstown",
+      "price": 969163,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-01-05",
+      "address": "227 TRIMBLESTON, GOATSTOWN ROAD, DUBLIN 14",
+      "price": 792952,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14T6C3"
+    },
+    {
+      "date": "2021-12-15",
+      "address": "229 Trimbleston, Goatstown Road, Dublin 14",
+      "price": 955947,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-13",
+      "address": "182 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN DUBLIN 14",
+      "price": 598000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14HN73"
+    },
+    {
+      "date": "2021-12-06",
+      "address": "230 Trimbleston, Goatstown Road, Dublin 14",
+      "price": 969163,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-01",
+      "address": "185 TRIMBLESTON, GOATSTOWN RD, CLONSKEAGH DUBLIN 14",
+      "price": 630000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14DY80"
+    },
+    {
+      "date": "2021-11-30",
+      "address": "APT 3 TRIMBLESTON, GOATSTOWN RD, DUBLIN 14",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D14XW14"
+    },
+    {
+      "date": "2021-11-18",
+      "address": "224 Trimbleston, Goatstown Road, Dublin 14",
+      "price": 907489,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-17",
+      "address": "56 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN DUBLIN 14",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14KV07"
+    },
+    {
+      "date": "2021-10-29",
+      "address": "385 TRIMBLESTON, GOATSTOWN ROAD, DUBLIN14",
+      "price": 490000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2021-10-28",
+      "address": "210 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN DUBLIN 14",
+      "price": 870000,
+      "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": "D14HE61"
+    },
+    {
+      "date": "2021-09-20",
+      "address": "204 TRIMBLESTON, GOATSTOWN RD, DUBLIN 14",
+      "price": 592000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14XV00"
+    },
+    {
+      "date": "2021-07-01",
+      "address": "78 TRIMBLESTON, GOATSTOWN RD, DUBLIN 14",
+      "price": 426000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-03",
+      "address": "177 TRIMBLESTON, GOATSTOWN RD, CLONSKEAGH DUBLIN 14",
+      "price": 780000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14TV09"
+    }
+  ],
+  "totalTransactions": 119
+}

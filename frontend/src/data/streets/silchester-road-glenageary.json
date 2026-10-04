@@ -1,0 +1,185 @@
+{
+  "slug": "silchester-road-glenageary",
+  "stats": {
+    "count": 12,
+    "median": 1452500,
+    "avg": 1483333,
+    "min": 20000,
+    "max": 2175000,
+    "firstYear": 2015,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 20000,
+      "avg_price": 20000,
+      "min_price": 20000,
+      "max_price": 20000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 2175000,
+      "avg_price": 2175000,
+      "min_price": 2175000,
+      "max_price": 2175000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1205000,
+      "avg_price": 1205000,
+      "min_price": 1205000,
+      "max_price": 1205000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1370000,
+      "avg_price": 1370000,
+      "min_price": 1370000,
+      "max_price": 1370000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1270000,
+      "avg_price": 1270000,
+      "min_price": 1270000,
+      "max_price": 1270000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1525000,
+      "avg_price": 1525000,
+      "min_price": 1525000,
+      "max_price": 1525000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 1465000,
+      "avg_price": 1602500,
+      "min_price": 1380000,
+      "max_price": 2100000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 2025000,
+      "avg_price": 2025000,
+      "min_price": 2025000,
+      "max_price": 2025000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1800000,
+      "avg_price": 1800000,
+      "min_price": 1800000,
+      "max_price": 1800000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-09-11",
+      "address": "8 SILCHESTER RD, GLENAGEARY, DUBLIN",
+      "price": 1800000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A96H9C2"
+    },
+    {
+      "date": "2024-07-18",
+      "address": "39 SILCHESTER ROAD, GLENAGEARY, CO DUBLIN",
+      "price": 2025000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A96R6C5"
+    },
+    {
+      "date": "2023-11-03",
+      "address": "12 SILCHESTER RD, GLENAGEARY, DUBLIN",
+      "price": 2100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96A3C6"
+    },
+    {
+      "date": "2023-07-07",
+      "address": "44 SILCHESTER RD, GLENAGEARY, DUBLIN",
+      "price": 1380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96A6F5"
+    },
+    {
+      "date": "2023-06-29",
+      "address": "43 SILCHESTER ROAD, GLENAGEARY, CO DUBLIN",
+      "price": 1380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96C8P2"
+    },
+    {
+      "date": "2023-02-20",
+      "address": "3 SILCHESTER RD, GLENAGEARY, DUBLIN",
+      "price": 1550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96V9P0"
+    },
+    {
+      "date": "2021-06-30",
+      "address": "5 SILCHESTER RD, GLENAGEARY, DUBLIN",
+      "price": 1525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96Y2T9"
+    },
+    {
+      "date": "2020-11-09",
+      "address": "13 SILCHESTER RD, GLENAGEARY, DUBLIN",
+      "price": 1270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-17",
+      "address": "11 SILCHESTER RD, GLENAGEARY, DUBLIN",
+      "price": 1370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-02",
+      "address": "45 SILCHESTER RD, GLENAGEARY, DUBLIN",
+      "price": 1205000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-29",
+      "address": "33 SILCHESTER RD, GLENAGEARY, DUBLIN",
+      "price": 2175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-15",
+      "address": "11 SILCHESTER RD, GLENAGEARY, DUBLIN",
+      "price": 20000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 12
+}

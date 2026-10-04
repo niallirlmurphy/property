@@ -1,0 +1,105 @@
+{
+  "slug": "oatlands-manor-mount-merrion",
+  "stats": {
+    "count": 9,
+    "median": 1233480,
+    "avg": 1231038,
+    "min": 1123348,
+    "max": 1510500,
+    "firstYear": 2023,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2023,
+      "count": 8,
+      "median_price": 1180899,
+      "avg_price": 1196106,
+      "min_price": 1123348,
+      "max_price": 1348018
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1510500,
+      "avg_price": 1510500,
+      "min_price": 1510500,
+      "max_price": 1510500
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-11-20",
+      "address": "5 OATLANDS MANOR, MOUNT MERRION, DUBLIN",
+      "price": 1510500,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A94X6T0"
+    },
+    {
+      "date": "2023-06-08",
+      "address": "2 Oatlands Manor, Mount Merrion, Co. Dublin",
+      "price": 1123348,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-02",
+      "address": "7 Oatlands Manor, Mount Merrion",
+      "price": 1255507,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-30",
+      "address": "6 Oatlands Manor, Mount Merrion",
+      "price": 1233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94Y7H2"
+    },
+    {
+      "date": "2023-05-26",
+      "address": "4 Oatlands Manor, Mount Merrion",
+      "price": 1123348,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94A6N4"
+    },
+    {
+      "date": "2023-05-18",
+      "address": "5 OATLANDS MANOR, MOUNT MERRION",
+      "price": 1233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94X6T0"
+    },
+    {
+      "date": "2023-05-16",
+      "address": "3 Oatlands Manor, Mount Merrion, County Dublin",
+      "price": 1128318,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-16",
+      "address": "8 Oatlands Manor, Mount Merrion",
+      "price": 1348018,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-15",
+      "address": "1 OATLANDS MANOR, MOUNT MERRION",
+      "price": 1123348,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

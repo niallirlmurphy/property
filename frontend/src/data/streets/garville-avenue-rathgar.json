@@ -1,0 +1,369 @@
+{
+  "slug": "garville-avenue-rathgar",
+  "stats": {
+    "count": 29,
+    "median": 1260000,
+    "avg": 1349310,
+    "min": 325000,
+    "max": 2975000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 424000,
+      "avg_price": 424000,
+      "min_price": 424000,
+      "max_price": 424000
+    },
+    {
+      "year": 2012,
+      "count": 4,
+      "median_price": 765000,
+      "avg_price": 707500,
+      "min_price": 400000,
+      "max_price": 900000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 1013000,
+      "avg_price": 1013000,
+      "min_price": 326000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 1125000,
+      "avg_price": 1125000,
+      "min_price": 625000,
+      "max_price": 1625000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1575000,
+      "avg_price": 1575000,
+      "min_price": 1575000,
+      "max_price": 1575000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 795000,
+      "avg_price": 795000,
+      "min_price": 795000,
+      "max_price": 795000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1085000,
+      "avg_price": 1085000,
+      "min_price": 1085000,
+      "max_price": 1085000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 325000,
+      "avg_price": 325000,
+      "min_price": 325000,
+      "max_price": 325000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 1110000,
+      "avg_price": 1110000,
+      "min_price": 960000,
+      "max_price": 1260000
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 700000,
+      "avg_price": 996667,
+      "min_price": 600000,
+      "max_price": 1690000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 2850000,
+      "avg_price": 2378333,
+      "min_price": 1310000,
+      "max_price": 2975000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 1725000,
+      "avg_price": 1800000,
+      "min_price": 1250000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 2460000,
+      "avg_price": 2460000,
+      "min_price": 2300000,
+      "max_price": 2620000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1855000,
+      "avg_price": 1855000,
+      "min_price": 1855000,
+      "max_price": 1855000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-02-19",
+      "address": "82 GARVILLE AVENUE, RATHGAR, DUBLIN 6",
+      "price": 1855000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06T2N2"
+    },
+    {
+      "date": "2025-11-12",
+      "address": "48 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 2300000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06XW24"
+    },
+    {
+      "date": "2025-07-30",
+      "address": "47 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 2620000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06RW84"
+    },
+    {
+      "date": "2023-10-10",
+      "address": "12 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 1850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06P382"
+    },
+    {
+      "date": "2023-06-30",
+      "address": "12 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06P382"
+    },
+    {
+      "date": "2023-06-06",
+      "address": "60 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06FH29"
+    },
+    {
+      "date": "2023-05-29",
+      "address": "9 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06NY33"
+    },
+    {
+      "date": "2022-10-25",
+      "address": "63 GARVILLE AVENUE, RATHGAR, DUBLIN 6",
+      "price": 2975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06Y193"
+    },
+    {
+      "date": "2022-09-09",
+      "address": "29 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 2850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06VA40"
+    },
+    {
+      "date": "2022-01-12",
+      "address": "43 GARVILLE AVENUE, RATHGAR, DUBLIN 6",
+      "price": 1310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06RX98"
+    },
+    {
+      "date": "2021-11-12",
+      "address": "46 GARVILLE AVENUE, RATHGAR, DUBLIN 6",
+      "price": 1690000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06T228"
+    },
+    {
+      "date": "2021-10-07",
+      "address": "73 GARVILLE AVE, RATHGAR, DUBLIN",
+      "price": 600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06C599"
+    },
+    {
+      "date": "2021-01-28",
+      "address": "75 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-06",
+      "address": "22 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 1260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-08",
+      "address": "70 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 960000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-14",
+      "address": "10 GARVILLE AVE, RATHGAR, DUBLIN",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-27",
+      "address": "57 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 1085000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-22",
+      "address": "74 GARVILLE AVE, RATHGAR",
+      "price": 795000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-02-18",
+      "address": "25 Garville Avenue, Rathgar",
+      "price": 1575000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-07-29",
+      "address": "28 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 1625000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-07-10",
+      "address": "48 GARVILLE AVE, RATHGAR, DUBLIN 6",
+      "price": 625000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06XW24"
+    },
+    {
+      "date": "2013-07-12",
+      "address": "33 Garville Avenue, Rathgar, Dublin 6",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-04-23",
+      "address": "1 Garville Avenue, Rathgar, Dublin 6",
+      "price": 326000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-08-31",
+      "address": "80 Garville Avenue, Rathgar, Dublin 6",
+      "price": 900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-07-06",
+      "address": "44 Garville Avenue, Rathgar",
+      "price": 775000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-07-03",
+      "address": "4 Garville Avenue, Rathgar, Dublin 6",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-05-30",
+      "address": "60 Garville Avenue, Rathgar, Dublin 6",
+      "price": 755000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06FH29"
+    },
+    {
+      "date": "2011-12-21",
+      "address": "75 Garville Avenue, Rathgar, Dublin",
+      "price": 424000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-07-06",
+      "address": "17 Garville Avenue, Rathgar",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 29
+}

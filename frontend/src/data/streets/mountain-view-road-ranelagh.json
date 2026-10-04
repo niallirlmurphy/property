@@ -1,0 +1,209 @@
+{
+  "slug": "mountain-view-road-ranelagh",
+  "stats": {
+    "count": 15,
+    "median": 1290000,
+    "avg": 1307467,
+    "min": 932000,
+    "max": 1850000,
+    "firstYear": 2013,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 932000,
+      "avg_price": 932000,
+      "min_price": 932000,
+      "max_price": 932000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 1250000,
+      "avg_price": 1246667,
+      "min_price": 990000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1040000,
+      "avg_price": 1040000,
+      "min_price": 1040000,
+      "max_price": 1040000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1200000,
+      "avg_price": 1200000,
+      "min_price": 1100000,
+      "max_price": 1300000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1290000,
+      "avg_price": 1290000,
+      "min_price": 1290000,
+      "max_price": 1290000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1505000,
+      "avg_price": 1505000,
+      "min_price": 1160000,
+      "max_price": 1850000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1700000,
+      "avg_price": 1700000,
+      "min_price": 1700000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1380000,
+      "avg_price": 1380000,
+      "min_price": 1300000,
+      "max_price": 1460000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 1370000,
+      "avg_price": 1370000,
+      "min_price": 1265000,
+      "max_price": 1475000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-09-02",
+      "address": "28 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 1475000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06K4P9"
+    },
+    {
+      "date": "2024-01-24",
+      "address": "50 MOUNTAIN VIEW ROAD, RANELAGH, DUBLIN 6",
+      "price": 1265000,
+      "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": "D06P7W2"
+    },
+    {
+      "date": "2023-07-28",
+      "address": "32 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 1460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06X0F6"
+    },
+    {
+      "date": "2023-02-23",
+      "address": "43 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06K8X7"
+    },
+    {
+      "date": "2022-04-11",
+      "address": "35 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06P1H2"
+    },
+    {
+      "date": "2019-06-18",
+      "address": "37 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 1850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-04",
+      "address": "25 MOUNTAIN VIEW ROAD, RANELAGH, DUBLIN 6",
+      "price": 1160000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-12",
+      "address": "31 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 1290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-08",
+      "address": "55 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-26",
+      "address": "29 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-31",
+      "address": "13 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 1040000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-23",
+      "address": "21 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-08-07",
+      "address": "23 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-05-30",
+      "address": "39 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
+      "price": 990000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-07-26",
+      "address": "49 Mountain View Road, Ranelagh, Dublin 6",
+      "price": 932000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 15
+}

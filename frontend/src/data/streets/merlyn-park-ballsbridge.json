@@ -1,0 +1,129 @@
+{
+  "slug": "merlyn-park-ballsbridge",
+  "stats": {
+    "count": 8,
+    "median": 1200000,
+    "avg": 1249500,
+    "min": 811000,
+    "max": 1700000,
+    "firstYear": 2011,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 985500,
+      "avg_price": 985500,
+      "min_price": 811000,
+      "max_price": 1160000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1220000,
+      "avg_price": 1220000,
+      "min_price": 1220000,
+      "max_price": 1220000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1230000,
+      "avg_price": 1230000,
+      "min_price": 1230000,
+      "max_price": 1230000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1440000,
+      "avg_price": 1440000,
+      "min_price": 1180000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 995000,
+      "avg_price": 995000,
+      "min_price": 995000,
+      "max_price": 995000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1700000,
+      "avg_price": 1700000,
+      "min_price": 1700000,
+      "max_price": 1700000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-09-18",
+      "address": "38 MERLYN PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 1700000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D04K4P1"
+    },
+    {
+      "date": "2020-04-07",
+      "address": "12 MERLYN PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 995000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-22",
+      "address": "40 MERLYN PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 1180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-02",
+      "address": "11 MERLYN PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-04-07",
+      "address": "19 MERLYN PARK, BALLSBRIDGE, DUBLIN",
+      "price": 1230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-11-05",
+      "address": "28 Merlyn Park, Ballsbridge",
+      "price": 1220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-12-23",
+      "address": "42 Merlyn Park, Ballsbridge, Dublin 4",
+      "price": 811000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-12-16",
+      "address": "17B Merlyn Park, Ballsbridge, Dunlin 4",
+      "price": 1160000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 8
+}

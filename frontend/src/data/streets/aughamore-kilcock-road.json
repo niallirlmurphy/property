@@ -1,0 +1,497 @@
+{
+  "slug": "aughamore-kilcock-road",
+  "stats": {
+    "count": 93,
+    "median": 312775,
+    "avg": 331465,
+    "min": 145803,
+    "max": 545000,
+    "firstYear": 2016,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 325991,
+      "avg_price": 325991,
+      "min_price": 281938,
+      "max_price": 370044
+    },
+    {
+      "year": 2017,
+      "count": 31,
+      "median_price": 295154,
+      "avg_price": 295311,
+      "min_price": 268032,
+      "max_price": 367400
+    },
+    {
+      "year": 2018,
+      "count": 18,
+      "median_price": 299559,
+      "avg_price": 304581,
+      "min_price": 290749,
+      "max_price": 348018
+    },
+    {
+      "year": 2019,
+      "count": 14,
+      "median_price": 339200,
+      "avg_price": 332491,
+      "min_price": 295154,
+      "max_price": 370000
+    },
+    {
+      "year": 2020,
+      "count": 14,
+      "median_price": 334801,
+      "avg_price": 326087,
+      "min_price": 145803,
+      "max_price": 397356
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 356828,
+      "avg_price": 368678,
+      "min_price": 339207,
+      "max_price": 410000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 452000,
+      "avg_price": 452000,
+      "min_price": 452000,
+      "max_price": 452000
+    },
+    {
+      "year": 2023,
+      "count": 6,
+      "median_price": 447500,
+      "avg_price": 440667,
+      "min_price": 380000,
+      "max_price": 515000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 535000,
+      "avg_price": 530000,
+      "min_price": 510000,
+      "max_price": 545000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 525000,
+      "avg_price": 525000,
+      "min_price": 525000,
+      "max_price": 525000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-03-02",
+      "address": "3A AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 525000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W91YKC8"
+    },
+    {
+      "date": "2025-12-03",
+      "address": "39 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 510000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W91A2N8"
+    },
+    {
+      "date": "2025-11-26",
+      "address": "3B AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 545000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W91EHN0"
+    },
+    {
+      "date": "2025-06-18",
+      "address": "70 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 535000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W91C98C"
+    },
+    {
+      "date": "2023-12-07",
+      "address": "67 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91CH9V"
+    },
+    {
+      "date": "2023-07-21",
+      "address": "70 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 463000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W91C98C"
+    },
+    {
+      "date": "2023-03-10",
+      "address": "62 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 391000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91F3FH"
+    },
+    {
+      "date": "2023-02-21",
+      "address": "53 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91F6N1"
+    },
+    {
+      "date": "2023-01-30",
+      "address": "11 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91A8N6"
+    },
+    {
+      "date": "2023-01-10",
+      "address": "15 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91K2C1"
+    },
+    {
+      "date": "2022-12-22",
+      "address": "23 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 452000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91F2D0"
+    },
+    {
+      "date": "2021-10-14",
+      "address": "75 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91X9N9"
+    },
+    {
+      "date": "2021-03-29",
+      "address": "99 Aughamore, Kilcock Road, Clane",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-18",
+      "address": "88 Aughamore, Kilcock Road, Clane",
+      "price": 356828,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-20",
+      "address": "93 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-05",
+      "address": "8 Aughamore, Kilcock Road, Clane",
+      "price": 334801,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-30",
+      "address": "97 Aughamore, Kilcock Road, Clane",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-23",
+      "address": "5 Aughamore, Kilcock Road, Clane",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-22",
+      "address": "6 Aughamore, Kilcock Road, Clane",
+      "price": 334900,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-02",
+      "address": "9 Aughamore, Kilcock Road, Clane",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-07",
+      "address": "3B Aughamore, Kilcock Road, Clane",
+      "price": 323788,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91EHN0"
+    },
+    {
+      "date": "2020-08-25",
+      "address": "39 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 145803,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W91A2N8"
+    },
+    {
+      "date": "2020-07-07",
+      "address": "2A Aughamore, Kilcock Road, Clane",
+      "price": 334801,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-12",
+      "address": "1B Aughamore, Kilcock Road, Clane",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-02",
+      "address": "2B Aughamore, Kilcock Road, Clane",
+      "price": 332538,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-30",
+      "address": "3A Aughamore, Kilcock Road, Clane",
+      "price": 334801,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W91YKC8"
+    },
+    {
+      "date": "2020-03-18",
+      "address": "4 Aughamore, Kilcock Road, Clane",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-11",
+      "address": "10 Aughamore, Kilcock Road, Clane",
+      "price": 397356,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-22",
+      "address": "40 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-23",
+      "address": "15 Aughamore, Kilcock road, Clane",
+      "price": 343612,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91K2C1"
+    },
+    {
+      "date": "2019-09-11",
+      "address": "104 Aughamore, Kilcock Road, Clane",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-12",
+      "address": "101 Aughamore, Kilcock Road, Clane",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-08",
+      "address": "105 Aughamore, Kilcock Road, Clane",
+      "price": 340708,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-12",
+      "address": "102 Aughamore, Kilcock Road, Clane",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-11",
+      "address": "58 Aughamore, Kilcock Road, Clane",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-11",
+      "address": "100 Aughamore, Kilcock Road, Clane",
+      "price": 339200,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-04",
+      "address": "103 Aughamore, Kilcock Road, Clane",
+      "price": 339200,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-01",
+      "address": "94 aughamore, kilcock road, clane",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-17",
+      "address": "95 Aughamore, Kilcock road, Clane",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-13",
+      "address": "90 Aughamore, Kilcock Road, Clane",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-28",
+      "address": "No. 92, Aughamore, Kilcock Road",
+      "price": 327447,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2019-05-10",
+      "address": "96 Aughamore, Kilcock Road, Clane",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-28",
+      "address": "54 Aughamore, Kilcock Road, Clane",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-02",
+      "address": "53 Aughamore, Kilcock Road, Clane",
+      "price": 294100,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91F6N1"
+    },
+    {
+      "date": "2018-11-01",
+      "address": "63 Aughamore, Kilcock Road, Clane",
+      "price": 299559,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-23",
+      "address": "60 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-18",
+      "address": "64 Aughamore, Kilcock Road, Clane",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-12",
+      "address": "62 Aughamore, Kilcock Road, Clane",
+      "price": 299559,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91F3FH"
+    },
+    {
+      "date": "2018-08-21",
+      "address": "68 Aughamore, Kilcock Road, Clane",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-18",
+      "address": "56 aughamore, kilcock road, clane",
+      "price": 295153,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 93
+}

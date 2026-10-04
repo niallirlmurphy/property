@@ -1,0 +1,177 @@
+{
+  "slug": "the-avenue-marianella",
+  "stats": {
+    "count": 14,
+    "median": 1352095,
+    "avg": 1463101,
+    "min": 1286344,
+    "max": 2375000,
+    "firstYear": 2017,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1387665,
+      "avg_price": 1387665,
+      "min_price": 1387665,
+      "max_price": 1387665
+    },
+    {
+      "year": 2018,
+      "count": 6,
+      "median_price": 1352095,
+      "avg_price": 1356609,
+      "min_price": 1321585,
+      "max_price": 1409692
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1321586,
+      "avg_price": 1321586,
+      "min_price": 1321586,
+      "max_price": 1321586
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1321586,
+      "avg_price": 1321586,
+      "min_price": 1321586,
+      "max_price": 1321586
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 1321585,
+      "avg_price": 1362643,
+      "min_price": 1286344,
+      "max_price": 1480000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 2112500,
+      "avg_price": 2112500,
+      "min_price": 1850000,
+      "max_price": 2375000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-05",
+      "address": "1 THE AVENUE, MARIANELLA, RATHGAR",
+      "price": 2375000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06ER85"
+    },
+    {
+      "date": "2026-06-09",
+      "address": "6 THE AVENUE, MARIANELLA, RATHGAR",
+      "price": 1850000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D06WR40"
+    },
+    {
+      "date": "2021-11-01",
+      "address": "5 The Avenue, Marianella, Rathgar",
+      "price": 1321585,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-22",
+      "address": "1 The Avenue, Marianella, Rathgar",
+      "price": 1286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-22",
+      "address": "8 THE AVENUE, MARIANELLA, RATHGAR",
+      "price": 1480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-11",
+      "address": "4 The Avenue, Marianella, Rathgar",
+      "price": 1321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-18",
+      "address": "6 The Avenue, Marianella, Rathgar",
+      "price": 1321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06WR40"
+    },
+    {
+      "date": "2018-08-28",
+      "address": "11 The Avenue, Marianella, Rathgar",
+      "price": 1382604,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-28",
+      "address": "2 THE AVENUE, MARIANELLA, ORWELL ROAD",
+      "price": 1409692,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-04",
+      "address": "9 The Avenue, Marianella, Rathgar",
+      "price": 1382604,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-29",
+      "address": "3 The Avenue, Marianella, Rathgar",
+      "price": 1321585,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-26",
+      "address": "7 The Avenue, Marianella, Orwell Road",
+      "price": 1321585,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-22",
+      "address": "8 The Avenue, Marianella, Rathgar",
+      "price": 1321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-14",
+      "address": "12 The Avenue, Marianella, Rathgar",
+      "price": 1387665,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 14
+}

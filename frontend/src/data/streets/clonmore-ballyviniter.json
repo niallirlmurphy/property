@@ -1,0 +1,537 @@
+{
+  "slug": "clonmore-ballyviniter",
+  "stats": {
+    "count": 107,
+    "median": 310000,
+    "avg": 297725,
+    "min": 167500,
+    "max": 401000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 188000,
+      "avg_price": 188000,
+      "min_price": 188000,
+      "max_price": 188000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 167500,
+      "avg_price": 167500,
+      "min_price": 167500,
+      "max_price": 167500
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 176500,
+      "avg_price": 176500,
+      "min_price": 176500,
+      "max_price": 176500
+    },
+    {
+      "year": 2015,
+      "count": 3,
+      "median_price": 250000,
+      "avg_price": 243742,
+      "min_price": 220000,
+      "max_price": 261225
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 265000,
+      "avg_price": 265000,
+      "min_price": 265000,
+      "max_price": 265000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 235683,
+      "avg_price": 237461,
+      "min_price": 233480,
+      "max_price": 245000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 249945,
+      "avg_price": 249945,
+      "min_price": 225000,
+      "max_price": 274890
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 245000,
+      "avg_price": 245000,
+      "min_price": 245000,
+      "max_price": 245000
+    },
+    {
+      "year": 2020,
+      "count": 8,
+      "median_price": 233072,
+      "avg_price": 249599,
+      "min_price": 212020,
+      "max_price": 310000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 210000,
+      "avg_price": 210000,
+      "min_price": 210000,
+      "max_price": 210000
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "median_price": 315000,
+      "avg_price": 327750,
+      "min_price": 280000,
+      "max_price": 401000
+    },
+    {
+      "year": 2023,
+      "count": 49,
+      "median_price": 312775,
+      "avg_price": 310168,
+      "min_price": 280000,
+      "max_price": 355000
+    },
+    {
+      "year": 2024,
+      "count": 16,
+      "median_price": 321585,
+      "avg_price": 319078,
+      "min_price": 300000,
+      "max_price": 352423
+    },
+    {
+      "year": 2025,
+      "count": 14,
+      "median_price": 314210,
+      "avg_price": 319384,
+      "min_price": 307075,
+      "max_price": 370000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 341000,
+      "avg_price": 341000,
+      "min_price": 341000,
+      "max_price": 341000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-04-27",
+      "address": "60 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 341000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "P51NYW2"
+    },
+    {
+      "date": "2025-08-08",
+      "address": "131 Clonmore, Ballyviniter, Mallow",
+      "price": 325992,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-31",
+      "address": "188 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51W1CC"
+    },
+    {
+      "date": "2025-07-07",
+      "address": "107 Clonmore, Ballyviniter, Mallow",
+      "price": 325991,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-09",
+      "address": "108 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51H7XD"
+    },
+    {
+      "date": "2025-05-29",
+      "address": "144 Clonmore, Ballyviniter, Mallow",
+      "price": 325991,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-30",
+      "address": "110 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 308370,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-17",
+      "address": "128  Clonmore, Ballyviniter, Mallow",
+      "price": 308370,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-31",
+      "address": "127 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 308370,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "P51FV0P"
+    },
+    {
+      "date": "2025-03-28",
+      "address": "145 Clonmore, Ballyviniter, Mallow",
+      "price": 326000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-19",
+      "address": "181 Clonmore, Ballyviniter, Mallow",
+      "price": 308370,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-12",
+      "address": "147 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 320050,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51WT1D"
+    },
+    {
+      "date": "2025-02-10",
+      "address": "126 Clonmore, Ballyviniter, Mallow",
+      "price": 308370,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-06",
+      "address": "146 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 320050,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51Y038"
+    },
+    {
+      "date": "2025-01-07",
+      "address": "125 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 307075,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P15KV4Y"
+    },
+    {
+      "date": "2024-12-20",
+      "address": "148 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51X52X"
+    },
+    {
+      "date": "2024-12-12",
+      "address": "180 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51TKF5"
+    },
+    {
+      "date": "2024-11-26",
+      "address": "183 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-18",
+      "address": "58 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51Y47N"
+    },
+    {
+      "date": "2024-09-12",
+      "address": "110 Clonmore, Ballyviniter, Mallow",
+      "price": 300226,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-08-21",
+      "address": "74 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51HRF1"
+    },
+    {
+      "date": "2024-07-31",
+      "address": "103 Clonmore, Ballyviniter, Mallow",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-12",
+      "address": "106  Clonmore, Ballyviniter, Mallow",
+      "price": 321585,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-10",
+      "address": "155 Clonmore, Ballyviniter, Mallow",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-21",
+      "address": "168 Clonmore, Ballyviniter, Mallow",
+      "price": 321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-06",
+      "address": "104 CLONMORE, BALLYVINITER, MALLOW",
+      "price": 321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-04",
+      "address": "178 Clonmore, Ballyviniter, Mallow",
+      "price": 321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-22",
+      "address": "111 Clonmore, Ballyviniter, Mallow",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-10",
+      "address": "194 Clonmore, Ballyviniter, Mallow",
+      "price": 321585,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-01",
+      "address": "163 Clonmore, Ballyviniter, Mallow",
+      "price": 321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-03-12",
+      "address": "105 Clonmore, Ballyviniter, Mallow",
+      "price": 321585,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "107 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "131 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "125 Clonmore, Ballyviniter, Mallow",
+      "price": 300226,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P15KV4Y"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "126 Clonmore, Ballyviniter, Mallow",
+      "price": 300226,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "144 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "145 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "147 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51WT1D"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "148 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51X52X"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "188 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51W1CC"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "181 Clonmore, Ballyviniter, Mallow",
+      "price": 300226,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "183 Clonmore, Ballyviniter, Mallow",
+      "price": 300226,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "182 Clonmore, Ballyviniter, Mallow",
+      "price": 300226,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P51XDT8"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "150 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "128 Clonmore, Ballyviniter, Mallow",
+      "price": 300226,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "109 Clonmore, Ballyviniter, Mallow",
+      "price": 300226,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "184 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "185 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "186 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-15",
+      "address": "149 Clonmore, Ballyviniter, Mallow",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 107
+}

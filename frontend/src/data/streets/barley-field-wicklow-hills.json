@@ -1,0 +1,505 @@
+{
+  "slug": "barley-field-wicklow-hills",
+  "stats": {
+    "count": 128,
+    "median": 237005,
+    "avg": 269055,
+    "min": 172135,
+    "max": 580000,
+    "firstYear": 2016,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 8,
+      "median_price": 208810,
+      "avg_price": 202684,
+      "min_price": 172135,
+      "max_price": 237004
+    },
+    {
+      "year": 2017,
+      "count": 51,
+      "median_price": 224035,
+      "avg_price": 226835,
+      "min_price": 180616,
+      "max_price": 285022
+    },
+    {
+      "year": 2018,
+      "count": 21,
+      "median_price": 237004,
+      "avg_price": 239952,
+      "min_price": 202642,
+      "max_price": 385000
+    },
+    {
+      "year": 2019,
+      "count": 25,
+      "median_price": 237885,
+      "avg_price": 247681,
+      "min_price": 220264,
+      "max_price": 295154
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 380000,
+      "avg_price": 380000,
+      "min_price": 360000,
+      "max_price": 400000
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 395000,
+      "avg_price": 395667,
+      "min_price": 345000,
+      "max_price": 447000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 445000,
+      "avg_price": 439167,
+      "min_price": 405000,
+      "max_price": 467500
+    },
+    {
+      "year": 2023,
+      "count": 7,
+      "median_price": 420000,
+      "avg_price": 423571,
+      "min_price": 370000,
+      "max_price": 495000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 469000,
+      "avg_price": 469000,
+      "min_price": 468000,
+      "max_price": 470000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 457750,
+      "avg_price": 457750,
+      "min_price": 455500,
+      "max_price": 460000
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 471500,
+      "avg_price": 483750,
+      "min_price": 412000,
+      "max_price": 580000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-18",
+      "address": "51 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 580000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A63HN27"
+    },
+    {
+      "date": "2026-07-29",
+      "address": "43 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 412000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63X278"
+    },
+    {
+      "date": "2026-05-05",
+      "address": "99 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 485000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A63T292"
+    },
+    {
+      "date": "2026-03-27",
+      "address": "71 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 458000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A63PC92"
+    },
+    {
+      "date": "2025-03-03",
+      "address": "92 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 460000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A63F863"
+    },
+    {
+      "date": "2025-01-13",
+      "address": "109 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 455500,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A63K802"
+    },
+    {
+      "date": "2024-11-01",
+      "address": "102 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63V079"
+    },
+    {
+      "date": "2024-08-02",
+      "address": "27 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 468000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X229"
+    },
+    {
+      "date": "2023-12-14",
+      "address": "120 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YE16"
+    },
+    {
+      "date": "2023-08-02",
+      "address": "34 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 413000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63WT27"
+    },
+    {
+      "date": "2023-07-17",
+      "address": "25 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63FN51"
+    },
+    {
+      "date": "2023-07-07",
+      "address": "82 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YT02"
+    },
+    {
+      "date": "2023-07-06",
+      "address": "86 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DT44"
+    },
+    {
+      "date": "2023-05-02",
+      "address": "58 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 422000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63XY99"
+    },
+    {
+      "date": "2023-04-26",
+      "address": "15 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63TH70"
+    },
+    {
+      "date": "2022-10-03",
+      "address": "124 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NH94"
+    },
+    {
+      "date": "2022-08-03",
+      "address": "88 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63RH72"
+    },
+    {
+      "date": "2022-07-29",
+      "address": "40 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 467500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63AP89"
+    },
+    {
+      "date": "2021-10-28",
+      "address": "90  BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 447000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-09",
+      "address": "20 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-23",
+      "address": "66 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63F899"
+    },
+    {
+      "date": "2020-02-26",
+      "address": "53 BARLEY FIELD, WICKLOW HILLS, NEWTONMOUNTKENNEDY",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-16",
+      "address": "49 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-10",
+      "address": "134 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 257800,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-06",
+      "address": "133 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 259911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-02",
+      "address": "155 Barley Field, Wicklow Hills, newtownmountkennedy",
+      "price": 249779,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-22",
+      "address": "153 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-14",
+      "address": "156 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 259031,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-11",
+      "address": "154 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-06",
+      "address": "160 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-01",
+      "address": "152 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 259911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-25",
+      "address": "132 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-01",
+      "address": "131 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 234900,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-27",
+      "address": "129 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 245374,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-25",
+      "address": "127 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-24",
+      "address": "128 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 271806,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63EP29"
+    },
+    {
+      "date": "2019-09-20",
+      "address": "140 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 224670,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-19",
+      "address": "141 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 224669,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-17",
+      "address": "139 Barley Field, Wicklow HIlls, Newtownmountkennedy",
+      "price": 229075,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-22",
+      "address": "146 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-21",
+      "address": "150 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 229075,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-25",
+      "address": "124 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 237885,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NH94"
+    },
+    {
+      "date": "2019-07-08",
+      "address": "120 BARLEY FIELD, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 236564,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YE16"
+    },
+    {
+      "date": "2019-07-05",
+      "address": "118 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 229074,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-05",
+      "address": "119 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 224669,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-20",
+      "address": "122 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 286991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-18",
+      "address": "116 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 220264,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-18",
+      "address": "117 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 224670,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-17",
+      "address": "103  BARLEY  FIELD, WICKLOW  HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-29",
+      "address": "114 Barley Field, Wicklow Hills, Newtownmountkennedy",
+      "price": 237004,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 128
+}

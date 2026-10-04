@@ -1,0 +1,505 @@
+{
+  "slug": "monalin-wicklow-hills",
+  "stats": {
+    "count": 105,
+    "median": 237004,
+    "avg": 278160,
+    "min": 116250,
+    "max": 600000,
+    "firstYear": 2015,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2015,
+      "count": 12,
+      "median_price": 209487,
+      "avg_price": 212501,
+      "min_price": 171806,
+      "max_price": 300000
+    },
+    {
+      "year": 2016,
+      "count": 34,
+      "median_price": 211454,
+      "avg_price": 213330,
+      "min_price": 171805,
+      "max_price": 264316
+    },
+    {
+      "year": 2018,
+      "count": 16,
+      "median_price": 226872,
+      "avg_price": 238650,
+      "min_price": 211453,
+      "max_price": 370000
+    },
+    {
+      "year": 2019,
+      "count": 19,
+      "median_price": 254626,
+      "avg_price": 268468,
+      "min_price": 116250,
+      "max_price": 375000
+    },
+    {
+      "year": 2020,
+      "count": 3,
+      "median_price": 334802,
+      "avg_price": 336601,
+      "min_price": 295000,
+      "max_price": 380000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 381000,
+      "avg_price": 381000,
+      "min_price": 365000,
+      "max_price": 397000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 432500,
+      "avg_price": 432500,
+      "min_price": 410000,
+      "max_price": 455000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 482500,
+      "avg_price": 482500,
+      "min_price": 482500,
+      "max_price": 482500
+    },
+    {
+      "year": 2024,
+      "count": 10,
+      "median_price": 462500,
+      "avg_price": 443300,
+      "min_price": 288000,
+      "max_price": 510000
+    },
+    {
+      "year": 2025,
+      "count": 4,
+      "median_price": 502500,
+      "avg_price": 495000,
+      "min_price": 375000,
+      "max_price": 600000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 476000,
+      "avg_price": 476000,
+      "min_price": 470000,
+      "max_price": 482000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-14",
+      "address": "35 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 470000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A63KD29"
+    },
+    {
+      "date": "2026-07-07",
+      "address": "48 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 482000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63WE28"
+    },
+    {
+      "date": "2025-11-21",
+      "address": "30 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 375000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A63Y938"
+    },
+    {
+      "date": "2025-08-27",
+      "address": "43 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 530000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A63R242"
+    },
+    {
+      "date": "2025-06-17",
+      "address": "89 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 600000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A63Y224"
+    },
+    {
+      "date": "2025-01-30",
+      "address": "77 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 475000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A63HE65"
+    },
+    {
+      "date": "2024-12-14",
+      "address": "88 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63V277"
+    },
+    {
+      "date": "2024-10-01",
+      "address": "51 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 288000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DF30"
+    },
+    {
+      "date": "2024-09-20",
+      "address": "62 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63XA02"
+    },
+    {
+      "date": "2024-09-05",
+      "address": "34 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63EV90"
+    },
+    {
+      "date": "2024-07-26",
+      "address": "46 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YY65"
+    },
+    {
+      "date": "2024-07-23",
+      "address": "23 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63AE70"
+    },
+    {
+      "date": "2024-07-01",
+      "address": "28 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63RP77"
+    },
+    {
+      "date": "2024-06-25",
+      "address": "41 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YA66"
+    },
+    {
+      "date": "2024-06-10",
+      "address": "5 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63A718"
+    },
+    {
+      "date": "2024-03-22",
+      "address": "73 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63T291"
+    },
+    {
+      "date": "2023-01-16",
+      "address": "16  MONALIN, WICKLOW  HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 482500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63A992"
+    },
+    {
+      "date": "2022-10-26",
+      "address": "9 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63XD83"
+    },
+    {
+      "date": "2022-06-03",
+      "address": "85 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DX88"
+    },
+    {
+      "date": "2021-12-21",
+      "address": "27 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 397000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63HC98"
+    },
+    {
+      "date": "2021-09-30",
+      "address": "21 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63C425"
+    },
+    {
+      "date": "2020-12-17",
+      "address": "54 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-08",
+      "address": "44 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-22",
+      "address": "61 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-18",
+      "address": "60 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-06",
+      "address": "56 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-26",
+      "address": "38 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-09",
+      "address": "21 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63C425"
+    },
+    {
+      "date": "2019-06-17",
+      "address": "73 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 257710,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63T291"
+    },
+    {
+      "date": "2019-06-12",
+      "address": "77 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 229075,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63HE65"
+    },
+    {
+      "date": "2019-06-11",
+      "address": "38 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 116250,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-04",
+      "address": "74 Monalin, Wicklow Hills, Newtownmountkenndy",
+      "price": 232159,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-31",
+      "address": "35 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 349000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2019-05-30",
+      "address": "80 MONALIN, WICKLOW HILLS, NEWTOWNMOUNTKENNEDY",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-19",
+      "address": "89 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 254625,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63Y224"
+    },
+    {
+      "date": "2019-02-19",
+      "address": "83 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-11",
+      "address": "91 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 290748,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-07",
+      "address": "85 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 224668,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DX88"
+    },
+    {
+      "date": "2019-02-07",
+      "address": "87 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 250220,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-06",
+      "address": "88 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 254626,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63V277"
+    },
+    {
+      "date": "2019-01-30",
+      "address": "84 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 224670,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-29",
+      "address": "90 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 254625,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-03",
+      "address": "62 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 259030,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63XA02"
+    },
+    {
+      "date": "2018-12-21",
+      "address": "79  Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 220265,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-10",
+      "address": "80 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 220265,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-05",
+      "address": "81 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-05",
+      "address": "78 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 224670,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-03",
+      "address": "82 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 240970,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-30",
+      "address": "67 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 224670,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-25",
+      "address": "64  Monalin, Wicklow Hills, Newtownmount Kennedy",
+      "price": 220575,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 105
+}

@@ -1,0 +1,473 @@
+{
+  "slug": "longstone-blessington-road",
+  "stats": {
+    "count": 132,
+    "median": 352423,
+    "avg": 372530,
+    "min": 262963,
+    "max": 750000,
+    "firstYear": 2019,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2019,
+      "count": 38,
+      "median_price": 334801,
+      "avg_price": 345095,
+      "min_price": 299560,
+      "max_price": 437181
+    },
+    {
+      "year": 2020,
+      "count": 43,
+      "median_price": 343612,
+      "avg_price": 341871,
+      "min_price": 262963,
+      "max_price": 418501
+    },
+    {
+      "year": 2021,
+      "count": 39,
+      "median_price": 380600,
+      "avg_price": 372947,
+      "min_price": 268150,
+      "max_price": 471365
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 515000,
+      "avg_price": 511667,
+      "min_price": 435000,
+      "max_price": 585000
+    },
+    {
+      "year": 2024,
+      "count": 5,
+      "median_price": 540000,
+      "avg_price": 538000,
+      "min_price": 450000,
+      "max_price": 642000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 750000,
+      "avg_price": 701667,
+      "min_price": 605000,
+      "max_price": 750000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 485000,
+      "avg_price": 485000,
+      "min_price": 485000,
+      "max_price": 485000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-19",
+      "address": "55 LONGSTONE, BLESSINGTON ROAD, CRADDOCKSTOWN  NAAS",
+      "price": 485000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W91YYV8"
+    },
+    {
+      "date": "2025-08-22",
+      "address": "135 LONGSTONE, BLESSINGTON ROAD, CRADOCKSTOWN",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "W91TXP2"
+    },
+    {
+      "date": "2025-04-09",
+      "address": "87 LONGSTONE, BLESSINGTON ROAD, NAAS",
+      "price": 750000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "W91W2CV"
+    },
+    {
+      "date": "2025-04-01",
+      "address": "95 LONGSTONE, BLESSINGTON ROAD, CRADDOCKSTOWN",
+      "price": 605000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W91H6KW"
+    },
+    {
+      "date": "2024-11-05",
+      "address": "66 LONGSTONE, BLESSINGTON ROAD, NAAS",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91HH6A"
+    },
+    {
+      "date": "2024-10-24",
+      "address": "92 LONGSTONE, BLESSINGTON ROAD, NAAS",
+      "price": 540000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91XT7H"
+    },
+    {
+      "date": "2024-10-23",
+      "address": "122 LONGSTONE, BLESSINGTON ROAD, CRADDOCKSTOWN",
+      "price": 642000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91P97N"
+    },
+    {
+      "date": "2024-10-04",
+      "address": "72 LONGSTONE, BLESSINGTON ROAD, CRADDOCKSTOWN  NAAS",
+      "price": 508000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91PW5W"
+    },
+    {
+      "date": "2024-02-02",
+      "address": "141 LONGSTONE, BLESSINGTON ROAD, CARDDOCKSTOWN",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91E9WK"
+    },
+    {
+      "date": "2022-07-20",
+      "address": "4 LONGSTONE, BLESSINGTON ROAD, CRADDOCKSTOWN",
+      "price": 515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91F7HC"
+    },
+    {
+      "date": "2022-05-30",
+      "address": "154 LONGSTONE, BLESSINGTON ROAD, CRADOCKSTOWN",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91HEV9"
+    },
+    {
+      "date": "2022-05-09",
+      "address": "123 LONGSTONE, BLESSINGTON ROAD, NAAS",
+      "price": 585000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91V9VK"
+    },
+    {
+      "date": "2021-11-24",
+      "address": "21 Longstone, Blessington Road, Cradockstown",
+      "price": 471365,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-18",
+      "address": "22 LONGSTONE, BLESSINGTON ROAD, CRADOCKSTOWN",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-08",
+      "address": "26 Longstone, Blessington Road, Cradockstown",
+      "price": 380600,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-02",
+      "address": "23 Longstone, Blessington Road, Craddockstown",
+      "price": 389868,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-28",
+      "address": "25  Longstone, Blessington Road, Craddockstown",
+      "price": 395500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-27",
+      "address": "No. 48 Longstone, Blessington Road, Craddockstown",
+      "price": 440529,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-18",
+      "address": "4 Longstone, Blessington Road, Craddockstown",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91F7HC"
+    },
+    {
+      "date": "2021-10-15",
+      "address": "No. 27 Longstone, Blessington Road, Craddockstown",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-24",
+      "address": "18 LONGSTONE, BLESSINGTON ROAD, NAAS",
+      "price": 445475,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-22",
+      "address": "15 Longstone, Blessington Road, Naas",
+      "price": 409690,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-14",
+      "address": "NO 28 Longstone, Blessington Road, Cradockstown",
+      "price": 422908,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-07",
+      "address": "29 Longstone, Blessington Road, Cradockstown",
+      "price": 396476,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-02",
+      "address": "2 Longstone, Blessington Road, Craddockstown",
+      "price": 356828,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-31",
+      "address": "52 Longstone, Blessington Road, Craddockstown",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-27",
+      "address": "16 Longstone, Blessington Road, Craddockstown",
+      "price": 436124,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-23",
+      "address": "50 Longstone, Blessington Road, Cradockstown",
+      "price": 343612,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-19",
+      "address": "51 Longstone, Blessington Road, Naas",
+      "price": 383258,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-06",
+      "address": "3 Longstone, Blessington Road, Craddockstown",
+      "price": 356828,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-04",
+      "address": "31 Longstone, Blessington Road, Craddockstown",
+      "price": 352424,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-23",
+      "address": "54 Longstone, Blessington Road, Cradockstown",
+      "price": 268150,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-22",
+      "address": "56 Longstone, Blessington Road, Craddockstown",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-22",
+      "address": "57 Longstone, Blessington Road, Craddockstown",
+      "price": 409690,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-15",
+      "address": "55 Longstone, Blessington Road, Craddockstown",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-24",
+      "address": "30 Longstone, Blessington Road, Craddockstown",
+      "price": 352422,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-24",
+      "address": "32 Longstone, Blessington Road, Craddockstown",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-17",
+      "address": "34 Longstone, Blessington Road, Cradockstown",
+      "price": 347137,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-09",
+      "address": "33 Longstone, Blessington Road, Craddockstown",
+      "price": 352422,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-03",
+      "address": "35 Longstone, Blessington Road, Cradockstown",
+      "price": 348017,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-16",
+      "address": "105 Longstone, Blessington Road, Naas",
+      "price": 428073,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-15",
+      "address": "103 Longstone, Blessington Road, Craddockstown",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-07",
+      "address": "102 Longstone, Blessington Road, Naas",
+      "price": 389250,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-19",
+      "address": "101 LONGSTONE, BLESSINGTON ROAD, CRADOCKSTOWN",
+      "price": 364317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-11",
+      "address": "104 Longstone, Blessington Road, Craddockstown",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-09",
+      "address": "100 LONGSTONE, BLESSINGTON ROAD, CRADOCKSTOWN",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-26",
+      "address": "99 Longstone, Blessington Road, Craddockstown",
+      "price": 418502,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-19",
+      "address": "107 Longstone, Blessington Road, Cradockstown",
+      "price": 312774,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-11",
+      "address": "106 Longstone, Blessington Road, Naas",
+      "price": 427313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-11",
+      "address": "108 Longstone, Blessington Road, Craddockstown",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 132
+}

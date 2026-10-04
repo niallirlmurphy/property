@@ -1,0 +1,145 @@
+{
+  "slug": "castle-park-road-sandycove",
+  "stats": {
+    "count": 9,
+    "median": 1450000,
+    "avg": 1696222,
+    "min": 1180000,
+    "max": 3200000,
+    "firstYear": 2015,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1680000,
+      "avg_price": 1680000,
+      "min_price": 1680000,
+      "max_price": 1680000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1390000,
+      "avg_price": 1390000,
+      "min_price": 1390000,
+      "max_price": 1390000
+    },
+    {
+      "year": 2018,
+      "count": 3,
+      "median_price": 1380000,
+      "avg_price": 1371667,
+      "min_price": 1285000,
+      "max_price": 1450000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1180000,
+      "avg_price": 1180000,
+      "min_price": 1180000,
+      "max_price": 1180000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1751000,
+      "avg_price": 1751000,
+      "min_price": 1751000,
+      "max_price": 1751000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1950000,
+      "avg_price": 1950000,
+      "min_price": 1950000,
+      "max_price": 1950000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 3200000,
+      "avg_price": 3200000,
+      "min_price": 3200000,
+      "max_price": 3200000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-23",
+      "address": "14 CASTLE PARK RD, SANDYCOVE, DUBLIN",
+      "price": 3200000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "A96AF40"
+    },
+    {
+      "date": "2024-12-05",
+      "address": "50 CASTLE PARK RD, SANDYCOVE, DUN LAOGHAIRE",
+      "price": 1950000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "A96F4W0"
+    },
+    {
+      "date": "2022-09-29",
+      "address": "30 CASTLE PARK RD, SANDYCOVE, DUBLIN",
+      "price": 1751000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96YW58"
+    },
+    {
+      "date": "2021-09-15",
+      "address": "14 CASTLE PARK RD, SANDYCOVE, DUBLIN",
+      "price": 1180000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "A96AF40"
+    },
+    {
+      "date": "2018-08-24",
+      "address": "4 CASTLE PARK RD, SANDYCOVE, DUBLIN",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-18",
+      "address": "29 CASTLE PARK RD, SANDYCOVE, DUBLIN",
+      "price": 1380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-04",
+      "address": "10 CASTLE PARK RD, SANDYCOVE, DUBLIN",
+      "price": 1285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-21",
+      "address": "17 CASTLE PARK RD, SANDYCOVE, DUBLIN",
+      "price": 1390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-12-07",
+      "address": "19 CASTLE PARK RD, SANDYCOVE, DUBLIN",
+      "price": 1680000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

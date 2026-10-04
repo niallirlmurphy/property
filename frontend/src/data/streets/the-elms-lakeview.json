@@ -1,0 +1,441 @@
+{
+  "slug": "the-elms-lakeview",
+  "stats": {
+    "count": 93,
+    "median": 350220,
+    "avg": 344654,
+    "min": 264316,
+    "max": 462555,
+    "firstYear": 2024,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2024,
+      "count": 65,
+      "median_price": 345000,
+      "avg_price": 339195,
+      "min_price": 264316,
+      "max_price": 462555
+    },
+    {
+      "year": 2025,
+      "count": 27,
+      "median_price": 374383,
+      "avg_price": 356121,
+      "min_price": 272738,
+      "max_price": 400881
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 389868,
+      "avg_price": 389868,
+      "min_price": 389868,
+      "max_price": 389868
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-01-30",
+      "address": "106 THE ELMS, LAKEVIEW, CASTLEREDMOND",
+      "price": 389868,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "P25V8Y4"
+    },
+    {
+      "date": "2025-10-31",
+      "address": "102 The Elms, Lakeview, Castleredmond",
+      "price": 398678,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-15",
+      "address": "No. 107, The Elms, Lakeview",
+      "price": 398678,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-14",
+      "address": "109 The Elms, Lakeview, Castleredmond",
+      "price": 398678,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-06",
+      "address": "99 THE ELMS, LAKEVIEW, MIDLETON",
+      "price": 400881,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-30",
+      "address": "108 The Elms, Lakeview, Midleton",
+      "price": 398678,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-08",
+      "address": "104 THE ELMS, LAKEVIEW, CASTLEREDMOND",
+      "price": 303965,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-29",
+      "address": "103  The Elms, Lakeview, Castleredmond",
+      "price": 389866,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-28",
+      "address": "100 The Elms, Lakeview, Midleton",
+      "price": 398678,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-28",
+      "address": "101 The Elms, Lakeview, Castleredmond",
+      "price": 398678,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-07",
+      "address": "92 The Elms, Lakeview, Castleredmond",
+      "price": 387665,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-30",
+      "address": "96 The Elms, Lakeview, Castleredmond",
+      "price": 365639,
+      "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-29",
+      "address": "91 The Elms, Lakeview, Midleton",
+      "price": 396476,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-22",
+      "address": "98 The Elms, Lakeview, Castleredmond",
+      "price": 374383,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-10",
+      "address": "94 The Elms, Lakeview, Castleredmond",
+      "price": 396476,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-09",
+      "address": "93 The Elms, Lakeview, Midleton",
+      "price": 387665,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-09",
+      "address": "90 The Elms, Lakeview, Midleton",
+      "price": 279866,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-07",
+      "address": "97 The Elms, Lakeview, Midleton",
+      "price": 365639,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-03",
+      "address": "95 The Elms, Lakeview, Castleredmond",
+      "price": 370134,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P25Y1Y2"
+    },
+    {
+      "date": "2025-04-02",
+      "address": "88 The Elms, Lakeview, Midleton",
+      "price": 280748,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-02",
+      "address": "89 The Elms, Lakeview, Midleton",
+      "price": 272738,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-04",
+      "address": "87 The Elms, Lakeview, Castleredmond",
+      "price": 370044,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-28",
+      "address": "85 The Elms, Lakeview, midleton",
+      "price": 374400,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-31",
+      "address": "84 The Elms, Lakeview, Midleton",
+      "price": 303963,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-29",
+      "address": "80  The Elms, Lakeview, Castleredmond",
+      "price": 303964,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-23",
+      "address": "82 The Elms, Lakeview, Midleton",
+      "price": 299559,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-20",
+      "address": "83 The Elms, Lakeview, Castleredmond",
+      "price": 299559,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-07",
+      "address": "81 The Elms, Lakeview, Midleton",
+      "price": 299558,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-12-20",
+      "address": "75 The Elms, Lakeview, Midleton",
+      "price": 292249,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-19",
+      "address": "77 The Elms, Lakeview, Midleton",
+      "price": 305507,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-17",
+      "address": "74 The Elms, Lakeview, Middleton",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-17",
+      "address": "33 The Elms, Lakeview, Midleton",
+      "price": 378854,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-17",
+      "address": "79 The Elms, Lakeview, Castleredmond",
+      "price": 299560,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-12",
+      "address": "76 The Elms, Lakeview, Castleredmond",
+      "price": 356828,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-20",
+      "address": "64  The Elms, Lakeview, Midleton",
+      "price": 378855,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-13",
+      "address": "35 The Elms, Lakeview, Midleton",
+      "price": 378854,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-12",
+      "address": "63 The Elms, Lakeview, Midleton",
+      "price": 462555,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-06",
+      "address": "73 The Elms, Lakeview, Midleton",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-04",
+      "address": "65 The Elms, Lakeview, Midleton",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-31",
+      "address": "67 The Elms, Lakeview, Castleredmond",
+      "price": 367775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-31",
+      "address": "68 The Elms, Lakeview, Midleton",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-31",
+      "address": "70 The Elms, Lakeview, Castleredmond",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-31",
+      "address": "71 The Elms, Lakeview, Castleredmond",
+      "price": 336938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-29",
+      "address": "69 The Elms, Lakeview, Midleton",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-29",
+      "address": "72 The Elms, Lakeview, Castleredmond",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-24",
+      "address": "66  The Elms, Lakeview, Castleredmond",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-08",
+      "address": "49  The Elms, Lakeview, Midleton",
+      "price": 350219,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-07",
+      "address": "53 The Elms, Lakeview, Midleton",
+      "price": 350220,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-01",
+      "address": "55  The Elms, Lakeview, Midleton",
+      "price": 318722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-27",
+      "address": "48 The Elms, Lakeview, Midleton",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 93
+}

@@ -1,0 +1,553 @@
+{
+  "slug": "palace-fields-tuam",
+  "stats": {
+    "count": 133,
+    "median": 196000,
+    "avg": 208287,
+    "min": 105000,
+    "max": 490000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 2,
+      "median_price": 192500,
+      "avg_price": 192500,
+      "min_price": 145000,
+      "max_price": 240000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 130000,
+      "avg_price": 130000,
+      "min_price": 130000,
+      "max_price": 130000
+    },
+    {
+      "year": 2012,
+      "count": 5,
+      "median_price": 147000,
+      "avg_price": 144501,
+      "min_price": 127000,
+      "max_price": 161674
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 134000,
+      "avg_price": 153800,
+      "min_price": 123000,
+      "max_price": 215000
+    },
+    {
+      "year": 2014,
+      "count": 7,
+      "median_price": 130000,
+      "avg_price": 124745,
+      "min_price": 105000,
+      "max_price": 140000
+    },
+    {
+      "year": 2015,
+      "count": 16,
+      "median_price": 121000,
+      "avg_price": 121397,
+      "min_price": 108370,
+      "max_price": 140000
+    },
+    {
+      "year": 2016,
+      "count": 9,
+      "median_price": 152500,
+      "avg_price": 152694,
+      "min_price": 135000,
+      "max_price": 176250
+    },
+    {
+      "year": 2017,
+      "count": 8,
+      "median_price": 165500,
+      "avg_price": 167225,
+      "min_price": 137000,
+      "max_price": 196000
+    },
+    {
+      "year": 2018,
+      "count": 9,
+      "median_price": 195000,
+      "avg_price": 202556,
+      "min_price": 170000,
+      "max_price": 255000
+    },
+    {
+      "year": 2019,
+      "count": 14,
+      "median_price": 225000,
+      "avg_price": 213929,
+      "min_price": 145000,
+      "max_price": 280000
+    },
+    {
+      "year": 2020,
+      "count": 8,
+      "median_price": 190000,
+      "avg_price": 198250,
+      "min_price": 156000,
+      "max_price": 240000
+    },
+    {
+      "year": 2021,
+      "count": 17,
+      "median_price": 258000,
+      "avg_price": 258941,
+      "min_price": 216000,
+      "max_price": 310000
+    },
+    {
+      "year": 2022,
+      "count": 12,
+      "median_price": 277000,
+      "avg_price": 261458,
+      "min_price": 132000,
+      "max_price": 325000
+    },
+    {
+      "year": 2023,
+      "count": 8,
+      "median_price": 277500,
+      "avg_price": 261062,
+      "min_price": 186500,
+      "max_price": 310000
+    },
+    {
+      "year": 2024,
+      "count": 5,
+      "median_price": 325000,
+      "avg_price": 316000,
+      "min_price": 220000,
+      "max_price": 385000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 390000,
+      "avg_price": 354333,
+      "min_price": 265000,
+      "max_price": 408000
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 359000,
+      "avg_price": 373250,
+      "min_price": 285000,
+      "max_price": 490000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-19",
+      "address": "149 PALACE FIELDS, TUAM, GALWAY",
+      "price": 368000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H54FW94"
+    },
+    {
+      "date": "2026-05-08",
+      "address": "270 PALACE FIELDS, TUAM, GALWAY",
+      "price": 350000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H54DX56"
+    },
+    {
+      "date": "2026-02-17",
+      "address": "18 PALACE FIELDS, TUAM, GALWAY",
+      "price": 285000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "H54R271"
+    },
+    {
+      "date": "2026-02-06",
+      "address": "157 PALACE FIELDS, TUAM, GALWAY",
+      "price": 490000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "H54EY72"
+    },
+    {
+      "date": "2025-10-06",
+      "address": "31 PALACE FIELDS, TUAM, GALWAY",
+      "price": 265000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "H54F821"
+    },
+    {
+      "date": "2025-08-28",
+      "address": "150 PALACE FIELDS, TUAM, GALWAY",
+      "price": 390000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H54X683"
+    },
+    {
+      "date": "2025-05-22",
+      "address": "185 PALACE FIELDS, TUAM, GALWAY",
+      "price": 408000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H54AT25"
+    },
+    {
+      "date": "2024-12-06",
+      "address": "236 PALACE FIELDS, TUAM, GALWAY",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54HW24"
+    },
+    {
+      "date": "2024-12-05",
+      "address": "16 PALACE FIELDS, TUAM, GALWAY",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54XV24"
+    },
+    {
+      "date": "2024-08-20",
+      "address": "174 PALACE FIELDS, TUAM, GALWAY",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54TD36"
+    },
+    {
+      "date": "2024-06-28",
+      "address": "116 PALACE FIELDS, TUAM, GALWAY",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54NX98"
+    },
+    {
+      "date": "2024-06-05",
+      "address": "248 PALACE FIELDS, TUAM, GALWAY",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54AT04"
+    },
+    {
+      "date": "2023-12-04",
+      "address": "113 PALACE FIELDS, TUAM, GALWAY",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54XF95"
+    },
+    {
+      "date": "2023-10-19",
+      "address": "225 PALACE FIELDS, TUAM, GALWAY",
+      "price": 210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54PD25"
+    },
+    {
+      "date": "2023-08-30",
+      "address": "108 PALACE FIELDS, TUAM, GALWAY",
+      "price": 292000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54C990"
+    },
+    {
+      "date": "2023-06-29",
+      "address": "257 PALACE FIELDS, TUAM, GALWAY",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54DF24"
+    },
+    {
+      "date": "2023-04-26",
+      "address": "164 PALACE FIELDS, TUAM, GALWAY",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54KC82"
+    },
+    {
+      "date": "2023-04-05",
+      "address": "100 PALACE FIELDS, TUAM, GALWAY",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54XE78"
+    },
+    {
+      "date": "2023-03-08",
+      "address": "168 PALACE FIELDS, TUAM, GALWAY",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54DR76"
+    },
+    {
+      "date": "2023-01-27",
+      "address": "93 PALACE FIELDS, TUAM, COUNTY GALWAY",
+      "price": 186500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54K576"
+    },
+    {
+      "date": "2022-12-22",
+      "address": "118 PALACE FIELDS, TUAM, GALWAY",
+      "price": 267000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54HH67"
+    },
+    {
+      "date": "2022-12-16",
+      "address": "192 PALACE FIELDS, TUAM, GALWAY",
+      "price": 132000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54YH52"
+    },
+    {
+      "date": "2022-11-25",
+      "address": "262 PALACE FIELDS, TUAM, GALWAY",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54RK25"
+    },
+    {
+      "date": "2022-10-21",
+      "address": "74 PALACE FIELDS, TUAM, GALWAY",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54PF99"
+    },
+    {
+      "date": "2022-10-06",
+      "address": "32 PALACE FIELDS, TUAM, GALWAY",
+      "price": 222500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54CR94"
+    },
+    {
+      "date": "2022-08-10",
+      "address": "52 PALACE FIELDS, TUAM, GALWAY",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54P049"
+    },
+    {
+      "date": "2022-07-18",
+      "address": "69 PALACE FIELDS, TUAM, GALWAY",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54EV80"
+    },
+    {
+      "date": "2022-04-26",
+      "address": "114 PALACE FIELDS, TUAM, GALWAY",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54HN84"
+    },
+    {
+      "date": "2022-04-11",
+      "address": "205 PALACE FIELDS, TUAM, GALWAY",
+      "price": 279000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54DY04"
+    },
+    {
+      "date": "2022-04-05",
+      "address": "3 PALACE FIELDS, TUAM, GALWAY",
+      "price": 307000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54CH22"
+    },
+    {
+      "date": "2022-02-25",
+      "address": "157 PALACE FIELDS, TUAM, GALWAY",
+      "price": 325000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "H54EY72"
+    },
+    {
+      "date": "2022-01-21",
+      "address": "137 PALACE FIELDS, TUAM, GALWAY",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54K889"
+    },
+    {
+      "date": "2021-12-31",
+      "address": "236 PALACE FIELDS, TUAM, GALWAY",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54HW24"
+    },
+    {
+      "date": "2021-12-20",
+      "address": "167 PALACE FIELDS, TUAM, GALWAY",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54E168"
+    },
+    {
+      "date": "2021-12-13",
+      "address": "237 PALACE FIELDS, TUAM, GALWAY",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54VW73"
+    },
+    {
+      "date": "2021-11-12",
+      "address": "83 PALACE FIELDS, TUAM, CO GALWAY",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54HX93"
+    },
+    {
+      "date": "2021-10-15",
+      "address": "47 PALACE FIELDS, TUAM, CO GALWAY",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54PY91"
+    },
+    {
+      "date": "2021-10-13",
+      "address": "22 PALACE FIELDS, TUAM, GALWAY",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54HY40"
+    },
+    {
+      "date": "2021-09-01",
+      "address": "232 PALACE FIELDS, TUAM, COUNTY GALWAY",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54RT99"
+    },
+    {
+      "date": "2021-07-28",
+      "address": "228 PALACE FIELDS, TUAM, GALWAY",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54WP23"
+    },
+    {
+      "date": "2021-07-26",
+      "address": "254 PALACE FIELDS, TUAM, GALWAY",
+      "price": 271000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54FY58"
+    },
+    {
+      "date": "2021-07-07",
+      "address": "48 PALACE FIELDS, TUAM, GALWAY",
+      "price": 298000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54TY07"
+    },
+    {
+      "date": "2021-06-25",
+      "address": "256 PALACE FIELDS, TUAM, GALWAY",
+      "price": 258000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54AE16"
+    },
+    {
+      "date": "2021-06-24",
+      "address": "178 PALACE FIELDS, TUAM, CO GALWAY",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54E540"
+    },
+    {
+      "date": "2021-06-16",
+      "address": "173 PALACE FIELDS, TUAM, GALWAY",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54XE17"
+    },
+    {
+      "date": "2021-06-04",
+      "address": "55 PALACE FIELDS, TUAM, GALWAY",
+      "price": 267000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54DC90"
+    },
+    {
+      "date": "2021-05-11",
+      "address": "230 PALACE FIELDS, TUAM, COUNTY GALWAY",
+      "price": 237000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H54W983"
+    },
+    {
+      "date": "2021-03-22",
+      "address": "210 PALACE FIELDS, TUAM, GALWAY",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-19",
+      "address": "98 PALACE FIELDS, TUAM, GALWAY",
+      "price": 216000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-21",
+      "address": "123 PALACE FIELDS, TUAM, GALWAY",
+      "price": 172500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 133
+}

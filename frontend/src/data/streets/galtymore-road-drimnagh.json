@@ -1,0 +1,553 @@
+{
+  "slug": "galtymore-road-drimnagh",
+  "stats": {
+    "count": 127,
+    "median": 288000,
+    "avg": 283581,
+    "min": 58500,
+    "max": 690000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 180000,
+      "avg_price": 180000,
+      "min_price": 175000,
+      "max_price": 185000
+    },
+    {
+      "year": 2011,
+      "count": 5,
+      "median_price": 132000,
+      "avg_price": 124700,
+      "min_price": 84000,
+      "max_price": 162500
+    },
+    {
+      "year": 2012,
+      "count": 8,
+      "median_price": 104000,
+      "avg_price": 104062,
+      "min_price": 72500,
+      "max_price": 138000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 130000,
+      "avg_price": 125200,
+      "min_price": 90000,
+      "max_price": 165000
+    },
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 139000,
+      "avg_price": 145960,
+      "min_price": 115000,
+      "max_price": 200000
+    },
+    {
+      "year": 2015,
+      "count": 9,
+      "median_price": 194100,
+      "avg_price": 193159,
+      "min_price": 123333,
+      "max_price": 235000
+    },
+    {
+      "year": 2016,
+      "count": 8,
+      "median_price": 225000,
+      "avg_price": 206688,
+      "min_price": 58500,
+      "max_price": 260000
+    },
+    {
+      "year": 2017,
+      "count": 5,
+      "median_price": 242200,
+      "avg_price": 246640,
+      "min_price": 232000,
+      "max_price": 271000
+    },
+    {
+      "year": 2018,
+      "count": 6,
+      "median_price": 310000,
+      "avg_price": 299500,
+      "min_price": 270000,
+      "max_price": 315000
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 289500,
+      "avg_price": 290125,
+      "min_price": 235000,
+      "max_price": 372000
+    },
+    {
+      "year": 2020,
+      "count": 9,
+      "median_price": 272000,
+      "avg_price": 280034,
+      "min_price": 240000,
+      "max_price": 330000
+    },
+    {
+      "year": 2021,
+      "count": 8,
+      "median_price": 345500,
+      "avg_price": 354000,
+      "min_price": 288000,
+      "max_price": 434000
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "median_price": 347500,
+      "avg_price": 352500,
+      "min_price": 330000,
+      "max_price": 385000
+    },
+    {
+      "year": 2023,
+      "count": 11,
+      "median_price": 318000,
+      "avg_price": 306636,
+      "min_price": 210000,
+      "max_price": 375000
+    },
+    {
+      "year": 2024,
+      "count": 12,
+      "median_price": 397500,
+      "avg_price": 398333,
+      "min_price": 300000,
+      "max_price": 490000
+    },
+    {
+      "year": 2025,
+      "count": 10,
+      "median_price": 422500,
+      "avg_price": 432800,
+      "min_price": 350000,
+      "max_price": 525000
+    },
+    {
+      "year": 2026,
+      "count": 10,
+      "median_price": 427500,
+      "avg_price": 449650,
+      "min_price": 355000,
+      "max_price": 690000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-25",
+      "address": "428 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 435000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12X016"
+    },
+    {
+      "date": "2026-09-02",
+      "address": "267 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 400000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12HP22"
+    },
+    {
+      "date": "2026-08-17",
+      "address": "530 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 502000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D12WD82"
+    },
+    {
+      "date": "2026-05-18",
+      "address": "377 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 377000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12VN29"
+    },
+    {
+      "date": "2026-05-18",
+      "address": "404 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 462500,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12V992"
+    },
+    {
+      "date": "2026-04-20",
+      "address": "103 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y320"
+    },
+    {
+      "date": "2026-04-09",
+      "address": "38 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 420000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12PF51"
+    },
+    {
+      "date": "2026-03-05",
+      "address": "368 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 380000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12CK10"
+    },
+    {
+      "date": "2026-02-25",
+      "address": "494 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 475000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12WD66"
+    },
+    {
+      "date": "2026-02-18",
+      "address": "500 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 690000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D12FD92"
+    },
+    {
+      "date": "2025-12-19",
+      "address": "65 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 425000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12ET6D"
+    },
+    {
+      "date": "2025-10-23",
+      "address": "314 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D12CP27"
+    },
+    {
+      "date": "2025-08-26",
+      "address": "361 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 411000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12CY80"
+    },
+    {
+      "date": "2025-07-17",
+      "address": "332 GALTYMORE ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 500000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12FC81"
+    },
+    {
+      "date": "2025-06-06",
+      "address": "269 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 525000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12YK25"
+    },
+    {
+      "date": "2025-05-14",
+      "address": "385 GALTYMORE ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 420000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12PA99"
+    },
+    {
+      "date": "2025-03-18",
+      "address": "178 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 382500,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12H7YP"
+    },
+    {
+      "date": "2025-02-28",
+      "address": "440 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 449500,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12DA36"
+    },
+    {
+      "date": "2025-02-06",
+      "address": "344 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 400000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12F899"
+    },
+    {
+      "date": "2025-01-21",
+      "address": "41 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 465000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12RX71"
+    },
+    {
+      "date": "2024-11-25",
+      "address": "114 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12KR88"
+    },
+    {
+      "date": "2024-11-11",
+      "address": "56 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 461000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12A314"
+    },
+    {
+      "date": "2024-11-08",
+      "address": "200 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12DH72"
+    },
+    {
+      "date": "2024-11-07",
+      "address": "53 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E448"
+    },
+    {
+      "date": "2024-10-03",
+      "address": "59 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12RY67"
+    },
+    {
+      "date": "2024-09-04",
+      "address": "254 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12NY89"
+    },
+    {
+      "date": "2024-08-02",
+      "address": "498 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12H527"
+    },
+    {
+      "date": "2024-06-28",
+      "address": "158 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 490000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12YW81"
+    },
+    {
+      "date": "2024-03-28",
+      "address": "397 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 408000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12DF83"
+    },
+    {
+      "date": "2024-03-07",
+      "address": "159 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 349000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12XC96"
+    },
+    {
+      "date": "2024-02-27",
+      "address": "281 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y895"
+    },
+    {
+      "date": "2024-01-08",
+      "address": "92 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 387000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y684"
+    },
+    {
+      "date": "2023-11-30",
+      "address": "155 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K251"
+    },
+    {
+      "date": "2023-11-07",
+      "address": "122 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y434"
+    },
+    {
+      "date": "2023-10-04",
+      "address": "24 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 327000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K308"
+    },
+    {
+      "date": "2023-08-09",
+      "address": "7 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12RK72"
+    },
+    {
+      "date": "2023-07-28",
+      "address": "310 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 318000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P663"
+    },
+    {
+      "date": "2023-07-06",
+      "address": "78 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 302000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12KF97"
+    },
+    {
+      "date": "2023-06-08",
+      "address": "280 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12XF85"
+    },
+    {
+      "date": "2023-04-24",
+      "address": "380 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 266000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12VY58"
+    },
+    {
+      "date": "2023-04-05",
+      "address": "314 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 210000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D12CP27"
+    },
+    {
+      "date": "2023-04-04",
+      "address": "260 GALTYMORE RD, DRIMNAGH, DUBLIN CITY",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12V573"
+    },
+    {
+      "date": "2023-03-15",
+      "address": "422 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12HW82"
+    },
+    {
+      "date": "2022-11-14",
+      "address": "13 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12HK79"
+    },
+    {
+      "date": "2022-08-17",
+      "address": "386 GALTYMORE ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12YY17"
+    },
+    {
+      "date": "2022-08-04",
+      "address": "34 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12CD71"
+    },
+    {
+      "date": "2022-03-16",
+      "address": "31 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12FP58"
+    },
+    {
+      "date": "2021-11-30",
+      "address": "502 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 434000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K778"
+    },
+    {
+      "date": "2021-11-09",
+      "address": "303 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 328000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12KC03"
+    },
+    {
+      "date": "2021-10-29",
+      "address": "115 GALTYMORE RD, DRIMNAGH, DUBLIN 12",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12WV63"
+    }
+  ],
+  "totalTransactions": 127
+}

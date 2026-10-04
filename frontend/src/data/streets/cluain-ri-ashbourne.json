@@ -1,0 +1,553 @@
+{
+  "slug": "cluain-ri-ashbourne",
+  "stats": {
+    "count": 92,
+    "median": 235000,
+    "avg": 241864,
+    "min": 82000,
+    "max": 459500,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 2,
+      "median_price": 196250,
+      "avg_price": 196250,
+      "min_price": 194500,
+      "max_price": 198000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 170000,
+      "avg_price": 170000,
+      "min_price": 170000,
+      "max_price": 170000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 111000,
+      "avg_price": 111000,
+      "min_price": 82000,
+      "max_price": 140000
+    },
+    {
+      "year": 2013,
+      "count": 4,
+      "median_price": 147500,
+      "avg_price": 144500,
+      "min_price": 117000,
+      "max_price": 166000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 190000,
+      "avg_price": 190667,
+      "min_price": 185000,
+      "max_price": 197000
+    },
+    {
+      "year": 2015,
+      "count": 13,
+      "median_price": 203000,
+      "avg_price": 195538,
+      "min_price": 128000,
+      "max_price": 286000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 160250,
+      "avg_price": 162125,
+      "min_price": 128000,
+      "max_price": 200000
+    },
+    {
+      "year": 2017,
+      "count": 5,
+      "median_price": 245000,
+      "avg_price": 225500,
+      "min_price": 177500,
+      "max_price": 270000
+    },
+    {
+      "year": 2018,
+      "count": 3,
+      "median_price": 230000,
+      "avg_price": 221167,
+      "min_price": 189500,
+      "max_price": 244000
+    },
+    {
+      "year": 2019,
+      "count": 7,
+      "median_price": 250500,
+      "avg_price": 241643,
+      "min_price": 185000,
+      "max_price": 280000
+    },
+    {
+      "year": 2020,
+      "count": 6,
+      "median_price": 245000,
+      "avg_price": 230417,
+      "min_price": 165000,
+      "max_price": 270000
+    },
+    {
+      "year": 2021,
+      "count": 7,
+      "median_price": 265000,
+      "avg_price": 246714,
+      "min_price": 180000,
+      "max_price": 300000
+    },
+    {
+      "year": 2022,
+      "count": 6,
+      "median_price": 317000,
+      "avg_price": 285167,
+      "min_price": 196000,
+      "max_price": 330000
+    },
+    {
+      "year": 2023,
+      "count": 9,
+      "median_price": 305500,
+      "avg_price": 277500,
+      "min_price": 210000,
+      "max_price": 366000
+    },
+    {
+      "year": 2024,
+      "count": 12,
+      "median_price": 306500,
+      "avg_price": 313250,
+      "min_price": 230000,
+      "max_price": 459500
+    },
+    {
+      "year": 2025,
+      "count": 6,
+      "median_price": 258500,
+      "avg_price": 307833,
+      "min_price": 240000,
+      "max_price": 435000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 360000,
+      "avg_price": 360000,
+      "min_price": 350000,
+      "max_price": 370000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-22",
+      "address": "113 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84XT65"
+    },
+    {
+      "date": "2026-02-27",
+      "address": "163 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 370000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "A84D510"
+    },
+    {
+      "date": "2025-12-22",
+      "address": "56 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 435000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A84AE29"
+    },
+    {
+      "date": "2025-11-27",
+      "address": "221 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 405000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A84EN24"
+    },
+    {
+      "date": "2025-10-20",
+      "address": "183 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 257000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "A84P702"
+    },
+    {
+      "date": "2025-07-10",
+      "address": "55 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 240000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "A84XK35"
+    },
+    {
+      "date": "2025-07-07",
+      "address": "114 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 260000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "A84RW70"
+    },
+    {
+      "date": "2025-03-21",
+      "address": "102 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 250000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "A84PT73"
+    },
+    {
+      "date": "2024-12-19",
+      "address": "38 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 392000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84X967"
+    },
+    {
+      "date": "2024-11-14",
+      "address": "80 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 264000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84HY26"
+    },
+    {
+      "date": "2024-10-02",
+      "address": "187 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 331000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84X092"
+    },
+    {
+      "date": "2024-09-13",
+      "address": "44 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 387500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84RF24"
+    },
+    {
+      "date": "2024-09-10",
+      "address": "193 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 459500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84E037"
+    },
+    {
+      "date": "2024-08-30",
+      "address": "182 CLUAIN RI, ASHBOURNE, CO. MEATH",
+      "price": 323000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84W308"
+    },
+    {
+      "date": "2024-08-26",
+      "address": "58 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84C792"
+    },
+    {
+      "date": "2024-08-07",
+      "address": "98 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84Y767"
+    },
+    {
+      "date": "2024-07-30",
+      "address": "111 CLUAIN RI, ASHBOURNE, CO MEATH",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84HN90"
+    },
+    {
+      "date": "2024-07-10",
+      "address": "149 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84DX40"
+    },
+    {
+      "date": "2024-03-25",
+      "address": "49 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84PX68"
+    },
+    {
+      "date": "2024-01-16",
+      "address": "174 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 247000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84WR12"
+    },
+    {
+      "date": "2023-10-26",
+      "address": "189 CLUAIN RI, ASHBOURNE, CO MEATH",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84RP84"
+    },
+    {
+      "date": "2023-09-07",
+      "address": "93 CLUAIN RI, ASHBOURNE, CO MEATH",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84XW22"
+    },
+    {
+      "date": "2023-07-18",
+      "address": "202 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 366000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84AY76"
+    },
+    {
+      "date": "2023-07-13",
+      "address": "119 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 226000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84N521"
+    },
+    {
+      "date": "2023-07-04",
+      "address": "209 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 305500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84PR99"
+    },
+    {
+      "date": "2023-05-31",
+      "address": "65 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84VK70"
+    },
+    {
+      "date": "2023-05-16",
+      "address": "130 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84AD77"
+    },
+    {
+      "date": "2023-03-06",
+      "address": "188 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84CY98"
+    },
+    {
+      "date": "2023-02-01",
+      "address": "124 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84HW80"
+    },
+    {
+      "date": "2022-11-18",
+      "address": "208 CLUAIN RI, ASHBOURNE, CO MEATH",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84F437"
+    },
+    {
+      "date": "2022-11-09",
+      "address": "58 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 196000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84C792"
+    },
+    {
+      "date": "2022-09-08",
+      "address": "47 CLUAIN RI, ASHBOURNE, CO MEATH",
+      "price": 319000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84K192"
+    },
+    {
+      "date": "2022-06-29",
+      "address": "156 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84EH95"
+    },
+    {
+      "date": "2022-04-22",
+      "address": "178 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84R597"
+    },
+    {
+      "date": "2022-01-20",
+      "address": "151 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 321000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84NY50"
+    },
+    {
+      "date": "2021-10-29",
+      "address": "157 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 271000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84X952"
+    },
+    {
+      "date": "2021-07-05",
+      "address": "40 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 276000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84D573"
+    },
+    {
+      "date": "2021-05-07",
+      "address": "109 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84WA00"
+    },
+    {
+      "date": "2021-02-16",
+      "address": "50 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84RT99"
+    },
+    {
+      "date": "2021-02-01",
+      "address": "131 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-22",
+      "address": "158 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-20",
+      "address": "129 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-25",
+      "address": "2 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-02",
+      "address": "102 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 187500,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "A84PT73"
+    },
+    {
+      "date": "2020-06-19",
+      "address": "161 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-06",
+      "address": "223 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 165000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-04",
+      "address": "227 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-27",
+      "address": "219 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-17",
+      "address": "103 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-30",
+      "address": "121 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 250500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 92
+}

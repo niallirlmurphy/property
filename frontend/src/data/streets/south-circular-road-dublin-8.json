@@ -1,0 +1,545 @@
+{
+  "slug": "south-circular-road-dublin-8",
+  "stats": {
+    "count": 123,
+    "median": 475000,
+    "avg": 581170,
+    "min": 70000,
+    "max": 2017177,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 365000,
+      "avg_price": 365000,
+      "min_price": 365000,
+      "max_price": 365000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 415000,
+      "avg_price": 415000,
+      "min_price": 415000,
+      "max_price": 415000
+    },
+    {
+      "year": 2012,
+      "count": 4,
+      "median_price": 328750,
+      "avg_price": 321875,
+      "min_price": 280000,
+      "max_price": 350000
+    },
+    {
+      "year": 2013,
+      "count": 7,
+      "median_price": 280000,
+      "avg_price": 268143,
+      "min_price": 120000,
+      "max_price": 470000
+    },
+    {
+      "year": 2014,
+      "count": 18,
+      "median_price": 390000,
+      "avg_price": 413253,
+      "min_price": 134750,
+      "max_price": 1100000
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 317500,
+      "avg_price": 348625,
+      "min_price": 70000,
+      "max_price": 620000
+    },
+    {
+      "year": 2016,
+      "count": 13,
+      "median_price": 485000,
+      "avg_price": 556577,
+      "min_price": 205000,
+      "max_price": 995000
+    },
+    {
+      "year": 2017,
+      "count": 14,
+      "median_price": 379500,
+      "avg_price": 392500,
+      "min_price": 144000,
+      "max_price": 720000
+    },
+    {
+      "year": 2018,
+      "count": 10,
+      "median_price": 625500,
+      "avg_price": 716630,
+      "min_price": 230000,
+      "max_price": 1614251
+    },
+    {
+      "year": 2019,
+      "count": 5,
+      "median_price": 915217,
+      "avg_price": 1109479,
+      "min_price": 585000,
+      "max_price": 2017177
+    },
+    {
+      "year": 2020,
+      "count": 8,
+      "median_price": 587600,
+      "avg_price": 629712,
+      "min_price": 450000,
+      "max_price": 1087500
+    },
+    {
+      "year": 2021,
+      "count": 6,
+      "median_price": 453000,
+      "avg_price": 554333,
+      "min_price": 275000,
+      "max_price": 1250000
+    },
+    {
+      "year": 2022,
+      "count": 7,
+      "median_price": 650000,
+      "avg_price": 780714,
+      "min_price": 370000,
+      "max_price": 1425000
+    },
+    {
+      "year": 2024,
+      "count": 8,
+      "median_price": 758500,
+      "avg_price": 815708,
+      "min_price": 466666,
+      "max_price": 1490000
+    },
+    {
+      "year": 2025,
+      "count": 7,
+      "median_price": 900000,
+      "avg_price": 827143,
+      "min_price": 500000,
+      "max_price": 1100000
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 810000,
+      "avg_price": 953883,
+      "min_price": 420000,
+      "max_price": 1700000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-18",
+      "address": "49 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 1700000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D08YDR0"
+    },
+    {
+      "date": "2026-08-20",
+      "address": "609 SOUTH CIRCULAR RD, DUBLIN 8",
+      "price": 1335000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D08KF2R"
+    },
+    {
+      "date": "2026-04-23",
+      "address": "138 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 648298,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D08NWV9"
+    },
+    {
+      "date": "2026-03-20",
+      "address": "33 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08E2V3"
+    },
+    {
+      "date": "2026-03-13",
+      "address": "459 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "D08AE4A"
+    },
+    {
+      "date": "2026-02-17",
+      "address": "376 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 870000,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "D08Y8H1"
+    },
+    {
+      "date": "2025-11-10",
+      "address": "460 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 985000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D08N6T0"
+    },
+    {
+      "date": "2025-10-15",
+      "address": "273 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 900000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D08FXA6"
+    },
+    {
+      "date": "2025-10-03",
+      "address": "10 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 920000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D08TKN1"
+    },
+    {
+      "date": "2025-07-23",
+      "address": "188 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 645000,
+      "bedrooms": 4,
+      "propertyType": "bungalow",
+      "eircode": "D08C6C4"
+    },
+    {
+      "date": "2025-06-06",
+      "address": "597 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 1100000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D08K6HY"
+    },
+    {
+      "date": "2025-04-16",
+      "address": "362 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 740000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D08N9YF"
+    },
+    {
+      "date": "2025-01-30",
+      "address": "177 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 500000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D08H6C5"
+    },
+    {
+      "date": "2024-11-13",
+      "address": "456 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 645000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08DVC0"
+    },
+    {
+      "date": "2024-11-13",
+      "address": "474 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 685000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08A2A0"
+    },
+    {
+      "date": "2024-10-24",
+      "address": "2 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 775000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D08DR60"
+    },
+    {
+      "date": "2024-09-12",
+      "address": "79 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 1490000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D08HR77"
+    },
+    {
+      "date": "2024-02-20",
+      "address": "177 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 900000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D08H6C5"
+    },
+    {
+      "date": "2024-02-01",
+      "address": "19 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 466666,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08PD77"
+    },
+    {
+      "date": "2024-01-30",
+      "address": "150 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 742000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D08FNE0"
+    },
+    {
+      "date": "2024-01-18",
+      "address": "348 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 822000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D08Y9K4"
+    },
+    {
+      "date": "2022-12-14",
+      "address": "126 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08FX39"
+    },
+    {
+      "date": "2022-07-14",
+      "address": "49 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 1425000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D08YDR0"
+    },
+    {
+      "date": "2022-05-24",
+      "address": "367 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-18",
+      "address": "57 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 695000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08W8E2"
+    },
+    {
+      "date": "2022-02-09",
+      "address": "442 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08W1XK"
+    },
+    {
+      "date": "2022-02-02",
+      "address": "336 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08H7D0"
+    },
+    {
+      "date": "2022-01-31",
+      "address": "492 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 570000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08TRC6"
+    },
+    {
+      "date": "2021-11-26",
+      "address": "118 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08VHW0"
+    },
+    {
+      "date": "2021-07-16",
+      "address": "445 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08N1N2"
+    },
+    {
+      "date": "2021-04-30",
+      "address": "322 SOUTH CIRCULAR RD, DUBLIN 8",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08W5R5"
+    },
+    {
+      "date": "2021-04-09",
+      "address": "166 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 570000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-08",
+      "address": "265 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-09",
+      "address": "546 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 431000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-17",
+      "address": "486 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 610000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-29",
+      "address": "238 SOUTH CIRCULAR RD, DUBLIN 8",
+      "price": 462500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-29",
+      "address": "240 SOUTH CIRCULAR RD, DUBLIN 8",
+      "price": 462500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-26",
+      "address": "182 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 630000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-03",
+      "address": "216 SOUTH CIRCULAR RD, DUBLIN 8",
+      "price": 770000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-02",
+      "address": "107 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 565200,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-12",
+      "address": "218 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-24",
+      "address": "9 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 1087500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-15",
+      "address": "384 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 2017177,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-15",
+      "address": "397 SOUTH CIRCULAR RD, DUBLIN 8",
+      "price": 915217,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-02",
+      "address": "6 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 1240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-12",
+      "address": "531 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 790000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-01",
+      "address": "744 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 585000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-31",
+      "address": "138 SOUTH CIRCULAR RD, DUBLIN 8, DUBLIN",
+      "price": 568000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D08NWV9"
+    },
+    {
+      "date": "2018-10-26",
+      "address": "208 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 1220780,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-26",
+      "address": "270 SOUTH CIRCULAR ROAD, DUBLIN 8",
+      "price": 1614251,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 123
+}

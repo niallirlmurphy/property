@@ -1,0 +1,553 @@
+{
+  "slug": "corrib-road-terenure",
+  "stats": {
+    "count": 91,
+    "median": 452000,
+    "avg": 466464,
+    "min": 150000,
+    "max": 850000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6,
+      "median_price": 306500,
+      "avg_price": 287917,
+      "min_price": 150000,
+      "max_price": 355000
+    },
+    {
+      "year": 2011,
+      "count": 5,
+      "median_price": 260000,
+      "avg_price": 269400,
+      "min_price": 225000,
+      "max_price": 330000
+    },
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 315000,
+      "avg_price": 323333,
+      "min_price": 315000,
+      "max_price": 340000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 305000,
+      "avg_price": 326890,
+      "min_price": 280000,
+      "max_price": 399950
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 339750,
+      "avg_price": 346875,
+      "min_price": 308000,
+      "max_price": 400000
+    },
+    {
+      "year": 2015,
+      "count": 5,
+      "median_price": 371000,
+      "avg_price": 375851,
+      "min_price": 347000,
+      "max_price": 401254
+    },
+    {
+      "year": 2016,
+      "count": 5,
+      "median_price": 425000,
+      "avg_price": 431400,
+      "min_price": 400000,
+      "max_price": 475000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 420000,
+      "avg_price": 423333,
+      "min_price": 415000,
+      "max_price": 435000
+    },
+    {
+      "year": 2018,
+      "count": 5,
+      "median_price": 480000,
+      "avg_price": 458600,
+      "min_price": 388000,
+      "max_price": 515000
+    },
+    {
+      "year": 2019,
+      "count": 7,
+      "median_price": 479000,
+      "avg_price": 480714,
+      "min_price": 410000,
+      "max_price": 556000
+    },
+    {
+      "year": 2020,
+      "count": 8,
+      "median_price": 467500,
+      "avg_price": 474875,
+      "min_price": 415000,
+      "max_price": 637000
+    },
+    {
+      "year": 2021,
+      "count": 7,
+      "median_price": 483000,
+      "avg_price": 492714,
+      "min_price": 420000,
+      "max_price": 625000
+    },
+    {
+      "year": 2022,
+      "count": 7,
+      "median_price": 530000,
+      "avg_price": 541714,
+      "min_price": 440000,
+      "max_price": 695000
+    },
+    {
+      "year": 2023,
+      "count": 5,
+      "median_price": 555000,
+      "avg_price": 539700,
+      "min_price": 425000,
+      "max_price": 600000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 621500,
+      "avg_price": 621500,
+      "min_price": 610000,
+      "max_price": 633000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 690000,
+      "avg_price": 671000,
+      "min_price": 610000,
+      "max_price": 713000
+    },
+    {
+      "year": 2026,
+      "count": 11,
+      "median_price": 650000,
+      "avg_price": 674818,
+      "min_price": 515000,
+      "max_price": 850000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-21",
+      "address": "140 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 525000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D6WYY84"
+    },
+    {
+      "date": "2026-08-26",
+      "address": "5 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 650000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D6WY497"
+    },
+    {
+      "date": "2026-07-27",
+      "address": "18 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 750000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D6WKC53"
+    },
+    {
+      "date": "2026-07-20",
+      "address": "4 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 642000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D6WTX00"
+    },
+    {
+      "date": "2026-07-01",
+      "address": "195 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 680000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WYX93"
+    },
+    {
+      "date": "2026-05-21",
+      "address": "187 CORRIB RD, TERENURE, DUBLIN 6",
+      "price": 646000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D6WYD80"
+    },
+    {
+      "date": "2026-04-10",
+      "address": "32 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 685000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WH954"
+    },
+    {
+      "date": "2026-04-09",
+      "address": "176 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 515000,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "D6WT998"
+    },
+    {
+      "date": "2026-03-31",
+      "address": "172 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WNN23"
+    },
+    {
+      "date": "2026-03-31",
+      "address": "172 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 850000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D6WNN23"
+    },
+    {
+      "date": "2026-03-19",
+      "address": "199 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 630000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D6WTC96"
+    },
+    {
+      "date": "2025-07-29",
+      "address": "120 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 690000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D6WX078"
+    },
+    {
+      "date": "2025-07-10",
+      "address": "159 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 713000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D6WA997"
+    },
+    {
+      "date": "2025-01-14",
+      "address": "114 CORRIB ROAD, TERENURE, DUBLIN 6W",
+      "price": 610000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D6WHY42"
+    },
+    {
+      "date": "2024-07-30",
+      "address": "117 CORRIB ROAD, TERENURE, DUBLIN 6W",
+      "price": 610000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WKF24"
+    },
+    {
+      "date": "2024-07-08",
+      "address": "72 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 633000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WCD92"
+    },
+    {
+      "date": "2023-07-14",
+      "address": "91 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 586000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WP260"
+    },
+    {
+      "date": "2023-06-30",
+      "address": "102 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 555000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WX371"
+    },
+    {
+      "date": "2023-03-29",
+      "address": "137 CORRIB RD, TERENURE, DUBLIN",
+      "price": 600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WVY92"
+    },
+    {
+      "date": "2023-03-06",
+      "address": "38 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 532500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WAN24"
+    },
+    {
+      "date": "2023-01-13",
+      "address": "83 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WAD78"
+    },
+    {
+      "date": "2022-12-02",
+      "address": "2 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 585000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WY744"
+    },
+    {
+      "date": "2022-08-08",
+      "address": "163 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WDF88"
+    },
+    {
+      "date": "2022-07-20",
+      "address": "48 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 695000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WP033"
+    },
+    {
+      "date": "2022-06-13",
+      "address": "178 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WE379"
+    },
+    {
+      "date": "2022-04-29",
+      "address": "129 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 492000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WFH52"
+    },
+    {
+      "date": "2022-04-27",
+      "address": "109 CORRIB RD, TERENURE, DUBLIN 6",
+      "price": 535000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WPX98"
+    },
+    {
+      "date": "2022-02-02",
+      "address": "123 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WW896"
+    },
+    {
+      "date": "2021-08-19",
+      "address": "166 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 625000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WV564"
+    },
+    {
+      "date": "2021-08-16",
+      "address": "95 CORRIB ROAD, TERENURE, DUBLIN 6W",
+      "price": 483000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WF654"
+    },
+    {
+      "date": "2021-03-31",
+      "address": "32 CORRIB RD, TERENURE, DUBLIN 6",
+      "price": 473000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-19",
+      "address": "184 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 491000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-10",
+      "address": "61 CORRIB RD, TERENURE, DUBLIN",
+      "price": 452000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-08",
+      "address": "180 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-03",
+      "address": "151 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-01",
+      "address": "146 CORRIB ROAD, TERENURE, DUBLIN 6W",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-15",
+      "address": "205 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-23",
+      "address": "66 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-17",
+      "address": "135 CORRIB RD, TERENURE, DUBLIN",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-25",
+      "address": "57 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-11",
+      "address": "77 CORRIB RD, TERENURE, DUBLIN 6",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-13",
+      "address": "131 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 637000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-07",
+      "address": "7 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 482000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-12",
+      "address": "153 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-31",
+      "address": "58 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 479000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-13",
+      "address": "97 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-03",
+      "address": "110 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 556000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-19",
+      "address": "15 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-07",
+      "address": "156 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-07",
+      "address": "173 CORRIB RD, TERENURE, DUBLIN 6W",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 91
+}

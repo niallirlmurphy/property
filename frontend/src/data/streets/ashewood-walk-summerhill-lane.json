@@ -1,0 +1,553 @@
+{
+  "slug": "ashewood-walk-summerhill-lane",
+  "stats": {
+    "count": 107,
+    "median": 299558,
+    "avg": 270868,
+    "min": 18650,
+    "max": 436123,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 185000,
+      "avg_price": 190532,
+      "min_price": 185000,
+      "max_price": 201595
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 142390,
+      "avg_price": 142390,
+      "min_price": 135000,
+      "max_price": 149780
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 127753,
+      "avg_price": 127753,
+      "min_price": 127753,
+      "max_price": 127753
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 145913,
+      "avg_price": 145913,
+      "min_price": 136827,
+      "max_price": 155000
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 138589,
+      "avg_price": 139779,
+      "min_price": 136564,
+      "max_price": 145375
+    },
+    {
+      "year": 2015,
+      "count": 3,
+      "median_price": 147400,
+      "avg_price": 145903,
+      "min_price": 140969,
+      "max_price": 149339
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 190440,
+      "avg_price": 194754,
+      "min_price": 178236,
+      "max_price": 219900
+    },
+    {
+      "year": 2017,
+      "count": 5,
+      "median_price": 200263,
+      "avg_price": 212705,
+      "min_price": 198000,
+      "max_price": 245000
+    },
+    {
+      "year": 2018,
+      "count": 3,
+      "median_price": 235505,
+      "avg_price": 237767,
+      "min_price": 233480,
+      "max_price": 244316
+    },
+    {
+      "year": 2019,
+      "count": 10,
+      "median_price": 233480,
+      "avg_price": 216943,
+      "min_price": 140970,
+      "max_price": 244316
+    },
+    {
+      "year": 2020,
+      "count": 11,
+      "median_price": 244315,
+      "avg_price": 218391,
+      "min_price": 18650,
+      "max_price": 259912
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 317500,
+      "avg_price": 317500,
+      "min_price": 317500,
+      "max_price": 317500
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 278000,
+      "avg_price": 278000,
+      "min_price": 256000,
+      "max_price": 300000
+    },
+    {
+      "year": 2023,
+      "count": 15,
+      "median_price": 321585,
+      "avg_price": 315006,
+      "min_price": 272000,
+      "max_price": 339207
+    },
+    {
+      "year": 2024,
+      "count": 22,
+      "median_price": 330396,
+      "avg_price": 329848,
+      "min_price": 300000,
+      "max_price": 352423
+    },
+    {
+      "year": 2025,
+      "count": 17,
+      "median_price": 376305,
+      "avg_price": 357781,
+      "min_price": 230000,
+      "max_price": 436123
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 322500,
+      "avg_price": 322500,
+      "min_price": 280000,
+      "max_price": 365000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-23",
+      "address": "24 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 280000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "R32WVW2"
+    },
+    {
+      "date": "2026-08-31",
+      "address": "53 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 365000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "R32H2P6"
+    },
+    {
+      "date": "2025-10-03",
+      "address": "37 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 350000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "R32FH09"
+    },
+    {
+      "date": "2025-09-03",
+      "address": "48 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 387000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "R32T0H1"
+    },
+    {
+      "date": "2025-08-01",
+      "address": "105 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 436123,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-22",
+      "address": "109 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 385044,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-17",
+      "address": "106 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 384925,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-08",
+      "address": "115 ashewood walk, summerhill lane, portlaoise",
+      "price": 384925,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-05",
+      "address": "110 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 383259,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-04",
+      "address": "116 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 400881,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-29",
+      "address": "111 ASHEWOOD WALK, SUMMERHILL LANE, Portlaoise",
+      "price": 365639,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-29",
+      "address": "112 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 376305,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-29",
+      "address": "113 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 385044,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-07",
+      "address": "117 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 323370,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-26",
+      "address": "118 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 317180,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-25",
+      "address": "122 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 330396,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-25",
+      "address": "119 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 332180,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-21",
+      "address": "129 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 310000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R32W2WV"
+    },
+    {
+      "date": "2025-02-10",
+      "address": "19 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 230000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "R32Y2EC"
+    },
+    {
+      "date": "2024-12-05",
+      "address": "123 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-14",
+      "address": "14 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32H3FV"
+    },
+    {
+      "date": "2024-11-07",
+      "address": "125  Ashewood Walk, Summerhill Lane, Portlaois",
+      "price": 332181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-07",
+      "address": "126 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 330395,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-04",
+      "address": "128 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-08-20",
+      "address": "103 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-18",
+      "address": "102 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-11",
+      "address": "101 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 315725,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-10",
+      "address": "100 Ashewood Walk, Summerhill Lane, Stradbally Road",
+      "price": 308369,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-19",
+      "address": "99 ashewood walk, summerhill lane, portlaoise",
+      "price": 323370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-24",
+      "address": "98 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 341675,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-21",
+      "address": "161 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 340991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-10",
+      "address": "96 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-10",
+      "address": "92 Ashewood Walk, Summerhill Lane, Stradbally Road",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-09",
+      "address": "93 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-30",
+      "address": "91 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 321585,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-26",
+      "address": "97 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-25",
+      "address": "156 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-25",
+      "address": "160 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-17",
+      "address": "95 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 325990,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-03",
+      "address": "159 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 323370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-03-26",
+      "address": "94 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 334800,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-21",
+      "address": "79 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-19",
+      "address": "90 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 339206,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-09",
+      "address": "89 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-25",
+      "address": "87 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-20",
+      "address": "85 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 299558,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-04",
+      "address": "83 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 299558,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-21",
+      "address": "130 ASHEWOOD WALK, SUMMERHILL LANE, PORTLAOISE",
+      "price": 272000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32A6CN"
+    },
+    {
+      "date": "2023-05-17",
+      "address": "69 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-09",
+      "address": "73 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 318965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 107
+}

@@ -1,0 +1,145 @@
+{
+  "slug": "leinster-road-west-rathmines",
+  "stats": {
+    "count": 10,
+    "median": 1222466,
+    "avg": 1107923,
+    "min": 490000,
+    "max": 1762115,
+    "firstYear": 2013,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 526250,
+      "avg_price": 526250,
+      "min_price": 490000,
+      "max_price": 562500
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 676529,
+      "avg_price": 676529,
+      "min_price": 676529,
+      "max_price": 676529
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1071575,
+      "avg_price": 1071575,
+      "min_price": 722500,
+      "max_price": 1420650
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1145374,
+      "avg_price": 1145374,
+      "min_price": 1145374,
+      "max_price": 1145374
+    },
+    {
+      "year": 2020,
+      "count": 3,
+      "median_price": 1350000,
+      "avg_price": 1470558,
+      "min_price": 1299559,
+      "max_price": 1762115
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1650000,
+      "avg_price": 1650000,
+      "min_price": 1650000,
+      "max_price": 1650000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-02-12",
+      "address": "4 LEINSTER ROAD WEST, RATHMINES, DUBLIN 6",
+      "price": 1650000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06X7P6"
+    },
+    {
+      "date": "2020-09-24",
+      "address": "4 LEINSTER ROAD WEST, RATHMINES, DUBLIN 6",
+      "price": 1350000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06X7P6"
+    },
+    {
+      "date": "2020-09-03",
+      "address": "31 Leinster Road West, Rathmines",
+      "price": 1762115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-21",
+      "address": "30 Leinster Road West, Rathmines, Dublin 6",
+      "price": 1299559,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-12",
+      "address": "32 LEINSTER ROAD WEST, RATHMINES, DUBLIN 6",
+      "price": 1145374,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-26",
+      "address": "24 LEINSTER RD WEST, RATHMINES, DUBLIN 6",
+      "price": 1420650,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-09",
+      "address": "12 LEINSTER RD WEST, RATHMINES, DUBLIN 6",
+      "price": 722500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-10",
+      "address": "24 LEINSTER RD WEST, RATHMINES, DUBLIN 6",
+      "price": 676529,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-08-22",
+      "address": "3 LEINSTER ROAD WEST, RATHMINES, DUBLIN 6",
+      "price": 562500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-07-29",
+      "address": "12 Leinster Road West, Rathmines, Dublin 6",
+      "price": 490000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

@@ -1,0 +1,177 @@
+{
+  "slug": "rosanule-phoenix-park-racecourse",
+  "stats": {
+    "count": 13,
+    "median": 263000,
+    "avg": 299393,
+    "min": 228899,
+    "max": 463000,
+    "firstYear": 2010,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6,
+      "median_price": 257307,
+      "avg_price": 249984,
+      "min_price": 228899,
+      "max_price": 264317
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 246697,
+      "avg_price": 246697,
+      "min_price": 246697,
+      "max_price": 246697
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 255507,
+      "avg_price": 255507,
+      "min_price": 255507,
+      "max_price": 255507
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 295000,
+      "avg_price": 295000,
+      "min_price": 295000,
+      "max_price": 295000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 357500,
+      "avg_price": 357500,
+      "min_price": 330000,
+      "max_price": 385000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 417000,
+      "avg_price": 417000,
+      "min_price": 417000,
+      "max_price": 417000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 463000,
+      "avg_price": 463000,
+      "min_price": 463000,
+      "max_price": 463000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-09-19",
+      "address": "74 ROSANULE, PHOENIX PARK RACECOURSE, CASTLEKNOCK",
+      "price": 463000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D15WP99"
+    },
+    {
+      "date": "2022-03-03",
+      "address": "23 ROSANULE, PHOENIX PARK RACECOURSE, CASTLEKNOCK DUBLIN 15",
+      "price": 417000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15TY2H"
+    },
+    {
+      "date": "2017-09-23",
+      "address": "23 ROSANULE, PHOENIX PARK RACECOURSE, CASTLEKNOCK DUBLIN 15",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15TY2H"
+    },
+    {
+      "date": "2017-05-15",
+      "address": "74 ROSANULE, PHOENIX PARK RACECOURSE, CASTLEKNOCK",
+      "price": 330000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D15WP99"
+    },
+    {
+      "date": "2016-04-04",
+      "address": "35 ROSANULE, PHOENIX PARK RACECOURSE, CASTLEKNOCK",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-25",
+      "address": "27 Rosanule, Phoenix Park Racecourse, Castleknock",
+      "price": 255507,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-23",
+      "address": "30 Rosanule, Phoenix Park Racecourse, Casteknock",
+      "price": 246697,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-08-18",
+      "address": "42 Rosanule, Phoenix Park Racecourse, Castleknock",
+      "price": 263000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-08-03",
+      "address": "Apt 43 Rosanule, Phoenix Park Racecourse, Castleknock",
+      "price": 228899,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2010-07-29",
+      "address": "35  Rosanule, Phoenix Park Racecourse, Castleknock",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-06-30",
+      "address": "70 Rosanule, Phoenix Park Racecourse, Castleknock",
+      "price": 229074,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-04-08",
+      "address": "Apartment 48, Rosanule, Phoenix Park Racecourse",
+      "price": 262115,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2010-02-01",
+      "address": "Apt 67 Rosanule, Phoenix Park Racecourse, Castleknock",
+      "price": 252500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 13
+}

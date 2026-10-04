@@ -1,0 +1,169 @@
+{
+  "slug": "corrig-avenue-dun-laoghaire",
+  "stats": {
+    "count": 10,
+    "median": 1235000,
+    "avg": 1209125,
+    "min": 635000,
+    "max": 1935000,
+    "firstYear": 2013,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 635000,
+      "avg_price": 635000,
+      "min_price": 635000,
+      "max_price": 635000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 875000,
+      "avg_price": 875000,
+      "min_price": 875000,
+      "max_price": 875000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1185000,
+      "avg_price": 1185000,
+      "min_price": 1150000,
+      "max_price": 1220000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 870000,
+      "avg_price": 870000,
+      "min_price": 870000,
+      "max_price": 870000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1505000,
+      "avg_price": 1505000,
+      "min_price": 1505000,
+      "max_price": 1505000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1365000,
+      "avg_price": 1365000,
+      "min_price": 1365000,
+      "max_price": 1365000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1935000,
+      "avg_price": 1935000,
+      "min_price": 1935000,
+      "max_price": 1935000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1250000,
+      "avg_price": 1250000,
+      "min_price": 1250000,
+      "max_price": 1250000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1286250,
+      "avg_price": 1286250,
+      "min_price": 1286250,
+      "max_price": 1286250
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-11-13",
+      "address": "10 CORRIG AVE, DUN LAOGHAIRE, DUBLIN",
+      "price": 1286250,
+      "bedrooms": 6,
+      "propertyType": "semi-detached",
+      "eircode": "A96PX72"
+    },
+    {
+      "date": "2024-04-11",
+      "address": "3 CORRIG AVE, DUN LAOGHAIRE, DUBLIN",
+      "price": 1250000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "A96CA30"
+    },
+    {
+      "date": "2023-11-27",
+      "address": "24 CORRIG AVE, DUN LAOGHAIRE, CO DUBLIN",
+      "price": 1935000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96Y795"
+    },
+    {
+      "date": "2022-03-10",
+      "address": "16 CORRIG AVENUE, DUN LAOGHAIRE, CO DUBLIN",
+      "price": 1365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96W206"
+    },
+    {
+      "date": "2020-07-17",
+      "address": "6 CORRIG AVE, DUN LAOGHAIRE, DUBLIN",
+      "price": 1505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-04",
+      "address": "12 CORRIG AVENUE, DUN LAOGHAIRE, CO DUBLIN",
+      "price": 870000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-29",
+      "address": "31 CORRIG AVE, DUN LAOGHAIRE, DUBLIN",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-14",
+      "address": "21 CORRIG AVE, DUN LAOGHAIRE, DUBLIN",
+      "price": 1220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-11-26",
+      "address": "23 Corrig Avenue, Dun Laoghaire",
+      "price": 875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-12-23",
+      "address": "24 CORRIG AVE, DUN LAOGHAIRE, DUBLIN",
+      "price": 635000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 10
+}

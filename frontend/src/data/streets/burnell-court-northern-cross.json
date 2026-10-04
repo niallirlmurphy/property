@@ -1,0 +1,521 @@
+{
+  "slug": "burnell-court-northern-cross",
+  "stats": {
+    "count": 99,
+    "median": 132787,
+    "avg": 192510,
+    "min": 106230,
+    "max": 351000,
+    "firstYear": 2014,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 159000,
+      "avg_price": 159000,
+      "min_price": 146000,
+      "max_price": 172000
+    },
+    {
+      "year": 2015,
+      "count": 54,
+      "median_price": 132787,
+      "avg_price": 127518,
+      "min_price": 106230,
+      "max_price": 166933
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 175000,
+      "avg_price": 175000,
+      "min_price": 165000,
+      "max_price": 185000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 190000,
+      "avg_price": 190000,
+      "min_price": 190000,
+      "max_price": 190000
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 190000,
+      "avg_price": 199250,
+      "min_price": 187000,
+      "max_price": 230000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 235000,
+      "avg_price": 235000,
+      "min_price": 235000,
+      "max_price": 235000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 242500,
+      "avg_price": 242500,
+      "min_price": 242500,
+      "max_price": 242500
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 270000,
+      "avg_price": 270000,
+      "min_price": 270000,
+      "max_price": 270000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 280000,
+      "avg_price": 277667,
+      "min_price": 240000,
+      "max_price": 313000
+    },
+    {
+      "year": 2023,
+      "count": 5,
+      "median_price": 286000,
+      "avg_price": 286200,
+      "min_price": 264000,
+      "max_price": 321000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 281500,
+      "avg_price": 288342,
+      "min_price": 235000,
+      "max_price": 332000
+    },
+    {
+      "year": 2025,
+      "count": 12,
+      "median_price": 324000,
+      "avg_price": 303333,
+      "min_price": 225000,
+      "max_price": 351000
+    },
+    {
+      "year": 2026,
+      "count": 7,
+      "median_price": 320000,
+      "avg_price": 305143,
+      "min_price": 250000,
+      "max_price": 344000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-17",
+      "address": "54 BURNELL COURT, NORTHERN CROSS, MALAHIDE",
+      "price": 250000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D17YY80"
+    },
+    {
+      "date": "2026-05-29",
+      "address": "191 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD",
+      "price": 320000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17AD98"
+    },
+    {
+      "date": "2026-05-29",
+      "address": "191 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17AD98"
+    },
+    {
+      "date": "2026-04-29",
+      "address": "131 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD",
+      "price": 329000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17FN23"
+    },
+    {
+      "date": "2026-03-06",
+      "address": "APT 1 BURNELL COURT, NORTHERN CROSS, MALAHIDE ROAD",
+      "price": 317000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17E895"
+    },
+    {
+      "date": "2026-03-03",
+      "address": "138 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD",
+      "price": 344000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17KR24"
+    },
+    {
+      "date": "2026-02-13",
+      "address": "182 BURNELL COURT, NORTHERN CROSS, MALAHIDE ROAD",
+      "price": 256000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D17KV78"
+    },
+    {
+      "date": "2025-12-18",
+      "address": "127 BURNELL COURT, NORTHERN CROSS, MALAHIDE ROAD",
+      "price": 335000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17XR66"
+    },
+    {
+      "date": "2025-10-23",
+      "address": "140 BURNELL COURT, NORTHERN CROSS, MALAHIDE ROAD",
+      "price": 330000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17P958"
+    },
+    {
+      "date": "2025-09-29",
+      "address": "93 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 325000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17AE70"
+    },
+    {
+      "date": "2025-09-17",
+      "address": "158 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 340000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17HW40"
+    },
+    {
+      "date": "2025-09-03",
+      "address": "193 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 248000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17TF65"
+    },
+    {
+      "date": "2025-08-29",
+      "address": "81 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17EW90"
+    },
+    {
+      "date": "2025-08-27",
+      "address": "153 BURNELL COURT, NORTHERN CROSS, MALAHIDE ROAD",
+      "price": 323000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17Y894"
+    },
+    {
+      "date": "2025-08-13",
+      "address": "175 BURNELL COURT, NORTHERN CROSS, MALAHIDE ROAD",
+      "price": 351000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17YV04"
+    },
+    {
+      "date": "2025-07-31",
+      "address": "166 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17W972"
+    },
+    {
+      "date": "2025-04-29",
+      "address": "56 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 321000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17K220"
+    },
+    {
+      "date": "2025-03-20",
+      "address": "165 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD",
+      "price": 250000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D17K825"
+    },
+    {
+      "date": "2025-01-30",
+      "address": "189 BURNELL COURT, NORTHERN CROSS, MALAHIDE ROAD",
+      "price": 252000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D17YV12"
+    },
+    {
+      "date": "2024-10-17",
+      "address": "55 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 330050,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17K254"
+    },
+    {
+      "date": "2024-10-14",
+      "address": "125 BURNELL CT, NORTHERN CROSS, DUBLIN 17",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17YX31"
+    },
+    {
+      "date": "2024-09-04",
+      "address": "169 BURNELL COURT, NORTHERN CROSS, DUBLIN 17",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17EY88"
+    },
+    {
+      "date": "2024-04-11",
+      "address": "29 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 332000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17AR55"
+    },
+    {
+      "date": "2024-03-15",
+      "address": "80 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 283000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17X243"
+    },
+    {
+      "date": "2024-03-12",
+      "address": "123 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17PX01"
+    },
+    {
+      "date": "2023-07-06",
+      "address": "98 BURNELL COURT, NORTHERN CROSS, MALAHIDE",
+      "price": 321000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17Y584"
+    },
+    {
+      "date": "2023-05-17",
+      "address": "66 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17NX07"
+    },
+    {
+      "date": "2023-03-22",
+      "address": "27 BURNELL COURT, NORTHERN CROSS, DUBLIN 13",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17W898"
+    },
+    {
+      "date": "2023-03-06",
+      "address": "112 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 264000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17EH99"
+    },
+    {
+      "date": "2023-02-01",
+      "address": "144 BURNELL COURT, NORTHERN CROSS, DUBLIN 17",
+      "price": 286000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17A497"
+    },
+    {
+      "date": "2022-12-15",
+      "address": "73 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17K279"
+    },
+    {
+      "date": "2022-12-08",
+      "address": "159 BURNELL COURT, NORTHERN CROSS, DUBLIN 17",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17F860"
+    },
+    {
+      "date": "2022-06-08",
+      "address": "31 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 313000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17KF40"
+    },
+    {
+      "date": "2021-11-10",
+      "address": "50 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17PE09"
+    },
+    {
+      "date": "2020-06-29",
+      "address": "113 BURNELL COURT, NORTHERN CROSS, DUBLIN 13",
+      "price": 242500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-10",
+      "address": "29 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17AR55"
+    },
+    {
+      "date": "2018-12-06",
+      "address": "APT 43 BURNELL CT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 187000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-05-31",
+      "address": "APT 114 BURNELL COURT, NORTHERN CROSS, MALAHIDE ROAD",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-02-14",
+      "address": "APT 101 BURNELL COURT, NORTHERN CROSS, MALAHIDE ROAD",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-02-09",
+      "address": "7 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-15",
+      "address": "115 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-20",
+      "address": "54 BURNELL COURT, NORTHERN CROSS, MALAHIDE",
+      "price": 165000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2016-09-02",
+      "address": "126 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 185000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-01",
+      "address": "165 Burnell Court, Northern Cross, Malahide Road",
+      "price": 106230,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17K825"
+    },
+    {
+      "date": "2015-05-01",
+      "address": "182 Burnell Court, Northern Cross, Malahide Road",
+      "price": 106230,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D17KV78"
+    },
+    {
+      "date": "2015-05-01",
+      "address": "140 Burnell Court, Northern Cross, Malahide Road",
+      "price": 132787,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17P958"
+    },
+    {
+      "date": "2015-05-01",
+      "address": "127 Burnell Court, Northern Cross, Malahide Road",
+      "price": 132787,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17XR66"
+    },
+    {
+      "date": "2015-05-01",
+      "address": "131 Burnell Court, Northern Cross, Malahide Road",
+      "price": 132787,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17FN23"
+    },
+    {
+      "date": "2015-05-01",
+      "address": "103 Burnell Court, Northern Cross, Malahide Road",
+      "price": 132787,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-01",
+      "address": "130 Burnell Court, Northern Cross, Malahide Road",
+      "price": 132787,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 99
+}

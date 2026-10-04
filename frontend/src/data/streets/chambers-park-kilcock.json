@@ -1,0 +1,537 @@
+{
+  "slug": "chambers-park-kilcock",
+  "stats": {
+    "count": 128,
+    "median": 250500,
+    "avg": 256668,
+    "min": 90000,
+    "max": 450000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 207000,
+      "avg_price": 207000,
+      "min_price": 207000,
+      "max_price": 207000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 160000,
+      "avg_price": 160000,
+      "min_price": 160000,
+      "max_price": 160000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 183000,
+      "avg_price": 183000,
+      "min_price": 161000,
+      "max_price": 205000
+    },
+    {
+      "year": 2015,
+      "count": 5,
+      "median_price": 190000,
+      "avg_price": 182400,
+      "min_price": 145000,
+      "max_price": 200000
+    },
+    {
+      "year": 2016,
+      "count": 11,
+      "median_price": 185000,
+      "avg_price": 183545,
+      "min_price": 137000,
+      "max_price": 218000
+    },
+    {
+      "year": 2017,
+      "count": 8,
+      "median_price": 207000,
+      "avg_price": 203875,
+      "min_price": 169000,
+      "max_price": 243000
+    },
+    {
+      "year": 2018,
+      "count": 12,
+      "median_price": 210000,
+      "avg_price": 204508,
+      "min_price": 90000,
+      "max_price": 255000
+    },
+    {
+      "year": 2019,
+      "count": 10,
+      "median_price": 221250,
+      "avg_price": 208000,
+      "min_price": 107500,
+      "max_price": 265000
+    },
+    {
+      "year": 2020,
+      "count": 10,
+      "median_price": 211000,
+      "avg_price": 218700,
+      "min_price": 168000,
+      "max_price": 273000
+    },
+    {
+      "year": 2021,
+      "count": 5,
+      "median_price": 251000,
+      "avg_price": 245400,
+      "min_price": 187000,
+      "max_price": 272000
+    },
+    {
+      "year": 2022,
+      "count": 20,
+      "median_price": 268500,
+      "avg_price": 272050,
+      "min_price": 225000,
+      "max_price": 326000
+    },
+    {
+      "year": 2023,
+      "count": 14,
+      "median_price": 300000,
+      "avg_price": 286024,
+      "min_price": 140000,
+      "max_price": 350000
+    },
+    {
+      "year": 2024,
+      "count": 13,
+      "median_price": 340000,
+      "avg_price": 324700,
+      "min_price": 247102,
+      "max_price": 380000
+    },
+    {
+      "year": 2025,
+      "count": 10,
+      "median_price": 376500,
+      "avg_price": 379550,
+      "min_price": 335000,
+      "max_price": 450000
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 360000,
+      "avg_price": 358081,
+      "min_price": 265000,
+      "max_price": 430000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-26",
+      "address": "43 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 430000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W23VK37"
+    },
+    {
+      "date": "2026-08-25",
+      "address": "154 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 340000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "W23KF29"
+    },
+    {
+      "date": "2026-07-03",
+      "address": "72 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23Y290"
+    },
+    {
+      "date": "2026-06-30",
+      "address": "97 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 393485,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "W23AP96"
+    },
+    {
+      "date": "2026-05-28",
+      "address": "126 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 350000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "W23H2R9"
+    },
+    {
+      "date": "2026-02-17",
+      "address": "28 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 265000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "W23FA75"
+    },
+    {
+      "date": "2025-12-17",
+      "address": "226 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 383000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W23P951"
+    },
+    {
+      "date": "2025-12-15",
+      "address": "60 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 396000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W23EP23"
+    },
+    {
+      "date": "2025-09-23",
+      "address": "195 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 450000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W23E766"
+    },
+    {
+      "date": "2025-09-01",
+      "address": "309 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 370000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W23Y058"
+    },
+    {
+      "date": "2025-08-21",
+      "address": "111 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 396000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W23F880"
+    },
+    {
+      "date": "2025-08-08",
+      "address": "44 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 357500,
+      "bedrooms": 2,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-17",
+      "address": "102 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 335000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-03",
+      "address": "60 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 369000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W23EP23"
+    },
+    {
+      "date": "2025-03-19",
+      "address": "106 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 400000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W23NH96"
+    },
+    {
+      "date": "2025-03-10",
+      "address": "103 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 339000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "W23T271"
+    },
+    {
+      "date": "2024-12-18",
+      "address": "192 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23W938"
+    },
+    {
+      "date": "2024-11-20",
+      "address": "107 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23WA26"
+    },
+    {
+      "date": "2024-11-15",
+      "address": "116 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23AH68"
+    },
+    {
+      "date": "2024-09-24",
+      "address": "153 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 358001,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-16",
+      "address": "144 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-04",
+      "address": "50 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 336000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23KW58"
+    },
+    {
+      "date": "2024-09-02",
+      "address": "234 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 247102,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23C9H9"
+    },
+    {
+      "date": "2024-05-29",
+      "address": "171 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23EE70"
+    },
+    {
+      "date": "2024-05-29",
+      "address": "299 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 347000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23ED35"
+    },
+    {
+      "date": "2024-05-22",
+      "address": "87 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-18",
+      "address": "92 CHAMBERS PARK, KILCOCK, CO. KILDARE",
+      "price": 293000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23XN72"
+    },
+    {
+      "date": "2024-03-22",
+      "address": "196 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23XV70"
+    },
+    {
+      "date": "2024-03-08",
+      "address": "281 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23YT91"
+    },
+    {
+      "date": "2023-12-08",
+      "address": "255 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23YX54"
+    },
+    {
+      "date": "2023-12-07",
+      "address": "109 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23XT53"
+    },
+    {
+      "date": "2023-11-21",
+      "address": "149 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 261000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23ED74"
+    },
+    {
+      "date": "2023-10-19",
+      "address": "225 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23XR92"
+    },
+    {
+      "date": "2023-10-11",
+      "address": "6 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23Y314"
+    },
+    {
+      "date": "2023-09-27",
+      "address": "117 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 287000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23E027"
+    },
+    {
+      "date": "2023-08-09",
+      "address": "193 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 140000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23RX65"
+    },
+    {
+      "date": "2023-06-21",
+      "address": "264 CHAMBERS PARK, KILCOCK, CO. KILDARE",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23Y962"
+    },
+    {
+      "date": "2023-06-09",
+      "address": "160 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 251000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23T993"
+    },
+    {
+      "date": "2023-03-31",
+      "address": "75 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-14",
+      "address": "211 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 292342,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-09",
+      "address": "294 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-08",
+      "address": "306 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 322000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23D251"
+    },
+    {
+      "date": "2023-01-10",
+      "address": "137 CHAMBERS PARK, KILCOCK, CO KILDARE",
+      "price": 306000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-20",
+      "address": "154 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 284000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "W23KF29"
+    },
+    {
+      "date": "2022-12-16",
+      "address": "110 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23YD71"
+    },
+    {
+      "date": "2022-12-14",
+      "address": "53 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 317000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23KP95"
+    },
+    {
+      "date": "2022-11-30",
+      "address": "170 CHAMBERS PARK, KILCOCK, CO KILDARE",
+      "price": 257000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23HP22"
+    },
+    {
+      "date": "2022-11-25",
+      "address": "178 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 326000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23X2Y3"
+    },
+    {
+      "date": "2022-11-01",
+      "address": "18 CHAMBERS PK, KILCOCK, KILDARE",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23HF78"
+    },
+    {
+      "date": "2022-10-25",
+      "address": "52 CHAMBERS PARK, KILCOCK, CO KILDARE",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91X0F2"
+    }
+  ],
+  "totalTransactions": 128
+}

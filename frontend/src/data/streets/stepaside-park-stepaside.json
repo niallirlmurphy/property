@@ -1,0 +1,537 @@
+{
+  "slug": "stepaside-park-stepaside",
+  "stats": {
+    "count": 102,
+    "median": 693314,
+    "avg": 719906,
+    "min": 490000,
+    "max": 1185000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 6,
+      "median_price": 592500,
+      "avg_price": 601667,
+      "min_price": 575000,
+      "max_price": 645000
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 592500,
+      "avg_price": 592500,
+      "min_price": 590000,
+      "max_price": 595000
+    },
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 492500,
+      "avg_price": 504833,
+      "min_price": 490000,
+      "max_price": 532000
+    },
+    {
+      "year": 2014,
+      "count": 9,
+      "median_price": 650000,
+      "avg_price": 638667,
+      "min_price": 590000,
+      "max_price": 670000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 655000,
+      "avg_price": 655000,
+      "min_price": 655000,
+      "max_price": 655000
+    },
+    {
+      "year": 2017,
+      "count": 10,
+      "median_price": 644934,
+      "avg_price": 677357,
+      "min_price": 634362,
+      "max_price": 765000
+    },
+    {
+      "year": 2018,
+      "count": 22,
+      "median_price": 674008,
+      "avg_price": 681127,
+      "min_price": 524229,
+      "max_price": 855000
+    },
+    {
+      "year": 2019,
+      "count": 13,
+      "median_price": 760000,
+      "avg_price": 726696,
+      "min_price": 568282,
+      "max_price": 830000
+    },
+    {
+      "year": 2020,
+      "count": 12,
+      "median_price": 654185,
+      "avg_price": 668847,
+      "min_price": 568282,
+      "max_price": 795000
+    },
+    {
+      "year": 2021,
+      "count": 10,
+      "median_price": 820000,
+      "avg_price": 826639,
+      "min_price": 656388,
+      "max_price": 985000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 900000,
+      "avg_price": 886500,
+      "min_price": 832500,
+      "max_price": 927000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 905000,
+      "avg_price": 900833,
+      "min_price": 875000,
+      "max_price": 922500
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 955500,
+      "avg_price": 955500,
+      "min_price": 941000,
+      "max_price": 970000
+    },
+    {
+      "year": 2025,
+      "count": 5,
+      "median_price": 890000,
+      "avg_price": 959400,
+      "min_price": 835000,
+      "max_price": 1185000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1150000,
+      "avg_price": 1150000,
+      "min_price": 1150000,
+      "max_price": 1150000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-15",
+      "address": "40 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 1150000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D18XH63"
+    },
+    {
+      "date": "2025-10-10",
+      "address": "172 STEPASIDE PARK, STEPASIDE, DUBLIN18",
+      "price": 890000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D18N1Y9"
+    },
+    {
+      "date": "2025-09-23",
+      "address": "24 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 1185000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D18VY32"
+    },
+    {
+      "date": "2025-08-12",
+      "address": "167 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 1035000,
+      "bedrooms": 6,
+      "propertyType": "detached",
+      "eircode": "D18Y7R0"
+    },
+    {
+      "date": "2025-04-30",
+      "address": "187 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 852000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D18C4P6"
+    },
+    {
+      "date": "2025-02-19",
+      "address": "177 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 835000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D18F7P6"
+    },
+    {
+      "date": "2024-08-15",
+      "address": "116 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 970000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D18R891"
+    },
+    {
+      "date": "2024-06-27",
+      "address": "48 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 941000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D18X659"
+    },
+    {
+      "date": "2023-09-14",
+      "address": "109 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18T2K1"
+    },
+    {
+      "date": "2023-06-23",
+      "address": "14 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 905000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18A668"
+    },
+    {
+      "date": "2023-03-10",
+      "address": "5 STEPASIDE PARK, STEPASIDE, DUBLIN",
+      "price": 922500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18NX81"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "6 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18XW73"
+    },
+    {
+      "date": "2022-02-28",
+      "address": "18 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 927000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18HN76"
+    },
+    {
+      "date": "2022-01-17",
+      "address": "153 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 832500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18RR97"
+    },
+    {
+      "date": "2021-12-09",
+      "address": "182 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 985000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18P6R0"
+    },
+    {
+      "date": "2021-10-26",
+      "address": "105 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 935000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18TR62"
+    },
+    {
+      "date": "2021-08-06",
+      "address": "26 STEPASIDE PARK, STEPASIDE, DUBLIN",
+      "price": 865000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18X892"
+    },
+    {
+      "date": "2021-06-14",
+      "address": "134 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 820000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18YX40"
+    },
+    {
+      "date": "2021-06-01",
+      "address": "50 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18FD92"
+    },
+    {
+      "date": "2021-04-29",
+      "address": "33 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 820000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18FF21"
+    },
+    {
+      "date": "2021-02-17",
+      "address": "99 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 656388,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-01",
+      "address": "46 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 695000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-26",
+      "address": "62 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 780000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-22",
+      "address": "16 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 960000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-30",
+      "address": "39 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 795000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-18",
+      "address": "47 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 730000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-10",
+      "address": "186 Stepaside Park, Stepaside, Dublin 18",
+      "price": 656387,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-26",
+      "address": "191 Stepaside Park, Stepaside",
+      "price": 568282,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-21",
+      "address": "173 Stepaside Park, Stepaside, Dublin 18",
+      "price": 612335,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-25",
+      "address": "189 Stepaside Park, Stepaside",
+      "price": 613656,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-24",
+      "address": "190 Stepaside Park, Stepaside",
+      "price": 568282,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-10",
+      "address": "119 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 795000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-02",
+      "address": "184 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 651982,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-21",
+      "address": "192 Stepaside Park, Stepaside",
+      "price": 572687,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-20",
+      "address": "169 Stepaside Park, Stepaside",
+      "price": 731278,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-06",
+      "address": "163 Stepaside Park, Stepaside, Dublin 18",
+      "price": 731278,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-03",
+      "address": "164 Stepaside Park, Stepaside, Dublin 18",
+      "price": 713656,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-28",
+      "address": "98 Stepaside Park, Stepaside",
+      "price": 779736,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-15",
+      "address": "165 STEPASIDE PARK, STEPASIDE",
+      "price": 748899,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-12",
+      "address": "137 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 770000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-12",
+      "address": "172 Stepaside Park, Stepaside",
+      "price": 585903,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-11",
+      "address": "57 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 762500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-02",
+      "address": "15 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 796000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-12",
+      "address": "168 STEPASIDE PARK, STEPASIDE",
+      "price": 830000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-27",
+      "address": "12 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 740000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-15",
+      "address": "171 Stepaside Park, Stepaside, Dublin 18",
+      "price": 568282,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-29",
+      "address": "188 Stepaside Park, Stepaside, Dublin 18",
+      "price": 766520,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-04",
+      "address": "175 Stepaside Park, Stepaside, Dublin 18",
+      "price": 625550,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-18",
+      "address": "17 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 760000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-19",
+      "address": "174 Stepaside Park, Stepaside",
+      "price": 563877,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 102
+}

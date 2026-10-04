@@ -1,0 +1,145 @@
+{
+  "slug": "seafield-road-west-clontarf",
+  "stats": {
+    "count": 9,
+    "median": 1275000,
+    "avg": 1616333,
+    "min": 1000000,
+    "max": 3450000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1080000,
+      "avg_price": 1080000,
+      "min_price": 1080000,
+      "max_price": 1080000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1200000,
+      "avg_price": 1200000,
+      "min_price": 1200000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1000000,
+      "avg_price": 1000000,
+      "min_price": 1000000,
+      "max_price": 1000000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1275000,
+      "avg_price": 1275000,
+      "min_price": 1275000,
+      "max_price": 1275000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1042000,
+      "avg_price": 1042000,
+      "min_price": 1042000,
+      "max_price": 1042000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 2712500,
+      "avg_price": 2712500,
+      "min_price": 1975000,
+      "max_price": 3450000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 1762500,
+      "avg_price": 1762500,
+      "min_price": 1725000,
+      "max_price": 1800000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-19",
+      "address": "6 SEAFIELD ROAD WEST, CLONTARF, DUBLIN 3",
+      "price": 1725000,
+      "bedrooms": 6,
+      "propertyType": "detached",
+      "eircode": "D03VF78"
+    },
+    {
+      "date": "2026-08-07",
+      "address": "11 SEAFIELD ROAD WEST, CLONTARF, DUBLIN 3",
+      "price": 1800000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D03X995"
+    },
+    {
+      "date": "2025-07-09",
+      "address": "17 SEAFIELD RD WEST, CLONTARF, DUBLIN 3",
+      "price": 3450000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D03P793"
+    },
+    {
+      "date": "2025-01-16",
+      "address": "4 SEAFIELD ROAD WEST, CLONTARF, DUBLIN 3",
+      "price": 1975000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D03YK19"
+    },
+    {
+      "date": "2022-01-25",
+      "address": "52 SEAFIELD ROAD WEST, CLONTARF, DUBLIN 3",
+      "price": 1042000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03EP40"
+    },
+    {
+      "date": "2020-08-27",
+      "address": "42 SEAFIELD RD WEST, CLONTARF, DUBLIN 3",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-09",
+      "address": "44 SEAFIELD RD WEST, CLONTARF, DUBLIN 3",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-11-01",
+      "address": "40 Seafield Road West, Clontarf",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-03-24",
+      "address": "2c  Seafield Road West, Clontarf, Dublin 3",
+      "price": 1080000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

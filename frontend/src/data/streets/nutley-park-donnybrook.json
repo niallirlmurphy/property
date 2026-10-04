@@ -1,0 +1,241 @@
+{
+  "slug": "nutley-park-donnybrook",
+  "stats": {
+    "count": 17,
+    "median": 1280000,
+    "avg": 1298353,
+    "min": 425000,
+    "max": 1900000,
+    "firstYear": 2011,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 612500,
+      "avg_price": 612500,
+      "min_price": 425000,
+      "max_price": 800000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 926000,
+      "avg_price": 926000,
+      "min_price": 902000,
+      "max_price": 950000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1250000,
+      "avg_price": 1250000,
+      "min_price": 1250000,
+      "max_price": 1250000
+    },
+    {
+      "year": 2015,
+      "count": 2,
+      "median_price": 1262500,
+      "avg_price": 1262500,
+      "min_price": 1100000,
+      "max_price": 1425000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1475000,
+      "avg_price": 1475000,
+      "min_price": 1475000,
+      "max_price": 1475000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1900000,
+      "avg_price": 1900000,
+      "min_price": 1900000,
+      "max_price": 1900000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1537500,
+      "avg_price": 1537500,
+      "min_price": 1210000,
+      "max_price": 1865000
+    },
+    {
+      "year": 2020,
+      "count": 3,
+      "median_price": 1280000,
+      "avg_price": 1426667,
+      "min_price": 1200000,
+      "max_price": 1800000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1340000,
+      "avg_price": 1340000,
+      "min_price": 1340000,
+      "max_price": 1340000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1400000,
+      "avg_price": 1400000,
+      "min_price": 1400000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1750000,
+      "avg_price": 1750000,
+      "min_price": 1750000,
+      "max_price": 1750000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-01-19",
+      "address": "1 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1750000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04V2V6"
+    },
+    {
+      "date": "2023-03-20",
+      "address": "36 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04R6P3"
+    },
+    {
+      "date": "2021-07-30",
+      "address": "9 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A4T0"
+    },
+    {
+      "date": "2020-09-21",
+      "address": "34 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-25",
+      "address": "44 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-15",
+      "address": "6 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-19",
+      "address": "50 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-10",
+      "address": "5 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1865000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-06",
+      "address": "22 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-06",
+      "address": "7 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-28",
+      "address": "3 Nutley Park, Donnybrook",
+      "price": 1425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-16",
+      "address": "22 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-06-18",
+      "address": "54 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-12-20",
+      "address": "22 NUTLEY PARK, DONNYBROOK, DUBLIN 4",
+      "price": 950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-02-01",
+      "address": "29 Nutley Park, Donnybrook",
+      "price": 902000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-11-04",
+      "address": "17 nutley park, donnybrook, dublin 4",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-10-20",
+      "address": "58  Nutley Park, Donnybrook",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 17
+}

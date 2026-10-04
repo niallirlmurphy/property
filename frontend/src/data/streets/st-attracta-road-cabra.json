@@ -1,0 +1,553 @@
+{
+  "slug": "st-attracta-road-cabra",
+  "stats": {
+    "count": 93,
+    "median": 295000,
+    "avg": 290130,
+    "min": 90000,
+    "max": 602000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 210000,
+      "avg_price": 210000,
+      "min_price": 210000,
+      "max_price": 210000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 175000,
+      "avg_price": 175000,
+      "min_price": 175000,
+      "max_price": 175000
+    },
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 95000,
+      "avg_price": 111667,
+      "min_price": 90000,
+      "max_price": 150000
+    },
+    {
+      "year": 2013,
+      "count": 6,
+      "median_price": 140000,
+      "avg_price": 138750,
+      "min_price": 111000,
+      "max_price": 170500
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 188000,
+      "avg_price": 176000,
+      "min_price": 140000,
+      "max_price": 200000
+    },
+    {
+      "year": 2015,
+      "count": 3,
+      "median_price": 231000,
+      "avg_price": 225167,
+      "min_price": 212500,
+      "max_price": 232000
+    },
+    {
+      "year": 2016,
+      "count": 6,
+      "median_price": 190000,
+      "avg_price": 196000,
+      "min_price": 156000,
+      "max_price": 265000
+    },
+    {
+      "year": 2017,
+      "count": 6,
+      "median_price": 233500,
+      "avg_price": 240500,
+      "min_price": 110000,
+      "max_price": 356000
+    },
+    {
+      "year": 2018,
+      "count": 6,
+      "median_price": 319500,
+      "avg_price": 300437,
+      "min_price": 215000,
+      "max_price": 374000
+    },
+    {
+      "year": 2019,
+      "count": 4,
+      "median_price": 306000,
+      "avg_price": 298000,
+      "min_price": 260000,
+      "max_price": 320000
+    },
+    {
+      "year": 2020,
+      "count": 12,
+      "median_price": 286500,
+      "avg_price": 285208,
+      "min_price": 225000,
+      "max_price": 359000
+    },
+    {
+      "year": 2021,
+      "count": 6,
+      "median_price": 311750,
+      "avg_price": 315917,
+      "min_price": 295000,
+      "max_price": 355000
+    },
+    {
+      "year": 2022,
+      "count": 9,
+      "median_price": 317000,
+      "avg_price": 340722,
+      "min_price": 290000,
+      "max_price": 482000
+    },
+    {
+      "year": 2023,
+      "count": 7,
+      "median_price": 316000,
+      "avg_price": 328286,
+      "min_price": 245000,
+      "max_price": 400000
+    },
+    {
+      "year": 2024,
+      "count": 4,
+      "median_price": 409000,
+      "avg_price": 396000,
+      "min_price": 250000,
+      "max_price": 516000
+    },
+    {
+      "year": 2025,
+      "count": 13,
+      "median_price": 400000,
+      "avg_price": 410962,
+      "min_price": 295000,
+      "max_price": 602000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 380000,
+      "avg_price": 334500,
+      "min_price": 197500,
+      "max_price": 426000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-01",
+      "address": "134 ST ATTRACTA RD, CABRA, DUBLIN",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07Y1F9"
+    },
+    {
+      "date": "2026-07-27",
+      "address": "164 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 197500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07R6F5"
+    },
+    {
+      "date": "2026-05-18",
+      "address": "236 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 426000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07RP27"
+    },
+    {
+      "date": "2025-12-18",
+      "address": "146 ST ATTRACTA RD, CABRA, DUBLIN 11",
+      "price": 414000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07V1Y5"
+    },
+    {
+      "date": "2025-12-16",
+      "address": "76 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 416000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D07A3K5"
+    },
+    {
+      "date": "2025-12-01",
+      "address": "29 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 481000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07RH99"
+    },
+    {
+      "date": "2025-11-28",
+      "address": "88 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 360000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07F5F9"
+    },
+    {
+      "date": "2025-10-22",
+      "address": "118 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 295000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D07WV99"
+    },
+    {
+      "date": "2025-10-03",
+      "address": "32 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "D07H3E6"
+    },
+    {
+      "date": "2025-09-22",
+      "address": "311 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 400000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D07P6Y8"
+    },
+    {
+      "date": "2025-07-10",
+      "address": "214 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 420000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07F7P1"
+    },
+    {
+      "date": "2025-06-13",
+      "address": "132 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 602000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07T3V7"
+    },
+    {
+      "date": "2025-02-18",
+      "address": "8 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07P7FD"
+    },
+    {
+      "date": "2025-02-13",
+      "address": "323 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 375000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07W264"
+    },
+    {
+      "date": "2025-02-10",
+      "address": "21 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 491000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07A6K6"
+    },
+    {
+      "date": "2025-01-22",
+      "address": "27 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 383500,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07HT20"
+    },
+    {
+      "date": "2024-08-23",
+      "address": "83 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 516000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07E4P0"
+    },
+    {
+      "date": "2024-07-10",
+      "address": "293 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07V0H6"
+    },
+    {
+      "date": "2024-05-03",
+      "address": "301 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 377000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07WA44"
+    },
+    {
+      "date": "2024-01-30",
+      "address": "122 ST ATTRACTA ROAD, CABRA, DUBLIN 7",
+      "price": 441000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07E339"
+    },
+    {
+      "date": "2023-09-26",
+      "address": "288 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07PW5C"
+    },
+    {
+      "date": "2023-09-21",
+      "address": "121 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 316000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07N2K5"
+    },
+    {
+      "date": "2023-08-30",
+      "address": "109 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07K2A8"
+    },
+    {
+      "date": "2023-05-23",
+      "address": "45 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07X6K5"
+    },
+    {
+      "date": "2023-04-25",
+      "address": "54 ST ATTRACTA ROAD, CABRA, DUBLIN 7",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07E8W7"
+    },
+    {
+      "date": "2023-04-21",
+      "address": "169 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 382000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07VHP1"
+    },
+    {
+      "date": "2023-02-14",
+      "address": "135 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07X2FW"
+    },
+    {
+      "date": "2022-12-16",
+      "address": "90 ST ATTRACTA ROAD, CABRA, DUBLIN 7",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07E8P6"
+    },
+    {
+      "date": "2022-10-28",
+      "address": "67 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07H6CN"
+    },
+    {
+      "date": "2022-09-13",
+      "address": "108 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07YD25"
+    },
+    {
+      "date": "2022-08-25",
+      "address": "52 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07E2N7"
+    },
+    {
+      "date": "2022-07-29",
+      "address": "236 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 315000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07RP27"
+    },
+    {
+      "date": "2022-06-21",
+      "address": "194 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 317000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07E3V6"
+    },
+    {
+      "date": "2022-04-11",
+      "address": "116 ST ATTRACTA ROAD, CABRA, DUBLIN 7",
+      "price": 482000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07T251"
+    },
+    {
+      "date": "2022-04-08",
+      "address": "206 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 292500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07P2C2"
+    },
+    {
+      "date": "2022-04-06",
+      "address": "251 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07TD50"
+    },
+    {
+      "date": "2021-11-15",
+      "address": "223 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07H6K1"
+    },
+    {
+      "date": "2021-09-03",
+      "address": "267 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07F540"
+    },
+    {
+      "date": "2021-06-03",
+      "address": "227 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 297000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07A5Y8"
+    },
+    {
+      "date": "2021-05-12",
+      "address": "262 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 312500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07NW68"
+    },
+    {
+      "date": "2021-04-15",
+      "address": "214 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 311000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07F7P1"
+    },
+    {
+      "date": "2021-02-23",
+      "address": "58 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-23",
+      "address": "68 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 359000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-22",
+      "address": "17 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-25",
+      "address": "110 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 288000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-28",
+      "address": "226 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-12",
+      "address": "175 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-06",
+      "address": "80 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-31",
+      "address": "122 ST ATTRACTA ROAD, CABRA, DUBLIN 7",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07E339"
+    },
+    {
+      "date": "2020-05-13",
+      "address": "170 ST ATTRACTA RD, CABRA, DUBLIN 7",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 93
+}

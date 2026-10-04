@@ -1,0 +1,553 @@
+{
+  "slug": "brandon-road-drimnagh",
+  "stats": {
+    "count": 91,
+    "median": 300000,
+    "avg": 301054,
+    "min": 110000,
+    "max": 531000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 215000,
+      "avg_price": 217125,
+      "min_price": 183500,
+      "max_price": 255000
+    },
+    {
+      "year": 2011,
+      "count": 4,
+      "median_price": 160000,
+      "avg_price": 161500,
+      "min_price": 146000,
+      "max_price": 180000
+    },
+    {
+      "year": 2012,
+      "count": 7,
+      "median_price": 130000,
+      "avg_price": 132143,
+      "min_price": 110000,
+      "max_price": 155000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 142500,
+      "avg_price": 142500,
+      "min_price": 135000,
+      "max_price": 150000
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 195000,
+      "avg_price": 204250,
+      "min_price": 170000,
+      "max_price": 257000
+    },
+    {
+      "year": 2015,
+      "count": 3,
+      "median_price": 228400,
+      "avg_price": 223133,
+      "min_price": 200000,
+      "max_price": 241000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 246612,
+      "avg_price": 256556,
+      "min_price": 236000,
+      "max_price": 297000
+    },
+    {
+      "year": 2017,
+      "count": 5,
+      "median_price": 256000,
+      "avg_price": 264962,
+      "min_price": 156000,
+      "max_price": 347810
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 287500,
+      "avg_price": 292000,
+      "min_price": 278000,
+      "max_price": 315000
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 302000,
+      "avg_price": 308625,
+      "min_price": 277500,
+      "max_price": 360000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 286000,
+      "avg_price": 302200,
+      "min_price": 225000,
+      "max_price": 400000
+    },
+    {
+      "year": 2021,
+      "count": 9,
+      "median_price": 325000,
+      "avg_price": 297111,
+      "min_price": 195000,
+      "max_price": 370000
+    },
+    {
+      "year": 2022,
+      "count": 5,
+      "median_price": 370000,
+      "avg_price": 370500,
+      "min_price": 320000,
+      "max_price": 405000
+    },
+    {
+      "year": 2023,
+      "count": 9,
+      "median_price": 335000,
+      "avg_price": 329833,
+      "min_price": 150000,
+      "max_price": 462500
+    },
+    {
+      "year": 2024,
+      "count": 5,
+      "median_price": 439000,
+      "avg_price": 429400,
+      "min_price": 350000,
+      "max_price": 515000
+    },
+    {
+      "year": 2025,
+      "count": 5,
+      "median_price": 448000,
+      "avg_price": 457990,
+      "min_price": 429950,
+      "max_price": 504000
+    },
+    {
+      "year": 2026,
+      "count": 8,
+      "median_price": 465000,
+      "avg_price": 469250,
+      "min_price": 430000,
+      "max_price": 531000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-02",
+      "address": "134 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 470000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12YK60"
+    },
+    {
+      "date": "2026-06-30",
+      "address": "102 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 531000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12CH52"
+    },
+    {
+      "date": "2026-06-15",
+      "address": "121 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 478000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D12P8K3"
+    },
+    {
+      "date": "2026-04-17",
+      "address": "257 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y045"
+    },
+    {
+      "date": "2026-04-17",
+      "address": "184 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 455000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12KC60"
+    },
+    {
+      "date": "2026-03-09",
+      "address": "20 BRANDON RD, DRIMNAGH, DUBLIN",
+      "price": 430000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12H2P2"
+    },
+    {
+      "date": "2026-03-04",
+      "address": "6 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 460000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12W4FY"
+    },
+    {
+      "date": "2026-02-23",
+      "address": "186 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 480000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D12VK18"
+    },
+    {
+      "date": "2025-10-24",
+      "address": "112 BRANDON ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D12YH61"
+    },
+    {
+      "date": "2025-05-26",
+      "address": "203 BRANDON ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 443000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12AN27"
+    },
+    {
+      "date": "2025-05-16",
+      "address": "291 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 504000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12HR88"
+    },
+    {
+      "date": "2025-02-17",
+      "address": "135 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 448000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12V1F1"
+    },
+    {
+      "date": "2025-02-13",
+      "address": "167 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 429950,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12X3X6"
+    },
+    {
+      "date": "2024-12-05",
+      "address": "189 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12RR25"
+    },
+    {
+      "date": "2024-11-05",
+      "address": "30 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 473000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12X0K5"
+    },
+    {
+      "date": "2024-10-31",
+      "address": "195 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 439000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12RX53"
+    },
+    {
+      "date": "2024-10-04",
+      "address": "106 BRANDON RD, DRIMNAGH, DUBLIN CITY",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12V620"
+    },
+    {
+      "date": "2024-08-31",
+      "address": "295 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12AK16"
+    },
+    {
+      "date": "2023-11-29",
+      "address": "59 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 462500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12T6T0"
+    },
+    {
+      "date": "2023-09-07",
+      "address": "33 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y8W3"
+    },
+    {
+      "date": "2023-07-12",
+      "address": "136 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 328000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12WD39"
+    },
+    {
+      "date": "2023-06-09",
+      "address": "48 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 378000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12T6Y7"
+    },
+    {
+      "date": "2023-06-01",
+      "address": "190 BRANDON ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12R996"
+    },
+    {
+      "date": "2023-05-29",
+      "address": "179 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E762"
+    },
+    {
+      "date": "2023-03-28",
+      "address": "79 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P9H6"
+    },
+    {
+      "date": "2023-03-21",
+      "address": "76 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E0H3"
+    },
+    {
+      "date": "2023-01-05",
+      "address": "108 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12HC57"
+    },
+    {
+      "date": "2022-12-05",
+      "address": "35 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12C5R3"
+    },
+    {
+      "date": "2022-11-09",
+      "address": "101 BRANDON ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 399500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12V5X2"
+    },
+    {
+      "date": "2022-09-16",
+      "address": "158 BRANDON ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12T638"
+    },
+    {
+      "date": "2022-07-19",
+      "address": "29 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12PD7W"
+    },
+    {
+      "date": "2022-02-14",
+      "address": "73 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 358000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12H2W6"
+    },
+    {
+      "date": "2021-10-29",
+      "address": "171 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 337000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12R8H2"
+    },
+    {
+      "date": "2021-09-17",
+      "address": "141 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 347500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12A0P6"
+    },
+    {
+      "date": "2021-09-01",
+      "address": "102 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 327000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12CH52"
+    },
+    {
+      "date": "2021-06-15",
+      "address": "124 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E2AE"
+    },
+    {
+      "date": "2021-05-24",
+      "address": "56 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12N978"
+    },
+    {
+      "date": "2021-04-30",
+      "address": "25 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12W6F8"
+    },
+    {
+      "date": "2021-04-29",
+      "address": "137 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 252500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K5X8"
+    },
+    {
+      "date": "2021-04-16",
+      "address": "9 BRANDON ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E2H6"
+    },
+    {
+      "date": "2021-03-16",
+      "address": "2 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 195000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12W9N2"
+    },
+    {
+      "date": "2020-10-16",
+      "address": "174 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-08",
+      "address": "67 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-14",
+      "address": "173 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-10",
+      "address": "86 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-24",
+      "address": "32 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 286000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-31",
+      "address": "64 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-24",
+      "address": "101 BRANDON ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 277500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12V5X2"
+    },
+    {
+      "date": "2019-09-11",
+      "address": "35 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 304000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12C5R3"
+    },
+    {
+      "date": "2019-06-28",
+      "address": "128 BRANDON RD, DRIMNAGH, DUBLIN 12",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 91
+}

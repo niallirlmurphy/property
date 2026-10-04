@@ -1,0 +1,137 @@
+{
+  "slug": "pembroke-park-ballsbridge",
+  "stats": {
+    "count": 9,
+    "median": 1300000,
+    "avg": 1421111,
+    "min": 750000,
+    "max": 2400000,
+    "firstYear": 2011,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1300000,
+      "avg_price": 1300000,
+      "min_price": 1300000,
+      "max_price": 1300000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 970000,
+      "avg_price": 970000,
+      "min_price": 750000,
+      "max_price": 1190000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 1132500,
+      "avg_price": 1132500,
+      "min_price": 935000,
+      "max_price": 1330000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1900000,
+      "avg_price": 1900000,
+      "min_price": 1900000,
+      "max_price": 1900000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 1492500,
+      "avg_price": 1492500,
+      "min_price": 885000,
+      "max_price": 2100000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2400000,
+      "avg_price": 2400000,
+      "min_price": 2400000,
+      "max_price": 2400000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-10-02",
+      "address": "13 PEMBROKE PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 2400000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D04E2N6"
+    },
+    {
+      "date": "2022-12-02",
+      "address": "21 PEMBROKE PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 2100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V0A2"
+    },
+    {
+      "date": "2022-06-02",
+      "address": "16A PEMBROKE PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 885000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y684"
+    },
+    {
+      "date": "2016-04-08",
+      "address": "31 PEMBROKE PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-08-05",
+      "address": "37 Pembroke Park, Ballsbridge",
+      "price": 1330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-07-17",
+      "address": "3 PEMBROKE PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 935000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-12-20",
+      "address": "16A Pembroke Park, Ballsbridge, Dublin 4",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y684"
+    },
+    {
+      "date": "2013-12-16",
+      "address": "6 PEMBROKE PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 1190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-05-31",
+      "address": "25 Pembroke Park, Ballsbridge, Dublin 4",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

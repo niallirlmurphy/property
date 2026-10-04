@@ -1,0 +1,137 @@
+{
+  "slug": "dunboy-brighton-road",
+  "stats": {
+    "count": 8,
+    "median": 1362500,
+    "avg": 1338125,
+    "min": 670000,
+    "max": 1740000,
+    "firstYear": 2010,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1400000,
+      "avg_price": 1400000,
+      "min_price": 1400000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1237500,
+      "avg_price": 1237500,
+      "min_price": 1150000,
+      "max_price": 1325000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 670000,
+      "avg_price": 670000,
+      "min_price": 670000,
+      "max_price": 670000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1315000,
+      "avg_price": 1315000,
+      "min_price": 1315000,
+      "max_price": 1315000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1410000,
+      "avg_price": 1410000,
+      "min_price": 1410000,
+      "max_price": 1410000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1695000,
+      "avg_price": 1695000,
+      "min_price": 1695000,
+      "max_price": 1695000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1740000,
+      "avg_price": 1740000,
+      "min_price": 1740000,
+      "max_price": 1740000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-06-17",
+      "address": "6 DUNBOY, BRIGHTON RD, FOXROCK DUBLIN 18",
+      "price": 1740000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D18E2W7"
+    },
+    {
+      "date": "2024-09-27",
+      "address": "3 DUNBOY, BRIGHTON RD, FOXROCK DUBLIN 18",
+      "price": 1695000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D18H6Y1"
+    },
+    {
+      "date": "2022-06-17",
+      "address": "2 DUNBOY, BRIGHTON RD, FOXROCK DUBLIN 18",
+      "price": 1410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18R1W3"
+    },
+    {
+      "date": "2021-10-01",
+      "address": "3 DUNBOY, BRIGHTON RD, FOXROCK DUBLIN 18",
+      "price": 1315000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D18H6Y1"
+    },
+    {
+      "date": "2020-12-11",
+      "address": "10 DUNBOY, BRIGHTON RD, FOXROCK DUBLIN 18",
+      "price": 670000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-27",
+      "address": "7 DUNBOY, BRIGHTON RD, FOXROCK DUBLIN 18",
+      "price": 1325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-02",
+      "address": "5 DUNBOY, BRIGHTON RD, FOXROCK DUBLIN 18",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-08-20",
+      "address": "9 Dunboy, Brighton Road, Foxrock",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 8
+}

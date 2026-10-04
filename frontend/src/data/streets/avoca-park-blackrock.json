@@ -1,0 +1,489 @@
+{
+  "slug": "avoca-park-blackrock",
+  "stats": {
+    "count": 44,
+    "median": 1360000,
+    "avg": 1307672,
+    "min": 640000,
+    "max": 2150000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 810000,
+      "avg_price": 835000,
+      "min_price": 800000,
+      "max_price": 895000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 670000,
+      "avg_price": 670000,
+      "min_price": 640000,
+      "max_price": 700000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 975000,
+      "avg_price": 975000,
+      "min_price": 975000,
+      "max_price": 975000
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 1400000,
+      "avg_price": 1330012,
+      "min_price": 1020000,
+      "max_price": 1500050
+    },
+    {
+      "year": 2015,
+      "count": 2,
+      "median_price": 1283750,
+      "avg_price": 1283750,
+      "min_price": 1017500,
+      "max_price": 1550000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 1271250,
+      "avg_price": 1271250,
+      "min_price": 1200000,
+      "max_price": 1342500
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 985000,
+      "avg_price": 985000,
+      "min_price": 985000,
+      "max_price": 985000
+    },
+    {
+      "year": 2020,
+      "count": 3,
+      "median_price": 1112500,
+      "avg_price": 1079167,
+      "min_price": 965000,
+      "max_price": 1160000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1300000,
+      "avg_price": 1300000,
+      "min_price": 820000,
+      "max_price": 1780000
+    },
+    {
+      "year": 2022,
+      "count": 5,
+      "median_price": 1370000,
+      "avg_price": 1357000,
+      "min_price": 1200000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2023,
+      "count": 6,
+      "median_price": 1445000,
+      "avg_price": 1382500,
+      "min_price": 875000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 1570000,
+      "avg_price": 1618333,
+      "min_price": 1500000,
+      "max_price": 1900000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 1425000,
+      "avg_price": 1441667,
+      "min_price": 1340000,
+      "max_price": 1560000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 1400000,
+      "avg_price": 1616667,
+      "min_price": 1300000,
+      "max_price": 2150000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-27",
+      "address": "16 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94XT97"
+    },
+    {
+      "date": "2026-06-16",
+      "address": "20 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1300000,
+      "bedrooms": 1,
+      "propertyType": "detached",
+      "eircode": "A94XP70"
+    },
+    {
+      "date": "2026-02-27",
+      "address": "100 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 2150000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A94F8N5"
+    },
+    {
+      "date": "2025-10-16",
+      "address": "61 AVOCA PARK, BLACKROCK, CO DUBLIN",
+      "price": 1425000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A94R1W7"
+    },
+    {
+      "date": "2025-08-08",
+      "address": "57 AVOCA PARK, BLACKROCK, CO DUBLIN",
+      "price": 1340000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A94X8K1"
+    },
+    {
+      "date": "2025-07-22",
+      "address": "95 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1560000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A94A066"
+    },
+    {
+      "date": "2024-08-12",
+      "address": "60 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1620000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A94V0F6"
+    },
+    {
+      "date": "2024-06-24",
+      "address": "5 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1590000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A94V242"
+    },
+    {
+      "date": "2024-05-22",
+      "address": "78 AVOCA PARK, BLACKROCK, CO DUBLIN",
+      "price": 1550000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A94T938"
+    },
+    {
+      "date": "2024-05-20",
+      "address": "32 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1550000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A94XV27"
+    },
+    {
+      "date": "2024-03-26",
+      "address": "104 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1900000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A94F5T9"
+    },
+    {
+      "date": "2024-02-29",
+      "address": "87 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1500000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A94K0N8"
+    },
+    {
+      "date": "2023-10-27",
+      "address": "49 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94P9E8"
+    },
+    {
+      "date": "2023-07-11",
+      "address": "102 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94R7Y4"
+    },
+    {
+      "date": "2023-06-09",
+      "address": "38 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94HW13"
+    },
+    {
+      "date": "2023-05-16",
+      "address": "4 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1080000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94DX25"
+    },
+    {
+      "date": "2023-01-27",
+      "address": "82 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94ER25"
+    },
+    {
+      "date": "2023-01-19",
+      "address": "30 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94DX06"
+    },
+    {
+      "date": "2022-11-23",
+      "address": "34 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94D998"
+    },
+    {
+      "date": "2022-11-07",
+      "address": "85 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94HX09"
+    },
+    {
+      "date": "2022-08-25",
+      "address": "7 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94EA26"
+    },
+    {
+      "date": "2022-06-09",
+      "address": "50 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94P9X2"
+    },
+    {
+      "date": "2022-03-10",
+      "address": "58 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94Y6F5"
+    },
+    {
+      "date": "2021-10-05",
+      "address": "101 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1780000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94W7P9"
+    },
+    {
+      "date": "2021-09-17",
+      "address": "77 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 820000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94WF78"
+    },
+    {
+      "date": "2020-12-03",
+      "address": "91 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 965000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-03",
+      "address": "65 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1112500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-22",
+      "address": "5 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1160000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A94V242"
+    },
+    {
+      "date": "2018-04-19",
+      "address": "62 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 985000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-15",
+      "address": "102 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94R7Y4"
+    },
+    {
+      "date": "2016-12-17",
+      "address": "3 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-05-17",
+      "address": "18 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1342500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-01",
+      "address": "34 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1017500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94D998"
+    },
+    {
+      "date": "2015-07-02",
+      "address": "99 Avoca Park, Blackrock",
+      "price": 1550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-19",
+      "address": "50 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94P9X2"
+    },
+    {
+      "date": "2014-12-09",
+      "address": "11 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1020000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-09-19",
+      "address": "102 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94R7Y4"
+    },
+    {
+      "date": "2014-05-20",
+      "address": "68 AVOCA PARK, BLACKROCK, DUBLIN",
+      "price": 1500050,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-07-26",
+      "address": "72 Avoca Park, Blackrock",
+      "price": 975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-06-11",
+      "address": "95 Avoca Park, Blackrock",
+      "price": 640000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-02-06",
+      "address": "37 Avoca Park, Blackrock",
+      "price": 700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-11-04",
+      "address": "51 Avoca Park, Blackrock",
+      "price": 895000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-07-25",
+      "address": "47 Avoca Park, Blackrock, County Dublin",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-07-24",
+      "address": "81 Avoca Park, Blackrock",
+      "price": 810000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 44
+}

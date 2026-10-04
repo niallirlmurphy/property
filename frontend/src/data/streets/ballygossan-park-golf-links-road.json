@@ -1,0 +1,505 @@
+{
+  "slug": "ballygossan-park-golf-links-road",
+  "stats": {
+    "count": 107,
+    "median": 317180,
+    "avg": 356887,
+    "min": 251100,
+    "max": 695000,
+    "firstYear": 2016,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 18,
+      "median_price": 281057,
+      "avg_price": 288910,
+      "min_price": 251100,
+      "max_price": 370000
+    },
+    {
+      "year": 2017,
+      "count": 28,
+      "median_price": 290774,
+      "avg_price": 308025,
+      "min_price": 259912,
+      "max_price": 387665
+    },
+    {
+      "year": 2018,
+      "count": 28,
+      "median_price": 309185,
+      "avg_price": 317093,
+      "min_price": 263876,
+      "max_price": 440529
+    },
+    {
+      "year": 2019,
+      "count": 13,
+      "median_price": 317181,
+      "avg_price": 365943,
+      "min_price": 285264,
+      "max_price": 510000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 310000,
+      "avg_price": 310000,
+      "min_price": 310000,
+      "max_price": 310000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 431000,
+      "avg_price": 431000,
+      "min_price": 431000,
+      "max_price": 431000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 598500,
+      "avg_price": 598500,
+      "min_price": 547000,
+      "max_price": 650000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 487500,
+      "avg_price": 492500,
+      "min_price": 470000,
+      "max_price": 525000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 535000,
+      "avg_price": 535000,
+      "min_price": 535000,
+      "max_price": 535000
+    },
+    {
+      "year": 2025,
+      "count": 9,
+      "median_price": 570000,
+      "avg_price": 560889,
+      "min_price": 475000,
+      "max_price": 643000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 617500,
+      "avg_price": 617500,
+      "min_price": 540000,
+      "max_price": 695000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-29",
+      "address": "10 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 695000,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": "K34ND92"
+    },
+    {
+      "date": "2026-05-28",
+      "address": "85  BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 540000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "K34P026"
+    },
+    {
+      "date": "2025-12-12",
+      "address": "34 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 570000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "K34PC78"
+    },
+    {
+      "date": "2025-12-02",
+      "address": "1 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 590000,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": "K34PN52"
+    },
+    {
+      "date": "2025-11-24",
+      "address": "55 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 570000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "K34HH76"
+    },
+    {
+      "date": "2025-10-10",
+      "address": "73 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 643000,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "K34EP23"
+    },
+    {
+      "date": "2025-08-26",
+      "address": "75 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 605000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "K34K004"
+    },
+    {
+      "date": "2025-08-26",
+      "address": "84 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 475000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "K34RY84"
+    },
+    {
+      "date": "2025-06-13",
+      "address": "101 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 555000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "K34YP82"
+    },
+    {
+      "date": "2025-02-24",
+      "address": "19 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 500000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "K34YV99"
+    },
+    {
+      "date": "2025-01-31",
+      "address": "NO.46 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 540000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "K34XF53"
+    },
+    {
+      "date": "2024-07-15",
+      "address": "103 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 535000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34AH30"
+    },
+    {
+      "date": "2023-11-13",
+      "address": "7 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34T673"
+    },
+    {
+      "date": "2023-08-25",
+      "address": "28 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34NX68"
+    },
+    {
+      "date": "2023-06-02",
+      "address": "20 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34F659"
+    },
+    {
+      "date": "2023-05-22",
+      "address": "98 BALLYGOSSAN PARK, GOLF LINKS ROAD, S",
+      "price": 490000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34N977"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "36, BALLYGOSSAN PARK, GOLF LINKS ROAD",
+      "price": 547000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34F407"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "27 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34Y940"
+    },
+    {
+      "date": "2021-09-02",
+      "address": "47 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 431000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34TW68"
+    },
+    {
+      "date": "2020-06-25",
+      "address": "65 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-21",
+      "address": "71 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-18",
+      "address": "12 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-07",
+      "address": "88 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 422907,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-31",
+      "address": "92 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 373370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-17",
+      "address": "89 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-17",
+      "address": "90 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 285264,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-02",
+      "address": "91 Ballygossan Pk, Golf Links Road, Skerries",
+      "price": 307326,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-01",
+      "address": "93 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 458149,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-20",
+      "address": "54 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-14",
+      "address": "86 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 317179,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-14",
+      "address": "87 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 308371,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-01",
+      "address": "37 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 484581,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-24",
+      "address": "85 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 299558,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34P026"
+    },
+    {
+      "date": "2018-12-14",
+      "address": "84 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34RY84"
+    },
+    {
+      "date": "2018-12-03",
+      "address": "82 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-30",
+      "address": "36, Ballygossan Park, Golf Links Road",
+      "price": 389250,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34F407"
+    },
+    {
+      "date": "2018-11-21",
+      "address": "94 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-01",
+      "address": "95 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-19",
+      "address": "99 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-18",
+      "address": "98 Ballygossan Park, Golf Links Road, S",
+      "price": 286343,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34N977"
+    },
+    {
+      "date": "2018-09-28",
+      "address": "77 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-24",
+      "address": "76 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-12",
+      "address": "75 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34K004"
+    },
+    {
+      "date": "2018-09-04",
+      "address": "59 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 436124,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-17",
+      "address": "72 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 362832,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-20",
+      "address": "100 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 334801,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-20",
+      "address": "73 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 440529,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34EP23"
+    },
+    {
+      "date": "2018-07-18",
+      "address": "101 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 334801,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34YP82"
+    },
+    {
+      "date": "2018-07-13",
+      "address": "66 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-29",
+      "address": "74 Ballygossan Park, Golf Links Road, Skerries",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 107
+}

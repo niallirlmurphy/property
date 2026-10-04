@@ -1,0 +1,553 @@
+{
+  "slug": "carnlough-road-cabra",
+  "stats": {
+    "count": 95,
+    "median": 261000,
+    "avg": 279946,
+    "min": 80000,
+    "max": 575000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 5,
+      "median_price": 190000,
+      "avg_price": 184600,
+      "min_price": 115000,
+      "max_price": 235000
+    },
+    {
+      "year": 2011,
+      "count": 4,
+      "median_price": 142500,
+      "avg_price": 133750,
+      "min_price": 100000,
+      "max_price": 150000
+    },
+    {
+      "year": 2012,
+      "count": 5,
+      "median_price": 105000,
+      "avg_price": 118000,
+      "min_price": 85000,
+      "max_price": 187000
+    },
+    {
+      "year": 2013,
+      "count": 8,
+      "median_price": 104625,
+      "avg_price": 107656,
+      "min_price": 80000,
+      "max_price": 145000
+    },
+    {
+      "year": 2014,
+      "count": 9,
+      "median_price": 167500,
+      "avg_price": 169984,
+      "min_price": 95000,
+      "max_price": 237000
+    },
+    {
+      "year": 2015,
+      "count": 3,
+      "median_price": 210000,
+      "avg_price": 201667,
+      "min_price": 170000,
+      "max_price": 225000
+    },
+    {
+      "year": 2016,
+      "count": 5,
+      "median_price": 232000,
+      "avg_price": 232000,
+      "min_price": 165000,
+      "max_price": 275000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 344000,
+      "avg_price": 326333,
+      "min_price": 260000,
+      "max_price": 375000
+    },
+    {
+      "year": 2018,
+      "count": 3,
+      "median_price": 346000,
+      "avg_price": 351667,
+      "min_price": 339000,
+      "max_price": 370000
+    },
+    {
+      "year": 2019,
+      "count": 6,
+      "median_price": 286225,
+      "avg_price": 289075,
+      "min_price": 263500,
+      "max_price": 317500
+    },
+    {
+      "year": 2020,
+      "count": 7,
+      "median_price": 300000,
+      "avg_price": 300264,
+      "min_price": 243000,
+      "max_price": 365000
+    },
+    {
+      "year": 2021,
+      "count": 8,
+      "median_price": 360000,
+      "avg_price": 345552,
+      "min_price": 206415,
+      "max_price": 472000
+    },
+    {
+      "year": 2022,
+      "count": 5,
+      "median_price": 354000,
+      "avg_price": 308000,
+      "min_price": 150000,
+      "max_price": 439000
+    },
+    {
+      "year": 2023,
+      "count": 10,
+      "median_price": 374000,
+      "avg_price": 364656,
+      "min_price": 168565,
+      "max_price": 495000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 489500,
+      "avg_price": 492000,
+      "min_price": 403000,
+      "max_price": 575000
+    },
+    {
+      "year": 2025,
+      "count": 5,
+      "median_price": 405000,
+      "avg_price": 420100,
+      "min_price": 381000,
+      "max_price": 465500
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 500000,
+      "avg_price": 505667,
+      "min_price": 482000,
+      "max_price": 535000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-02",
+      "address": "294 CARNLOUGH ROAD, CABRA, DUBLIN 7",
+      "price": 535000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D07T024"
+    },
+    {
+      "date": "2026-05-20",
+      "address": "415 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 482000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D07HV26"
+    },
+    {
+      "date": "2026-01-28",
+      "address": "131 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 500000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D07TD39"
+    },
+    {
+      "date": "2025-11-11",
+      "address": "126 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 459000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07N2X2"
+    },
+    {
+      "date": "2025-09-12",
+      "address": "413 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 405000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07KHX2"
+    },
+    {
+      "date": "2025-07-04",
+      "address": "119 CARNLOUGH ROAD, CABRA, DUBLIN 7",
+      "price": 465500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07XW3V"
+    },
+    {
+      "date": "2025-05-26",
+      "address": "382 CARNLOUGH ROAD, CABRA, DUBLIN 7",
+      "price": 390000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D07X5X7"
+    },
+    {
+      "date": "2025-01-16",
+      "address": "25 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 381000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D07WP04"
+    },
+    {
+      "date": "2024-12-18",
+      "address": "462 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 403000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07V022"
+    },
+    {
+      "date": "2024-08-20",
+      "address": "205 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 471000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07C1Y6"
+    },
+    {
+      "date": "2024-08-13",
+      "address": "150 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07H5K0"
+    },
+    {
+      "date": "2024-07-08",
+      "address": "235 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 535000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07NP49"
+    },
+    {
+      "date": "2024-04-16",
+      "address": "409 CARNLOUGH ROAD, CABRA, DUBLIN 7",
+      "price": 575000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07TX67"
+    },
+    {
+      "date": "2024-04-15",
+      "address": "210 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 508000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07A0P0"
+    },
+    {
+      "date": "2023-11-29",
+      "address": "483 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 168565,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07R2R7"
+    },
+    {
+      "date": "2023-11-17",
+      "address": "50 CARNLOUGH RD, CABRA, DUBLIN",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07TN82"
+    },
+    {
+      "date": "2023-10-20",
+      "address": "148 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07W5K6"
+    },
+    {
+      "date": "2023-10-10",
+      "address": "237 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07N2K8"
+    },
+    {
+      "date": "2023-10-09",
+      "address": "35 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07A3C3"
+    },
+    {
+      "date": "2023-09-19",
+      "address": "451 CARNLOUGH RD, CABRA, DUBLIN",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07RW32"
+    },
+    {
+      "date": "2023-07-17",
+      "address": "336 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 348000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07EP80"
+    },
+    {
+      "date": "2023-06-22",
+      "address": "179 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07PY95"
+    },
+    {
+      "date": "2023-03-20",
+      "address": "149 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07K8H3"
+    },
+    {
+      "date": "2023-02-09",
+      "address": "121 CARNLOUGH ROAD, CABRA, DUBLIN 7",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07R621"
+    },
+    {
+      "date": "2022-11-30",
+      "address": "3 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 361000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07A2N8"
+    },
+    {
+      "date": "2022-10-14",
+      "address": "657 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 354000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07RP86"
+    },
+    {
+      "date": "2022-08-02",
+      "address": "30 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 439000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07V382"
+    },
+    {
+      "date": "2022-07-29",
+      "address": "347 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 236000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07X0E1"
+    },
+    {
+      "date": "2022-04-11",
+      "address": "382 CARNLOUGH ROAD, CABRA, DUBLIN 7",
+      "price": 150000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D07X5X7"
+    },
+    {
+      "date": "2021-12-03",
+      "address": "71 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 472000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07H0X2"
+    },
+    {
+      "date": "2021-11-16",
+      "address": "557 CARNLOUGH RD, CABRA, DUBLIN",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07E5F3"
+    },
+    {
+      "date": "2021-10-13",
+      "address": "409 CARNLOUGH ROAD, CABRA, DUBLIN 7",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07TX67"
+    },
+    {
+      "date": "2021-08-25",
+      "address": "320 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07PK31"
+    },
+    {
+      "date": "2021-06-15",
+      "address": "136 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 206415,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07Y0H6"
+    },
+    {
+      "date": "2021-03-02",
+      "address": "117 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 371000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-12",
+      "address": "400 CARNLOUGH ROAD, CABRA, DUBLIN 7",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-15",
+      "address": "130 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-21",
+      "address": "106 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 243000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-10",
+      "address": "301 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-09",
+      "address": "551 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 254000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-13",
+      "address": "115 CARNLOUGH ROAD, CABRA, DUBLIN 7",
+      "price": 352850,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-05",
+      "address": "231 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 337000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-04",
+      "address": "451 CARNLOUGH RD, CABRA, DUBLIN",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07RW32"
+    },
+    {
+      "date": "2020-02-03",
+      "address": "415 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D07HV26"
+    },
+    {
+      "date": "2019-09-25",
+      "address": "379 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 263500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-13",
+      "address": "253 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 317500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-26",
+      "address": "218 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-01",
+      "address": "178 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 283000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-28",
+      "address": "278 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 316000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-11",
+      "address": "150 CARNLOUGH RD, CABRA, DUBLIN 7",
+      "price": 289450,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07H5K0"
+    }
+  ],
+  "totalTransactions": 95
+}

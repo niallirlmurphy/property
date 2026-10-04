@@ -1,0 +1,265 @@
+{
+  "slug": "the-rise-malahide",
+  "stats": {
+    "count": 18,
+    "median": 1362500,
+    "avg": 1348556,
+    "min": 270000,
+    "max": 2910000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 950000,
+      "avg_price": 950000,
+      "min_price": 950000,
+      "max_price": 950000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 672500,
+      "avg_price": 672500,
+      "min_price": 620000,
+      "max_price": 725000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 999000,
+      "avg_price": 999000,
+      "min_price": 999000,
+      "max_price": 999000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1225000,
+      "avg_price": 1225000,
+      "min_price": 1225000,
+      "max_price": 1225000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 800000,
+      "avg_price": 800000,
+      "min_price": 800000,
+      "max_price": 800000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 800000,
+      "avg_price": 800000,
+      "min_price": 800000,
+      "max_price": 800000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1050000,
+      "avg_price": 1050000,
+      "min_price": 1050000,
+      "max_price": 1050000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1647500,
+      "avg_price": 1647500,
+      "min_price": 1595000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1700000,
+      "avg_price": 1700000,
+      "min_price": 1700000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 1800000,
+      "avg_price": 1356667,
+      "min_price": 270000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1730000,
+      "avg_price": 1730000,
+      "min_price": 1730000,
+      "max_price": 1730000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 2205000,
+      "avg_price": 2205000,
+      "min_price": 1500000,
+      "max_price": 2910000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1900000,
+      "avg_price": 1900000,
+      "min_price": 1900000,
+      "max_price": 1900000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-19",
+      "address": "8 THE RISE, MALAHIDE, DUBLIN",
+      "price": 1900000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "K36PT73"
+    },
+    {
+      "date": "2025-08-18",
+      "address": "32 THE RISE, MALAHIDE, COUNTY DUBLIN",
+      "price": 2910000,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "K36XH73"
+    },
+    {
+      "date": "2025-03-05",
+      "address": "35 THE RISE, MALAHIDE, DUBLIN",
+      "price": 1500000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "K36KD29"
+    },
+    {
+      "date": "2024-09-17",
+      "address": "36 THE RISE, MALAHIDE, DUBLIN",
+      "price": 1730000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "K36H276"
+    },
+    {
+      "date": "2023-11-15",
+      "address": "7 THE RISE, MALAHIDE, DUBLIN",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36NC53"
+    },
+    {
+      "date": "2023-06-09",
+      "address": "3 THE RISE, MALAHIDE, CO DUBLIN",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36KW53"
+    },
+    {
+      "date": "2023-05-12",
+      "address": "38 THE RISE, MALAHIDE, DUBLIN",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36Y262"
+    },
+    {
+      "date": "2022-08-02",
+      "address": "27 THE RISE, MALAHIDE, DUBLIN",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36AX21"
+    },
+    {
+      "date": "2021-09-17",
+      "address": "18 THE RISE, MALAHIDE, DUBLIN",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36Y803"
+    },
+    {
+      "date": "2021-07-09",
+      "address": "4 THE RISE, MALAHIDE, DUBLIN",
+      "price": 1595000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36HX81"
+    },
+    {
+      "date": "2020-08-20",
+      "address": "37 THE RISE, MALAHIDE, DUBLIN",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-30",
+      "address": "28B THE RISE, MALAHIDE, THE RISE",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-26",
+      "address": "28A THE RISE, MALAHIDE, THE RISE",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-08-22",
+      "address": "15 THE RISE, MALAHIDE, DUBLIN",
+      "price": 1225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-11-27",
+      "address": "6 THE RISE, MALAHIDE, CO DUBLIN",
+      "price": 999000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-11-27",
+      "address": "19 THE RISE, MALAHIDE",
+      "price": 725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-08-16",
+      "address": "1 The Rise, Malahide",
+      "price": 620000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-07-12",
+      "address": "30 The Rise, Malahide",
+      "price": 950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 18
+}

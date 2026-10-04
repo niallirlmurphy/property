@@ -1,0 +1,137 @@
+{
+  "slug": "leopardstown-rise-leopardstown-road",
+  "stats": {
+    "count": 8,
+    "median": 1250000,
+    "avg": 1114375,
+    "min": 650000,
+    "max": 1500000,
+    "firstYear": 2013,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 650000,
+      "avg_price": 650000,
+      "min_price": 650000,
+      "max_price": 650000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 765000,
+      "avg_price": 765000,
+      "min_price": 765000,
+      "max_price": 765000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 910000,
+      "avg_price": 910000,
+      "min_price": 910000,
+      "max_price": 910000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1390000,
+      "avg_price": 1390000,
+      "min_price": 1280000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1245000,
+      "avg_price": 1245000,
+      "min_price": 1245000,
+      "max_price": 1245000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1310000,
+      "avg_price": 1310000,
+      "min_price": 1310000,
+      "max_price": 1310000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1255000,
+      "avg_price": 1255000,
+      "min_price": 1255000,
+      "max_price": 1255000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-03-25",
+      "address": "1 LEOPARDSTOWN RISE, LEOPARDSTOWN RD, FOXROCK DUBLIN 18",
+      "price": 1255000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D18E034"
+    },
+    {
+      "date": "2025-07-21",
+      "address": "10 LEOPARDSTOWN RISE, LEOPARDSTOWN RD, DUBLIN 18",
+      "price": 1310000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D18KW90"
+    },
+    {
+      "date": "2024-05-15",
+      "address": "3 LEOPARDSTOWN RISE, LEOPARDSTOWN RD, DUBLIN 18",
+      "price": 1245000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D18DK46"
+    },
+    {
+      "date": "2023-07-31",
+      "address": "7 LEOPARDSTOWN RISE, LEOPARDSTOWN RD, DUBLIN 18",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18V840"
+    },
+    {
+      "date": "2023-05-16",
+      "address": "12 LEOPARDSTOWN RISE, LEOPARDSTOWN RD, DUBLIN 18",
+      "price": 1280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18EH94"
+    },
+    {
+      "date": "2020-05-27",
+      "address": "6 LEOPARDSTOWN RISE, LEOPARDSTOWN ROAD, SANDYFORD",
+      "price": 910000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-20",
+      "address": "7 LEOPARDSTOWN RISE, LEOPARDSTOWN RD, DUBLIN 18",
+      "price": 765000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18V840"
+    },
+    {
+      "date": "2013-12-19",
+      "address": "9 LEOPARDSTOWN RISE, LEOPARDSTOWN RD, DUBLIN 18",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 8
+}

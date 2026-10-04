@@ -1,0 +1,553 @@
+{
+  "slug": "cooley-road-drimnagh",
+  "stats": {
+    "count": 106,
+    "median": 272500,
+    "avg": 278416,
+    "min": 70000,
+    "max": 553000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 171500,
+      "avg_price": 190750,
+      "min_price": 150000,
+      "max_price": 270000
+    },
+    {
+      "year": 2011,
+      "count": 7,
+      "median_price": 143500,
+      "avg_price": 164499,
+      "min_price": 105000,
+      "max_price": 245000
+    },
+    {
+      "year": 2012,
+      "count": 6,
+      "median_price": 127000,
+      "avg_price": 127333,
+      "min_price": 70000,
+      "max_price": 170000
+    },
+    {
+      "year": 2013,
+      "count": 6,
+      "median_price": 135750,
+      "avg_price": 130417,
+      "min_price": 90000,
+      "max_price": 185000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 160000,
+      "avg_price": 163333,
+      "min_price": 155000,
+      "max_price": 175000
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 210000,
+      "avg_price": 215062,
+      "min_price": 195000,
+      "max_price": 255000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 222500,
+      "avg_price": 219250,
+      "min_price": 180000,
+      "max_price": 252000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 255000,
+      "avg_price": 229650,
+      "min_price": 106600,
+      "max_price": 302000
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 283500,
+      "avg_price": 284000,
+      "min_price": 265000,
+      "max_price": 304000
+    },
+    {
+      "year": 2019,
+      "count": 6,
+      "median_price": 280000,
+      "avg_price": 277500,
+      "min_price": 225000,
+      "max_price": 335000
+    },
+    {
+      "year": 2020,
+      "count": 9,
+      "median_price": 287000,
+      "avg_price": 299556,
+      "min_price": 267000,
+      "max_price": 356000
+    },
+    {
+      "year": 2021,
+      "count": 5,
+      "median_price": 230000,
+      "avg_price": 269800,
+      "min_price": 185000,
+      "max_price": 372000
+    },
+    {
+      "year": 2022,
+      "count": 6,
+      "median_price": 283500,
+      "avg_price": 291833,
+      "min_price": 250000,
+      "max_price": 355000
+    },
+    {
+      "year": 2023,
+      "count": 15,
+      "median_price": 355000,
+      "avg_price": 367500,
+      "min_price": 297500,
+      "max_price": 471000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 447000,
+      "avg_price": 444833,
+      "min_price": 422500,
+      "max_price": 465000
+    },
+    {
+      "year": 2025,
+      "count": 8,
+      "median_price": 408500,
+      "avg_price": 413500,
+      "min_price": 371000,
+      "max_price": 465000
+    },
+    {
+      "year": 2026,
+      "count": 8,
+      "median_price": 390500,
+      "avg_price": 411625,
+      "min_price": 330000,
+      "max_price": 553000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-31",
+      "address": "66 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 415000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12TX9C"
+    },
+    {
+      "date": "2026-08-20",
+      "address": "163 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 553000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12VW95"
+    },
+    {
+      "date": "2026-04-17",
+      "address": "84 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12TA4A"
+    },
+    {
+      "date": "2026-04-13",
+      "address": "256 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 349000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12K386"
+    },
+    {
+      "date": "2026-04-10",
+      "address": "210 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 381000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D12V588"
+    },
+    {
+      "date": "2026-03-23",
+      "address": "200 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 330000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12YNE4"
+    },
+    {
+      "date": "2026-03-04",
+      "address": "92 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 380000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D12NH5C"
+    },
+    {
+      "date": "2026-01-28",
+      "address": "316 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 485000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12K351"
+    },
+    {
+      "date": "2025-11-14",
+      "address": "108 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 422000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12AX60"
+    },
+    {
+      "date": "2025-09-26",
+      "address": "236 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 385000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12FK72"
+    },
+    {
+      "date": "2025-09-09",
+      "address": "230 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 465000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12K282"
+    },
+    {
+      "date": "2025-09-01",
+      "address": "77 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 371000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12VN36"
+    },
+    {
+      "date": "2025-08-18",
+      "address": "28 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 395000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12N972"
+    },
+    {
+      "date": "2025-07-08",
+      "address": "54 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 440000,
+      "bedrooms": 2,
+      "propertyType": null,
+      "eircode": "D12CK25"
+    },
+    {
+      "date": "2025-06-30",
+      "address": "122 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 435000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12H337"
+    },
+    {
+      "date": "2025-04-16",
+      "address": "186 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 395000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "119 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 447000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K091"
+    },
+    {
+      "date": "2024-07-15",
+      "address": "294 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 422500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12VX5P"
+    },
+    {
+      "date": "2024-02-13",
+      "address": "141 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12CT99"
+    },
+    {
+      "date": "2023-12-05",
+      "address": "252 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12EC64"
+    },
+    {
+      "date": "2023-12-01",
+      "address": "134 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 372000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y316"
+    },
+    {
+      "date": "2023-12-01",
+      "address": "340 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12TX06"
+    },
+    {
+      "date": "2023-11-20",
+      "address": "107 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12XD83"
+    },
+    {
+      "date": "2023-10-20",
+      "address": "163 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 425000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12VW95"
+    },
+    {
+      "date": "2023-10-19",
+      "address": "208 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F850"
+    },
+    {
+      "date": "2023-10-06",
+      "address": "293 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P3V7"
+    },
+    {
+      "date": "2023-08-16",
+      "address": "249 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12XW65"
+    },
+    {
+      "date": "2023-07-25",
+      "address": "4 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12KNN0"
+    },
+    {
+      "date": "2023-07-20",
+      "address": "299 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 471000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12C8X3"
+    },
+    {
+      "date": "2023-06-20",
+      "address": "195 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12R2VX"
+    },
+    {
+      "date": "2023-05-09",
+      "address": "229 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 297500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12PR86"
+    },
+    {
+      "date": "2023-04-25",
+      "address": "217 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 447000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12DX30"
+    },
+    {
+      "date": "2023-04-05",
+      "address": "216 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P593"
+    },
+    {
+      "date": "2023-01-31",
+      "address": "84 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12TA4A"
+    },
+    {
+      "date": "2022-11-08",
+      "address": "274 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 257000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12TW26"
+    },
+    {
+      "date": "2022-08-31",
+      "address": "211 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y96E"
+    },
+    {
+      "date": "2022-06-02",
+      "address": "202 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 327000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y661"
+    },
+    {
+      "date": "2022-05-17",
+      "address": "186 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 250000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2022-05-03",
+      "address": "237 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12AD90"
+    },
+    {
+      "date": "2022-02-16",
+      "address": "217 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 252000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12DX30"
+    },
+    {
+      "date": "2021-09-07",
+      "address": "126 COOLEY RD, DRIMNAGH, DUBLIN",
+      "price": 372000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K5NV"
+    },
+    {
+      "date": "2021-09-06",
+      "address": "217 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 185000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12DX30"
+    },
+    {
+      "date": "2021-06-22",
+      "address": "161 COOLEY ROAD, DRIMNAGH, DUBLIN 12",
+      "price": 332000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12V903"
+    },
+    {
+      "date": "2021-02-03",
+      "address": "127 COOLEY RD, DRIMNAGH, DUBLIN",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-03",
+      "address": "152 COOLEY RD, DRIMNAGH, DUBLIN",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-17",
+      "address": "106 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-15",
+      "address": "70 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 267000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-29",
+      "address": "296 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 282000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-28",
+      "address": "286 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-14",
+      "address": "210 COOLEY RD, DRIMNAGH, DUBLIN 12",
+      "price": 275000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D12V588"
+    }
+  ],
+  "totalTransactions": 106
+}

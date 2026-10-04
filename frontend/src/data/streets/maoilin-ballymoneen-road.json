@@ -1,0 +1,497 @@
+{
+  "slug": "maoilin-ballymoneen-road",
+  "stats": {
+    "count": 99,
+    "median": 270925,
+    "avg": 287132,
+    "min": 189427,
+    "max": 530000,
+    "firstYear": 2016,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 26,
+      "median_price": 247282,
+      "avg_price": 250275,
+      "min_price": 189427,
+      "max_price": 352000
+    },
+    {
+      "year": 2017,
+      "count": 35,
+      "median_price": 270925,
+      "avg_price": 266792,
+      "min_price": 202197,
+      "max_price": 370000
+    },
+    {
+      "year": 2018,
+      "count": 25,
+      "median_price": 278206,
+      "avg_price": 287408,
+      "min_price": 251156,
+      "max_price": 390000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 340000,
+      "avg_price": 340000,
+      "min_price": 340000,
+      "max_price": 340000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 340000,
+      "avg_price": 340000,
+      "min_price": 320000,
+      "max_price": 360000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 378000,
+      "avg_price": 378000,
+      "min_price": 378000,
+      "max_price": 378000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 488000,
+      "avg_price": 500000,
+      "min_price": 482000,
+      "max_price": 530000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 432500,
+      "avg_price": 432500,
+      "min_price": 417500,
+      "max_price": 447500
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 435000,
+      "avg_price": 368333,
+      "min_price": 230000,
+      "max_price": 440000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 528000,
+      "avg_price": 528000,
+      "min_price": 528000,
+      "max_price": 528000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-30",
+      "address": "NO.62 MAOILIN, BALLYMONEEN ROAD, KNOCKNACARRA",
+      "price": 528000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H91H7Y5"
+    },
+    {
+      "date": "2024-11-15",
+      "address": "82 MAOILIN, BALLYMONEEN ROAD, GALWAY",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91DC6F"
+    },
+    {
+      "date": "2024-08-23",
+      "address": "73 MAOILIN, BALLYMONEEN ROAD, KNOCKNACARRA",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91PR98"
+    },
+    {
+      "date": "2024-03-20",
+      "address": "79 MAOILIN, BALLYMONEEN ROAD, GALWAY",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91CYR0"
+    },
+    {
+      "date": "2023-10-27",
+      "address": "68 MAOILIN, BALLYMONEEN ROAD, GALWAY",
+      "price": 417500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91DNN4"
+    },
+    {
+      "date": "2023-01-11",
+      "address": "83 MAOILIN, BALLYMONEEN ROAD, GALWAY",
+      "price": 447500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91A6CH"
+    },
+    {
+      "date": "2022-10-26",
+      "address": "NO. 61 MAOILIN, BALLYMONEEN ROAD, GALWAY",
+      "price": 530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91E2R0"
+    },
+    {
+      "date": "2022-08-15",
+      "address": "99 MAOILIN, BALLYMONEEN ROAD, KNOCKNACARRA",
+      "price": 482000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91V0NN"
+    },
+    {
+      "date": "2022-07-19",
+      "address": "12 MAOILIN, BALLYMONEEN ROAD, GALWAY",
+      "price": 488000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91E0FA"
+    },
+    {
+      "date": "2021-07-28",
+      "address": "47 MAOILIN, BALLYMONEEN ROAD, GALWAY",
+      "price": 378000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91YAE3"
+    },
+    {
+      "date": "2020-09-23",
+      "address": "85 MAOILIN, BALLYMONEEN ROAD, GALWAY",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-28",
+      "address": "73 MAOILIN, BALLYMONEEN ROAD, KNOCKNACARRA",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91PR98"
+    },
+    {
+      "date": "2019-05-07",
+      "address": "10 MAOILIN, BALLYMONEEN ROAD, GALWAY",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-08",
+      "address": "70 MAOILIN, BALLYMONEEN ROAD, GALWAY",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-20",
+      "address": "77 Maoilin, Ballymoneen Road",
+      "price": 278206,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-20",
+      "address": "80 Maoilin, Ballymoneen Road",
+      "price": 278206,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-20",
+      "address": "81 Maoilin, Ballymoneen Road",
+      "price": 278206,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-10",
+      "address": "78 Maoilin, Ballymoneen Road, Galway",
+      "price": 260145,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-09",
+      "address": "82 Maoilin, Ballymoneen Road",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-31",
+      "address": "95 Maoilin, Ballymoneen Road",
+      "price": 337350,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-27",
+      "address": "79 Maoilin, Ballymoneen Road, Galway",
+      "price": 255507,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91CYR0"
+    },
+    {
+      "date": "2018-07-26",
+      "address": "76 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 251156,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-24",
+      "address": "85 Maoilin, Ballymoneen Road, Galway",
+      "price": 291399,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-23",
+      "address": "84 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 255507,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-17",
+      "address": "86 Maoilin, Ballymoneen Road, Galway",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-17",
+      "address": "75 Maoilin, Ballymoneen Road, Co. Galway",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-18",
+      "address": "83 Maoilin, Ballymoneen Road, Galway",
+      "price": 260145,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91A6CH"
+    },
+    {
+      "date": "2018-06-12",
+      "address": "88 MAOILIN, BALLYMONEEN ROAD, KNOCKNACARRA",
+      "price": 255506,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-06",
+      "address": "74 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 348678,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-30",
+      "address": "94 Maoilin, Ballymoneen Road, Galway",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-24",
+      "address": "92 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 255507,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-17",
+      "address": "No.91 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 255512,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2018-04-19",
+      "address": "No 101, Maoilin, Ballymoneen Road",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2018-04-12",
+      "address": "98 MAOILIN, BALLYMONEEN RD, GALWAY",
+      "price": 286342,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-10",
+      "address": "96 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-03",
+      "address": "97 Maoilin, ballymoneen road, galway",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-29",
+      "address": "99 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 286343,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91V0NN"
+    },
+    {
+      "date": "2018-03-16",
+      "address": "102 MAOILIN, BALLYMONEEN ROAD, GALWAY",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-29",
+      "address": "38 MAOILIN, Ballymoneen Road, Galway",
+      "price": 270925,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-15",
+      "address": "21 Maoilin, Ballymoneen Road",
+      "price": 270925,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-24",
+      "address": "No 58 Maoilin, Ballymoneen Road, Galway",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2017-11-23",
+      "address": "56 Maoilin, Ballymoneen Road",
+      "price": 202197,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-23",
+      "address": "57 Maoilin, Ballymoneen Road",
+      "price": 202197,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-17",
+      "address": "59 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-17",
+      "address": "44 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 268721,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-09",
+      "address": "60 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-01",
+      "address": "53 Maoilin, Ballymoneen Road, Galway",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-27",
+      "address": "52 Maoilin, Ballymoneen Road",
+      "price": 235683,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-05",
+      "address": "45 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-28",
+      "address": "47 Maoilin, Ballymoneen Road, Galway",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91YAE3"
+    }
+  ],
+  "totalTransactions": 99
+}

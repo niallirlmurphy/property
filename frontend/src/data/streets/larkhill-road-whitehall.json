@@ -1,0 +1,553 @@
+{
+  "slug": "larkhill-road-whitehall",
+  "stats": {
+    "count": 102,
+    "median": 322000,
+    "avg": 314287,
+    "min": 77500,
+    "max": 556000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 215000,
+      "avg_price": 210375,
+      "min_price": 190000,
+      "max_price": 221500
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 128750,
+      "avg_price": 128750,
+      "min_price": 77500,
+      "max_price": 180000
+    },
+    {
+      "year": 2012,
+      "count": 4,
+      "median_price": 147500,
+      "avg_price": 147250,
+      "min_price": 135000,
+      "max_price": 159000
+    },
+    {
+      "year": 2013,
+      "count": 6,
+      "median_price": 147500,
+      "avg_price": 151000,
+      "min_price": 120000,
+      "max_price": 180000
+    },
+    {
+      "year": 2014,
+      "count": 6,
+      "median_price": 236000,
+      "avg_price": 225500,
+      "min_price": 190000,
+      "max_price": 246000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 322000,
+      "avg_price": 322000,
+      "min_price": 322000,
+      "max_price": 322000
+    },
+    {
+      "year": 2016,
+      "count": 5,
+      "median_price": 237000,
+      "avg_price": 228000,
+      "min_price": 140000,
+      "max_price": 287500
+    },
+    {
+      "year": 2017,
+      "count": 8,
+      "median_price": 287000,
+      "avg_price": 285469,
+      "min_price": 220000,
+      "max_price": 349250
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 307500,
+      "avg_price": 307500,
+      "min_price": 304000,
+      "max_price": 311000
+    },
+    {
+      "year": 2019,
+      "count": 5,
+      "median_price": 307000,
+      "avg_price": 308900,
+      "min_price": 290000,
+      "max_price": 335000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 300000,
+      "avg_price": 322000,
+      "min_price": 265000,
+      "max_price": 440000
+    },
+    {
+      "year": 2021,
+      "count": 11,
+      "median_price": 350800,
+      "avg_price": 366073,
+      "min_price": 250000,
+      "max_price": 556000
+    },
+    {
+      "year": 2022,
+      "count": 8,
+      "median_price": 350750,
+      "avg_price": 355375,
+      "min_price": 298500,
+      "max_price": 410000
+    },
+    {
+      "year": 2023,
+      "count": 8,
+      "median_price": 364000,
+      "avg_price": 360625,
+      "min_price": 315000,
+      "max_price": 410000
+    },
+    {
+      "year": 2024,
+      "count": 11,
+      "median_price": 367000,
+      "avg_price": 366932,
+      "min_price": 300000,
+      "max_price": 475000
+    },
+    {
+      "year": 2025,
+      "count": 13,
+      "median_price": 430000,
+      "avg_price": 427000,
+      "min_price": 365000,
+      "max_price": 454000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 390000,
+      "avg_price": 417667,
+      "min_price": 375000,
+      "max_price": 488000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-10",
+      "address": "93 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 390000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D09HW70"
+    },
+    {
+      "date": "2026-04-29",
+      "address": "170 LARKHILL ROAD, WHITEHALL, DUBLIN 9",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09V970"
+    },
+    {
+      "date": "2026-02-27",
+      "address": "67 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 488000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D09Y266"
+    },
+    {
+      "date": "2025-12-17",
+      "address": "246 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 425000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D09P529"
+    },
+    {
+      "date": "2025-12-15",
+      "address": "147 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 435000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D09C580"
+    },
+    {
+      "date": "2025-10-08",
+      "address": "211 LARKHILL RD, WHITEHALL, DUBLIN",
+      "price": 415000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D09TK49"
+    },
+    {
+      "date": "2025-07-14",
+      "address": "232 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 410000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D09DP76"
+    },
+    {
+      "date": "2025-07-04",
+      "address": "3 LARKHILL ROAD, WHITEHALL, DUBLIN 9",
+      "price": 440000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D09C564"
+    },
+    {
+      "date": "2025-05-21",
+      "address": "158 LARKHILL ROAD, WHITEHALL, DUBLIN 9",
+      "price": 430000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D09CK46"
+    },
+    {
+      "date": "2025-05-09",
+      "address": "256 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 425000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D09WV32"
+    },
+    {
+      "date": "2025-05-02",
+      "address": "69 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 430000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D09W2T4"
+    },
+    {
+      "date": "2025-02-17",
+      "address": "74 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09XF20"
+    },
+    {
+      "date": "2025-02-10",
+      "address": "16 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 445000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D09XH99"
+    },
+    {
+      "date": "2025-01-16",
+      "address": "71 LARKHILL ROAD, WHITEHALL, DUBLIN 9",
+      "price": 425000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D09RX89"
+    },
+    {
+      "date": "2025-01-08",
+      "address": "276 LARKHILL ROAD, WHITEHALL, DUBLIN 9",
+      "price": 454000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D09E422"
+    },
+    {
+      "date": "2025-01-07",
+      "address": "60 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 452000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D09RR50"
+    },
+    {
+      "date": "2024-12-18",
+      "address": "50 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09VY13"
+    },
+    {
+      "date": "2024-11-14",
+      "address": "268 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09DH02"
+    },
+    {
+      "date": "2024-10-31",
+      "address": "91 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 398000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09X091"
+    },
+    {
+      "date": "2024-08-08",
+      "address": "105 LARKHILL RD, WHITEHALL, DUBLIN",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09P448"
+    },
+    {
+      "date": "2024-06-28",
+      "address": "106 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09DE44"
+    },
+    {
+      "date": "2024-06-26",
+      "address": "103 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 378000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09Y189"
+    },
+    {
+      "date": "2024-06-19",
+      "address": "42 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 339250,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09RY24"
+    },
+    {
+      "date": "2024-05-10",
+      "address": "49 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 312000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09F795"
+    },
+    {
+      "date": "2024-04-29",
+      "address": "55 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 342000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09FE80"
+    },
+    {
+      "date": "2024-04-24",
+      "address": "53 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09WD26"
+    },
+    {
+      "date": "2024-01-25",
+      "address": "243 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 367000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09R205"
+    },
+    {
+      "date": "2023-09-06",
+      "address": "248 LARKHILL ROAD, WHITEHALL, DUBLIN 9",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09HR26"
+    },
+    {
+      "date": "2023-07-06",
+      "address": "234 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09W227"
+    },
+    {
+      "date": "2023-06-02",
+      "address": "133 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09A312"
+    },
+    {
+      "date": "2023-05-05",
+      "address": "167 LARKHILL ROAD, WHITEHALL, DUBLIN 9",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09VN84"
+    },
+    {
+      "date": "2023-04-13",
+      "address": "260 LARKHILL RD, WHITEHALL, DUBLIN CITY",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09PR88"
+    },
+    {
+      "date": "2023-04-12",
+      "address": "173 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 378000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09XY23"
+    },
+    {
+      "date": "2023-01-12",
+      "address": "10 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09NA07"
+    },
+    {
+      "date": "2023-01-10",
+      "address": "227 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 322000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09A527"
+    },
+    {
+      "date": "2022-11-28",
+      "address": "69 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 360000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D09W2T4"
+    },
+    {
+      "date": "2022-10-07",
+      "address": "109 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09YH58"
+    },
+    {
+      "date": "2022-08-16",
+      "address": "149 LARKHILL RD, WHITEHALL, DUBLIN",
+      "price": 323000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09WP68"
+    },
+    {
+      "date": "2022-07-27",
+      "address": "153 LARKHILL ROAD, WHITEHALL, DUBLIN 9",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09A211"
+    },
+    {
+      "date": "2022-07-15",
+      "address": "56 LARKHILL RD, WHITEHALL, DUBLIN 11",
+      "price": 341500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09XV05"
+    },
+    {
+      "date": "2022-05-06",
+      "address": "100 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09Y893"
+    },
+    {
+      "date": "2022-04-22",
+      "address": "68 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09N763"
+    },
+    {
+      "date": "2022-02-02",
+      "address": "187 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 298500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09Y9E2"
+    },
+    {
+      "date": "2021-12-17",
+      "address": "115 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 332000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09TC59"
+    },
+    {
+      "date": "2021-12-10",
+      "address": "266 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 337000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09FW26"
+    },
+    {
+      "date": "2021-12-01",
+      "address": "83 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09FF24"
+    },
+    {
+      "date": "2021-11-01",
+      "address": "71 LARKHILL ROAD, WHITEHALL, DUBLIN 9",
+      "price": 358000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D09RX89"
+    },
+    {
+      "date": "2021-10-06",
+      "address": "52 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09X942"
+    },
+    {
+      "date": "2021-09-28",
+      "address": "111 LARKHILL RD, WHITEHALL, DUBLIN",
+      "price": 556000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09VY62"
+    },
+    {
+      "date": "2021-08-18",
+      "address": "225 LARKHILL RD, WHITEHALL, DUBLIN 9",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09CX93"
+    }
+  ],
+  "totalTransactions": 102
+}

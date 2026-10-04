@@ -1,0 +1,177 @@
+{
+  "slug": "albert-road-lower-sandycove",
+  "stats": {
+    "count": 11,
+    "median": 1230000,
+    "avg": 1299091,
+    "min": 493000,
+    "max": 2925000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 493000,
+      "avg_price": 493000,
+      "min_price": 493000,
+      "max_price": 493000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1325000,
+      "avg_price": 1325000,
+      "min_price": 1325000,
+      "max_price": 1325000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1076000,
+      "avg_price": 1076000,
+      "min_price": 1076000,
+      "max_price": 1076000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1060500,
+      "avg_price": 1060500,
+      "min_price": 836000,
+      "max_price": 1285000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 765000,
+      "avg_price": 765000,
+      "min_price": 765000,
+      "max_price": 765000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1065000,
+      "avg_price": 1065000,
+      "min_price": 900000,
+      "max_price": 1230000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1450000,
+      "avg_price": 1450000,
+      "min_price": 1450000,
+      "max_price": 1450000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2005000,
+      "avg_price": 2005000,
+      "min_price": 2005000,
+      "max_price": 2005000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 2925000,
+      "avg_price": 2925000,
+      "min_price": 2925000,
+      "max_price": 2925000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-03-05",
+      "address": "25 ALBERT RD LOWER, SANDYCOVE, DUBLIN",
+      "price": 2925000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "A96E5R9"
+    },
+    {
+      "date": "2025-11-24",
+      "address": "70 ALBERT RD LOWER, SANDYCOVE, DUBLIN",
+      "price": 2005000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "A96E0W4"
+    },
+    {
+      "date": "2024-08-12",
+      "address": "2 ALBERT RD LOWER, SANDYCOVE, GLEANGEARY",
+      "price": 1450000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A96K2H7"
+    },
+    {
+      "date": "2021-10-15",
+      "address": "8 ALBERT RD LOWER, SANDYCOVE, DUBLIN",
+      "price": 1230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A96K8N3"
+    },
+    {
+      "date": "2021-01-27",
+      "address": "87A ALBERT RD LOWER, SANDYCOVE, DUBLIN",
+      "price": 900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-31",
+      "address": "53 ALBERT RD LOWER, SANDYCOVE, DUBLIN",
+      "price": 765000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-22",
+      "address": "28 ALBERT ROAD LOWER, SANDYCOVE, COUNTY DUBLIN",
+      "price": 1285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-09",
+      "address": "1 ALBERT RD LOWER, SANDYCOVE, DUBLIN",
+      "price": 836000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-08",
+      "address": "70 ALBERT RD LOWER, SANDYCOVE, DUBLIN",
+      "price": 1076000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "A96E0W4"
+    },
+    {
+      "date": "2015-05-15",
+      "address": "28 ALBERT RD LOWER, SANDYCOVE, DUBLIN",
+      "price": 1325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-10-11",
+      "address": "58b albert road lower, sandycove",
+      "price": 493000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 11
+}

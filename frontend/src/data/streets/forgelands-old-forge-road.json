@@ -1,0 +1,473 @@
+{
+  "slug": "forgelands-old-forge-road",
+  "stats": {
+    "count": 128,
+    "median": 242290,
+    "avg": 239947,
+    "min": 164428,
+    "max": 312775,
+    "firstYear": 2020,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2020,
+      "count": 38,
+      "median_price": 200844,
+      "avg_price": 200390,
+      "min_price": 164428,
+      "max_price": 225007
+    },
+    {
+      "year": 2021,
+      "count": 9,
+      "median_price": 183467,
+      "avg_price": 193415,
+      "min_price": 164428,
+      "max_price": 228000
+    },
+    {
+      "year": 2022,
+      "count": 13,
+      "median_price": 224670,
+      "avg_price": 233922,
+      "min_price": 215859,
+      "max_price": 290000
+    },
+    {
+      "year": 2023,
+      "count": 22,
+      "median_price": 242291,
+      "avg_price": 238718,
+      "min_price": 193832,
+      "max_price": 268040
+    },
+    {
+      "year": 2024,
+      "count": 16,
+      "median_price": 277533,
+      "avg_price": 265871,
+      "min_price": 223577,
+      "max_price": 299500
+    },
+    {
+      "year": 2025,
+      "count": 11,
+      "median_price": 286300,
+      "avg_price": 284652,
+      "min_price": 257709,
+      "max_price": 310000
+    },
+    {
+      "year": 2026,
+      "count": 19,
+      "median_price": 303964,
+      "avg_price": 298933,
+      "min_price": 286344,
+      "max_price": 312775
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-22",
+      "address": "206 Forgelands, Old Forge Road, Milehouse Road",
+      "price": 295154,
+      "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-09-02",
+      "address": "203 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-08-31",
+      "address": "200 Forgelands, Old Forge Road, Milehouse Road",
+      "price": 286344,
+      "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-08-27",
+      "address": "199 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303965,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-08-25",
+      "address": "198 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-07-16",
+      "address": "154 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303965,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-07-14",
+      "address": "156 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 304000,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-07-08",
+      "address": "158 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 295154,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-06-29",
+      "address": "150 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 312775,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-05-27",
+      "address": "153 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-05-22",
+      "address": "No. 151 Forgelands, Old Forge Road, Milehouse",
+      "price": 303964,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-03-19",
+      "address": "273 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-03-03",
+      "address": "212 Forgelands, Old Forge Road, Milehouse Road",
+      "price": 303965,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2026-02-23",
+      "address": "218 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 286344,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-02-20",
+      "address": "219 Forgelands, Old Forge Road",
+      "price": 287693,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-02-19",
+      "address": "216 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303900,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-02-19",
+      "address": "217 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303965,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-02-17",
+      "address": "220 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303965,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2026-01-22",
+      "address": "221 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 295154,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-12-12",
+      "address": "269 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303965,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-11-14",
+      "address": "274 FORGELANDS, OLD FORGE ROAD, MILEHOUSE ROAD",
+      "price": 295200,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-13",
+      "address": "225 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 310000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-30",
+      "address": "224 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 273127,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-22",
+      "address": "234 Forgelands, Old Forge Road, Milehouse Road",
+      "price": 290749,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-14",
+      "address": "145 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 257709,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-07",
+      "address": "No. 149 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-02-21",
+      "address": "No 265 Forgelands, Old Forge Road, Milehouse Road",
+      "price": 286343,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-31",
+      "address": "261 Forgelands, old Forge Road, Enniscorthy",
+      "price": 286300,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-01-07",
+      "address": "256 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 263900,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-01-02",
+      "address": "148 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-12",
+      "address": "144 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-29",
+      "address": "257 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-18",
+      "address": "239 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-08",
+      "address": "238 Forgelands, Old Forge Road, Milehouse Road",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-27",
+      "address": "258 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-08-20",
+      "address": "247 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-28",
+      "address": "255 FORGELANDS, OLD FORGE ROAD, MILESHOUSE ROAD",
+      "price": 263877,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-04",
+      "address": "245 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 299500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-29",
+      "address": "96 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 246453,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-10",
+      "address": "97 Forgelands, Old Forge Road, Gorey",
+      "price": 242290,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-29",
+      "address": "94 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 242600,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-16",
+      "address": "246 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 281900,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-05",
+      "address": "92 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 242290,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-03-26",
+      "address": "242 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-03-22",
+      "address": "99 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 223577,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-03-21",
+      "address": "95 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 242291,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-14",
+      "address": "136 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 248520,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-03",
+      "address": "93 FORGELANDS, OLD FORGE ROAD, ENNISCORTHY",
+      "price": 268040,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-18",
+      "address": "101 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 193832,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-23",
+      "address": "109 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 242291,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 128
+}

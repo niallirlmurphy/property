@@ -1,0 +1,553 @@
+{
+  "slug": "blarney-street-cork",
+  "stats": {
+    "count": 134,
+    "median": 153250,
+    "avg": 163279,
+    "min": 20500,
+    "max": 415000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 20500,
+      "avg_price": 20500,
+      "min_price": 20500,
+      "max_price": 20500
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 94500,
+      "avg_price": 94500,
+      "min_price": 94500,
+      "max_price": 94500
+    },
+    {
+      "year": 2012,
+      "count": 9,
+      "median_price": 62000,
+      "avg_price": 86100,
+      "min_price": 24000,
+      "max_price": 165000
+    },
+    {
+      "year": 2013,
+      "count": 8,
+      "median_price": 44750,
+      "avg_price": 53312,
+      "min_price": 35000,
+      "max_price": 117000
+    },
+    {
+      "year": 2014,
+      "count": 13,
+      "median_price": 66000,
+      "avg_price": 76885,
+      "min_price": 45000,
+      "max_price": 153500
+    },
+    {
+      "year": 2015,
+      "count": 7,
+      "median_price": 87500,
+      "avg_price": 89786,
+      "min_price": 50000,
+      "max_price": 141000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 97500,
+      "avg_price": 100193,
+      "min_price": 80771,
+      "max_price": 125000
+    },
+    {
+      "year": 2017,
+      "count": 9,
+      "median_price": 135000,
+      "avg_price": 159944,
+      "min_price": 23500,
+      "max_price": 270000
+    },
+    {
+      "year": 2018,
+      "count": 13,
+      "median_price": 165000,
+      "avg_price": 178308,
+      "min_price": 106000,
+      "max_price": 345000
+    },
+    {
+      "year": 2019,
+      "count": 7,
+      "median_price": 150000,
+      "avg_price": 161857,
+      "min_price": 115000,
+      "max_price": 230000
+    },
+    {
+      "year": 2020,
+      "count": 7,
+      "median_price": 107000,
+      "avg_price": 113914,
+      "min_price": 60000,
+      "max_price": 175000
+    },
+    {
+      "year": 2021,
+      "count": 10,
+      "median_price": 222000,
+      "avg_price": 206175,
+      "min_price": 94000,
+      "max_price": 290000
+    },
+    {
+      "year": 2022,
+      "count": 10,
+      "median_price": 232500,
+      "avg_price": 238050,
+      "min_price": 147000,
+      "max_price": 415000
+    },
+    {
+      "year": 2023,
+      "count": 8,
+      "median_price": 230500,
+      "avg_price": 217625,
+      "min_price": 140000,
+      "max_price": 272000
+    },
+    {
+      "year": 2024,
+      "count": 12,
+      "median_price": 242500,
+      "avg_price": 233667,
+      "min_price": 153000,
+      "max_price": 335000
+    },
+    {
+      "year": 2025,
+      "count": 14,
+      "median_price": 248500,
+      "avg_price": 269571,
+      "min_price": 135000,
+      "max_price": 390000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 85000,
+      "avg_price": 85000,
+      "min_price": 85000,
+      "max_price": 85000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-02-24",
+      "address": "278 BLARNEY ST, CORK, CORK",
+      "price": 85000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "T23X0W9"
+    },
+    {
+      "date": "2025-11-20",
+      "address": "71 BLARNEY STREET, CORK",
+      "price": 390000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "T23H28Y"
+    },
+    {
+      "date": "2025-10-22",
+      "address": "353A BLARNEY ST, CORK, CORK",
+      "price": 233000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "T23Y9Y3"
+    },
+    {
+      "date": "2025-10-21",
+      "address": "62 BLARNEY STREET, CORK, CO CORK",
+      "price": 350000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "T23AX9X"
+    },
+    {
+      "date": "2025-09-23",
+      "address": "306 BLARNEY ST, CORK, CORK",
+      "price": 205000,
+      "bedrooms": 1,
+      "propertyType": "terraced",
+      "eircode": "T23W32Y"
+    },
+    {
+      "date": "2025-09-17",
+      "address": "289 BLARNEY ST, CORK, CORK",
+      "price": 215000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T23K7H2"
+    },
+    {
+      "date": "2025-09-05",
+      "address": "280A BLARNEY ST, CORK, CORK",
+      "price": 198000,
+      "bedrooms": 1,
+      "propertyType": "terraced",
+      "eircode": "T23R2X7"
+    },
+    {
+      "date": "2025-08-29",
+      "address": "336A, BLARNEY ST, CORK",
+      "price": 275000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T23WAA0"
+    },
+    {
+      "date": "2025-08-14",
+      "address": "42 BLARNEY ST, CORK, CORK",
+      "price": 135000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "eircode": "T23A4EY"
+    },
+    {
+      "date": "2025-07-21",
+      "address": "245 BLARNEY ST, CORK, CORK",
+      "price": 257000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T23W2P7"
+    },
+    {
+      "date": "2025-04-17",
+      "address": "156 BLARNEY ST, CORK, CORK",
+      "price": 380000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "T23D5F9"
+    },
+    {
+      "date": "2025-02-14",
+      "address": "313 BLARNEY ST, CORK, CORK",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23KRA4"
+    },
+    {
+      "date": "2025-02-11",
+      "address": "284 BLARNEY ST, CORK, CORK",
+      "price": 240000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T23N6X5"
+    },
+    {
+      "date": "2025-01-29",
+      "address": "21 BLARNEY ST, CORK, CORK",
+      "price": 275000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "T23EF6N"
+    },
+    {
+      "date": "2025-01-28",
+      "address": "236 BLARNEY ST, CORK, CORK",
+      "price": 236000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "T23V4A6"
+    },
+    {
+      "date": "2024-12-16",
+      "address": "129 BLARNEY ST, CORK, CORK",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23P0A2"
+    },
+    {
+      "date": "2024-12-04",
+      "address": "90 BLARNEY ST, CORK",
+      "price": 180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23XHR2"
+    },
+    {
+      "date": "2024-11-20",
+      "address": "237 BLARNEY ST, CORK, CORK",
+      "price": 180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23E4E1"
+    },
+    {
+      "date": "2024-10-22",
+      "address": "72 BLARNEY ST, CORK",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23H5CE"
+    },
+    {
+      "date": "2024-09-20",
+      "address": "73 BLARNEY ST, CORK, CORK",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23HC66"
+    },
+    {
+      "date": "2024-09-09",
+      "address": "311 BLARNEY ST, CORK, CORK",
+      "price": 153000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23XF7Y"
+    },
+    {
+      "date": "2024-09-02",
+      "address": "170 BLARNEY ST, CORK, CORK",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23H0C5"
+    },
+    {
+      "date": "2024-08-13",
+      "address": "302 BLARNEY ST, CORK, CORK",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23X0CT"
+    },
+    {
+      "date": "2024-07-04",
+      "address": "111 BLARNEY ST, CORK, CORK",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23YF76"
+    },
+    {
+      "date": "2024-04-19",
+      "address": "58 BLARNEY ST, CORK, CORK",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23KXC2"
+    },
+    {
+      "date": "2024-01-26",
+      "address": "223 BLARNEY ST, CORK, CORK",
+      "price": 211000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23P2D8"
+    },
+    {
+      "date": "2024-01-23",
+      "address": "323 BLARNEY ST, CORK",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23E3VP"
+    },
+    {
+      "date": "2023-12-08",
+      "address": "179 BLARNEY ST, CORK, CORK",
+      "price": 272000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23Y9N6"
+    },
+    {
+      "date": "2023-11-03",
+      "address": "284 BLARNEY ST, CORK, CORK",
+      "price": 140000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "T23N6X5"
+    },
+    {
+      "date": "2023-09-10",
+      "address": "336 BLARNEY ST, CORK, CORK",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23DR7V"
+    },
+    {
+      "date": "2023-09-06",
+      "address": "153 BLARNEY ST, CORK, CORK",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23K5R3"
+    },
+    {
+      "date": "2023-08-28",
+      "address": "273 BLARNEY ST, CORK, CORK",
+      "price": 233000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23N6V2"
+    },
+    {
+      "date": "2023-04-26",
+      "address": "183 BLARNEY ST, CORK, CORK",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23W6W8"
+    },
+    {
+      "date": "2023-03-22",
+      "address": "299 BLARNEY ST, CORK",
+      "price": 180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23A8N9"
+    },
+    {
+      "date": "2023-03-09",
+      "address": "12 BLARNEY ST, CORK, CORK",
+      "price": 231000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23HE2C"
+    },
+    {
+      "date": "2022-12-13",
+      "address": "54 BLARNEY ST, CORK",
+      "price": 268751,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23H2TK"
+    },
+    {
+      "date": "2022-12-13",
+      "address": "53 BLARNEY ST, CORK",
+      "price": 268751,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23YR5H"
+    },
+    {
+      "date": "2022-12-09",
+      "address": "9 BLARNEY STREET, CORK",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-28",
+      "address": "297 BLARNEY STREET, CORK, CO CORK",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23K6C8"
+    },
+    {
+      "date": "2022-08-10",
+      "address": "316 BLARNEY ST, CORK",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23A2HN"
+    },
+    {
+      "date": "2022-07-19",
+      "address": "130 BLARNEY ST, CORK, CORK",
+      "price": 206000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23N9C3"
+    },
+    {
+      "date": "2022-04-19",
+      "address": "222 BLARNEY ST, CORK, CORK",
+      "price": 159000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23E6W4"
+    },
+    {
+      "date": "2022-03-21",
+      "address": "48 BLARNEY ST, CORK, CORK",
+      "price": 147000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23P21R"
+    },
+    {
+      "date": "2022-03-15",
+      "address": "185 BLARNEY ST, CORK, CORK",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23H3C9"
+    },
+    {
+      "date": "2022-02-08",
+      "address": "389 BLARNEY ST, CORK, CORK",
+      "price": 206000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23HX8C"
+    },
+    {
+      "date": "2021-12-20",
+      "address": "148 BLARNEY ST, CORK",
+      "price": 283750,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23E8C1"
+    },
+    {
+      "date": "2021-12-16",
+      "address": "239 BLARNEY ST, CORK, CORK",
+      "price": 125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23V8N6"
+    },
+    {
+      "date": "2021-12-01",
+      "address": "283 BLARNEY ST, CORK",
+      "price": 205000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23E7K4"
+    },
+    {
+      "date": "2021-10-11",
+      "address": "294 BLARNEY ST, CORK, CORK",
+      "price": 120000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23R1X3"
+    },
+    {
+      "date": "2021-10-08",
+      "address": "24 BLARNEY ST, CORK, CORK",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T23EYK7"
+    }
+  ],
+  "totalTransactions": 134
+}

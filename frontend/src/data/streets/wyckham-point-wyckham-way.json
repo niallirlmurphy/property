@@ -1,0 +1,553 @@
+{
+  "slug": "wyckham-point-wyckham-way",
+  "stats": {
+    "count": 120,
+    "median": 369000,
+    "avg": 375550,
+    "min": 84234,
+    "max": 799000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 22,
+      "median_price": 281234,
+      "avg_price": 285512,
+      "min_price": 84234,
+      "max_price": 551111
+    },
+    {
+      "year": 2011,
+      "count": 6,
+      "median_price": 252500,
+      "avg_price": 302054,
+      "min_price": 229074,
+      "max_price": 572000
+    },
+    {
+      "year": 2012,
+      "count": 9,
+      "median_price": 230000,
+      "avg_price": 224435,
+      "min_price": 152000,
+      "max_price": 280000
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 245000,
+      "avg_price": 389333,
+      "min_price": 124000,
+      "max_price": 799000
+    },
+    {
+      "year": 2014,
+      "count": 6,
+      "median_price": 367500,
+      "avg_price": 360167,
+      "min_price": 270000,
+      "max_price": 445000
+    },
+    {
+      "year": 2015,
+      "count": 9,
+      "median_price": 305000,
+      "avg_price": 301761,
+      "min_price": 123250,
+      "max_price": 400000
+    },
+    {
+      "year": 2016,
+      "count": 10,
+      "median_price": 356000,
+      "avg_price": 341032,
+      "min_price": 118320,
+      "max_price": 480000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 461000,
+      "avg_price": 469750,
+      "min_price": 277000,
+      "max_price": 680000
+    },
+    {
+      "year": 2018,
+      "count": 7,
+      "median_price": 465000,
+      "avg_price": 456214,
+      "min_price": 397500,
+      "max_price": 490000
+    },
+    {
+      "year": 2019,
+      "count": 6,
+      "median_price": 398500,
+      "avg_price": 401500,
+      "min_price": 320000,
+      "max_price": 480000
+    },
+    {
+      "year": 2020,
+      "count": 6,
+      "median_price": 438500,
+      "avg_price": 421000,
+      "min_price": 315000,
+      "max_price": 480000
+    },
+    {
+      "year": 2021,
+      "count": 5,
+      "median_price": 435000,
+      "avg_price": 458400,
+      "min_price": 383000,
+      "max_price": 620000
+    },
+    {
+      "year": 2022,
+      "count": 5,
+      "median_price": 435000,
+      "avg_price": 454000,
+      "min_price": 335000,
+      "max_price": 585000
+    },
+    {
+      "year": 2023,
+      "count": 8,
+      "median_price": 461500,
+      "avg_price": 476125,
+      "min_price": 360000,
+      "max_price": 625000
+    },
+    {
+      "year": 2024,
+      "count": 5,
+      "median_price": 460000,
+      "avg_price": 444755,
+      "min_price": 208777,
+      "max_price": 710000
+    },
+    {
+      "year": 2025,
+      "count": 7,
+      "median_price": 545100,
+      "avg_price": 534729,
+      "min_price": 410000,
+      "max_price": 601000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 576000,
+      "avg_price": 576000,
+      "min_price": 570000,
+      "max_price": 582000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-29",
+      "address": "201 WYCKHAM POINT, WYCKHAM WAY, BALINTEER DUBLIN 14",
+      "price": 570000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D16K092"
+    },
+    {
+      "date": "2026-06-02",
+      "address": "55 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 582000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16YE68"
+    },
+    {
+      "date": "2025-12-11",
+      "address": "58 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM",
+      "price": 520000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D16PW98"
+    },
+    {
+      "date": "2025-11-24",
+      "address": "39 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 410000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D16F256"
+    },
+    {
+      "date": "2025-09-12",
+      "address": "115 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 487000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D16R156"
+    },
+    {
+      "date": "2025-08-27",
+      "address": "283 WYCKHAM POINT, WYCKHAM WAY, BALLINTEER DUBLIN 14",
+      "price": 545100,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D16F5A2"
+    },
+    {
+      "date": "2025-08-20",
+      "address": "119 WYCKHAM POINT, WYCKHAM WAY, DUBLIN 14",
+      "price": 585000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D16WY66"
+    },
+    {
+      "date": "2025-08-01",
+      "address": "APT 120 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 595000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D16KV08"
+    },
+    {
+      "date": "2025-06-04",
+      "address": "290 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 601000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D16PX79"
+    },
+    {
+      "date": "2024-09-18",
+      "address": "146 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 14",
+      "price": 208777,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16CE41"
+    },
+    {
+      "date": "2024-07-01",
+      "address": "151 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 710000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16D9A8"
+    },
+    {
+      "date": "2024-06-21",
+      "address": "153 WYCKHAM POINT, WYCKHAM WAY, DUBDRUM",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16HV41"
+    },
+    {
+      "date": "2024-03-22",
+      "address": "APT 175 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D16WH45"
+    },
+    {
+      "date": "2024-03-07",
+      "address": "127 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16X201"
+    },
+    {
+      "date": "2023-11-17",
+      "address": "APT 172 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D16D4F6"
+    },
+    {
+      "date": "2023-10-20",
+      "address": "100 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16T382"
+    },
+    {
+      "date": "2023-10-03",
+      "address": "173 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 421000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16AA01"
+    },
+    {
+      "date": "2023-08-26",
+      "address": "299 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 625000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16WR91"
+    },
+    {
+      "date": "2023-08-17",
+      "address": "143 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 545000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16RV69"
+    },
+    {
+      "date": "2023-08-03",
+      "address": "225 WYCKHAM POINT, WYCKHAM WAY, DUBLIN 16",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16FD70"
+    },
+    {
+      "date": "2023-05-25",
+      "address": "18 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16C925"
+    },
+    {
+      "date": "2023-01-31",
+      "address": "42 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 443000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16TR96"
+    },
+    {
+      "date": "2022-09-20",
+      "address": "101 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 490000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16P4A6"
+    },
+    {
+      "date": "2022-09-20",
+      "address": "169 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16RN09"
+    },
+    {
+      "date": "2022-05-24",
+      "address": "56 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D16T1X0"
+    },
+    {
+      "date": "2022-02-25",
+      "address": "87 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16N573"
+    },
+    {
+      "date": "2022-02-07",
+      "address": "139 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM",
+      "price": 585000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16FK02"
+    },
+    {
+      "date": "2021-10-22",
+      "address": "140 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM",
+      "price": 620000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16E863"
+    },
+    {
+      "date": "2021-09-03",
+      "address": "193 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 439000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16FY05"
+    },
+    {
+      "date": "2021-07-09",
+      "address": "149 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 14",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16CN17"
+    },
+    {
+      "date": "2021-06-15",
+      "address": "APT 217, WYCKHAM POINT, WYCKHAM WAY",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D16AW29"
+    },
+    {
+      "date": "2021-03-18",
+      "address": "291 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM",
+      "price": 383000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-03",
+      "address": "280 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-04",
+      "address": "257 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-20",
+      "address": "36 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D16H9Y4"
+    },
+    {
+      "date": "2020-03-12",
+      "address": "49  WYCKHAM POINT, WYCKHAM WAY, DUNDRUM",
+      "price": 399000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-12",
+      "address": "184 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 452000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-21",
+      "address": "221 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-09",
+      "address": "91 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-24",
+      "address": "15 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 372000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-16",
+      "address": "61 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-28",
+      "address": "68 WYCKHAM POINT, WYCKHAM WAY, BALLINTEER DUBLIN 16",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-01",
+      "address": "138 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 14",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16P088"
+    },
+    {
+      "date": "2019-01-22",
+      "address": "229 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 342000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-13",
+      "address": "153 WYCKHAM POINT, WYCKHAM WAY, DUBDRUM",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16HV41"
+    },
+    {
+      "date": "2018-08-28",
+      "address": "37 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 397500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-19",
+      "address": "108 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-11",
+      "address": "67 WYCKHAM POINT, WYCKHAM WAY, DUBLIN 16",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-07",
+      "address": "133 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 490000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-20",
+      "address": "276 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 476000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 120
+}

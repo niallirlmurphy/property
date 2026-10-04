@@ -1,0 +1,145 @@
+{
+  "slug": "lakelands-park-terenure",
+  "stats": {
+    "count": 9,
+    "median": 1425000,
+    "avg": 1311667,
+    "min": 125000,
+    "max": 1975000,
+    "firstYear": 2016,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 825000,
+      "avg_price": 825000,
+      "min_price": 825000,
+      "max_price": 825000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1145000,
+      "avg_price": 1145000,
+      "min_price": 1100000,
+      "max_price": 1190000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 125000,
+      "avg_price": 125000,
+      "min_price": 125000,
+      "max_price": 125000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1785000,
+      "avg_price": 1785000,
+      "min_price": 1675000,
+      "max_price": 1895000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1595000,
+      "avg_price": 1595000,
+      "min_price": 1595000,
+      "max_price": 1595000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1975000,
+      "avg_price": 1975000,
+      "min_price": 1975000,
+      "max_price": 1975000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1425000,
+      "avg_price": 1425000,
+      "min_price": 1425000,
+      "max_price": 1425000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-01-21",
+      "address": "8 LAKELANDS PARK, TERENURE, DUBLIN 6W",
+      "price": 1425000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D6WP680"
+    },
+    {
+      "date": "2025-11-06",
+      "address": "3 LAKELANDS PARK, TERENURE, DUBLIN 6W",
+      "price": 1975000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D6WRH94"
+    },
+    {
+      "date": "2024-12-17",
+      "address": "14 LAKELANDS PARK, TERENURE, DUBLIN 6W",
+      "price": 1595000,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "D6WHF99"
+    },
+    {
+      "date": "2021-09-03",
+      "address": "30 LAKELANDS PARK, TERENURE, DUBLIN 6W",
+      "price": 1895000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WTW84"
+    },
+    {
+      "date": "2021-05-18",
+      "address": "18 LAKELANDS PARK, TERENURE, DUBLIN 6W",
+      "price": 1675000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WRR52"
+    },
+    {
+      "date": "2018-05-28",
+      "address": "24 LAKELANDS PARK, TERENURE, DUBLIN 6W",
+      "price": 125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WXY44"
+    },
+    {
+      "date": "2017-02-03",
+      "address": "1 LAKELANDS PARK, TERENURE, DUBLIN 6W",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-01-26",
+      "address": "4 LAKELANDS PARK, TERENURE, DUBLIN 6W",
+      "price": 1190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-10",
+      "address": "30 LAKELANDS PARK, TERENURE, DUBLIN 6W",
+      "price": 825000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D6WTW84"
+    }
+  ],
+  "totalTransactions": 9
+}

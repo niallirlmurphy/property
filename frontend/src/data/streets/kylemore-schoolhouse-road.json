@@ -1,0 +1,545 @@
+{
+  "slug": "kylemore-schoolhouse-road",
+  "stats": {
+    "count": 132,
+    "median": 290748,
+    "avg": 315186,
+    "min": 145000,
+    "max": 610000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 211454,
+      "avg_price": 240485,
+      "min_price": 145000,
+      "max_price": 365000
+    },
+    {
+      "year": 2011,
+      "count": 3,
+      "median_price": 266000,
+      "avg_price": 303402,
+      "min_price": 181650,
+      "max_price": 462555
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 209295,
+      "avg_price": 209295,
+      "min_price": 198590,
+      "max_price": 220000
+    },
+    {
+      "year": 2014,
+      "count": 6,
+      "median_price": 229394,
+      "avg_price": 225348,
+      "min_price": 185727,
+      "max_price": 247401
+    },
+    {
+      "year": 2015,
+      "count": 4,
+      "median_price": 210573,
+      "avg_price": 212996,
+      "min_price": 202643,
+      "max_price": 228194
+    },
+    {
+      "year": 2016,
+      "count": 6,
+      "median_price": 237004,
+      "avg_price": 231061,
+      "min_price": 187577,
+      "max_price": 245925
+    },
+    {
+      "year": 2017,
+      "count": 7,
+      "median_price": 267285,
+      "avg_price": 267476,
+      "min_price": 223000,
+      "max_price": 325000
+    },
+    {
+      "year": 2018,
+      "count": 13,
+      "median_price": 248458,
+      "avg_price": 254955,
+      "min_price": 200200,
+      "max_price": 316300
+    },
+    {
+      "year": 2019,
+      "count": 14,
+      "median_price": 289434,
+      "avg_price": 274169,
+      "min_price": 236841,
+      "max_price": 298678
+    },
+    {
+      "year": 2020,
+      "count": 26,
+      "median_price": 287269,
+      "avg_price": 278092,
+      "min_price": 245000,
+      "max_price": 328722
+    },
+    {
+      "year": 2021,
+      "count": 6,
+      "median_price": 334064,
+      "avg_price": 335514,
+      "min_price": 317181,
+      "max_price": 360000
+    },
+    {
+      "year": 2022,
+      "count": 12,
+      "median_price": 342731,
+      "avg_price": 346539,
+      "min_price": 316260,
+      "max_price": 423500
+    },
+    {
+      "year": 2023,
+      "count": 12,
+      "median_price": 392158,
+      "avg_price": 406173,
+      "min_price": 365000,
+      "max_price": 492511
+    },
+    {
+      "year": 2024,
+      "count": 9,
+      "median_price": 453745,
+      "avg_price": 473243,
+      "min_price": 334802,
+      "max_price": 610000
+    },
+    {
+      "year": 2025,
+      "count": 6,
+      "median_price": 475000,
+      "avg_price": 473264,
+      "min_price": 385000,
+      "max_price": 550000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 545000,
+      "avg_price": 521333,
+      "min_price": 449000,
+      "max_price": 570000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-11",
+      "address": "162 KYLEMORE, SCHOOLHOUSE ROAD, CASTLETROY",
+      "price": 570000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "V94T1XK"
+    },
+    {
+      "date": "2026-04-27",
+      "address": "279 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 449000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "V94732Y"
+    },
+    {
+      "date": "2026-02-20",
+      "address": "206 KYLEMORE, SCHOOLHOUSE ROAD, MONALEEN",
+      "price": 545000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "V9432P9"
+    },
+    {
+      "date": "2025-12-08",
+      "address": "209 KYLEMORE, SCHOOLHOUSE ROAD, MONALEEN",
+      "price": 435000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "V940W26"
+    },
+    {
+      "date": "2025-06-18",
+      "address": "10 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 544587,
+      "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-30",
+      "address": "235 KYLEMORE, SCHOOLHOUSE ROAD, MONALEEN",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": "V943T62"
+    },
+    {
+      "date": "2025-05-28",
+      "address": "217 KYLEMORE, SCHOOLHOUSE ROAD, MONALEEN",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V942E24"
+    },
+    {
+      "date": "2025-03-26",
+      "address": "198 KYLEMORE, SCHOOLHOUSE ROAD, MONALEEN",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V9471X9"
+    },
+    {
+      "date": "2025-02-26",
+      "address": "202 KYLEMORE, SCHOOLHOUSE ROAD, CASTLETROY",
+      "price": 515000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "V9449F9"
+    },
+    {
+      "date": "2024-12-12",
+      "address": "115 KYLEMORE, SCHOOLHOUSE ROAD, MONALEEN",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94HRR0"
+    },
+    {
+      "date": "2024-12-10",
+      "address": "106 KYLEMORE, Schoolhouse Road, Castletroy",
+      "price": 422907,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-10",
+      "address": "13 KYLEMORE, Schoolhouse Road, Castletroy",
+      "price": 453745,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-10",
+      "address": "18 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 537445,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-10",
+      "address": "197 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-10",
+      "address": "214 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 436123,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-25",
+      "address": "11 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 544581,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-25",
+      "address": "12 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 544581,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-09",
+      "address": "41 KYLEMORE, SCHOOLHOUSE RD, CASTLETROY",
+      "price": 610000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94D77P"
+    },
+    {
+      "date": "2023-08-28",
+      "address": "208 KYLEMORE, SCHOOLHOUSE ROAD, MONALEEN",
+      "price": 407000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V9426F5"
+    },
+    {
+      "date": "2023-08-14",
+      "address": "232 KYLEMORE, SCHOOLHOUSE ROAD, Castletroy",
+      "price": 375771,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-19",
+      "address": "230 KYLEMORE, SCHOOLHOUSE ROAD, Castletroy",
+      "price": 492511,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-16",
+      "address": "251 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 425639,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-08",
+      "address": "15 Kylemore, Schoolhouse Road, Limerick",
+      "price": 386784,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-03",
+      "address": "260 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 390396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-04-27",
+      "address": "16 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 393920,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-09",
+      "address": "270 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 411542,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-03",
+      "address": "258 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-01-27",
+      "address": "264 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 383259,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-01-13",
+      "address": "267 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 459000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-01-06",
+      "address": "273 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 383259,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-07",
+      "address": "276 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 328722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-25",
+      "address": "274 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 342731,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-21",
+      "address": "271 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 404405,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-11",
+      "address": "275 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-14",
+      "address": "277 Kylemore, Schoolhouse Road, Limerick County",
+      "price": 342731,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-08-12",
+      "address": "279 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 321586,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "V94732Y"
+    },
+    {
+      "date": "2022-08-10",
+      "address": "282 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 321585,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-07-20",
+      "address": "257 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 342760,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-07-11",
+      "address": "283 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 349868,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-07-06",
+      "address": "281 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 316260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-10",
+      "address": "38 KYLEMORE, SCHOOLHOUSE RD, CASTLETROY",
+      "price": 423500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94VYK5"
+    },
+    {
+      "date": "2022-06-03",
+      "address": "280 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 342731,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-11",
+      "address": "123 KYLEMORE, SCHOOLHOUSE ROAD, MONALEEN",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94YDT0"
+    },
+    {
+      "date": "2021-05-11",
+      "address": "255 Kylemore, Schoolhouse Road, Monaleen",
+      "price": 333128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-06",
+      "address": "256 KYLEMORE, SCHOOLHOUSE ROAD, CASTLETROY",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-16",
+      "address": "252 Kylemore, Schoolhouse Road",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-18",
+      "address": "253 Kylemore, Schoolhouse Road, Monaleen",
+      "price": 337778,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-07",
+      "address": "158 KYLEMORE, SCHOOLHOUSE ROAD, MONALEEN",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-13",
+      "address": "66 KYLEMORE, SCHOOLHOUSE RD, CASTLETROY",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-12",
+      "address": "244 Kylemore, Schoolhouse Road, Castletroy",
+      "price": 297533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 132
+}

@@ -1,0 +1,553 @@
+{
+  "slug": "charlesland-grove-greystones",
+  "stats": {
+    "count": 95,
+    "median": 325000,
+    "avg": 328497,
+    "min": 120000,
+    "max": 545000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 2,
+      "median_price": 289500,
+      "avg_price": 289500,
+      "min_price": 264000,
+      "max_price": 315000
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 192500,
+      "avg_price": 192500,
+      "min_price": 190000,
+      "max_price": 195000
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 120000,
+      "avg_price": 120000,
+      "min_price": 120000,
+      "max_price": 120000
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 180000,
+      "avg_price": 175000,
+      "min_price": 135000,
+      "max_price": 210000
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 285000,
+      "avg_price": 281750,
+      "min_price": 210000,
+      "max_price": 347000
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 266500,
+      "avg_price": 277312,
+      "min_price": 220000,
+      "max_price": 345000
+    },
+    {
+      "year": 2016,
+      "count": 10,
+      "median_price": 263000,
+      "avg_price": 260500,
+      "min_price": 213000,
+      "max_price": 325000
+    },
+    {
+      "year": 2017,
+      "count": 5,
+      "median_price": 315000,
+      "avg_price": 304000,
+      "min_price": 240000,
+      "max_price": 380000
+    },
+    {
+      "year": 2018,
+      "count": 8,
+      "median_price": 303000,
+      "avg_price": 305188,
+      "min_price": 248000,
+      "max_price": 365000
+    },
+    {
+      "year": 2019,
+      "count": 9,
+      "median_price": 305000,
+      "avg_price": 313716,
+      "min_price": 198945,
+      "max_price": 445000
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 327500,
+      "avg_price": 315500,
+      "min_price": 247000,
+      "max_price": 360000
+    },
+    {
+      "year": 2021,
+      "count": 6,
+      "median_price": 352500,
+      "avg_price": 353667,
+      "min_price": 305000,
+      "max_price": 412000
+    },
+    {
+      "year": 2022,
+      "count": 5,
+      "median_price": 385000,
+      "avg_price": 405400,
+      "min_price": 370000,
+      "max_price": 490000
+    },
+    {
+      "year": 2023,
+      "count": 9,
+      "median_price": 395000,
+      "avg_price": 388306,
+      "min_price": 364750,
+      "max_price": 407000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 377500,
+      "avg_price": 357500,
+      "min_price": 190000,
+      "max_price": 495000
+    },
+    {
+      "year": 2025,
+      "count": 8,
+      "median_price": 444500,
+      "avg_price": 461250,
+      "min_price": 425000,
+      "max_price": 545000
+    },
+    {
+      "year": 2026,
+      "count": 5,
+      "median_price": 435000,
+      "avg_price": 424400,
+      "min_price": 345000,
+      "max_price": 542000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-06",
+      "address": "27 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 450000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63RD62"
+    },
+    {
+      "date": "2026-07-20",
+      "address": "162 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 542000,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": "A63PX92"
+    },
+    {
+      "date": "2026-05-08",
+      "address": "43 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 350000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63VY07"
+    },
+    {
+      "date": "2026-04-01",
+      "address": "137 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 345000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A63TN83"
+    },
+    {
+      "date": "2026-01-14",
+      "address": "56 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 435000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "A63TN12"
+    },
+    {
+      "date": "2025-12-17",
+      "address": "68 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 485000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "A63HX47"
+    },
+    {
+      "date": "2025-09-30",
+      "address": "126 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 545000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63Y392"
+    },
+    {
+      "date": "2025-08-13",
+      "address": "128 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 490000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63R773"
+    },
+    {
+      "date": "2025-07-18",
+      "address": "176 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 448500,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63W275"
+    },
+    {
+      "date": "2025-07-01",
+      "address": "49 CHARLESLAND GROVE, GREYSTONES, CO WICKLOW",
+      "price": 425000,
+      "bedrooms": 3,
+      "propertyType": "duplex",
+      "eircode": "A63VX75"
+    },
+    {
+      "date": "2025-04-17",
+      "address": "53 CHARLESLAND GROVE, GREYSTONES, CO WICKLOW",
+      "price": 430000,
+      "bedrooms": 3,
+      "propertyType": "duplex",
+      "eircode": "A63YD81"
+    },
+    {
+      "date": "2025-02-21",
+      "address": "131 CHARLESLAND GROVE, GREYSTONES, CO WICKLOW",
+      "price": 440500,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63W958"
+    },
+    {
+      "date": "2025-01-20",
+      "address": "94 CHARLESLAND GROVE, GREYSTONES, CO WICKLOW",
+      "price": 426000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63PR84"
+    },
+    {
+      "date": "2024-12-10",
+      "address": "161 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63WD68"
+    },
+    {
+      "date": "2024-12-05",
+      "address": "23 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63FA43"
+    },
+    {
+      "date": "2024-10-18",
+      "address": "175 CHARLESLAND GROVE, GREYSTONES, CO WICKLOW",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63K6R6"
+    },
+    {
+      "date": "2024-10-04",
+      "address": "155 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63V620"
+    },
+    {
+      "date": "2024-05-10",
+      "address": "27 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 380000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63RD62"
+    },
+    {
+      "date": "2024-04-16",
+      "address": "77 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DD36"
+    },
+    {
+      "date": "2023-12-18",
+      "address": "185 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63PK35"
+    },
+    {
+      "date": "2023-11-27",
+      "address": "74 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 407000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63RX34"
+    },
+    {
+      "date": "2023-10-26",
+      "address": "84 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DK80"
+    },
+    {
+      "date": "2023-10-05",
+      "address": "187 CHARLESLAND GROVE, GREYSTONES, CO WICKLOW",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63K594"
+    },
+    {
+      "date": "2023-08-18",
+      "address": "57 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63AT20"
+    },
+    {
+      "date": "2023-08-01",
+      "address": "141 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63XR02"
+    },
+    {
+      "date": "2023-07-20",
+      "address": "52 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 403000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63D599"
+    },
+    {
+      "date": "2023-05-31",
+      "address": "196 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KR40"
+    },
+    {
+      "date": "2023-02-01",
+      "address": "49 CHARLESLAND GROVE, GREYSTONES, CO WICKLOW",
+      "price": 364750,
+      "bedrooms": 3,
+      "propertyType": "duplex",
+      "eircode": "A63VX75"
+    },
+    {
+      "date": "2022-12-20",
+      "address": "162 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 385000,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": "A63PX92"
+    },
+    {
+      "date": "2022-12-07",
+      "address": "99 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63TP93"
+    },
+    {
+      "date": "2022-10-28",
+      "address": "114 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 372000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KV90"
+    },
+    {
+      "date": "2022-09-12",
+      "address": "174 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 490000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KC91"
+    },
+    {
+      "date": "2022-03-08",
+      "address": "47 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63EK02"
+    },
+    {
+      "date": "2021-11-30",
+      "address": "173 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KP29"
+    },
+    {
+      "date": "2021-10-20",
+      "address": "156 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63EN81"
+    },
+    {
+      "date": "2021-09-03",
+      "address": "145 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 412000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63E953"
+    },
+    {
+      "date": "2021-09-01",
+      "address": "177 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KX09"
+    },
+    {
+      "date": "2021-04-22",
+      "address": "53 CHARLESLAND GROVE, GREYSTONES, CO WICKLOW",
+      "price": 370000,
+      "bedrooms": 3,
+      "propertyType": "duplex",
+      "eircode": "A63YD81"
+    },
+    {
+      "date": "2021-03-29",
+      "address": "123 CHARLESLAND GROVE, GREYSTONES, CO WICKLOW",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-16",
+      "address": "142 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-21",
+      "address": "69 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-06",
+      "address": "162 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 360000,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": "A63PX92"
+    },
+    {
+      "date": "2020-02-17",
+      "address": "34 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 247000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-06",
+      "address": "25 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-15",
+      "address": "129 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-14",
+      "address": "13 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-26",
+      "address": "110 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-12",
+      "address": "136 CHARLESLAND GROVE, GREYSTONES, CO WICKLOW",
+      "price": 198945,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-05",
+      "address": "76 CHARLESLAND GROVE, GREYSTONES, WICKLOW",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-28",
+      "address": "94 CHARLESLAND GROVE, GREYSTONES, CO WICKLOW",
+      "price": 305000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63PR84"
+    }
+  ],
+  "totalTransactions": 95
+}

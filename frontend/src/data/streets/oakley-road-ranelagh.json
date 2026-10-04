@@ -1,0 +1,241 @@
+{
+  "slug": "oakley-road-ranelagh",
+  "stats": {
+    "count": 17,
+    "median": 1375000,
+    "avg": 1565422,
+    "min": 310000,
+    "max": 4935000,
+    "firstYear": 2012,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 310000,
+      "avg_price": 310000,
+      "min_price": 310000,
+      "max_price": 310000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 740000,
+      "avg_price": 740000,
+      "min_price": 740000,
+      "max_price": 740000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 612500,
+      "avg_price": 612500,
+      "min_price": 612500,
+      "max_price": 612500
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 650000,
+      "avg_price": 650000,
+      "min_price": 650000,
+      "max_price": 650000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1481250,
+      "avg_price": 1481250,
+      "min_price": 887500,
+      "max_price": 2075000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1210000,
+      "avg_price": 1210000,
+      "min_price": 920000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 4935000,
+      "avg_price": 4935000,
+      "min_price": 4935000,
+      "max_price": 4935000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 1609840,
+      "avg_price": 1609840,
+      "min_price": 1500000,
+      "max_price": 1719680
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 1375000,
+      "avg_price": 1743333,
+      "min_price": 555000,
+      "max_price": 3300000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 1641250,
+      "avg_price": 1641250,
+      "min_price": 1170000,
+      "max_price": 2112500
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2250000,
+      "avg_price": 2250000,
+      "min_price": 2250000,
+      "max_price": 2250000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-09-25",
+      "address": "32 OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 2250000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06N923"
+    },
+    {
+      "date": "2024-09-06",
+      "address": "33 OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 2112500,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06YD37"
+    },
+    {
+      "date": "2024-02-01",
+      "address": "36 OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 1170000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D06CA21"
+    },
+    {
+      "date": "2023-12-08",
+      "address": "20 OAKLEY RD, RANELAGH, DUBLIN",
+      "price": 1375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06N720"
+    },
+    {
+      "date": "2023-12-07",
+      "address": "9 OAKLEY ROAD, RANELAGH, DUBLIN 6",
+      "price": 555000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06ET86"
+    },
+    {
+      "date": "2023-05-02",
+      "address": "11 OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 3300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06NF25"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "7A OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06X5P0"
+    },
+    {
+      "date": "2022-07-04",
+      "address": "50 OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 1719680,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06X028"
+    },
+    {
+      "date": "2019-12-12",
+      "address": "12 OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 4935000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-18",
+      "address": "18 OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 920000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-06",
+      "address": "45 OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-29",
+      "address": "49 OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 2075000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-28",
+      "address": "25A OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 887500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-03-03",
+      "address": "26B OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-16",
+      "address": "18 OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 612500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-12-18",
+      "address": "50 OAKLEY RD, RANELAGH, DUBLIN 6",
+      "price": 740000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06X028"
+    },
+    {
+      "date": "2012-02-29",
+      "address": "25B Oakley Road, Ranelagh",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 17
+}

@@ -1,0 +1,257 @@
+{
+  "slug": "deerpark-road-castleknock",
+  "stats": {
+    "count": 19,
+    "median": 1260000,
+    "avg": 1282421,
+    "min": 750000,
+    "max": 1810000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 850000,
+      "avg_price": 850000,
+      "min_price": 850000,
+      "max_price": 850000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 750000,
+      "avg_price": 750000,
+      "min_price": 750000,
+      "max_price": 750000
+    },
+    {
+      "year": 2015,
+      "count": 5,
+      "median_price": 1150000,
+      "avg_price": 1169200,
+      "min_price": 961000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1130000,
+      "avg_price": 1130000,
+      "min_price": 1100000,
+      "max_price": 1160000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1190000,
+      "avg_price": 1190000,
+      "min_price": 1190000,
+      "max_price": 1190000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 1322500,
+      "avg_price": 1322500,
+      "min_price": 1250000,
+      "max_price": 1395000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1300000,
+      "max_price": 1700000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1290000,
+      "avg_price": 1290000,
+      "min_price": 1290000,
+      "max_price": 1290000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1435000,
+      "avg_price": 1435000,
+      "min_price": 1435000,
+      "max_price": 1435000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 1810000,
+      "avg_price": 1810000,
+      "min_price": 1810000,
+      "max_price": 1810000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1480000,
+      "avg_price": 1480000,
+      "min_price": 1480000,
+      "max_price": 1480000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-01",
+      "address": "32 DEERPARK RD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1480000,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "D15TPH0"
+    },
+    {
+      "date": "2025-11-28",
+      "address": "13 DEERPARK RD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1810000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D15X86P"
+    },
+    {
+      "date": "2025-02-26",
+      "address": "1 DEERPARK ROAD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1810000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D15K88C"
+    },
+    {
+      "date": "2023-05-12",
+      "address": "8 DEERPARK ROAD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15FNT3"
+    },
+    {
+      "date": "2022-01-26",
+      "address": "54 DEERPARK RD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15KWP7"
+    },
+    {
+      "date": "2021-07-02",
+      "address": "11 DEERPARK ROAD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15R62F"
+    },
+    {
+      "date": "2021-06-16",
+      "address": "28 DEERPARK ROAD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15TXK3"
+    },
+    {
+      "date": "2020-12-11",
+      "address": "43 DEERPARK ROAD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-11",
+      "address": "2 DEERPARK RD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-19",
+      "address": "19 DEERPARK RD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-27",
+      "address": "28 DEERPARK ROAD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1160000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15TXK3"
+    },
+    {
+      "date": "2017-06-23",
+      "address": "45 DEERPARK RD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-25",
+      "address": "22 DEERPARK RD, CASTLEKNOCK, DUBLIN 15",
+      "price": 975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-03",
+      "address": "25 DEERPARK ROAD, CASTLEKNOCK",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-20",
+      "address": "53 DEERPARK RD, CASTLEKNOCK, DUBLIN 15",
+      "price": 1260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-16",
+      "address": "10 Deerpark Road, Castleknock",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-27",
+      "address": "56 Deerpark Road, Castleknock, Dublin 15",
+      "price": 961000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-02-14",
+      "address": "7 Deerpark Road, Castleknock",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-10-28",
+      "address": "29 Deerpark Road, Castleknock, Dublin 15",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 19
+}

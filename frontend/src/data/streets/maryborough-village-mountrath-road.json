@@ -1,0 +1,521 @@
+{
+  "slug": "maryborough-village-mountrath-road",
+  "stats": {
+    "count": 108,
+    "median": 237885,
+    "avg": 241984,
+    "min": 113500,
+    "max": 440529,
+    "firstYear": 2011,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 113500,
+      "avg_price": 113500,
+      "min_price": 113500,
+      "max_price": 113500
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 145374,
+      "avg_price": 145374,
+      "min_price": 145374,
+      "max_price": 145374
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 145375,
+      "avg_price": 145375,
+      "min_price": 145375,
+      "max_price": 145375
+    },
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 170925,
+      "avg_price": 172981,
+      "min_price": 154185,
+      "max_price": 193833
+    },
+    {
+      "year": 2017,
+      "count": 6,
+      "median_price": 173106,
+      "avg_price": 181050,
+      "min_price": 149780,
+      "max_price": 229074
+    },
+    {
+      "year": 2018,
+      "count": 10,
+      "median_price": 158590,
+      "avg_price": 169780,
+      "min_price": 149779,
+      "max_price": 202644
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 206168,
+      "avg_price": 213435,
+      "min_price": 189427,
+      "max_price": 242291
+    },
+    {
+      "year": 2020,
+      "count": 11,
+      "median_price": 207048,
+      "avg_price": 210777,
+      "min_price": 189427,
+      "max_price": 242291
+    },
+    {
+      "year": 2021,
+      "count": 21,
+      "median_price": 237885,
+      "avg_price": 234500,
+      "min_price": 198238,
+      "max_price": 280000
+    },
+    {
+      "year": 2022,
+      "count": 13,
+      "median_price": 264317,
+      "avg_price": 284373,
+      "min_price": 246525,
+      "max_price": 350000
+    },
+    {
+      "year": 2023,
+      "count": 18,
+      "median_price": 269658,
+      "avg_price": 278131,
+      "min_price": 220260,
+      "max_price": 380000
+    },
+    {
+      "year": 2024,
+      "count": 12,
+      "median_price": 330396,
+      "avg_price": 314363,
+      "min_price": 251101,
+      "max_price": 352423
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 427764,
+      "avg_price": 427764,
+      "min_price": 415000,
+      "max_price": 440529
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-10-17",
+      "address": "82 MARYBOROUGH VILLAGE, MOUNTRATH ROAD, PORTLAOISE",
+      "price": 415000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "R32X9Y3"
+    },
+    {
+      "date": "2025-06-26",
+      "address": "11 Maryborough Village, Mountrath Road, Portloaise",
+      "price": 440529,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2024-11-15",
+      "address": "20 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-11-05",
+      "address": "18 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-30",
+      "address": "27 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-22",
+      "address": "21 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 348018,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-16",
+      "address": "25 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 334801,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-10",
+      "address": "23 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-01",
+      "address": "38 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 257338,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-27",
+      "address": "24 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-11",
+      "address": "47 maryborough village, mountrath road, portlaoise",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-08-23",
+      "address": "46 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 251101,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-03-07",
+      "address": "53 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-01-30",
+      "address": "51 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-16",
+      "address": "77 Maryborough Village, Mountrath road, Portlaoise",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-08",
+      "address": "74 Maryborough Village, Mountrath road, Portlaoise",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-27",
+      "address": "68 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-15",
+      "address": "247 MARYBOROUGH VILLAGE, MOUNTRATH ROAD, PORTLAOISE",
+      "price": 307000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32F9T8"
+    },
+    {
+      "date": "2023-09-14",
+      "address": "248 MARYBOROUGH VILLAGE, MOUNTRATH ROAD, PORTLAOISE",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32X2H6"
+    },
+    {
+      "date": "2023-08-11",
+      "address": "82 MARYBOROUGH VILLAGE, MOUNTRATH ROAD, PORTLAOISE",
+      "price": 380000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "R32X9Y3"
+    },
+    {
+      "date": "2023-07-31",
+      "address": "136 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-25",
+      "address": "63 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 224669,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-19",
+      "address": "61 MAryborough Village, Mountrath Road, Portlaoise",
+      "price": 220575,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-18",
+      "address": "66 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 229075,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-05",
+      "address": "65 Maryborough village, Mountrath road",
+      "price": 220260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-26",
+      "address": "113 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 348018,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-18",
+      "address": "128 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 259911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-08",
+      "address": "118 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 348018,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-04-18",
+      "address": "119 MARYBOROUGH VILLAGE, MOUNTRATH ROAD, PORTLOISE",
+      "price": 370044,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-28",
+      "address": "140 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 224670,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-22",
+      "address": "123 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-21",
+      "address": "135 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 224669,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-21",
+      "address": "107 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-29",
+      "address": "112 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-14",
+      "address": "110 MARYBOROUGH VILLAGE, MOUNTRATH ROAD, PORTLAOISE",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-14",
+      "address": "111 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-06",
+      "address": "114 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32K20T"
+    },
+    {
+      "date": "2022-10-06",
+      "address": "108 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32HNR2"
+    },
+    {
+      "date": "2022-09-22",
+      "address": "106 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-09-14",
+      "address": "98 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-09-12",
+      "address": "101 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 246525,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-09-02",
+      "address": "103 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-09-01",
+      "address": "97 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 259911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-20",
+      "address": "261 MARYBOROUGH VILLAGE, MOUNTRATH ROAD, LAOIS",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32C3HN"
+    },
+    {
+      "date": "2022-01-21",
+      "address": "163  Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 246696,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-13",
+      "address": "159 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-01",
+      "address": "154 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 251101,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-30",
+      "address": "144 Maryborough village, Mountrath Road, Portlaoise",
+      "price": 242291,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-26",
+      "address": "160 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 242291,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-19",
+      "address": "146 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 108
+}

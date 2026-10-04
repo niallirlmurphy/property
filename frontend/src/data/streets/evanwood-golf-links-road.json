@@ -1,0 +1,529 @@
+{
+  "slug": "evanwood-golf-links-road",
+  "stats": {
+    "count": 134,
+    "median": 211938,
+    "avg": 236132,
+    "min": 127588,
+    "max": 650000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 185000,
+      "avg_price": 185000,
+      "min_price": 185000,
+      "max_price": 185000
+    },
+    {
+      "year": 2014,
+      "count": 13,
+      "median_price": 134361,
+      "avg_price": 136948,
+      "min_price": 127588,
+      "max_price": 160000
+    },
+    {
+      "year": 2015,
+      "count": 17,
+      "median_price": 168500,
+      "avg_price": 172577,
+      "min_price": 133921,
+      "max_price": 215048
+    },
+    {
+      "year": 2016,
+      "count": 48,
+      "median_price": 203744,
+      "avg_price": 205627,
+      "min_price": 175770,
+      "max_price": 253500
+    },
+    {
+      "year": 2017,
+      "count": 16,
+      "median_price": 200441,
+      "avg_price": 209370,
+      "min_price": 184581,
+      "max_price": 256388
+    },
+    {
+      "year": 2018,
+      "count": 8,
+      "median_price": 267500,
+      "avg_price": 272881,
+      "min_price": 184582,
+      "max_price": 348002
+    },
+    {
+      "year": 2019,
+      "count": 4,
+      "median_price": 256750,
+      "avg_price": 256375,
+      "min_price": 245000,
+      "max_price": 267000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 285000,
+      "avg_price": 283800,
+      "min_price": 256000,
+      "max_price": 298000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 340000,
+      "avg_price": 340000,
+      "min_price": 320000,
+      "max_price": 360000
+    },
+    {
+      "year": 2022,
+      "count": 6,
+      "median_price": 351000,
+      "avg_price": 347000,
+      "min_price": 300000,
+      "max_price": 380000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 370000,
+      "avg_price": 368000,
+      "min_price": 330000,
+      "max_price": 402000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 415000,
+      "avg_price": 481833,
+      "min_price": 385000,
+      "max_price": 650000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 430000,
+      "avg_price": 430000,
+      "min_price": 430000,
+      "max_price": 430000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 460000,
+      "avg_price": 446667,
+      "min_price": 407000,
+      "max_price": 473000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-07",
+      "address": "150 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 473000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "V94RCC1"
+    },
+    {
+      "date": "2026-05-11",
+      "address": "148 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94PC5R"
+    },
+    {
+      "date": "2026-03-20",
+      "address": "154 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 407000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "V94NN9C"
+    },
+    {
+      "date": "2025-06-26",
+      "address": "111 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 430000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "V94RW2F"
+    },
+    {
+      "date": "2024-12-20",
+      "address": "2 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V941H57"
+    },
+    {
+      "date": "2024-11-15",
+      "address": "177 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94YFT0"
+    },
+    {
+      "date": "2024-10-22",
+      "address": "159 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 391000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94X56N"
+    },
+    {
+      "date": "2024-05-20",
+      "address": "121 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94X0TY"
+    },
+    {
+      "date": "2024-04-26",
+      "address": "124 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94F3PC"
+    },
+    {
+      "date": "2024-04-12",
+      "address": "3 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 635000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V9486X6"
+    },
+    {
+      "date": "2023-09-29",
+      "address": "195 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94P86H"
+    },
+    {
+      "date": "2023-09-12",
+      "address": "68 EVANWOOD, GOLF LINKS ROAD, LIMERICK",
+      "price": 402000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V9420Y1"
+    },
+    {
+      "date": "2023-08-22",
+      "address": "138 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94YW6X"
+    },
+    {
+      "date": "2023-07-03",
+      "address": "133 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94TYY3"
+    },
+    {
+      "date": "2022-12-16",
+      "address": "155 EVANWOOD, GOLF LINKS RD, CASTLETROY",
+      "price": 352000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94NP5H"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "87 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94AEY9"
+    },
+    {
+      "date": "2022-09-09",
+      "address": "111 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 300000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "V94RW2F"
+    },
+    {
+      "date": "2022-09-09",
+      "address": "137 EVANWOOD, GOLF LINKS ROAD, CASTELTROY",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94HK7F"
+    },
+    {
+      "date": "2022-06-16",
+      "address": "129 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94H58P"
+    },
+    {
+      "date": "2022-06-10",
+      "address": "101  EVANWOOD, GOLF  LINKS  ROAD, CASTELTROY",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94RC6P"
+    },
+    {
+      "date": "2021-12-02",
+      "address": "171 EVANWOOD, GOLF LINKS RD, CASTLETROY",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94YX0P"
+    },
+    {
+      "date": "2021-09-22",
+      "address": "125 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94NVY0"
+    },
+    {
+      "date": "2020-08-19",
+      "address": "138 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94YW6X"
+    },
+    {
+      "date": "2020-06-12",
+      "address": "170 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 298000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-04",
+      "address": "91 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 256000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-07",
+      "address": "134 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-24",
+      "address": "163 EVANWOOD, GOLF LINKS RD, CASTLETROY",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-04",
+      "address": "100 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 257000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-13",
+      "address": "159 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 256500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94X56N"
+    },
+    {
+      "date": "2019-10-29",
+      "address": "172 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-23",
+      "address": "121 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 267000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94X0TY"
+    },
+    {
+      "date": "2018-12-05",
+      "address": "115 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-26",
+      "address": "185 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-24",
+      "address": "11 Evanwood, Golf Links Road, Castletroy",
+      "price": 348002,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-09",
+      "address": "101 Evanwood, Golf Links Road, Casteltroy",
+      "price": 184582,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94RC6P"
+    },
+    {
+      "date": "2018-05-01",
+      "address": "33 Evanwood, Golf Links Road",
+      "price": 243128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-09",
+      "address": "2 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 339206,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V941H57"
+    },
+    {
+      "date": "2018-03-26",
+      "address": "150 EVANWOOD, GOLF LINKS ROAD, CASTLETROY",
+      "price": 290000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2018-03-05",
+      "address": "38 Evanwood, Golf Links Road, Castletroy",
+      "price": 243127,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-04",
+      "address": "65 Evanwood, Golf Links Road, Limerick",
+      "price": 243128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-25",
+      "address": "149 Evanwood, Golf Links Road, Limerick",
+      "price": 256388,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-08",
+      "address": "68 Evanwood, Golf Links Road, Limerick",
+      "price": 243128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V9420Y1"
+    },
+    {
+      "date": "2017-05-09",
+      "address": "107 Evanwood, Golf Links Road, Castletroy",
+      "price": 191630,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-24",
+      "address": "106 Evanwood, Golf Links Road, Castletroy",
+      "price": 215048,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-22",
+      "address": "110 Evanwood, Golf Links Road, Castletroy",
+      "price": 200441,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-22",
+      "address": "99 Evanwood, Golf Links Road, Limerick",
+      "price": 184581,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-21",
+      "address": "108 Evanwood, Golf Links Road, Castletroy",
+      "price": 200441,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-10",
+      "address": "105 Evanwood, Golf Links Road, Castletroy",
+      "price": 184581,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-06",
+      "address": "100 Evanwood, Golf Links Road, Castletroy",
+      "price": 209500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-03",
+      "address": "109 Evanwood, Golf Links Road, Castletroy",
+      "price": 199911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 134
+}

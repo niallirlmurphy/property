@@ -1,0 +1,473 @@
+{
+  "slug": "churchlands-delgany",
+  "stats": {
+    "count": 100,
+    "median": 506607,
+    "avg": 496442,
+    "min": 348100,
+    "max": 925000,
+    "firstYear": 2020,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2020,
+      "count": 6,
+      "median_price": 387665,
+      "avg_price": 387654,
+      "min_price": 387600,
+      "max_price": 387665
+    },
+    {
+      "year": 2021,
+      "count": 24,
+      "median_price": 396035,
+      "avg_price": 405432,
+      "min_price": 352423,
+      "max_price": 444934
+    },
+    {
+      "year": 2022,
+      "count": 26,
+      "median_price": 519824,
+      "avg_price": 538329,
+      "min_price": 427312,
+      "max_price": 700440
+    },
+    {
+      "year": 2023,
+      "count": 17,
+      "median_price": 524229,
+      "avg_price": 516196,
+      "min_price": 462555,
+      "max_price": 665198
+    },
+    {
+      "year": 2024,
+      "count": 18,
+      "median_price": 555066,
+      "avg_price": 593104,
+      "min_price": 528600,
+      "max_price": 925000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 668500,
+      "avg_price": 668500,
+      "min_price": 668500,
+      "max_price": 668500
+    },
+    {
+      "year": 2026,
+      "count": 8,
+      "median_price": 434496,
+      "avg_price": 433958,
+      "min_price": 348100,
+      "max_price": 532110
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-10",
+      "address": "51 CHURCHLANDS, DELGANY, CO. WICKLOW",
+      "price": 506607,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YF30"
+    },
+    {
+      "date": "2026-05-27",
+      "address": "Apartment 137 Churchlands, Delgany",
+      "price": 362385,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2026-05-11",
+      "address": "129 Churchlands, Delgany, County Wicklow",
+      "price": 532110,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2026-04-29",
+      "address": "138 Churchlands, Delgany, Co. Wicklow",
+      "price": 348100,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2026-04-22",
+      "address": "131 Churchlands, Delgany",
+      "price": 506607,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-04-22",
+      "address": "134 Churchlands, Delgany",
+      "price": 511013,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2026-04-21",
+      "address": "140 Churchlands, Delgany",
+      "price": 352422,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2026-04-16",
+      "address": "135 Churchlands, Delgany",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-11-06",
+      "address": "39 CHURCHLANDS, DELGANY, CO WICKLOW",
+      "price": 668500,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A63HE39"
+    },
+    {
+      "date": "2024-12-10",
+      "address": "50 CHURCHLANDS, DELGANY, WICKLOW",
+      "price": 925000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "A63CH04"
+    },
+    {
+      "date": "2024-08-01",
+      "address": "93 Churchlands, Delgany",
+      "price": 550650,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-08-01",
+      "address": "94 Churchlands, Delgany",
+      "price": 528600,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-26",
+      "address": "95 CHURCHLANDS, DELGANY, CO. WICKLOW",
+      "price": 559471,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-22",
+      "address": "No 96, Churchlands, Delgany",
+      "price": 550661,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-19",
+      "address": "97 CHURCHLANDS, DELGANY",
+      "price": 528634,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-19",
+      "address": "100 Churchlands, Delgany",
+      "price": 528634,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-12",
+      "address": "98 Churchlands, Delgany, County Wicklow",
+      "price": 537445,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-14",
+      "address": "102 Churchlands, Delgany",
+      "price": 537444,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-13",
+      "address": "99 Churchlands, Delgany",
+      "price": 537444,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-31",
+      "address": "85 Churchlands, Delgany, Co Wicklow",
+      "price": 599119,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-30",
+      "address": "103 Churchlands, Delgany",
+      "price": 528634,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-30",
+      "address": "104 Churchlands, Delgany",
+      "price": 559471,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-24",
+      "address": "21 CHURCHLANDS, DELGANY, CO. WICKLOW",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63FX43"
+    },
+    {
+      "date": "2024-03-27",
+      "address": "76 Churchlands, Delgany, Wicklow",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-03-11",
+      "address": "1 Churchlands, Delgany",
+      "price": 612334,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-01-24",
+      "address": "55 Churchlands, Delgany",
+      "price": 612335,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63VH30"
+    },
+    {
+      "date": "2024-01-23",
+      "address": "67 CHURCHLANDS, DELGANY, CO WICKLOW",
+      "price": 680000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X6R6"
+    },
+    {
+      "date": "2023-12-19",
+      "address": "83 Churchlands, Delgany",
+      "price": 559471,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-17",
+      "address": "92 Churchlands, Delgany, Co Wicklow",
+      "price": 533040,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-15",
+      "address": "91 Churchlands, Delgany",
+      "price": 528635,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-06",
+      "address": "90 Churchlands, Delgany",
+      "price": 524229,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-27",
+      "address": "88 Churchlands, Delgany",
+      "price": 524229,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-27",
+      "address": "89 Churchlands, Delgany",
+      "price": 506607,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-19",
+      "address": "84 Churchlands, Delgany, Co Wicklow",
+      "price": 506607,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-19",
+      "address": "86 Churchlands, Delgany, Co. Wicklow",
+      "price": 537445,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-27",
+      "address": "87 Churchlands, Delgany",
+      "price": 528635,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-04",
+      "address": "82 Churchlands, Delgany",
+      "price": 480176,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-31",
+      "address": "81 Churchlands, Delgany, Wicklow",
+      "price": 462555,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-11",
+      "address": "80 Churchlands, Delgany, Wicklow",
+      "price": 475770,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-20",
+      "address": "77 Churchlands, Delgany, Wicklow",
+      "price": 475771,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63N2N0"
+    },
+    {
+      "date": "2023-07-18",
+      "address": "78 Churchlands, Delgany",
+      "price": 475770,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-04",
+      "address": "78 Churchlands, Delgany, County Wicklow",
+      "price": 462555,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-04-06",
+      "address": "2 Churchlands, Delgany",
+      "price": 665198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-03-03",
+      "address": "53 churchlands, delgany",
+      "price": 528634,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-12-20",
+      "address": "3 Churchlands, Delgany",
+      "price": 674009,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-31",
+      "address": "67 Churchlands, Delgany, Co Wicklow",
+      "price": 550661,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X6R6"
+    },
+    {
+      "date": "2022-10-10",
+      "address": "69 Churchlands, Delgany",
+      "price": 497797,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-05",
+      "address": "70 Churchlands, Delgany, County Wicklow",
+      "price": 497797,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-09-22",
+      "address": "68 Churchlands, Delgany",
+      "price": 497797,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-09-02",
+      "address": "61 Churchlands, Delgany, Co. Wicklow",
+      "price": 665198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 100
+}

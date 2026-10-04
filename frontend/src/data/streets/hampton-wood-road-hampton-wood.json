@@ -1,0 +1,537 @@
+{
+  "slug": "hampton-wood-road-hampton-wood",
+  "stats": {
+    "count": 91,
+    "median": 170000,
+    "avg": 180692,
+    "min": 80000,
+    "max": 465000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 105727,
+      "avg_price": 105727,
+      "min_price": 105727,
+      "max_price": 105727
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 119824,
+      "avg_price": 107724,
+      "min_price": 80000,
+      "max_price": 123348
+    },
+    {
+      "year": 2014,
+      "count": 39,
+      "median_price": 118942,
+      "avg_price": 127070,
+      "min_price": 81400,
+      "max_price": 211454
+    },
+    {
+      "year": 2015,
+      "count": 10,
+      "median_price": 173106,
+      "avg_price": 177960,
+      "min_price": 118943,
+      "max_price": 233480
+    },
+    {
+      "year": 2016,
+      "count": 6,
+      "median_price": 170000,
+      "avg_price": 175114,
+      "min_price": 130000,
+      "max_price": 255000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 236000,
+      "avg_price": 236000,
+      "min_price": 236000,
+      "max_price": 236000
+    },
+    {
+      "year": 2018,
+      "count": 11,
+      "median_price": 237500,
+      "avg_price": 216841,
+      "min_price": 127753,
+      "max_price": 237500
+    },
+    {
+      "year": 2019,
+      "count": 5,
+      "median_price": 256000,
+      "avg_price": 271300,
+      "min_price": 205000,
+      "max_price": 330500
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 240000,
+      "avg_price": 240000,
+      "min_price": 240000,
+      "max_price": 240000
+    },
+    {
+      "year": 2021,
+      "count": 4,
+      "median_price": 246250,
+      "avg_price": 256876,
+      "min_price": 190000,
+      "max_price": 345002
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 341795,
+      "avg_price": 341795,
+      "min_price": 341795,
+      "max_price": 341795
+    },
+    {
+      "year": 2023,
+      "count": 5,
+      "median_price": 300000,
+      "avg_price": 287000,
+      "min_price": 100000,
+      "max_price": 452000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 140000,
+      "avg_price": 140000,
+      "min_price": 140000,
+      "max_price": 140000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 300500,
+      "avg_price": 300500,
+      "min_price": 231000,
+      "max_price": 370000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 465000,
+      "avg_price": 465000,
+      "min_price": 465000,
+      "max_price": 465000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-15",
+      "address": "162 HAMPTON WOOD ROAD, HAMPTON WOOD, DUBLIN11",
+      "price": 465000,
+      "bedrooms": 5,
+      "propertyType": "house",
+      "eircode": "D11H2R8"
+    },
+    {
+      "date": "2025-11-18",
+      "address": "165 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 370000,
+      "bedrooms": 3,
+      "propertyType": "duplex",
+      "eircode": "D11VR83"
+    },
+    {
+      "date": "2025-05-21",
+      "address": "47 HAMPTON WOOD RD, HAMPTON WOOD, ST MARGARETS RD DUBLIN 11",
+      "price": 231000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D11W688"
+    },
+    {
+      "date": "2024-02-15",
+      "address": "74 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 140000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11KX80"
+    },
+    {
+      "date": "2023-12-14",
+      "address": "131 HAMPTON WOOD ROAD, HAMPTON WOOD, DUBLIN 11",
+      "price": 100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11WY05"
+    },
+    {
+      "date": "2023-09-25",
+      "address": "158 HAMPTON WOOD ROAD, HAMPTON WOOD, DUBLIN 11",
+      "price": 452000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11W2T0"
+    },
+    {
+      "date": "2023-09-12",
+      "address": "140 HAMPTON WOOD ROAD, HAMPTON WOOD, DUBLIN 11",
+      "price": 323000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11X065"
+    },
+    {
+      "date": "2023-09-07",
+      "address": "52 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11X336"
+    },
+    {
+      "date": "2023-01-25",
+      "address": "93 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11C940"
+    },
+    {
+      "date": "2022-11-24",
+      "address": "166 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 341795,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11Y006"
+    },
+    {
+      "date": "2021-12-13",
+      "address": "146 HAMPTON WOOD ROAD, HAMPTON WOOD, FINGLAS",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11E295"
+    },
+    {
+      "date": "2021-09-23",
+      "address": "164 HAMPTON WOOD ROAD, HAMPTON WOOD, DUBLIN 11",
+      "price": 267500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11TP89"
+    },
+    {
+      "date": "2021-08-05",
+      "address": "166 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11Y006"
+    },
+    {
+      "date": "2021-02-12",
+      "address": "APT 110 HAMPTON WOOD ROAD, HAMPTON WOOD, FINGLAS",
+      "price": 345002,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2020-09-16",
+      "address": "102 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-25",
+      "address": "158 HAMPTON WOOD ROAD, HAMPTON WOOD, DUBLIN 11",
+      "price": 330500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11W2T0"
+    },
+    {
+      "date": "2019-09-25",
+      "address": "76 HAMPTON WOOD ROAD, HAMPTON WOOD, FINGLAS",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-30",
+      "address": "APT 43 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 205000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2019-07-09",
+      "address": "147 HAMPTON WOOD ROAD, HAMPTON WOOD, DUBLIN 11",
+      "price": 256000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-23",
+      "address": "165 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 310000,
+      "bedrooms": 3,
+      "propertyType": "duplex",
+      "eircode": "D11VR83"
+    },
+    {
+      "date": "2018-12-11",
+      "address": "APT 110 HAMPTON WOOD ROAD, HAMPTON WOOD, FINGLAS",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2018-09-28",
+      "address": "101 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 237500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-28",
+      "address": "94 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 237500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-28",
+      "address": "73 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 237500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-28",
+      "address": "75 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 237500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-28",
+      "address": "81 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 237500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-28",
+      "address": "82 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 237500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-28",
+      "address": "83 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 237500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-28",
+      "address": "92 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 237500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-14",
+      "address": "153 Hampton Wood Road, Hampton Wood",
+      "price": 127753,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-09",
+      "address": "111 HAMPTON WOOD RD, HAMPTON WOOD, MEAKSTOWN DUBLIN 11",
+      "price": 157500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-13",
+      "address": "131 HAMPTON WOOD ROAD, HAMPTON WOOD, DUBLIN 11",
+      "price": 236000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11WY05"
+    },
+    {
+      "date": "2016-12-13",
+      "address": "134 HAMPTON WOOD ROAD, HAMPTON WOOD, FINGLAS",
+      "price": 135682,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-07",
+      "address": "58 HAMPTON WOOD ROAD, HAMPTON WOOD, FINGLAS",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-06-10",
+      "address": "30 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-04-22",
+      "address": "109 HAMPTON WOOD ROAD, HAMPTON WOOD, FINGLAS",
+      "price": 130000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-03-11",
+      "address": "164 Hampton Wood Road, Hampton Wood, Dublin 11",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11TP89"
+    },
+    {
+      "date": "2016-02-22",
+      "address": "116 HAMPTON WOOD ROAD, HAMPTON WOOD, FINGLAS",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-10-28",
+      "address": "160 Hampton Wood Road, Hampton Wood, Dublin 11",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-10-02",
+      "address": "118 Hampton Wood Road, Hampton Wood",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-14",
+      "address": "102 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-24",
+      "address": "74 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11KX80"
+    },
+    {
+      "date": "2015-07-20",
+      "address": "93 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11C940"
+    },
+    {
+      "date": "2015-05-01",
+      "address": "134 Hampton Wood Road, Hampton Wood",
+      "price": 154185,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-10",
+      "address": "100 HAMPTON WOOD RD, HAMPTON WOOD, FINGLAS DUBLIN 11",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-02",
+      "address": "165 Hampton Wood Road, Hampton Wood, Dublin 11",
+      "price": 176211,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-02-26",
+      "address": "112 Hampton Wood Road, Hampton Wood, Dublin 11",
+      "price": 118943,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-02-05",
+      "address": "167 Hampton Wood Road, Hampton Wood, Dubli 11",
+      "price": 153304,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-19",
+      "address": "158 Hampton Wood Road, Hampton Wood, Dublin 11",
+      "price": 209762,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D11W2T0"
+    },
+    {
+      "date": "2014-12-18",
+      "address": "159 Hampton Wood Road, Hampton Wood",
+      "price": 211454,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 91
+}

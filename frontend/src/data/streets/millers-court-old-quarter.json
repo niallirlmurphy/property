@@ -1,0 +1,529 @@
+{
+  "slug": "millers-court-old-quarter",
+  "stats": {
+    "count": 100,
+    "median": 317181,
+    "avg": 339694,
+    "min": 114537,
+    "max": 640000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 200000,
+      "avg_price": 185000,
+      "min_price": 130000,
+      "max_price": 225000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 114537,
+      "avg_price": 117630,
+      "min_price": 114537,
+      "max_price": 130000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 176178,
+      "avg_price": 162283,
+      "min_price": 133040,
+      "max_price": 177630
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 442731,
+      "avg_price": 432819,
+      "min_price": 365638,
+      "max_price": 480176
+    },
+    {
+      "year": 2017,
+      "count": 33,
+      "median_price": 290748,
+      "avg_price": 289373,
+      "min_price": 167400,
+      "max_price": 425000
+    },
+    {
+      "year": 2018,
+      "count": 25,
+      "median_price": 352422,
+      "avg_price": 372101,
+      "min_price": 250000,
+      "max_price": 546256
+    },
+    {
+      "year": 2019,
+      "count": 5,
+      "median_price": 325000,
+      "avg_price": 328768,
+      "min_price": 303964,
+      "max_price": 358487
+    },
+    {
+      "year": 2020,
+      "count": 7,
+      "median_price": 375000,
+      "avg_price": 381775,
+      "min_price": 275000,
+      "max_price": 550000
+    },
+    {
+      "year": 2021,
+      "count": 4,
+      "median_price": 469000,
+      "avg_price": 499500,
+      "min_price": 420000,
+      "max_price": 640000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 430000,
+      "avg_price": 499333,
+      "min_price": 428000,
+      "max_price": 640000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 517500,
+      "avg_price": 517500,
+      "min_price": 475000,
+      "max_price": 560000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 498000,
+      "avg_price": 485000,
+      "min_price": 440000,
+      "max_price": 517000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 527500,
+      "avg_price": 527500,
+      "min_price": 500000,
+      "max_price": 555000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 399000,
+      "avg_price": 399000,
+      "min_price": 399000,
+      "max_price": 399000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-03-27",
+      "address": "16 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 399000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "P31NE41"
+    },
+    {
+      "date": "2025-11-26",
+      "address": "62 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 555000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "P31KX08"
+    },
+    {
+      "date": "2025-06-23",
+      "address": "73 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 500000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "P31HK19"
+    },
+    {
+      "date": "2024-10-09",
+      "address": "74  MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 498000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31HF21"
+    },
+    {
+      "date": "2024-08-30",
+      "address": "9 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31RD78"
+    },
+    {
+      "date": "2024-06-20",
+      "address": "49 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 517000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31YF80"
+    },
+    {
+      "date": "2023-06-20",
+      "address": "46 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 560000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31FT66"
+    },
+    {
+      "date": "2023-05-09",
+      "address": "52 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31K236"
+    },
+    {
+      "date": "2022-06-10",
+      "address": "109 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 640000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31YR23"
+    },
+    {
+      "date": "2022-05-13",
+      "address": "40 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31KW64"
+    },
+    {
+      "date": "2022-01-31",
+      "address": "76 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 428000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31VK54"
+    },
+    {
+      "date": "2021-10-29",
+      "address": "37 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31HE67"
+    },
+    {
+      "date": "2021-09-27",
+      "address": "29 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31H087"
+    },
+    {
+      "date": "2021-07-13",
+      "address": "24 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 463000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31RX81"
+    },
+    {
+      "date": "2021-05-31",
+      "address": "106  MILLERS  COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 640000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31WY18"
+    },
+    {
+      "date": "2020-11-17",
+      "address": "82  MILLERS  COURT, OLD  QUARTER, BALLINCOLLIG",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-08-13",
+      "address": "70 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-29",
+      "address": "71  MILLERS  COURT, OLD  QUARTER, BALLINCOLLIG",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-15",
+      "address": "27 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-10",
+      "address": "7 MILLERS COURT, OLD QUARTER, BALLINCOLLG",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-24",
+      "address": "13 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-18",
+      "address": "60 Millers Court, Old Quarter, Ballincollig",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-09",
+      "address": "9  MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31RD78"
+    },
+    {
+      "date": "2019-10-25",
+      "address": "61 Millers Court, Old Quarter, Ballincollig",
+      "price": 352422,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-18",
+      "address": "59 Millers Court, Old Quarter, Ballincollig",
+      "price": 358487,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-03",
+      "address": "55  Millers Court, Old Quarter, Ballincollig",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-14",
+      "address": "32 Millers Court, Old Quarter, Balllincollig",
+      "price": 303964,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-05",
+      "address": "22 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-05",
+      "address": "46 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31FT66"
+    },
+    {
+      "date": "2018-11-08",
+      "address": "47 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 376000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-31",
+      "address": "57 Millers Court, Old Quarter, Ballincollig",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-16",
+      "address": "56 Millers Court, Old Quarter, Ballincollig",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-27",
+      "address": "108 Millers Court, Old Quarter, Ballincollig",
+      "price": 405286,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-18",
+      "address": "107 Millers Court, Old Quarter, Ballincollig",
+      "price": 409692,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-10",
+      "address": "62 Millers Court, Old Quarter, Ballincollig",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31KX08"
+    },
+    {
+      "date": "2018-07-27",
+      "address": "63 Millers Court, Old Quarter, Ballincollig",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-24",
+      "address": "64  Millers Court, Old Quarter, Ballincollig",
+      "price": 352422,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-16",
+      "address": "65 Millers Court, Old Quarter, Ballincollig",
+      "price": 352422,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-11",
+      "address": "109 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 405286,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31YR23"
+    },
+    {
+      "date": "2018-06-01",
+      "address": "110 Millers Court, Old Quarter, Ballincollig",
+      "price": 546256,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-22",
+      "address": "10 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-16",
+      "address": "66 Millers Court, Old Quarter, Ballincollig",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-19",
+      "address": "67 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-18",
+      "address": "70 Millers Court, Old Quarter, Ballincollig",
+      "price": 339207,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-04",
+      "address": "68 Millers Court, Old Quarter, Ballincollig",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-03",
+      "address": "69 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-22",
+      "address": "71 Millers Court, Old Quarter, Ballincollig",
+      "price": 339048,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-28",
+      "address": "106 Millers Court, Old Quarter, Ballincollig",
+      "price": 427313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31WY18"
+    },
+    {
+      "date": "2018-02-26",
+      "address": "105 Millers Court, Old Quarter, Ballincollig",
+      "price": 391849,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-12",
+      "address": "101 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 528634,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 100
+}

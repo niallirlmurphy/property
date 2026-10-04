@@ -1,0 +1,545 @@
+{
+  "slug": "temple-mills-rathangan",
+  "stats": {
+    "count": 121,
+    "median": 211410,
+    "avg": 215497,
+    "min": 38634,
+    "max": 404000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 5,
+      "median_price": 180000,
+      "avg_price": 173674,
+      "min_price": 140970,
+      "max_price": 200000
+    },
+    {
+      "year": 2011,
+      "count": 3,
+      "median_price": 114537,
+      "avg_price": 121358,
+      "min_price": 114536,
+      "max_price": 135000
+    },
+    {
+      "year": 2013,
+      "count": 9,
+      "median_price": 79295,
+      "avg_price": 71005,
+      "min_price": 38634,
+      "max_price": 109559
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 133750,
+      "avg_price": 133750,
+      "min_price": 120000,
+      "max_price": 147500
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 112000,
+      "avg_price": 112000,
+      "min_price": 112000,
+      "max_price": 112000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 175000,
+      "avg_price": 175000,
+      "min_price": 175000,
+      "max_price": 175000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 160000,
+      "avg_price": 160000,
+      "min_price": 130000,
+      "max_price": 190000
+    },
+    {
+      "year": 2018,
+      "count": 8,
+      "median_price": 211410,
+      "avg_price": 201800,
+      "min_price": 150941,
+      "max_price": 211410
+    },
+    {
+      "year": 2019,
+      "count": 28,
+      "median_price": 211410,
+      "avg_price": 219146,
+      "min_price": 207555,
+      "max_price": 259912
+    },
+    {
+      "year": 2020,
+      "count": 16,
+      "median_price": 211410,
+      "avg_price": 215977,
+      "min_price": 170000,
+      "max_price": 239950
+    },
+    {
+      "year": 2021,
+      "count": 17,
+      "median_price": 233480,
+      "avg_price": 229699,
+      "min_price": 211409,
+      "max_price": 262555
+    },
+    {
+      "year": 2022,
+      "count": 16,
+      "median_price": 227306,
+      "avg_price": 241572,
+      "min_price": 205691,
+      "max_price": 400000
+    },
+    {
+      "year": 2023,
+      "count": 5,
+      "median_price": 310000,
+      "avg_price": 331800,
+      "min_price": 285000,
+      "max_price": 404000
+    },
+    {
+      "year": 2024,
+      "count": 4,
+      "median_price": 312500,
+      "avg_price": 288750,
+      "min_price": 190000,
+      "max_price": 340000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 383000,
+      "avg_price": 383000,
+      "min_price": 371000,
+      "max_price": 395000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 386500,
+      "avg_price": 386500,
+      "min_price": 383000,
+      "max_price": 390000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-19",
+      "address": "33 TEMPLE MILLS, RATHANGAN, CO KILDARE",
+      "price": 383000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R51E820"
+    },
+    {
+      "date": "2026-06-12",
+      "address": "32 TEMPLE MILLS, RATHANGAN, KILDARE",
+      "price": 390000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R51H362"
+    },
+    {
+      "date": "2025-09-01",
+      "address": "121 TEMPLE MILLS, RATHANGAN, KILDARE",
+      "price": 371000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R51AW73"
+    },
+    {
+      "date": "2025-05-30",
+      "address": "71 TEMPLE MILLS, RATHANGAN, KILDARE",
+      "price": 395000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "R51TR26"
+    },
+    {
+      "date": "2024-09-30",
+      "address": "12 TEMPLE MILLS, RATHANGAN, CO KILDARE",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51C896"
+    },
+    {
+      "date": "2024-09-04",
+      "address": "65 TEMPLE MILLS, RATHANGAN, CO KILDARE",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51AX76"
+    },
+    {
+      "date": "2024-08-07",
+      "address": "136 TEMPLE MILLS, RATHANGAN, KILDARE",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51N258"
+    },
+    {
+      "date": "2024-02-28",
+      "address": "114 TEMPLE MILLS, RATHANGAN, KILDARE",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51Y153"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "79 TEMPLE MILLS, RATHANGAN, KILDARE",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51NX01"
+    },
+    {
+      "date": "2023-09-29",
+      "address": "86 TEMPLE MILLS, RATHANGAN, KILDARE",
+      "price": 404000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51FN51"
+    },
+    {
+      "date": "2023-07-14",
+      "address": "6 TEMPLE MILLS, RATHANGAN, CO KILDARE",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51N704"
+    },
+    {
+      "date": "2023-06-16",
+      "address": "34 TEMPLE MILLS, RATHANGAN, KILDARE",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51VK30"
+    },
+    {
+      "date": "2023-01-05",
+      "address": "49 TEMPLE MILLS, RATHANGAN, KILDARE",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51WE19"
+    },
+    {
+      "date": "2022-06-02",
+      "address": "161 Temple Mills, Rathangan",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-31",
+      "address": "158 Temple Mills, Rathangan, County Kildare",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-20",
+      "address": "154 Temple Mills, Rathangan",
+      "price": 255507,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-19",
+      "address": "156 Temple Mills, Rathangan",
+      "price": 227313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-18",
+      "address": "153 Temple Mills, Rathangan",
+      "price": 222907,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-17",
+      "address": "157 Temple Mills, Rathangan, Co. Kildare",
+      "price": 227300,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-16",
+      "address": "159 Temple Mills, Rathangan",
+      "price": 227313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-11",
+      "address": "155 Temple Mills, Rathangan",
+      "price": 227313,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-23",
+      "address": "152 Temple Mills, Rathangan",
+      "price": 224669,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-21",
+      "address": "151  Temple Mills, Rathangan",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-15",
+      "address": "149 Temple Mills, Rathangan",
+      "price": 222907,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-10",
+      "address": "148 Temple Mills, Rathangan, County Kildare",
+      "price": 222907,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-03",
+      "address": "147 Temple Mills, Rathangan",
+      "price": 235682,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-01-20",
+      "address": "144 TEMPLE MILLS, RATHANGAN, CO KILDARE",
+      "price": 222907,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51FK07"
+    },
+    {
+      "date": "2022-01-18",
+      "address": "146 TEMPLE MILLS, RATHANGAN, COUNTY KILDARE",
+      "price": 222907,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51NF29"
+    },
+    {
+      "date": "2022-01-06",
+      "address": "145 TEMPLE MILLS, RATHANGAN",
+      "price": 205691,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-01",
+      "address": "67 TEMPLE MILLS, RATHANGAN, CO KILDARE",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R51A893"
+    },
+    {
+      "date": "2021-11-12",
+      "address": "72 Temple Mills, Rathangan",
+      "price": 262555,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-18",
+      "address": "68 Temple Mills, Rathangan",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-12",
+      "address": "65 Temple Mills, Rathangan",
+      "price": 262555,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-11",
+      "address": "70 Temple Mills, Rathangan",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-08",
+      "address": "69 Temple Mills, Rathangan",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-06",
+      "address": "66 Temple Mills, Rathangan",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-01",
+      "address": "71 Temple Mills, Rathangan",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-07",
+      "address": "11 TEMPLE MILLS, RATHANGAN, CO KILDARE",
+      "price": 239950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-16",
+      "address": "12 Temple Mills, Rathangan, Kildare",
+      "price": 211409,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-07",
+      "address": "14 Temple Mills, Rathangan",
+      "price": 211410,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-05",
+      "address": "13 Temple Mills, Rathangan",
+      "price": 211410,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-30",
+      "address": "16 Temple Mills, Rathangan, Co Kildare",
+      "price": 217621,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-04-19",
+      "address": "15 Temple Mills, Rathangan",
+      "price": 211410,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-05",
+      "address": "17 Temple Mills, Rathangan",
+      "price": 211409,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-03",
+      "address": "64 Temple Mills, Rathangan",
+      "price": 226432,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-28",
+      "address": "18 Temple Mills, Rathangan",
+      "price": 211410,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-22",
+      "address": "129 TEMPLE MILLS, RATHANGAN, CO. KILDARE",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-21",
+      "address": "19 Temple Mills, Rathangan",
+      "price": 211410,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-10",
+      "address": "20 Temple Mills, Rathangan",
+      "price": 211409,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-10",
+      "address": "27 Temple Mills, Rathangan",
+      "price": 211410,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 121
+}

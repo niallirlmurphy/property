@@ -1,0 +1,545 @@
+{
+  "slug": "churchfields-ashbourne",
+  "stats": {
+    "count": 98,
+    "median": 251312,
+    "avg": 269643,
+    "min": 100000,
+    "max": 525000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 14,
+      "median_price": 217930,
+      "avg_price": 218767,
+      "min_price": 138767,
+      "max_price": 310000
+    },
+    {
+      "year": 2011,
+      "count": 4,
+      "median_price": 180500,
+      "avg_price": 185798,
+      "min_price": 132190,
+      "max_price": 250000
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 105000,
+      "avg_price": 105000,
+      "min_price": 105000,
+      "max_price": 105000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 110000,
+      "avg_price": 132400,
+      "min_price": 100000,
+      "max_price": 230000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 284500,
+      "avg_price": 284500,
+      "min_price": 284500,
+      "max_price": 284500
+    },
+    {
+      "year": 2015,
+      "count": 3,
+      "median_price": 199119,
+      "avg_price": 210706,
+      "min_price": 182000,
+      "max_price": 251000
+    },
+    {
+      "year": 2017,
+      "count": 52,
+      "median_price": 257543,
+      "avg_price": 270004,
+      "min_price": 212235,
+      "max_price": 525000
+    },
+    {
+      "year": 2018,
+      "count": 3,
+      "median_price": 260000,
+      "avg_price": 279500,
+      "min_price": 235500,
+      "max_price": 343000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 289000,
+      "avg_price": 289000,
+      "min_price": 278000,
+      "max_price": 300000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 325000,
+      "avg_price": 325000,
+      "min_price": 325000,
+      "max_price": 325000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 335000,
+      "avg_price": 335000,
+      "min_price": 335000,
+      "max_price": 335000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 378500,
+      "avg_price": 378500,
+      "min_price": 372000,
+      "max_price": 385000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 441875,
+      "avg_price": 441875,
+      "min_price": 433750,
+      "max_price": 450000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 445000,
+      "avg_price": 445000,
+      "min_price": 445000,
+      "max_price": 445000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 420000,
+      "avg_price": 428667,
+      "min_price": 365000,
+      "max_price": 501000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 480000,
+      "avg_price": 482333,
+      "min_price": 450000,
+      "max_price": 517000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-02",
+      "address": "186  CHURCHFIELDS, ASHBOURNE, CO. MEATH",
+      "price": 517000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84X337"
+    },
+    {
+      "date": "2026-05-14",
+      "address": "NO.135 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 480000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A84AP03"
+    },
+    {
+      "date": "2026-04-23",
+      "address": "43 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 450000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A84YV52"
+    },
+    {
+      "date": "2025-06-24",
+      "address": "18 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 501000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A84E062"
+    },
+    {
+      "date": "2025-06-10",
+      "address": "193 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 365000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A84CV62"
+    },
+    {
+      "date": "2025-06-06",
+      "address": "28 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 420000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A84DT68"
+    },
+    {
+      "date": "2024-10-16",
+      "address": "61 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84YX74"
+    },
+    {
+      "date": "2023-12-19",
+      "address": "191 CHURCHFIELDS, ASHBOURNE, COUNTY MEATH",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84YY07"
+    },
+    {
+      "date": "2023-01-25",
+      "address": "207 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 433750,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84Y902"
+    },
+    {
+      "date": "2022-11-22",
+      "address": "28 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 372000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A84DT68"
+    },
+    {
+      "date": "2022-03-30",
+      "address": "127 CHURCHFIELDS, ASHBOURNE, COUNTY MEATH",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84RH70"
+    },
+    {
+      "date": "2021-08-11",
+      "address": "50 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A84N289"
+    },
+    {
+      "date": "2020-08-07",
+      "address": "180 CHURCHFIELDS, ASHBOURNE, CO. MEATH",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-08",
+      "address": "203 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 278000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-15",
+      "address": "155 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-30",
+      "address": "39 CHURCHFIELDS, ASHBOURNE, CO MEATH",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-06",
+      "address": "11 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 235500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-24",
+      "address": "212 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 343000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-01",
+      "address": "2 Churchfields, Ashbourne",
+      "price": 314079,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-16",
+      "address": "113 Churchfields, Ashbourne",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-07",
+      "address": "35 Churchfields, Ashbourne",
+      "price": 261000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-23",
+      "address": "3 Churchfields, Ashbourne",
+      "price": 525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-11",
+      "address": "13 Churchfields, Ashbourne",
+      "price": 265621,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-04",
+      "address": "97 Churchfields, Ashbourne, County Meath",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-29",
+      "address": "1 Churchfields, Ashbourne",
+      "price": 314079,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-01",
+      "address": "104 CHURCHFIELDS, ASHBOURNE, CO MEATH",
+      "price": 299559,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-01",
+      "address": "7 Churchfields, Ashbourne",
+      "price": 422764,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-21",
+      "address": "109 Churchfields, Ashbourne",
+      "price": 305269,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-13",
+      "address": "187 Churchfields, Ashbourne, Co. Meath",
+      "price": 261215,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-10",
+      "address": "119 Churchfields, Ashbourne",
+      "price": 273127,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-07",
+      "address": "130 Churchfields, Ashbourne, Co. Meath",
+      "price": 239646,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-07",
+      "address": "No.135 Churchfields, Ashbourne",
+      "price": 239646,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2017-06-29",
+      "address": "189 Churchfields, Ashbourne",
+      "price": 235280,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-27",
+      "address": "128 Churchfields, Ashbourne",
+      "price": 251524,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-27",
+      "address": "183 Churchfields, Ashbourne",
+      "price": 248000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-23",
+      "address": "180 CHURCHFIELDS, ASHBOURNE, CO. MEATH",
+      "price": 251100,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-22",
+      "address": "105 Churchfields, Ashbourne",
+      "price": 299560,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "126 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "131 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "184 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "181 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "192A Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "192B Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "188 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "134 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-16",
+      "address": "114 Churchfields, Ashbourne, Co Meath",
+      "price": 396476,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-16",
+      "address": "Unit 122 Churchfields, Ashbourne",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-14",
+      "address": "124 Churchfields, Ashbourne",
+      "price": 274432,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-12",
+      "address": "125 Churchfields, Ashbourne, Co Meath",
+      "price": 248458,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-07",
+      "address": "117 Churchfields, Ashbourne",
+      "price": 259911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 98
+}

@@ -1,0 +1,433 @@
+{
+  "slug": "waterfall-heights-waterfall-road",
+  "stats": {
+    "count": 104,
+    "median": 438326,
+    "avg": 427583,
+    "min": 352422,
+    "max": 527500,
+    "firstYear": 2024,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2024,
+      "count": 45,
+      "median_price": 410875,
+      "avg_price": 406913,
+      "min_price": 352422,
+      "max_price": 503744
+    },
+    {
+      "year": 2025,
+      "count": 59,
+      "median_price": 440529,
+      "avg_price": 443349,
+      "min_price": 362398,
+      "max_price": 527500
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-11-04",
+      "address": "60 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 493391,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-23",
+      "address": "61 Waterfall Heights, Waterfall Road, Cork",
+      "price": 362398,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-20",
+      "address": "65  Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 387665,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-14",
+      "address": "67 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 405286,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-13",
+      "address": "75 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 496365,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-12",
+      "address": "62 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 387665,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-08",
+      "address": "66 Waterfall Heights, WATERFALL ROAD, BISHOPSTOWN",
+      "price": 387665,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-10-01",
+      "address": "64 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 405286,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-30",
+      "address": "74 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 387664,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-29",
+      "address": "71 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 397900,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-23",
+      "address": "68 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 405286,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-22",
+      "address": "73 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 380600,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-19",
+      "address": "88 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 432500,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-17",
+      "address": "70 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 387665,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-26",
+      "address": "89 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 443502,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-19",
+      "address": "92 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 443502,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-18",
+      "address": "95 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 435875,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-14",
+      "address": "83 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 440528,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-13",
+      "address": "80 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 443502,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-13",
+      "address": "84 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 440529,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-13",
+      "address": "93 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 432500,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-07",
+      "address": "78 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 440529,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-07",
+      "address": "81 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 443502,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-05",
+      "address": "90 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 432500,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-01",
+      "address": "79 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 432500,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-01",
+      "address": "85 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 443502,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-30",
+      "address": "100 WATERFALL HEIGHTS, WATERFALL ROAD, BISHOPSTOWN",
+      "price": 497797,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12RR2R"
+    },
+    {
+      "date": "2025-07-30",
+      "address": "87 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 440529,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-07-28",
+      "address": "94 Waterfall Heights, Waterfall Road, Ardrostig",
+      "price": 474339,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-28",
+      "address": "91 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 440529,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-25",
+      "address": "No. 76 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 497797,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-18",
+      "address": "97 WATERFALL HEIGHTS, WATERFALL ROAD, BISHOPSTOWN",
+      "price": 440529,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-16",
+      "address": "99 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 497797,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-09",
+      "address": "98 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 440528,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-30",
+      "address": "102 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 440529,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-27",
+      "address": "101 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 432500,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-26",
+      "address": "103 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 440614,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-26",
+      "address": "105 WATERFALL HEIGHTS, WATERFALL ROAD, BISHOPSTOWN",
+      "price": 497797,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-10",
+      "address": "116 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 419525,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-07",
+      "address": "118 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 462775,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-27",
+      "address": "124 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 493391,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-26",
+      "address": "125 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 497797,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-24",
+      "address": "117  Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 440528,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-20",
+      "address": "121 Waterfall Heights, Waterfall Road",
+      "price": 423850,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-19",
+      "address": "123 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 419525,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-11",
+      "address": "128 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 497797,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-11",
+      "address": "132 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 527500,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-10",
+      "address": "115 Waterfall Heights, Waterfall Road, Bishopstown",
+      "price": 395044,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-03",
+      "address": "120 Waterfall Heights, WATERFALL ROAD, Bishopstown",
+      "price": 427313,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-21",
+      "address": "122 WATERFALL HEIGHTS, WATERFALL ROAD, Bishopstown",
+      "price": 421476,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 104
+}

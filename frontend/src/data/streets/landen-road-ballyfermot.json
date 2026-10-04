@@ -1,0 +1,553 @@
+{
+  "slug": "landen-road-ballyfermot",
+  "stats": {
+    "count": 104,
+    "median": 227808,
+    "avg": 223622,
+    "min": 40000,
+    "max": 446975,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 2,
+      "median_price": 132500,
+      "avg_price": 132500,
+      "min_price": 105000,
+      "max_price": 160000
+    },
+    {
+      "year": 2011,
+      "count": 3,
+      "median_price": 115000,
+      "avg_price": 102500,
+      "min_price": 65000,
+      "max_price": 127500
+    },
+    {
+      "year": 2012,
+      "count": 7,
+      "median_price": 110000,
+      "avg_price": 119357,
+      "min_price": 77000,
+      "max_price": 225000
+    },
+    {
+      "year": 2013,
+      "count": 6,
+      "median_price": 102000,
+      "avg_price": 98167,
+      "min_price": 60000,
+      "max_price": 128000
+    },
+    {
+      "year": 2014,
+      "count": 7,
+      "median_price": 133500,
+      "avg_price": 138786,
+      "min_price": 123000,
+      "max_price": 166000
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 156500,
+      "avg_price": 145250,
+      "min_price": 40000,
+      "max_price": 179000
+    },
+    {
+      "year": 2016,
+      "count": 8,
+      "median_price": 160000,
+      "avg_price": 150819,
+      "min_price": 87500,
+      "max_price": 197000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 201250,
+      "avg_price": 198100,
+      "min_price": 146900,
+      "max_price": 243000
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 238000,
+      "avg_price": 229060,
+      "min_price": 147240,
+      "max_price": 293000
+    },
+    {
+      "year": 2019,
+      "count": 7,
+      "median_price": 235000,
+      "avg_price": 235000,
+      "min_price": 215000,
+      "max_price": 258000
+    },
+    {
+      "year": 2020,
+      "count": 9,
+      "median_price": 240000,
+      "avg_price": 239556,
+      "min_price": 220000,
+      "max_price": 270000
+    },
+    {
+      "year": 2021,
+      "count": 6,
+      "median_price": 270500,
+      "avg_price": 272936,
+      "min_price": 225615,
+      "max_price": 330000
+    },
+    {
+      "year": 2022,
+      "count": 9,
+      "median_price": 288000,
+      "avg_price": 292944,
+      "min_price": 220000,
+      "max_price": 360000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 280000,
+      "avg_price": 282000,
+      "min_price": 250000,
+      "max_price": 316000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 347500,
+      "avg_price": 333333,
+      "min_price": 270000,
+      "max_price": 375000
+    },
+    {
+      "year": 2025,
+      "count": 11,
+      "median_price": 329000,
+      "avg_price": 349407,
+      "min_price": 275000,
+      "max_price": 446975
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 350000,
+      "avg_price": 361612,
+      "min_price": 335950,
+      "max_price": 410500
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-24",
+      "address": "94 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 410500,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D10VH42"
+    },
+    {
+      "date": "2026-07-07",
+      "address": "160 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
+      "price": 335950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10HH04"
+    },
+    {
+      "date": "2026-05-29",
+      "address": "71 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10AY18"
+    },
+    {
+      "date": "2026-03-10",
+      "address": "328 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 350000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D10YF64"
+    },
+    {
+      "date": "2025-10-29",
+      "address": "358 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 370000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D10KW11"
+    },
+    {
+      "date": "2025-09-22",
+      "address": "53 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 320000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D10RY74"
+    },
+    {
+      "date": "2025-09-16",
+      "address": "255 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
+      "price": 350000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D10ED86"
+    },
+    {
+      "date": "2025-08-25",
+      "address": "190 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 402000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D10YD68"
+    },
+    {
+      "date": "2025-07-30",
+      "address": "111 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 329000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D10X924"
+    },
+    {
+      "date": "2025-05-07",
+      "address": "211 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 312500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10E220"
+    },
+    {
+      "date": "2025-05-02",
+      "address": "254 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 300000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D10XE14"
+    },
+    {
+      "date": "2025-04-25",
+      "address": "123 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 446975,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D10WE03"
+    },
+    {
+      "date": "2025-04-04",
+      "address": "309 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 308000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D10TD23"
+    },
+    {
+      "date": "2025-02-07",
+      "address": "401 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 275000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D10Y678"
+    },
+    {
+      "date": "2025-01-31",
+      "address": "292 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 430000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D10KR79"
+    },
+    {
+      "date": "2024-11-07",
+      "address": "115 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10K832"
+    },
+    {
+      "date": "2024-09-11",
+      "address": "441 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10RW67"
+    },
+    {
+      "date": "2024-08-16",
+      "address": "128 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10YY95"
+    },
+    {
+      "date": "2024-07-08",
+      "address": "275 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10R889"
+    },
+    {
+      "date": "2024-06-28",
+      "address": "137 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10DF86"
+    },
+    {
+      "date": "2024-06-05",
+      "address": "344 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10AY60"
+    },
+    {
+      "date": "2023-09-27",
+      "address": "227 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10DY84"
+    },
+    {
+      "date": "2023-07-14",
+      "address": "380 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 316000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10HH95"
+    },
+    {
+      "date": "2023-06-07",
+      "address": "269 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10R838"
+    },
+    {
+      "date": "2022-12-09",
+      "address": "192 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10NT95"
+    },
+    {
+      "date": "2022-11-03",
+      "address": "41 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10RX72"
+    },
+    {
+      "date": "2022-09-23",
+      "address": "362 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10PK44"
+    },
+    {
+      "date": "2022-09-13",
+      "address": "289 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
+      "price": 270500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10HX34"
+    },
+    {
+      "date": "2022-09-02",
+      "address": "419 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 332000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10C953"
+    },
+    {
+      "date": "2022-05-24",
+      "address": "263 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 288000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10VY02"
+    },
+    {
+      "date": "2022-03-21",
+      "address": "165 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 291000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10KF82"
+    },
+    {
+      "date": "2022-01-17",
+      "address": "277 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10YN73"
+    },
+    {
+      "date": "2022-01-17",
+      "address": "321 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10Y193"
+    },
+    {
+      "date": "2021-10-28",
+      "address": "260 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10XW40"
+    },
+    {
+      "date": "2021-10-15",
+      "address": "78 LANDEN RD, BALLYFERMOT, DUBLIN",
+      "price": 301000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10AE28"
+    },
+    {
+      "date": "2021-09-08",
+      "address": "179 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10H968"
+    },
+    {
+      "date": "2021-07-12",
+      "address": "284 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10XA49"
+    },
+    {
+      "date": "2021-07-07",
+      "address": "190 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 256000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D10YD68"
+    },
+    {
+      "date": "2021-06-23",
+      "address": "266 LANDEN RD, BALLYFERMOT",
+      "price": 225615,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D10NV91"
+    },
+    {
+      "date": "2020-12-07",
+      "address": "197 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 238000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-11",
+      "address": "88 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-27",
+      "address": "125 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-29",
+      "address": "326 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-28",
+      "address": "331 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-29",
+      "address": "9 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-29",
+      "address": "67 LANDEN RD, BALLYFERMOT, DUBLIN",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-31",
+      "address": "20 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-17",
+      "address": "76 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 253000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-05",
+      "address": "155 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-19",
+      "address": "293 LANDEN RD, BALLYFERMOT, DUBLIN 10",
+      "price": 215000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 104
+}

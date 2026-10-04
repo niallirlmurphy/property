@@ -1,0 +1,553 @@
+{
+  "slug": "the-sycamores-edenderry",
+  "stats": {
+    "count": 94,
+    "median": 180500,
+    "avg": 198833,
+    "min": 65000,
+    "max": 380000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 165000,
+      "avg_price": 165000,
+      "min_price": 165000,
+      "max_price": 165000
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 111000,
+      "avg_price": 111000,
+      "min_price": 111000,
+      "max_price": 111000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 107500,
+      "avg_price": 107500,
+      "min_price": 105000,
+      "max_price": 110000
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 100000,
+      "avg_price": 92333,
+      "min_price": 65000,
+      "max_price": 112000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 85000,
+      "avg_price": 92667,
+      "min_price": 83000,
+      "max_price": 110000
+    },
+    {
+      "year": 2015,
+      "count": 6,
+      "median_price": 106750,
+      "avg_price": 113250,
+      "min_price": 105000,
+      "max_price": 135000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 121500,
+      "avg_price": 121500,
+      "min_price": 107000,
+      "max_price": 136000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 152092,
+      "avg_price": 148921,
+      "min_price": 129500,
+      "max_price": 162000
+    },
+    {
+      "year": 2018,
+      "count": 11,
+      "median_price": 176211,
+      "avg_price": 172266,
+      "min_price": 115000,
+      "max_price": 213000
+    },
+    {
+      "year": 2019,
+      "count": 3,
+      "median_price": 173000,
+      "avg_price": 165333,
+      "min_price": 149000,
+      "max_price": 174000
+    },
+    {
+      "year": 2020,
+      "count": 10,
+      "median_price": 168750,
+      "avg_price": 178285,
+      "min_price": 123597,
+      "max_price": 240000
+    },
+    {
+      "year": 2021,
+      "count": 8,
+      "median_price": 176250,
+      "avg_price": 191609,
+      "min_price": 137500,
+      "max_price": 290000
+    },
+    {
+      "year": 2022,
+      "count": 9,
+      "median_price": 220000,
+      "avg_price": 227889,
+      "min_price": 145000,
+      "max_price": 340000
+    },
+    {
+      "year": 2023,
+      "count": 5,
+      "median_price": 230000,
+      "avg_price": 222300,
+      "min_price": 159000,
+      "max_price": 290000
+    },
+    {
+      "year": 2024,
+      "count": 8,
+      "median_price": 251500,
+      "avg_price": 272062,
+      "min_price": 225000,
+      "max_price": 380000
+    },
+    {
+      "year": 2025,
+      "count": 10,
+      "median_price": 275500,
+      "avg_price": 273950,
+      "min_price": 226000,
+      "max_price": 330000
+    },
+    {
+      "year": 2026,
+      "count": 8,
+      "median_price": 290000,
+      "avg_price": 292625,
+      "min_price": 226000,
+      "max_price": 380000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-08",
+      "address": "151 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": "R45E684"
+    },
+    {
+      "date": "2026-05-18",
+      "address": "61 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 280000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45NH61"
+    },
+    {
+      "date": "2026-05-12",
+      "address": "10 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 380000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "R45N763"
+    },
+    {
+      "date": "2026-04-22",
+      "address": "268 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 300000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45KC56"
+    },
+    {
+      "date": "2026-04-10",
+      "address": "289 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 280000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45NF78"
+    },
+    {
+      "date": "2026-04-09",
+      "address": "276 THE SYCAMORES, EDENDERRY, CO OFFALY",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45Y921"
+    },
+    {
+      "date": "2026-02-03",
+      "address": "291 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 226000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45ER81"
+    },
+    {
+      "date": "2026-01-23",
+      "address": "123 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 300000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45H744"
+    },
+    {
+      "date": "2025-12-18",
+      "address": "291 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 226000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45ER81"
+    },
+    {
+      "date": "2025-11-13",
+      "address": "131 THE SYCAMORES, EDENDERRY, CO OFFALY",
+      "price": 280000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45E049"
+    },
+    {
+      "date": "2025-10-15",
+      "address": "80 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 275000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45X603"
+    },
+    {
+      "date": "2025-08-12",
+      "address": "297 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 330000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45E335"
+    },
+    {
+      "date": "2025-07-17",
+      "address": "90 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 276000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45EE37"
+    },
+    {
+      "date": "2025-05-06",
+      "address": "274 THE SYCAMORES, EDENDERRY, CO OFFALY",
+      "price": 276000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45R768"
+    },
+    {
+      "date": "2025-04-24",
+      "address": "283  THE SYCAMORES, EDENDERRY, COUNTY OFFALY",
+      "price": 265000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45NW29"
+    },
+    {
+      "date": "2025-04-24",
+      "address": "204 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 305000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45T922"
+    },
+    {
+      "date": "2025-04-16",
+      "address": "265 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 256500,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": "R45PK23"
+    },
+    {
+      "date": "2025-04-04",
+      "address": "18 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 250000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45HH21"
+    },
+    {
+      "date": "2024-12-19",
+      "address": "108 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45XP70"
+    },
+    {
+      "date": "2024-11-28",
+      "address": "195B THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 307000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45PF83"
+    },
+    {
+      "date": "2024-11-21",
+      "address": "71 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45XP66"
+    },
+    {
+      "date": "2024-09-04",
+      "address": "250 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 246500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45A896"
+    },
+    {
+      "date": "2024-07-12",
+      "address": "290 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45AE71"
+    },
+    {
+      "date": "2024-06-10",
+      "address": "281 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 253000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45K795"
+    },
+    {
+      "date": "2024-05-16",
+      "address": "150 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45KV24"
+    },
+    {
+      "date": "2024-05-10",
+      "address": "87 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45H796"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "44 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45EA22"
+    },
+    {
+      "date": "2023-12-14",
+      "address": "285 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 252500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45H970"
+    },
+    {
+      "date": "2023-10-24",
+      "address": "310 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45RX37"
+    },
+    {
+      "date": "2023-05-05",
+      "address": "307 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 159000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45YD51"
+    },
+    {
+      "date": "2023-01-19",
+      "address": "277 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45FD78"
+    },
+    {
+      "date": "2022-12-01",
+      "address": "8 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45EY23"
+    },
+    {
+      "date": "2022-11-24",
+      "address": "129 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45Y726"
+    },
+    {
+      "date": "2022-06-30",
+      "address": "46 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45CD50"
+    },
+    {
+      "date": "2022-06-17",
+      "address": "297 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 235000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45E335"
+    },
+    {
+      "date": "2022-04-05",
+      "address": "17 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 215000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45VF86"
+    },
+    {
+      "date": "2022-03-07",
+      "address": "50 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 145000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45VH27"
+    },
+    {
+      "date": "2022-03-02",
+      "address": "305 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 181000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45NP44"
+    },
+    {
+      "date": "2022-02-15",
+      "address": "97 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 217000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45F765"
+    },
+    {
+      "date": "2022-01-24",
+      "address": "164 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 273000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45R861"
+    },
+    {
+      "date": "2021-11-19",
+      "address": "306 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45AH79"
+    },
+    {
+      "date": "2021-09-10",
+      "address": "11 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45Y339"
+    },
+    {
+      "date": "2021-09-08",
+      "address": "19 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45YP64"
+    },
+    {
+      "date": "2021-06-23",
+      "address": "32 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 152873,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R45PX43"
+    },
+    {
+      "date": "2021-04-01",
+      "address": "308 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 137500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-26",
+      "address": "268 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 200000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45KC56"
+    },
+    {
+      "date": "2021-01-19",
+      "address": "45 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-18",
+      "address": "279 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 177500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-11",
+      "address": "111 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-26",
+      "address": "181 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 123597,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 94
+}

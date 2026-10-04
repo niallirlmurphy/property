@@ -1,0 +1,553 @@
+{
+  "slug": "redford-park-greystones",
+  "stats": {
+    "count": 138,
+    "median": 375500,
+    "avg": 394484,
+    "min": 142500,
+    "max": 1060000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 370000,
+      "avg_price": 334033,
+      "min_price": 247500,
+      "max_price": 384600
+    },
+    {
+      "year": 2011,
+      "count": 6,
+      "median_price": 223500,
+      "avg_price": 244833,
+      "min_price": 195000,
+      "max_price": 315000
+    },
+    {
+      "year": 2012,
+      "count": 10,
+      "median_price": 175000,
+      "avg_price": 189250,
+      "min_price": 142500,
+      "max_price": 258000
+    },
+    {
+      "year": 2013,
+      "count": 11,
+      "median_price": 240000,
+      "avg_price": 251455,
+      "min_price": 148000,
+      "max_price": 530000
+    },
+    {
+      "year": 2014,
+      "count": 9,
+      "median_price": 320000,
+      "avg_price": 328889,
+      "min_price": 240000,
+      "max_price": 500000
+    },
+    {
+      "year": 2015,
+      "count": 15,
+      "median_price": 327500,
+      "avg_price": 320867,
+      "min_price": 215000,
+      "max_price": 449000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 335000,
+      "avg_price": 372500,
+      "min_price": 310000,
+      "max_price": 510000
+    },
+    {
+      "year": 2017,
+      "count": 9,
+      "median_price": 385000,
+      "avg_price": 362111,
+      "min_price": 210000,
+      "max_price": 472000
+    },
+    {
+      "year": 2018,
+      "count": 5,
+      "median_price": 395000,
+      "avg_price": 398000,
+      "min_price": 285000,
+      "max_price": 560000
+    },
+    {
+      "year": 2019,
+      "count": 10,
+      "median_price": 365000,
+      "avg_price": 372250,
+      "min_price": 270000,
+      "max_price": 560000
+    },
+    {
+      "year": 2020,
+      "count": 10,
+      "median_price": 357500,
+      "avg_price": 362200,
+      "min_price": 224000,
+      "max_price": 505000
+    },
+    {
+      "year": 2021,
+      "count": 8,
+      "median_price": 467500,
+      "avg_price": 454650,
+      "min_price": 360000,
+      "max_price": 570000
+    },
+    {
+      "year": 2022,
+      "count": 7,
+      "median_price": 465000,
+      "avg_price": 477214,
+      "min_price": 367000,
+      "max_price": 570000
+    },
+    {
+      "year": 2023,
+      "count": 9,
+      "median_price": 500000,
+      "avg_price": 554278,
+      "min_price": 425000,
+      "max_price": 770000
+    },
+    {
+      "year": 2024,
+      "count": 10,
+      "median_price": 545500,
+      "avg_price": 581550,
+      "min_price": 450000,
+      "max_price": 1060000
+    },
+    {
+      "year": 2025,
+      "count": 5,
+      "median_price": 640000,
+      "avg_price": 632000,
+      "min_price": 545000,
+      "max_price": 700000
+    },
+    {
+      "year": 2026,
+      "count": 7,
+      "median_price": 610000,
+      "avg_price": 644429,
+      "min_price": 500000,
+      "max_price": 816000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-27",
+      "address": "240 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 585000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "A63PX62"
+    },
+    {
+      "date": "2026-06-19",
+      "address": "303 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 610000,
+      "bedrooms": 1,
+      "propertyType": "semi-detached",
+      "eircode": "A63FA36"
+    },
+    {
+      "date": "2026-05-28",
+      "address": "5 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 650000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "A63AE73"
+    },
+    {
+      "date": "2026-05-12",
+      "address": "131 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 765000,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "A63H213"
+    },
+    {
+      "date": "2026-03-31",
+      "address": "109 REDFORD PARK, GREYSTONES, CO WICKLOW",
+      "price": 585000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A63NN83"
+    },
+    {
+      "date": "2026-03-20",
+      "address": "293 REDFORD PARK, GREYSTONES, CO WICKLOW",
+      "price": 816000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "A63V524"
+    },
+    {
+      "date": "2026-01-14",
+      "address": "329 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 500000,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "A63FH58"
+    },
+    {
+      "date": "2025-09-25",
+      "address": "35 REDFORD PK, GREYSTONES, WICKLOW",
+      "price": 605000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A63E821"
+    },
+    {
+      "date": "2025-09-04",
+      "address": "149 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 670000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A63X003"
+    },
+    {
+      "date": "2025-08-01",
+      "address": "6 REDFORD PARK, GREYSTONES, CO WICKLOW",
+      "price": 700000,
+      "bedrooms": 3,
+      "propertyType": "bungalow",
+      "eircode": "A63KX93"
+    },
+    {
+      "date": "2025-06-10",
+      "address": "97 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 640000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A63A522"
+    },
+    {
+      "date": "2025-05-06",
+      "address": "81 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 545000,
+      "bedrooms": 2,
+      "propertyType": "bungalow",
+      "eircode": "A63E361"
+    },
+    {
+      "date": "2024-11-20",
+      "address": "267 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 1060000,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "A63Y710"
+    },
+    {
+      "date": "2024-11-15",
+      "address": "98 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 546000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63R582"
+    },
+    {
+      "date": "2024-11-14",
+      "address": "22 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 595000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63EH51"
+    },
+    {
+      "date": "2024-10-24",
+      "address": "315 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 545000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63N840"
+    },
+    {
+      "date": "2024-07-31",
+      "address": "161 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63HT02"
+    },
+    {
+      "date": "2024-05-20",
+      "address": "311 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 535000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63KH57"
+    },
+    {
+      "date": "2024-03-28",
+      "address": "48 REDFORD PARK, GREYSTONES, CO WICKLOW",
+      "price": 567500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63HE08"
+    },
+    {
+      "date": "2024-03-21",
+      "address": "56 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 547000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63WK61"
+    },
+    {
+      "date": "2024-03-01",
+      "address": "241 REDFORD PARK, GREYSTONES, CO WICKLOW",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DH98"
+    },
+    {
+      "date": "2024-03-01",
+      "address": "314 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YC98"
+    },
+    {
+      "date": "2023-12-20",
+      "address": "18 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63EF65"
+    },
+    {
+      "date": "2023-12-18",
+      "address": "195 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 448500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63PY19"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "105 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X393"
+    },
+    {
+      "date": "2023-11-28",
+      "address": "55 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 560000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63NX36"
+    },
+    {
+      "date": "2023-11-20",
+      "address": "134 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 770000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63CP46"
+    },
+    {
+      "date": "2023-11-07",
+      "address": "156 REDFORD PARK, GREYSTONES, BRAY",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63YR02"
+    },
+    {
+      "date": "2023-07-10",
+      "address": "164 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63Y282"
+    },
+    {
+      "date": "2023-03-16",
+      "address": "280 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63W327"
+    },
+    {
+      "date": "2023-03-06",
+      "address": "235 REDFORD PARK, GREYSTONES, CO WICKLOW",
+      "price": 580000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63X296"
+    },
+    {
+      "date": "2022-12-02",
+      "address": "293 REDFORD PARK, GREYSTONES, CO WICKLOW",
+      "price": 560000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "A63V524"
+    },
+    {
+      "date": "2022-08-03",
+      "address": "12 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 570000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63TR94"
+    },
+    {
+      "date": "2022-07-29",
+      "address": "79 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 367000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63Y336"
+    },
+    {
+      "date": "2022-06-14",
+      "address": "96 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63WP66"
+    },
+    {
+      "date": "2022-05-19",
+      "address": "185 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63Y067"
+    },
+    {
+      "date": "2022-04-26",
+      "address": "113 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 448500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63FX44"
+    },
+    {
+      "date": "2022-01-14",
+      "address": "77 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63PT67"
+    },
+    {
+      "date": "2021-10-15",
+      "address": "317 REDFORD PARK, GREYSTONES, CO WICKLOW",
+      "price": 376000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63XD81"
+    },
+    {
+      "date": "2021-10-01",
+      "address": "303 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 460000,
+      "bedrooms": 1,
+      "propertyType": "semi-detached",
+      "eircode": "A63FA36"
+    },
+    {
+      "date": "2021-09-23",
+      "address": "127 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 570000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63Y864"
+    },
+    {
+      "date": "2021-08-31",
+      "address": "321 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DN88"
+    },
+    {
+      "date": "2021-08-27",
+      "address": "192 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63CF40"
+    },
+    {
+      "date": "2021-08-20",
+      "address": "146 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63TW62"
+    },
+    {
+      "date": "2021-02-01",
+      "address": "279 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-18",
+      "address": "246 REDFORD PARK, GREYSTONES, CO WICKLOW",
+      "price": 396200,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-04",
+      "address": "191 REDFORD PARK, GREYSTONES, CO WICKLOW",
+      "price": 224000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-30",
+      "address": "71 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-30",
+      "address": "196 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-29",
+      "address": "277 REDFORD PARK, GREYSTONES, WICKLOW",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 138
+}

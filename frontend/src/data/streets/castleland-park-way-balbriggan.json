@@ -1,0 +1,489 @@
+{
+  "slug": "castleland-park-way-balbriggan",
+  "stats": {
+    "count": 109,
+    "median": 255506,
+    "avg": 249773,
+    "min": 173250,
+    "max": 428000,
+    "firstYear": 2014,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 189427,
+      "avg_price": 189427,
+      "min_price": 189427,
+      "max_price": 189427
+    },
+    {
+      "year": 2015,
+      "count": 20,
+      "median_price": 198237,
+      "avg_price": 196874,
+      "min_price": 173250,
+      "max_price": 235000
+    },
+    {
+      "year": 2016,
+      "count": 21,
+      "median_price": 213655,
+      "avg_price": 209655,
+      "min_price": 189427,
+      "max_price": 252500
+    },
+    {
+      "year": 2019,
+      "count": 21,
+      "median_price": 255506,
+      "avg_price": 259223,
+      "min_price": 250850,
+      "max_price": 300000
+    },
+    {
+      "year": 2020,
+      "count": 11,
+      "median_price": 268722,
+      "avg_price": 269530,
+      "min_price": 268722,
+      "max_price": 277533
+    },
+    {
+      "year": 2021,
+      "count": 25,
+      "median_price": 277533,
+      "avg_price": 281674,
+      "min_price": 275330,
+      "max_price": 345000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 358000,
+      "avg_price": 358000,
+      "min_price": 348000,
+      "max_price": 368000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 375000,
+      "avg_price": 371000,
+      "min_price": 363000,
+      "max_price": 375000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 424000,
+      "avg_price": 424000,
+      "min_price": 420000,
+      "max_price": 428000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-10-17",
+      "address": "102 CASTLELAND PARK WAY, BALBRIGGAN, DUBLIN",
+      "price": 428000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A92KCV4"
+    },
+    {
+      "date": "2024-02-23",
+      "address": "41 CASTLELAND PARK WAY, BALBRIGGAN, DUBLIN",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K32PN77"
+    },
+    {
+      "date": "2023-07-14",
+      "address": "17 CASTLELAND PARK WAY, BALBRIGGAN, CO DUBLIN",
+      "price": 363000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K32VK63"
+    },
+    {
+      "date": "2023-02-17",
+      "address": "91 CASTLELAND PARK WAY, BALBRIGGAN, CO DUBLIN",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K32HH61"
+    },
+    {
+      "date": "2023-01-30",
+      "address": "88 CASTLELAND PARK WAY, BALBRIGGAN, DUBLIN",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K32YH51"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "36 CASTLELAND PARK WAY, BALBRIGGAN, COUNTY DUBLIN",
+      "price": 368000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K32Y232"
+    },
+    {
+      "date": "2022-01-28",
+      "address": "64 CASTLELAND PARK WAY, BALBRIGGAN, DUBLIN",
+      "price": 348000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K32WV67"
+    },
+    {
+      "date": "2021-12-16",
+      "address": "112 Castleland Park Way, Balbriggan, Co. Dublin",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-09",
+      "address": "101 Castleland Park Way, Balbriggan",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-30",
+      "address": "111  Castleland Park Way, Balbriggan, Co. Dublin",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-26",
+      "address": "107 Castleland Park Way, Balbriggan",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-25",
+      "address": "113 Castleland Park Way, Balbriggan",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-11-01",
+      "address": "110 Castleland Park Way, Balbriggan",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-14",
+      "address": "105 CASTLELAND PARK WAY, BALBRIGGAN, CO DUBLIN",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-07",
+      "address": "104 CASTLELAND PARK WAY, BALBRIGGAN",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-10-04",
+      "address": "2 CASTLELAND PARK WAY, BALBRIGGAN, CO DUBLIN",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K32E367"
+    },
+    {
+      "date": "2021-09-24",
+      "address": "78 CASTLELAND PARK WAY, BALBRIGGAN, CO DUBLIN",
+      "price": 275330,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-22",
+      "address": "109 CASTLELAND PARK WAY, Balbriggan, Co. Dublin",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-09-20",
+      "address": "108 CASTLELAND PARK WAY, BALBRIGGAN",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-26",
+      "address": "95 Castleland Park Way, Balbriggan",
+      "price": 275330,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-13",
+      "address": "97 Castleland Park Way, Balbriggan",
+      "price": 275330,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-04",
+      "address": "102 Castleland Park Way, Balbriggan",
+      "price": 277534,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-04",
+      "address": "103 Castleland Park Way, Balbriggan, County Dublin",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-09",
+      "address": "75 CASTLELAND PARK WAY, Balbriggan, Co. Dublin",
+      "price": 275330,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-08",
+      "address": "79 Castleland Park Way, Balbriggan",
+      "price": 275330,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-05",
+      "address": "76 CASTLELAND PARK WAY, BALBRIGGAN",
+      "price": 275330,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-30",
+      "address": "77 Castleland Park Way, Balbriggan, Dublin",
+      "price": 275330,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-10",
+      "address": "96 Castleland Park Way, Balbriggan",
+      "price": 312500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-07",
+      "address": "100 Castleland Park Way, Balbriggan, Co Dublin",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-19",
+      "address": "74 Castleland Park Way, Balbriggan",
+      "price": 297357,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-02",
+      "address": "98 Castleland Park Way, Balbriggan, Co Dublin",
+      "price": 275330,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-08",
+      "address": "99 CASTLELAND PARK WAY, BALBRIGGAN",
+      "price": 276426,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-04",
+      "address": "50 Castleland Park Way, Balbriggan",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-03",
+      "address": "54 Castleland Park Way, Balbriggan, Co Dublin",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-04",
+      "address": "72 Castleland Park Way, Balbriggan, Co. Dublin",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-23",
+      "address": "51 castleland park way, BALBRIGGAN",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-04",
+      "address": "49 Castleland Park Way, Balbriggan, Co Dublin",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-20",
+      "address": "73 Castleland Park Way, Balbriggan, Co Dublin",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-16",
+      "address": "69 Castleland Park Way, Balbriggan, County Dublin",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-16",
+      "address": "71 Castleland Park Way, Balbriggan, Co. Dublin",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K32V803"
+    },
+    {
+      "date": "2020-04-01",
+      "address": "48 Castleland Park Way, Balbriggan",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-01",
+      "address": "52 CASTLELAND PARK WAY, BALBRIGGAN",
+      "price": 268800,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-31",
+      "address": "53 Castleland Park Way, Balbriggan",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-30",
+      "address": "57 Castleland Park Way, BALBRIGGAN, County Dublin",
+      "price": 252212,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-18",
+      "address": "59 Castleland Park Way, Balbriggan, County Dublin",
+      "price": 251101,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-11",
+      "address": "56 Castleland Park Way, Balbriggan, Co. Dublin",
+      "price": 251101,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-11",
+      "address": "39 CASTLELAND PARK WAY, BALBRIGGAN",
+      "price": 255506,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-04",
+      "address": "55 Castleland Park Way, Balbriggan, Co. Dublin.",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-27",
+      "address": "35 CASTLELAND PARK WAY, BALBRIGGAN",
+      "price": 255506,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-24",
+      "address": "20 CASTLELAND PARK WAY, BALBRIGGAN, DUBLIN",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 109
+}

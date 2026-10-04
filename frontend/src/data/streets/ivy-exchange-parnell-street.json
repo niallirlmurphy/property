@@ -1,0 +1,537 @@
+{
+  "slug": "ivy-exchange-parnell-street",
+  "stats": {
+    "count": 100,
+    "median": 317500,
+    "avg": 327941,
+    "min": 77778,
+    "max": 2830000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 135000,
+      "avg_price": 135000,
+      "min_price": 135000,
+      "max_price": 135000
+    },
+    {
+      "year": 2012,
+      "count": 3,
+      "median_price": 185000,
+      "avg_price": 162667,
+      "min_price": 105000,
+      "max_price": 198000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 225000,
+      "avg_price": 225000,
+      "min_price": 225000,
+      "max_price": 225000
+    },
+    {
+      "year": 2015,
+      "count": 15,
+      "median_price": 77778,
+      "avg_price": 123333,
+      "min_price": 77778,
+      "max_price": 195000
+    },
+    {
+      "year": 2016,
+      "count": 6,
+      "median_price": 290000,
+      "avg_price": 265417,
+      "min_price": 183000,
+      "max_price": 312500
+    },
+    {
+      "year": 2017,
+      "count": 10,
+      "median_price": 342000,
+      "avg_price": 339200,
+      "min_price": 300000,
+      "max_price": 366000
+    },
+    {
+      "year": 2018,
+      "count": 6,
+      "median_price": 343500,
+      "avg_price": 331667,
+      "min_price": 250500,
+      "max_price": 397500
+    },
+    {
+      "year": 2019,
+      "count": 5,
+      "median_price": 380000,
+      "avg_price": 372600,
+      "min_price": 238000,
+      "max_price": 490000
+    },
+    {
+      "year": 2020,
+      "count": 8,
+      "median_price": 349000,
+      "avg_price": 347875,
+      "min_price": 260000,
+      "max_price": 440000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 345000,
+      "avg_price": 345000,
+      "min_price": 330000,
+      "max_price": 360000
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "median_price": 372500,
+      "avg_price": 405250,
+      "min_price": 340000,
+      "max_price": 536000
+    },
+    {
+      "year": 2023,
+      "count": 12,
+      "median_price": 290000,
+      "avg_price": 519505,
+      "min_price": 220580,
+      "max_price": 2830000
+    },
+    {
+      "year": 2024,
+      "count": 17,
+      "median_price": 344000,
+      "avg_price": 357206,
+      "min_price": 224000,
+      "max_price": 550000
+    },
+    {
+      "year": 2025,
+      "count": 7,
+      "median_price": 350000,
+      "avg_price": 370429,
+      "min_price": 315000,
+      "max_price": 460000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 445000,
+      "avg_price": 421667,
+      "min_price": 370000,
+      "max_price": 450000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-01",
+      "address": "202 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 370000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D01TH94"
+    },
+    {
+      "date": "2026-08-20",
+      "address": "159 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 445000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D01HP64"
+    },
+    {
+      "date": "2026-02-16",
+      "address": "30 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D01VF80"
+    },
+    {
+      "date": "2025-11-27",
+      "address": "38 IVY EXCHANGE, PARNELL ST, DUBLIN",
+      "price": 460000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D01Y261"
+    },
+    {
+      "date": "2025-11-12",
+      "address": "51 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 335000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D01F384"
+    },
+    {
+      "date": "2025-09-17",
+      "address": "103 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 320000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D01P8N6"
+    },
+    {
+      "date": "2025-07-22",
+      "address": "42 IVY EXCHANGE, PARNELL STREET, DUBLIN 1",
+      "price": 378000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D01HE62"
+    },
+    {
+      "date": "2025-06-06",
+      "address": "26 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01PH67"
+    },
+    {
+      "date": "2025-05-30",
+      "address": "71 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01XD82"
+    },
+    {
+      "date": "2025-05-29",
+      "address": "55 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D01WV05"
+    },
+    {
+      "date": "2024-11-08",
+      "address": "47 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01W732"
+    },
+    {
+      "date": "2024-10-11",
+      "address": "56 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01VN27"
+    },
+    {
+      "date": "2024-10-08",
+      "address": "180 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01K593"
+    },
+    {
+      "date": "2024-09-20",
+      "address": "50 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01TP83"
+    },
+    {
+      "date": "2024-09-06",
+      "address": "APT 119, IVY EXCHANGE, PARNELL ST",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D01F950"
+    },
+    {
+      "date": "2024-05-24",
+      "address": "33 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01N528"
+    },
+    {
+      "date": "2024-03-26",
+      "address": "76 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 342500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01N281"
+    },
+    {
+      "date": "2024-02-07",
+      "address": "82 IVY EXCHANGE, PARNELL STREET, DUBLIN 1",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01KW35"
+    },
+    {
+      "date": "2024-01-23",
+      "address": "129 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 224000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01RC44"
+    },
+    {
+      "date": "2024-01-23",
+      "address": "163 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 354000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01PK88"
+    },
+    {
+      "date": "2024-01-23",
+      "address": "2 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 234000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01AC67"
+    },
+    {
+      "date": "2024-01-23",
+      "address": "201 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 283000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01RX80"
+    },
+    {
+      "date": "2024-01-23",
+      "address": "209 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 314000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01CD51"
+    },
+    {
+      "date": "2024-01-23",
+      "address": "4 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 304000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01RY16"
+    },
+    {
+      "date": "2024-01-23",
+      "address": "45 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 354000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01WY67"
+    },
+    {
+      "date": "2024-01-23",
+      "address": "52 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 314000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01PE86"
+    },
+    {
+      "date": "2024-01-23",
+      "address": "53 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 344000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01EA27"
+    },
+    {
+      "date": "2023-12-12",
+      "address": "132 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01N621"
+    },
+    {
+      "date": "2023-10-26",
+      "address": "36 IVY EXCHANGE, PARNELL ST, DN139868L",
+      "price": 2830000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01H685"
+    },
+    {
+      "date": "2023-09-20",
+      "address": "9 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 246500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01XE84"
+    },
+    {
+      "date": "2023-07-07",
+      "address": "1 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01XA03"
+    },
+    {
+      "date": "2023-07-07",
+      "address": "162 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01W674"
+    },
+    {
+      "date": "2023-07-07",
+      "address": "6 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01PW21"
+    },
+    {
+      "date": "2023-07-03",
+      "address": "28 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 220580,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01C438"
+    },
+    {
+      "date": "2023-07-03",
+      "address": "89 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 253490,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01FK53"
+    },
+    {
+      "date": "2023-07-03",
+      "address": "APT 91 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 253490,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D01NY26"
+    },
+    {
+      "date": "2023-06-14",
+      "address": "37 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01RK27"
+    },
+    {
+      "date": "2023-05-05",
+      "address": "5 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01KP66"
+    },
+    {
+      "date": "2023-03-30",
+      "address": "14 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01R894"
+    },
+    {
+      "date": "2022-11-25",
+      "address": "92 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 536000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01V270"
+    },
+    {
+      "date": "2022-11-07",
+      "address": "177 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01F673"
+    },
+    {
+      "date": "2022-08-09",
+      "address": "27 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01XY59"
+    },
+    {
+      "date": "2022-07-15",
+      "address": "135 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01HP28"
+    },
+    {
+      "date": "2021-12-17",
+      "address": "210 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01A253"
+    },
+    {
+      "date": "2021-11-16",
+      "address": "102 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01X2X5"
+    },
+    {
+      "date": "2020-12-23",
+      "address": "54 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-14",
+      "address": "115 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-14",
+      "address": "127 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-14",
+      "address": "131 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-02",
+      "address": "57 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 100
+}

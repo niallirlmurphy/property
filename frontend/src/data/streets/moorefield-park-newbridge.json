@@ -1,0 +1,545 @@
+{
+  "slug": "moorefield-park-newbridge",
+  "stats": {
+    "count": 91,
+    "median": 225000,
+    "avg": 240901,
+    "min": 45000,
+    "max": 438000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 150000,
+      "avg_price": 168867,
+      "min_price": 145000,
+      "max_price": 211600
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 145000,
+      "avg_price": 145000,
+      "min_price": 140000,
+      "max_price": 150000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 137000,
+      "avg_price": 135700,
+      "min_price": 117000,
+      "max_price": 150000
+    },
+    {
+      "year": 2014,
+      "count": 10,
+      "median_price": 181890,
+      "avg_price": 175378,
+      "min_price": 141000,
+      "max_price": 205000
+    },
+    {
+      "year": 2015,
+      "count": 6,
+      "median_price": 178750,
+      "avg_price": 173333,
+      "min_price": 130000,
+      "max_price": 205000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 170750,
+      "avg_price": 186625,
+      "min_price": 170000,
+      "max_price": 235000
+    },
+    {
+      "year": 2017,
+      "count": 5,
+      "median_price": 235000,
+      "avg_price": 219000,
+      "min_price": 135000,
+      "max_price": 265000
+    },
+    {
+      "year": 2018,
+      "count": 9,
+      "median_price": 205000,
+      "avg_price": 209889,
+      "min_price": 180000,
+      "max_price": 255000
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 192000,
+      "avg_price": 209093,
+      "min_price": 160000,
+      "max_price": 260000
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 228000,
+      "avg_price": 212500,
+      "min_price": 160000,
+      "max_price": 234000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 235000,
+      "avg_price": 235000,
+      "min_price": 235000,
+      "max_price": 235000
+    },
+    {
+      "year": 2022,
+      "count": 10,
+      "median_price": 310000,
+      "avg_price": 284386,
+      "min_price": 45000,
+      "max_price": 420000
+    },
+    {
+      "year": 2023,
+      "count": 11,
+      "median_price": 341000,
+      "avg_price": 331545,
+      "min_price": 297000,
+      "max_price": 365000
+    },
+    {
+      "year": 2024,
+      "count": 5,
+      "median_price": 350000,
+      "avg_price": 356600,
+      "min_price": 330000,
+      "max_price": 400000
+    },
+    {
+      "year": 2025,
+      "count": 5,
+      "median_price": 340000,
+      "avg_price": 354600,
+      "min_price": 275000,
+      "max_price": 438000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 400000,
+      "avg_price": 372667,
+      "min_price": 295000,
+      "max_price": 423000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-07",
+      "address": "128 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 423000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12YH57"
+    },
+    {
+      "date": "2026-06-10",
+      "address": "94 MOOREFIELD PARK, NEWBRIDGE, CO KILDARE",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12Y668"
+    },
+    {
+      "date": "2026-01-16",
+      "address": "258 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 400000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W12DA25"
+    },
+    {
+      "date": "2025-11-06",
+      "address": "207 MOOREFIELD PARK, NEWBRIDGE, CO KILDARE",
+      "price": 340000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W12N797"
+    },
+    {
+      "date": "2025-07-25",
+      "address": "185 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12DW72"
+    },
+    {
+      "date": "2025-07-02",
+      "address": "116 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 425000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W12TP03"
+    },
+    {
+      "date": "2025-06-30",
+      "address": "126 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 438000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W12D924"
+    },
+    {
+      "date": "2025-04-04",
+      "address": "99 MOOREFIELD PK, NEWBRIDGE, KILDARE",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12D998"
+    },
+    {
+      "date": "2024-12-13",
+      "address": "90 MOOREFIELD PARK, NEWBRIDGE, CO. KILDARE",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12WR02"
+    },
+    {
+      "date": "2024-11-14",
+      "address": "220 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 358000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12PK06"
+    },
+    {
+      "date": "2024-11-12",
+      "address": "234 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12YH28"
+    },
+    {
+      "date": "2024-05-21",
+      "address": "226 MOOREFIELD PARK, NEWBRIDGE, CO KILDARE",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-17",
+      "address": "80 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12V026"
+    },
+    {
+      "date": "2023-12-28",
+      "address": "153 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 348000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12CA39"
+    },
+    {
+      "date": "2023-11-09",
+      "address": "203 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 338500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12YV90"
+    },
+    {
+      "date": "2023-10-31",
+      "address": "9 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12H982"
+    },
+    {
+      "date": "2023-10-17",
+      "address": "120 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12A064"
+    },
+    {
+      "date": "2023-09-15",
+      "address": "258 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 341000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W12DA25"
+    },
+    {
+      "date": "2023-07-26",
+      "address": "211 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 303000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12EW27"
+    },
+    {
+      "date": "2023-06-21",
+      "address": "103 MOOREFIELD PARK, NEWBRIDGE, CO KILDARE",
+      "price": 297000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12HD34"
+    },
+    {
+      "date": "2023-03-21",
+      "address": "192 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 342500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12D433"
+    },
+    {
+      "date": "2023-02-24",
+      "address": "22 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 342000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12X062"
+    },
+    {
+      "date": "2023-01-25",
+      "address": "62 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12RW63"
+    },
+    {
+      "date": "2023-01-09",
+      "address": "172 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12KC98"
+    },
+    {
+      "date": "2022-12-09",
+      "address": "56 MOOREFIELD PARK, NEWBRIDGE, CO KILDARE",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12FX92"
+    },
+    {
+      "date": "2022-11-29",
+      "address": "8 MOOREFIELD PARK, NEWBRIDGE, CO KILDARE",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12A389"
+    },
+    {
+      "date": "2022-11-09",
+      "address": "209 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12KN53"
+    },
+    {
+      "date": "2022-10-28",
+      "address": "178 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12A563"
+    },
+    {
+      "date": "2022-10-13",
+      "address": "225 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12EP80"
+    },
+    {
+      "date": "2022-10-06",
+      "address": "82 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12VF78"
+    },
+    {
+      "date": "2022-06-22",
+      "address": "3 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12FT50"
+    },
+    {
+      "date": "2022-05-11",
+      "address": "184 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12TF70"
+    },
+    {
+      "date": "2022-03-11",
+      "address": "40 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 193862,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12TY86"
+    },
+    {
+      "date": "2022-01-21",
+      "address": "8 MOOREFIELD PARK, NEWBRIDGE, CO KILDARE",
+      "price": 45000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12A389"
+    },
+    {
+      "date": "2021-04-30",
+      "address": "154 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12RC78"
+    },
+    {
+      "date": "2020-09-21",
+      "address": "257 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 228000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-01",
+      "address": "213 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 228000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-19",
+      "address": "46 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 234000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-07",
+      "address": "61 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 160000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-13",
+      "address": "263 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 194000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-30",
+      "address": "129 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-29",
+      "address": "32 MOOREFIELD PARK, NEWBRIDGE, CO KILDARE",
+      "price": 237000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-04",
+      "address": "102 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-07",
+      "address": "264 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-26",
+      "address": "90 MOOREFIELD PARK, NEWBRIDGE, CO. KILDARE",
+      "price": 185000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12WR02"
+    },
+    {
+      "date": "2019-04-11",
+      "address": "255 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 186742,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-08",
+      "address": "54 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 160000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-31",
+      "address": "125 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 241000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-21",
+      "address": "203 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W12YV90"
+    },
+    {
+      "date": "2018-07-24",
+      "address": "27 MOOREFIELD PARK, NEWBRIDGE, KILDARE",
+      "price": 205000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 91
+}

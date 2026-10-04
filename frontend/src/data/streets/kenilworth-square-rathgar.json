@@ -1,0 +1,225 @@
+{
+  "slug": "kenilworth-square-rathgar",
+  "stats": {
+    "count": 17,
+    "median": 1280000,
+    "avg": 1418235,
+    "min": 10000,
+    "max": 2700000,
+    "firstYear": 2013,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 905000,
+      "avg_price": 905000,
+      "min_price": 905000,
+      "max_price": 905000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 887500,
+      "avg_price": 887500,
+      "min_price": 725000,
+      "max_price": 1050000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1385000,
+      "avg_price": 1385000,
+      "min_price": 1385000,
+      "max_price": 1385000
+    },
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 865000,
+      "avg_price": 825000,
+      "min_price": 10000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1865000,
+      "avg_price": 1865000,
+      "min_price": 1380000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2018,
+      "count": 3,
+      "median_price": 1280000,
+      "avg_price": 1636667,
+      "min_price": 930000,
+      "max_price": 2700000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 1127500,
+      "avg_price": 1127500,
+      "min_price": 1100000,
+      "max_price": 1155000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 2387500,
+      "avg_price": 2387500,
+      "min_price": 2275000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1900000,
+      "avg_price": 1900000,
+      "min_price": 1900000,
+      "max_price": 1900000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-12-12",
+      "address": "72 KENILWORTH SQUARE, RATHGAR, DUBLIN 6",
+      "price": 1900000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D06A025"
+    },
+    {
+      "date": "2023-08-11",
+      "address": "53 KENILWORTH SQUARE, RATHGAR, DUBLIN 6",
+      "price": 2275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06K540"
+    },
+    {
+      "date": "2023-07-10",
+      "address": "51 KENILWORTH SQ, RATHGAR, DUBLIN 6",
+      "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06Y274"
+    },
+    {
+      "date": "2020-07-17",
+      "address": "4 KENILWORTH SQUARE, RATHGAR, DUBLIN 6",
+      "price": 1155000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-15",
+      "address": "73 KENILWORTH SQ, RATHGAR, DUBLIN 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-16",
+      "address": "11 KENILWORTH SQUARE, RATHGAR, DUBLIN 6",
+      "price": 930000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-12",
+      "address": "32 Kenilworth Square, Rathgar",
+      "price": 2700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-01",
+      "address": "88 KENILWORTH SQ, RATHGAR, DUBLIN 6",
+      "price": 1280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-02",
+      "address": "41 KENILWORTH SQ, RATHGAR, DUBLIN 6",
+      "price": 1380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-02",
+      "address": "18 KENILWORTH SQ, RATHGAR, DUBLIN 6",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-14",
+      "address": "48 KENILWORTH SQ, RATHGAR, DUBLIN 6",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-02-25",
+      "address": "46 Kenilworth Square, Rathgar",
+      "price": 10000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-02-25",
+      "address": "46 Kenilworth Square, Rathgar",
+      "price": 865000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-08",
+      "address": "2 KENILWORTH SQUARE, RATHGAR, DUBLIN 6",
+      "price": 1385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-12-09",
+      "address": "72 KENILWORTH SQ, RATHGAR, DUBLIN 6",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06A025"
+    },
+    {
+      "date": "2014-03-28",
+      "address": "64 KENILWORTH SQ, RATHGAR, DUBLIN 6",
+      "price": 725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-05-24",
+      "address": "34 Kenilworth Square, Rathgar, Dublin 6",
+      "price": 905000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 17
+}

@@ -1,0 +1,553 @@
+{
+  "slug": "clogher-road-crumlin",
+  "stats": {
+    "count": 107,
+    "median": 333000,
+    "avg": 330816,
+    "min": 100000,
+    "max": 675000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 7,
+      "median_price": 260000,
+      "avg_price": 268571,
+      "min_price": 165000,
+      "max_price": 340000
+    },
+    {
+      "year": 2011,
+      "count": 6,
+      "median_price": 161500,
+      "avg_price": 157667,
+      "min_price": 131000,
+      "max_price": 172500
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 185000,
+      "avg_price": 185000,
+      "min_price": 185000,
+      "max_price": 185000
+    },
+    {
+      "year": 2013,
+      "count": 6,
+      "median_price": 162500,
+      "avg_price": 161667,
+      "min_price": 130000,
+      "max_price": 190000
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 261786,
+      "avg_price": 257262,
+      "min_price": 210000,
+      "max_price": 300000
+    },
+    {
+      "year": 2015,
+      "count": 2,
+      "median_price": 278850,
+      "avg_price": 278850,
+      "min_price": 185000,
+      "max_price": 372700
+    },
+    {
+      "year": 2016,
+      "count": 8,
+      "median_price": 251000,
+      "avg_price": 229875,
+      "min_price": 100000,
+      "max_price": 270000
+    },
+    {
+      "year": 2017,
+      "count": 10,
+      "median_price": 292500,
+      "avg_price": 312800,
+      "min_price": 252000,
+      "max_price": 450000
+    },
+    {
+      "year": 2018,
+      "count": 8,
+      "median_price": 330000,
+      "avg_price": 339980,
+      "min_price": 260000,
+      "max_price": 437500
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 347500,
+      "avg_price": 347500,
+      "min_price": 338000,
+      "max_price": 357000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 300000,
+      "avg_price": 291000,
+      "min_price": 210000,
+      "max_price": 375000
+    },
+    {
+      "year": 2021,
+      "count": 9,
+      "median_price": 314000,
+      "avg_price": 310444,
+      "min_price": 137500,
+      "max_price": 405000
+    },
+    {
+      "year": 2022,
+      "count": 7,
+      "median_price": 440000,
+      "avg_price": 433214,
+      "min_price": 340000,
+      "max_price": 558500
+    },
+    {
+      "year": 2023,
+      "count": 10,
+      "median_price": 388250,
+      "avg_price": 392250,
+      "min_price": 360000,
+      "max_price": 430000
+    },
+    {
+      "year": 2024,
+      "count": 10,
+      "median_price": 439500,
+      "avg_price": 399450,
+      "min_price": 157500,
+      "max_price": 540000
+    },
+    {
+      "year": 2025,
+      "count": 6,
+      "median_price": 512500,
+      "avg_price": 506417,
+      "min_price": 400500,
+      "max_price": 603000
+    },
+    {
+      "year": 2026,
+      "count": 7,
+      "median_price": 436000,
+      "avg_price": 495429,
+      "min_price": 370000,
+      "max_price": 675000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-03",
+      "address": "21 CLOGHER RD, CRUMLIN, DUBLIN",
+      "price": 412000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12X2T9"
+    },
+    {
+      "date": "2026-08-07",
+      "address": "329 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12RK60"
+    },
+    {
+      "date": "2026-07-31",
+      "address": "205 CLOGHER RD, CRUMLIN, DUBLIN",
+      "price": 537000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12EK18"
+    },
+    {
+      "date": "2026-07-31",
+      "address": "139 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 436000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12X867"
+    },
+    {
+      "date": "2026-06-03",
+      "address": "36 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12TPH6"
+    },
+    {
+      "date": "2026-05-21",
+      "address": "386 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 623000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12VH75"
+    },
+    {
+      "date": "2026-05-07",
+      "address": "403 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 675000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12TX62"
+    },
+    {
+      "date": "2025-10-24",
+      "address": "1 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 410000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12Y2X3"
+    },
+    {
+      "date": "2025-08-15",
+      "address": "350 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 550000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12FX96"
+    },
+    {
+      "date": "2025-07-30",
+      "address": "368 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 475000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12XH33"
+    },
+    {
+      "date": "2025-07-25",
+      "address": "372 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 603000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D12NF72"
+    },
+    {
+      "date": "2025-07-03",
+      "address": "229 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 600000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D12FH27"
+    },
+    {
+      "date": "2025-03-10",
+      "address": "33 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 400500,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12CRK8"
+    },
+    {
+      "date": "2024-12-17",
+      "address": "259 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 363000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12TF84"
+    },
+    {
+      "date": "2024-11-13",
+      "address": "149 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 439000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12EF95"
+    },
+    {
+      "date": "2024-10-10",
+      "address": "301 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 540000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12KN79"
+    },
+    {
+      "date": "2024-09-25",
+      "address": "422 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 490000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12VE22"
+    },
+    {
+      "date": "2024-09-22",
+      "address": "347 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12XF34"
+    },
+    {
+      "date": "2024-08-21",
+      "address": "317 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 157500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12AW62"
+    },
+    {
+      "date": "2024-08-21",
+      "address": "351 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12N998"
+    },
+    {
+      "date": "2024-08-09",
+      "address": "47 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F9X9"
+    },
+    {
+      "date": "2024-05-07",
+      "address": "335 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12XT68"
+    },
+    {
+      "date": "2024-02-20",
+      "address": "47 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12F9X9"
+    },
+    {
+      "date": "2023-12-08",
+      "address": "337 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12WD30"
+    },
+    {
+      "date": "2023-11-28",
+      "address": "13 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12W3P9"
+    },
+    {
+      "date": "2023-09-01",
+      "address": "363 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 366000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12HY66"
+    },
+    {
+      "date": "2023-08-24",
+      "address": "205 CLOGHER RD, CRUMLIN, DUBLIN",
+      "price": 395000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12EK18"
+    },
+    {
+      "date": "2023-08-14",
+      "address": "4 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 386500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y1XP"
+    },
+    {
+      "date": "2023-08-11",
+      "address": "247 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12YR91"
+    },
+    {
+      "date": "2023-05-03",
+      "address": "217 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12YX46"
+    },
+    {
+      "date": "2023-04-06",
+      "address": "296 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12CYR8"
+    },
+    {
+      "date": "2023-04-05",
+      "address": "349 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12AH26"
+    },
+    {
+      "date": "2023-02-23",
+      "address": "336 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12YA03"
+    },
+    {
+      "date": "2022-12-22",
+      "address": "22 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12WN3C"
+    },
+    {
+      "date": "2022-12-15",
+      "address": "300 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 354000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12FF80"
+    },
+    {
+      "date": "2022-09-28",
+      "address": "420 CLOGHER RD, CRUMLIN, DUBLIN CITY",
+      "price": 558500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12E9F4"
+    },
+    {
+      "date": "2022-07-26",
+      "address": "284 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12AY19"
+    },
+    {
+      "date": "2022-06-22",
+      "address": "298 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12TP49"
+    },
+    {
+      "date": "2022-04-13",
+      "address": "416 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12FYY9"
+    },
+    {
+      "date": "2022-03-29",
+      "address": "255 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12N883"
+    },
+    {
+      "date": "2021-12-21",
+      "address": "12 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12X8E2"
+    },
+    {
+      "date": "2021-12-14",
+      "address": "3 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 268000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P2K1"
+    },
+    {
+      "date": "2021-10-22",
+      "address": "354 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 291000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12NY03"
+    },
+    {
+      "date": "2021-08-19",
+      "address": "312 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12P026"
+    },
+    {
+      "date": "2021-05-27",
+      "address": "61 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 314000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12A2T3"
+    },
+    {
+      "date": "2021-04-22",
+      "address": "165 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 137500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12K027"
+    },
+    {
+      "date": "2021-03-12",
+      "address": "279 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-26",
+      "address": "376 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-25",
+      "address": "299 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 288500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-08",
+      "address": "18 CLOGHER ROAD, CRUMLIN, DUBLIN 12",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 107
+}

@@ -1,0 +1,553 @@
+{
+  "slug": "castlecurragh-heath-mulhuddart",
+  "stats": {
+    "count": 101,
+    "median": 177500,
+    "avg": 200456,
+    "min": 11105,
+    "max": 415000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 8,
+      "median_price": 150975,
+      "avg_price": 149244,
+      "min_price": 130000,
+      "max_price": 175000
+    },
+    {
+      "year": 2011,
+      "count": 4,
+      "median_price": 134000,
+      "avg_price": 128500,
+      "min_price": 98000,
+      "max_price": 148000
+    },
+    {
+      "year": 2012,
+      "count": 6,
+      "median_price": 119000,
+      "avg_price": 107500,
+      "min_price": 56000,
+      "max_price": 136000
+    },
+    {
+      "year": 2013,
+      "count": 7,
+      "median_price": 116000,
+      "avg_price": 101429,
+      "min_price": 50000,
+      "max_price": 126000
+    },
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 155000,
+      "avg_price": 145000,
+      "min_price": 80000,
+      "max_price": 178000
+    },
+    {
+      "year": 2015,
+      "count": 9,
+      "median_price": 130000,
+      "avg_price": 114512,
+      "min_price": 11105,
+      "max_price": 177500
+    },
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 189000,
+      "avg_price": 180333,
+      "min_price": 150000,
+      "max_price": 202000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 203000,
+      "avg_price": 205875,
+      "min_price": 179500,
+      "max_price": 238000
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 157500,
+      "avg_price": 158750,
+      "min_price": 135000,
+      "max_price": 185000
+    },
+    {
+      "year": 2019,
+      "count": 4,
+      "median_price": 160000,
+      "avg_price": 175500,
+      "min_price": 134000,
+      "max_price": 248000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 209500,
+      "avg_price": 209500,
+      "min_price": 161000,
+      "max_price": 258000
+    },
+    {
+      "year": 2021,
+      "count": 10,
+      "median_price": 247000,
+      "avg_price": 238500,
+      "min_price": 130000,
+      "max_price": 283000
+    },
+    {
+      "year": 2022,
+      "count": 6,
+      "median_price": 212000,
+      "avg_price": 221000,
+      "min_price": 140000,
+      "max_price": 310000
+    },
+    {
+      "year": 2023,
+      "count": 7,
+      "median_price": 271000,
+      "avg_price": 271143,
+      "min_price": 195000,
+      "max_price": 325000
+    },
+    {
+      "year": 2024,
+      "count": 9,
+      "median_price": 312000,
+      "avg_price": 309000,
+      "min_price": 265000,
+      "max_price": 383000
+    },
+    {
+      "year": 2025,
+      "count": 7,
+      "median_price": 283000,
+      "avg_price": 272429,
+      "min_price": 175000,
+      "max_price": 410000
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 376500,
+      "avg_price": 335000,
+      "min_price": 100000,
+      "max_price": 415000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-26",
+      "address": "305 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 342000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15X5T9"
+    },
+    {
+      "date": "2026-05-01",
+      "address": "349 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 415000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D15R802"
+    },
+    {
+      "date": "2026-03-24",
+      "address": "267 CASTLECURRAGH HEATH, MULHUDDART, BLANCHARDSTOWN",
+      "price": 100000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D15PX39"
+    },
+    {
+      "date": "2026-03-23",
+      "address": "47 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 378000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15DP46"
+    },
+    {
+      "date": "2026-03-03",
+      "address": "134 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 375000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15E7Y8"
+    },
+    {
+      "date": "2026-01-30",
+      "address": "217 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 400000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15E6C4"
+    },
+    {
+      "date": "2025-11-20",
+      "address": "286 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 362000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15R6Y7"
+    },
+    {
+      "date": "2025-10-20",
+      "address": "202 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 175000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15V6Y2"
+    },
+    {
+      "date": "2025-09-12",
+      "address": "164 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 283000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15W957"
+    },
+    {
+      "date": "2025-08-13",
+      "address": "296 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 410000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15V9X8"
+    },
+    {
+      "date": "2025-07-15",
+      "address": "56 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 296000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D15P3C4"
+    },
+    {
+      "date": "2025-04-24",
+      "address": "203 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 182000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D15A3X5"
+    },
+    {
+      "date": "2025-01-30",
+      "address": "327 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 199000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15NY56"
+    },
+    {
+      "date": "2024-11-25",
+      "address": "349 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 312000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D15R802"
+    },
+    {
+      "date": "2024-10-22",
+      "address": "170 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 271000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15N9P5"
+    },
+    {
+      "date": "2024-10-07",
+      "address": "165 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 274000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15HE28"
+    },
+    {
+      "date": "2024-10-02",
+      "address": "42 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 383000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15E2H2"
+    },
+    {
+      "date": "2024-09-06",
+      "address": "20 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 361000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15Y5H0"
+    },
+    {
+      "date": "2024-08-21",
+      "address": "317 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15RW72"
+    },
+    {
+      "date": "2024-07-01",
+      "address": "62 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15P2P3"
+    },
+    {
+      "date": "2024-06-13",
+      "address": "334 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15A6C3"
+    },
+    {
+      "date": "2024-05-03",
+      "address": "87 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15V9Y0"
+    },
+    {
+      "date": "2023-11-29",
+      "address": "145 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15Y2E4"
+    },
+    {
+      "date": "2023-09-13",
+      "address": "124 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 317000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15AD9F"
+    },
+    {
+      "date": "2023-09-05",
+      "address": "147 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15V4P5"
+    },
+    {
+      "date": "2023-09-04",
+      "address": "336 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 195000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15C6T1"
+    },
+    {
+      "date": "2023-08-18",
+      "address": "182 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15DW20"
+    },
+    {
+      "date": "2023-06-15",
+      "address": "325 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 271000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15VF95"
+    },
+    {
+      "date": "2023-05-05",
+      "address": "63 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15A0E0"
+    },
+    {
+      "date": "2022-12-20",
+      "address": "86 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 259000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15X2C4"
+    },
+    {
+      "date": "2022-12-13",
+      "address": "98 Castlecurragh Heath, Mulhuddart",
+      "price": 140000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D07NT66"
+    },
+    {
+      "date": "2022-10-28",
+      "address": "80 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15A8N9"
+    },
+    {
+      "date": "2022-07-11",
+      "address": "201 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 152000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15WYF7"
+    },
+    {
+      "date": "2022-02-16",
+      "address": "58 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15F2C8"
+    },
+    {
+      "date": "2022-01-18",
+      "address": "54 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 165000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15X6Y0"
+    },
+    {
+      "date": "2021-12-27",
+      "address": "62 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15P2P3"
+    },
+    {
+      "date": "2021-11-10",
+      "address": "36 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15Y0Y2"
+    },
+    {
+      "date": "2021-08-19",
+      "address": "348 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 249000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15H2A2"
+    },
+    {
+      "date": "2021-08-09",
+      "address": "268 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 256000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15FF61"
+    },
+    {
+      "date": "2021-07-28",
+      "address": "142 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 130000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15A4E3"
+    },
+    {
+      "date": "2021-07-09",
+      "address": "153 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15R923"
+    },
+    {
+      "date": "2021-07-05",
+      "address": "218 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 283000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15YD29"
+    },
+    {
+      "date": "2021-03-15",
+      "address": "310 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-09",
+      "address": "62 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 232000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15P2P3"
+    },
+    {
+      "date": "2021-02-03",
+      "address": "134 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 220000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15E7Y8"
+    },
+    {
+      "date": "2020-04-21",
+      "address": "90 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 258000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-19",
+      "address": "274 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 161000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-13",
+      "address": "319 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 134000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-21",
+      "address": "204 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 185000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-07",
+      "address": "187 CASTLECURRAGH HEATH, MULHUDDART, DUBLIN 15",
+      "price": 248000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 101
+}

@@ -1,0 +1,289 @@
+{
+  "slug": "stillorgan-park-blackrock",
+  "stats": {
+    "count": 22,
+    "median": 1352500,
+    "avg": 1380100,
+    "min": 543500,
+    "max": 2806000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 950500,
+      "avg_price": 950500,
+      "min_price": 950500,
+      "max_price": 950500
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 543500,
+      "avg_price": 543500,
+      "min_price": 543500,
+      "max_price": 543500
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1100000,
+      "avg_price": 1100000,
+      "min_price": 1100000,
+      "max_price": 1100000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 1052500,
+      "avg_price": 1052500,
+      "min_price": 875000,
+      "max_price": 1230000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1400000,
+      "avg_price": 1400000,
+      "min_price": 1400000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 705000,
+      "avg_price": 705000,
+      "min_price": 705000,
+      "max_price": 705000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 1059250,
+      "avg_price": 1059250,
+      "min_price": 978500,
+      "max_price": 1140000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1405000,
+      "avg_price": 1405000,
+      "min_price": 1405000,
+      "max_price": 1405000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 1355000,
+      "avg_price": 1348750,
+      "min_price": 1085000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2024,
+      "count": 4,
+      "median_price": 1741850,
+      "avg_price": 1874675,
+      "min_price": 1515000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 1630000,
+      "avg_price": 1920333,
+      "min_price": 1325000,
+      "max_price": 2806000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1380000,
+      "avg_price": 1380000,
+      "min_price": 1380000,
+      "max_price": 1380000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-03-18",
+      "address": "6 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 1380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94VF68"
+    },
+    {
+      "date": "2025-10-01",
+      "address": "53 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 1325000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A94E170"
+    },
+    {
+      "date": "2025-07-10",
+      "address": "41 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 2806000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "A94P267"
+    },
+    {
+      "date": "2025-04-03",
+      "address": "50 STILLORGAN PARK, BLACKROCK, CO DUBLIN",
+      "price": 1630000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A94YF80"
+    },
+    {
+      "date": "2024-12-09",
+      "address": "55 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 1515000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A94NR71"
+    },
+    {
+      "date": "2024-08-12",
+      "address": "34 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 1950000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A94T923"
+    },
+    {
+      "date": "2024-06-14",
+      "address": "51 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 1533700,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "A94DE08"
+    },
+    {
+      "date": "2024-02-06",
+      "address": "43 STILLORGAN PARK, BLACKROCK, CO. DUBLIN",
+      "price": 2500000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A94RR20"
+    },
+    {
+      "date": "2023-10-06",
+      "address": "57 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94TY26"
+    },
+    {
+      "date": "2023-09-28",
+      "address": "28 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94P660"
+    },
+    {
+      "date": "2023-07-31",
+      "address": "9 STILLORGAN PARK, BLACKROCK, CO DUBLIN",
+      "price": 1085000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94WY03"
+    },
+    {
+      "date": "2023-03-14",
+      "address": "8 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 1435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94DR12"
+    },
+    {
+      "date": "2022-12-07",
+      "address": "14 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 1405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94P990"
+    },
+    {
+      "date": "2020-03-20",
+      "address": "4 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 978500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-10",
+      "address": "2 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 1140000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-04-26",
+      "address": "20 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 705000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-11-02",
+      "address": "42 Stillorgan Park, Blackrock, Co. Dublin",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-11-14",
+      "address": "47 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 1230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-02-24",
+      "address": "54 STILLORGAN PARK, BLACKROCK, DUBLIN",
+      "price": 875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-06-26",
+      "address": "14 Stillorgan Park, Blackrock",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-02-15",
+      "address": "12 Stillorgan Park, Blackrock, Co. Dublin",
+      "price": 543500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-05-24",
+      "address": "37 Stillorgan Park, Blackrock",
+      "price": 950500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 22
+}

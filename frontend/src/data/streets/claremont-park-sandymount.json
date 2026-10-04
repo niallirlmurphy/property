@@ -1,0 +1,185 @@
+{
+  "slug": "claremont-park-sandymount",
+  "stats": {
+    "count": 12,
+    "median": 1350000,
+    "avg": 1350859,
+    "min": 820000,
+    "max": 2113000,
+    "firstYear": 2010,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 820000,
+      "avg_price": 820000,
+      "min_price": 820000,
+      "max_price": 820000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 1275000,
+      "avg_price": 1275000,
+      "min_price": 1150000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1600000,
+      "avg_price": 1600000,
+      "min_price": 1600000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1300000,
+      "avg_price": 1300000,
+      "min_price": 1300000,
+      "max_price": 1300000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1146750,
+      "avg_price": 1146750,
+      "min_price": 1146750,
+      "max_price": 1146750
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1150000,
+      "avg_price": 1150000,
+      "min_price": 1100000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1530000,
+      "avg_price": 1530000,
+      "min_price": 1530000,
+      "max_price": 1530000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1425278,
+      "avg_price": 1425278,
+      "min_price": 1400000,
+      "max_price": 1450556
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 2113000,
+      "avg_price": 2113000,
+      "min_price": 2113000,
+      "max_price": 2113000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-07-05",
+      "address": "13 CLAREMONT PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 2113000,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "D04FW31"
+    },
+    {
+      "date": "2023-12-22",
+      "address": "7 CLAREMONT PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04P996"
+    },
+    {
+      "date": "2023-06-23",
+      "address": "24 CLAREMONT PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1450556,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04PH90"
+    },
+    {
+      "date": "2022-07-05",
+      "address": "6 CLAREMONT PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04RF25"
+    },
+    {
+      "date": "2019-07-09",
+      "address": "27 CLAREMONT PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-21",
+      "address": "30 CLAREMONT PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-03",
+      "address": "16 CLAREMONT PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1146750,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-31",
+      "address": "23 CLAREMONT PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-23",
+      "address": "19 CLAREMONT PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-09-01",
+      "address": "12 Claremont Park, Sandymount",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-08-21",
+      "address": "2 CLAREMONT PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-08-17",
+      "address": "32 Claremont Park, Sandymount",
+      "price": 820000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 12
+}

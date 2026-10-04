@@ -1,0 +1,545 @@
+{
+  "slug": "dooradoyle-park-dooradoyle",
+  "stats": {
+    "count": 97,
+    "median": 180000,
+    "avg": 194038,
+    "min": 70000,
+    "max": 428500,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 164750,
+      "avg_price": 164750,
+      "min_price": 164750,
+      "max_price": 164750
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 100000,
+      "avg_price": 100000,
+      "min_price": 100000,
+      "max_price": 100000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 75000,
+      "avg_price": 75000,
+      "min_price": 75000,
+      "max_price": 75000
+    },
+    {
+      "year": 2014,
+      "count": 6,
+      "median_price": 108500,
+      "avg_price": 106917,
+      "min_price": 70000,
+      "max_price": 147000
+    },
+    {
+      "year": 2015,
+      "count": 9,
+      "median_price": 130000,
+      "avg_price": 131333,
+      "min_price": 80000,
+      "max_price": 185000
+    },
+    {
+      "year": 2016,
+      "count": 5,
+      "median_price": 122500,
+      "avg_price": 128600,
+      "min_price": 85500,
+      "max_price": 165000
+    },
+    {
+      "year": 2017,
+      "count": 8,
+      "median_price": 166000,
+      "avg_price": 168125,
+      "min_price": 110000,
+      "max_price": 210000
+    },
+    {
+      "year": 2018,
+      "count": 12,
+      "median_price": 155000,
+      "avg_price": 161160,
+      "min_price": 123921,
+      "max_price": 223000
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 173500,
+      "avg_price": 179438,
+      "min_price": 145000,
+      "max_price": 230000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 163000,
+      "avg_price": 173200,
+      "min_price": 153000,
+      "max_price": 200000
+    },
+    {
+      "year": 2021,
+      "count": 8,
+      "median_price": 201500,
+      "avg_price": 199812,
+      "min_price": 164000,
+      "max_price": 242000
+    },
+    {
+      "year": 2022,
+      "count": 7,
+      "median_price": 245000,
+      "avg_price": 242714,
+      "min_price": 190000,
+      "max_price": 315000
+    },
+    {
+      "year": 2023,
+      "count": 11,
+      "median_price": 234000,
+      "avg_price": 238091,
+      "min_price": 182000,
+      "max_price": 300000
+    },
+    {
+      "year": 2024,
+      "count": 4,
+      "median_price": 295000,
+      "avg_price": 292250,
+      "min_price": 267000,
+      "max_price": 312000
+    },
+    {
+      "year": 2025,
+      "count": 5,
+      "median_price": 278000,
+      "avg_price": 255600,
+      "min_price": 180000,
+      "max_price": 320000
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 351000,
+      "avg_price": 345250,
+      "min_price": 250000,
+      "max_price": 428500
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-16",
+      "address": "78 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 392000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "V94K00X"
+    },
+    {
+      "date": "2026-06-26",
+      "address": "114 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 250000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "V94V290"
+    },
+    {
+      "date": "2026-04-10",
+      "address": "171 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94K5W6"
+    },
+    {
+      "date": "2026-03-27",
+      "address": "190 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 275000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "V94W524"
+    },
+    {
+      "date": "2026-03-13",
+      "address": "128 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 416000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94PF6T"
+    },
+    {
+      "date": "2026-01-29",
+      "address": "138 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 428500,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "V94RX7T"
+    },
+    {
+      "date": "2025-12-12",
+      "address": "5 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 278000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "V94R2TE"
+    },
+    {
+      "date": "2025-06-13",
+      "address": "188 DOORADOYLE PK, DOORADOYLE, LIMERICK",
+      "price": 180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94DP80"
+    },
+    {
+      "date": "2025-06-09",
+      "address": "109 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 300000,
+      "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": "V94W7K3"
+    },
+    {
+      "date": "2025-03-07",
+      "address": "71 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 320000,
+      "bedrooms": 3,
+      "propertyType": null,
+      "eircode": "V946D51"
+    },
+    {
+      "date": "2025-02-21",
+      "address": "APT 1, DOORADOYLE PARK, DOORADOYLE",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "V94E097"
+    },
+    {
+      "date": "2024-12-03",
+      "address": "189 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94RTX6"
+    },
+    {
+      "date": "2024-11-29",
+      "address": "49 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 267000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94FK75"
+    },
+    {
+      "date": "2024-08-30",
+      "address": "52 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 312000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94RW92"
+    },
+    {
+      "date": "2024-05-28",
+      "address": "58 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94H4X6"
+    },
+    {
+      "date": "2023-12-06",
+      "address": "122 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 196000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94X898"
+    },
+    {
+      "date": "2023-11-27",
+      "address": "153 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94PY24"
+    },
+    {
+      "date": "2023-10-24",
+      "address": "APT 59, DOORADOYLE PARK, DOORADOYLE",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2023-09-05",
+      "address": "37 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94K2Y7"
+    },
+    {
+      "date": "2023-08-21",
+      "address": "40 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94Y165"
+    },
+    {
+      "date": "2023-07-14",
+      "address": "41 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94HY53"
+    },
+    {
+      "date": "2023-05-30",
+      "address": "29 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 234000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94FP68"
+    },
+    {
+      "date": "2023-05-30",
+      "address": "APT 169, DOORADOYLE PARK, DOORADOYLE",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "V94DH90"
+    },
+    {
+      "date": "2023-05-18",
+      "address": "148 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 192000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94KH95"
+    },
+    {
+      "date": "2023-05-12",
+      "address": "139 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94V6RN"
+    },
+    {
+      "date": "2023-02-21",
+      "address": "160 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 182000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94R299"
+    },
+    {
+      "date": "2022-11-30",
+      "address": "6 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94KP29"
+    },
+    {
+      "date": "2022-10-21",
+      "address": "APT 4, DOORADOYLE PARK, DOORADOYLE",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "V94KN26"
+    },
+    {
+      "date": "2022-09-21",
+      "address": "28 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 232000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94H4C2"
+    },
+    {
+      "date": "2022-07-22",
+      "address": "APT 2, DOORADOYLE PARK, DOORADOYLE",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "V94RH72"
+    },
+    {
+      "date": "2022-05-30",
+      "address": "131 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94DWX3"
+    },
+    {
+      "date": "2022-04-21",
+      "address": "150 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94EC64"
+    },
+    {
+      "date": "2022-02-24",
+      "address": "45 DOORADOYLE PARK, DOORADOYLE, LIMERICK CITY",
+      "price": 192000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94A3C9"
+    },
+    {
+      "date": "2021-12-15",
+      "address": "64 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 228000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94HFX4"
+    },
+    {
+      "date": "2021-11-12",
+      "address": "85 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 242000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94H5YD"
+    },
+    {
+      "date": "2021-09-16",
+      "address": "10 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 215000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94X825"
+    },
+    {
+      "date": "2021-09-16",
+      "address": "57 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 180000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94PK30"
+    },
+    {
+      "date": "2021-09-13",
+      "address": "34 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 208000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94N767"
+    },
+    {
+      "date": "2021-06-11",
+      "address": "164 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 195000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94CX61"
+    },
+    {
+      "date": "2021-06-10",
+      "address": "APT 9, DOORADOYLE PARK, DOORADOYLE",
+      "price": 166500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "V94XR26"
+    },
+    {
+      "date": "2021-02-15",
+      "address": "154 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 164000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-10",
+      "address": "3 DOORADOYLE PARK, DOORADOYLE, CO LIMERICK",
+      "price": 163000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-02",
+      "address": "20 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 155000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-14",
+      "address": "167 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 195000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-16",
+      "address": "24 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-06",
+      "address": "192 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 153000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-24",
+      "address": "101 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 189000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-01",
+      "address": "142 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-11",
+      "address": "46 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-28",
+      "address": "158 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
+      "price": 165000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 97
+}

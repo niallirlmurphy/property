@@ -1,0 +1,217 @@
+{
+  "slug": "louvain-ardilea",
+  "stats": {
+    "count": 17,
+    "median": 1275000,
+    "avg": 1309353,
+    "min": 840000,
+    "max": 2280000,
+    "firstYear": 2010,
+    "lastYear": 2023
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1175000,
+      "avg_price": 1175000,
+      "min_price": 1175000,
+      "max_price": 1175000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 970000,
+      "avg_price": 970000,
+      "min_price": 970000,
+      "max_price": 970000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 840000,
+      "avg_price": 840000,
+      "min_price": 840000,
+      "max_price": 840000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1262500,
+      "avg_price": 1262500,
+      "min_price": 1000000,
+      "max_price": 1525000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 1420000,
+      "avg_price": 1420000,
+      "min_price": 1410000,
+      "max_price": 1430000
+    },
+    {
+      "year": 2021,
+      "count": 7,
+      "median_price": 1224000,
+      "avg_price": 1307714,
+      "min_price": 920000,
+      "max_price": 2280000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1627500,
+      "avg_price": 1627500,
+      "min_price": 1275000,
+      "max_price": 1980000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2023-10-13",
+      "address": "27 LOUVAIN, ARDILEA, CLONSKEAGH",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14E263"
+    },
+    {
+      "date": "2023-06-08",
+      "address": "48 LOUVAIN, ARDILEA, CLONSKEAGH",
+      "price": 1980000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14CX40"
+    },
+    {
+      "date": "2021-12-13",
+      "address": "29 LOUVAIN, ARDILEA, CLONSKEAGH DUBLIN 14",
+      "price": 1120000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14XE81"
+    },
+    {
+      "date": "2021-11-15",
+      "address": "35 LOUVAIN, ARDILEA, ROEBUCK",
+      "price": 1360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14AX73"
+    },
+    {
+      "date": "2021-09-30",
+      "address": "38 LOUVAIN, ARDILEA, ROEBUCK RD DUBLIN 14",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14W267"
+    },
+    {
+      "date": "2021-09-02",
+      "address": "13 LOUVAIN, ARDILEA, CLONSKEAGH DUBLIN 14",
+      "price": 950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14DF80"
+    },
+    {
+      "date": "2021-04-23",
+      "address": "40 LOUVAIN, ARDILEA, CLONSKEAGH",
+      "price": 2280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14TW83"
+    },
+    {
+      "date": "2021-03-25",
+      "address": "23 LOUVAIN, ARDILEA, DUBLIN 24",
+      "price": 920000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-15",
+      "address": "28 LOUVAIN, ARDILEA, ROEBUCK ROAD",
+      "price": 1224000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-02",
+      "address": "4 LOUVAIN, ARDILEA, CLONSKEAGH DUBLIN 14",
+      "price": 1430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-02",
+      "address": "12 LOUVAIN, ARDILEA, CLONSKEAGH",
+      "price": 1410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-06",
+      "address": "30 LOUVAIN, ARDILEA, CLUAIN SCEACH DUBLIN 14",
+      "price": 1525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-05",
+      "address": "32 LOUVAIN, ARDILEA, ROEBUCK RD DUBLIN 14",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-10",
+      "address": "15 LOUVAIN, ARDILEA, ROEBUCK RD DUBLIN 14",
+      "price": 840000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-15",
+      "address": "4 LOUVAIN, ARDILEA, CLONSKEAGH DUBLIN 14",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-13",
+      "address": "44 LOUVAIN, ARDILEA, CLONSKEA",
+      "price": 970000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-03-30",
+      "address": "40 Louvain, Ardilea, Clonskeagh",
+      "price": 1175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14TW83"
+    }
+  ],
+  "totalTransactions": 17
+}

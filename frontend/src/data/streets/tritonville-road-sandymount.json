@@ -1,0 +1,553 @@
+{
+  "slug": "tritonville-road-sandymount",
+  "stats": {
+    "count": 79,
+    "median": 1200000,
+    "avg": 1112924,
+    "min": 12500,
+    "max": 2500000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 5,
+      "median_price": 660000,
+      "avg_price": 616800,
+      "min_price": 324000,
+      "max_price": 750000
+    },
+    {
+      "year": 2011,
+      "count": 3,
+      "median_price": 470000,
+      "avg_price": 468333,
+      "min_price": 360000,
+      "max_price": 575000
+    },
+    {
+      "year": 2012,
+      "count": 5,
+      "median_price": 429000,
+      "avg_price": 538800,
+      "min_price": 355000,
+      "max_price": 985000
+    },
+    {
+      "year": 2013,
+      "count": 4,
+      "median_price": 540000,
+      "avg_price": 530375,
+      "min_price": 491000,
+      "max_price": 550500
+    },
+    {
+      "year": 2014,
+      "count": 3,
+      "median_price": 948000,
+      "avg_price": 940000,
+      "min_price": 912000,
+      "max_price": 960000
+    },
+    {
+      "year": 2015,
+      "count": 4,
+      "median_price": 1112500,
+      "avg_price": 1160000,
+      "min_price": 820000,
+      "max_price": 1595000
+    },
+    {
+      "year": 2016,
+      "count": 6,
+      "median_price": 982500,
+      "avg_price": 957500,
+      "min_price": 800000,
+      "max_price": 1100000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 1127500,
+      "avg_price": 1185150,
+      "min_price": 875602,
+      "max_price": 1610000
+    },
+    {
+      "year": 2018,
+      "count": 3,
+      "median_price": 1400000,
+      "avg_price": 1360000,
+      "min_price": 1260000,
+      "max_price": 1420000
+    },
+    {
+      "year": 2019,
+      "count": 6,
+      "median_price": 1287500,
+      "avg_price": 1032917,
+      "min_price": 12500,
+      "max_price": 1420000
+    },
+    {
+      "year": 2020,
+      "count": 3,
+      "median_price": 1275000,
+      "avg_price": 1133333,
+      "min_price": 825000,
+      "max_price": 1300000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1197500,
+      "avg_price": 1197500,
+      "min_price": 995000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2022,
+      "count": 10,
+      "median_price": 1351372,
+      "avg_price": 1451836,
+      "min_price": 1165000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 1415000,
+      "avg_price": 1345000,
+      "min_price": 650000,
+      "max_price": 1900000
+    },
+    {
+      "year": 2024,
+      "count": 7,
+      "median_price": 1650000,
+      "avg_price": 1530714,
+      "min_price": 980000,
+      "max_price": 1850000
+    },
+    {
+      "year": 2025,
+      "count": 9,
+      "median_price": 1510000,
+      "avg_price": 1347222,
+      "min_price": 230000,
+      "max_price": 1800000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1860000,
+      "avg_price": 1860000,
+      "min_price": 1860000,
+      "max_price": 1860000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-01-29",
+      "address": "125 TRITONVILLE RD, SANDYMOUNT, DUBLIN",
+      "price": 1860000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04F540"
+    },
+    {
+      "date": "2025-11-06",
+      "address": "35 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 915000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04A436"
+    },
+    {
+      "date": "2025-09-18",
+      "address": "95 TRITONVILLE RD, SANDYMOUNT, DUBLIN",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04DE28"
+    },
+    {
+      "date": "2025-09-09",
+      "address": "43 TRITONVILLE ROAD, SANDYMOUNT, DUBLIN 4",
+      "price": 1300000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04PF60"
+    },
+    {
+      "date": "2025-06-10",
+      "address": "147 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1510000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04WD88"
+    },
+    {
+      "date": "2025-06-06",
+      "address": "138 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1695000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04RH31"
+    },
+    {
+      "date": "2025-05-01",
+      "address": "131 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1800000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04X076"
+    },
+    {
+      "date": "2025-03-06",
+      "address": "137 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1700000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04RX01"
+    },
+    {
+      "date": "2025-02-05",
+      "address": "153 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1455000,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "D04FX94"
+    },
+    {
+      "date": "2025-01-15",
+      "address": "116 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1520000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04Y8N7"
+    },
+    {
+      "date": "2024-12-19",
+      "address": "59 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1725000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04E5W9"
+    },
+    {
+      "date": "2024-11-07",
+      "address": "143 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04AX96"
+    },
+    {
+      "date": "2024-10-03",
+      "address": "129 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04DE00"
+    },
+    {
+      "date": "2024-08-09",
+      "address": "37 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1260000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04KW56"
+    },
+    {
+      "date": "2024-06-18",
+      "address": "128 TRITONVILLE ROAD, SANDYMOUNT, DUBLIN 4",
+      "price": 1850000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04E176"
+    },
+    {
+      "date": "2024-03-20",
+      "address": "133 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1550000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D04PK22"
+    },
+    {
+      "date": "2024-02-09",
+      "address": "50 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 980000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04AV21"
+    },
+    {
+      "date": "2023-05-26",
+      "address": "104 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E443"
+    },
+    {
+      "date": "2023-05-03",
+      "address": "69 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X5Y6"
+    },
+    {
+      "date": "2023-04-27",
+      "address": "144 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04HX79"
+    },
+    {
+      "date": "2023-03-16",
+      "address": "81 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04XP86"
+    },
+    {
+      "date": "2022-12-15",
+      "address": "123 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1312744,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04CK63"
+    },
+    {
+      "date": "2022-12-01",
+      "address": "131 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 2500000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04X076"
+    },
+    {
+      "date": "2022-11-28",
+      "address": "141 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1552120,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V304"
+    },
+    {
+      "date": "2022-11-10",
+      "address": "14 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1286000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04CF76"
+    },
+    {
+      "date": "2022-10-20",
+      "address": "25 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1165000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X7X9"
+    },
+    {
+      "date": "2022-09-19",
+      "address": "5 TRITONVILLE ROAD, SANDYMOUNT, DUBLIN 4",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04VE82"
+    },
+    {
+      "date": "2022-07-28",
+      "address": "122 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04YR12"
+    },
+    {
+      "date": "2022-06-08",
+      "address": "140 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1437500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y186"
+    },
+    {
+      "date": "2022-05-30",
+      "address": "33 TRITONVILLE ROAD, SANDYMOUNT, DUBLIN 4",
+      "price": 1390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y098"
+    },
+    {
+      "date": "2022-02-21",
+      "address": "76 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04P8P7"
+    },
+    {
+      "date": "2021-11-26",
+      "address": "33 TRITONVILLE ROAD, SANDYMOUNT, DUBLIN 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y098"
+    },
+    {
+      "date": "2021-08-27",
+      "address": "71 TRITONVILLE ROAD, SANDYMOUNT, DUBLIN 4",
+      "price": 995000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04FW52"
+    },
+    {
+      "date": "2020-07-20",
+      "address": "66 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-24",
+      "address": "45 TRITONVILLE ROAD, SANDYMOUNT, DUBLIN 4",
+      "price": 825000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-23",
+      "address": "103 TRITONVILLE ROAD, SANDYMOUNT, DUBLIN 4",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-12",
+      "address": "93 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-16",
+      "address": "113 TRITONVILLE ROAD, SANDYMOUNT, DUBLIN 4",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-20",
+      "address": "90 TRITONVILLE ROAD, SANDYMOUNT, DUBLIN 4",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-21",
+      "address": "2 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 840000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-16",
+      "address": "96 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-07",
+      "address": "146 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 12500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-01",
+      "address": "72 TRITONVILLE ROAD, SANDYMOUNT, DUBLIN 4",
+      "price": 1260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-18",
+      "address": "79 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-10",
+      "address": "126 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-23",
+      "address": "73 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 985000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-29",
+      "address": "66 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1610000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-15",
+      "address": "63 TRITONVILLE RD, SANDYMOUNT, DUBLIN",
+      "price": 1270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-01-25",
+      "address": "50 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 875602,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04AV21"
+    },
+    {
+      "date": "2016-12-20",
+      "address": "91 TRITONVILLE RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 79
+}

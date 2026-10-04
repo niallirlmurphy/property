@@ -1,0 +1,129 @@
+{
+  "slug": "montpelier-parade-monkstown",
+  "stats": {
+    "count": 8,
+    "median": 1425000,
+    "avg": 1454688,
+    "min": 680000,
+    "max": 2100000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 680000,
+      "avg_price": 680000,
+      "min_price": 680000,
+      "max_price": 680000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1200000,
+      "avg_price": 1200000,
+      "min_price": 1200000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1312500,
+      "avg_price": 1312500,
+      "min_price": 1312500,
+      "max_price": 1312500
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1425000,
+      "avg_price": 1425000,
+      "min_price": 1350000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 1900000,
+      "avg_price": 1900000,
+      "min_price": 1700000,
+      "max_price": 2100000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1795000,
+      "avg_price": 1795000,
+      "min_price": 1795000,
+      "max_price": 1795000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-03-30",
+      "address": "47 MONTPELIER PARADE, MONKSTOWN, DUBLIN",
+      "price": 1795000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94E3F6"
+    },
+    {
+      "date": "2023-05-05",
+      "address": "47 MONTPELIER PARADE, MONKSTOWN, DUBLIN",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94E3F6"
+    },
+    {
+      "date": "2023-03-30",
+      "address": "8 MONTPELIER PARADE, MONKSTOWN, DUBLIN",
+      "price": 2100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94D763"
+    },
+    {
+      "date": "2021-12-09",
+      "address": "49 MONTPELIER PARADE, MONKSTOWN, DUBLIN",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94X8D3"
+    },
+    {
+      "date": "2021-02-19",
+      "address": "6 MONTPELIER PARADE, MONKSTOWN, DUBLIN",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-28",
+      "address": "47 MONTPELIER PARADE, MONKSTOWN, DUBLIN",
+      "price": 1312500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94E3F6"
+    },
+    {
+      "date": "2017-06-06",
+      "address": "6 MONTPELIER PARADE, MONKSTOWN, DUBLIN",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-04-12",
+      "address": "35 MONTPELIER PARADE, MONKSTOWN",
+      "price": 680000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 8
+}

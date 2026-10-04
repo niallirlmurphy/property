@@ -1,0 +1,553 @@
+{
+  "slug": "athlumney-castle-navan",
+  "stats": {
+    "count": 95,
+    "median": 260000,
+    "avg": 274147,
+    "min": 130000,
+    "max": 510000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 207500,
+      "avg_price": 213250,
+      "min_price": 190000,
+      "max_price": 248000
+    },
+    {
+      "year": 2011,
+      "count": 4,
+      "median_price": 218375,
+      "avg_price": 221062,
+      "min_price": 157500,
+      "max_price": 290000
+    },
+    {
+      "year": 2012,
+      "count": 8,
+      "median_price": 156750,
+      "avg_price": 162375,
+      "min_price": 130000,
+      "max_price": 200000
+    },
+    {
+      "year": 2013,
+      "count": 6,
+      "median_price": 155250,
+      "avg_price": 165500,
+      "min_price": 141000,
+      "max_price": 230000
+    },
+    {
+      "year": 2014,
+      "count": 7,
+      "median_price": 210000,
+      "avg_price": 219714,
+      "min_price": 178000,
+      "max_price": 295000
+    },
+    {
+      "year": 2015,
+      "count": 6,
+      "median_price": 205500,
+      "avg_price": 216417,
+      "min_price": 190000,
+      "max_price": 257500
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 208500,
+      "avg_price": 229875,
+      "min_price": 192500,
+      "max_price": 310000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 235625,
+      "avg_price": 241562,
+      "min_price": 225000,
+      "max_price": 270000
+    },
+    {
+      "year": 2018,
+      "count": 6,
+      "median_price": 312500,
+      "avg_price": 312500,
+      "min_price": 270000,
+      "max_price": 365000
+    },
+    {
+      "year": 2019,
+      "count": 6,
+      "median_price": 252750,
+      "avg_price": 275083,
+      "min_price": 250000,
+      "max_price": 352500
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 277500,
+      "avg_price": 279250,
+      "min_price": 255000,
+      "max_price": 307000
+    },
+    {
+      "year": 2021,
+      "count": 12,
+      "median_price": 307500,
+      "avg_price": 315292,
+      "min_price": 245000,
+      "max_price": 420000
+    },
+    {
+      "year": 2022,
+      "count": 9,
+      "median_price": 345000,
+      "avg_price": 345111,
+      "min_price": 200000,
+      "max_price": 430000
+    },
+    {
+      "year": 2023,
+      "count": 5,
+      "median_price": 339000,
+      "avg_price": 345800,
+      "min_price": 315000,
+      "max_price": 377000
+    },
+    {
+      "year": 2024,
+      "count": 5,
+      "median_price": 365000,
+      "avg_price": 366800,
+      "min_price": 351000,
+      "max_price": 380000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 465500,
+      "avg_price": 457167,
+      "min_price": 396000,
+      "max_price": 510000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 413000,
+      "avg_price": 413000,
+      "min_price": 396000,
+      "max_price": 430000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-17",
+      "address": "139 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 430000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "C15TH9K"
+    },
+    {
+      "date": "2026-02-23",
+      "address": "143 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 396000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "C15R5YP"
+    },
+    {
+      "date": "2025-10-13",
+      "address": "225 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 396000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "C15P6KR"
+    },
+    {
+      "date": "2025-10-01",
+      "address": "116 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 465500,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "C15XN4T"
+    },
+    {
+      "date": "2025-03-25",
+      "address": "103 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 510000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "C15P8DK"
+    },
+    {
+      "date": "2024-11-26",
+      "address": "228 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 351000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15N6X2"
+    },
+    {
+      "date": "2024-08-23",
+      "address": "95 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15D28P"
+    },
+    {
+      "date": "2024-08-19",
+      "address": "96 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15V06P"
+    },
+    {
+      "date": "2024-05-28",
+      "address": "93 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 373000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15TK6D"
+    },
+    {
+      "date": "2024-04-24",
+      "address": "26 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15W8C6"
+    },
+    {
+      "date": "2023-10-31",
+      "address": "226 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15F1W8"
+    },
+    {
+      "date": "2023-08-24",
+      "address": "213 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15P8X7"
+    },
+    {
+      "date": "2023-08-15",
+      "address": "216 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 377000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15F2C6"
+    },
+    {
+      "date": "2023-07-28",
+      "address": "32 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 339000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15E9W6"
+    },
+    {
+      "date": "2023-03-31",
+      "address": "159 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 338000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15EYC5"
+    },
+    {
+      "date": "2022-10-12",
+      "address": "234 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15PH02"
+    },
+    {
+      "date": "2022-10-05",
+      "address": "114 ATHLUMNEY CASTLE, NAVAN, CO MEATH",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15PXD7"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "128 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15Y5RH"
+    },
+    {
+      "date": "2022-07-22",
+      "address": "182 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15H3K1"
+    },
+    {
+      "date": "2022-07-14",
+      "address": "219 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 311000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15NY64"
+    },
+    {
+      "date": "2022-06-16",
+      "address": "19 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15N2C8"
+    },
+    {
+      "date": "2022-06-02",
+      "address": "197 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15Y7N0"
+    },
+    {
+      "date": "2022-03-16",
+      "address": "179 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15N8P4"
+    },
+    {
+      "date": "2022-01-17",
+      "address": "79 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15CX9V"
+    },
+    {
+      "date": "2021-12-17",
+      "address": "174 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15C4H1"
+    },
+    {
+      "date": "2021-10-14",
+      "address": "173 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15C2C2"
+    },
+    {
+      "date": "2021-09-14",
+      "address": "199 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 333500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15P8C2"
+    },
+    {
+      "date": "2021-08-27",
+      "address": "196 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15V9H0"
+    },
+    {
+      "date": "2021-08-24",
+      "address": "18 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15A5V6"
+    },
+    {
+      "date": "2021-07-21",
+      "address": "1 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15R9C8"
+    },
+    {
+      "date": "2021-06-30",
+      "address": "148 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15A7XK"
+    },
+    {
+      "date": "2021-05-07",
+      "address": "145 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15XWK3"
+    },
+    {
+      "date": "2021-03-12",
+      "address": "75 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-12",
+      "address": "226 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15F1W8"
+    },
+    {
+      "date": "2021-02-09",
+      "address": "197 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15Y7N0"
+    },
+    {
+      "date": "2021-02-04",
+      "address": "151 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-22",
+      "address": "77 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 307000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-07",
+      "address": "21 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-07",
+      "address": "101 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-16",
+      "address": "54 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-18",
+      "address": "50 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-16",
+      "address": "168 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-17",
+      "address": "3 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 352500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-05",
+      "address": "130 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 252000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-09",
+      "address": "63 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 253500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-07",
+      "address": "79 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 292500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15CX9V"
+    },
+    {
+      "date": "2018-11-23",
+      "address": "103 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 295000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "C15P8DK"
+    },
+    {
+      "date": "2018-06-13",
+      "address": "85 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-17",
+      "address": "202 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-13",
+      "address": "234 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "C15PH02"
+    }
+  ],
+  "totalTransactions": 95
+}

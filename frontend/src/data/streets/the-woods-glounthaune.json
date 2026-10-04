@@ -1,0 +1,537 @@
+{
+  "slug": "the-woods-glounthaune",
+  "stats": {
+    "count": 108,
+    "median": 264317,
+    "avg": 290971,
+    "min": 120000,
+    "max": 605000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 10,
+      "median_price": 221916,
+      "avg_price": 213048,
+      "min_price": 132158,
+      "max_price": 300000
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 135683,
+      "avg_price": 165874,
+      "min_price": 132160,
+      "max_price": 229780
+    },
+    {
+      "year": 2014,
+      "count": 8,
+      "median_price": 213992,
+      "avg_price": 187725,
+      "min_price": 120000,
+      "max_price": 233000
+    },
+    {
+      "year": 2015,
+      "count": 15,
+      "median_price": 221164,
+      "avg_price": 237146,
+      "min_price": 140000,
+      "max_price": 400678
+    },
+    {
+      "year": 2016,
+      "count": 24,
+      "median_price": 238691,
+      "avg_price": 263072,
+      "min_price": 220263,
+      "max_price": 425000
+    },
+    {
+      "year": 2017,
+      "count": 13,
+      "median_price": 304770,
+      "avg_price": 318415,
+      "min_price": 243096,
+      "max_price": 414317
+    },
+    {
+      "year": 2018,
+      "count": 7,
+      "median_price": 308370,
+      "avg_price": 325162,
+      "min_price": 284552,
+      "max_price": 396475
+    },
+    {
+      "year": 2019,
+      "count": 5,
+      "median_price": 270000,
+      "avg_price": 303300,
+      "min_price": 253000,
+      "max_price": 388500
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 425000,
+      "avg_price": 425000,
+      "min_price": 385000,
+      "max_price": 465000
+    },
+    {
+      "year": 2021,
+      "count": 7,
+      "median_price": 395000,
+      "avg_price": 390857,
+      "min_price": 250000,
+      "max_price": 560000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 405000,
+      "avg_price": 414333,
+      "min_price": 400000,
+      "max_price": 438000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 297000,
+      "avg_price": 304750,
+      "min_price": 255000,
+      "max_price": 370000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 479000,
+      "avg_price": 464667,
+      "min_price": 410000,
+      "max_price": 505000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 487500,
+      "avg_price": 487500,
+      "min_price": 370000,
+      "max_price": 605000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 537500,
+      "avg_price": 537500,
+      "min_price": 530000,
+      "max_price": 545000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-24",
+      "address": "104 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 530000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "T45P772"
+    },
+    {
+      "date": "2026-07-28",
+      "address": "50  THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 545000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "T45NN12"
+    },
+    {
+      "date": "2025-12-17",
+      "address": "75 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 370000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "T45D996"
+    },
+    {
+      "date": "2025-12-16",
+      "address": "27 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 605000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "T45A440"
+    },
+    {
+      "date": "2024-09-10",
+      "address": "58 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45TK80"
+    },
+    {
+      "date": "2024-08-26",
+      "address": "39 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 479000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45X611"
+    },
+    {
+      "date": "2024-02-02",
+      "address": "29 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45T446"
+    },
+    {
+      "date": "2023-12-08",
+      "address": "73 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 314000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45HF80"
+    },
+    {
+      "date": "2023-08-03",
+      "address": "82 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45NT29"
+    },
+    {
+      "date": "2023-05-15",
+      "address": "76 THE WOODS, GLOUNTHAUNE, CO CORK",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45EK61"
+    },
+    {
+      "date": "2023-03-13",
+      "address": "98 THE WOODS, GLOUNTHAUNE, CO. CORK",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45RX04"
+    },
+    {
+      "date": "2022-09-23",
+      "address": "34 THE WOODS, GLOUNTHAUNE, CO. CORK",
+      "price": 438000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45TW56"
+    },
+    {
+      "date": "2022-08-18",
+      "address": "35 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45HP08"
+    },
+    {
+      "date": "2022-01-18",
+      "address": "108 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45K381"
+    },
+    {
+      "date": "2021-11-15",
+      "address": "81 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 266000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45PD95"
+    },
+    {
+      "date": "2021-10-12",
+      "address": "110 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 445000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45HY98"
+    },
+    {
+      "date": "2021-09-13",
+      "address": "38 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45A339"
+    },
+    {
+      "date": "2021-06-10",
+      "address": "85 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45F850"
+    },
+    {
+      "date": "2021-04-08",
+      "address": "16, THE WOODS, GLOUNTHAUNE",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-24",
+      "address": "10 THE WOODS, GLOUNTHAUNE, CO. CORK",
+      "price": 560000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-26",
+      "address": "27 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 395000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "T45A440"
+    },
+    {
+      "date": "2020-06-26",
+      "address": "56 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-26",
+      "address": "7 THE WOODS, GLOUNTHAUNE, CO CORK",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-27",
+      "address": "83 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-09",
+      "address": "74 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 253000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-04",
+      "address": "73 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45HF80"
+    },
+    {
+      "date": "2019-06-28",
+      "address": "21 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 388500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-06",
+      "address": "58 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45TK80"
+    },
+    {
+      "date": "2018-06-01",
+      "address": "11 The Woods, Glounthaune, Co. Cork",
+      "price": 396475,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-19",
+      "address": "109 THE WOODS, GLOUNTHAUNE, CORK",
+      "price": 348000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-15",
+      "address": "108 The Woods, Glounthaune",
+      "price": 300365,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-16",
+      "address": "101  The Woods, Glounthaune",
+      "price": 284552,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-29",
+      "address": "100 The Woods, Glounthaune",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-25",
+      "address": "48 The Woods, Glounthaune",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-11",
+      "address": "102  The Woods, Glounthaune, Co Cork.",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-17",
+      "address": "104 The Woods, Glounthaune, Cork",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-01",
+      "address": "103 The Woods, Glounthaune",
+      "price": 295153,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-24",
+      "address": "105 The Woods, Glounthaune, County Cork",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-17",
+      "address": "106 The Woods, Glounthaune, County Cork",
+      "price": 295153,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-02",
+      "address": "107 The Woods, Glounthaune, Cork",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-18",
+      "address": "109 The Woods, Glounthaune, Cork",
+      "price": 304770,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-13",
+      "address": "111 The Woods, Glounthaune, Co. Cork",
+      "price": 308369,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-17",
+      "address": "15 THE WOODS, GLOUNTHAUNE, CO CORK",
+      "price": 374449,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-16",
+      "address": "110 The Woods, Glounthaune, County Cork",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-11",
+      "address": "114 The Woods, Glounthaune, Co. Cork",
+      "price": 309176,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-19",
+      "address": "10 The Woods, Glounthaune, Co. Cork",
+      "price": 414317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-09",
+      "address": "44 THE WOODS, GLOUNTHAUNE, CO. CORK",
+      "price": 243096,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-03",
+      "address": "14 The Woods, Glounthaune",
+      "price": 374449,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-09",
+      "address": "42 The Woods, Glounthaune",
+      "price": 238691,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-28",
+      "address": "12 The Woods, Glounthaune, Cork",
+      "price": 384065,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 108
+}

@@ -1,0 +1,289 @@
+{
+  "slug": "victoria-road-rathgar",
+  "stats": {
+    "count": 23,
+    "median": 1200000,
+    "avg": 1225891,
+    "min": 556000,
+    "max": 2115000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 777500,
+      "avg_price": 777500,
+      "min_price": 690000,
+      "max_price": 865000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 770000,
+      "avg_price": 733700,
+      "min_price": 556000,
+      "max_price": 825000
+    },
+    {
+      "year": 2015,
+      "count": 2,
+      "median_price": 1112500,
+      "avg_price": 1112500,
+      "min_price": 1100000,
+      "max_price": 1125000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1100000,
+      "avg_price": 1100000,
+      "min_price": 1100000,
+      "max_price": 1100000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1265000,
+      "avg_price": 1265000,
+      "min_price": 1265000,
+      "max_price": 1265000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1200000,
+      "avg_price": 1200000,
+      "min_price": 1200000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1319750,
+      "avg_price": 1319750,
+      "min_price": 1262000,
+      "max_price": 1377500
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1220000,
+      "avg_price": 1220000,
+      "min_price": 1220000,
+      "max_price": 1220000
+    },
+    {
+      "year": 2024,
+      "count": 5,
+      "median_price": 1450000,
+      "avg_price": 1443500,
+      "min_price": 1192500,
+      "max_price": 1700000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2025000,
+      "avg_price": 2025000,
+      "min_price": 2025000,
+      "max_price": 2025000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 2040000,
+      "avg_price": 2040000,
+      "min_price": 1965000,
+      "max_price": 2115000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-31",
+      "address": "11 VICTORIA ROAD, RATHGAR, DUBLIN 6",
+      "price": 1965000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06DD28"
+    },
+    {
+      "date": "2026-01-09",
+      "address": "19 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 2115000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06XD58"
+    },
+    {
+      "date": "2025-12-11",
+      "address": "22 VICTORIA ROAD, RATHGAR, DUBLIN 6",
+      "price": 2025000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D06CY92"
+    },
+    {
+      "date": "2024-12-02",
+      "address": "35 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 1192500,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06N407"
+    },
+    {
+      "date": "2024-08-15",
+      "address": "3 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 1450000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06DV29"
+    },
+    {
+      "date": "2024-07-30",
+      "address": "13 VICTORIA ROAD, RATHGAR, DUBLIN 6",
+      "price": 1225000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06E781"
+    },
+    {
+      "date": "2024-02-16",
+      "address": "20 VICTORIA ROAD, RATHGAR, DUBLIN 6",
+      "price": 1650000,
+      "bedrooms": 4,
+      "propertyType": "apartment",
+      "eircode": "D06DR02"
+    },
+    {
+      "date": "2024-02-15",
+      "address": "33 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 1700000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D06AY81"
+    },
+    {
+      "date": "2020-11-11",
+      "address": "27 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 1220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-04",
+      "address": "9 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 1377500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-26",
+      "address": "3 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 1262000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06DV29"
+    },
+    {
+      "date": "2018-03-29",
+      "address": "28 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-02",
+      "address": "17 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 1265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-04",
+      "address": "15 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-11-16",
+      "address": "11 Victoria Road, Rathgar, Dublin 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-03-27",
+      "address": "8 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 1125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-09-20",
+      "address": "10 Victoria Road, Rathgar",
+      "price": 825000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-08-21",
+      "address": "36 Victoria road, Rathgar",
+      "price": 712500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-08-14",
+      "address": "19 Victoria Road, Rathgar",
+      "price": 770000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-06-20",
+      "address": "30 VICTORIA RD, RATHGAR, DUBLIN 6",
+      "price": 805000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-05-10",
+      "address": "12 Victoria Road, Rathgar",
+      "price": 556000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-11-18",
+      "address": "17 VICTORIA ROAD, RATHGAR",
+      "price": 865000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-09-09",
+      "address": "No. 9  Victoria Road, Rathgar, Dublin 6",
+      "price": 690000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 23
+}

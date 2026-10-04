@@ -1,0 +1,553 @@
+{
+  "slug": "brightwater-crosshaven",
+  "stats": {
+    "count": 110,
+    "median": 275000,
+    "avg": 285315,
+    "min": 113000,
+    "max": 650000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 332500,
+      "avg_price": 326250,
+      "min_price": 250000,
+      "max_price": 390000
+    },
+    {
+      "year": 2011,
+      "count": 4,
+      "median_price": 167500,
+      "avg_price": 176250,
+      "min_price": 145000,
+      "max_price": 225000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 166500,
+      "avg_price": 166500,
+      "min_price": 128000,
+      "max_price": 205000
+    },
+    {
+      "year": 2013,
+      "count": 5,
+      "median_price": 160000,
+      "avg_price": 167294,
+      "min_price": 140969,
+      "max_price": 193000
+    },
+    {
+      "year": 2014,
+      "count": 10,
+      "median_price": 172500,
+      "avg_price": 188397,
+      "min_price": 113000,
+      "max_price": 285000
+    },
+    {
+      "year": 2015,
+      "count": 10,
+      "median_price": 222500,
+      "avg_price": 237242,
+      "min_price": 195000,
+      "max_price": 310000
+    },
+    {
+      "year": 2016,
+      "count": 6,
+      "median_price": 238050,
+      "avg_price": 225041,
+      "min_price": 185022,
+      "max_price": 253000
+    },
+    {
+      "year": 2017,
+      "count": 10,
+      "median_price": 267500,
+      "avg_price": 264900,
+      "min_price": 190000,
+      "max_price": 335000
+    },
+    {
+      "year": 2018,
+      "count": 5,
+      "median_price": 325000,
+      "avg_price": 289800,
+      "min_price": 178000,
+      "max_price": 345000
+    },
+    {
+      "year": 2019,
+      "count": 10,
+      "median_price": 273250,
+      "avg_price": 286650,
+      "min_price": 230000,
+      "max_price": 348000
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 270000,
+      "avg_price": 282500,
+      "min_price": 240000,
+      "max_price": 350000
+    },
+    {
+      "year": 2021,
+      "count": 10,
+      "median_price": 290000,
+      "avg_price": 287300,
+      "min_price": 212000,
+      "max_price": 411000
+    },
+    {
+      "year": 2022,
+      "count": 9,
+      "median_price": 345000,
+      "avg_price": 372444,
+      "min_price": 270000,
+      "max_price": 550000
+    },
+    {
+      "year": 2023,
+      "count": 5,
+      "median_price": 313500,
+      "avg_price": 341900,
+      "min_price": 275000,
+      "max_price": 481000
+    },
+    {
+      "year": 2024,
+      "count": 6,
+      "median_price": 350000,
+      "avg_price": 373833,
+      "min_price": 296000,
+      "max_price": 470000
+    },
+    {
+      "year": 2025,
+      "count": 6,
+      "median_price": 387000,
+      "avg_price": 421500,
+      "min_price": 330000,
+      "max_price": 620000
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 406250,
+      "avg_price": 449375,
+      "min_price": 335000,
+      "max_price": 650000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-24",
+      "address": "114 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 650000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "P43PP49"
+    },
+    {
+      "date": "2026-06-08",
+      "address": "12 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 405000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "P43NX23"
+    },
+    {
+      "date": "2026-05-05",
+      "address": "137 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 335000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "P43X262"
+    },
+    {
+      "date": "2026-03-27",
+      "address": "103 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 407500,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "P43P028"
+    },
+    {
+      "date": "2025-12-22",
+      "address": "NO 2 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 355000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "P43AY01"
+    },
+    {
+      "date": "2025-12-19",
+      "address": "62 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 374000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "P43XY81"
+    },
+    {
+      "date": "2025-09-26",
+      "address": "202 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 400000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "P43EA09"
+    },
+    {
+      "date": "2025-07-29",
+      "address": "27 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43AX79"
+    },
+    {
+      "date": "2025-04-02",
+      "address": "114 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 620000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "P43PP49"
+    },
+    {
+      "date": "2025-02-05",
+      "address": "165 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 450000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "P43NY04"
+    },
+    {
+      "date": "2024-12-20",
+      "address": "78 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43KW60"
+    },
+    {
+      "date": "2024-09-25",
+      "address": "155 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43DP79"
+    },
+    {
+      "date": "2024-07-18",
+      "address": "13 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43YK68"
+    },
+    {
+      "date": "2024-04-15",
+      "address": "143 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 307000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43RW62"
+    },
+    {
+      "date": "2024-02-14",
+      "address": "193 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43PV07"
+    },
+    {
+      "date": "2024-02-09",
+      "address": "77 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 296000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43TF88"
+    },
+    {
+      "date": "2023-11-24",
+      "address": "157 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43YD36"
+    },
+    {
+      "date": "2023-09-14",
+      "address": "64 BRIGHTWATER, CROSSHAVEN, CO CORK",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43AE89"
+    },
+    {
+      "date": "2023-08-31",
+      "address": "159 BRIGHTWATER, CROSSHAVEN, COUNTY CORK",
+      "price": 313500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43X209"
+    },
+    {
+      "date": "2023-07-26",
+      "address": "53 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 481000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43HY24"
+    },
+    {
+      "date": "2023-01-25",
+      "address": "148 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43W274"
+    },
+    {
+      "date": "2022-12-14",
+      "address": "174 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43F961"
+    },
+    {
+      "date": "2022-12-02",
+      "address": "205 BRIGHTWATER, CROSSHAVEN, CO CORK",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43KX71"
+    },
+    {
+      "date": "2022-11-16",
+      "address": "178  BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43FK29"
+    },
+    {
+      "date": "2022-10-27",
+      "address": "11 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 352000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43VN30"
+    },
+    {
+      "date": "2022-09-27",
+      "address": "211 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43X589"
+    },
+    {
+      "date": "2022-08-23",
+      "address": "200 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43N244"
+    },
+    {
+      "date": "2022-07-12",
+      "address": "174 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43F961"
+    },
+    {
+      "date": "2022-07-08",
+      "address": "140 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43F342"
+    },
+    {
+      "date": "2022-07-01",
+      "address": "121 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43FD37"
+    },
+    {
+      "date": "2021-10-15",
+      "address": "6 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 332000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43EP03"
+    },
+    {
+      "date": "2021-09-17",
+      "address": "147 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43R248"
+    },
+    {
+      "date": "2021-08-18",
+      "address": "44 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43EY18"
+    },
+    {
+      "date": "2021-08-16",
+      "address": "160 BRIGHTWATER, CROSSHAVEN, CO CORK",
+      "price": 411000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43V590"
+    },
+    {
+      "date": "2021-08-12",
+      "address": "12 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 285000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "P43NX23"
+    },
+    {
+      "date": "2021-06-04",
+      "address": "69 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43DK25"
+    },
+    {
+      "date": "2021-05-25",
+      "address": "29 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43KW93"
+    },
+    {
+      "date": "2021-05-21",
+      "address": "28 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43DK13"
+    },
+    {
+      "date": "2021-02-24",
+      "address": "112 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 212000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-25",
+      "address": "36 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 228000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-13",
+      "address": "208 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-30",
+      "address": "163 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-20",
+      "address": "41 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-03-03",
+      "address": "26 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-09",
+      "address": "193 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43PV07"
+    },
+    {
+      "date": "2019-09-02",
+      "address": "22 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 348000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-18",
+      "address": "8 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 276500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-17",
+      "address": "101 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-28",
+      "address": "174 BRIGHTWATER, CROSSHAVEN, CORK",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43F961"
+    },
+    {
+      "date": "2019-03-25",
+      "address": "177 BRIGHTWATER, CROSSHAVEN, CO CORK",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 110
+}

@@ -4,8 +4,8 @@
 Groups full-market-price residential sales into "streets" by extracting the
 street/estate name from the first address component (house numbers stripped)
 and disambiguating with the area + county. Produces:
-  - Top 20 streets by highest value (median sale price)
-  - Top 20 streets by highest volume (transaction count)
+  - Top N_VALUE streets by highest value (median sale price)
+  - Top N_VOLUME streets by highest volume (transaction count)
 """
 import os
 import sys
@@ -19,8 +19,8 @@ from street_key import street_key, APT_NAME_RE
 
 MIN_TX_FOR_VALUE = 8      # streets need enough sales to be a credible "high value" page
 MIN_TX_FLOOR = 3          # ignore near-unique addresses entirely
-N_VALUE = 80              # top-N by median price
-N_VOLUME = 20             # top-N by transaction count
+N_VALUE = 150             # top-N by median price
+N_VOLUME = 150            # top-N by transaction count
 
 APT_FRACTION_THRESHOLD = 0.5  # >=50% of sales flagged as apartments -> exclude as a block
 

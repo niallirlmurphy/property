@@ -1,0 +1,489 @@
+{
+  "slug": "st-lawrence-road-clontarf",
+  "stats": {
+    "count": 44,
+    "median": 1301250,
+    "avg": 1401130,
+    "min": 375000,
+    "max": 3450000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 630000,
+      "avg_price": 630000,
+      "min_price": 630000,
+      "max_price": 630000
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 1212500,
+      "avg_price": 1212500,
+      "min_price": 375000,
+      "max_price": 2050000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 955000,
+      "avg_price": 955000,
+      "min_price": 955000,
+      "max_price": 955000
+    },
+    {
+      "year": 2015,
+      "count": 2,
+      "median_price": 921500,
+      "avg_price": 921500,
+      "min_price": 868000,
+      "max_price": 975000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 999000,
+      "avg_price": 999000,
+      "min_price": 999000,
+      "max_price": 999000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 1475000,
+      "avg_price": 1475000,
+      "min_price": 1010000,
+      "max_price": 1940000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1675000,
+      "avg_price": 1675000,
+      "min_price": 1500000,
+      "max_price": 1850000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 2500000,
+      "max_price": 2500000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 810000,
+      "avg_price": 756000,
+      "min_price": 650000,
+      "max_price": 850000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 2000000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 980000,
+      "avg_price": 980000,
+      "min_price": 980000,
+      "max_price": 980000
+    },
+    {
+      "year": 2023,
+      "count": 5,
+      "median_price": 1350000,
+      "avg_price": 1426500,
+      "min_price": 1250000,
+      "max_price": 1850000
+    },
+    {
+      "year": 2024,
+      "count": 10,
+      "median_price": 1430000,
+      "avg_price": 1529000,
+      "min_price": 960000,
+      "max_price": 2250000
+    },
+    {
+      "year": 2025,
+      "count": 8,
+      "median_price": 1520000,
+      "avg_price": 1806901,
+      "min_price": 1250000,
+      "max_price": 3450000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 1180000,
+      "avg_price": 1180000,
+      "min_price": 710000,
+      "max_price": 1650000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-30",
+      "address": "61 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03X402"
+    },
+    {
+      "date": "2026-03-11",
+      "address": "27A ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 710000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D03K6P8"
+    },
+    {
+      "date": "2025-10-01",
+      "address": "63 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 3450000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D03C978"
+    },
+    {
+      "date": "2025-09-29",
+      "address": "60 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1640000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D03W4C0"
+    },
+    {
+      "date": "2025-09-04",
+      "address": "105 ST LAWRENCE ROAD, CLONTARF, DUBLIN 3",
+      "price": 1260000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D03PW90"
+    },
+    {
+      "date": "2025-07-08",
+      "address": "7 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 2475000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D03N623"
+    },
+    {
+      "date": "2025-06-16",
+      "address": "33 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1270000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D03EY48"
+    },
+    {
+      "date": "2025-03-20",
+      "address": "27 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": "detached",
+      "eircode": "D03WN84"
+    },
+    {
+      "date": "2025-03-03",
+      "address": "80 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1710211,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D03YR74"
+    },
+    {
+      "date": "2025-02-10",
+      "address": "48 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": "detached",
+      "eircode": "D03HN62"
+    },
+    {
+      "date": "2024-12-13",
+      "address": "56 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 2125000,
+      "bedrooms": null,
+      "propertyType": "detached",
+      "eircode": "D03Y5F2"
+    },
+    {
+      "date": "2024-12-04",
+      "address": "4 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1680000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D03NV66"
+    },
+    {
+      "date": "2024-11-29",
+      "address": "18 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1210000,
+      "bedrooms": null,
+      "propertyType": "detached",
+      "eircode": "D03HP89"
+    },
+    {
+      "date": "2024-11-28",
+      "address": "9 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1240000,
+      "bedrooms": null,
+      "propertyType": "detached",
+      "eircode": "D03EK09"
+    },
+    {
+      "date": "2024-10-08",
+      "address": "45 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1450000,
+      "bedrooms": null,
+      "propertyType": "detached",
+      "eircode": "D03EH24"
+    },
+    {
+      "date": "2024-09-27",
+      "address": "90 ST LAWRENCE ROAD, CLONTARF, DUBLIN 3",
+      "price": 960000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03WK12"
+    },
+    {
+      "date": "2024-07-08",
+      "address": "2 ST LAWRENCE ROAD, CLONTARF, DUBLIN 3",
+      "price": 2250000,
+      "bedrooms": 1,
+      "propertyType": "detached",
+      "eircode": "D03VW64"
+    },
+    {
+      "date": "2024-06-27",
+      "address": "71 ST LAWRENCE ROAD, CLONTARF, DUBLIN 3",
+      "price": 1750000,
+      "bedrooms": 3,
+      "propertyType": "detached",
+      "eircode": "D03NR71"
+    },
+    {
+      "date": "2024-03-22",
+      "address": "15 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1215000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D03TY03"
+    },
+    {
+      "date": "2024-02-21",
+      "address": "83 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1410000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "D03R672"
+    },
+    {
+      "date": "2023-10-23",
+      "address": "106 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03W582"
+    },
+    {
+      "date": "2023-07-28",
+      "address": "1B ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1332500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03EP99"
+    },
+    {
+      "date": "2023-06-12",
+      "address": "129 ST LAWRENCE ROAD, CLONTARF, DUBLIN 3",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03A897"
+    },
+    {
+      "date": "2023-03-09",
+      "address": "137 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03HX59"
+    },
+    {
+      "date": "2023-02-23",
+      "address": "81 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03YD63"
+    },
+    {
+      "date": "2022-11-18",
+      "address": "132 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 980000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03CH74"
+    },
+    {
+      "date": "2021-08-04",
+      "address": "7 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 2000000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D03N623"
+    },
+    {
+      "date": "2020-11-06",
+      "address": "78 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-05",
+      "address": "117 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 810000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-19",
+      "address": "29 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-19",
+      "address": "122 ST LAWRENCE ROAD, CLONTARF, DUBLIN 3",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-21",
+      "address": "79 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 820000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-11",
+      "address": "63 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 2500000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D03C978"
+    },
+    {
+      "date": "2018-10-11",
+      "address": "100 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-28",
+      "address": "86 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-10",
+      "address": "58 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1010000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-31",
+      "address": "19 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 1940000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-29",
+      "address": "32 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 999000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-12-23",
+      "address": "2 ST LAWRENCE ROAD, CLONTARF, DUBLIN 3",
+      "price": 975000,
+      "bedrooms": 1,
+      "propertyType": "detached",
+      "eircode": "D03VW64"
+    },
+    {
+      "date": "2015-09-15",
+      "address": "104 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 868000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-05-27",
+      "address": "84 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "price": 955000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-09-23",
+      "address": "26 St Lawrence Road, Clontarf",
+      "price": 2050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-05-06",
+      "address": "27a St Lawrence Road, Clontarf",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-08-27",
+      "address": "134 ST  LAWRENCE ROAD, CLONTARF",
+      "price": 630000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 44
+}

@@ -1,0 +1,145 @@
+{
+  "slug": "st-john-s-road-sandymount",
+  "stats": {
+    "count": 9,
+    "median": 1400000,
+    "avg": 1450111,
+    "min": 1000000,
+    "max": 2180000,
+    "firstYear": 2014,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1000000,
+      "avg_price": 1000000,
+      "min_price": 1000000,
+      "max_price": 1000000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1100000,
+      "avg_price": 1100000,
+      "min_price": 1100000,
+      "max_price": 1100000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1130000,
+      "avg_price": 1130000,
+      "min_price": 1130000,
+      "max_price": 1130000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1071000,
+      "avg_price": 1071000,
+      "min_price": 1071000,
+      "max_price": 1071000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1400000,
+      "avg_price": 1400000,
+      "min_price": 1400000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 2020000,
+      "avg_price": 1950000,
+      "min_price": 1650000,
+      "max_price": 2180000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-12-16",
+      "address": "7 ST JOHNS RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1650000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04WP90"
+    },
+    {
+      "date": "2025-12-04",
+      "address": "2 ST JOHNS RD, SANDYMOUNT, DUBLIN 4",
+      "price": 2180000,
+      "bedrooms": 2,
+      "propertyType": "detached",
+      "eircode": "D04PX68"
+    },
+    {
+      "date": "2025-09-26",
+      "address": "12 ST JOHNS RD, SANDYMOUNT, DUBLIN 4",
+      "price": 2020000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D04NP70"
+    },
+    {
+      "date": "2022-12-19",
+      "address": "27 ST JOHNS RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04YD83"
+    },
+    {
+      "date": "2021-07-23",
+      "address": "17 ST JOHNS RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04F3A8"
+    },
+    {
+      "date": "2020-09-14",
+      "address": "19 ST JOHNS RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1071000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-18",
+      "address": "41 ST JOHNS RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1130000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-28",
+      "address": "7 ST JOHNS RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1100000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04WP90"
+    },
+    {
+      "date": "2014-01-10",
+      "address": "4 ST JOHNS RD, SANDYMOUNT, DUBLIN 4",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

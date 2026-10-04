@@ -19,6 +19,30 @@ NAME_FIX = {
     ("Street Thomas Road", "Mount Merrion"): "St Thomas Road",
     ("the Burbidge", "Lansdowne Place"): "The Burbidge",
     ("the Links", "Elm Park"): "The Links",
+    ("Street Johns Road", "Sandymount"): "St John's Road",
+    ("Street Lawrence Road", "Clontarf"): "St Lawrence Road",
+    ("Street Albans Park", "Ballsbridge"): "St Alban's Park",
+    ("Street Attracta Road", "Cabra"): "St Attracta Road",
+}
+
+# Hand-corrected area names, keyed by raw area from the CSV.
+AREA_FIX = {
+    "Street Edmund's": "St Edmund's",
+    "Ocallaghan Strand": "O'Callaghan Strand",
+}
+
+# (raw street, area) pairs to leave out: duplicates of another page for the same
+# place under a different area/spelling, or names corrupted in the source data.
+EXCLUDE = {
+    ("Dargle Demesne", "Cookstown"),        # same estate as Dargle Demesne, Enniskerry
+    ("Castlepark Road", "Sandycove"),       # same road as Castle Park Road, Sandycove
+    ("Dartmouth Square", "Dublin 6"),       # same square as Dartmouth Square, Ranelagh
+    ("Beechwood Court", "Stillorgan"),      # same estate as Beechwood Court, Stillorgan Road
+    ("Edward Square", "Bloomfield Avenue"), # same square as Edward Square, Bloomfield
+    ("Merrion Road", "Dublin 4"),           # same road as Merrion Road, Ballsbridge
+    ("Grosvenor Road", "Rathmines"),        # same road as Grosvenor Road, Rathgar
+    ("Thormanby Hill", "Thormanby Road"),   # same estate as Thormanby Hill, Howth
+    ("Cla\ufffd M\ufffdr", "Old Monivea Road"),  # U+FFFD in the PPR source; real name lost
 }
 
 # Optional 2-3 sentence factual commentary, keyed by slug. Only verifiable facts.
@@ -64,11 +88,14 @@ def main():
     # base slug from name+area; resolve collisions by appending county slug
     base = []
     for r in rows:
-        raw_name, area, county = r["street"], r["area"], r["county"]
-        name = NAME_FIX.get((raw_name, area), raw_name)
-        # title-case a leading lowercase "the"
-        name = re.sub(r"^the\b", "The", name)
-        base.append({"raw_name": raw_name, "name": name, "area": area, "county": county, "row": r})
+        raw_name, raw_area, county = r["street"], r["area"], r["county"]
+        if (raw_name, raw_area) in EXCLUDE:
+            continue
+        name = NAME_FIX.get((raw_name, raw_area), raw_name)
+        # title-case a leading lowercase "the"/"an"
+        name = re.sub(r"^(the|an)\b", lambda m: m.group(1).title(), name)
+        area = AREA_FIX.get(raw_area, raw_area)
+        base.append({"raw_name": raw_name, "raw_area": raw_area, "name": name, "area": area, "county": county, "row": r})
     slug_counts = {}
     for b in base:
         s = slugify(f"{b['name']} {b['area']}")
@@ -96,7 +123,7 @@ def main():
             "category": cat,
             "rank": int(r["rank"]),
             "normalizedKey": normalized_key_string(
-                normalize(b["raw_name"]), normalize(b["area"]), b["county"].strip().lower()),
+                normalize(b["raw_name"]), normalize(b["raw_area"]), b["county"].strip().lower()),
             "description": desc,
         }
         if s in INFO:

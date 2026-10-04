@@ -1,0 +1,497 @@
+{
+  "slug": "ashfield-avenue-ridgewood",
+  "stats": {
+    "count": 95,
+    "median": 363877,
+    "avg": 374504,
+    "min": 206000,
+    "max": 595000,
+    "firstYear": 2016,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 287611,
+      "avg_price": 304388,
+      "min_price": 286345,
+      "max_price": 339207
+    },
+    {
+      "year": 2017,
+      "count": 24,
+      "median_price": 325991,
+      "avg_price": 328879,
+      "min_price": 277533,
+      "max_price": 385000
+    },
+    {
+      "year": 2018,
+      "count": 32,
+      "median_price": 372224,
+      "avg_price": 366118,
+      "min_price": 325992,
+      "max_price": 427312
+    },
+    {
+      "year": 2019,
+      "count": 24,
+      "median_price": 383259,
+      "avg_price": 378032,
+      "min_price": 328193,
+      "max_price": 408811
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 428550,
+      "avg_price": 428550,
+      "min_price": 392100,
+      "max_price": 465000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 206000,
+      "avg_price": 206000,
+      "min_price": 206000,
+      "max_price": 206000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 535000,
+      "avg_price": 533750,
+      "min_price": 515000,
+      "max_price": 550000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 535000,
+      "avg_price": 535000,
+      "min_price": 535000,
+      "max_price": 535000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 587500,
+      "avg_price": 587500,
+      "min_price": 580000,
+      "max_price": 595000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 537500,
+      "avg_price": 537500,
+      "min_price": 500000,
+      "max_price": 575000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-11",
+      "address": "26 ASHFIELD AVENUE, RIDGEWOOD, FORREST ROAD",
+      "price": 500000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "K67V2A3"
+    },
+    {
+      "date": "2026-05-29",
+      "address": "42 ASHFIELD AVENUE, RIDGEWOOD, FORREST ROAD",
+      "price": 575000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67K3C9"
+    },
+    {
+      "date": "2025-09-08",
+      "address": "8 ASHFIELD AVENUE, RIDGEWOOD, FORREST ROAD",
+      "price": 595000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "K67C4E9"
+    },
+    {
+      "date": "2025-01-21",
+      "address": "29  ASHFIELD  AVENUE, RIDGEWOOD, SWORDS",
+      "price": 580000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "K67V5X6"
+    },
+    {
+      "date": "2024-09-20",
+      "address": "105 ASHFIELD AVENUE, RIDGEWOOD, SWORDS",
+      "price": 535000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67E0C3"
+    },
+    {
+      "date": "2023-12-11",
+      "address": "69 ASHFIELD AVENUE, RIDGEWOOD, FORREST ROAD",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67E6R3"
+    },
+    {
+      "date": "2023-12-05",
+      "address": "44 ASHFIELD AVENUE, RIDGEWOOD, SWORDS",
+      "price": 545000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67R7X0"
+    },
+    {
+      "date": "2023-01-31",
+      "address": "63 ASHFIELD AVENUE, RIDGEWOOD, SWORDS",
+      "price": 525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67Y9T8"
+    },
+    {
+      "date": "2023-01-25",
+      "address": "21 ASHFIELD AVENUE, RIDGEWOOD, SWORDS",
+      "price": 515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67F6A0"
+    },
+    {
+      "date": "2022-08-30",
+      "address": "42 ASHFIELD AVENUE, RIDGEWOOD, FORREST ROAD",
+      "price": 206000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67K3C9"
+    },
+    {
+      "date": "2020-09-18",
+      "address": "107 ASHFIELD AVENUE, RIDGEWOOD, FORREST ROAD",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-10",
+      "address": "66 Ashfield Avenue, Ridgewood, Forrest Road",
+      "price": 392100,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-17",
+      "address": "30 Ashfield Avenue, Ridgewood, Forrest Road",
+      "price": 396476,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-06",
+      "address": "69 Ashfield Avenue, Ridgewood, Forrest Road",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67E6R3"
+    },
+    {
+      "date": "2019-10-25",
+      "address": "67 Ashfield Avenue, Ridgewood, Forrest Road",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-10",
+      "address": "68 ashfield avenue, ridgewood, swords",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-09",
+      "address": "64 ashfield avenue, ridgewood, forrest road",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-02",
+      "address": "40 Ashfield Avenue, Ridgewood, Forrest Road",
+      "price": 361234,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-20",
+      "address": "63 ashfield avenue, ridgewood, swords",
+      "price": 392000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67Y9T8"
+    },
+    {
+      "date": "2019-08-15",
+      "address": "49 Ashfield Avenue, Ridgewood, Forrest Road",
+      "price": 378855,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-31",
+      "address": "No. 37  Ashfield Avenue, Ridgewood, Forrest Road  Swords",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": "K67T8W5"
+    },
+    {
+      "date": "2019-07-03",
+      "address": "41 ASHFIELD AVENUE, RIDGEWOOD, SWORDS",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-03",
+      "address": "77 Ashfield Avenue, Ridgewood, Swords",
+      "price": 408811,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-23",
+      "address": "29 Ashfield Avenue, Ridgewood, Swords",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67V5X6"
+    },
+    {
+      "date": "2019-05-17",
+      "address": "71 ASHFIELD AVENUE, RIDGEWOOD, SWORDS",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-17",
+      "address": "89  Ashfield Avenue, Ridgewood, Swords",
+      "price": 383259,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-11",
+      "address": "73 Ashfield Avenue, Ridgewood, Swords",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-22",
+      "address": "33 Ashfield Avenue, Ridgewood, Swords",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-06",
+      "address": "45 Ashfield Avenue, Ridgewood, Swords",
+      "price": 354650,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-22",
+      "address": "70 ASHFIELD AVENUE, RIDGEWOOD, FORREST ROAD",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-08",
+      "address": "39 Ashfield Avenue, Ridgewood, Swords",
+      "price": 356380,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-01",
+      "address": "35 Ashfield Avenue, Ridgewood, Swords",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-30",
+      "address": "27 ashfield ave, ridgewood, SWORDS",
+      "price": 328193,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-30",
+      "address": "51 Ashfield Avenue, Ridgewood, Swords",
+      "price": 371950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-30",
+      "address": "42 Ashfield Avenue, Ridgewood, Forrest Road",
+      "price": 362996,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67K3C9"
+    },
+    {
+      "date": "2019-01-17",
+      "address": "28 Ashfield Avenue, Ridgewood, Swords",
+      "price": 383259,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-19",
+      "address": "44 Ashfield Avenue, Ridgewood, Swords",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67R7X0"
+    },
+    {
+      "date": "2018-12-14",
+      "address": "36 Ashfield Avenue, Ridgewood, Swords",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-13",
+      "address": "34 Ashfield Avenue, Ridgewood, Swords",
+      "price": 427312,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-10",
+      "address": "50 Ashfield Avenue, Ridgewood, Swords",
+      "price": 378856,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-05",
+      "address": "75 Ashfield Avenue, Ridgewood, Swords",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-30",
+      "address": "32 Ashfield Avenue, Ridgewood, Swords",
+      "price": 383259,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-06",
+      "address": "60 Ashfield Avenue, Ridgewood, Forrest Road",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-25",
+      "address": "88 Ashfield Avenue, Ridgewood, Swords",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-25",
+      "address": "57 Ashfield Avenue, Ridgewood, Swords",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-20",
+      "address": "43 Ashfield Avenue, Ridgewood, Swords",
+      "price": 363423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-28",
+      "address": "72 Ashfield Avenue, Ridgewood, Swords",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-27",
+      "address": "92 Ashfield Avenue, Ridgewood, Swords",
+      "price": 396475,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-24",
+      "address": "52  Ashfield Avenue, Ridgewood, Forrest Road",
+      "price": 378855,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-08",
+      "address": "59 Ashfield Avenue, Ridgewood, Forest Road",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 95
+}

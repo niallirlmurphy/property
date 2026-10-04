@@ -1,0 +1,553 @@
+{
+  "slug": "beechpark-leixlip",
+  "stats": {
+    "count": 111,
+    "median": 290000,
+    "avg": 302524,
+    "min": 74889,
+    "max": 622000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 7,
+      "median_price": 225000,
+      "avg_price": 216574,
+      "min_price": 125000,
+      "max_price": 265000
+    },
+    {
+      "year": 2011,
+      "count": 11,
+      "median_price": 187225,
+      "avg_price": 188271,
+      "min_price": 74889,
+      "max_price": 337500
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 130000,
+      "avg_price": 130000,
+      "min_price": 130000,
+      "max_price": 130000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 190000,
+      "avg_price": 190000,
+      "min_price": 180000,
+      "max_price": 200000
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 257709,
+      "avg_price": 262373,
+      "min_price": 229075,
+      "max_price": 305000
+    },
+    {
+      "year": 2015,
+      "count": 19,
+      "median_price": 310132,
+      "avg_price": 298877,
+      "min_price": 229075,
+      "max_price": 352379
+    },
+    {
+      "year": 2016,
+      "count": 23,
+      "median_price": 273127,
+      "avg_price": 274878,
+      "min_price": 237885,
+      "max_price": 356828
+    },
+    {
+      "year": 2017,
+      "count": 21,
+      "median_price": 325991,
+      "avg_price": 319371,
+      "min_price": 253304,
+      "max_price": 383259
+    },
+    {
+      "year": 2018,
+      "count": 6,
+      "median_price": 370044,
+      "avg_price": 371167,
+      "min_price": 352422,
+      "max_price": 392070
+    },
+    {
+      "year": 2019,
+      "count": 3,
+      "median_price": 370044,
+      "avg_price": 358348,
+      "min_price": 290000,
+      "max_price": 415000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 377000,
+      "avg_price": 377000,
+      "min_price": 369000,
+      "max_price": 385000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 419500,
+      "avg_price": 419500,
+      "min_price": 402000,
+      "max_price": 437000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 570000,
+      "avg_price": 570000,
+      "min_price": 570000,
+      "max_price": 570000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 465000,
+      "avg_price": 378333,
+      "min_price": 140000,
+      "max_price": 530000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 508500,
+      "avg_price": 508500,
+      "min_price": 500000,
+      "max_price": 517000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 522016,
+      "avg_price": 495672,
+      "min_price": 415000,
+      "max_price": 550000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 622000,
+      "avg_price": 622000,
+      "min_price": 622000,
+      "max_price": 622000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-01-16",
+      "address": "258 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 622000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W23TT68"
+    },
+    {
+      "date": "2025-09-23",
+      "address": "206 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 550000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "W23K588"
+    },
+    {
+      "date": "2025-09-18",
+      "address": "138 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 415000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "W23XW28"
+    },
+    {
+      "date": "2025-07-17",
+      "address": "202 BEECHPARK, LEIXLIP, CO KILDARE",
+      "price": 522016,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W23PK50"
+    },
+    {
+      "date": "2024-12-18",
+      "address": "239 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 517000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23YX00"
+    },
+    {
+      "date": "2024-10-15",
+      "address": "247 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23PD68"
+    },
+    {
+      "date": "2023-12-19",
+      "address": "225 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-30",
+      "address": "272 BEECHPARK, LEIXLIP, COUNTY KILDARE",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23P029"
+    },
+    {
+      "date": "2023-07-19",
+      "address": "122 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 140000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23N889"
+    },
+    {
+      "date": "2022-10-10",
+      "address": "271 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 570000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23TX06"
+    },
+    {
+      "date": "2021-07-22",
+      "address": "274 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 402000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-20",
+      "address": "281 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 437000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23CF43"
+    },
+    {
+      "date": "2020-10-23",
+      "address": "207 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-22",
+      "address": "236 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 369000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-23",
+      "address": "17 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-16",
+      "address": "225 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-01",
+      "address": "188 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 370044,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-22",
+      "address": "252 Beechpark, Leixlip",
+      "price": 356828,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-28",
+      "address": "254 BEECHPARK, LEIXLIP",
+      "price": 352422,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-05-08",
+      "address": "184 BEECHPARK, LEIXLIP, KILDARE",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-06",
+      "address": "271 Beechpark, Leixlip",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-03",
+      "address": "255 Beechpark, Leixlip",
+      "price": 383260,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-28",
+      "address": "263 Beechpark, Leixlip",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-24",
+      "address": "Site 256, Beechpark, Leixlip",
+      "price": 383259,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2017-09-26",
+      "address": "251 Beechpark, Leixlip",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-26",
+      "address": "272 Beechpark, Leixlip, County Kildare",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23P029"
+    },
+    {
+      "date": "2017-09-08",
+      "address": "258 Beechpark, leixlip",
+      "price": 343415,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-04",
+      "address": "261 Beechpark, Leixlip",
+      "price": 350220,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-25",
+      "address": "260 Beechpark, Leixlip",
+      "price": 350220,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-01",
+      "address": "262 Beechpark, leixlip",
+      "price": 350220,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-14",
+      "address": "264 Beechpark, Leixlip, CO. Kildare",
+      "price": 325990,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-07",
+      "address": "239 Beechpark, Leixlip",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-24",
+      "address": "265 Beechpark, Leixlip",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-15",
+      "address": "238 Beechpark, Leixlip",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-04",
+      "address": "269 Beechpark, Leixlip",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-02",
+      "address": "268 Beechpark, Leixlip",
+      "price": 325991,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-27",
+      "address": "277 Beechpark, Leixlip",
+      "price": 286343,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-24",
+      "address": "274 Beechpark, Leixlip",
+      "price": 292952,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-16",
+      "address": "272 Beechpark, Leixlip",
+      "price": 259910,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-10",
+      "address": "275 Beechpark, Leixlip",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-09",
+      "address": "276 Beechpark, Leixlip",
+      "price": 253304,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-08",
+      "address": "193 Beechpark, Leixlip",
+      "price": 343568,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-02-08",
+      "address": "187 Beechpark, Leixlip",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-01-12",
+      "address": "280 Beechpark, Leixlip",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-23",
+      "address": "278 Beechpark, Leixlip, Co. Kildare",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-20",
+      "address": "279 Beechpark, Leixlip",
+      "price": 248899,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-20",
+      "address": "281 Beechpark, Leixlip",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-16",
+      "address": "250 Beechpark, Leixlip",
+      "price": 242291,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-11-30",
+      "address": "248 BEECHPARK, Leixlip",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-26",
+      "address": "247 Beechpark, Leixlip",
+      "price": 273127,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 111
+}

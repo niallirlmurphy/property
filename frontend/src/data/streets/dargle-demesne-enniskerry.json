@@ -1,0 +1,137 @@
+{
+  "slug": "dargle-demesne-enniskerry",
+  "stats": {
+    "count": 11,
+    "median": 1405286,
+    "avg": 1345614,
+    "min": 969163,
+    "max": 1581498,
+    "firstYear": 2023,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1101320,
+      "avg_price": 1101320,
+      "min_price": 1101320,
+      "max_price": 1101320
+    },
+    {
+      "year": 2024,
+      "count": 4,
+      "median_price": 1405286,
+      "avg_price": 1324890,
+      "min_price": 969163,
+      "max_price": 1519824
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 1330396,
+      "avg_price": 1330396,
+      "min_price": 1140969,
+      "max_price": 1519823
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 1464757,
+      "avg_price": 1435022,
+      "min_price": 1229075,
+      "max_price": 1581498
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-22",
+      "address": "14 Dargle Demesne, Enniskerry",
+      "price": 1563877,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A98E2Y3"
+    },
+    {
+      "date": "2026-05-07",
+      "address": "17 Dargle Demesne, Enniskerry",
+      "price": 1229075,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-04-17",
+      "address": "16 Dargle Demesne, Enniskerry",
+      "price": 1365638,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-01-09",
+      "address": "8 Dargle Demesne, Enniskerry, Co. Wicklow",
+      "price": 1581498,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2025-09-19",
+      "address": "21 Dargle Demesne, Enniskerry",
+      "price": 1140969,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-01-22",
+      "address": "19 DARGLE DEMESNE, ENNISKERRY",
+      "price": 1519823,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-10-24",
+      "address": "27 Dargle Demesne, Enniskerry, Co.Wicklow",
+      "price": 969163,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-07-29",
+      "address": "22 Dargle Demesne, Enniskerry",
+      "price": 1519824,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A98R9T0"
+    },
+    {
+      "date": "2024-06-27",
+      "address": "20 Dargle Demesne, Enniskerry, County Wicklow",
+      "price": 1405286,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-04-09",
+      "address": "18 Dargle Demesne, Enniskerry",
+      "price": 1405286,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2023-10-18",
+      "address": "2 DARGLE DEMESNE, ENNISKERRY, CO. WICKLOW",
+      "price": 1101320,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 11
+}

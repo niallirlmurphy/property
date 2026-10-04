@@ -1,0 +1,137 @@
+{
+  "slug": "rostrevor-road-rathgar",
+  "stats": {
+    "count": 9,
+    "median": 1400000,
+    "avg": 1560556,
+    "min": 1060000,
+    "max": 2225000,
+    "firstYear": 2014,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 1267500,
+      "avg_price": 1267500,
+      "min_price": 1060000,
+      "max_price": 1475000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 2225000,
+      "avg_price": 2225000,
+      "min_price": 2225000,
+      "max_price": 2225000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1250000,
+      "avg_price": 1250000,
+      "min_price": 1250000,
+      "max_price": 1250000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1587500,
+      "avg_price": 1587500,
+      "min_price": 1300000,
+      "max_price": 1875000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 1380000,
+      "avg_price": 1380000,
+      "min_price": 1360000,
+      "max_price": 1400000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2100000,
+      "avg_price": 2100000,
+      "min_price": 2100000,
+      "max_price": 2100000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-04-24",
+      "address": "15 ROSTREVOR RD, RATHGAR, DUBLIN 6",
+      "price": 2100000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06R2V1"
+    },
+    {
+      "date": "2020-12-15",
+      "address": "9 ROSTREVOR RD, RATHGAR, DUBLIN 6",
+      "price": 1360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-09",
+      "address": "5 ROSTREVOR RD, RATHGAR, DUBLIN 6",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-17",
+      "address": "2 ROSTREVOR RD, RATHGAR, DUBLIN 6",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-01",
+      "address": "16 ROSTREVOR RD, RATHGAR, DUBLIN 6",
+      "price": 1875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-17",
+      "address": "29 ROSTREVOR RD, RATHGAR, DUBLIN 6",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-11-16",
+      "address": "17 ROSTREVOR RD, RATHGAR, DUBLIN 6",
+      "price": 2225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-09-04",
+      "address": "20 ROSTREVOR RD, RATHGAR, DUBLIN 6",
+      "price": 1475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-02-03",
+      "address": "23A ROSTREVOR RD, RATHGAR, DUBLIN 6",
+      "price": 1060000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 9
+}

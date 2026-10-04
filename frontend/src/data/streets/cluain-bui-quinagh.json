@@ -1,0 +1,513 @@
+{
+  "slug": "cluain-bui-quinagh",
+  "stats": {
+    "count": 115,
+    "median": 233480,
+    "avg": 241163,
+    "min": 79295,
+    "max": 1453745,
+    "firstYear": 2010,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 1453745,
+      "avg_price": 1453745,
+      "min_price": 1453745,
+      "max_price": 1453745
+    },
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 212000,
+      "avg_price": 212000,
+      "min_price": 212000,
+      "max_price": 212000
+    },
+    {
+      "year": 2015,
+      "count": 7,
+      "median_price": 96916,
+      "avg_price": 95604,
+      "min_price": 79295,
+      "max_price": 110000
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 160000,
+      "avg_price": 160000,
+      "min_price": 160000,
+      "max_price": 160000
+    },
+    {
+      "year": 2018,
+      "count": 5,
+      "median_price": 174450,
+      "avg_price": 174916,
+      "min_price": 167400,
+      "max_price": 190000
+    },
+    {
+      "year": 2019,
+      "count": 15,
+      "median_price": 174450,
+      "avg_price": 179494,
+      "min_price": 151982,
+      "max_price": 198238
+    },
+    {
+      "year": 2020,
+      "count": 9,
+      "median_price": 185022,
+      "avg_price": 197159,
+      "min_price": 161233,
+      "max_price": 259912
+    },
+    {
+      "year": 2021,
+      "count": 11,
+      "median_price": 226432,
+      "avg_price": 231958,
+      "min_price": 161233,
+      "max_price": 290749
+    },
+    {
+      "year": 2022,
+      "count": 20,
+      "median_price": 207049,
+      "avg_price": 223404,
+      "min_price": 172687,
+      "max_price": 299559
+    },
+    {
+      "year": 2023,
+      "count": 16,
+      "median_price": 255506,
+      "avg_price": 266615,
+      "min_price": 224670,
+      "max_price": 317181
+    },
+    {
+      "year": 2024,
+      "count": 19,
+      "median_price": 286344,
+      "avg_price": 290749,
+      "min_price": 259911,
+      "max_price": 334801
+    },
+    {
+      "year": 2025,
+      "count": 10,
+      "median_price": 301762,
+      "avg_price": 308769,
+      "min_price": 299559,
+      "max_price": 343000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-09-12",
+      "address": "65 Cluain Bui, Quinagh, Carlow",
+      "price": 299559,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-08-12",
+      "address": "66 Cluain Bui, Quinagh",
+      "price": 299559,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-30",
+      "address": "98 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 343000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R93HT0F"
+    },
+    {
+      "date": "2025-06-09",
+      "address": "18 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 335000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R93TX2A"
+    },
+    {
+      "date": "2025-06-05",
+      "address": "63 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 303965,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-05-23",
+      "address": "69 Cluain Bui, Quinagh, Co. Carlow",
+      "price": 299559,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-04-28",
+      "address": "68 Cluain Bui, Quinagh, County Carlow",
+      "price": 299559,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-03-28",
+      "address": "71 Cluain Bui, Quinagh, Carlow",
+      "price": 299559,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-24",
+      "address": "72 Cluain Bui, Quinagh, Carlow",
+      "price": 303965,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-02-18",
+      "address": "64 Cluain Bui, Quinagh, Carlow",
+      "price": 303964,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2024-11-29",
+      "address": "70  Cluain Bui, Quinagh",
+      "price": 299559,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-16",
+      "address": "74 Cluain Bui, Quinagh, Carlow",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-09",
+      "address": "73 Cluain Bui, Quinagh, Carlow",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-08-16",
+      "address": "78 Cluain Bui, Quinagh",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-08-06",
+      "address": "77 Cluain Bui, Quinagh, Carlow",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-26",
+      "address": "76 Cluain Bui, Quinagh",
+      "price": 286343,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-24",
+      "address": "75 Cluain Bui, Quinagh, Carlow Town",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-12",
+      "address": "79 CLUAIN BUI, Quinagh",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-25",
+      "address": "80 Cluain Bui, Quinagh, Carlow",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-30",
+      "address": "85 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 334801,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-16",
+      "address": "60 Cluain Bui, Quinagh, Carlow",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-14",
+      "address": "84 Cluain Bui, Quinagh, Carlow",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-13",
+      "address": "83 Cluain Bui, Quinagh, Carlow",
+      "price": 277534,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93E92K"
+    },
+    {
+      "date": "2024-05-03",
+      "address": "86 Cluain Bui, Quinagh, Carlow",
+      "price": 325992,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-25",
+      "address": "88 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-18",
+      "address": "82 Cluain Bui, Quinagh",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-04-18",
+      "address": "91 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-02-09",
+      "address": "52 Cluain Bui, Quinagh, Carlow",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-01-09",
+      "address": "62 Cluain Bui, Quinagh, Carlow",
+      "price": 259911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-30",
+      "address": "53 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 251101,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-11-30",
+      "address": "61 Cluain Bui, Quinagh",
+      "price": 259911,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-13",
+      "address": "54 Cluain Bui, Quinagh",
+      "price": 251101,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-09",
+      "address": "90 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-06",
+      "address": "89 Cluain Bui, Quinagh, Carlow",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "29 Cluain Bui, Quinagh, Carlow",
+      "price": 233480,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-24",
+      "address": "55 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 251101,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-18",
+      "address": "28 Cluain Bui, Quinagh",
+      "price": 242290,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-18",
+      "address": "27 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 242291,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-03",
+      "address": "50 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-18",
+      "address": "31 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 224670,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-17",
+      "address": "56 Cluain Bui, Quinagh, Carlow",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-05-05",
+      "address": "117 CLUAIN BUI, QUINAGH, CO CARLOW",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93E2Y8"
+    },
+    {
+      "date": "2023-04-14",
+      "address": "57 Cluain Bui, Quinagh, Co. Carlow",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-03-30",
+      "address": "59 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-02-23",
+      "address": "58 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-07",
+      "address": "49 Cluain Bui, Quinagh",
+      "price": 215859,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-11-01",
+      "address": "48 Cluain Bui, Quinagh, Carlow",
+      "price": 207048,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-28",
+      "address": "34 CLUAIN BUI, QUINAGH, CARLOW",
+      "price": 209000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-14",
+      "address": "33 Cluain Bui, Quinagh",
+      "price": 172687,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-10-13",
+      "address": "47 Cluain Bui, Quinagh, Carlow",
+      "price": 207048,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 115
+}

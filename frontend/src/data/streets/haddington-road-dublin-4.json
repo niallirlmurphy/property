@@ -1,0 +1,177 @@
+{
+  "slug": "haddington-road-dublin-4",
+  "stats": {
+    "count": 12,
+    "median": 1205000,
+    "avg": 1155994,
+    "min": 42000,
+    "max": 1924933,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 655000,
+      "avg_price": 655000,
+      "min_price": 655000,
+      "max_price": 655000
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 42000,
+      "avg_price": 42000,
+      "min_price": 42000,
+      "max_price": 42000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1425000,
+      "avg_price": 1425000,
+      "min_price": 1425000,
+      "max_price": 1425000
+    },
+    {
+      "year": 2018,
+      "count": 2,
+      "median_price": 1250000,
+      "avg_price": 1250000,
+      "min_price": 1210000,
+      "max_price": 1290000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1924933,
+      "avg_price": 1924933,
+      "min_price": 1924933,
+      "max_price": 1924933
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 956000,
+      "avg_price": 956000,
+      "min_price": 902000,
+      "max_price": 1010000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1640000,
+      "avg_price": 1640000,
+      "min_price": 1640000,
+      "max_price": 1640000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 1200000,
+      "avg_price": 1257667,
+      "min_price": 1118000,
+      "max_price": 1455000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-10",
+      "address": "98 HADDINGTON ROAD, DUBLIN 4",
+      "price": 1118000,
+      "bedrooms": 7,
+      "propertyType": "semi-detached",
+      "eircode": "D04H3C3"
+    },
+    {
+      "date": "2026-02-17",
+      "address": "97 HADDINGTON ROAD, DUBLIN 4",
+      "price": 1455000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D04YK79"
+    },
+    {
+      "date": "2026-02-03",
+      "address": "44 HADDINGTON ROAD, DUBLIN 4",
+      "price": 1200000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D04Y718"
+    },
+    {
+      "date": "2025-06-26",
+      "address": "29 HADDINGTON RD, DUBLIN 4, DUBLIN",
+      "price": 1640000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04C6T4"
+    },
+    {
+      "date": "2024-10-10",
+      "address": "35 HADDINGTON RD, DUBLIN 4, DUBLIN",
+      "price": 902000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04V2H5"
+    },
+    {
+      "date": "2024-09-13",
+      "address": "87 HADDINGTON RD, DUBLIN 4, DUBLIN",
+      "price": 1010000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D04WP23"
+    },
+    {
+      "date": "2022-04-04",
+      "address": "66 HADDINGTON ROAD, DUBLIN 4",
+      "price": 1924933,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04RW97"
+    },
+    {
+      "date": "2018-11-02",
+      "address": "66 HADDINGTON ROAD, DUBLIN 4",
+      "price": 1210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04RW97"
+    },
+    {
+      "date": "2018-05-31",
+      "address": "29 HADDINGTON RD, DUBLIN 4, DUBLIN",
+      "price": 1290000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04C6T4"
+    },
+    {
+      "date": "2016-06-30",
+      "address": "68 HADDINGTON RD, DUBLIN 4, DUBLIN",
+      "price": 1425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-01-14",
+      "address": "41 Haddington Road, Dublin 4",
+      "price": 42000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-05-14",
+      "address": "67 Haddington Road, Dublin 4",
+      "price": 655000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 12
+}

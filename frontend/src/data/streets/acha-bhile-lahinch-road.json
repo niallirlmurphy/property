@@ -1,0 +1,529 @@
+{
+  "slug": "acha-bhile-lahinch-road",
+  "stats": {
+    "count": 113,
+    "median": 120000,
+    "avg": 162391,
+    "min": 37000,
+    "max": 1390000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 97000,
+      "avg_price": 97000,
+      "min_price": 97000,
+      "max_price": 97000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 65000,
+      "avg_price": 65000,
+      "min_price": 65000,
+      "max_price": 65000
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "median_price": 75000,
+      "avg_price": 238125,
+      "min_price": 37000,
+      "max_price": 1390000
+    },
+    {
+      "year": 2016,
+      "count": 26,
+      "median_price": 90482,
+      "avg_price": 90995,
+      "min_price": 54878,
+      "max_price": 140000
+    },
+    {
+      "year": 2017,
+      "count": 20,
+      "median_price": 79148,
+      "avg_price": 81921,
+      "min_price": 61300,
+      "max_price": 135000
+    },
+    {
+      "year": 2018,
+      "count": 3,
+      "median_price": 160000,
+      "avg_price": 168733,
+      "min_price": 83700,
+      "max_price": 262500
+    },
+    {
+      "year": 2019,
+      "count": 5,
+      "median_price": 125000,
+      "avg_price": 135000,
+      "min_price": 125000,
+      "max_price": 170000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 139500,
+      "avg_price": 144100,
+      "min_price": 120000,
+      "max_price": 175500
+    },
+    {
+      "year": 2021,
+      "count": 5,
+      "median_price": 169000,
+      "avg_price": 141111,
+      "min_price": 38554,
+      "max_price": 190000
+    },
+    {
+      "year": 2022,
+      "count": 9,
+      "median_price": 215000,
+      "avg_price": 197462,
+      "min_price": 80659,
+      "max_price": 250000
+    },
+    {
+      "year": 2023,
+      "count": 11,
+      "median_price": 230000,
+      "avg_price": 224682,
+      "min_price": 60000,
+      "max_price": 395000
+    },
+    {
+      "year": 2024,
+      "count": 13,
+      "median_price": 333000,
+      "avg_price": 326000,
+      "min_price": 265000,
+      "max_price": 333000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 218000,
+      "avg_price": 216667,
+      "min_price": 212000,
+      "max_price": 220000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 155000,
+      "avg_price": 178333,
+      "min_price": 155000,
+      "max_price": 225000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-08-04",
+      "address": "139 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 225000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "V95Y017"
+    },
+    {
+      "date": "2026-01-05",
+      "address": "140 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 155000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "V95F973"
+    },
+    {
+      "date": "2026-01-05",
+      "address": "144 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 155000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "V95RH22"
+    },
+    {
+      "date": "2025-09-25",
+      "address": "160 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 220000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "V95R856"
+    },
+    {
+      "date": "2025-07-29",
+      "address": "137 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 212000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "V95T650"
+    },
+    {
+      "date": "2025-02-26",
+      "address": "161 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 218000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "V95E181"
+    },
+    {
+      "date": "2024-12-09",
+      "address": "72 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95Y2TK"
+    },
+    {
+      "date": "2024-10-03",
+      "address": "105 Acha Bhile, Lahinch Road, Ennis",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "106 Acha Bhile, Lahinch Road, Ennis",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "107 Acha Bhile, Lahinch Road, Ennis",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "109 Acha Bhile, Lahinch Road, Ennis",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "110 Acha bhile, Lahinch Road, Ennis",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "123 Acha bhile, Lahinch Road, Ennis",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "108 Acha Bhile, Lahinch Road, Ennis",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "124 Acha bhile, Lahinch Road, Ennis",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "125 Acha bhile, Lahinch Road, Ennis",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "111 Acha bhile, Lahinch Road, Ennis",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-03",
+      "address": "112 Acha bhile, Lahinch Road, Ennis",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-14",
+      "address": "54 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95HHP3"
+    },
+    {
+      "date": "2023-12-18",
+      "address": "158 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 179500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95NR26"
+    },
+    {
+      "date": "2023-12-01",
+      "address": "38 ACHA BHILE, LAHINCH RD, ENNIS",
+      "price": 218000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95W57C"
+    },
+    {
+      "date": "2023-12-01",
+      "address": "56 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 268000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95X2P6"
+    },
+    {
+      "date": "2023-11-17",
+      "address": "4 ACHA BHILE, LAHINCH RD, ENNIS",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95T2XH"
+    },
+    {
+      "date": "2023-11-10",
+      "address": "65 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95CXC5"
+    },
+    {
+      "date": "2023-09-15",
+      "address": "143 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 183000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95AX97"
+    },
+    {
+      "date": "2023-08-22",
+      "address": "26 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 241000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95XE9H"
+    },
+    {
+      "date": "2023-05-23",
+      "address": "36 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95DRC6"
+    },
+    {
+      "date": "2023-01-23",
+      "address": "141 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 60000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95HW62"
+    },
+    {
+      "date": "2023-01-20",
+      "address": "153 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 162000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95X098"
+    },
+    {
+      "date": "2023-01-18",
+      "address": "58 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95CDK7"
+    },
+    {
+      "date": "2022-12-01",
+      "address": "8 ACHA BHILE, LAHINCH RD, CLARE",
+      "price": 205000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95TV2N"
+    },
+    {
+      "date": "2022-11-10",
+      "address": "13 ACHA BHILE, LAHINCH RD, LOUGHVILLE",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95V2WD"
+    },
+    {
+      "date": "2022-11-09",
+      "address": "4 ACHA BHILE, LAHINCH RD, ENNIS",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95T2XH"
+    },
+    {
+      "date": "2022-07-21",
+      "address": "47 ACHA BHILE, LAHINCH RD, ENNIS",
+      "price": 215000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95C58P"
+    },
+    {
+      "date": "2022-07-15",
+      "address": "32 ACHA BHILE, LAHINCH RD, ENNIS",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95P89C"
+    },
+    {
+      "date": "2022-06-30",
+      "address": "152 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 161000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95FN44"
+    },
+    {
+      "date": "2022-06-10",
+      "address": "27 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95NF8Y"
+    },
+    {
+      "date": "2022-05-20",
+      "address": "50 ACHA BHILE, LAHINCH RD, ENNIS",
+      "price": 80659,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95NX3E"
+    },
+    {
+      "date": "2022-03-25",
+      "address": "60 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 175500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95F9DN"
+    },
+    {
+      "date": "2021-12-10",
+      "address": "154 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 130000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95KN28"
+    },
+    {
+      "date": "2021-10-06",
+      "address": "44 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 178000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95PK3V"
+    },
+    {
+      "date": "2021-09-23",
+      "address": "5 ACHA BHILE, LAHINCH RD, ENNIS",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95EAP8"
+    },
+    {
+      "date": "2021-07-23",
+      "address": "34 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 169000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95XAC1"
+    },
+    {
+      "date": "2021-02-17",
+      "address": "38 ACHA BHILE, LAHINCH RD, ENNIS",
+      "price": 38554,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95W57C"
+    },
+    {
+      "date": "2020-11-13",
+      "address": "33 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 139500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-13",
+      "address": "34 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 133000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95XAC1"
+    },
+    {
+      "date": "2020-11-12",
+      "address": "60 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 175500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V95F9DN"
+    },
+    {
+      "date": "2020-06-09",
+      "address": "165 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 120000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-06",
+      "address": "45 ACHA BHILE, LAHINCH RD, ENNIS",
+      "price": 152500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-16",
+      "address": "164 ACHA BHILE, LAHINCH ROAD, ENNIS",
+      "price": 125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 113
+}

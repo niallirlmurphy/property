@@ -1,0 +1,369 @@
+{
+  "slug": "upper-leeson-street-dublin-4",
+  "stats": {
+    "count": 31,
+    "median": 1400000,
+    "avg": 1657097,
+    "min": 410000,
+    "max": 7150000,
+    "firstYear": 2011,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1250000,
+      "avg_price": 1250000,
+      "min_price": 1250000,
+      "max_price": 1250000
+    },
+    {
+      "year": 2013,
+      "count": 4,
+      "median_price": 740000,
+      "avg_price": 700000,
+      "min_price": 410000,
+      "max_price": 910000
+    },
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1910000,
+      "avg_price": 1910000,
+      "min_price": 1910000,
+      "max_price": 1910000
+    },
+    {
+      "year": 2015,
+      "count": 4,
+      "median_price": 1400000,
+      "avg_price": 1607500,
+      "min_price": 930000,
+      "max_price": 2700000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 1850000,
+      "avg_price": 3062500,
+      "min_price": 1400000,
+      "max_price": 7150000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 1320000,
+      "avg_price": 1218333,
+      "min_price": 875000,
+      "max_price": 1460000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1520000,
+      "avg_price": 1520000,
+      "min_price": 440000,
+      "max_price": 2600000
+    },
+    {
+      "year": 2021,
+      "count": 1,
+      "median_price": 1525000,
+      "avg_price": 1525000,
+      "min_price": 1525000,
+      "max_price": 1525000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 1350000,
+      "avg_price": 1900000,
+      "min_price": 1150000,
+      "max_price": 3200000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 850000,
+      "avg_price": 1500000,
+      "min_price": 800000,
+      "max_price": 2850000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 2350000,
+      "avg_price": 2350000,
+      "min_price": 2350000,
+      "max_price": 2350000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 1705000,
+      "avg_price": 1705000,
+      "min_price": 1510000,
+      "max_price": 1900000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 1275000,
+      "avg_price": 1275000,
+      "min_price": 850000,
+      "max_price": 1700000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-20",
+      "address": "119 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04P6R0"
+    },
+    {
+      "date": "2026-05-14",
+      "address": "114 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04P5X7"
+    },
+    {
+      "date": "2025-11-06",
+      "address": "109 UPPER LEESON ST, DUBLIN 4",
+      "price": 1510000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04F9W3"
+    },
+    {
+      "date": "2025-04-15",
+      "address": "38 UPPER LEESON ST, DUBLIN 4",
+      "price": 1900000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D04X5P6"
+    },
+    {
+      "date": "2024-06-28",
+      "address": "2 Upper Leeson Street, Dublin 4",
+      "price": 2350000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04HF44"
+    },
+    {
+      "date": "2023-12-18",
+      "address": "135 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E5Y6"
+    },
+    {
+      "date": "2023-08-18",
+      "address": "4 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A2W2"
+    },
+    {
+      "date": "2023-07-14",
+      "address": "49 UPPER LEESON ST, DUBLIN 4",
+      "price": 2850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V3K0"
+    },
+    {
+      "date": "2022-12-02",
+      "address": "138 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X3X0"
+    },
+    {
+      "date": "2022-05-27",
+      "address": "102 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04X6F9"
+    },
+    {
+      "date": "2022-03-31",
+      "address": "24 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 3200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E4C1"
+    },
+    {
+      "date": "2021-04-23",
+      "address": "74 UPPER LEESON ST, DUBLIN 4",
+      "price": 1525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-12",
+      "address": "147 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-02",
+      "address": "90 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 2600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-27",
+      "address": "47 Upper Leeson Street, Dublin 4",
+      "price": 1460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-16",
+      "address": "54 UPPER LEESON ST, DUBLIN 4",
+      "price": 875000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-27",
+      "address": "109 UPPER LEESON ST, DUBLIN 4",
+      "price": 1320000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04F9W3"
+    },
+    {
+      "date": "2016-12-19",
+      "address": "100 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-16",
+      "address": "86 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 7150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-10-28",
+      "address": "65A UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 2000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-03-11",
+      "address": "39 Upper Leeson Street, Dublin 4",
+      "price": 1400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-12-11",
+      "address": "81 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 930000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-11-18",
+      "address": "99 Upper Leeson Street, Dublin 4",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-11-11",
+      "address": "53 UPPER LEESON ST, DUBLIN 4",
+      "price": 1200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-13",
+      "address": "49 Upper Leeson Street, Dublin 4",
+      "price": 2700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V3K0"
+    },
+    {
+      "date": "2014-06-06",
+      "address": "65 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 1910000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-12-06",
+      "address": "101 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 910000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-11-14",
+      "address": "123 upper leeson st, dublin 4",
+      "price": 760000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-09-23",
+      "address": "102a Upper Leeson Street, Dublin 4",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-04-25",
+      "address": "139 Upper Leeson Street, Dublin 4",
+      "price": 720000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-06-29",
+      "address": "20 Upper Leeson Street, Dublin 4",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 31
+}

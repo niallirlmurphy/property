@@ -1,0 +1,481 @@
+{
+  "slug": "viewmount-greenane-road",
+  "stats": {
+    "count": 91,
+    "median": 245815,
+    "avg": 254117,
+    "min": 161500,
+    "max": 456000,
+    "firstYear": 2016,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2016,
+      "count": 3,
+      "median_price": 161500,
+      "avg_price": 174167,
+      "min_price": 161500,
+      "max_price": 199500
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 230000,
+      "avg_price": 221667,
+      "min_price": 205000,
+      "max_price": 230000
+    },
+    {
+      "year": 2019,
+      "count": 14,
+      "median_price": 236564,
+      "avg_price": 239798,
+      "min_price": 224600,
+      "max_price": 297000
+    },
+    {
+      "year": 2020,
+      "count": 18,
+      "median_price": 227313,
+      "avg_price": 235440,
+      "min_price": 214537,
+      "max_price": 279000
+    },
+    {
+      "year": 2021,
+      "count": 25,
+      "median_price": 251057,
+      "avg_price": 253006,
+      "min_price": 229031,
+      "max_price": 312950
+    },
+    {
+      "year": 2022,
+      "count": 23,
+      "median_price": 263436,
+      "avg_price": 257516,
+      "min_price": 224669,
+      "max_price": 303965
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 377500,
+      "avg_price": 377500,
+      "min_price": 345000,
+      "max_price": 410000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 455000,
+      "avg_price": 446333,
+      "min_price": 428000,
+      "max_price": 456000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-12-05",
+      "address": "127 VIEWMOUNT, GREENANE ROAD, RATHDRUM",
+      "price": 456000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A67NY73"
+    },
+    {
+      "date": "2025-08-26",
+      "address": "NO.15  VIEWMOUNT, GREENANE  ROAD, RATHDRUM",
+      "price": 455000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A67TX08"
+    },
+    {
+      "date": "2025-08-14",
+      "address": "24 VIEWMOUNT, GREENANE ROAD, RATHDRUM",
+      "price": 428000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "A67PK63"
+    },
+    {
+      "date": "2024-10-15",
+      "address": "27 VIEWMOUNT, GREENANE ROAD, RATHDRUM",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A67E678"
+    },
+    {
+      "date": "2024-09-17",
+      "address": "76 VIEWMOUNT, GREENANE ROAD, RATHDRUM",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A67YT29"
+    },
+    {
+      "date": "2022-08-22",
+      "address": "128 viewmount, greenane road, rathdrum",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-08-16",
+      "address": "130 Viewmount, Greenane Road, Rathdrum",
+      "price": 250850,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-08-09",
+      "address": "127 Viewmount, Greenane Road, Rathdrum",
+      "price": 268722,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A67NY73"
+    },
+    {
+      "date": "2022-08-09",
+      "address": "129 Viewmount, Greenane Road, Rathdrum",
+      "price": 278000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-07-28",
+      "address": "126 Viewmount, Greenane Road, Rathdrum",
+      "price": 244933,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-07-15",
+      "address": "123 Viewmount, Greenane Road, Rathdrum",
+      "price": 265198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-07-15",
+      "address": "125 Viewmount, Greenane Road, Rathdrum",
+      "price": 244934,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-07-12",
+      "address": "124 Viewmount, Greenane Road, Rathdrum",
+      "price": 265198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-29",
+      "address": "121 Viewmount, Greenane Road, Rathdrum",
+      "price": 269603,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-24",
+      "address": "122 Viewmount, Greenane Road, Rathnew",
+      "price": 265198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-06-03",
+      "address": "NO. 111 VIEWMOUNT, GREENANE ROAD, RATHDRUM",
+      "price": 230837,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-16",
+      "address": "113 Viewmount, Greenane Road, Rathdrum",
+      "price": 224669,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-13",
+      "address": "116 VIEWMOUNT, GREENANE ROAD, RATHDRUM",
+      "price": 242290,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-12",
+      "address": "120 Viewmount, Greenane Road, Rathdrum",
+      "price": 266960,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-10",
+      "address": "118 Viewmount, Greenane Road, Rathdrum",
+      "price": 263436,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-06",
+      "address": "119 Viewmount, Greenane Road, Rathdrum",
+      "price": 263436,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-05",
+      "address": "115 Viewmount, Greenane Road, Rathdrum",
+      "price": 242291,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-15",
+      "address": "110 Viewmount, Greenane Road, Rathdrum",
+      "price": 235198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-09",
+      "address": "107 Viewmount, Greenane Road, Rathdrum",
+      "price": 303965,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-03-01",
+      "address": "109 Viewmount, Greenane Road, Rathdrum",
+      "price": 235189,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-15",
+      "address": "105 Viewmount, Greenane Road, Rathdrum",
+      "price": 258987,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-14",
+      "address": "106 Viewmount, Greenane Road, Rathdrum",
+      "price": 256344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-02-03",
+      "address": "108  Viewmount, Greenane Road, Rathdrum",
+      "price": 264690,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-22",
+      "address": "104 Viewmount, Greenane Road, Rathdrum",
+      "price": 265198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-20",
+      "address": "102 VIEWMOUNT, GREENANE ROAD, RATHDRUM",
+      "price": 295154,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-17",
+      "address": "103 Viewmount, Greenane Road, Rathdrum",
+      "price": 254626,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-17",
+      "address": "No. 97 Viewmount, Greenane Road, Rathdrum",
+      "price": 235198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-16",
+      "address": "101 VIEWMOUNT, GREENANE ROAD, RATHDRUM",
+      "price": 253700,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-10",
+      "address": "96 Viewmount, Greenane Road, Rathdrum",
+      "price": 235198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-09",
+      "address": "99 Viewmount, Greenane Road, Rathdrum",
+      "price": 254581,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-08",
+      "address": "92 Viewmount, Greenane Road, Rathdrum",
+      "price": 235198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-12-07",
+      "address": "94 Viewmount, Greenane Road, Rathdrum",
+      "price": 235198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-08-09",
+      "address": "89 Viewmount, Greenane Road, Rathdrum",
+      "price": 251057,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-21",
+      "address": "91 Viewmount, Greenane Road, Rathdrum",
+      "price": 231674,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-19",
+      "address": "86 Viewmount, Greenane Road, Rathdrum",
+      "price": 235198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-16",
+      "address": "85 Viewmount, Greenane Road, Rathrum",
+      "price": 312950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-15",
+      "address": "84 Viewmount, Greenane Road, Rathdrum",
+      "price": 251057,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-07-13",
+      "address": "87 Viewmount, Greenane Road, Rathdrum",
+      "price": 235198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-16",
+      "address": "74 VIEWMOUNT, GREENANE ROAD, RATHDRUM",
+      "price": 309950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-08",
+      "address": "81  Viewmount, Greenane Road, Rathdrum",
+      "price": 248414,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-04",
+      "address": "82 Viewmount, Greenane Road, Rathdrum",
+      "price": 251058,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-04",
+      "address": "77 Viewmount, Greenane Road, Rathdrum",
+      "price": 248414,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-06-02",
+      "address": "76 Viewmount, Greenane Road, Rathdrum",
+      "price": 235198,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A67YT29"
+    },
+    {
+      "date": "2021-05-24",
+      "address": "79 Viewmount, Greenane Road, Rathdrum",
+      "price": 229031,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-05-21",
+      "address": "78 Viewmount, Greenane Road, Rathdrum",
+      "price": 248414,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 91
+}

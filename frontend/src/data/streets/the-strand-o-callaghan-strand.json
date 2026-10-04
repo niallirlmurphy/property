@@ -1,0 +1,521 @@
+{
+  "slug": "the-strand-o-callaghan-strand",
+  "stats": {
+    "count": 121,
+    "median": 249000,
+    "avg": 268250,
+    "min": 150000,
+    "max": 530000,
+    "firstYear": 2014,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 198000,
+      "avg_price": 198000,
+      "min_price": 198000,
+      "max_price": 198000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 183199,
+      "avg_price": 183199,
+      "min_price": 183199,
+      "max_price": 183199
+    },
+    {
+      "year": 2016,
+      "count": 26,
+      "median_price": 248788,
+      "avg_price": 247591,
+      "min_price": 170000,
+      "max_price": 305000
+    },
+    {
+      "year": 2017,
+      "count": 12,
+      "median_price": 260500,
+      "avg_price": 258039,
+      "min_price": 159471,
+      "max_price": 370000
+    },
+    {
+      "year": 2018,
+      "count": 43,
+      "median_price": 235000,
+      "avg_price": 241244,
+      "min_price": 177000,
+      "max_price": 440000
+    },
+    {
+      "year": 2019,
+      "count": 13,
+      "median_price": 245000,
+      "avg_price": 246538,
+      "min_price": 175000,
+      "max_price": 345000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 309100,
+      "avg_price": 309100,
+      "min_price": 246200,
+      "max_price": 372000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 372500,
+      "avg_price": 372500,
+      "min_price": 365000,
+      "max_price": 380000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 385000,
+      "avg_price": 375000,
+      "min_price": 335000,
+      "max_price": 405000
+    },
+    {
+      "year": 2023,
+      "count": 7,
+      "median_price": 338000,
+      "avg_price": 344714,
+      "min_price": 230000,
+      "max_price": 505000
+    },
+    {
+      "year": 2024,
+      "count": 4,
+      "median_price": 370000,
+      "avg_price": 376250,
+      "min_price": 260000,
+      "max_price": 505000
+    },
+    {
+      "year": 2025,
+      "count": 4,
+      "median_price": 410000,
+      "avg_price": 411250,
+      "min_price": 295000,
+      "max_price": 530000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 331500,
+      "avg_price": 304500,
+      "min_price": 150000,
+      "max_price": 432000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-13",
+      "address": "68 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94FN32"
+    },
+    {
+      "date": "2026-04-10",
+      "address": "131 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 331500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94K504"
+    },
+    {
+      "date": "2026-03-27",
+      "address": "93 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 432000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "V94XY07"
+    },
+    {
+      "date": "2025-09-12",
+      "address": "16 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 490000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "V94FH00"
+    },
+    {
+      "date": "2025-05-23",
+      "address": "12 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 295000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "V94P892"
+    },
+    {
+      "date": "2025-03-04",
+      "address": "APT 41, THE STRAND, OCALLAGHAN STRAND",
+      "price": 530000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "V94FR88"
+    },
+    {
+      "date": "2025-02-28",
+      "address": "71 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94DH95"
+    },
+    {
+      "date": "2024-12-02",
+      "address": "12 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 260000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "V94P892"
+    },
+    {
+      "date": "2024-08-28",
+      "address": "22 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94YE81"
+    },
+    {
+      "date": "2024-02-23",
+      "address": "96 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94NC59"
+    },
+    {
+      "date": "2024-01-26",
+      "address": "63 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94P840"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "34 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94A6K2"
+    },
+    {
+      "date": "2023-12-15",
+      "address": "131 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94K504"
+    },
+    {
+      "date": "2023-12-06",
+      "address": "91 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94V382"
+    },
+    {
+      "date": "2023-11-20",
+      "address": "2 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94VW59"
+    },
+    {
+      "date": "2023-10-24",
+      "address": "119 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94XW6Y"
+    },
+    {
+      "date": "2023-05-19",
+      "address": "APT 112, THE STRAND, OCALLAGHAN STRAND",
+      "price": 338000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "V94HA29"
+    },
+    {
+      "date": "2023-03-07",
+      "address": "52 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94K4V8"
+    },
+    {
+      "date": "2022-03-04",
+      "address": "86 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94K103"
+    },
+    {
+      "date": "2022-02-08",
+      "address": "65 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94V9D6"
+    },
+    {
+      "date": "2022-01-28",
+      "address": "28 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94Y159"
+    },
+    {
+      "date": "2021-12-16",
+      "address": "55 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94X88D"
+    },
+    {
+      "date": "2021-05-07",
+      "address": "128 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94NW24"
+    },
+    {
+      "date": "2020-10-19",
+      "address": "82 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 246200,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-22",
+      "address": "APT 41, THE STRAND, OCALLAGHAN STRAND",
+      "price": 372000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "V94FR88"
+    },
+    {
+      "date": "2019-09-30",
+      "address": "124 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-30",
+      "address": "35 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-20",
+      "address": "APT 114, THE STRAND, OCALLAGHAN STRAND",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2019-07-11",
+      "address": "69 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-04",
+      "address": "42 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-03",
+      "address": "55 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94X88D"
+    },
+    {
+      "date": "2019-04-29",
+      "address": "93 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 230000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "V94XY07"
+    },
+    {
+      "date": "2019-04-15",
+      "address": "90 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-26",
+      "address": "65 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94V9D6"
+    },
+    {
+      "date": "2019-03-07",
+      "address": "72 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-04",
+      "address": "134 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-04",
+      "address": "131 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94K504"
+    },
+    {
+      "date": "2019-02-19",
+      "address": "127 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-17",
+      "address": "107 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 249000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-25",
+      "address": "80 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-12",
+      "address": "78 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 246000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-27",
+      "address": "115 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 195000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-18",
+      "address": "113 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-01",
+      "address": "100 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-01",
+      "address": "101 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-01",
+      "address": "102 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-01",
+      "address": "103 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-01",
+      "address": "104 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-01",
+      "address": "105 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-31",
+      "address": "96 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 232000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94NC59"
+    }
+  ],
+  "totalTransactions": 121
+}

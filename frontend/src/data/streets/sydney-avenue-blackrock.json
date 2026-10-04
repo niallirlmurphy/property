@@ -1,0 +1,241 @@
+{
+  "slug": "sydney-avenue-blackrock",
+  "stats": {
+    "count": 15,
+    "median": 1340000,
+    "avg": 1400937,
+    "min": 435000,
+    "max": 2675000,
+    "firstYear": 2010,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 878000,
+      "avg_price": 878000,
+      "min_price": 878000,
+      "max_price": 878000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 617500,
+      "avg_price": 617500,
+      "min_price": 435000,
+      "max_price": 800001
+    },
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 1220000,
+      "avg_price": 1220000,
+      "min_price": 1220000,
+      "max_price": 1220000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 2015000,
+      "avg_price": 2015000,
+      "min_price": 2015000,
+      "max_price": 2015000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 2107500,
+      "avg_price": 2107500,
+      "min_price": 2107500,
+      "max_price": 2107500
+    },
+    {
+      "year": 2017,
+      "count": 1,
+      "median_price": 1340000,
+      "avg_price": 1340000,
+      "min_price": 1340000,
+      "max_price": 1340000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1080000,
+      "avg_price": 1080000,
+      "min_price": 1080000,
+      "max_price": 1080000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 2675000,
+      "avg_price": 2675000,
+      "min_price": 2675000,
+      "max_price": 2675000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 1350000,
+      "avg_price": 1350000,
+      "min_price": 1350000,
+      "max_price": 1350000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1186775,
+      "avg_price": 1186775,
+      "min_price": 873000,
+      "max_price": 1500550
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1300000,
+      "avg_price": 1300000,
+      "min_price": 1300000,
+      "max_price": 1300000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1890000,
+      "avg_price": 1890000,
+      "min_price": 1890000,
+      "max_price": 1890000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1550000,
+      "avg_price": 1550000,
+      "min_price": 1550000,
+      "max_price": 1550000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-11-19",
+      "address": "48 SYDNEY AVENUE, BLACKROCK, CO DUBLIN",
+      "price": 1550000,
+      "bedrooms": 6,
+      "propertyType": "apartment",
+      "eircode": "A94D2T0"
+    },
+    {
+      "date": "2023-11-29",
+      "address": "42 SYDNEY AVENUE, BLACKROCK, CO DUBLIN",
+      "price": 1890000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94D8P6"
+    },
+    {
+      "date": "2022-03-23",
+      "address": "20 SYDNEY AVE, BLACKROCK, DUBLIN",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94E2V4"
+    },
+    {
+      "date": "2021-12-03",
+      "address": "21 SYDNEY AVE, BLACKROCK, CO DUBLIN",
+      "price": 1500550,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-08",
+      "address": "19A SYDNEY AVENUE, BLACKROCK, CO DUBLIN",
+      "price": 873000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-04",
+      "address": "24 SYDNEY AVE, BLACKROCK, DUBLIN",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-23",
+      "address": "30 SYDNEY AVE, BLACKROCK, DUBLIN",
+      "price": 2675000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-23",
+      "address": "5 SYDNEY AVE, BLACKROCK, DUBLIN",
+      "price": 1080000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-01-31",
+      "address": "24 SYDNEY AVE, BLACKROCK, DUBLIN",
+      "price": 1340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-07-20",
+      "address": "12 SYDNEY AVE, BLACKROCK, DUBLIN",
+      "price": 2107500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-11",
+      "address": "10 SYDNEY AVE, BLACKROCK, DUBLIN",
+      "price": 2015000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-01-16",
+      "address": "39 Sydney Avenue, Blackrock",
+      "price": 1220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-06-01",
+      "address": "18 Sydney Avenue, Blackrock",
+      "price": 800001,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-05-01",
+      "address": "15 Sydney Avenue, Blackrock, Co. Dublin",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2010-03-03",
+      "address": "35 Sydney Avenue, Blackrock, Co.Dublin",
+      "price": 878000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 15
+}

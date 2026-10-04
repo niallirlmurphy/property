@@ -1,0 +1,473 @@
+{
+  "slug": "castlefield-hall-clonsilla",
+  "stats": {
+    "count": 120,
+    "median": 433920,
+    "avg": 442105,
+    "min": 321128,
+    "max": 630000,
+    "firstYear": 2019,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2019,
+      "count": 29,
+      "median_price": 405286,
+      "avg_price": 393839,
+      "min_price": 321128,
+      "max_price": 470000
+    },
+    {
+      "year": 2020,
+      "count": 13,
+      "median_price": 415200,
+      "avg_price": 414620,
+      "min_price": 373984,
+      "max_price": 436123
+    },
+    {
+      "year": 2022,
+      "count": 12,
+      "median_price": 440485,
+      "avg_price": 423409,
+      "min_price": 338800,
+      "max_price": 499950
+    },
+    {
+      "year": 2023,
+      "count": 28,
+      "median_price": 440485,
+      "avg_price": 431120,
+      "min_price": 378854,
+      "max_price": 502203
+    },
+    {
+      "year": 2024,
+      "count": 23,
+      "median_price": 493392,
+      "avg_price": 479922,
+      "min_price": 418502,
+      "max_price": 572687
+    },
+    {
+      "year": 2025,
+      "count": 10,
+      "median_price": 531000,
+      "avg_price": 540199,
+      "min_price": 488986,
+      "max_price": 630000
+    },
+    {
+      "year": 2026,
+      "count": 5,
+      "median_price": 560000,
+      "avg_price": 529749,
+      "min_price": 453744,
+      "max_price": 560000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-06-19",
+      "address": "45 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 515000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15W08D"
+    },
+    {
+      "date": "2026-06-09",
+      "address": "41 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 453744,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2026-02-12",
+      "address": "75 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 560000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15YA3C"
+    },
+    {
+      "date": "2026-02-12",
+      "address": "76 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 560000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15X37C"
+    },
+    {
+      "date": "2026-01-30",
+      "address": "78 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 560000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15EE7Y"
+    },
+    {
+      "date": "2025-12-15",
+      "address": "79 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 507000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15A3EK"
+    },
+    {
+      "date": "2025-10-29",
+      "address": "6 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 550000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D15P8RP"
+    },
+    {
+      "date": "2025-10-14",
+      "address": "84 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 575000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15EVX4"
+    },
+    {
+      "date": "2025-09-17",
+      "address": "40 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 510000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15RC8V"
+    },
+    {
+      "date": "2025-08-08",
+      "address": "39 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 488986,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15KXH0"
+    },
+    {
+      "date": "2025-06-30",
+      "address": "80 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 512000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15Y91K"
+    },
+    {
+      "date": "2025-03-14",
+      "address": "44 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 510000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15PC9H"
+    },
+    {
+      "date": "2025-02-19",
+      "address": "82 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 559000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15T38C"
+    },
+    {
+      "date": "2025-01-31",
+      "address": "55 CASTLEFIELD HALL, CLONSILLA, DUBLIN15",
+      "price": 630000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D15FC6V"
+    },
+    {
+      "date": "2025-01-13",
+      "address": "43 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 560000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15PNT7"
+    },
+    {
+      "date": "2024-11-26",
+      "address": "81 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15TCX9"
+    },
+    {
+      "date": "2024-11-22",
+      "address": "89 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 572687,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-22",
+      "address": "77 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 542000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15T22R"
+    },
+    {
+      "date": "2024-09-13",
+      "address": "63 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 502203,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-09-13",
+      "address": "83 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 501000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15YXK7"
+    },
+    {
+      "date": "2024-09-05",
+      "address": "57 castlefield hall, clonsilla",
+      "price": 524229,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-30",
+      "address": "62 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 493392,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-23",
+      "address": "73 Castlefield Hall, Clonsilla",
+      "price": 418502,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-19",
+      "address": "46 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 523000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15NPY1"
+    },
+    {
+      "date": "2024-07-16",
+      "address": "72 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 440485,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-15",
+      "address": "61 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 493392,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15K16D"
+    },
+    {
+      "date": "2024-07-10",
+      "address": "70 Castlefield Hall, Clonsilla",
+      "price": 418502,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-09",
+      "address": "66 Castlefield Hall, Clonsilla",
+      "price": 418502,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-09",
+      "address": "67 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 440485,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-09",
+      "address": "68 Castlefield Hall, Clonsilla",
+      "price": 440088,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15H32H"
+    },
+    {
+      "date": "2024-07-08",
+      "address": "60 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 502202,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-08",
+      "address": "64 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 511013,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-08",
+      "address": "74 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 453744,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-05",
+      "address": "69 Castlefield Hall, Clonsilla",
+      "price": 418502,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-04",
+      "address": "59 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 502203,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-02",
+      "address": "71 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 440484,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-01",
+      "address": "58 Castlefield hall, clonsilla, d15",
+      "price": 502262,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-28",
+      "address": "65 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 449339,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "20 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 405286,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-08-01",
+      "address": "22 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 378855,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-21",
+      "address": "19 Castlefield Hall, Clonsilla",
+      "price": 418502,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-21",
+      "address": "21 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-20",
+      "address": "24 CASTLEFIELD HALL, CLONSILLA",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-18",
+      "address": "23 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 378855,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-13",
+      "address": "27 Castlefield Hall, Clonsilla",
+      "price": 378854,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-06",
+      "address": "28 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-07-03",
+      "address": "26 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 378855,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-29",
+      "address": "25 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 392070,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-23",
+      "address": "31 Castlefield Hall, Clonsilla, Dublin 15",
+      "price": 453744,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-06-19",
+      "address": "29 Castlefield Hall, Clonsilla",
+      "price": 440484,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 120
+}

@@ -1,0 +1,497 @@
+{
+  "slug": "brandon-square-waterville",
+  "stats": {
+    "count": 126,
+    "median": 277516,
+    "avg": 297719,
+    "min": 233333,
+    "max": 655000,
+    "firstYear": 2014,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 55,
+      "median_price": 252863,
+      "avg_price": 261469,
+      "min_price": 233333,
+      "max_price": 308370
+    },
+    {
+      "year": 2015,
+      "count": 52,
+      "median_price": 277533,
+      "avg_price": 283707,
+      "min_price": 250406,
+      "max_price": 330000
+    },
+    {
+      "year": 2016,
+      "count": 4,
+      "median_price": 344500,
+      "avg_price": 352250,
+      "min_price": 340000,
+      "max_price": 380000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 425000,
+      "avg_price": 425000,
+      "min_price": 425000,
+      "max_price": 425000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 394500,
+      "avg_price": 394500,
+      "min_price": 390000,
+      "max_price": 399000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 385000,
+      "avg_price": 385000,
+      "min_price": 385000,
+      "max_price": 385000
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 482000,
+      "avg_price": 462667,
+      "min_price": 421000,
+      "max_price": 485000
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 528000,
+      "avg_price": 527667,
+      "min_price": 485000,
+      "max_price": 570000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 487500,
+      "avg_price": 436250,
+      "min_price": 245000,
+      "max_price": 525000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 655000,
+      "avg_price": 655000,
+      "min_price": 655000,
+      "max_price": 655000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-29",
+      "address": "28 BRANDON SQUARE, WATERVILLE, DUBLIN15",
+      "price": 655000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15X297"
+    },
+    {
+      "date": "2023-12-01",
+      "address": "60 BRANDON SQUARE, WATERVILLE, SNUGBOROUGH ROAD",
+      "price": 525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15NH21"
+    },
+    {
+      "date": "2023-10-09",
+      "address": "40 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15TX33"
+    },
+    {
+      "date": "2023-08-29",
+      "address": "15  BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15XE78"
+    },
+    {
+      "date": "2023-05-15",
+      "address": "29 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15HX65"
+    },
+    {
+      "date": "2022-10-10",
+      "address": "133 BRANDON SQUARE, WATERVILLE, SNUGBOROUGH ROAD",
+      "price": 570000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15XC58"
+    },
+    {
+      "date": "2022-04-05",
+      "address": "73 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15P923"
+    },
+    {
+      "date": "2022-01-28",
+      "address": "54 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 528000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15RH95"
+    },
+    {
+      "date": "2021-11-25",
+      "address": "124 BRANDON SQUARE, WATERVILLE, SNUGBOROUGH ROAD",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D15YK06"
+    },
+    {
+      "date": "2021-03-05",
+      "address": "83 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 482000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-02-01",
+      "address": "112 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 421000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-15",
+      "address": "16 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-20",
+      "address": "6 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 399000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-22",
+      "address": "39 Brandon Square, Waterville, Blanchardstown",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-30",
+      "address": "74 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-09",
+      "address": "100 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 347000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-23",
+      "address": "1 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-06-13",
+      "address": "67 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-02-22",
+      "address": "86  BRANDON SQUARE, WATERVILLE, SNUGBOROUGH ROAD  BLANCHARDSTOWN",
+      "price": 342000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-10-28",
+      "address": "118 Brandon Square, Waterville, Blanchardstown",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-10-05",
+      "address": "93 Brandon Square, waterville, snugborough road  blanchardstown",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-24",
+      "address": "114 Brandon Square, Waterville, Snugborough Road",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-23",
+      "address": "62 Brandon Square, Waterville, Blanchardstown",
+      "price": 290748,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-21",
+      "address": "56 Brandon Square, Waterville, Blanchardstown",
+      "price": 281938,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-08",
+      "address": "131 Brandon Square, Waterville, Blanchardstown",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-03",
+      "address": "64 Brandon Square, Waterville, Blanchardstown",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-25",
+      "address": "127 Brandon Square, Waterville, Blanchardstown",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-25",
+      "address": "129 Brandon Square, Waterville, Blanchardstown",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-21",
+      "address": "130 Brandon Square, Waterville",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-18",
+      "address": "128 BRANDON SQUARE, WATERVILLE, BLANCHARDSTOWN",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-14",
+      "address": "126 Brandon Square, Waterville, Blanchardstown",
+      "price": 277500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-07",
+      "address": "102 Brandon Square, Waterville, Blancardstown",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-08-07",
+      "address": "105 Brandon Square, Waterville, Blanchardstown",
+      "price": 283106,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-27",
+      "address": "106 Brandon Square, Waterville, Blanchardstown",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-17",
+      "address": "104 Brandon Square, Waterville, Blanchardstown",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-16",
+      "address": "65 Brandon Square, Waterville, Blanchardstown",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-16",
+      "address": "108 Brandon Square, Waterville, Blanchardstown",
+      "price": 328000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-14",
+      "address": "107 Brandon Square, Waterville, Blanchardstown",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-07",
+      "address": "122 Brandon Square, Waterville, Snugborough Road",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-07",
+      "address": "121 brandon square, waterville, blanchardstown",
+      "price": 273127,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-02",
+      "address": "103 Brandon Square, Waterville, Blanchardstown",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-01",
+      "address": "120 Brandon Square, Waterville, Blanchardstown",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-06-26",
+      "address": "115 Brandon Square, Waterville, Snugborough Road",
+      "price": 268292,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-06-26",
+      "address": "58 Brandon Square, Waterville, Dublin 15",
+      "price": 250406,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-06-19",
+      "address": "55 Brandon Square, Waterville, Blanchardstown",
+      "price": 296916,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-06-19",
+      "address": "63 Brandon Square, Waterville, Snugborough Raod  Blanchardstown",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-06-11",
+      "address": "119 Brandon Square, Waterville, Blanchardstown",
+      "price": 273128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-29",
+      "address": "67 Brandon Square, Waterville, Blanchardstown",
+      "price": 282819,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-26",
+      "address": "109 Brandon square, waterville, snugborough road",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-22",
+      "address": "111 Brandon Square, Waterville, Blanchardstown",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 126
+}

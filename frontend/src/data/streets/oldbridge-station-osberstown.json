@@ -1,0 +1,537 @@
+{
+  "slug": "oldbridge-station-osberstown",
+  "stats": {
+    "count": 107,
+    "median": 264273,
+    "avg": 286537,
+    "min": 160000,
+    "max": 581000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 4,
+      "median_price": 171806,
+      "avg_price": 177384,
+      "min_price": 170925,
+      "max_price": 195000
+    },
+    {
+      "year": 2013,
+      "count": 6,
+      "median_price": 176212,
+      "avg_price": 176406,
+      "min_price": 173000,
+      "max_price": 180600
+    },
+    {
+      "year": 2014,
+      "count": 16,
+      "median_price": 223750,
+      "avg_price": 220314,
+      "min_price": 177975,
+      "max_price": 265000
+    },
+    {
+      "year": 2015,
+      "count": 13,
+      "median_price": 255463,
+      "avg_price": 256232,
+      "min_price": 228000,
+      "max_price": 315000
+    },
+    {
+      "year": 2016,
+      "count": 15,
+      "median_price": 259868,
+      "avg_price": 261859,
+      "min_price": 198200,
+      "max_price": 294950
+    },
+    {
+      "year": 2017,
+      "count": 20,
+      "median_price": 277533,
+      "avg_price": 277731,
+      "min_price": 252000,
+      "max_price": 308370
+    },
+    {
+      "year": 2018,
+      "count": 7,
+      "median_price": 290749,
+      "avg_price": 287794,
+      "min_price": 255000,
+      "max_price": 350000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 290500,
+      "avg_price": 290500,
+      "min_price": 246000,
+      "max_price": 335000
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 293750,
+      "avg_price": 291957,
+      "min_price": 253328,
+      "max_price": 327000
+    },
+    {
+      "year": 2021,
+      "count": 4,
+      "median_price": 381500,
+      "avg_price": 373250,
+      "min_price": 325000,
+      "max_price": 405000
+    },
+    {
+      "year": 2022,
+      "count": 6,
+      "median_price": 410000,
+      "avg_price": 363167,
+      "min_price": 160000,
+      "max_price": 480000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 380000,
+      "avg_price": 401333,
+      "min_price": 371000,
+      "max_price": 453000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 580000,
+      "avg_price": 560333,
+      "min_price": 520000,
+      "max_price": 581000
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 555000,
+      "avg_price": 558000,
+      "min_price": 554000,
+      "max_price": 565000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 558500,
+      "avg_price": 558500,
+      "min_price": 558500,
+      "max_price": 558500
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-02-24",
+      "address": "282 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 558500,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W91N1W8"
+    },
+    {
+      "date": "2025-07-16",
+      "address": "209 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 565000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W91W244"
+    },
+    {
+      "date": "2025-03-27",
+      "address": "253 OLDBRIDGE STATION, OSBERSTOWN, KILDARE",
+      "price": 554000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W91Y3K4"
+    },
+    {
+      "date": "2025-03-10",
+      "address": "229 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 555000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W91XP38"
+    },
+    {
+      "date": "2024-12-02",
+      "address": "286 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 581000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91F7Y2"
+    },
+    {
+      "date": "2024-09-18",
+      "address": "216 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 580000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91FT66"
+    },
+    {
+      "date": "2024-06-18",
+      "address": "256 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 520000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91E6C4"
+    },
+    {
+      "date": "2023-10-18",
+      "address": "171 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91NCX5"
+    },
+    {
+      "date": "2023-06-08",
+      "address": "265 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 453000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91W2C3"
+    },
+    {
+      "date": "2023-02-28",
+      "address": "115 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 371000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91Y8RH"
+    },
+    {
+      "date": "2022-11-22",
+      "address": "230 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 434000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91Y068"
+    },
+    {
+      "date": "2022-11-02",
+      "address": "181 OLDBRIDGE STATION, OSBERSTOWN, KILDARE",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91P04X"
+    },
+    {
+      "date": "2022-08-22",
+      "address": "206 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91XF30"
+    },
+    {
+      "date": "2022-06-03",
+      "address": "186 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91FYY4"
+    },
+    {
+      "date": "2022-04-08",
+      "address": "143 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91YYW0"
+    },
+    {
+      "date": "2022-01-21",
+      "address": "201 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 160000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91KXR2"
+    },
+    {
+      "date": "2021-10-15",
+      "address": "248 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91V0F4"
+    },
+    {
+      "date": "2021-08-27",
+      "address": "279 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91Y90P"
+    },
+    {
+      "date": "2021-07-08",
+      "address": "198 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 363000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91C6AC"
+    },
+    {
+      "date": "2021-02-12",
+      "address": "177 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-12-23",
+      "address": "144 OLDBRIDGE STATION, OSBERSTOWN, SALLINS",
+      "price": 267500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-16",
+      "address": "176 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-09-18",
+      "address": "130 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 253328,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-02-12",
+      "address": "175 OLDBRIDGE STATION, OSBERSTOWN, KILDARE",
+      "price": 327000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-11-08",
+      "address": "209 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 335000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W91W244"
+    },
+    {
+      "date": "2019-02-07",
+      "address": "173 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 246000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-08-30",
+      "address": "171 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 266000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91NCX5"
+    },
+    {
+      "date": "2018-08-23",
+      "address": "192 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-15",
+      "address": "168 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 262500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-06-13",
+      "address": "142 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-03-14",
+      "address": "268  Oldbridge Station, Osberstown, Naas",
+      "price": 299559,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-12",
+      "address": "280 Oldbridge Station, Osberstown, Naas",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-09",
+      "address": "279 Oldbridge Station, Osberstown, Naas",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91Y90P"
+    },
+    {
+      "date": "2017-11-27",
+      "address": "276 Oldbridge Station, Osberstown, Naas",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-02",
+      "address": "285 Oldbridge Station, Osberstown, Naas",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-27",
+      "address": "284 Oldbridge Station, Osberstown, Naas",
+      "price": 255500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-27",
+      "address": "282 Oldbridge Station, Osberstown, Naas",
+      "price": 286344,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W91N1W8"
+    },
+    {
+      "date": "2017-10-05",
+      "address": "152 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 252000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-18",
+      "address": "274 Oldbridge Station, Osberstown, NAas",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-06",
+      "address": "273 Oldbridge Station, Osberstown, Naas",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-11",
+      "address": "269 Oldbridge Station, Osberstown, Naas",
+      "price": 272246,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-10",
+      "address": "271 Oldbridge Station, Osberstown, Naas",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-04",
+      "address": "272 Oldbridge Station, Osberstown, Naas",
+      "price": 272300,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-31",
+      "address": "270 Oldbridge Station, Osberstown, Naas",
+      "price": 272247,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-28",
+      "address": "286 Oldbridge Station, Osberstown, Naas",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91F7Y2"
+    },
+    {
+      "date": "2017-06-08",
+      "address": "260 Oldbridge Station, Osberstown, Naas",
+      "price": 281125,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-06",
+      "address": "243, Oldbridge Station, Osberstown",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-05-09",
+      "address": "259 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 288546,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-04-12",
+      "address": "261 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 264273,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-23",
+      "address": "263 Oldbridge Station, Osberstown, Naas",
+      "price": 264273,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 107
+}

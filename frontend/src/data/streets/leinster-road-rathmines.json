@@ -1,0 +1,545 @@
+{
+  "slug": "leinster-road-rathmines",
+  "stats": {
+    "count": 59,
+    "median": 1250000,
+    "avg": 1284499,
+    "min": 10000,
+    "max": 2667800,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 3,
+      "median_price": 510000,
+      "avg_price": 476667,
+      "min_price": 10000,
+      "max_price": 910000
+    },
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 880000,
+      "avg_price": 880000,
+      "min_price": 880000,
+      "max_price": 880000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 592500,
+      "avg_price": 592500,
+      "min_price": 530000,
+      "max_price": 655000
+    },
+    {
+      "year": 2014,
+      "count": 4,
+      "median_price": 750000,
+      "avg_price": 770000,
+      "min_price": 350000,
+      "max_price": 1230000
+    },
+    {
+      "year": 2015,
+      "count": 7,
+      "median_price": 1020000,
+      "avg_price": 1002714,
+      "min_price": 325000,
+      "max_price": 1600000
+    },
+    {
+      "year": 2016,
+      "count": 5,
+      "median_price": 1350000,
+      "avg_price": 1194200,
+      "min_price": 761000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2017,
+      "count": 5,
+      "median_price": 998000,
+      "avg_price": 1032600,
+      "min_price": 870000,
+      "max_price": 1250000
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 1630000,
+      "avg_price": 1619662,
+      "min_price": 975000,
+      "max_price": 2243648
+    },
+    {
+      "year": 2019,
+      "count": 5,
+      "median_price": 1363000,
+      "avg_price": 1626160,
+      "min_price": 800000,
+      "max_price": 2667800
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 1505000,
+      "avg_price": 1505000,
+      "min_price": 990000,
+      "max_price": 2020000
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 1700000,
+      "avg_price": 1510000,
+      "min_price": 1100000,
+      "max_price": 1730000
+    },
+    {
+      "year": 2022,
+      "count": 5,
+      "median_price": 1326000,
+      "avg_price": 1370200,
+      "min_price": 200000,
+      "max_price": 2525000
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "median_price": 2600000,
+      "avg_price": 2050000,
+      "min_price": 950000,
+      "max_price": 2600000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 1650000,
+      "avg_price": 1581500,
+      "min_price": 970000,
+      "max_price": 2124500
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "median_price": 1535000,
+      "avg_price": 1655000,
+      "min_price": 1430000,
+      "max_price": 2000000
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 1528750,
+      "avg_price": 1549375,
+      "min_price": 1315000,
+      "max_price": 1825000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-05-19",
+      "address": "111 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1372500,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D06E7E5"
+    },
+    {
+      "date": "2026-04-27",
+      "address": "135 LEINSTER ROAD, RATHMINES, DUBLIN 6",
+      "price": 1685000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06K1V0"
+    },
+    {
+      "date": "2026-04-16",
+      "address": "2 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1315000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06W2F2"
+    },
+    {
+      "date": "2026-01-23",
+      "address": "79 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1825000,
+      "bedrooms": 6,
+      "propertyType": "semi-detached",
+      "eircode": "D06NY52"
+    },
+    {
+      "date": "2025-10-09",
+      "address": "85 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1430000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06A4P0"
+    },
+    {
+      "date": "2025-10-01",
+      "address": "54 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 2000000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D06N2V3"
+    },
+    {
+      "date": "2025-08-14",
+      "address": "95 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1535000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06F4A9"
+    },
+    {
+      "date": "2024-10-19",
+      "address": "97 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 970000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06W5X0"
+    },
+    {
+      "date": "2024-10-11",
+      "address": "60 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 2124500,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D06Y5N7"
+    },
+    {
+      "date": "2024-04-19",
+      "address": "25 LEINSTER RD, RATHMINES, DUBLIN",
+      "price": 1650000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "D06KN36"
+    },
+    {
+      "date": "2023-07-11",
+      "address": "23 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06YK50"
+    },
+    {
+      "date": "2023-05-11",
+      "address": "77 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 2600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06F7P1"
+    },
+    {
+      "date": "2023-02-23",
+      "address": "140 LEINSTER ROAD, RATHMINES, DN131954F (Part)",
+      "price": 2600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06HP23"
+    },
+    {
+      "date": "2022-12-21",
+      "address": "109 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 999999,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06WF80"
+    },
+    {
+      "date": "2022-12-09",
+      "address": "70 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 2525000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06N5P9"
+    },
+    {
+      "date": "2022-08-15",
+      "address": "71 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06W1H1"
+    },
+    {
+      "date": "2022-02-14",
+      "address": "140 LEINSTER ROAD, RATHMINES, DUBLIN 6",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06HP23"
+    },
+    {
+      "date": "2022-01-25",
+      "address": "95 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1326000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06F4A9"
+    },
+    {
+      "date": "2021-05-21",
+      "address": "118 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06N5N0"
+    },
+    {
+      "date": "2021-04-14",
+      "address": "71 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1730000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06W1H1"
+    },
+    {
+      "date": "2021-03-12",
+      "address": "70 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06N5P9"
+    },
+    {
+      "date": "2020-11-23",
+      "address": "109 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 990000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06WF80"
+    },
+    {
+      "date": "2020-07-23",
+      "address": "14 LEINSTER RD, RATHMINES, DUBLIN",
+      "price": 2020000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-01",
+      "address": "125 LEINSTER ROAD, RATHMINES, DUBLIN 6",
+      "price": 2290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-26",
+      "address": "52 LEINSTER RD, RATHMINES, DUBLIN",
+      "price": 2667800,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-22",
+      "address": "1A LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1010000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-21",
+      "address": "10 LEINSTER ROAD, RATHMINES",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-02-15",
+      "address": "75 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1363000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-10-26",
+      "address": "11 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 2243648,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-09-20",
+      "address": "54 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1400000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D06N2V3"
+    },
+    {
+      "date": "2018-06-22",
+      "address": "60 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1860000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D06Y5N7"
+    },
+    {
+      "date": "2018-01-31",
+      "address": "14 LEINSTER RD, RATHMINES, DUBLIN",
+      "price": 975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-18",
+      "address": "53 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-07",
+      "address": "153 LEINSTER ROAD, RATHMINES, DUBLIN 6",
+      "price": 975000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-10-03",
+      "address": "52 LEINSTER RD, RATHMINES, DUBLIN",
+      "price": 870000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-10",
+      "address": "127 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1070000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-01-30",
+      "address": "103 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 998000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-06",
+      "address": "11 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 860000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-20",
+      "address": "81 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-06-30",
+      "address": "114 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 761000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-04-06",
+      "address": "3 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-01-15",
+      "address": "136 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-11-19",
+      "address": "88 Leinster Road, Rathmines, Dublin 6",
+      "price": 799000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-04",
+      "address": "126 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-07-07",
+      "address": "139 Leinster Road, Rathmines",
+      "price": 1475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-06-29",
+      "address": "104 LEINSTER ROAD, RATHMINES, DUBLIN 6",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-04-30",
+      "address": "71 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06W1H1"
+    },
+    {
+      "date": "2015-02-27",
+      "address": "124B LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-01-13",
+      "address": "65 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 1020000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-11-07",
+      "address": "126 LEINSTER RD, RATHMINES, DUBLIN 6",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 59
+}

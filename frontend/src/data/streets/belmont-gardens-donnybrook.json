@@ -1,0 +1,209 @@
+{
+  "slug": "belmont-gardens-donnybrook",
+  "stats": {
+    "count": 14,
+    "median": 1211250,
+    "avg": 1202278,
+    "min": 640000,
+    "max": 1625000,
+    "firstYear": 2011,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 640000,
+      "avg_price": 640000,
+      "min_price": 640000,
+      "max_price": 640000
+    },
+    {
+      "year": 2014,
+      "count": 2,
+      "median_price": 1140944,
+      "avg_price": 1140944,
+      "min_price": 900000,
+      "max_price": 1381889
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1350000,
+      "avg_price": 1350000,
+      "min_price": 1350000,
+      "max_price": 1350000
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "median_price": 990000,
+      "avg_price": 990000,
+      "min_price": 980000,
+      "max_price": 1000000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 1035000,
+      "avg_price": 1163333,
+      "min_price": 910000,
+      "max_price": 1545000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1522500,
+      "avg_price": 1522500,
+      "min_price": 1522500,
+      "max_price": 1522500
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1072500,
+      "avg_price": 1072500,
+      "min_price": 1072500,
+      "max_price": 1072500
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1625000,
+      "avg_price": 1625000,
+      "min_price": 1625000,
+      "max_price": 1625000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1515000,
+      "avg_price": 1515000,
+      "min_price": 1515000,
+      "max_price": 1515000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 1355000,
+      "avg_price": 1355000,
+      "min_price": 1355000,
+      "max_price": 1355000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-11-14",
+      "address": "16 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 1355000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D04W0Y2"
+    },
+    {
+      "date": "2023-03-02",
+      "address": "15 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 1515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04R9C2"
+    },
+    {
+      "date": "2022-01-10",
+      "address": "5 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 1625000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04N1N2"
+    },
+    {
+      "date": "2019-07-26",
+      "address": "13 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 1072500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-11-14",
+      "address": "3 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 1522500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-12-01",
+      "address": "17 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 1545000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-07-26",
+      "address": "22 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 910000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-03-10",
+      "address": "33 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 1035000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-09-30",
+      "address": "33 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-08-24",
+      "address": "4 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 980000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-09-04",
+      "address": "21 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-11-14",
+      "address": "15 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 1381889,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04R9C2"
+    },
+    {
+      "date": "2014-08-25",
+      "address": "12 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-11-18",
+      "address": "27 Belmont Gardens, Donnybrook, Dublin 4",
+      "price": 640000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 14
+}

@@ -1,0 +1,553 @@
+{
+  "slug": "an-fiodan-doughiska",
+  "stats": {
+    "count": 103,
+    "median": 232500,
+    "avg": 244322,
+    "min": 85000,
+    "max": 460000,
+    "firstYear": 2010,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 212596,
+      "avg_price": 211298,
+      "min_price": 195000,
+      "max_price": 225000
+    },
+    {
+      "year": 2011,
+      "count": 2,
+      "median_price": 147500,
+      "avg_price": 147500,
+      "min_price": 105000,
+      "max_price": 190000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 137750,
+      "avg_price": 137750,
+      "min_price": 120000,
+      "max_price": 155500
+    },
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 145000,
+      "avg_price": 146667,
+      "min_price": 135000,
+      "max_price": 160000
+    },
+    {
+      "year": 2014,
+      "count": 8,
+      "median_price": 112540,
+      "avg_price": 125710,
+      "min_price": 90000,
+      "max_price": 204000
+    },
+    {
+      "year": 2015,
+      "count": 4,
+      "median_price": 165500,
+      "avg_price": 158250,
+      "min_price": 85000,
+      "max_price": 217000
+    },
+    {
+      "year": 2016,
+      "count": 6,
+      "median_price": 210000,
+      "avg_price": 199417,
+      "min_price": 143000,
+      "max_price": 232500
+    },
+    {
+      "year": 2017,
+      "count": 10,
+      "median_price": 205000,
+      "avg_price": 197200,
+      "min_price": 100000,
+      "max_price": 246000
+    },
+    {
+      "year": 2018,
+      "count": 8,
+      "median_price": 235000,
+      "avg_price": 239815,
+      "min_price": 167000,
+      "max_price": 301000
+    },
+    {
+      "year": 2019,
+      "count": 5,
+      "median_price": 200748,
+      "avg_price": 208859,
+      "min_price": 158731,
+      "max_price": 278000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 247000,
+      "avg_price": 242600,
+      "min_price": 190000,
+      "max_price": 280000
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "median_price": 260000,
+      "avg_price": 255980,
+      "min_price": 205940,
+      "max_price": 302000
+    },
+    {
+      "year": 2022,
+      "count": 11,
+      "median_price": 282500,
+      "avg_price": 282955,
+      "min_price": 240000,
+      "max_price": 340000
+    },
+    {
+      "year": 2023,
+      "count": 10,
+      "median_price": 323500,
+      "avg_price": 309600,
+      "min_price": 209000,
+      "max_price": 388000
+    },
+    {
+      "year": 2024,
+      "count": 10,
+      "median_price": 338500,
+      "avg_price": 314100,
+      "min_price": 170000,
+      "max_price": 420000
+    },
+    {
+      "year": 2025,
+      "count": 8,
+      "median_price": 350000,
+      "avg_price": 315750,
+      "min_price": 150000,
+      "max_price": 443000
+    },
+    {
+      "year": 2026,
+      "count": 4,
+      "median_price": 441500,
+      "avg_price": 420750,
+      "min_price": 340000,
+      "max_price": 460000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-16",
+      "address": "66 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 460000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H91P4VY"
+    },
+    {
+      "date": "2026-07-28",
+      "address": "85 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 340000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "H91AX5T"
+    },
+    {
+      "date": "2026-05-27",
+      "address": "146 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 428000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91NXH0"
+    },
+    {
+      "date": "2026-01-29",
+      "address": "34 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 455000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H91EK2H"
+    },
+    {
+      "date": "2025-09-01",
+      "address": "104 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91XE02"
+    },
+    {
+      "date": "2025-08-28",
+      "address": "65 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 350000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "H91HWN7"
+    },
+    {
+      "date": "2025-08-20",
+      "address": "110 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 355000,
+      "bedrooms": 3,
+      "propertyType": "duplex",
+      "eircode": "H91H1F9"
+    },
+    {
+      "date": "2025-08-13",
+      "address": "36 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 443000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "H91T1XH"
+    },
+    {
+      "date": "2025-03-21",
+      "address": "51 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 350000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "H91V83X"
+    },
+    {
+      "date": "2025-02-20",
+      "address": "14 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 363000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "H91TN2V"
+    },
+    {
+      "date": "2025-01-28",
+      "address": "90 AN FIODAN, DOUGHISKA, MERLIN",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91TVW8"
+    },
+    {
+      "date": "2025-01-23",
+      "address": "117 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 150000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "H91DK84"
+    },
+    {
+      "date": "2024-09-24",
+      "address": "12 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91EKN6"
+    },
+    {
+      "date": "2024-07-23",
+      "address": "170 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 200000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91A032"
+    },
+    {
+      "date": "2024-07-12",
+      "address": "14 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 327000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "H91TN2V"
+    },
+    {
+      "date": "2024-06-18",
+      "address": "157 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91HF6N"
+    },
+    {
+      "date": "2024-05-30",
+      "address": "37 AN FIODAN, DOUGHISKA, GALWAY CITY",
+      "price": 394000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91HH5V"
+    },
+    {
+      "date": "2024-05-29",
+      "address": "92 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91XKD3"
+    },
+    {
+      "date": "2024-05-24",
+      "address": "177 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91PEY0"
+    },
+    {
+      "date": "2024-04-18",
+      "address": "56 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91N6DF"
+    },
+    {
+      "date": "2024-03-20",
+      "address": "168 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91TX86"
+    },
+    {
+      "date": "2024-03-05",
+      "address": "187 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91PNK6"
+    },
+    {
+      "date": "2023-12-14",
+      "address": "31 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 388000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91HHK3"
+    },
+    {
+      "date": "2023-12-06",
+      "address": "135 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 378000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91H99X"
+    },
+    {
+      "date": "2023-11-14",
+      "address": "154 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 322000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91NYF7"
+    },
+    {
+      "date": "2023-09-29",
+      "address": "127 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 272000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91K6XK"
+    },
+    {
+      "date": "2023-09-11",
+      "address": "5 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91KXT2"
+    },
+    {
+      "date": "2023-07-26",
+      "address": "68 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91EFA4"
+    },
+    {
+      "date": "2023-03-30",
+      "address": "169 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 209000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91P573"
+    },
+    {
+      "date": "2023-03-16",
+      "address": "26 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 337000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91NC2C"
+    },
+    {
+      "date": "2023-03-14",
+      "address": "28 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91YDR5"
+    },
+    {
+      "date": "2023-02-02",
+      "address": "115 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 215000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91P270"
+    },
+    {
+      "date": "2022-12-09",
+      "address": "67 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91NXE6"
+    },
+    {
+      "date": "2022-12-01",
+      "address": "55 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 282500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91Y8PA"
+    },
+    {
+      "date": "2022-11-25",
+      "address": "11 AN FIODAN, DOUGHISKA, MERLIN PARK",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91NPR8"
+    },
+    {
+      "date": "2022-10-05",
+      "address": "30 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91HXF6"
+    },
+    {
+      "date": "2022-08-11",
+      "address": "186 AN FIODAN, DOUGHISKA, MERLIN",
+      "price": 337000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91V1HF"
+    },
+    {
+      "date": "2022-08-08",
+      "address": "160 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91R982"
+    },
+    {
+      "date": "2022-08-04",
+      "address": "166 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91AX07"
+    },
+    {
+      "date": "2022-05-20",
+      "address": "4 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91AYW6"
+    },
+    {
+      "date": "2022-04-12",
+      "address": "146 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 308000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91NXH0"
+    },
+    {
+      "date": "2022-02-18",
+      "address": "10 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91C8VP"
+    },
+    {
+      "date": "2022-01-11",
+      "address": "112 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91K603"
+    },
+    {
+      "date": "2021-11-11",
+      "address": "153 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 302000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91R76D"
+    },
+    {
+      "date": "2021-08-25",
+      "address": "18 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91HD6X"
+    },
+    {
+      "date": "2021-06-11",
+      "address": "113 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 205940,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91R285"
+    },
+    {
+      "date": "2020-11-10",
+      "address": "141 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 246000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-06",
+      "address": "113 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 190000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91R285"
+    },
+    {
+      "date": "2020-07-31",
+      "address": "25 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-07-02",
+      "address": "70 AN FIODAN, DOUGHISKA, GALWAY",
+      "price": 247000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 103
+}

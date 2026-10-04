@@ -1,0 +1,193 @@
+{
+  "slug": "beechwood-avenue-upper-ranelagh",
+  "stats": {
+    "count": 13,
+    "median": 1225000,
+    "avg": 1211154,
+    "min": 810000,
+    "max": 1950000,
+    "firstYear": 2014,
+    "lastYear": 2025
+  },
+  "trends": [
+    {
+      "year": 2014,
+      "count": 1,
+      "median_price": 1100000,
+      "avg_price": 1100000,
+      "min_price": 1100000,
+      "max_price": 1100000
+    },
+    {
+      "year": 2015,
+      "count": 1,
+      "median_price": 1250000,
+      "avg_price": 1250000,
+      "min_price": 1250000,
+      "max_price": 1250000
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 1005000,
+      "avg_price": 1005000,
+      "min_price": 1005000,
+      "max_price": 1005000
+    },
+    {
+      "year": 2017,
+      "count": 3,
+      "median_price": 850000,
+      "avg_price": 978333,
+      "min_price": 810000,
+      "max_price": 1275000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 990000,
+      "avg_price": 990000,
+      "min_price": 990000,
+      "max_price": 990000
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1300000,
+      "avg_price": 1300000,
+      "min_price": 1225000,
+      "max_price": 1375000
+    },
+    {
+      "year": 2022,
+      "count": 1,
+      "median_price": 1950000,
+      "avg_price": 1950000,
+      "min_price": 1950000,
+      "max_price": 1950000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 1330000,
+      "avg_price": 1330000,
+      "min_price": 1330000,
+      "max_price": 1330000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 1292500,
+      "avg_price": 1292500,
+      "min_price": 1125000,
+      "max_price": 1460000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2025-07-17",
+      "address": "4 BEECHWOOD AVENUE UPPER, RANELAGH, DUBLIN 6",
+      "price": 1460000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D06EK74"
+    },
+    {
+      "date": "2025-01-31",
+      "address": "4 BEECHWOOD AVENUE UPPER, RANELAGH, DUBLIN 6",
+      "price": 1125000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "D06EK74"
+    },
+    {
+      "date": "2023-03-09",
+      "address": "24 BEECHWOOD AVE UPPER, RANELAGH, DUBLIN 6",
+      "price": 1330000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06H0A6"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "57 BEECHWOOD AVE UPPER, RANELAGH, DUBLIN 6",
+      "price": 1950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06C2W4"
+    },
+    {
+      "date": "2021-11-22",
+      "address": "66 BEECHWOOD AVE UPPER, RANELAGH, DUBLIN 6",
+      "price": 1375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06VY17"
+    },
+    {
+      "date": "2021-06-09",
+      "address": "54 BEECHWOOD AVE UPPER, RANELAGH, DUBLIN 6",
+      "price": 1225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06W5C7"
+    },
+    {
+      "date": "2020-10-15",
+      "address": "38 BEECHWOOD AVENUE UPPER, RANELAGH, DUBLIN 6",
+      "price": 990000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-08",
+      "address": "54 BEECHWOOD AVE UPPER, RANELAGH, DUBLIN 6",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06W5C7"
+    },
+    {
+      "date": "2017-07-20",
+      "address": "70 BEECHWOOD AVE UPPER, RANELAGH, DUBLIN 6",
+      "price": 810000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-01-27",
+      "address": "66 BEECHWOOD AVE UPPER, RANELAGH, DUBLIN 6",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06VY17"
+    },
+    {
+      "date": "2016-07-18",
+      "address": "55 BEECHWOOD AVE UPPER, RANELAGH, DUBLIN 6",
+      "price": 1005000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-12-14",
+      "address": "57 BEECHWOOD AVE UPPER, RANELAGH, DUBLIN 6",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06C2W4"
+    },
+    {
+      "date": "2014-10-30",
+      "address": "59 BEECHWOOD AVE UPPER, RANELAGH, DUBLIN 6",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 13
+}

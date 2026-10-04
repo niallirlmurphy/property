@@ -1,0 +1,177 @@
+{
+  "slug": "sunbury-park-dartry",
+  "stats": {
+    "count": 12,
+    "median": 1200000,
+    "avg": 1112604,
+    "min": 650000,
+    "max": 1500000,
+    "firstYear": 2011,
+    "lastYear": 2024
+  },
+  "trends": [
+    {
+      "year": 2011,
+      "count": 1,
+      "median_price": 750000,
+      "avg_price": 750000,
+      "min_price": 750000,
+      "max_price": 750000
+    },
+    {
+      "year": 2017,
+      "count": 2,
+      "median_price": 947500,
+      "avg_price": 947500,
+      "min_price": 895000,
+      "max_price": 1000000
+    },
+    {
+      "year": 2018,
+      "count": 1,
+      "median_price": 1250000,
+      "avg_price": 1250000,
+      "min_price": 1250000,
+      "max_price": 1250000
+    },
+    {
+      "year": 2019,
+      "count": 1,
+      "median_price": 1500000,
+      "avg_price": 1500000,
+      "min_price": 1500000,
+      "max_price": 1500000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 879250,
+      "avg_price": 879250,
+      "min_price": 879250,
+      "max_price": 879250
+    },
+    {
+      "year": 2022,
+      "count": 3,
+      "median_price": 1310000,
+      "avg_price": 1324000,
+      "min_price": 1270000,
+      "max_price": 1392000
+    },
+    {
+      "year": 2023,
+      "count": 2,
+      "median_price": 900000,
+      "avg_price": 900000,
+      "min_price": 650000,
+      "max_price": 1150000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 1305000,
+      "avg_price": 1305000,
+      "min_price": 1305000,
+      "max_price": 1305000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-07-03",
+      "address": "18 SUNBURY PARK, DARTRY, DUBLIN 6",
+      "price": 1305000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D06X661"
+    },
+    {
+      "date": "2023-09-21",
+      "address": "10 SUNBURY PARK, DARTRY, DUBLIN 6",
+      "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06TK79"
+    },
+    {
+      "date": "2023-07-10",
+      "address": "2 SUNBURY PARK, DARTRY, DUBLIN 6",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06NY13"
+    },
+    {
+      "date": "2022-08-05",
+      "address": "15 SUNBURY PARK, DARTRY, DUBLIN 6",
+      "price": 1310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06YF22"
+    },
+    {
+      "date": "2022-06-15",
+      "address": "16 SUNBURY PARK, DARTRY, DUBLIN 6",
+      "price": 1270000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06VX77"
+    },
+    {
+      "date": "2022-02-28",
+      "address": "17 SUNBURY PARK, DARTRY, DUBLIN 6",
+      "price": 1392000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06YW01"
+    },
+    {
+      "date": "2020-07-17",
+      "address": "14 SUNBURY PARK, DARTRY, DUBLIN 6",
+      "price": 879250,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-06-28",
+      "address": "2 SUNBURY PARK, DARTRY, DUBLIN 6",
+      "price": 1500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06NY13"
+    },
+    {
+      "date": "2018-02-28",
+      "address": "21 SUNBURY PARK, DARTRY",
+      "price": 1250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-09-18",
+      "address": "17 SUNBURY PARK, DARTRY, DUBLIN 6",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06YW01"
+    },
+    {
+      "date": "2017-08-18",
+      "address": "15 SUNBURY PARK, DARTRY, DUBLIN 6",
+      "price": 895000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D06YF22"
+    },
+    {
+      "date": "2011-09-26",
+      "address": "1 Sunbury Park, Dartry",
+      "price": 750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 12
+}

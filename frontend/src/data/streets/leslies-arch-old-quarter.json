@@ -1,0 +1,537 @@
+{
+  "slug": "leslies-arch-old-quarter",
+  "stats": {
+    "count": 99,
+    "median": 285000,
+    "avg": 276790,
+    "min": 40000,
+    "max": 545000,
+    "firstYear": 2012,
+    "lastYear": 2026
+  },
+  "trends": [
+    {
+      "year": 2012,
+      "count": 4,
+      "median_price": 128500,
+      "avg_price": 136500,
+      "min_price": 97000,
+      "max_price": 192000
+    },
+    {
+      "year": 2013,
+      "count": 4,
+      "median_price": 172500,
+      "avg_price": 168750,
+      "min_price": 100000,
+      "max_price": 230000
+    },
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 136000,
+      "avg_price": 178820,
+      "min_price": 130000,
+      "max_price": 260000
+    },
+    {
+      "year": 2015,
+      "count": 10,
+      "median_price": 281000,
+      "avg_price": 253750,
+      "min_price": 160000,
+      "max_price": 328000
+    },
+    {
+      "year": 2016,
+      "count": 20,
+      "median_price": 175856,
+      "avg_price": 220614,
+      "min_price": 136563,
+      "max_price": 388750
+    },
+    {
+      "year": 2017,
+      "count": 8,
+      "median_price": 257500,
+      "avg_price": 264562,
+      "min_price": 173000,
+      "max_price": 347500
+    },
+    {
+      "year": 2018,
+      "count": 4,
+      "median_price": 385000,
+      "avg_price": 346000,
+      "min_price": 202000,
+      "max_price": 412000
+    },
+    {
+      "year": 2019,
+      "count": 9,
+      "median_price": 335000,
+      "avg_price": 322222,
+      "min_price": 260000,
+      "max_price": 370000
+    },
+    {
+      "year": 2020,
+      "count": 6,
+      "median_price": 281750,
+      "avg_price": 236833,
+      "min_price": 40000,
+      "max_price": 390000
+    },
+    {
+      "year": 2021,
+      "count": 8,
+      "median_price": 312750,
+      "avg_price": 331912,
+      "min_price": 256796,
+      "max_price": 425000
+    },
+    {
+      "year": 2022,
+      "count": 9,
+      "median_price": 290000,
+      "avg_price": 314222,
+      "min_price": 275000,
+      "max_price": 420000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 405000,
+      "avg_price": 405500,
+      "min_price": 295000,
+      "max_price": 517000
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "median_price": 425000,
+      "avg_price": 365167,
+      "min_price": 155500,
+      "max_price": 515000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 435000,
+      "avg_price": 435000,
+      "min_price": 345000,
+      "max_price": 525000
+    },
+    {
+      "year": 2026,
+      "count": 3,
+      "median_price": 520000,
+      "avg_price": 481667,
+      "min_price": 380000,
+      "max_price": 545000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-07-09",
+      "address": "90 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 380000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "P31KR96"
+    },
+    {
+      "date": "2026-04-23",
+      "address": "82 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 520000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "P31RY62"
+    },
+    {
+      "date": "2026-01-16",
+      "address": "72 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 545000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "P31RX06"
+    },
+    {
+      "date": "2025-11-14",
+      "address": "69 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 345000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "P31X688"
+    },
+    {
+      "date": "2025-09-17",
+      "address": "57 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 525000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "P31YP82"
+    },
+    {
+      "date": "2024-11-25",
+      "address": "37 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 155500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31CY51"
+    },
+    {
+      "date": "2024-11-21",
+      "address": "102 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31PW35"
+    },
+    {
+      "date": "2024-02-02",
+      "address": "54 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 515000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31HC56"
+    },
+    {
+      "date": "2023-11-28",
+      "address": "47 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31VX26"
+    },
+    {
+      "date": "2023-11-28",
+      "address": "56 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 517000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31W329"
+    },
+    {
+      "date": "2023-10-24",
+      "address": "138 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31YD65"
+    },
+    {
+      "date": "2023-01-18",
+      "address": "45 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31CX76"
+    },
+    {
+      "date": "2022-12-21",
+      "address": "159 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 282500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31WC84"
+    },
+    {
+      "date": "2022-12-09",
+      "address": "146 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 303000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31EA06"
+    },
+    {
+      "date": "2022-11-21",
+      "address": "19 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31NY39"
+    },
+    {
+      "date": "2022-11-16",
+      "address": "115 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31D578"
+    },
+    {
+      "date": "2022-09-29",
+      "address": "37 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 287500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31CY51"
+    },
+    {
+      "date": "2022-09-05",
+      "address": "66 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31CF63"
+    },
+    {
+      "date": "2022-07-21",
+      "address": "131 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31K510"
+    },
+    {
+      "date": "2022-07-15",
+      "address": "24 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31HR04"
+    },
+    {
+      "date": "2022-02-10",
+      "address": "124 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31FH36"
+    },
+    {
+      "date": "2021-12-10",
+      "address": "92 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31VP66"
+    },
+    {
+      "date": "2021-11-19",
+      "address": "78 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31N603"
+    },
+    {
+      "date": "2021-10-13",
+      "address": "48 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 300500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31XW53"
+    },
+    {
+      "date": "2021-08-27",
+      "address": "98 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 368000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31AD79"
+    },
+    {
+      "date": "2021-07-26",
+      "address": "43 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31TV70"
+    },
+    {
+      "date": "2021-07-06",
+      "address": "13 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31D923"
+    },
+    {
+      "date": "2021-02-04",
+      "address": "114 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 280000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-20",
+      "address": "64 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 256796,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-05",
+      "address": "126 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 40000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-06-15",
+      "address": "100 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 55000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-05-13",
+      "address": "64 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 233000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-30",
+      "address": "30 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 372500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-15",
+      "address": "91 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 330500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-01-14",
+      "address": "73 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-12-17",
+      "address": "27 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-29",
+      "address": "102 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31PW35"
+    },
+    {
+      "date": "2019-09-23",
+      "address": "148 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-08",
+      "address": "78 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31N603"
+    },
+    {
+      "date": "2019-07-31",
+      "address": "112 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-07-04",
+      "address": "145 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-03-14",
+      "address": "147 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-16",
+      "address": "35 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-07",
+      "address": "131 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31K510"
+    },
+    {
+      "date": "2018-10-19",
+      "address": "79 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-27",
+      "address": "81 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-04-11",
+      "address": "2 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 412000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-01-10",
+      "address": "APT 26, LESLIES ARCH, OLD QUARTER",
+      "price": 202000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2017-12-15",
+      "address": "141 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 290000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-11-29",
+      "address": "59 LESLIES ARCH, OLD QUARTER, BALLINCOLLIG",
+      "price": 206000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    }
+  ],
+  "totalTransactions": 99
+}
