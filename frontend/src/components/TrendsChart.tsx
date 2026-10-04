@@ -1,8 +1,12 @@
-import {
-  ResponsiveContainer, LineChart, Line, XAxis, YAxis,
-  CartesianGrid, Tooltip, Legend
-} from "recharts";
+import { lazy, Suspense, useEffect, useState } from "react";
 import type { TrendPoint } from "../types";
+
+// Recharts loads only when the chart nears the viewport. Recharts draws nothing
+// during prerender anyway (ResponsiveContainer needs a measured width), so the
+// fixed-height placeholder matches the prerendered HTML and hydration.
+const TrendsPlot = lazy(() => import("./TrendsPlot"));
+
+const PLOT_HEIGHT = 252;
 
 interface Props {
   data: TrendPoint[];
@@ -10,39 +14,26 @@ interface Props {
   inline?: boolean;
 }
 
-function formatK(n: number) {
-  return n >= 1_000_000 ? `€${(n / 1_000_000).toFixed(1)}m` : n >= 1000 ? `€${(n / 1000).toFixed(0)}k` : `€${n}`;
+// Callback ref (not useRef) so the observer attaches whenever the box mounts —
+// on live-fallback pages it only appears once the fetched data arrives.
+function useNearViewport<T extends Element>() {
+  const [el, setEl] = useState<T | null>(null);
+  const [near, setNear] = useState(false);
+  useEffect(() => {
+    if (!el || near) return;
+    if (typeof IntersectionObserver === "undefined") return setNear(true);
+    const io = new IntersectionObserver(
+      (entries) => { if (entries.some((e) => e.isIntersecting)) setNear(true); },
+      { rootMargin: "300px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [el, near]);
+  return [setEl, near] as const;
 }
-
-function formatFull(n: number) {
-  return "€" + Math.round(n).toLocaleString("en-IE");
-}
-
-const CustomTooltip = ({ active, payload, label }: any) => {
-  if (!active || !payload?.length) return null;
-  // Get the count from the first payload item's original data point
-  const count = payload[0]?.payload?.count;
-  return (
-    <div className="trends-tooltip">
-      <div className="trends-tooltip-year">{label}</div>
-      {payload.map((p: any) => (
-        <div key={p.dataKey} className="trends-tooltip-row">
-          <span className="trends-tooltip-dot" style={{ background: p.color }} />
-          <span>{p.name}:</span>
-          <strong>{formatFull(p.value)}</strong>
-        </div>
-      ))}
-      {count !== undefined && (
-        <div className="trends-tooltip-row" style={{ marginTop: '4px', paddingTop: '4px', borderTop: '1px solid #e5e7eb' }}>
-          <span>Transactions:</span>
-          <strong>{count.toLocaleString()}</strong>
-        </div>
-      )}
-    </div>
-  );
-};
 
 export default function TrendsChart({ data, onClose, inline = false }: Props) {
+  const [plotRef, showPlot] = useNearViewport<HTMLDivElement>();
   if (!data.length) return null;
 
   const totalSales = data.reduce((s, d) => s + d.count, 0);
@@ -55,17 +46,13 @@ export default function TrendsChart({ data, onClose, inline = false }: Props) {
           <button onClick={onClose} className="trends-close" aria-label="Close trends">✕</button>
         )}
       </div>
-      <ResponsiveContainer width="100%" height={252}>
-        <LineChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#eee" />
-          <XAxis dataKey="year" tick={{ fontSize: 11 }} />
-          <YAxis tickFormatter={formatK} tick={{ fontSize: 11 }} width={50} />
-          <Tooltip content={<CustomTooltip />} />
-          <Legend wrapperStyle={{ fontSize: 11 }} />
-          <Line type="monotone" dataKey="median_price" name="Median" stroke="#1a3c5e" strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="avg_price"    name="Average" stroke="#e07b39" strokeWidth={2} dot={false} strokeDasharray="4 2" />
-        </LineChart>
-      </ResponsiveContainer>
+      <div ref={plotRef} style={{ width: "100%", height: PLOT_HEIGHT }}>
+        {showPlot && (
+          <Suspense fallback={null}>
+            <TrendsPlot data={data} />
+          </Suspense>
+        )}
+      </div>
       <div className="trends-footer">
         {totalSales.toLocaleString()} sales (full market price)
       </div>
