@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { fetchCountySummary } from "../api";
 import TrendsChart from "./TrendsChart";
 import PageHeader from "./PageHeader";
@@ -20,15 +20,11 @@ function formatPrice(n: number | null) {
   return "€" + Math.round(n).toLocaleString("en-IE");
 }
 
-// Eager glob: county stats/trends/recent-sales are bundled so custom-template
-// counties (Cork/Galway) render their full content into static HTML at SSG
-// prerender time. Without this the stats block was client-fetched and gated
-// behind `{data && …}`, so crawlers saw an almost-empty page.
-const COUNTY_DATA = import.meta.glob<{ default: CountySummary }>("../data/counties/*.json", { eager: true });
-
-function bakedCounty(slug: string): CountySummary | undefined {
-  return COUNTY_DATA[`../data/counties/${slug}.json`]?.default;
-}
+// County stats/trends/recent-sales come from the /county/:slug route loader
+// (countyLoader in routeLoaders.ts), so custom-template counties (Cork/Galway) render
+// their full content into static HTML at prerender time. Without baked data the
+// stats block was client-fetched and gated behind `{data && …}`, so crawlers saw
+// an almost-empty page.
 
 interface CountyPageTemplateProps {
   content: CountyContent;
@@ -36,7 +32,7 @@ interface CountyPageTemplateProps {
 
 export default function CountyPageTemplate({ content }: CountyPageTemplateProps) {
   const slug = countySlug(content.name);
-  const baked = bakedCounty(slug);
+  const baked = (useLoaderData() as CountySummary | null) ?? undefined;
   const [fetched, setFetched] = useState<CountySummary | null>(null);
   const data = baked ?? fetched;
   const [loading, setLoading] = useState(!baked);

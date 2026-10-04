@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useLoaderData, Link } from "react-router-dom";
 import { fetchCountySummary } from "../api";
 import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
@@ -20,13 +20,6 @@ import {
 function formatPrice(n: number | null) {
   if (n == null) return "—";
   return "€" + Math.round(n).toLocaleString("en-IE");
-}
-
-// Eager glob: county data is bundled for synchronous access at SSG prerender time.
-const COUNTY_DATA = import.meta.glob<{ default: CountySummary }>("../data/counties/*.json", { eager: true });
-
-function bakedCounty(slug: string): CountySummary | undefined {
-  return COUNTY_DATA[`../data/counties/${slug}.json`]?.default;
 }
 
 // Optional hero photo per county slug (used on the default dynamic page).
@@ -106,13 +99,15 @@ export default function CountyPage() {
   // Check if we have custom content for this county
   const customContent = getCountyContent(slug ?? "");
 
+  const loaderData = useLoaderData() as CountySummary | null;
+
   // If custom content exists, use the template
   if (customContent) {
     return <CountyPageTemplate content={customContent} />;
   }
 
   // Otherwise, fall back to the default dynamic page
-  const baked = slug ? bakedCounty(slug) : undefined;
+  const baked = loaderData ?? undefined;
   const [fetched, setFetched] = useState<CountySummary | null>(null);
   const data = baked ?? fetched;
   const [loading, setLoading] = useState(!baked);

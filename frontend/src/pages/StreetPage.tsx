@@ -1,5 +1,4 @@
 import { useParams, useLoaderData, Link } from "react-router-dom";
-import type { LoaderFunctionArgs } from "react-router-dom";
 import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
@@ -8,18 +7,6 @@ import MapSearchThumb from "../components/MapSearchThumb";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { streetFromSlug } from "../streets";
 import type { StreetData } from "../types";
-
-// Lazy glob read only by the build-time loader. vite-react-ssg inlines the result
-// into each prerendered page and serves it as a per-page data file on client
-// navigation, so street data stays out of the main JS bundle.
-const DATA = import.meta.glob<{ default: StreetData }>("../data/streets/*.json");
-
-export async function streetLoader({ params }: LoaderFunctionArgs): Promise<StreetData | null> {
-  if (!import.meta.env.SSR) return null; // client: replaced by vite-react-ssg's static data fetch
-  const config = streetFromSlug(params.slug ?? "");
-  const load = config && DATA[`../data/streets/${config.slug}.json`];
-  return load ? (await load()).default : null;
-}
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";

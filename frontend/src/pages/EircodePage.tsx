@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useLoaderData, Link } from "react-router-dom";
 import { fetchEircode, fetchTrends } from "../api";
 import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
@@ -8,13 +8,6 @@ import type { EircodeResponse, TrendPoint, EircodePageData } from "../types";
 import { DUBLIN_EIRCODE_AREAS, countySlug } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
 import Breadcrumbs from "../components/Breadcrumbs";
-
-// Eager glob: eircode data is bundled for synchronous access at SSG prerender time.
-const EIRCODE_DATA = import.meta.glob<{ default: EircodePageData }>("../data/eircodes/*.json", { eager: true });
-
-function bakedEircode(code: string): EircodePageData | undefined {
-  return EIRCODE_DATA[`../data/eircodes/${code}.json`]?.default;
-}
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -37,7 +30,7 @@ export default function EircodePage() {
     ]
   );
 
-  const baked = bakedEircode(upperCode);
+  const baked = (useLoaderData() as EircodePageData | null) ?? undefined;
   const [fetchedData, setFetchedData] = useState<EircodeResponse | null>(null);
   const [fetchedTrends, setFetchedTrends] = useState<TrendPoint[]>([]);
   const data = baked?.eircode ?? fetchedData;
