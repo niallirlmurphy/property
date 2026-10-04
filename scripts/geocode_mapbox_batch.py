@@ -62,7 +62,9 @@ from canonical_geocoding import (
 from duplicate_handler import update_geocoding_for_duplicates
 from mapbox_client import MapboxClient
 from extract_base_address import is_bulk_sale, extract_base_address
-from geocode_query_prep import fold, prepare_geocode_address, load_town_gazetteer
+from geocode_query_prep import (fold, prepare_geocode_address, load_town_gazetteer,
+                                LOCALITY_MAX_KM, load_locality_centroids,
+                                locality_centroid, locality_distance_km)
 
 load_dotenv("backend/.env")
 
@@ -79,7 +81,8 @@ IRELAND_BBOX = (51.4, 55.5, -10.7, -5.4)  # min_lat, max_lat, min_lon, max_lon
 ACCEPTABLE_PRECISION = {'rooftop', 'parcel', 'point'}
 
 # Persist geocode results to the database every this many properties, so an
-# interruption loses at most one chunk instead of the whole run.
+# interruption loses at most one chunk instead of the whole run. Override with
+# --chunk-size (e.g. 25 for small, closely monitored runs).
 CHUNK_SIZE = 1000
 
 
@@ -475,7 +478,8 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                                 rk_centroids: Optional[dict] = None,
                                rk_thresholds: Optional[dict] = None,
                                centroid_mode: bool = False,
-                               gazetteer: Optional[dict] = None) -> List[Tuple[int, Optional[float], Optional[float], int]]:
+                               gazetteer: Optional[dict] = None,
+                               locality_centroids: Optional[dict] = None) -> List[Tuple[int, Optional[float], Optional[float], int]]:
     """
     Batch geocode using Mapbox API with improved logic:
     - HTML entity cleaning (Tandy&#039;s → Tandy's)
@@ -541,6 +545,12 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
             address = prepare_geocode_address(address, prop['county'], gazetteer)
             compare_to = strip_dublin_district(address)
 
+            # No routing key = no distance check. Fall back to where our own geocoded
+            # rows naming the same locality sit: bias Mapbox toward it, and reject
+            # answers far from it (the Leopardstown estate placed in Malahide).
+            loc_point = None if routing_key else locality_centroid(
+                address, prop['county'], locality_centroids)
+
             def evaluate(result: dict) -> Tuple[Optional[float], Optional[float], int, Optional[str]]:
                 """Validate one Mapbox answer -> (lat, lon, quality, reject_reason)."""
                 lat, lon = result['latitude'], result['longitude']
@@ -565,6 +575,11 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                 if (is_valid and feature_type in ('address', 'street')
                         and not street_matches(full_address, compare_to)):
                     is_valid, reason = False, f"street_mismatch({full_address[:40]})"
+                if is_valid and not routing_key:
+                    dist = locality_distance_km(lat, lon, address, prop['county'],
+                                                locality_centroids)
+                    if dist is not None and dist > LOCALITY_MAX_KM:
+                        is_valid, reason = False, f"locality_far({dist:.0f}km)"
 
                 # Centroid mode: a town-level answer (or one that lands back on the
                 # row's current point) can't fix a town-level centroid — it just
@@ -602,7 +617,7 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                              else f"{q_address}, Ireland")
                     if attempt:
                         retry_count += 1
-                    result = await mapbox.geocode(query, country='ie', proximity=proximity)
+                    result = await mapbox.geocode(query, country='ie', proximity=proximity or loc_point)
                     if result:
                         if result.get('method') == 'eircode':
                             eircode_count += 1
@@ -764,6 +779,13 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         except Exception as e:
             print(f"⚠️  Could not load town gazetteer ({e}); skipping typo correction")
 
+        locality_centroids = {}
+        try:
+            locality_centroids = await load_locality_centroids(pool)
+            print(f"Loaded {len(locality_centroids):,} locality centroids for validation")
+        except Exception as e:
+            print(f"⚠️  Could not load locality centroids ({e}); skipping locality check")
+
         # Release the DB pool during the (potentially long) geocoding phase. Holding
         # idle connections open across a multi-minute Mapbox run lets Supabase close
         # them server-side, so the later write phase would fail with
@@ -791,7 +813,8 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                 results = await batch_geocode_mapbox(chunk, None, client, rk_centroids=rk_centroids,
                                                    rk_thresholds=rk_thresholds,
                                                    centroid_mode=centroid,
-                                                   gazetteer=gazetteer)
+                                                   gazetteer=gazetteer,
+                                                   locality_centroids=locality_centroids)
 
                 # Tally this chunk and collect the rows to persist.
                 chunk_updates = []
@@ -902,6 +925,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
 
 
 async def main():
+    global CHUNK_SIZE
     # Skip canonical cache for batch operations (too large to load into memory)
     # Cache will be checked per-address during geocoding
     print("Starting batch geocoding with improved logic...\n")
@@ -932,6 +956,8 @@ async def main():
             before = sys.argv[i + 1]
         elif arg == "--ids-file" and i + 1 < len(sys.argv):
             ids_file = sys.argv[i + 1]
+        elif arg == "--chunk-size" and i + 1 < len(sys.argv):
+            CHUNK_SIZE = max(1, int(sys.argv[i + 1]))
 
     await geocode_with_mapbox(
         limit=limit,

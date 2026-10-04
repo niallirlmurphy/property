@@ -88,3 +88,26 @@ def test_street_match_still_rejects_different_streets():
     assert not street_matches("9 Barton Road, Rathfarnham, Dublin", "9 Burton Road, Clontarf")
     # A county is not a corroborating locality, and Y counts as a consonant.
     assert not street_matches("23 Kells Road, Dublin, D12 C7X6, Ireland", "23 Kellys Court, Kellys Row")
+
+
+def test_locality_components_skip_county_and_districts():
+    from geocode_query_prep import locality_components
+    assert locality_components("10 The Ashes, Elmfield, Leopardstown, Co. Dublin", "Dublin") \
+        == ["ELMFIELD", "LEOPARDSTOWN"]
+    assert locality_components("5 Main Street, Dublin 15", "Dublin") == []
+    assert locality_components("63 Domnic Street, Cork City", "Cork") == []
+
+
+def test_locality_distance_rejects_same_named_estate_elsewhere():
+    from geocode_query_prep import locality_centroid, locality_distance_km
+    cents = {("DUBLIN", "LEOPARDSTOWN"): (53.267, -6.195)}
+    addr = "10 The Ashes, Elmfield, Leopardstown"
+    assert locality_centroid(addr, "Dublin", cents) == (53.267, -6.195)
+    assert locality_distance_km(53.574, -6.107, addr, "Dublin", cents) > 30   # Malahide
+    assert locality_distance_km(53.270, -6.190, addr, "Dublin", cents) < 1
+    assert locality_distance_km(53.270, -6.190, "5 Main Street, Dublin 15", "Dublin", cents) is None
+
+
+def test_locality_components_skip_roads():
+    from geocode_query_prep import locality_components
+    assert locality_components("5 Elm Park, Malahide Road, Artane", "Dublin") == ["ARTANE"]
