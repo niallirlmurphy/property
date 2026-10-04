@@ -20,9 +20,11 @@ import { IresReitValuationContent } from "../blog-posts/valuing-ires-reit-proper
 import { HowHomeIqValuesContent } from "../blog-posts/how-homeiq-values-a-home";
 import { BaringsIresTakeoverContent } from "../blog-posts/barings-ires-reit-takeover-offer-fair-value";
 import { MarketHealth36MonthsContent } from "../blog-posts/irish-property-market-health-36-months";
+import { HousePriceGrowthMapContent } from "../blog-posts/ireland-house-price-growth-map";
 
 // Map slugs to content components
 const BLOG_CONTENT: Record<string, React.ComponentType> = {
+  "ireland-house-price-growth-map": HousePriceGrowthMapContent,
   "irish-property-market-health-36-months": MarketHealth36MonthsContent,
   "barings-ires-reit-takeover-offer-fair-value": BaringsIresTakeoverContent,
   "how-homeiq-values-a-home": HowHomeIqValuesContent,

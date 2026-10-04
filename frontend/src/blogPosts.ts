@@ -33,6 +33,15 @@ export function publishedPosts(now: Date = new Date()): BlogPost[] {
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "ireland-house-price-growth-map",
+    title: "Ireland House Price Growth Map: Where Prices Are Rising Fastest",
+    description: "An interactive map of house price growth across Ireland, built from second-hand sales on the Property Price Register. See which areas are outpacing the national market, which are lagging, and the fastest- and slowest-growing towns.",
+    date: "2026-11-01",
+    author: "HomeIQ Team",
+    tags: ["Analysis", "Map", "Price Growth", "PPR"],
+    readTime: "5 min read"
+  },
+  {
     slug: "irish-property-market-health-36-months",
     title: "Ireland's Property Market Is Stable but Stretched: Price Growth Has Halved and Sales Have Plateaued",
     description: "We analysed 166,000 cleaned Property Price Register sales from October 2023 to September 2026: sales volumes, median and average prices, the slowdown in growth, Dublin vs the regions, urban vs rural, Dublin postcodes and the rise of new builds — with charts.",
