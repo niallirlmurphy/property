@@ -2,6 +2,15 @@ import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { BLOG_POSTS, isPublished } from "../blogPosts";
+import { SITE_STATS as S } from "../siteStats";
+
+declare const __BUILD_DATE__: string;
+
+// Gated on the build date, not the visitor's clock, so the prerendered HTML and
+// the hydrated page agree; the link appears on the first deploy after it's live.
+const methodologyPost = BLOG_POSTS.find((p) => p.slug === "how-homeiq-values-a-home");
+const showMethodology = methodologyPost != null && isPublished(methodologyPost, new Date(__BUILD_DATE__));
 
 export default function AboutPage() {
   const meta = usePageMeta(
@@ -27,6 +36,48 @@ export default function AboutPage() {
             just what a property is worth today, but how regional trends, historical cycles, and local
             developments influence future value.
           </p>
+        </section>
+
+        <section className="about-section" id="data-sources">
+          <h2>Data Sources &amp; Methodology</h2>
+          <h3>Where the sales come from</h3>
+          <p>
+            Every sale on HomeIQ comes from the{" "}
+            <a href="https://www.propertypriceregister.ie" target="_blank" rel="noopener noreferrer">Property Price Register</a>,
+            published by the Property Services Regulatory Authority (PSRA). It records the date, address,
+            county and price of every residential property sale in Ireland since January 2010, and the
+            Eircode for many recent sales. HomeIQ currently holds {S.totalSales} sales from {S.firstMonth} to {S.lastMonth}.
+          </p>
+          <h3>How often it's updated</h3>
+          <p>
+            We add new sales from the register every two weeks. A sale only appears on the register once
+            stamp duty is filed with Revenue, usually a few weeks to a few months after the sale closes, so
+            the latest months always undercount and fill in over later updates.
+          </p>
+          <h3>How locations are found</h3>
+          <p>
+            The register lists addresses but not map coordinates. We work out each location from the
+            Eircode where there is one, and from the address otherwise, then check the result: it must fall
+            inside Ireland, inside the right county, and near its Eircode area. {S.mappedPct}% of sales are
+            on the map. Some are placed at street or town level rather than the exact house, and locations
+            that fail our checks are left out of map searches and valuations until they're fixed.
+          </p>
+          <h3>How prices and trends are calculated</h3>
+          <p>
+            Area and street figures use median prices, which are less affected by a few very expensive
+            sales than averages. We leave out sales the register marks as not full market price (such as
+            transfers within a family), extreme price outliers, and bulk sales of several homes for one
+            combined price, as these would distort the figures. The register doesn't record bedrooms or
+            property type; where we show them, they come from public listing information for that sale.
+          </p>
+          {showMethodology && methodologyPost && (
+            <p>
+              For a closer look at how estimates are built, read{" "}
+              <Link to={`/blog/${methodologyPost.slug}`} style={{ color: "#1a3c5e", textDecoration: "underline" }}>
+                {methodologyPost.title}
+              </Link>.
+            </p>
+          )}
         </section>
 
         <section className="about-section">

@@ -188,6 +188,16 @@ def main():
         if not success:
             print("\n⚠️  Warning: Page-data generation had errors")
 
+        # Homepage trust strip / FAQ figures (queries the DB directly)
+        success = run_command(
+            ['python3', 'scripts/generate_site_stats.py'],
+            "STEP 4b: Generate homepage site stats",
+            dry_run=args.dry_run
+        )
+
+        if not success:
+            print("\n⚠️  Warning: Site-stats generation had errors")
+
     # Summary
     print("\n" + "="*80)
     print("PIPELINE COMPLETE")

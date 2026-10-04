@@ -330,6 +330,9 @@ body {
   .app[data-tab="trends"] .map-container  { display: none; }
   .app[data-tab="trends"] .trends-pane    { display: block; }
 
+  .app[data-tab="intro"]  .map-container  { display: none; }
+  .app[data-tab="intro"]  .results-pane   { display: block; }
+
   /* Hide desktop-only trends overlay */
   .trends-panel,
   .trends-toggle { display: none !important; }
@@ -1710,6 +1713,14 @@ input[type="range"]::-moz-range-thumb {
 .home-intro-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 12px; }
 .home-intro-posts { margin: 0 0 6px; padding-left: 18px; }
 .home-intro-posts li { margin-bottom: 4px; }
+.home-trust { margin: 0 0 14px; padding: 8px 10px; background: #f3f6fa; border-left: 3px solid #1a3c5e; border-radius: 4px; font-size: 12px; color: #444; }
+.home-trust strong { color: #1a3c5e; }
+.home-trust-links { display: inline-flex; gap: 12px; margin-left: 10px; font-weight: 600; white-space: nowrap; }
+.home-faq { margin: 0 0 10px; }
+.home-faq dt { font-weight: 600; color: #333; margin-top: 10px; }
+.home-faq dd { margin: 2px 0 0; }
+.results-pane .site-footer { padding: 20px 12px; font-size: 12px; }
+.results-pane .site-footer .separator { margin: 0 6px; }
 
 /* ------------------------------------------------------------------ */
 /* NMP flag                                                             */
@@ -1733,6 +1744,12 @@ input[type="range"]::-moz-range-thumb {
   font-weight: 700;
   color: #1a3c5e;
   margin: 0 0 12px;
+}
+.about-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a3c5e;
+  margin: 20px 0 6px;
 }
 .about-lead {
   font-size: 17px;

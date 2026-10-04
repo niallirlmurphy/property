@@ -18,6 +18,8 @@ function replace(pattern, replacement, what) {
 // the rendered page sets its own.
 replace(/<title data-rh="true">[^<]*<\/title>/, "<title>HomeIQ</title>", "the Helmet <title>");
 replace(/\s*<(meta|link) data-rh="true"[^>]*>/g, "", "Helmet meta/link tags");
+// Homepage-only structured data (Dataset + FAQ), also emitted through Helmet.
+replace(/\s*<script data-rh="true" type="application\/ld\+json">[\s\S]*?<\/script>/g, "", "Helmet JSON-LD");
 // Prerendered homepage markup plus its router hydration data, which sit inside #root.
 replace(
   /<div id="root" data-server-rendered="true">[\s\S]*?<\/div>(\s*<script>window\.__VITE_REACT_SSG_HASH__)/,

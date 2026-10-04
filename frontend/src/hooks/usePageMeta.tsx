@@ -1,8 +1,9 @@
 import { useLocation } from "react-router-dom";
 import { Head } from "vite-react-ssg";
+import { SITE_STATS as S } from "../siteStats";
 
 const BASE_TITLE = "HomeIQ — Ireland Property Price Search";
-const BASE_DESC  = "Search 785,000 residential property sales in Ireland (2010-2026). 85% geocoded with interactive maps, price trends, and Eircode lookup. Free property price data.";
+const BASE_DESC  = `Search ${S.totalSales} residential property sales in Ireland (${S.firstYear}–${S.lastYear}) from the Property Price Register, with interactive maps, price trends and Eircode lookup. Free, updated every two weeks.`;
 const SITE = "https://homeiq.ie";
 const DEFAULT_OG_IMAGE = "https://homeiq.ie/images/ppr-og-image.jpg";
 

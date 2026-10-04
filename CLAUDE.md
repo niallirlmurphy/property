@@ -156,8 +156,9 @@ export $(grep '^DATABASE_URL=' backend/.env | xargs)
 python3 scripts/generate_street_data.py     # writes frontend/src/data/streets/*.json
 python3 scripts/generate_sitemap.py          # refresh sitemap
 python3 scripts/generate_page_data.py        # writes frontend/src/data/{areas,eircodes,counties}/*.json
+python3 scripts/generate_site_stats.py       # writes frontend/src/data/site_stats.json (homepage trust strip/FAQ figures)
 git add frontend/src/data/streets frontend/public/sitemap.xml
-git add frontend/src/data/areas frontend/src/data/eircodes frontend/src/data/counties
+git add frontend/src/data/areas frontend/src/data/eircodes frontend/src/data/counties frontend/src/data/site_stats.json
 git commit -m "chore: refresh street page data" && git push origin main
 ```
 This refreshes the 50 static street pages (`/street/:slug`). Data is baked into

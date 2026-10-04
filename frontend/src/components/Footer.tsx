@@ -13,6 +13,10 @@ export default function Footer() {
         <a href="/polygon">Map Search</a>
         <span className="separator">•</span>
         <a href="/about">About</a>
+        <span className="separator">•</span>
+        <a href="/about#data-sources">Data Sources</a>
+        <span className="separator">•</span>
+        <a href="/contact">Contact</a>
       </p>
       <p className="build-info">
         Build: {__BUILD_TIME__}

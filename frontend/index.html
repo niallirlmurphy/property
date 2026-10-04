@@ -30,7 +30,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="HomeIQ — Ireland Property Price Search" />
-    <meta name="twitter:description" content="Search 785,000 residential property sales in Ireland (2010-2026). 85% geocoded. Free, fast, covers all 26 counties." />
+    <meta name="twitter:description" content="Search over 800,000 residential property sales in Ireland since 2010. Free, fast, covers all 26 counties." />
     <meta name="twitter:image:alt" content="Ireland's Property Price Register - 784,000+ Sales Since 2010" />
 
     <!-- Performance hints -->
@@ -77,79 +77,7 @@
     }
     </script>
 
-    <!-- Structured data — Dataset -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Dataset",
-      "name": "Ireland Residential Property Price Register (785,000 Sales)",
-      "description": "All residential property sales in Ireland 2010-2026. 85% geocoded with coordinates, covering 26 counties and 667,000+ searchable locations with interactive maps and price trends.",
-      "url": "https://homeiq.ie",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
-      "isAccessibleForFree": true,
-      "creator": {
-        "@type": "Organization",
-        "name": "Revenue Commissioners, Ireland",
-        "url": "https://www.propertypriceregister.ie"
-      },
-      "temporalCoverage": "2010-01-01/2026-05-22",
-      "spatialCoverage": {
-        "@type": "Country",
-        "name": "Ireland"
-      },
-      "distribution": {
-        "@type": "DataDownload",
-        "encodingFormat": "application/json",
-        "contentUrl": "https://homeiq.ie"
-      },
-      "variableMeasured": [
-        "Sale Price",
-        "Sale Date",
-        "Property Type",
-        "Geographic Coordinates",
-        "Eircode",
-        "County",
-        "Address"
-      ]
-    }
-    </script>
 
-    <!-- Structured data — FAQ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "How many property sales are in the HomeIQ database?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "HomeIQ contains 785,000 residential property sales in Ireland from 2010 to 2026, with 85% geocoded for map-based search across all 26 counties."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Is HomeIQ free to use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, HomeIQ is completely free. Search property prices by address, Eircode, or area with no registration required. Access price trends, mortgage calculator, and energy ratings at no cost."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What time period does the data cover?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "HomeIQ covers all residential property sales in Ireland from January 2010 to May 2026, sourced from the official Property Price Register maintained by the Revenue Commissioners."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Can I search by Eircode?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, HomeIQ supports Eircode search. Enter any Irish Eircode to find all property sales in that area with prices, dates, and map locations."
-        }
-      }]
-    }
-    </script>
   </head>
   <body>
     <div id="root"></div>

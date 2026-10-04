@@ -34,6 +34,8 @@ export default defineConfig({
     __BUILD_TIME__: JSON.stringify(
       new Date().toLocaleString("en-IE", { dateStyle: "medium", timeStyle: "short", timeZone: "Europe/Dublin" })
     ),
+    // YYYY-MM-DD, for content gated on a date (e.g. links to scheduled posts)
+    __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)),
   },
   // vite-react-ssg reads its build-time SSG options from here (the plugin
   // augments vite's UserConfig with `ssgOptions`). `includedRoutes` decides

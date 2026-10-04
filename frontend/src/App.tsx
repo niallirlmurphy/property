@@ -7,7 +7,6 @@ import ResultsList from "./components/ResultsList";
 import EircodePanel from "./components/EircodePanel";
 import TrendsChart from "./components/TrendsChart";
 import EmailAlertModal from "./components/EmailAlertModal";
-import Footer from "./components/Footer";
 import HomeIntro from "./components/HomeIntro";
 import type { Property, SearchResponse, TrendPoint, SearchParams, EircodeResponse } from "./types";
 import WaffleMenu from "./components/WaffleMenu";
@@ -168,7 +167,10 @@ function partitionByExactMatch(results: Property[], query: string): {
   };
 }
 
-type MobileTab = "map" | "list" | "trends";
+// "intro": mobile before the first search, when the main area shows the
+// homepage intro instead of the map. Both renders start there, so it can't
+// mismatch on hydration; the first search switches to "map".
+type MobileTab = "intro" | "map" | "list" | "trends";
 
 export default function App() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -193,7 +195,7 @@ export default function App() {
 
   const [activeProperty, setActiveProperty] = useState<Property | null>(null);
   const [lastSearchQuery, setLastSearchQuery] = useState<string>("");
-  const [mobileTab, setMobileTab] = useState<MobileTab>("map");
+  const [mobileTab, setMobileTab] = useState<MobileTab>("intro");
   const [emailAlertOpen, setEmailAlertOpen] = useState(false);
   const [lastSearchParams, setLastSearchParams] = useState<SearchParams | null>(null);
   const searchGenRef = useRef(0);
@@ -515,7 +517,7 @@ export default function App() {
           Map
         </button>
         <button
-          className={mobileTab === "list" ? "active" : ""}
+          className={mobileTab === "list" || mobileTab === "intro" ? "active" : ""}
           onClick={() => setMobileTab("list")}
         >
           <span className="tab-icon">🏠</span>

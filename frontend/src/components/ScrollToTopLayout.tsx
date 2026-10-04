@@ -6,12 +6,15 @@ import { useLocation, Outlet } from "react-router-dom";
  * every client-side navigation. Without this, React Router preserves the
  * previous page's scroll offset, so following a link near the bottom of a long
  * page (e.g. a street card on a county page) lands you partway down the next
- * page. Renders the matched route via <Outlet />.
+ * page. A link with a hash (e.g. /about#data-sources) scrolls to that element
+ * instead. Renders the matched route via <Outlet />.
  */
 export default function ScrollToTopLayout() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    const target = hash && document.getElementById(decodeURIComponent(hash.slice(1)));
+    if (target) target.scrollIntoView();
+    else window.scrollTo(0, 0);
+  }, [pathname, hash]);
   return <Outlet />;
 }
