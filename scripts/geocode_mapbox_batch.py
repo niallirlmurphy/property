@@ -249,6 +249,17 @@ RK_MULT = 2.0
 RK_FLOOR_KM = 8.0
 RK_CEIL_KM = 45.0
 
+# Points where Mapbox dumps unmatched addresses from unrelated places (found in the
+# Oct 2026 legacy-run audit; rows there were flagged geocode_suspect). Any answer
+# within DUMP_POINT_KM of one is rejected so retries can't land back on them.
+DUMP_POINTS = [
+    (53.426437, -6.241269),  # north Dublin: Glasnevin, Artane, Clarehall, Ballymun...
+    (53.404340, -6.063342),  # in the sea off Howth: Rialto, Parkwest, Kinsealy...
+    (53.278385, -6.212314),  # Mount Street, Clanbrassil Street, Arran Quay, Tullyvale...
+    (53.546927, -6.093343),  # Skerries: Royal Canal Park, Ballsbridge, Sandyford courts
+]
+DUMP_POINT_KM = 0.01
+
 # Dublin postal district ("Dublin 4", "DUBLIN 6W"). Mapbox parses this as house
 # number + street, e.g. "..., Dublin 4" → "4 Dublin Street, Baldoyle" (rooftop!).
 DUBLIN_DISTRICT_RE = re.compile(r'\bDUBLIN\s+\d{1,2}[A-Z]?\b', re.IGNORECASE)
@@ -580,6 +591,9 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                                                 locality_centroids)
                     if dist is not None and dist > LOCALITY_MAX_KM:
                         is_valid, reason = False, f"locality_far({dist:.0f}km)"
+                if is_valid and any(_haversine_km(lat, lon, dlat, dlon) < DUMP_POINT_KM
+                                    for dlat, dlon in DUMP_POINTS):
+                    is_valid, reason = False, "dump_point"
 
                 # Centroid mode: a town-level answer (or one that lands back on the
                 # row's current point) can't fix a town-level centroid — it just
