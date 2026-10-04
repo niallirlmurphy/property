@@ -11,8 +11,8 @@
 // the page's live-API fallback.
 import type { LoaderFunctionArgs } from "react-router-dom";
 import { areaFromSlug } from "./areas";
-import { streetFromSlug } from "./streets";
 import type { AreaSummary, CountySummary, EircodePageData, StreetData } from "./types";
+import type { StreetConfig } from "./streetRegistry";
 
 const AREA_DATA = import.meta.glob<{ default: AreaSummary }>("./data/areas/*.json");
 const COUNTY_DATA = import.meta.glob<{ default: CountySummary }>("./data/counties/*.json");
@@ -40,8 +40,17 @@ export async function eircodeLoader({ params }: LoaderFunctionArgs): Promise<Eir
   return read(EIRCODE_DATA[`./data/eircodes/${(params.code ?? "").toUpperCase()}.json`]);
 }
 
-export async function streetLoader({ params }: LoaderFunctionArgs): Promise<StreetData | null> {
+export interface StreetPageData {
+  street: StreetConfig;
+  data: StreetData;
+}
+
+// Returns the street's full registry entry too, so the page needn't import the
+// registry (and its description text) into its bundle.
+export async function streetLoader({ params }: LoaderFunctionArgs): Promise<StreetPageData | null> {
   if (!import.meta.env.SSR) return null;
-  const config = streetFromSlug(params.slug ?? "");
-  return read(config && STREET_DATA[`./data/streets/${config.slug}.json`]);
+  const { streetConfigFromSlug } = await import("./streetRegistry");
+  const street = streetConfigFromSlug(params.slug ?? "");
+  const data = await read(street && STREET_DATA[`./data/streets/${street.slug}.json`]);
+  return street && data ? { street, data } : null;
 }

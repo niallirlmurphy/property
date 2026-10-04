@@ -1,26 +1,13 @@
-import registry from "./data/streets_registry.json";
+// Street links for client code: the registry trimmed to the fields needed to
+// list and link to streets (see the street-links plugin in vite.config.ts).
+// The full entries, with description text, are in ./streetRegistry.
+import links from "virtual:street-links";
+import type { StreetLink } from "./streetRegistry";
 
-export interface StreetConfig {
-  slug: string;
-  name: string;
-  area: string;
-  county: string;
-  countySlug: string;
-  category: "value" | "volume";
-  rank: number;
-  normalizedKey: string;
-  description: string;
-  info?: string;
-  image?: string;
-  imageAlt?: string;
-}
+export type { StreetLink };
 
-export const STREETS: StreetConfig[] = registry as StreetConfig[];
+export const STREETS: StreetLink[] = links;
 
-export function streetFromSlug(slug: string): StreetConfig | undefined {
-  return STREETS.find(s => s.slug === slug);
-}
-
-export function streetsForCounty(countySlug: string): StreetConfig[] {
+export function streetsForCounty(countySlug: string): StreetLink[] {
   return STREETS.filter(s => s.countySlug === countySlug);
 }

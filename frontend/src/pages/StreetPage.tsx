@@ -1,12 +1,11 @@
-import { useParams, useLoaderData, Link } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import MapSearchThumb from "../components/MapSearchThumb";
 import { usePageMeta } from "../hooks/usePageMeta";
-import { streetFromSlug } from "../streets";
-import type { StreetData } from "../types";
+import type { StreetPageData } from "../routeLoaders";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -14,9 +13,9 @@ function formatPrice(n: number | null) {
 }
 
 export default function StreetPage() {
-  const { slug } = useParams<{ slug: string }>();
-  const config = streetFromSlug(slug ?? "");
-  const data = useLoaderData() as StreetData | null;
+  const loaded = useLoaderData() as StreetPageData | null;
+  const config = loaded?.street;
+  const data = loaded?.data;
 
   const crumbs = config
     ? [
