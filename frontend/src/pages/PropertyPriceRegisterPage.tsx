@@ -14,18 +14,23 @@ export default function PropertyPriceRegisterPage() {
   return (
     <div className="static-page">
       {meta}
-      <script type="application/ld+json">
-        {JSON.stringify({
+      <script
+        type="application/ld+json"
+        // As __html, not a text child: React escapes text children (" → &quot;),
+        // and browsers don't decode entities inside <script>, so the JSON-LD was
+        // invalid and the page failed hydration.
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://homeiq.ie"},
             {"@type": "ListItem", "position": 2, "name": "Property Price Register", "item": "https://homeiq.ie/property-price-register"}
           ]
-        })}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify({
+        }).replace(/</g, "\\u003c") }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
@@ -78,8 +83,8 @@ export default function PropertyPriceRegisterPage() {
               }
             }
           ]
-        })}
-      </script>
+        }).replace(/</g, "\\u003c") }}
+      />
       <PageHeader title="Understanding Ireland's Property Price Register" />
       <main className="static-content">
         <section className="about-section">
