@@ -1,3 +1,5 @@
+declare const __BUILD_TIME__: string;
+
 export default function Footer() {
   return (
     <div className="site-footer">
@@ -13,10 +15,7 @@ export default function Footer() {
         <a href="/about">About</a>
       </p>
       <p className="build-info">
-        Build: {new Date().toLocaleString("en-IE", {
-          dateStyle: "medium",
-          timeStyle: "short",
-        })}
+        Build: {__BUILD_TIME__}
       </p>
     </div>
   );

@@ -6,6 +6,13 @@ import { STREETS } from "./src/streets";
 
 export default defineConfig({
   plugins: [react()],
+  define: {
+    // Formatted once at build time so the prerendered HTML and the hydrated
+    // client render the same string (a render-time `new Date()` mismatches).
+    __BUILD_TIME__: JSON.stringify(
+      new Date().toLocaleString("en-IE", { dateStyle: "medium", timeStyle: "short", timeZone: "Europe/Dublin" })
+    ),
+  },
   // vite-react-ssg reads its build-time SSG options from here (the plugin
   // augments vite's UserConfig with `ssgOptions`). `includedRoutes` decides
   // which concrete URLs get prerendered — it is NOT a ViteReactSSG() runtime
