@@ -8,6 +8,7 @@ import EircodePanel from "./components/EircodePanel";
 import TrendsChart from "./components/TrendsChart";
 import EmailAlertModal from "./components/EmailAlertModal";
 import Footer from "./components/Footer";
+import HomeIntro from "./components/HomeIntro";
 import type { Property, SearchResponse, TrendPoint, SearchParams, EircodeResponse } from "./types";
 import WaffleMenu from "./components/WaffleMenu";
 import ContactSidebar from "./components/ContactModals";
@@ -486,7 +487,9 @@ export default function App() {
       />
 
       <div className="results-pane">
-        {resultsPanel}
+        {/* No urlQ check: the prerendered HTML never has ?q, so keying on it would
+            mismatch on hydration. A ?q load sets hasSearched in its mount effect. */}
+        {!hasSearched && !loading ? <HomeIntro /> : resultsPanel}
       </div>
 
       <div className="map-container">
