@@ -6,11 +6,11 @@
   "rewrites": [
     {
       "source": "/eircode/:code",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     },
     {
       "source": "/blog/:slug",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     }
   ],
   "redirects": [

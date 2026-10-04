@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useLoaderData, Link } from "react-router-dom";
+import { useParams, useLoaderData, Link, Navigate } from "react-router-dom";
 import { fetchEircode, fetchTrends } from "../api";
 import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
@@ -50,6 +50,10 @@ export default function EircodePage() {
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
   }, [upperCode]);
+
+  // Lowercase codes (e.g. /eircode/h91) have no Vercel redirect outside Dublin;
+  // send them to the uppercase URL so the canonical is always uppercase.
+  if (code && code !== upperCode) return <Navigate to={`/eircode/${upperCode}`} replace />;
 
   return (
     <>
