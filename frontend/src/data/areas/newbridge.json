@@ -228,9 +228,9 @@
     },
     {
       "year": 2014,
-      "count": 154,
+      "count": 155,
       "median_price": 165000.0,
-      "avg_price": 174963.0,
+      "avg_price": 175238.0,
       "min_price": 14375.0,
       "max_price": 600000.0
     },
@@ -260,17 +260,17 @@
     },
     {
       "year": 2018,
-      "count": 135,
+      "count": 143,
       "median_price": 240000.0,
-      "avg_price": 316327.0,
+      "avg_price": 310896.0,
       "min_price": 30000.0,
       "max_price": 8261055.0
     },
     {
       "year": 2019,
-      "count": 177,
-      "median_price": 253000.0,
-      "avg_price": 266144.0,
+      "count": 179,
+      "median_price": 253500.0,
+      "avg_price": 266388.0,
       "min_price": 17000.0,
       "max_price": 1250000.0
     },

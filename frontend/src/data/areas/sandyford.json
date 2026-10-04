@@ -7,8 +7,8 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 562110.0,
-  "avg_price": 664035,
+  "median_price": 568125.0,
+  "avg_price": 747535,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -65,24 +65,6 @@
       "bedrooms": 2,
       "property_type": "apartment",
       "distance_m": 945.01601154
-    },
-    {
-      "id": 804225,
-      "sale_date": "2026-09-14",
-      "address": "111 THE OVAL, TULLYVALE, CABINTEELY DUBLIN 18",
-      "county": "Dublin",
-      "eircode": "D18HX24",
-      "price": 275000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.278385,
-      "longitude": -6.212314,
-      "routing_key": "D18",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1254.7270415
     },
     {
       "id": 803946,
@@ -191,86 +173,104 @@
       "bedrooms": 1,
       "property_type": "apartment",
       "distance_m": 1232.9033569
+    },
+    {
+      "id": 802150,
+      "sale_date": "2026-08-26",
+      "address": "12 CUL CUILLE, SANDYFORD, CO DUBLN",
+      "county": "Dublin",
+      "eircode": "D18DVF7",
+      "price": 1110000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.269569,
+      "longitude": -6.227063,
+      "routing_key": "D18",
+      "bedrooms": 4,
+      "property_type": "semi-detached",
+      "distance_m": 168.83147856
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 47,
-      "median_price": 314000.0,
-      "avg_price": 344412.0,
+      "count": 52,
+      "median_price": 307500.0,
+      "avg_price": 335796.0,
       "min_price": 89867.84,
       "max_price": 750000.0
     },
     {
       "year": 2011,
-      "count": 57,
-      "median_price": 247500.0,
-      "avg_price": 258955.0,
+      "count": 58,
+      "median_price": 248750.0,
+      "avg_price": 260982.0,
       "min_price": 80000.0,
       "max_price": 780000.0
     },
     {
       "year": 2012,
-      "count": 99,
+      "count": 101,
       "median_price": 173000.0,
-      "avg_price": 206001.0,
+      "avg_price": 208001.0,
       "min_price": 83700.44,
       "max_price": 540000.0
     },
     {
       "year": 2013,
-      "count": 51,
+      "count": 55,
       "median_price": 273128.0,
-      "avg_price": 323101.0,
+      "avg_price": 319403.0,
       "min_price": 65000.0,
       "max_price": 1100000.0
     },
     {
       "year": 2014,
-      "count": 103,
-      "median_price": 370000.0,
-      "avg_price": 378727.0,
-      "min_price": 131600.0,
+      "count": 115,
+      "median_price": 350000.0,
+      "avg_price": 370995.0,
+      "min_price": 32698.54,
       "max_price": 815000.0
     },
     {
       "year": 2015,
-      "count": 104,
+      "count": 110,
       "median_price": 325496.0,
-      "avg_price": 354855.0,
+      "avg_price": 358163.0,
       "min_price": 165000.0,
       "max_price": 782500.0
     },
     {
       "year": 2016,
-      "count": 141,
-      "median_price": 356828.0,
-      "avg_price": 392218.0,
-      "min_price": 175000.0,
+      "count": 152,
+      "median_price": 355000.0,
+      "avg_price": 385876.0,
+      "min_price": 25000.0,
       "max_price": 1677185.0
     },
     {
       "year": 2017,
-      "count": 123,
+      "count": 131,
       "median_price": 378855.0,
-      "avg_price": 435434.0,
+      "avg_price": 430518.0,
       "min_price": 185000.0,
       "max_price": 1790000.0
     },
     {
       "year": 2018,
-      "count": 128,
-      "median_price": 385500.0,
-      "avg_price": 399043.0,
+      "count": 142,
+      "median_price": 384000.0,
+      "avg_price": 393503.0,
       "min_price": 85730.0,
       "max_price": 900000.0
     },
     {
       "year": 2019,
-      "count": 129,
+      "count": 131,
       "median_price": 426872.0,
-      "avg_price": 455937.0,
+      "avg_price": 455331.0,
       "min_price": 184516.0,
       "max_price": 1400000.0
     },
@@ -284,49 +284,49 @@
     },
     {
       "year": 2021,
-      "count": 193,
+      "count": 191,
       "median_price": 495000.0,
-      "avg_price": 523439.0,
+      "avg_price": 526093.0,
       "min_price": 220700.0,
       "max_price": 2600000.0
     },
     {
       "year": 2022,
-      "count": 289,
+      "count": 287,
       "median_price": 450000.0,
-      "avg_price": 504606.0,
+      "avg_price": 505666.0,
       "min_price": 27500.0,
       "max_price": 1481000.0
     },
     {
       "year": 2023,
-      "count": 269,
-      "median_price": 487000.0,
-      "avg_price": 544674.0,
+      "count": 266,
+      "median_price": 492500.0,
+      "avg_price": 546697.0,
       "min_price": 150000.0,
       "max_price": 6167400.88
     },
     {
       "year": 2024,
-      "count": 291,
-      "median_price": 485000.0,
-      "avg_price": 541876.0,
+      "count": 289,
+      "median_price": 500000.0,
+      "avg_price": 542940.0,
       "min_price": 35872.0,
       "max_price": 1665000.0
     },
     {
       "year": 2025,
-      "count": 226,
-      "median_price": 531500.0,
-      "avg_price": 583011.0,
+      "count": 222,
+      "median_price": 537500.0,
+      "avg_price": 587428.0,
       "min_price": 256250.0,
       "max_price": 1665000.0
     },
     {
       "year": 2026,
-      "count": 130,
-      "median_price": 562110.0,
-      "avg_price": 616796.0,
+      "count": 128,
+      "median_price": 568125.0,
+      "avg_price": 620957.0,
       "min_price": 210000.0,
       "max_price": 1500000.0
     }

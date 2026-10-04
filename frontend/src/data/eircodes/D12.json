@@ -114,23 +114,6 @@
         "property_type": "semi-detached"
       },
       {
-        "id": 804483,
-        "sale_date": "2026-09-16",
-        "address": "52 ST JAMESS RD, GREENHILLS, DUBLIN 12",
-        "county": "Dublin",
-        "eircode": "D12K2CV",
-        "price": 631000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.312824,
-        "longitude": -6.332262,
-        "routing_key": "D12",
-        "bedrooms": 3,
-        "property_type": "terraced"
-      },
-      {
         "id": 804507,
         "sale_date": "2026-09-16",
         "address": "APARTMENT 31A, LANSDOWNE VALLEY, DUBLIN 12",
@@ -146,6 +129,23 @@
         "routing_key": "D12",
         "bedrooms": 2,
         "property_type": "apartment"
+      },
+      {
+        "id": 804483,
+        "sale_date": "2026-09-16",
+        "address": "52 ST JAMESS RD, GREENHILLS, DUBLIN 12",
+        "county": "Dublin",
+        "eircode": "D12K2CV",
+        "price": 631000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.312824,
+        "longitude": -6.332262,
+        "routing_key": "D12",
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 804270,

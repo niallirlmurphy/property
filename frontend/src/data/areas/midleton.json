@@ -7,8 +7,8 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 383130.0,
-  "avg_price": 320290,
+  "median_price": 383000.0,
+  "avg_price": 317990,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -65,6 +65,24 @@
       "bedrooms": 3,
       "property_type": "house",
       "distance_m": 1412.03724856
+    },
+    {
+      "id": 803744,
+      "sale_date": "2026-09-09",
+      "address": "14 WOODQUAY, MIDDLETON, CORK",
+      "county": "Cork",
+      "eircode": "P25CA26",
+      "price": 305000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.914288,
+      "longitude": -8.172756,
+      "routing_key": "P25",
+      "bedrooms": 3,
+      "property_type": "duplex",
+      "distance_m": 794.78474789
     },
     {
       "id": 803613,
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "bungalow",
       "distance_m": 1247.80618302
-    },
-    {
-      "id": 800340,
-      "sale_date": "2026-08-11",
-      "address": "34 CONVENT VIEW, MIDLETON, CO CORK",
-      "county": "Cork",
-      "eircode": "P25W524",
-      "price": 328000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.907958,
-      "longitude": -8.168152,
-      "routing_key": "P25",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 1561.7311928
     }
   ],
   "trends": [
@@ -252,25 +252,25 @@
     },
     {
       "year": 2017,
-      "count": 44,
-      "median_price": 201500.0,
-      "avg_price": 220250.0,
+      "count": 45,
+      "median_price": 193000.0,
+      "avg_price": 218756.0,
       "min_price": 21000.0,
       "max_price": 795000.0
     },
     {
       "year": 2018,
-      "count": 48,
-      "median_price": 270925.0,
-      "avg_price": 254372.0,
+      "count": 54,
+      "median_price": 269402.0,
+      "avg_price": 251974.0,
       "min_price": 103000.0,
       "max_price": 383260.0
     },
     {
       "year": 2019,
-      "count": 66,
-      "median_price": 241000.0,
-      "avg_price": 257254.0,
+      "count": 69,
+      "median_price": 242000.0,
+      "avg_price": 260844.0,
       "min_price": 40000.0,
       "max_price": 700000.0
     },
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 132,
-      "median_price": 383130.0,
-      "avg_price": 373365.0,
+      "count": 133,
+      "median_price": 383000.0,
+      "avg_price": 372851.0,
       "min_price": 28129.66,
       "max_price": 660000.0
     }

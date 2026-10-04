@@ -7,8 +7,8 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 216000.0,
-  "avg_price": 730856,
+  "median_price": 215500.0,
+  "avg_price": 714516,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -139,6 +139,24 @@
       "distance_m": 1311.4042632
     },
     {
+      "id": 803245,
+      "sale_date": "2026-09-04",
+      "address": "222 ROSUILLIGHE, LETTERKENNY, DONEGAL",
+      "county": "Donegal",
+      "eircode": "F92XD7V",
+      "price": 167000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 54.949562,
+      "longitude": -7.737654,
+      "routing_key": "F92",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "distance_m": 286.22624233
+    },
+    {
       "id": 803112,
       "sale_date": "2026-09-03",
       "address": "74 THE GREEN, BALLYMACOOL, LETTERKENNY",
@@ -173,24 +191,6 @@
       "bedrooms": 2,
       "property_type": "detached",
       "distance_m": 286.22624233
-    },
-    {
-      "id": 802579,
-      "sale_date": "2026-09-01",
-      "address": "15 Gleann Glas, Lismonaghan, Letterkenny",
-      "county": "Donegal",
-      "eircode": null,
-      "price": 330396.0,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 54.935543,
-      "longitude": -7.736761,
-      "routing_key": null,
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 1811.10211115
     }
   ],
   "trends": [
@@ -260,18 +260,18 @@
     },
     {
       "year": 2018,
-      "count": 112,
-      "median_price": 102500.0,
-      "avg_price": 120295.0,
+      "count": 129,
+      "median_price": 105000.0,
+      "avg_price": 121593.0,
       "min_price": 20000.0,
       "max_price": 835000.0
     },
     {
       "year": 2019,
-      "count": 148,
-      "median_price": 112250.0,
-      "avg_price": 121107.0,
-      "min_price": 13000.0,
+      "count": 154,
+      "median_price": 110000.0,
+      "avg_price": 120395.0,
+      "min_price": 12500.0,
       "max_price": 375000.0
     },
     {
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 129,
-      "median_price": 216000.0,
-      "avg_price": 246143.0,
+      "count": 130,
+      "median_price": 215500.0,
+      "avg_price": 245534.0,
       "min_price": 40000.0,
       "max_price": 2975400.0
     }

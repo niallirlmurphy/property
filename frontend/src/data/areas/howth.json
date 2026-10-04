@@ -196,9 +196,9 @@
   "trends": [
     {
       "year": 2010,
-      "count": 28,
-      "median_price": 657500.0,
-      "avg_price": 725910.0,
+      "count": 29,
+      "median_price": 675000.0,
+      "avg_price": 726741.0,
       "min_price": 250000.0,
       "max_price": 2022511.0
     },
@@ -212,57 +212,57 @@
     },
     {
       "year": 2012,
-      "count": 21,
-      "median_price": 358000.0,
-      "avg_price": 395786.0,
+      "count": 24,
+      "median_price": 346000.0,
+      "avg_price": 387938.0,
       "min_price": 100000.0,
       "max_price": 1000000.0
     },
     {
       "year": 2013,
-      "count": 43,
+      "count": 45,
       "median_price": 395000.0,
-      "avg_price": 441564.0,
+      "avg_price": 442383.0,
       "min_price": 132000.0,
       "max_price": 1275000.0
     },
     {
       "year": 2014,
-      "count": 38,
-      "median_price": 395000.0,
-      "avg_price": 506274.0,
+      "count": 42,
+      "median_price": 387500.0,
+      "avg_price": 490557.0,
       "min_price": 40000.0,
       "max_price": 1600000.0
     },
     {
       "year": 2015,
-      "count": 33,
-      "median_price": 400000.0,
-      "avg_price": 586328.0,
+      "count": 36,
+      "median_price": 385000.0,
+      "avg_price": 564689.0,
       "min_price": 130000.0,
       "max_price": 1246696.03
     },
     {
       "year": 2016,
-      "count": 49,
-      "median_price": 550000.0,
-      "avg_price": 637078.0,
+      "count": 53,
+      "median_price": 530000.0,
+      "avg_price": 622563.0,
       "min_price": 130000.0,
       "max_price": 1750000.0
     },
     {
       "year": 2017,
-      "count": 40,
-      "median_price": 637500.0,
-      "avg_price": 726028.0,
+      "count": 41,
+      "median_price": 640000.0,
+      "avg_price": 732589.0,
       "min_price": 295000.0,
       "max_price": 2900000.0
     },
     {
       "year": 2018,
-      "count": 64,
-      "median_price": 716250.0,
-      "avg_price": 722711.0,
+      "count": 66,
+      "median_price": 707500.0,
+      "avg_price": 716765.0,
       "min_price": 24000.0,
       "max_price": 2150000.0
     },

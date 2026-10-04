@@ -2,8 +2,8 @@
   "name": "Clonmel, Tipperary",
   "slug": "clonmel",
   "center": {
-    "lat": 52.3610817,
-    "lon": -7.6991241
+    "lat": 52.3611052,
+    "lon": -7.6991779
   },
   "radius_km": 2.0,
   "total_count": 10,
@@ -28,7 +28,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 374.81089156
+      "distance_m": 379.03958924
     },
     {
       "id": 804670,
@@ -46,7 +46,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 659.85667095
+      "distance_m": 659.17532219
     },
     {
       "id": 804529,
@@ -64,7 +64,7 @@
       "routing_key": "E91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 986.24743555
+      "distance_m": 986.07594297
     },
     {
       "id": 804485,
@@ -82,7 +82,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1924.65423627
+      "distance_m": 1928.52477593
     },
     {
       "id": 804218,
@@ -100,7 +100,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1175.84488504
+      "distance_m": 1171.74860661
     },
     {
       "id": 803890,
@@ -118,7 +118,7 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 1413.13095907
+      "distance_m": 1410.76584382
     },
     {
       "id": 803550,
@@ -136,7 +136,7 @@
       "routing_key": "E91",
       "bedrooms": 4,
       "property_type": "bungalow",
-      "distance_m": 775.24900196
+      "distance_m": 770.84789403
     },
     {
       "id": 803273,
@@ -154,7 +154,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 349.46008049
+      "distance_m": 346.33357287
     },
     {
       "id": 803238,
@@ -172,7 +172,7 @@
       "routing_key": "E91",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 607.33724024
+      "distance_m": 611.70621857
     },
     {
       "id": 802840,
@@ -190,15 +190,15 @@
       "routing_key": "E91",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 997.99017249
+      "distance_m": 1001.28120197
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 36,
-      "median_price": 176500.0,
-      "avg_price": 183694.0,
+      "count": 37,
+      "median_price": 180000.0,
+      "avg_price": 184405.0,
       "min_price": 50000.0,
       "max_price": 365000.0
     },
@@ -260,17 +260,17 @@
     },
     {
       "year": 2018,
-      "count": 121,
+      "count": 139,
       "median_price": 149000.0,
-      "avg_price": 164083.0,
+      "avg_price": 163860.0,
       "min_price": 26000.0,
       "max_price": 488000.0
     },
     {
       "year": 2019,
-      "count": 127,
-      "median_price": 150000.0,
-      "avg_price": 164902.0,
+      "count": 134,
+      "median_price": 148500.0,
+      "avg_price": 165851.0,
       "min_price": 40500.0,
       "max_price": 450000.0
     },
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 119,
+      "count": 120,
       "median_price": 290000.0,
-      "avg_price": 284163.0,
+      "avg_price": 283553.0,
       "min_price": 60000.0,
       "max_price": 705000.0
     }
