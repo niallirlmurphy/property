@@ -3,7 +3,136 @@
   "installCommand": "npm install",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/mortgages",
+      "destination": "/mortgage",
+      "permanent": true
+    },
+    {
+      "source": "/ber-ratings",
+      "destination": "/energy",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d01",
+      "destination": "/eircode/D01",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d02",
+      "destination": "/eircode/D02",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d03",
+      "destination": "/eircode/D03",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d04",
+      "destination": "/eircode/D04",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d05",
+      "destination": "/eircode/D05",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d06",
+      "destination": "/eircode/D06",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d6w",
+      "destination": "/eircode/D6W",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d07",
+      "destination": "/eircode/D07",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d08",
+      "destination": "/eircode/D08",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d09",
+      "destination": "/eircode/D09",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d10",
+      "destination": "/eircode/D10",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d11",
+      "destination": "/eircode/D11",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d12",
+      "destination": "/eircode/D12",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d13",
+      "destination": "/eircode/D13",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d14",
+      "destination": "/eircode/D14",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d15",
+      "destination": "/eircode/D15",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d16",
+      "destination": "/eircode/D16",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d17",
+      "destination": "/eircode/D17",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d18",
+      "destination": "/eircode/D18",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d20",
+      "destination": "/eircode/D20",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d22",
+      "destination": "/eircode/D22",
+      "permanent": true
+    },
+    {
+      "source": "/eircode/d24",
+      "destination": "/eircode/D24",
+      "permanent": true
+    }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/eircode/:code",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/index.html"
+    }
   ]
 }

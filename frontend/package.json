@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite-react-ssg build",
+    "build": "tsc && vite-react-ssg build && cp dist/404/index.html dist/404.html",
     "preview": "vite preview"
   },
   "dependencies": {

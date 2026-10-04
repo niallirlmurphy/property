@@ -25,6 +25,7 @@ import BlogListPage from "./pages/BlogListPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import StreetPage from "./pages/StreetPage";
 import StreetsIndexPage from "./pages/StreetsIndexPage";
+import NotFoundPage from "./pages/NotFoundPage";
 import ScrollToTopLayout from "./components/ScrollToTopLayout";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
@@ -63,8 +64,8 @@ export const routes = [
   { path: "/camino/before-you-go", element: <BeforeYouGoPage /> },
   { path: "/blog", element: <BlogListPage /> },
   { path: "/blog/:slug", element: <BlogPostPage /> },
-  // Catch-all: send unknown paths home instead of rendering a blank page
-  { path: "*", element: <Navigate to="/" replace /> },
+  // Catch-all: a real "not found" page (prerendered as /404 → dist/404.html)
+  { path: "*", element: <NotFoundPage /> },
     ],
   },
 ];

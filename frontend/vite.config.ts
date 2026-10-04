@@ -26,7 +26,9 @@ export default defineConfig({
       // Scheduled (future-dated) posts are not prerendered until their date.
       const posts = publishedPosts().map((p) => `/blog/${p.slug}`);
       const streets = STREETS.map((s) => `/street/${s.slug}`);
-      return [...staticPaths, ...counties, ...areas, ...eircodes, ...posts, ...streets];
+      // "/404" renders the catch-all NotFoundPage; the build script copies it to
+      // dist/404.html, which Vercel serves (status 404) for unmatched URLs.
+      return [...staticPaths, ...counties, ...areas, ...eircodes, ...posts, ...streets, "/404"];
     },
   },
   server: {
