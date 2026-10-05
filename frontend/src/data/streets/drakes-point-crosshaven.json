@@ -110,19 +110,19 @@
   "transactions": [
     {
       "date": "2026-08-21",
-      "address": "22  DRAKES POINT, CROSSHAVEN, CORK",
-      "price": 420000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "P43DH59"
-    },
-    {
-      "date": "2026-08-21",
       "address": "5 DRAKES POINT, CROSSHAVEN, CO CORK",
       "price": 763000,
       "bedrooms": 4,
       "propertyType": "detached",
       "eircode": "P43W598"
+    },
+    {
+      "date": "2026-08-21",
+      "address": "22  DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43DH59"
     },
     {
       "date": "2026-05-22",

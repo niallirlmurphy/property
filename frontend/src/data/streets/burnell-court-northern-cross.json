@@ -462,14 +462,6 @@
     },
     {
       "date": "2015-05-01",
-      "address": "165 Burnell Court, Northern Cross, Malahide Road",
-      "price": 106230,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D17K825"
-    },
-    {
-      "date": "2015-05-01",
       "address": "182 Burnell Court, Northern Cross, Malahide Road",
       "price": 106230,
       "bedrooms": 1,
@@ -511,6 +503,14 @@
     {
       "date": "2015-05-01",
       "address": "130 Burnell Court, Northern Cross, Malahide Road",
+      "price": 132787,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-05-01",
+      "address": "132 Burnell Court, Northern Cross, Malahide Road",
       "price": 132787,
       "bedrooms": null,
       "propertyType": null,

@@ -3,7 +3,7 @@
     "code": "D12",
     "match_type": "routing_key",
     "stats": {
-      "total_count": 3717,
+      "total_count": 3716,
       "median_price": 397000.0,
       "avg_price": 410774.0,
       "earliest_sale": "2010-01-21",

@@ -102,18 +102,18 @@
     },
     {
       "date": "2026-04-22",
-      "address": "131 Churchlands, Delgany",
-      "price": 506607,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2026-04-22",
       "address": "134 Churchlands, Delgany",
       "price": 511013,
       "bedrooms": 2,
       "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2026-04-22",
+      "address": "131 Churchlands, Delgany",
+      "price": 506607,
+      "bedrooms": null,
+      "propertyType": null,
       "eircode": null
     },
     {
@@ -318,16 +318,16 @@
     },
     {
       "date": "2023-10-27",
-      "address": "88 Churchlands, Delgany",
-      "price": 524229,
+      "address": "89 Churchlands, Delgany",
+      "price": 506607,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2023-10-27",
-      "address": "89 Churchlands, Delgany",
-      "price": 506607,
+      "address": "88 Churchlands, Delgany",
+      "price": 524229,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

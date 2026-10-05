@@ -150,19 +150,19 @@
   "transactions": [
     {
       "date": "2026-06-03",
-      "address": "NO 588 NORTH CIRCULAR ROAD, DUBLIN 7",
-      "price": 895000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D01K6C6"
-    },
-    {
-      "date": "2026-06-03",
       "address": "243 NORTH CIRCULAR RD, DUBLIN 7, DUBLIN",
       "price": 1270000,
       "bedrooms": 5,
       "propertyType": "semi-detached",
       "eircode": "D07H1K7"
+    },
+    {
+      "date": "2026-06-03",
+      "address": "NO 588 NORTH CIRCULAR ROAD, DUBLIN 7",
+      "price": 895000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D01K6C6"
     },
     {
       "date": "2025-12-12",

@@ -398,16 +398,16 @@
     },
     {
       "date": "2015-07-07",
-      "address": "122 Brandon Square, Waterville, Snugborough Road",
-      "price": 273128,
+      "address": "121 brandon square, waterville, blanchardstown",
+      "price": 273127,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2015-07-07",
-      "address": "121 brandon square, waterville, blanchardstown",
-      "price": 273127,
+      "address": "122 Brandon Square, Waterville, Snugborough Road",
+      "price": 273128,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -430,16 +430,16 @@
     },
     {
       "date": "2015-06-26",
-      "address": "115 Brandon Square, Waterville, Snugborough Road",
-      "price": 268292,
+      "address": "58 Brandon Square, Waterville, Dublin 15",
+      "price": 250406,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2015-06-26",
-      "address": "58 Brandon Square, Waterville, Dublin 15",
-      "price": 250406,
+      "address": "115 Brandon Square, Waterville, Snugborough Road",
+      "price": 268292,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

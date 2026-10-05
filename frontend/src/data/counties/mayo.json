@@ -153,8 +153,8 @@
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": null,
-      "longitude": null,
+      "latitude": 53.80226,
+      "longitude": -9.506221,
       "routing_key": "F28",
       "bedrooms": 3,
       "property_type": "apartment"

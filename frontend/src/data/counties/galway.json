@@ -215,7 +215,7 @@
       "sale_date": "2026-09-24",
       "address": "30 BLOCK Q ATHENRY SHOPPING CENTER, ATHENRY, CO GALWAY",
       "county": "Galway",
-      "eircode": "A123456",
+      "eircode": null,
       "price": 280000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
@@ -223,7 +223,7 @@
       "size_description": null,
       "latitude": null,
       "longitude": null,
-      "routing_key": "A12",
+      "routing_key": null,
       "bedrooms": null,
       "property_type": null
     },

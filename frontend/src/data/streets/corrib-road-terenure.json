@@ -216,16 +216,16 @@
       "date": "2026-03-31",
       "address": "172 CORRIB RD, TERENURE, DUBLIN 6W",
       "price": 850000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "terraced",
       "eircode": "D6WNN23"
     },
     {
       "date": "2026-03-31",
       "address": "172 CORRIB RD, TERENURE, DUBLIN 6W",
       "price": 850000,
-      "bedrooms": 3,
-      "propertyType": "terraced",
+      "bedrooms": null,
+      "propertyType": null,
       "eircode": "D6WNN23"
     },
     {

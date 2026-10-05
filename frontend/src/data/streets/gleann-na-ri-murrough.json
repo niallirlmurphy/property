@@ -262,19 +262,19 @@
     },
     {
       "date": "2023-08-25",
-      "address": "260 GLEANN NA RI, MURROUGH, RENMORE",
-      "price": 253500,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-08-25",
       "address": "237 GLEANN NA RI, MURROUGH, RENMORE",
       "price": 195000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "H91VX52"
+    },
+    {
+      "date": "2023-08-25",
+      "address": "260 GLEANN NA RI, MURROUGH, RENMORE",
+      "price": 253500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2023-07-27",

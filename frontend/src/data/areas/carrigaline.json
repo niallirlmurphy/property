@@ -7,7 +7,7 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 426156.0,
+  "median_price": 422500.0,
   "avg_price": 372300,
   "min_year": 2010,
   "max_year": 2026,
@@ -204,9 +204,9 @@
     },
     {
       "year": 2011,
-      "count": 78,
-      "median_price": 192500.0,
-      "avg_price": 209200.0,
+      "count": 79,
+      "median_price": 190000.0,
+      "avg_price": 207786.0,
       "min_price": 88106.0,
       "max_price": 825000.0
     },
@@ -220,9 +220,9 @@
     },
     {
       "year": 2013,
-      "count": 84,
-      "median_price": 176320.0,
-      "avg_price": 202768.0,
+      "count": 85,
+      "median_price": 176000.0,
+      "avg_price": 201647.0,
       "min_price": 75000.0,
       "max_price": 490000.0
     },
@@ -244,9 +244,9 @@
     },
     {
       "year": 2016,
-      "count": 154,
-      "median_price": 237943.0,
-      "avg_price": 252451.0,
+      "count": 157,
+      "median_price": 237885.0,
+      "avg_price": 250929.0,
       "min_price": 86500.0,
       "max_price": 542000.0
     },
@@ -260,9 +260,9 @@
     },
     {
       "year": 2018,
-      "count": 136,
-      "median_price": 266000.0,
-      "avg_price": 291570.0,
+      "count": 137,
+      "median_price": 267000.0,
+      "avg_price": 291821.0,
       "min_price": 99000.0,
       "max_price": 1788546.26
     },
@@ -276,9 +276,9 @@
     },
     {
       "year": 2020,
-      "count": 133,
-      "median_price": 265000.0,
-      "avg_price": 325436.0,
+      "count": 134,
+      "median_price": 263750.0,
+      "avg_price": 324947.0,
       "min_price": 28804.17,
       "max_price": 6174008.0
     },
@@ -316,18 +316,18 @@
     },
     {
       "year": 2025,
-      "count": 145,
-      "median_price": 412000.0,
-      "avg_price": 445361.0,
+      "count": 150,
+      "median_price": 406500.0,
+      "avg_price": 437295.0,
       "min_price": 65000.0,
       "max_price": 860000.0
     },
     {
       "year": 2026,
-      "count": 102,
-      "median_price": 426156.0,
-      "avg_price": 437384.0,
-      "min_price": 160000.0,
+      "count": 104,
+      "median_price": 422500.0,
+      "avg_price": 432204.0,
+      "min_price": 156000.0,
       "max_price": 1000000.0
     }
   ]

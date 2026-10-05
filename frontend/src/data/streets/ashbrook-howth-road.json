@@ -478,14 +478,6 @@
     },
     {
       "date": "2022-01-20",
-      "address": "103 ASHBROOK, HOWTH RD, CLONTART",
-      "price": 385523,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-01-20",
       "address": "126 ASHBROOK, HOWTH RD, CLONTARF",
       "price": 385523,
       "bedrooms": null,
@@ -535,6 +527,14 @@
     {
       "date": "2022-01-20",
       "address": "74 ASHBROOK, HOWTH RD, CLONTARF",
+      "price": 385523,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-01-20",
+      "address": "85 ASHBROOK, HOWTH RD, CLONTARF",
       "price": 385523,
       "bedrooms": null,
       "propertyType": null,
