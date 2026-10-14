@@ -26,8 +26,8 @@
       "latitude": 52.27202,
       "longitude": -9.709839,
       "routing_key": "V92",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 421.07367192
     },
     {
@@ -44,8 +44,8 @@
       "latitude": 52.267719,
       "longitude": -9.696631,
       "routing_key": "V92",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 641.30854586
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 52.281002,
       "longitude": -9.722482,
       "routing_key": "V92",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "detached",
       "distance_m": 1741.43278809
     },
     {

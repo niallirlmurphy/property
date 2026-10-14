@@ -26,8 +26,8 @@
       "latitude": 53.493213,
       "longitude": -10.017916,
       "routing_key": "H71",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 565.56886121
     },
     {

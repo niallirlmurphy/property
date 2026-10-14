@@ -25,8 +25,8 @@
         "latitude": 53.341512,
         "longitude": -6.231418,
         "routing_key": "D04",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "apartment"
       },
       {
         "id": 805337,
@@ -42,25 +42,8 @@
         "latitude": 53.325651,
         "longitude": -6.213444,
         "routing_key": "D04",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
-        "id": 805161,
-        "sale_date": "2026-09-28",
-        "address": "2D BELLFIELD COURT, STILLORGAN RD, DONNYBROOK DUBLIN 4",
-        "county": "Dublin",
-        "eircode": "D04TK73",
-        "price": 430000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": null,
-        "longitude": null,
-        "routing_key": "D04",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "apartment"
       },
       {
         "id": 805153,
@@ -76,8 +59,25 @@
         "latitude": 53.3258022794178,
         "longitude": -6.21972694744625,
         "routing_key": "D04",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
+        "id": 805161,
+        "sale_date": "2026-09-28",
+        "address": "2D BELLFIELD COURT, STILLORGAN RD, DONNYBROOK DUBLIN 4",
+        "county": "Dublin",
+        "eircode": "D04TK73",
+        "price": 430000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": null,
+        "longitude": null,
+        "routing_key": "D04",
+        "bedrooms": 2,
+        "property_type": "apartment"
       },
       {
         "id": 805030,

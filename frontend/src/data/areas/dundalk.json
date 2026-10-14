@@ -44,8 +44,8 @@
       "latitude": 53.998373,
       "longitude": -6.377618,
       "routing_key": "A91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1676.07394912
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 53.99808,
       "longitude": -6.37319,
       "routing_key": "A91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1956.00632121
     },
     {

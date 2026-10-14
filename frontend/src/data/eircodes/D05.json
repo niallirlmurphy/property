@@ -25,8 +25,25 @@
         "latitude": 53.381488,
         "longitude": -6.171939,
         "routing_key": "D05",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 805282,
+        "sale_date": "2026-09-29",
+        "address": "20 KILBARRACK RD, RAHENY, DUBLIN 5",
+        "county": "Dublin",
+        "eircode": "D05P4A9",
+        "price": 795670.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.38562,
+        "longitude": -6.14401,
+        "routing_key": "D05",
+        "bedrooms": 4,
+        "property_type": "semi-detached"
       },
       {
         "id": 805286,
@@ -42,8 +59,8 @@
         "latitude": 53.3857,
         "longitude": -6.144291,
         "routing_key": "D05",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 4,
+        "property_type": "semi-detached"
       },
       {
         "id": 805323,
@@ -63,23 +80,6 @@
         "property_type": null
       },
       {
-        "id": 805282,
-        "sale_date": "2026-09-29",
-        "address": "20 KILBARRACK RD, RAHENY, DUBLIN 5",
-        "county": "Dublin",
-        "eircode": "D05P4A9",
-        "price": 795670.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.38562,
-        "longitude": -6.14401,
-        "routing_key": "D05",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
         "id": 805111,
         "sale_date": "2026-09-28",
         "address": "11 KILBRIDE RD, KILLESTER, DUBLIN 5",
@@ -93,8 +93,8 @@
         "latitude": 53.3731,
         "longitude": -6.207937,
         "routing_key": "D05",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 805134,
@@ -110,8 +110,8 @@
         "latitude": 53.385669,
         "longitude": -6.220055,
         "routing_key": "D05",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "house"
       },
       {
         "id": 805210,
@@ -127,8 +127,8 @@
         "latitude": 53.380722,
         "longitude": -6.166251,
         "routing_key": "D05",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 804937,

@@ -254,18 +254,18 @@
     },
     {
       "date": "2025-07-28",
-      "address": "94 Waterfall Heights, Waterfall Road, Ardrostig",
-      "price": 474339,
-      "bedrooms": 4,
-      "propertyType": "terraced",
-      "eircode": null
-    },
-    {
-      "date": "2025-07-28",
       "address": "91 Waterfall Heights, Waterfall Road, Bishopstown",
       "price": 440529,
       "bedrooms": 5,
       "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-07-28",
+      "address": "94 Waterfall Heights, Waterfall Road, Ardrostig",
+      "price": 474339,
+      "bedrooms": 4,
+      "propertyType": "terraced",
       "eircode": null
     },
     {

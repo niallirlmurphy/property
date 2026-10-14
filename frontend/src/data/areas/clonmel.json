@@ -26,8 +26,8 @@
       "latitude": 52.359382,
       "longitude": -7.711522,
       "routing_key": "E91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 862.52995478
     },
     {
@@ -44,8 +44,8 @@
       "latitude": 52.354156,
       "longitude": -7.711533,
       "routing_key": "E91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "bungalow",
       "distance_m": 1143.0117841
     },
     {

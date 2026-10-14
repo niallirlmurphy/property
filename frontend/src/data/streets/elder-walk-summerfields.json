@@ -110,7 +110,7 @@
     },
     {
       "date": "2024-10-04",
-      "address": "47 Elder Walk, Summerfields, Kilbarry",
+      "address": "54  Elder Walk, Summerfields, Kilbarry",
       "price": 265695,
       "bedrooms": null,
       "propertyType": null,
@@ -118,7 +118,7 @@
     },
     {
       "date": "2024-10-04",
-      "address": "54  Elder Walk, Summerfields, Kilbarry",
+      "address": "47 Elder Walk, Summerfields, Kilbarry",
       "price": 265695,
       "bedrooms": null,
       "propertyType": null,
@@ -286,6 +286,30 @@
     },
     {
       "date": "2024-06-10",
+      "address": "38 Elder Walk, Summerfields, Kilbarry",
+      "price": 265695,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-10",
+      "address": "37 Elder Walk, Summerfields, Kilbarry",
+      "price": 265695,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "X91K7KF"
+    },
+    {
+      "date": "2024-06-10",
+      "address": "39 Elder Walk, Summerfields, Kilbarry",
+      "price": 265695,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-10",
       "address": "40 Elder Walk, Summerfields, Kilbarry",
       "price": 265695,
       "bedrooms": null,
@@ -325,30 +349,6 @@
       "eircode": null
     },
     {
-      "date": "2024-06-10",
-      "address": "38 Elder Walk, Summerfields, Kilbarry",
-      "price": 265695,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2024-06-10",
-      "address": "37 Elder Walk, Summerfields, Kilbarry",
-      "price": 265695,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "X91K7KF"
-    },
-    {
-      "date": "2024-06-10",
-      "address": "39 Elder Walk, Summerfields, Kilbarry",
-      "price": 265695,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
       "date": "2024-05-29",
       "address": "3 Elder Walk, Summerfields, Kilbarry",
       "price": 260853,
@@ -371,6 +371,30 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "X91Y1KV"
+    },
+    {
+      "date": "2024-05-10",
+      "address": "53 Elder Walk, Summerfields, Kilbarry",
+      "price": 265695,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-10",
+      "address": "55 Elder Walk, Summerfields, Kilbarry",
+      "price": 265695,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-05-10",
+      "address": "54 Elder Walk, Summerfields, Kilbarry",
+      "price": 265695,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2024-05-10",
@@ -407,30 +431,6 @@
     {
       "date": "2024-05-10",
       "address": "56 Elder Walk, Summerfields, Kilbarry",
-      "price": 265695,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2024-05-10",
-      "address": "33 Elder Walk, Summerfields, Kilbarry",
-      "price": 265695,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2024-05-10",
-      "address": "32 Elder Walk, Summerfields, Kilbarry",
-      "price": 265695,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2024-05-10",
-      "address": "53 Elder Walk, Summerfields, Kilbarry",
       "price": 265695,
       "bedrooms": null,
       "propertyType": null,

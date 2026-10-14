@@ -2,33 +2,33 @@
   "name": "Blanchardstown, Dublin",
   "slug": "blanchardstown",
   "center": {
-    "lat": 53.39262596427047,
-    "lon": -6.381097228573567
+    "lat": 53.3844588,
+    "lon": -6.3829415
   },
   "radius_km": 2.5,
   "total_count": 10,
-  "median_price": 416000.0,
-  "avg_price": 515900,
+  "median_price": 447000.0,
+  "avg_price": 765400,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
     {
-      "id": 805524,
-      "sale_date": "2026-10-01",
-      "address": "40 SHACKLETON HOUSE, ARCHERSWOOD, DUBLIN 15",
+      "id": 805145,
+      "sale_date": "2026-09-28",
+      "address": "21 FARMLEIGH CLOSE, CASTLEKNOCK, DUBLIN 15",
       "county": "Dublin",
-      "eircode": "D15CH73",
-      "price": 270000.0,
+      "eircode": "D15E0A2",
+      "price": 1150000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.404534,
-      "longitude": -6.408477,
+      "latitude": 53.367992,
+      "longitude": -6.361921,
       "routing_key": "D15",
-      "bedrooms": 1,
-      "property_type": "apartment",
-      "distance_m": 2252.39163879
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 2305.57517436
     },
     {
       "id": 805073,
@@ -46,25 +46,25 @@
       "routing_key": "D15",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1362.22234947
+      "distance_m": 2144.89349477
     },
     {
-      "id": 804998,
-      "sale_date": "2026-09-24",
-      "address": "143 PARK DRIVE AVENUE, CASTLEKNOCK, CO DUBLIN",
+      "id": 805062,
+      "sale_date": "2026-09-25",
+      "address": "113 GEORGIAN VILLAGE, CASTLEKNOCK, DUBLIN 15",
       "county": "Dublin",
-      "eircode": "D15WF82",
-      "price": 470000.0,
+      "eircode": "D15P82N",
+      "price": 2450000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.376125,
-      "longitude": -6.367619,
+      "latitude": 53.369384,
+      "longitude": -6.357496,
       "routing_key": "D15",
-      "bedrooms": 2,
-      "property_type": "terraced",
-      "distance_m": 2043.73671371
+      "bedrooms": 5,
+      "property_type": "detached",
+      "distance_m": 2383.78928721
     },
     {
       "id": 805011,
@@ -82,7 +82,25 @@
       "routing_key": "D15",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 2130.69633851
+      "distance_m": 1250.68739081
+    },
+    {
+      "id": 804998,
+      "sale_date": "2026-09-24",
+      "address": "143 PARK DRIVE AVENUE, CASTLEKNOCK, CO DUBLIN",
+      "county": "Dublin",
+      "eircode": "D15WF82",
+      "price": 470000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.376125,
+      "longitude": -6.367619,
+      "routing_key": "D15",
+      "bedrooms": 2,
+      "property_type": "terraced",
+      "distance_m": 1378.38085251
     },
     {
       "id": 804953,
@@ -100,7 +118,7 @@
       "routing_key": "D15",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 2194.97339592
+      "distance_m": 1446.57261581
     },
     {
       "id": 804806,
@@ -118,7 +136,7 @@
       "routing_key": "D15",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 1345.59406724
+      "distance_m": 713.44616038
     },
     {
       "id": 804826,
@@ -136,7 +154,7 @@
       "routing_key": "D15",
       "bedrooms": 4,
       "property_type": "house",
-      "distance_m": 2438.95702686
+      "distance_m": 2026.79644722
     },
     {
       "id": 804726,
@@ -154,7 +172,7 @@
       "routing_key": "D15",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1140.34460475
+      "distance_m": 1952.81199301
     },
     {
       "id": 804659,
@@ -172,163 +190,145 @@
       "routing_key": "D15",
       "bedrooms": 3,
       "property_type": "house",
-      "distance_m": 2398.41135013
-    },
-    {
-      "id": 804603,
-      "sale_date": "2026-09-18",
-      "address": "1 CHARNWOOD PARK, CLONSILLA, DUBLIN 15",
-      "county": "Dublin",
-      "eircode": "D15XPF6",
-      "price": 835000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.385185,
-      "longitude": -6.413773,
-      "routing_key": "D15",
-      "bedrooms": 5,
-      "property_type": "semi-detached",
-      "distance_m": 2326.38488398
+      "distance_m": 2171.35582474
     }
   ],
   "trends": [
     {
       "year": 2010,
       "count": 69,
-      "median_price": 211453.0,
-      "avg_price": 228401.0,
+      "median_price": 212500.0,
+      "avg_price": 229350.0,
       "min_price": 17500.0,
       "max_price": 425000.0
     },
     {
       "year": 2011,
-      "count": 49,
-      "median_price": 170000.0,
-      "avg_price": 411256.0,
+      "count": 47,
+      "median_price": 180617.0,
+      "avg_price": 424544.0,
       "min_price": 80000.0,
       "max_price": 11315000.0
     },
     {
       "year": 2012,
-      "count": 69,
+      "count": 72,
       "median_price": 160000.0,
-      "avg_price": 162216.0,
+      "avg_price": 175214.0,
       "min_price": 50000.0,
-      "max_price": 380000.0
+      "max_price": 770000.0
     },
     {
       "year": 2013,
-      "count": 91,
-      "median_price": 141000.0,
-      "avg_price": 167653.0,
+      "count": 92,
+      "median_price": 145000.0,
+      "avg_price": 168064.0,
       "min_price": 77000.0,
       "max_price": 449000.0
     },
     {
       "year": 2014,
-      "count": 198,
-      "median_price": 231667.0,
-      "avg_price": 238711.0,
+      "count": 205,
+      "median_price": 244053.0,
+      "avg_price": 254973.0,
       "min_price": 93000.0,
-      "max_price": 910000.0
+      "max_price": 1050000.0
     },
     {
       "year": 2015,
-      "count": 193,
-      "median_price": 266080.0,
-      "avg_price": 250987.0,
-      "min_price": 90000.0,
-      "max_price": 647576.0
+      "count": 202,
+      "median_price": 268111.0,
+      "avg_price": 257600.0,
+      "min_price": 100000.0,
+      "max_price": 770000.0
     },
     {
       "year": 2016,
-      "count": 155,
-      "median_price": 220000.0,
-      "avg_price": 262484.0,
+      "count": 173,
+      "median_price": 235000.0,
+      "avg_price": 287578.0,
       "min_price": 85000.0,
-      "max_price": 940000.0
+      "max_price": 1000000.0
     },
     {
       "year": 2017,
-      "count": 176,
-      "median_price": 245000.0,
-      "avg_price": 266680.0,
+      "count": 197,
+      "median_price": 255000.0,
+      "avg_price": 286542.0,
       "min_price": 60000.0,
-      "max_price": 810000.0
+      "max_price": 1160000.0
     },
     {
       "year": 2018,
-      "count": 168,
-      "median_price": 251500.0,
-      "avg_price": 286720.0,
+      "count": 181,
+      "median_price": 258000.0,
+      "avg_price": 305855.0,
       "min_price": 130000.0,
-      "max_price": 702000.0
+      "max_price": 1150000.0
     },
     {
       "year": 2019,
-      "count": 184,
-      "median_price": 256000.0,
-      "avg_price": 278402.0,
+      "count": 200,
+      "median_price": 265000.0,
+      "avg_price": 290737.0,
       "min_price": 27500.0,
       "max_price": 947200.0
     },
     {
       "year": 2020,
-      "count": 122,
-      "median_price": 264644.0,
-      "avg_price": 292240.0,
+      "count": 123,
+      "median_price": 265000.0,
+      "avg_price": 301494.0,
       "min_price": 50000.0,
       "max_price": 812000.0
     },
     {
       "year": 2021,
-      "count": 424,
-      "median_price": 320000.0,
-      "avg_price": 368387.0,
+      "count": 476,
+      "median_price": 335000.0,
+      "avg_price": 401014.0,
       "min_price": 70128.0,
-      "max_price": 1400000.0
+      "max_price": 1700000.0
     },
     {
       "year": 2022,
-      "count": 578,
-      "median_price": 340000.0,
-      "avg_price": 417690.0,
+      "count": 631,
+      "median_price": 355000.0,
+      "avg_price": 465656.0,
       "min_price": 80000.0,
-      "max_price": 2600000.0
+      "max_price": 9814000.0
     },
     {
       "year": 2023,
-      "count": 599,
-      "median_price": 355000.0,
-      "avg_price": 422307.0,
+      "count": 664,
+      "median_price": 375000.0,
+      "avg_price": 450641.0,
       "min_price": 20000.0,
       "max_price": 4150000.0
     },
     {
       "year": 2024,
-      "count": 540,
-      "median_price": 375000.0,
-      "avg_price": 456974.0,
+      "count": 579,
+      "median_price": 390000.0,
+      "avg_price": 481610.0,
       "min_price": 21000.0,
       "max_price": 10134439.65
     },
     {
       "year": 2025,
-      "count": 511,
-      "median_price": 427000.0,
-      "avg_price": 486549.0,
-      "min_price": 139795.94,
+      "count": 570,
+      "median_price": 454500.0,
+      "avg_price": 535943.0,
+      "min_price": 20000.0,
       "max_price": 4359030.0
     },
     {
       "year": 2026,
-      "count": 333,
-      "median_price": 416000.0,
-      "avg_price": 466561.0,
+      "count": 359,
+      "median_price": 447000.0,
+      "avg_price": 502789.0,
       "min_price": 100000.0,
-      "max_price": 1500000.0
+      "max_price": 2450000.0
     }
   ]
 }

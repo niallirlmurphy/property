@@ -1,9 +1,9 @@
 {
   "slug": "fearann-ri-doughiska",
   "stats": {
-    "count": 90,
-    "median": 190500,
-    "avg": 204071,
+    "count": 91,
+    "median": 190000,
+    "avg": 203202,
     "min": 56400,
     "max": 1100000,
     "firstYear": 2010,
@@ -12,10 +12,10 @@
   "trends": [
     {
       "year": 2010,
-      "count": 2,
-      "median_price": 145600,
-      "avg_price": 145600,
-      "min_price": 130000,
+      "count": 3,
+      "median_price": 130000,
+      "avg_price": 138733,
+      "min_price": 125000,
       "max_price": 161200
     },
     {
@@ -222,22 +222,6 @@
     },
     {
       "date": "2024-12-23",
-      "address": "105 FEARANN RI, DOUGHISKA, GALWAY",
-      "price": 345000,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
-      "eircode": "H91C9TD"
-    },
-    {
-      "date": "2024-12-23",
-      "address": "141 FEARANN RI, DOUGHISKA, GALWAY",
-      "price": 320000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "H91NRH1"
-    },
-    {
-      "date": "2024-12-23",
       "address": "103 FEARANN RI, DOUGHISKA, GALWAY",
       "price": 290000,
       "bedrooms": null,
@@ -259,6 +243,22 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "H91F61Y"
+    },
+    {
+      "date": "2024-12-23",
+      "address": "105 FEARANN RI, DOUGHISKA, GALWAY",
+      "price": 345000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H91C9TD"
+    },
+    {
+      "date": "2024-12-23",
+      "address": "141 FEARANN RI, DOUGHISKA, GALWAY",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91NRH1"
     },
     {
       "date": "2024-12-17",
@@ -541,5 +541,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 90
+  "totalTransactions": 91
 }

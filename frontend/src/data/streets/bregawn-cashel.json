@@ -48,8 +48,8 @@
       "date": "2026-09-28",
       "address": "16 BREGAWN, CASHEL, TIPPERARY",
       "price": 395000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "house",
       "eircode": "E25XH22"
     },
     {

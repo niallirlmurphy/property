@@ -222,19 +222,19 @@
     },
     {
       "date": "2014-01-27",
-      "address": "2B CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
-      "price": 810000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2014-01-27",
       "address": "2A CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
       "price": 810000,
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": "D04E7D0"
+    },
+    {
+      "date": "2014-01-27",
+      "address": "2B CLYDE LANE, BALLSBRIDGE, DUBLIN 4",
+      "price": 810000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2014-01-06",

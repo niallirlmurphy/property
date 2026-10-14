@@ -1,9 +1,9 @@
 {
   "slug": "gleann-an-ghairdin-ballytegan",
   "stats": {
-    "count": 111,
+    "count": 113,
     "median": 237885,
-    "avg": 250365,
+    "avg": 251120,
     "min": 192070,
     "max": 385000,
     "firstYear": 2017,
@@ -44,9 +44,9 @@
     },
     {
       "year": 2022,
-      "count": 20,
-      "median_price": 257379,
-      "avg_price": 256352,
+      "count": 21,
+      "median_price": 254846,
+      "avg_price": 256102,
       "min_price": 237885,
       "max_price": 285000
     },
@@ -76,10 +76,10 @@
     },
     {
       "year": 2026,
-      "count": 8,
-      "median_price": 365619,
-      "avg_price": 363369,
-      "min_price": 339207,
+      "count": 9,
+      "median_price": 365600,
+      "avg_price": 360217,
+      "min_price": 335000,
       "max_price": 385000
     }
   ],
@@ -89,7 +89,7 @@
       "address": "264 Gleann An Ghairdin, Ballytegan, Gorey",
       "price": 365639,
       "bedrooms": null,
-      "propertyType": null,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
@@ -99,6 +99,14 @@
       "bedrooms": null,
       "propertyType": "semi-detached",
       "eircode": null
+    },
+    {
+      "date": "2026-07-06",
+      "address": "100 GLEANN AN GHAIRDÍN, BALLYTEGAN, GOREY",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "Y25W9X7"
     },
     {
       "date": "2026-06-16",
@@ -254,19 +262,19 @@
     },
     {
       "date": "2023-11-21",
-      "address": "15 GLEANN AN GHAIRDIN, BALLYTEGAN, WEXFORD",
-      "price": 339000,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
-      "eircode": "Y25R8H3"
-    },
-    {
-      "date": "2023-11-21",
       "address": "137 Gleann an Ghairdin, Ballytegan, Gorey",
       "price": 277533,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2023-11-21",
+      "address": "15 GLEANN AN GHAIRDIN, BALLYTEGAN, WEXFORD",
+      "price": 339000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "Y25R8H3"
     },
     {
       "date": "2023-10-18",
@@ -413,6 +421,14 @@
       "eircode": null
     },
     {
+      "date": "2022-08-10",
+      "address": "298 Gleann an Ghairdín, Ballytegan, Gorey",
+      "price": 251100,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2022-08-09",
       "address": "237 Gleann An Ghairdin, Ballytegan, Gorey",
       "price": 264317,
@@ -422,16 +438,16 @@
     },
     {
       "date": "2022-08-08",
-      "address": "235 Gleann An Ghairdin, Ballytegan, Gorey",
-      "price": 264317,
+      "address": "238 GLEANN AN GHAIRDIN, BALLYTEGAN",
+      "price": 270000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2022-08-08",
-      "address": "238 GLEANN AN GHAIRDIN, BALLYTEGAN",
-      "price": 270000,
+      "address": "235 Gleann An Ghairdin, Ballytegan, Gorey",
+      "price": 264317,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -454,22 +470,6 @@
     },
     {
       "date": "2022-05-27",
-      "address": "297 Gleann An Ghairdin, Ballytegan, Gorey",
-      "price": 239700,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-05-27",
-      "address": "286 Gleann An Ghairdin, Ballytegan, Gorey",
-      "price": 264300,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-05-27",
       "address": "296 Gleann An Ghairdin, Ballytegan, Gorey",
       "price": 237900,
       "bedrooms": null,
@@ -477,13 +477,13 @@
       "eircode": null
     },
     {
-      "date": "2022-05-24",
-      "address": "285 Gleann an Ghairdin, Ballytegan, Gorey",
-      "price": 237885,
+      "date": "2022-05-27",
+      "address": "297 Gleann An Ghairdin, Ballytegan, Gorey",
+      "price": 239700,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     }
   ],
-  "totalTransactions": 111
+  "totalTransactions": 113
 }

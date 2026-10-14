@@ -156,8 +156,8 @@
       "latitude": null,
       "longitude": null,
       "routing_key": "R32",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 2,
+      "property_type": "apartment"
     },
     {
       "id": 805489,
@@ -173,8 +173,8 @@
       "latitude": 53.047683,
       "longitude": -7.313063,
       "routing_key": "R32",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 3,
+      "property_type": "semi-detached"
     },
     {
       "id": 805439,
@@ -191,7 +191,7 @@
       "longitude": -7.149513,
       "routing_key": null,
       "bedrooms": null,
-      "property_type": null
+      "property_type": "house"
     },
     {
       "id": 805402,
@@ -241,8 +241,8 @@
       "latitude": 53.146446,
       "longitude": -7.177866,
       "routing_key": "R32",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 2,
+      "property_type": "terraced"
     },
     {
       "id": 805156,
@@ -258,8 +258,8 @@
       "latitude": null,
       "longitude": null,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 3,
+      "property_type": "terraced"
     },
     {
       "id": 805079,

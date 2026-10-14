@@ -25,8 +25,8 @@
         "latitude": 53.369579,
         "longitude": -6.199919,
         "routing_key": "D03",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 4,
+        "property_type": "terraced"
       },
       {
         "id": 805372,
@@ -42,8 +42,8 @@
         "latitude": 53.35609,
         "longitude": -6.24286,
         "routing_key": "D03",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 805336,
@@ -59,8 +59,8 @@
         "latitude": 53.364665,
         "longitude": -6.222282,
         "routing_key": "D03",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "apartment"
       },
       {
         "id": 804944,

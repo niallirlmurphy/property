@@ -43,7 +43,7 @@
         "longitude": -6.26565,
         "routing_key": "D07",
         "bedrooms": null,
-        "property_type": null
+        "property_type": "house"
       },
       {
         "id": 805266,
@@ -76,8 +76,8 @@
         "latitude": 53.358768,
         "longitude": -6.270719,
         "routing_key": "D07",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 805101,

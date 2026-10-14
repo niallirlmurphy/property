@@ -2,8 +2,8 @@
   "name": "Athenry, Galway",
   "slug": "athenry",
   "center": {
-    "lat": 53.3014446,
-    "lon": -8.7489089
+    "lat": 53.3014222,
+    "lon": -8.7488683
   },
   "radius_km": 2.0,
   "total_count": 10,
@@ -28,7 +28,7 @@
       "routing_key": "H65",
       "bedrooms": null,
       "property_type": "house",
-      "distance_m": 370.64060586
+      "distance_m": 366.99927971
     },
     {
       "id": 804631,
@@ -46,7 +46,7 @@
       "routing_key": "H65",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 772.7629009
+      "distance_m": 775.50632284
     },
     {
       "id": 803640,
@@ -64,7 +64,7 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 370.64060586
+      "distance_m": 366.99927971
     },
     {
       "id": 803452,
@@ -82,7 +82,7 @@
       "routing_key": "H65",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1202.17107803
+      "distance_m": 1199.37310593
     },
     {
       "id": 803305,
@@ -100,7 +100,7 @@
       "routing_key": "H65",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 727.24897996
+      "distance_m": 729.72562263
     },
     {
       "id": 802630,
@@ -118,7 +118,7 @@
       "routing_key": "H65",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 445.4360552
+      "distance_m": 447.51682141
     },
     {
       "id": 802551,
@@ -136,7 +136,7 @@
       "routing_key": "H65",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 484.18339975
+      "distance_m": 484.77522807
     },
     {
       "id": 800749,
@@ -154,7 +154,7 @@
       "routing_key": "H65",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 787.11085023
+      "distance_m": 790.69329569
     },
     {
       "id": 800514,
@@ -172,7 +172,7 @@
       "routing_key": "H65",
       "bedrooms": 3,
       "property_type": "apartment",
-      "distance_m": 783.71177561
+      "distance_m": 781.10208797
     },
     {
       "id": 798829,
@@ -190,7 +190,7 @@
       "routing_key": "H65",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1470.22750455
+      "distance_m": 1470.46062458
     }
   ],
   "trends": [

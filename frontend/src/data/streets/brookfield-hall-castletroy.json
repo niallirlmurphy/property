@@ -182,19 +182,19 @@
     },
     {
       "date": "2024-10-14",
-      "address": "416 BROOKFIELD HALL, CASTLETROY, LIMERICK",
-      "price": 242500,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "V94T208"
-    },
-    {
-      "date": "2024-10-14",
       "address": "523 BROOKFIELD HALL, CASTLETROY, LIMERICK",
       "price": 147000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "V94TX66"
+    },
+    {
+      "date": "2024-10-14",
+      "address": "416 BROOKFIELD HALL, CASTLETROY, LIMERICK",
+      "price": 242500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94T208"
     },
     {
       "date": "2024-09-06",

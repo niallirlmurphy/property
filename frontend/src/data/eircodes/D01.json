@@ -29,23 +29,6 @@
         "property_type": "apartment"
       },
       {
-        "id": 805260,
-        "sale_date": "2026-09-29",
-        "address": "12 BARROW HOUSE, MAYOR ST, DUBLIN 1",
-        "county": "Dublin",
-        "eircode": "D01Y338",
-        "price": 410000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": null,
-        "longitude": null,
-        "routing_key": "D01",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
         "id": 805281,
         "sale_date": "2026-09-29",
         "address": "20 FIRST AVE, SEVILLE PLACE, DUBLIN 1",
@@ -59,8 +42,25 @@
         "latitude": 53.3537808459226,
         "longitude": -6.24547823047198,
         "routing_key": "D01",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 805260,
+        "sale_date": "2026-09-29",
+        "address": "12 BARROW HOUSE, MAYOR ST, DUBLIN 1",
+        "county": "Dublin",
+        "eircode": "D01Y338",
+        "price": 410000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": null,
+        "longitude": null,
+        "routing_key": "D01",
+        "bedrooms": 2,
+        "property_type": "apartment"
       },
       {
         "id": 804993,

@@ -72,8 +72,8 @@
       "date": "2026-10-01",
       "address": "170 DUNDOOGAN, HAYNESTOWN, DUNDALK",
       "price": 270000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "terraced",
       "eircode": "A91XN5D"
     },
     {

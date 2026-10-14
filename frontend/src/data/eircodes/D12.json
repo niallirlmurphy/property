@@ -29,23 +29,6 @@
         "property_type": "terraced"
       },
       {
-        "id": 805534,
-        "sale_date": "2026-10-01",
-        "address": "7 STANFORD GREEN, WALKINSTOWN, DUBLIN 12",
-        "county": "Dublin",
-        "eircode": "D12Y9E8",
-        "price": 531000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.321914,
-        "longitude": -6.327054,
-        "routing_key": "D12",
-        "bedrooms": 3,
-        "property_type": "terraced"
-      },
-      {
         "id": 805520,
         "sale_date": "2026-10-01",
         "address": "37 FORT OSTMAN, OLD COUNTY RD, CRUMLIN DUBLIN 12",
@@ -60,7 +43,7 @@
         "longitude": -6.297374,
         "routing_key": "D12",
         "bedrooms": null,
-        "property_type": null
+        "property_type": "apartment"
       },
       {
         "id": 805532,
@@ -80,6 +63,23 @@
         "property_type": "terraced"
       },
       {
+        "id": 805534,
+        "sale_date": "2026-10-01",
+        "address": "7 STANFORD GREEN, WALKINSTOWN, DUBLIN 12",
+        "county": "Dublin",
+        "eircode": "D12Y9E8",
+        "price": 531000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.321914,
+        "longitude": -6.327054,
+        "routing_key": "D12",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
         "id": 805448,
         "sale_date": "2026-09-30",
         "address": "93 ROYSTON, KIMMAGE RD WEST, DUBLIN 12",
@@ -93,8 +93,8 @@
         "latitude": 53.313434,
         "longitude": -6.309448,
         "routing_key": "D12",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "terraced"
       },
       {
         "id": 805314,
@@ -110,8 +110,8 @@
         "latitude": 53.304157,
         "longitude": -6.325766,
         "routing_key": "D12",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 805214,
@@ -127,8 +127,8 @@
         "latitude": 53.313335,
         "longitude": -6.327531,
         "routing_key": "D12",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 805083,

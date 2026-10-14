@@ -2,13 +2,13 @@
   "name": "Drumcondra, Dublin",
   "slug": "drumcondra",
   "center": {
-    "lat": 53.3686248363387,
-    "lon": -6.253225214799238
+    "lat": 53.3680988,
+    "lon": -6.2554727
   },
   "radius_km": 1.5,
   "total_count": 10,
   "median_price": 565000.0,
-  "avg_price": 549000,
+  "avg_price": 585200,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,7 @@
       "routing_key": "D07",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1282.57516031
+      "distance_m": 1150.84440354
     },
     {
       "id": 805196,
@@ -44,9 +44,9 @@
       "latitude": 53.37099,
       "longitude": -6.235302,
       "routing_key": "D09",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1221.70235392
+      "bedrooms": 3,
+      "property_type": "terraced",
+      "distance_m": 1380.63339333
     },
     {
       "id": 804773,
@@ -64,7 +64,7 @@
       "routing_key": "D09",
       "bedrooms": 2,
       "property_type": "house",
-      "distance_m": 1214.03141585
+      "distance_m": 1064.06518293
     },
     {
       "id": 804622,
@@ -82,7 +82,7 @@
       "routing_key": "D09",
       "bedrooms": 4,
       "property_type": "terraced",
-      "distance_m": 913.83848046
+      "distance_m": 765.68579
     },
     {
       "id": 804565,
@@ -100,7 +100,7 @@
       "routing_key": "D09",
       "bedrooms": 4,
       "property_type": "house",
-      "distance_m": 919.03093011
+      "distance_m": 769.02532956
     },
     {
       "id": 804559,
@@ -118,7 +118,7 @@
       "routing_key": "D03",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1138.39111569
+      "distance_m": 1284.49797999
     },
     {
       "id": 804534,
@@ -136,7 +136,7 @@
       "routing_key": "D09",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1259.11101244
+      "distance_m": 1401.33110839
     },
     {
       "id": 804319,
@@ -154,7 +154,7 @@
       "routing_key": "D03",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 746.44233082
+      "distance_m": 837.38003883
     },
     {
       "id": 804099,
@@ -172,161 +172,161 @@
       "routing_key": "D09",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 823.4922555
+      "distance_m": 790.1670713
     },
     {
-      "id": 804101,
-      "sale_date": "2026-09-11",
-      "address": "24 ST DECLANS TERRACE, MARINO, DUBLIN 3",
+      "id": 803962,
+      "sale_date": "2026-09-10",
+      "address": "42 ELIZABETH ST, OFF CLONLIFFE RD, DUBLIN 3",
       "county": "Dublin",
-      "eircode": "D03E2P3",
-      "price": 120000.0,
+      "eircode": "D03CY92",
+      "price": 482000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.368854,
-      "longitude": -6.232162,
+      "latitude": 53.362491,
+      "longitude": -6.255702,
       "routing_key": "D03",
-      "bedrooms": null,
+      "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 1402.28035188
+      "distance_m": 624.29628193
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 61,
+      "count": 62,
       "median_price": 305000.0,
-      "avg_price": 349002.0,
+      "avg_price": 347163.0,
       "min_price": 150000.0,
       "max_price": 760000.0
     },
     {
       "year": 2011,
-      "count": 86,
-      "median_price": 281100.0,
-      "avg_price": 299985.0,
+      "count": 81,
+      "median_price": 282200.0,
+      "avg_price": 298688.0,
       "min_price": 76666.0,
       "max_price": 1625000.0
     },
     {
       "year": 2012,
-      "count": 106,
+      "count": 101,
       "median_price": 245000.0,
-      "avg_price": 273696.0,
+      "avg_price": 269810.0,
       "min_price": 30000.0,
       "max_price": 670000.0
     },
     {
       "year": 2013,
-      "count": 140,
-      "median_price": 281500.0,
-      "avg_price": 288156.0,
+      "count": 137,
+      "median_price": 280000.0,
+      "avg_price": 286583.0,
       "min_price": 42000.0,
       "max_price": 750000.0
     },
     {
       "year": 2014,
-      "count": 169,
+      "count": 167,
       "median_price": 330000.0,
-      "avg_price": 349039.0,
+      "avg_price": 347980.0,
       "min_price": 48409.0,
       "max_price": 1350000.0
     },
     {
       "year": 2015,
-      "count": 174,
-      "median_price": 350000.0,
-      "avg_price": 373539.0,
-      "min_price": 47500.0,
+      "count": 168,
+      "median_price": 352500.0,
+      "avg_price": 375777.0,
+      "min_price": 100000.0,
       "max_price": 1270000.0
     },
     {
       "year": 2016,
-      "count": 211,
-      "median_price": 414097.0,
-      "avg_price": 412175.0,
+      "count": 184,
+      "median_price": 409692.0,
+      "avg_price": 405983.0,
       "min_price": 100000.0,
       "max_price": 900000.0
     },
     {
       "year": 2017,
-      "count": 177,
-      "median_price": 400000.0,
-      "avg_price": 420871.0,
+      "count": 167,
+      "median_price": 398000.0,
+      "avg_price": 420672.0,
       "min_price": 91000.0,
       "max_price": 1300000.0
     },
     {
       "year": 2018,
-      "count": 221,
+      "count": 217,
       "median_price": 440529.0,
-      "avg_price": 469502.0,
+      "avg_price": 469839.0,
       "min_price": 30000.0,
       "max_price": 2000000.0
     },
     {
       "year": 2019,
-      "count": 190,
-      "median_price": 414250.0,
-      "avg_price": 445778.0,
+      "count": 181,
+      "median_price": 410000.0,
+      "avg_price": 446147.0,
       "min_price": 135000.0,
       "max_price": 1300000.0
     },
     {
       "year": 2020,
-      "count": 145,
-      "median_price": 442000.0,
-      "avg_price": 470968.0,
+      "count": 141,
+      "median_price": 437000.0,
+      "avg_price": 470549.0,
       "min_price": 175000.0,
       "max_price": 1460000.0
     },
     {
       "year": 2021,
-      "count": 345,
-      "median_price": 462000.0,
-      "avg_price": 506090.0,
+      "count": 327,
+      "median_price": 465000.0,
+      "avg_price": 511339.0,
       "min_price": 15000.0,
       "max_price": 1760000.0
     },
     {
       "year": 2022,
-      "count": 398,
+      "count": 379,
       "median_price": 475000.0,
-      "avg_price": 540993.0,
+      "avg_price": 547053.0,
       "min_price": 20000.0,
       "max_price": 2943385.0
     },
     {
       "year": 2023,
-      "count": 473,
-      "median_price": 466200.0,
-      "avg_price": 517726.0,
+      "count": 445,
+      "median_price": 467000.0,
+      "avg_price": 521013.0,
       "min_price": 26500.0,
       "max_price": 1900000.0
     },
     {
       "year": 2024,
-      "count": 448,
+      "count": 424,
       "median_price": 518500.0,
-      "avg_price": 567256.0,
+      "avg_price": 569790.0,
       "min_price": 120000.0,
       "max_price": 3100000.0
     },
     {
       "year": 2025,
-      "count": 418,
-      "median_price": 555000.0,
-      "avg_price": 603892.0,
+      "count": 398,
+      "median_price": 551500.0,
+      "avg_price": 605101.0,
       "min_price": 100000.0,
       "max_price": 2500000.0
     },
     {
       "year": 2026,
-      "count": 213,
+      "count": 202,
       "median_price": 565000.0,
-      "avg_price": 574841.0,
+      "avg_price": 577796.0,
       "min_price": 118000.0,
       "max_price": 1470000.0
     }

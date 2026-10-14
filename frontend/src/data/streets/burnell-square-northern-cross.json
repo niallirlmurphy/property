@@ -518,10 +518,10 @@
     },
     {
       "date": "2021-03-01",
-      "address": "APT 93 BURNELL SQUARE, NORTHERN CROSS, MALAHIDE ROAD",
+      "address": "1 BURNELL SQUARE, NORTHERN CROSS, MALAHIDE ROAD",
       "price": 250000,
       "bedrooms": null,
-      "propertyType": "apartment",
+      "propertyType": null,
       "eircode": null
     }
   ],

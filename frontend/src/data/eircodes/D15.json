@@ -29,6 +29,23 @@
         "property_type": "apartment"
       },
       {
+        "id": 805417,
+        "sale_date": "2026-09-30",
+        "address": "32 LATCHFORD CLOSE, CASTAHEANY, DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15X252",
+        "price": 320000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.397132,
+        "longitude": -6.434178,
+        "routing_key": "D15",
+        "bedrooms": 2,
+        "property_type": "apartment"
+      },
+      {
         "id": 805357,
         "sale_date": "2026-09-30",
         "address": "10 ASHFIELD GROVE, MULHUDDART, DUBLIN 15",
@@ -42,8 +59,8 @@
         "latitude": null,
         "longitude": null,
         "routing_key": "D15",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "bungalow"
       },
       {
         "id": 805404,
@@ -59,25 +76,8 @@
         "latitude": null,
         "longitude": null,
         "routing_key": "D15",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
-        "id": 805417,
-        "sale_date": "2026-09-30",
-        "address": "32 LATCHFORD CLOSE, CASTAHEANY, DUBLIN 15",
-        "county": "Dublin",
-        "eircode": "D15X252",
-        "price": 320000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.397132,
-        "longitude": -6.434178,
-        "routing_key": "D15",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 805304,
@@ -93,8 +93,8 @@
         "latitude": 53.401538,
         "longitude": -6.435495,
         "routing_key": "D15",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "duplex"
       },
       {
         "id": 805278,
@@ -110,8 +110,8 @@
         "latitude": 53.39339,
         "longitude": -6.16765,
         "routing_key": "D15",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 805249,
@@ -127,8 +127,8 @@
         "latitude": 53.392303,
         "longitude": -6.432433,
         "routing_key": "D15",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 1,
+        "property_type": "terraced"
       },
       {
         "id": 805145,

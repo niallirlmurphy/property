@@ -534,11 +534,11 @@
     },
     {
       "date": "2020-03-19",
-      "address": "6 THE LAURELS, TULLOW RD, CARLOW",
-      "price": 105000,
+      "address": "131 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 110000,
       "bedrooms": null,
       "propertyType": null,
-      "eircode": null
+      "eircode": "R93F5C0"
     }
   ],
   "totalTransactions": 91

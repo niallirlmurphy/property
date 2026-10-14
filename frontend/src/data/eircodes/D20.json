@@ -25,8 +25,8 @@
         "latitude": 53.347503,
         "longitude": -6.382551,
         "routing_key": "D20",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 805180,
@@ -42,8 +42,8 @@
         "latitude": 53.35112,
         "longitude": -6.37155,
         "routing_key": "D20",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 805201,
@@ -59,8 +59,8 @@
         "latitude": 53.355041,
         "longitude": -6.377335,
         "routing_key": "D20",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 804790,

@@ -398,19 +398,19 @@
     },
     {
       "date": "2021-07-15",
-      "address": "254 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
-      "price": 450000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D09Y2R3"
-    },
-    {
-      "date": "2021-07-15",
       "address": "326 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
       "price": 450000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D09KTW8"
+    },
+    {
+      "date": "2021-07-15",
+      "address": "254 COLLINSWOOD, COLLINS AVENUE, DUBLIN 9",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09Y2R3"
     },
     {
       "date": "2021-07-07",

@@ -342,19 +342,19 @@
     },
     {
       "date": "2017-09-26",
-      "address": "272 Beechpark, Leixlip, County Kildare",
-      "price": 317181,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "W23P029"
-    },
-    {
-      "date": "2017-09-26",
       "address": "251 Beechpark, Leixlip",
       "price": 352423,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2017-09-26",
+      "address": "272 Beechpark, Leixlip, County Kildare",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23P029"
     },
     {
       "date": "2017-09-08",
@@ -478,16 +478,16 @@
     },
     {
       "date": "2017-02-08",
-      "address": "187 Beechpark, Leixlip",
-      "price": 312775,
+      "address": "193 Beechpark, Leixlip",
+      "price": 343568,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2017-02-08",
-      "address": "193 Beechpark, Leixlip",
-      "price": 343568,
+      "address": "187 Beechpark, Leixlip",
+      "price": 312775,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

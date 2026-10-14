@@ -390,14 +390,6 @@
     },
     {
       "date": "2020-04-16",
-      "address": "69 Castleland Park Way, Balbriggan, County Dublin",
-      "price": 268722,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-04-16",
       "address": "71 Castleland Park Way, Balbriggan, Co. Dublin",
       "price": 268722,
       "bedrooms": null,
@@ -405,8 +397,8 @@
       "eircode": "K32V803"
     },
     {
-      "date": "2020-04-01",
-      "address": "48 Castleland Park Way, Balbriggan",
+      "date": "2020-04-16",
+      "address": "69 Castleland Park Way, Balbriggan, County Dublin",
       "price": 268722,
       "bedrooms": null,
       "propertyType": null,
@@ -416,6 +408,14 @@
       "date": "2020-04-01",
       "address": "52 CASTLELAND PARK WAY, BALBRIGGAN",
       "price": 268800,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-04-01",
+      "address": "48 Castleland Park Way, Balbriggan",
+      "price": 268722,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

@@ -406,19 +406,19 @@
     },
     {
       "date": "2023-02-28",
-      "address": "125 THE OVAL, TULLYVALE, CABINTEELY DUBLIN 18",
-      "price": 268000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D18NP22"
-    },
-    {
-      "date": "2023-02-28",
       "address": "158 THE OVAL, TULLYVALE, CABINTEELY DUBLIN 18",
       "price": 402000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D18AF88"
+    },
+    {
+      "date": "2023-02-28",
+      "address": "125 THE OVAL, TULLYVALE, CABINTEELY DUBLIN 18",
+      "price": 268000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18NP22"
     },
     {
       "date": "2023-02-03",

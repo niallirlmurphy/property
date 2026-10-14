@@ -173,8 +173,8 @@
       "latitude": null,
       "longitude": null,
       "routing_key": "H16",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 3,
+      "property_type": "bungalow"
     },
     {
       "id": 805545,
@@ -224,8 +224,8 @@
       "latitude": 53.863895,
       "longitude": -7.211794,
       "routing_key": "A82",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 5,
+      "property_type": "semi-detached"
     },
     {
       "id": 805231,
@@ -241,13 +241,13 @@
       "latitude": 54.068466,
       "longitude": -7.562985,
       "routing_key": "H14",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 4,
+      "property_type": "bungalow"
     },
     {
       "id": 805149,
       "sale_date": "2026-09-28",
-      "address": "22 SL� NA COILLE, BELTURBET, CO CAVAN",
+      "address": "22 SLÍ NA COILLE, BELTURBET, CO CAVAN",
       "county": "Cavan",
       "eircode": "H14FK44",
       "price": 274000.0,
@@ -258,8 +258,8 @@
       "latitude": null,
       "longitude": null,
       "routing_key": "H14",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 3,
+      "property_type": "semi-detached"
     },
     {
       "id": 805108,
@@ -275,8 +275,8 @@
       "latitude": 53.935939,
       "longitude": -7.405109,
       "routing_key": "H12",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 3,
+      "property_type": "semi-detached"
     },
     {
       "id": 805068,

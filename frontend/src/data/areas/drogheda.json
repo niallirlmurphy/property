@@ -26,8 +26,8 @@
       "latitude": 53.713073,
       "longitude": -6.343326,
       "routing_key": "A92",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "detached",
       "distance_m": 637.01667809
     },
     {
@@ -45,7 +45,7 @@
       "longitude": -6.355999,
       "routing_key": null,
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "cottage",
       "distance_m": 1979.96958185
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 53.713973,
       "longitude": -6.344676,
       "routing_key": "A92",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 523.5021559
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 53.713142,
       "longitude": -6.344727,
       "routing_key": "A92",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 547.78985799
     },
     {

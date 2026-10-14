@@ -59,6 +59,23 @@
         "latitude": 53.274169,
         "longitude": -6.380118,
         "routing_key": "D24",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
+        "id": 805277,
+        "sale_date": "2026-09-29",
+        "address": "18 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
+        "county": "Dublin",
+        "eircode": "D24V594",
+        "price": 290000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.316421,
+        "longitude": -6.3341,
+        "routing_key": "D24",
         "bedrooms": null,
         "property_type": null
       },
@@ -76,8 +93,8 @@
         "latitude": 53.291923,
         "longitude": -6.383941,
         "routing_key": "D24",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 805272,
@@ -97,21 +114,21 @@
         "property_type": null
       },
       {
-        "id": 805277,
+        "id": 805330,
         "sale_date": "2026-09-29",
-        "address": "18 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
+        "address": "8 GREENHILLS COURT, GREENHILLS RD, DUBLIN 24",
         "county": "Dublin",
-        "eircode": "D24V594",
-        "price": 290000.0,
+        "eircode": "D24V180",
+        "price": 265000.0,
         "not_full_market_price": false,
         "vat_exclusive": false,
         "description": "Second-Hand Dwelling house /Apartment",
         "size_description": null,
-        "latitude": 53.316421,
-        "longitude": -6.3341,
+        "latitude": 53.316818,
+        "longitude": -6.333742,
         "routing_key": "D24",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 1,
+        "property_type": "apartment"
       },
       {
         "id": 805285,
@@ -144,25 +161,8 @@
         "latitude": 53.295526,
         "longitude": -6.354784,
         "routing_key": "D24",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
-        "id": 805299,
-        "sale_date": "2026-09-29",
-        "address": "34 FOREST CLOSE, KINGSWOOD, DUBLIN 24",
-        "county": "Dublin",
-        "eircode": "D24KPP2",
-        "price": 692000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.30784,
-        "longitude": -6.36124,
-        "routing_key": "D24",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "apartment"
       },
       {
         "id": 805300,

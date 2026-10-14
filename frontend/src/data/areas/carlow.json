@@ -26,8 +26,8 @@
       "latitude": 52.833774,
       "longitude": -6.932708,
       "routing_key": "R93",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 902.68766539
     },
     {
@@ -44,8 +44,8 @@
       "latitude": 52.831211,
       "longitude": -6.903511,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1861.97958707
     },
     {

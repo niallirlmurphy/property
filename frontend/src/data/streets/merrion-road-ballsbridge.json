@@ -169,7 +169,7 @@
       "address": "67 MERRION RD, BALLSBRIDGE, DUBLIN 4",
       "price": 937500,
       "bedrooms": 1,
-      "propertyType": "apartment",
+      "propertyType": "detached",
       "eircode": "D04RD40"
     },
     {
@@ -177,7 +177,7 @@
       "address": "67 MERRION RD, BALLSBRIDGE, DUBLIN 4",
       "price": 937500,
       "bedrooms": 1,
-      "propertyType": "detached",
+      "propertyType": "apartment",
       "eircode": "D04RD40"
     },
     {

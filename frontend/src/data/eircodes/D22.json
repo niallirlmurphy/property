@@ -42,8 +42,8 @@
         "latitude": 53.302059,
         "longitude": -6.501901,
         "routing_key": "D22",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "semi-detached"
       },
       {
         "id": 805403,
@@ -76,8 +76,8 @@
         "latitude": 53.297065,
         "longitude": -6.494735,
         "routing_key": "D22",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 805088,

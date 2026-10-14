@@ -128,8 +128,8 @@
       "date": "2026-09-28",
       "address": "211 CHARLESLAND PARK, GREYSTONES, WICKLOW",
       "price": 455000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "terraced",
       "eircode": "A63F308"
     },
     {

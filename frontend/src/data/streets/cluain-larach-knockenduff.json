@@ -1,9 +1,9 @@
 {
   "slug": "cluain-larach-knockenduff",
   "stats": {
-    "count": 162,
-    "median": 232990,
-    "avg": 238909,
+    "count": 167,
+    "median": 229075,
+    "avg": 237959,
     "min": 149443,
     "max": 555000,
     "firstYear": 2016,
@@ -12,17 +12,17 @@
   "trends": [
     {
       "year": 2016,
-      "count": 10,
-      "median_price": 191258,
-      "avg_price": 194219,
+      "count": 11,
+      "median_price": 188684,
+      "avg_price": 190926,
       "min_price": 157725,
       "max_price": 257532
     },
     {
       "year": 2017,
-      "count": 38,
-      "median_price": 212466,
-      "avg_price": 213939,
+      "count": 39,
+      "median_price": 211454,
+      "avg_price": 213424,
       "min_price": 160616,
       "max_price": 297000
     },
@@ -44,9 +44,9 @@
     },
     {
       "year": 2020,
-      "count": 23,
+      "count": 24,
       "median_price": 242291,
-      "avg_price": 253694,
+      "avg_price": 251934,
       "min_price": 211453,
       "max_price": 370000
     },
@@ -60,9 +60,9 @@
     },
     {
       "year": 2022,
-      "count": 17,
+      "count": 19,
       "median_price": 253304,
-      "avg_price": 266129,
+      "avg_price": 262993,
       "min_price": 219383,
       "max_price": 350500
     },
@@ -237,6 +237,14 @@
       "eircode": "X91V57X"
     },
     {
+      "date": "2022-03-22",
+      "address": "46 Cluain Lárach, Knockenduff, Tramore",
+      "price": 219383,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2022-03-11",
       "address": "38 Cluain Larach, Knockenduff, Tramore",
       "price": 219383,
@@ -288,6 +296,14 @@
       "date": "2022-01-19",
       "address": "49 Cluain Larach, Knockenduff, Tramore",
       "price": 219383,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-01-17",
+      "address": "No. 35 Cluain Lárach, Knockenduff, Tramore",
+      "price": 253304,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -483,23 +499,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2021-06-21",
-      "address": "70 Cluain Larach, Knockenduff, Tramore",
-      "price": 303965,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2021-06-17",
-      "address": "82 Cluain Larach, Knockenduff, Tramore",
-      "price": 242291,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 162
+  "totalTransactions": 167
 }

@@ -1,9 +1,9 @@
 {
   "slug": "gleann-na-ri-murrough",
   "stats": {
-    "count": 115,
+    "count": 118,
     "median": 130719,
-    "avg": 145438,
+    "avg": 145804,
     "min": 55000,
     "max": 310000,
     "firstYear": 2013,
@@ -36,9 +36,9 @@
     },
     {
       "year": 2016,
-      "count": 7,
-      "median_price": 92000,
-      "avg_price": 100357,
+      "count": 8,
+      "median_price": 91000,
+      "avg_price": 98562,
       "min_price": 75000,
       "max_price": 129000
     },
@@ -92,9 +92,9 @@
     },
     {
       "year": 2023,
-      "count": 9,
-      "median_price": 207000,
-      "avg_price": 215389,
+      "count": 11,
+      "median_price": 205000,
+      "avg_price": 212000,
       "min_price": 170000,
       "max_price": 253500
     },
@@ -317,6 +317,22 @@
       "eircode": "H91DY84"
     },
     {
+      "date": "2023-05-31",
+      "address": "APT 241, GLEANN NA RÍ, MURROUGH",
+      "price": 197500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2023-05-22",
+      "address": "APT 244, GLEANN NA RÍ, MURROUGH",
+      "price": 196000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
       "date": "2023-03-22",
       "address": "68 GLEANN NA RI, MURROUGH, MERLIN PARK",
       "price": 170000,
@@ -398,6 +414,22 @@
     },
     {
       "date": "2021-03-24",
+      "address": "166 GLEANN NA RI, MURROUGH, RENMORE",
+      "price": 125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-24",
+      "address": "167 GLEANN NA RI, MURROUGH, RENMORE",
+      "price": 125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-24",
       "address": "184 GLEANN NA RI, MURROUGH, RENMORE",
       "price": 125000,
       "bedrooms": null,
@@ -415,22 +447,6 @@
     {
       "date": "2021-03-24",
       "address": "187 GLEANN NA RI, MURROUGH, RENMORE",
-      "price": 125000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2021-03-24",
-      "address": "166 GLEANN NA RI, MURROUGH, RENMORE",
-      "price": 125000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2021-03-24",
-      "address": "167 GLEANN NA RI, MURROUGH, RENMORE",
       "price": 125000,
       "bedrooms": null,
       "propertyType": null,
@@ -507,23 +523,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2019-03-29",
-      "address": "217 GLEANN NA RI, MURROUGH, GALWAY",
-      "price": 158000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-03-29",
-      "address": "198 GLEANN NA RI, MURROUGH, RENMORE",
-      "price": 150000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "H91AW81"
     }
   ],
-  "totalTransactions": 115
+  "totalTransactions": 118
 }

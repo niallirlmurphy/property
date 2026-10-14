@@ -292,8 +292,8 @@
       "latitude": 52.723724,
       "longitude": -9.320556,
       "routing_key": "V15",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 4,
+      "property_type": "detached"
     },
     {
       "id": 805345,
@@ -309,8 +309,8 @@
       "latitude": 52.93867,
       "longitude": -8.920734,
       "routing_key": "V95",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 5,
+      "property_type": "detached"
     }
   ]
 }

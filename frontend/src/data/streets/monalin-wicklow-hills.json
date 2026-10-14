@@ -398,19 +398,19 @@
     },
     {
       "date": "2019-02-07",
-      "address": "87 Monalin, Wicklow Hills, Newtownmountkennedy",
-      "price": 250220,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-02-07",
       "address": "85 Monalin, Wicklow Hills, Newtownmountkennedy",
       "price": 224668,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "A63DX88"
+    },
+    {
+      "date": "2019-02-07",
+      "address": "87 Monalin, Wicklow Hills, Newtownmountkennedy",
+      "price": 250220,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2019-02-06",

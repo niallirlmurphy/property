@@ -470,16 +470,16 @@
     },
     {
       "date": "2019-03-08",
-      "address": "111 Knightswood, Matthews Lane, Drogheda",
-      "price": 233480,
+      "address": "108 knightswood, matthews lane, drogheda",
+      "price": 264000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2019-03-08",
-      "address": "108 knightswood, matthews lane, drogheda",
-      "price": 264000,
+      "address": "111 Knightswood, Matthews Lane, Drogheda",
+      "price": 233480,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

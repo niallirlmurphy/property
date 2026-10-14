@@ -438,6 +438,30 @@
     },
     {
       "date": "2017-06-19",
+      "address": "126 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "131 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "184 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
       "address": "181 Churchfields, Ashbourne",
       "price": 212235,
       "bedrooms": null,
@@ -471,30 +495,6 @@
     {
       "date": "2017-06-19",
       "address": "134 Churchfields, Ashbourne",
-      "price": 212235,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-06-19",
-      "address": "126 Churchfields, Ashbourne",
-      "price": 212235,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-06-19",
-      "address": "131 Churchfields, Ashbourne",
-      "price": 212235,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-06-19",
-      "address": "184 Churchfields, Ashbourne",
       "price": 212235,
       "bedrooms": null,
       "propertyType": null,

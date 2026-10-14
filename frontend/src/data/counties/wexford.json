@@ -207,8 +207,8 @@
       "latitude": null,
       "longitude": null,
       "routing_key": "Y35",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 4,
+      "property_type": "detached"
     },
     {
       "id": 805552,
@@ -275,8 +275,8 @@
       "latitude": 52.618953,
       "longitude": -6.229961,
       "routing_key": "Y25",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 3,
+      "property_type": "detached"
     },
     {
       "id": 805506,
@@ -310,7 +310,7 @@
       "longitude": null,
       "routing_key": null,
       "bedrooms": null,
-      "property_type": null
+      "property_type": "terraced"
     }
   ]
 }

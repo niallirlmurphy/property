@@ -246,19 +246,19 @@
     },
     {
       "date": "2024-12-03",
-      "address": "APT 35, THE GALLERY, TURVEY WALK",
-      "price": 315000,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "eircode": "K36A028"
-    },
-    {
-      "date": "2024-12-03",
       "address": "56 THE GALLERY, TURVEY WALK, DONABATE",
       "price": 290000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "K36EA26"
+    },
+    {
+      "date": "2024-12-03",
+      "address": "APT 35, THE GALLERY, TURVEY WALK",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "K36A028"
     },
     {
       "date": "2024-09-13",

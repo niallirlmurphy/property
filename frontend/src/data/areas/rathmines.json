@@ -44,8 +44,8 @@
       "latitude": 53.315067,
       "longitude": -6.268826,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "detached",
       "distance_m": 1301.77021082
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 53.31409,
       "longitude": -6.261445,
       "routing_key": "D06",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 1,
+      "property_type": "apartment",
       "distance_m": 1401.91460322
     },
     {

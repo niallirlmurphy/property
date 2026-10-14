@@ -26,8 +26,8 @@
       "latitude": 53.047683,
       "longitude": -7.313063,
       "routing_key": "R32",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1753.95507547
     },
     {

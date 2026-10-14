@@ -25,8 +25,8 @@
         "latitude": 53.34213,
         "longitude": -6.36155,
         "routing_key": "D10",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 805117,

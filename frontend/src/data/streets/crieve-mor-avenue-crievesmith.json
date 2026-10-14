@@ -72,24 +72,24 @@
       "date": "2026-09-30",
       "address": "56 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
       "price": 351982,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
       "date": "2026-09-28",
       "address": "52 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
       "price": 360792,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
       "date": "2026-09-28",
       "address": "51 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
       "price": 360792,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
@@ -230,17 +230,17 @@
     },
     {
       "date": "2025-10-02",
-      "address": "135 Crieve Mor Avenue, Crievesmith, Letterkenny",
-      "price": 241850,
-      "bedrooms": 2,
+      "address": "140 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
+      "price": 351982,
+      "bedrooms": 4,
       "propertyType": "semi-detached",
       "eircode": null
     },
     {
       "date": "2025-10-02",
-      "address": "140 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
-      "price": 351982,
-      "bedrooms": 4,
+      "address": "135 Crieve Mor Avenue, Crievesmith, Letterkenny",
+      "price": 241850,
+      "bedrooms": 2,
       "propertyType": "semi-detached",
       "eircode": null
     },
@@ -398,19 +398,19 @@
     },
     {
       "date": "2024-12-10",
-      "address": "67 Crieve Mor Avenue, Crievesmith, Letterkenny",
-      "price": 245000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2024-12-10",
       "address": "62 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
       "price": 342000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "F92A8PE"
+    },
+    {
+      "date": "2024-12-10",
+      "address": "67 Crieve Mor Avenue, Crievesmith, Letterkenny",
+      "price": 245000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2024-12-06",

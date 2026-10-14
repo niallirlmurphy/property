@@ -26,8 +26,8 @@
       "latitude": 53.2664721600958,
       "longitude": -8.92709724930239,
       "routing_key": "H91",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "apartment",
       "distance_m": 1678.74418849
     },
     {
@@ -105,7 +105,7 @@
     {
       "id": 802210,
       "sale_date": "2026-08-26",
-      "address": "9 Cnoc Fearn�in, Station Road, Oranmore",
+      "address": "9 Cnoc Fearnáin, Station Road, Oranmore",
       "county": "Galway",
       "eircode": null,
       "price": 452293.58,

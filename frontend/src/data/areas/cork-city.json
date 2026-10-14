@@ -45,7 +45,7 @@
       "longitude": -8.469161,
       "routing_key": "T12",
       "bedrooms": null,
-      "property_type": null,
+      "property_type": "terraced",
       "distance_m": 618.66474646
     },
     {
@@ -62,8 +62,8 @@
       "latitude": 51.909605,
       "longitude": -8.48503,
       "routing_key": "T23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 2587.36639321
     },
     {
@@ -80,8 +80,8 @@
       "latitude": 51.913402,
       "longitude": -8.474776,
       "routing_key": "T23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 2706.68630071
     },
     {
@@ -116,8 +116,8 @@
       "latitude": 51.89635,
       "longitude": -8.459679,
       "routing_key": "T12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 829.90330396
     },
     {
@@ -134,8 +134,8 @@
       "latitude": 51.902435,
       "longitude": -8.455519,
       "routing_key": "T23",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "apartment",
       "distance_m": 1563.32955238
     },
     {

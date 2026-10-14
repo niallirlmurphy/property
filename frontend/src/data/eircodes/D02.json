@@ -26,7 +26,7 @@
         "longitude": null,
         "routing_key": "D02",
         "bedrooms": null,
-        "property_type": null
+        "property_type": "apartment"
       },
       {
         "id": 805290,
@@ -60,7 +60,7 @@
         "longitude": null,
         "routing_key": "D02",
         "bedrooms": null,
-        "property_type": null
+        "property_type": "apartment"
       },
       {
         "id": 805038,

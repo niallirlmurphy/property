@@ -224,8 +224,8 @@
       "latitude": 53.484383,
       "longitude": -6.735925,
       "routing_key": "A83",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 6,
+      "property_type": "bungalow"
     },
     {
       "id": 805521,
@@ -258,8 +258,8 @@
       "latitude": 53.731231,
       "longitude": -6.843445,
       "routing_key": "A82",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 2,
+      "property_type": "terraced"
     },
     {
       "id": 805441,
@@ -275,8 +275,8 @@
       "latitude": 53.549942,
       "longitude": -6.765627,
       "routing_key": "C15",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 2,
+      "property_type": "apartment"
     },
     {
       "id": 805405,
@@ -292,8 +292,8 @@
       "latitude": 53.718791,
       "longitude": -6.881541,
       "routing_key": null,
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 4,
+      "property_type": "detached"
     },
     {
       "id": 805391,
@@ -309,8 +309,8 @@
       "latitude": 53.846172,
       "longitude": -6.804114,
       "routing_key": "A82",
-      "bedrooms": null,
-      "property_type": null
+      "bedrooms": 3,
+      "property_type": "semi-detached"
     }
   ]
 }

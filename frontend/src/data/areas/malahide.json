@@ -8,7 +8,7 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 471366.0,
-  "avg_price": 548634,
+  "avg_price": 541032,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -175,12 +175,12 @@
       "distance_m": 1429.33070503
     },
     {
-      "id": 797320,
+      "id": 797349,
       "sale_date": "2026-06-29",
-      "address": "12 Newenham Drive, Belcamp, Malahide Road",
+      "address": "3 Newenham Terrace, Belcamp, Malahide Road",
       "county": "Dublin",
       "eircode": null,
-      "price": 565000.0,
+      "price": 488986.78,
       "not_full_market_price": false,
       "vat_exclusive": true,
       "description": "New Dwelling house /Apartment",

@@ -29,23 +29,6 @@
         "property_type": "terraced"
       },
       {
-        "id": 805309,
-        "sale_date": "2026-09-29",
-        "address": "40 KICKHAM RD, KILMAINHAM, DUBLIN 8",
-        "county": "Dublin",
-        "eircode": "D08VF20",
-        "price": 537000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.337631,
-        "longitude": -6.309987,
-        "routing_key": "D08",
-        "bedrooms": null,
-        "property_type": null
-      },
-      {
         "id": 805319,
         "sale_date": "2026-09-29",
         "address": "54 EMMET RD, INCHICORE, DUBLIN 8",
@@ -59,8 +42,25 @@
         "latitude": 53.34036,
         "longitude": -6.31081,
         "routing_key": "D08",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "terraced"
+      },
+      {
+        "id": 805309,
+        "sale_date": "2026-09-29",
+        "address": "40 KICKHAM RD, KILMAINHAM, DUBLIN 8",
+        "county": "Dublin",
+        "eircode": "D08VF20",
+        "price": 537000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.337631,
+        "longitude": -6.309987,
+        "routing_key": "D08",
+        "bedrooms": 2,
+        "property_type": "terraced"
       },
       {
         "id": 805065,

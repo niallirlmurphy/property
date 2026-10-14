@@ -44,8 +44,8 @@
       "latitude": 52.135178,
       "longitude": -8.64106,
       "routing_key": "P51",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 5,
+      "property_type": "detached",
       "distance_m": 1047.87297902
     },
     {

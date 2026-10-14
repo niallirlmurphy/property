@@ -26,8 +26,8 @@
       "latitude": 53.179729,
       "longitude": -6.800651,
       "routing_key": "W12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 2,
+      "property_type": "terraced",
       "distance_m": 170.85408675
     },
     {
@@ -44,8 +44,8 @@
       "latitude": 53.172134,
       "longitude": -6.813905,
       "routing_key": "W12",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 1378.16739011
     },
     {

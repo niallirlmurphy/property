@@ -44,8 +44,8 @@
       "latitude": 53.204979,
       "longitude": -6.115465,
       "routing_key": "A98",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "apartment",
       "distance_m": 513.02303014
     },
     {

@@ -25,8 +25,8 @@
         "latitude": 53.384605,
         "longitude": -6.286854,
         "routing_key": "D11",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 3,
+        "property_type": "terraced"
       },
       {
         "id": 805333,
@@ -42,8 +42,8 @@
         "latitude": 53.402687,
         "longitude": -6.294656,
         "routing_key": "D11",
-        "bedrooms": null,
-        "property_type": null
+        "bedrooms": 2,
+        "property_type": "apartment"
       },
       {
         "id": 804815,

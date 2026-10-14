@@ -44,8 +44,8 @@
       "latitude": 53.274169,
       "longitude": -6.380118,
       "routing_key": "D24",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1925.58037779
     },
     {
@@ -67,24 +67,6 @@
       "distance_m": 362.75494495
     },
     {
-      "id": 805296,
-      "sale_date": "2026-09-29",
-      "address": "31 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
-      "county": "Dublin",
-      "eircode": "D24H273",
-      "price": 290000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.295526,
-      "longitude": -6.354784,
-      "routing_key": "D24",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 996.31522321
-    },
-    {
       "id": 805285,
       "sale_date": "2026-09-29",
       "address": "23 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
@@ -103,6 +85,24 @@
       "distance_m": 996.31522321
     },
     {
+      "id": 805296,
+      "sale_date": "2026-09-29",
+      "address": "31 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
+      "county": "Dublin",
+      "eircode": "D24H273",
+      "price": 290000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.295526,
+      "longitude": -6.354784,
+      "routing_key": "D24",
+      "bedrooms": 2,
+      "property_type": "apartment",
+      "distance_m": 996.31522321
+    },
+    {
       "id": 805252,
       "sale_date": "2026-09-29",
       "address": "10 BIRCHWOOD CLOSE, BIRCHWOOD HEIGHTS, SPRINGFIELD DUBLIN 24",
@@ -116,8 +116,8 @@
       "latitude": 53.291923,
       "longitude": -6.383941,
       "routing_key": "D24",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "terraced",
       "distance_m": 1510.58627986
     },
     {
@@ -134,8 +134,8 @@
       "latitude": 53.30784,
       "longitude": -6.36124,
       "routing_key": "D24",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
       "distance_m": 2230.61563989
     },
     {
@@ -152,8 +152,8 @@
       "latitude": 53.27227,
       "longitude": -6.335348,
       "routing_key": "D24",
-      "bedrooms": null,
-      "property_type": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
       "distance_m": 2497.09720179
     },
     {

@@ -286,19 +286,19 @@
     },
     {
       "date": "2022-03-11",
-      "address": "88 DRAKES POINT, CROSSHAVEN, CORK",
-      "price": 420000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "P43HD52"
-    },
-    {
-      "date": "2022-03-11",
       "address": "171 Drakes Point, Crosshaven, Cork",
       "price": 288987,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2022-03-11",
+      "address": "88 DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43HD52"
     },
     {
       "date": "2022-03-08",
