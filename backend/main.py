@@ -1365,7 +1365,9 @@ async def search_exact(
     # Normalize the search input using same logic as address_normalized column
     def normalize_for_search(addr: str) -> str:
         """Apply same normalization as the database column."""
-        normalized = addr.strip()
+        # Fold fadas (Slí → Sli) so input typed with or without them matches
+        normalized = ''.join(c for c in unicodedata.normalize('NFKD', addr)
+                             if not unicodedata.combining(c)).strip()
         normalized = re.sub(r'\s+', ' ', normalized)
         normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
         normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)

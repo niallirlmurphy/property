@@ -16,6 +16,7 @@ import asyncpg
 import os
 import sys
 import re
+import unicodedata
 from datetime import datetime
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
@@ -38,7 +39,9 @@ def normalize_address(address: str) -> str:
     normalized = address
 
     # 1. Basic cleanup
-    normalized = normalized.strip()
+    # Fold fadas (Slí → Sli) so input typed with or without them matches
+    normalized = ''.join(c for c in unicodedata.normalize('NFKD', normalized)
+                         if not unicodedata.combining(c)).strip()
     normalized = re.sub(r'\s+', ' ', normalized)  # Normalize whitespace
     normalized = re.sub(r',\s*,+', ',', normalized)  # Remove multiple commas
 

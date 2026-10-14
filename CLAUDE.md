@@ -419,6 +419,8 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
     3. Title case with exceptions (Dublin, Cork, Co., etc. stay capitalized)
     4. Clean punctuation: normalize commas/spaces, remove leading/trailing
     5. Normalize whitespace (single spaces only)
+    6. Fold Irish fadas (Slí→Sli, Cnocán→Cnocan) so input typed with or without them matches. The raw `address` column keeps the fadas for display. All copies of the normalizer must fold: `scripts/sync_ppr_updates.py`, `db/import.py`, `scripts/normalize_addresses.py`, `backend/main.py::normalize_for_search`, and the test suite copy.
+  - **Source encoding**: `PPR-ALL.csv` is Windows-1252, not UTF-8 ('€' is byte 0x80, Í is 0xCD). `sync_ppr_updates.py` detects the encoding (`detect_csv_encoding`) and `geocode.py` reads it as cp1252. Never read it as UTF-8 with `errors="replace"`, which turns every fada into U+FFFD (1,701 rows were repaired from this on 2026-10-14).
   - **Query pattern**: For exact address matching, ALWAYS query `address_normalized` column directly (NOT LIKE/REGEXP). Example:
     ```python
     # ✅ CORRECT: Use normalized column directly

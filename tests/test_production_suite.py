@@ -437,6 +437,7 @@ async def test_address_normalization(results: TestResults):
     import asyncpg
     import os
     import re
+    import unicodedata
 
     DATABASE_URL = os.environ.get("DATABASE_URL")
     if not DATABASE_URL:
@@ -448,7 +449,9 @@ async def test_address_normalization(results: TestResults):
         if not address:
             return address
 
-        normalized = address.strip()
+        # Fold fadas (Slí → Sli) so input typed with or without them matches
+        normalized = ''.join(c for c in unicodedata.normalize('NFKD', address)
+                             if not unicodedata.combining(c)).strip()
         normalized = re.sub(r'\s+', ' ', normalized)
         normalized = re.sub(r',\s*,+', ',', normalized)
         normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)

@@ -33,6 +33,7 @@ import re
 import requests
 import tempfile
 import subprocess
+import unicodedata
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional, List, Dict
@@ -78,6 +79,29 @@ def parse_bool(raw: str) -> bool:
     return raw.strip().lower() in ("yes", "true", "1")
 
 
+def detect_csv_encoding(path: str) -> str:
+    """Return the encoding to read a PPR CSV with.
+
+    PPR-ALL.csv is Windows-1252, not UTF-8: '€' is byte 0x80 and fadas are single
+    bytes (Í = 0xCD). Reading it as UTF-8 with errors='replace' silently turns every
+    fada into U+FFFD ("SLÍ NA COILLE" → "SL� NA COILLE"). Use UTF-8 only if the whole
+    file decodes cleanly, so a switch to UTF-8 by the PPR keeps working.
+    """
+    with open(path, 'rb') as f:
+        data = f.read()
+    try:
+        data.decode('utf-8')
+        return 'utf-8-sig'
+    except UnicodeDecodeError:
+        return 'cp1252'
+
+
+def fold_accents(text: str) -> str:
+    """Strip combining marks (á → a). Same folding the backend applies to search input."""
+    decomposed = unicodedata.normalize('NFKD', text)
+    return ''.join(c for c in decomposed if not unicodedata.combining(c))
+
+
 def normalize_address(address: str) -> str:
     """
     Normalize Irish property address for better geocoding and matching.
@@ -89,6 +113,8 @@ def normalize_address(address: str) -> str:
     4. Standardize apartment/unit formatting
     5. Standardize street type abbreviations
     6. Clean up punctuation and whitespace
+    7. Fold Irish fadas (Slí → Sli) so input typed with or without them matches;
+       the raw address column keeps them for display
     """
     if not address:
         return address
@@ -103,7 +129,7 @@ def normalize_address(address: str) -> str:
     normalized = normalized.replace('&lt;', '<')
     normalized = normalized.replace('&gt;', '>')
 
-    normalized = normalized.strip()
+    normalized = fold_accents(normalized).strip()
 
     # Basic cleanup
     normalized = re.sub(r'\s+', ' ', normalized)
@@ -297,7 +323,7 @@ async def filter_new_sales(csv_path: str, since_date: datetime.date) -> List[Dic
     print(f"  (PPR CSV is date-sorted, reading from end...)")
 
     # Read all lines (fast for 103MB file)
-    with open(csv_path, 'r', encoding='utf-8', errors='replace') as f:
+    with open(csv_path, 'r', encoding=detect_csv_encoding(csv_path)) as f:
         lines = f.readlines()
 
     header = lines[0]

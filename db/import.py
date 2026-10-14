@@ -17,6 +17,7 @@ import csv
 import os
 import sys
 import re
+import unicodedata
 from datetime import datetime
 from typing import Optional
 from dotenv import load_dotenv
@@ -85,7 +86,9 @@ def normalize_address(address: str) -> str:
     if not address:
         return address
 
-    normalized = address.strip()
+    # Fold fadas (Slí → Sli) so input typed with or without them matches
+    normalized = ''.join(c for c in unicodedata.normalize('NFKD', address)
+                         if not unicodedata.combining(c)).strip()
     normalized = re.sub(r'\s+', ' ', normalized)
     normalized = re.sub(r',\s*,+', ',', normalized)
     normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)

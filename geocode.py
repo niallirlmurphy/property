@@ -27,6 +27,9 @@ import re
 import requests
 
 SOURCE_CSV = os.path.join(os.path.dirname(__file__), "source data", "PPR-ALL.csv")
+# The PPR CSV is Windows-1252 ('€' is 0x80, fadas are single bytes). Reading it as
+# UTF-8 with errors="replace" turned every fada into U+FFFD.
+SOURCE_ENCODING = "cp1252"
 DB_PATH    = os.path.join(os.path.dirname(__file__), "geocode_cache.db")
 OUTPUT_CSV = os.path.join(os.path.dirname(__file__), "PPR-ALL-geocoded.csv")
 
@@ -208,7 +211,7 @@ def run_geocoding():
     last_commit_row = start_row
 
     try:
-        with open(SOURCE_CSV, encoding="utf-8-sig", errors="replace") as f:
+        with open(SOURCE_CSV, encoding=SOURCE_ENCODING) as f:
             reader = csv.DictReader(f)
             for row_num, row in enumerate(reader, start=1):
                 total_rows = row_num
@@ -293,7 +296,7 @@ def export_csv():
     written = 0
     enriched = 0
 
-    with open(SOURCE_CSV, encoding="utf-8-sig", errors="replace") as fin, \
+    with open(SOURCE_CSV, encoding=SOURCE_ENCODING) as fin, \
          open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as fout:
 
         reader  = csv.DictReader(fin)
