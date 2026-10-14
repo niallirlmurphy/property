@@ -30,14 +30,6 @@
   "transactions": [
     {
       "date": "2019-04-24",
-      "address": "85 Castleguard Manor, Ardee",
-      "price": 235000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-04-24",
       "address": "91 Castleguard Manor, Ardee",
       "price": 230000,
       "bedrooms": null,
@@ -205,9 +197,9 @@
       "eircode": null
     },
     {
-      "date": "2018-12-07",
-      "address": "59 Castleguard Manor, Ardee",
-      "price": 227500,
+      "date": "2019-04-24",
+      "address": "85 Castleguard Manor, Ardee",
+      "price": 235000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -375,6 +367,14 @@
     {
       "date": "2018-12-07",
       "address": "62 Castleguard Manor, Ardee",
+      "price": 227500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-07",
+      "address": "59 Castleguard Manor, Ardee",
       "price": 227500,
       "bedrooms": null,
       "propertyType": null,

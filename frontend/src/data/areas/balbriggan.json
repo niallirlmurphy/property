@@ -8,10 +8,28 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 347500.0,
-  "avg_price": 370382,
+  "avg_price": 366182,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805395,
+      "sale_date": "2026-09-30",
+      "address": "2 HAMILTON WAY, BALBRIGGAN, CO. DUBLIN",
+      "county": "Dublin",
+      "eircode": "K32TX29",
+      "price": 183000.0,
+      "not_full_market_price": true,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.602245,
+      "longitude": -6.175917,
+      "routing_key": "K32",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 836.43659782
+    },
     {
       "id": 804674,
       "sale_date": "2026-09-21",
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": null,
       "distance_m": 1635.96915792
-    },
-    {
-      "id": 800986,
-      "sale_date": "2026-08-14",
-      "address": "86 FANCOURT HEIGHTS, BALBRIGGAN, DUBLIN",
-      "county": "Dublin",
-      "eircode": "K32NF24",
-      "price": 225000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.606914,
-      "longitude": -6.169441,
-      "routing_key": "K32",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1506.12376662
     }
   ],
   "trends": [

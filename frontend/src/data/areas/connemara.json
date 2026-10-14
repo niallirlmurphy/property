@@ -8,10 +8,28 @@
   "radius_km": 5.0,
   "total_count": 10,
   "median_price": 285000.0,
-  "avg_price": 275450,
+  "avg_price": 273950,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805348,
+      "sale_date": "2026-09-29",
+      "address": "NO 17, RACECOURSE LAWNS, CLIFDEN",
+      "county": "Galway",
+      "eircode": "H71EC94",
+      "price": 270000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.493213,
+      "longitude": -10.017916,
+      "routing_key": "H71",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 565.56886121
+    },
     {
       "id": 803801,
       "sale_date": "2026-09-09",
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": null,
       "distance_m": 2454.84091763
-    },
-    {
-      "id": 778706,
-      "sale_date": "2026-03-23",
-      "address": "10 AILLEBRACK, BALLYCONNEELY, GALWAY",
-      "county": "Galway",
-      "eircode": "H71AF59",
-      "price": 285000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.488764,
-      "longitude": -10.013793,
-      "routing_key": "H71",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 483.7956598
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 12,
+      "count": 13,
       "median_price": 285000.0,
-      "avg_price": 277458.0,
+      "avg_price": 276885.0,
       "min_price": 127000.0,
       "max_price": 565000.0
     }

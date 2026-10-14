@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 389000.0,
-  "avg_price": 292300,
+  "median_price": 390000.0,
+  "avg_price": 306800,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805618,
+      "sale_date": "2026-10-02",
+      "address": "ST ANNE HOUSE, LEWIS ROAD, KILLARNEY",
+      "county": "Kerry",
+      "eircode": "V93WK2D",
+      "price": 500000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.061315,
+      "longitude": -9.506137,
+      "routing_key": "V93",
+      "bedrooms": null,
+      "property_type": "house",
+      "distance_m": 201.55761946
+    },
     {
       "id": 804865,
       "sale_date": "2026-09-22",
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": "apartment",
       "distance_m": 431.07087076
-    },
-    {
-      "id": 801179,
-      "sale_date": "2026-08-17",
-      "address": "74 WOODLAWN PARK, KILLARNEY, KERRY",
-      "county": "Kerry",
-      "eircode": "V93W3PH",
-      "price": 355000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.050216,
-      "longitude": -9.501679,
-      "routing_key": "V93",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 1070.87992384
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 68,
-      "median_price": 389000.0,
-      "avg_price": 408362.0,
+      "count": 69,
+      "median_price": 390000.0,
+      "avg_price": 409690.0,
       "min_price": 140000.0,
       "max_price": 1800000.0
     }

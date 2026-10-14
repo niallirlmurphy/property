@@ -7,11 +7,29 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 849000.0,
-  "avg_price": 800885,
+  "median_price": 849500.0,
+  "avg_price": 816761,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805179,
+      "sale_date": "2026-09-28",
+      "address": "42 CLOISTER AVE, BLACKROCK, DUBLIN",
+      "county": "Dublin",
+      "eircode": "A94C5P1",
+      "price": 857000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.29211,
+      "longitude": -6.185837,
+      "routing_key": "A94",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 910.0157636
+    },
     {
       "id": 804917,
       "sale_date": "2026-09-23",
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": null,
       "distance_m": 363.43521378
-    },
-    {
-      "id": 802871,
-      "sale_date": "2026-09-02",
-      "address": "4 Coil Coille, Slieve Rua Drive, Kilmacud",
-      "county": "Dublin",
-      "eircode": "A94NX4K",
-      "price": 698237.89,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.287765,
-      "longitude": -6.218105,
-      "routing_key": "A94",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1323.3081875
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 167,
-      "median_price": 849000.0,
-      "avg_price": 968855.0,
+      "count": 168,
+      "median_price": 849500.0,
+      "avg_price": 968189.0,
       "min_price": 337500.0,
       "max_price": 3790000.0
     }

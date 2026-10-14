@@ -318,17 +318,17 @@
     },
     {
       "date": "2025-11-26",
-      "address": "443 Ard Uisce, Whiterock Hill",
-      "price": 283288,
-      "bedrooms": 3,
+      "address": "418 Ard Uisce, Whiterock Hill",
+      "price": 277533,
+      "bedrooms": null,
       "propertyType": "semi-detached",
       "eircode": null
     },
     {
       "date": "2025-11-26",
-      "address": "418 Ard Uisce, Whiterock Hill",
-      "price": 277533,
-      "bedrooms": null,
+      "address": "443 Ard Uisce, Whiterock Hill",
+      "price": 283288,
+      "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": null
     },

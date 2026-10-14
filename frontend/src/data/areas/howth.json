@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 775000.0,
-  "avg_price": 1009600,
+  "median_price": 750000.0,
+  "avg_price": 930100,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805361,
+      "sale_date": "2026-09-30",
+      "address": "104 GRACE OMALLEY RD, HOWTH, DUBLIN",
+      "county": "Dublin",
+      "eircode": "D13XH01",
+      "price": 605000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.38592,
+      "longitude": -6.07055,
+      "routing_key": "D13",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 361.5173258
+    },
     {
       "id": 804663,
       "sale_date": "2026-09-21",
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "detached",
       "distance_m": 1129.52973557
-    },
-    {
-      "id": 796882,
-      "sale_date": "2026-06-18",
-      "address": "HILLSIDE, WINDGATE RD, HOWTH",
-      "county": "Dublin",
-      "eircode": "D13E8W2",
-      "price": 1400000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.373323,
-      "longitude": -6.063366,
-      "routing_key": "D13",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1397.23457422
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 34,
-      "median_price": 775000.0,
-      "avg_price": 1084765.0,
+      "count": 35,
+      "median_price": 750000.0,
+      "avg_price": 1071057.0,
       "min_price": 30000.0,
       "max_price": 4650000.0
     }

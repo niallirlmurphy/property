@@ -446,7 +446,7 @@
     },
     {
       "date": "2022-01-20",
-      "address": "161 ASHBROOK, HOWTH RD, CLONTARF",
+      "address": "105 ASHBROOK, HOWTH RD, CLONTARF",
       "price": 385523,
       "bedrooms": null,
       "propertyType": null,
@@ -454,7 +454,7 @@
     },
     {
       "date": "2022-01-20",
-      "address": "167 ASHBROOK, HOWTH RD, CLONTARF",
+      "address": "111 ASHBROOK, HOWTH RD, CLONTARF",
       "price": 385523,
       "bedrooms": null,
       "propertyType": null,
@@ -462,7 +462,15 @@
     },
     {
       "date": "2022-01-20",
-      "address": "187 ASHBROOK, HOWTH RD, CLONTARF",
+      "address": "114 ASHBROOK, HOWTH RD, CLONTARF DUBLIN 3",
+      "price": 403881,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-01-20",
+      "address": "154 ASHBROOK, HOWTH RD, CLONTARF DUBLIN 3",
       "price": 385523,
       "bedrooms": null,
       "propertyType": null,
@@ -470,7 +478,31 @@
     },
     {
       "date": "2022-01-20",
-      "address": "138 ASHBROOK, HOWTH RD, CLONTARF",
+      "address": "121 ASHBROOK, HOWTH RD, CLONTARF DUBLIN 3",
+      "price": 403881,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-01-20",
+      "address": "162 ASHBROOK, HOWTH RD, CLONTARF DUBLIN 3",
+      "price": 403881,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-01-20",
+      "address": "100 ASHBROOK, HOWTH RD, CLONARF",
+      "price": 385523,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03V256"
+    },
+    {
+      "date": "2022-01-20",
+      "address": "104 ASHBROOK, HOWTH RD, CLONTARF DUBLIN 3",
       "price": 385523,
       "bedrooms": null,
       "propertyType": null,
@@ -478,7 +510,7 @@
     },
     {
       "date": "2022-01-20",
-      "address": "126 ASHBROOK, HOWTH RD, CLONTARF",
+      "address": "112 ASHBROOK, HOWTH RD, CLONTARF DUBLIN 3",
       "price": 385523,
       "bedrooms": null,
       "propertyType": null,
@@ -486,7 +518,7 @@
     },
     {
       "date": "2022-01-20",
-      "address": "130 ASHBROOK, HOWTH RD, CLONTARF",
+      "address": "113 ASHBROOK, HOWTH RD, CLONTARF DUBLIN 3",
       "price": 385523,
       "bedrooms": null,
       "propertyType": null,
@@ -494,48 +526,16 @@
     },
     {
       "date": "2022-01-20",
-      "address": "152 ASHBROOK, HOWTH RD, CLONTARF",
-      "price": 385523,
+      "address": "115 ASHBROOK, HOWTH RD, CLONTARF DUBLIN 3",
+      "price": 403881,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2022-01-20",
-      "address": "140 ASHBROOK, HOWTH RD, CLONTARF",
-      "price": 385523,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-01-20",
-      "address": "143 ASHBROOK, HOWTH RD, CLONTARF",
-      "price": 385523,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-01-20",
-      "address": "158 ASHBROOK, HOWTH RD, CLONTARF",
-      "price": 385523,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-01-20",
-      "address": "74 ASHBROOK, HOWTH RD, CLONTARF",
-      "price": 385523,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-01-20",
-      "address": "85 ASHBROOK, HOWTH RD, CLONTARF",
-      "price": 385523,
+      "address": "118 ASHBROOK, HOWTH RD, CLONTARF DUBLIN 3",
+      "price": 403881,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

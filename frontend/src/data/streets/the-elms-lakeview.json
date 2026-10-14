@@ -278,14 +278,6 @@
     },
     {
       "date": "2024-12-17",
-      "address": "74 The Elms, Lakeview, Middleton",
-      "price": 361233,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2024-12-17",
       "address": "33 The Elms, Lakeview, Midleton",
       "price": 378854,
       "bedrooms": null,
@@ -296,6 +288,14 @@
       "date": "2024-12-17",
       "address": "79 The Elms, Lakeview, Castleredmond",
       "price": 299560,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-17",
+      "address": "74 The Elms, Lakeview, Middleton",
+      "price": 361233,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

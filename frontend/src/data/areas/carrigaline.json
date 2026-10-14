@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 422500.0,
-  "avg_price": 372300,
+  "median_price": 420000.0,
+  "avg_price": 386300,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805612,
+      "sale_date": "2026-10-02",
+      "address": "KILNAGLEARY, CARRIGALINE, CO CORK",
+      "county": "Cork",
+      "eircode": "P43Y298",
+      "price": 300000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.808056,
+      "longitude": -8.380018,
+      "routing_key": "P43",
+      "bedrooms": 3,
+      "property_type": "detached",
+      "distance_m": 1141.4959391
+    },
     {
       "id": 804416,
       "sale_date": "2026-09-15",
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "semi-detached",
       "distance_m": 1149.81541416
-    },
-    {
-      "id": 800351,
-      "sale_date": "2026-08-11",
-      "address": "4 CHESTNUT GROVE, BRIDGEMOUNT, CARRIGALINE",
-      "county": "Cork",
-      "eircode": "P43Y234",
-      "price": 160000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.821491,
-      "longitude": -8.382686,
-      "routing_key": "P43",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 982.48563968
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 104,
-      "median_price": 422500.0,
-      "avg_price": 432204.0,
+      "count": 105,
+      "median_price": 420000.0,
+      "avg_price": 430945.0,
       "min_price": 156000.0,
       "max_price": 1000000.0
     }

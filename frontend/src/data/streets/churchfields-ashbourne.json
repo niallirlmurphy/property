@@ -382,18 +382,18 @@
     },
     {
       "date": "2017-07-07",
-      "address": "130 Churchfields, Ashbourne, Co. Meath",
-      "price": 239646,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-07-07",
       "address": "No.135 Churchfields, Ashbourne",
       "price": 239646,
       "bedrooms": null,
       "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2017-07-07",
+      "address": "130 Churchfields, Ashbourne, Co. Meath",
+      "price": 239646,
+      "bedrooms": null,
+      "propertyType": null,
       "eircode": null
     },
     {
@@ -438,30 +438,6 @@
     },
     {
       "date": "2017-06-19",
-      "address": "126 Churchfields, Ashbourne",
-      "price": 212235,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-06-19",
-      "address": "131 Churchfields, Ashbourne",
-      "price": 212235,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-06-19",
-      "address": "184 Churchfields, Ashbourne",
-      "price": 212235,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-06-19",
       "address": "181 Churchfields, Ashbourne",
       "price": 212235,
       "bedrooms": null,
@@ -495,6 +471,30 @@
     {
       "date": "2017-06-19",
       "address": "134 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "126 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "131 Churchfields, Ashbourne",
+      "price": 212235,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-06-19",
+      "address": "184 Churchfields, Ashbourne",
       "price": 212235,
       "bedrooms": null,
       "propertyType": null,

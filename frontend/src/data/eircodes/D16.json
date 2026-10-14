@@ -3,14 +3,48 @@
     "code": "D16",
     "match_type": "routing_key",
     "stats": {
-      "total_count": 3339,
+      "total_count": 3341,
       "median_price": 550000.0,
-      "avg_price": 564768.0,
+      "avg_price": 564938.0,
       "earliest_sale": "2010-01-14",
-      "latest_sale": "2026-09-22"
+      "latest_sale": "2026-10-02"
     },
     "count": 10,
     "results": [
+      {
+        "id": 805560,
+        "sale_date": "2026-10-02",
+        "address": "10 BROADFORD LAWN, BALLINTEER, DUBLIN 16",
+        "county": "Dublin",
+        "eircode": "D16A897",
+        "price": 630000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.278335,
+        "longitude": -6.255875,
+        "routing_key": "D16",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
+        "id": 805255,
+        "sale_date": "2026-09-29",
+        "address": "104 LUDFORD RD, BALLINTEER, DUBLIN 16",
+        "county": "Dublin",
+        "eircode": "D16F208",
+        "price": 1070000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.28054,
+        "longitude": -6.25365,
+        "routing_key": "D16",
+        "bedrooms": null,
+        "property_type": null
+      },
       {
         "id": 804834,
         "sale_date": "2026-09-22",
@@ -146,40 +180,6 @@
         "routing_key": "D16",
         "bedrooms": 3,
         "property_type": "semi-detached"
-      },
-      {
-        "id": 802880,
-        "sale_date": "2026-09-02",
-        "address": "44 KINGSTON GROVE, BALLINTEER, DUBLIN 16",
-        "county": "Dublin",
-        "eircode": "D16W293",
-        "price": 585000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.269981,
-        "longitude": -6.250984,
-        "routing_key": "D16",
-        "bedrooms": 3,
-        "property_type": "semi-detached"
-      },
-      {
-        "id": 802648,
-        "sale_date": "2026-09-01",
-        "address": "40 BROADFORD DRIVE, BALLINTEER, DUBLIN 14",
-        "county": "Dublin",
-        "eircode": "D16CY64",
-        "price": 580000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.279544,
-        "longitude": -6.256825,
-        "routing_key": "D16",
-        "bedrooms": null,
-        "property_type": null
       }
     ]
   },
@@ -314,9 +314,9 @@
     },
     {
       "year": 2026,
-      "count": 11029,
-      "median_price": 476000.0,
-      "avg_price": 604287.0,
+      "count": 11175,
+      "median_price": 478000.0,
+      "avg_price": 604423.0,
       "min_price": 10000.0,
       "max_price": 18481040.37
     }

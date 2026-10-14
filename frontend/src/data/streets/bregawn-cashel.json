@@ -1,11 +1,11 @@
 {
   "slug": "bregawn-cashel",
   "stats": {
-    "count": 94,
+    "count": 95,
     "median": 312775,
-    "avg": 311416,
+    "avg": 312296,
     "min": 259075,
-    "max": 375000,
+    "max": 395000,
     "firstYear": 2023,
     "lastYear": 2026
   },
@@ -36,14 +36,22 @@
     },
     {
       "year": 2026,
-      "count": 21,
-      "median_price": 312775,
-      "avg_price": 321160,
+      "count": 22,
+      "median_price": 313844,
+      "avg_price": 324517,
       "min_price": 298902,
-      "max_price": 375000
+      "max_price": 395000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-28",
+      "address": "16 BREGAWN, CASHEL, TIPPERARY",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "E25XH22"
+    },
     {
       "date": "2026-09-09",
       "address": "178 Bregawn, Cashel",
@@ -435,15 +443,7 @@
       "bedrooms": 4,
       "propertyType": "semi-detached",
       "eircode": null
-    },
-    {
-      "date": "2025-06-19",
-      "address": "185 Bregawn, Cashel",
-      "price": 312775,
-      "bedrooms": 4,
-      "propertyType": "semi-detached",
-      "eircode": null
     }
   ],
-  "totalTransactions": 94
+  "totalTransactions": 95
 }

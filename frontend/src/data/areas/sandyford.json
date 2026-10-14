@@ -7,11 +7,29 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 564220.0,
-  "avg_price": 747535,
+  "median_price": 568125.0,
+  "avg_price": 813035,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805616,
+      "sale_date": "2026-10-02",
+      "address": "SOUK EL RAAB, LEOPARDSTOWN RD, FOXROCK",
+      "county": "Dublin",
+      "eircode": "D18Y6C5",
+      "price": 1765000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.268963,
+      "longitude": -6.219207,
+      "routing_key": "D18",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 370.7846077
+    },
     {
       "id": 805069,
       "sale_date": "2026-09-25",
@@ -173,24 +191,6 @@
       "bedrooms": 1,
       "property_type": "apartment",
       "distance_m": 1232.9033569
-    },
-    {
-      "id": 802150,
-      "sale_date": "2026-08-26",
-      "address": "12 CUL CUILLE, SANDYFORD, CO DUBLN",
-      "county": "Dublin",
-      "eircode": "D18DVF7",
-      "price": 1110000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.269569,
-      "longitude": -6.227063,
-      "routing_key": "D18",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 168.83147856
     }
   ],
   "trends": [
@@ -324,11 +324,11 @@
     },
     {
       "year": 2026,
-      "count": 131,
-      "median_price": 564220.0,
-      "avg_price": 621043.0,
+      "count": 132,
+      "median_price": 568125.0,
+      "avg_price": 629710.0,
       "min_price": 210000.0,
-      "max_price": 1500000.0
+      "max_price": 1765000.0
     }
   ]
 }

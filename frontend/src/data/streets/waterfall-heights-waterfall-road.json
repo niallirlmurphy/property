@@ -238,19 +238,19 @@
     },
     {
       "date": "2025-07-30",
-      "address": "100 WATERFALL HEIGHTS, WATERFALL ROAD, BISHOPSTOWN",
-      "price": 497797,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "T12RR2R"
-    },
-    {
-      "date": "2025-07-30",
       "address": "87 Waterfall Heights, Waterfall Road, Bishopstown",
       "price": 440529,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2025-07-30",
+      "address": "100 WATERFALL HEIGHTS, WATERFALL ROAD, BISHOPSTOWN",
+      "price": 497797,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12RR2R"
     },
     {
       "date": "2025-07-28",

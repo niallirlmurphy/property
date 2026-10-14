@@ -7,11 +7,29 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 865000.0,
-  "avg_price": 1059000,
+  "median_price": 861778.0,
+  "avg_price": 1009700,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805179,
+      "sale_date": "2026-09-28",
+      "address": "42 CLOISTER AVE, BLACKROCK, DUBLIN",
+      "county": "Dublin",
+      "eircode": "A94C5P1",
+      "price": 857000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.29211,
+      "longitude": -6.185837,
+      "routing_key": "A94",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 1181.68743066
+    },
     {
       "id": 805006,
       "sale_date": "2026-09-24",
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": null,
       "distance_m": 831.18974201
-    },
-    {
-      "id": 801867,
-      "sale_date": "2026-08-21",
-      "address": "EVERGREEN, 7 GROVE LAWN, BLACKROCK",
-      "county": "Dublin",
-      "eircode": "A94R3P2",
-      "price": 1350000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.295444,
-      "longitude": -6.196226,
-      "routing_key": "A94",
-      "bedrooms": 5,
-      "property_type": "detached",
-      "distance_m": 1362.01119875
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 125,
-      "median_price": 865000.0,
-      "avg_price": 1074782.0,
+      "count": 126,
+      "median_price": 861778.0,
+      "avg_price": 1073054.0,
       "min_price": 321170.0,
       "max_price": 3875000.0
     }

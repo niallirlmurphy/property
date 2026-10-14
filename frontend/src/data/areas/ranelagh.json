@@ -2,16 +2,34 @@
   "name": "Ranelagh, Dublin",
   "slug": "ranelagh",
   "center": {
-    "lat": 53.3252185,
-    "lon": -6.2550504
+    "lat": 53.32467830558739,
+    "lon": -6.253141255078549
   },
   "radius_km": 1.0,
   "total_count": 10,
   "median_price": 945000.0,
-  "avg_price": 949450,
+  "avg_price": 957650,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805601,
+      "sale_date": "2026-10-02",
+      "address": "APT 112, RATHMINES TOWN CENTRE, RATHMINES RD LOWER DUBLIN 6",
+      "county": "Dublin",
+      "eircode": "D06XC60",
+      "price": 520000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.325376,
+      "longitude": -6.265116,
+      "routing_key": "D06",
+      "bedrooms": 2,
+      "property_type": "apartment",
+      "distance_m": 801.66995017
+    },
     {
       "id": 804704,
       "sale_date": "2026-09-21",
@@ -28,7 +46,7 @@
       "routing_key": "D06",
       "bedrooms": 3,
       "property_type": null,
-      "distance_m": 633.52731946
+      "distance_m": 607.03377665
     },
     {
       "id": 804475,
@@ -46,7 +64,7 @@
       "routing_key": "D06",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 378.20626247
+      "distance_m": 242.98722775
     },
     {
       "id": 804325,
@@ -64,7 +82,7 @@
       "routing_key": "D06",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 303.89145766
+      "distance_m": 398.97665526
     },
     {
       "id": 804035,
@@ -82,7 +100,7 @@
       "routing_key": "D06",
       "bedrooms": 8,
       "property_type": "terraced",
-      "distance_m": 555.28011169
+      "distance_m": 695.32330342
     },
     {
       "id": 803454,
@@ -100,25 +118,7 @@
       "routing_key": "D06",
       "bedrooms": 1,
       "property_type": "terraced",
-      "distance_m": 440.70473362
-    },
-    {
-      "id": 803231,
-      "sale_date": "2026-09-04",
-      "address": "1A MOUNTPLEASANT AVE UPPER, RANELAGH, DUBLIN 6",
-      "county": "Dublin",
-      "eircode": "D06C820",
-      "price": 715000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.326534,
-      "longitude": -6.261086,
-      "routing_key": "D06",
-      "bedrooms": 2,
-      "property_type": "terraced",
-      "distance_m": 427.97639378
+      "distance_m": 317.05036244
     },
     {
       "id": 803178,
@@ -136,7 +136,25 @@
       "routing_key": "D06",
       "bedrooms": 4,
       "property_type": "terraced",
-      "distance_m": 439.9842938
+      "distance_m": 406.83075525
+    },
+    {
+      "id": 803231,
+      "sale_date": "2026-09-04",
+      "address": "1A MOUNTPLEASANT AVE UPPER, RANELAGH, DUBLIN 6",
+      "county": "Dublin",
+      "eircode": "D06C820",
+      "price": 715000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.326534,
+      "longitude": -6.261086,
+      "routing_key": "D06",
+      "bedrooms": 2,
+      "property_type": "terraced",
+      "distance_m": 568.22668819
     },
     {
       "id": 803307,
@@ -154,7 +172,7 @@
       "routing_key": "D06",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 512.58382432
+      "distance_m": 636.12458481
     },
     {
       "id": 803167,
@@ -172,25 +190,7 @@
       "routing_key": "D06",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 274.93175605
-    },
-    {
-      "id": 802941,
-      "sale_date": "2026-09-02",
-      "address": "APT 1, BELGRAVE VIEW, BELGRAVE SQ",
-      "county": "Dublin",
-      "eircode": "D06H5K8",
-      "price": 438000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.321426,
-      "longitude": -6.25912,
-      "routing_key": "D06",
-      "bedrooms": 1,
-      "property_type": "apartment",
-      "distance_m": 501.68205392
+      "distance_m": 229.30233114
     }
   ],
   "trends": [
@@ -212,9 +212,9 @@
     },
     {
       "year": 2012,
-      "count": 76,
-      "median_price": 437500.0,
-      "avg_price": 500819.0,
+      "count": 77,
+      "median_price": 440000.0,
+      "avg_price": 504120.0,
       "min_price": 100000.0,
       "max_price": 2050000.0
     },
@@ -228,25 +228,25 @@
     },
     {
       "year": 2014,
-      "count": 87,
-      "median_price": 550000.0,
-      "avg_price": 679659.0,
+      "count": 86,
+      "median_price": 578250.0,
+      "avg_price": 718429.0,
       "min_price": 75000.0,
       "max_price": 3778483.0
     },
     {
       "year": 2015,
-      "count": 80,
+      "count": 78,
       "median_price": 558750.0,
-      "avg_price": 699460.0,
+      "avg_price": 702895.0,
       "min_price": 60000.0,
       "max_price": 4350000.0
     },
     {
       "year": 2016,
-      "count": 113,
-      "median_price": 730000.0,
-      "avg_price": 771066.0,
+      "count": 112,
+      "median_price": 731500.0,
+      "avg_price": 785531.0,
       "min_price": 162500.0,
       "max_price": 4500000.0
     },
@@ -254,79 +254,79 @@
       "year": 2017,
       "count": 113,
       "median_price": 760000.0,
-      "avg_price": 816447.0,
+      "avg_price": 833801.0,
       "min_price": 145000.0,
       "max_price": 2800000.0
     },
     {
       "year": 2018,
-      "count": 103,
-      "median_price": 724000.0,
-      "avg_price": 866046.0,
+      "count": 99,
+      "median_price": 730000.0,
+      "avg_price": 902997.0,
       "min_price": 150000.0,
       "max_price": 4569595.0
     },
     {
       "year": 2019,
-      "count": 123,
+      "count": 122,
       "median_price": 750000.0,
-      "avg_price": 860255.0,
+      "avg_price": 864827.0,
       "min_price": 10000.0,
       "max_price": 4935000.0
     },
     {
       "year": 2020,
-      "count": 79,
-      "median_price": 740000.0,
-      "avg_price": 857855.0,
+      "count": 76,
+      "median_price": 763750.0,
+      "avg_price": 874057.0,
       "min_price": 290000.0,
       "max_price": 3000000.0
     },
     {
       "year": 2021,
-      "count": 165,
-      "median_price": 590000.0,
-      "avg_price": 815277.0,
+      "count": 161,
+      "median_price": 595000.0,
+      "avg_price": 834433.0,
       "min_price": 23611.0,
       "max_price": 4440000.0
     },
     {
       "year": 2022,
-      "count": 204,
-      "median_price": 946267.0,
-      "avg_price": 1050950.0,
+      "count": 195,
+      "median_price": 975000.0,
+      "avg_price": 1073004.0,
       "min_price": 10000.0,
       "max_price": 4724500.0
     },
     {
       "year": 2023,
-      "count": 213,
-      "median_price": 843750.0,
-      "avg_price": 1011303.0,
+      "count": 206,
+      "median_price": 860000.0,
+      "avg_price": 1061170.0,
       "min_price": 18750.0,
       "max_price": 4200000.0
     },
     {
       "year": 2024,
-      "count": 204,
+      "count": 188,
       "median_price": 810000.0,
-      "avg_price": 959495.0,
+      "avg_price": 965734.0,
       "min_price": 35000.0,
       "max_price": 6500000.0
     },
     {
       "year": 2025,
-      "count": 165,
-      "median_price": 999999.0,
-      "avg_price": 1096565.0,
+      "count": 158,
+      "median_price": 945000.0,
+      "avg_price": 1100628.0,
       "min_price": 90000.0,
       "max_price": 6000000.0
     },
     {
       "year": 2026,
-      "count": 104,
+      "count": 98,
       "median_price": 945000.0,
-      "avg_price": 1104287.0,
+      "avg_price": 1105641.0,
       "min_price": 15000.0,
       "max_price": 4550000.0
     }

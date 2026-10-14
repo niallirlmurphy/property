@@ -278,126 +278,6 @@
     },
     {
       "date": "2020-10-02",
-      "address": "132 Cedar Place, Ridgewood, Swords",
-      "price": 342427,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-02",
-      "address": "116 Cedar Place, Ridgewood, Swords",
-      "price": 332564,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "K67Y9E2"
-    },
-    {
-      "date": "2020-10-02",
-      "address": "126 Cedar Place, Ridgewood, Swords",
-      "price": 362154,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "K67R9K7"
-    },
-    {
-      "date": "2020-10-02",
-      "address": "128 Cedar Place, Ridgewood, Swords",
-      "price": 332564,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "K67F2V6"
-    },
-    {
-      "date": "2020-10-02",
-      "address": "148 Cedar Place, Ridgewood, Swords",
-      "price": 332564,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-02",
-      "address": "107 Cedar Place, Ridgewood, Swords",
-      "price": 362154,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-02",
-      "address": "108 Cedar Place, Ridgewood, Swords",
-      "price": 342427,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-02",
-      "address": "110 Cedar Place, Ridgewood, Swords",
-      "price": 342427,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-02",
-      "address": "112 Cedar Place, Ridgewood, Swords",
-      "price": 342427,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-02",
-      "address": "113 Cedar Place, Ridgewood, Swords",
-      "price": 342427,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-02",
-      "address": "114 Cedar Place, Ridgewood, Swords",
-      "price": 332564,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-02",
-      "address": "135 Cedar Place, Ridgewood, Swords",
-      "price": 362154,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-02",
-      "address": "133 Cedar Place, Ridgewood, Swords",
-      "price": 332564,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-02",
-      "address": "56 CEDAR PLACE, RIDGEWOOD, SWORDS",
-      "price": 316091,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "K67C440"
-    },
-    {
-      "date": "2020-10-02",
-      "address": "74 CEDAR PLACE, RIDGEWOOD, SWORDS",
-      "price": 316091,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "K67VE80"
-    },
-    {
-      "date": "2020-10-02",
       "address": "124 Cedar Place, Ridgewood, Swords",
       "price": 332564,
       "bedrooms": null,
@@ -539,6 +419,126 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "K67W967"
+    },
+    {
+      "date": "2020-10-02",
+      "address": "76 CEDAR PLACE, RIDGEWOOD, SWORDS",
+      "price": 316091,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67DX70"
+    },
+    {
+      "date": "2020-10-02",
+      "address": "77 CEDAR PLACE, RIDGEWOOD, SWORDS",
+      "price": 307039,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67T253"
+    },
+    {
+      "date": "2020-10-02",
+      "address": "73 CEDAR PLACE, RIDGEWOOD, SWORDS",
+      "price": 307039,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67KC78"
+    },
+    {
+      "date": "2020-10-02",
+      "address": "81 CEDAR PLACE, RIDGEWOOD, SWORDS",
+      "price": 334197,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67XH33"
+    },
+    {
+      "date": "2020-10-02",
+      "address": "157 Cedar Place, Ridgewood, Swords",
+      "price": 332564,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-02",
+      "address": "153 Cedar Place, Ridgewood, Swords",
+      "price": 342427,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-02",
+      "address": "143 Cedar Place, Ridgewood, Swords",
+      "price": 332564,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-02",
+      "address": "54 CEDAR PLACE, RIDGEWOOD, SWORDS",
+      "price": 316091,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67HX65"
+    },
+    {
+      "date": "2020-10-02",
+      "address": "75 CEDAR PLACE, RIDGEWOOD, SWORDS",
+      "price": 334197,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K67FF96"
+    },
+    {
+      "date": "2020-10-02",
+      "address": "123 Cedar Place, Ridgewood, Swords",
+      "price": 342427,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-02",
+      "address": "125 Cedar Place, Ridgewood, Swords",
+      "price": 342427,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-02",
+      "address": "127 Cedar Place, Ridgewood, Swords",
+      "price": 342427,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-02",
+      "address": "129 Cedar Place, Ridgewood, Swords",
+      "price": 332564,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-02",
+      "address": "130 Cedar Place, Ridgewood, Swords",
+      "price": 342427,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-10-02",
+      "address": "134 Cedar Place, Ridgewood, Swords",
+      "price": 342427,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     }
   ],
   "totalTransactions": 127

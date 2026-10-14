@@ -7,11 +7,29 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 756250.0,
-  "avg_price": 1109905,
+  "median_price": 752500.0,
+  "avg_price": 1067905,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805559,
+      "sale_date": "2026-10-02",
+      "address": "1 DELGANY GLEN, DELGANY, WICKLOW",
+      "county": "Wicklow",
+      "eircode": "A63CX34",
+      "price": 660000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.137199,
+      "longitude": -6.08107,
+      "routing_key": "A63",
+      "bedrooms": 4,
+      "property_type": "semi-detached",
+      "distance_m": 1469.58724071
+    },
     {
       "id": 805059,
       "sale_date": "2026-09-25",
@@ -173,24 +191,6 @@
       "bedrooms": 4,
       "property_type": "detached",
       "distance_m": 486.89464804
-    },
-    {
-      "id": 801234,
-      "sale_date": "2026-08-18",
-      "address": "10 CHURCH GATE, CHURCH RD, GREYSTONES",
-      "county": "Wicklow",
-      "eircode": "A63D562",
-      "price": 1080000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.148593,
-      "longitude": -6.067937,
-      "routing_key": "A63",
-      "bedrooms": 4,
-      "property_type": "detached",
-      "distance_m": 519.13213422
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 58,
-      "median_price": 756250.0,
-      "avg_price": 864925.0,
+      "count": 59,
+      "median_price": 752500.0,
+      "avg_price": 861452.0,
       "min_price": 390000.0,
       "max_price": 2350000.0
     }

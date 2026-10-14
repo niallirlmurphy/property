@@ -7,11 +7,47 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 475000.0,
-  "avg_price": 570200,
+  "median_price": 497000.0,
+  "avg_price": 762000,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805588,
+      "sale_date": "2026-10-02",
+      "address": "45 WHITESTRAND RD, GALWAY, GALWAY",
+      "county": "Galway",
+      "eircode": "H91FV38",
+      "price": 550000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.265071,
+      "longitude": -9.064147,
+      "routing_key": "H91",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 777.01641588
+    },
+    {
+      "id": 805492,
+      "sale_date": "2026-10-01",
+      "address": "12 AVERARD WEST, TAYLORS HILL, GALWAY",
+      "county": "Galway",
+      "eircode": "H91A3HE",
+      "price": 2120000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.270608,
+      "longitude": -9.069116,
+      "routing_key": "H91",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 1023.4284073
+    },
     {
       "id": 804816,
       "sale_date": "2026-09-22",
@@ -155,42 +191,6 @@
       "bedrooms": 4,
       "property_type": "terraced",
       "distance_m": 802.84159415
-    },
-    {
-      "id": 801481,
-      "sale_date": "2026-08-19",
-      "address": "52 GLEN DARA, RAHOON, GALWAY",
-      "county": "Galway",
-      "eircode": "H91C5DD",
-      "price": 371000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.273417,
-      "longitude": -9.083295,
-      "routing_key": "H91",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 1393.46796173
-    },
-    {
-      "id": 800960,
-      "sale_date": "2026-08-14",
-      "address": "68 GLEANN DARA, RAHOON, GALWAY",
-      "county": "Galway",
-      "eircode": "H91VKP1",
-      "price": 381000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.272357,
-      "longitude": -9.08259,
-      "routing_key": "H91",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 1266.63489696
     }
   ],
   "trends": [
@@ -324,11 +324,11 @@
     },
     {
       "year": 2026,
-      "count": 83,
-      "median_price": 475000.0,
-      "avg_price": 588104.0,
+      "count": 85,
+      "median_price": 497000.0,
+      "avg_price": 605678.0,
       "min_price": 180000.0,
-      "max_price": 1880000.0
+      "max_price": 2120000.0
     }
   ]
 }

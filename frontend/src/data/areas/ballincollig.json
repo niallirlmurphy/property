@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 428175.0,
-  "avg_price": 426018,
+  "median_price": 426588.0,
+  "avg_price": 409927,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805301,
+      "sale_date": "2026-09-29",
+      "address": "37 Woodfiled, Coolroe, Ballincollig",
+      "county": "Cork",
+      "eircode": null,
+      "price": 414096.0,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.888673,
+      "longitude": -8.620642,
+      "routing_key": null,
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 1983.40122887
+    },
     {
       "id": 804154,
       "sale_date": "2026-09-11",
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "terraced",
       "distance_m": 1105.93129444
-    },
-    {
-      "id": 799915,
-      "sale_date": "2026-08-07",
-      "address": "23 COOPERS GRANGE, OLD QUARTER, BALLINCOLLIG",
-      "county": "Cork",
-      "eircode": "P31AE73",
-      "price": 575000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.89019,
-      "longitude": -8.600614,
-      "routing_key": "P31",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 640.85058614
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 73,
-      "median_price": 428175.0,
-      "avg_price": 443020.0,
+      "count": 74,
+      "median_price": 426588.0,
+      "avg_price": 442629.0,
       "min_price": 135000.0,
       "max_price": 945000.0
     }

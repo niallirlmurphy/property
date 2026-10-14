@@ -398,22 +398,6 @@
     },
     {
       "date": "2021-03-24",
-      "address": "166 GLEANN NA RI, MURROUGH, RENMORE",
-      "price": 125000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2021-03-24",
-      "address": "167 GLEANN NA RI, MURROUGH, RENMORE",
-      "price": 125000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2021-03-24",
       "address": "184 GLEANN NA RI, MURROUGH, RENMORE",
       "price": 125000,
       "bedrooms": null,
@@ -431,6 +415,22 @@
     {
       "date": "2021-03-24",
       "address": "187 GLEANN NA RI, MURROUGH, RENMORE",
+      "price": 125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-24",
+      "address": "166 GLEANN NA RI, MURROUGH, RENMORE",
+      "price": 125000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-03-24",
+      "address": "167 GLEANN NA RI, MURROUGH, RENMORE",
       "price": 125000,
       "bedrooms": null,
       "propertyType": null,

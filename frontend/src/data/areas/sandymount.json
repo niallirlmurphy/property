@@ -2,33 +2,51 @@
   "name": "Sandymount, Dublin",
   "slug": "sandymount",
   "center": {
-    "lat": 53.3279999,
-    "lon": -6.2209624
+    "lat": 53.33244775182873,
+    "lon": -6.217995198064463
   },
   "radius_km": 1.0,
   "total_count": 10,
-  "median_price": 815000.0,
-  "avg_price": 979660,
+  "median_price": 765528.0,
+  "avg_price": 775508,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
     {
-      "id": 805026,
-      "sale_date": "2026-09-24",
-      "address": "58 Sandymount Place, Sandymount Avenue",
+      "id": 805337,
+      "sale_date": "2026-09-29",
+      "address": "APT 20, KIRKWOOD, PARK AVE",
       "county": "Dublin",
-      "eircode": null,
-      "price": 866972.48,
+      "eircode": "D04RH76",
+      "price": 725000.0,
       "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.329486,
-      "longitude": -6.218274,
-      "routing_key": null,
-      "bedrooms": 3,
-      "property_type": "apartment",
-      "distance_m": 243.79827549
+      "latitude": 53.325651,
+      "longitude": -6.213444,
+      "routing_key": "D04",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 814.94082201
+    },
+    {
+      "id": 805153,
+      "sale_date": "2026-09-28",
+      "address": "23 SHREWSBURY SQ, SANDYMOUNT AVE, BALLSBRIDGE",
+      "county": "Dublin",
+      "eircode": "D04C950",
+      "price": 850000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.3258022794178,
+      "longitude": -6.21972694744625,
+      "routing_key": "D04",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 748.53659859
     },
     {
       "id": 805051,
@@ -46,7 +64,25 @@
       "routing_key": null,
       "bedrooms": 3,
       "property_type": "apartment",
-      "distance_m": 261.60784708
+      "distance_m": 314.16253463
+    },
+    {
+      "id": 805026,
+      "sale_date": "2026-09-24",
+      "address": "58 Sandymount Place, Sandymount Avenue",
+      "county": "Dublin",
+      "eircode": null,
+      "price": 866972.48,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.329486,
+      "longitude": -6.218274,
+      "routing_key": null,
+      "bedrooms": 3,
+      "property_type": "apartment",
+      "distance_m": 330.14367376
     },
     {
       "id": 804837,
@@ -64,7 +100,7 @@
       "routing_key": "D04",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 336.86392449
+      "distance_m": 539.46321996
     },
     {
       "id": 804635,
@@ -82,7 +118,7 @@
       "routing_key": "D04",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 728.16534232
+      "distance_m": 722.68124721
     },
     {
       "id": 804511,
@@ -100,7 +136,7 @@
       "routing_key": "D04",
       "bedrooms": null,
       "property_type": "apartment",
-      "distance_m": 476.69945226
+      "distance_m": 527.18859249
     },
     {
       "id": 804322,
@@ -118,7 +154,7 @@
       "routing_key": null,
       "bedrooms": 3,
       "property_type": "apartment",
-      "distance_m": 850.87831731
+      "distance_m": 319.82199663
     },
     {
       "id": 804301,
@@ -136,199 +172,163 @@
       "routing_key": null,
       "bedrooms": 3,
       "property_type": "apartment",
-      "distance_m": 833.45878106
+      "distance_m": 375.88577846
     },
     {
-      "id": 803243,
-      "sale_date": "2026-09-04",
-      "address": "22 SANDYMOUNT PLACE, SANDYMOUNT AVENUE, DUBLIN 4",
+      "id": 804161,
+      "sale_date": "2026-09-11",
+      "address": "7 LANSDOWN CRESENT, BALLSBRIDGE, DUBLIN 4",
       "county": "Dublin",
-      "eircode": "D04PDH6",
-      "price": 3083700.0,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.335071,
-      "longitude": -6.218744,
-      "routing_key": "D04",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 800.71824338
-    },
-    {
-      "id": 802777,
-      "sale_date": "2026-09-02",
-      "address": "11 Sandymount Place, Sandymount Avenue, Sandymount",
-      "county": "Dublin",
-      "eircode": null,
-      "price": 682819.38,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.327056,
-      "longitude": -6.222094,
-      "routing_key": null,
-      "bedrooms": 2,
-      "property_type": "apartment",
-      "distance_m": 129.30537444
-    },
-    {
-      "id": 802906,
-      "sale_date": "2026-09-02",
-      "address": "65 MERRION VILLAGE, BLOCK 3, MERRION RD DUBLIN 4",
-      "county": "Dublin",
-      "eircode": "D04PP46",
-      "price": 450000.0,
+      "eircode": "D04H7A4",
+      "price": 600000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.326565,
-      "longitude": -6.224437,
+      "latitude": 53.334407,
+      "longitude": -6.232416,
       "routing_key": "D04",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 281.24293733
+      "bedrooms": 2,
+      "property_type": "terraced",
+      "distance_m": 985.13215878
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 48,
-      "median_price": 578844.0,
-      "avg_price": 621027.0,
+      "count": 49,
+      "median_price": 572687.0,
+      "avg_price": 568965.0,
       "min_price": 52500.0,
-      "max_price": 3000000.0
+      "max_price": 2030000.0
     },
     {
       "year": 2011,
-      "count": 46,
-      "median_price": 532500.0,
-      "avg_price": 599809.0,
-      "min_price": 225000.0,
+      "count": 49,
+      "median_price": 530000.0,
+      "avg_price": 575371.0,
+      "min_price": 50000.0,
       "max_price": 1775000.0
     },
     {
       "year": 2012,
       "count": 50,
-      "median_price": 489196.0,
-      "avg_price": 701822.0,
+      "median_price": 428000.0,
+      "avg_price": 454312.0,
       "min_price": 160000.0,
-      "max_price": 4400000.0
+      "max_price": 1004405.0
     },
     {
       "year": 2013,
-      "count": 74,
-      "median_price": 630000.0,
-      "avg_price": 680818.0,
-      "min_price": 110000.0,
-      "max_price": 3050000.0
+      "count": 77,
+      "median_price": 565000.0,
+      "avg_price": 589388.0,
+      "min_price": 10000.0,
+      "max_price": 1500000.0
     },
     {
       "year": 2014,
-      "count": 90,
-      "median_price": 627181.0,
-      "avg_price": 667716.0,
+      "count": 99,
+      "median_price": 616740.0,
+      "avg_price": 645661.0,
       "min_price": 35306.0,
       "max_price": 1625000.0
     },
     {
       "year": 2015,
-      "count": 92,
-      "median_price": 663750.0,
-      "avg_price": 744370.0,
+      "count": 105,
+      "median_price": 611000.0,
+      "avg_price": 696611.0,
       "min_price": 206000.0,
       "max_price": 2000000.0
     },
     {
       "year": 2016,
-      "count": 105,
-      "median_price": 655000.0,
-      "avg_price": 765418.0,
+      "count": 107,
+      "median_price": 600000.0,
+      "avg_price": 728377.0,
       "min_price": 125500.0,
-      "max_price": 2800000.0
+      "max_price": 2419000.0
     },
     {
       "year": 2017,
-      "count": 94,
-      "median_price": 732500.0,
-      "avg_price": 852557.0,
+      "count": 101,
+      "median_price": 725000.0,
+      "avg_price": 761994.0,
       "min_price": 280000.0,
-      "max_price": 3750000.0
+      "max_price": 2000000.0
     },
     {
       "year": 2018,
-      "count": 115,
-      "median_price": 795000.0,
-      "avg_price": 954876.0,
+      "count": 126,
+      "median_price": 750000.0,
+      "avg_price": 871460.0,
       "min_price": 30000.0,
-      "max_price": 4500000.0
+      "max_price": 4100000.0
     },
     {
       "year": 2019,
-      "count": 81,
-      "median_price": 775000.0,
-      "avg_price": 922870.0,
+      "count": 93,
+      "median_price": 730000.0,
+      "avg_price": 810241.0,
       "min_price": 12500.0,
       "max_price": 5425000.0
     },
     {
       "year": 2020,
-      "count": 82,
-      "median_price": 777500.0,
-      "avg_price": 887873.0,
+      "count": 85,
+      "median_price": 699961.0,
+      "avg_price": 770299.0,
       "min_price": 10000.0,
-      "max_price": 3350000.0
+      "max_price": 2575000.0
     },
     {
       "year": 2021,
-      "count": 169,
-      "median_price": 835000.0,
-      "avg_price": 1062535.0,
+      "count": 161,
+      "median_price": 785000.0,
+      "avg_price": 941491.0,
       "min_price": 175000.0,
       "max_price": 5726872.0
     },
     {
       "year": 2022,
-      "count": 205,
-      "median_price": 876500.0,
-      "avg_price": 1120245.0,
+      "count": 210,
+      "median_price": 830000.0,
+      "avg_price": 987403.0,
       "min_price": 175000.0,
-      "max_price": 6250000.0
+      "max_price": 3832599.0
     },
     {
       "year": 2023,
-      "count": 225,
-      "median_price": 954000.0,
-      "avg_price": 1222518.0,
+      "count": 219,
+      "median_price": 859031.0,
+      "avg_price": 1020612.0,
       "min_price": 235000.0,
       "max_price": 9092500.0
     },
     {
       "year": 2024,
-      "count": 208,
-      "median_price": 928758.0,
-      "avg_price": 1222525.0,
+      "count": 225,
+      "median_price": 805000.0,
+      "avg_price": 1034776.0,
       "min_price": 262500.0,
-      "max_price": 12230000.0
+      "max_price": 5814977.97
     },
     {
       "year": 2025,
-      "count": 208,
-      "median_price": 828347.0,
-      "avg_price": 1055607.0,
-      "min_price": 20278.0,
-      "max_price": 5200000.0
+      "count": 220,
+      "median_price": 800750.0,
+      "avg_price": 972977.0,
+      "min_price": 47000.0,
+      "max_price": 4000000.0
     },
     {
       "year": 2026,
-      "count": 157,
-      "median_price": 815000.0,
-      "avg_price": 1181882.0,
+      "count": 158,
+      "median_price": 765528.0,
+      "avg_price": 938883.0,
       "min_price": 300000.0,
-      "max_price": 10440009.0
+      "max_price": 4300000.0
     }
   ]
 }

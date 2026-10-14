@@ -398,19 +398,19 @@
     },
     {
       "date": "2019-03-04",
-      "address": "134 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
-      "price": 175000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-03-04",
       "address": "131 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
       "price": 175000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "V94K504"
+    },
+    {
+      "date": "2019-03-04",
+      "address": "134 THE STRAND, OCALLAGHAN STRAND, LIMERICK",
+      "price": 175000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2019-02-19",

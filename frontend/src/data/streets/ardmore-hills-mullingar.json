@@ -294,19 +294,19 @@
     },
     {
       "date": "2023-07-17",
-      "address": "123 ARDMORE HILLS, MULLINGAR, CO. WESTMEATH",
-      "price": 337000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "N91CFN2"
-    },
-    {
-      "date": "2023-07-17",
       "address": "172 Ardmore Hills, Mullingar",
       "price": 354626,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2023-07-17",
+      "address": "123 ARDMORE HILLS, MULLINGAR, CO. WESTMEATH",
+      "price": 337000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91CFN2"
     },
     {
       "date": "2023-07-10",

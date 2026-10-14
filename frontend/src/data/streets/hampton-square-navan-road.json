@@ -542,11 +542,11 @@
     },
     {
       "date": "2020-10-30",
-      "address": "131 HAMPTON SQ, NAVAN RD, DUBLIN 7",
-      "price": 255000,
+      "address": "143 HAMPTON SQ, NAVAN RD, DUBLIN 7",
+      "price": 280000,
       "bedrooms": null,
-      "propertyType": "apartment",
-      "eircode": "D07TP90"
+      "propertyType": null,
+      "eircode": null
     }
   ],
   "totalTransactions": 140

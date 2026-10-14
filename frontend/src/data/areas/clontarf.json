@@ -7,11 +7,29 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 880000.0,
-  "avg_price": 1474300,
+  "median_price": 875000.0,
+  "avg_price": 1477800,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805528,
+      "sale_date": "2026-10-01",
+      "address": "5 GROSVENOR COURT, CLONTARF, DUBLIN 3",
+      "county": "Dublin",
+      "eircode": "D03K576",
+      "price": 865000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.369579,
+      "longitude": -6.199919,
+      "routing_key": "D03",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 996.61869606
+    },
     {
       "id": 804617,
       "sale_date": "2026-09-18",
@@ -173,24 +191,6 @@
       "bedrooms": 4,
       "property_type": "semi-detached",
       "distance_m": 704.58970487
-    },
-    {
-      "id": 801258,
-      "sale_date": "2026-08-18",
-      "address": "16 KINCORA COURT, CLONTARF, DUBLIN 3",
-      "county": "Dublin",
-      "eircode": "D03N2P1",
-      "price": 830000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.361106,
-      "longitude": -6.186247,
-      "routing_key": "D03",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 706.90632882
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 100,
-      "median_price": 880000.0,
-      "avg_price": 1015287.0,
+      "count": 101,
+      "median_price": 875000.0,
+      "avg_price": 1013799.0,
       "min_price": 265000.0,
       "max_price": 4250000.0
     }

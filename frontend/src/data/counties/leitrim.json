@@ -1,8 +1,8 @@
 {
   "county": "Leitrim",
-  "total_count": 7085,
-  "median_price": 225000.0,
-  "avg_price": 224482.0,
+  "total_count": 7086,
+  "median_price": 225500.0,
+  "avg_price": 225393.0,
   "trends": [
     {
       "year": 2010,
@@ -134,14 +134,31 @@
     },
     {
       "year": 2026,
-      "count": 285,
-      "median_price": 225000.0,
-      "avg_price": 224482.0,
+      "count": 286,
+      "median_price": 225500.0,
+      "avg_price": 225393.0,
       "min_price": 13800.0,
       "max_price": 720000.0
     }
   ],
   "recent": [
+    {
+      "id": 805605,
+      "sale_date": "2026-10-02",
+      "address": "CLOONBONEY, MOHILL, LEITRIM",
+      "county": "Leitrim",
+      "eircode": "N41P089",
+      "price": 485000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.921646,
+      "longitude": -7.866026,
+      "routing_key": "N41",
+      "bedrooms": 4,
+      "property_type": "detached"
+    },
     {
       "id": 805103,
       "sale_date": "2026-09-25",
@@ -294,23 +311,6 @@
       "routing_key": "N41",
       "bedrooms": 4,
       "property_type": "detached"
-    },
-    {
-      "id": 803547,
-      "sale_date": "2026-09-07",
-      "address": "CALLOWHILL BALLINAMORE, BALLINAMORE, LEITRIM",
-      "county": "Leitrim",
-      "eircode": "N41EE64",
-      "price": 415000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 54.061337,
-      "longitude": -7.834972,
-      "routing_key": "N41",
-      "bedrooms": null,
-      "property_type": null
     }
   ]
 }

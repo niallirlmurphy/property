@@ -3,14 +3,48 @@
     "code": "D6W",
     "match_type": "routing_key",
     "stats": {
-      "total_count": 1834,
+      "total_count": 1836,
       "median_price": 625000.0,
-      "avg_price": 675328.0,
+      "avg_price": 675151.0,
       "earliest_sale": "2010-01-28",
-      "latest_sale": "2026-09-21"
+      "latest_sale": "2026-09-29"
     },
     "count": 10,
     "results": [
+      {
+        "id": 805270,
+        "sale_date": "2026-09-29",
+        "address": "15 HAZELBROOK COURT, TERENURE RD WEST, DUBLIN 6W",
+        "county": "Dublin",
+        "eircode": "D6WXA36",
+        "price": 690000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": null,
+        "longitude": null,
+        "routing_key": "D6W",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 805261,
+        "sale_date": "2026-09-29",
+        "address": "12 BOYNE COURT, HAROLDS CROSS RD, HAROLDS CROSS DUBLIN 6W",
+        "county": "Dublin",
+        "eircode": "D6WA667",
+        "price": 335000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": null,
+        "longitude": null,
+        "routing_key": "D6W",
+        "bedrooms": null,
+        "property_type": null
+      },
       {
         "id": 804666,
         "sale_date": "2026-09-21",
@@ -146,40 +180,6 @@
         "routing_key": "D6W",
         "bedrooms": 3,
         "property_type": "semi-detached"
-      },
-      {
-        "id": 803205,
-        "sale_date": "2026-09-04",
-        "address": "14 COLLEGE PARK, TERENURE, DUBLIN 6W",
-        "county": "Dublin",
-        "eircode": "D6WHH90",
-        "price": 840000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.304676,
-        "longitude": -6.305047,
-        "routing_key": "D6W",
-        "bedrooms": 3,
-        "property_type": "semi-detached"
-      },
-      {
-        "id": 803073,
-        "sale_date": "2026-09-03",
-        "address": "4 CEDAR COURT, MOUNT TALLANT AVE, DUBLIN 6",
-        "county": "Dublin",
-        "eircode": "D6WFX67",
-        "price": 562500.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.3157,
-        "longitude": -6.282681,
-        "routing_key": "D6W",
-        "bedrooms": 3,
-        "property_type": "terraced"
       }
     ]
   },
@@ -314,9 +314,9 @@
     },
     {
       "year": 2026,
-      "count": 11029,
-      "median_price": 476000.0,
-      "avg_price": 604287.0,
+      "count": 11175,
+      "median_price": 478000.0,
+      "avg_price": 604423.0,
       "min_price": 10000.0,
       "max_price": 18481040.37
     }

@@ -390,16 +390,16 @@
     },
     {
       "date": "2017-07-21",
-      "address": "37 ROSELAND AVENUE, CUALANOR, DUN LAOGHAIRE",
-      "price": 651982,
+      "address": "35 Roseland Avenue, Cualanor, Upper Glengeary Road",
+      "price": 638766,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2017-07-21",
-      "address": "35 Roseland Avenue, Cualanor, Upper Glengeary Road",
-      "price": 638766,
+      "address": "37 ROSELAND AVENUE, CUALANOR, DUN LAOGHAIRE",
+      "price": 651982,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -494,11 +494,11 @@
     },
     {
       "date": "2017-05-31",
-      "address": "33 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
-      "price": 704846,
-      "bedrooms": 5,
-      "propertyType": "apartment",
-      "eircode": "A96X7Y8"
+      "address": "13 ROSELAND AVENUE, CUALANOR, UPPER GLENAGEARY ROAD",
+      "price": 651982,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     }
   ],
   "totalTransactions": 92

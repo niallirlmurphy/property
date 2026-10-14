@@ -398,6 +398,14 @@
     },
     {
       "date": "2023-07-03",
+      "address": "APT 91 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
+      "price": 253490,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D01NY26"
+    },
+    {
+      "date": "2023-07-03",
       "address": "28 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
       "price": 220580,
       "bedrooms": null,
@@ -411,14 +419,6 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D01FK53"
-    },
-    {
-      "date": "2023-07-03",
-      "address": "APT 91 IVY EXCHANGE, PARNELL ST, DUBLIN 1",
-      "price": 253490,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "eircode": "D01NY26"
     },
     {
       "date": "2023-06-14",

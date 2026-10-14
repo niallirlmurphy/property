@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 347500.0,
-  "avg_price": 319000,
+  "median_price": 343750.0,
+  "avg_price": 305000,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805397,
+      "sale_date": "2026-09-30",
+      "address": "21 WESTERN BAY, DUNGARVAN, CO WATERFORD",
+      "county": "Waterford",
+      "eircode": "X35D938",
+      "price": 340000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.084815,
+      "longitude": -7.632671,
+      "routing_key": "X35",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 968.50226906
+    },
     {
       "id": 804363,
       "sale_date": "2026-09-15",
@@ -173,24 +191,6 @@
       "bedrooms": 2,
       "property_type": "terraced",
       "distance_m": 561.97831406
-    },
-    {
-      "id": 798703,
-      "sale_date": "2026-07-30",
-      "address": "30 RIVER LANE, KNOCKATEEMORE, DUNGARVAN",
-      "county": "Waterford",
-      "eircode": "X35DC93",
-      "price": 480000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.105598,
-      "longitude": -7.622127,
-      "routing_key": "X35",
-      "bedrooms": 5,
-      "property_type": "semi-detached",
-      "distance_m": 1765.12775469
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 63,
-      "median_price": 347500.0,
-      "avg_price": 350065.0,
+      "count": 64,
+      "median_price": 343750.0,
+      "avg_price": 349907.0,
       "min_price": 50000.0,
       "max_price": 805000.0
     }

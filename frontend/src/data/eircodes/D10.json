@@ -3,14 +3,48 @@
     "code": "D10",
     "match_type": "routing_key",
     "stats": {
-      "total_count": 879,
+      "total_count": 880,
       "median_price": 280000.0,
-      "avg_price": 280201.0,
+      "avg_price": 280269.0,
       "earliest_sale": "2010-03-12",
-      "latest_sale": "2026-09-23"
+      "latest_sale": "2026-09-29"
     },
     "count": 10,
     "results": [
+      {
+        "id": 805257,
+        "sale_date": "2026-09-29",
+        "address": "11 CLIFDEN RD, BALLYFERMOT, DUBLIN 10",
+        "county": "Dublin",
+        "eircode": "D10YN63",
+        "price": 340000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.34213,
+        "longitude": -6.36155,
+        "routing_key": "D10",
+        "bedrooms": null,
+        "property_type": null
+      },
+      {
+        "id": 805117,
+        "sale_date": "2026-09-28",
+        "address": "12, CROFTWOOD GARDENS, CHERRY ORCHARD DUBLIN 10",
+        "county": "Dublin",
+        "eircode": "D10A521",
+        "price": 160000.0,
+        "not_full_market_price": true,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.336338,
+        "longitude": -6.367106,
+        "routing_key": "D10",
+        "bedrooms": null,
+        "property_type": null
+      },
       {
         "id": 804933,
         "sale_date": "2026-09-23",
@@ -146,40 +180,6 @@
         "routing_key": "D10",
         "bedrooms": 4,
         "property_type": "semi-detached"
-      },
-      {
-        "id": 800992,
-        "sale_date": "2026-08-14",
-        "address": "93 BALLYFERMOT DR, DUBLIN 10, DUBLIN",
-        "county": "Dublin",
-        "eircode": "D10YH99",
-        "price": 350000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.339145,
-        "longitude": -6.353239,
-        "routing_key": "D10",
-        "bedrooms": null,
-        "property_type": "terraced"
-      },
-      {
-        "id": 800020,
-        "sale_date": "2026-08-07",
-        "address": "80 CEDAR BROOK WALK, CHERRY ORCHARD, DUBLIN 10",
-        "county": "Dublin",
-        "eircode": "D10T672",
-        "price": 335000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.337596,
-        "longitude": -6.381039,
-        "routing_key": "D10",
-        "bedrooms": 3,
-        "property_type": "terraced"
       }
     ]
   },
@@ -314,9 +314,9 @@
     },
     {
       "year": 2026,
-      "count": 11029,
-      "median_price": 476000.0,
-      "avg_price": 604287.0,
+      "count": 11175,
+      "median_price": 478000.0,
+      "avg_price": 604423.0,
       "min_price": 10000.0,
       "max_price": 18481040.37
     }

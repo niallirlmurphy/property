@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 433706.0,
-  "avg_price": 460956,
+  "median_price": 427313.0,
+  "avg_price": 432456,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805436,
+      "sale_date": "2026-09-30",
+      "address": "65 RIVERDALE, ORANMORE, GALWAY",
+      "county": "Galway",
+      "eircode": "H91KP38",
+      "price": 315000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.2664721600958,
+      "longitude": -8.92709724930239,
+      "routing_key": "H91",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 1678.74418849
+    },
     {
       "id": 805012,
       "sale_date": "2026-09-24",
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "duplex",
       "distance_m": 1769.23078046
-    },
-    {
-      "id": 800758,
-      "sale_date": "2026-08-13",
-      "address": "68 ROS CAOIN, ROSCAM, DOUGHISKA",
-      "county": "Galway",
-      "eircode": "H91VY6F",
-      "price": 600000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.277542,
-      "longitude": -8.971466,
-      "routing_key": "H91",
-      "bedrooms": 5,
-      "property_type": "detached",
-      "distance_m": 1630.1338864
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 70,
-      "median_price": 433706.0,
-      "avg_price": 447919.0,
+      "count": 71,
+      "median_price": 427313.0,
+      "avg_price": 446047.0,
       "min_price": 210000.0,
       "max_price": 916740.0
     }

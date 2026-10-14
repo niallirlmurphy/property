@@ -7,11 +7,29 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 517000.0,
-  "avg_price": 453897,
+  "median_price": 518500.0,
+  "avg_price": 485397,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805445,
+      "sale_date": "2026-09-30",
+      "address": "88 RAIL PARK, MAYNOOTH, KILDARE",
+      "county": "Kildare",
+      "eircode": "W23KP30",
+      "price": 605000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.375205,
+      "longitude": -6.5857,
+      "routing_key": "W23",
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 974.17196727
+    },
     {
       "id": 804435,
       "sale_date": "2026-09-16",
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "semi-detached",
       "distance_m": 1673.40634587
-    },
-    {
-      "id": 802082,
-      "sale_date": "2026-08-25",
-      "address": "45 CHARTER HOUSE, DUNBOYNE RD, MAYNOOTH",
-      "county": "Kildare",
-      "eircode": "W23CY95",
-      "price": 290000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.382976,
-      "longitude": -6.588525,
-      "routing_key": "W23",
-      "bedrooms": 2,
-      "property_type": "apartment",
-      "distance_m": 249.96050965
     }
   ],
   "trends": [
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 81,
-      "median_price": 517000.0,
-      "avg_price": 540376.0,
+      "count": 82,
+      "median_price": 518500.0,
+      "avg_price": 541164.0,
       "min_price": 150000.0,
       "max_price": 1520000.0
     }

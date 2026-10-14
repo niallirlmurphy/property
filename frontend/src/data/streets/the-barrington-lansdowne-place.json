@@ -262,14 +262,6 @@
     },
     {
       "date": "2020-12-18",
-      "address": "30 The Barrington, Lansdowne Place, Lansdowne Road",
-      "price": 859031,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-12-18",
       "address": "Apartment 7  The Barrington, Lansdowne Place, Lansdowne Road",
       "price": 1211454,
       "bedrooms": null,
@@ -282,6 +274,14 @@
       "price": 859031,
       "bedrooms": null,
       "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2020-12-18",
+      "address": "30 The Barrington, Lansdowne Place, Lansdowne Road",
+      "price": 859031,
+      "bedrooms": null,
+      "propertyType": null,
       "eircode": null
     }
   ],
