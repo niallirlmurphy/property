@@ -18,6 +18,9 @@ import sys
 import urllib.parse
 import urllib.request
 
+sys.path.insert(0, os.path.dirname(__file__))
+from page_data_schedule import record_generated, skip_if_generated_this_month
+
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 AREAS_TS = os.path.join(ROOT, "frontend", "src", "areas.ts")
 DATA_DIR = os.path.join(ROOT, "frontend", "src", "data")
@@ -169,7 +172,10 @@ def main():
     ap = argparse.ArgumentParser(description="Generate static area/eircode/county page JSON.")
     ap.add_argument("--api-url", default=os.getenv("PAGE_DATA_API_URL", "http://localhost:8000"))
     ap.add_argument("--only", help="comma list of: areas,eircodes,counties")
+    ap.add_argument("--force", action="store_true", help="ignore the once-per-month limit")
     args = ap.parse_args()
+    if skip_if_generated_this_month("pages", force=args.force):
+        return 0
     only = set(s.strip() for s in args.only.split(",")) if args.only else {"areas", "eircodes", "counties"}
 
     written = 0
@@ -203,6 +209,7 @@ def main():
                 print(f"WARNING: county {name} failed: {e}")
 
     print(f"wrote {written} page data files under {DATA_DIR}")
+    record_generated("pages")
     return 0
 
 

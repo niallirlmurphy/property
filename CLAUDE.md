@@ -145,6 +145,14 @@ python3 scripts/geocode_mapbox_batch.py --needs-geocoding --apply
 python3 scripts/flag_bad_geocodes.py --apply --add-only
 ```
   `--add-only` never clears existing flags. Run it after *every* geocoding sweep (batch, centroid, `--ids-file`). The full pipeline does this automatically as Step 2c.
+- **Development pins** (`scripts/development_pins.py`, table `development_pins`): hand-checked coordinates for named schemes Mapbox can't place (e.g. Parkview, Stepaside). `geocode_mapbox_batch.py --apply` places matching sales on their pin before any Mapbox call (0 requests) and never sends pinned rows to Mapbox; the flagger never flags them. Add one with:
+```bash
+python3 scripts/development_pins.py add --name "Parkview, Stepaside" --county Dublin \
+  --match "parkview & (ash | cedar | oak ...) & (stepaside | belarmine | dublin <-> 18) & !belfry" \
+  --lat 53.2596962 --lon -6.2247187          # dry run: lists matched addresses; add --apply to save
+python3 scripts/development_pins.py list
+```
+  The match is a `to_tsquery` expression (no LIKE): include misspellings and block names, exclude neighbouring schemes that share a word. For spread-out estates of streets add `--keep-within 800`: visible geocodes already within 800m of the pin are kept, and only missing, hidden or far-off rows move (e.g. Honeypark).
 
 3. **Enrich properties:**
 ```bash
@@ -166,6 +174,11 @@ git add frontend/src/data/streets frontend/public/sitemap.xml
 git add frontend/src/data/areas frontend/src/data/eircodes frontend/src/data/counties frontend/src/data/site_stats.json
 git commit -m "chore: refresh street page data" && git push origin main
 ```
+**Page data is limited to once per calendar month.** `generate_page_data.py`, `generate_street_data.py`
+and `generate_site_stats.py` record their last run in `frontend/src/data/page_data_generated.json` and
+skip (exit 0) if they already ran this month; pass `--force` to override (or `--force-page-data` to
+`ppr_full_pipeline.py`), e.g. for a new page type with no data yet. Commit the stamp file with the data.
+
 This refreshes the 50 static street pages (`/street/:slug`). Data is baked into
 the SSG build, so a redeploy (automatic on push) is required for changes to show.
 To change *which* streets get pages, re-run `python3 scripts/analyze_top_streets.py`

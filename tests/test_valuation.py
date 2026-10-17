@@ -594,6 +594,41 @@ class TestAdjustments:
         assert all(w >= 0 for w in weights)
 
 
+    def _apt(self, bedrooms, price, distance_m=500):
+        return {'distance_m': distance_m, 'recency_score': 0.8, 'property_type': 'Apartment',
+                'bedrooms': bedrooms, 'adjusted_price': price}
+
+    def test_ladder_weights_matching_bedrooms_higher(self):
+        """Valuing a 2-bed: 2-bed sales outweigh 1-bed sales, as in the house path
+        (same count 1.5x, one bedroom off 0.7x, two or more off 0.2x)."""
+        adjuster = MVPAdjuster(None)
+        comps = [self._apt(2, 400000), self._apt(1, 300000), self._apt(4, 700000),
+                 self._apt(2, 400000, distance_m=1000)]  # sets max_distance
+        ladder = adjuster.bedroom_ladder_valuation(comps, 2, 'Apartment')
+        w2, w1, w4 = ladder['weights'][:3]
+        assert w2 / w1 == pytest.approx(1.5 / 0.7)
+        assert w2 / w4 == pytest.approx(1.5 / 0.2)
+
+    def test_ladder_estimate_leans_to_same_bedroom_sales(self):
+        """A 1-bed that sold dear for its size moves a 2-bed estimate less than a
+        matching 2-bed sale does."""
+        adjuster = MVPAdjuster(None)
+        # 2-bed-equivalents: 2-bed 400k; 1-bed 400k/0.796 ≈ 502.5k
+        comps = [self._apt(2, 400000), self._apt(1, 400000),
+                 self._apt(2, 400000, distance_m=1000)]
+        base = adjuster.bedroom_ladder_valuation(comps, 2, 'Apartment')['base_2bed']
+        midpoint = (400000 + 400000 / 0.796) / 2
+        assert 400000 < base < midpoint
+
+    def test_ladder_unknown_bedrooms_still_weak(self):
+        """Unknown-size sales keep their low weight next to a one-bedroom-off sale."""
+        adjuster = MVPAdjuster(None)
+        comps = [self._apt(1, 300000), self._apt(None, 400000),
+                 self._apt(2, 400000, distance_m=1000)]
+        w1, wu = adjuster.bedroom_ladder_valuation(comps, 2, 'Apartment')['weights'][:2]
+        assert wu < w1
+
+
 # ============================================================================
 # Calculator Tests
 # ============================================================================

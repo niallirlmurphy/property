@@ -63,6 +63,26 @@ CREATE INDEX IF NOT EXISTS idx_properties_address_fts
 CREATE INDEX IF NOT EXISTS idx_properties_address_normalized_prefix
     ON properties (address_normalized text_pattern_ops);
 
+-- Hand-checked coordinates for named developments (scripts/development_pins.py).
+-- Every sale whose address matches match_query (to_tsquery('simple', ...) over
+-- address_normalized) is placed on the pin before any Mapbox call, and never flagged
+-- by flag_bad_geocodes.py. RLS: run scripts/enable_rls_security.py after creating.
+CREATE TABLE IF NOT EXISTS development_pins (
+    id           SERIAL PRIMARY KEY,
+    name         TEXT NOT NULL,
+    county       TEXT NOT NULL,
+    match_query  TEXT NOT NULL,
+    latitude     DOUBLE PRECISION NOT NULL,
+    longitude    DOUBLE PRECISION NOT NULL,
+    source       TEXT NOT NULL DEFAULT 'manual',
+    notes        TEXT,
+    created_at   TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    UNIQUE (county, match_query)
+);
+-- Optional: rows already visible within this many metres of the pin keep their own
+-- geocode (spread-out estates); NULL puts every matching row on the pin.
+ALTER TABLE development_pins ADD COLUMN IF NOT EXISTS keep_within_m DOUBLE PRECISION;
+
 -- Search query analytics log
 CREATE TABLE IF NOT EXISTS search_log (
     id               BIGSERIAL PRIMARY KEY,

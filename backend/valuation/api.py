@@ -359,7 +359,7 @@ async def estimate_property_value(
                     'address_matched': location.address_matched
                 },
                 'valuation_date': target_date.isoformat(),
-                'algorithm_version': '1.1.0-ladder',
+                'algorithm_version': '1.2.0-ladder-bedmatch',
                 'processing_time_ms': processing_time_ms,
                 'bedroom_ladder': {
                     'applied': ladder is not None,

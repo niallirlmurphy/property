@@ -32,6 +32,8 @@ Options:
     --skip-geocoding        Skip geocoding step
     --skip-enrichment       Skip enrichment step
     --skip-page-data        Skip static page-data generation step
+    --force-page-data       Regenerate page data even if already done this month
+                            (page data is otherwise limited to once per calendar month)
     --geocode-limit N       Limit geocoding to N properties (default: all)
     --enrich-limit N        Limit enrichment to N properties (default: 100)
     --enrich-rate-limit N   Seconds between enrichment requests (default: 5)
@@ -81,6 +83,7 @@ def main():
     parser.add_argument('--skip-geocoding', action='store_true', help='Skip geocoding step')
     parser.add_argument('--skip-enrichment', action='store_true', help='Skip enrichment step')
     parser.add_argument('--skip-page-data', action='store_true', help='Skip static page-data generation step')
+    parser.add_argument('--force-page-data', action='store_true', help='Ignore the once-per-month page-data limit')
     parser.add_argument('--geocode-limit', type=int, help='Limit geocoding to N properties')
     parser.add_argument('--enrich-limit', type=int, default=100, help='Limit enrichment (default: 100)')
     parser.add_argument('--enrich-rate-limit', type=int, default=5, help='Seconds between enrichment (default: 5)')
@@ -193,7 +196,7 @@ def main():
     # Step 4: Regenerate static area/eircode/county page data (calls the backend API)
     if not args.skip_page_data:
         success = run_command(
-            ['python3', 'scripts/generate_page_data.py'],
+            ['python3', 'scripts/generate_page_data.py'] + (['--force'] if args.force_page_data else []),
             "STEP 4: Generate static page data (area / eircode / county)",
             dry_run=args.dry_run
         )
@@ -203,7 +206,7 @@ def main():
 
         # Homepage trust strip / FAQ figures (queries the DB directly)
         success = run_command(
-            ['python3', 'scripts/generate_site_stats.py'],
+            ['python3', 'scripts/generate_site_stats.py'] + (['--force'] if args.force_page_data else []),
             "STEP 4b: Generate homepage site stats",
             dry_run=args.dry_run
         )

@@ -14,12 +14,14 @@ Two flags, two purposes:
                              union of: no coordinates
                                        coordinate outside its stored county's box
                                        eircode beyond its routing-key's adaptive extent
+                                       numbered address far from its town's other sales
                                        on a coordinate shared by >=30 distinct addresses
 
   geocode_suspect = TRUE   -> hide from /search and /trends until re-geocoded
                              (coordinate is known-wrong / untrustworthy)
                              union of: coordinate outside its stored county's box
                                        eircode beyond its routing-key's adaptive extent
+                                       numbered address far from its town's other sales
                                        on a coordinate shared by >=50 distinct addresses
                              (only rows that HAVE coordinates)
 
@@ -28,6 +30,8 @@ Two flags, two purposes:
   flat distance-from-centroid conflated key-size with error. The county-box check is the
   reliable wrong-town signal; the per-key adaptive distance rule and the cluster check
   catch the rest.
+
+Rows matching a development pin (scripts/development_pins.py) are never flagged.
 
 Idempotent: safe to re-run. Use --apply to write; default is dry-run.
 
@@ -38,13 +42,20 @@ re-flagged (2026-10: ~13k wrong rows had gone unflagged since the 23 Aug full ru
 Parkview, Stepaside D18 placed near Malahide). The full run would also re-queue rows
 that already failed (suspect + needs_geocoding = FALSE), so add-only leaves those alone.
 """
+import math
 import os
+import re
+import statistics
 import sys
+from collections import defaultdict
+
 import psycopg2
+from psycopg2.extras import execute_values
 from dotenv import load_dotenv
 
 sys.path.insert(0, os.path.dirname(__file__))
 from county_validator import COUNTY_BOUNDS
+from development_pins import PINNED_IDS_SQL
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", "backend", ".env"))
 
@@ -72,6 +83,111 @@ COUNTY_MARGIN_DEG = 0.2
 
 SUSPECT_CLUSTER = 50     # distinct addresses on one coord -> fallback centroid (hide)
 WORKLIST_CLUSTER = 30    # distinct addresses on one coord -> worth re-geocoding
+
+# Locality consistency: a numbered address ending in a town ("52 Listoke Pines, Drogheda")
+# should sit near that town's other sales. This catches wrong-town rows the routing-key
+# rule can't see because they have no eircode and no "Dublin N" (2026-10: "20 the Ash,
+# Parkview, Stepaside" sat 22km away, visible). Each town's reference point and extent
+# come from its own visible numbered sales, with the same clamp(p75 * mult) shape as the
+# routing-key rule. Unnumbered rural addresses are skipped: a townland whose postal town
+# is Navan can be 15km from Navan. A row is spared if it sits near another place named in
+# its own address ("48 Woodlawn, Allenwood, Naas" is in Allenwood, ~15km from Naas); if
+# that village has too few sales to check, the row is only flagged beyond LOC_CEIL_KM.
+LOC_MULT = 2.0
+LOC_FLOOR_KM = 5.0
+LOC_CEIL_KM = 30.0
+LOC_MIN_REF = 20          # visible numbered sales needed before a town is checked
+LOC_RESCUE_MIN_REF = 5    # ...and before a named village can spare a row
+
+_COUNTY_WORDS = "|".join(c.lower() for c in COUNTY_BOUNDS)
+_AREA_SUFFIX = re.compile(
+    rf"(?:^|[\s,]+)(?:co\.?\s*\w+|county\s+\w+|dublin\s*\d{{1,2}}w?|ireland|{_COUNTY_WORDS})\.?\s*$",
+    re.I)
+_ROAD = re.compile(r"\b(?:road|rd|street|st|avenue|ave|lane|main|upper|lower|[nr]\d+)\b", re.I)
+_NUMBERED = re.compile(r"^(?:apt|apartment|unit|flat|no)?\.?\s*\d+[a-z]?\b", re.I)
+
+
+def _strip_area_suffix(part):
+    prev = None
+    while prev != part:
+        prev, part = part, _AREA_SUFFIX.sub("", part).strip(" ,.")
+    return part
+
+
+def address_places(address):
+    """Place names in a numbered address, most specific first, town last.
+
+    Only the last two comma parts after the house/unit are considered, so block names
+    ("the Oak") aren't treated as places. [] if unnumbered or the last part isn't a town.
+    """
+    if not address or not _NUMBERED.match(address):
+        return []
+    parts = [x.strip(" .") for x in address.split(",")]
+    while parts:
+        last = _strip_area_suffix(parts[-1])
+        if last:
+            parts[-1] = last
+            break
+        parts.pop()
+    places = parts[max(1, len(parts) - 2):]
+    ok = lambda x: len(x) >= 3 and not re.search(r"\d", x) and not _ROAD.search(x)
+    if not places or not ok(places[-1]):
+        return []
+    return [x.lower() for x in places if ok(x)]
+
+
+def _km(lat1, lon1, lat2, lon2):
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    a = (math.sin((p2 - p1) / 2) ** 2
+         + math.cos(p1) * math.cos(p2) * math.sin(math.radians(lon2 - lon1) / 2) ** 2)
+    return 12742 * math.asin(math.sqrt(a))
+
+
+def locality_bad_ids(rows):
+    """ids of visible rows far from the town their address ends in.
+
+    rows: iterable of (id, county, address_normalized, lat, lon, geocode_suspect).
+    """
+    rows = [(r, address_places(r[2])) for r in rows if r[3] is not None]
+    ref = defaultdict(list)
+    for r, places in rows:
+        if places and not r[5]:
+            ref[(r[1], places[-1])].append((r[3], r[4]))
+
+    extent = {}   # (county, place) -> (lat, lon, threshold_km, n)
+    for key, pts in ref.items():
+        if len(pts) < LOC_RESCUE_MIN_REF:
+            continue
+        lat = statistics.median(p[0] for p in pts)
+        lon = statistics.median(p[1] for p in pts)
+        d = sorted(_km(lat, lon, *p) for p in pts)
+        p75 = d[int(len(d) * 0.75)]
+        extent[key] = (lat, lon, max(LOC_FLOOR_KM, min(LOC_CEIL_KM, p75 * LOC_MULT)), len(pts))
+
+    def near(county, place, lat, lon, min_ref):
+        """(within threshold, km away), or None if the place has too few sales."""
+        e = extent.get((county, place))
+        if e is None or e[3] < min_ref:
+            return None
+        d = _km(e[0], e[1], lat, lon)
+        return d <= e[2], d
+
+    bad = set()
+    for r, places in rows:
+        if not places or r[5]:
+            continue
+        town = near(r[1], places[-1], r[3], r[4], LOC_MIN_REF)
+        if town is None or town[0]:
+            continue
+        villages = [near(r[1], x, r[3], r[4], LOC_RESCUE_MIN_REF) for x in places[:-1]]
+        if any(v and v[0] for v in villages):
+            continue
+        # A village we can't check (too few sales) may be far from its postal town,
+        # so only flag beyond the ceiling.
+        if places[:-1] and not any(villages) and town[1] <= LOC_CEIL_KM:
+            continue
+        bad.add(r[0])
+    return bad
 
 APPLY = "--apply" in sys.argv
 ADD_ONLY = "--add-only" in sys.argv
@@ -109,6 +225,16 @@ def main():
         cur.execute("CREATE INDEX IF NOT EXISTS idx_properties_geocode_suspect "
                     "ON properties (geocode_suspect) WHERE geocode_suspect = TRUE")
         print("✓ geocode_suspect column + index ensured")
+
+    # Locality rule runs in Python (address parsing); its ids go to a temp table the
+    # CTE below unions in. Temp tables are session-only, so this is fine in dry-run.
+    cur.execute("SELECT id, county, address_normalized, latitude, longitude, "
+                "geocode_suspect IS TRUE FROM properties WHERE latitude IS NOT NULL")
+    loc_bad = locality_bad_ids(cur.fetchall())
+    cur.execute("DROP TABLE IF EXISTS _loc_bad")
+    cur.execute("CREATE TEMP TABLE _loc_bad (id BIGINT PRIMARY KEY)")
+    execute_values(cur, "INSERT INTO _loc_bad (id) VALUES %s", [(i,) for i in loc_bad])
+    print(f"Locality rule: {len(loc_bad):,} visible rows far from their town")
 
     # Reusable CTEs identifying the bad rows.
     cte = f"""
@@ -197,16 +323,25 @@ def main():
         SELECT p.id FROM properties p
         JOIN cluster_worklist_pts c ON p.latitude = c.latitude AND p.longitude = c.longitude
     ),
+    pinned AS (
+        -- Rows on a hand-checked development pin (development_pins.py). A pin puts
+        -- every unit on one point, which the cluster rule would otherwise hide.
+        {PINNED_IDS_SQL}
+    ),
     suspect_ids AS (
-        SELECT id FROM county_bad
-        UNION SELECT id FROM rk_bad
-        UNION SELECT id FROM cluster_suspect
+        (SELECT id FROM county_bad
+         UNION SELECT id FROM rk_bad
+         UNION SELECT id FROM _loc_bad
+         UNION SELECT id FROM cluster_suspect)
+        EXCEPT SELECT id FROM pinned
     ),
     worklist_ids AS (
-        SELECT id FROM properties WHERE latitude IS NULL
-        UNION SELECT id FROM county_bad
-        UNION SELECT id FROM rk_bad
-        UNION SELECT id FROM cluster_worklist
+        (SELECT id FROM properties WHERE latitude IS NULL
+         UNION SELECT id FROM county_bad
+         UNION SELECT id FROM rk_bad
+         UNION SELECT id FROM _loc_bad
+         UNION SELECT id FROM cluster_worklist)
+        EXCEPT SELECT id FROM pinned
     )
     """
 

@@ -1,18 +1,23 @@
 """Biweekly generator: read the street registry, query Supabase once, and write
 one static JSON per street (stats + yearly trends + latest 50 transactions).
 Run after the PPR sync, then rebuild/redeploy the frontend."""
-import json, os, sys
+import argparse, json, os, sys
 import psycopg2
 from collections import defaultdict
 from statistics import median as _median
 sys.path.insert(0, os.path.dirname(__file__))
 from street_key import street_key, normalized_key_string
+from page_data_schedule import record_generated, skip_if_generated_this_month
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 REG = os.path.join(ROOT, "frontend", "src", "data", "streets_registry.json")
 OUTDIR = os.path.join(ROOT, "frontend", "src", "data", "streets")
 
 def main():
+    ap = argparse.ArgumentParser(description="Generate static street page JSON.")
+    ap.add_argument("--force", action="store_true", help="ignore the once-per-month limit")
+    if skip_if_generated_this_month("streets", force=ap.parse_args().force):
+        return
     registry = json.load(open(REG))
     targets = {e["normalizedKey"]: e["slug"] for e in registry}
     tx = defaultdict(list)  # normalizedKey -> list of transaction dicts
@@ -85,6 +90,7 @@ def main():
         if not rows:
             print(f"WARNING: no transactions matched for {slug} ({key})")
     print(f"wrote {written} street data files to {OUTDIR}")
+    record_generated("streets")
 
 if __name__ == "__main__":
     main()

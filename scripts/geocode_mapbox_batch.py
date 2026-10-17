@@ -55,6 +55,7 @@ from dotenv import load_dotenv
 # Add scripts directory to path for imports
 sys.path.insert(0, os.path.dirname(__file__))
 from county_validator import validate_county, normalize_county, COUNTY_BOUNDS
+from development_pins import APPLY_SQL, PINNED_IDS_SQL
 from canonical_geocoding import (
     initialize_cache,
     get_canonical_coordinates,
@@ -705,6 +706,12 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
     pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3)
 
     try:
+        # Development pins first: free, exact, and they take pinned rows off the
+        # worklist so no Mapbox request is spent on them (see development_pins.py).
+        if not dry_run:
+            result = await pool.execute(APPLY_SQL)
+            print(f"📍 Development pins: {int(result.split()[-1]):,} rows placed (0 Mapbox calls)")
+
         # Fetch properties
         if ids_file:
             # Exact rows from a file (one id per line) — used to re-run a specific
@@ -726,6 +733,15 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
                 min_price=min_price, suspect=suspect, eircode_only=eircode_only,
                 since=since, before=before
             )
+
+        # Never send a pinned row to Mapbox, whichever mode selected it (--centroid
+        # would otherwise pick a pin point up once 100+ units share it).
+        pinned = {r["id"] for r in await pool.fetch(PINNED_IDS_SQL)}
+        if pinned:
+            before_n = len(properties)
+            properties = [p for p in properties if p["id"] not in pinned]
+            if len(properties) < before_n:
+                print(f"📍 Skipping {before_n - len(properties):,} rows in pinned developments")
 
         print(f"\n{'='*70}")
         print(f"MAPBOX BATCH GEOCODING")

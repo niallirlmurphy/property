@@ -94,6 +94,19 @@ def bedroom_ratio(bedrooms: Optional[int]) -> Optional[float]:
     return _BEDROOM_RATIO[4] if bedrooms > 4 else _BEDROOM_RATIO[0]
 
 
+def bedroom_match_factor(subject_bedrooms: int, comp_bedrooms: int) -> float:
+    """Weight multiplier for how closely a comparable's bedroom count matches the
+    subject's: same count 1.5x, one bedroom off 0.7x, two or more off 0.2x.
+    Both counts must be known; callers choose their own unknown-count weight."""
+    bedroom_diff = abs(comp_bedrooms - subject_bedrooms)
+    if bedroom_diff == 0:
+        return 1.5
+    if bedroom_diff == 1:
+        return 0.7
+    # 3-bed vs 5-bed should have very low weight
+    return 0.2
+
+
 def trim_price_outliers(
     comparables: list,
     price_key: str = "adjusted_price",
@@ -321,18 +334,7 @@ class MVPAdjuster:
         if subject_bedrooms is not None:
             comp_bedrooms = comparable.get('bedrooms')
             if comp_bedrooms is not None:
-                bedroom_diff = abs(comp_bedrooms - subject_bedrooms)
-
-                if bedroom_diff == 0:
-                    # Exact match: 50% bonus
-                    bedroom_factor = 1.5
-                elif bedroom_diff == 1:
-                    # 1 bedroom difference: slight penalty
-                    bedroom_factor = 0.7
-                else:
-                    # 2+ bedroom difference: heavy penalty
-                    # 3-bed vs 5-bed should have very low weight
-                    bedroom_factor = 0.2
+                bedroom_factor = bedroom_match_factor(subject_bedrooms, comp_bedrooms)
             else:
                 # Unknown bedroom count: soft down-weight (mirrors unknown type).
                 # Without this an unlabelled unit — which may be a huge, pricey
@@ -499,8 +501,13 @@ class MVPAdjuster:
             else:
                 type_factor = _TYPE_FACTOR_DIFFERENT
 
-            size_weight = 1.0 if bedroom_ratio(c.get("bedrooms")) is not None \
-                else _UNKNOWN_BEDROOM_SIZE_WEIGHT
+            # Normalising puts every size on one base, but a same-size sale is
+            # still the best evidence for the subject: weight by bedroom match as
+            # the house path does. Unknown sizes can't be normalised; keep weak.
+            if bedroom_ratio(c.get("bedrooms")) is not None:
+                size_weight = bedroom_match_factor(subject_bedrooms, c["bedrooms"])
+            else:
+                size_weight = _UNKNOWN_BEDROOM_SIZE_WEIGHT
 
             w = max(0.0, base * type_factor * size_weight)
             raw_weights.append(w)
