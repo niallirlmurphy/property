@@ -1,20 +1,20 @@
 """
 Geocoder service for property valuation.
 
-Converts addresses to coordinates using multiple fallback methods:
-1. Eircode routing key lookup (fast, accurate for Irish addresses)
-2. Nominatim API (OpenStreetMap)
-3. Database fuzzy address match (fallback for known addresses)
+Converts addresses to coordinates from our own data, in order:
+1. Database match on the exact address (properties sold since 2010)
+2. Database match on the development/street, for units that never sold
+3. Routing-key centroid, from the Eircode or a "Dublin N" postal district
+
+Nominatim is deliberately not used: OSM can't resolve Irish scheme/unit names
+and its fuzzy answers land in the wrong town.
 
 Returns coordinates with confidence score.
 """
 
-import os
 import re
 import math
-import asyncio
 import logging
-import httpx
 
 logger = logging.getLogger(__name__)
 from typing import Dict, Optional, Tuple
@@ -26,7 +26,7 @@ from .cache import TTLCache
 # stable. ValuationGeocoder is created per request, so this module-level cache is
 # what lets repeated valuations of the same address skip the DB/Nominatim work
 # entirely. 24h TTL, matching the search-layer geocode cache in main.py. Only
-# successful results are cached (failures may be transient Nominatim errors).
+# successful results are cached.
 _GEOCODE_CACHE = TTLCache(ttl_seconds=86400)
 
 
@@ -36,6 +36,156 @@ _GEOCODE_CACHE = TTLCache(ttl_seconds=86400)
 # Routing keys are geographically compact, so 30km comfortably clears any
 # legitimate in-area address while catching gross county-level errors.
 _ROUTING_KEY_MAX_KM = 30.0
+
+# Dublin postal districts are far more compact: even including residual bad
+# rows, every D-key's p95 member distance is under ~9km. 30km would accept a
+# Stepaside (D18) address geocoded to Malahide, so D-keys get a tighter cap.
+_DUBLIN_DISTRICT_MAX_KM = 10.0
+
+# Recorded sales in one development (e.g. "The Oak, Parkview, Stepaside")
+# should sit together; if they span more than this, some are mis-geocoded and
+# their median can't be trusted.
+_DEVELOPMENT_MAX_SPREAD_KM = 1.5
+
+# A locality ("Stepaside", "Shrule") is a town or village, so its sales may
+# spread wider — but a name matching sales across the county is no locality.
+_LOCALITY_MAX_SPREAD_KM = 5.0
+
+_AREA_CONFIDENCE = {"database_development": 0.70, "database_locality": 0.55}
+
+# Leading unit designator stripped to find a development's other sales:
+# "Apt 21, ...", "Unit 5B ...", "21 ...", "Flat 3, ...".
+_UNIT_PREFIX = re.compile(
+    r'^(?:(?:Apt|Apartment|Unit|Flat|No\.?)\s*)?\d+[A-Za-z]?\b\s*,?\s*', re.I
+)
+
+# An address part that is only a unit designator ("Apt 21", "Unit 5B").
+_UNIT_PART = re.compile(r'^(?:(?:Apt|Apartment|Unit|Flat|No\.?)\s*)?\d+[A-Za-z]?$', re.I)
+
+# Words that don't identify a place. Unit words are dropped too, since
+# schemes are recorded inconsistently ("Parkview", "Parkview Apts").
+_AREA_SKIP_WORDS = {
+    'the', 'and', 'of', 'co', 'county', 'ireland', 'dublin',
+    'apt', 'apts', 'apartment', 'apartments', 'unit', 'units', 'flat', 'flats', 'no',
+}
+
+_COUNTY_NAMES = {
+    'carlow', 'cavan', 'clare', 'cork', 'donegal', 'dublin', 'galway', 'kerry',
+    'kildare', 'kilkenny', 'laois', 'leitrim', 'limerick', 'longford', 'louth',
+    'mayo', 'meath', 'monaghan', 'offaly', 'roscommon', 'sligo', 'tipperary',
+    'waterford', 'westmeath', 'wexford', 'wicklow',
+}
+
+# "Dublin 18" / "Dublin 6W" -> routing key D18 / D6W.
+_DUBLIN_DISTRICT = re.compile(r'\bDublin\s*(\d{1,2})(W)?\b', re.I)
+
+
+def _normalize_address(address: str) -> str:
+    """Normalize an address to match the address_normalized column.
+
+    Same logic as the /search/exact endpoint (S1 page).
+    """
+    normalized = address.strip()
+    normalized = re.sub(r'\s+', ' ', normalized)
+    normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
+    normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
+
+    # Expand common abbreviations to match normalized format
+    street_types = {
+        r'\bSt\.?\b': 'Street', r'\bRd\.?\b': 'Road', r'\bAve\.?\b': 'Avenue',
+        r'\bDr\.?\b': 'Drive', r'\bCl\.?\b': 'Close', r'\bCt\.?\b': 'Court',
+        r'\bPk\.?\b': 'Park', r'\bSq\.?\b': 'Square',
+    }
+    for abbrev, full in street_types.items():
+        normalized = re.sub(abbrev, full, normalized, flags=re.I)
+
+    # Clean punctuation and apply title case
+    normalized = re.sub(r',\s*,', ',', normalized)
+    normalized = re.sub(r'\s+,', ',', normalized)
+    normalized = re.sub(r',\s+', ', ', normalized)
+    normalized = normalized.strip(', ')
+
+    words = normalized.split()
+    lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
+    upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
+
+    result_words = []
+    for i, word in enumerate(words):
+        if i == 0:
+            result_words.append(word.capitalize())
+        elif word in upper_exceptions:
+            result_words.append(word)
+        elif word.lower() in lower_exceptions:
+            result_words.append(word.lower())
+        else:
+            result_words.append(word.capitalize())
+
+    return ' '.join(result_words).strip()
+
+
+def _max_km_for_routing_key(routing_key: str) -> float:
+    return _DUBLIN_DISTRICT_MAX_KM if routing_key.upper().startswith('D') else _ROUTING_KEY_MAX_KM
+
+
+def _routing_key_from_address(address: str) -> Optional[str]:
+    """Routing key implied by a Dublin postal district in the address, if any."""
+    m = _DUBLIN_DISTRICT.search(address or "")
+    if not m:
+        return None
+    if m.group(2):
+        return f"D{int(m.group(1))}W"
+    return f"D{int(m.group(1)):02d}"
+
+
+def _is_area_suffix(part: str) -> bool:
+    """True for trailing parts that name a county/district, not a place:
+    "Dublin 18", "Co. Meath", "County Cork", "Ireland"."""
+    p = re.sub(r'^(?:Co\.?|County)\s+', '', part.strip(), flags=re.I).lower()
+    return (
+        p in _COUNTY_NAMES or p == 'ireland'
+        or bool(re.fullmatch(r'dublin\s*\d{1,2}w?', p))
+    )
+
+
+def _address_levels(address_norm: str):
+    """Broader and broader searches for an address that isn't itself in the PPR.
+
+    "Apt 21, the Oak, Parkview, Stepaside, Dublin 18" yields
+        ("database_development", "Oak Parkview Stepaside", 1.5)
+        ("database_development", "Parkview Stepaside", 1.5)
+        ("database_locality", "Stepaside", 5.0)
+    i.e. (method, full-text terms, max spread km), most specific first.
+    """
+    rest = _UNIT_PREFIX.sub('', address_norm, count=1)
+    # "Navan Co Meath" -> "Navan"; a bare county word is kept, since it may be
+    # part of a street or town name ("Kildare Road").
+    rest = re.sub(r'\b(?:Co\.?|County)\s+\w+', '', rest, flags=re.I)
+    parts = [
+        p.strip() for p in rest.split(',')
+        if p.strip() and not _is_area_suffix(p) and not _UNIT_PART.match(p.strip())
+    ]
+
+    levels, seen = [], set()
+    for i in range(len(parts)):
+        words = [
+            w for w in re.findall(r'\w+', ' '.join(parts[i:]))
+            if not w.isdigit() and w.lower() not in _AREA_SKIP_WORDS
+        ]
+        terms = ' '.join(words)
+        if not terms:
+            continue
+        candidates = []
+        if i < len(parts) - 1 or len(parts) == 1:
+            candidates.append(("database_development", terms, _DEVELOPMENT_MAX_SPREAD_KM))
+        if i == len(parts) - 1:
+            # The last part is the locality; a lone part ("Ranelagh") may be
+            # either, so it is tried tight first, then as a locality.
+            candidates.append(("database_locality", terms, _LOCALITY_MAX_SPREAD_KM))
+        for level in candidates:
+            if (level[0], terms.lower()) not in seen:
+                seen.add((level[0], terms.lower()))
+                levels.append(level)
+    return levels
 
 
 def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -59,11 +209,6 @@ class ValuationGeocoder:
             db_pool: asyncpg connection pool
         """
         self.db = db_pool
-        self.nominatim_url = os.getenv(
-            'NOMINATIM_URL',
-            'https://nominatim.openstreetmap.org/search'
-        )
-        self.user_agent = 'HomeIQ.ie Property Valuation/1.0'
 
     async def geocode_address(
         self,
@@ -75,9 +220,9 @@ class ValuationGeocoder:
         Geocode an address using multiple methods (cached).
 
         Priority:
-        1. Database lookup (check existing properties first!)
-        2. Eircode routing key (if provided)
-        3. Nominatim API (only if not in database)
+        1. Database lookup of the exact address
+        2. Database lookup of the development/street (unsold units)
+        3. Routing-key centroid (Eircode, else "Dublin N" in the address)
 
         Successful results are memoised per (address, eircode, county) for 24h;
         the resolution work itself lives in ``_geocode_address_uncached``.
@@ -85,7 +230,7 @@ class ValuationGeocoder:
         Args:
             address: Property address
             eircode: Optional Eircode (7 chars, no space)
-            county: Optional county name (defaults to Dublin, used to bias Nominatim)
+            county: Optional county name (defaults to Dublin)
 
         Returns:
             GeocodingResult with coordinates and confidence
@@ -102,8 +247,8 @@ class ValuationGeocoder:
         if hit:
             return cached
 
-        # A failed geocode raises ValueError and is deliberately not cached
-        # (Nominatim timeouts etc. are often transient); only cache successes.
+        # A failed geocode raises ValueError and is deliberately not cached, so
+        # it is retried once new sales are imported; only cache successes.
         result = await self._geocode_address_uncached(address, eircode, county)
         _GEOCODE_CACHE.set(cache_key, result)
         return result
@@ -114,71 +259,95 @@ class ValuationGeocoder:
         eircode: Optional[str] = None,
         county: Optional[str] = None
     ) -> GeocodingResult:
-        """Resolve an address to a GeocodingResult (see geocode_address)."""
+        """Resolve an address to a GeocodingResult (see geocode_address).
 
-        # When an Eircode is supplied, resolve its routing-key centroid up
-        # front so we can sanity-check the (less trusted) database coordinate
-        # against it before returning.
+        Falls back from the most to the least specific location we hold, so a
+        valuation always gets a location for any county with sales data:
+        exact address -> development/street -> locality -> routing key ->
+        county centroid.
+        """
+        county_name = county or "Dublin"
+
+        # The routing key (from the Eircode, else a "Dublin N" district in the
+        # address) is both a fallback and a sanity check: a database-derived
+        # location outside it is wrong-area data and is skipped.
+        routing_key = None
         routing_key_result = None
         if eircode:
+            routing_key = eircode[:3].upper()
+        else:
+            routing_key = _routing_key_from_address(address)
+        if routing_key:
             try:
-                routing_key_result = await self._geocode_by_eircode_routing_key(eircode)
+                routing_key_result = await self._geocode_by_eircode_routing_key(routing_key)
             except Exception as e:
-                logger.warning(f"Eircode geocoding failed: {e}")
+                logger.warning(f"Routing key lookup failed: {e}")
+            if routing_key_result and not eircode:
+                routing_key_result.method = "postal_district_routing_key"
+                routing_key_result.address_matched = f"Dublin postal district {routing_key}"
 
-        # Method 1: Database lookup (ALWAYS try this first!)
-        # Works for any property in the Property Price Register (2010-present).
-        # Constrain to the requested county (defaulting to Dublin) so an
-        # identical street/house number in another county is never returned —
-        # e.g. "36 Fairfield Road" exists only in Cork, but a Dublin request
-        # must not silently geocode to Cork.
+        def in_routing_key_area(result: GeocodingResult) -> bool:
+            if not routing_key_result:
+                return True
+            km = _haversine_km(
+                result.latitude, result.longitude,
+                routing_key_result.latitude, routing_key_result.longitude
+            )
+            if km > _max_km_for_routing_key(routing_key):
+                logger.warning(
+                    f"{result.method} location for '{address}' is {km:.1f}km "
+                    f"from routing key {routing_key}; skipping"
+                )
+                return False
+            return True
+
+        # Method 1: the exact property (any sale in the PPR since 2010).
+        # Constrained to the requested county so an identical street/house
+        # number elsewhere is never returned.
         try:
             result = await self._geocode_by_db_fuzzy_match(address, county)
-            if result:
-                # Guard against wrong-area database coordinates: if the match
-                # is implausibly far from the Eircode's routing-key centroid,
-                # trust the centroid instead.
-                if routing_key_result and _haversine_km(
-                    result.latitude, result.longitude,
-                    routing_key_result.latitude, routing_key_result.longitude
-                ) > _ROUTING_KEY_MAX_KM:
-                    logger.warning(
-                        f"Database coordinate for '{address}' is "
-                        f">{_ROUTING_KEY_MAX_KM:.0f}km from routing key "
-                        f"{eircode[:3].upper()}; using routing-key centroid"
-                    )
-                    return routing_key_result
+            if result and in_routing_key_area(result):
                 logger.info(f"✅ Geocoded via database: {result.address_matched}")
                 return result
         except Exception as e:
             logger.warning(f"Database geocoding failed: {e}")
 
-        # Method 2: Eircode routing key lookup
-        # Works for properties not in database if Eircode provided
+        # Method 2: progressively broader parts of the address — the
+        # development/street the unit is in, then its locality — located by
+        # the median of their recorded sales.
+        for method, terms, max_spread_km in _address_levels(_normalize_address(address)):
+            try:
+                result = await self._geocode_by_db_area(terms, county_name, method, max_spread_km)
+            except Exception as e:
+                logger.warning(f"Database area lookup failed for '{terms}': {e}")
+                continue
+            if result and in_routing_key_area(result):
+                logger.info(f"✅ Geocoded via {method}: '{terms}'")
+                return result
+
+        # Method 3: routing-key centroid.
         if routing_key_result:
-            logger.info(f"✅ Geocoded via Eircode routing key: {eircode[:3]}")
+            logger.info(f"✅ Geocoded via routing key: {routing_key}")
             return routing_key_result
 
-        # Method 3: Nominatim API (last resort)
-        # Works for new properties not in database, uses OpenStreetMap
-        result = await self._geocode_by_nominatim(address, eircode, county)
-        if result:
-            logger.info(f"✅ Geocoded via Nominatim: {result.address_matched}")
-            return result
+        # Method 4: county centroid — always available for a county with data.
+        try:
+            result = await self._geocode_by_county_centroid(county_name)
+            if result:
+                logger.info(f"✅ Geocoded via county centroid: {county_name}")
+                return result
+        except Exception as e:
+            logger.warning(f"County centroid lookup failed: {e}")
 
-        # All methods failed - provide helpful error message
         if eircode:
             raise ValueError(
                 f"Could not locate '{address}' (Eircode: {eircode}). "
-                "This property may not exist in our database or external geocoding services. "
-                "Please verify the address and Eircode are correct."
+                "Please verify the address, Eircode and county are correct."
             )
-        else:
-            raise ValueError(
-                f"Could not locate '{address}'. "
-                "Try adding the area name (e.g., 'Crumlin') or providing an Eircode for better accuracy. "
-                "Note: Properties must have sold since 2010 to be in the Property Price Register."
-            )
+        raise ValueError(
+            f"Could not locate '{address}' in County {county_name}. "
+            "Please verify the county is correct."
+        )
 
     async def _geocode_by_eircode_routing_key(
         self,
@@ -223,112 +392,104 @@ class ValuationGeocoder:
 
         return None
 
-    async def _geocode_by_nominatim(
+    async def _geocode_by_db_area(
         self,
-        address: str,
-        eircode: Optional[str] = None,
-        county: Optional[str] = None
+        terms: str,
+        county: str,
+        method: str,
+        max_spread_km: float
     ) -> Optional[GeocodingResult]:
         """
-        Geocode using Nominatim (OpenStreetMap) API.
+        Locate a development, street or locality by its recorded sales.
+
+        Matches every term with full-text search (GIN-indexed, AND semantics),
+        takes the median coordinate, and rejects it if the matches are spread
+        out (p75 distance from the median > max_spread_km): a scattered set
+        means mixed places or mis-geocoded rows, so its median is meaningless.
 
         Args:
-            address: Property address
-            eircode: Optional Eircode to include in query
-            county: Optional county name to bias search results
+            terms: Space-separated search terms, e.g. "Oak Parkview Stepaside"
+            county: County to constrain the match to
+            method: Method name for the result ("database_development"/"database_locality")
+            max_spread_km: Maximum p75 distance of matches from their median
 
         Returns:
-            GeocodingResult or None if no result found
+            GeocodingResult or None if no tight cluster of sales matches
         """
-        # Construct search query with county bias
-        # Default to Dublin if no county specified
-        county_name = county or "Dublin"
-
-        if eircode:
-            search_query = f"{address}, {eircode}, {county_name}, Ireland"
-        else:
-            search_query = f"{address}, {county_name}, Ireland"
-
-        params = {
-            'q': search_query,
-            'format': 'json',
-            'limit': 1,
-            'countrycodes': 'ie',
-            'addressdetails': 1
-        }
-
-        headers = {
-            'User-Agent': self.user_agent
-        }
-
-        try:
-            # Add retry logic for transient network errors
-            for attempt in range(2):  # 2 attempts max
-                try:
-                    async with httpx.AsyncClient(timeout=10.0) as client:  # Increased timeout
-                        response = await client.get(
-                            self.nominatim_url,
-                            params=params,
-                            headers=headers
-                        )
-
-                        # Handle rate limiting (429) gracefully
-                        if response.status_code == 429:
-                            if attempt == 0:
-                                await asyncio.sleep(1)  # Wait 1 second before retry
-                                continue
-                            else:
-                                return None  # Give up, try next method
-
-                        response.raise_for_status()
-
-                        results = response.json()
-
-                        if results and len(results) > 0:
-                            result = results[0]
-
-                            # Check if result is in Ireland
-                            lat = float(result['lat'])
-                            lon = float(result['lon'])
-
-                            # Ireland bounding box
-                            if not (51.4 <= lat <= 55.5 and -10.7 <= lon <= -5.4):
-                                return None
-
-                            # Confidence based on result quality
-                            importance = float(result.get('importance', 0.5))
-                            confidence = min(0.95, 0.60 + importance * 0.35)
-
-                            return GeocodingResult(
-                                latitude=lat,
-                                longitude=lon,
-                                confidence=confidence,
-                                method="nominatim",
-                                address_matched=result.get('display_name')
-                            )
-
-                        # Empty results, no need to retry
-                        return None
-
-                except (httpx.ConnectError, httpx.TimeoutException) as e:
-                    # Network error - retry once
-                    if attempt == 0:
-                        await asyncio.sleep(0.5)
-                        continue
-                    else:
-                        # Final attempt failed, fall through to next method
-                        return None
-
-        except httpx.HTTPStatusError as e:
-            # HTTP error (4xx, 5xx) - don't retry
-            print(f"Nominatim HTTP error: {e.response.status_code}")
+        query = """
+            WITH m AS (
+                SELECT latitude, longitude, address
+                FROM properties
+                WHERE
+                    to_tsvector('simple', COALESCE(address_normalized, address))
+                        @@ plainto_tsquery('simple', $1)
+                    AND county ILIKE $2
+                    AND latitude IS NOT NULL
+                    AND longitude IS NOT NULL
+                    AND geocode_suspect IS NOT TRUE
+                    AND geocode_quality_issue IS NOT TRUE
+                -- A sample is plenty for a median/spread, and bounds the heap
+                -- fetches for big towns (Lucan has ~8k sales).
+                LIMIT 500
+            ),
+            c AS (
+                SELECT
+                    percentile_cont(0.5) WITHIN GROUP (ORDER BY latitude) AS lat,
+                    percentile_cont(0.5) WITHIN GROUP (ORDER BY longitude) AS lon
+                FROM m
+            )
+            SELECT
+                c.lat AS latitude,
+                c.lon AS longitude,
+                COUNT(*) AS n,
+                percentile_cont(0.75) WITHIN GROUP (ORDER BY
+                    ST_DistanceSphere(ST_MakePoint(m.longitude, m.latitude),
+                                      ST_MakePoint(c.lon, c.lat))
+                ) / 1000.0 AS spread_km,
+                MIN(m.address) AS address
+            FROM m, c
+            GROUP BY c.lat, c.lon;
+        """
+        row = await self.db.fetchrow(query, terms, county)
+        if not row or row['latitude'] is None:
             return None
-        except Exception as e:
-            # Unexpected error - log and continue to next method
-            print(f"Nominatim unexpected error: {e}")
+        if row['spread_km'] > max_spread_km:
+            logger.info(
+                f"'{terms}' matches {row['n']} sales spread {row['spread_km']:.1f}km "
+                f"(> {max_spread_km}km); skipping"
+            )
             return None
 
-        return None
+        return GeocodingResult(
+            latitude=float(row['latitude']),
+            longitude=float(row['longitude']),
+            confidence=_AREA_CONFIDENCE[method],
+            method=method,
+            address_matched=f"{row['n']} sales matching '{terms}', e.g. {row['address']}"
+        )
+
+    async def _geocode_by_county_centroid(self, county: str) -> Optional[GeocodingResult]:
+        """Median of the county's routing-key centroids (last-resort location)."""
+        query = """
+            SELECT
+                percentile_cont(0.5) WITHIN GROUP (ORDER BY centroid_lat) AS latitude,
+                percentile_cont(0.5) WITHIN GROUP (ORDER BY centroid_lon) AS longitude
+            FROM routing_key_stats
+            WHERE primary_county ILIKE $1
+              AND geocoded_count >= 20
+              AND centroid_lat IS NOT NULL;
+        """
+        row = await self.db.fetchrow(query, county)
+        if not row or row['latitude'] is None:
+            return None
+
+        return GeocodingResult(
+            latitude=float(row['latitude']),
+            longitude=float(row['longitude']),
+            confidence=0.30,
+            method="county_centroid",
+            address_matched=f"County {county}"
+        )
 
     async def _geocode_by_db_fuzzy_match(
         self,
@@ -352,43 +513,7 @@ class ValuationGeocoder:
             GeocodingResult or None if no match found
         """
         county_name = county or "Dublin"
-        # Normalize address - EXACT copy from /search/exact endpoint
-        normalized = address.strip()
-        normalized = re.sub(r'\s+', ' ', normalized)
-        normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
-        normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
-
-        # Expand common abbreviations to match normalized format
-        street_types = {
-            r'\bSt\.?\b': 'Street', r'\bRd\.?\b': 'Road', r'\bAve\.?\b': 'Avenue',
-            r'\bDr\.?\b': 'Drive', r'\bCl\.?\b': 'Close', r'\bCt\.?\b': 'Court',
-            r'\bPk\.?\b': 'Park', r'\bSq\.?\b': 'Square',
-        }
-        for abbrev, full in street_types.items():
-            normalized = re.sub(abbrev, full, normalized, flags=re.I)
-
-        # Clean punctuation and apply title case
-        normalized = re.sub(r',\s*,', ',', normalized)
-        normalized = re.sub(r'\s+,', ',', normalized)
-        normalized = re.sub(r',\s+', ', ', normalized)
-        normalized = normalized.strip(', ')
-
-        words = normalized.split()
-        lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
-        upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
-
-        result_words = []
-        for i, word in enumerate(words):
-            if i == 0:
-                result_words.append(word.capitalize())
-            elif word in upper_exceptions:
-                result_words.append(word)
-            elif word.lower() in lower_exceptions:
-                result_words.append(word.lower())
-            else:
-                result_words.append(word.capitalize())
-
-        address_norm = ' '.join(result_words).strip()
+        address_norm = _normalize_address(address)
 
         # Try exact prefix match first (fast, for S1 page compatibility).
         # Scope to county so e.g. a Cork "36 Fairfield Road" is not returned
@@ -403,7 +528,9 @@ class ValuationGeocoder:
                 property_type
             FROM properties
             WHERE
-                starts_with(COALESCE(address_normalized, address), $1)
+                -- Bare column (never NULL) so the text_pattern_ops index
+                -- idx_properties_address_normalized_prefix serves the prefix.
+                starts_with(address_normalized, $1)
                 AND county ILIKE $2
                 AND latitude IS NOT NULL
                 AND longitude IS NOT NULL

@@ -140,6 +140,11 @@ python3 scripts/geocode_mapbox_batch.py --needs-geocoding --apply
 - Uses MapboxClient with HTML cleaning, Eircode-first, bulk extraction
 - Expected success: ~98% with quality 78-80/100
 - Mapbox usage tracked automatically (50k/month limit enforced)
+- Then re-flag wrong-town results (a Mapbox success clears `geocode_suspect`, so wrong answers would otherwise go live):
+```bash
+python3 scripts/flag_bad_geocodes.py --apply --add-only
+```
+  `--add-only` never clears existing flags. Run it after *every* geocoding sweep (batch, centroid, `--ids-file`). The full pipeline does this automatically as Step 2c.
 
 3. **Enrich properties:**
 ```bash

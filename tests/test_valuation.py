@@ -163,6 +163,7 @@ class TestGeocoder:
             {'centroid_lat': 53.32, 'centroid_lon': -6.32, 'property_count': 100},  # routing key D02
             {'latitude': 51.90, 'longitude': -8.47,  # Cork coordinates (bad data)
              'address': 'Somewhere, Cork', 'bedrooms': None},
+            None, None,  # area levels for "Address" find nothing
         ]
 
         geocoder = ValuationGeocoder(mock_db_pool)
@@ -242,10 +243,127 @@ class TestGeocoder:
 
         geocoder = ValuationGeocoder(mock_db_pool)
 
-        # No DB match, no Nominatim result -> raises with a "Could not locate" message.
-        with patch.object(geocoder, '_geocode_by_nominatim', new=AsyncMock(return_value=None)):
-            with pytest.raises(ValueError, match="Could not locate"):
-                await geocoder.geocode_address("Nonexistent Address")
+        # No DB match and no routing key -> raises with a "Could not locate" message.
+        with pytest.raises(ValueError, match="Could not locate"):
+            await geocoder.geocode_address("Nonexistent Address")
+
+    def test_no_nominatim_fallback(self):
+        """Valuation must not geocode via Nominatim (public OSM can't resolve
+        Irish unit/scheme names and returns wrong-town matches)."""
+        assert not hasattr(ValuationGeocoder, '_geocode_by_nominatim')
+
+    # An unsold apartment: "Apt 21" is not in the PPR, but other units in the
+    # same block are. Call order: D18 centroid (from "Dublin 18"), exact
+    # prefix match, full-text match, then the area levels "Oak Parkview
+    # Stepaside", "Parkview Stepaside" and "Stepaside".
+    UNSOLD_UNIT = "Apartment 21, The Oak, Parkview, Stepaside, Dublin 18"
+    D18_CENTROID = {'centroid_lat': 53.2615, 'centroid_lon': -6.1875, 'property_count': 5481}
+
+    @staticmethod
+    def _area_row(lat, lon, spread_km, n=3):
+        return {'latitude': lat, 'longitude': lon, 'n': n, 'spread_km': spread_km,
+                'address': 'Apt 47 the Oak, Parkview, Stepaside'}
+
+    @pytest.mark.asyncio
+    async def test_unsold_unit_located_by_development(self, mock_db_pool):
+        """An unsold unit is placed at the median of its block's recorded sales."""
+        mock_db_pool.fetchrow.side_effect = [
+            self.D18_CENTROID, None, None,
+            self._area_row(53.2596, -6.2225, 0.1),
+        ]
+
+        geocoder = ValuationGeocoder(mock_db_pool)
+        result = await geocoder.geocode_address(self.UNSOLD_UNIT)
+
+        assert result.method == "database_development"
+        assert (result.latitude, result.longitude) == (53.2596, -6.2225)
+        # Siblings differ in size, so no bedroom count is inherited.
+        assert result.bedrooms is None
+        # The district routing key is looked up from "Dublin 18".
+        assert mock_db_pool.fetchrow.call_args_list[0][0][1] == "D18"
+        # Unit number, filler words and the district number are dropped.
+        assert mock_db_pool.fetchrow.call_args_list[3][0][1:] == ("Oak Parkview Stepaside", "Dublin")
+
+    @pytest.mark.asyncio
+    async def test_development_rejects_scattered_matches(self, mock_db_pool):
+        """Sibling sales spread over many km are untrustworthy -> next level."""
+        mock_db_pool.fetchrow.side_effect = [
+            self.D18_CENTROID, None, None,
+            self._area_row(53.40, -6.15, 9.0),   # Oak Parkview Stepaside: scattered
+            self._area_row(53.40, -6.15, 9.0),   # Parkview Stepaside: scattered
+            None,                                # Stepaside: no match
+        ]
+
+        geocoder = ValuationGeocoder(mock_db_pool)
+        result = await geocoder.geocode_address(self.UNSOLD_UNIT)
+
+        assert result.method == "postal_district_routing_key"
+        assert (result.latitude, result.longitude) == (53.2615, -6.1875)
+
+    @pytest.mark.asyncio
+    async def test_development_rejects_wrong_district(self, mock_db_pool):
+        """A tight cluster ~20km from the address's district is the wrong scheme."""
+        malahide = self._area_row(53.4443, -6.1365, 0.2)
+        mock_db_pool.fetchrow.side_effect = [
+            self.D18_CENTROID, None, None, malahide, malahide, None,
+        ]
+
+        geocoder = ValuationGeocoder(mock_db_pool)
+        result = await geocoder.geocode_address(self.UNSOLD_UNIT)
+
+        assert result.method == "postal_district_routing_key"
+
+    @pytest.mark.asyncio
+    async def test_unsold_unit_falls_back_to_locality(self, mock_db_pool):
+        """No usable development match -> the locality's sales."""
+        mock_db_pool.fetchrow.side_effect = [
+            self.D18_CENTROID, None, None, None, None,
+            self._area_row(53.2531, -6.2144, 1.8, n=600),
+        ]
+
+        geocoder = ValuationGeocoder(mock_db_pool)
+        result = await geocoder.geocode_address(self.UNSOLD_UNIT)
+
+        assert result.method == "database_locality"
+        assert mock_db_pool.fetchrow.call_args_list[5][0][1] == "Stepaside"
+
+    @pytest.mark.asyncio
+    async def test_dublin_district_rejects_far_exact_match(self, mock_db_pool):
+        """Dublin postal districts are compact: an exact DB match ~20km from the
+        D18 centroid is wrong-area data even though it is under the 30km cap."""
+        mock_db_pool.fetchrow.side_effect = [
+            self.D18_CENTROID,
+            {'latitude': 53.4443, 'longitude': -6.1365,
+             'address': '40 the Oak, Parkview, Stepaside', 'bedrooms': 2,
+             'property_type': 'apartment'},
+            None, None, None,  # area levels find nothing usable
+        ]
+
+        geocoder = ValuationGeocoder(mock_db_pool)
+        result = await geocoder.geocode_address("40 The Oak, Parkview, Stepaside, Dublin 18")
+
+        assert result.method == "postal_district_routing_key"
+
+    @pytest.mark.asyncio
+    async def test_falls_back_to_county_centroid(self, mock_db_pool):
+        """With nothing else to go on, a valuation still gets a county location."""
+        mock_db_pool.fetchrow.side_effect = [
+            None, None,          # exact, full-text
+            None, None,          # "Sea Breeze Shrule", "Shrule"
+            {'latitude': 53.85, 'longitude': -9.30},  # Mayo centroid
+        ]
+
+        geocoder = ValuationGeocoder(mock_db_pool)
+        result = await geocoder.geocode_address("Apartment 3, Sea Breeze, Shrule", county="Mayo")
+
+        assert result.method == "county_centroid"
+        assert result.confidence < 0.5
+        assert mock_db_pool.fetchrow.call_args_list[4][0][1] == "Mayo"
+
+    def test_routing_key_from_dublin_district(self):
+        assert geocoder_mod._routing_key_from_address("1 Ranelagh, Dublin 6") == "D06"
+        assert geocoder_mod._routing_key_from_address("4 Terenure Road, Dublin 6W") == "D6W"
+        assert geocoder_mod._routing_key_from_address("Main Street, Swords") is None
 
 
 # ============================================================================

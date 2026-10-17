@@ -30,6 +30,13 @@ Two flags, two purposes:
   catch the rest.
 
 Idempotent: safe to re-run. Use --apply to write; default is dry-run.
+
+--add-only (with --apply): only ADD flags to rows not already suspect, without the
+full reset/reconcile. Run it after every geocoding sweep: geocode_mapbox_batch.py
+clears geocode_suspect on rows it places, so a wrong Mapbox answer stays visible until
+re-flagged (2026-10: ~13k wrong rows had gone unflagged since the 23 Aug full run, e.g.
+Parkview, Stepaside D18 placed near Malahide). The full run would also re-queue rows
+that already failed (suspect + needs_geocoding = FALSE), so add-only leaves those alone.
 """
 import os
 import sys
@@ -67,6 +74,7 @@ SUSPECT_CLUSTER = 50     # distinct addresses on one coord -> fallback centroid 
 WORKLIST_CLUSTER = 30    # distinct addresses on one coord -> worth re-geocoding
 
 APPLY = "--apply" in sys.argv
+ADD_ONLY = "--add-only" in sys.argv
 
 
 def _county_bounds_values():
@@ -138,10 +146,26 @@ def main():
         WHERE p.latitude IS NOT NULL
         GROUP BY p.routing_key
     ),
+    rk_member AS (
+        -- A row's routing key: from its eircode, else (County Dublin only) from a
+        -- "Dublin N" postal district in the address, so eircode-less rows such as
+        -- "45 the Ash, Parkview, Stepaside Dublin 18" placed 21km away near
+        -- Malahide are checked too. Extents (rk_extent) stay eircode-only.
+        SELECT p.id, p.latitude, p.longitude,
+               COALESCE(p.routing_key,
+                 CASE WHEN m.d[2] IS NOT NULL THEN 'D' || m.d[1]::int || 'W'
+                      WHEN m.d[1] IS NOT NULL THEN 'D' || lpad(m.d[1]::int::text, 2, '0')
+                 END) AS routing_key
+        FROM properties p
+        LEFT JOIN LATERAL (
+            SELECT regexp_match(p.address_normalized, '\\mDublin\\s*(\\d{{1,2}})(W)?\\M', 'i') AS d
+        ) m ON p.routing_key IS NULL AND p.county = 'Dublin'
+        WHERE p.latitude IS NOT NULL
+    ),
     rk_bad AS (
         -- Adaptive per-key threshold = clamp(p75 * RK_MULT, RK_FLOOR_KM, RK_CEIL_KM).
         SELECT p.id
-        FROM properties p
+        FROM rk_member p
         JOIN good_keys k ON k.routing_key = p.routing_key
         JOIN rk_extent e ON e.routing_key = p.routing_key
         WHERE p.latitude IS NOT NULL
@@ -213,6 +237,21 @@ def main():
     n_suspect, n_worklist = cur.fetchone()
     print(f"geocode_suspect (hide from search): {n_suspect:,}")
     print(f"needs_geocoding (re-geocode worklist): {n_worklist:,}")
+
+    if ADD_ONLY:
+        # Rows not yet suspect: flag the suspect ones and queue all of them. Rows
+        # already suspect (hidden, possibly failed and de-queued) are untouched.
+        cur.execute("UPDATE properties p SET geocode_suspect = b.suspect, needs_geocoding = TRUE "
+                    "FROM _bad_geo b WHERE p.id = b.id AND p.geocode_suspect IS NOT TRUE "
+                    "AND (b.suspect OR p.needs_geocoding IS DISTINCT FROM TRUE)")
+        print(f"✓ add-only: flagged/queued {cur.rowcount:,} rows not previously suspect")
+        cur.execute("SELECT COUNT(*) FILTER (WHERE geocode_suspect), "
+                    "COUNT(*) FILTER (WHERE needs_geocoding) FROM properties")
+        print("now: geocode_suspect={:,}, needs_geocoding={:,}".format(*cur.fetchone()))
+        cur.execute("DROP TABLE IF EXISTS _bad_geo")
+        print("\n✅ Done.")
+        conn.close()
+        return
 
     # 3. Set geocode_suspect (reset first so re-runs reflect improved data)
     cur.execute("UPDATE properties SET geocode_suspect = FALSE WHERE geocode_suspect = TRUE")

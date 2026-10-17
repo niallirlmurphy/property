@@ -11,13 +11,17 @@ Pydantic schemas for request/response validation:
 - `ComparableProperty` - Individual comparable
 - `ConfidenceInterval`, `ValidationResult`, `ValuationStatistics`
 
-### geocoder.py (273 lines)
-Multi-method address geocoding:
-1. Eircode routing key lookup (fast, Irish-specific)
-2. Nominatim API (OpenStreetMap)
-3. Database fuzzy match (fallback)
+### geocoder.py
+Address geocoding from our own data, most to least specific:
+1. Exact address match (any PPR sale since 2010)
+2. Development/street match for unsold units ("Apt 21, The Oak, Parkview" ->
+   median of the block's sales), rejected if the matches are spread out
+3. Locality match ("Stepaside")
+4. Routing-key centroid (Eircode, or "Dublin N" in the address)
+5. County centroid (always available)
 
-Returns coordinates with confidence score.
+Database levels must fall inside the routing key (10km for Dublin districts).
+No Nominatim: OSM can't resolve Irish scheme names and returns wrong-town matches.
 
 ### comparable_search.py (194 lines)
 Adaptive radius search for comparable properties:

@@ -57,6 +57,12 @@ CREATE INDEX IF NOT EXISTS idx_properties_address_fts
     ON properties
     USING gin (to_tsvector('simple', COALESCE(address_normalized, address)));
 
+-- Prefix index for exact-address lookups (starts_with(address_normalized, $1)).
+-- The plain btree uses the en_US collation, which can't serve a prefix match,
+-- so without this each valuation miss seq-scanned the table (~10s).
+CREATE INDEX IF NOT EXISTS idx_properties_address_normalized_prefix
+    ON properties (address_normalized text_pattern_ops);
+
 -- Search query analytics log
 CREATE TABLE IF NOT EXISTS search_log (
     id               BIGSERIAL PRIMARY KEY,

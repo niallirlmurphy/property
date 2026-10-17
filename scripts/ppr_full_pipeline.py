@@ -108,6 +108,7 @@ def main():
     print(f"  1. Import:     {'SKIP' if args.skip_import else 'YES'}")
     print(f"  2. Geocode:    {'SKIP' if args.skip_geocoding else 'YES'}")
     print(f"  2b. geog fill: {'SKIP' if args.skip_geocoding else 'YES'}")
+    print(f"  2c. Flag bad:  {'SKIP' if args.skip_geocoding else 'YES'}")
     print(f"  3. Enrich:     {'SKIP' if args.skip_enrichment else 'YES'}")
     print(f"  4. Page data:  {'SKIP' if args.skip_page_data else 'YES'}")
     print()
@@ -159,6 +160,18 @@ def main():
         )
         if not success:
             print("\n⚠️  Warning: geog backfill had errors")
+
+    # Step 2c: Re-flag wrong-town geocodes. A Mapbox success clears geocode_suspect,
+    # so a wrong answer would otherwise become visible to search and valuations.
+    # --add-only never clears existing flags.
+    if not args.skip_geocoding:
+        success = run_command(
+            ['python3', 'scripts/flag_bad_geocodes.py', '--add-only'] + ([] if args.dry_run else ['--apply']),
+            "STEP 2c: Flag bad geocodes (add-only)",
+            dry_run=False,  # flag_bad_geocodes.py is a dry run without --apply
+        )
+        if not success:
+            print("\n⚠️  Warning: bad-geocode flagging had errors")
 
     # Step 3: Enrich properties (bedrooms, types via DuckDuckGo full-page scraping)
     if not args.skip_enrichment:

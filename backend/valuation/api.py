@@ -46,7 +46,6 @@ async def valuation_health_check():
         "service": "valuation",
         "database_connected": pool is not None,
         "config": {
-            "nominatim_url": os.getenv('NOMINATIM_URL', 'https://nominatim.openstreetmap.org/search'),
             "has_mapbox_token": bool(os.getenv('MAPBOX_TOKEN')),
             "has_autoaddress_key": bool(os.getenv('AUTOADDRESS_KEY'))
         }
