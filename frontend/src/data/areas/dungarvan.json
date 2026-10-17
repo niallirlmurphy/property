@@ -292,9 +292,9 @@
     },
     {
       "year": 2022,
-      "count": 123,
-      "median_price": 242500.0,
-      "avg_price": 287739.0,
+      "count": 122,
+      "median_price": 243750.0,
+      "avg_price": 289400.0,
       "min_price": 57500.0,
       "max_price": 960000.0
     },

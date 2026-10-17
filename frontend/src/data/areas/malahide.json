@@ -7,8 +7,8 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 471366.0,
-  "avg_price": 541032,
+  "median_price": 466683.0,
+  "avg_price": 548634,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -175,12 +175,12 @@
       "distance_m": 1429.33070503
     },
     {
-      "id": 797349,
+      "id": 797320,
       "sale_date": "2026-06-29",
-      "address": "3 Newenham Terrace, Belcamp, Malahide Road",
+      "address": "12 Newenham Drive, Belcamp, Malahide Road",
       "county": "Dublin",
       "eircode": null,
-      "price": 488986.78,
+      "price": 565000.0,
       "not_full_market_price": false,
       "vat_exclusive": true,
       "description": "New Dwelling house /Apartment",
@@ -212,19 +212,19 @@
     },
     {
       "year": 2012,
-      "count": 3,
-      "median_price": 200000.0,
-      "avg_price": 206333.0,
+      "count": 2,
+      "median_price": 197000.0,
+      "avg_price": 197000.0,
       "min_price": 194000.0,
-      "max_price": 225000.0
+      "max_price": 200000.0
     },
     {
       "year": 2013,
-      "count": 3,
-      "median_price": 214803.0,
-      "avg_price": 192434.0,
+      "count": 2,
+      "median_price": 167402.0,
+      "avg_price": 167402.0,
       "min_price": 120000.0,
-      "max_price": 242500.0
+      "max_price": 214803.1
     },
     {
       "year": 2014,
@@ -252,9 +252,9 @@
     },
     {
       "year": 2017,
-      "count": 28,
+      "count": 27,
       "median_price": 286344.0,
-      "avg_price": 296897.0,
+      "avg_price": 295263.0,
       "min_price": 85000.0,
       "max_price": 590000.0
     },
@@ -276,57 +276,57 @@
     },
     {
       "year": 2020,
-      "count": 13,
-      "median_price": 390000.0,
-      "avg_price": 428054.0,
+      "count": 7,
+      "median_price": 315000.0,
+      "avg_price": 293427.0,
       "min_price": 145000.0,
-      "max_price": 726872.0
+      "max_price": 471000.0
     },
     {
       "year": 2021,
-      "count": 80,
-      "median_price": 389626.0,
-      "avg_price": 440555.0,
+      "count": 58,
+      "median_price": 360749.0,
+      "avg_price": 375074.0,
       "min_price": 135000.0,
       "max_price": 1475000.0
     },
     {
       "year": 2022,
-      "count": 84,
-      "median_price": 396476.0,
-      "avg_price": 450706.0,
+      "count": 67,
+      "median_price": 387665.0,
+      "avg_price": 401468.0,
       "min_price": 167000.0,
       "max_price": 1650000.0
     },
     {
       "year": 2023,
-      "count": 30,
-      "median_price": 415000.0,
-      "avg_price": 445954.0,
+      "count": 26,
+      "median_price": 405271.0,
+      "avg_price": 408393.0,
       "min_price": 200000.0,
       "max_price": 1050000.0
     },
     {
       "year": 2024,
-      "count": 32,
-      "median_price": 473000.0,
-      "avg_price": 473076.0,
+      "count": 30,
+      "median_price": 460500.0,
+      "avg_price": 450369.0,
       "min_price": 280000.0,
-      "max_price": 837004.0
+      "max_price": 725000.0
     },
     {
       "year": 2025,
-      "count": 46,
-      "median_price": 425763.0,
-      "avg_price": 424553.0,
+      "count": 43,
+      "median_price": 418502.0,
+      "avg_price": 411627.0,
       "min_price": 147500.0,
       "max_price": 985000.0
     },
     {
       "year": 2026,
-      "count": 31,
-      "median_price": 471366.0,
-      "avg_price": 457361.0,
+      "count": 30,
+      "median_price": 466683.0,
+      "avg_price": 453306.0,
       "min_price": 160000.0,
       "max_price": 1120000.0
     }

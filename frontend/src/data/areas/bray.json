@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 152,
+      "count": 153,
       "median_price": 525000.0,
-      "avg_price": 594699.0,
+      "avg_price": 593335.0,
       "min_price": 235000.0,
       "max_price": 2500000.0
     }

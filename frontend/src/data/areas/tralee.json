@@ -7,8 +7,8 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 260000.0,
-  "avg_price": 263250,
+  "median_price": 262500.0,
+  "avg_price": 305750,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -67,24 +67,6 @@
       "distance_m": 1741.43278809
     },
     {
-      "id": 804639,
-      "sale_date": "2026-09-18",
-      "address": "AUGHACASLA, CASTLEGREGORY, TRALEE",
-      "county": "Kerry",
-      "eircode": "V92E4F1",
-      "price": 250000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.269405,
-      "longitude": -9.705086,
-      "routing_key": "V92",
-      "bedrooms": 4,
-      "property_type": "detached",
-      "distance_m": 47.4021447
-    },
-    {
       "id": 804342,
       "sale_date": "2026-09-15",
       "address": "19 URBAN TERRACE, BOHERBEE, TRALEE",
@@ -119,24 +101,6 @@
       "bedrooms": 1,
       "property_type": "apartment",
       "distance_m": 746.07857089
-    },
-    {
-      "id": 803967,
-      "sale_date": "2026-09-10",
-      "address": "47 BANNA BEACH, TRALEE, COUNTY KERRY",
-      "county": "Kerry",
-      "eircode": "V92V660",
-      "price": 90000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.269405,
-      "longitude": -9.705086,
-      "routing_key": "V92",
-      "bedrooms": 2,
-      "property_type": "bungalow",
-      "distance_m": 47.4021447
     },
     {
       "id": 803935,
@@ -191,6 +155,42 @@
       "bedrooms": 3,
       "property_type": "terraced",
       "distance_m": 1167.41983816
+    },
+    {
+      "id": 802311,
+      "sale_date": "2026-08-28",
+      "address": "15 CARRIGEENDANIEL, CAHERSLEE, KERRY",
+      "county": "Kerry",
+      "eircode": "V92N2KC",
+      "price": 425000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.277191,
+      "longitude": -9.721154,
+      "routing_key": "V92",
+      "bedrooms": 4,
+      "property_type": "detached",
+      "distance_m": 1378.56219941
+    },
+    {
+      "id": 801907,
+      "sale_date": "2026-08-24",
+      "address": "14 WOODLEE, MONAVALLEY, TRALEE",
+      "county": "Kerry",
+      "eircode": "V92KF8X",
+      "price": 340000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.278793,
+      "longitude": -9.699615,
+      "routing_key": "V92",
+      "bedrooms": 4,
+      "property_type": "detached",
+      "distance_m": 1144.31238697
     }
   ],
   "trends": [
@@ -252,25 +252,25 @@
     },
     {
       "year": 2017,
-      "count": 277,
+      "count": 276,
       "median_price": 95000.0,
-      "avg_price": 105947.0,
+      "avg_price": 105787.0,
       "min_price": 23154.0,
       "max_price": 500000.0
     },
     {
       "year": 2018,
-      "count": 227,
-      "median_price": 125000.0,
-      "avg_price": 133918.0,
+      "count": 226,
+      "median_price": 126000.0,
+      "avg_price": 134290.0,
       "min_price": 26500.0,
       "max_price": 1900000.0
     },
     {
       "year": 2019,
-      "count": 227,
+      "count": 225,
       "median_price": 135000.0,
-      "avg_price": 154121.0,
+      "avg_price": 153486.0,
       "min_price": 15000.0,
       "max_price": 960000.0
     },
@@ -284,49 +284,49 @@
     },
     {
       "year": 2021,
-      "count": 259,
-      "median_price": 161000.0,
-      "avg_price": 178552.0,
+      "count": 255,
+      "median_price": 160352.0,
+      "avg_price": 178018.0,
       "min_price": 20000.0,
       "max_price": 920000.0
     },
     {
       "year": 2022,
-      "count": 253,
-      "median_price": 191000.0,
-      "avg_price": 236579.0,
+      "count": 242,
+      "median_price": 191500.0,
+      "avg_price": 237486.0,
       "min_price": 30000.0,
       "max_price": 3282540.97
     },
     {
       "year": 2023,
-      "count": 265,
+      "count": 254,
       "median_price": 200000.0,
-      "avg_price": 250249.0,
+      "avg_price": 250982.0,
       "min_price": 30000.0,
       "max_price": 5770000.0
     },
     {
       "year": 2024,
-      "count": 236,
-      "median_price": 215000.0,
-      "avg_price": 242060.0,
+      "count": 213,
+      "median_price": 212000.0,
+      "avg_price": 233872.0,
       "min_price": 30000.0,
       "max_price": 850000.0
     },
     {
       "year": 2025,
-      "count": 189,
-      "median_price": 262000.0,
-      "avg_price": 276999.0,
+      "count": 184,
+      "median_price": 265500.0,
+      "avg_price": 277918.0,
       "min_price": 40000.0,
       "max_price": 800000.0
     },
     {
       "year": 2026,
-      "count": 115,
-      "median_price": 260000.0,
-      "avg_price": 288092.0,
+      "count": 108,
+      "median_price": 262500.0,
+      "avg_price": 290301.0,
       "min_price": 30000.0,
       "max_price": 940000.0
     }

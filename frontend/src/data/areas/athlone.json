@@ -7,8 +7,8 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 290500.0,
-  "avg_price": 321260,
+  "median_price": 285000.0,
+  "avg_price": 311760,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -139,24 +139,6 @@
       "distance_m": 787.78603599
     },
     {
-      "id": 804408,
-      "sale_date": "2026-09-15",
-      "address": "AISLING, MOOR VIEW, ATHLONE",
-      "county": "Westmeath",
-      "eircode": "N37ER88",
-      "price": 400000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.423965,
-      "longitude": -7.940385,
-      "routing_key": "N37",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 192.51840271
-    },
-    {
       "id": 803965,
       "sale_date": "2026-09-10",
       "address": "46 CHURCH HILLS RD, COOSAN, ATHLONE",
@@ -191,6 +173,24 @@
       "bedrooms": 2,
       "property_type": "apartment",
       "distance_m": 522.87724909
+    },
+    {
+      "id": 803844,
+      "sale_date": "2026-09-09",
+      "address": "68 JOLLY MARINER, COOSAN ROAD, ATHLONE",
+      "county": "Westmeath",
+      "eircode": "N37K640",
+      "price": 305000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.432456,
+      "longitude": -7.948922,
+      "routing_key": "N37",
+      "bedrooms": 2,
+      "property_type": "apartment",
+      "distance_m": 1149.65438755
     }
   ],
   "trends": [
@@ -204,17 +204,17 @@
     },
     {
       "year": 2011,
-      "count": 40,
+      "count": 39,
       "median_price": 135000.0,
-      "avg_price": 145689.0,
+      "avg_price": 145662.0,
       "min_price": 40000.0,
       "max_price": 465000.0
     },
     {
       "year": 2012,
-      "count": 55,
+      "count": 53,
       "median_price": 85000.0,
-      "avg_price": 103584.0,
+      "avg_price": 102964.0,
       "min_price": 10000.0,
       "max_price": 250000.0
     },
@@ -236,9 +236,9 @@
     },
     {
       "year": 2015,
-      "count": 146,
+      "count": 145,
       "median_price": 100000.0,
-      "avg_price": 107552.0,
+      "avg_price": 107342.0,
       "min_price": 17576.0,
       "max_price": 330000.0
     },
@@ -252,81 +252,81 @@
     },
     {
       "year": 2017,
-      "count": 144,
-      "median_price": 125500.0,
-      "avg_price": 135930.0,
+      "count": 142,
+      "median_price": 126500.0,
+      "avg_price": 136634.0,
       "min_price": 10000.0,
       "max_price": 1120000.0
     },
     {
       "year": 2018,
-      "count": 170,
+      "count": 166,
       "median_price": 170000.0,
-      "avg_price": 169248.0,
+      "avg_price": 170447.0,
       "min_price": 17000.0,
       "max_price": 575000.0
     },
     {
       "year": 2019,
-      "count": 165,
-      "median_price": 164000.0,
-      "avg_price": 175314.0,
+      "count": 164,
+      "median_price": 164500.0,
+      "avg_price": 175590.0,
       "min_price": 52000.0,
       "max_price": 590000.0
     },
     {
       "year": 2020,
-      "count": 147,
+      "count": 145,
       "median_price": 183000.0,
-      "avg_price": 189458.0,
+      "avg_price": 189650.0,
       "min_price": 17350.0,
       "max_price": 500000.0
     },
     {
       "year": 2021,
-      "count": 177,
+      "count": 173,
       "median_price": 195000.0,
-      "avg_price": 203435.0,
+      "avg_price": 203777.0,
       "min_price": 23000.0,
       "max_price": 490000.0
     },
     {
       "year": 2022,
-      "count": 197,
-      "median_price": 230000.0,
-      "avg_price": 231173.0,
+      "count": 190,
+      "median_price": 235000.0,
+      "avg_price": 233250.0,
       "min_price": 40000.0,
       "max_price": 800000.0
     },
     {
       "year": 2023,
-      "count": 192,
-      "median_price": 230000.0,
-      "avg_price": 249738.0,
+      "count": 190,
+      "median_price": 230500.0,
+      "avg_price": 250630.0,
       "min_price": 30000.0,
       "max_price": 1080000.0
     },
     {
       "year": 2024,
-      "count": 174,
+      "count": 172,
       "median_price": 251000.0,
-      "avg_price": 253291.0,
+      "avg_price": 253283.0,
       "min_price": 24000.0,
       "max_price": 970000.0
     },
     {
       "year": 2025,
-      "count": 166,
+      "count": 164,
       "median_price": 300000.0,
-      "avg_price": 296738.0,
+      "avg_price": 298031.0,
       "min_price": 39600.0,
       "max_price": 670000.0
     },
     {
       "year": 2026,
-      "count": 114,
-      "median_price": 290500.0,
-      "avg_price": 295043.0,
+      "count": 109,
+      "median_price": 285000.0,
+      "avg_price": 290596.0,
       "min_price": 60000.0,
       "max_price": 770000.0
     }

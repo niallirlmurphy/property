@@ -7,7 +7,7 @@
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 875000.0,
+  "median_price": 870000.0,
   "avg_price": 1477800,
   "min_year": 2010,
   "max_year": 2026,
@@ -300,9 +300,9 @@
     },
     {
       "year": 2023,
-      "count": 176,
+      "count": 175,
       "median_price": 700000.0,
-      "avg_price": 765282.0,
+      "avg_price": 765872.0,
       "min_price": 195000.0,
       "max_price": 3300000.0
     },
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 101,
-      "median_price": 875000.0,
-      "avg_price": 1013799.0,
+      "count": 102,
+      "median_price": 870000.0,
+      "avg_price": 1009595.0,
       "min_price": 265000.0,
       "max_price": 4250000.0
     }

@@ -252,9 +252,9 @@
     },
     {
       "year": 2017,
-      "count": 169,
-      "median_price": 568000.0,
-      "avg_price": 613801.0,
+      "count": 168,
+      "median_price": 567500.0,
+      "avg_price": 611204.0,
       "min_price": 122620.0,
       "max_price": 2780000.0
     },
@@ -326,7 +326,7 @@
       "year": 2026,
       "count": 168,
       "median_price": 849500.0,
-      "avg_price": 968189.0,
+      "avg_price": 964915.0,
       "min_price": 337500.0,
       "max_price": 3790000.0
     }

@@ -7,11 +7,29 @@
   },
   "radius_km": 2.5,
   "total_count": 10,
-  "median_price": 447000.0,
-  "avg_price": 765400,
+  "median_price": 440000.0,
+  "avg_price": 775400,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805278,
+      "sale_date": "2026-09-29",
+      "address": "19 WOODVIEW PARK, CASTLEKNOCK, DUBLIN 15",
+      "county": "Dublin",
+      "eircode": "D15WV4D",
+      "price": 600000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.379375,
+      "longitude": -6.359521,
+      "routing_key": "D15",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "distance_m": 1658.00291993
+    },
     {
       "id": 805145,
       "sale_date": "2026-09-28",
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "semi-detached",
       "distance_m": 1952.81199301
-    },
-    {
-      "id": 804659,
-      "sale_date": "2026-09-21",
-      "address": "12 CHARNWOOD PARK, CLONSILLA, DUBLIN 15",
-      "county": "Dublin",
-      "eircode": "D15R5Y2",
-      "price": 500000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.386108,
-      "longitude": -6.415458,
-      "routing_key": "D15",
-      "bedrooms": 3,
-      "property_type": "house",
-      "distance_m": 2171.35582474
     }
   ],
   "trends": [
@@ -228,9 +228,9 @@
     },
     {
       "year": 2014,
-      "count": 205,
-      "median_price": 244053.0,
-      "avg_price": 254973.0,
+      "count": 204,
+      "median_price": 243172.0,
+      "avg_price": 254850.0,
       "min_price": 93000.0,
       "max_price": 1050000.0
     },
@@ -252,9 +252,9 @@
     },
     {
       "year": 2017,
-      "count": 197,
+      "count": 196,
       "median_price": 255000.0,
-      "avg_price": 286542.0,
+      "avg_price": 286795.0,
       "min_price": 60000.0,
       "max_price": 1160000.0
     },
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 359,
-      "median_price": 447000.0,
-      "avg_price": 502789.0,
+      "count": 371,
+      "median_price": 440000.0,
+      "avg_price": 497400.0,
       "min_price": 100000.0,
       "max_price": 2450000.0
     }

@@ -7,8 +7,8 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 346000.0,
-  "avg_price": 352223,
+  "median_price": 350000.0,
+  "avg_price": 375123,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -65,24 +65,6 @@
       "bedrooms": 3,
       "property_type": "semi-detached",
       "distance_m": 1064.14593985
-    },
-    {
-      "id": 803909,
-      "sale_date": "2026-09-10",
-      "address": "13 BEAUFORT ABBEY, CROSSDRUM, OLDCASTLE",
-      "county": "Meath",
-      "eircode": "C15K00A",
-      "price": 230000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.658439,
-      "longitude": -6.683108,
-      "routing_key": "C15",
-      "bedrooms": 1,
-      "property_type": "apartment",
-      "distance_m": 598.08584215
     },
     {
       "id": 803898,
@@ -191,6 +173,24 @@
       "bedrooms": 3,
       "property_type": "duplex",
       "distance_m": 458.41071552
+    },
+    {
+      "id": 802186,
+      "sale_date": "2026-08-26",
+      "address": "36 CLUAIN ADAIN GREEN, CLONGMAGADDEN, NAVAN",
+      "county": "Meath",
+      "eircode": "C15FX7W",
+      "price": 459000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.669933,
+      "longitude": -6.688749,
+      "routing_key": "C15",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "distance_m": 1899.78782424
     }
   ],
   "trends": [
@@ -228,17 +228,17 @@
     },
     {
       "year": 2014,
-      "count": 169,
+      "count": 167,
       "median_price": 127000.0,
-      "avg_price": 135300.0,
+      "avg_price": 135717.0,
       "min_price": 30000.0,
       "max_price": 480000.0
     },
     {
       "year": 2015,
-      "count": 163,
-      "median_price": 155000.0,
-      "avg_price": 160051.0,
+      "count": 162,
+      "median_price": 152500.0,
+      "avg_price": 159589.0,
       "min_price": 25000.0,
       "max_price": 425000.0
     },
@@ -252,9 +252,9 @@
     },
     {
       "year": 2017,
-      "count": 165,
-      "median_price": 198238.0,
-      "avg_price": 195115.0,
+      "count": 163,
+      "median_price": 198500.0,
+      "avg_price": 196359.0,
       "min_price": 30000.0,
       "max_price": 960000.0
     },
@@ -268,65 +268,65 @@
     },
     {
       "year": 2019,
-      "count": 266,
+      "count": 255,
       "median_price": 235000.0,
-      "avg_price": 231465.0,
-      "min_price": 15000.0,
+      "avg_price": 231858.0,
+      "min_price": 15060.84,
       "max_price": 1666666.0
     },
     {
       "year": 2020,
-      "count": 228,
-      "median_price": 225000.0,
-      "avg_price": 223985.0,
+      "count": 219,
+      "median_price": 230000.0,
+      "avg_price": 226101.0,
       "min_price": 68181.82,
       "max_price": 594500.0
     },
     {
       "year": 2021,
-      "count": 281,
-      "median_price": 248000.0,
-      "avg_price": 260080.0,
+      "count": 267,
+      "median_price": 250000.0,
+      "avg_price": 257627.0,
       "min_price": 64333.0,
-      "max_price": 1000000.0
+      "max_price": 890000.0
     },
     {
       "year": 2022,
-      "count": 301,
-      "median_price": 280000.0,
-      "avg_price": 339515.0,
+      "count": 295,
+      "median_price": 282000.0,
+      "avg_price": 342129.0,
       "min_price": 17500.0,
       "max_price": 15861233.51
     },
     {
       "year": 2023,
-      "count": 451,
-      "median_price": 317180.0,
-      "avg_price": 354987.0,
+      "count": 442,
+      "median_price": 318502.0,
+      "avg_price": 357154.0,
       "min_price": 40000.0,
       "max_price": 15635242.0
     },
     {
       "year": 2024,
-      "count": 363,
-      "median_price": 325900.0,
-      "avg_price": 331593.0,
+      "count": 351,
+      "median_price": 325991.0,
+      "avg_price": 332024.0,
       "min_price": 75000.0,
       "max_price": 2061674.01
     },
     {
       "year": 2025,
-      "count": 246,
-      "median_price": 347450.0,
-      "avg_price": 367796.0,
+      "count": 233,
+      "median_price": 350000.0,
+      "avg_price": 358634.0,
       "min_price": 30000.0,
-      "max_price": 3963000.0
+      "max_price": 1347136.56
     },
     {
       "year": 2026,
-      "count": 141,
-      "median_price": 346000.0,
-      "avg_price": 353022.0,
+      "count": 136,
+      "median_price": 350000.0,
+      "avg_price": 358721.0,
       "min_price": 55000.0,
       "max_price": 1680000.0
     }

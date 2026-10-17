@@ -114,23 +114,6 @@
         "property_type": null
       },
       {
-        "id": 804800,
-        "sale_date": "2026-09-22",
-        "address": "19 RIVERSIDE DR, CHURCHTOWN, DUBLIN 14",
-        "county": "Dublin",
-        "eircode": "D14X280",
-        "price": 1250000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.301143,
-        "longitude": -6.269158,
-        "routing_key": "D14",
-        "bedrooms": 4,
-        "property_type": "semi-detached"
-      },
-      {
         "id": 804812,
         "sale_date": "2026-09-22",
         "address": "21 MOORE HOUSE, LORETO ABBEY, RATHFARNHAM",
@@ -146,6 +129,23 @@
         "routing_key": "D14",
         "bedrooms": 2,
         "property_type": "apartment"
+      },
+      {
+        "id": 804800,
+        "sale_date": "2026-09-22",
+        "address": "19 RIVERSIDE DR, CHURCHTOWN, DUBLIN 14",
+        "county": "Dublin",
+        "eircode": "D14X280",
+        "price": 1250000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.301143,
+        "longitude": -6.269158,
+        "routing_key": "D14",
+        "bedrooms": 4,
+        "property_type": "semi-detached"
       },
       {
         "id": 804697,

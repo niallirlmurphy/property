@@ -262,19 +262,19 @@
     },
     {
       "date": "2023-11-21",
-      "address": "137 Gleann an Ghairdin, Ballytegan, Gorey",
-      "price": 277533,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-11-21",
       "address": "15 GLEANN AN GHAIRDIN, BALLYTEGAN, WEXFORD",
       "price": 339000,
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": "Y25R8H3"
+    },
+    {
+      "date": "2023-11-21",
+      "address": "137 Gleann an Ghairdin, Ballytegan, Gorey",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2023-10-18",

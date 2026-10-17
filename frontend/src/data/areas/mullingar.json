@@ -8,7 +8,7 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 339604.0,
-  "avg_price": 318300,
+  "avg_price": 319800,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -139,24 +139,6 @@
       "distance_m": 1808.99076311
     },
     {
-      "id": 804589,
-      "sale_date": "2026-09-17",
-      "address": "BALLINLOUGH, MULLINGAR, WESTMEATH",
-      "county": "Westmeath",
-      "eircode": "N91KH72",
-      "price": 310000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.525604,
-      "longitude": -7.341862,
-      "routing_key": "N91",
-      "bedrooms": 3,
-      "property_type": null,
-      "distance_m": 44.25055587
-    },
-    {
       "id": 804579,
       "sale_date": "2026-09-17",
       "address": "9  NEW BALLINDERRY, MULLINGAR, CO WESTMEATH",
@@ -191,14 +173,32 @@
       "bedrooms": 2,
       "property_type": "apartment",
       "distance_m": 1747.99164246
+    },
+    {
+      "id": 804356,
+      "sale_date": "2026-09-15",
+      "address": "26 COLLEGE HILL, IRISHTOWN, MULLINGAR",
+      "county": "Westmeath",
+      "eircode": "N91N2C0",
+      "price": 325000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.538124,
+      "longitude": -7.360223,
+      "routing_key": "N91",
+      "bedrooms": 4,
+      "property_type": "semi-detached",
+      "distance_m": 1856.98489084
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 125,
-      "median_price": 137000.0,
-      "avg_price": 146719.0,
+      "count": 124,
+      "median_price": 137250.0,
+      "avg_price": 146822.0,
       "min_price": 45000.0,
       "max_price": 350000.0
     },
@@ -252,81 +252,81 @@
     },
     {
       "year": 2017,
-      "count": 198,
-      "median_price": 157750.0,
-      "avg_price": 167924.0,
+      "count": 197,
+      "median_price": 155500.0,
+      "avg_price": 167888.0,
       "min_price": 29550.0,
       "max_price": 660000.0
     },
     {
       "year": 2018,
-      "count": 227,
+      "count": 225,
       "median_price": 169000.0,
-      "avg_price": 174009.0,
+      "avg_price": 173624.0,
       "min_price": 40000.0,
       "max_price": 390000.0
     },
     {
       "year": 2019,
-      "count": 249,
-      "median_price": 178000.0,
-      "avg_price": 195122.0,
+      "count": 248,
+      "median_price": 177000.0,
+      "avg_price": 195012.0,
       "min_price": 40000.0,
       "max_price": 2100000.0
     },
     {
       "year": 2020,
-      "count": 181,
-      "median_price": 177500.0,
-      "avg_price": 189165.0,
+      "count": 180,
+      "median_price": 177250.0,
+      "avg_price": 187799.0,
       "min_price": 10062.35,
       "max_price": 542500.0
     },
     {
       "year": 2021,
-      "count": 233,
+      "count": 231,
       "median_price": 200000.0,
-      "avg_price": 208707.0,
+      "avg_price": 209038.0,
       "min_price": 35000.0,
       "max_price": 859031.0
     },
     {
       "year": 2022,
-      "count": 284,
+      "count": 280,
       "median_price": 225000.0,
-      "avg_price": 240755.0,
+      "avg_price": 240623.0,
       "min_price": 50000.0,
       "max_price": 945000.0
     },
     {
       "year": 2023,
-      "count": 316,
+      "count": 312,
       "median_price": 239500.0,
-      "avg_price": 242772.0,
+      "avg_price": 243000.0,
       "min_price": 77500.0,
       "max_price": 560000.0
     },
     {
       "year": 2024,
-      "count": 276,
-      "median_price": 292874.0,
-      "avg_price": 304046.0,
+      "count": 274,
+      "median_price": 295000.0,
+      "avg_price": 304743.0,
       "min_price": 62500.0,
       "max_price": 4757709.25
     },
     {
       "year": 2025,
-      "count": 347,
-      "median_price": 321000.0,
-      "avg_price": 336637.0,
+      "count": 345,
+      "median_price": 321585.0,
+      "avg_price": 337108.0,
       "min_price": 20000.0,
       "max_price": 2731277.53
     },
     {
       "year": 2026,
-      "count": 204,
+      "count": 202,
       "median_price": 339604.0,
-      "avg_price": 331002.0,
+      "avg_price": 330393.0,
       "min_price": 45653.0,
       "max_price": 875000.0
     }

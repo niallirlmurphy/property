@@ -406,19 +406,19 @@
     },
     {
       "date": "2022-10-06",
-      "address": "108 Maryborough Village, Mountrath Road, Portlaoise",
-      "price": 308370,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "R32HNR2"
-    },
-    {
-      "date": "2022-10-06",
       "address": "114 Maryborough Village, Mountrath Road, Portlaoise",
       "price": 308370,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "R32K20T"
+    },
+    {
+      "date": "2022-10-06",
+      "address": "108 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32HNR2"
     },
     {
       "date": "2022-09-22",

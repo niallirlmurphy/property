@@ -8,7 +8,7 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 712000.0,
-  "avg_price": 725500,
+  "avg_price": 810500,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -175,22 +175,22 @@
       "distance_m": 1918.45255831
     },
     {
-      "id": 803509,
-      "sale_date": "2026-09-07",
-      "address": "53 GLENAGEARY WOODS, DUN LAOGHAIRE, DUBLIN",
+      "id": 803843,
+      "sale_date": "2026-09-09",
+      "address": "66A LOWER ALBERT RD, GLENAGEARY, DUBLIN",
       "county": "Dublin",
-      "eircode": "A96X5C8",
-      "price": 1450000.0,
+      "eircode": "A96E3E7",
+      "price": 2300000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.281734,
-      "longitude": -6.139204,
+      "latitude": 53.277483,
+      "longitude": -6.121529,
       "routing_key": "A96",
-      "bedrooms": 5,
+      "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 1192.8143668
+      "distance_m": 1908.97253954
     }
   ],
   "trends": [
@@ -204,25 +204,25 @@
     },
     {
       "year": 2011,
-      "count": 130,
-      "median_price": 301250.0,
-      "avg_price": 434145.0,
+      "count": 131,
+      "median_price": 300000.0,
+      "avg_price": 432328.0,
       "min_price": 20000.0,
       "max_price": 2195500.0
     },
     {
       "year": 2012,
-      "count": 154,
+      "count": 155,
       "median_price": 342000.0,
-      "avg_price": 416459.0,
+      "avg_price": 414933.0,
       "min_price": 50000.0,
       "max_price": 3000000.0
     },
     {
       "year": 2013,
-      "count": 223,
-      "median_price": 395000.0,
-      "avg_price": 474824.0,
+      "count": 224,
+      "median_price": 395594.0,
+      "avg_price": 475723.0,
       "min_price": 31000.0,
       "max_price": 4155000.0
     },
@@ -236,33 +236,33 @@
     },
     {
       "year": 2015,
-      "count": 245,
+      "count": 246,
       "median_price": 490000.0,
-      "avg_price": 566519.0,
+      "avg_price": 566651.0,
       "min_price": 100995.0,
       "max_price": 2500000.0
     },
     {
       "year": 2016,
-      "count": 356,
-      "median_price": 450000.0,
-      "avg_price": 538904.0,
+      "count": 403,
+      "median_price": 416160.0,
+      "avg_price": 513176.0,
       "min_price": 100000.0,
       "max_price": 2275000.0
     },
     {
       "year": 2017,
-      "count": 426,
-      "median_price": 450000.0,
-      "avg_price": 557217.0,
+      "count": 564,
+      "median_price": 352423.0,
+      "avg_price": 501015.0,
       "min_price": 50000.0,
       "max_price": 3730000.0
     },
     {
       "year": 2018,
-      "count": 323,
-      "median_price": 515000.0,
-      "avg_price": 633139.0,
+      "count": 576,
+      "median_price": 412500.0,
+      "avg_price": 515941.0,
       "min_price": 62500.0,
       "max_price": 3600000.0
     },
@@ -284,9 +284,9 @@
     },
     {
       "year": 2021,
-      "count": 365,
+      "count": 364,
       "median_price": 650000.0,
-      "avg_price": 839937.0,
+      "avg_price": 834553.0,
       "min_price": 160000.0,
       "max_price": 4000000.0
     },
@@ -308,25 +308,25 @@
     },
     {
       "year": 2024,
-      "count": 421,
-      "median_price": 690000.0,
-      "avg_price": 888645.0,
+      "count": 420,
+      "median_price": 692500.0,
+      "avg_price": 889428.0,
       "min_price": 15000.0,
       "max_price": 8250000.0
     },
     {
       "year": 2025,
-      "count": 376,
+      "count": 378,
       "median_price": 713000.0,
-      "avg_price": 943118.0,
+      "avg_price": 942144.0,
       "min_price": 20000.0,
       "max_price": 9750000.0
     },
     {
       "year": 2026,
-      "count": 225,
+      "count": 229,
       "median_price": 712000.0,
-      "avg_price": 1071038.0,
+      "avg_price": 1073455.0,
       "min_price": 200000.0,
       "max_price": 17495412.84
     }

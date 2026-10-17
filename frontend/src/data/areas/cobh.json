@@ -8,10 +8,28 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 332989.0,
-  "avg_price": 345200,
+  "avg_price": 343700,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805392,
+      "sale_date": "2026-09-30",
+      "address": "18 WILLOW DR, CLUAIN ARD, COBH",
+      "county": "Cork",
+      "eircode": "P24CX36",
+      "price": 350000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.856281,
+      "longitude": -8.310847,
+      "routing_key": "P24",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "distance_m": 1279.06679256
+    },
     {
       "id": 804530,
       "sale_date": "2026-09-17",
@@ -173,24 +191,6 @@
       "bedrooms": null,
       "property_type": "terraced",
       "distance_m": 437.95829103
-    },
-    {
-      "id": 802379,
-      "sale_date": "2026-08-31",
-      "address": "14 RUSHBROOKE MANOR, COBH, CORK",
-      "county": "Cork",
-      "eircode": "P24DX03",
-      "price": 365000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.851093,
-      "longitude": -8.315517,
-      "routing_key": "P24",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 1412.55836221
     }
   ],
   "trends": [
@@ -268,9 +268,9 @@
     },
     {
       "year": 2019,
-      "count": 96,
-      "median_price": 214000.0,
-      "avg_price": 222992.0,
+      "count": 95,
+      "median_price": 215000.0,
+      "avg_price": 223103.0,
       "min_price": 60000.0,
       "max_price": 570000.0
     },
@@ -292,9 +292,9 @@
     },
     {
       "year": 2022,
-      "count": 157,
-      "median_price": 260500.0,
-      "avg_price": 313058.0,
+      "count": 156,
+      "median_price": 261968.0,
+      "avg_price": 314263.0,
       "min_price": 100000.0,
       "max_price": 1232500.0
     },
@@ -308,9 +308,9 @@
     },
     {
       "year": 2024,
-      "count": 160,
+      "count": 159,
       "median_price": 281938.0,
-      "avg_price": 309236.0,
+      "avg_price": 309169.0,
       "min_price": 32703.22,
       "max_price": 1330000.0
     },
@@ -324,9 +324,9 @@
     },
     {
       "year": 2026,
-      "count": 91,
+      "count": 92,
       "median_price": 332989.0,
-      "avg_price": 352170.0,
+      "avg_price": 352147.0,
       "min_price": 135000.0,
       "max_price": 795000.0
     }

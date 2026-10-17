@@ -131,23 +131,6 @@
         "property_type": "apartment"
       },
       {
-        "id": 804562,
-        "sale_date": "2026-09-17",
-        "address": "41 COLLEGE GATE, TOWNSEND STREET, DUBLIN 2",
-        "county": "Dublin",
-        "eircode": "D02DE72",
-        "price": 345000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.373481,
-        "longitude": -6.374289,
-        "routing_key": "D02",
-        "bedrooms": 1,
-        "property_type": "apartment"
-      },
-      {
         "id": 804571,
         "sale_date": "2026-09-17",
         "address": "7 STEPHENS LANE, MOUNT ST UPPER, DUBLIN 2",
@@ -163,6 +146,23 @@
         "routing_key": "D02",
         "bedrooms": 3,
         "property_type": null
+      },
+      {
+        "id": 804562,
+        "sale_date": "2026-09-17",
+        "address": "41 COLLEGE GATE, TOWNSEND STREET, DUBLIN 2",
+        "county": "Dublin",
+        "eircode": "D02DE72",
+        "price": 345000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.373481,
+        "longitude": -6.374289,
+        "routing_key": "D02",
+        "bedrooms": 1,
+        "property_type": "apartment"
       },
       {
         "id": 804455,

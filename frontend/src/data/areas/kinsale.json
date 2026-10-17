@@ -8,7 +8,7 @@
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 427313.0,
-  "avg_price": 450661,
+  "avg_price": 455961,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -47,6 +47,24 @@
       "bedrooms": 4,
       "property_type": "detached",
       "distance_m": 252.92252153
+    },
+    {
+      "id": 805165,
+      "sale_date": "2026-09-28",
+      "address": "31 SHEARWATER, PIER RD, KINSALE",
+      "county": "Cork",
+      "eircode": "P17X659",
+      "price": 450000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.701992,
+      "longitude": -8.519403,
+      "routing_key": "P17",
+      "bedrooms": 2,
+      "property_type": "apartment",
+      "distance_m": 484.60676266
     },
     {
       "id": 805140,
@@ -173,24 +191,6 @@
       "bedrooms": 3,
       "property_type": "terraced",
       "distance_m": 231.43903551
-    },
-    {
-      "id": 802408,
-      "sale_date": "2026-08-31",
-      "address": "22 ABBEY VIEW, KINSALE, CORK",
-      "county": "Cork",
-      "eircode": "P17F978",
-      "price": 397000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.70655,
-      "longitude": -8.528262,
-      "routing_key": "P17",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 376.01119711
     }
   ],
   "trends": [
@@ -316,17 +316,17 @@
     },
     {
       "year": 2025,
-      "count": 145,
+      "count": 144,
       "median_price": 438326.0,
-      "avg_price": 530086.0,
+      "avg_price": 530723.0,
       "min_price": 90000.0,
       "max_price": 2820000.0
     },
     {
       "year": 2026,
-      "count": 88,
+      "count": 89,
       "median_price": 427313.0,
-      "avg_price": 546339.0,
+      "avg_price": 545257.0,
       "min_price": 10000.0,
       "max_price": 3176500.0
     }

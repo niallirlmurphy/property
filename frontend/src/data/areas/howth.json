@@ -244,11 +244,11 @@
     },
     {
       "year": 2016,
-      "count": 53,
-      "median_price": 530000.0,
-      "avg_price": 622563.0,
+      "count": 52,
+      "median_price": 527500.0,
+      "avg_price": 600881.0,
       "min_price": 130000.0,
-      "max_price": 1750000.0
+      "max_price": 1620000.0
     },
     {
       "year": 2017,
@@ -260,50 +260,50 @@
     },
     {
       "year": 2018,
-      "count": 66,
-      "median_price": 707500.0,
-      "avg_price": 716765.0,
+      "count": 58,
+      "median_price": 660000.0,
+      "avg_price": 697642.0,
       "min_price": 24000.0,
       "max_price": 2150000.0
     },
     {
       "year": 2019,
-      "count": 57,
+      "count": 56,
       "median_price": 675000.0,
-      "avg_price": 773379.0,
+      "avg_price": 778529.0,
       "min_price": 133389.0,
       "max_price": 2895000.0
     },
     {
       "year": 2020,
-      "count": 62,
-      "median_price": 785000.0,
-      "avg_price": 825860.0,
+      "count": 60,
+      "median_price": 804692.0,
+      "avg_price": 841806.0,
       "min_price": 160000.0,
       "max_price": 2075000.0
     },
     {
       "year": 2021,
-      "count": 61,
+      "count": 60,
       "median_price": 680000.0,
-      "avg_price": 769130.0,
+      "avg_price": 772866.0,
       "min_price": 295000.0,
       "max_price": 1885000.0
     },
     {
       "year": 2022,
-      "count": 84,
-      "median_price": 671250.0,
-      "avg_price": 931509.0,
+      "count": 72,
+      "median_price": 742500.0,
+      "avg_price": 1023053.0,
       "min_price": 217500.0,
       "max_price": 5700000.0
     },
     {
       "year": 2023,
-      "count": 78,
-      "median_price": 867500.0,
-      "avg_price": 1006665.0,
-      "min_price": 250000.0,
+      "count": 77,
+      "median_price": 870000.0,
+      "avg_price": 1016492.0,
+      "min_price": 260000.0,
       "max_price": 3150000.0
     },
     {
@@ -316,9 +316,9 @@
     },
     {
       "year": 2025,
-      "count": 61,
-      "median_price": 682500.0,
-      "avg_price": 835171.0,
+      "count": 52,
+      "median_price": 740000.0,
+      "avg_price": 879078.0,
       "min_price": 30000.0,
       "max_price": 3000000.0
     },

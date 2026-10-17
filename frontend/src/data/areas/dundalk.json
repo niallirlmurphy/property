@@ -316,9 +316,9 @@
     },
     {
       "year": 2025,
-      "count": 283,
+      "count": 282,
       "median_price": 260000.0,
-      "avg_price": 294951.0,
+      "avg_price": 294685.0,
       "min_price": 36000.0,
       "max_price": 8229074.89
     },

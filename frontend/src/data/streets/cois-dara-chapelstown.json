@@ -342,6 +342,22 @@
     },
     {
       "date": "2022-05-19",
+      "address": "62 Cois Dara, Chapelstown, Tullow Road",
+      "price": 207048,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-19",
+      "address": "63 Cois Dara, Chapelstown, Tullow Road",
+      "price": 207048,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2022-05-19",
       "address": "61 Cois Dara, Chapelstown, Tullow Road",
       "price": 207048,
       "bedrooms": null,
@@ -405,24 +421,8 @@
       "eircode": null
     },
     {
-      "date": "2022-05-19",
-      "address": "62 Cois Dara, Chapelstown, Tullow Road",
-      "price": 207048,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-05-19",
-      "address": "63 Cois Dara, Chapelstown, Tullow Road",
-      "price": 207048,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
       "date": "2022-03-31",
-      "address": "40 Cois Dara, Chapelstown, Tullow Road",
+      "address": "46 Cois Dara, Chapelstown, Tullow Road",
       "price": 195595,
       "bedrooms": null,
       "propertyType": null,
@@ -430,7 +430,7 @@
     },
     {
       "date": "2022-03-31",
-      "address": "47 Cois Dara, Chapelstown, Tullow Road",
+      "address": "45 Cois Dara, Chapelstown, Tullow Road",
       "price": 195595,
       "bedrooms": null,
       "propertyType": null,
@@ -438,15 +438,15 @@
     },
     {
       "date": "2022-03-31",
-      "address": "48 Cois Dara, Chapelstown, Tullow Road",
-      "price": 195595,
+      "address": "42 Cois Dara, Chapelstown, Tullow Road",
+      "price": 165815,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2022-03-31",
-      "address": "49 Cois Dara, Chapelstown, Tullow Road",
+      "address": "43 Cois Dara, Chapelstown, Tullow Road",
       "price": 195595,
       "bedrooms": null,
       "propertyType": null,

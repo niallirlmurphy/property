@@ -318,19 +318,19 @@
     },
     {
       "date": "2024-05-29",
-      "address": "299 CHAMBERS PARK, KILCOCK, KILDARE",
-      "price": 347000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "W23ED35"
-    },
-    {
-      "date": "2024-05-29",
       "address": "171 CHAMBERS PARK, KILCOCK, KILDARE",
       "price": 295000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "W23EE70"
+    },
+    {
+      "date": "2024-05-29",
+      "address": "299 CHAMBERS PARK, KILCOCK, KILDARE",
+      "price": 347000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23ED35"
     },
     {
       "date": "2024-05-22",

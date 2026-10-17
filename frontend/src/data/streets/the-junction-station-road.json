@@ -22,7 +22,7 @@
   "transactions": [
     {
       "date": "2023-09-13",
-      "address": "103 The Junction, Station Road, The Crossings  Adamstown",
+      "address": "109 The Junction, Station Road, The Crossings  Adamstown",
       "price": 374362,
       "bedrooms": null,
       "propertyType": null,
@@ -30,7 +30,23 @@
     },
     {
       "date": "2023-09-13",
-      "address": "108 The Junction, Station Road, The Crossings  Adamstown",
+      "address": "133 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 285223,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "19 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 231987,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "38 The Junction, Station Road, The Crossings  Adamstown",
       "price": 325115,
       "bedrooms": null,
       "propertyType": null,
@@ -38,7 +54,55 @@
     },
     {
       "date": "2023-09-13",
-      "address": "105 The Junction, Station Road, The Crossings  Adamstown",
+      "address": "22 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "23 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "98 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 285223,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "10 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 320700,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "110 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "136 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 285223,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "137 The Junction, Station Road, The Crossings  Adamstown",
       "price": 320139,
       "bedrooms": null,
       "propertyType": null,
@@ -46,7 +110,7 @@
     },
     {
       "date": "2023-09-13",
-      "address": "113 The Junction, Station Road, The Crossings  Adamstown",
+      "address": "96 The Junction, Station Road, The Crossings  Adamstown",
       "price": 325115,
       "bedrooms": null,
       "propertyType": null,
@@ -54,8 +118,16 @@
     },
     {
       "date": "2023-09-13",
-      "address": "104 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 285223,
+      "address": "95 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 374362,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "41 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -70,14 +142,6 @@
     },
     {
       "date": "2023-09-13",
-      "address": "101 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 325115,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
       "address": "39 The Junction, Station Road, The Crossings  Adamstown",
       "price": 231987,
       "bedrooms": null,
@@ -86,32 +150,8 @@
     },
     {
       "date": "2023-09-13",
-      "address": "112 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 285223,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "138 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 285223,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
       "address": "11 The Junction, Station Road, The Crossings  Adamstown",
       "price": 320700,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "111 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 231987,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -150,78 +190,6 @@
     },
     {
       "date": "2023-09-13",
-      "address": "117 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 374362,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "116 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 285223,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "128 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 285223,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "114 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 325115,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "141 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 294053,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "115 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 325115,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "140 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 240816,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "122 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 325115,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "129 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 320139,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
       "address": "13 The Junction, Station Road, The Crossings  Adamstown",
       "price": 369948,
       "bedrooms": null,
@@ -254,22 +222,6 @@
     },
     {
       "date": "2023-09-13",
-      "address": "124 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 285223,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "123 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 320139,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
       "address": "12 The Junction, Station Road, The Crossings  Adamstown",
       "price": 369948,
       "bedrooms": null,
@@ -278,88 +230,8 @@
     },
     {
       "date": "2023-09-13",
-      "address": "121 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 374362,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "130 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 231987,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "127 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 320139,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "120 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 320139,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "139 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 328969,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "106 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 320139,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "107 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 374362,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
       "address": "14 The Junction, Station Road, The Crossings  Adamstown",
       "price": 369948,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "125 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 231987,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "126 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 285223,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-13",
-      "address": "134 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 320139,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -390,32 +262,160 @@
     },
     {
       "date": "2023-09-13",
-      "address": "118 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 285223,
+      "address": "15 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 369948,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2023-09-13",
-      "address": "119 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 320139,
+      "address": "16 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2023-09-13",
-      "address": "131 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 285223,
+      "address": "18 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2023-09-13",
-      "address": "132 The Junction, Station Road, The Crossings  Adamstown",
-      "price": 320139,
+      "address": "20 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "21 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "24 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "25 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "26 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "27 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 374362,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "28 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "30 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "31 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "34 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "35 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "36 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "40 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "42 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "43 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "44 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-09-13",
+      "address": "45 The Junction, Station Road, The Crossings  Adamstown",
+      "price": 325115,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

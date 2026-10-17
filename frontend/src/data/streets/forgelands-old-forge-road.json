@@ -190,17 +190,17 @@
     },
     {
       "date": "2026-02-19",
-      "address": "217 Forgelands, Old Forge Road, Enniscorthy",
-      "price": 303965,
-      "bedrooms": 4,
+      "address": "216 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303900,
+      "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": null
     },
     {
       "date": "2026-02-19",
-      "address": "216 Forgelands, Old Forge Road, Enniscorthy",
-      "price": 303900,
-      "bedrooms": 3,
+      "address": "217 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303965,
+      "bedrooms": 4,
       "propertyType": "semi-detached",
       "eircode": null
     },

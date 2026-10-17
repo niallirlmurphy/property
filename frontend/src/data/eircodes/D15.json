@@ -80,6 +80,23 @@
         "property_type": "semi-detached"
       },
       {
+        "id": 805278,
+        "sale_date": "2026-09-29",
+        "address": "19 WOODVIEW PARK, CASTLEKNOCK, DUBLIN 15",
+        "county": "Dublin",
+        "eircode": "D15WV4D",
+        "price": 600000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.379375,
+        "longitude": -6.359521,
+        "routing_key": "D15",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
         "id": 805304,
         "sale_date": "2026-09-29",
         "address": "38 LINNETFIELDS SQ, CASTAHEANY, CLONEE DUBLIN 15",
@@ -95,23 +112,6 @@
         "routing_key": "D15",
         "bedrooms": 2,
         "property_type": "duplex"
-      },
-      {
-        "id": 805278,
-        "sale_date": "2026-09-29",
-        "address": "19 WOODVIEW PARK, CASTLEKNOCK, DUBLIN 15",
-        "county": "Dublin",
-        "eircode": "D15WV4D",
-        "price": 600000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.39339,
-        "longitude": -6.16765,
-        "routing_key": "D15",
-        "bedrooms": 3,
-        "property_type": "semi-detached"
       },
       {
         "id": 805249,

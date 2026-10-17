@@ -131,23 +131,6 @@
         "property_type": "apartment"
       },
       {
-        "id": 802896,
-        "sale_date": "2026-09-02",
-        "address": "6 RIVERSDALE AVE, PALMERSTOWN, DUBLIN 20",
-        "county": "Dublin",
-        "eircode": "D20YN52",
-        "price": 635000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.358283,
-        "longitude": -6.376193,
-        "routing_key": "D20",
-        "bedrooms": 3,
-        "property_type": "terraced"
-      },
-      {
         "id": 802857,
         "sale_date": "2026-09-02",
         "address": "31 KNOCKMAREE, ST LAURENCE'S ROAD, CHAPELIZOD",
@@ -165,6 +148,23 @@
         "property_type": null
       },
       {
+        "id": 802896,
+        "sale_date": "2026-09-02",
+        "address": "6 RIVERSDALE AVE, PALMERSTOWN, DUBLIN 20",
+        "county": "Dublin",
+        "eircode": "D20YN52",
+        "price": 635000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.358283,
+        "longitude": -6.376193,
+        "routing_key": "D20",
+        "bedrooms": 3,
+        "property_type": "terraced"
+      },
+      {
         "id": 802606,
         "sale_date": "2026-09-01",
         "address": "206 THE ISLAND, CHAPELIZOD, DUBLIN 20",
@@ -175,8 +175,8 @@
         "vat_exclusive": false,
         "description": "Second-Hand Dwelling house /Apartment",
         "size_description": null,
-        "latitude": 53.228318,
-        "longitude": -6.124304,
+        "latitude": 53.349243,
+        "longitude": -6.346136,
         "routing_key": "D20",
         "bedrooms": 2,
         "property_type": "apartment"

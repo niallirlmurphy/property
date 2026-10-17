@@ -174,18 +174,18 @@
     },
     {
       "date": "2025-06-06",
-      "address": "244 Drumnigh Manor, Portmarnock",
-      "price": 722466,
-      "bedrooms": 5,
-      "propertyType": "house",
-      "eircode": null
-    },
-    {
-      "date": "2025-06-06",
       "address": "261 Drumnigh Manor, Portmarnock",
       "price": 740088,
       "bedrooms": 5,
       "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2025-06-06",
+      "address": "244 Drumnigh Manor, Portmarnock",
+      "price": 722466,
+      "bedrooms": 5,
+      "propertyType": "house",
       "eircode": null
     },
     {

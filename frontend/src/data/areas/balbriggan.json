@@ -196,9 +196,9 @@
   "trends": [
     {
       "year": 2010,
-      "count": 50,
+      "count": 49,
       "median_price": 197500.0,
-      "avg_price": 198631.0,
+      "avg_price": 198705.0,
       "min_price": 81818.0,
       "max_price": 350000.0
     },
@@ -228,9 +228,9 @@
     },
     {
       "year": 2014,
-      "count": 99,
+      "count": 98,
       "median_price": 160000.0,
-      "avg_price": 159870.0,
+      "avg_price": 159685.0,
       "min_price": 35000.0,
       "max_price": 349000.0
     },
@@ -284,9 +284,9 @@
     },
     {
       "year": 2021,
-      "count": 129,
-      "median_price": 270000.0,
-      "avg_price": 348027.0,
+      "count": 128,
+      "median_price": 265000.0,
+      "avg_price": 348245.0,
       "min_price": 10000.0,
       "max_price": 9700000.0
     },
@@ -308,17 +308,17 @@
     },
     {
       "year": 2024,
-      "count": 129,
-      "median_price": 352423.0,
-      "avg_price": 347177.0,
+      "count": 128,
+      "median_price": 352422.0,
+      "avg_price": 346546.0,
       "min_price": 117500.0,
       "max_price": 905000.0
     },
     {
       "year": 2025,
-      "count": 140,
+      "count": 138,
       "median_price": 357000.0,
-      "avg_price": 359130.0,
+      "avg_price": 357545.0,
       "min_price": 35000.0,
       "max_price": 950000.0
     },

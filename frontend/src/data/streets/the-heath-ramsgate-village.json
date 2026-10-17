@@ -430,19 +430,19 @@
     },
     {
       "date": "2022-08-10",
-      "address": "191 THE HEATH, RAMSGATE VILLAGE, GOREY",
-      "price": 265000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "Y25Y597"
-    },
-    {
-      "date": "2022-08-10",
       "address": "158 THE HEATH, RAMSGATE VILLAGE, GOREY",
       "price": 220000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "Y25AH50"
+    },
+    {
+      "date": "2022-08-10",
+      "address": "191 THE HEATH, RAMSGATE VILLAGE, GOREY",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "Y25Y597"
     },
     {
       "date": "2022-04-27",

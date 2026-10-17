@@ -246,6 +246,30 @@
     },
     {
       "date": "2019-04-12",
+      "address": "110 Carton Grove, Dublin Road, Maynooth",
+      "price": 246657,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-12",
+      "address": "96 Carton Grove, Dublin Road, Maynooth",
+      "price": 296262,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-12",
+      "address": "97 Carton Grove, Dublin Road, Maynooth",
+      "price": 296262,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-12",
       "address": "100 Carton Grove, Dublin Road, Maynooth",
       "price": 296262,
       "bedrooms": null,
@@ -320,30 +344,6 @@
       "date": "2019-04-12",
       "address": "109 Carton Grove, Dublin Road, Maynooth",
       "price": 246657,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-04-12",
-      "address": "110 Carton Grove, Dublin Road, Maynooth",
-      "price": 246657,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-04-12",
-      "address": "96 Carton Grove, Dublin Road, Maynooth",
-      "price": 296262,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-04-12",
-      "address": "97 Carton Grove, Dublin Road, Maynooth",
-      "price": 296262,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

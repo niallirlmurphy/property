@@ -114,6 +114,23 @@
         "property_type": "apartment"
       },
       {
+        "id": 805212,
+        "sale_date": "2026-09-28",
+        "address": "8 GLENBOURNE RD, LEOPARDSTOWN VALLEY, DUBLIN 18",
+        "county": "Dublin",
+        "eircode": "D18A2H0",
+        "price": 702000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.25903,
+        "longitude": -6.1992,
+        "routing_key": "D18",
+        "bedrooms": 3,
+        "property_type": "semi-detached"
+      },
+      {
         "id": 805107,
         "sale_date": "2026-09-28",
         "address": "1 WILLOW GLEN, GLENAMUCK ROAD, CARRICKMINES",
@@ -143,23 +160,6 @@
         "size_description": null,
         "latitude": 53.254395,
         "longitude": -6.20325,
-        "routing_key": "D18",
-        "bedrooms": 3,
-        "property_type": "semi-detached"
-      },
-      {
-        "id": 805212,
-        "sale_date": "2026-09-28",
-        "address": "8 GLENBOURNE RD, LEOPARDSTOWN VALLEY, DUBLIN 18",
-        "county": "Dublin",
-        "eircode": "D18A2H0",
-        "price": 702000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.25903,
-        "longitude": -6.1992,
         "routing_key": "D18",
         "bedrooms": 3,
         "property_type": "semi-detached"

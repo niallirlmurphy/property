@@ -222,6 +222,22 @@
     },
     {
       "date": "2024-12-23",
+      "address": "105 FEARANN RI, DOUGHISKA, GALWAY",
+      "price": 345000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "H91C9TD"
+    },
+    {
+      "date": "2024-12-23",
+      "address": "141 FEARANN RI, DOUGHISKA, GALWAY",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H91NRH1"
+    },
+    {
+      "date": "2024-12-23",
       "address": "103 FEARANN RI, DOUGHISKA, GALWAY",
       "price": 290000,
       "bedrooms": null,
@@ -243,22 +259,6 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "H91F61Y"
-    },
-    {
-      "date": "2024-12-23",
-      "address": "105 FEARANN RI, DOUGHISKA, GALWAY",
-      "price": 345000,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
-      "eircode": "H91C9TD"
-    },
-    {
-      "date": "2024-12-23",
-      "address": "141 FEARANN RI, DOUGHISKA, GALWAY",
-      "price": 320000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "H91NRH1"
     },
     {
       "date": "2024-12-17",

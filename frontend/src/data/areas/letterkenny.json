@@ -7,8 +7,8 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 220000.0,
-  "avg_price": 311209,
+  "median_price": 223000.0,
+  "avg_price": 750073,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -67,24 +67,6 @@
       "distance_m": 1807.14642237
     },
     {
-      "id": 805194,
-      "sale_date": "2026-09-28",
-      "address": "52 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
-      "county": "Donegal",
-      "eircode": null,
-      "price": 360792.0,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 54.937941,
-      "longitude": -7.750138,
-      "routing_key": null,
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 1807.14642237
-    },
-    {
       "id": 805192,
       "sale_date": "2026-09-28",
       "address": "51 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
@@ -103,22 +85,22 @@
       "distance_m": 1807.14642237
     },
     {
-      "id": 804889,
-      "sale_date": "2026-09-22",
-      "address": "ROSEMOUNT HOUSE, LETTERKENNY, DONEGAL",
+      "id": 805194,
+      "sale_date": "2026-09-28",
+      "address": "52 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
       "county": "Donegal",
-      "eircode": "F92X893",
-      "price": 292000.0,
+      "eircode": null,
+      "price": 360792.0,
       "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 54.949562,
-      "longitude": -7.737654,
-      "routing_key": "F92",
-      "bedrooms": 6,
-      "property_type": "detached",
-      "distance_m": 286.22624233
+      "latitude": 54.937941,
+      "longitude": -7.750138,
+      "routing_key": null,
+      "bedrooms": 4,
+      "property_type": "semi-detached",
+      "distance_m": 1807.14642237
     },
     {
       "id": 804794,
@@ -191,6 +173,24 @@
       "bedrooms": 4,
       "property_type": "semi-detached",
       "distance_m": 1807.14642237
+    },
+    {
+      "id": 803725,
+      "sale_date": "2026-09-09",
+      "address": "1-12 Droim na Gaoithe, Windyhall, Letterkenny",
+      "county": "Donegal",
+      "eircode": null,
+      "price": 4680632.03,
+      "not_full_market_price": true,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 54.964729,
+      "longitude": -7.731981,
+      "routing_key": null,
+      "bedrooms": 1,
+      "property_type": "house",
+      "distance_m": 1456.86711595
     }
   ],
   "trends": [
@@ -260,73 +260,73 @@
     },
     {
       "year": 2018,
-      "count": 134,
-      "median_price": 102500.0,
-      "avg_price": 119575.0,
+      "count": 130,
+      "median_price": 103750.0,
+      "avg_price": 120508.0,
       "min_price": 20000.0,
       "max_price": 835000.0
     },
     {
       "year": 2019,
-      "count": 155,
+      "count": 149,
       "median_price": 110000.0,
-      "avg_price": 119983.0,
+      "avg_price": 119066.0,
       "min_price": 12500.0,
       "max_price": 375000.0
     },
     {
       "year": 2020,
-      "count": 149,
-      "median_price": 139000.0,
-      "avg_price": 137160.0,
+      "count": 144,
+      "median_price": 136250.0,
+      "avg_price": 137151.0,
       "min_price": 22000.0,
       "max_price": 392000.0
     },
     {
       "year": 2021,
-      "count": 169,
+      "count": 152,
       "median_price": 125000.0,
-      "avg_price": 135141.0,
-      "min_price": 25000.0,
+      "avg_price": 136137.0,
+      "min_price": 27000.0,
       "max_price": 385000.0
     },
     {
       "year": 2022,
-      "count": 210,
-      "median_price": 165000.0,
-      "avg_price": 164417.0,
+      "count": 181,
+      "median_price": 167000.0,
+      "avg_price": 169274.0,
       "min_price": 22000.0,
       "max_price": 380000.0
     },
     {
       "year": 2023,
-      "count": 205,
+      "count": 166,
       "median_price": 175000.0,
-      "avg_price": 179927.0,
+      "avg_price": 181610.0,
       "min_price": 40000.0,
       "max_price": 625000.0
     },
     {
       "year": 2024,
-      "count": 179,
-      "median_price": 176000.0,
-      "avg_price": 188197.0,
-      "min_price": 30000.0,
+      "count": 157,
+      "median_price": 180000.0,
+      "avg_price": 194107.0,
+      "min_price": 40000.0,
       "max_price": 550000.0
     },
     {
       "year": 2025,
-      "count": 182,
-      "median_price": 176250.0,
-      "avg_price": 200036.0,
+      "count": 160,
+      "median_price": 180000.0,
+      "avg_price": 204866.0,
       "min_price": 24000.0,
       "max_price": 592000.0
     },
     {
       "year": 2026,
-      "count": 137,
-      "median_price": 220000.0,
-      "avg_price": 245588.0,
+      "count": 121,
+      "median_price": 223000.0,
+      "avg_price": 247587.0,
       "min_price": 40000.0,
       "max_price": 2975400.0
     }

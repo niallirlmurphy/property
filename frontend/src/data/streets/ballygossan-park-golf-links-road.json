@@ -230,19 +230,19 @@
     },
     {
       "date": "2022-09-30",
-      "address": "27 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
-      "price": 650000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "K34Y940"
-    },
-    {
-      "date": "2022-09-30",
       "address": "36, BALLYGOSSAN PARK, GOLF LINKS ROAD",
       "price": 547000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "K34F407"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "27 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34Y940"
     },
     {
       "date": "2021-09-02",

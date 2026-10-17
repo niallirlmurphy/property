@@ -7,8 +7,8 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 330000.0,
-  "avg_price": 357385,
+  "median_price": 325000.0,
+  "avg_price": 350806,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -29,24 +29,6 @@
       "bedrooms": null,
       "property_type": null,
       "distance_m": 1824.00851514
-    },
-    {
-      "id": 805104,
-      "sale_date": "2026-09-27",
-      "address": "33 KNOCKRAHADERRY, LISCANNOR, CLARE",
-      "county": "Clare",
-      "eircode": "V95HP30",
-      "price": 405000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.8362454368492,
-      "longitude": -8.98278443222419,
-      "routing_key": "V95",
-      "bedrooms": 3,
-      "property_type": "detached",
-      "distance_m": 811.59896303
     },
     {
       "id": 804073,
@@ -191,6 +173,24 @@
       "bedrooms": null,
       "property_type": null,
       "distance_m": 984.82114971
+    },
+    {
+      "id": 803218,
+      "sale_date": "2026-09-04",
+      "address": "17 Cedar Hill, Tulla Road, Ennis",
+      "county": "Clare",
+      "eircode": null,
+      "price": 339207.04,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.85206,
+      "longitude": -8.972794,
+      "routing_key": null,
+      "bedrooms": null,
+      "property_type": null,
+      "distance_m": 1203.64114221
     }
   ],
   "trends": [
@@ -212,9 +212,9 @@
     },
     {
       "year": 2012,
-      "count": 86,
+      "count": 85,
       "median_price": 115000.0,
-      "avg_price": 141603.0,
+      "avg_price": 142198.0,
       "min_price": 20000.0,
       "max_price": 1923952.0
     },
@@ -236,9 +236,9 @@
     },
     {
       "year": 2015,
-      "count": 189,
-      "median_price": 98000.0,
-      "avg_price": 107929.0,
+      "count": 188,
+      "median_price": 99000.0,
+      "avg_price": 108168.0,
       "min_price": 15000.0,
       "max_price": 300000.0
     },
@@ -252,17 +252,17 @@
     },
     {
       "year": 2017,
-      "count": 148,
+      "count": 146,
       "median_price": 160000.0,
-      "avg_price": 165319.0,
+      "avg_price": 166368.0,
       "min_price": 37500.0,
       "max_price": 450000.0
     },
     {
       "year": 2018,
-      "count": 184,
-      "median_price": 172500.0,
-      "avg_price": 164600.0,
+      "count": 182,
+      "median_price": 173000.0,
+      "avg_price": 165480.0,
       "min_price": 17000.0,
       "max_price": 390000.0
     },
@@ -276,57 +276,57 @@
     },
     {
       "year": 2020,
-      "count": 186,
+      "count": 185,
       "median_price": 187000.0,
-      "avg_price": 191684.0,
+      "avg_price": 192093.0,
       "min_price": 40000.0,
       "max_price": 585000.0
     },
     {
       "year": 2021,
-      "count": 247,
+      "count": 238,
       "median_price": 205000.0,
-      "avg_price": 211103.0,
+      "avg_price": 208838.0,
       "min_price": 32000.0,
       "max_price": 829915.0
     },
     {
       "year": 2022,
-      "count": 244,
+      "count": 234,
       "median_price": 225000.0,
-      "avg_price": 233585.0,
+      "avg_price": 233799.0,
       "min_price": 20000.0,
       "max_price": 1700000.0
     },
     {
       "year": 2023,
-      "count": 250,
-      "median_price": 252500.0,
-      "avg_price": 253944.0,
+      "count": 245,
+      "median_price": 255000.0,
+      "avg_price": 253867.0,
       "min_price": 68000.0,
       "max_price": 595000.0
     },
     {
       "year": 2024,
-      "count": 221,
-      "median_price": 270000.0,
-      "avg_price": 291423.0,
+      "count": 209,
+      "median_price": 271000.0,
+      "avg_price": 293908.0,
       "min_price": 10000.0,
       "max_price": 3218234.67
     },
     {
       "year": 2025,
-      "count": 212,
-      "median_price": 288750.0,
-      "avg_price": 299938.0,
+      "count": 208,
+      "median_price": 287250.0,
+      "avg_price": 299417.0,
       "min_price": 50000.0,
       "max_price": 1250000.0
     },
     {
       "year": 2026,
-      "count": 129,
-      "median_price": 330000.0,
-      "avg_price": 321261.0,
+      "count": 125,
+      "median_price": 325000.0,
+      "avg_price": 321029.0,
       "min_price": 48000.0,
       "max_price": 590308.36
     }

@@ -131,23 +131,6 @@
         "property_type": "semi-detached"
       },
       {
-        "id": 803271,
-        "sale_date": "2026-09-04",
-        "address": "3 GLENAVY PARK, TERENURE, DUBLIN 6",
-        "county": "Dublin",
-        "eircode": "D6WF256",
-        "price": 1300000.0,
-        "not_full_market_price": false,
-        "vat_exclusive": false,
-        "description": "Second-Hand Dwelling house /Apartment",
-        "size_description": null,
-        "latitude": 53.310546,
-        "longitude": -6.296659,
-        "routing_key": "D6W",
-        "bedrooms": 4,
-        "property_type": "detached"
-      },
-      {
         "id": 803317,
         "sale_date": "2026-09-04",
         "address": "5 PARKVIEW, HAROLDS CROSS RD, DUBLIN 6W",
@@ -163,6 +146,23 @@
         "routing_key": "D6W",
         "bedrooms": 1,
         "property_type": "apartment"
+      },
+      {
+        "id": 803271,
+        "sale_date": "2026-09-04",
+        "address": "3 GLENAVY PARK, TERENURE, DUBLIN 6",
+        "county": "Dublin",
+        "eircode": "D6WF256",
+        "price": 1300000.0,
+        "not_full_market_price": false,
+        "vat_exclusive": false,
+        "description": "Second-Hand Dwelling house /Apartment",
+        "size_description": null,
+        "latitude": 53.310546,
+        "longitude": -6.296659,
+        "routing_key": "D6W",
+        "bedrooms": 4,
+        "property_type": "detached"
       },
       {
         "id": 803304,

@@ -7,8 +7,8 @@
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 335514.0,
-  "avg_price": 350450,
+  "median_price": 335000.0,
+  "avg_price": 328500,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -175,22 +175,22 @@
       "distance_m": 1034.43332817
     },
     {
-      "id": 804043,
-      "sale_date": "2026-09-11",
-      "address": "10 The Green, Fox Meadows, KILKENNY",
+      "id": 803838,
+      "sale_date": "2026-09-09",
+      "address": "6 HAZEL GROVE, ARCHERS ST, KILKENNY",
       "county": "Kilkenny",
-      "eircode": null,
-      "price": 581497.79,
+      "eircode": "R95E4FN",
+      "price": 362000.0,
       "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 52.657943,
-      "longitude": -7.262626,
-      "routing_key": null,
+      "latitude": 52.642871,
+      "longitude": -7.241585,
+      "routing_key": "R95",
       "bedrooms": 4,
-      "property_type": "house",
-      "distance_m": 1111.62038298
+      "property_type": "terraced",
+      "distance_m": 1090.82182651
     }
   ],
   "trends": [
@@ -220,113 +220,113 @@
     },
     {
       "year": 2013,
-      "count": 69,
-      "median_price": 110500.0,
-      "avg_price": 141640.0,
+      "count": 68,
+      "median_price": 112750.0,
+      "avg_price": 142252.0,
       "min_price": 25000.0,
       "max_price": 546255.0
     },
     {
       "year": 2014,
-      "count": 155,
-      "median_price": 115000.0,
-      "avg_price": 136747.0,
+      "count": 153,
+      "median_price": 115500.0,
+      "avg_price": 137243.0,
       "min_price": 40000.0,
       "max_price": 805000.0
     },
     {
       "year": 2015,
-      "count": 174,
-      "median_price": 137500.0,
-      "avg_price": 155394.0,
+      "count": 172,
+      "median_price": 138000.0,
+      "avg_price": 156277.0,
       "min_price": 40000.0,
       "max_price": 590000.0
     },
     {
       "year": 2016,
-      "count": 166,
+      "count": 164,
       "median_price": 175500.0,
-      "avg_price": 194919.0,
+      "avg_price": 195345.0,
       "min_price": 23000.0,
       "max_price": 540000.0
     },
     {
       "year": 2017,
-      "count": 206,
+      "count": 201,
       "median_price": 175000.0,
-      "avg_price": 195140.0,
+      "avg_price": 194661.0,
       "min_price": 33333.33,
       "max_price": 1100000.0
     },
     {
       "year": 2018,
-      "count": 227,
+      "count": 214,
       "median_price": 195000.0,
-      "avg_price": 208660.0,
+      "avg_price": 210449.0,
       "min_price": 10000.0,
       "max_price": 600000.0
     },
     {
       "year": 2019,
-      "count": 271,
-      "median_price": 197000.0,
-      "avg_price": 220322.0,
+      "count": 266,
+      "median_price": 198000.0,
+      "avg_price": 221540.0,
       "min_price": 10000.0,
       "max_price": 637444.93
     },
     {
       "year": 2020,
-      "count": 191,
+      "count": 188,
       "median_price": 207000.0,
-      "avg_price": 229302.0,
+      "avg_price": 230014.0,
       "min_price": 35000.0,
       "max_price": 1100000.0
     },
     {
       "year": 2021,
-      "count": 268,
+      "count": 264,
       "median_price": 240500.0,
-      "avg_price": 280862.0,
+      "avg_price": 281909.0,
       "min_price": 21640.0,
       "max_price": 4250000.0
     },
     {
       "year": 2022,
-      "count": 292,
-      "median_price": 261250.0,
-      "avg_price": 311106.0,
+      "count": 291,
+      "median_price": 260000.0,
+      "avg_price": 311024.0,
       "min_price": 40000.0,
       "max_price": 940000.0
     },
     {
       "year": 2023,
-      "count": 305,
+      "count": 301,
       "median_price": 271000.0,
-      "avg_price": 306795.0,
+      "avg_price": 306700.0,
       "min_price": 40000.0,
       "max_price": 1271428.0
     },
     {
       "year": 2024,
-      "count": 321,
-      "median_price": 300000.0,
-      "avg_price": 340801.0,
+      "count": 318,
+      "median_price": 299042.0,
+      "avg_price": 340321.0,
       "min_price": 22500.0,
       "max_price": 1370000.0
     },
     {
       "year": 2025,
-      "count": 308,
-      "median_price": 327250.0,
-      "avg_price": 368605.0,
+      "count": 302,
+      "median_price": 327000.0,
+      "avg_price": 369236.0,
       "min_price": 90000.0,
       "max_price": 1580000.0
     },
     {
       "year": 2026,
-      "count": 220,
-      "median_price": 335514.0,
-      "avg_price": 371911.0,
+      "count": 211,
+      "median_price": 335000.0,
+      "avg_price": 372066.0,
       "min_price": 10000.0,
       "max_price": 1550000.0
     }

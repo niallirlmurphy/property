@@ -366,19 +366,19 @@
     },
     {
       "date": "2022-08-31",
-      "address": "35 HEATHERVUE, GREYSTONES, WICKLOW",
-      "price": 720000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "A63XD23"
-    },
-    {
-      "date": "2022-08-31",
       "address": "170 HEATHERVUE, GREYSTONES, WICKLOW",
       "price": 620000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "A63RY71"
+    },
+    {
+      "date": "2022-08-31",
+      "address": "35 HEATHERVUE, GREYSTONES, WICKLOW",
+      "price": 720000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63XD23"
     },
     {
       "date": "2022-08-30",
