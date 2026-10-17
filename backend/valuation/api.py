@@ -20,7 +20,9 @@ from .models import (
 )
 from .geocoder import ValuationGeocoder
 from .comparable_search import ComparableSearcher
-from .adjustments import MVPAdjuster, property_bucket, trim_price_outliers
+from .adjustments import (
+    MVPAdjuster, property_bucket, property_type_from_address, trim_price_outliers,
+)
 from .calculator import ValuationCalculator
 from .validator import MVPValidator
 from .nearby_amenities import get_nearby_amenities
@@ -143,6 +145,13 @@ async def estimate_property_value(
                     print(f"[Valuation] Using property_type from database: {subject_property_type}")
             elif subject_property_type is not None:
                 print(f"[Valuation] Using property_type from user input: {subject_property_type}")
+            # Last resort: the address itself ("Apartment 21, The Oak, ..."). A
+            # development-level match has no single stored type, and without one
+            # the bedroom ladder is skipped.
+            if subject_property_type is None:
+                subject_property_type = property_type_from_address(request.address)
+                if subject_property_type is not None:
+                    print(f"[Valuation] Using property_type from address: {subject_property_type}")
         except ValueError as e:
             print(f"[Valuation] Geocoding failed: {str(e)}")
             # Log geocoding failures to Sentry
@@ -359,7 +368,7 @@ async def estimate_property_value(
                     'address_matched': location.address_matched
                 },
                 'valuation_date': target_date.isoformat(),
-                'algorithm_version': '1.2.0-ladder-bedmatch',
+                'algorithm_version': '1.2.1-ladder-bedmatch',
                 'processing_time_ms': processing_time_ms,
                 'bedroom_ladder': {
                     'applied': ladder is not None,

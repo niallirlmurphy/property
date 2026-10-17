@@ -629,6 +629,51 @@ class TestAdjustments:
         assert wu < w1
 
 
+    def test_property_type_from_address(self):
+        """An address that names a unit marks the subject as an apartment, so the
+        bedroom ladder applies even when no type is given or stored."""
+        from valuation.adjustments import property_type_from_address
+        assert property_type_from_address("Apartment 21, The Oak, Parkview, Stepaside") == "apartment"
+        assert property_type_from_address("10 The Oak Parkview Apts, Stepaside") == "apartment"
+        assert property_type_from_address("Apt. 4, Elm Park, Merrion Road") == "apartment"
+        assert property_type_from_address("Flat 2, 14 Leeson Street") == "apartment"
+        assert property_type_from_address("28 Slane Road, Crumlin, Dublin 12") is None
+        assert property_type_from_address("3 Aptos Drive") is None  # whole words only
+        assert property_type_from_address("") is None
+
+
+    def test_off_market_factors(self):
+        """Sales far below the local median (likely non-market transfers) get
+        almost no weight; ordinary spread and small pools are left alone."""
+        from valuation.adjustments import off_market_factors
+        prices = [420000, 410000, 440000, 400000, 430000, 203798]
+        assert off_market_factors(prices, 0.6) == [1.0] * 5 + [0.02]
+        assert off_market_factors([420000, 410000, 300000, 400000, 430000], 0.6) == [1.0] * 5
+        assert off_market_factors([420000, 410000, 100000, 400000], 0.6) == [1.0] * 4
+
+    def test_ladder_off_market_sale_gets_almost_no_weight(self):
+        """Parkview case: a 2-bed recorded at ~half the going rate barely moves
+        the estimate, while a cheap-but-normal 1-bed is not penalised."""
+        adjuster = MVPAdjuster(None)
+        comps = [self._apt(2, 430000), self._apt(2, 440000), self._apt(2, 203798),
+                 self._apt(1, 330000), self._apt(2, 425000),
+                 self._apt(2, 435000, distance_m=1000)]
+        ladder = adjuster.bedroom_ladder_valuation(comps, 2, 'Apartment')
+        w = ladder['weights']
+        assert w[2] < w[0] * 0.05          # off-market 2-bed
+        assert w[3] / w[0] == pytest.approx(0.7 / 1.5)  # 1-bed keeps its bedroom weight
+        assert ladder['base_2bed'] > 415000
+
+    def test_house_weights_off_market_sale(self):
+        adjuster = MVPAdjuster(None)
+        comps = [{'distance_m': 500, 'recency_score': 0.8, 'property_type': 'House',
+                  'bedrooms': 3, 'adjusted_price': p}
+                 for p in (500000, 510000, 490000, 505000, 495000, 200000)]
+        comps[0]['distance_m'] = 1000
+        w = adjuster.calculate_all_weights(comps, 3, 'House')
+        assert w[5] < w[1] * 0.05
+
+
 # ============================================================================
 # Calculator Tests
 # ============================================================================

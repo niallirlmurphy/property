@@ -7,6 +7,8 @@ Phase 2: Feature-based adjustments (bedrooms, property type, BER)
 Weighting formula: distance + recency
 """
 
+import re
+import statistics
 from typing import Dict, Optional
 from datetime import datetime
 
@@ -55,6 +57,21 @@ def property_bucket(property_type: Optional[str]) -> Optional[str]:
         return "apartment"
     if any(k in p for k in ("house", "detach", "terrac", "bungalow", "cottage", "town")):
         return "house"
+    return None
+
+
+# Words in an address that mark a unit in an apartment block.
+_APARTMENT_ADDRESS_RE = re.compile(
+    r"\b(apartments?|apts?|flats?|duplex|penthouse)\b", re.IGNORECASE)
+
+
+def property_type_from_address(address: Optional[str]) -> Optional[str]:
+    """'apartment' if the address names a unit ("Apartment 21, The Oak, ..."),
+    else None. Fallback for subjects with no user-given or stored type, e.g. an
+    address matched to a whole development rather than one sale; without a type
+    the bedroom ladder can't run and 1-bed prices drag a 2-bed estimate down."""
+    if address and _APARTMENT_ADDRESS_RE.search(address):
+        return "apartment"
     return None
 
 
@@ -134,6 +151,28 @@ def trim_price_outliers(
     hi = q3 + k * iqr
     kept = [c for c in comps if lo <= c[price_key] <= hi]
     return kept if len(kept) >= min_keep else comps
+
+
+# Off-market sales: a sale recorded far below the local median is almost always a
+# non-market transfer (family sale, part-share, affordable-scheme or shared-equity
+# unit) that the PPR didn't flag as not_full_market_price, e.g. a Parkview 2-bed at
+# €203,798 among ~€420k 2-beds. Such sales get almost no weight. Apartments compare
+# 2-bed-equivalent prices, so a cheap 1-bed isn't mistaken for one; houses compare
+# raw prices (sizes vary more), so their cut-off is lower.
+OFF_MARKET_RATIO_APARTMENT = 0.6
+OFF_MARKET_RATIO_HOUSE = 0.5
+_OFF_MARKET_WEIGHT = 0.02
+_OFF_MARKET_MIN_POOL = 5
+
+
+def off_market_factors(prices: list, ratio: float) -> list:
+    """Weight multiplier per price: ``_OFF_MARKET_WEIGHT`` if below ``ratio`` x the
+    pool median, else 1.0. Pools under ``_OFF_MARKET_MIN_POOL`` are left alone
+    (too few sales to trust the median)."""
+    if len(prices) < _OFF_MARKET_MIN_POOL:
+        return [1.0] * len(prices)
+    floor = ratio * statistics.median(prices)
+    return [_OFF_MARKET_WEIGHT if p < floor else 1.0 for p in prices]
 
 
 class MVPAdjuster:
@@ -480,10 +519,15 @@ class MVPAdjuster:
             if survivors >= min(min_keep, len(comparables)):
                 excluded = [p > max_2bed_equiv for p in normalised_prices]
 
+        kept_prices = [p for p, ex in zip(normalised_prices, excluded) if not ex]
+        kept_factors = iter(off_market_factors(kept_prices, OFF_MARKET_RATIO_APARTMENT))
+        market_factors = [0.0 if ex else next(kept_factors) for ex in excluded]
+
         max_distance = max(c["distance_m"] for c in comparables)
         raw_weights = []
         weighted_sum = 0.0
-        for c, normalised, is_excluded in zip(comparables, normalised_prices, excluded):
+        for c, normalised, is_excluded, market_factor in zip(
+                comparables, normalised_prices, excluded, market_factors):
             if is_excluded:
                 raw_weights.append(0.0)
                 continue
@@ -509,7 +553,7 @@ class MVPAdjuster:
             else:
                 size_weight = _UNKNOWN_BEDROOM_SIZE_WEIGHT
 
-            w = max(0.0, base * type_factor * size_weight)
+            w = max(0.0, base * type_factor * size_weight * market_factor)
             raw_weights.append(w)
             weighted_sum += w * normalised
 
@@ -556,6 +600,11 @@ class MVPAdjuster:
                 comparable, max_distance, subject_bedrooms, subject_property_type
             )
             weights.append(weight)
+
+        factors = off_market_factors(
+            [float(c.get('adjusted_price', c.get('price', 0))) for c in comparables],
+            OFF_MARKET_RATIO_HOUSE)
+        weights = [w * f for w, f in zip(weights, factors)]
 
         # Normalize weights to sum to 1.0
         total_weight = sum(weights)
