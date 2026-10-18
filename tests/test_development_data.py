@@ -29,6 +29,13 @@ def test_bedroom_breakdown_needs_five_sales():
     assert [(b["bedrooms"], b["count"], b["median"]) for b in out] == [(2, 5, 400000)]
 
 
+def test_bedroom_breakdown_dropped_when_it_breaks_the_ladder():
+    rows = [_sale(810000, 2) for _ in range(7)] + [_sale(645000, 3) for _ in range(20)]
+    assert bedroom_breakdown(rows) == []
+    rows = [_sale(300000, 1) for _ in range(5)] + [_sale(400000, 2) for _ in range(5)]
+    assert [b["bedrooms"] for b in bedroom_breakdown(rows)] == [1, 2]
+
+
 def test_type_breakdown_buckets_houses_and_apartments():
     rows = ([_sale(400000, ptype="apartment") for _ in range(5)]
             + [_sale(800000, ptype=t) for t in ("semi-detached", "terraced", "house", "detached", "bungalow")]
