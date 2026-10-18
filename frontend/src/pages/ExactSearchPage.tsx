@@ -92,26 +92,32 @@ export default function ExactSearchPage() {
       // Update URL
       navigate(`/s1?q=${encodeURIComponent(searchQuery)}`, { replace: true });
 
-      // Stage 2: Load radius search for trends in background (slower, for context)
+      // Stage 2: Load radius search for trends in background (slower, for context).
+      // Its own try/catch: the exact results are already on screen, so a failed
+      // neighbourhood lookup (e.g. "Could not geocode") must not show a search error.
       console.log("[S1 Search] Stage 2: Loading neighborhood trends in background");
-      const radiusResult = await searchProperties({
-        q: searchQuery,
-        radius_km: 0.5, // 500m radius for neighborhood context
-        min_year: undefined, // Full history
-        limit: 500,
-      });
+      try {
+        const radiusResult = await searchProperties({
+          q: searchQuery,
+          radius_km: 0.5, // 500m radius for neighborhood context
+          min_year: undefined, // Full history
+          limit: 500,
+        });
 
-      console.log("[S1 Search] Radius search returned", radiusResult.results.length, "results for trends");
+        console.log("[S1 Search] Radius search returned", radiusResult.results.length, "results for trends");
 
-      // Update with trends data
-      setAllResults(radiusResult.results);
+        // Update with trends data
+        setAllResults(radiusResult.results);
 
-      // Calculate trends from radius search (neighborhood context)
-      if (radiusResult.results.length > 0) {
-        console.log("[S1 Search] Calculating trends from", radiusResult.results.length, "properties");
-        const trendsData = calculateTrendsFromProperties(radiusResult.results);
-        console.log("[S1 Search] Trends calculated:", trendsData.length, "data points");
-        setTrends(trendsData);
+        // Calculate trends from radius search (neighborhood context)
+        if (radiusResult.results.length > 0) {
+          console.log("[S1 Search] Calculating trends from", radiusResult.results.length, "properties");
+          const trendsData = calculateTrendsFromProperties(radiusResult.results);
+          console.log("[S1 Search] Trends calculated:", trendsData.length, "data points");
+          setTrends(trendsData);
+        }
+      } catch (err) {
+        console.warn("[S1 Search] Neighbourhood trends unavailable:", err);
       }
     } catch (err) {
       console.error("[S1 Search] Search error:", err);

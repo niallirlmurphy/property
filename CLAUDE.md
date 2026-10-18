@@ -467,7 +467,7 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
 - **Radius search**: `ST_DWithin(geom::geography, ...)` on GIST-indexed PostGIS geometry column. Results ordered by `ST_Distance` ascending. Auto-expands radius (2x, 3x, 5x, 10x up to 20km) if fewer than 5 results found.
 - **Polygon search** (New): `ST_Within(geom::geometry, polygon)` for map-based area selection. Supports drawing tools (polygon, rectangle, circle) at `/polygon`. Accepts custom polygon coordinates via `POST /search/polygon`. Up to 1,000 properties per query.
 - **Exact address search** (`/search/exact`): Matches against `address_normalized` column for reliable results. Handles user input variations (ROAD vs RD, punctuation differences) by normalizing search input with same logic as database. Supports prefix matching to handle missing area suffixes (e.g., "28 Slane Road" matches "28 Slane Road, Crumlin, Dublin 12").
-- **Geocoding at search time** (`resolve_location`): coordinates → Eircode/routing key (DB) → place name (`places` table) → token DB lookup → Mapbox. The backend no longer uses Nominatim (it ranked same-named roads above towns: "Swords, Dublin" → Swords Road, Whitehall).
+- **Geocoding at search time** (`resolve_location`): coordinates → Eircode/routing key (DB) → exact address (`address_normalized ^@`, as `/search/exact`) → place name (`places` table) → token DB lookup → fuzzy DB. No external geocoder: no Nominatim (it ranked same-named roads above towns: "Swords, Dublin" → Swords Road, Whitehall) and no Mapbox (since 2026-10-18). Queries that still fail are logged to `geocode_misses` (`db/migrations/003_geocode_misses.sql`); check them with `python3 scripts/geocode_misses_report.py [--days 7]` to see whether a geocoder is worth bringing back.
 - **Places table**: town/suburb/locality centres built from our own geocoded sales by `python3 scripts/build_places.py --apply` (dry run without `--apply`). A name's centre is the median of sales within 5km of its densest cell, kept if ≥50% of its sales are there. Without a county in the query, Dublin wins, else only names used in a single county ("Tuam" yes, "Main Street" no → Mapbox). Re-run yearly or after big geocoding cleanups; shared logic lives in `backend/places.py`.
 - **Trends query**: Uses `PERCENTILE_CONT(0.5)` for median price, filtered to `not_full_market_price = FALSE`.
 - **Caching**: In-memory TTL cache for counties (1h), trends (1h), Eircodes (1h), geocode results (24h), search results (5min).
@@ -591,7 +591,7 @@ python3 scripts/security_monitor.py --fix
   - **Usage tracking**: All Mapbox requests tracked in `mapbox_usage` table via `MapboxClient` wrapper
   - **Quota enforcement**: Pre-flight checks prevent exceeding monthly limit
   - **Monitoring**: `python3 scripts/mapbox_usage_tracker.py --current-month`
-  - **Monthly allocation**: 2k for PPR sync, 5k for API, 43k for batch operations
+  - **Monthly allocation**: 2k for PPR sync, 48k for batch operations (the search API no longer calls Mapbox)
   - See [MAPBOX_USAGE_TRACKING.md](docs/MAPBOX_USAGE_TRACKING.md) for complete documentation
 
 ## Troubleshooting

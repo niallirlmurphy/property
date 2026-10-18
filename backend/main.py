@@ -20,7 +20,6 @@ from dotenv import load_dotenv
 import sentry_sdk
 from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.asyncio import AsyncioIntegration
-from mapbox_client import MapboxClient
 from places import parse_query, pick_place
 
 load_dotenv()
@@ -66,7 +65,6 @@ class SafeJSONResponse(JSONResponse):
         ).encode("utf-8")
 
 DATABASE_URL    = os.environ["DATABASE_URL"]
-MAPBOX_TOKEN    = os.environ.get("MAPBOX_TOKEN", "")
 AUTOADDRESS_KEY = os.environ.get("AUTOADDRESS_KEY", "")
 SENTRY_DSN      = os.environ.get("SENTRY_DSN", "")
 ADMIN_API_TOKEN = os.environ.get("ADMIN_API_TOKEN", "")
@@ -382,6 +380,21 @@ ALLOWED_ORIGINS = [
 if os.environ.get("ENVIRONMENT") != "production":
     ALLOWED_ORIGINS.append("http://localhost:5173")
 
+
+# Registered before CORSMiddleware so it sits *inside* it. Starlette turns
+# unhandled exceptions into 500s in ServerErrorMiddleware, which is outside
+# CORS, so those 500s had no Access-Control-Allow-Origin header and browsers
+# reported "Failed to fetch" instead of a server error (2026-10-18 DB outage).
+@app.middleware("http")
+async def catch_unhandled_errors(request: Request, call_next):
+    try:
+        return await call_next(request)
+    except Exception as e:
+        logger.exception(f"Unhandled error on {request.method} {request.url.path}")
+        sentry_sdk.capture_exception(e)
+        return JSONResponse(status_code=500, content={"detail": "Internal server error"})
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
@@ -454,44 +467,6 @@ def _normalise_eircode(s: str) -> str:
     return s.strip().upper().replace(" ", "")
 
 
-MIN_DB_MATCHES = 3
-
-_STARTS_WITH_NUMBER = re.compile(r"^\d+\s+\w")
-
-# Abbreviation → full expansion for Irish addresses.
-# Applied before sending to Mapbox so it can resolve correctly.
-# Word-boundary anchored to avoid partial matches (e.g. "St" in "Stoneybatter").
-_ADDR_ABBREVS: list[tuple[re.Pattern, str]] = [
-    (re.compile(r"\bRd\.?\b",          re.IGNORECASE), "Road"),
-    (re.compile(r"\bAve?\.?\b",        re.IGNORECASE), "Avenue"),
-    (re.compile(r"\bDr\.?\b",          re.IGNORECASE), "Drive"),
-    (re.compile(r"\bTce\.?(?=\W|$)",    re.IGNORECASE), "Terrace"),
-    (re.compile(r"\bTerr\.?(?=\W|$)",  re.IGNORECASE), "Terrace"),
-    (re.compile(r"\bCres\.?\b",        re.IGNORECASE), "Crescent"),
-    (re.compile(r"\bGdns?\.?\b",       re.IGNORECASE), "Gardens"),
-    (re.compile(r"\bSq\.?\b",          re.IGNORECASE), "Square"),
-    (re.compile(r"\bPk\.?\b",          re.IGNORECASE), "Park"),
-    (re.compile(r"\bBlvd\.?\b",        re.IGNORECASE), "Boulevard"),
-    (re.compile(r"\bMt\.?\b",          re.IGNORECASE), "Mount"),
-    (re.compile(r"\bNth\.?\b",         re.IGNORECASE), "North"),
-    (re.compile(r"\bSth\.?\b",         re.IGNORECASE), "South"),
-    # "St." with a dot is unambiguous — expand to Street.
-    # Bare "St" without a dot is left alone: it's more often Saint than Street
-    # in Irish addresses (St Patrick's, St Brigid's etc).
-    (re.compile(r"\bSt\.",             re.IGNORECASE), "Street"),
-    # Strip "No." / "No " prefix from house numbers: "No. 11 Foo" → "11 Foo"
-    (re.compile(r"^No\.?\s*",          re.IGNORECASE), ""),
-    # Strip "Co." county qualifier — Mapbox doesn't need it
-    (re.compile(r",?\s*Co\.?\s+",      re.IGNORECASE), ", "),
-]
-
-
-def _expand_abbreviations(query: str) -> str:
-    """Expand common Irish address abbreviations for better Mapbox resolution."""
-    for pattern, replacement in _ADDR_ABBREVS:
-        query = pattern.sub(replacement, query)
-    # Collapse any double spaces left by substitutions
-    return re.sub(r"  +", " ", query).strip(", ").strip()
 
 
 def normalize_query(q: str) -> str:
@@ -589,238 +564,268 @@ _ABBREV_TO_FULL = {"rd": "road", "ave": "avenue", "dr": "drive", "tce": "terrace
 _FULL_TO_ABBREV = {v: k for k, v in _ABBREV_TO_FULL.items()}
 
 
+def normalize_for_search(addr: str) -> str:
+    """Apply the same normalization as the address_normalized column."""
+    # Fold fadas (Slí → Sli) so input typed with or without them matches
+    normalized = ''.join(c for c in unicodedata.normalize('NFKD', addr)
+                         if not unicodedata.combining(c)).strip()
+    normalized = re.sub(r'\s+', ' ', normalized)
+    normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
+    normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
+
+    # Expand common abbreviations to match normalized format
+    street_types = {
+        r'\bSt\.?\b': 'Street', r'\bRd\.?\b': 'Road', r'\bAve\.?\b': 'Avenue',
+        r'\bDr\.?\b': 'Drive', r'\bCl\.?\b': 'Close', r'\bCt\.?\b': 'Court',
+        r'\bPk\.?\b': 'Park', r'\bSq\.?\b': 'Square',
+    }
+    for abbrev, full in street_types.items():
+        normalized = re.sub(abbrev, full, normalized, flags=re.I)
+
+    # Clean punctuation and apply title case
+    normalized = re.sub(r',\s*,', ',', normalized)
+    normalized = re.sub(r'\s+,', ',', normalized)
+    normalized = re.sub(r',\s+', ', ', normalized)
+    normalized = normalized.strip(', ')
+
+    words = normalized.split()
+    lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
+    upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
+
+    result_words = []
+    for i, word in enumerate(words):
+        if i == 0:
+            result_words.append(word.capitalize())
+        elif word in upper_exceptions:
+            result_words.append(word)
+        elif word.lower() in lower_exceptions:
+            result_words.append(word.lower())
+        else:
+            result_words.append(word.capitalize())
+
+    return ' '.join(result_words).strip()
+
+
+async def _geocode_db_exact_address(query: str, county: Optional[str] = None) -> "tuple[float, float] | None":
+    """Coordinates of our own sales of this address, matched like /search/exact.
+
+    Prefix match on address_normalized (idx_properties_address_normalized_prefix),
+    so "42 Mount Carmel Road" finds "42 Mount Carmel Road, Goatstown, Dublin 14"
+    in milliseconds. Only used when the matches are one tight cluster, so a street
+    name shared by several towns falls through to the later steps.
+    """
+    normalized = normalize_for_search(query)
+    if not re.match(r"(\d|apt |unit |flat )", normalized, re.IGNORECASE):
+        return None
+    county = _county_or_dublin(query, county)
+    try:
+        row = await asyncio.wait_for(
+            db_pool.fetchrow("""
+                SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt,
+                       COALESCE(STDDEV(latitude), 0)  AS std_lat,
+                       COALESCE(STDDEV(longitude), 0) AS std_lon
+                FROM (
+                    SELECT latitude, longitude
+                    FROM properties
+                    WHERE address_normalized ^@ $1
+                      AND ($2::text IS NULL OR county = $2)
+                      AND latitude IS NOT NULL
+                      AND geocode_suspect IS NOT TRUE
+                    LIMIT 200
+                ) m
+            """, normalized, county),
+            timeout=2.0,
+        )
+    except Exception as e:
+        logger.warning(f"Exact-address geocode failed for {query!r}: {e}")
+        return None
+    if not row or not row["cnt"]:
+        return None
+    if row["std_lat"] < 0.01 and row["std_lon"] < 0.01:
+        return float(row["lat"]), float(row["lon"])
+    return None
+
+
 def _address_tokens(s: str) -> list[str]:
     return [t for t in _TOKEN_RE.findall(s.lower()) if t not in _STOP_WORDS and len(t) > 1]
 
 
-def _token_condition(t: str, idx: int) -> "tuple[str, list]":
-    """Return (SQL fragment, params) for a token, matching its abbreviation/expansion too.
-    Also handles singular/plural variants (lawn/lawns, garden/gardens, etc.)."""
-    patterns = [f"%{t}%"]
-
-    # Check for abbreviation/expansion
-    alt = _FULL_TO_ABBREV.get(t) or _ABBREV_TO_FULL.get(t)
-    if alt:
-        patterns.append(f"%{alt}%")
-
-    # Handle plural/singular variants
-    if t.endswith('s') and len(t) > 3:
-        # Try singular: "lawns" → "lawn", "gardens" → "garden"
-        singular = t[:-1]
-        patterns.append(f"%{singular}%")
-    elif not t.endswith('s'):
-        # Try plural: "lawn" → "lawns", "garden" → "gardens"
-        plural = t + 's'
-        patterns.append(f"%{plural}%")
-
-    if len(patterns) == 1:
-        return f"LOWER(address) LIKE ${idx}", patterns
-    else:
-        # Build OR condition for all variants
-        conditions = [f"LOWER(address) LIKE ${idx+i}" for i in range(len(patterns))]
-        return f"({' OR '.join(conditions)})", patterns
+# Same expression as idx_properties_address_fts, so these lookups use that GIN index.
+_ADDRESS_TSVECTOR = "to_tsvector('simple', COALESCE(address_normalized, address))"
+# A token lookup matching more sales than this is too vague to place.
+_MAX_TOKEN_MATCHES = 2000
+# Ambiguous token matches fall back to those this close to the county's main centre.
+_COUNTY_CENTRE_RADIUS_M = 5000
+_HOUSE_NUMBER_RE = re.compile(r"^(\d+)[a-z]?\s+(.+)$", re.IGNORECASE)
+# Furthest house number either side tried as a neighbour (43 → 23..63).
+_MAX_NUMBER_GAP = 20
 
 
-async def _geocode_db_tokens(query: str, county: Optional[str] = None) -> "tuple[float, float] | None":
-    """Match query against DB by requiring all significant tokens to appear in the address.
-    Each token also matches its abbreviated/expanded form (road↔rd, avenue↔ave, etc.)
-    so DB entries like 'MERRION RD' match a query for 'Merrion Road'.
-    Returns centroid if matching rows form a tight cluster.
-    Single-token queries (e.g. "Rathmines") use a tighter stddev threshold to avoid
-    false positives from common words.
-    Requires a pg_trgm GIN index on LOWER(address) for acceptable performance.
-    Optionally filters by county to disambiguate addresses that exist in multiple counties.
-    """
-    tokens = _address_tokens(query)
-    if not tokens:
-        return None
-    # Single-token queries need a tighter cluster to avoid false positives
-    std_threshold = 0.02 if len(tokens) >= 2 else 0.01
+def _county_or_dublin(query: str, county: Optional[str]) -> Optional[str]:
+    """Golden rule: no county in the call or the query text means Dublin."""
+    if not county and not COUNTY_KEYWORDS.search(query.lower()):
+        return "Dublin"
+    return county
 
-    parts, params = [], []
-    idx = 1
+
+def _token_tsquery(tokens: list[str]) -> str:
+    """'mount & carmel & (road | rd)': every token, or its abbreviation/plural, must appear."""
+    parts = []
     for t in tokens:
-        cond, p = _token_condition(t, idx)
-        parts.append(cond)
-        params.extend(p)
-        idx += len(p)
+        variants = {t}
+        alt = _FULL_TO_ABBREV.get(t) or _ABBREV_TO_FULL.get(t)
+        if alt:
+            variants.add(alt)
+        if t.endswith("s") and len(t) > 3:
+            variants.add(t[:-1])        # lawns → lawn
+        elif not t.endswith("s") and not t.isdigit():
+            variants.add(t + "s")       # garden → gardens
+        parts.append("(" + " | ".join(sorted(variants)) + ")")
+    return " & ".join(parts)
 
-    # Add county filter if provided
-    if county:
-        parts.append(f"LOWER(county) = LOWER(${idx})")
-        params.append(county)
-        idx += 1
 
-    where = " AND ".join(parts)
+async def _geocode_db_nearest_number(query: str, county: Optional[str] = None) -> "tuple[float, float] | None":
+    """A numbered address we have no sale for ("43 Mount Carmel Road"): use the sale
+    with the nearest house number on the same street (42 or 44), same side of the
+    road on a tie. A street's centre can be a kilometre from the house; a neighbour
+    is tens of metres away. Probes only the neighbouring addresses on the
+    address_normalized prefix index, so a long or common street costs no more than
+    a short one. Gives up when the neighbours are spread out, i.e. the street name
+    exists in more than one place and the query doesn't say which.
+    """
+    normalized = normalize_for_search(query)
+    m = _HOUSE_NUMBER_RE.match(normalized)
+    if not m:
+        return None
+    number = int(m.group(1))
+    street, _, area = m.group(2).partition(",")
+    street = street.strip()
+    if len(street) < 4:
+        return None
+    numbers = [n for d in range(1, _MAX_NUMBER_GAP + 1) for n in (number - d, number + d) if n > 0]
+    prefixes = [f"{n} {street}" for n in numbers]
+    # Each "^@ $n" is a separate index probe; the planner ORs them in one bitmap scan.
+    probes = " OR ".join(f"address_normalized ^@ ${i}" for i in range(2, len(prefixes) + 2))
     try:
-        row = await asyncio.wait_for(
+        rows = await asyncio.wait_for(
+            db_pool.fetch(f"""
+                SELECT address_normalized, latitude, longitude
+                FROM properties
+                WHERE ({probes})
+                  AND ($1::text IS NULL OR county = $1)
+                  AND latitude IS NOT NULL
+                  AND geocode_suspect IS NOT TRUE
+                LIMIT 500
+            """, _county_or_dublin(query, county), *prefixes),
+            timeout=2.0,
+        )
+    except Exception as e:
+        logger.warning(f"Nearest-number geocode failed for {query!r}: {e}")
+        return None
+
+    # (house number, lat, lon) — the prefix also matches "44 Mount Carmel Roadstone",
+    # so require the street to end there.
+    on_street = []
+    area_tokens = set(_address_tokens(area))
+    for r in rows:
+        pm = _HOUSE_NUMBER_RE.match(r["address_normalized"])
+        rest = pm.group(2) if pm else ""
+        if not pm or not (rest == street or rest.startswith(street + ",")):
+            continue
+        in_area = area_tokens <= set(_address_tokens(rest))
+        on_street.append((int(pm.group(1)), r["latitude"], r["longitude"], in_area))
+    # The area in the query ("…, Goatstown") picks between same-named streets.
+    if area_tokens and any(s[3] for s in on_street):
+        on_street = [s for s in on_street if s[3]]
+    if not on_street:
+        return None
+
+    gap = min(abs(n - number) for n, *_ in on_street)
+    nearest = [s for s in on_street if abs(s[0] - number) == gap]
+    best = [s for s in nearest if s[0] % 2 == number % 2] or nearest
+    # Neighbours either side must agree (within ~500m), else the street is ambiguous.
+    nearby = [s for s in on_street if abs(s[0] - number) <= gap + 2]
+    if (max(s[1] for s in nearby) - min(s[1] for s in nearby) > 0.005 or
+            max(s[2] for s in nearby) - min(s[2] for s in nearby) > 0.008):
+        return None
+    return (sum(s[1] for s in best) / len(best), sum(s[2] for s in best) / len(best))
+
+
+async def _token_cluster(tsquery: str, county: Optional[str],
+                         near: "tuple[float, float] | None" = None) -> "dict | None":
+    """Centre, count and spread of sales matching tsquery, optionally only within
+    _COUNTY_CENTRE_RADIUS_M of `near` (lat, lon)."""
+    near_sql = ""
+    params = [tsquery, county]
+    if near:
+        near_sql = f"AND ST_DWithin(geog, ST_MakePoint($4, $3)::geography, {_COUNTY_CENTRE_RADIUS_M})"
+        params += [near[0], near[1]]
+    try:
+        return await asyncio.wait_for(
             db_pool.fetchrow(f"""
                 SELECT AVG(latitude)              AS lat,
                        AVG(longitude)             AS lon,
                        COUNT(*)                   AS cnt,
                        COALESCE(STDDEV(latitude),  0) AS std_lat,
                        COALESCE(STDDEV(longitude), 0) AS std_lon
-                FROM properties
-                WHERE latitude IS NOT NULL AND {where}
+                FROM (
+                    SELECT latitude, longitude
+                    FROM properties
+                    WHERE {_ADDRESS_TSVECTOR} @@ to_tsquery('simple', $1)
+                      AND ($2::text IS NULL OR county = $2)
+                      AND latitude IS NOT NULL
+                      AND geocode_suspect IS NOT TRUE
+                      {near_sql}
+                    LIMIT {_MAX_TOKEN_MATCHES + 1}
+                ) m
             """, *params),
             timeout=2.0,
         )
-    except Exception:
+    except Exception as e:
+        logger.warning(f"Token geocode failed for {tsquery!r}: {e}")
         return None
 
-    if not row or not row["lat"] or (row["cnt"] or 0) < 1:
+
+async def _geocode_db_tokens(query: str, county: Optional[str] = None) -> "tuple[float, float] | None":
+    """Match query against DB by requiring all significant tokens to appear in the address.
+    Each token also matches its abbreviated/expanded form (road↔rd, avenue↔ave, etc.)
+    and its plural/singular, via full-text search on idx_properties_address_fts.
+    Returns centroid if matching rows form a tight cluster.
+    Single-token queries (e.g. "Rathmines") use a tighter stddev threshold to avoid
+    false positives from common words; more than _MAX_TOKEN_MATCHES sales is too vague.
+    A name found all over the county ("Main Street" + Cork) falls back to the matches
+    near the county's main centre (Cork city), as Mapbox's proximity hint used to.
+    """
+    tokens = _address_tokens(normalize_for_search(query))
+    if not tokens:
         return None
-    if row["std_lat"] < std_threshold and row["std_lon"] < std_threshold:
+    # Single-token queries need a tighter cluster to avoid false positives
+    std_threshold = 0.02 if len(tokens) >= 2 else 0.01
+    tsquery = _token_tsquery(tokens)
+    county = _county_or_dublin(query, county)
+
+    def tight(row) -> bool:
+        return bool(row and row["cnt"] and row["cnt"] <= _MAX_TOKEN_MATCHES
+                    and row["std_lat"] < std_threshold and row["std_lon"] < std_threshold)
+
+    row = await _token_cluster(tsquery, county)
+    if row and not row["cnt"]:
+        return None
+    if not tight(row) and county:
+        centre = await _geocode_place(county, county)
+        if centre:
+            row = await _token_cluster(tsquery, county, near=centre)
+    if tight(row):
         return float(row["lat"]), float(row["lon"])
     return None
 
 
-async def _geocode_db(query: str) -> "tuple[float, float] | None":
-    """Fuzzy match query against DB addresses/counties, return centroid if confident.
-    Only tries plural/singular variants if no exact matches found first."""
-    term = f"%{query.strip()}%"
-    row = await db_pool.fetchrow("""
-        SELECT
-            COUNT(*)            AS match_count,
-            AVG(latitude)       AS lat,
-            AVG(longitude)      AS lon
-        FROM properties
-        WHERE latitude IS NOT NULL
-          AND (address ILIKE $1 OR county ILIKE $1)
-    """, term)
-
-    # If we have enough matches with the original query, return those coordinates
-    if row and row["match_count"] >= MIN_DB_MATCHES:
-        return float(row["lat"]), float(row["lon"])
-
-    # Only try plural → singular fallback if original query returned 0 results
-    # This prevents "Elm Gardens" from matching "Elm Garden" if both exist
-    if row and row["match_count"] == 0:
-        # Try stripping trailing 's' for plural → singular (lawns → lawn)
-        if query.lower().endswith('s') and not query.lower().endswith('ss'):
-            singular_query = query[:-1]
-            singular_term = f"%{singular_query.strip()}%"
-            row = await db_pool.fetchrow("""
-                SELECT
-                    COUNT(*)            AS match_count,
-                    AVG(latitude)       AS lat,
-                    AVG(longitude)      AS lon
-                FROM properties
-                WHERE latitude IS NOT NULL
-                  AND (address ILIKE $1 OR county ILIKE $1)
-            """, singular_term)
-            if row and row["match_count"] >= MIN_DB_MATCHES:
-                return float(row["lat"]), float(row["lon"])
-
-    return None
-
-
-DUBLIN_COUNTIES = {"dublin", "co. dublin", "county dublin", "co dublin"}
 COUNTY_KEYWORDS = re.compile(
     r"\b(cork|galway|limerick|waterford|kilkenny|wexford|wicklow|kildare|meath|louth|"
     r"cavan|monaghan|donegal|sligo|mayo|roscommon|leitrim|longford|westmeath|offaly|"
     r"laois|tipperary|clare|kerry)\b",
     re.IGNORECASE,
 )
-# Dublin city centre — used as proximity bias when no county is mentioned
-DUBLIN_CENTER = "-6.2603,53.3498"
-
-
-async def _proximity_hint_from_query(query: str) -> Optional[str]:
-    """Extract a precise proximity hint by looking up the road/area part of the query
-    in the property DB.
-
-    For "27 Elm Court, Merrion Road" the trailing part "Merrion Road" has a tight
-    cluster of DB records in Ballsbridge D4 — that centroid beats the generic Dublin
-    centre as a Mapbox proximity hint.
-
-    Returns a "lon,lat" string if a tight cluster (stddev < ~3km) is found with
-    at least 5 matching records, otherwise None.
-    """
-    parts = [p.strip() for p in query.split(",") if p.strip()]
-    if len(parts) < 2:
-        return None
-
-    # Try trailing parts: last part alone, then last two parts combined
-    candidates = [parts[-1]]
-    if len(parts) >= 3:
-        candidates.append(f"{parts[-2]}, {parts[-1]}")
-
-    for candidate in candidates:
-        if len(candidate) < 4:
-            continue
-        try:
-            row = await asyncio.wait_for(
-                db_pool.fetchrow("""
-                    SELECT AVG(longitude) AS lon, AVG(latitude) AS lat,
-                           COUNT(*)       AS cnt,
-                           STDDEV(longitude) AS std_lon,
-                           STDDEV(latitude)  AS std_lat
-                    FROM properties
-                    WHERE latitude IS NOT NULL AND address ILIKE $1
-                """, f"%{candidate}%"),
-                timeout=2.0,
-            )
-        except Exception:
-            return None
-        if not row or (row["cnt"] or 0) < 5:
-            continue
-        std_lon = row["std_lon"] or 0
-        std_lat = row["std_lat"] or 0
-        # Accept only tight clusters (~3km radius at Irish latitudes)
-        if std_lon < 0.05 and std_lat < 0.05:
-            return f"{row['lon']:.6f},{row['lat']:.6f}"
-
-    return None
-
-
-async def _geocode_mapbox(
-    query: str,
-    client: httpx.AsyncClient,
-    proximity: Optional[str] = None,
-) -> "tuple[float, float] | None":
-    """Resolve query via Mapbox Geocoding API, restricted to Ireland.
-    Uses a caller-supplied proximity hint when available, otherwise falls back
-    to Dublin city centre for queries with no county indicator.
-
-    NOTE: Uses MapboxClient for usage tracking."""
-    if not MAPBOX_TOKEN:
-        return None
-
-    # Determine proximity hint
-    if not proximity:
-        q_lower = query.lower()
-        has_county = COUNTY_KEYWORDS.search(q_lower) or any(c in q_lower for c in DUBLIN_COUNTIES)
-        if not has_county:
-            proximity = DUBLIN_CENTER
-
-    try:
-        # Use MapboxClient for tracking
-        async with MapboxClient(source='backend_api', operation='search_geocode') as mapbox:
-            result = await mapbox.geocode(
-                query,
-                country='IE',
-                types='place,locality,neighborhood,address,postcode',
-                proximity=proximity,
-                limit=1
-            )
-
-            if not result:
-                return None
-
-            lat_f, lon_f = result['latitude'], result['longitude']
-
-            # Validate coordinates are in Ireland
-            if _is_in_ireland(lat_f, lon_f):
-                return lat_f, lon_f
-            else:
-                logger.warning(f"Mapbox returned out-of-bounds coordinates for {query!r}: {lat_f}, {lon_f}")
-                return None
-    except Exception as e:
-        logger.warning(f"Mapbox geocoding failed: {type(e).__name__}: {e}")
-        return None
-
-
 async def _geocode_place(query: str, county: Optional[str] = None) -> "tuple[float, float] | None":
     """Resolve a town/suburb/locality name ("Swords, Dublin", "Limerick City") to the
     centre of its sales, from the `places` table (scripts/build_places.py)."""
@@ -862,12 +867,13 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
       3. Routing key (D02, H91) → DB   (centroid of all properties with that Eircode prefix)
       4. Eircode → DB exact match      (fast indexed lookup with validation from properties table)
       5. Eircode → Reference table     (pre-computed Eircode centroids from 222k Eircodes)
-      6. Place name → places table     (town/suburb centres built from our own sales)
-      7. Token-based DB lookup         (tight clusters in known developments)
-      8. Mapbox Geocoding API          (commercial fallback)
-      9. Fuzzy DB ILIKE full-scan      (slow last resort)
+      6. Exact address → DB            (prefix match on address_normalized, as /search/exact)
+      7. Nearest house number → DB     (43 Mount Carmel Road → sale at No. 42/44)
+      8. Place name → places table     (town/suburb centres built from our own sales)
+      9. Token-based DB lookup         (full-text, tight clusters: estates, developments)
+    Anything else is logged to geocode_misses and raises 404.
 
-    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_place', 'db_tokens', 'mapbox', 'db_fuzzy'
+    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_address', 'db_neighbour', 'db_place', 'db_tokens'
     """
     # 1. Raw coordinates
     coord_match = re.match(r"^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$", query.strip())
@@ -951,50 +957,42 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         if rk_row and (rk_row["cnt"] or 0) >= 1:
             return _cache_and_return(float(rk_row["lat"]), float(rk_row["lon"]), "db_routing_key")
 
-    # 4a. Place name — towns, suburbs and localities ("Swords, Dublin", "Ranelagh").
+    # 4a. This exact address in our own sales (same match as /search/exact). An
+    # address we hold must never depend on the slow token scan.
+    result = await _geocode_db_exact_address(query, county)
+    if result:
+        return _cache_and_return(*result, "db_address")
+
+    # 4b. A numbered address we have no sale for: its nearest neighbour on the street.
+    result = await _geocode_db_nearest_number(query, county)
+    if result:
+        return _cache_and_return(*result, "db_neighbour")
+
+    # 4c. Place name — towns, suburbs and localities ("Swords, Dublin", "Ranelagh").
     # Our own sales-derived centres; Nominatim ranked same-named roads above towns.
     result = await _geocode_place(query, county)
     if result:
         return _cache_and_return(*result, "db_place")
 
-    # 4b. Token-based DB lookup — matches addresses by significant words.
-    # Handles abbreviation mismatches (Rd vs Road) and finds tight clusters in known
-    # Irish developments before falling through to external geocoders.
-    # County filter helps disambiguate addresses that exist in multiple counties.
+    # 4d. Token-based DB lookup — every significant word in the address (Rd↔Road,
+    # plurals), accepted only as a tight cluster: developments, estates, streets.
     result = await _geocode_db_tokens(query, county)
     if result:
         return _cache_and_return(*result, "db_tokens")
 
-    # 5. Mapbox — commercial geocoder for streets and addresses.
-    # Expand abbreviations first (Rd→Road, Ave→Avenue etc) so Mapbox resolves correctly.
-    mapbox_query = _expand_abbreviations(query)
-    q_lower = query.lower()
-    has_county_context = COUNTY_KEYWORDS.search(q_lower) or any(c in q_lower for c in DUBLIN_COUNTIES)
-    async with httpx.AsyncClient() as client:
-        proximity = await _proximity_hint_from_query(mapbox_query)
-        if not proximity and county:
-            # Bias towards the county's main town ("galway" → Galway city), not Dublin.
-            centre = await _geocode_place(county, county)
-            if centre:
-                proximity = f"{centre[1]},{centre[0]}"
-        # Append the county filter ("Main Street" + Cork), or default to Dublin for
-        # house-numbered addresses only. Bare area names must not get ", Dublin":
-        # Mapbox misreads them ("Rathmines, Dublin" → Dublin Road, Wicklow).
-        is_street_address = bool(_STARTS_WITH_NUMBER.match(query.strip()))
-        if not has_county_context and county:
-            mapbox_query = f"{mapbox_query}, {county}"
-        elif not proximity and not has_county_context and is_street_address:
-            mapbox_query = f"{mapbox_query}, Dublin"
-        result = await _geocode_mapbox(mapbox_query, client, proximity=proximity)
-        if result:
-            return _cache_and_return(*result, "mapbox")
-
-    # 6. Fuzzy DB ILIKE fallback — only reached if all external geocoders fail
-    result = await _geocode_db(query)
-    if result:
-        return _cache_and_return(*result, "db_fuzzy")
-
+    # Nothing in our data. Search uses no external geocoder (no Mapbox): log the
+    # miss to geocode_misses (scripts/geocode_misses_report.py) and give up.
+    asyncio.create_task(_log_geocode_miss(query, county))
     raise HTTPException(status_code=404, detail=f"Could not geocode: {query}")
+
+
+async def _log_geocode_miss(query: str, county: Optional[str]) -> None:
+    """Record a query resolve_location could not place. Fire and forget."""
+    try:
+        await db_pool.execute(
+            "INSERT INTO geocode_misses (query, county) VALUES ($1, $2)", query, county)
+    except Exception as e:
+        logger.warning(f"Geocode miss logging failed for {query!r}: {e}")
 
 
 # ---------------------------------------------------------------------------
@@ -1088,17 +1086,42 @@ async def _log_search_query(
 # Routes
 # ---------------------------------------------------------------------------
 
+async def _db_status() -> str:
+    """'ok', 'connecting' (pool not up yet) or 'unavailable' (SELECT 1 failed/slow)."""
+    if db_pool is None:
+        return "connecting"
+    async def ping():
+        async with db_pool.acquire() as conn:
+            await conn.fetchval("SELECT 1")
+    try:
+        await asyncio.wait_for(ping(), timeout=3)
+        return "ok"
+    except Exception as e:
+        logger.warning(f"Health DB check failed: {e}")
+        return "unavailable"
+
+
 @app.get("/health")
 async def health():
+    # Always 200: this is Railway's deploy healthcheck, and a slow DB must not
+    # fail deploys (see _init_db_pool_with_retry). Use /health/db for alerting.
     stats = cache.stats()
     return {
         "status": "ok",
+        "database": await _db_status(),
         "cache": {
             "hit_rate": f"{stats['hit_rate']:.1%}",
             "size": f"{stats['size']}/{stats['max_size']}",
             "utilization": f"{stats['size'] / stats['max_size'] * 100:.0f}%"
         }
     }
+
+
+@app.get("/health/db")
+async def health_db():
+    """503 unless the database answers SELECT 1 within 3s. For uptime monitors."""
+    status = await _db_status()
+    return JSONResponse(status_code=200 if status == "ok" else 503, content={"database": status})
 
 
 @app.get("/geocode")
@@ -1334,48 +1357,6 @@ async def search_exact(
     start_time = time.time()
     _rate_limit_check(request, 60, "search_exact")
 
-    # Normalize the search input using same logic as address_normalized column
-    def normalize_for_search(addr: str) -> str:
-        """Apply same normalization as the database column."""
-        # Fold fadas (Slí → Sli) so input typed with or without them matches
-        normalized = ''.join(c for c in unicodedata.normalize('NFKD', addr)
-                             if not unicodedata.combining(c)).strip()
-        normalized = re.sub(r'\s+', ' ', normalized)
-        normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
-        normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
-
-        # Expand common abbreviations to match normalized format
-        street_types = {
-            r'\bSt\.?\b': 'Street', r'\bRd\.?\b': 'Road', r'\bAve\.?\b': 'Avenue',
-            r'\bDr\.?\b': 'Drive', r'\bCl\.?\b': 'Close', r'\bCt\.?\b': 'Court',
-            r'\bPk\.?\b': 'Park', r'\bSq\.?\b': 'Square',
-        }
-        for abbrev, full in street_types.items():
-            normalized = re.sub(abbrev, full, normalized, flags=re.I)
-
-        # Clean punctuation and apply title case
-        normalized = re.sub(r',\s*,', ',', normalized)
-        normalized = re.sub(r'\s+,', ',', normalized)
-        normalized = re.sub(r',\s+', ', ', normalized)
-        normalized = normalized.strip(', ')
-
-        words = normalized.split()
-        lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
-        upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
-
-        result_words = []
-        for i, word in enumerate(words):
-            if i == 0:
-                result_words.append(word.capitalize())
-            elif word in upper_exceptions:
-                result_words.append(word)
-            elif word.lower() in lower_exceptions:
-                result_words.append(word.lower())
-            else:
-                result_words.append(word.capitalize())
-
-        return ' '.join(result_words).strip()
-
     search_normalized = normalize_for_search(address)
 
     # Golden rule: a bare street-level address with no county always resolves to
@@ -1394,7 +1375,9 @@ async def search_exact(
         return cached
 
     # Step 1: Find exact address match with prefix search
-    # Handle NULL address_normalized by falling back to address column
+    # ^@ on the bare column so idx_properties_address_normalized_prefix (text_pattern_ops)
+    # is used; starts_with(COALESCE(...)) matched no index and scanned the whole table.
+    # Rows with NULL address_normalized are still found by the full-text fallback below.
     # Apply county filter if provided
     if county:
         exact_rows = await db_pool.fetch("""
@@ -1404,7 +1387,7 @@ async def search_exact(
                 size_description, latitude, longitude,
                 routing_key, bedrooms, property_type
             FROM properties
-            WHERE starts_with(COALESCE(address_normalized, address), $1)
+            WHERE address_normalized ^@ $1
               AND county = $2
             ORDER BY sale_date DESC
         """, search_normalized, county)
@@ -1416,7 +1399,7 @@ async def search_exact(
                 size_description, latitude, longitude,
                 routing_key, bedrooms, property_type
             FROM properties
-            WHERE starts_with(COALESCE(address_normalized, address), $1)
+            WHERE address_normalized ^@ $1
             ORDER BY sale_date DESC
         """, search_normalized)
 
@@ -1428,6 +1411,7 @@ async def search_exact(
     else:
         # Step 3: No exact match - try full-text search as fallback
         search_terms = ' & '.join(search_normalized.split())
+        # 'simple' must match idx_properties_address_fts, or Postgres seq-scans every row
         if county:
             rows = await db_pool.fetch("""
                 SELECT
@@ -1435,9 +1419,9 @@ async def search_exact(
                     not_full_market_price, vat_exclusive, description,
                     size_description, latitude, longitude,
                     routing_key, bedrooms, property_type,
-                    ts_rank(to_tsvector('english', COALESCE(address_normalized, address)), to_tsquery('english', $1)) as rank
+                    ts_rank(to_tsvector('simple', COALESCE(address_normalized, address)), to_tsquery('simple', $1)) as rank
                 FROM properties
-                WHERE to_tsvector('english', COALESCE(address_normalized, address)) @@ to_tsquery('english', $1)
+                WHERE to_tsvector('simple', COALESCE(address_normalized, address)) @@ to_tsquery('simple', $1)
                   AND county = $2
                 ORDER BY rank DESC, sale_date DESC
                 LIMIT 100
@@ -1449,9 +1433,9 @@ async def search_exact(
                     not_full_market_price, vat_exclusive, description,
                     size_description, latitude, longitude,
                     routing_key, bedrooms, property_type,
-                    ts_rank(to_tsvector('english', COALESCE(address_normalized, address)), to_tsquery('english', $1)) as rank
+                    ts_rank(to_tsvector('simple', COALESCE(address_normalized, address)), to_tsquery('simple', $1)) as rank
                 FROM properties
-                WHERE to_tsvector('english', COALESCE(address_normalized, address)) @@ to_tsquery('english', $1)
+                WHERE to_tsvector('simple', COALESCE(address_normalized, address)) @@ to_tsquery('simple', $1)
                 ORDER BY rank DESC, sale_date DESC
                 LIMIT 100
             """, search_terms)
