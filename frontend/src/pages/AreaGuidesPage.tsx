@@ -27,8 +27,8 @@ export default function AreaGuidesPage() {
   // Prerendered with headline figures; null in dev, where the plain links stand in.
   const developmentCards = useLoaderData() as DevelopmentCard[] | null;
 
-  // All covered streets grouped by county. Counties sorted alphabetically
-  // (Dublin first, as the open group); streets alphabetically within.
+  // All covered streets grouped by county: Dublin first (most streets), then
+  // alphabetically; streets alphabetically within.
   const streetsByCounty = Object.entries(
     [...STREETS]
       .sort((a, b) => a.name.localeCompare(b.name))
@@ -157,7 +157,7 @@ export default function AreaGuidesPage() {
             <Link to="/streets">ranked street list</Link>.
           </p>
           {streetsByCounty.map(([county, streets]) => (
-            <details key={county} className="guide-group" open={county === "Dublin"}>
+            <details key={county} className="guide-group">
               <summary>Co. {county} <span className="guide-count">{streets.length}</span></summary>
               <ul className="guide-street-list">
                 {streets.map(s => (
