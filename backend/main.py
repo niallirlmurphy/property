@@ -21,6 +21,7 @@ import sentry_sdk
 from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.asyncio import AsyncioIntegration
 from mapbox_client import MapboxClient
+from places import parse_query, pick_place
 
 load_dotenv()
 
@@ -820,85 +821,21 @@ async def _geocode_mapbox(
         return None
 
 
-async def _nominatim_first(client: httpx.AsyncClient, params: dict) -> "tuple[float, float] | None":
-    """(lat, lon) of Nominatim's top result for `params`, if it is in Ireland."""
+async def _geocode_place(query: str, county: Optional[str] = None) -> "tuple[float, float] | None":
+    """Resolve a town/suburb/locality name ("Swords, Dublin", "Limerick City") to the
+    centre of its sales, from the `places` table (scripts/build_places.py)."""
+    names, hint = parse_query(query, county)
+    if not names:
+        return None
     try:
-        resp = await client.get(
-            "https://nominatim.openstreetmap.org/search",
-            params={**params, "format": "json", "limit": 1},
-            headers={"User-Agent": USER_AGENT},
-            timeout=5.0,
+        rows = await db_pool.fetch(
+            "SELECT name, county, latitude, longitude, sales, counties FROM places WHERE name = ANY($1)",
+            names,
         )
-        results = resp.json() if resp.status_code == 200 else []
     except Exception as e:
-        logger.debug(f"Nominatim lookup failed for {params!r}: {e}")
+        logger.warning(f"Place lookup failed for {query!r}: {e}")
         return None
-    if results:
-        lat, lon = float(results[0]["lat"]), float(results[0]["lon"])
-        if _is_in_ireland(lat, lon):
-            return lat, lon
-    return None
-
-
-async def _geocode_nominatim(
-    query: str,
-    client: httpx.AsyncClient,
-    county: Optional[str] = None,
-) -> "tuple[float, float] | None":
-    """Resolve query (address, place name, or eircode) via Nominatim.
-    Returns (lat, lon) if successful, None otherwise.
-    Nominatim returns results ordered by importance, so first result is usually correct.
-    County parameter helps disambiguate addresses that exist in multiple counties."""
-    # Place names first ("Swords, Dublin", "Tuam, Galway"): a settlement-only search,
-    # because the free-text one ranks named roads and estates above the town itself
-    # (Swords Road AGI in Whitehall, Tuam Road Retail Centre in Galway city). Skipped
-    # for house-numbered addresses; road names find no settlement and fall through.
-    if not re.search(r"\d", query):
-        result = await _nominatim_first(client, {
-            "q": f"{query.strip()}, {county}" if county else query.strip(),
-            "countrycodes": "ie", "featureType": "settlement",
-        })
-        if result:
-            return result
-    try:
-        # Nominatim search — add county (if provided) and "Ireland" to avoid international matches
-        search_query = f"{query.strip()}"
-        if county:
-            search_query = f"{search_query}, {county}"
-        search_query = f"{search_query}, Ireland"
-
-        resp = await client.get(
-            "https://nominatim.openstreetmap.org/search",
-            params={
-                "q": search_query,
-                "format": "json",
-                "limit": 1,
-                "addressdetails": 0,  # Faster response without full address breakdown
-            },
-            headers={"User-Agent": USER_AGENT},
-            timeout=5.0,
-        )
-        if resp.status_code != 200:
-            return None
-
-        results = resp.json()
-        if not results:
-            return None
-
-        lat = results[0].get("lat")
-        lon = results[0].get("lon")
-
-        if lat is not None and lon is not None:
-            lat_f, lon_f = float(lat), float(lon)
-            # Validate coordinates are in Ireland (prevents matching "Ireland" hamlet in UK)
-            if _is_in_ireland(lat_f, lon_f):
-                return lat_f, lon_f
-            else:
-                logger.warning(f"Nominatim returned out-of-bounds coordinates for {query!r}: {lat_f}, {lon_f}")
-        return None
-    except Exception as e:
-        logger.debug(f"Nominatim geocoding failed for {query!r}: {e}")
-        return None
+    return pick_place([dict(r) for r in rows], names, hint)
 
 
 async def _flag_bad_geocode(eircode: str):
@@ -925,12 +862,12 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
       3. Routing key (D02, H91) → DB   (centroid of all properties with that Eircode prefix)
       4. Eircode → DB exact match      (fast indexed lookup with validation from properties table)
       5. Eircode → Reference table     (pre-computed Eircode centroids from 222k Eircodes)
-      6. Token-based DB lookup         (tight clusters in known developments)
-      7. Nominatim                     (OSM geocoder, importance-ranked results)
+      6. Place name → places table     (town/suburb centres built from our own sales)
+      7. Token-based DB lookup         (tight clusters in known developments)
       8. Mapbox Geocoding API          (commercial fallback)
       9. Fuzzy DB ILIKE full-scan      (slow last resort)
 
-    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'nominatim', 'db_tokens', 'mapbox', 'db_fuzzy'
+    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_place', 'db_tokens', 'mapbox', 'db_fuzzy'
     """
     # 1. Raw coordinates
     coord_match = re.match(r"^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$", query.strip())
@@ -1014,7 +951,13 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         if rk_row and (rk_row["cnt"] or 0) >= 1:
             return _cache_and_return(float(rk_row["lat"]), float(rk_row["lon"]), "db_routing_key")
 
-    # 4. Token-based DB lookup — matches addresses by significant words.
+    # 4a. Place name — towns, suburbs and localities ("Swords, Dublin", "Ranelagh").
+    # Our own sales-derived centres; Nominatim ranked same-named roads above towns.
+    result = await _geocode_place(query, county)
+    if result:
+        return _cache_and_return(*result, "db_place")
+
+    # 4b. Token-based DB lookup — matches addresses by significant words.
     # Handles abbreviation mismatches (Rd vs Road) and finds tight clusters in known
     # Irish developments before falling through to external geocoders.
     # County filter helps disambiguate addresses that exist in multiple counties.
@@ -1022,33 +965,31 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
     if result:
         return _cache_and_return(*result, "db_tokens")
 
-    # 5. Nominatim — free OSM geocoder with good Irish coverage. Returns results ordered
-    # by importance, so first result is usually the primary settlement/address.
-    # Better than Mapbox for place names (avoids sub-locality confusion like Barna).
-    # County parameter helps disambiguate addresses in multiple locations.
-    async with httpx.AsyncClient() as client:
-        result = await _geocode_nominatim(query, client, county)
-        if result:
-            return _cache_and_return(*result, "nominatim")
-
-    # 6. Mapbox — commercial geocoder, fallback if Nominatim fails.
+    # 5. Mapbox — commercial geocoder for streets and addresses.
     # Expand abbreviations first (Rd→Road, Ave→Avenue etc) so Mapbox resolves correctly.
     mapbox_query = _expand_abbreviations(query)
     q_lower = query.lower()
     has_county_context = COUNTY_KEYWORDS.search(q_lower) or any(c in q_lower for c in DUBLIN_COUNTIES)
     async with httpx.AsyncClient() as client:
         proximity = await _proximity_hint_from_query(mapbox_query)
-        # Only append county context for street addresses (start with a number).
-        # Bare area names like "Rathmines" must be sent as-is — appending ", Dublin"
-        # causes Mapbox to misread them (e.g. "Rathmines, Dublin" → Dublin Road, Wicklow).
+        if not proximity and county:
+            # Bias towards the county's main town ("galway" → Galway city), not Dublin.
+            centre = await _geocode_place(county, county)
+            if centre:
+                proximity = f"{centre[1]},{centre[0]}"
+        # Append the county filter ("Main Street" + Cork), or default to Dublin for
+        # house-numbered addresses only. Bare area names must not get ", Dublin":
+        # Mapbox misreads them ("Rathmines, Dublin" → Dublin Road, Wicklow).
         is_street_address = bool(_STARTS_WITH_NUMBER.match(query.strip()))
-        if not proximity and not has_county_context and is_street_address:
-            mapbox_query = mapbox_query + (f", {county}" if county else ", Dublin")
+        if not has_county_context and county:
+            mapbox_query = f"{mapbox_query}, {county}"
+        elif not proximity and not has_county_context and is_street_address:
+            mapbox_query = f"{mapbox_query}, Dublin"
         result = await _geocode_mapbox(mapbox_query, client, proximity=proximity)
         if result:
             return _cache_and_return(*result, "mapbox")
 
-    # 7. Fuzzy DB ILIKE fallback — only reached if all external geocoders fail
+    # 6. Fuzzy DB ILIKE fallback — only reached if all external geocoders fail
     result = await _geocode_db(query)
     if result:
         return _cache_and_return(*result, "db_fuzzy")

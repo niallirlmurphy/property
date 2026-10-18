@@ -115,7 +115,9 @@ class MapboxClient:
         address: str,
         country: str = 'ie',
         limit: int = 1,
-        eircode: Optional[str] = None
+        eircode: Optional[str] = None,
+        types: str = 'address,poi,postcode',
+        proximity: Optional[str] = None
     ) -> Optional[Dict]:
         """
         Geocode single address using Mapbox Geocoding API.
@@ -127,6 +129,8 @@ class MapboxClient:
             country: ISO country code (default: 'ie' for Ireland)
             limit: Maximum results to return
             eircode: Irish postal code (if available, will try first)
+            types: Mapbox feature types to accept
+            proximity: "lon,lat" to bias results towards
 
         Returns:
             Dict with 'latitude', 'longitude', 'full_address', 'precision' or None if no results
@@ -136,13 +140,13 @@ class MapboxClient:
         """
         # Try Eircode first if available (more accurate)
         if eircode:
-            result = await self._geocode_query(eircode, country, limit)
+            result = await self._geocode_query(eircode, country, limit, types, proximity)
             if result:
                 result['method'] = 'eircode'
                 return result
 
         # Fallback to address (or primary if no eircode)
-        result = await self._geocode_query(address, country, limit)
+        result = await self._geocode_query(address, country, limit, types, proximity)
         if result:
             result['method'] = 'address'
         return result
@@ -151,7 +155,9 @@ class MapboxClient:
         self,
         query: str,
         country: str,
-        limit: int
+        limit: int,
+        types: str = 'address,poi,postcode',
+        proximity: Optional[str] = None
     ) -> Optional[Dict]:
         """Internal method to geocode a single query."""
         await self._check_limit(required_requests=1)
@@ -161,8 +167,10 @@ class MapboxClient:
             'access_token': self.token,
             'country': country,
             'limit': limit,
-            'types': 'address,poi,postcode'
+            'types': types
         }
+        if proximity:
+            params['proximity'] = proximity
 
         try:
             response = await self._client.get(url, params=params)

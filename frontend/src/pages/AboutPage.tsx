@@ -177,9 +177,8 @@ export default function AboutPage() {
                 </a>
               </dt>
               <dd>
-                For addresses not found in official datasets, we fall back to OpenStreetMap's
-                community-maintained geospatial database via the Nominatim geocoding service,
-                ensuring comprehensive coverage of Irish locations.
+                Our maps are drawn on OpenStreetMap's community-maintained map of Ireland,
+                giving clear street-level context for every sale.
               </dd>
             </div>
           </dl>

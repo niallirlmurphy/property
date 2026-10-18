@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS search_log (
     max_price        INTEGER,
     min_year         INTEGER,
     max_year         INTEGER,
-    geocode_source   TEXT,  -- 'db_exact' | 'nominatim' | 'db_tokens' | 'mapbox' | 'db_fuzzy' | 'cache'
+    geocode_source   TEXT,  -- 'db_exact' | 'db_place' | 'db_tokens' | 'mapbox' | 'db_fuzzy' | 'cache'
     user_agent       TEXT,
     ip_address       INET
 );
@@ -126,3 +126,17 @@ CREATE INDEX IF NOT EXISTS email_alerts_active_idx ON email_alerts (is_active, e
 CREATE INDEX IF NOT EXISTS email_alerts_email_idx ON email_alerts (email);
 CREATE INDEX IF NOT EXISTS email_alerts_token_idx ON email_alerts (unsubscribe_token);
 
+
+-- Town/suburb/locality centres for search, built from our own geocoded sales by
+-- scripts/build_places.py (name is normalized: lower-case, fadas folded).
+-- counties = how many counties use the name; the backend only trusts a non-Dublin
+-- row without a county in the query when it is 1.
+CREATE TABLE IF NOT EXISTS places (
+    name       TEXT NOT NULL,
+    county     TEXT NOT NULL,
+    latitude   DOUBLE PRECISION NOT NULL,
+    longitude  DOUBLE PRECISION NOT NULL,
+    sales      INTEGER NOT NULL,
+    counties   INTEGER NOT NULL,
+    PRIMARY KEY (name, county)
+);

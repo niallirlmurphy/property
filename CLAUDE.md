@@ -67,7 +67,6 @@ Canonical variables used across scripts/services:
 - `DATABASE_URL` (required for all database operations; Supabase connection string)
 - `MAPBOX_TOKEN` (required for geocoding; Mapbox API token pk.xxx format)
 - `VITE_API_URL` (frontend; points to Railway backend in production)
-- `NOMINATIM_URL` (backend geocoding endpoint; defaults to public endpoint)
 - `AUTOADDRESS_KEY` (for Eircode enrichment; pub_xxx format)
 - `SENTRY_DSN` (optional; error tracking and performance monitoring)
 
@@ -260,7 +259,7 @@ python3 scripts/geocode_mapbox_batch.py --centroid --limit 10000 --apply
 ```bash
 cd backend
 pip install -r requirements.txt
-cp .env.example .env          # fill in DATABASE_URL (and optional NOMINATIM_URL)
+cp .env.example .env          # fill in DATABASE_URL
 uvicorn main:app --reload
 # API at http://localhost:8000
 ```
@@ -421,7 +420,6 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
   - `DATABASE_URL` (required - Supabase connection string)
   - `MAPBOX_TOKEN` (required - for geocoding API)
   - `SENTRY_DSN` (optional - error tracking)
-  - `NOMINATIM_URL` (optional - defaults to public endpoint)
   - `AUTOADDRESS_KEY` (optional - for Eircode enrichment)
 - Deploy config is in `backend/railway.toml` (start: `uvicorn main:app --host 0.0.0.0 --port $PORT`).
 
@@ -469,7 +467,8 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
 - **Radius search**: `ST_DWithin(geom::geography, ...)` on GIST-indexed PostGIS geometry column. Results ordered by `ST_Distance` ascending. Auto-expands radius (2x, 3x, 5x, 10x up to 20km) if fewer than 5 results found.
 - **Polygon search** (New): `ST_Within(geom::geometry, polygon)` for map-based area selection. Supports drawing tools (polygon, rectangle, circle) at `/polygon`. Accepts custom polygon coordinates via `POST /search/polygon`. Up to 1,000 properties per query.
 - **Exact address search** (`/search/exact`): Matches against `address_normalized` column for reliable results. Handles user input variations (ROAD vs RD, punctuation differences) by normalizing search input with same logic as database. Supports prefix matching to handle missing area suffixes (e.g., "28 Slane Road" matches "28 Slane Road, Crumlin, Dublin 12").
-- **Geocoding at search time**: Backend calls Nominatim (`NOMINATIM_URL`) to resolve user queries to (lat, lon). Supports addresses, Eircodes, and coordinate pairs.
+- **Geocoding at search time** (`resolve_location`): coordinates → Eircode/routing key (DB) → place name (`places` table) → token DB lookup → Mapbox. The backend no longer uses Nominatim (it ranked same-named roads above towns: "Swords, Dublin" → Swords Road, Whitehall).
+- **Places table**: town/suburb/locality centres built from our own geocoded sales by `python3 scripts/build_places.py --apply` (dry run without `--apply`). A name's centre is the median of sales within 5km of its densest cell, kept if ≥50% of its sales are there. Without a county in the query, Dublin wins, else only names used in a single county ("Tuam" yes, "Main Street" no → Mapbox). Re-run yearly or after big geocoding cleanups; shared logic lives in `backend/places.py`.
 - **Trends query**: Uses `PERCENTILE_CONT(0.5)` for median price, filtered to `not_full_market_price = FALSE`.
 - **Caching**: In-memory TTL cache for counties (1h), trends (1h), Eircodes (1h), geocode results (24h), search results (5min).
 
@@ -637,7 +636,7 @@ docker run -it --rm \
 
 First run imports the PBF and can take 10–30 minutes. Subsequent runs reuse the data volume if you mount a persistent named volume instead of the local directory.
 
-The bulk geocoder (`geocode.py`) is configured to call local Nominatim at `http://localhost:8080/search`; if that service is down, geocoding requests fail and retry with backoff (Photon fallback is only used when Nominatim returns no result for non-Eircode queries). The backend API separately defaults to the public Nominatim endpoint unless `NOMINATIM_URL` is set.
+The bulk geocoder (`geocode.py`) is configured to call local Nominatim at `http://localhost:8080/search`; if that service is down, geocoding requests fail and retry with backoff (Photon fallback is only used when Nominatim returns no result for non-Eircode queries). The backend API doesn't use Nominatim (see `places` table above); this local instance is only for the legacy bulk geocoder.
 
 ## SEO Strategy & Traffic Growth
 
