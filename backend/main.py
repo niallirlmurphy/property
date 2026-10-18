@@ -2280,6 +2280,25 @@ async def get_active_email_alerts(request: Request):
     return [serialize_row(r) for r in rows]
 
 
+@app.get("/cron/new-subscribers", dependencies=[Depends(verify_cron_secret)])
+async def cron_new_subscribers():
+    """
+    Property-alert sign-ups in the previous calendar month, for the monthly GitHub
+    Actions check that tells the site owner about new subscribers. Counts only:
+    the workflow posts them to a public repo, so no emails or addresses.
+
+    **Authentication required:** X-Cron-Secret header
+    """
+    row = await db_pool.fetchrow("""
+        SELECT to_char(date_trunc('month', now()) - interval '1 month', 'YYYY-MM') AS month,
+               COUNT(*) FILTER (WHERE created_at >= date_trunc('month', now()) - interval '1 month'
+                                  AND created_at <  date_trunc('month', now())) AS new,
+               COUNT(*) FILTER (WHERE is_active) AS active
+        FROM email_alerts
+    """)
+    return {"month": row["month"], "new": row["new"], "active": row["active"]}
+
+
 @app.post("/cron/send-monthly-alerts", dependencies=[Depends(verify_cron_secret)])
 async def cron_send_monthly_alerts(request: Request):
     """

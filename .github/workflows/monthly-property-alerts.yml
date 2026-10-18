@@ -1,57 +1,54 @@
-name: Monthly Property Alerts
+name: Monthly New Subscriber Check
+
+# On the 1st, asks the backend how many people signed up for property alerts last
+# month and opens an issue (GitHub emails it to the repo owner) if any did. The repo
+# is public, so the issue carries counts only. Needs CRON_SECRET set to the same
+# value here (repo secret) and in Railway.
 
 on:
   schedule:
-    # Run on the 1st of every month at 2:00 AM UTC
-    - cron: '0 2 1 * *'
-  # Allow manual trigger for testing
+    - cron: '0 8 1 * *'
   workflow_dispatch:
 
+permissions:
+  issues: write
+
 jobs:
-  send-alerts:
+  check-subscribers:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Send Monthly Property Alerts
+      - name: Count last month's sign-ups
+        id: count
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: |
-          response=$(curl -s -w "\n%{http_code}" -X POST \
-            https://eloquent-optimism-production-350a.up.railway.app/cron/send-monthly-alerts \
-            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
-            -H "Content-Type: application/json")
-
-          http_code=$(echo "$response" | tail -n1)
-          body=$(echo "$response" | sed '$d')
-
-          echo "HTTP Status: $http_code"
-          echo "Response: $body"
-
-          if [ "$http_code" -ne 200 ]; then
-            echo "❌ Monthly alerts job failed with status $http_code"
-            exit 1
+          if [ -z "$CRON_SECRET" ]; then
+            echo "::error::CRON_SECRET repo secret not set"; exit 1
           fi
+          body=$(curl -sf -H "X-Cron-Secret: $CRON_SECRET" \
+            https://eloquent-optimism-production-350a.up.railway.app/cron/new-subscribers) \
+            || { echo "::error::Backend request failed"; exit 1; }
+          echo "$body"
+          echo "month=$(echo "$body" | jq -r .month)" >> "$GITHUB_OUTPUT"
+          echo "new=$(echo "$body" | jq -r .new)" >> "$GITHUB_OUTPUT"
+          echo "active=$(echo "$body" | jq -r .active)" >> "$GITHUB_OUTPUT"
 
-          echo "✅ Monthly alerts job completed successfully"
-          echo "$body" | jq '.'
-
-      - name: Create issue on failure
-        if: failure()
+      - name: Open issue for new subscribers
+        if: steps.count.outputs.new != '0'
         uses: actions/github-script@v7
+        env:
+          MONTH: ${{ steps.count.outputs.month }}
+          NEW: ${{ steps.count.outputs.new }}
+          ACTIVE: ${{ steps.count.outputs.active }}
         with:
           script: |
+            const { MONTH, NEW, ACTIVE } = process.env;
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: '🚨 Monthly Property Alerts Failed',
-              body: `The monthly property alerts cron job failed on ${new Date().toISOString()}.
-
-              **Workflow Run:** ${context.payload.repository.html_url}/actions/runs/${context.runId}
-
-              Please investigate the logs and ensure:
-              - Railway backend is running
-              - CRON_SECRET is correctly configured
-              - RESEND_API_KEY is set in Railway environment
-              - Database connection is healthy
-
-              cc: @niallirlmurphy`,
-              labels: ['bug', 'email-alerts', 'cron']
-            })
+              title: `📬 ${NEW} new property alert subscriber${NEW === '1' ? '' : 's'} in ${MONTH}`,
+              body: `${NEW} sign-up${NEW === '1' ? '' : 's'} for property alerts in ${MONTH}; ${ACTIVE} active in total.\n\n` +
+                    `Details (not posted here, the repo is public): query the \`email_alerts\` table, ` +
+                    `or \`GET /email-alerts/active\` with the admin token.\n\ncc @${context.repo.owner}`,
+            });
