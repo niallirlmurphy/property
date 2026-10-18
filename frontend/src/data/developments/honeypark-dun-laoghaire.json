@@ -1,25 +1,17 @@
 {
   "slug": "honeypark-dun-laoghaire",
   "stats": {
-    "count": 796,
-    "median": 363117,
-    "avg": 449309,
+    "count": 484,
+    "median": 361233,
+    "avg": 343928,
     "min": 102000,
-    "max": 1200000,
-    "firstYear": 2010,
+    "max": 484582,
+    "firstYear": 2011,
     "lastYear": 2026,
-    "recentMedian": 1075000,
-    "recentCount": 17
+    "recentMedian": null,
+    "recentCount": 1
   },
   "trends": [
-    {
-      "year": 2010,
-      "count": 1,
-      "median_price": 200000,
-      "avg_price": 200000,
-      "min_price": 200000,
-      "max_price": 200000
-    },
     {
       "year": 2011,
       "count": 6,
@@ -30,158 +22,123 @@
     },
     {
       "year": 2012,
-      "count": 15,
-      "median_price": 444934,
-      "avg_price": 438605,
+      "count": 1,
+      "median_price": 180000,
+      "avg_price": 180000,
       "min_price": 180000,
-      "max_price": 610000
+      "max_price": 180000
     },
     {
       "year": 2013,
-      "count": 52,
-      "median_price": 453744,
-      "avg_price": 431969,
+      "count": 1,
+      "median_price": 108000,
+      "avg_price": 108000,
       "min_price": 108000,
-      "max_price": 580000
+      "max_price": 108000
     },
     {
       "year": 2014,
-      "count": 74,
-      "median_price": 524229,
-      "avg_price": 525646,
+      "count": 1,
+      "median_price": 153000,
+      "avg_price": 153000,
       "min_price": 153000,
-      "max_price": 696035
+      "max_price": 153000
     },
     {
       "year": 2015,
-      "count": 49,
-      "median_price": 599118,
-      "avg_price": 584011,
+      "count": 2,
+      "median_price": 110500,
+      "avg_price": 110500,
       "min_price": 110500,
-      "max_price": 762115
+      "max_price": 110500
     },
     {
       "year": 2016,
-      "count": 84,
+      "count": 57,
       "median_price": 308370,
-      "avg_price": 409986,
+      "avg_price": 312805,
       "min_price": 102000,
-      "max_price": 687225
+      "max_price": 484582
     },
     {
       "year": 2017,
-      "count": 163,
+      "count": 142,
       "median_price": 308370,
-      "avg_price": 364265,
+      "avg_price": 326270,
       "min_price": 251101,
-      "max_price": 694000
+      "max_price": 484582
     },
     {
       "year": 2018,
-      "count": 281,
+      "count": 262,
       "median_price": 361233,
-      "avg_price": 386252,
+      "avg_price": 366359,
       "min_price": 259912,
-      "max_price": 830000
+      "max_price": 484582
     },
     {
       "year": 2019,
-      "count": 9,
-      "median_price": 750000,
-      "avg_price": 612611,
+      "count": 2,
+      "median_price": 343750,
+      "avg_price": 343750,
       "min_price": 330000,
-      "max_price": 855000
+      "max_price": 357500
     },
     {
       "year": 2020,
-      "count": 9,
-      "median_price": 785000,
-      "avg_price": 572500,
+      "count": 4,
+      "median_price": 297500,
+      "avg_price": 276250,
       "min_price": 130000,
-      "max_price": 840000
-    },
-    {
-      "year": 2021,
-      "count": 5,
-      "median_price": 905000,
-      "avg_price": 908000,
-      "min_price": 865000,
-      "max_price": 945000
+      "max_price": 380000
     },
     {
       "year": 2022,
-      "count": 11,
-      "median_price": 980000,
-      "avg_price": 861545,
-      "min_price": 435000,
-      "max_price": 1110000
+      "count": 2,
+      "median_price": 466000,
+      "avg_price": 466000,
+      "min_price": 462000,
+      "max_price": 470000
     },
     {
       "year": 2023,
-      "count": 10,
-      "median_price": 980000,
-      "avg_price": 843200,
+      "count": 2,
+      "median_price": 445000,
+      "avg_price": 445000,
       "min_price": 420000,
-      "max_price": 1080000
+      "max_price": 470000
     },
     {
       "year": 2024,
-      "count": 13,
-      "median_price": 995000,
-      "avg_price": 846052,
-      "min_price": 244682,
-      "max_price": 1130000
-    },
-    {
-      "year": 2025,
-      "count": 8,
-      "median_price": 1049998,
-      "avg_price": 925374,
-      "min_price": 333000,
-      "max_price": 1200000
+      "count": 1,
+      "median_price": 440000,
+      "avg_price": 440000,
+      "min_price": 440000,
+      "max_price": 440000
     },
     {
       "year": 2026,
-      "count": 6,
-      "median_price": 1090000,
-      "avg_price": 975833,
+      "count": 1,
+      "median_price": 426000,
+      "avg_price": 426000,
       "min_price": 426000,
-      "max_price": 1115000
+      "max_price": 426000
     }
   ],
-  "bedrooms": [
-    {
-      "bedrooms": 4,
-      "count": 7,
-      "median": 950000,
-      "avg": 808210
-    },
-    {
-      "bedrooms": 5,
-      "count": 11,
-      "median": 985000,
-      "avg": 887764
-    }
-  ],
+  "bedrooms": [],
   "types": [
     {
       "type": "Apartment",
-      "count": 469,
+      "count": 462,
       "median": 361233,
-      "avg": 354904
-    },
-    {
-      "type": "House",
-      "count": 30,
-      "median": 842500,
-      "avg": 785669
+      "avg": 346803
     }
   ],
   "development": {
-    "firstSaleYear": 2010,
-    "newHomeSales": 695,
-    "resales": 101,
-    "bedroomsKnown": 25
+    "firstSaleYear": 2011,
+    "newHomeSales": 459,
+    "resales": 25,
+    "bedroomsKnown": 0
   },
   "bulkSales": [
     {
@@ -256,139 +213,11 @@
   },
   "transactions": [
     {
-      "date": "2026-07-30",
-      "address": "36 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1115000,
-      "bedrooms": 5,
-      "propertyType": "terraced",
-      "newHome": false
-    },
-    {
-      "date": "2026-07-15",
-      "address": "14 BRICKFIELD WAY, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1100000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2026-07-03",
-      "address": "22 BURFORD DRIVE, HONEY PARK, DUN LAOGHAIRE",
-      "price": 1080000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2026-06-19",
-      "address": "1 MAYPARK AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1105000,
-      "bedrooms": 5,
-      "propertyType": "terraced",
-      "newHome": false
-    },
-    {
       "date": "2026-05-20",
       "address": "15 ROCHDALE, HONEY PARK, KILL AVENUE   DUN LAOGHAIRE",
       "price": 426000,
       "bedrooms": null,
       "propertyType": "apartment",
-      "newHome": false
-    },
-    {
-      "date": "2026-03-27",
-      "address": "2 MAYPARK AVENUE, HONEYPARK, DÚN LAOGHAIRE",
-      "price": 1029000,
-      "bedrooms": 3,
-      "propertyType": "apartment",
-      "newHome": false
-    },
-    {
-      "date": "2025-11-13",
-      "address": "21 CLAREMOUNT AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1185000,
-      "bedrooms": 6,
-      "propertyType": "semi-detached",
-      "newHome": false
-    },
-    {
-      "date": "2025-09-01",
-      "address": "2 CLAREMOUNT AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 333000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2025-08-11",
-      "address": "15 BRICKFIELD WAY, HONEYPARK, DUN LAOGHAIRE",
-      "price": 950000,
-      "bedrooms": 4,
-      "propertyType": "terraced",
-      "newHome": false
-    },
-    {
-      "date": "2025-07-03",
-      "address": "16 CLAREMONT AVENUE, HONEY PARK, DUN LAOGHAIRE",
-      "price": 1100000,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "newHome": false
-    },
-    {
-      "date": "2025-05-30",
-      "address": "15 BURFORD DRIVE, HONEYPARK  DUN LAOGHAIRE, DUBLIN",
-      "price": 1200000,
-      "bedrooms": 5,
-      "propertyType": "semi-detached",
-      "newHome": false
-    },
-    {
-      "date": "2025-04-24",
-      "address": "9 BRICKFIELD WAY, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1100000,
-      "bedrooms": 4,
-      "propertyType": "terraced",
-      "newHome": false
-    },
-    {
-      "date": "2025-03-18",
-      "address": "3 HONEY PARK, SALLYNOGGIN, DUN LAOGHAIRE",
-      "price": 535000,
-      "bedrooms": 3,
-      "propertyType": "bungalow",
-      "newHome": false
-    },
-    {
-      "date": "2025-01-03",
-      "address": "4 MARCONI CRESCENT, HONEYPARK DUN LAOGHAIRE, CO DUBLIN",
-      "price": 999995,
-      "bedrooms": 4,
-      "propertyType": "terraced",
-      "newHome": false
-    },
-    {
-      "date": "2024-12-11",
-      "address": "8 HONEY PARK COTTAGES, SALLYNOGGIN, CO DUBLIN",
-      "price": 775000,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
-      "newHome": false
-    },
-    {
-      "date": "2024-11-27",
-      "address": "20 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1075000,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "newHome": false
-    },
-    {
-      "date": "2024-11-11",
-      "address": "4 HONEY PARK, SALLYNOGGIN, DUN LAOGHAIRE",
-      "price": 244682,
-      "bedrooms": null,
-      "propertyType": null,
       "newHome": false
     },
     {
@@ -400,145 +229,9 @@
       "newHome": false
     },
     {
-      "date": "2024-08-08",
-      "address": "19 BURFORD DRIVE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1000000,
-      "bedrooms": null,
-      "propertyType": "terraced",
-      "newHome": false
-    },
-    {
-      "date": "2024-06-21",
-      "address": "14 BRICKFIELD DRIVE, HONEYPARK, DUNLAOGHAIRE",
-      "price": 1130000,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "newHome": false
-    },
-    {
-      "date": "2024-05-03",
-      "address": "2 CARNEGIE DRIVE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1050000,
-      "bedrooms": 2,
-      "propertyType": "bungalow",
-      "newHome": false
-    },
-    {
-      "date": "2024-04-29",
-      "address": "1 MAYPARK AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 995000,
-      "bedrooms": 5,
-      "propertyType": "semi-detached",
-      "newHome": false
-    },
-    {
-      "date": "2024-04-19",
-      "address": "1 BRICKFIELD DRIVE, HONEYPARK, DUNLAOGHAIRE",
-      "price": 1006000,
-      "bedrooms": 4,
-      "propertyType": "terraced",
-      "newHome": false
-    },
-    {
-      "date": "2024-04-08",
-      "address": "13 BRICKFIELD WAY, HONEYPARK, DUN LAOGHAIRE",
-      "price": 985000,
-      "bedrooms": 5,
-      "propertyType": "terraced",
-      "newHome": false
-    },
-    {
-      "date": "2024-03-14",
-      "address": "11 BURFORD DRIVE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1055000,
-      "bedrooms": 5,
-      "propertyType": "terraced",
-      "newHome": false
-    },
-    {
-      "date": "2024-02-29",
-      "address": "33 BURFORD DRIVE, HONEY PARK, DUN LAOGHAIRE",
-      "price": 910000,
-      "bedrooms": 5,
-      "propertyType": "terraced",
-      "newHome": false
-    },
-    {
-      "date": "2024-02-26",
-      "address": "2 CLAREMOUNT AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 333000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2023-10-26",
-      "address": "32 BRICKFIELD DRIVE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 990000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2023-10-26",
-      "address": "32 CARNEGIE DRIVE, HONEY PARK, DUN LAOGHAIRE",
-      "price": 1002000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2023-09-08",
-      "address": "2 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 965000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2023-08-03",
-      "address": "17 HONEY PARK COTTAGES, SALLYNOGGIN, COUNTY DUBLIN",
-      "price": 510000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2023-07-31",
-      "address": "27 CARNEGIE DRIVE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1025000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": true
-    },
-    {
       "date": "2023-06-22",
       "address": "6 ROCHDALE, HONEY PARK, KILL AVENUE   DUN LAOGHAIRE",
       "price": 420000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2023-06-09",
-      "address": "12 MARCONI CRESCENT, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1000000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2023-05-24",
-      "address": "14 BURFORD DRIVE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1080000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2023-05-24",
-      "address": "10 MARCONI CRESCENT, HONEYPARK, DUN LAOGHAIRE",
-      "price": 970000,
       "bedrooms": null,
       "propertyType": null,
       "newHome": false
@@ -552,65 +245,9 @@
       "newHome": false
     },
     {
-      "date": "2022-12-22",
-      "address": "22 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1050000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2022-11-01",
-      "address": "1 MAYPARK AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 980000,
-      "bedrooms": 5,
-      "propertyType": "semi-detached",
-      "newHome": false
-    },
-    {
-      "date": "2022-10-28",
-      "address": "29 BURFORD DRIVE, HONEY PARK, DUN LAOGHAIRE",
-      "price": 970000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2022-10-21",
-      "address": "18  BOYD AVENUE, HONEYPARK, DUN  LAOGHAIRE",
-      "price": 1000000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
       "date": "2022-09-15",
       "address": "10 ROCHDALE, HONEY PARK, KILL AVENUE",
       "price": 462000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2022-08-30",
-      "address": "5 DARGAN DRIVE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 1110000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2022-08-05",
-      "address": "18 BURFORD DRIVE, HONEYPARK, DUN LAOIRE",
-      "price": 1110000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2022-07-28",
-      "address": "16 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 980000,
       "bedrooms": null,
       "propertyType": null,
       "newHome": false
@@ -624,37 +261,357 @@
       "newHome": false
     },
     {
-      "date": "2022-03-11",
-      "address": "34 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 910000,
+      "date": "2020-11-12",
+      "address": "61 ROCHDALE, HONEY PARK, KILL AVENUE",
+      "price": 380000,
       "bedrooms": null,
       "propertyType": null,
       "newHome": false
     },
     {
-      "date": "2022-03-02",
-      "address": "14 HONEY PARK, SALLYNOGGIN, DUBLIN",
-      "price": 435000,
+      "date": "2020-05-19",
+      "address": "39 ROCHDALE, HONEY PARK, DUN LAOGHAIRE",
+      "price": 130000,
       "bedrooms": null,
       "propertyType": null,
       "newHome": false
     },
     {
-      "date": "2021-12-20",
-      "address": "8 BRICKFIELD DRIVE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 945000,
+      "date": "2020-02-21",
+      "address": "APT 63 ROCHDALE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2020-01-29",
+      "address": "35 ROCHDALE, HONEY PARK, KILL AVENUE   DUN LAOGHAIRE",
+      "price": 260000,
       "bedrooms": null,
       "propertyType": null,
       "newHome": false
     },
     {
-      "date": "2021-11-19",
-      "address": "18 CARNEGIE DRIVE, HONEYPARK, DUN LAOGHAIRE",
-      "price": 865000,
+      "date": "2019-07-01",
+      "address": "APT 31, ROCHDALE HONEYPARK, KILL AVE",
+      "price": 357500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2019-03-21",
+      "address": "6 ROCHDALE, HONEY PARK, KILL AVENUE   DUN LAOGHAIRE",
+      "price": 330000,
       "bedrooms": null,
       "propertyType": null,
       "newHome": false
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 100  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 484582,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 96  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 59  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 60  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 61  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 62  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 63  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 64  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 65  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 66  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 67  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 68  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 69  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 70  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 71  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 484582,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 72  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 484582,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 73  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 74  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 75  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 76  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 77  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 78  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 79  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 80  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 81  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 82  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 83  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 84  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 85  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 484582,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 86  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 484582,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 87  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 88  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 259912,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 89  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 90  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 91  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 92  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 93  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-11-21",
+      "address": "Apartment 94  Charlotte Block, Honeypark, Dun Laoghaire",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
     }
   ],
-  "totalTransactions": 796
+  "totalTransactions": 484
 }

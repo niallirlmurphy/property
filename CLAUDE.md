@@ -182,7 +182,9 @@ skip (exit 0) if they already ran this month; pass `--force` to override (or `--
 
 **Development pages** (`/development/:slug`, index `/developments`): one per entry in
 `frontend/src/data/developments_registry.json`. Each entry's `pinName` names a row in
-`development_pins`, whose match rule decides which sales belong; schools and transport come from
+`development_pins`, whose match rule decides which sales belong (an optional `salesMatch`
+tsquery narrows that further when the pin covers more than the page, e.g. Honeypark's page is its
+apartment blocks only); schools and transport come from
 the `amenities` table. Bulk sales (stats_excluded, or >5x the scheme median) are listed separately
 and left out of the stats. To add a development: pin it first, add a registry entry (no figures in
 the text; they go stale), then `python3 scripts/generate_development_data.py --force`.

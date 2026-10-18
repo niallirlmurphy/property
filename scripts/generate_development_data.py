@@ -186,14 +186,20 @@ def build_page(slug: str, sales: list, amenities: list, lat: float, lon: float,
     }
 
 
-def _fetch(cur, pin_name: str) -> list:
+def _fetch(cur, pin_name: str, sales_match: Optional[str] = None) -> list:
+    """Sales matching the pin's rule, narrowed by the registry entry's optional
+    `salesMatch` (a to_tsquery expression): the pin may cover more than the page,
+    e.g. Honeypark's pin places its house streets too, but its page is the
+    apartment blocks."""
     from development_pins import PIN_MATCH
+    narrow = ("AND to_tsvector('simple', COALESCE(p.address_normalized, p.address))"
+              " @@ to_tsquery('simple', %s)") if sales_match else ""
     cur.execute(f"""
         SELECT p.sale_date, p.address, p.price, p.bedrooms, p.property_type,
                p.description, p.stats_excluded
         FROM properties p JOIN development_pins d ON {PIN_MATCH}
-        WHERE d.name = %s AND p.not_full_market_price = FALSE AND p.price > 0
-    """, (pin_name,))
+        WHERE d.name = %s AND p.not_full_market_price = FALSE AND p.price > 0 {narrow}
+    """, (pin_name, sales_match) if sales_match else (pin_name,))
     return [{"date": r[0], "address": r[1], "price": float(r[2]), "bedrooms": r[3],
              "propertyType": r[4], "description": r[5], "stats_excluded": bool(r[6])}
             for r in cur.fetchall()]
@@ -225,7 +231,7 @@ def main():
         if not pin:
             print(f"❌ No pin named {entry['pinName']!r}; skipping {entry['slug']}")
             continue
-        page = build_page(entry["slug"], _fetch(cur, entry["pinName"]), amenities, *pin)
+        page = build_page(entry["slug"], _fetch(cur, entry["pinName"], entry.get("salesMatch")), amenities, *pin)
         with open(os.path.join(OUTDIR, entry["slug"] + ".json"), "w", encoding="utf-8") as fh:
             json.dump(page, fh, indent=2, ensure_ascii=False)
         s = page["stats"]

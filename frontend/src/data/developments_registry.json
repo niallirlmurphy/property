@@ -78,10 +78,11 @@
     "county": "Dublin",
     "countySlug": "dublin",
     "pinName": "Honeypark, Dun Laoghaire",
+    "salesMatch": "(leona | neptune | charlotte | rochdale | apartment) & !sallynoggin",
     "latitude": 53.2795689,
     "longitude": -6.146452,
-    "description": "Sold prices, price trends and bedroom breakdown for Honeypark, Dún Laoghaire, from the Property Price Register, covering its houses and apartments.",
-    "info": "Honeypark is a large mixed scheme of houses and apartment blocks between Dún Laoghaire and Glenageary, built in phases from 2010. It is the largest of the developments covered here, and most of its sales on the register are new homes. In February 2020 the 197 apartments of its Neptune Block were sold together for €114.4 million; that sale is listed separately below and left out of the price statistics.",
+    "description": "Sold prices, price trends and bedroom breakdown for the Honeypark apartments, Dún Laoghaire, from the Property Price Register.",
+    "info": "Honeypark is a large scheme between Dún Laoghaire and Glenageary, built in phases from 2010. This page covers its apartment blocks (Leona, Neptune, Charlotte and Rochdale); the scheme's house streets and the older Honey Park in Sallynoggin are not included. In February 2020 the 197 apartments of the Neptune Block were sold together for €114.4 million; that sale is listed separately below and left out of the price statistics.",
     "areaInfo": "Glenageary, Sandycove and Dún Laoghaire DART stations are all within about 2 km, and Dún Laoghaire's harbour, pier and town centre are a short trip north. Rathdown School is about 1 km away.",
     "relatedAreas": [
       { "slug": "dun-laoghaire", "name": "Dún Laoghaire" },

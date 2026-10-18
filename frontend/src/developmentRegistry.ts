@@ -10,6 +10,7 @@ export interface DevelopmentConfig {
   county: string;
   countySlug: string;
   pinName: string;        // development_pins.name; decides which sales belong
+  salesMatch?: string;    // optional to_tsquery narrowing the pin's sales (e.g. Honeypark: apartment blocks only)
   latitude: number;
   longitude: number;
   description: string;
