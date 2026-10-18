@@ -71,8 +71,11 @@ def area_targets():
         match = re.findall(r'"([^"]+)"', re.search(r"match:\s*\[([^\]]*)\]", obj).group(1))
         rk = re.search(r"routing_keys:\s*\[([^\]]*)\]", obj)
         routing_keys = re.findall(r'"([^"]+)"', rk.group(1)) if rk else []
+        # An explicit centre overrides the query (see AreaConfig.center in areas.ts).
+        center = re.search(r"center:\s*\[\s*(-?[\d.]+),\s*(-?[\d.]+)\s*\]", obj)
         targets.append({
             "slug": slug, "query": query, "radius_km": radius,
+            "q": f"{center.group(1)},{center.group(2)}" if center else query,
             "match": match, "routing_keys": routing_keys,
         })
     return targets
@@ -109,11 +112,11 @@ def build_area(api_url, target):
     locality = ",".join(target["match"]) if target["match"] else None
     routing_keys = ",".join(target["routing_keys"]) if target["routing_keys"] else None
     search = _get(api_url, "/search", {
-        "q": target["query"], "radius_km": target["radius_km"],
+        "q": target["q"], "radius_km": target["radius_km"],
         "limit": RECENT_LIMIT, "locality": locality, "routing_keys": routing_keys,
     })
     trends = _get(api_url, "/trends", {
-        "q": target["query"], "radius_km": target["radius_km"],
+        "q": target["q"], "radius_km": target["radius_km"],
         "locality": locality, "routing_keys": routing_keys,
     }).get("data", [])
 

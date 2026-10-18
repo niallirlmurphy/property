@@ -2,8 +2,8 @@
   "name": "Clonmel, Tipperary",
   "slug": "clonmel",
   "center": {
-    "lat": 52.3611052,
-    "lon": -7.6991779
+    "lat": 52.3610817,
+    "lon": -7.6991241
   },
   "radius_km": 2.0,
   "total_count": 10,
@@ -28,7 +28,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 862.52995478
+      "distance_m": 865.52881747
     },
     {
       "id": 805246,
@@ -46,7 +46,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "bungalow",
-      "distance_m": 1143.0117841
+      "distance_m": 1143.95065286
     },
     {
       "id": 805027,
@@ -64,7 +64,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 379.03958924
+      "distance_m": 374.81089156
     },
     {
       "id": 804670,
@@ -82,7 +82,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 659.17532219
+      "distance_m": 659.85667095
     },
     {
       "id": 804529,
@@ -100,7 +100,7 @@
       "routing_key": "E91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 986.07594297
+      "distance_m": 986.24743555
     },
     {
       "id": 804485,
@@ -118,7 +118,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1928.52477593
+      "distance_m": 1924.65423627
     },
     {
       "id": 804218,
@@ -136,7 +136,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1171.74860661
+      "distance_m": 1175.84488504
     },
     {
       "id": 803890,
@@ -154,7 +154,7 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 1410.76584382
+      "distance_m": 1413.13095907
     },
     {
       "id": 803550,
@@ -172,7 +172,7 @@
       "routing_key": "E91",
       "bedrooms": 4,
       "property_type": "bungalow",
-      "distance_m": 770.84789403
+      "distance_m": 775.24900196
     },
     {
       "id": 803273,
@@ -190,7 +190,7 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 346.33357287
+      "distance_m": 349.46008049
     }
   ],
   "trends": [

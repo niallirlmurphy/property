@@ -1,4 +1,6 @@
+import { lazy, Suspense } from "react";
 import { useLoaderData, Link } from "react-router-dom";
+import { ClientOnly } from "vite-react-ssg";
 import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
@@ -7,6 +9,8 @@ import MapSearchThumb from "../components/MapSearchThumb";
 import { usePageMeta } from "../hooks/usePageMeta";
 import type { DevelopmentPageData } from "../routeLoaders";
 import type { DevelopmentTransaction } from "../types";
+
+const DevelopmentMap = lazy(() => import("../components/DevelopmentMap"));
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -69,6 +73,7 @@ export default function DevelopmentPage() {
 
   const { stats, development, amenities } = data;
   const nearestStop = amenities.transport[0];
+  const mapFallback = <div className="development-map-fallback" aria-hidden="true" />;
   const faqs = [
     {
       q: `What is the average price in ${config.name}?`,
@@ -225,6 +230,15 @@ export default function DevelopmentPage() {
 
         <section className="content-section">
           <h2>The Area</h2>
+          <div className="development-map">
+            <ClientOnly fallback={mapFallback}>
+              {() => (
+                <Suspense fallback={mapFallback}>
+                  <DevelopmentMap lat={config.latitude} lon={config.longitude} name={config.name} />
+                </Suspense>
+              )}
+            </ClientOnly>
+          </div>
           <p>{config.areaInfo}</p>
           <p>
             More local prices:{" "}

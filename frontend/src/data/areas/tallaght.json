@@ -67,24 +67,6 @@
       "distance_m": 362.75494495
     },
     {
-      "id": 805285,
-      "sale_date": "2026-09-29",
-      "address": "23 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
-      "county": "Dublin",
-      "eircode": "D24CP86",
-      "price": 290000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.295526,
-      "longitude": -6.354784,
-      "routing_key": "D24",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 996.31522321
-    },
-    {
       "id": 805296,
       "sale_date": "2026-09-29",
       "address": "31 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
@@ -100,6 +82,24 @@
       "routing_key": "D24",
       "bedrooms": 2,
       "property_type": "apartment",
+      "distance_m": 996.31522321
+    },
+    {
+      "id": 805285,
+      "sale_date": "2026-09-29",
+      "address": "23 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
+      "county": "Dublin",
+      "eircode": "D24CP86",
+      "price": 290000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.295526,
+      "longitude": -6.354784,
+      "routing_key": "D24",
+      "bedrooms": null,
+      "property_type": null,
       "distance_m": 996.31522321
     },
     {

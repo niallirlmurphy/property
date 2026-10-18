@@ -2,8 +2,8 @@
   "name": "Waterford City",
   "slug": "waterford-city",
   "center": {
-    "lat": 52.2629766,
-    "lon": -7.1150096
+    "lat": 52.2628502,
+    "lon": -7.1150928
   },
   "radius_km": 3.0,
   "total_count": 10,
@@ -28,7 +28,7 @@
       "routing_key": "X91",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 210.6762243
+      "distance_m": 196.01820225
     },
     {
       "id": 805364,
@@ -46,7 +46,7 @@
       "routing_key": "X91",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 848.32261445
+      "distance_m": 839.09599671
     },
     {
       "id": 805365,
@@ -64,7 +64,7 @@
       "routing_key": "X91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1315.33900722
+      "distance_m": 1302.57197835
     },
     {
       "id": 805423,
@@ -82,7 +82,7 @@
       "routing_key": "X91",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 1513.22869112
+      "distance_m": 1507.31017776
     },
     {
       "id": 805406,
@@ -100,7 +100,7 @@
       "routing_key": "X91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 2825.39843598
+      "distance_m": 2811.60204925
     },
     {
       "id": 804894,
@@ -118,7 +118,7 @@
       "routing_key": "X91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 452.52446933
+      "distance_m": 437.46606997
     },
     {
       "id": 804907,
@@ -136,7 +136,7 @@
       "routing_key": null,
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 2380.959374
+      "distance_m": 2374.61257797
     },
     {
       "id": 804772,
@@ -154,7 +154,7 @@
       "routing_key": "X91",
       "bedrooms": 3,
       "property_type": "detached",
-      "distance_m": 646.93109137
+      "distance_m": 658.25963127
     },
     {
       "id": 804737,
@@ -172,7 +172,7 @@
       "routing_key": "X91",
       "bedrooms": 2,
       "property_type": "semi-detached",
-      "distance_m": 952.06608943
+      "distance_m": 937.05100248
     },
     {
       "id": 804700,
@@ -190,7 +190,7 @@
       "routing_key": "X91",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 1855.56236026
+      "distance_m": 1843.15730167
     }
   ],
   "trends": [
@@ -228,9 +228,9 @@
     },
     {
       "year": 2014,
-      "count": 267,
+      "count": 268,
       "median_price": 65000.0,
-      "avg_price": 79894.0,
+      "avg_price": 80155.0,
       "min_price": 15000.0,
       "max_price": 485000.0
     },
@@ -244,33 +244,33 @@
     },
     {
       "year": 2016,
-      "count": 383,
+      "count": 387,
       "median_price": 80000.0,
-      "avg_price": 99941.0,
+      "avg_price": 100175.0,
       "min_price": 12000.0,
       "max_price": 850000.0
     },
     {
       "year": 2017,
-      "count": 334,
+      "count": 335,
       "median_price": 100000.0,
-      "avg_price": 121900.0,
+      "avg_price": 122357.0,
       "min_price": 10000.0,
       "max_price": 620000.0
     },
     {
       "year": 2018,
-      "count": 393,
+      "count": 394,
       "median_price": 120000.0,
-      "avg_price": 134795.0,
+      "avg_price": 134800.0,
       "min_price": 20517.0,
       "max_price": 805000.0
     },
     {
       "year": 2019,
-      "count": 400,
+      "count": 401,
       "median_price": 130000.0,
-      "avg_price": 146415.0,
+      "avg_price": 146524.0,
       "min_price": 20000.0,
       "max_price": 620000.0
     },
@@ -284,9 +284,9 @@
     },
     {
       "year": 2021,
-      "count": 539,
-      "median_price": 143000.0,
-      "avg_price": 177338.0,
+      "count": 540,
+      "median_price": 143500.0,
+      "avg_price": 177332.0,
       "min_price": 20000.0,
       "max_price": 2820000.0
     },
@@ -300,25 +300,25 @@
     },
     {
       "year": 2023,
-      "count": 509,
-      "median_price": 170000.0,
-      "avg_price": 196912.0,
+      "count": 510,
+      "median_price": 171000.0,
+      "avg_price": 197048.0,
       "min_price": 25394.0,
       "max_price": 930000.0
     },
     {
       "year": 2024,
-      "count": 491,
+      "count": 494,
       "median_price": 195000.0,
-      "avg_price": 217424.0,
+      "avg_price": 217623.0,
       "min_price": 10000.0,
       "max_price": 765000.0
     },
     {
       "year": 2025,
-      "count": 474,
+      "count": 475,
       "median_price": 217000.0,
-      "avg_price": 248155.0,
+      "avg_price": 248383.0,
       "min_price": 45000.0,
       "max_price": 1410000.0
     },

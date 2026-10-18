@@ -5,7 +5,7 @@ import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import type { AreaSummary } from "../types";
-import { areaFromSlug, countyForArea, countyFromSlug } from "../areas";
+import { areaFromSlug, areaSearchQuery, countyForArea, countyFromSlug } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import MapSearchThumb from "../components/MapSearchThumb";
@@ -31,7 +31,7 @@ export default function AreaPage() {
   useEffect(() => {
     if (!config || baked) return;   // baked data is already rendered; no fetch needed
     setLoading(true);
-    fetchAreaSummary(config.slug, config.query, config.radius_km)
+    fetchAreaSummary(config.slug, areaSearchQuery(config), config.radius_km)
       .then(setFetched)
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
@@ -169,11 +169,11 @@ export default function AreaPage() {
           <section className="content-section">
             <h2>Search {config.name} Properties</h2>
             <p>
-              Use the <Link to={`/?q=${encodeURIComponent(config.query)}&radius_km=${config.radius_km}`}>interactive map</Link> to
+              Use the <Link to={`/?q=${encodeURIComponent(areaSearchQuery(config))}&radius_km=${config.radius_km}`}>interactive map</Link> to
               filter by price range, year, and radius.
             </p>
             <MapSearchThumb
-              to={`/?q=${encodeURIComponent(config.query)}&radius_km=${config.radius_km}`}
+              to={`/?q=${encodeURIComponent(areaSearchQuery(config))}&radius_km=${config.radius_km}`}
               label={`Search ${config.name} on the map`}
             />
             <p>
