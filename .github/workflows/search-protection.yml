@@ -21,16 +21,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: '3.10'
 
       - name: Install dependencies
         run: |
-          pip install pytest pytest-asyncio httpx
+          # tests/conftest.py imports psycopg2, requests and dotenv
+          pip install pytest pytest-asyncio httpx psycopg2-binary requests python-dotenv
           cd backend
           pip install -r requirements.txt
 
