@@ -858,6 +858,16 @@ async def _flag_bad_geocode(eircode: str):
         logger.error(f"Failed to flag bad geocode for {eircode}: {e}")
 
 
+async def _routing_key_centroid(routing_key: str):
+    """{lat, lon, cnt} for a routing key from the routing_key_stats materialized view,
+    or None. Averaging the sales on the fly scanned the whole table (~20s for "D14")."""
+    return await db_pool.fetchrow("""
+        SELECT centroid_lat AS lat, centroid_lon AS lon, geocoded_count AS cnt
+        FROM routing_key_stats
+        WHERE routing_key = $1 AND centroid_lat IS NOT NULL
+    """, routing_key)
+
+
 async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[float, float, str]":
     """Return (lat, lon, source) for an address, eircode, or 'lat,lon' string.
 
@@ -889,15 +899,11 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         cache.set("geocode_v4", {"q": query, "county": county or ""}, {"lat": lat, "lon": lon}, TTL_GEOCODE)
         return lat, lon, source
 
-    # 3a. Routing key (3-char Eircode prefix like D02, H91) — return centroid of all properties with that prefix
+    # 3a. Routing key (3-char Eircode prefix like D02, H91) — centroid of all properties
+    # with that prefix, precomputed in routing_key_stats (302 rows, refreshed on import).
     if _looks_like_routing_key(query):
         norm = query.strip().upper()
-        rk_row = await db_pool.fetchrow("""
-            SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
-            FROM properties
-            WHERE latitude IS NOT NULL
-              AND REPLACE(UPPER(eircode), ' ', '') LIKE $1
-        """, norm + "%")
+        rk_row = await _routing_key_centroid(norm)
 
         if rk_row and (rk_row["cnt"] or 0) >= 1:
             return _cache_and_return(float(rk_row["lat"]), float(rk_row["lon"]), "db_routing_key")
@@ -908,12 +914,7 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         prefix = norm[:3]
 
         # Get routing key centroid for quality validation
-        rk_row = await db_pool.fetchrow("""
-            SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
-            FROM properties
-            WHERE latitude IS NOT NULL
-              AND REPLACE(UPPER(eircode), ' ', '') LIKE $1
-        """, prefix + "%")
+        rk_row = await _routing_key_centroid(prefix)
 
         # Try exact eircode
         row = await db_pool.fetchrow("""

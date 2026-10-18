@@ -13,6 +13,7 @@ Returns coordinates with confidence score.
 """
 
 import re
+import unicodedata
 import math
 import logging
 
@@ -85,7 +86,9 @@ def _normalize_address(address: str) -> str:
 
     Same logic as the /search/exact endpoint (S1 page).
     """
-    normalized = address.strip()
+    # Fold fadas (Slí → Sli) so input typed with or without them matches
+    normalized = ''.join(c for c in unicodedata.normalize('NFKD', address)
+                         if not unicodedata.combining(c)).strip()
     normalized = re.sub(r'\s+', ' ', normalized)
     normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
     normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)

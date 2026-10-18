@@ -1086,7 +1086,10 @@ async def test_s1_page_exact_matches_only(client: httpx.AsyncClient, results: Te
 
 
 async def test_valuation_with_enrichment(client: httpx.AsyncClient, results: TestResults, address: str):
-    """Test valuation with optional enrichment data (bedrooms, BER)."""
+    """Test valuation with optional enrichment data (bedrooms, BER).
+
+    Pass an address that is NOT in the database: entered details are written to
+    the matched property (enrich_property_from_request)."""
     try:
         resp = await client.post(
             f"{BACKEND_URL}/api/valuation/estimate",
@@ -1176,7 +1179,9 @@ async def run_all_tests():
         print("\nValuation API:")
         await test_valuation_existing_property(client, results, existing_address)
         await test_valuation_nonexistent_property(client, results, non_existing_address)
-        await test_valuation_with_enrichment(client, results, existing_address)
+        # Made-up address: the valuation writes entered bedrooms/BER back to the
+        # matched property, so a real one would get fake test data.
+        await test_valuation_with_enrichment(client, results, non_existing_address)
 
         print("\nFrontend:")
         await test_frontend_loads(client, results)

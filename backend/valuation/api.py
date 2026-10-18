@@ -5,6 +5,7 @@ Phase 1: POST /api/valuation/estimate
 """
 
 import os
+import re
 import asyncpg
 from fastapi import APIRouter, HTTPException, BackgroundTasks, Depends
 from datetime import datetime
@@ -18,7 +19,7 @@ from .models import (
     ValuationStatistics,
     NearbyAmenity
 )
-from .geocoder import ValuationGeocoder
+from .geocoder import ValuationGeocoder, _normalize_address
 from .comparable_search import ComparableSearcher
 from .adjustments import (
     MVPAdjuster, property_bucket, property_type_from_address, trim_price_outliers,
@@ -481,8 +482,9 @@ async def log_valuation_request(
                 n_comparables,
                 quality_score,
                 algorithm_version,
-                processing_time_ms
-            ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
+                processing_time_ms,
+                bedrooms
+            ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
             RETURNING request_id;
         """
 
@@ -503,7 +505,8 @@ async def log_valuation_request(
             response.validation.n_comparables,
             response.validation.quality_score,
             response.metadata['algorithm_version'],
-            response.metadata['processing_time_ms']
+            response.metadata['processing_time_ms'],
+            request.bedrooms
         )
 
         # Log comparables used (for detailed analysis)
@@ -535,95 +538,117 @@ async def log_valuation_request(
                 comp.recency_score
             )
 
-        # Enrich property data with crowdsourced information
-        await enrich_property_from_request(
-            db_pool,
-            request,
-            location
-        )
-
     except Exception as e:
         # Don't fail the request if logging fails
         print(f"Failed to log valuation request: {e}")
+        request_id = None
+
+    # Enrich property data with crowdsourced information
+    await enrich_property_from_request(db_pool, request, request_id)
+
+
+# The address must name one property: a house number or unit ("42 …", "Apt 3, …").
+_SPECIFIC_ADDRESS_RE = re.compile(r"^(\d+[a-z]?\s|(apt|unit|flat)\s)", re.IGNORECASE)
+# Bulk sales ("Units 1-76 …") are not one property.
+_RANGE_ADDRESS_RE = re.compile(r"[0-9]+ *(-|to) *[0-9]+", re.IGNORECASE)
+# Different spellings of one house count as the same property if this close (~100m).
+_SAME_PROPERTY_DEG = 0.001
+# The valuation page's top option is "6+": only 1-5 are exact counts.
+_MAX_EXACT_BEDROOMS = 5
+
+
+async def find_subject_property_ids(db_pool, address: str, county: Optional[str]) -> list:
+    """Ids of the properties rows (one per sale) for exactly the house a valuation is
+    for, or [] when the address doesn't pin down a single property.
+
+    Independent of how the valuation was geocoded: a house with no coordinates, or a
+    flagged geocode, is still the right row to fill in. Prefix match on
+    address_normalized (index-backed, as the S1 page), within the county (Dublin
+    when none is given). No full-text fallback: a near-match is the wrong house.
+    """
+    norm = _normalize_address(address)
+    if not _SPECIFIC_ADDRESS_RE.match(norm) or _RANGE_ADDRESS_RE.search(norm):
+        return []
+    rows = await db_pool.fetch("""
+        SELECT id, address_normalized, latitude, longitude
+        FROM properties
+        WHERE address_normalized ^@ $1
+          AND LOWER(county) = LOWER($2)
+        LIMIT 50
+    """, norm, county or "Dublin")
+    # "4 Main Street" is also a prefix of "4 Main Streetside": the match must end the
+    # address or a comma part of it.
+    rows = [r for r in rows
+            if r["address_normalized"] == norm or r["address_normalized"].startswith(norm + ",")]
+    if not rows or any(_RANGE_ADDRESS_RE.search(r["address_normalized"]) for r in rows):
+        return []
+    if len({r["address_normalized"] for r in rows}) > 1:
+        # "42 Mount Carmel Road, Goatstown" and "…, Dundrum" are one house only if
+        # every sale is geocoded to the same spot.
+        if any(r["latitude"] is None for r in rows):
+            return []
+        lats = [r["latitude"] for r in rows]
+        lons = [r["longitude"] for r in rows]
+        if max(lats) - min(lats) > _SAME_PROPERTY_DEG or max(lons) - min(lons) > _SAME_PROPERTY_DEG * 1.5:
+            return []
+    return [r["id"] for r in rows]
 
 
 async def enrich_property_from_request(
     db_pool,
     request: ValuationRequest,
-    location
+    request_id=None
 ):
     """
     Enrich property database with crowdsourced data from valuation requests.
 
-    Updates properties table with:
+    Updates every sale row of the valued house with:
     - Eircode (if missing and provided)
-    - Bedrooms (if missing and provided)
+    - Bedrooms (if missing and provided; 1-5 only, since 6 means "6+").
+      Marked bedrooms_source = 'valuation_request'.
     - BER rating (if missing and provided)
 
-    Only updates if property exists and field is currently NULL.
+    Never overwrites an existing value. The rows filled in are recorded on the
+    valuation_requests row (enriched_property_ids).
 
     Args:
         db_pool: Database connection pool
         request: ValuationRequest with potential enrichment data
-        location: GeocodingResult with matched address info
+        request_id: valuation_requests row to record the enriched ids on (if logged)
     """
+    bedrooms = request.bedrooms if request.bedrooms and request.bedrooms <= _MAX_EXACT_BEDROOMS else None
+    if not (request.eircode or bedrooms or request.ber_rating):
+        return
 
     try:
-        # Build update fields dynamically based on what was provided
-        updates = []
-        params = []
-        param_idx = 1
-
-        if request.eircode:
-            updates.append(f"eircode = COALESCE(eircode, ${param_idx})")
-            params.append(request.eircode)
-            param_idx += 1
-
-        if request.bedrooms:
-            updates.append(f"bedrooms = COALESCE(bedrooms, ${param_idx})")
-            params.append(request.bedrooms)
-            param_idx += 1
-
-        if request.ber_rating:
-            updates.append(f"ber_rating = COALESCE(ber_rating, ${param_idx})")
-            params.append(request.ber_rating)
-            param_idx += 1
-
-        # Only proceed if we have something to update
-        if not updates:
+        ids = await find_subject_property_ids(db_pool, request.address, request.county)
+        if not ids:
+            print(f"[Valuation] Enrichment skipped: '{request.address}' is not one known property")
             return
 
-        # Update properties that match this address
-        # Use the matched address from geocoding to find the right property
-        if location.method == "database_exact" and location.address_matched:
-            # We have a specific address match - update that property
-            update_query = f"""
-                UPDATE properties
-                SET {', '.join(updates)}
-                WHERE address = ${param_idx}
-                AND ({' OR '.join([
-                    'eircode IS NULL' if request.eircode else '1=0',
-                    'bedrooms IS NULL' if request.bedrooms else '1=0',
-                    'ber_rating IS NULL' if request.ber_rating else '1=0'
-                ])})
-                RETURNING id, address, eircode, bedrooms, ber_rating;
-            """
+        updated = await db_pool.fetch("""
+            UPDATE properties
+            SET eircode    = COALESCE(eircode, $2),
+                bedrooms   = COALESCE(bedrooms, $3),
+                bedrooms_source = CASE WHEN bedrooms IS NULL AND $3::int IS NOT NULL
+                                       THEN 'valuation_request' ELSE bedrooms_source END,
+                ber_rating = COALESCE(ber_rating, $4)
+            WHERE id = ANY($1::bigint[])
+              AND (($2::text IS NOT NULL AND eircode IS NULL)
+                OR ($3::int  IS NOT NULL AND bedrooms IS NULL)
+                OR ($4::text IS NOT NULL AND ber_rating IS NULL))
+            RETURNING id, address, eircode, bedrooms, ber_rating
+        """, ids, request.eircode, bedrooms, request.ber_rating)
 
-            params.append(location.address_matched)
-
-            updated = await db_pool.fetch(update_query, *params)
-
-            if updated:
-                print(f"✅ Enriched {len(updated)} properties with crowdsourced data:")
-                for row in updated:
-                    enrichments = []
-                    if request.eircode and row['eircode'] == request.eircode:
-                        enrichments.append(f"Eircode={request.eircode}")
-                    if request.bedrooms and row['bedrooms'] == request.bedrooms:
-                        enrichments.append(f"Bedrooms={request.bedrooms}")
-                    if request.ber_rating and row['ber_rating'] == request.ber_rating:
-                        enrichments.append(f"BER={request.ber_rating}")
-                    print(f"   {row['address']}: {', '.join(enrichments)}")
+        if updated:
+            print(f"✅ Enriched {len(updated)} properties with crowdsourced data:")
+            for row in updated:
+                print(f"   {row['address']}: eircode={row['eircode']}, "
+                      f"bedrooms={row['bedrooms']}, ber={row['ber_rating']}")
+            if request_id:
+                await db_pool.execute(
+                    "UPDATE valuation_requests SET enriched_property_ids = $2 WHERE request_id = $1",
+                    request_id, [r["id"] for r in updated])
 
     except Exception as e:
         # Don't fail if enrichment fails
