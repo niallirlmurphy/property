@@ -1,30 +1,38 @@
 {
   "slug": "nutley-avenue-donnybrook",
   "stats": {
-    "count": 17,
-    "median": 1650000,
-    "avg": 1624118,
-    "min": 835000,
+    "count": 26,
+    "median": 1657500,
+    "avg": 1611423,
+    "min": 732000,
     "max": 3000000,
-    "firstYear": 2012,
+    "firstYear": 2011,
     "lastYear": 2025
   },
   "trends": [
     {
+      "year": 2011,
+      "count": 1,
+      "median_price": 1030000,
+      "avg_price": 1030000,
+      "min_price": 1030000,
+      "max_price": 1030000
+    },
+    {
       "year": 2012,
-      "count": 2,
-      "median_price": 930000,
-      "avg_price": 930000,
-      "min_price": 835000,
+      "count": 3,
+      "median_price": 835000,
+      "avg_price": 864000,
+      "min_price": 732000,
       "max_price": 1025000
     },
     {
       "year": 2013,
-      "count": 1,
-      "median_price": 1040000,
-      "avg_price": 1040000,
+      "count": 2,
+      "median_price": 1352500,
+      "avg_price": 1352500,
       "min_price": 1040000,
-      "max_price": 1040000
+      "max_price": 1665000
     },
     {
       "year": 2014,
@@ -51,6 +59,14 @@
       "max_price": 1650000
     },
     {
+      "year": 2019,
+      "count": 2,
+      "median_price": 1675000,
+      "avg_price": 1675000,
+      "min_price": 1350000,
+      "max_price": 2000000
+    },
+    {
       "year": 2020,
       "count": 1,
       "median_price": 1150000,
@@ -60,34 +76,34 @@
     },
     {
       "year": 2021,
-      "count": 1,
-      "median_price": 1900000,
-      "avg_price": 1900000,
+      "count": 2,
+      "median_price": 2100000,
+      "avg_price": 2100000,
       "min_price": 1900000,
-      "max_price": 1900000
+      "max_price": 2300000
     },
     {
       "year": 2022,
-      "count": 2,
-      "median_price": 1622500,
-      "avg_price": 1622500,
-      "min_price": 1395000,
+      "count": 3,
+      "median_price": 1395000,
+      "avg_price": 1506667,
+      "min_price": 1275000,
       "max_price": 1850000
     },
     {
       "year": 2024,
-      "count": 4,
-      "median_price": 1900000,
-      "avg_price": 1885000,
+      "count": 5,
+      "median_price": 1935000,
+      "avg_price": 1895000,
       "min_price": 1690000,
       "max_price": 2050000
     },
     {
       "year": 2025,
-      "count": 1,
-      "median_price": 3000000,
-      "avg_price": 3000000,
-      "min_price": 3000000,
+      "count": 2,
+      "median_price": 2500000,
+      "avg_price": 2500000,
+      "min_price": 2000000,
       "max_price": 3000000
     }
   ],
@@ -99,6 +115,22 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D04Y1F8"
+    },
+    {
+      "date": "2025-01-21",
+      "address": "33 NUTLEY AVE, BALLSBRIDGE, DUBLIN 4",
+      "price": 2000000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "D04X0N1"
+    },
+    {
+      "date": "2024-12-09",
+      "address": "36 NUTLEY AVE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1935000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D04X3E6"
     },
     {
       "date": "2024-10-25",
@@ -141,6 +173,14 @@
       "eircode": "D04C3Y4"
     },
     {
+      "date": "2022-03-04",
+      "address": "57 NUTLEY AVE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1275000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04A2A3"
+    },
+    {
       "date": "2022-01-24",
       "address": "19 NUTLEY AVE, DONNYBROOK, DUBLIN 4",
       "price": 1395000,
@@ -157,9 +197,33 @@
       "eircode": "D04XH72"
     },
     {
+      "date": "2021-01-14",
+      "address": "60 NUTLEY AVE, BALLSBRIDGE, DUBLIN",
+      "price": 2300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2020-09-22",
       "address": "2 NUTLEY AVE, DONNYBROOK, DUBLIN 4",
       "price": 1150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-09-04",
+      "address": "59 NUTLEY AVE, BALLSBRIDGE, DUBLIN 4",
+      "price": 1350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-08-23",
+      "address": "18 NUTLEY AVE, BALLSBRIDGE, DUBLIN 4",
+      "price": 2000000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -205,6 +269,14 @@
       "eircode": "D04C3Y4"
     },
     {
+      "date": "2013-10-31",
+      "address": "55 Nutley Avenue, Ballsbridge",
+      "price": 1665000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2013-03-29",
       "address": "50 Nutley Avenue, Donnybrook",
       "price": 1040000,
@@ -227,7 +299,23 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2012-10-09",
+      "address": "42 Nutley Avenue, Ballsbridge, Dublin 4",
+      "price": 732000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-12-20",
+      "address": "28 Nutley Avenue, Ballsbridge",
+      "price": 1030000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     }
   ],
-  "totalTransactions": 17
+  "totalTransactions": 26
 }

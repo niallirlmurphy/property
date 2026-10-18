@@ -19,6 +19,10 @@ def test_area_targets_parse_known_entries():
     assert rath["radius_km"] == 1.5
     assert rath["match"] == ["Rathmines"]
     assert rath["routing_keys"] == ["D06"]
+    assert rath["q"] == "Rathmines, Dublin"            # no explicit centre: the query
+
+    # An explicit centre replaces the query (it geocodes to Swords Road, Whitehall)
+    assert by_slug["swords"]["q"] == "53.45291,-6.23373"
 
     # Entry with multiple match terms + multiple routing keys
     dl = by_slug["dun-laoghaire"]
@@ -67,7 +71,7 @@ def test_build_area_matches_area_summary_shape(monkeypatch):
         raise AssertionError(path)
 
     monkeypatch.setattr(g, "_get", fake_get)
-    target = {"slug": "rathmines", "query": "Rathmines, Dublin", "radius_km": 1.5,
+    target = {"slug": "rathmines", "query": "Rathmines, Dublin", "q": "Rathmines, Dublin", "radius_km": 1.5,
               "match": ["Rathmines"], "routing_keys": ["D06"]}
     out = g.build_area("http://x", target)
 
@@ -151,7 +155,7 @@ def test_build_area_raises_on_trends_http_error(monkeypatch):
         raise AssertionError(path)
 
     monkeypatch.setattr(g, "_get", fake_get)
-    target = {"slug": "x", "query": "X", "radius_km": 2, "match": [], "routing_keys": []}
+    target = {"slug": "x", "query": "X", "q": "X", "radius_km": 2, "match": [], "routing_keys": []}
     with pytest.raises(urllib.error.HTTPError):
         g.build_area("http://x", target)
 

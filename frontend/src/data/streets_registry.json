@@ -32,18 +32,10 @@
     "rank": 3,
     "normalizedKey": "ailesbury road|ballsbridge|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €3,875,000 across 28 recorded sales on the Property Price Register.",
+    "alsoKeys": [
+      "ailesbury road|donnybrook|dublin"
+    ],
     "info": "Ailesbury Road is a wide, tree-lined Victorian road in Ballsbridge, Dublin 4, long regarded as one of Dublin's most prestigious residential addresses. Its large detached red-brick and stucco houses date largely from the 1860s to 1880s, and a number serve as embassies and diplomatic residences."
-  },
-  {
-    "slug": "ailesbury-road-donnybrook",
-    "name": "Ailesbury Road",
-    "area": "Donnybrook",
-    "county": "Dublin",
-    "countySlug": "dublin",
-    "category": "value",
-    "rank": 4,
-    "normalizedKey": "ailesbury road|donnybrook|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €3,500,000 across 9 recorded sales on the Property Price Register."
   },
   {
     "slug": "herbert-park-ballsbridge",
@@ -79,6 +71,9 @@
     "rank": 7,
     "normalizedKey": "leeson park|ranelagh|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €2,900,000 across 20 recorded sales on the Property Price Register.",
+    "alsoKeys": [
+      "leeson park|dublin 6|dublin"
+    ],
     "info": "The barrister and judge Michael Comyn lived on Leeson Park, where the republican leader Erskine Childers is said to have sheltered before his capture in 1922; the architectural historian Alistair Rowan and archivist Ann Martha Rowan lived at No. 22."
   },
   {
@@ -230,6 +225,9 @@
     "rank": 20,
     "normalizedKey": "sydney parade avenue|sandymount|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €2,070,000 across 11 recorded sales on the Property Price Register.",
+    "alsoKeys": [
+      "sydney parade avenue|dublin 4|dublin"
+    ],
     "info": "14 Sydney Parade Avenue was the family home of the brothers Jack and Walter Peterson, who won silver in field hockey for Ireland at the 1908 London Olympics."
   },
   {
@@ -280,18 +278,6 @@
     "info": "Palmerston Road is a broad, tree-lined Victorian avenue in Rathmines, Dublin 6, developed largely in the second half of the 19th century. It is known for its large red-brick and granite houses set back behind mature front gardens. No. 97 was the childhood home of the Gifford sisters, among them Grace Gifford, who married the 1916 leader Joseph Plunkett, and Muriel Gifford, who married the executed signatory Thomas MacDonagh."
   },
   {
-    "slug": "sydney-parade-avenue-dublin-4",
-    "name": "Sydney Parade Avenue",
-    "area": "Dublin 4",
-    "county": "Dublin",
-    "countySlug": "dublin",
-    "category": "value",
-    "rank": 25,
-    "normalizedKey": "sydney parade avenue|dublin 4|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €1,925,000 across 9 recorded sales on the Property Price Register.",
-    "info": "14 Sydney Parade Avenue was the family home of the brothers Jack and Walter Peterson, who won silver in field hockey for Ireland at the 1908 London Olympics."
-  },
-  {
     "slug": "green-park-orwell-road",
     "name": "Green Park",
     "area": "Orwell Road",
@@ -335,18 +321,6 @@
     "normalizedKey": "longford terrace|monkstown|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €1,885,000 across 18 recorded sales on the Property Price Register.",
     "info": "Longford Terrace is a seafront Victorian terrace in Monkstown, south County Dublin, overlooking Dublin Bay. Its tall, stucco-fronted houses form one of the best-known 19th-century terraces on the coast. The astronomer and spectroscopist Margaret Lindsay Huggins (1848–1915) grew up at No. 23, where a commemorative plaque was installed in 1997."
-  },
-  {
-    "slug": "leeson-park-dublin-6",
-    "name": "Leeson Park",
-    "area": "Dublin 6",
-    "county": "Dublin",
-    "countySlug": "dublin",
-    "category": "value",
-    "rank": 30,
-    "normalizedKey": "leeson park|dublin 6|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €1,875,000 across 12 recorded sales on the Property Price Register.",
-    "info": "The barrister and judge Michael Comyn lived on Leeson Park, where the republican leader Erskine Childers is said to have sheltered before his capture in 1922; the architectural historian Alistair Rowan and archivist Ann Martha Rowan lived at No. 22."
   },
   {
     "slug": "cowper-road-rathmines",
@@ -496,17 +470,6 @@
     "description": "One of Ireland's highest-value streets, with a median sale price of €1,675,000 across 8 recorded sales on the Property Price Register."
   },
   {
-    "slug": "nutley-avenue-ballsbridge",
-    "name": "Nutley Avenue",
-    "area": "Ballsbridge",
-    "county": "Dublin",
-    "countySlug": "dublin",
-    "category": "value",
-    "rank": 44,
-    "normalizedKey": "nutley avenue|ballsbridge|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €1,665,000 across 9 recorded sales on the Property Price Register."
-  },
-  {
     "slug": "nutley-avenue-donnybrook",
     "name": "Nutley Avenue",
     "area": "Donnybrook",
@@ -515,7 +478,10 @@
     "category": "value",
     "rank": 45,
     "normalizedKey": "nutley avenue|donnybrook|dublin",
-    "description": "One of Ireland's highest-value streets, with a median sale price of €1,650,000 across 17 recorded sales on the Property Price Register."
+    "description": "One of Ireland's highest-value streets, with a median sale price of €1,650,000 across 17 recorded sales on the Property Price Register.",
+    "alsoKeys": [
+      "nutley avenue|ballsbridge|dublin"
+    ]
   },
   {
     "slug": "grosvenor-road-rathgar",

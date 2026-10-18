@@ -22,6 +22,14 @@
   "transactions": [
     {
       "date": "2016-12-19",
+      "address": "72 ASHLEY HALL, ST EDMUND'S, PAMERSTOWN",
+      "price": 191000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2016-12-19",
       "address": "76 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
       "price": 191000,
       "bedrooms": null,
@@ -407,14 +415,6 @@
     {
       "date": "2016-12-19",
       "address": "73 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
-      "price": 191000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2016-12-19",
-      "address": "74 ASHLEY HALL, ST EDMUND'S, PALMERSTOWN",
       "price": 191000,
       "bedrooms": null,
       "propertyType": null,

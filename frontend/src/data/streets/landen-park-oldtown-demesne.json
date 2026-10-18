@@ -334,16 +334,16 @@
     },
     {
       "date": "2020-09-30",
-      "address": "67 LANDEN PARK, OLDTOWN DEMESNE, NAAS",
-      "price": 570000,
+      "address": "51 LANDEN PARK, OLDTOWN DEMESNE, NAAS",
+      "price": 410000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2020-09-30",
-      "address": "51 LANDEN PARK, OLDTOWN DEMESNE, NAAS",
-      "price": 410000,
+      "address": "67 LANDEN PARK, OLDTOWN DEMESNE, NAAS",
+      "price": 570000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -371,6 +371,14 @@
       "bedrooms": 4,
       "propertyType": "semi-detached",
       "eircode": "W91N201"
+    },
+    {
+      "date": "2018-09-20",
+      "address": "88 Landen Park, Oldtown Demesne, Naas",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W91T9Y1"
     },
     {
       "date": "2018-09-20",
@@ -427,14 +435,6 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2018-09-20",
-      "address": "88 Landen Park, Oldtown Demesne, Naas",
-      "price": 317181,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "W91T9Y1"
     },
     {
       "date": "2018-07-27",

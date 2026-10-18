@@ -262,6 +262,14 @@
     },
     {
       "date": "2023-08-01",
+      "address": "15 CLIFDEN GLEN, CLIFDEN, GALWAY",
+      "price": 165000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H71HK74"
+    },
+    {
+      "date": "2023-08-01",
       "address": "126 CLIFDEN GLEN, CLIFDEN, GALWAY",
       "price": 60000,
       "bedrooms": null,
@@ -275,14 +283,6 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "H71H348"
-    },
-    {
-      "date": "2023-08-01",
-      "address": "15 CLIFDEN GLEN, CLIFDEN, GALWAY",
-      "price": 165000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "H71HK74"
     },
     {
       "date": "2023-07-20",

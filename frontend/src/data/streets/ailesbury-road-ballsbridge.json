@@ -1,9 +1,9 @@
 {
   "slug": "ailesbury-road-ballsbridge",
   "stats": {
-    "count": 28,
-    "median": 3875000,
-    "avg": 4281250,
+    "count": 37,
+    "median": 3750000,
+    "avg": 4297568,
     "min": 1100000,
     "max": 11700000,
     "firstYear": 2010,
@@ -20,33 +20,33 @@
     },
     {
       "year": 2011,
-      "count": 2,
-      "median_price": 4137500,
-      "avg_price": 4137500,
-      "min_price": 3650000,
+      "count": 3,
+      "median_price": 3650000,
+      "avg_price": 3533333,
+      "min_price": 2325000,
       "max_price": 4625000
     },
     {
       "year": 2012,
-      "count": 1,
-      "median_price": 2500000,
-      "avg_price": 2500000,
+      "count": 2,
+      "median_price": 2575000,
+      "avg_price": 2575000,
       "min_price": 2500000,
-      "max_price": 2500000
+      "max_price": 2650000
     },
     {
       "year": 2013,
-      "count": 1,
-      "median_price": 4750000,
-      "avg_price": 4750000,
-      "min_price": 4750000,
+      "count": 3,
+      "median_price": 4500000,
+      "avg_price": 3883333,
+      "min_price": 2400000,
       "max_price": 4750000
     },
     {
       "year": 2014,
-      "count": 3,
-      "median_price": 5000000,
-      "avg_price": 4700000,
+      "count": 4,
+      "median_price": 4705000,
+      "avg_price": 4627500,
       "min_price": 3100000,
       "max_price": 6000000
     },
@@ -60,10 +60,10 @@
     },
     {
       "year": 2016,
-      "count": 2,
-      "median_price": 3162500,
-      "avg_price": 3162500,
-      "min_price": 2800000,
+      "count": 3,
+      "median_price": 2800000,
+      "avg_price": 2858333,
+      "min_price": 2250000,
       "max_price": 3525000
     },
     {
@@ -81,6 +81,14 @@
       "avg_price": 6750000,
       "min_price": 6750000,
       "max_price": 6750000
+    },
+    {
+      "year": 2020,
+      "count": 1,
+      "median_price": 3500000,
+      "avg_price": 3500000,
+      "min_price": 3500000,
+      "max_price": 3500000
     },
     {
       "year": 2021,
@@ -108,19 +116,19 @@
     },
     {
       "year": 2024,
-      "count": 2,
+      "count": 3,
       "median_price": 3100000,
-      "avg_price": 3100000,
+      "avg_price": 5400000,
       "min_price": 3100000,
-      "max_price": 3100000
+      "max_price": 10000000
     },
     {
       "year": 2025,
-      "count": 3,
-      "median_price": 2100000,
-      "avg_price": 2933333,
+      "count": 4,
+      "median_price": 3650000,
+      "avg_price": 3975000,
       "min_price": 1500000,
-      "max_price": 5200000
+      "max_price": 7100000
     },
     {
       "year": 2026,
@@ -157,6 +165,14 @@
       "eircode": "D04T6N2"
     },
     {
+      "date": "2025-06-06",
+      "address": "87 AILESBURY RD, DONNYBROOK, DUBLIN 4",
+      "price": 7100000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D04R2N3"
+    },
+    {
       "date": "2025-04-11",
       "address": "37 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
       "price": 5200000,
@@ -171,6 +187,14 @@
       "bedrooms": null,
       "propertyType": "apartment",
       "eircode": "D04X8N1"
+    },
+    {
+      "date": "2024-09-23",
+      "address": "81 AILESBURY RD, DONNYBROOK, DUBLIN 4",
+      "price": 10000000,
+      "bedrooms": 6,
+      "propertyType": "apartment",
+      "eircode": "D04W2C0"
     },
     {
       "date": "2024-08-23",
@@ -253,6 +277,14 @@
       "eircode": "D04F3P1"
     },
     {
+      "date": "2020-01-24",
+      "address": "70 AILESBURY RD, DONNYBROOK, DUBLIN 4",
+      "price": 3500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2019-04-16",
       "address": "49 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
       "price": 6750000,
@@ -275,6 +307,14 @@
       "bedrooms": null,
       "propertyType": "house",
       "eircode": "D04N1W4"
+    },
+    {
+      "date": "2016-02-25",
+      "address": "70 Ailesbury Road, Donnybrook",
+      "price": 2250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2016-01-06",
@@ -301,6 +341,14 @@
       "eircode": "D04V2H6"
     },
     {
+      "date": "2014-09-15",
+      "address": "81 AILESBURY RD, DONNYBROOK, DUBLIN 4",
+      "price": 4410000,
+      "bedrooms": 6,
+      "propertyType": "apartment",
+      "eircode": "D04W2C0"
+    },
+    {
       "date": "2014-08-29",
       "address": "25 AILESBURY RD, BALLSBRIDGE, DUBLIN 4",
       "price": 3100000,
@@ -325,9 +373,33 @@
       "eircode": null
     },
     {
+      "date": "2013-07-31",
+      "address": "56 Ailesbury Road, Donnybrook",
+      "price": 2400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-06-21",
+      "address": "18 Ailesbury Road, Donnybrook",
+      "price": 4500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2012-07-06",
       "address": "84 Ailesbury Road, Ballsbridge",
       "price": 2500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2012-01-30",
+      "address": "43 Ailesbury Road, Donnybrook",
+      "price": 2650000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -349,6 +421,14 @@
       "eircode": null
     },
     {
+      "date": "2011-08-18",
+      "address": "35 Ailesbury Road, Donnybrook",
+      "price": 2325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2010-01-15",
       "address": "10 Ailesbury Road, Ballsbridge",
       "price": 1100000,
@@ -357,5 +437,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 28
+  "totalTransactions": 37
 }

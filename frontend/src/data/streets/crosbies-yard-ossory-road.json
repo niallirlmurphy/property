@@ -406,19 +406,19 @@
     },
     {
       "date": "2021-05-28",
-      "address": "189 CROSBIES YARD, OSSORY RD, DUBLIN 1",
-      "price": 306000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D03HR98"
-    },
-    {
-      "date": "2021-05-28",
       "address": "138 CROSBIES YARD, OSSORY RD, DUBLIN 3",
       "price": 305000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D03A2Y5"
+    },
+    {
+      "date": "2021-05-28",
+      "address": "189 CROSBIES YARD, OSSORY RD, DUBLIN 1",
+      "price": 306000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03HR98"
     },
     {
       "date": "2021-05-27",

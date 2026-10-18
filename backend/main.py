@@ -820,6 +820,26 @@ async def _geocode_mapbox(
         return None
 
 
+async def _nominatim_first(client: httpx.AsyncClient, params: dict) -> "tuple[float, float] | None":
+    """(lat, lon) of Nominatim's top result for `params`, if it is in Ireland."""
+    try:
+        resp = await client.get(
+            "https://nominatim.openstreetmap.org/search",
+            params={**params, "format": "json", "limit": 1},
+            headers={"User-Agent": USER_AGENT},
+            timeout=5.0,
+        )
+        results = resp.json() if resp.status_code == 200 else []
+    except Exception as e:
+        logger.debug(f"Nominatim lookup failed for {params!r}: {e}")
+        return None
+    if results:
+        lat, lon = float(results[0]["lat"]), float(results[0]["lon"])
+        if _is_in_ireland(lat, lon):
+            return lat, lon
+    return None
+
+
 async def _geocode_nominatim(
     query: str,
     client: httpx.AsyncClient,
@@ -829,6 +849,17 @@ async def _geocode_nominatim(
     Returns (lat, lon) if successful, None otherwise.
     Nominatim returns results ordered by importance, so first result is usually correct.
     County parameter helps disambiguate addresses that exist in multiple counties."""
+    # Place names first ("Swords, Dublin", "Tuam, Galway"): a settlement-only search,
+    # because the free-text one ranks named roads and estates above the town itself
+    # (Swords Road AGI in Whitehall, Tuam Road Retail Centre in Galway city). Skipped
+    # for house-numbered addresses; road names find no settlement and fall through.
+    if not re.search(r"\d", query):
+        result = await _nominatim_first(client, {
+            "q": f"{query.strip()}, {county}" if county else query.strip(),
+            "countrycodes": "ie", "featureType": "settlement",
+        })
+        if result:
+            return result
     try:
         # Nominatim search — add county (if provided) and "Ireland" to avoid international matches
         search_query = f"{query.strip()}"

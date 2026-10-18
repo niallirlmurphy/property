@@ -72,14 +72,15 @@ def bedroom_breakdown(rows: list) -> list:
     """Median/average price per bedroom count. Empty unless the medians rise with
     size (1-bed < 2-bed < 3-bed ...), as the valuation ladder assumes: the few
     sales with known bedrooms can be unrepresentative (e.g. Elm Park's 2-beds
-    above its 3-beds), and a table contradicting the ladder would mislead."""
+    above its 3-beds), and a table contradicting the ladder would mislead. Also
+    empty with a single size: one row says nothing about size and price."""
     by_beds = defaultdict(list)
     for s in rows:
         if s["bedrooms"] is not None:
             by_beds[s["bedrooms"]].append(s["price"])
     out = [{"bedrooms": b, **_summary(p)} for b, p in sorted(by_beds.items())
            if len(p) >= MIN_BREAKDOWN_SALES]
-    if any(lo["median"] >= hi["median"] for lo, hi in zip(out, out[1:])):
+    if len(out) < 2 or any(lo["median"] >= hi["median"] for lo, hi in zip(out, out[1:])):
         return []
     return out
 

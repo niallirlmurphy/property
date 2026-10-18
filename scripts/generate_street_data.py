@@ -19,8 +19,9 @@ def main():
     if skip_if_generated_this_month("streets", force=ap.parse_args().force):
         return
     registry = json.load(open(REG))
-    targets = {e["normalizedKey"]: e["slug"] for e in registry}
-    tx = defaultdict(list)  # normalizedKey -> list of transaction dicts
+    # A page's own key plus any duplicate keys merged into it (build_street_registry MERGE)
+    targets = {k: e["slug"] for e in registry for k in [e["normalizedKey"], *e.get("alsoKeys", [])]}
+    tx = defaultdict(list)  # slug -> list of transaction dicts
 
     conn = psycopg2.connect(os.getenv("DATABASE_URL"))
     cur = conn.cursor(name="stream"); cur.itersize = 20000
@@ -40,7 +41,7 @@ def main():
         key = normalized_key_string(*r[0])
         if key not in targets:
             continue
-        tx[key].append({
+        tx[targets[key]].append({
             "date": sale_date.isoformat(),
             "address": raw_addr,
             "price": float(price),
@@ -54,7 +55,7 @@ def main():
     written = 0
     for entry in registry:
         key = entry["normalizedKey"]; slug = entry["slug"]
-        rows = tx.get(key, [])
+        rows = tx.get(slug, [])
         prices = [t["price"] for t in rows]
         years = sorted({int(t["date"][:4]) for t in rows}) if rows else []
         # per-year trend points

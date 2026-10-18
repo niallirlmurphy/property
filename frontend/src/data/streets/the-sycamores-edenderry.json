@@ -262,19 +262,19 @@
     },
     {
       "date": "2025-04-24",
-      "address": "283  THE SYCAMORES, EDENDERRY, COUNTY OFFALY",
-      "price": 265000,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
-      "eircode": "R45NW29"
-    },
-    {
-      "date": "2025-04-24",
       "address": "204 THE SYCAMORES, EDENDERRY, OFFALY",
       "price": 305000,
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": "R45T922"
+    },
+    {
+      "date": "2025-04-24",
+      "address": "283  THE SYCAMORES, EDENDERRY, COUNTY OFFALY",
+      "price": 265000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45NW29"
     },
     {
       "date": "2025-04-16",

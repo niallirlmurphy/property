@@ -1,10 +1,10 @@
 {
   "slug": "leeson-park-ranelagh",
   "stats": {
-    "count": 20,
-    "median": 2900000,
-    "avg": 2970056,
-    "min": 680000,
+    "count": 32,
+    "median": 2387500,
+    "avg": 2496504,
+    "min": 170000,
     "max": 6500000,
     "firstYear": 2013,
     "lastYear": 2024
@@ -12,10 +12,10 @@
   "trends": [
     {
       "year": 2013,
-      "count": 1,
-      "median_price": 3371625,
-      "avg_price": 3371625,
-      "min_price": 3371625,
+      "count": 5,
+      "median_price": 2150000,
+      "avg_price": 2324325,
+      "min_price": 1800000,
       "max_price": 3371625
     },
     {
@@ -28,18 +28,18 @@
     },
     {
       "year": 2015,
-      "count": 1,
-      "median_price": 2700000,
-      "avg_price": 2700000,
-      "min_price": 2700000,
+      "count": 2,
+      "median_price": 2225000,
+      "avg_price": 2225000,
+      "min_price": 1750000,
       "max_price": 2700000
     },
     {
       "year": 2016,
-      "count": 1,
-      "median_price": 1700000,
-      "avg_price": 1700000,
-      "min_price": 1700000,
+      "count": 2,
+      "median_price": 1673500,
+      "avg_price": 1673500,
+      "min_price": 1647000,
       "max_price": 1700000
     },
     {
@@ -59,12 +59,20 @@
       "max_price": 3050000
     },
     {
-      "year": 2020,
+      "year": 2019,
       "count": 2,
-      "median_price": 2167500,
-      "avg_price": 2167500,
+      "median_price": 1247500,
+      "avg_price": 1247500,
+      "min_price": 170000,
+      "max_price": 2325000
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "median_price": 2580000,
+      "avg_price": 2546250,
       "min_price": 1725000,
-      "max_price": 2610000
+      "max_price": 3300000
     },
     {
       "year": 2021,
@@ -76,18 +84,18 @@
     },
     {
       "year": 2022,
-      "count": 4,
-      "median_price": 3367500,
-      "avg_price": 3336125,
-      "min_price": 1885000,
+      "count": 5,
+      "median_price": 3235000,
+      "avg_price": 2716900,
+      "min_price": 240000,
       "max_price": 4724500
     },
     {
       "year": 2023,
-      "count": 3,
-      "median_price": 2425000,
-      "avg_price": 2665000,
-      "min_price": 2100000,
+      "count": 4,
+      "median_price": 2262500,
+      "avg_price": 2062500,
+      "min_price": 255000,
       "max_price": 3470000
     },
     {
@@ -141,6 +149,14 @@
       "eircode": "D06H2X2"
     },
     {
+      "date": "2023-04-20",
+      "address": "21A LEESON PARK, DUBLIN 6",
+      "price": 255000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2023-03-21",
       "address": "9 LEESON PARK, RANELAGH, DUBLIN 6",
       "price": 2425000,
@@ -181,12 +197,28 @@
       "eircode": "D06YR94"
     },
     {
+      "date": "2022-05-27",
+      "address": "21A LEESON PARK, DUBLIN 6",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2021-09-24",
       "address": "43 LEESON PARK, RANELAGH, DUBLIN 6",
       "price": 3800000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D06NR40"
+    },
+    {
+      "date": "2020-12-23",
+      "address": "23 LEESON PARK, DUBLIN 6, DUBLIN",
+      "price": 3300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2020-12-15",
@@ -197,9 +229,33 @@
       "eircode": "D06TF82"
     },
     {
+      "date": "2020-11-09",
+      "address": "27 LEESON PARK, DUBLIN 6",
+      "price": 2550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2020-05-12",
       "address": "38 LEESON PARK, RANELAGH, DUBLIN 6",
       "price": 1725000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-10-08",
+      "address": "21A LEESON PARK, DUBLIN 6",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-01-25",
+      "address": "52 LEESON PARK, DUBLIN 6, DUBLIN",
+      "price": 2325000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -237,12 +293,28 @@
       "eircode": null
     },
     {
+      "date": "2016-03-11",
+      "address": "15 LEESON PARK, DUBLIN 6, DUBLIN",
+      "price": 1647000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2015-07-14",
       "address": "16 LEESON PARK, RANELAGH, DUBLIN 6",
       "price": 2700000,
       "bedrooms": null,
       "propertyType": "apartment",
       "eircode": "D06W6P5"
+    },
+    {
+      "date": "2015-05-25",
+      "address": "55 LEESON PARK, DUBLIN 6, DUBLIN",
+      "price": 1750000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2014-07-18",
@@ -259,7 +331,39 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2013-10-17",
+      "address": "49 Leeson Park, Dublin 6",
+      "price": 2150000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-08-07",
+      "address": "5 Leeson Park, Dublin 6",
+      "price": 2350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-05-22",
+      "address": "1 Leeson Park, Dublin 6",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-05-14",
+      "address": "49  Leeson Park, Dublin 6",
+      "price": 1950000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     }
   ],
-  "totalTransactions": 20
+  "totalTransactions": 32
 }

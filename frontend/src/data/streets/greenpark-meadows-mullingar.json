@@ -486,19 +486,19 @@
     },
     {
       "date": "2020-03-06",
-      "address": "213 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
-      "price": 172000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "N91N5C3"
-    },
-    {
-      "date": "2020-03-06",
       "address": "12 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
       "price": 200000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2020-03-06",
+      "address": "213 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 172000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91N5C3"
     },
     {
       "date": "2020-01-31",

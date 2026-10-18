@@ -45,6 +45,17 @@ EXCLUDE = {
     ("Cla\ufffd M\ufffdr", "Old Monivea Road"),  # U+FFFD in the PPR source; real name lost
 }
 
+# (raw street, area) pairs that are the same street as another page, filed under a
+# different area name. Not given a page of their own: their sales are merged into
+# the page named on the right (via its "alsoKeys"), and the old URL redirects there
+# (vercel.json).
+MERGE = {
+    ("Ailesbury Road", "Donnybrook"): ("Ailesbury Road", "Ballsbridge"),
+    ("Leeson Park", "Dublin 6"): ("Leeson Park", "Ranelagh"),
+    ("Sydney Parade Avenue", "Dublin 4"): ("Sydney Parade Avenue", "Sandymount"),
+    ("Nutley Avenue", "Ballsbridge"): ("Nutley Avenue", "Donnybrook"),
+}
+
 # Optional 2-3 sentence factual commentary, keyed by slug. Only verifiable facts.
 INFO = {
     "ailesbury-road-ballsbridge": "Ailesbury Road is a wide, tree-lined Victorian road in Ballsbridge, Dublin 4, long regarded as one of Dublin's most prestigious residential addresses. Its large detached red-brick and stucco houses date largely from the 1860s to 1880s, and a number serve as embassies and diplomatic residences.",
@@ -65,7 +76,6 @@ INFO = {
     "morehampton-road-dublin-4": "Morehampton Road has been home to several writers and artists, including the writer Kathleen Goodfellow (No. 4) and the artist and printer Cecil ffrench Salkeld (No. 43), who ran the Gayfield Press from a garden studio there in the 1930s and 1940s.",
     "sandymount-avenue-dublin-4": "The poet W. B. Yeats (1865–1939) was born in Sandymount in 1865, traditionally at a house called “Georgeville” on Sandymount Avenue.",
     "sydney-parade-avenue-sandymount": "14 Sydney Parade Avenue was the family home of the brothers Jack and Walter Peterson, who won silver in field hockey for Ireland at the 1908 London Olympics.",
-    "sydney-parade-avenue-dublin-4": "14 Sydney Parade Avenue was the family home of the brothers Jack and Walter Peterson, who won silver in field hockey for Ireland at the 1908 London Olympics.",
     "orwell-park-rathgar": "The playwright J. M. Synge (1871–1909) grew up at 4 Orwell Park, his family home until 1890.",
     "highfield-road-rathgar": "28 Highfield Road was a childhood home of Dr Dorothy Price (1890–1954), the physician who pioneered tuberculosis control and BCG vaccination in Ireland.",
     "temple-road-dartry": "Temple Road was the final home of the Trinity College botanist Henry Horatio Dixon (1869–1953), co-author of the cohesion-tension theory of how water rises in plants.",
@@ -74,7 +84,6 @@ INFO = {
     "palmerston-park-rathmines": "Palmerston Park's residents have included Charles Dawson (1842–1917), Lord Mayor of Dublin, at No. 13, and the writer and soldier C. Morton Horne (1885–1916), killed in the First World War, at No. 16.",
     "dartmouth-square-ranelagh": "The geologist Grenville Cole (1859–1924), director of the Geological Survey of Ireland, lived at No. 3 Dartmouth Square around the turn of the 20th century.",
     "leeson-park-ranelagh": "The barrister and judge Michael Comyn lived on Leeson Park, where the republican leader Erskine Childers is said to have sheltered before his capture in 1922; the architectural historian Alistair Rowan and archivist Ann Martha Rowan lived at No. 22.",
-    "leeson-park-dublin-6": "The barrister and judge Michael Comyn lived on Leeson Park, where the republican leader Erskine Childers is said to have sheltered before his capture in 1922; the architectural historian Alistair Rowan and archivist Ann Martha Rowan lived at No. 22.",
     "northbrook-road-ranelagh": "No. 21 Northbrook Road was the family home of Thomas Crean (1873–1923), an Irish rugby international who won the Victoria Cross in the Boer War; the botanist Henry Horatio Dixon also lived for a time at No. 23.",
     "waltham-terrace-blackrock": "The architect Patrick Byrne (d. 1864) lived at No. 3 Waltham Terrace, and the suffragette Norah Elam (1878–1961) was born at No. 13.",
     "coliemore-road-dalkey": "The actor Norman Rodway (1929–2001) was born at “Elsinore”, his family home on Coliemore Road.",
@@ -89,7 +98,7 @@ def main():
     base = []
     for r in rows:
         raw_name, raw_area, county = r["street"], r["area"], r["county"]
-        if (raw_name, raw_area) in EXCLUDE:
+        if (raw_name, raw_area) in EXCLUDE or (raw_name, raw_area) in MERGE:
             continue
         name = NAME_FIX.get((raw_name, raw_area), raw_name)
         # title-case a leading lowercase "the"/"an"
@@ -126,6 +135,10 @@ def main():
                 normalize(b["raw_name"]), normalize(b["raw_area"]), b["county"].strip().lower()),
             "description": desc,
         }
+        also = [normalized_key_string(normalize(n), normalize(a), b["county"].strip().lower())
+                for (n, a), keep in MERGE.items() if keep == (b["raw_name"], b["raw_area"])]
+        if also:
+            entry["alsoKeys"] = also
         if s in INFO:
             entry["info"] = INFO[s]
         out.append(entry)

@@ -149,14 +149,7 @@
       "max_price": 717000
     }
   ],
-  "bedrooms": [
-    {
-      "bedrooms": 2,
-      "count": 21,
-      "median": 495000,
-      "avg": 496667
-    }
-  ],
+  "bedrooms": [],
   "types": [
     {
       "type": "Apartment",

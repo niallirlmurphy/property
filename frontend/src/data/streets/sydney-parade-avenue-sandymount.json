@@ -1,9 +1,9 @@
 {
   "slug": "sydney-parade-avenue-sandymount",
   "stats": {
-    "count": 11,
-    "median": 2070000,
-    "avg": 1991364,
+    "count": 20,
+    "median": 1962500,
+    "avg": 1957590,
     "min": 1150000,
     "max": 3260000,
     "firstYear": 2010,
@@ -35,11 +35,19 @@
       "max_price": 1240000
     },
     {
-      "year": 2017,
+      "year": 2015,
       "count": 1,
-      "median_price": 2100000,
-      "avg_price": 2100000,
-      "min_price": 2100000,
+      "median_price": 1270000,
+      "avg_price": 1270000,
+      "min_price": 1270000,
+      "max_price": 1270000
+    },
+    {
+      "year": 2017,
+      "count": 4,
+      "median_price": 1652500,
+      "avg_price": 1682500,
+      "min_price": 1325000,
       "max_price": 2100000
     },
     {
@@ -59,12 +67,20 @@
       "max_price": 1560000
     },
     {
-      "year": 2021,
+      "year": 2020,
       "count": 1,
-      "median_price": 1700000,
-      "avg_price": 1700000,
+      "median_price": 2736800,
+      "avg_price": 2736800,
+      "min_price": 2736800,
+      "max_price": 2736800
+    },
+    {
+      "year": 2021,
+      "count": 2,
+      "median_price": 1975000,
+      "avg_price": 1975000,
       "min_price": 1700000,
-      "max_price": 1700000
+      "max_price": 2250000
     },
     {
       "year": 2022,
@@ -75,12 +91,28 @@
       "max_price": 2350000
     },
     {
+      "year": 2023,
+      "count": 2,
+      "median_price": 2180000,
+      "avg_price": 2180000,
+      "min_price": 1435000,
+      "max_price": 2925000
+    },
+    {
       "year": 2024,
       "count": 1,
       "median_price": 3260000,
       "avg_price": 3260000,
       "min_price": 3260000,
       "max_price": 3260000
+    },
+    {
+      "year": 2025,
+      "count": 1,
+      "median_price": 2000000,
+      "avg_price": 2000000,
+      "min_price": 2000000,
+      "max_price": 2000000
     },
     {
       "year": 2026,
@@ -109,12 +141,36 @@
       "eircode": "D04E5F9"
     },
     {
+      "date": "2025-10-08",
+      "address": "41 SYDNEY PARADE AVE, DUBLIN 4, DUBLIN",
+      "price": 2000000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D04X5E5"
+    },
+    {
       "date": "2024-11-20",
       "address": "50 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
       "price": 3260000,
       "bedrooms": 6,
       "propertyType": "detached",
       "eircode": "D04X3V1"
+    },
+    {
+      "date": "2023-12-14",
+      "address": "63 SYDNEY PARADE AVE, DUBLIN 4, DUBLIN",
+      "price": 2925000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y5A4"
+    },
+    {
+      "date": "2023-04-06",
+      "address": "67 SYDNEY PARADE AVE, DUBLIN 4, DUBLIN",
+      "price": 1435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E9X6"
     },
     {
       "date": "2022-01-06",
@@ -128,6 +184,22 @@
       "date": "2021-04-15",
       "address": "81 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
       "price": 1700000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2021-01-28",
+      "address": "63 SYDNEY PARADE AVE, DUBLIN 4, DUBLIN",
+      "price": 2250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y5A4"
+    },
+    {
+      "date": "2020-12-18",
+      "address": "27 SYDNEY PARADE AVE, DUBLIN 4, DUBLIN",
+      "price": 2736800,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -149,12 +221,44 @@
       "eircode": null
     },
     {
+      "date": "2017-09-22",
+      "address": "1 SYDNEY PARADE AVE, DUBLIN 4, DUBLIN",
+      "price": 1380000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2017-08-29",
+      "address": "63 SYDNEY PARADE AVE, DUBLIN 4, DUBLIN",
+      "price": 1925000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04Y5A4"
+    },
+    {
       "date": "2017-02-09",
       "address": "65 SYDNEY PARADE AVE, SANDYMOUNT, DUBLIN 4",
       "price": 2100000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D04N8N4"
+    },
+    {
+      "date": "2017-01-20",
+      "address": "1 SYDNEY PARADE AVE, DUBLIN 4, DUBLIN",
+      "price": 1325000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2015-12-18",
+      "address": "41 SYDNEY PARADE AVE, DUBLIN 4, DUBLIN",
+      "price": 1270000,
+      "bedrooms": 5,
+      "propertyType": "apartment",
+      "eircode": "D04X5E5"
     },
     {
       "date": "2014-04-09",
@@ -181,5 +285,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 11
+  "totalTransactions": 20
 }

@@ -24,9 +24,14 @@ def test_split_bulk_moves_portfolio_sales_out():
 
 
 def test_bedroom_breakdown_needs_five_sales():
-    rows = [_sale(400000, 2) for _ in range(5)] + [_sale(300000, 1) for _ in range(4)]
+    rows = ([_sale(400000, 2) for _ in range(5)] + [_sale(300000, 1) for _ in range(4)]
+            + [_sale(500000, 3) for _ in range(5)])
     out = bedroom_breakdown(rows)
-    assert [(b["bedrooms"], b["count"], b["median"]) for b in out] == [(2, 5, 400000)]
+    assert [(b["bedrooms"], b["count"], b["median"]) for b in out] == [(2, 5, 400000), (3, 5, 500000)]
+
+
+def test_bedroom_breakdown_dropped_with_a_single_size():
+    assert bedroom_breakdown([_sale(400000, 2) for _ in range(9)]) == []
 
 
 def test_bedroom_breakdown_dropped_when_it_breaks_the_ladder():

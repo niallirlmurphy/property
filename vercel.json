@@ -133,6 +133,26 @@
       "source": "/eircode/d24",
       "destination": "/eircode/D24",
       "permanent": true
+    },
+    {
+      "source": "/street/ailesbury-road-donnybrook",
+      "destination": "/street/ailesbury-road-ballsbridge",
+      "permanent": true
+    },
+    {
+      "source": "/street/leeson-park-dublin-6",
+      "destination": "/street/leeson-park-ranelagh",
+      "permanent": true
+    },
+    {
+      "source": "/street/sydney-parade-avenue-dublin-4",
+      "destination": "/street/sydney-parade-avenue-sandymount",
+      "permanent": true
+    },
+    {
+      "source": "/street/nutley-avenue-ballsbridge",
+      "destination": "/street/nutley-avenue-donnybrook",
+      "permanent": true
     }
   ]
 }

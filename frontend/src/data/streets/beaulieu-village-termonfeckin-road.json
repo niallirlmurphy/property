@@ -142,19 +142,19 @@
     },
     {
       "date": "2025-06-27",
-      "address": "35 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
-      "price": 397000,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
-      "eircode": "A92PCP2"
-    },
-    {
-      "date": "2025-06-27",
       "address": "167 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
       "price": 277500,
       "bedrooms": 4,
       "propertyType": "semi-detached",
       "eircode": null
+    },
+    {
+      "date": "2025-06-27",
+      "address": "35 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 397000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A92PCP2"
     },
     {
       "date": "2025-06-20",
