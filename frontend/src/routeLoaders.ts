@@ -10,8 +10,8 @@
 // the loaders are replaced by that static-data fetch. A missing file → null →
 // the page's live-API fallback.
 import type { LoaderFunctionArgs } from "react-router-dom";
-import { areaFromSlug } from "./areas";
-import type { AreaSummary, CountySummary, DevelopmentData, EircodePageData, StreetData } from "./types";
+import { AREAS, COUNTIES, areaFromSlug, countySlug } from "./areas";
+import type { AreaSummary, CountySummary, DevelopmentData, EircodePageData, StreetData, TrendPoint } from "./types";
 import type { DevelopmentConfig } from "./developmentRegistry";
 import type { StreetConfig } from "./streetRegistry";
 
@@ -79,7 +79,8 @@ export async function developmentsIndexLoader(): Promise<DevelopmentIndexEntry[]
   return DEVELOPMENT_CONFIGS.map(({ slug, name, area, description }) => ({ slug, name, area, description }));
 }
 
-// /areaguides development cards: link fields plus headline figures.
+// /areaguides: headline figures for the county buttons, town and development
+// cards, and each Dublin street's routing key (for grouping by postcode).
 export interface DevelopmentCard {
   slug: string;
   name: string;
@@ -88,12 +89,79 @@ export interface DevelopmentCard {
   count: number;
 }
 
-export async function areaGuidesLoader(): Promise<DevelopmentCard[] | null> {
+export interface GuideFigure {
+  median: number;
+  count: number;
+  change?: number;   // % on the previous year; counties only
+}
+
+export interface AreaGuidesData {
+  year: number;
+  counties: Record<string, GuideFigure>;
+  areas: Record<string, GuideFigure>;
+  developments: DevelopmentCard[];
+  streetKeys: Record<string, string>;
+}
+
+// Town figures need this many sales in the year: area trends are scoped by
+// locality, and small samples (or undercounted towns) give misleading medians.
+const MIN_AREA_SALES = 50;
+const MIN_COUNTY_SALES = 100;
+
+function yearFigure(trends: TrendPoint[], year: number, minSales: number, withChange: boolean): GuideFigure | null {
+  const cur = trends.find(t => t.year === year);
+  if (!cur || cur.median_price == null || cur.count < minSales) return null;
+  const prev = trends.find(t => t.year === year - 1);
+  const change = withChange && prev?.median_price && prev.count >= minSales
+    ? Math.round(1000 * (cur.median_price / prev.median_price - 1)) / 10
+    : undefined;
+  return { median: cur.median_price, count: cur.count, ...(change != null && { change }) };
+}
+
+// Most common routing key among a street's sales (eircode, else "Dublin N" in the address).
+function streetRoutingKey(data: StreetData): string | null {
+  const keys = new Map<string, number>();
+  for (const t of data.transactions) {
+    let key = t.eircode?.slice(0, 3).toUpperCase();
+    if (!key) {
+      const m = /Dublin (\d{1,2})(W?)\b/i.exec(t.address);
+      key = m ? (m[2] ? "D6W" : "D" + m[1].padStart(2, "0")) : undefined;
+    }
+    if (key) keys.set(key, (keys.get(key) ?? 0) + 1);
+  }
+  return [...keys].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
+}
+
+export async function areaGuidesLoader(): Promise<AreaGuidesData | null> {
   if (!import.meta.env.SSR) return null;
-  const { DEVELOPMENT_CONFIGS } = await import("./developmentRegistry");
-  const cards = await Promise.all(DEVELOPMENT_CONFIGS.map(async ({ slug, name, area }) => {
+  const year = new Date().getFullYear() - 1;   // last complete year
+  const [{ DEVELOPMENT_CONFIGS }, { STREET_CONFIGS }] = await Promise.all([
+    import("./developmentRegistry"), import("./streetRegistry"),
+  ]);
+
+  const counties: Record<string, GuideFigure> = {};
+  for (const name of COUNTIES) {
+    const slug = countySlug(name);
+    const data = await read(COUNTY_DATA[`./data/counties/${slug}.json`]);
+    const fig = data && yearFigure(data.trends, year, MIN_COUNTY_SALES, true);
+    if (fig) counties[slug] = fig;
+  }
+  const areas: Record<string, GuideFigure> = {};
+  for (const { slug } of AREAS) {
+    const data = await read(AREA_DATA[`./data/areas/${slug}.json`]);
+    const fig = data && yearFigure(data.trends, year, MIN_AREA_SALES, false);
+    if (fig) areas[slug] = fig;
+  }
+  const developments: DevelopmentCard[] = [];
+  for (const { slug, name, area } of DEVELOPMENT_CONFIGS) {
     const data = await read(DEVELOPMENT_DATA[`./data/developments/${slug}.json`]);
-    return data && { slug, name, area, median: data.stats.median, count: data.stats.count };
-  }));
-  return cards.filter((c): c is DevelopmentCard => c !== null);
+    if (data) developments.push({ slug, name, area, median: data.stats.median, count: data.stats.count });
+  }
+  const streetKeys: Record<string, string> = {};
+  for (const s of STREET_CONFIGS.filter(s => s.countySlug === "dublin")) {
+    const data = await read(STREET_DATA[`./data/streets/${s.slug}.json`]);
+    const key = data && streetRoutingKey(data);
+    if (key) streetKeys[s.slug] = key;
+  }
+  return { year, counties, areas, developments, streetKeys };
 }

@@ -181,6 +181,20 @@ export const DUBLIN_EIRCODE_AREAS: Record<string, string> = {
   D22: "Dublin 22", D24: "Dublin 24",
 };
 
+// Best-known neighbourhoods per Dublin routing key, for postcode links and street
+// grouping. Includes the county's non-D keys that the street pages fall under.
+export const DUBLIN_POSTCODE_NEIGHBOURHOODS: Record<string, string> = {
+  D01: "North City Centre", D02: "South City Centre", D03: "Clontarf, Fairview",
+  D04: "Ballsbridge, Sandymount, Donnybrook", D05: "Raheny, Artane", D06: "Rathmines, Ranelagh, Rathgar",
+  D6W: "Terenure, Templeogue", D07: "Phibsborough, Cabra", D08: "Kilmainham, The Liberties",
+  D09: "Drumcondra, Glasnevin, Santry", D10: "Ballyfermot", D11: "Finglas",
+  D12: "Crumlin, Walkinstown", D13: "Howth, Sutton, Baldoyle", D14: "Dundrum, Rathfarnham, Churchtown",
+  D15: "Blanchardstown, Castleknock", D16: "Ballinteer, Knocklyon", D17: "Coolock, Darndale",
+  D18: "Sandyford, Foxrock, Cabinteely", D20: "Palmerstown, Chapelizod", D22: "Clondalkin",
+  D24: "Tallaght", A94: "Blackrock, Stillorgan", A96: "Dún Laoghaire, Dalkey, Glenageary",
+  K32: "Balbriggan", K34: "Skerries", K36: "Malahide, Portmarnock", K67: "Swords", K78: "Lucan",
+};
+
 // Provinces of the Republic of Ireland → county slugs (display order).
 // Covers all 26 counties in COUNTIES.
 export const PROVINCES: { name: string; counties: string[] }[] = [
