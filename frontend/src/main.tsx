@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 import { inject } from "@vercel/analytics";
 import App from "./App";
 import {
-  areaLoader, countyLoader, developmentLoader, developmentsIndexLoader, eircodeLoader, streetLoader,
+  areaGuidesLoader, areaLoader, countyLoader, developmentLoader, developmentsIndexLoader, eircodeLoader, streetLoader,
 } from "./routeLoaders";
 import ScrollToTopLayout from "./components/ScrollToTopLayout";
 import "leaflet/dist/leaflet.css";
@@ -27,7 +27,7 @@ export const routes = [
   { path: "/polygon", lazy: () => import("./pages/PolygonSearchPage").then(page) },
   { path: "/heatmap", lazy: () => import("./pages/HeatmapPage").then(page) },
   { path: "/valuation", lazy: () => import("./pages/ValuationPage").then(page) },
-  { path: "/areaguides", lazy: () => import("./pages/AreaGuidesPage").then(page) },
+  { path: "/areaguides", lazy: () => import("./pages/AreaGuidesPage").then(page), loader: areaGuidesLoader },
   { path: "/area/:slug", lazy: () => import("./pages/AreaPage").then(page), loader: areaLoader },
   { path: "/streets", lazy: () => import("./pages/StreetsIndexPage").then(page) },
   { path: "/street/:slug", lazy: () => import("./pages/StreetPage").then(page), loader: streetLoader },

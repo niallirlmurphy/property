@@ -78,3 +78,22 @@ export async function developmentsIndexLoader(): Promise<DevelopmentIndexEntry[]
   const { DEVELOPMENT_CONFIGS } = await import("./developmentRegistry");
   return DEVELOPMENT_CONFIGS.map(({ slug, name, area, description }) => ({ slug, name, area, description }));
 }
+
+// /areaguides development cards: link fields plus headline figures.
+export interface DevelopmentCard {
+  slug: string;
+  name: string;
+  area: string;
+  median: number;
+  count: number;
+}
+
+export async function areaGuidesLoader(): Promise<DevelopmentCard[] | null> {
+  if (!import.meta.env.SSR) return null;
+  const { DEVELOPMENT_CONFIGS } = await import("./developmentRegistry");
+  const cards = await Promise.all(DEVELOPMENT_CONFIGS.map(async ({ slug, name, area }) => {
+    const data = await read(DEVELOPMENT_DATA[`./data/developments/${slug}.json`]);
+    return data && { slug, name, area, median: data.stats.median, count: data.stats.count };
+  }));
+  return cards.filter((c): c is DevelopmentCard => c !== null);
+}
