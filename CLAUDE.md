@@ -170,14 +170,22 @@ python3 scripts/generate_street_data.py     # writes frontend/src/data/streets/*
 python3 scripts/generate_sitemap.py          # refresh sitemap
 python3 scripts/generate_page_data.py        # writes frontend/src/data/{areas,eircodes,counties}/*.json
 python3 scripts/generate_site_stats.py       # writes frontend/src/data/site_stats.json (homepage trust strip/FAQ figures)
+python3 scripts/generate_development_data.py # writes frontend/src/data/developments/*.json (/development/:slug)
 git add frontend/src/data/streets frontend/public/sitemap.xml
-git add frontend/src/data/areas frontend/src/data/eircodes frontend/src/data/counties frontend/src/data/site_stats.json
+git add frontend/src/data/areas frontend/src/data/eircodes frontend/src/data/counties frontend/src/data/site_stats.json frontend/src/data/developments frontend/src/data/page_data_generated.json
 git commit -m "chore: refresh street page data" && git push origin main
 ```
-**Page data is limited to once per calendar month.** `generate_page_data.py`, `generate_street_data.py`
-and `generate_site_stats.py` record their last run in `frontend/src/data/page_data_generated.json` and
+**Page data is limited to once per calendar month.** `generate_page_data.py`, `generate_street_data.py`,
+`generate_site_stats.py` and `generate_development_data.py` record their last run in `frontend/src/data/page_data_generated.json` and
 skip (exit 0) if they already ran this month; pass `--force` to override (or `--force-page-data` to
 `ppr_full_pipeline.py`), e.g. for a new page type with no data yet. Commit the stamp file with the data.
+
+**Development pages** (`/development/:slug`, index `/developments`): one per entry in
+`frontend/src/data/developments_registry.json`. Each entry's `pinName` names a row in
+`development_pins`, whose match rule decides which sales belong; schools and transport come from
+the `amenities` table. Bulk sales (stats_excluded, or >5x the scheme median) are listed separately
+and left out of the stats. To add a development: pin it first, add a registry entry (no figures in
+the text; they go stale), then `python3 scripts/generate_development_data.py --force`.
 
 This refreshes the 50 static street pages (`/street/:slug`). Data is baked into
 the SSG build, so a redeploy (automatic on push) is required for changes to show.

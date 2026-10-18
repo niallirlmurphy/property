@@ -214,6 +214,16 @@ def main():
         if not success:
             print("\n⚠️  Warning: Site-stats generation had errors")
 
+        # Development landing pages (pinned schemes; queries the DB directly)
+        success = run_command(
+            ['python3', 'scripts/generate_development_data.py'] + (['--force'] if args.force_page_data else []),
+            "STEP 4c: Generate development page data",
+            dry_run=args.dry_run
+        )
+
+        if not success:
+            print("\n⚠️  Warning: Development page-data generation had errors")
+
     # Summary
     print("\n" + "="*80)
     print("PIPELINE COMPLETE")

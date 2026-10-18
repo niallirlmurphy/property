@@ -1,0 +1,667 @@
+{
+  "slug": "elm-park-merrion-road",
+  "stats": {
+    "count": 387,
+    "median": 350000,
+    "avg": 395069,
+    "min": 100000,
+    "max": 1400000,
+    "firstYear": 2013,
+    "lastYear": 2026,
+    "recentMedian": 616740,
+    "recentCount": 66
+  },
+  "trends": [
+    {
+      "year": 2013,
+      "count": 3,
+      "median_price": 295000,
+      "avg_price": 271333,
+      "min_price": 158000,
+      "max_price": 361000
+    },
+    {
+      "year": 2014,
+      "count": 5,
+      "median_price": 380000,
+      "avg_price": 687000,
+      "min_price": 235000,
+      "max_price": 1325000
+    },
+    {
+      "year": 2015,
+      "count": 3,
+      "median_price": 350000,
+      "avg_price": 361667,
+      "min_price": 270000,
+      "max_price": 465000
+    },
+    {
+      "year": 2016,
+      "count": 193,
+      "median_price": 167117,
+      "avg_price": 233221,
+      "min_price": 111008,
+      "max_price": 1048829
+    },
+    {
+      "year": 2017,
+      "count": 9,
+      "median_price": 350000,
+      "avg_price": 418667,
+      "min_price": 100000,
+      "max_price": 1240000
+    },
+    {
+      "year": 2018,
+      "count": 26,
+      "median_price": 361000,
+      "avg_price": 445769,
+      "min_price": 295000,
+      "max_price": 1190000
+    },
+    {
+      "year": 2019,
+      "count": 8,
+      "median_price": 339000,
+      "avg_price": 364750,
+      "min_price": 325000,
+      "max_price": 450000
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "median_price": 545000,
+      "avg_price": 558000,
+      "min_price": 425000,
+      "max_price": 715000
+    },
+    {
+      "year": 2021,
+      "count": 10,
+      "median_price": 442500,
+      "avg_price": 461824,
+      "min_price": 353000,
+      "max_price": 599119
+    },
+    {
+      "year": 2022,
+      "count": 7,
+      "median_price": 380000,
+      "avg_price": 409286,
+      "min_price": 343000,
+      "max_price": 500000
+    },
+    {
+      "year": 2023,
+      "count": 8,
+      "median_price": 690000,
+      "avg_price": 750625,
+      "min_price": 355000,
+      "max_price": 1260000
+    },
+    {
+      "year": 2024,
+      "count": 54,
+      "median_price": 535220,
+      "avg_price": 582486,
+      "min_price": 324677,
+      "max_price": 1400000
+    },
+    {
+      "year": 2025,
+      "count": 42,
+      "median_price": 623370,
+      "avg_price": 653687,
+      "min_price": 387000,
+      "max_price": 1299550
+    },
+    {
+      "year": 2026,
+      "count": 14,
+      "median_price": 628926,
+      "avg_price": 648780,
+      "min_price": 410000,
+      "max_price": 850000
+    }
+  ],
+  "bedrooms": [
+    {
+      "bedrooms": 2,
+      "count": 7,
+      "median": 810000,
+      "avg": 773008
+    },
+    {
+      "bedrooms": 3,
+      "count": 20,
+      "median": 645374,
+      "avg": 696677
+    }
+  ],
+  "types": [
+    {
+      "type": "Apartment",
+      "count": 97,
+      "median": 603524,
+      "avg": 582303
+    },
+    {
+      "type": "House",
+      "count": 5,
+      "median": 881058,
+      "avg": 949212
+    }
+  ],
+  "development": {
+    "firstSaleYear": 2013,
+    "newHomeSales": 81,
+    "resales": 306,
+    "bedroomsKnown": 31
+  },
+  "bulkSales": [
+    {
+      "date": "2016-02-17",
+      "address": "11 The Links, Elm Park, Merrion Road",
+      "price": 9173500,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2016-05-25",
+      "address": "3 THE LINKS, ELM PARK, MERRION RD DUBLIN 4",
+      "price": 49315625,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2016-05-25",
+      "address": "APT 11 BLOCK 1 THE LINKS, ELM PARK, MERRION ROAD",
+      "price": 9684375,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    }
+  ],
+  "amenities": {
+    "transport": [
+      {
+        "name": "DART Sydney Parade",
+        "mode": "DART",
+        "distance_m": 502
+      },
+      {
+        "name": "DART Sandymount",
+        "mode": "DART",
+        "distance_m": 821
+      },
+      {
+        "name": "DART Booterstown",
+        "mode": "DART",
+        "distance_m": 1578
+      },
+      {
+        "name": "DART Lansdowne Road",
+        "mode": "DART",
+        "distance_m": 1937
+      },
+      {
+        "name": "Luas Milltown",
+        "mode": "Luas (Green Line)",
+        "distance_m": 2531
+      },
+      {
+        "name": "Luas Cowper",
+        "mode": "Luas (Green Line)",
+        "distance_m": 2544
+      }
+    ],
+    "schools": [
+      {
+        "name": "St. Michael's College",
+        "level": "Secondary",
+        "distance_m": 505
+      },
+      {
+        "name": "Booterstown National School",
+        "level": "Primary",
+        "distance_m": 1441
+      },
+      {
+        "name": "University College Dublin (UCD)",
+        "level": "Tertiary",
+        "distance_m": 1628
+      },
+      {
+        "name": "St. Andrew's College",
+        "level": "Secondary",
+        "distance_m": 1806
+      },
+      {
+        "name": "St. Conleth's College",
+        "level": "Secondary & Primary",
+        "distance_m": 1824
+      },
+      {
+        "name": "Muckross Park College",
+        "level": "Secondary",
+        "distance_m": 2072
+      },
+      {
+        "name": "Coláiste Eoin",
+        "level": "Secondary",
+        "distance_m": 2131
+      },
+      {
+        "name": "Coláiste Íosagáin",
+        "level": "Secondary",
+        "distance_m": 2149
+      }
+    ]
+  },
+  "transactions": [
+    {
+      "date": "2026-07-09",
+      "address": "APT 57 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 436800,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2026-06-19",
+      "address": "71 THE GARDENS, ELMPARK GREEN, DUBLIN 4",
+      "price": 790000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-04-30",
+      "address": "APT 74 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 748898,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2026-04-16",
+      "address": "APT 53 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 550661,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2026-04-14",
+      "address": "APT 76 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 572687,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2026-03-27",
+      "address": "50 ELM PARK, MERRION ROAD, BALLSBRIDGE",
+      "price": 410000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-03-23",
+      "address": "APT 178 THE LINKS, ELM PARK, DUBLIN 4",
+      "price": 820000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-03-20",
+      "address": "APT 30 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 643172,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2026-03-19",
+      "address": "APT 54 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 577092,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2026-03-18",
+      "address": "APT 54 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 577092,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2026-02-06",
+      "address": "APT 47 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 614679,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2026-01-22",
+      "address": "221 LLANDAFF TERRACE, ELM PARK, MERRION",
+      "price": 790000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2026-01-14",
+      "address": "APT 63 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 701834,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2026-01-13",
+      "address": "APARTMENT 24, THE LINKS, ELM PARK",
+      "price": 850000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-12-15",
+      "address": "APT 68 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 612335,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-12-05",
+      "address": "36 The Gardens Elm Park, Dublin 4",
+      "price": 590308,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-12-04",
+      "address": "APT.75 - THE GARDENS, ELMPARK GREEN, MERRION ROAD",
+      "price": 905000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-12-03",
+      "address": "APT 62 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 583875,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-12-01",
+      "address": "APT 64 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 660792,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-11-10",
+      "address": "APT.25 - THE GARDENS, ELMPARK GREEN, MERRION ROAD",
+      "price": 616740,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-11-07",
+      "address": "APT 111 - THE LINKS, ELM PARK, MERRION ROAD",
+      "price": 850000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-10-17",
+      "address": "APT 46 - THE LINKS, ELM PARK, MERRION ROAD",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-10-14",
+      "address": "38 THE GARDENS, ELMPARK GREEN, DUBLIN 4",
+      "price": 647577,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-09-16",
+      "address": "APT 189, THE LINKS, ELM PARK DUBLIN 4",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-09-04",
+      "address": "Apartment 59 The Gardens, Elmpark Green, Dublin 4",
+      "price": 660973,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-09-02",
+      "address": "APT 55 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 630000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-08-22",
+      "address": "APT 112 - THE LINKS, ELM PARK, MERRION ROAD",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-08-20",
+      "address": "17 ELM PARK, MERRION ROAD, BALLSBRIDGE",
+      "price": 387500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-08-14",
+      "address": "37 The Gardens, Elmpark Green, Merrion Road",
+      "price": 599119,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-08-11",
+      "address": "12 ELM PARK, MERRION ROAD, BALLSBRIDGE",
+      "price": 505000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-08-08",
+      "address": "APT 33 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 616740,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-07-29",
+      "address": "8 THE BAY  ELM PARK, MERRION ROAD, BALLSBRIDGE",
+      "price": 387000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-07-24",
+      "address": "APARTMENT 131, THE LINKS, ELM PARK",
+      "price": 862000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-07-24",
+      "address": "APT 44 THE GARDENS, ELMPARK GREEN, DUBLIN 4",
+      "price": 603524,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-07-24",
+      "address": "APT 23 - THE LINKS, ELM PARK, MERRION ROAD",
+      "price": 815000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-07-24",
+      "address": "APT.35 - THE GARDENS, ELMPARK GREEN, MERRION ROAD",
+      "price": 612335,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-07-16",
+      "address": "Apartment 48, The Gardens, Elmpark Green",
+      "price": 607930,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-07-10",
+      "address": "APT 154 THE LINKS, ELM PARK, DUBLIN 4",
+      "price": 825000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-06-09",
+      "address": "APT 69 THE GARDENS, ELM PARK GREEN, MERRION ROAD",
+      "price": 700440,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-06-06",
+      "address": "APT 58 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 634361,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-06-06",
+      "address": "APT 160, THE LINKS, ELM PARK",
+      "price": 421000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-29",
+      "address": "APT 77 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 1299550,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-05-28",
+      "address": "APT 40 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 656388,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-05-23",
+      "address": "APT 132 - THE LINKS, ELM PARK, MERRION ROAD",
+      "price": 850000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-16",
+      "address": "46 The Gardens Elmpark Green, Dublin 4",
+      "price": 616741,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-05-16",
+      "address": "APT 24 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 572687,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-05-14",
+      "address": "APT 14 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 603524,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-04-25",
+      "address": "Apartment 67, The Gardens, Elmpark Green",
+      "price": 524229,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-04-15",
+      "address": "26 The Gardens, Elmpark Green",
+      "price": 638766,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2025-04-10",
+      "address": "208 THE LINKS, ELM PARK, MERRION RD",
+      "price": 485000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    }
+  ],
+  "totalTransactions": 387
+}

@@ -8,6 +8,7 @@ sitemap can never drift out of sync with what is really prerendered:
   - areas     -> frontend/src/data/areas/*.json
   - eircodes  -> frontend/src/data/eircodes/*.json
   - streets   -> frontend/src/data/streets_registry.json
+  - developments -> frontend/src/data/developments_registry.json
   - blog      -> frontend/src/blogPosts.ts (slug + date)
   - static / tool / landing pages -> STATIC_PAGES below
 
@@ -34,6 +35,7 @@ STATIC_PAGES = [
     ("/property-price-register", "monthly", "0.9"),
     ("/areaguides", "weekly", "0.8"),
     ("/streets", "weekly", "0.7"),
+    ("/developments", "monthly", "0.6"),
     ("/blog", "weekly", "0.7"),
     ("/heatmap", "weekly", "0.7"),
     ("/valuation", "monthly", "0.7"),
@@ -66,6 +68,15 @@ def _slugs_from_dir(subdir: str) -> list[tuple[str, str]]:
 
 def _street_slugs() -> list[tuple[str, str]]:
     reg = DATA / "streets_registry.json"
+    if not reg.is_file():
+        return []
+    import json
+    lastmod = _mtime_date(reg)
+    return [(e["slug"], lastmod) for e in json.load(open(reg))]
+
+
+def _development_slugs() -> list[tuple[str, str]]:
+    reg = DATA / "developments_registry.json"
     if not reg.is_file():
         return []
     import json
@@ -120,6 +131,9 @@ def generate_sitemap() -> str:
 
     for slug, lastmod in _street_slugs():
         lines += _url(f"/street/{slug}", lastmod, "weekly", "0.6")
+
+    for slug, lastmod in _development_slugs():
+        lines += _url(f"/development/{slug}", lastmod, "monthly", "0.6")
 
     for slug, post_date in _blog_posts():
         lines += _url(f"/blog/{slug}", post_date, "monthly", "0.6")

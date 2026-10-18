@@ -21,6 +21,7 @@ export default function NotFoundPage() {
           <li><Link to="/">Search property prices</Link></li>
           <li><Link to="/areaguides">Browse area guides</Link></li>
           <li><Link to="/streets">Browse streets</Link></li>
+          <li><Link to="/developments">Browse developments</Link></li>
           <li><Link to="/blog">Read the blog</Link></li>
         </ul>
       </div>

@@ -9,6 +9,7 @@ import { areaFromSlug, countyForArea, countyFromSlug } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import MapSearchThumb from "../components/MapSearchThumb";
+import { developmentsForArea } from "../developments";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -149,6 +150,19 @@ export default function AreaPage() {
                   ))}
                 </tbody>
               </table>
+            </section>
+          )}
+
+          {developmentsForArea(config.slug).length > 0 && (
+            <section className="content-section">
+              <h2>Developments near {config.name}</h2>
+              <ul>
+                {developmentsForArea(config.slug).map(d => (
+                  <li key={d.slug}>
+                    <Link to={`/development/${d.slug}`}>{d.name}, {d.area}</Link>: sold prices, schools and transport
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
 

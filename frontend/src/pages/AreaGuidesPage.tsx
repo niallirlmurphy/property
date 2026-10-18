@@ -105,6 +105,15 @@ export default function AreaGuidesPage() {
         </section>
 
         <section className="content-section">
+          <h2>Developments</h2>
+          <p>
+            Price guides for named apartment and housing schemes such as Honeypark,
+            Elm Park and Rockfield, with schools and transport links:{" "}
+            <Link to="/developments">browse developments</Link>.
+          </p>
+        </section>
+
+        <section className="content-section">
           <h2>Street Level Analysis</h2>
           <p>
             Dive into individual streets with dedicated price guides for Ireland's

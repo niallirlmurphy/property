@@ -3,7 +3,9 @@ import { ViteReactSSG } from "vite-react-ssg";
 import { Navigate } from "react-router-dom";
 import { inject } from "@vercel/analytics";
 import App from "./App";
-import { areaLoader, countyLoader, eircodeLoader, streetLoader } from "./routeLoaders";
+import {
+  areaLoader, countyLoader, developmentLoader, developmentsIndexLoader, eircodeLoader, streetLoader,
+} from "./routeLoaders";
 import ScrollToTopLayout from "./components/ScrollToTopLayout";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
@@ -29,6 +31,8 @@ export const routes = [
   { path: "/area/:slug", lazy: () => import("./pages/AreaPage").then(page), loader: areaLoader },
   { path: "/streets", lazy: () => import("./pages/StreetsIndexPage").then(page) },
   { path: "/street/:slug", lazy: () => import("./pages/StreetPage").then(page), loader: streetLoader },
+  { path: "/developments", lazy: () => import("./pages/DevelopmentsIndexPage").then(page), loader: developmentsIndexLoader },
+  { path: "/development/:slug", lazy: () => import("./pages/DevelopmentPage").then(page), loader: developmentLoader },
   { path: "/county/dublin", lazy: () => import("./pages/DublinCountyPage").then(page) },
   { path: "/county/:slug", lazy: () => import("./pages/CountyPage").then(page), loader: countyLoader },
   { path: "/eircode/:code", lazy: () => import("./pages/EircodePage").then(page), loader: eircodeLoader },

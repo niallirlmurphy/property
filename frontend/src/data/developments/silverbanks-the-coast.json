@@ -1,0 +1,568 @@
+{
+  "slug": "silverbanks-the-coast",
+  "stats": {
+    "count": 165,
+    "median": 233481,
+    "avg": 253395,
+    "min": 140969,
+    "max": 685000,
+    "firstYear": 2017,
+    "lastYear": 2026,
+    "recentMedian": 392500,
+    "recentCount": 14
+  },
+  "trends": [
+    {
+      "year": 2017,
+      "count": 30,
+      "median_price": 226872,
+      "avg_price": 216129,
+      "min_price": 140969,
+      "max_price": 330396
+    },
+    {
+      "year": 2018,
+      "count": 98,
+      "median_price": 219888,
+      "avg_price": 213383,
+      "min_price": 140969,
+      "max_price": 350000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 337918,
+      "avg_price": 337918,
+      "min_price": 300837,
+      "max_price": 375000
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "median_price": 275254,
+      "avg_price": 275254,
+      "min_price": 255507,
+      "max_price": 295000
+    },
+    {
+      "year": 2021,
+      "count": 7,
+      "median_price": 337000,
+      "avg_price": 325000,
+      "min_price": 232000,
+      "max_price": 470000
+    },
+    {
+      "year": 2022,
+      "count": 7,
+      "median_price": 410000,
+      "avg_price": 374429,
+      "min_price": 210000,
+      "max_price": 435000
+    },
+    {
+      "year": 2023,
+      "count": 4,
+      "median_price": 461000,
+      "avg_price": 486750,
+      "min_price": 415000,
+      "max_price": 610000
+    },
+    {
+      "year": 2024,
+      "count": 2,
+      "median_price": 537500,
+      "avg_price": 537500,
+      "min_price": 415000,
+      "max_price": 660000
+    },
+    {
+      "year": 2025,
+      "count": 6,
+      "median_price": 362500,
+      "avg_price": 420000,
+      "min_price": 300000,
+      "max_price": 685000
+    },
+    {
+      "year": 2026,
+      "count": 7,
+      "median_price": 415000,
+      "avg_price": 392929,
+      "min_price": 325000,
+      "max_price": 460000
+    }
+  ],
+  "bedrooms": [
+    {
+      "bedrooms": 2,
+      "count": 8,
+      "median": 382500,
+      "avg": 351466
+    }
+  ],
+  "types": [
+    {
+      "type": "Apartment",
+      "count": 19,
+      "median": 295154,
+      "avg": 302412
+    }
+  ],
+  "development": {
+    "firstSaleYear": 2017,
+    "newHomeSales": 131,
+    "resales": 34,
+    "bedroomsKnown": 14
+  },
+  "bulkSales": [],
+  "amenities": {
+    "transport": [
+      {
+        "name": "DART Clongriffin",
+        "mode": "DART",
+        "distance_m": 401
+      },
+      {
+        "name": "DART Howth Junction & Donaghmede",
+        "mode": "DART",
+        "distance_m": 1141
+      },
+      {
+        "name": "DART Bayside",
+        "mode": "DART",
+        "distance_m": 1685
+      },
+      {
+        "name": "DART Kilbarrack",
+        "mode": "DART",
+        "distance_m": 1805
+      },
+      {
+        "name": "DART Portmarnock",
+        "mode": "DART",
+        "distance_m": 2501
+      },
+      {
+        "name": "DART Sutton",
+        "mode": "DART",
+        "distance_m": 2884
+      }
+    ],
+    "schools": [
+      {
+        "name": "St. Fintan's High School",
+        "level": "Secondary",
+        "distance_m": 3203
+      },
+      {
+        "name": "Sutton Park School",
+        "level": "Secondary",
+        "distance_m": 3396
+      }
+    ]
+  },
+  "transactions": [
+    {
+      "date": "2026-08-24",
+      "address": "22 BIRCH HOUSE, SILVERBANKS, THE COAST",
+      "price": 427000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-06-30",
+      "address": "104  ASH  HOUSE, SILVERBANKS, THE COAST  BALDOYLE",
+      "price": 362500,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-04-15",
+      "address": "5  WILLOW HOUSE, SILVERBANKS, THE COAST",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-03-06",
+      "address": "97 ASH HOUSE, SILVERBANKS, BALDOYLE",
+      "price": 415000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-02-24",
+      "address": "13 ROWAN HOUSE, SILVERBANKS, THE COAST",
+      "price": 325000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-02-05",
+      "address": "111 ALDER HOUSE, SILVERBANKS, THE COAST",
+      "price": 421000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-01-09",
+      "address": "APT. 112 ALDER HOUSE, SILVERBANKS, THE COAST",
+      "price": 460000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-09-25",
+      "address": "33 BIRCH HOUSE, SILVERBANKS, BALDOYLE",
+      "price": 300000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-09-25",
+      "address": "8  ROWAN HOUSE, SILVERBANKS, BALDOYLE",
+      "price": 460000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-09-18",
+      "address": "12 ROWAN HOUSE, SILVERBANKS, THE COAST",
+      "price": 685000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2025-06-18",
+      "address": "106 ASH HOUSE, SILVERBANKS, THE COAST",
+      "price": 370000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-16",
+      "address": "63 BEECH HOUSE, SILVERBANKS, BALDOYLE",
+      "price": 355000,
+      "bedrooms": null,
+      "propertyType": "house",
+      "newHome": false
+    },
+    {
+      "date": "2025-03-31",
+      "address": "37 SYCAMORE HOUSE, SILVERBANKS, THE COAST",
+      "price": 350000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2024-10-29",
+      "address": "19  BIRCH HOUSE, SILVERBANKS, THE COAST  BALDOYLE",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-03-22",
+      "address": "14 ROWAN HOUSE, SILVERBANKS, THE COAST",
+      "price": 660000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-09-22",
+      "address": "127 ALDER HOUSE, SILVER BANKS, THE COAST",
+      "price": 610000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-09-08",
+      "address": "76 OAK HOUSE, SILVERBANKS, THE COAST",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-05-09",
+      "address": "44 SYCAMORE HOUSE, SILVERBANKS, THE COAST",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-03-21",
+      "address": "26 BIRCH HOUSE, SILVERBANKS  THE COAST, BALDOYLE",
+      "price": 422000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-10-28",
+      "address": "101  ASH  HOUSE, SILVERBANKS, THE COAST  BALDOYLE",
+      "price": 414000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-09-23",
+      "address": "46 SYCAMORE HOUSE, SILVERBANKS, THE COAST",
+      "price": 417000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-09-01",
+      "address": "42 SYCAMORE HOUSE, SILVERBANKS, THE COAST",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-08-19",
+      "address": "89 OAK HOUSE, SILVERBANKS, THE COAST",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-08-11",
+      "address": "11 ROWAN HOUSE, SILVERBANKS, THE COAST",
+      "price": 340000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-05-18",
+      "address": "79 OAK HOUSE, SILVERBANKS, THE COAST",
+      "price": 210000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-04-28",
+      "address": "4 ROWAN HOUSE, SILVERBANKS, THE COAST",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2021-11-16",
+      "address": "62  BEECH  HOUSE, SILVERBANKS, BALDOYLE",
+      "price": 337000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2021-09-27",
+      "address": "71 Beech House, Silverbanks, Baldoyle",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2021-08-20",
+      "address": "78 OAK HOUSE, SILVERBANKS, THE COAST",
+      "price": 366000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2021-08-04",
+      "address": "33 BIRCH HOUSE, SILVERBANKS, BALDOYLE",
+      "price": 255000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2021-05-07",
+      "address": "21 BIRCH HOUSE, SILVERBANKS, THE COAST",
+      "price": 250000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2021-03-31",
+      "address": "18 WILLOW HOUSE, SILVERBANKS, THE COAST",
+      "price": 365000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2021-03-03",
+      "address": "11 WILLOW HOUSE, SILVERBANKS, BALDOYLE",
+      "price": 232000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2020-11-20",
+      "address": "121 Alder House, Silverbanks  The Coast, Baldoyle",
+      "price": 255507,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2020-11-05",
+      "address": "95 ASH HOUSE, SILVERBANKS, THE COAST",
+      "price": 295000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2019-02-22",
+      "address": "14 ROWAN HOUSE, SILVERBANKS, THE COAST",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2019-02-21",
+      "address": "53 Sycamore House, Silverbanks, Baldoyle",
+      "price": 300837,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-10-18",
+      "address": "91 Oak House, Silverbanks, The Coast",
+      "price": 176211,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-09-04",
+      "address": "87 Oak House, Silverbanks, The Coast",
+      "price": 171806,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-08-23",
+      "address": "67 Beechouse, Silverbanks, The Coast",
+      "price": 167400,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-07-03",
+      "address": "44 Sycamore House, Silverbanks, The Coast",
+      "price": 237885,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-07-02",
+      "address": "35 Birch House, Silverbanks The Coast, Baldoyle",
+      "price": 255506,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-06-29",
+      "address": "57 beech house, Silverbanks, The Coast",
+      "price": 215859,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-06-12",
+      "address": "111 Alder House, Silverbanks, The Coast",
+      "price": 233480,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-01",
+      "address": "42 Sycamore house, Silverbanks, The Coast",
+      "price": 233481,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-05-24",
+      "address": "125 Alder House, Silverbanks, The Coast",
+      "price": 189427,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-05-23",
+      "address": "124 alder house, silverbanks, baldoyle",
+      "price": 185022,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-05-23",
+      "address": "72 Beech House, Silverbanks, The Coast",
+      "price": 167401,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-05-18",
+      "address": "76 OAK HOUSE, SILVERBANKS, THE COAST",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-05-16",
+      "address": "74 Oak House, Silverbanks, Baldoyle",
+      "price": 207048,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    }
+  ],
+  "totalTransactions": 165
+}

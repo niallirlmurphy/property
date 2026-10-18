@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "elm-park-merrion-road",
+    "name": "Elm Park",
+    "area": "Merrion Road, Dublin 4",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "pinName": "Elm Park, Merrion Road",
+    "latitude": 53.3195,
+    "longitude": -6.2125,
+    "description": "Sold prices, price trends and bedroom breakdown for the Elm Park apartments on Merrion Road, Dublin 4, from the Property Price Register.",
+    "info": "Elm Park is an apartment scheme off Merrion Road between Ballsbridge and Booterstown, beside St. Vincent's University Hospital. Its apartments are set in named blocks (addresses such as Links, Bay and Gardens) around landscaped grounds, and the scheme first appears on the Property Price Register in 2013.",
+    "areaInfo": "Merrion Road is one of Dublin 4's main routes into the city, lined with embassies, hotels and period houses. Sydney Parade and Sandymount DART stations are within walking distance, and UCD's Belfield campus is a short trip away.",
+    "relatedAreas": [
+      { "slug": "sandymount", "name": "Sandymount" },
+      { "slug": "blackrock", "name": "Blackrock" }
+    ],
+    "eircode": "D04"
+  },
+  {
+    "slug": "rockfield-dundrum",
+    "name": "Rockfield",
+    "area": "Dundrum, Dublin 16",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "pinName": "Rockfield, Dundrum",
+    "latitude": 53.286,
+    "longitude": -6.2355,
+    "description": "Sold prices, price trends and bedroom breakdown for the Rockfield apartments in Dundrum, Dublin 16, from the Property Price Register.",
+    "info": "Rockfield is an apartment scheme between Dundrum and Sandyford, with blocks named after trees (The Oaks, Hollies, Willows, Rowan, Elm and Limes). It was completed before the Property Price Register began in 2010, so every sale recorded here is a resale.",
+    "areaInfo": "Balally Luas stop on the Green Line is beside the scheme, giving a direct tram to the city centre, and Dundrum Town Centre, Sandyford Business District and the M50 are all close by.",
+    "relatedAreas": [
+      { "slug": "sandyford", "name": "Sandyford" },
+      { "slug": "stillorgan", "name": "Stillorgan" }
+    ],
+    "eircode": "D16"
+  },
+  {
+    "slug": "elmfield-leopardstown",
+    "name": "Elmfield",
+    "area": "Leopardstown, Dublin 18",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "pinName": "Elmfield, Leopardstown",
+    "latitude": 53.2606145,
+    "longitude": -6.209435,
+    "description": "Sold prices, price trends and recent sales for the Elmfield apartments in Leopardstown, Dublin 18, from the Property Price Register.",
+    "info": "Elmfield is an apartment scheme in Leopardstown, near Ballyogan. Most of its apartments changed hands in a single bulk sale: in February 2020, 189 apartments at Elmfield were sold together for €99.8 million. That sale is listed separately below and left out of the price statistics, so the figures reflect individual sales.",
+    "areaInfo": "The Luas Green Line runs nearby, with Central Park, The Gallops, Glencairn and Leopardstown Valley stops all within about 1.5 km. Leopardstown Racecourse, Central Park and the Sandyford business district are close by, as is the M50.",
+    "relatedAreas": [
+      { "slug": "sandyford", "name": "Sandyford" },
+      { "slug": "stillorgan", "name": "Stillorgan" }
+    ],
+    "eircode": "D18"
+  },
+  {
+    "slug": "silverbanks-the-coast",
+    "name": "Silverbanks",
+    "area": "The Coast, Baldoyle, Dublin 13",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "pinName": "Silverbanks, The Coast",
+    "latitude": 53.401631,
+    "longitude": -6.1425785,
+    "description": "Sold prices, price trends and bedroom breakdown for Silverbanks at The Coast, Baldoyle, Dublin 13, from the Property Price Register.",
+    "info": "Silverbanks is a newer apartment scheme at The Coast, the coastal development between Baldoyle and Portmarnock. Its first sales appear on the Property Price Register in 2017, and most sales recorded since have been new homes.",
+    "areaInfo": "Clongriffin DART station is about 400 m away, with Howth Junction and Bayside a little further. Baldoyle Bay and the coast road to Portmarnock and Malahide are on the doorstep, and Howth is a short drive east.",
+    "relatedAreas": [
+      { "slug": "howth", "name": "Howth" },
+      { "slug": "malahide", "name": "Malahide" }
+    ],
+    "eircode": "D13"
+  },
+  {
+    "slug": "honeypark-dun-laoghaire",
+    "name": "Honeypark",
+    "area": "Dún Laoghaire, Co. Dublin",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "pinName": "Honeypark, Dun Laoghaire",
+    "latitude": 53.2795689,
+    "longitude": -6.146452,
+    "description": "Sold prices, price trends and bedroom breakdown for Honeypark, Dún Laoghaire, from the Property Price Register, covering its houses and apartments.",
+    "info": "Honeypark is a large mixed scheme of houses and apartment blocks between Dún Laoghaire and Glenageary, built in phases from 2010. It is the largest of the developments covered here, and most of its sales on the register are new homes. In February 2020 the 197 apartments of its Neptune Block were sold together for €114.4 million; that sale is listed separately below and left out of the price statistics.",
+    "areaInfo": "Glenageary, Sandycove and Dún Laoghaire DART stations are all within about 2 km, and Dún Laoghaire's harbour, pier and town centre are a short trip north. Rathdown School is about 1 km away.",
+    "relatedAreas": [
+      { "slug": "dun-laoghaire", "name": "Dún Laoghaire" },
+      { "slug": "blackrock", "name": "Blackrock" }
+    ]
+  }
+]

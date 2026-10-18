@@ -5,6 +5,7 @@ import react from "@vitejs/plugin-react";
 import { COUNTIES, AREAS, DUBLIN_EIRCODE_AREAS, countySlug } from "./src/areas";
 import { publishedPosts } from "./src/blogPosts";
 import { STREET_CONFIGS, STREET_LINK_FIELDS } from "./src/streetRegistry";
+import { DEVELOPMENT_CONFIGS, DEVELOPMENT_LINK_FIELDS } from "./src/developmentRegistry";
 
 // vite-react-ssg evaluates this config separately for its client and SSR builds.
 // Pin the build instant in the environment on first load so both builds share
@@ -13,28 +14,32 @@ import { STREET_CONFIGS, STREET_LINK_FIELDS } from "./src/streetRegistry";
 process.env.HOMEIQ_BUILD_INSTANT ??= new Date().toISOString();
 const BUILD_INSTANT = new Date(process.env.HOMEIQ_BUILD_INSTANT);
 
-const REGISTRY = fileURLToPath(new URL("./src/data/streets_registry.json", import.meta.url));
+const dataFile = (name: string) => fileURLToPath(new URL(`./src/data/${name}`, import.meta.url));
 
-// `virtual:street-links`: the street registry with only the link fields, for
-// pages that list or link to streets. Dropping description/info keeps ~56 KB of
-// text out of the bundle; the street page gets its full entry from its loader.
-function streetLinks(): Plugin {
-  const id = "virtual:street-links";
+// `virtual:street-links` / `virtual:development-links`: a registry with only the
+// link fields, for client pages that list or link to its entries. Dropping the
+// description/info text keeps it out of the bundle (~56 KB for streets); the
+// detail pages get their full entry from their loader.
+function registryLinks(id: string, file: string, fields: readonly string[]): Plugin {
   return {
-    name: "street-links",
+    name: id.replace("virtual:", ""),
     resolveId: (source) => (source === id ? "\0" + id : undefined),
     load(resolved) {
       if (resolved !== "\0" + id) return;
-      this.addWatchFile(REGISTRY);
-      const registry: Record<string, unknown>[] = JSON.parse(readFileSync(REGISTRY, "utf8"));
-      const links = registry.map((s) => Object.fromEntries(STREET_LINK_FIELDS.map((f) => [f, s[f]])));
+      this.addWatchFile(file);
+      const registry: Record<string, unknown>[] = JSON.parse(readFileSync(file, "utf8"));
+      const links = registry.map((s) => Object.fromEntries(fields.map((f) => [f, s[f]])));
       return `export default ${JSON.stringify(links)};`;
     },
   };
 }
 
 export default defineConfig({
-  plugins: [react(), streetLinks()],
+  plugins: [
+    react(),
+    registryLinks("virtual:street-links", dataFile("streets_registry.json"), STREET_LINK_FIELDS),
+    registryLinks("virtual:development-links", dataFile("developments_registry.json"), DEVELOPMENT_LINK_FIELDS),
+  ],
   define: {
     // Formatted once at build time so the prerendered HTML and the hydrated
     // client render the same string (a render-time `new Date()` mismatches).
@@ -64,9 +69,10 @@ export default defineConfig({
       // Scheduled (future-dated) posts are not prerendered until their date.
       const posts = publishedPosts().map((p) => `/blog/${p.slug}`);
       const streets = STREET_CONFIGS.map((s) => `/street/${s.slug}`);
+      const developments = DEVELOPMENT_CONFIGS.map((d) => `/development/${d.slug}`);
       // "/404" renders the catch-all NotFoundPage; the build script copies it to
       // dist/404.html, which Vercel serves (status 404) for unmatched URLs.
-      return [...staticPaths, ...counties, ...areas, ...eircodes, ...posts, ...streets, "/404"];
+      return [...staticPaths, ...counties, ...areas, ...eircodes, ...posts, ...streets, ...developments, "/404"];
     },
   },
   server: {

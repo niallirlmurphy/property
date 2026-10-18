@@ -1,0 +1,660 @@
+{
+  "slug": "rockfield-dundrum",
+  "stats": {
+    "count": 223,
+    "median": 385000,
+    "avg": 398563,
+    "min": 180000,
+    "max": 770000,
+    "firstYear": 2010,
+    "lastYear": 2026,
+    "recentMedian": 495000,
+    "recentCount": 25
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 4,
+      "median_price": 267500,
+      "avg_price": 256000,
+      "min_price": 190000,
+      "max_price": 299000
+    },
+    {
+      "year": 2011,
+      "count": 5,
+      "median_price": 254600,
+      "avg_price": 256120,
+      "min_price": 190000,
+      "max_price": 380000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 213750,
+      "avg_price": 213750,
+      "min_price": 200000,
+      "max_price": 227500
+    },
+    {
+      "year": 2013,
+      "count": 4,
+      "median_price": 235000,
+      "avg_price": 239375,
+      "min_price": 215000,
+      "max_price": 272500
+    },
+    {
+      "year": 2014,
+      "count": 14,
+      "median_price": 284000,
+      "avg_price": 283714,
+      "min_price": 215000,
+      "max_price": 375000
+    },
+    {
+      "year": 2015,
+      "count": 15,
+      "median_price": 310000,
+      "avg_price": 301510,
+      "min_price": 197000,
+      "max_price": 360000
+    },
+    {
+      "year": 2016,
+      "count": 14,
+      "median_price": 308000,
+      "avg_price": 301143,
+      "min_price": 180000,
+      "max_price": 340000
+    },
+    {
+      "year": 2017,
+      "count": 8,
+      "median_price": 342500,
+      "avg_price": 374688,
+      "min_price": 262500,
+      "max_price": 635000
+    },
+    {
+      "year": 2018,
+      "count": 23,
+      "median_price": 390000,
+      "avg_price": 440174,
+      "min_price": 300000,
+      "max_price": 705000
+    },
+    {
+      "year": 2019,
+      "count": 28,
+      "median_price": 385000,
+      "avg_price": 430339,
+      "min_price": 320000,
+      "max_price": 660000
+    },
+    {
+      "year": 2020,
+      "count": 15,
+      "median_price": 390000,
+      "avg_price": 413914,
+      "min_price": 310000,
+      "max_price": 620000
+    },
+    {
+      "year": 2021,
+      "count": 18,
+      "median_price": 384000,
+      "avg_price": 399306,
+      "min_price": 330000,
+      "max_price": 630000
+    },
+    {
+      "year": 2022,
+      "count": 13,
+      "median_price": 431000,
+      "avg_price": 452889,
+      "min_price": 380000,
+      "max_price": 653000
+    },
+    {
+      "year": 2023,
+      "count": 19,
+      "median_price": 425000,
+      "avg_price": 433500,
+      "min_price": 381000,
+      "max_price": 595000
+    },
+    {
+      "year": 2024,
+      "count": 20,
+      "median_price": 445500,
+      "avg_price": 442500,
+      "min_price": 375000,
+      "max_price": 495000
+    },
+    {
+      "year": 2025,
+      "count": 14,
+      "median_price": 495000,
+      "avg_price": 510857,
+      "min_price": 350000,
+      "max_price": 770000
+    },
+    {
+      "year": 2026,
+      "count": 7,
+      "median_price": 513000,
+      "avg_price": 540857,
+      "min_price": 425000,
+      "max_price": 717000
+    }
+  ],
+  "bedrooms": [
+    {
+      "bedrooms": 2,
+      "count": 21,
+      "median": 495000,
+      "avg": 496667
+    }
+  ],
+  "types": [
+    {
+      "type": "Apartment",
+      "count": 63,
+      "median": 365000,
+      "avg": 379271
+    },
+    {
+      "type": "House",
+      "count": 8,
+      "median": 461500,
+      "avg": 486125
+    }
+  ],
+  "development": {
+    "firstSaleYear": 2010,
+    "newHomeSales": 0,
+    "resales": 223,
+    "bedroomsKnown": 25
+  },
+  "bulkSales": [],
+  "amenities": {
+    "transport": [
+      {
+        "name": "Luas Balally",
+        "mode": "Luas (Green Line)",
+        "distance_m": 94
+      },
+      {
+        "name": "Luas Kilmacud",
+        "mode": "Luas (Green Line)",
+        "distance_m": 870
+      },
+      {
+        "name": "Luas Dundrum",
+        "mode": "Luas (Green Line)",
+        "distance_m": 904
+      },
+      {
+        "name": "Luas Stillorgan",
+        "mode": "Luas (Green Line)",
+        "distance_m": 1281
+      },
+      {
+        "name": "Luas Sandyford",
+        "mode": "Luas (Green Line)",
+        "distance_m": 1586
+      },
+      {
+        "name": "Luas Windy Arbour",
+        "mode": "Luas (Green Line)",
+        "distance_m": 2016
+      }
+    ],
+    "schools": [
+      {
+        "name": "Wesley College",
+        "level": "Secondary",
+        "distance_m": 1144
+      },
+      {
+        "name": "Mount Anville Secondary School",
+        "level": "Secondary",
+        "distance_m": 1640
+      },
+      {
+        "name": "Oatlands College",
+        "level": "Secondary",
+        "distance_m": 1907
+      },
+      {
+        "name": "Coláiste Íosagáin",
+        "level": "Secondary",
+        "distance_m": 2003
+      },
+      {
+        "name": "Coláiste Eoin",
+        "level": "Secondary",
+        "distance_m": 2005
+      },
+      {
+        "name": "University College Dublin (UCD)",
+        "level": "Tertiary",
+        "distance_m": 2417
+      },
+      {
+        "name": "Alexandra College",
+        "level": "Secondary",
+        "distance_m": 2953
+      },
+      {
+        "name": "St. Andrew's College",
+        "level": "Secondary",
+        "distance_m": 2999
+      }
+    ]
+  },
+  "transactions": [
+    {
+      "date": "2026-07-06",
+      "address": "17 THE ELM, ROCKFIELD, DUNDRUM",
+      "price": 556000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-07-01",
+      "address": "92 THE OAKS, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-05-11",
+      "address": "18 THE ELM, ROCKFIELD, DUNDRUM",
+      "price": 717000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-04-27",
+      "address": "12 THE ELM, ROCKFIELD, DUNDRUM DUBLIN 16",
+      "price": 425000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-04-27",
+      "address": "12 THE ELM, ROCKFIELD, DUNDRUM DUBLIN 16",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-02-23",
+      "address": "44 THE WILLOW, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 675000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2026-01-29",
+      "address": "7 THE WILLOW, ROCKFIELD, DUNDRUM",
+      "price": 513000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2025-12-18",
+      "address": "26 THE WILLOW, ROCKFIELD, DUNDRUM",
+      "price": 520000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2025-12-16",
+      "address": "42 THE HOLLY, ROCKFIELD APTS, DUNDRUM DUBLIN 16",
+      "price": 540000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-11-28",
+      "address": "APT 26 THE LIME, ROCKFIELD, DUNDRUM",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-11-25",
+      "address": "17 THE OAKS, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 420000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-10-28",
+      "address": "27 THE LIME, ROCKFIELD, SANDYFORD RD DUBLIN 14",
+      "price": 480000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-10-28",
+      "address": "40 THE ROWAN, ROCKFIELD, DUNDRUM",
+      "price": 505000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-10-15",
+      "address": "13 THE HOLLYS, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 495000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-09-22",
+      "address": "1 THE HOLLY, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 495000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-09-03",
+      "address": "104 THE OAKS, ROCKFIELD, DUNDRUM",
+      "price": 770000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-08-11",
+      "address": "28 THE WILLOW, ROCKFIELD, DUNDRUM",
+      "price": 437000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-07-30",
+      "address": "54 THE ROWAN, ROCKFIELD, DUNDRUM",
+      "price": 740000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-19",
+      "address": "19 THE OAKS, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 540000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-02-27",
+      "address": "72 THE OAKS, ROCKFIELD, DUNDRUM",
+      "price": 350000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-02-18",
+      "address": "29 THE LIME, ROCKFIELD, DUNDRUM",
+      "price": 385000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-12-13",
+      "address": "35 THE OAKS, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-11-20",
+      "address": "28 THE HOLLY, ROCKFIELD, DUNDRUM",
+      "price": 462000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-11-05",
+      "address": "55 THE HOLLY, ROCKFIELD, DUNDRUM DUBLIN 16",
+      "price": 495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-10-21",
+      "address": "32 THE HOLLY, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-10-08",
+      "address": "APT 24 THE LIMES, ROCKFIELD, SANDYFORD",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2024-09-10",
+      "address": "14 THE WILLOW, ROCKFIELD, DUNDRUM",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-08-30",
+      "address": "37 THE WILLOWS, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 390000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-08-30",
+      "address": "19 THE HOLLY, ROCKFIELD, OVEREND AVE DUBLIN 16",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-07-26",
+      "address": "APT 67 THE HOLLY, ROCKFIELD, DUNDRUM DUBLIN 16",
+      "price": 441000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2024-06-28",
+      "address": "3 THE HOLLY  BLOCK 8, RIVERSDALE  ROCKFIELD, DUNDRUM",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-06-20",
+      "address": "4 THE OAKS, ROCKFIELD, DUNDRUM",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-06-13",
+      "address": "32 THE WILLOWS, ROCKFIELD, DUNDRUM",
+      "price": 395000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-06-04",
+      "address": "27 THE WILLOW, ROCKFIELD, DUNDRUM DUBLIN 16",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-04-26",
+      "address": "83 THE OAK, BLOCK 9B, ROCKFIELD DUBLIN 14",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-02-22",
+      "address": "55 THE HOLLY, ROCKFIELD, DUNDRUM DUBLIN 16",
+      "price": 418000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-02-21",
+      "address": "33 THE HOLLY, ROCKFIELD, DUNDRUM DUBLIN 16",
+      "price": 468000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-02-02",
+      "address": "21 THE OAKS, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-01-30",
+      "address": "APT 6, THE HOLLY, ROCKFIELD DUBLIN 14",
+      "price": 471000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2024-01-26",
+      "address": "39 THE HOLLY, ROCKFIELD, DUNDRUM",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-01-26",
+      "address": "90 THE OAK, ROCKFIELD, DUNDRUM DUBLIN 16",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-12-20",
+      "address": "24 THE OAKS, ROCKFIELD, DUNDRUM DUBLIN 16",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-12-08",
+      "address": "18 THE ELM, ROCKFIELD, DUNDRUM",
+      "price": 595000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-11-22",
+      "address": "27 THE OAK, ROCKFIELD, SANDYFORD RD DUBLIN 16",
+      "price": 413000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-11-14",
+      "address": "29 THE HOLLY, ROCKFIELD, DUNDRUM",
+      "price": 415000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-11-09",
+      "address": "6 THE OAKS BLOCK 9A, ROCKFIELD, DUNDRUM",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-10-04",
+      "address": "18 HOLLY ROCKFIELD, DUNDRUM, DUBLIN 14",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-09-28",
+      "address": "49 THE ROWAN, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-08-11",
+      "address": "9 THE OAK, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-07-20",
+      "address": "48 THE OAKS, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    }
+  ],
+  "totalTransactions": 223
+}

@@ -1,0 +1,660 @@
+{
+  "slug": "honeypark-dun-laoghaire",
+  "stats": {
+    "count": 796,
+    "median": 363117,
+    "avg": 449309,
+    "min": 102000,
+    "max": 1200000,
+    "firstYear": 2010,
+    "lastYear": 2026,
+    "recentMedian": 1075000,
+    "recentCount": 17
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 200000,
+      "avg_price": 200000,
+      "min_price": 200000,
+      "max_price": 200000
+    },
+    {
+      "year": 2011,
+      "count": 6,
+      "median_price": 195500,
+      "avg_price": 195333,
+      "min_price": 175000,
+      "max_price": 230000
+    },
+    {
+      "year": 2012,
+      "count": 15,
+      "median_price": 444934,
+      "avg_price": 438605,
+      "min_price": 180000,
+      "max_price": 610000
+    },
+    {
+      "year": 2013,
+      "count": 52,
+      "median_price": 453744,
+      "avg_price": 431969,
+      "min_price": 108000,
+      "max_price": 580000
+    },
+    {
+      "year": 2014,
+      "count": 74,
+      "median_price": 524229,
+      "avg_price": 525646,
+      "min_price": 153000,
+      "max_price": 696035
+    },
+    {
+      "year": 2015,
+      "count": 49,
+      "median_price": 599118,
+      "avg_price": 584011,
+      "min_price": 110500,
+      "max_price": 762115
+    },
+    {
+      "year": 2016,
+      "count": 84,
+      "median_price": 308370,
+      "avg_price": 409986,
+      "min_price": 102000,
+      "max_price": 687225
+    },
+    {
+      "year": 2017,
+      "count": 163,
+      "median_price": 308370,
+      "avg_price": 364265,
+      "min_price": 251101,
+      "max_price": 694000
+    },
+    {
+      "year": 2018,
+      "count": 281,
+      "median_price": 361233,
+      "avg_price": 386252,
+      "min_price": 259912,
+      "max_price": 830000
+    },
+    {
+      "year": 2019,
+      "count": 9,
+      "median_price": 750000,
+      "avg_price": 612611,
+      "min_price": 330000,
+      "max_price": 855000
+    },
+    {
+      "year": 2020,
+      "count": 9,
+      "median_price": 785000,
+      "avg_price": 572500,
+      "min_price": 130000,
+      "max_price": 840000
+    },
+    {
+      "year": 2021,
+      "count": 5,
+      "median_price": 905000,
+      "avg_price": 908000,
+      "min_price": 865000,
+      "max_price": 945000
+    },
+    {
+      "year": 2022,
+      "count": 11,
+      "median_price": 980000,
+      "avg_price": 861545,
+      "min_price": 435000,
+      "max_price": 1110000
+    },
+    {
+      "year": 2023,
+      "count": 10,
+      "median_price": 980000,
+      "avg_price": 843200,
+      "min_price": 420000,
+      "max_price": 1080000
+    },
+    {
+      "year": 2024,
+      "count": 13,
+      "median_price": 995000,
+      "avg_price": 846052,
+      "min_price": 244682,
+      "max_price": 1130000
+    },
+    {
+      "year": 2025,
+      "count": 8,
+      "median_price": 1049998,
+      "avg_price": 925374,
+      "min_price": 333000,
+      "max_price": 1200000
+    },
+    {
+      "year": 2026,
+      "count": 6,
+      "median_price": 1090000,
+      "avg_price": 975833,
+      "min_price": 426000,
+      "max_price": 1115000
+    }
+  ],
+  "bedrooms": [
+    {
+      "bedrooms": 4,
+      "count": 7,
+      "median": 950000,
+      "avg": 808210
+    },
+    {
+      "bedrooms": 5,
+      "count": 11,
+      "median": 985000,
+      "avg": 887764
+    }
+  ],
+  "types": [
+    {
+      "type": "Apartment",
+      "count": 469,
+      "median": 361233,
+      "avg": 354904
+    },
+    {
+      "type": "House",
+      "count": 30,
+      "median": 842500,
+      "avg": 785669
+    }
+  ],
+  "development": {
+    "firstSaleYear": 2010,
+    "newHomeSales": 695,
+    "resales": 101,
+    "bedroomsKnown": 25
+  },
+  "bulkSales": [
+    {
+      "date": "2020-02-27",
+      "address": "APARTMENT 1 - 197 NEPTUNE BLOCK, HONEYPARK, DUN LAOGHAIRE",
+      "price": 114440820,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    }
+  ],
+  "amenities": {
+    "transport": [
+      {
+        "name": "DART Glenageary",
+        "mode": "DART",
+        "distance_m": 1566
+      },
+      {
+        "name": "DART Sandycove & Glasthule",
+        "mode": "DART",
+        "distance_m": 1740
+      },
+      {
+        "name": "DART Salthill & Monkstown",
+        "mode": "DART",
+        "distance_m": 1770
+      },
+      {
+        "name": "DART Dún Laoghaire",
+        "mode": "DART",
+        "distance_m": 1959
+      },
+      {
+        "name": "DART Seapoint",
+        "mode": "DART",
+        "distance_m": 2336
+      },
+      {
+        "name": "DART Dalkey",
+        "mode": "DART",
+        "distance_m": 2761
+      }
+    ],
+    "schools": [
+      {
+        "name": "Rathdown School",
+        "level": "Secondary",
+        "distance_m": 1060
+      },
+      {
+        "name": "St. Brigid's National School Foxrock",
+        "level": "Primary",
+        "distance_m": 2122
+      },
+      {
+        "name": "Holy Child Killiney",
+        "level": "Secondary",
+        "distance_m": 3434
+      },
+      {
+        "name": "Carysfort National School",
+        "level": "Primary",
+        "distance_m": 3455
+      },
+      {
+        "name": "Blackrock College",
+        "level": "Secondary",
+        "distance_m": 3477
+      }
+    ]
+  },
+  "transactions": [
+    {
+      "date": "2026-07-30",
+      "address": "36 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1115000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2026-07-15",
+      "address": "14 BRICKFIELD WAY, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-07-03",
+      "address": "22 BURFORD DRIVE, HONEY PARK, DUN LAOGHAIRE",
+      "price": 1080000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-06-19",
+      "address": "1 MAYPARK AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1105000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2026-05-20",
+      "address": "15 ROCHDALE, HONEY PARK, KILL AVENUE   DUN LAOGHAIRE",
+      "price": 426000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-03-27",
+      "address": "2 MAYPARK AVENUE, HONEYPARK, DÚN LAOGHAIRE",
+      "price": 1029000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-11-13",
+      "address": "21 CLAREMOUNT AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1185000,
+      "bedrooms": 6,
+      "propertyType": "semi-detached",
+      "newHome": false
+    },
+    {
+      "date": "2025-09-01",
+      "address": "2 CLAREMOUNT AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2025-08-11",
+      "address": "15 BRICKFIELD WAY, HONEYPARK, DUN LAOGHAIRE",
+      "price": 950000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2025-07-03",
+      "address": "16 CLAREMONT AVENUE, HONEY PARK, DUN LAOGHAIRE",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-30",
+      "address": "15 BURFORD DRIVE, HONEYPARK  DUN LAOGHAIRE, DUBLIN",
+      "price": 1200000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "newHome": false
+    },
+    {
+      "date": "2025-04-24",
+      "address": "9 BRICKFIELD WAY, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1100000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2025-03-18",
+      "address": "3 HONEY PARK, SALLYNOGGIN, DUN LAOGHAIRE",
+      "price": 535000,
+      "bedrooms": 3,
+      "propertyType": "bungalow",
+      "newHome": false
+    },
+    {
+      "date": "2025-01-03",
+      "address": "4 MARCONI CRESCENT, HONEYPARK DUN LAOGHAIRE, CO DUBLIN",
+      "price": 999995,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2024-12-11",
+      "address": "8 HONEY PARK COTTAGES, SALLYNOGGIN, CO DUBLIN",
+      "price": 775000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "newHome": false
+    },
+    {
+      "date": "2024-11-27",
+      "address": "20 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1075000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2024-11-11",
+      "address": "4 HONEY PARK, SALLYNOGGIN, DUN LAOGHAIRE",
+      "price": 244682,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-10-15",
+      "address": "14 ROCHDALE, HONEY PARK, KILL AVENUE",
+      "price": 440000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-08-08",
+      "address": "19 BURFORD DRIVE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2024-06-21",
+      "address": "14 BRICKFIELD DRIVE, HONEYPARK, DUNLAOGHAIRE",
+      "price": 1130000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2024-05-03",
+      "address": "2 CARNEGIE DRIVE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1050000,
+      "bedrooms": 2,
+      "propertyType": "bungalow",
+      "newHome": false
+    },
+    {
+      "date": "2024-04-29",
+      "address": "1 MAYPARK AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 995000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "newHome": false
+    },
+    {
+      "date": "2024-04-19",
+      "address": "1 BRICKFIELD DRIVE, HONEYPARK, DUNLAOGHAIRE",
+      "price": 1006000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2024-04-08",
+      "address": "13 BRICKFIELD WAY, HONEYPARK, DUN LAOGHAIRE",
+      "price": 985000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2024-03-14",
+      "address": "11 BURFORD DRIVE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1055000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2024-02-29",
+      "address": "33 BURFORD DRIVE, HONEY PARK, DUN LAOGHAIRE",
+      "price": 910000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "newHome": false
+    },
+    {
+      "date": "2024-02-26",
+      "address": "2 CLAREMOUNT AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 333000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-10-26",
+      "address": "32 BRICKFIELD DRIVE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 990000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-10-26",
+      "address": "32 CARNEGIE DRIVE, HONEY PARK, DUN LAOGHAIRE",
+      "price": 1002000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-09-08",
+      "address": "2 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 965000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-08-03",
+      "address": "17 HONEY PARK COTTAGES, SALLYNOGGIN, COUNTY DUBLIN",
+      "price": 510000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-07-31",
+      "address": "27 CARNEGIE DRIVE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1025000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2023-06-22",
+      "address": "6 ROCHDALE, HONEY PARK, KILL AVENUE   DUN LAOGHAIRE",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-06-09",
+      "address": "12 MARCONI CRESCENT, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-05-24",
+      "address": "14 BURFORD DRIVE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1080000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-05-24",
+      "address": "10 MARCONI CRESCENT, HONEYPARK, DUN LAOGHAIRE",
+      "price": 970000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2023-02-03",
+      "address": "13 ROCHDALE, HONEY PARK, KILL AVENUE",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-12-22",
+      "address": "22 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-11-01",
+      "address": "1 MAYPARK AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 980000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "newHome": false
+    },
+    {
+      "date": "2022-10-28",
+      "address": "29 BURFORD DRIVE, HONEY PARK, DUN LAOGHAIRE",
+      "price": 970000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-10-21",
+      "address": "18  BOYD AVENUE, HONEYPARK, DUN  LAOGHAIRE",
+      "price": 1000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-09-15",
+      "address": "10 ROCHDALE, HONEY PARK, KILL AVENUE",
+      "price": 462000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-08-30",
+      "address": "5 DARGAN DRIVE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 1110000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-08-05",
+      "address": "18 BURFORD DRIVE, HONEYPARK, DUN LAOIRE",
+      "price": 1110000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-07-28",
+      "address": "16 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 980000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-05-04",
+      "address": "32 ROCHDALE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 470000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-03-11",
+      "address": "34 BOYD AVENUE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 910000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-03-02",
+      "address": "14 HONEY PARK, SALLYNOGGIN, DUBLIN",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2021-12-20",
+      "address": "8 BRICKFIELD DRIVE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 945000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2021-11-19",
+      "address": "18 CARNEGIE DRIVE, HONEYPARK, DUN LAOGHAIRE",
+      "price": 865000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    }
+  ],
+  "totalTransactions": 796
+}

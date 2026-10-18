@@ -11,13 +11,15 @@
 // the page's live-API fallback.
 import type { LoaderFunctionArgs } from "react-router-dom";
 import { areaFromSlug } from "./areas";
-import type { AreaSummary, CountySummary, EircodePageData, StreetData } from "./types";
+import type { AreaSummary, CountySummary, DevelopmentData, EircodePageData, StreetData } from "./types";
+import type { DevelopmentConfig } from "./developmentRegistry";
 import type { StreetConfig } from "./streetRegistry";
 
 const AREA_DATA = import.meta.glob<{ default: AreaSummary }>("./data/areas/*.json");
 const COUNTY_DATA = import.meta.glob<{ default: CountySummary }>("./data/counties/*.json");
 const EIRCODE_DATA = import.meta.glob<{ default: EircodePageData }>("./data/eircodes/*.json");
 const STREET_DATA = import.meta.glob<{ default: StreetData }>("./data/streets/*.json");
+const DEVELOPMENT_DATA = import.meta.glob<{ default: DevelopmentData }>("./data/developments/*.json");
 
 async function read<T>(load: (() => Promise<{ default: T }>) | undefined | null | false): Promise<T | null> {
   return load ? (await load()).default : null;
@@ -53,4 +55,26 @@ export async function streetLoader({ params }: LoaderFunctionArgs): Promise<Stre
   const street = streetConfigFromSlug(params.slug ?? "");
   const data = await read(street && STREET_DATA[`./data/streets/${street.slug}.json`]);
   return street && data ? { street, data } : null;
+}
+
+export interface DevelopmentPageData {
+  development: DevelopmentConfig;
+  data: DevelopmentData;
+}
+
+export async function developmentLoader({ params }: LoaderFunctionArgs): Promise<DevelopmentPageData | null> {
+  if (!import.meta.env.SSR) return null;
+  const { developmentConfigFromSlug } = await import("./developmentRegistry");
+  const development = developmentConfigFromSlug(params.slug ?? "");
+  const data = await read(development && DEVELOPMENT_DATA[`./data/developments/${development.slug}.json`]);
+  return development && data ? { development, data } : null;
+}
+
+// The /developments index gets just the link fields.
+export type DevelopmentIndexEntry = Pick<DevelopmentConfig, "slug" | "name" | "area" | "description">;
+
+export async function developmentsIndexLoader(): Promise<DevelopmentIndexEntry[] | null> {
+  if (!import.meta.env.SSR) return null;
+  const { DEVELOPMENT_CONFIGS } = await import("./developmentRegistry");
+  return DEVELOPMENT_CONFIGS.map(({ slug, name, area, description }) => ({ slug, name, area, description }));
 }

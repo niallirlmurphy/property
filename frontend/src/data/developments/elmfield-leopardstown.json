@@ -1,0 +1,588 @@
+{
+  "slug": "elmfield-leopardstown",
+  "stats": {
+    "count": 205,
+    "median": 322990,
+    "avg": 324295,
+    "min": 154185,
+    "max": 540000,
+    "firstYear": 2010,
+    "lastYear": 2025,
+    "recentMedian": null,
+    "recentCount": 2
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 1,
+      "median_price": 248899,
+      "avg_price": 248899,
+      "min_price": 248899,
+      "max_price": 248899
+    },
+    {
+      "year": 2011,
+      "count": 4,
+      "median_price": 277963,
+      "avg_price": 269703,
+      "min_price": 237885,
+      "max_price": 285000
+    },
+    {
+      "year": 2012,
+      "count": 2,
+      "median_price": 154185,
+      "avg_price": 154185,
+      "min_price": 154185,
+      "max_price": 154185
+    },
+    {
+      "year": 2016,
+      "count": 1,
+      "median_price": 325000,
+      "avg_price": 325000,
+      "min_price": 325000,
+      "max_price": 325000
+    },
+    {
+      "year": 2017,
+      "count": 141,
+      "median_price": 329694,
+      "avg_price": 321316,
+      "min_price": 219968,
+      "max_price": 406174
+    },
+    {
+      "year": 2018,
+      "count": 48,
+      "median_price": 321439,
+      "avg_price": 323614,
+      "min_price": 264654,
+      "max_price": 403000
+    },
+    {
+      "year": 2019,
+      "count": 2,
+      "median_price": 387635,
+      "avg_price": 387635,
+      "min_price": 370270,
+      "max_price": 405000
+    },
+    {
+      "year": 2022,
+      "count": 2,
+      "median_price": 480000,
+      "avg_price": 480000,
+      "min_price": 460000,
+      "max_price": 500000
+    },
+    {
+      "year": 2023,
+      "count": 1,
+      "median_price": 460000,
+      "avg_price": 460000,
+      "min_price": 460000,
+      "max_price": 460000
+    },
+    {
+      "year": 2024,
+      "count": 1,
+      "median_price": 475000,
+      "avg_price": 475000,
+      "min_price": 475000,
+      "max_price": 475000
+    },
+    {
+      "year": 2025,
+      "count": 2,
+      "median_price": 505000,
+      "avg_price": 505000,
+      "min_price": 470000,
+      "max_price": 540000
+    }
+  ],
+  "bedrooms": [],
+  "types": [
+    {
+      "type": "Apartment",
+      "count": 44,
+      "median": 321296,
+      "avg": 324649
+    }
+  ],
+  "development": {
+    "firstSaleYear": 2010,
+    "newHomeSales": 191,
+    "resales": 14,
+    "bedroomsKnown": 1
+  },
+  "bulkSales": [
+    {
+      "date": "2020-02-27",
+      "address": "189 APARTMENTS AT ELMFIELD, BALLYOGAN, DUBLIN 18",
+      "price": 99762972,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    }
+  ],
+  "amenities": {
+    "transport": [
+      {
+        "name": "Luas Central Park",
+        "mode": "Luas (Green Line)",
+        "distance_m": 1223
+      },
+      {
+        "name": "Luas The Gallops",
+        "mode": "Luas (Green Line)",
+        "distance_m": 1270
+      },
+      {
+        "name": "Luas Glencairn",
+        "mode": "Luas (Green Line)",
+        "distance_m": 1360
+      },
+      {
+        "name": "Luas Leopardstown Valley",
+        "mode": "Luas (Green Line)",
+        "distance_m": 1377
+      },
+      {
+        "name": "Luas Sandyford",
+        "mode": "Luas (Green Line)",
+        "distance_m": 1951
+      },
+      {
+        "name": "Luas Ballyogan Wood",
+        "mode": "Luas (Green Line)",
+        "distance_m": 2064
+      }
+    ],
+    "schools": [
+      {
+        "name": "Wesley College",
+        "level": "Secondary",
+        "distance_m": 2317
+      },
+      {
+        "name": "St. Brigid's National School Foxrock",
+        "level": "Primary",
+        "distance_m": 2567
+      },
+      {
+        "name": "Mount Anville Secondary School",
+        "level": "Secondary",
+        "distance_m": 3590
+      },
+      {
+        "name": "Oatlands College",
+        "level": "Secondary",
+        "distance_m": 3859
+      }
+    ]
+  },
+  "transactions": [
+    {
+      "date": "2025-09-19",
+      "address": "20 THE SYCAMORE, ELMFIELD, BALLYOGAN RD",
+      "price": 470000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-21",
+      "address": "26 THE SYCAMORE, ELMFIELD, BALLYOGAN RD DUBLIN 18",
+      "price": 540000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2024-07-22",
+      "address": "APT 11, THE SYCAMORE, ELMFIELD DUBLIN 18",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2023-06-22",
+      "address": "25 THE SYCAMORE, ELMFIELD, BALLYOGAN DUBLIN 18",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-07-22",
+      "address": "35 THE SYCAMORE, ELMFIELD, BALLYOGAN",
+      "price": 460000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2022-05-31",
+      "address": "16 THE SYCAMORE, ELMFIELD, BALLYOGAN RD",
+      "price": 500000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2019-04-05",
+      "address": "24 THE SYCAMORE, ELMFIELD, BALLYOGAN RD DUBLIN 18",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2019-01-15",
+      "address": "1 THE SYCAMORE, ELMFIELD, BALLYOGAN DUBLIN 18",
+      "price": 370270,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2018-12-17",
+      "address": "31 THE SYCAMORE, ELMFIELD, LEOPARDSTOWN DUBLIN 18",
+      "price": 403000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 10 The Beeches, Elmfield, Leopardstown",
+      "price": 321302,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 13 The Beeches, Elmfield, Leopardstown",
+      "price": 321296,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 41 The Sycamore, Elmfield, Leopardstown",
+      "price": 322224,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "13 THE SYCAMORE, ELMFIELD, BALLYOGAN DUBLIN 18",
+      "price": 323322,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 1 The Beeches, Elmfield, Leopardstown",
+      "price": 264654,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 17 The Beeches, Elmfield, Leopardstown",
+      "price": 322593,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 18 The Beeches, Elmfield, Leopardstown",
+      "price": 320827,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 27 The Beeches, Elmfield, Leopardstown",
+      "price": 391956,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 6 The Beeches, Elmfield, Leopardstown",
+      "price": 322990,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 7 The Beeches, Elmfield, Leopardstown",
+      "price": 321296,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 7 The Sycamore, Elmfield, Leopardstown",
+      "price": 265217,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 14 The Sycamore, Elmfield, Leopardstown",
+      "price": 323034,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 11 The Beeches, Elmfield, Leopardstown",
+      "price": 321735,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 12 The Beeches, Elmfield, Leopardstown",
+      "price": 320835,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 12 The Sycamore, Elmfield, Leopardstown",
+      "price": 322707,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 14 The Beeches, Elmfield, Leopardstown",
+      "price": 321485,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 15 The Beeches, Elmfield, Leopardstown",
+      "price": 321159,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 16 The Beeches, Elmfield, Leopardstown",
+      "price": 321302,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 19 The Beeches, Elmfield, Leopardstown",
+      "price": 321296,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 2 The Beeches, Elmfield, Leopardstown",
+      "price": 321163,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 20 The Beeches, Elmfield, Leopardstown",
+      "price": 321113,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 21 The Beeches, Elmfield, Leopardstown",
+      "price": 321163,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 22 The Beeches, Elmfield, Leopardstown",
+      "price": 321302,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 23 The Beeches, Elmfield, Leopardstown",
+      "price": 320848,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 23 The Sycamore, Elmfield, Leopardstown",
+      "price": 322889,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 24 The Beeches, Elmfield, Leopardstown",
+      "price": 320848,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 25 The Beeches, Elmfield, Leopardstown",
+      "price": 392521,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 26 The Beeches, Elmfield, Leopardstown",
+      "price": 392521,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 28 The Beeches, Elmfield, Leopardstown",
+      "price": 391975,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 3 The Beeches, Elmfield, Leopardstown",
+      "price": 321163,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 30 The Sycamore, Elmfield, Leopardstown",
+      "price": 322706,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 32 The Sycamore, Elmfield, Leopardstown",
+      "price": 322211,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 33 The Sycamore, Elmfield, Leopardstown",
+      "price": 322211,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 38 The Sycamore, Elmfield, Leopardstown",
+      "price": 264745,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 4 The Beeches, Elmfield, Leopardstown",
+      "price": 321393,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 5 The Beeches, Elmfield, Leopardstown",
+      "price": 320827,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 8 The Beeches, Elmfield, Leopardstown",
+      "price": 321163,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "Apartment 9 The Beeches, Elmfield, Leopardstown",
+      "price": 321159,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "17 THE SYCAMORE, ELMFIELD, BALLYOGAN DUBLIN 18",
+      "price": 266090,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "18 THE SYCAMORE, ELMFIELD, BALLYOGAN DUBLIN 18",
+      "price": 323726,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    },
+    {
+      "date": "2018-06-06",
+      "address": "22 THE SYCAMORE, ELMFIELD, BALLYOGAN DUBLIN 18",
+      "price": 323845,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": true
+    }
+  ],
+  "totalTransactions": 205
+}
