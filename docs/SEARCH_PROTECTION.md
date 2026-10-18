@@ -54,23 +54,12 @@ pytest tests/test_search_core.py -v -k "cache"
 **Test run:**
 - Starts backend automatically if not running
 - Runs county filter tests (fast subset, ~15s)
-- Full test suite runs in CI/CD
 
-### 3. GitHub Actions CI/CD (`.github/workflows/search-protection.yml`)
+### 3. GitHub Actions CI/CD (removed 2026-10-18)
 
-**Runs on every PR** that touches search code:
-- Starts backend service
-- Runs full test suite (all 17 tests)
-- Blocks merge if tests fail
-- Reports results as GitHub status check
-
-**Configure GitHub repo:**
-```
-Settings → Branches → Branch protection rules → main
-☑ Require status checks to pass before merging
-  Add: "search-tests"
-☑ Require branches to be up to date before merging
-```
+The `search-protection.yml` workflow was deleted: it never had database secrets, so it
+failed on every run, and it only repeated what the pre-commit hook already runs
+locally against the real database. The hook is the protection.
 
 ### 4. Code Ownership (`.github/CODEOWNERS`)
 
@@ -220,10 +209,6 @@ pytest tests/test_search_core.py -v -k "new query"
 ```bash
 # Update pytest/httpx
 pip install --upgrade pytest pytest-asyncio httpx
-
-# Update GitHub Actions (if Python version changes)
-vim .github/workflows/search-protection.yml
-# Change: python-version: '3.10' → '3.11'
 ```
 
 ### Debugging Test Failures
