@@ -72,12 +72,8 @@ asyncio.run(main())
 
 ## Monitoring
 
-### Daily Check (Automated)
-
-GitHub Action runs daily at 9 AM UTC:
-- Checks quota usage
-- Creates GitHub issue if >90% used
-- See: `.github/workflows/mapbox_quota_check.yml`
+The daily GitHub Action quota check was removed on 2026-10-18. `MapboxClient` already
+refuses requests past the 50k/month limit, so check usage by hand when needed:
 
 ### Manual Check
 
