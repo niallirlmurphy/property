@@ -383,12 +383,11 @@ async def test_frontend_loads(client: httpx.AsyncClient, results: TestResults):
         resp = await client.get(FRONTEND_URL, timeout=TIMEOUT, follow_redirects=True)
         if resp.status_code == 200:
             html = resp.text
-            if "HomeIQ" in html and "index-" in html:
-                # Extract bundle name
-                import re
-                bundle_match = re.search(r'index-([a-zA-Z0-9]+)\.js', html)
-                bundle = bundle_match.group(1) if bundle_match else "unknown"
-                results.add_pass("Frontend loads", f"Bundle: index-{bundle}.js")
+            # Entry bundle is /assets/<name>-<hash>.js (name was index-, now app-)
+            import re
+            bundle_match = re.search(r'/assets/([\w-]+\.js)', html)
+            if "HomeIQ" in html and bundle_match:
+                results.add_pass("Frontend loads", f"Bundle: {bundle_match.group(1)}")
             else:
                 results.add_fail("Frontend loads", "HTML doesn't contain expected content")
         else:
@@ -913,14 +912,14 @@ async def test_api_security(client: httpx.AsyncClient, results: TestResults):
         results.add_fail("API security check", str(e))
 
 
-async def get_random_test_addresses() -> Tuple[str, str]:
+async def get_random_test_addresses() -> Tuple[str, str, str]:
     """
     Get two test addresses from database:
     1. Random address that exists (for positive test)
     2. Fake address that doesn't exist (for negative test)
 
     Returns:
-        Tuple of (existing_address, non_existing_address)
+        Tuple of (existing_address, existing_county, non_existing_address)
     """
     try:
         conn = await asyncpg.connect(os.getenv('DATABASE_URL'), timeout=10.0)
@@ -928,7 +927,7 @@ async def get_random_test_addresses() -> Tuple[str, str]:
         # Get a random property using TABLESAMPLE for fast random selection
         # TABLESAMPLE is O(1) vs ORDER BY RANDOM() which is O(n)
         row = await conn.fetchrow("""
-            SELECT address
+            SELECT address, county
             FROM properties TABLESAMPLE SYSTEM (1)
             WHERE latitude IS NOT NULL
             AND longitude IS NOT NULL
@@ -940,25 +939,27 @@ async def get_random_test_addresses() -> Tuple[str, str]:
         """)
 
         existing_address = row['address'] if row else "28 Slane Road"
+        existing_county = row['county'] if row else "Dublin"
 
         # Create a fake address that definitely doesn't exist
         non_existing_address = "999 Nonexistent Fake Street, Imaginarytown, Dublin 99"
 
         await conn.close()
-        return existing_address, non_existing_address
+        return existing_address, existing_county, non_existing_address
 
     except Exception as e:
         print(f"Warning: Could not fetch random addresses from database: {e}")
         # Fallback to known addresses
-        return "28 Slane Road", "999 Nonexistent Fake Street, Imaginarytown, Dublin 99"
+        return "28 Slane Road", "Dublin", "999 Nonexistent Fake Street, Imaginarytown, Dublin 99"
 
 
-async def test_valuation_existing_property(client: httpx.AsyncClient, results: TestResults, address: str):
+async def test_valuation_existing_property(client: httpx.AsyncClient, results: TestResults, address: str,
+                                           county: str):
     """Test valuation for a property that exists in database."""
     try:
         resp = await client.post(
             f"{BACKEND_URL}/api/valuation/estimate",
-            json={"address": address},
+            json={"address": address, "county": county},  # valuation defaults to Dublin
             timeout=30.0
         )
 
@@ -1134,8 +1135,8 @@ async def run_all_tests():
 
     # Get random test addresses for valuation tests
     print("Selecting random test addresses...")
-    existing_address, non_existing_address = await get_random_test_addresses()
-    print(f"  Existing: {existing_address}")
+    existing_address, existing_county, non_existing_address = await get_random_test_addresses()
+    print(f"  Existing: {existing_address} ({existing_county})")
     print(f"  Non-existing: {non_existing_address}\n")
 
     async with httpx.AsyncClient() as client:
@@ -1177,7 +1178,7 @@ async def run_all_tests():
         await test_coordinate_quality(client, results)
 
         print("\nValuation API:")
-        await test_valuation_existing_property(client, results, existing_address)
+        await test_valuation_existing_property(client, results, existing_address, existing_county)
         await test_valuation_nonexistent_property(client, results, non_existing_address)
         # Made-up address: the valuation writes entered bedrooms/BER back to the
         # matched property, so a real one would get fake test data.

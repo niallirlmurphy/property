@@ -821,7 +821,7 @@ async def _geocode_db_tokens(query: str, county: Optional[str] = None) -> "tuple
 
 
 COUNTY_KEYWORDS = re.compile(
-    r"\b(cork|galway|limerick|waterford|kilkenny|wexford|wicklow|kildare|meath|louth|"
+    r"\b(carlow|cork|galway|limerick|waterford|kilkenny|wexford|wicklow|kildare|meath|louth|"
     r"cavan|monaghan|donegal|sligo|mayo|roscommon|leitrim|longford|westmeath|offaly|"
     r"laois|tipperary|clare|kerry)\b",
     re.IGNORECASE,
@@ -868,7 +868,38 @@ async def _routing_key_centroid(routing_key: str):
     """, routing_key)
 
 
-async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[float, float, str]":
+_COUNTY_NAMES = {
+    "carlow", "cavan", "clare", "cork", "donegal", "dublin", "galway", "kerry", "kildare",
+    "kilkenny", "laois", "leitrim", "limerick", "longford", "louth", "mayo", "meath",
+    "monaghan", "offaly", "roscommon", "sligo", "tipperary", "waterford", "westmeath",
+    "wexford", "wicklow",
+}
+
+
+async def _geocode_county(query: str) -> "tuple[float, float] | None":
+    """A bare county name ("dublin", "Co. Cork", "County Meath"): its main town when
+    one shares the name (Cork → Cork city), else the centre of the county's sales
+    from routing_key_stats (no main town of that name: Dublin, Meath, Kerry …)."""
+    name = re.sub(r"^(co\.?|county)\s+|\s+county$", "", query.strip().lower()).strip()
+    if name not in _COUNTY_NAMES:
+        return None
+    county = name.title()
+    town = await _geocode_place(name, county)
+    if town:
+        return town
+    row = await db_pool.fetchrow("""
+        SELECT SUM(centroid_lat * geocoded_count) / SUM(geocoded_count) AS lat,
+               SUM(centroid_lon * geocoded_count) / SUM(geocoded_count) AS lon
+        FROM routing_key_stats
+        WHERE primary_county = $1 AND centroid_lat IS NOT NULL AND geocoded_count > 0
+    """, county)
+    if row and row["lat"] is not None:
+        return float(row["lat"]), float(row["lon"])
+    return None
+
+
+async def resolve_location(query: str, county: Optional[str] = None,
+                           log_miss: bool = True) -> "tuple[float, float, str]":
     """Return (lat, lon, source) for an address, eircode, or 'lat,lon' string.
 
     Resolution order:
@@ -877,13 +908,14 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
       3. Routing key (D02, H91) → DB   (centroid of all properties with that Eircode prefix)
       4. Eircode → DB exact match      (fast indexed lookup with validation from properties table)
       5. Eircode → Reference table     (pre-computed Eircode centroids from 222k Eircodes)
-      6. Exact address → DB            (prefix match on address_normalized, as /search/exact)
-      7. Nearest house number → DB     (43 Mount Carmel Road → sale at No. 42/44)
-      8. Place name → places table     (town/suburb centres built from our own sales)
-      9. Token-based DB lookup         (full-text, tight clusters: estates, developments)
+      6. County name → county centre   (its same-named town, else routing_key_stats: "dublin")
+      7. Exact address → DB            (prefix match on address_normalized, as /search/exact)
+      8. Nearest house number → DB     (43 Mount Carmel Road → sale at No. 42/44)
+      9. Place name → places table     (town/suburb centres built from our own sales)
+      10. Token-based DB lookup        (full-text, tight clusters: estates, developments)
     Anything else is logged to geocode_misses and raises 404.
 
-    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_address', 'db_neighbour', 'db_place', 'db_tokens'
+    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_county', 'db_address', 'db_neighbour', 'db_place', 'db_tokens'
     """
     # 1. Raw coordinates
     coord_match = re.match(r"^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$", query.strip())
@@ -958,6 +990,11 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
         if rk_row and (rk_row["cnt"] or 0) >= 1:
             return _cache_and_return(float(rk_row["lat"]), float(rk_row["lon"]), "db_routing_key")
 
+    # 3c. A bare county name ("dublin", "Co. Meath").
+    result = await _geocode_county(query)
+    if result:
+        return _cache_and_return(*result, "db_county")
+
     # 4a. This exact address in our own sales (same match as /search/exact). An
     # address we hold must never depend on the slow token scan.
     result = await _geocode_db_exact_address(query, county)
@@ -983,7 +1020,8 @@ async def resolve_location(query: str, county: Optional[str] = None) -> "tuple[f
 
     # Nothing in our data. Search uses no external geocoder (no Mapbox): log the
     # miss to geocode_misses (scripts/geocode_misses_report.py) and give up.
-    asyncio.create_task(_log_geocode_miss(query, county))
+    if log_miss:
+        asyncio.create_task(_log_geocode_miss(query, county))
     raise HTTPException(status_code=404, detail=f"Could not geocode: {query}")
 
 
@@ -1176,7 +1214,14 @@ async def search(
         }
         return SafeJSONResponse(content=cached, headers=headers)
 
-    lat, lon, geocode_source = await resolve_location(q, county=county)
+    try:
+        lat, lon, geocode_source = await resolve_location(q, county=county, log_miss=not county)
+    except HTTPException as e:
+        # A place outside the chosen county ("Nobber" with the Dublin filter): locate
+        # it without the county; the county filter is then dropped below.
+        if e.status_code != 404 or not county:
+            raise
+        lat, lon, geocode_source = await resolve_location(q)
 
     # Strategy: Try original radius with county filter first.
     # If no results at original radius AND county filter is set, retry without county filter before expanding radius.
