@@ -958,7 +958,7 @@ async def test_valuation_existing_property(client: httpx.AsyncClient, results: T
     """Test valuation for a property that exists in database."""
     try:
         resp = await client.post(
-            f"{BACKEND_URL}/api/valuation/estimate",
+            f"{BACKEND_URL}/valuation/estimate",
             json={"address": address, "county": county},  # valuation defaults to Dublin
             timeout=30.0
         )
@@ -1011,7 +1011,7 @@ async def test_valuation_nonexistent_property(client: httpx.AsyncClient, results
     """Test valuation for a property that doesn't exist - should fail gracefully."""
     try:
         resp = await client.post(
-            f"{BACKEND_URL}/api/valuation/estimate",
+            f"{BACKEND_URL}/valuation/estimate",
             json={"address": address},
             timeout=30.0
         )
@@ -1093,7 +1093,7 @@ async def test_valuation_with_enrichment(client: httpx.AsyncClient, results: Tes
     the matched property (enrich_property_from_request)."""
     try:
         resp = await client.post(
-            f"{BACKEND_URL}/api/valuation/estimate",
+            f"{BACKEND_URL}/valuation/estimate",
             json={
                 "address": address,
                 "bedrooms": 3,

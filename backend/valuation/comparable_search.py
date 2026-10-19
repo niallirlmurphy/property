@@ -125,8 +125,12 @@ class ComparableSearcher:
                 p.property_type,
                 p.county,
                 ST_Distance(p.geog, sp.geog) AS distance_m,
-                -- Recency score (0-1, recent = higher)
-                1.0 - (EXTRACT(EPOCH FROM (NOW() - p.sale_date)) / ($4 * 365 * 86400)) AS recency_score
+                -- Recency score (0-1, recent = higher). Clamped: the $5 cutoff is a calendar
+                -- date, so a sale at the window edge can come out just below 0 (365-day years)
+                -- and fail the ComparableProperty ge=0 check, 500ing the whole valuation.
+                GREATEST(0.0, LEAST(1.0,
+                    1.0 - (EXTRACT(EPOCH FROM (NOW() - p.sale_date)) / ($4 * 365 * 86400))
+                )) AS recency_score
             FROM properties p
             CROSS JOIN subject_point sp
             WHERE
