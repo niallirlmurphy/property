@@ -557,8 +557,8 @@ python3 scripts/enable_rls_security.py
 - Prevents unauthorized frontend origins from calling API
 
 **Automated Security Monitoring**
-- **Daily proactive checks** via GitHub Actions (3:00 AM UTC)
-- Auto-detects RLS configuration drift and fixes automatically
+- Daily GitHub Actions check removed 2026-10-21 (it failed on every run connecting to the DB); run the script by hand instead
+- Detects RLS configuration drift; `--fix` repairs it
 - Script: `scripts/security_monitor.py` (run manually anytime)
 - Setup: See [AUTOMATED_SECURITY_SETUP.md](AUTOMATED_SECURITY_SETUP.md)
 - **Expected result**: No Supabase security alert emails
