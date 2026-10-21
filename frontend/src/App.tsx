@@ -275,12 +275,9 @@ export default function App() {
         allResults = [...uniqueExact, ...result.results];
       }
 
-      const { exact, rest, partialMatchIds, exactMatchIds } = partitionByExactMatch(allResults, params.q);
+      const { exact, rest } = partitionByExactMatch(allResults, params.q);
       const sortedResults = [...exact, ...rest];
       const sortedResult = { ...result, results: sortedResults, count: sortedResults.length };
-
-      // Combine partial and exact match IDs for highlighting
-      const allMatchIds = new Set([...partialMatchIds, ...exactMatchIds]);
 
       const exactWithCoords = exact.filter(p => p.latitude != null && p.longitude != null);
       const pinIds = new Set(exactWithCoords.map(p => p.id));
@@ -395,11 +392,10 @@ export default function App() {
 
         return {
           partialMatchIds: new Set(partialTop2),
-          exactMatchIds: new Set(exact),
-          allMatchIds: new Set([...partialTop2, ...exact])
+          exactMatchIds: new Set(exact)
         };
       })()
-    : { partialMatchIds: new Set<number>(), exactMatchIds: new Set<number>(), allMatchIds: new Set<number>() };
+    : { partialMatchIds: new Set<number>(), exactMatchIds: new Set<number>() };
 
   const resultSummary = searchResult
     ? { count: searchResult.count, radius_km: searchResult.radius_km }
@@ -416,7 +412,7 @@ export default function App() {
       results={searchResult?.results ?? []}
       activeId={activeProperty?.id ?? null}
       onSelect={handleSelectProperty}
-      exactMatchIds={matchIds.allMatchIds}
+      exactMatchIds={matchIds.exactMatchIds}
       partialMatchIds={matchIds.partialMatchIds}
       hasSearched={hasSearched}
       loading={loading}
