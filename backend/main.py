@@ -69,6 +69,9 @@ AUTOADDRESS_KEY = os.environ.get("AUTOADDRESS_KEY", "")
 SENTRY_DSN      = os.environ.get("SENTRY_DSN", "")
 ADMIN_API_TOKEN = os.environ.get("ADMIN_API_TOKEN", "")
 CRON_SECRET     = os.environ.get("CRON_SECRET", "")
+# Admin endpoints (/geocoding-queue/*, /email-alerts/active) are switched off while
+# unused (2026-10-22, after the Railway env-var leak). Set True to bring them back.
+ADMIN_ENDPOINTS_ENABLED = False
 USER_AGENT      = "PPR-webapp/1.0 (personal research)"
 
 # Initialize Sentry for error tracking and performance monitoring
@@ -101,6 +104,9 @@ async def verify_admin_token(authorization: str = Header(None)) -> bool:
     Verify admin API token using constant-time comparison.
     Prevents timing attacks that could reveal the token.
     """
+    if not ADMIN_ENDPOINTS_ENABLED:
+        raise HTTPException(status_code=404, detail="Not Found")
+
     if not authorization or not authorization.startswith("Bearer "):
         raise HTTPException(status_code=401, detail="Missing authentication token")
 

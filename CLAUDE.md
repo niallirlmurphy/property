@@ -556,6 +556,13 @@ python3 scripts/enable_rls_security.py
 - localhost:5173 allowed in development
 - Prevents unauthorized frontend origins from calling API
 
+**Admin endpoints - DISABLED (2026-10-22)**
+- `GET /geocoding-queue/next`, `POST /geocoding-queue/update`, `POST /geocoding-queue/skip` and `GET /email-alerts/active` all return 404, even with a valid `ADMIN_API_TOKEN`
+- Why: nothing uses them, and Railway's 21 Oct 2026 security incident may have leaked every Railway env var, including `ADMIN_API_TOKEN`. They could move geocodes and list subscriber emails
+- Switched off by `ADMIN_ENDPOINTS_ENABLED = False` in `backend/main.py` (checked first in `verify_admin_token`). The `/manual-geocode` page calls the queue endpoints and won't work while they're off (it never sent a token anyway)
+- To re-enable: set the flag to `True`, put a fresh `ADMIN_API_TOKEN` (`openssl rand -hex 32`) in Railway, and send it as `Authorization: Bearer <token>`
+- `/cron/*` endpoints are separate (`CRON_SECRET`) and not affected
+
 **Automated Security Monitoring**
 - Daily GitHub Actions check removed 2026-10-21 (it failed on every run connecting to the DB); run the script by hand instead
 - Detects RLS configuration drift; `--fix` repairs it
