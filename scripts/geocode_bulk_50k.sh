@@ -4,7 +4,7 @@
 
 set -e
 
-DATABASE_URL="${DATABASE_URL:-postgresql://postgres.jyezhkgevzejhundypxn:eboCukbtcBX0Ozyq@aws-0-eu-west-1.pooler.supabase.com:5432/postgres}"
+DATABASE_URL="${DATABASE_URL:?set DATABASE_URL (see backend/.env)}"
 LOG_DIR="logs"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 MAIN_LOG="$LOG_DIR/mapbox_bulk_$TIMESTAMP.log"
