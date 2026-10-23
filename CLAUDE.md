@@ -144,6 +144,7 @@ python3 scripts/geocode_mapbox_batch.py --needs-geocoding --apply
 python3 scripts/flag_bad_geocodes.py --apply --add-only
 ```
   `--add-only` never clears existing flags. Run it after *every* geocoding sweep (batch, centroid, `--ids-file`). The full pipeline does this automatically as Step 2c.
+  For a run of back-to-back 500-row `--ids-file` batches, flag every 5th batch and after the last one, not after each: every flagger run reads the whole table (~0.8 GB), and flagging each batch drained the Supabase Disk IO budget (2026-10-23). For the same reason `geocode_query_prep.py` caches its town gazetteer and locality centroids in `logs/geocode_prep_cache/` for 24h.
 - **Development pins** (`scripts/development_pins.py`, table `development_pins`): hand-checked coordinates for named schemes Mapbox can't place (e.g. Parkview, Stepaside). `geocode_mapbox_batch.py --apply` places matching sales on their pin before any Mapbox call (0 requests) and never sends pinned rows to Mapbox; the flagger never flags them. Add one with:
 ```bash
 python3 scripts/development_pins.py add --name "Parkview, Stepaside" --county Dublin \

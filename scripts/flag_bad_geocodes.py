@@ -208,7 +208,10 @@ def main():
         print("❌ DATABASE_URL not set")
         sys.exit(1)
 
-    conn = psycopg2.connect(dsn)
+    # Keepalives: a dropped connection otherwise hangs the script forever with no
+    # query running server-side (happened twice on 2026-10-23).
+    conn = psycopg2.connect(dsn, keepalives=1, keepalives_idle=60,
+                            keepalives_interval=15, keepalives_count=4)
     conn.autocommit = True  # commit each step; big updates must not share one txn
     cur = conn.cursor()
     # These aggregate/join updates exceed Supabase's default statement_timeout.

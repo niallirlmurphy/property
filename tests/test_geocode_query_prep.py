@@ -111,3 +111,34 @@ def test_locality_distance_rejects_same_named_estate_elsewhere():
 def test_locality_components_skip_roads():
     from geocode_query_prep import locality_components
     assert locality_components("5 Elm Park, Malahide Road, Artane", "Dublin") == ["ARTANE"]
+
+
+def test_loaders_reuse_disk_cache(tmp_path, monkeypatch):
+    import asyncio
+    import geocode_query_prep as gqp
+    monkeypatch.setattr(gqp, "CACHE_DIR", str(tmp_path))
+
+    class Conn:
+        calls = 0
+        async def execute(self, *_): pass
+        async def fetch(self, sql, *_):
+            Conn.calls += 1
+            if "percentile_cont" in sql:
+                return [{"county": "Dublin", "part": " Leopardstown", "lat": 53.267, "lon": -6.195}]
+            return [{"county": "Galway", "part": "Oughterard"}]
+
+    class Pool:
+        def acquire(self):
+            class Ctx:
+                async def __aenter__(self): return Conn()
+                async def __aexit__(self, *_): pass
+            return Ctx()
+
+    for _ in range(2):
+        assert asyncio.run(gqp.load_locality_centroids(Pool())) == {("DUBLIN", "LEOPARDSTOWN"): (53.267, -6.195)}
+        assert asyncio.run(gqp.load_town_gazetteer(Pool())) == {"GALWAY": {"OUGHTERARD"}}
+    assert Conn.calls == 2  # second round served from disk
+
+    monkeypatch.setattr(gqp, "CACHE_TTL_S", -1)  # expired: back to the database
+    asyncio.run(gqp.load_town_gazetteer(Pool()))
+    assert Conn.calls == 3

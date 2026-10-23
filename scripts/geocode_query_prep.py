@@ -22,11 +22,19 @@ Locality centroids (median position of our geocoded rows naming each locality)
 cover rows with no eircode or "Dublin N": nothing else checks distance for them,
 so Mapbox could place "The Ashes, Elmfield, Leopardstown" at a same-named estate
 in Malahide and pass every other check.
+
+The gazetteer and centroids are each a full scan of properties (~1 GB of disk
+reads between them) yet barely move when a batch adds 500 rows, so they are
+cached on disk for CACHE_TTL_S; back-to-back batches would otherwise drain the
+Supabase Disk IO budget (2026-10-23).
 """
 
 import difflib
+import json
 import math
+import os
 import re
+import time
 import unicodedata
 from typing import Dict, List, Optional, Set, Tuple
 
@@ -43,6 +51,9 @@ TYPO_MIN_LEN = 6
 # and an answer further than LOCALITY_MAX_KM from it is rejected.
 LOCALITY_MIN_COUNT = 20
 LOCALITY_MAX_KM = 3.0
+CACHE_DIR = os.path.join(os.path.dirname(__file__), '..', 'logs', 'geocode_prep_cache')
+CACHE_TTL_S = 24 * 3600
+
 # Roads run for kilometres ("Malahide Road"), so they are not localities.
 ROAD_COMPONENT_RE = re.compile(
     r'\b(ROAD|STREET|AVENUE|LANE|DRIVE|QUAY|TERRACE|PARADE|ROW|HILL|WAY|BYPASS)$')
@@ -147,8 +158,30 @@ def locality_distance_km(lat: float, lon: float, address: str, county: Optional[
     return min(dists) if dists else None
 
 
+def _read_cache(name: str):
+    path = os.path.join(CACHE_DIR, f'{name}.json')
+    try:
+        if time.time() - os.path.getmtime(path) < CACHE_TTL_S:
+            with open(path) as f:
+                return json.load(f)
+    except (OSError, ValueError):
+        pass
+    return None
+
+
+def _write_cache(name: str, data) -> None:
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    tmp = os.path.join(CACHE_DIR, f'{name}.json.tmp')
+    with open(tmp, 'w') as f:
+        json.dump(data, f)
+    os.replace(tmp, os.path.join(CACHE_DIR, f'{name}.json'))
+
+
 async def load_locality_centroids(pool) -> Dict[Tuple[str, str], Tuple[float, float]]:
     """Median (lat, lon) of trusted geocoded rows per (county, locality component)."""
+    cached = _read_cache('locality_centroids')
+    if cached is not None:
+        return {(c, k): (lat, lon) for c, k, lat, lon in cached}
     async with pool.acquire() as conn:
         await conn.execute("SET statement_timeout = '600s'")
         rows = await conn.fetch("""
@@ -167,12 +200,16 @@ async def load_locality_centroids(pool) -> Dict[Tuple[str, str], Tuple[float, fl
         key = fold(COUNTY_PREFIX_RE.sub('', r['part'])).strip(' .')
         if key and not re.search(r'\d', key):
             centroids.setdefault((fold(r['county']), key), (float(r['lat']), float(r['lon'])))
+    _write_cache('locality_centroids', [[c, k, lat, lon] for (c, k), (lat, lon) in centroids.items()])
     return centroids
 
 
 async def load_town_gazetteer(pool) -> Dict[str, Set[str]]:
     """Known town/locality names per county: non-first address components that
     appear at least GAZETTEER_MIN_COUNT times in that county."""
+    cached = _read_cache('town_gazetteer')
+    if cached is not None:
+        return {county: set(towns) for county, towns in cached.items()}
     async with pool.acquire() as conn:
         await conn.execute("SET statement_timeout = '600s'")
         rows = await conn.fetch("""
@@ -186,4 +223,5 @@ async def load_town_gazetteer(pool) -> Dict[str, Set[str]]:
     gazetteer: Dict[str, Set[str]] = {}
     for r in rows:
         gazetteer.setdefault(fold(r['county']), set()).add(fold(r['part']))
+    _write_cache('town_gazetteer', {county: sorted(towns) for county, towns in gazetteer.items()})
     return gazetteer
