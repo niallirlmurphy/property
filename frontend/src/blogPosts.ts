@@ -33,6 +33,15 @@ export function publishedPosts(now: Date = new Date()): BlogPost[] {
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "irish-property-market-2010-2026-demand-supply-affordability",
+    title: "Demand, Supply or Affordability? What 16 Years of Irish Property Data Says About the Market",
+    description: "We put 16 years of Property Price Register sales next to CSO population, migration, income and house-building data. Prices more than doubled from the 2013 low while earnings rose 46%: a demand-led market hitting a supply wall, with affordability worsening fastest outside Dublin. With charts, regional figures, and Tullamore and Skibbereen up close.",
+    date: "2026-10-23",
+    author: "HomeIQ Team",
+    tags: ["Analysis", "Market Report", "PPR", "Affordability", "Supply", "Population"],
+    readTime: "14 min read"
+  },
+  {
     slug: "ireland-house-price-growth-map",
     title: "Ireland House Price Growth Map: Where Prices Are Rising Fastest",
     description: "An interactive map of house price growth across Ireland, built from second-hand sales on the Property Price Register. See which areas are outpacing the national market, which are lagging, and the fastest- and slowest-growing towns.",

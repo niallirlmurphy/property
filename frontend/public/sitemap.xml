@@ -2,79 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://homeiq.ie/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/property-price-register</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/areaguides</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/streets</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/developments</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/blog</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/heatmap</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/valuation</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/polygon</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/mortgage</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/energy</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/about</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://homeiq.ie/contact</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -2487,6 +2487,12 @@
   <url>
     <loc>https://homeiq.ie/development/honeypark-dun-laoghaire</loc>
     <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://homeiq.ie/blog/irish-property-market-2010-2026-demand-supply-affordability</loc>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

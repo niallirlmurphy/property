@@ -1,0 +1,1086 @@
+{
+ "generated": "2026-10-23",
+ "description": "Yearly PPR aggregates for blog post irish-property-market-2010-2026-demand-supply-affordability. Cleaning: not_full_market_price=FALSE, price 50k-3m, bulk unit-range rows removed; new build = description mentions new/nua; medians on resales; new builds VAT-grossed x1.135.",
+ "yearly_by_region": {
+  "max_sale_date": "2026-10-02",
+  "yearly": [
+   {
+    "region": "Cities",
+    "n_raw": 4440,
+    "n_raw_new": 1082,
+    "n_clean": 4067,
+    "n_clean_new": 1039,
+    "med_resale": 205000.0,
+    "med_all": 210000.0,
+    "med_new_gross": 229999.99795,
+    "year": 2010
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 3161,
+    "n_raw_new": 1027,
+    "n_clean": 2986,
+    "n_clean_new": 1004,
+    "med_resale": 229175.0,
+    "med_all": 229462.4978,
+    "med_new_gross": 229687.4984,
+    "year": 2010
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 6943,
+    "n_raw_new": 1335,
+    "n_clean": 6581,
+    "n_clean_new": 1291,
+    "med_resale": 287500.0,
+    "med_all": 278075.0,
+    "med_new_gross": 247662.675,
+    "year": 2010
+   },
+   {
+    "region": "Rest",
+    "n_raw": 6460,
+    "n_raw_new": 1869,
+    "n_clean": 5831,
+    "n_clean_new": 1803,
+    "med_resale": 152875.0,
+    "med_all": 164500.0,
+    "med_new_gross": 180400.305,
+    "year": 2010
+   },
+   {
+    "region": "National",
+    "n_raw": 21004,
+    "n_raw_new": 5313,
+    "n_clean": 19465,
+    "n_clean_new": 5137,
+    "med_resale": 220000.0,
+    "med_all": 219999.98965,
+    "med_new_gross": 215593.25,
+    "year": 2010
+   },
+   {
+    "region": "Cities",
+    "n_raw": 4301,
+    "n_raw_new": 679,
+    "n_clean": 3878,
+    "n_clean_new": 641,
+    "med_resale": 173000.0,
+    "med_all": 175000.0,
+    "med_new_gross": 192950.0,
+    "year": 2011
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 2454,
+    "n_raw_new": 464,
+    "n_clean": 2279,
+    "n_clean_new": 437,
+    "med_resale": 190000.0,
+    "med_all": 195000.0,
+    "med_new_gross": 209999.9927,
+    "year": 2011
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 5907,
+    "n_raw_new": 684,
+    "n_clean": 5534,
+    "n_clean_new": 653,
+    "med_resale": 252500.0,
+    "med_all": 250000.0,
+    "med_new_gross": 209975.0,
+    "year": 2011
+   },
+   {
+    "region": "Rest",
+    "n_raw": 5784,
+    "n_raw_new": 1128,
+    "n_clean": 4901,
+    "n_clean_new": 1034,
+    "med_resale": 132000.0,
+    "med_all": 138000.0,
+    "med_new_gross": 152336.8625,
+    "year": 2011
+   },
+   {
+    "region": "National",
+    "n_raw": 18446,
+    "n_raw_new": 2955,
+    "n_clean": 16592,
+    "n_clean_new": 2765,
+    "med_resale": 185000.0,
+    "med_all": 185000.0,
+    "med_new_gross": 181600.0,
+    "year": 2011
+   },
+   {
+    "region": "Cities",
+    "n_raw": 5367,
+    "n_raw_new": 554,
+    "n_clean": 4594,
+    "n_clean_new": 497,
+    "med_resale": 155000.0,
+    "med_all": 157000.0,
+    "med_new_gross": 177499.9941,
+    "year": 2012
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 3332,
+    "n_raw_new": 529,
+    "n_clean": 2967,
+    "n_clean_new": 457,
+    "med_resale": 165000.0,
+    "med_all": 170000.0,
+    "med_new_gross": 198625.0,
+    "year": 2012
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 8926,
+    "n_raw_new": 966,
+    "n_clean": 8238,
+    "n_clean_new": 905,
+    "med_resale": 220000.0,
+    "med_all": 217500.0,
+    "med_new_gross": 204527.0,
+    "year": 2012
+   },
+   {
+    "region": "Rest",
+    "n_raw": 7750,
+    "n_raw_new": 1126,
+    "n_clean": 6121,
+    "n_clean_new": 993,
+    "med_resale": 117500.0,
+    "med_all": 120000.0,
+    "med_new_gross": 129999.495,
+    "year": 2012
+   },
+   {
+    "region": "National",
+    "n_raw": 25375,
+    "n_raw_new": 3175,
+    "n_clean": 21920,
+    "n_clean_new": 2852,
+    "med_resale": 165000.0,
+    "med_all": 165000.0,
+    "med_new_gross": 171810.625,
+    "year": 2012
+   },
+   {
+    "region": "Cities",
+    "n_raw": 6510,
+    "n_raw_new": 679,
+    "n_clean": 5416,
+    "n_clean_new": 588,
+    "med_resale": 145000.0,
+    "med_all": 145140.395,
+    "med_new_gross": 150000.465,
+    "year": 2013
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 4091,
+    "n_raw_new": 625,
+    "n_clean": 3697,
+    "n_clean_new": 588,
+    "med_resale": 165000.0,
+    "med_all": 165710.0,
+    "med_new_gross": 182350.671975,
+    "year": 2013
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 10520,
+    "n_raw_new": 1336,
+    "n_clean": 9545,
+    "n_clean_new": 993,
+    "med_resale": 239650.0,
+    "med_all": 235000.0,
+    "med_new_gross": 204663.2,
+    "year": 2013
+   },
+   {
+    "region": "Rest",
+    "n_raw": 9104,
+    "n_raw_new": 1253,
+    "n_clean": 6774,
+    "n_clean_new": 946,
+    "med_resale": 108000.0,
+    "med_all": 109000.0,
+    "med_new_gross": 110000.0005,
+    "year": 2013
+   },
+   {
+    "region": "National",
+    "n_raw": 30225,
+    "n_raw_new": 3893,
+    "n_clean": 25432,
+    "n_clean_new": 3115,
+    "med_resale": 160000.0,
+    "med_all": 160000.0,
+    "med_new_gross": 155000.0038,
+    "year": 2013
+   },
+   {
+    "region": "Cities",
+    "n_raw": 9888,
+    "n_raw_new": 999,
+    "n_clean": 8588,
+    "n_clean_new": 898,
+    "med_resale": 141000.0,
+    "med_all": 144000.0,
+    "med_new_gross": 158900.0,
+    "year": 2014
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 6064,
+    "n_raw_new": 929,
+    "n_clean": 5613,
+    "n_clean_new": 830,
+    "med_resale": 179370.0,
+    "med_all": 182500.0,
+    "med_new_gross": 214999.99685,
+    "year": 2014
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 14182,
+    "n_raw_new": 1682,
+    "n_clean": 13643,
+    "n_clean_new": 1670,
+    "med_resale": 259000.0,
+    "med_all": 262000.0,
+    "med_new_gross": 286999.749025,
+    "year": 2014
+   },
+   {
+    "region": "Rest",
+    "n_raw": 13541,
+    "n_raw_new": 1813,
+    "n_clean": 10451,
+    "n_clean_new": 1431,
+    "med_resale": 106000.0,
+    "med_all": 108250.0,
+    "med_new_gross": 113500.0,
+    "year": 2014
+   },
+   {
+    "region": "National",
+    "n_raw": 43675,
+    "n_raw_new": 5423,
+    "n_clean": 38295,
+    "n_clean_new": 4829,
+    "med_resale": 166000.0,
+    "med_all": 169951.495,
+    "med_new_gross": 181600.0,
+    "year": 2014
+   },
+   {
+    "region": "Cities",
+    "n_raw": 11581,
+    "n_raw_new": 1215,
+    "n_clean": 10159,
+    "n_clean_new": 1102,
+    "med_resale": 150000.0,
+    "med_all": 155000.0,
+    "med_new_gross": 173655.0,
+    "year": 2015
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 6668,
+    "n_raw_new": 1071,
+    "n_clean": 6143,
+    "n_clean_new": 1028,
+    "med_resale": 197000.0,
+    "med_all": 210000.0,
+    "med_new_gross": 274948.075,
+    "year": 2015
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 15443,
+    "n_raw_new": 2167,
+    "n_clean": 14528,
+    "n_clean_new": 2113,
+    "med_resale": 278186.0,
+    "med_all": 281500.0,
+    "med_new_gross": 304553.415,
+    "year": 2015
+   },
+   {
+    "region": "Rest",
+    "n_raw": 15475,
+    "n_raw_new": 1789,
+    "n_clean": 12368,
+    "n_clean_new": 1405,
+    "med_resale": 115000.0,
+    "med_all": 115000.0,
+    "med_new_gross": 124998.685,
+    "year": 2015
+   },
+   {
+    "region": "National",
+    "n_raw": 49167,
+    "n_raw_new": 6242,
+    "n_clean": 43198,
+    "n_clean_new": 5648,
+    "med_resale": 178500.0,
+    "med_all": 180000.0,
+    "med_new_gross": 210499.37,
+    "year": 2015
+   },
+   {
+    "region": "Cities",
+    "n_raw": 11665,
+    "n_raw_new": 1504,
+    "n_clean": 10355,
+    "n_clean_new": 1363,
+    "med_resale": 167000.0,
+    "med_all": 171000.0,
+    "med_new_gross": 209999.97,
+    "year": 2016
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 6760,
+    "n_raw_new": 1332,
+    "n_clean": 6319,
+    "n_clean_new": 1287,
+    "med_resale": 210000.0,
+    "med_all": 229999.99795,
+    "med_new_gross": 285999.98995,
+    "year": 2016
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 15815,
+    "n_raw_new": 2535,
+    "n_clean": 15105,
+    "n_clean_new": 2461,
+    "med_resale": 295000.0,
+    "med_all": 312610.78,
+    "med_new_gross": 374550.0,
+    "year": 2016
+   },
+   {
+    "region": "Rest",
+    "n_raw": 15702,
+    "n_raw_new": 1507,
+    "n_clean": 12735,
+    "n_clean_new": 1285,
+    "med_resale": 125000.0,
+    "med_all": 125000.0,
+    "med_new_gross": 145280.0,
+    "year": 2016
+   },
+   {
+    "region": "National",
+    "n_raw": 49942,
+    "n_raw_new": 6878,
+    "n_clean": 44514,
+    "n_clean_new": 6396,
+    "med_resale": 190000.0,
+    "med_all": 200000.0,
+    "med_new_gross": 277110.323775,
+    "year": 2016
+   },
+   {
+    "region": "Cities",
+    "n_raw": 12186,
+    "n_raw_new": 1598,
+    "n_clean": 11027,
+    "n_clean_new": 1507,
+    "med_resale": 185000.0,
+    "med_all": 190000.0,
+    "med_new_gross": 240000.29,
+    "year": 2017
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 8260,
+    "n_raw_new": 2176,
+    "n_clean": 7831,
+    "n_clean_new": 2133,
+    "med_resale": 227000.0,
+    "med_all": 253666.10995,
+    "med_new_gross": 295000.12,
+    "year": 2017
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 17996,
+    "n_raw_new": 4074,
+    "n_clean": 16996,
+    "n_clean_new": 3982,
+    "med_resale": 332375.0,
+    "med_all": 341000.0,
+    "med_new_gross": 357663.47,
+    "year": 2017
+   },
+   {
+    "region": "Rest",
+    "n_raw": 16582,
+    "n_raw_new": 1509,
+    "n_clean": 13821,
+    "n_clean_new": 1295,
+    "med_resale": 135000.0,
+    "med_all": 139000.0,
+    "med_new_gross": 169304.545,
+    "year": 2017
+   },
+   {
+    "region": "National",
+    "n_raw": 55024,
+    "n_raw_new": 9357,
+    "n_clean": 49675,
+    "n_clean_new": 8917,
+    "med_resale": 210000.0,
+    "med_all": 230000.0,
+    "med_new_gross": 302000.8,
+    "year": 2017
+   },
+   {
+    "region": "Cities",
+    "n_raw": 12521,
+    "n_raw_new": 1840,
+    "n_clean": 11413,
+    "n_clean_new": 1606,
+    "med_resale": 196000.0,
+    "med_all": 209000.035,
+    "med_new_gross": 299999.795,
+    "year": 2018
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 8931,
+    "n_raw_new": 2804,
+    "n_clean": 8336,
+    "n_clean_new": 2716,
+    "med_resale": 240000.0,
+    "med_all": 266749.98135,
+    "med_new_gross": 309665.455,
+    "year": 2018
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 18703,
+    "n_raw_new": 4830,
+    "n_clean": 17623,
+    "n_clean_new": 4702,
+    "med_resale": 340000.0,
+    "med_all": 360000.0,
+    "med_new_gross": 394999.9987,
+    "year": 2018
+   },
+   {
+    "region": "Rest",
+    "n_raw": 17308,
+    "n_raw_new": 1632,
+    "n_clean": 14634,
+    "n_clean_new": 1376,
+    "med_resale": 145000.0,
+    "med_all": 150000.0,
+    "med_new_gross": 194999.9916,
+    "year": 2018
+   },
+   {
+    "region": "National",
+    "n_raw": 57463,
+    "n_raw_new": 11106,
+    "n_clean": 52006,
+    "n_clean_new": 10400,
+    "med_resale": 220000.0,
+    "med_all": 245000.0,
+    "med_new_gross": 332499.9979,
+    "year": 2018
+   },
+   {
+    "region": "Cities",
+    "n_raw": 13117,
+    "n_raw_new": 2041,
+    "n_clean": 11917,
+    "n_clean_new": 1667,
+    "med_resale": 205000.0,
+    "med_all": 222500.0,
+    "med_new_gross": 323475.0,
+    "year": 2019
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 9912,
+    "n_raw_new": 3601,
+    "n_clean": 9154,
+    "n_clean_new": 3395,
+    "med_resale": 246000.0,
+    "med_all": 280756.25,
+    "med_new_gross": 322499.9896,
+    "year": 2019
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 18462,
+    "n_raw_new": 4072,
+    "n_clean": 17312,
+    "n_clean_new": 3826,
+    "med_resale": 340000.0,
+    "med_all": 360000.0,
+    "med_new_gross": 394999.9987,
+    "year": 2019
+   },
+   {
+    "region": "Rest",
+    "n_raw": 17577,
+    "n_raw_new": 1644,
+    "n_clean": 15164,
+    "n_clean_new": 1374,
+    "med_resale": 153000.0,
+    "med_all": 159999.9966,
+    "med_new_gross": 218375.135,
+    "year": 2019
+   },
+   {
+    "region": "National",
+    "n_raw": 59068,
+    "n_raw_new": 11358,
+    "n_clean": 53547,
+    "n_clean_new": 10262,
+    "med_resale": 229000.0,
+    "med_all": 251000.0,
+    "med_new_gross": 340000.6,
+    "year": 2019
+   },
+   {
+    "region": "Cities",
+    "n_raw": 11169,
+    "n_raw_new": 2121,
+    "n_clean": 10079,
+    "n_clean_new": 1758,
+    "med_resale": 210000.0,
+    "med_all": 235000.0,
+    "med_new_gross": 329999.485075,
+    "year": 2020
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 8263,
+    "n_raw_new": 2705,
+    "n_clean": 7709,
+    "n_clean_new": 2459,
+    "med_resale": 250000.0,
+    "med_all": 285000.0,
+    "med_new_gross": 337499.06,
+    "year": 2020
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 14790,
+    "n_raw_new": 3126,
+    "n_clean": 14018,
+    "n_clean_new": 2945,
+    "med_resale": 350000.0,
+    "med_all": 375000.0,
+    "med_new_gross": 420604.45235,
+    "year": 2020
+   },
+   {
+    "region": "Rest",
+    "n_raw": 15336,
+    "n_raw_new": 1493,
+    "n_clean": 13482,
+    "n_clean_new": 1276,
+    "med_resale": 155000.0,
+    "med_all": 162500.0,
+    "med_new_gross": 238350.0,
+    "year": 2020
+   },
+   {
+    "region": "National",
+    "n_raw": 49558,
+    "n_raw_new": 9445,
+    "n_clean": 45288,
+    "n_clean_new": 8438,
+    "med_resale": 230000.0,
+    "med_all": 256000.0,
+    "med_new_gross": 349999.95,
+    "year": 2020
+   },
+   {
+    "region": "Cities",
+    "n_raw": 13240,
+    "n_raw_new": 1944,
+    "n_clean": 12274,
+    "n_clean_new": 1671,
+    "med_resale": 230000.0,
+    "med_all": 245000.0,
+    "med_new_gross": 334998.655,
+    "year": 2021
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 9969,
+    "n_raw_new": 3322,
+    "n_clean": 9440,
+    "n_clean_new": 3153,
+    "med_resale": 280000.0,
+    "med_all": 314999.955,
+    "med_new_gross": 349999.95,
+    "year": 2021
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 17100,
+    "n_raw_new": 2438,
+    "n_clean": 16324,
+    "n_clean_new": 2348,
+    "med_resale": 380000.0,
+    "med_all": 390000.0,
+    "med_new_gross": 434999.99785,
+    "year": 2021
+   },
+   {
+    "region": "Rest",
+    "n_raw": 19297,
+    "n_raw_new": 1868,
+    "n_clean": 17399,
+    "n_clean_new": 1583,
+    "med_resale": 175000.0,
+    "med_all": 180000.0,
+    "med_new_gross": 244999.965,
+    "year": 2021
+   },
+   {
+    "region": "National",
+    "n_raw": 59606,
+    "n_raw_new": 9572,
+    "n_clean": 55437,
+    "n_clean_new": 8755,
+    "med_resale": 250000.0,
+    "med_all": 272500.0,
+    "med_new_gross": 349999.9954,
+    "year": 2021
+   },
+   {
+    "region": "Cities",
+    "n_raw": 13682,
+    "n_raw_new": 2199,
+    "n_clean": 12832,
+    "n_clean_new": 2042,
+    "med_resale": 255000.0,
+    "med_all": 275000.0,
+    "med_new_gross": 349998.815,
+    "year": 2022
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 10792,
+    "n_raw_new": 3751,
+    "n_clean": 10225,
+    "n_clean_new": 3551,
+    "med_resale": 300000.0,
+    "med_all": 337500.0,
+    "med_new_gross": 380225.0,
+    "year": 2022
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 18489,
+    "n_raw_new": 2952,
+    "n_clean": 17514,
+    "n_clean_new": 2849,
+    "med_resale": 403000.0,
+    "med_all": 419999.94,
+    "med_new_gross": 464999.9887,
+    "year": 2022
+   },
+   {
+    "region": "Rest",
+    "n_raw": 19796,
+    "n_raw_new": 2102,
+    "n_clean": 18120,
+    "n_clean_new": 1787,
+    "med_resale": 195000.0,
+    "med_all": 205000.0,
+    "med_new_gross": 280000.0054,
+    "year": 2022
+   },
+   {
+    "region": "National",
+    "n_raw": 62759,
+    "n_raw_new": 11004,
+    "n_clean": 58691,
+    "n_clean_new": 10229,
+    "med_resale": 275000.0,
+    "med_all": 300000.0,
+    "med_new_gross": 379999.135,
+    "year": 2022
+   },
+   {
+    "region": "Cities",
+    "n_raw": 14090,
+    "n_raw_new": 2726,
+    "n_clean": 12897,
+    "n_clean_new": 2405,
+    "med_resale": 270000.0,
+    "med_all": 297500.0,
+    "med_new_gross": 374999.99345,
+    "year": 2023
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 11154,
+    "n_raw_new": 4124,
+    "n_clean": 10422,
+    "n_clean_new": 3844,
+    "med_resale": 320000.0,
+    "med_all": 365118.15,
+    "med_new_gross": 409999.455,
+    "year": 2023
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 18922,
+    "n_raw_new": 2999,
+    "n_clean": 17892,
+    "n_clean_new": 2879,
+    "med_resale": 410000.0,
+    "med_all": 430000.0,
+    "med_new_gross": 494999.605,
+    "year": 2023
+   },
+   {
+    "region": "Rest",
+    "n_raw": 19222,
+    "n_raw_new": 2264,
+    "n_clean": 17526,
+    "n_clean_new": 1915,
+    "med_resale": 205000.0,
+    "med_all": 220000.0,
+    "med_new_gross": 320070.0,
+    "year": 2023
+   },
+   {
+    "region": "National",
+    "n_raw": 63388,
+    "n_raw_new": 12113,
+    "n_clean": 58737,
+    "n_clean_new": 11043,
+    "med_resale": 290000.0,
+    "med_all": 322000.0,
+    "med_new_gross": 402925.0,
+    "year": 2023
+   },
+   {
+    "region": "Cities",
+    "n_raw": 13613,
+    "n_raw_new": 3010,
+    "n_clean": 12395,
+    "n_clean_new": 2670,
+    "med_resale": 290000.0,
+    "med_all": 320000.765,
+    "med_new_gross": 389999.74485,
+    "year": 2024
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 10357,
+    "n_raw_new": 3581,
+    "n_clean": 9709,
+    "n_clean_new": 3319,
+    "med_resale": 343500.0,
+    "med_all": 382892.25,
+    "med_new_gross": 425000.75,
+    "year": 2024
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 19314,
+    "n_raw_new": 3836,
+    "n_clean": 17940,
+    "n_clean_new": 3536,
+    "med_resale": 450000.0,
+    "med_all": 470001.7975,
+    "med_new_gross": 496663.577425,
+    "year": 2024
+   },
+   {
+    "region": "Rest",
+    "n_raw": 18291,
+    "n_raw_new": 2527,
+    "n_clean": 16570,
+    "n_clean_new": 2169,
+    "med_resale": 225000.0,
+    "med_all": 243000.0,
+    "med_new_gross": 344999.99125,
+    "year": 2024
+   },
+   {
+    "region": "National",
+    "n_raw": 61575,
+    "n_raw_new": 12954,
+    "n_clean": 56614,
+    "n_clean_new": 11694,
+    "med_resale": 318000.0,
+    "med_all": 350000.0,
+    "med_new_gross": 425000.0009,
+    "year": 2024
+   },
+   {
+    "region": "Cities",
+    "n_raw": 13900,
+    "n_raw_new": 3623,
+    "n_clean": 13000,
+    "n_clean_new": 3402,
+    "med_resale": 320000.0,
+    "med_all": 355000.0,
+    "med_new_gross": 416749.3,
+    "year": 2025
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 10877,
+    "n_raw_new": 4231,
+    "n_clean": 10217,
+    "n_clean_new": 3914,
+    "med_resale": 372000.0,
+    "med_all": 414999.13,
+    "med_new_gross": 439999.775,
+    "year": 2025
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 19266,
+    "n_raw_new": 3822,
+    "n_clean": 18230,
+    "n_clean_new": 3541,
+    "med_resale": 481000.0,
+    "med_all": 495000.00225,
+    "med_new_gross": 500535.0,
+    "year": 2025
+   },
+   {
+    "region": "Rest",
+    "n_raw": 18092,
+    "n_raw_new": 2840,
+    "n_clean": 16482,
+    "n_clean_new": 2409,
+    "med_resale": 245000.0,
+    "med_all": 270000.0,
+    "med_new_gross": 368875.0,
+    "year": 2025
+   },
+   {
+    "region": "National",
+    "n_raw": 62135,
+    "n_raw_new": 14516,
+    "n_clean": 57929,
+    "n_clean_new": 13266,
+    "med_resale": 350000.0,
+    "med_all": 380000.0,
+    "med_new_gross": 439999.775,
+    "year": 2025
+   },
+   {
+    "region": "Cities",
+    "n_raw": 8340,
+    "n_raw_new": 2131,
+    "n_clean": 7843,
+    "n_clean_new": 2008,
+    "med_resale": 330000.0,
+    "med_all": 371999.655,
+    "med_new_gross": 439999.99065,
+    "year": 2026
+   },
+   {
+    "region": "Commuter",
+    "n_raw": 6228,
+    "n_raw_new": 2375,
+    "n_clean": 5916,
+    "n_clean_new": 2281,
+    "med_resale": 400000.0,
+    "med_all": 430000.425,
+    "med_new_gross": 455000.0031,
+    "year": 2026
+   },
+   {
+    "region": "Dublin",
+    "n_raw": 11622,
+    "n_raw_new": 2440,
+    "n_clean": 11103,
+    "n_clean_new": 2315,
+    "med_resale": 490000.0,
+    "med_all": 499999.99505,
+    "med_new_gross": 500000.415,
+    "year": 2026
+   },
+   {
+    "region": "Rest",
+    "n_raw": 11021,
+    "n_raw_new": 1928,
+    "n_clean": 10256,
+    "n_clean_new": 1728,
+    "med_resale": 260000.0,
+    "med_all": 289999.991,
+    "med_new_gross": 384999.945,
+    "year": 2026
+   },
+   {
+    "region": "National",
+    "n_raw": 37211,
+    "n_raw_new": 8874,
+    "n_clean": 35118,
+    "n_clean_new": 8332,
+    "med_resale": 360000.0,
+    "med_all": 395000.0,
+    "med_new_gross": 454928.43,
+    "year": 2026
+   }
+  ]
+ },
+ "towns_resale": {
+  "tullamore": {
+   "2010": {
+    "n_clean_resale": 67,
+    "median_resale": 185000.0
+   },
+   "2011": {
+    "n_clean_resale": 51,
+    "median_resale": 135000.0
+   },
+   "2012": {
+    "n_clean_resale": 81,
+    "median_resale": 127000.0
+   },
+   "2013": {
+    "n_clean_resale": 94,
+    "median_resale": 120000.0
+   },
+   "2014": {
+    "n_clean_resale": 166,
+    "median_resale": 127500.0
+   },
+   "2015": {
+    "n_clean_resale": 172,
+    "median_resale": 128500.0
+   },
+   "2016": {
+    "n_clean_resale": 190,
+    "median_resale": 128500.0
+   },
+   "2017": {
+    "n_clean_resale": 192,
+    "median_resale": 160000.0
+   },
+   "2018": {
+    "n_clean_resale": 179,
+    "median_resale": 175000.0
+   },
+   "2019": {
+    "n_clean_resale": 190,
+    "median_resale": 177000.0
+   },
+   "2020": {
+    "n_clean_resale": 203,
+    "median_resale": 179000.0
+   },
+   "2021": {
+    "n_clean_resale": 216,
+    "median_resale": 190000.0
+   },
+   "2022": {
+    "n_clean_resale": 251,
+    "median_resale": 220000.0
+   },
+   "2023": {
+    "n_clean_resale": 262,
+    "median_resale": 232000.0
+   },
+   "2024": {
+    "n_clean_resale": 237,
+    "median_resale": 245000.0
+   },
+   "2025": {
+    "n_clean_resale": 217,
+    "median_resale": 280000.0
+   },
+   "2026": {
+    "n_clean_resale": 129,
+    "median_resale": 295000.0
+   }
+  },
+  "skibbereen": {
+   "2010": {
+    "n_clean_resale": 25,
+    "median_resale": 165000.0
+   },
+   "2011": {
+    "n_clean_resale": 21,
+    "median_resale": 182000.0
+   },
+   "2012": {
+    "n_clean_resale": 23,
+    "median_resale": 145000.0
+   },
+   "2013": {
+    "n_clean_resale": 26,
+    "median_resale": 127500.0
+   },
+   "2014": {
+    "n_clean_resale": 41,
+    "median_resale": 150000.0
+   },
+   "2015": {
+    "n_clean_resale": 45,
+    "median_resale": 160000.0
+   },
+   "2016": {
+    "n_clean_resale": 62,
+    "median_resale": 155000.0
+   },
+   "2017": {
+    "n_clean_resale": 51,
+    "median_resale": 185000.0
+   },
+   "2018": {
+    "n_clean_resale": 70,
+    "median_resale": 180000.0
+   },
+   "2019": {
+    "n_clean_resale": 58,
+    "median_resale": 190000.0
+   },
+   "2020": {
+    "n_clean_resale": 48,
+    "median_resale": 182500.0
+   },
+   "2021": {
+    "n_clean_resale": 80,
+    "median_resale": 246250.0
+   },
+   "2022": {
+    "n_clean_resale": 64,
+    "median_resale": 241250.0
+   },
+   "2023": {
+    "n_clean_resale": 58,
+    "median_resale": 287500.0
+   },
+   "2024": {
+    "n_clean_resale": 73,
+    "median_resale": 270000.0
+   },
+   "2025": {
+    "n_clean_resale": 55,
+    "median_resale": 305000.0
+   },
+   "2026": {
+    "n_clean_resale": 35,
+    "median_resale": 290000.0
+   }
+  }
+ }
+}
