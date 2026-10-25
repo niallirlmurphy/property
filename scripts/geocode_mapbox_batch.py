@@ -66,7 +66,8 @@ from mapbox_client import MapboxClient
 from extract_base_address import is_bulk_sale, extract_base_address
 from geocode_query_prep import (fold, prepare_geocode_address, load_town_gazetteer,
                                 LOCALITY_MAX_KM, load_locality_centroids,
-                                locality_centroid, locality_distance_km)
+                                locality_centroid, locality_distance_km,
+                                load_routing_key_extents)
 
 load_dotenv("backend/.env")
 
@@ -474,6 +475,12 @@ async def _close_pool(pool: asyncpg.Pool, timeout_s: float = 30.0) -> None:
         pool.terminate()
 
 
+async def _init_conn(conn) -> None:
+    # Supabase's 2MB default spills the big percentile/GROUP BY sorts to temp
+    # files on disk, which counts against the Disk IO budget.
+    await conn.execute("SET work_mem = '32MB'")
+
+
 async def _create_pool_with_retry(attempts: int = 10, delay_s: float = 30.0) -> asyncpg.Pool:
     """Open a DB pool, retrying through transient network/DNS drops.
 
@@ -482,7 +489,7 @@ async def _create_pool_with_retry(attempts: int = 10, delay_s: float = 30.0) -> 
     """
     for attempt in range(1, attempts + 1):
         try:
-            return await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3)
+            return await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3, init=_init_conn)
         except (OSError, asyncpg.PostgresError) as e:
             if attempt == attempts:
                 raise
@@ -703,7 +710,7 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         print("Add to backend/.env: MAPBOX_TOKEN=your_token_here")
         return
 
-    pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3)
+    pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=3, init=_init_conn)
 
     try:
         # Development pins first: free, exact, and they take pinned rows off the
@@ -784,24 +791,10 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
         # flag_bad_geocodes.py). Keys missing here fall back to ROUTING_KEY_MAX_KM.
         rk_thresholds = {}
         try:
-            async with pool.acquire() as conn:
-                await conn.execute("SET statement_timeout = '600s'")
-                ext_rows = await conn.fetch("""
-                    SELECT p.routing_key,
-                           percentile_cont(0.75) WITHIN GROUP (ORDER BY
-                             ST_Distance(
-                               ST_SetSRID(ST_MakePoint(p.longitude, p.latitude), 4326)::geography,
-                               ST_SetSRID(ST_MakePoint(k.centroid_lon, k.centroid_lat), 4326)::geography
-                             ) / 1000.0) AS p75_km
-                    FROM properties p
-                    JOIN routing_key_stats k ON k.routing_key = p.routing_key
-                    WHERE p.latitude IS NOT NULL
-                      AND k.geocoded_count >= 20 AND k.centroid_lat IS NOT NULL
-                    GROUP BY p.routing_key
-                """)
+            extents = await load_routing_key_extents(pool)
             rk_thresholds = {
-                r['routing_key']: max(RK_FLOOR_KM, min(RK_CEIL_KM, r['p75_km'] * RK_MULT))
-                for r in ext_rows
+                rk: max(RK_FLOOR_KM, min(RK_CEIL_KM, p75_km * RK_MULT))
+                for rk, p75_km in extents.items()
             }
             print(f"Loaded {len(rk_thresholds):,} adaptive routing-key thresholds")
         except Exception as e:

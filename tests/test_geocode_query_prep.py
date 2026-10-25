@@ -123,6 +123,8 @@ def test_loaders_reuse_disk_cache(tmp_path, monkeypatch):
         async def execute(self, *_): pass
         async def fetch(self, sql, *_):
             Conn.calls += 1
+            if "p75_km" in sql:
+                return [{"routing_key": "D18", "p75_km": 2.5}]
             if "percentile_cont" in sql:
                 return [{"county": "Dublin", "part": " Leopardstown", "lat": 53.267, "lon": -6.195}]
             return [{"county": "Galway", "part": "Oughterard"}]
@@ -137,8 +139,9 @@ def test_loaders_reuse_disk_cache(tmp_path, monkeypatch):
     for _ in range(2):
         assert asyncio.run(gqp.load_locality_centroids(Pool())) == {("DUBLIN", "LEOPARDSTOWN"): (53.267, -6.195)}
         assert asyncio.run(gqp.load_town_gazetteer(Pool())) == {"GALWAY": {"OUGHTERARD"}}
-    assert Conn.calls == 2  # second round served from disk
+        assert asyncio.run(gqp.load_routing_key_extents(Pool())) == {"D18": 2.5}
+    assert Conn.calls == 3  # second round served from disk
 
     monkeypatch.setattr(gqp, "CACHE_TTL_S", -1)  # expired: back to the database
     asyncio.run(gqp.load_town_gazetteer(Pool()))
-    assert Conn.calls == 3
+    assert Conn.calls == 4

@@ -23,8 +23,8 @@ cover rows with no eircode or "Dublin N": nothing else checks distance for them,
 so Mapbox could place "The Ashes, Elmfield, Leopardstown" at a same-named estate
 in Malahide and pass every other check.
 
-The gazetteer and centroids are each a full scan of properties (~1 GB of disk
-reads between them) yet barely move when a batch adds 500 rows, so they are
+The gazetteer, centroids and routing-key extents are each a full scan of
+properties (over 1 GB of disk reads between them) yet barely move when a batch adds 500 rows, so they are
 cached on disk for CACHE_TTL_S; back-to-back batches would otherwise drain the
 Supabase Disk IO budget (2026-10-23).
 """
@@ -225,3 +225,29 @@ async def load_town_gazetteer(pool) -> Dict[str, Set[str]]:
         gazetteer.setdefault(fold(r['county']), set()).add(fold(r['part']))
     _write_cache('town_gazetteer', {county: sorted(towns) for county, towns in gazetteer.items()})
     return gazetteer
+
+
+async def load_routing_key_extents(pool) -> Dict[str, float]:
+    """Each routing key's core extent: the 75th percentile distance (km) of its
+    geocoded rows from the key centroid in routing_key_stats."""
+    cached = _read_cache('routing_key_extents')
+    if cached is not None:
+        return cached
+    async with pool.acquire() as conn:
+        await conn.execute("SET statement_timeout = '600s'")
+        rows = await conn.fetch("""
+            SELECT p.routing_key,
+                   percentile_cont(0.75) WITHIN GROUP (ORDER BY
+                     ST_Distance(
+                       ST_SetSRID(ST_MakePoint(p.longitude, p.latitude), 4326)::geography,
+                       ST_SetSRID(ST_MakePoint(k.centroid_lon, k.centroid_lat), 4326)::geography
+                     ) / 1000.0) AS p75_km
+            FROM properties p
+            JOIN routing_key_stats k ON k.routing_key = p.routing_key
+            WHERE p.latitude IS NOT NULL
+              AND k.geocoded_count >= 20 AND k.centroid_lat IS NOT NULL
+            GROUP BY p.routing_key
+        """)
+    extents = {r['routing_key']: float(r['p75_km']) for r in rows}
+    _write_cache('routing_key_extents', extents)
+    return extents

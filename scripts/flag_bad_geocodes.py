@@ -216,6 +216,8 @@ def main():
     cur = conn.cursor()
     # These aggregate/join updates exceed Supabase's default statement_timeout.
     cur.execute("SET statement_timeout = '900s'")
+    # The 2MB default spills each run's sorts (~380MB) to temp files on disk.
+    cur.execute("SET work_mem = '64MB'")
 
     print(f"Mode: {'APPLY (writing)' if APPLY else 'DRY RUN (no writes)'}")
     print(f"Thresholds: county-box margin {COUNTY_MARGIN_DEG}deg, routing-key adaptive "
