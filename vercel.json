@@ -15,6 +15,11 @@
   ],
   "redirects": [
     {
+      "source": "/blog/irelands-longest-greenway",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
       "source": "/mortgages",
       "destination": "/mortgage",
       "permanent": true

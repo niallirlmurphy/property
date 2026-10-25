@@ -132,15 +132,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "10 min read"
   },
   {
-    slug: "irelands-longest-greenway",
-    title: "Ireland's Longest Greenway",
-    description: "Guide to Ireland's Longest Greenway - the 125km Royal Canal Greenway and Old Rail Trail route from Leixlip to Athlone.",
-    date: "2026-06-22",
-    author: "HomeIQ Team",
-    tags: ["Greenway", "Midlands", "Amenities", "Cycling"],
-    readTime: "5 min read"
-  },
-  {
     slug: "how-to-use-property-price-register",
     title: "How to Use Ireland's Property Price Register - Complete Guide",
     description: "Learn how to search and interpret data from Ireland's Property Price Register, including tips for finding accurate property sale prices.",

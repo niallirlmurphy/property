@@ -10,7 +10,6 @@ import { BLOG_POSTS, isPublished } from "../blogPosts";
 import { HowToUsePPRContent } from "../blog-posts/how-to-use-property-price-register";
 import { DublinPostcodesContent } from "../blog-posts/dublin-property-prices-by-postcode-2026";
 import { EircodeGuideContent } from "../blog-posts/understanding-eircode-property-search";
-import { IrelandsLongestGreenwayContent } from "../blog-posts/irelands-longest-greenway";
 import { BestMonthToSellContent } from "../blog-posts/best-month-to-sell-property-ireland";
 import { TransportPremiumContent } from "../blog-posts/does-being-near-a-luas-or-dart-add-value";
 import { SchoolPremiumContent } from "../blog-posts/does-living-near-a-good-school-add-value";
@@ -36,7 +35,6 @@ const BLOG_CONTENT: Record<string, React.ComponentType> = {
   "does-living-near-a-good-school-add-value": SchoolPremiumContent,
   "does-being-near-a-luas-or-dart-add-value": TransportPremiumContent,
   "best-month-to-sell-property-ireland": BestMonthToSellContent,
-  "irelands-longest-greenway": IrelandsLongestGreenwayContent,
   "how-to-use-property-price-register": HowToUsePPRContent,
   "dublin-property-prices-by-postcode-2026": DublinPostcodesContent,
   "understanding-eircode-property-search": EircodeGuideContent,
