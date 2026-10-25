@@ -394,12 +394,21 @@ if os.environ.get("ENVIRONMENT") != "production":
 # reported "Failed to fetch" instead of a server error (2026-10-18 DB outage).
 @app.middleware("http")
 async def catch_unhandled_errors(request: Request, call_next):
+    detail = None
     try:
-        return await call_next(request)
+        response = await call_next(request)
     except Exception as e:
         logger.exception(f"Unhandled error on {request.method} {request.url.path}")
         sentry_sdk.capture_exception(e)
-        return JSONResponse(status_code=500, content={"detail": "Internal server error"})
+        response = JSONResponse(status_code=500, content={"detail": "Internal server error"})
+        detail = f"{type(e).__name__}: {e}"[:500]
+    path = request.url.path
+    if response.status_code >= 500 and path.startswith(("/search", "/geocode")):
+        qp = request.query_params
+        asyncio.create_task(_log_search_failure(
+            path, qp.get("q") or qp.get("address"), qp.get("county"), "error",
+            detail or f"HTTP {response.status_code}"))
+    return response
 
 
 app.add_middleware(
@@ -883,7 +892,7 @@ async def resolve_location(query: str, county: Optional[str] = None,
       8. Nearest house number → DB     (43 Mount Carmel Road → sale at No. 42/44)
       9. Place name → places table     (town/suburb centres built from our own sales)
       10. Token-based DB lookup        (full-text, tight clusters: estates, developments)
-    Anything else is logged to geocode_misses and raises 404.
+    Anything else is logged to search_failures (no_location) and raises 404.
 
     Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_county', 'db_address', 'db_neighbour', 'db_place', 'db_tokens'
     """
@@ -989,19 +998,21 @@ async def resolve_location(query: str, county: Optional[str] = None,
         return _cache_and_return(*result, "db_tokens")
 
     # Nothing in our data. Search uses no external geocoder (no Mapbox): log the
-    # miss to geocode_misses (scripts/geocode_misses_report.py) and give up.
+    # miss to search_failures (scripts/failures_report.py) and give up.
     if log_miss:
-        asyncio.create_task(_log_geocode_miss(query, county))
+        asyncio.create_task(_log_search_failure("/search", query, county, "no_location"))
     raise HTTPException(status_code=404, detail=f"Could not geocode: {query}")
 
 
-async def _log_geocode_miss(query: str, county: Optional[str]) -> None:
-    """Record a query resolve_location could not place. Fire and forget."""
+async def _log_search_failure(endpoint: str, query: Optional[str], county: Optional[str],
+                              reason: str, detail: Optional[str] = None) -> None:
+    """Record a search that failed (reason: no_location, no_results, error). Fire and forget."""
     try:
         await db_pool.execute(
-            "INSERT INTO geocode_misses (query, county) VALUES ($1, $2)", query, county)
+            "INSERT INTO search_failures (endpoint, query, county, reason, detail) "
+            "VALUES ($1, $2, $3, $4, $5)", endpoint, query, county, reason, detail)
     except Exception as e:
-        logger.warning(f"Geocode miss logging failed for {query!r}: {e}")
+        logger.warning(f"Search failure logging failed for {query!r}: {e}")
 
 
 # ---------------------------------------------------------------------------
@@ -1333,6 +1344,9 @@ async def search(
 
     # Log search query for analytics (fire and forget)
     elapsed_ms = int((time.time() - start_time) * 1000)
+    if not rows:
+        asyncio.create_task(_log_search_failure(
+            "/search", q, county, "no_results", f"radius {actual_radius}km"))
     asyncio.create_task(_log_search_query(
         query=q,
         resolved_lat=lat,
@@ -1482,6 +1496,10 @@ async def search_exact(
                     }
                 )
             logger.error(f"EXACT SEARCH COUNTY FILTER BREACH: address='{address}', county={county}, result_counties={result_counties}")
+
+    if not rows:
+        asyncio.create_task(_log_search_failure(
+            "/search/exact", address, county, "no_results", search_normalized))
 
     # Cache the result
     cache.set("exact_search", cache_key, result, TTL_EXACT_SEARCH)

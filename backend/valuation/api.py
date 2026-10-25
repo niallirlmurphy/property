@@ -4,6 +4,7 @@ FastAPI endpoints for property valuation.
 Phase 1: POST /api/valuation/estimate
 """
 
+import asyncio
 import os
 import re
 import asyncpg
@@ -322,7 +323,7 @@ async def estimate_property_value(
 
         # Step 5: Validate and assign confidence
         validator = MVPValidator()
-        validation = validator.validate(valuation, comparables)
+        validation = validator.validate(valuation, comparables, location.method)
 
         # Nearest amenities (Dublin only; None elsewhere or on any error).
         # Uses an in-memory cache of the small amenities table, so this adds no
@@ -419,6 +420,7 @@ async def estimate_property_value(
     except HTTPException as e:
         # Re-raise HTTP exceptions with enhanced logging
         print(f"[Valuation] ❌ HTTP Error {e.status_code}: {e.detail}")
+        asyncio.create_task(log_valuation_failure(pool, request, e.status_code, str(e.detail)))
         raise
 
     except Exception as e:
@@ -442,11 +444,28 @@ async def estimate_property_value(
         except ImportError:
             pass
 
+        asyncio.create_task(log_valuation_failure(
+            pool, request, 500, f"{type(e).__name__}: {e}"[:500]))
+
         # Return generic error to user
         raise HTTPException(
             status_code=500,
             detail="Valuation calculation failed. Please try again later."
         )
+
+
+async def log_valuation_failure(db_pool, request: ValuationRequest,
+                                status_code: int, detail: str) -> None:
+    """Record a failed valuation in valuation_failures. Fire and forget."""
+    try:
+        await db_pool.execute("""
+            INSERT INTO valuation_failures
+                (address, eircode, county, property_type, bedrooms, status_code, detail)
+            VALUES ($1, $2, $3, $4, $5, $6, $7)
+        """, request.address, request.eircode, request.county, request.property_type,
+            request.bedrooms, status_code, detail)
+    except Exception as e:
+        print(f"[Valuation] Failure logging failed: {e}")
 
 
 async def log_valuation_request(

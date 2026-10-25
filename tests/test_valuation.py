@@ -844,6 +844,20 @@ class TestValidator:
         assert result.n_comparables == 12
         assert result.avg_distance_km < 1.0  # All within 200m
 
+    def test_county_centroid_location_is_low_confidence(self, sample_comparables):
+        """An address placed only at its county centre is low confidence, however good the comps."""
+        valuation = {
+            'estimate': 400000,
+            'confidence_interval': {'lower': 380000, 'upper': 420000},
+            'statistics': {'mean_price': 400000, 'median_price': 400000, 'std_dev': 20000,
+                           'coefficient_of_variation': 0.05,
+                           'min_price': 380000, 'max_price': 420000},
+        }
+        result = MVPValidator().validate(valuation, sample_comparables * 4, "county_centroid")
+
+        assert result.confidence_level == ConfidenceLevel.LOW
+        assert any(w.code == "LOCATION_COUNTY_CENTROID" for w in result.warnings)
+
     def test_validate_medium_confidence(self, sample_comparables):
         """Test validation with medium-quality data."""
         validator = MVPValidator()

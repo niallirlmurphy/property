@@ -5,7 +5,7 @@ Checks valuation quality and generates warnings.
 Assigns confidence levels based on multiple quality factors.
 """
 
-from typing import List, Dict
+from typing import List, Dict, Optional
 from .models import (
     ValidationResult,
     ValidationWarning,
@@ -33,7 +33,8 @@ class MVPValidator:
     def validate(
         self,
         valuation: Dict,
-        comparables: List[Dict]
+        comparables: List[Dict],
+        location_method: Optional[str] = None
     ) -> ValidationResult:
         """
         Validate valuation quality and assign confidence level.
@@ -75,6 +76,18 @@ class MVPValidator:
 
         # Overall quality score (0-1)
         quality_score = sum(quality_factors) / len(quality_factors)
+
+        # Check 5: an address placed only at its county centre could be anywhere in
+        # the county, so its comparables say little about it whatever their quality.
+        if location_method == "county_centroid":
+            quality_score = min(quality_score, 0.49)
+            warnings.append(ValidationWarning(
+                level=WarningLevel.ERROR,
+                message="We couldn't locate this address, so the estimate is based on "
+                        "sales near the centre of the county. Add an Eircode for a "
+                        "more reliable estimate.",
+                code="LOCATION_COUNTY_CENTROID"
+            ))
 
         # Determine confidence level based on quality score
         confidence_level = self._determine_confidence_level(quality_score)
