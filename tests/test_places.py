@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend"))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
-from places import address_place_names, normalize_place, parse_query, pick_place  # noqa: E402
+from places import address_place_names, normalize_place, parse_localities, parse_query, pick_place  # noqa: E402
 from build_places import cluster_centre  # noqa: E402
 
 
@@ -31,6 +31,21 @@ def test_parse_query():
     assert parse_query("Nobber", "Meath") == (["nobber"], "Meath")
     assert parse_query("Dublin 2") == (["dublin 2"], None)
     assert parse_query("36 fairfield road") == ([], None)
+
+
+def test_parse_query_strips_trailing_county():
+    assert parse_query("Redhills Co Cavan") == (["redhills"], "Cavan")
+    assert parse_query("Drumlaney, Redhills Co. Cavan") == (["drumlaney"], "Cavan")
+    assert parse_query("Carlow") == (["carlow"], None)
+    assert parse_query("Co Cavan") == (["co cavan"], None)
+
+
+def test_parse_localities_uses_later_parts():
+    assert parse_localities("Drumlaney, Redhills") == (["redhills"], None)
+    assert parse_localities("Drumlaney, Redhills, Co Cavan") == (["redhills"], "Cavan")
+    assert parse_localities("5 Main Street, Tuam", "Galway") == (["tuam"], "Galway")
+    assert parse_localities("Achill") == ([], None)
+    assert parse_localities("Apt 4, 12 Main St, Dublin 8") == (["dublin 8"], None)
 
 
 def test_pick_place_county_hint():

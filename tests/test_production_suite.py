@@ -1077,6 +1077,269 @@ async def test_valuation_with_enrichment(client: httpx.AsyncClient, results: Tes
         results.add_fail(f"Valuation with enrichment: {address[:30]}...", str(e))
 
 
+# ---------------------------------------------------------------------------
+# Usage analysis: how the site is used, which features are popular, what fails.
+# Reads only the small log tables (search_log, search_failures,
+# valuation_requests, valuation_failures, api_usage_daily), never properties.
+# ---------------------------------------------------------------------------
+
+USAGE_DAYS = 30
+# Crawlers and scripts (incl. this suite before it sent X-HomeIQ-Test)
+NON_HUMAN_UA = r"(bot|crawl|spider|slurp|python-|httpx|curl/|wget|headless|lighthouse)"
+_COUNTY_NAMES = {
+    "carlow", "cavan", "clare", "cork", "donegal", "dublin", "galway", "kerry", "kildare",
+    "kilkenny", "laois", "leitrim", "limerick", "longford", "louth", "mayo", "meath",
+    "monaghan", "offaly", "roscommon", "sligo", "tipperary", "waterford", "westmeath",
+    "wexford", "wicklow",
+}
+
+
+def classify_query(q: str) -> str:
+    """Rough shape of a search query, to see which kinds of input fail."""
+    import re
+    q = (q or "").strip()
+    low = q.lower()
+    if len(q) < 4:
+        return "very short"
+    if re.fullmatch(r"-?\d+(\.\d+)?\s*,\s*-?\d+(\.\d+)?", q):
+        return "coordinates"
+    if re.fullmatch(r"[a-z]\d[\dw]\s?[a-z0-9]{4}", low):
+        return "full eircode"
+    if re.fullmatch(r"[a-z]\d[\dw]", low):
+        return "routing key"
+    if re.search(r"[^\x00-\x7f]", q):
+        return "non-ascii (fadas etc.)"
+    if re.match(r"(apt|apartment|unit|flat)\b", low):
+        return "apartment/unit"
+    if re.match(r"\d", low):
+        return "house number + street"
+    if any(w in _COUNTY_NAMES for w in re.findall(r"[a-z]+", low)):
+        return "place + county"
+    return "place/street name"
+
+
+def _pct(n, total):
+    return f"{100 * n / total:.0f}%" if total else "n/a"
+
+
+async def _log_conn():
+    return await asyncpg.connect(os.environ["DATABASE_URL"], timeout=10.0, statement_cache_size=0,
+                                 server_settings={"statement_timeout": "20000"})
+
+
+async def test_logging_health(results: TestResults):
+    """Each query log has recent rows, so a broken insert shows up within days
+    (valuation_requests silently stopped on 2026-10-17 from a too-short column)."""
+    if not os.environ.get("DATABASE_URL"):
+        results.add_warning("Logging health", "DATABASE_URL not set")
+        return
+    conn = await _log_conn()
+    try:
+        for table, col, max_days in [("search_log", "ts", 3), ("valuation_requests", "created_at", 7),
+                                     ("api_usage_daily", "day", 2)]:
+            last = await conn.fetchval(f"SELECT MAX({col}) FROM {table}")
+            if last is None:
+                results.add_warning(f"Logging: {table}", "no rows yet")
+                continue
+            age = (datetime.now().date() - (last.date() if hasattr(last, "date") else last)).days
+            if age > max_days:
+                results.add_warning(f"Logging: {table}",
+                                    f"last row {age} days ago ({last:%Y-%m-%d}); check its insert still works")
+            else:
+                results.add_pass(f"Logging: {table}", f"last row {last:%Y-%m-%d %H:%M}")
+    finally:
+        await conn.close()
+
+
+async def test_feature_usage(results: TestResults):
+    """Requests per feature (api_usage_daily), with error rates and speed."""
+    if not os.environ.get("DATABASE_URL"):
+        return
+    conn = await _log_conn()
+    try:
+        rows = await conn.fetch("""
+            SELECT endpoint, SUM(requests) AS n,
+                   SUM(requests) FILTER (WHERE status >= 500) AS e5,
+                   SUM(requests) FILTER (WHERE status BETWEEN 400 AND 499) AS e4,
+                   SUM(total_ms)::float / NULLIF(SUM(requests), 0) AS avg_ms,
+                   MIN(day) AS since
+            FROM api_usage_daily
+            WHERE day > CURRENT_DATE - $1::int
+            GROUP BY endpoint ORDER BY n DESC
+        """, USAGE_DAYS)
+        if not rows:
+            results.add_warning("Feature usage", "api_usage_daily is empty (counts start after the 2026-10-25 deploy)")
+            return
+        total = sum(r["n"] for r in rows)
+        lines = [f"{r['n']:7,}  {_pct(r['n'], total):>4}  {r['endpoint']:<32} "
+                 f"4xx {_pct(r['e4'] or 0, r['n']):>4}  5xx {_pct(r['e5'] or 0, r['n']):>4}  "
+                 f"{r['avg_ms'] or 0:6.0f}ms" for r in rows[:20]]
+        results.add_pass(f"Feature usage, last {USAGE_DAYS} days ({total:,} API requests since {min(r['since'] for r in rows)})",
+                         "\n   ".join(lines))
+        for r in rows:
+            if r["n"] >= 20 and (r["e5"] or 0) / r["n"] > 0.02:
+                results.add_warning(f"Feature errors: {r['endpoint']}",
+                                    f"{_pct(r['e5'], r['n'])} of {r['n']:,} requests were 5xx")
+    finally:
+        await conn.close()
+
+
+async def test_search_usage(results: TestResults):
+    """What people search for (search_log; uncached /search calls, people only)."""
+    if not os.environ.get("DATABASE_URL"):
+        return
+    conn = await _log_conn()
+    try:
+        human = f"COALESCE(user_agent, '') !~* '{NON_HUMAN_UA}'"
+        window = f"ts > NOW() - make_interval(days => {USAGE_DAYS})"
+        s = await conn.fetchrow(f"""
+            SELECT COUNT(*) AS n,
+                   COUNT(*) FILTER (WHERE NOT ({human})) AS bots,
+                   COUNT(*) FILTER (WHERE {human} AND ts > NOW() - INTERVAL '7 days') AS this_week,
+                   COUNT(*) FILTER (WHERE {human} AND ts BETWEEN NOW() - INTERVAL '14 days' AND NOW() - INTERVAL '7 days') AS last_week,
+                   COUNT(*) FILTER (WHERE {human} AND county_filter IS NOT NULL) AS with_county,
+                   COUNT(*) FILTER (WHERE {human} AND (min_price IS NOT NULL OR max_price IS NOT NULL
+                                    OR min_year IS NOT NULL OR max_year IS NOT NULL)) AS with_filters,
+                   COUNT(*) FILTER (WHERE {human} AND result_count = 0) AS empty,
+                   PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY elapsed_ms) FILTER (WHERE {human}) AS p50_ms
+            FROM search_log WHERE {window}
+        """)
+        people = s["n"] - s["bots"]
+        results.add_pass(
+            f"Searches, last {USAGE_DAYS} days",
+            f"{people:,} by people ({people / USAGE_DAYS:.1f}/day), {s['bots']:,} by bots/scripts; "
+            f"this week {s['this_week']:,} vs last week {s['last_week']:,}\n"
+            f"   county filter {_pct(s['with_county'], people)}, price/year filters {_pct(s['with_filters'], people)}, "
+            f"0 results {_pct(s['empty'], people)}, median {s['p50_ms'] or 0:.0f}ms")
+
+        top = await conn.fetch(f"""
+            SELECT LOWER(TRIM(query)) AS q, COUNT(*) AS n FROM search_log
+            WHERE {window} AND {human} GROUP BY 1 ORDER BY n DESC LIMIT 15
+        """)
+        results.add_pass("Top searches", "\n   ".join(f"{r['n']:4}  {r['q']}" for r in top) or "none")
+
+        mix = await conn.fetch(f"""
+            SELECT COALESCE(county_filter, '(none)') AS county, COUNT(*) AS n FROM search_log
+            WHERE {window} AND {human} GROUP BY 1 ORDER BY n DESC LIMIT 8
+        """)
+        src = await conn.fetch(f"""
+            SELECT COALESCE(geocode_source, '?') AS src, COUNT(*) AS n FROM search_log
+            WHERE {window} AND {human} GROUP BY 1 ORDER BY n DESC
+        """)
+        results.add_pass("Search mix",
+                         "county: " + ", ".join(f"{r['county']} {_pct(r['n'], people)}" for r in mix) +
+                         "\n   resolved by: " + ", ".join(f"{r['src']} {_pct(r['n'], people)}" for r in src))
+
+        shapes = await conn.fetch(f"SELECT query FROM search_log WHERE {window} AND {human}")
+        counts = {}
+        for r in shapes:
+            k = classify_query(r["query"])
+            counts[k] = counts.get(k, 0) + 1
+        results.add_pass("Search query shapes", ", ".join(
+            f"{k} {_pct(n, people)}" for k, n in sorted(counts.items(), key=lambda kv: -kv[1])))
+    finally:
+        await conn.close()
+
+
+async def test_valuation_usage(results: TestResults):
+    """Valuations requested, how confident they were and what people enter."""
+    if not os.environ.get("DATABASE_URL"):
+        return
+    conn = await _log_conn()
+    try:
+        v = await conn.fetchrow("""
+            SELECT COUNT(*) AS n,
+                   COUNT(*) FILTER (WHERE created_at > NOW() - INTERVAL '7 days') AS this_week,
+                   COUNT(*) FILTER (WHERE confidence_level = 'high') AS high,
+                   COUNT(*) FILTER (WHERE confidence_level = 'medium') AS medium,
+                   COUNT(*) FILTER (WHERE confidence_level = 'low') AS low,
+                   COUNT(*) FILTER (WHERE eircode IS NOT NULL) AS with_eircode,
+                   COUNT(*) FILTER (WHERE bedrooms IS NOT NULL) AS with_bedrooms
+            FROM valuation_requests WHERE created_at > NOW() - make_interval(days => $1)
+        """, USAGE_DAYS)
+        f = await conn.fetchval("""
+            SELECT COUNT(*) FROM valuation_failures WHERE ts > NOW() - make_interval(days => $1)
+        """, USAGE_DAYS)
+        n = v["n"]
+        results.add_pass(
+            f"Valuations, last {USAGE_DAYS} days",
+            f"{n:,} succeeded ({v['this_week']:,} this week), {f:,} failed ({_pct(f, n + f)} failure rate)\n"
+            f"   confidence: high {_pct(v['high'], n)}, medium {_pct(v['medium'], n)}, low {_pct(v['low'], n)}; "
+            f"eircode given {_pct(v['with_eircode'], n)}, bedrooms given {_pct(v['with_bedrooms'], n)}")
+    finally:
+        await conn.close()
+
+
+async def test_failure_analysis(results: TestResults):
+    """Failed searches and valuations: how often, the most common, and which
+    kinds of input (edge cases) fail most."""
+    if not os.environ.get("DATABASE_URL"):
+        return
+    conn = await _log_conn()
+    try:
+        searches = await conn.fetchval(f"""
+            SELECT COUNT(*) FROM search_log
+            WHERE ts > NOW() - make_interval(days => $1) AND COALESCE(user_agent, '') !~* '{NON_HUMAN_UA}'
+        """, USAGE_DAYS)
+        by_reason = await conn.fetch("""
+            SELECT reason, endpoint, COUNT(*) AS n FROM search_failures
+            WHERE ts > NOW() - make_interval(days => $1) GROUP BY 1, 2 ORDER BY n DESC
+        """, USAGE_DAYS)
+        if not by_reason:
+            results.add_pass("Search failures", f"none in the last {USAGE_DAYS} days")
+        else:
+            results.add_pass(f"Search failures, last {USAGE_DAYS} days", ", ".join(
+                f"{r['reason']} ({r['endpoint']}) {r['n']:,}" for r in by_reason) +
+                f"  [vs {searches:,} logged /search calls]")
+            # search_log only holds searches that were placed, so the unplaced ones
+            # are on top of it
+            no_loc = sum(r["n"] for r in by_reason if r["reason"] == "no_location")
+            attempts = searches + no_loc
+            if attempts >= 50 and no_loc / attempts > 0.10:
+                results.add_warning("Search: unplaceable queries",
+                                    f"{_pct(no_loc, attempts)} of searches couldn't be placed; see scripts/failures_report.py")
+            errors = sum(r["n"] for r in by_reason if r["reason"] == "error")
+            if errors:
+                results.add_warning("Search: server errors", f"{errors:,} 5xx responses on search endpoints")
+
+            for reason in ("no_location", "no_results", "error"):
+                top = await conn.fetch("""
+                    SELECT LOWER(TRIM(query)) AS q, county, COUNT(*) AS n FROM search_failures
+                    WHERE ts > NOW() - make_interval(days => $1) AND reason = $2
+                    GROUP BY 1, 2 ORDER BY n DESC LIMIT 10
+                """, USAGE_DAYS, reason)
+                if top:
+                    results.add_pass(f"Top failing searches: {reason}", "\n   ".join(
+                        f"{r['n']:4}  {r['q']}" + (f" [{r['county']}]" if r["county"] else "") for r in top))
+
+            rows = await conn.fetch("""
+                SELECT query FROM search_failures
+                WHERE ts > NOW() - make_interval(days => $1) AND reason IN ('no_location', 'no_results')
+            """, USAGE_DAYS)
+            counts = {}
+            for r in rows:
+                k = classify_query(r["query"])
+                counts[k] = counts.get(k, 0) + 1
+            results.add_pass("Failing query shapes (edge cases)", ", ".join(
+                f"{k} {n}" for k, n in sorted(counts.items(), key=lambda kv: -kv[1])))
+
+        vf = await conn.fetch("""
+            SELECT status_code, COALESCE(detail, '') AS detail, COUNT(*) AS n,
+                   (ARRAY_AGG(address ORDER BY ts DESC))[1] AS example
+            FROM valuation_failures WHERE ts > NOW() - make_interval(days => $1)
+            GROUP BY 1, 2 ORDER BY n DESC LIMIT 10
+        """, USAGE_DAYS)
+        if vf:
+            results.add_pass("Valuation failures", "\n   ".join(
+                f"{r['n']:4}  {r['status_code']}  {r['detail'][:60]}  e.g. {r['example']}" for r in vf))
+            if any(r["status_code"] >= 500 for r in vf):
+                results.add_warning("Valuation: server errors", "500s in valuation_failures; check Sentry")
+        else:
+            results.add_pass("Valuation failures", f"none in the last {USAGE_DAYS} days")
+    finally:
+        await conn.close()
+
+
 async def run_all_tests():
     """Run complete test suite."""
     print("╔══════════════════════════════════════════════════════════════╗")
@@ -1097,7 +1360,8 @@ async def run_all_tests():
     print(f"  Existing: {existing_address} ({existing_county})")
     print(f"  Non-existing: {non_existing_address}\n")
 
-    async with httpx.AsyncClient() as client:
+    # The header keeps this suite's requests out of the usage and query logs
+    async with httpx.AsyncClient(headers={"X-HomeIQ-Test": "1"}) as client:
         # Database statistics (informational)
         print("Database Statistics:")
         await test_database_statistics(results)
@@ -1152,6 +1416,14 @@ async def run_all_tests():
 
         print("\nPerformance:")
         await test_performance(client, results)
+
+    print("\nUsage Analysis:")
+    for analysis in (test_logging_health, test_feature_usage, test_search_usage,
+                     test_valuation_usage, test_failure_analysis):
+        try:
+            await analysis(results)
+        except Exception as e:
+            results.add_warning(f"Usage analysis: {analysis.__name__}", str(e))
 
     # Summary
     success = results.summary()

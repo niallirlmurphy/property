@@ -27,6 +27,7 @@ from .adjustments import (
 )
 from .calculator import ValuationCalculator
 from .validator import MVPValidator
+from usage import query_logging_enabled
 from .nearby_amenities import get_nearby_amenities
 
 
@@ -457,6 +458,8 @@ async def estimate_property_value(
 async def log_valuation_failure(db_pool, request: ValuationRequest,
                                 status_code: int, detail: str) -> None:
     """Record a failed valuation in valuation_failures. Fire and forget."""
+    if not query_logging_enabled():
+        return
     try:
         await db_pool.execute("""
             INSERT INTO valuation_failures
@@ -485,6 +488,11 @@ async def log_valuation_request(
         location: Geocoding result
         response: Valuation response
     """
+
+    # Test traffic isn't logged, but its enrichment still runs (the suite checks it)
+    if not query_logging_enabled():
+        await enrich_property_from_request(db_pool, request, None)
+        return
 
     try:
         query = """

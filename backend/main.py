@@ -20,8 +20,9 @@ from dotenv import load_dotenv
 import sentry_sdk
 from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.asyncio import AsyncioIntegration
-from places import parse_query, pick_place
+from places import parse_localities, parse_query, pick_place
 from address_normalize import normalize_address
+import usage
 
 load_dotenv()
 
@@ -335,8 +336,11 @@ async def lifespan(app: FastAPI):
         asyncio.create_task(_init_db_pool_with_retry())
 
     task = asyncio.create_task(_heartbeat_loop())
+    usage_task = asyncio.create_task(usage.flush_loop(lambda: db_pool))
     yield
     task.cancel()
+    usage_task.cancel()
+    await usage.flush(db_pool)
     if db_pool is not None:
         await db_pool.close()
 
@@ -395,6 +399,8 @@ if os.environ.get("ENVIRONMENT") != "production":
 @app.middleware("http")
 async def catch_unhandled_errors(request: Request, call_next):
     detail = None
+    usage.start_request(request.headers)
+    started = time.time()
     try:
         response = await call_next(request)
     except Exception as e:
@@ -403,6 +409,11 @@ async def catch_unhandled_errors(request: Request, call_next):
         response = JSONResponse(status_code=500, content={"detail": "Internal server error"})
         detail = f"{type(e).__name__}: {e}"[:500]
     path = request.url.path
+    # Route template ("/eircode/{code}"), not the raw path, so counts group by feature
+    route = request.scope.get("route")
+    if request.method != "OPTIONS" and not path.startswith(("/health", "/cron")):
+        usage.record(f"{request.method} {route.path if route else 'unmatched'}",
+                     response.status_code, int((time.time() - started) * 1000))
     if response.status_code >= 500 and path.startswith(("/search", "/geocode")):
         qp = request.query_params
         asyncio.create_task(_log_search_failure(
@@ -778,6 +789,15 @@ async def _geocode_db_tokens(query: str, county: Optional[str] = None) -> "tuple
     tokens = _address_tokens(normalize_for_search(query))
     if not tokens:
         return None
+    result = await _token_lookup(tokens, query, county)
+    # A house number we have no sale for ("135 Athlumney Castle"): the estate/street
+    # it's on still places it.
+    if result is None and tokens[0].isdigit() and len(tokens) >= 3:
+        result = await _token_lookup(tokens[1:], query, county)
+    return result
+
+
+async def _token_lookup(tokens: list, query: str, county: Optional[str]) -> "tuple[float, float] | None":
     # Single-token queries need a tighter cluster to avoid false positives
     std_threshold = 0.02 if len(tokens) >= 2 else 0.01
     tsquery = _token_tsquery(tokens)
@@ -805,10 +825,12 @@ COUNTY_KEYWORDS = re.compile(
     r"laois|tipperary|clare|kerry)\b",
     re.IGNORECASE,
 )
-async def _geocode_place(query: str, county: Optional[str] = None) -> "tuple[float, float] | None":
+async def _geocode_place(query: str, county: Optional[str] = None,
+                         parse=parse_query) -> "tuple[float, float] | None":
     """Resolve a town/suburb/locality name ("Swords, Dublin", "Limerick City") to the
-    centre of its sales, from the `places` table (scripts/build_places.py)."""
-    names, hint = parse_query(query, county)
+    centre of its sales, from the `places` table (scripts/build_places.py). `parse`
+    picks the names to try (parse_localities: the later parts of the query)."""
+    names, hint = parse(query, county)
     if not names:
         return None
     try:
@@ -892,9 +914,10 @@ async def resolve_location(query: str, county: Optional[str] = None,
       8. Nearest house number → DB     (43 Mount Carmel Road → sale at No. 42/44)
       9. Place name → places table     (town/suburb centres built from our own sales)
       10. Token-based DB lookup        (full-text, tight clusters: estates, developments)
+      11. Later parts → places table   (locality the query ends with: "Drumlaney, Redhills")
     Anything else is logged to search_failures (no_location) and raises 404.
 
-    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_county', 'db_address', 'db_neighbour', 'db_place', 'db_tokens'
+    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_county', 'db_address', 'db_neighbour', 'db_place', 'db_tokens', 'db_locality'
     """
     # 1. Raw coordinates
     coord_match = re.match(r"^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$", query.strip())
@@ -997,6 +1020,12 @@ async def resolve_location(query: str, county: Optional[str] = None,
     if result:
         return _cache_and_return(*result, "db_tokens")
 
+    # 4e. The locality the query ends with, when the first part is unknown
+    # ("Drumlaney, Redhills" -> Redhills). Last, so streets found above stay precise.
+    result = await _geocode_place(query, county, parse=parse_localities)
+    if result:
+        return _cache_and_return(*result, "db_locality")
+
     # Nothing in our data. Search uses no external geocoder (no Mapbox): log the
     # miss to search_failures (scripts/failures_report.py) and give up.
     if log_miss:
@@ -1007,6 +1036,8 @@ async def resolve_location(query: str, county: Optional[str] = None,
 async def _log_search_failure(endpoint: str, query: Optional[str], county: Optional[str],
                               reason: str, detail: Optional[str] = None) -> None:
     """Record a search that failed (reason: no_location, no_results, error). Fire and forget."""
+    if not usage.query_logging_enabled():
+        return
     try:
         await db_pool.execute(
             "INSERT INTO search_failures (endpoint, query, county, reason, detail) "
@@ -1088,6 +1119,8 @@ async def _log_search_query(
     ip_address: Optional[str],
 ) -> None:
     """Log search query to search_log table for analytics. Fire and forget — errors are ignored."""
+    if not usage.query_logging_enabled():
+        return
     try:
         await db_pool.execute("""
             INSERT INTO search_log (

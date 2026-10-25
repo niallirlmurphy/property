@@ -29,6 +29,15 @@ MIN_SALES = 10
 CLUSTER_KM = 5.0
 CLUSTER_SHARE = 0.5
 
+# Places too small to cluster from sales (MIN_SALES), with hand-checked centres:
+# (name as normalize_place gives it, county, lat, lon). Written with sales = 0.
+MANUAL_PLACES = [
+    ("drumlaney", "Cavan", 54.11159, -7.35314),     # townland, Redhills (2026-10-25)
+    ("achill", "Mayo", 53.930, -9.939),             # "Achill" alone -> Achill Sound village
+    ("dugort", "Mayo", 54.00965, -10.02500),        # village on Achill Island; both spellings
+    ("doogort", "Mayo", 54.00965, -10.02500),
+]
+
 SAMPLE = ["swords", "malahide", "tuam", "limerick city", "ranelagh", "dun laoghaire",
           "elm park", "nobber", "dublin 2", "main street", "cork", "galway", "kilkenny", "sligo"]
 
@@ -83,6 +92,9 @@ def main():
         if c:
             places.append((name, county, *c, spread[name]))
     print(f"{len(points):,} candidate names, {len(places):,} clustered places")
+    manual = {(n, c) for n, c, *_ in MANUAL_PLACES}
+    places = [p for p in places if (p[0], p[1]) not in manual]
+    places += [(n, c, la, lo, 0, spread[n] or 1) for n, c, la, lo in MANUAL_PLACES]
     by_name = defaultdict(list)
     for p in places:
         by_name[p[0]].append(p)

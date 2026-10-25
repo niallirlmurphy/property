@@ -18,6 +18,7 @@ COUNTIES = [
 ]
 _COUNTY_BY_NORM = {c.lower(): c for c in COUNTIES}
 _COUNTY_PREFIX = re.compile(r"^(co|county)\s+")
+_COUNTY_SUFFIX = re.compile(r"\s(co|county)\s(" + "|".join(_COUNTY_BY_NORM) + r")$")
 
 
 def normalize_place(s: str) -> str:
@@ -45,22 +46,48 @@ def address_place_names(address: str) -> set:
     return names
 
 
+def _query_parts(query: str, county: Optional[str]) -> "tuple[list, Optional[str]]":
+    """Normalized comma parts with county parts and trailing "co X" removed, and the
+    county hint they give. "Redhills Co Cavan" -> (["redhills"], "Cavan")."""
+    hint = county
+    parts = []
+    for p in (normalize_place(p) for p in query.split(",")):
+        m = _COUNTY_SUFFIX.search(p)
+        if m:
+            hint = _COUNTY_BY_NORM[m.group(2)]
+            p = p[:m.start()].strip()
+        c = county_of(p) if parts else None    # a first part named "Carlow" is the town
+        if c:
+            hint = c
+        elif p:
+            parts.append(p)
+    return parts, hint
+
+
+def _is_numbered(part: str) -> bool:
+    return bool(re.search(r"\d", part)) and not re.fullmatch(r"dublin \d{1,2}w?", part)
+
+
 def parse_query(query: str, county: Optional[str] = None) -> "tuple[list, Optional[str]]":
     """(place names to look up, county hint) for a search query, or ([], None) when the
     query isn't a place name. "Swords, Dublin" -> (["swords"], "Dublin");
     "Limerick City" -> (["limerick city", "limerick"], None)."""
-    parts = [normalize_place(p) for p in query.split(",")]
-    parts = [p for p in parts if p]
-    if not parts or re.search(r"\d", parts[0]) and not re.fullmatch(r"dublin \d{1,2}w?", parts[0]):
+    parts, hint = _query_parts(query, county)
+    if not parts or _is_numbered(parts[0]):
         return [], None                      # house-numbered address, not a place
-    hint = county
-    for p in parts[1:]:
-        hint = county_of(p) or hint
     name = parts[0]
     names = [name]
     if name.endswith(" city"):
         names.append(name[: -len(" city")])
     return names, hint
+
+
+def parse_localities(query: str, county: Optional[str] = None) -> "tuple[list, Optional[str]]":
+    """The later parts of a query, as place names to fall back on when the first part
+    can't be placed: "Drumlaney, Redhills" -> (["redhills"], None). The backend tries
+    these last, after street-level lookups, so "Main Street, Tuam" stays on the street."""
+    parts, hint = _query_parts(query, county)
+    return [p for p in parts[1:] if not _is_numbered(p)], hint
 
 
 def pick_place(rows: list, names: list, hint: Optional[str]) -> "Optional[tuple[float, float]]":
