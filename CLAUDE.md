@@ -442,11 +442,12 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
 - **Address normalization**: All addresses stored in both original and normalized forms. `address_normalized` column applies consistent formatting (title case, whitespace cleanup, abbreviation standardization, remove "No." prefix, standardize apartment/unit). **CRITICAL**: Normalization is applied automatically during import (`db/import.py`, `scripts/sync_ppr_updates.py`) and verified by test suite (`tests/test_production_suite.py::test_address_normalization`). This ensures exact address searches work reliably by eliminating punctuation/abbreviation variations.
   - **Normalization rules**: 
     1. Remove "No." prefix from house numbers
-    2. Expand abbreviations: Rd→Road, St→Street, Ave→Avenue, Dr→Drive, Apt→Apartment
+    2. Expand abbreviations: Rd→Road, Ave→Avenue, Dr→Drive, Apartment→Apt, Co.→Co. St is Street only at the end of a line or before a qualifier/county/number ("Main St Lower", "Thomas St Dublin 8"); otherwise Saint ("12 St Mobhi Road"), since a number never comes straight before a street type
     3. Title case with exceptions (Dublin, Cork, Co., etc. stay capitalized)
     4. Clean punctuation: normalize commas/spaces, remove leading/trailing
     5. Normalize whitespace (single spaces only)
-    6. Fold Irish fadas (Slí→Sli, Cnocán→Cnocan) so input typed with or without them matches. The raw `address` column keeps the fadas for display. All copies of the normalizer must fold: `scripts/sync_ppr_updates.py`, `db/import.py`, `scripts/normalize_addresses.py`, `backend/main.py::normalize_for_search`, and the test suite copy.
+    6. Fold Irish fadas (Slí→Sli, Cnocán→Cnocan) so input typed with or without them matches. The raw `address` column keeps the fadas for display.
+  - **One normalizer**: `backend/address_normalize.py` (in `backend/` because Railway deploys only that directory). Import, sync, `normalize_addresses.py`, `main.py::normalize_for_search` and the tests all import it; never copy it. After changing a rule, run `python3 scripts/normalize_addresses.py --recheck` (dry run; `--apply` to write) and deploy the backend straight after, or search input and stored rows disagree. Last run 2026-10-25: 83,765 rows (St→Saint, Co.→Co).
   - **Source encoding**: `PPR-ALL.csv` is Windows-1252, not UTF-8 ('€' is byte 0x80, Í is 0xCD). `sync_ppr_updates.py` detects the encoding (`detect_csv_encoding`) and `geocode.py` reads it as cp1252. Never read it as UTF-8 with `errors="replace"`, which turns every fada into U+FFFD (1,701 rows were repaired from this on 2026-10-14).
   - **Query pattern**: For exact address matching, ALWAYS query `address_normalized` column directly (NOT LIKE/REGEXP). Example:
     ```python

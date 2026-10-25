@@ -33,7 +33,6 @@ import re
 import requests
 import tempfile
 import subprocess
-import unicodedata
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional, List, Dict
@@ -49,6 +48,9 @@ PPR_DOWNLOAD_PAGE = "https://www.propertypriceregister.ie/website/npsra/pprweb.n
 # Users should download manually from the website.
 
 PROJECT_ROOT = Path(__file__).parent.parent
+
+sys.path.insert(0, str(PROJECT_ROOT / 'backend'))
+from address_normalize import fold_accents, normalize_address  # noqa: E402,F401
 
 
 def parse_date(raw: Optional[str]):
@@ -94,96 +96,6 @@ def detect_csv_encoding(path: str) -> str:
         return 'utf-8-sig'
     except UnicodeDecodeError:
         return 'cp1252'
-
-
-def fold_accents(text: str) -> str:
-    """Strip combining marks (á → a). Same folding the backend applies to search input."""
-    decomposed = unicodedata.normalize('NFKD', text)
-    return ''.join(c for c in decomposed if not unicodedata.combining(c))
-
-
-def normalize_address(address: str) -> str:
-    """
-    Normalize Irish property address for better geocoding and matching.
-
-    Rules:
-    1. Clean HTML entities (&#039; -> ', &amp; -> &, etc.)
-    2. Title case (except common words)
-    3. Remove "No." prefix from house numbers
-    4. Standardize apartment/unit formatting
-    5. Standardize street type abbreviations
-    6. Clean up punctuation and whitespace
-    7. Fold Irish fadas (Slí → Sli) so input typed with or without them matches;
-       the raw address column keeps them for display
-    """
-    if not address:
-        return address
-
-    # FIRST: Clean HTML entities (critical for geocoding)
-    import html
-    normalized = html.unescape(address)
-
-    # Also clean common XML/HTML entities that html.unescape might miss
-    normalized = normalized.replace('&amp;', '&')
-    normalized = normalized.replace('&quot;', '"')
-    normalized = normalized.replace('&lt;', '<')
-    normalized = normalized.replace('&gt;', '>')
-
-    normalized = fold_accents(normalized).strip()
-
-    # Basic cleanup
-    normalized = re.sub(r'\s+', ' ', normalized)
-    normalized = re.sub(r',\s*,+', ',', normalized)
-
-    # Remove "No." prefix
-    normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
-
-    # Standardize apartment/unit
-    normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
-
-    # Standardize street types
-    street_types = {
-        r'\bSt\.?\b': 'Street',
-        r'\bRd\.?\b': 'Road',
-        r'\bAve\.?\b': 'Avenue',
-        r'\bDr\.?\b': 'Drive',
-        r'\bCl\.?\b': 'Close',
-        r'\bCt\.?\b': 'Court',
-        r'\bPk\.?\b': 'Park',
-        r'\bSq\.?\b': 'Square',
-    }
-
-    for abbrev, full in street_types.items():
-        normalized = re.sub(abbrev, full, normalized, flags=re.I)
-
-    # Clean up punctuation
-    normalized = re.sub(r',\s*,', ',', normalized)
-    normalized = re.sub(r'\s+,', ',', normalized)
-    normalized = re.sub(r',\s+', ', ', normalized)
-    normalized = normalized.strip(', ')
-
-    # Title case with exceptions
-    words = normalized.split()
-    lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
-    upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
-
-    result_words = []
-    for i, word in enumerate(words):
-        if i == 0:
-            result_words.append(word.capitalize())
-        elif word in upper_exceptions:
-            result_words.append(word)
-        elif word.lower() in lower_exceptions:
-            result_words.append(word.lower())
-        else:
-            result_words.append(word.capitalize())
-
-    normalized = ' '.join(result_words)
-
-    # Final cleanup
-    normalized = re.sub(r'\s+', ' ', normalized).strip()
-
-    return normalized
 
 
 def normalize_ppr_row(row: Dict[str, str]) -> Dict[str, any]:

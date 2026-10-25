@@ -9,116 +9,22 @@ Creates a new 'address_normalized' column with cleaned addresses that:
 
 Usage:
     python3 scripts/normalize_addresses.py [--limit N] [--dry-run]
+    python3 scripts/normalize_addresses.py --recheck [--apply]
+
+--recheck re-runs the normalizer over every row and rewrites the ones whose stored
+value no longer matches (after a rule change). Dry run unless --apply.
 """
 
 import asyncio
 import asyncpg
 import os
 import sys
-import re
-import unicodedata
 from datetime import datetime
 
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
+from address_normalize import normalize_address  # noqa: E402
+
 DATABASE_URL = os.environ.get("DATABASE_URL")
-
-
-def normalize_address(address: str) -> str:
-    """
-    Normalize Irish property address for better API matching.
-
-    Rules:
-    1. Title case (except common words)
-    2. Remove excessive punctuation
-    3. Standardize common patterns
-    4. Remove noise words that prevent matching
-    5. Fix common OCR/data entry errors
-    """
-    if not address:
-        return address
-
-    normalized = address
-
-    # 1. Basic cleanup
-    # Fold fadas (Slí → Sli) so input typed with or without them matches
-    normalized = ''.join(c for c in unicodedata.normalize('NFKD', normalized)
-                         if not unicodedata.combining(c)).strip()
-    normalized = re.sub(r'\s+', ' ', normalized)  # Normalize whitespace
-    normalized = re.sub(r',\s*,+', ',', normalized)  # Remove multiple commas
-
-    # 2. Remove "No." / "No " prefix from house numbers
-    # "No. 11 Main Street" → "11 Main Street"
-    normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
-
-    # 3. Standardize apartment/unit formatting
-    # "Apartment 5" → "Apt 5"
-    # "Unit 12" → "Unit 12" (keep as is)
-    normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
-
-    # 4. Remove redundant location qualifiers that hurt matching
-    # These often differ between PPR and geocoding databases
-    noise_patterns = [
-        r'\bMinisters?\s+Road\b',  # "Ministers Road" (specific to some estates)
-        r'\bChurch\s+Fields\s+(East|West)\b',  # Directional qualifiers
-        r'\bMiller\s*[\'S]*\s+Glen\b',  # Possessive variations
-        r'\bStrawhall\b',  # Sub-locality that may not be in geocoder
-    ]
-
-    for pattern in noise_patterns:
-        # Replace with space to avoid joining words
-        normalized = re.sub(pattern, ' ', normalized, flags=re.I)
-
-    # 5. Fix common OCR/data entry errors
-    normalized = re.sub(r'\bCo\.?\s+', 'Co. ', normalized, flags=re.I)  # "Co Cork" → "Co. Cork"
-    normalized = re.sub(r'\bCo\s+Dublin\b', 'Dublin', normalized, flags=re.I)  # "Co Dublin" → "Dublin"
-
-    # 6. Standardize street types
-    street_types = {
-        r'\bSt\.?\b': 'Street',
-        r'\bRd\.?\b': 'Road',
-        r'\bAve\.?\b': 'Avenue',
-        r'\bDr\.?\b': 'Drive',
-        r'\bCl\.?\b': 'Close',
-        r'\bCt\.?\b': 'Court',
-        r'\bPk\.?\b': 'Park',
-        r'\bSq\.?\b': 'Square',
-    }
-
-    for abbrev, full in street_types.items():
-        normalized = re.sub(abbrev, full, normalized, flags=re.I)
-
-    # 7. Clean up punctuation
-    normalized = re.sub(r',\s*,', ',', normalized)  # Double commas
-    normalized = re.sub(r'\s+,', ',', normalized)  # Space before comma
-    normalized = re.sub(r',\s+', ', ', normalized)  # Standardize comma spacing
-    normalized = normalized.strip(', ')  # Trim leading/trailing commas
-
-    # 8. Title case with exceptions for common Irish words
-    # Keep all-caps county names, fix mixed case
-    words = normalized.split()
-    lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
-    upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
-
-    result_words = []
-    for i, word in enumerate(words):
-        # First word always capitalized
-        if i == 0:
-            result_words.append(word.capitalize())
-        # Keep known upper case
-        elif word in upper_exceptions:
-            result_words.append(word)
-        # Lower case exceptions
-        elif word.lower() in lower_exceptions:
-            result_words.append(word.lower())
-        # Title case for everything else
-        else:
-            result_words.append(word.capitalize())
-
-    normalized = ' '.join(result_words)
-
-    # 9. Final cleanup
-    normalized = re.sub(r'\s+', ' ', normalized).strip()
-
-    return normalized
 
 
 async def add_normalized_column(pool):
@@ -233,6 +139,48 @@ async def normalize_all_addresses(pool, limit=None, dry_run=False):
     print(f"\n✅ Normalized {updated:,} addresses")
 
 
+async def recheck_all_addresses(pool, apply=False):
+    """Rewrite address_normalized wherever the current rules give a different value."""
+    CHUNK = 5000
+    last_id, scanned, changes = 0, 0, []
+    async with pool.acquire() as conn:
+        await conn.execute("SET statement_timeout = '30s'")
+        while True:
+            rows = await conn.fetch("""
+                SELECT id, address, address_normalized FROM properties
+                WHERE id > $1 AND address IS NOT NULL
+                ORDER BY id LIMIT $2
+            """, last_id, CHUNK)
+            if not rows:
+                break
+            last_id = rows[-1]['id']
+            scanned += len(rows)
+            for r in rows:
+                new = normalize_address(r['address'])
+                if new != r['address_normalized']:
+                    changes.append((r['id'], r['address_normalized'], new))
+            if scanned % 100000 < CHUNK:
+                print(f"  scanned {scanned:,}, {len(changes):,} to change")
+
+        print(f"\nScanned {scanned:,} rows; {len(changes):,} would change")
+        for _, old, new in changes[:25]:
+            print(f"  {old}  →  {new}")
+        if not apply:
+            print("\nDry run. Re-run with --apply to write.")
+            return
+
+        for i in range(0, len(changes), 1000):
+            batch = changes[i:i + 1000]
+            await conn.execute("""
+                UPDATE properties p SET address_normalized = v.new
+                FROM unnest($1::bigint[], $2::text[]) AS v(id, new)
+                WHERE p.id = v.id
+            """, [c[0] for c in batch], [c[2] for c in batch])
+            print(f"  updated {min(i + 1000, len(changes)):,} / {len(changes):,}")
+            await asyncio.sleep(0.5)  # spread the writes out for the Disk IO budget
+        print(f"\n✅ Rewrote {len(changes):,} addresses")
+
+
 async def show_stats(pool):
     """Show statistics about address normalization."""
 
@@ -307,6 +255,13 @@ async def main():
         sys.exit(1)
 
     pool = await asyncpg.create_pool(DATABASE_URL, min_size=2, max_size=5)
+
+    if "--recheck" in sys.argv:
+        try:
+            await recheck_all_addresses(pool, apply="--apply" in sys.argv)
+        finally:
+            await pool.close()
+        return
 
     try:
         # Add column if needed

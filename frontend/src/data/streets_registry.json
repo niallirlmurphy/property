@@ -201,7 +201,7 @@
     "countySlug": "dublin",
     "category": "value",
     "rank": 18,
-    "normalizedKey": "street kevins park|dartry|dublin",
+    "normalizedKey": "saint kevins park|dartry|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €2,125,000 across 22 recorded sales on the Property Price Register."
   },
   {
@@ -307,7 +307,7 @@
     "countySlug": "dublin",
     "category": "value",
     "rank": 28,
-    "normalizedKey": "street marys road|ballsbridge|dublin",
+    "normalizedKey": "saint marys road|ballsbridge|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €1,900,000 across 15 recorded sales on the Property Price Register."
   },
   {
@@ -873,7 +873,7 @@
     "countySlug": "dublin",
     "category": "value",
     "rank": 80,
-    "normalizedKey": "street thomas road|mount merrion|dublin",
+    "normalizedKey": "saint thomas road|mount merrion|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €1,460,000 across 9 recorded sales on the Property Price Register."
   },
   {
@@ -1005,7 +1005,7 @@
     "countySlug": "dublin",
     "category": "value",
     "rank": 95,
-    "normalizedKey": "street johns road|sandymount|dublin",
+    "normalizedKey": "saint johns road|sandymount|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €1,400,000 across 9 recorded sales on the Property Price Register."
   },
   {
@@ -1225,7 +1225,7 @@
     "countySlug": "dublin",
     "category": "value",
     "rank": 117,
-    "normalizedKey": "street lawrence road|clontarf|dublin",
+    "normalizedKey": "saint lawrence road|clontarf|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €1,301,250 across 44 recorded sales on the Property Price Register."
   },
   {
@@ -1346,7 +1346,7 @@
     "countySlug": "dublin",
     "category": "value",
     "rank": 128,
-    "normalizedKey": "street albans park|ballsbridge|dublin",
+    "normalizedKey": "saint albans park|ballsbridge|dublin",
     "description": "One of Ireland's highest-value streets, with a median sale price of €1,270,000 across 10 recorded sales on the Property Price Register."
   },
   {
@@ -2952,7 +2952,7 @@
     "countySlug": "dublin",
     "category": "volume",
     "rank": 128,
-    "normalizedKey": "street attracta road|cabra|dublin",
+    "normalizedKey": "saint attracta road|cabra|dublin",
     "description": "One of Ireland's most active streets, with 93 recorded sales on the Property Price Register and a median price of €295,000."
   },
   {

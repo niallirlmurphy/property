@@ -435,56 +435,14 @@ async def test_address_normalization(results: TestResults):
     """Test that all addresses have normalized versions populated."""
     import asyncpg
     import os
-    import re
-    import unicodedata
 
     DATABASE_URL = os.environ.get("DATABASE_URL")
     if not DATABASE_URL:
         results.add_warning("Address normalization", "DATABASE_URL not set - skipping")
         return
 
-    def normalize_address(address: str) -> str:
-        """Normalize address using same logic as normalize_addresses.py script."""
-        if not address:
-            return address
-
-        # Fold fadas (Slí → Sli) so input typed with or without them matches
-        normalized = ''.join(c for c in unicodedata.normalize('NFKD', address)
-                             if not unicodedata.combining(c)).strip()
-        normalized = re.sub(r'\s+', ' ', normalized)
-        normalized = re.sub(r',\s*,+', ',', normalized)
-        normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
-        normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
-
-        street_types = {
-            r'\bSt\.?\b': 'Street', r'\bRd\.?\b': 'Road', r'\bAve\.?\b': 'Avenue',
-            r'\bDr\.?\b': 'Drive', r'\bCl\.?\b': 'Close', r'\bCt\.?\b': 'Court',
-            r'\bPk\.?\b': 'Park', r'\bSq\.?\b': 'Square',
-        }
-        for abbrev, full in street_types.items():
-            normalized = re.sub(abbrev, full, normalized, flags=re.I)
-
-        normalized = re.sub(r',\s*,', ',', normalized)
-        normalized = re.sub(r'\s+,', ',', normalized)
-        normalized = re.sub(r',\s+', ', ', normalized)
-        normalized = normalized.strip(', ')
-
-        words = normalized.split()
-        lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
-        upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
-
-        result_words = []
-        for i, word in enumerate(words):
-            if i == 0:
-                result_words.append(word.capitalize())
-            elif word in upper_exceptions:
-                result_words.append(word)
-            elif word.lower() in lower_exceptions:
-                result_words.append(word.lower())
-            else:
-                result_words.append(word.capitalize())
-
-        return ' '.join(result_words).strip()
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
+    from address_normalize import normalize_address
 
     try:
         conn = await asyncpg.connect(DATABASE_URL)

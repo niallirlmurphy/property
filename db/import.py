@@ -17,12 +17,14 @@ import csv
 import os
 import sys
 import re
-import unicodedata
 from datetime import datetime
 from typing import Optional
 from dotenv import load_dotenv
 import psycopg2
 from psycopg2.extras import execute_values
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
+from address_normalize import normalize_address  # noqa: E402
 
 load_dotenv()
 
@@ -76,56 +78,6 @@ def parse_float(raw: str) -> Optional[float]:
         return float(raw.strip())
     except (ValueError, AttributeError):
         return None
-
-
-def normalize_address(address: str) -> str:
-    """
-    Normalize address for better matching (same logic as scripts/normalize_addresses.py).
-    Applied automatically during import to ensure all new records have normalized addresses.
-    """
-    if not address:
-        return address
-
-    # Fold fadas (Slí → Sli) so input typed with or without them matches
-    normalized = ''.join(c for c in unicodedata.normalize('NFKD', address)
-                         if not unicodedata.combining(c)).strip()
-    normalized = re.sub(r'\s+', ' ', normalized)
-    normalized = re.sub(r',\s*,+', ',', normalized)
-    normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
-    normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
-
-    # Standardize street types
-    street_types = {
-        r'\bSt\.?\b': 'Street', r'\bRd\.?\b': 'Road', r'\bAve\.?\b': 'Avenue',
-        r'\bDr\.?\b': 'Drive', r'\bCl\.?\b': 'Close', r'\bCt\.?\b': 'Court',
-        r'\bPk\.?\b': 'Park', r'\bSq\.?\b': 'Square',
-    }
-    for abbrev, full in street_types.items():
-        normalized = re.sub(abbrev, full, normalized, flags=re.I)
-
-    # Clean punctuation
-    normalized = re.sub(r',\s*,', ',', normalized)
-    normalized = re.sub(r'\s+,', ',', normalized)
-    normalized = re.sub(r',\s+', ', ', normalized)
-    normalized = normalized.strip(', ')
-
-    # Title case
-    words = normalized.split()
-    lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
-    upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
-
-    result_words = []
-    for i, word in enumerate(words):
-        if i == 0:
-            result_words.append(word.capitalize())
-        elif word in upper_exceptions:
-            result_words.append(word)
-        elif word.lower() in lower_exceptions:
-            result_words.append(word.lower())
-        else:
-            result_words.append(word.capitalize())
-
-    return ' '.join(result_words).strip()
 
 
 def run_import():

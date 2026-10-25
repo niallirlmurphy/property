@@ -21,6 +21,7 @@ import sentry_sdk
 from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.asyncio import AsyncioIntegration
 from places import parse_query, pick_place
+from address_normalize import normalize_address
 
 load_dotenv()
 
@@ -572,44 +573,7 @@ _FULL_TO_ABBREV = {v: k for k, v in _ABBREV_TO_FULL.items()}
 
 def normalize_for_search(addr: str) -> str:
     """Apply the same normalization as the address_normalized column."""
-    # Fold fadas (Slí → Sli) so input typed with or without them matches
-    normalized = ''.join(c for c in unicodedata.normalize('NFKD', addr)
-                         if not unicodedata.combining(c)).strip()
-    normalized = re.sub(r'\s+', ' ', normalized)
-    normalized = re.sub(r'^No\.?\s+(\d+)', r'\1', normalized, flags=re.I)
-    normalized = re.sub(r'\bApartment\b', 'Apt', normalized, flags=re.I)
-
-    # Expand common abbreviations to match normalized format
-    street_types = {
-        r'\bSt\.?\b': 'Street', r'\bRd\.?\b': 'Road', r'\bAve\.?\b': 'Avenue',
-        r'\bDr\.?\b': 'Drive', r'\bCl\.?\b': 'Close', r'\bCt\.?\b': 'Court',
-        r'\bPk\.?\b': 'Park', r'\bSq\.?\b': 'Square',
-    }
-    for abbrev, full in street_types.items():
-        normalized = re.sub(abbrev, full, normalized, flags=re.I)
-
-    # Clean punctuation and apply title case
-    normalized = re.sub(r',\s*,', ',', normalized)
-    normalized = re.sub(r'\s+,', ',', normalized)
-    normalized = re.sub(r',\s+', ', ', normalized)
-    normalized = normalized.strip(', ')
-
-    words = normalized.split()
-    lower_exceptions = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
-    upper_exceptions = {'Co.', 'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
-
-    result_words = []
-    for i, word in enumerate(words):
-        if i == 0:
-            result_words.append(word.capitalize())
-        elif word in upper_exceptions:
-            result_words.append(word)
-        elif word.lower() in lower_exceptions:
-            result_words.append(word.lower())
-        else:
-            result_words.append(word.capitalize())
-
-    return ' '.join(result_words).strip()
+    return normalize_address(addr)
 
 
 async def _geocode_db_exact_address(query: str, county: Optional[str] = None) -> "tuple[float, float] | None":
