@@ -819,10 +819,18 @@ async def _token_lookup(tokens: list, query: str, county: Optional[str]) -> "tup
     return None
 
 
-COUNTY_KEYWORDS = re.compile(
-    r"\b(carlow|cork|galway|limerick|waterford|kilkenny|wexford|wicklow|kildare|meath|louth|"
+_OTHER_COUNTIES = (
+    r"(?:carlow|cork|galway|limerick|waterford|kilkenny|wexford|wicklow|kildare|meath|louth|"
     r"cavan|monaghan|donegal|sligo|mayo|roscommon|leitrim|longford|westmeath|offaly|"
-    r"laois|tipperary|clare|kerry)\b",
+    r"laois|tipperary|clare|kerry)"
+)
+# A county outside Dublin named in the query text: after "Co"/"County", or ending a
+# comma part ("Ennis, Clare", "fairfield road cork", "Galway City"). A county word
+# inside a name ("25 Clare Road", "Cork Street", "Clare Hall") doesn't count, so those
+# keep the Dublin default.
+COUNTY_KEYWORDS = re.compile(
+    rf"\b(?:co|county)\.?\s*{_OTHER_COUNTIES}\b"
+    rf"|\b{_OTHER_COUNTIES}(?:\s+(?:city|town))?\s*(?:,|$)",
     re.IGNORECASE,
 )
 async def _geocode_place(query: str, county: Optional[str] = None,
@@ -1473,7 +1481,12 @@ async def search_exact(
         rows = exact_rows
     else:
         # Step 3: No exact match - try full-text search as fallback
-        search_terms = ' & '.join(search_normalized.split())
+        # A leading house number must come straight before the next word, or "25 Clare
+        # Road" matches "25 Doonbeg House, Clare Hall, Malahide Road".
+        words = search_normalized.split()
+        if len(words) > 1 and words[0].isdigit():
+            words[:2] = [f"{words[0]} <-> {words[1]}"]
+        search_terms = ' & '.join(words)
         # 'simple' must match idx_properties_address_fts, or Postgres seq-scans every row
         if county:
             rows = await db_pool.fetch("""

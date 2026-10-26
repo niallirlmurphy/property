@@ -29,11 +29,20 @@ function formatDate(dateString: string): string {
   return `${day}-${month}-${year}`;
 }
 
+// On mobile the map is display:none behind the List/Intro tabs. Leaflet's animations
+// divide by the map's size, so flying a hidden map throws "Invalid LatLng (NaN, NaN)":
+// jump instead, and re-measure when the map is shown again.
+function isShown(map: L.Map): boolean {
+  const el = map.getContainer();
+  return el.clientWidth > 0 && el.clientHeight > 0;
+}
+
 function MapFlyTo({ center, radius }: { center: [number, number]; radius: number }) {
   const map = useMap();
   useEffect(() => {
     const zoom = radius <= 0.5 ? 17 : radius <= 1 ? 16 : radius <= 2 ? 15 : radius <= 5 ? 14 : 13;
-    map.flyTo(center, zoom, { duration: 1 });
+    if (isShown(map)) map.flyTo(center, zoom, { duration: 1 });
+    else map.setView(center, zoom, { animate: false });
   }, [center, radius, map]);
   return null;
 }
@@ -41,8 +50,22 @@ function MapFlyTo({ center, radius }: { center: [number, number]; radius: number
 function MapPanTo({ center }: { center: [number, number] | null }) {
   const map = useMap();
   useEffect(() => {
-    if (center) map.panTo(center, { animate: true, duration: 0.5 });
+    if (!center) return;
+    if (isShown(map)) map.panTo(center, { animate: true, duration: 0.5 });
+    else map.setView(center, map.getZoom(), { animate: false });
   }, [center, map]);
+  return null;
+}
+
+function MapResizeWatcher() {
+  const map = useMap();
+  useEffect(() => {
+    const observer = new ResizeObserver(() => {
+      if (isShown(map)) map.invalidateSize({ pan: false });
+    });
+    observer.observe(map.getContainer());
+    return () => observer.disconnect();
+  }, [map]);
   return null;
 }
 
@@ -90,6 +113,7 @@ export default function MapView({
         />
       )}
       <MapPanTo center={panTarget} />
+      <MapResizeWatcher />
       {mapProperties
         .filter(p => p.latitude !== null && p.longitude !== null)
         .map(p => (

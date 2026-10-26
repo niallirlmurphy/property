@@ -40,6 +40,9 @@ SEARCH_TEST_CASES = [
     # Cross-county ambiguous addresses
     ("Main Street", "Cork", "Cork", 10, "Generic street name filtered to Cork"),
     ("Main Street", "Galway", "Galway", 10, "Generic street name filtered to Galway"),
+
+    # A county word inside a street name isn't a county: still the Dublin default
+    ("25 Clare Road", None, "Dublin", 50, "Clare Road, Drumcondra (not County Clare)"),
 ]
 
 
@@ -84,6 +87,9 @@ async def test_search_respects_county_filter(query, county, expected_county, min
     ("36 fairfield road", None, "Dublin", 0),
     # ...unless the query text itself names another county, which is honoured.
     ("36 fairfield road cork", None, "Cork", 1),
+    # No sale at 25 Clare Road, Dublin; the full-text fallback mustn't offer
+    # "25 Doonbeg House, Clare Hall, Malahide Road" or County Clare's Clare Road.
+    ("25 Clare Road", None, "Dublin", 0),
 ])
 async def test_exact_search_respects_county_filter(address, county, expected_county, exact_count):
     """Verify exact search endpoint respects county filter."""

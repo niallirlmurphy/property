@@ -302,6 +302,7 @@ export default function App() {
         ? `Could not find "${params.q}". Try a more specific address or use an Eircode.`
         : (e.message ?? "An error occurred");
       setError(errorMsg);
+      setMobileTab("intro");   // the error shows in the search form
     } finally {
       if (searchGenRef.current === gen) setLoading(false);
     }
@@ -337,6 +338,7 @@ export default function App() {
     } catch (e: any) {
       if (searchGenRef.current !== gen) return;
       setError(e.message ?? "An error occurred");
+      setMobileTab("intro");   // the error shows in the search form
     } finally {
       if (searchGenRef.current === gen) setLoading(false);
     }
@@ -506,6 +508,13 @@ export default function App() {
 
       <nav className="mobile-tab-bar">
         <button
+          className={mobileTab === "intro" ? "active" : ""}
+          onClick={() => setMobileTab("intro")}
+        >
+          <span className="tab-icon">🔍</span>
+          Search
+        </button>
+        <button
           className={mobileTab === "map" ? "active" : ""}
           onClick={() => setMobileTab("map")}
         >
@@ -513,7 +522,7 @@ export default function App() {
           Map
         </button>
         <button
-          className={mobileTab === "list" || mobileTab === "intro" ? "active" : ""}
+          className={mobileTab === "list" ? "active" : ""}
           onClick={() => setMobileTab("list")}
         >
           <span className="tab-icon">🏠</span>
