@@ -278,12 +278,12 @@ body {
 @media (max-width: 639px) {
   .app {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto auto auto 1fr;
     grid-template-areas:
       "header"
+      "tabs"
       "search"
-      "main"
-      "tabs";
+      "main";
   }
 
   .app-header {
@@ -343,20 +343,20 @@ body {
   .trends-panel,
   .trends-toggle { display: none !important; }
 
-  /* Mobile tab bar */
+  /* Mobile tab bar, under the header so it's in reach above the map */
   .mobile-tab-bar {
     grid-area: tabs;
     display: flex;
     background: white;
-    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
   }
 
   .mobile-tab-bar button {
     flex: 1;
-    padding: 8px 6px 10px;
+    padding: 8px 6px 7px;
     background: none;
     border: none;
-    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
     font-size: 11px;
     font-weight: 500;
     color: #888;
@@ -373,7 +373,7 @@ body {
 
   .mobile-tab-bar button.active {
     color: #1a3c5e;
-    border-top-color: #1a3c5e;
+    border-bottom-color: #1a3c5e;
   }
 
   .tab-badge {
