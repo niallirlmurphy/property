@@ -79,3 +79,23 @@ def test_cluster_centre_rejects_spread_and_small_names():
     spread = [(52.0 + i * 0.2, -8.0 - i * 0.1) for i in range(20)]
     assert cluster_centre(spread) is None
     assert cluster_centre([(53.5, -8.8)] * 9) is None
+
+
+def test_cluster_centre_keeps_postal_town_with_rural_hinterland():
+    # Mallow: a busy centre, but most sales are "Townland, Mallow" up to 20km+ out.
+    town = [(52.137 + (i % 20) * 1e-4, -8.642) for i in range(300)]
+    rural = [(51.9 + i * 0.001, -8.2 - i * 0.001) for i in range(400)]
+    lat, lon, n = cluster_centre(town + rural)
+    assert abs(lat - 52.138) < 0.002 and n == 700
+    # A county name ending addresses county-wide isn't a place at that town.
+    assert cluster_centre(town + rural, core_ok=False) is None
+
+
+def test_cluster_centre_tied_cells_pick_the_densest_neighbourhood():
+    # Achill Island: three cells of 7; only one has neighbours within 5km.
+    lone_a = [(53.90, -9.80)] * 7
+    lone_b = [(53.70, -9.50)] * 7
+    village = [(53.98, -10.067)] * 7 + [(53.99, -10.03)] * 6 + [(53.975, -10.0)] * 3
+    for pts in (lone_a + lone_b + village, village + lone_b + lone_a):
+        lat, lon, n = cluster_centre(pts)
+        assert abs(lat - 53.98) < 0.02 and abs(lon + 10.06) < 0.04
