@@ -30,6 +30,11 @@ export const dublinContent: CountyContent = {
       description: "Coastal south-county suburb, upscale family homes and villages"
     },
     {
+      name: "Monkstown",
+      slug: "monkstown",
+      description: "Coastal suburb between Blackrock and Dún Laoghaire, period terraces and squares"
+    },
+    {
       name: "Dún Laoghaire",
       slug: "dun-laoghaire",
       description: "Coastal town and harbour, period houses and seafront apartments"
