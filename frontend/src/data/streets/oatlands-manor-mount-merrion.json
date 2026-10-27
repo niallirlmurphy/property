@@ -2,8 +2,8 @@
   "slug": "oatlands-manor-mount-merrion",
   "stats": {
     "count": 9,
-    "median": 1233480,
-    "avg": 1231038,
+    "median": 1400000,
+    "avg": 1357721,
     "min": 1123348,
     "max": 1510500,
     "firstYear": 2023,
@@ -13,8 +13,8 @@
     {
       "year": 2023,
       "count": 8,
-      "median_price": 1180899,
-      "avg_price": 1196106,
+      "median_price": 1340320,
+      "avg_price": 1338624,
       "min_price": 1123348,
       "max_price": 1348018
     },

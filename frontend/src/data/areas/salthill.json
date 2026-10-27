@@ -2,13 +2,13 @@
   "name": "Salthill, Galway",
   "slug": "salthill",
   "center": {
-    "lat": 53.2620258,
-    "lon": -9.0746256
+    "lat": 53.2628433709774,
+    "lon": -9.077323
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 497000.0,
-  "avg_price": 762000,
+  "median_price": 503333.0,
+  "avg_price": 759100,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "H91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 777.01641588
+      "price_incl_vat": 550000.0,
+      "distance_m": 913.48083652
     },
     {
       "id": 805492,
@@ -46,7 +47,8 @@
       "routing_key": "H91",
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 1023.4284073
+      "price_incl_vat": 2120000.0,
+      "distance_m": 1023.02931514
     },
     {
       "id": 804816,
@@ -64,7 +66,8 @@
       "routing_key": "H91",
       "bedrooms": 3,
       "property_type": "apartment",
-      "distance_m": 1089.52982177
+      "price_incl_vat": 375000.0,
+      "distance_m": 1202.28748175
     },
     {
       "id": 804470,
@@ -82,7 +85,8 @@
       "routing_key": "H91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 775.99607575
+      "price_incl_vat": 450000.0,
+      "distance_m": 583.40690611
     },
     {
       "id": 803291,
@@ -100,25 +104,8 @@
       "routing_key": "H91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 454.36911295
-    },
-    {
-      "id": 803207,
-      "sale_date": "2026-09-04",
-      "address": "14 THE MAPLES, GORT, GALWAY",
-      "county": "Galway",
-      "eircode": "H91PDF1",
-      "price": 400000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.265464,
-      "longitude": -9.07903,
-      "routing_key": "H91",
-      "bedrooms": 5,
-      "property_type": "detached",
-      "distance_m": 482.48136574
+      "price_incl_vat": 450000.0,
+      "distance_m": 552.55538473
     },
     {
       "id": 802623,
@@ -136,7 +123,8 @@
       "routing_key": "H91",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 848.79479499
+      "price_incl_vat": 475000.0,
+      "distance_m": 717.52060039
     },
     {
       "id": 802617,
@@ -154,7 +142,8 @@
       "routing_key": "H91",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 1114.13306996
+      "price_incl_vat": 1110000.0,
+      "distance_m": 973.47238542
     },
     {
       "id": 802165,
@@ -172,7 +161,8 @@
       "routing_key": "H91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 154.32361419
+      "price_incl_vat": 1150000.0,
+      "distance_m": 179.10937992
     },
     {
       "id": 801948,
@@ -190,127 +180,147 @@
       "routing_key": "H91",
       "bedrooms": 4,
       "property_type": "terraced",
-      "distance_m": 802.84159415
+      "price_incl_vat": 540000.0,
+      "distance_m": 848.14062984
+    },
+    {
+      "id": 801481,
+      "sale_date": "2026-08-19",
+      "address": "52 GLEN DARA, RAHOON, GALWAY",
+      "county": "Galway",
+      "eircode": "H91C5DD",
+      "price": 371000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.273417,
+      "longitude": -9.083295,
+      "routing_key": "H91",
+      "bedrooms": 4,
+      "property_type": "semi-detached",
+      "price_incl_vat": 371000.0,
+      "distance_m": 1242.38249455
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 25,
-      "median_price": 364000.0,
-      "avg_price": 362724.0,
+      "count": 26,
+      "median_price": 376950.0,
+      "avg_price": 360579.0,
       "min_price": 20000.0,
       "max_price": 635000.0
     },
     {
       "year": 2011,
-      "count": 53,
-      "median_price": 270000.0,
-      "avg_price": 280722.0,
+      "count": 52,
+      "median_price": 272500.0,
+      "avg_price": 285463.0,
       "min_price": 66000.0,
       "max_price": 565000.0
     },
     {
       "year": 2012,
-      "count": 45,
-      "median_price": 250000.0,
-      "avg_price": 283756.0,
-      "min_price": 100000.0,
+      "count": 46,
+      "median_price": 245000.0,
+      "avg_price": 278154.0,
+      "min_price": 26063.0,
       "max_price": 1400000.0
     },
     {
       "year": 2013,
-      "count": 58,
-      "median_price": 271000.0,
-      "avg_price": 279342.0,
+      "count": 57,
+      "median_price": 277000.0,
+      "avg_price": 295857.0,
       "min_price": 65000.0,
       "max_price": 1020000.0
     },
     {
       "year": 2014,
-      "count": 90,
+      "count": 87,
       "median_price": 240000.0,
-      "avg_price": 274996.0,
+      "avg_price": 278777.0,
       "min_price": 60000.0,
       "max_price": 800000.0
     },
     {
       "year": 2015,
-      "count": 74,
-      "median_price": 244500.0,
-      "avg_price": 287241.0,
+      "count": 75,
+      "median_price": 249000.0,
+      "avg_price": 292211.0,
       "min_price": 45000.0,
       "max_price": 1850000.0
     },
     {
       "year": 2016,
-      "count": 85,
-      "median_price": 275000.0,
-      "avg_price": 319224.0,
+      "count": 84,
+      "median_price": 272500.0,
+      "avg_price": 320149.0,
       "min_price": 76000.0,
       "max_price": 900000.0
     },
     {
       "year": 2017,
-      "count": 121,
-      "median_price": 222500.0,
-      "avg_price": 312106.0,
+      "count": 125,
+      "median_price": 222000.0,
+      "avg_price": 318495.0,
       "min_price": 40000.0,
       "max_price": 3925000.0
     },
     {
       "year": 2018,
       "count": 91,
-      "median_price": 320000.0,
-      "avg_price": 399646.0,
+      "median_price": 315000.0,
+      "avg_price": 396899.0,
       "min_price": 92000.0,
       "max_price": 1800000.0
     },
     {
       "year": 2019,
-      "count": 91,
-      "median_price": 330101.0,
-      "avg_price": 420827.0,
+      "count": 89,
+      "median_price": 350000.0,
+      "avg_price": 426718.0,
       "min_price": 96473.0,
       "max_price": 2200000.0
     },
     {
       "year": 2020,
-      "count": 74,
-      "median_price": 330000.0,
-      "avg_price": 380695.0,
+      "count": 76,
+      "median_price": 339750.0,
+      "avg_price": 392019.0,
       "min_price": 89000.0,
       "max_price": 1157000.0
     },
     {
       "year": 2021,
-      "count": 132,
-      "median_price": 300000.0,
-      "avg_price": 384339.0,
+      "count": 135,
+      "median_price": 315000.0,
+      "avg_price": 388935.0,
       "min_price": 25833.0,
       "max_price": 1542500.0
     },
     {
       "year": 2022,
-      "count": 181,
-      "median_price": 365000.0,
-      "avg_price": 438550.0,
+      "count": 184,
+      "median_price": 370000.0,
+      "avg_price": 441401.0,
       "min_price": 100000.0,
       "max_price": 2250000.0
     },
     {
       "year": 2023,
-      "count": 229,
-      "median_price": 381000.0,
-      "avg_price": 449480.0,
+      "count": 234,
+      "median_price": 395000.0,
+      "avg_price": 462386.0,
       "min_price": 49000.0,
       "max_price": 2200000.0
     },
     {
       "year": 2024,
-      "count": 188,
-      "median_price": 420000.0,
-      "avg_price": 498038.0,
+      "count": 184,
+      "median_price": 425000.0,
+      "avg_price": 511160.0,
       "min_price": 47000.0,
       "max_price": 1800000.0
     },
@@ -318,15 +328,15 @@
       "year": 2025,
       "count": 150,
       "median_price": 480500.0,
-      "avg_price": 546927.0,
+      "avg_price": 549519.0,
       "min_price": 155000.0,
       "max_price": 1720000.0
     },
     {
       "year": 2026,
-      "count": 85,
-      "median_price": 497000.0,
-      "avg_price": 607796.0,
+      "count": 86,
+      "median_price": 503333.0,
+      "avg_price": 610872.0,
       "min_price": 180000.0,
       "max_price": 2120000.0
     }

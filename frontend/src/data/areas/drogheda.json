@@ -2,13 +2,13 @@
   "name": "Drogheda, Louth",
   "slug": "drogheda",
   "center": {
-    "lat": 53.7149877,
-    "lon": -6.3524183
+    "lat": 53.71998,
+    "lon": -6.346968
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 348018.0,
-  "avg_price": 389286,
+  "median_price": 395000.0,
+  "avg_price": 401097,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,27 @@
       "routing_key": "A92",
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 637.01667809
+      "price_incl_vat": 575000.0,
+      "distance_m": 805.47295401
+    },
+    {
+      "id": 805527,
+      "sale_date": "2026-10-01",
+      "address": "49 Listoke Wood, Ballymakenny Road, Drogheda",
+      "county": "Louth",
+      "eircode": "A92E7YA",
+      "price": 417180.61,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.733246,
+      "longitude": -6.341491,
+      "routing_key": "A92",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 473499.99,
+      "distance_m": 1520.11620187
     },
     {
       "id": 805334,
@@ -46,7 +66,8 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": "cottage",
-      "distance_m": 1979.96958185
+      "price_incl_vat": 485000.01,
+      "distance_m": 1530.98163004
     },
     {
       "id": 805123,
@@ -64,7 +85,8 @@
       "routing_key": "A92",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 523.5021559
+      "price_incl_vat": 228000.0,
+      "distance_m": 685.48719995
     },
     {
       "id": 805191,
@@ -82,7 +104,8 @@
       "routing_key": "A92",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 547.78985799
+      "price_incl_vat": 250000.0,
+      "distance_m": 775.31501402
     },
     {
       "id": 805003,
@@ -100,7 +123,8 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "house",
-      "distance_m": 458.96067056
+      "price_incl_vat": 424999.99,
+      "distance_m": 890.31473667
     },
     {
       "id": 804992,
@@ -118,7 +142,8 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "house",
-      "distance_m": 1976.27518472
+      "price_incl_vat": 489999.93,
+      "distance_m": 1532.44282548
     },
     {
       "id": 804722,
@@ -136,7 +161,8 @@
       "routing_key": "A92",
       "bedrooms": 5,
       "property_type": "detached",
-      "distance_m": 999.81585976
+      "price_incl_vat": 525000.0,
+      "distance_m": 395.3111967
     },
     {
       "id": 804680,
@@ -154,179 +180,163 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "house",
-      "distance_m": 1969.90035843
+      "price_incl_vat": 485000.26,
+      "distance_m": 1533.58069738
     },
     {
-      "id": 804630,
-      "sale_date": "2026-09-18",
-      "address": "7 UPPER MAGDALENE STREET, DROGHEDA, CO LOUTH",
+      "id": 804654,
+      "sale_date": "2026-09-21",
+      "address": "10 SHELDUCK ST, ASTON VILLAGE, DROGHEDA",
       "county": "Louth",
-      "eircode": "A92W0FE",
-      "price": 262000.0,
+      "eircode": "A92KXC0",
+      "price": 355000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.718067,
-      "longitude": -6.351029,
+      "latitude": 53.730735,
+      "longitude": -6.331621,
       "routing_key": "A92",
       "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 354.78660665
-    },
-    {
-      "id": 804533,
-      "sale_date": "2026-09-17",
-      "address": "12 THE CHESTERS, TERMONFECKIN ROAD, DROGHEDA",
-      "county": "Louth",
-      "eircode": null,
-      "price": 392070.0,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.727096,
-      "longitude": -6.33326,
-      "routing_key": null,
-      "bedrooms": 4,
-      "property_type": "terraced",
-      "distance_m": 1848.14550807
+      "property_type": "semi-detached",
+      "price_incl_vat": 355000.0,
+      "distance_m": 1568.13849661
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 98,
-      "median_price": 152000.0,
-      "avg_price": 157700.0,
+      "count": 106,
+      "median_price": 153500.0,
+      "avg_price": 163313.0,
       "min_price": 45000.0,
-      "max_price": 287000.0
+      "max_price": 345000.0
     },
     {
       "year": 2011,
-      "count": 81,
-      "median_price": 130000.0,
-      "avg_price": 134387.0,
+      "count": 93,
+      "median_price": 125325.0,
+      "avg_price": 132214.0,
       "min_price": 24000.0,
-      "max_price": 300000.0
+      "max_price": 322000.0
     },
     {
       "year": 2012,
-      "count": 111,
-      "median_price": 108370.0,
-      "avg_price": 122826.0,
+      "count": 126,
+      "median_price": 120000.0,
+      "avg_price": 129099.0,
       "min_price": 20000.0,
       "max_price": 475000.0
     },
     {
       "year": 2013,
-      "count": 131,
-      "median_price": 87500.0,
-      "avg_price": 105509.0,
+      "count": 150,
+      "median_price": 86000.0,
+      "avg_price": 105355.0,
       "min_price": 25500.0,
       "max_price": 340000.0
     },
     {
       "year": 2014,
-      "count": 229,
-      "median_price": 111000.0,
-      "avg_price": 115143.0,
+      "count": 233,
+      "median_price": 105000.0,
+      "avg_price": 113646.0,
       "min_price": 25000.0,
       "max_price": 328750.0
     },
     {
       "year": 2015,
-      "count": 261,
-      "median_price": 130000.0,
-      "avg_price": 132127.0,
+      "count": 280,
+      "median_price": 125000.0,
+      "avg_price": 131247.0,
       "min_price": 10543.23,
       "max_price": 600000.0
     },
     {
       "year": 2016,
-      "count": 232,
-      "median_price": 149865.0,
-      "avg_price": 149926.0,
+      "count": 256,
+      "median_price": 140050.0,
+      "avg_price": 146617.0,
       "min_price": 11000.0,
       "max_price": 451000.0
     },
     {
       "year": 2017,
-      "count": 245,
-      "median_price": 170044.0,
-      "avg_price": 170445.0,
+      "count": 249,
+      "median_price": 166000.0,
+      "avg_price": 171051.0,
       "min_price": 27000.0,
       "max_price": 510000.0
     },
     {
       "year": 2018,
-      "count": 300,
-      "median_price": 202762.0,
-      "avg_price": 203028.0,
+      "count": 298,
+      "median_price": 200000.0,
+      "avg_price": 203966.0,
       "min_price": 15000.0,
       "max_price": 890000.0
     },
     {
       "year": 2019,
-      "count": 272,
-      "median_price": 193878.0,
-      "avg_price": 235975.0,
+      "count": 299,
+      "median_price": 200000.0,
+      "avg_price": 241551.0,
       "min_price": 50000.0,
       "max_price": 7200000.0
     },
     {
       "year": 2020,
-      "count": 289,
-      "median_price": 180000.0,
-      "avg_price": 188033.0,
+      "count": 284,
+      "median_price": 188750.0,
+      "avg_price": 192402.0,
       "min_price": 25000.0,
       "max_price": 575000.0
     },
     {
       "year": 2021,
-      "count": 398,
+      "count": 400,
       "median_price": 215000.0,
-      "avg_price": 241890.0,
+      "avg_price": 235067.0,
       "min_price": 10000.0,
-      "max_price": 5594714.0
+      "max_price": 4000000.0
     },
     {
       "year": 2022,
-      "count": 426,
-      "median_price": 235000.0,
-      "avg_price": 243556.0,
-      "min_price": 35000.0,
+      "count": 501,
+      "median_price": 260000.0,
+      "avg_price": 260039.0,
+      "min_price": 20000.0,
       "max_price": 982000.0
     },
     {
       "year": 2023,
-      "count": 432,
-      "median_price": 274064.0,
-      "avg_price": 273147.0,
+      "count": 577,
+      "median_price": 316115.0,
+      "avg_price": 303159.0,
       "min_price": 10000.0,
       "max_price": 1250000.0
     },
     {
       "year": 2024,
-      "count": 359,
-      "median_price": 275000.0,
-      "avg_price": 319930.0,
+      "count": 446,
+      "median_price": 305000.0,
+      "avg_price": 341084.0,
       "min_price": 25000.0,
       "max_price": 15572687.22
     },
     {
       "year": 2025,
-      "count": 558,
-      "median_price": 317181.0,
-      "avg_price": 314775.0,
+      "count": 652,
+      "median_price": 355330.0,
+      "avg_price": 344809.0,
       "min_price": 13000.0,
       "max_price": 5450608.0
     },
     {
       "year": 2026,
-      "count": 342,
-      "median_price": 348018.0,
-      "avg_price": 339675.0,
+      "count": 394,
+      "median_price": 395000.0,
+      "avg_price": 372641.0,
       "min_price": 110000.0,
       "max_price": 1310000.0
     }

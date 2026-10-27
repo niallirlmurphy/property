@@ -2,13 +2,13 @@
   "name": "Dundalk, Louth",
   "slug": "dundalk",
   "center": {
-    "lat": 54.0046033,
-    "lon": -6.4008879
+    "lat": 53.997809000000004,
+    "lon": -6.39534
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 252500.0,
-  "avg_price": 266750,
+  "median_price": 285000.0,
+  "avg_price": 307854,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "A91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1928.3812099
+      "price_incl_vat": 357000.0,
+      "distance_m": 1292.17125089
     },
     {
       "id": 805321,
@@ -46,7 +47,8 @@
       "routing_key": "A91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1676.07394912
+      "price_incl_vat": 335000.0,
+      "distance_m": 1163.88122962
     },
     {
       "id": 805162,
@@ -64,7 +66,27 @@
       "routing_key": "A91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1956.00632121
+      "price_incl_vat": 335000.0,
+      "distance_m": 1452.88808685
+    },
+    {
+      "id": 805175,
+      "sale_date": "2026-09-28",
+      "address": "4 CARLINN DRIVE, MULHARLIN ROAD, DUNDALK",
+      "county": "Louth",
+      "eircode": "A91AK0F",
+      "price": 360000.0,
+      "not_full_market_price": true,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.9815425,
+      "longitude": -6.397249,
+      "routing_key": "A91",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "price_incl_vat": 360000.0,
+      "distance_m": 1814.86441337
     },
     {
       "id": 804920,
@@ -82,7 +104,27 @@
       "routing_key": "A91",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 600.80343203
+      "price_incl_vat": 262500.0,
+      "distance_m": 1421.38809431
+    },
+    {
+      "id": 804901,
+      "sale_date": "2026-09-23",
+      "address": "12 LENNONSTOWN MANOR, RED BARNS RD, DUNDALK",
+      "county": "Louth",
+      "eircode": "A91Y7N9",
+      "price": 305000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.993755,
+      "longitude": -6.372276,
+      "routing_key": "A91",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 305000.0,
+      "distance_m": 1578.4628008
     },
     {
       "id": 804667,
@@ -100,7 +142,27 @@
       "routing_key": "A91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 712.249308
+      "price_incl_vat": 325000.0,
+      "distance_m": 127.12118153
+    },
+    {
+      "id": 804484,
+      "sale_date": "2026-09-16",
+      "address": "56 Bayview, Red Barns Road, Dundalk",
+      "county": "Louth",
+      "eircode": null,
+      "price": 370044.0,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.994911,
+      "longitude": -6.371385,
+      "routing_key": null,
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "price_incl_vat": 419999.94,
+      "distance_m": 1603.77734826
     },
     {
       "id": 804261,
@@ -118,215 +180,163 @@
       "routing_key": "A91",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 616.75737297
+      "price_incl_vat": 189000.0,
+      "distance_m": 815.17440365
     },
     {
-      "id": 804003,
-      "sale_date": "2026-09-10",
-      "address": "9 LADYWELL SQUARE, DUNDALK, CO LOUTH",
+      "id": 804274,
+      "sale_date": "2026-09-14",
+      "address": "47 COLLEGE MANOR, HOEYS LANE, DUNDALK",
       "county": "Louth",
-      "eircode": "A91F9C8",
-      "price": 84000.0,
+      "eircode": "A91X39R",
+      "price": 240000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.993091,
-      "longitude": -6.405586,
+      "latitude": 53.986892,
+      "longitude": -6.386083,
       "routing_key": "A91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1317.89407824
-    },
-    {
-      "id": 803804,
-      "sale_date": "2026-09-09",
-      "address": "31 DUBLIN ST, DUNDALK, LOUTH",
-      "county": "Louth",
-      "eircode": "A91F8X5",
-      "price": 200000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.999706,
-      "longitude": -6.405943,
-      "routing_key": "A91",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 637.96812817
-    },
-    {
-      "id": 803434,
-      "sale_date": "2026-09-07",
-      "address": "1 CLUAIN ARD, LIS NA DARA, DUNDALK",
-      "county": "Louth",
-      "eircode": "A91N12P",
-      "price": 365000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 54.000381,
-      "longitude": -6.42457,
-      "routing_key": "A91",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 1622.43629209
-    },
-    {
-      "id": 803181,
-      "sale_date": "2026-09-04",
-      "address": "10 MOUNTAIN VIEW CRESCENT, POINT RD, DUNDALK",
-      "county": "Louth",
-      "eircode": "A91K2C9",
-      "price": 215000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 54.007263,
-      "longitude": -6.378298,
-      "routing_key": "A91",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 1510.43466484
+      "price_incl_vat": 240000.0,
+      "distance_m": 1358.35613233
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 95,
-      "median_price": 153000.0,
-      "avg_price": 165088.0,
+      "count": 106,
+      "median_price": 154000.0,
+      "avg_price": 169753.0,
       "min_price": 50000.0,
       "max_price": 387665.0
     },
     {
       "year": 2011,
-      "count": 90,
-      "median_price": 115250.0,
-      "avg_price": 116698.0,
+      "count": 97,
+      "median_price": 117000.0,
+      "avg_price": 122950.0,
       "min_price": 20000.0,
-      "max_price": 330000.0
+      "max_price": 555000.0
     },
     {
       "year": 2012,
-      "count": 111,
+      "count": 123,
       "median_price": 70000.0,
-      "avg_price": 94354.0,
+      "avg_price": 94794.0,
       "min_price": 20000.0,
       "max_price": 550000.0
     },
     {
       "year": 2013,
-      "count": 136,
-      "median_price": 85750.0,
-      "avg_price": 117476.0,
-      "min_price": 20000.0,
+      "count": 140,
+      "median_price": 81250.0,
+      "avg_price": 109307.0,
+      "min_price": 15000.0,
       "max_price": 1400000.0
     },
     {
       "year": 2014,
-      "count": 179,
-      "median_price": 92500.0,
-      "avg_price": 101564.0,
+      "count": 256,
+      "median_price": 90000.0,
+      "avg_price": 101696.0,
       "min_price": 16000.0,
       "max_price": 449339.2
     },
     {
       "year": 2015,
-      "count": 195,
-      "median_price": 95000.0,
-      "avg_price": 113847.0,
+      "count": 252,
+      "median_price": 104965.0,
+      "avg_price": 120227.0,
       "min_price": 18333.33,
       "max_price": 420000.0
     },
     {
       "year": 2016,
-      "count": 214,
-      "median_price": 121111.0,
-      "avg_price": 130845.0,
-      "min_price": 20000.0,
-      "max_price": 360000.0
+      "count": 253,
+      "median_price": 125000.0,
+      "avg_price": 146286.0,
+      "min_price": 30000.0,
+      "max_price": 2250000.0
     },
     {
       "year": 2017,
-      "count": 202,
+      "count": 224,
       "median_price": 140000.0,
-      "avg_price": 151904.0,
+      "avg_price": 163123.0,
       "min_price": 15000.0,
-      "max_price": 513000.0
+      "max_price": 2300000.0
     },
     {
       "year": 2018,
-      "count": 248,
-      "median_price": 165000.0,
-      "avg_price": 165766.0,
-      "min_price": 15000.0,
-      "max_price": 410000.0
+      "count": 261,
+      "median_price": 176000.0,
+      "avg_price": 177376.0,
+      "min_price": 30000.0,
+      "max_price": 530000.0
     },
     {
       "year": 2019,
-      "count": 345,
-      "median_price": 180000.0,
-      "avg_price": 183517.0,
+      "count": 316,
+      "median_price": 190000.0,
+      "avg_price": 201698.0,
       "min_price": 20000.0,
       "max_price": 1500000.0
     },
     {
       "year": 2020,
-      "count": 246,
-      "median_price": 167500.0,
-      "avg_price": 171970.0,
+      "count": 276,
+      "median_price": 172750.0,
+      "avg_price": 181228.0,
       "min_price": 20000.0,
-      "max_price": 450000.0
+      "max_price": 512000.0
     },
     {
       "year": 2021,
-      "count": 326,
-      "median_price": 190000.0,
-      "avg_price": 205700.0,
-      "min_price": 35000.0,
-      "max_price": 1550661.6
+      "count": 338,
+      "median_price": 208000.0,
+      "avg_price": 211067.0,
+      "min_price": 20000.0,
+      "max_price": 551000.0
     },
     {
       "year": 2022,
-      "count": 349,
-      "median_price": 204962.0,
-      "avg_price": 206056.0,
+      "count": 340,
+      "median_price": 206500.0,
+      "avg_price": 213685.0,
       "min_price": 32000.0,
       "max_price": 595000.0
     },
     {
       "year": 2023,
-      "count": 273,
-      "median_price": 207000.0,
-      "avg_price": 216499.0,
+      "count": 280,
+      "median_price": 215000.0,
+      "avg_price": 229329.0,
       "min_price": 25000.0,
       "max_price": 950000.0
     },
     {
       "year": 2024,
-      "count": 315,
-      "median_price": 232632.0,
-      "avg_price": 247558.0,
+      "count": 300,
+      "median_price": 240000.0,
+      "avg_price": 260458.0,
       "min_price": 36500.0,
       "max_price": 690000.0
     },
     {
       "year": 2025,
-      "count": 282,
+      "count": 274,
       "median_price": 260000.0,
-      "avg_price": 294685.0,
+      "avg_price": 268433.0,
       "min_price": 36000.0,
-      "max_price": 8229074.89
+      "max_price": 610000.0
     },
     {
       "year": 2026,
-      "count": 180,
-      "median_price": 252500.0,
-      "avg_price": 264163.0,
+      "count": 211,
+      "median_price": 285000.0,
+      "avg_price": 294519.0,
       "min_price": 20000.0,
       "max_price": 785000.0
     }

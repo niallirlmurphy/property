@@ -2,8 +2,8 @@
   "slug": "elmfield-leopardstown",
   "stats": {
     "count": 205,
-    "median": 322990,
-    "avg": 324295,
+    "median": 366272,
+    "avg": 364282,
     "min": 154185,
     "max": 540000,
     "firstYear": 2010,
@@ -15,24 +15,24 @@
     {
       "year": 2010,
       "count": 1,
-      "median_price": 248899,
-      "avg_price": 248899,
+      "median_price": 282500,
+      "avg_price": 282500,
       "min_price": 248899,
       "max_price": 248899
     },
     {
       "year": 2011,
       "count": 4,
-      "median_price": 277963,
-      "avg_price": 269703,
+      "median_price": 296250,
+      "avg_price": 296494,
       "min_price": 237885,
       "max_price": 285000
     },
     {
       "year": 2012,
       "count": 2,
-      "median_price": 154185,
-      "avg_price": 154185,
+      "median_price": 175000,
+      "avg_price": 175000,
       "min_price": 154185,
       "max_price": 154185
     },
@@ -47,16 +47,16 @@
     {
       "year": 2017,
       "count": 141,
-      "median_price": 329694,
-      "avg_price": 321316,
+      "median_price": 374194,
+      "avg_price": 363674,
       "min_price": 219968,
       "max_price": 406174
     },
     {
       "year": 2018,
       "count": 48,
-      "median_price": 321439,
-      "avg_price": 323614,
+      "median_price": 364833,
+      "avg_price": 366169,
       "min_price": 264654,
       "max_price": 403000
     },
@@ -106,8 +106,8 @@
     {
       "type": "Apartment",
       "count": 44,
-      "median": 321296,
-      "avg": 324649
+      "median": 364672,
+      "avg": 364702
     }
   ],
   "development": {

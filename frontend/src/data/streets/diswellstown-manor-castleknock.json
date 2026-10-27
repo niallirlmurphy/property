@@ -2,8 +2,8 @@
   "slug": "diswellstown-manor-castleknock",
   "stats": {
     "count": 111,
-    "median": 484581,
-    "avg": 501369,
+    "median": 530000,
+    "avg": 554488,
     "min": 348017,
     "max": 835000,
     "firstYear": 2016,
@@ -13,24 +13,24 @@
     {
       "year": 2016,
       "count": 58,
-      "median_price": 466960,
-      "avg_price": 477739,
+      "median_price": 530000,
+      "avg_price": 542233,
       "min_price": 348017,
       "max_price": 715121
     },
     {
       "year": 2017,
       "count": 34,
-      "median_price": 406173,
-      "avg_price": 437353,
+      "median_price": 461006,
+      "avg_price": 496396,
       "min_price": 356828,
       "max_price": 670484
     },
     {
       "year": 2018,
       "count": 5,
-      "median_price": 542000,
-      "avg_price": 562413,
+      "median_price": 615170,
+      "avg_price": 592034,
       "min_price": 505000,
       "max_price": 690000
     },
@@ -302,19 +302,19 @@
     },
     {
       "date": "2017-06-29",
-      "address": "80 Diswellstown Manor, CASTLEKNOCK, Dublin 15",
-      "price": 365639,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
-      "eircode": "D15N2EY"
-    },
-    {
-      "date": "2017-06-29",
       "address": "41 Diswellstown Manor, Castleknock",
       "price": 555066,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2017-06-29",
+      "address": "80 Diswellstown Manor, CASTLEKNOCK, Dublin 15",
+      "price": 365639,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D15N2EY"
     },
     {
       "date": "2017-06-23",

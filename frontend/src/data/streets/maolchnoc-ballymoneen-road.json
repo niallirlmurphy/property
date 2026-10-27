@@ -2,8 +2,8 @@
   "slug": "maolchnoc-ballymoneen-road",
   "stats": {
     "count": 124,
-    "median": 422889,
-    "avg": 406345,
+    "median": 479979,
+    "avg": 460592,
     "min": 259912,
     "max": 560000,
     "firstYear": 2023,
@@ -13,32 +13,32 @@
     {
       "year": 2023,
       "count": 30,
-      "median_price": 418458,
-      "avg_price": 401940,
+      "median_price": 474950,
+      "avg_price": 456202,
       "min_price": 281938,
       "max_price": 479950
     },
     {
       "year": 2024,
       "count": 35,
-      "median_price": 422907,
-      "avg_price": 402278,
+      "median_price": 480000,
+      "avg_price": 456586,
       "min_price": 290749,
       "max_price": 485000
     },
     {
       "year": 2025,
       "count": 36,
-      "median_price": 396432,
-      "avg_price": 393480,
+      "median_price": 449950,
+      "avg_price": 446600,
       "min_price": 259912,
       "max_price": 499515
     },
     {
       "year": 2026,
       "count": 23,
-      "median_price": 440485,
-      "avg_price": 438417,
+      "median_price": 499950,
+      "avg_price": 494317,
       "min_price": 400836,
       "max_price": 560000
     }

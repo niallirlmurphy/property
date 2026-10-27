@@ -2,8 +2,8 @@
   "slug": "evanwood-golf-links-road",
   "stats": {
     "count": 134,
-    "median": 211938,
-    "avg": 236132,
+    "median": 238641,
+    "avg": 255312,
     "min": 127588,
     "max": 650000,
     "firstYear": 2012,
@@ -13,48 +13,48 @@
     {
       "year": 2012,
       "count": 1,
-      "median_price": 185000,
-      "avg_price": 185000,
+      "median_price": 209975,
+      "avg_price": 209975,
       "min_price": 185000,
       "max_price": 185000
     },
     {
       "year": 2014,
       "count": 13,
-      "median_price": 134361,
-      "avg_price": 136948,
+      "median_price": 152500,
+      "avg_price": 155436,
       "min_price": 127588,
       "max_price": 160000
     },
     {
       "year": 2015,
       "count": 17,
-      "median_price": 168500,
-      "avg_price": 172577,
+      "median_price": 191248,
+      "avg_price": 194290,
       "min_price": 133921,
       "max_price": 215048
     },
     {
       "year": 2016,
       "count": 48,
-      "median_price": 203744,
-      "avg_price": 205627,
+      "median_price": 231250,
+      "avg_price": 232714,
       "min_price": 175770,
       "max_price": 253500
     },
     {
       "year": 2017,
       "count": 16,
-      "median_price": 200441,
-      "avg_price": 209370,
+      "median_price": 227500,
+      "avg_price": 237635,
       "min_price": 184581,
       "max_price": 256388
     },
     {
       "year": 2018,
       "count": 8,
-      "median_price": 267500,
-      "avg_price": 272881,
+      "median_price": 275950,
+      "avg_price": 295797,
       "min_price": 184582,
       "max_price": 348002
     },

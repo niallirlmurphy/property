@@ -2,13 +2,13 @@
   "name": "Portobello, Dublin",
   "slug": "portobello",
   "center": {
-    "lat": 53.3312645,
-    "lon": -6.2688255
+    "lat": 53.33096,
+    "lon": -6.268709
   },
   "radius_km": 1.0,
   "total_count": 10,
-  "median_price": 595000.0,
-  "avg_price": 707930,
+  "median_price": 599250.0,
+  "avg_price": 687430,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,25 +28,8 @@
       "routing_key": "D08",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 834.33489396
-    },
-    {
-      "id": 804841,
-      "sale_date": "2026-09-22",
-      "address": "5 DONORE RD, CIRCULAR RD SOUTH, DUBLIN 8",
-      "county": "Dublin",
-      "eircode": "D08N1NH",
-      "price": 685000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.335239,
-      "longitude": -6.282251,
-      "routing_key": "D08",
-      "bedrooms": 2,
-      "property_type": "terraced",
-      "distance_m": 997.79792065
+      "price_incl_vat": 415300.0,
+      "distance_m": 867.43079259
     },
     {
       "id": 804625,
@@ -64,7 +47,8 @@
       "routing_key": "D08",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 178.56016113
+      "price_incl_vat": 1700000.0,
+      "distance_m": 204.8919961
     },
     {
       "id": 804288,
@@ -82,7 +66,8 @@
       "routing_key": "D08",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 170.59870897
+      "price_incl_vat": 576000.0,
+      "distance_m": 154.47048107
     },
     {
       "id": 803974,
@@ -100,7 +85,8 @@
       "routing_key": "D08",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 145.86590762
+      "price_incl_vat": 575000.0,
+      "distance_m": 116.25408805
     },
     {
       "id": 803839,
@@ -118,7 +104,8 @@
       "routing_key": "D08",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 314.30959895
+      "price_incl_vat": 1190000.0,
+      "distance_m": 314.88830156
     },
     {
       "id": 803831,
@@ -136,7 +123,8 @@
       "routing_key": "D08",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 493.64712129
+      "price_incl_vat": 648000.0,
+      "distance_m": 502.34772979
     },
     {
       "id": 803532,
@@ -154,7 +142,8 @@
       "routing_key": "D08",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 266.29349301
+      "price_incl_vat": 525000.0,
+      "distance_m": 253.04496043
     },
     {
       "id": 803085,
@@ -172,7 +161,8 @@
       "routing_key": "D08",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 817.66896951
+      "price_incl_vat": 390000.0,
+      "distance_m": 850.71994469
     },
     {
       "id": 802893,
@@ -190,7 +180,27 @@
       "routing_key": "D08",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 405.36577262
+      "price_incl_vat": 375000.0,
+      "distance_m": 415.37270187
+    },
+    {
+      "id": 802837,
+      "sale_date": "2026-09-02",
+      "address": "26 BISHOPSMEDE, CLANBRASSIL ST UPPER, DUBLIN 8",
+      "county": "Dublin",
+      "eircode": "D08YY74",
+      "price": 480000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.330551,
+      "longitude": -6.275653,
+      "routing_key": "D08",
+      "bedrooms": 2,
+      "property_type": "apartment",
+      "price_incl_vat": 480000.0,
+      "distance_m": 464.86424635
     }
   ],
   "trends": [
@@ -236,9 +246,9 @@
     },
     {
       "year": 2015,
-      "count": 38,
-      "median_price": 395000.0,
-      "avg_price": 421602.0,
+      "count": 39,
+      "median_price": 390000.0,
+      "avg_price": 414125.0,
       "min_price": 10000.0,
       "max_price": 1075000.0
     },
@@ -254,23 +264,23 @@
       "year": 2017,
       "count": 43,
       "median_price": 460000.0,
-      "avg_price": 476025.0,
+      "avg_price": 478631.0,
       "min_price": 40000.0,
       "max_price": 895000.0
     },
     {
       "year": 2018,
-      "count": 55,
-      "median_price": 479500.0,
-      "avg_price": 530191.0,
-      "min_price": 236000.0,
+      "count": 56,
+      "median_price": 474750.0,
+      "avg_price": 522554.0,
+      "min_price": 205000.0,
       "max_price": 1025000.0
     },
     {
       "year": 2019,
-      "count": 60,
+      "count": 59,
       "median_price": 615000.0,
-      "avg_price": 671634.0,
+      "avg_price": 679035.0,
       "min_price": 125000.0,
       "max_price": 1775000.0
     },
@@ -284,49 +294,49 @@
     },
     {
       "year": 2021,
-      "count": 112,
-      "median_price": 422000.0,
-      "avg_price": 489253.0,
+      "count": 109,
+      "median_price": 415000.0,
+      "avg_price": 494169.0,
       "min_price": 75000.0,
       "max_price": 1700000.0
     },
     {
       "year": 2022,
-      "count": 157,
+      "count": 152,
       "median_price": 500000.0,
-      "avg_price": 555017.0,
+      "avg_price": 559060.0,
       "min_price": 19500.0,
       "max_price": 1539000.0
     },
     {
       "year": 2023,
-      "count": 168,
+      "count": 166,
       "median_price": 510000.0,
-      "avg_price": 552213.0,
+      "avg_price": 551981.0,
       "min_price": 123514.67,
       "max_price": 1600000.0
     },
     {
       "year": 2024,
-      "count": 159,
-      "median_price": 510000.0,
-      "avg_price": 557082.0,
+      "count": 156,
+      "median_price": 511000.0,
+      "avg_price": 558519.0,
       "min_price": 17000.0,
       "max_price": 1535000.0
     },
     {
       "year": 2025,
-      "count": 138,
+      "count": 135,
       "median_price": 585000.0,
-      "avg_price": 643557.0,
+      "avg_price": 639711.0,
       "min_price": 125000.0,
       "max_price": 1780000.0
     },
     {
       "year": 2026,
-      "count": 105,
-      "median_price": 595000.0,
-      "avg_price": 648075.0,
+      "count": 98,
+      "median_price": 599250.0,
+      "avg_price": 662896.0,
       "min_price": 220000.0,
       "max_price": 1795000.0
     }

@@ -2,8 +2,8 @@
   "slug": "churchlands-delgany",
   "stats": {
     "count": 100,
-    "median": 506607,
-    "avg": 496442,
+    "median": 569999,
+    "avg": 558244,
     "min": 348100,
     "max": 925000,
     "firstYear": 2020,
@@ -13,40 +13,40 @@
     {
       "year": 2020,
       "count": 6,
-      "median_price": 387665,
-      "avg_price": 387654,
+      "median_price": 440000,
+      "avg_price": 439988,
       "min_price": 387600,
       "max_price": 387665
     },
     {
       "year": 2021,
       "count": 24,
-      "median_price": 396035,
-      "avg_price": 405432,
+      "median_price": 449500,
+      "avg_price": 460165,
       "min_price": 352423,
       "max_price": 444934
     },
     {
       "year": 2022,
       "count": 26,
-      "median_price": 519824,
-      "avg_price": 538329,
+      "median_price": 580000,
+      "avg_price": 608231,
       "min_price": 427312,
       "max_price": 700440
     },
     {
       "year": 2023,
       "count": 17,
-      "median_price": 524229,
-      "avg_price": 516196,
+      "median_price": 595000,
+      "avg_price": 585882,
       "min_price": 462555,
       "max_price": 665198
     },
     {
       "year": 2024,
       "count": 18,
-      "median_price": 555066,
-      "avg_price": 593104,
+      "median_price": 630000,
+      "avg_price": 656261,
       "min_price": 528600,
       "max_price": 925000
     },
@@ -61,8 +61,8 @@
     {
       "year": 2026,
       "count": 8,
-      "median_price": 434496,
-      "avg_price": 433958,
+      "median_price": 478502,
+      "avg_price": 485672,
       "min_price": 348100,
       "max_price": 532110
     }
@@ -150,16 +150,16 @@
     },
     {
       "date": "2024-08-01",
-      "address": "94 Churchlands, Delgany",
-      "price": 528600,
+      "address": "93 Churchlands, Delgany",
+      "price": 550650,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2024-08-01",
-      "address": "93 Churchlands, Delgany",
-      "price": 550650,
+      "address": "94 Churchlands, Delgany",
+      "price": 528600,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -182,7 +182,7 @@
     },
     {
       "date": "2024-07-19",
-      "address": "100 Churchlands, Delgany",
+      "address": "97 CHURCHLANDS, DELGANY",
       "price": 528634,
       "bedrooms": null,
       "propertyType": null,
@@ -190,7 +190,7 @@
     },
     {
       "date": "2024-07-19",
-      "address": "97 CHURCHLANDS, DELGANY",
+      "address": "100 Churchlands, Delgany",
       "price": 528634,
       "bedrooms": null,
       "propertyType": null,
@@ -230,16 +230,16 @@
     },
     {
       "date": "2024-05-30",
-      "address": "104 Churchlands, Delgany",
-      "price": 559471,
+      "address": "103 Churchlands, Delgany",
+      "price": 528634,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2024-05-30",
-      "address": "103 Churchlands, Delgany",
-      "price": 528634,
+      "address": "104 Churchlands, Delgany",
+      "price": 559471,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -318,16 +318,16 @@
     },
     {
       "date": "2023-10-27",
-      "address": "88 Churchlands, Delgany",
-      "price": 524229,
+      "address": "89 Churchlands, Delgany",
+      "price": 506607,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2023-10-27",
-      "address": "89 Churchlands, Delgany",
-      "price": 506607,
+      "address": "88 Churchlands, Delgany",
+      "price": 524229,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

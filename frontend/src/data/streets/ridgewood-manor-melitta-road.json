@@ -2,8 +2,8 @@
   "slug": "ridgewood-manor-melitta-road",
   "stats": {
     "count": 100,
-    "median": 255554,
-    "avg": 271092,
+    "median": 290053,
+    "avg": 301913,
     "min": 72600,
     "max": 502000,
     "firstYear": 2016,
@@ -13,56 +13,56 @@
     {
       "year": 2016,
       "count": 15,
-      "median_price": 235683,
-      "avg_price": 238116,
+      "median_price": 267500,
+      "avg_price": 270262,
       "min_price": 224619,
       "max_price": 264950
     },
     {
       "year": 2017,
       "count": 18,
-      "median_price": 253656,
-      "avg_price": 253242,
+      "median_price": 287900,
+      "avg_price": 287430,
       "min_price": 234472,
       "max_price": 303965
     },
     {
       "year": 2018,
       "count": 10,
-      "median_price": 269823,
-      "avg_price": 271795,
+      "median_price": 306249,
+      "avg_price": 308488,
       "min_price": 255507,
       "max_price": 307929
     },
     {
       "year": 2019,
       "count": 14,
-      "median_price": 259912,
-      "avg_price": 267292,
+      "median_price": 295000,
+      "avg_price": 297253,
       "min_price": 248898,
       "max_price": 320000
     },
     {
       "year": 2020,
       "count": 14,
-      "median_price": 259905,
-      "avg_price": 265322,
+      "median_price": 294992,
+      "avg_price": 297814,
       "min_price": 233480,
       "max_price": 345000
     },
     {
       "year": 2021,
       "count": 18,
-      "median_price": 257268,
-      "avg_price": 264155,
+      "median_price": 292000,
+      "avg_price": 297124,
       "min_price": 248898,
       "max_price": 359000
     },
     {
       "year": 2022,
       "count": 4,
-      "median_price": 262115,
-      "avg_price": 277533,
+      "median_price": 297500,
+      "avg_price": 315000,
       "min_price": 255507,
       "max_price": 330396
     },

@@ -2,8 +2,8 @@
   "slug": "brandon-square-waterville",
   "stats": {
     "count": 126,
-    "median": 277516,
-    "avg": 297719,
+    "median": 314981,
+    "avg": 329351,
     "min": 233333,
     "max": 655000,
     "firstYear": 2014,
@@ -13,16 +13,16 @@
     {
       "year": 2014,
       "count": 55,
-      "median_price": 252863,
-      "avg_price": 261469,
+      "median_price": 287000,
+      "avg_price": 296768,
       "min_price": 233333,
       "max_price": 308370
     },
     {
       "year": 2015,
       "count": 52,
-      "median_price": 277533,
-      "avg_price": 283707,
+      "median_price": 315000,
+      "avg_price": 322008,
       "min_price": 250406,
       "max_price": 330000
     },
@@ -45,8 +45,8 @@
     {
       "year": 2019,
       "count": 2,
-      "median_price": 394500,
-      "avg_price": 394500,
+      "median_price": 420825,
+      "avg_price": 420825,
       "min_price": 390000,
       "max_price": 399000
     },
@@ -398,16 +398,16 @@
     },
     {
       "date": "2015-07-07",
-      "address": "122 Brandon Square, Waterville, Snugborough Road",
-      "price": 273128,
+      "address": "121 brandon square, waterville, blanchardstown",
+      "price": 273127,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2015-07-07",
-      "address": "121 brandon square, waterville, blanchardstown",
-      "price": 273127,
+      "address": "122 Brandon Square, Waterville, Snugborough Road",
+      "price": 273128,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -430,16 +430,16 @@
     },
     {
       "date": "2015-06-26",
-      "address": "115 Brandon Square, Waterville, Snugborough Road",
-      "price": 268292,
+      "address": "58 Brandon Square, Waterville, Dublin 15",
+      "price": 250406,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2015-06-26",
-      "address": "58 Brandon Square, Waterville, Dublin 15",
-      "price": 250406,
+      "address": "115 Brandon Square, Waterville, Snugborough Road",
+      "price": 268292,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

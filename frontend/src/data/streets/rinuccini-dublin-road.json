@@ -3,7 +3,7 @@
   "stats": {
     "count": 91,
     "median": 185500,
-    "avg": 160252,
+    "avg": 162034,
     "min": 36667,
     "max": 537867,
     "firstYear": 2012,
@@ -13,8 +13,8 @@
     {
       "year": 2012,
       "count": 1,
-      "median_price": 78500,
-      "avg_price": 78500,
+      "median_price": 89098,
+      "avg_price": 89098,
       "min_price": 78500,
       "max_price": 78500
     },
@@ -93,8 +93,8 @@
     {
       "year": 2023,
       "count": 3,
-      "median_price": 222026,
-      "avg_price": 275675,
+      "median_price": 252000,
+      "avg_price": 285667,
       "min_price": 195000,
       "max_price": 410000
     },
@@ -102,7 +102,7 @@
       "year": 2024,
       "count": 31,
       "median_price": 230000,
-      "avg_price": 233195,
+      "avg_price": 237119,
       "min_price": 185000,
       "max_price": 375000
     },
@@ -246,19 +246,19 @@
     },
     {
       "date": "2024-09-10",
-      "address": "102 RINUCCINI, DUBLIN RD, PORTLAOISE",
-      "price": 189000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "R32DK57"
-    },
-    {
-      "date": "2024-09-10",
       "address": "40 RINUCCINI, DUBLIN ROAD, PORTLAOISE",
       "price": 375000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "R32DT3F"
+    },
+    {
+      "date": "2024-09-10",
+      "address": "102 RINUCCINI, DUBLIN RD, PORTLAOISE",
+      "price": 189000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32DK57"
     },
     {
       "date": "2024-09-09",

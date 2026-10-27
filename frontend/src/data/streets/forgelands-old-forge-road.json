@@ -2,8 +2,8 @@
   "slug": "forgelands-old-forge-road",
   "stats": {
     "count": 128,
-    "median": 242290,
-    "avg": 239947,
+    "median": 274999,
+    "avg": 272022,
     "min": 164428,
     "max": 312775,
     "firstYear": 2020,
@@ -13,56 +13,56 @@
     {
       "year": 2020,
       "count": 38,
-      "median_price": 200844,
-      "avg_price": 200390,
+      "median_price": 227958,
+      "avg_price": 227442,
       "min_price": 164428,
       "max_price": 225007
     },
     {
       "year": 2021,
       "count": 9,
-      "median_price": 183467,
-      "avg_price": 193415,
+      "median_price": 208235,
+      "avg_price": 219526,
       "min_price": 164428,
       "max_price": 228000
     },
     {
       "year": 2022,
       "count": 13,
-      "median_price": 224670,
-      "avg_price": 233922,
+      "median_price": 255000,
+      "avg_price": 265501,
       "min_price": 215859,
       "max_price": 290000
     },
     {
       "year": 2023,
       "count": 22,
-      "median_price": 242291,
-      "avg_price": 238718,
+      "median_price": 275000,
+      "avg_price": 270945,
       "min_price": 193832,
       "max_price": 268040
     },
     {
       "year": 2024,
       "count": 16,
-      "median_price": 277533,
-      "avg_price": 265871,
+      "median_price": 315000,
+      "avg_price": 301764,
       "min_price": 223577,
       "max_price": 299500
     },
     {
       "year": 2025,
       "count": 11,
-      "median_price": 286300,
-      "avg_price": 284652,
+      "median_price": 321768,
+      "avg_price": 321872,
       "min_price": 257709,
       "max_price": 310000
     },
     {
       "year": 2026,
       "count": 19,
-      "median_price": 303964,
-      "avg_price": 298933,
+      "median_price": 335000,
+      "avg_price": 337850,
       "min_price": 286344,
       "max_price": 312775
     }
@@ -190,17 +190,17 @@
     },
     {
       "date": "2026-02-19",
-      "address": "217 Forgelands, Old Forge Road, Enniscorthy",
-      "price": 303965,
-      "bedrooms": 4,
+      "address": "216 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303900,
+      "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": null
     },
     {
       "date": "2026-02-19",
-      "address": "216 Forgelands, Old Forge Road, Enniscorthy",
-      "price": 303900,
-      "bedrooms": 3,
+      "address": "217 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 303965,
+      "bedrooms": 4,
       "propertyType": "semi-detached",
       "eircode": null
     },

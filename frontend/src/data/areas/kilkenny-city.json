@@ -2,13 +2,13 @@
   "name": "Kilkenny",
   "slug": "kilkenny-city",
   "center": {
-    "lat": 52.6506255,
-    "lon": -7.2514438
+    "lat": 52.653574,
+    "lon": -7.25071
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 335000.0,
-  "avg_price": 328500,
+  "median_price": 340000.0,
+  "avg_price": 360650,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,25 +28,8 @@
       "routing_key": "R95",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1514.14260416
-    },
-    {
-      "id": 805451,
-      "sale_date": "2026-09-30",
-      "address": "APT 13, SEVILLE LAWNS, MARGARETS FIELDS",
-      "county": "Kilkenny",
-      "eircode": "R95P525",
-      "price": 260000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.638053,
-      "longitude": -7.27089,
-      "routing_key": "R95",
-      "bedrooms": 2,
-      "property_type": "apartment",
-      "distance_m": 1920.92005956
+      "price_incl_vat": 287000.0,
+      "distance_m": 1203.37042763
     },
     {
       "id": 805251,
@@ -64,7 +47,8 @@
       "routing_key": "R95",
       "bedrooms": 2,
       "property_type": "semi-detached",
-      "distance_m": 599.00463814
+      "price_incl_vat": 255000.0,
+      "distance_m": 529.39422482
     },
     {
       "id": 805028,
@@ -82,7 +66,8 @@
       "routing_key": "R95",
       "bedrooms": 3,
       "property_type": "duplex",
-      "distance_m": 1304.2933397
+      "price_incl_vat": 260000.0,
+      "distance_m": 1063.32714411
     },
     {
       "id": 804747,
@@ -100,7 +85,8 @@
       "routing_key": "R95",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 245.75213001
+      "price_incl_vat": 272000.0,
+      "distance_m": 536.10651891
     },
     {
       "id": 804535,
@@ -118,7 +104,8 @@
       "routing_key": "R95",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 1773.20510053
+      "price_incl_vat": 360000.0,
+      "distance_m": 1479.67793532
     },
     {
       "id": 804469,
@@ -136,7 +123,8 @@
       "routing_key": "R95",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 1582.57589725
+      "price_incl_vat": 420000.0,
+      "distance_m": 1325.03783402
     },
     {
       "id": 804240,
@@ -154,7 +142,8 @@
       "routing_key": "R95",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1265.39873573
+      "price_incl_vat": 329000.0,
+      "distance_m": 1596.87684933
     },
     {
       "id": 804081,
@@ -172,7 +161,27 @@
       "routing_key": "R95",
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 1034.43332817
+      "price_incl_vat": 480000.0,
+      "distance_m": 1358.17420274
+    },
+    {
+      "id": 803756,
+      "sale_date": "2026-09-09",
+      "address": "17 The Green, Fox Meadow, Kilkenny",
+      "county": "Kilkenny",
+      "eircode": null,
+      "price": 581497.8,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.658428,
+      "longitude": -7.263308,
+      "routing_key": null,
+      "bedrooms": 4,
+      "property_type": "detached",
+      "price_incl_vat": 660000.0,
+      "distance_m": 1009.21925776
     },
     {
       "id": 803838,
@@ -190,143 +199,144 @@
       "routing_key": "R95",
       "bedrooms": 4,
       "property_type": "terraced",
-      "distance_m": 1090.82182651
+      "price_incl_vat": 362000.0,
+      "distance_m": 1341.62815295
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 77,
-      "median_price": 165000.0,
-      "avg_price": 189089.0,
+      "count": 93,
+      "median_price": 169000.0,
+      "avg_price": 193285.0,
       "min_price": 62500.0,
       "max_price": 730000.0
     },
     {
       "year": 2011,
-      "count": 58,
+      "count": 68,
       "median_price": 146750.0,
-      "avg_price": 165849.0,
+      "avg_price": 168186.0,
       "min_price": 54000.0,
       "max_price": 695000.0
     },
     {
       "year": 2012,
-      "count": 92,
-      "median_price": 116250.0,
-      "avg_price": 127632.0,
+      "count": 106,
+      "median_price": 126750.0,
+      "avg_price": 134444.0,
       "min_price": 10000.0,
       "max_price": 465000.0
     },
     {
       "year": 2013,
-      "count": 68,
-      "median_price": 112750.0,
-      "avg_price": 142252.0,
+      "count": 80,
+      "median_price": 119588.0,
+      "avg_price": 148408.0,
       "min_price": 25000.0,
       "max_price": 546255.0
     },
     {
       "year": 2014,
-      "count": 153,
-      "median_price": 115500.0,
-      "avg_price": 137243.0,
+      "count": 179,
+      "median_price": 122000.0,
+      "avg_price": 141148.0,
       "min_price": 40000.0,
       "max_price": 805000.0
     },
     {
       "year": 2015,
-      "count": 172,
-      "median_price": 138000.0,
-      "avg_price": 156277.0,
+      "count": 197,
+      "median_price": 143000.0,
+      "avg_price": 160256.0,
       "min_price": 40000.0,
       "max_price": 590000.0
     },
     {
       "year": 2016,
-      "count": 164,
-      "median_price": 175500.0,
-      "avg_price": 195345.0,
+      "count": 183,
+      "median_price": 180000.0,
+      "avg_price": 199696.0,
       "min_price": 23000.0,
       "max_price": 540000.0
     },
     {
       "year": 2017,
-      "count": 201,
-      "median_price": 175000.0,
-      "avg_price": 194661.0,
+      "count": 218,
+      "median_price": 180000.0,
+      "avg_price": 200022.0,
       "min_price": 33333.33,
       "max_price": 1100000.0
     },
     {
       "year": 2018,
-      "count": 214,
+      "count": 223,
       "median_price": 195000.0,
-      "avg_price": 210449.0,
+      "avg_price": 211807.0,
       "min_price": 10000.0,
       "max_price": 600000.0
     },
     {
       "year": 2019,
-      "count": 266,
-      "median_price": 198000.0,
-      "avg_price": 221540.0,
+      "count": 276,
+      "median_price": 200000.0,
+      "avg_price": 222603.0,
       "min_price": 10000.0,
       "max_price": 637444.93
     },
     {
       "year": 2020,
-      "count": 188,
-      "median_price": 207000.0,
-      "avg_price": 230014.0,
+      "count": 206,
+      "median_price": 210000.0,
+      "avg_price": 234732.0,
       "min_price": 35000.0,
       "max_price": 1100000.0
     },
     {
       "year": 2021,
-      "count": 264,
-      "median_price": 240500.0,
-      "avg_price": 281909.0,
+      "count": 267,
+      "median_price": 245000.0,
+      "avg_price": 282708.0,
       "min_price": 21640.0,
       "max_price": 4250000.0
     },
     {
       "year": 2022,
-      "count": 291,
-      "median_price": 260000.0,
-      "avg_price": 311024.0,
+      "count": 296,
+      "median_price": 266750.0,
+      "avg_price": 315761.0,
       "min_price": 40000.0,
       "max_price": 940000.0
     },
     {
       "year": 2023,
-      "count": 301,
-      "median_price": 271000.0,
-      "avg_price": 306700.0,
+      "count": 311,
+      "median_price": 275000.0,
+      "avg_price": 315927.0,
       "min_price": 40000.0,
       "max_price": 1271428.0
     },
     {
       "year": 2024,
-      "count": 318,
-      "median_price": 299042.0,
-      "avg_price": 340321.0,
+      "count": 306,
+      "median_price": 296500.0,
+      "avg_price": 349345.0,
       "min_price": 22500.0,
       "max_price": 1370000.0
     },
     {
       "year": 2025,
-      "count": 302,
-      "median_price": 327000.0,
-      "avg_price": 369236.0,
+      "count": 291,
+      "median_price": 335000.0,
+      "avg_price": 378554.0,
       "min_price": 90000.0,
       "max_price": 1580000.0
     },
     {
       "year": 2026,
-      "count": 211,
-      "median_price": 335000.0,
-      "avg_price": 372066.0,
+      "count": 213,
+      "median_price": 340000.0,
+      "avg_price": 380426.0,
       "min_price": 10000.0,
       "max_price": 1550000.0
     }

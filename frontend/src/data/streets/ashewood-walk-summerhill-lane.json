@@ -2,8 +2,8 @@
   "slug": "ashewood-walk-summerhill-lane",
   "stats": {
     "count": 107,
-    "median": 299558,
-    "avg": 270868,
+    "median": 300000,
+    "avg": 301356,
     "min": 18650,
     "max": 436123,
     "firstYear": 2010,
@@ -13,88 +13,88 @@
     {
       "year": 2010,
       "count": 3,
-      "median_price": 185000,
-      "avg_price": 190532,
+      "median_price": 209975,
+      "avg_price": 216253,
       "min_price": 185000,
       "max_price": 201595
     },
     {
       "year": 2011,
       "count": 2,
-      "median_price": 142390,
-      "avg_price": 142390,
+      "median_price": 152500,
+      "avg_price": 152500,
       "min_price": 135000,
       "max_price": 149780
     },
     {
       "year": 2012,
       "count": 1,
-      "median_price": 127753,
-      "avg_price": 127753,
+      "median_price": 145000,
+      "avg_price": 145000,
       "min_price": 127753,
       "max_price": 127753
     },
     {
       "year": 2013,
       "count": 2,
-      "median_price": 145913,
-      "avg_price": 145913,
+      "median_price": 165612,
+      "avg_price": 165612,
       "min_price": 136827,
       "max_price": 155000
     },
     {
       "year": 2014,
       "count": 4,
-      "median_price": 138589,
-      "avg_price": 139779,
+      "median_price": 157298,
+      "avg_price": 158649,
       "min_price": 136564,
       "max_price": 145375
     },
     {
       "year": 2015,
       "count": 3,
-      "median_price": 147400,
-      "avg_price": 145903,
+      "median_price": 167299,
+      "avg_price": 165600,
       "min_price": 140969,
       "max_price": 149339
     },
     {
       "year": 2016,
       "count": 4,
-      "median_price": 190440,
-      "avg_price": 194754,
+      "median_price": 216149,
+      "avg_price": 221046,
       "min_price": 178236,
       "max_price": 219900
     },
     {
       "year": 2017,
       "count": 5,
-      "median_price": 200263,
-      "avg_price": 212705,
+      "median_price": 227298,
+      "avg_price": 236074,
       "min_price": 198000,
       "max_price": 245000
     },
     {
       "year": 2018,
       "count": 3,
-      "median_price": 235505,
-      "avg_price": 237767,
+      "median_price": 267298,
+      "avg_price": 269866,
       "min_price": 233480,
       "max_price": 244316
     },
     {
       "year": 2019,
       "count": 10,
-      "median_price": 233480,
-      "avg_price": 216943,
+      "median_price": 265000,
+      "avg_price": 241032,
       "min_price": 140970,
       "max_price": 244316
     },
     {
       "year": 2020,
       "count": 11,
-      "median_price": 244315,
-      "avg_price": 218391,
+      "median_price": 277298,
+      "avg_price": 242307,
       "min_price": 18650,
       "max_price": 259912
     },
@@ -117,24 +117,24 @@
     {
       "year": 2023,
       "count": 15,
-      "median_price": 321585,
-      "avg_price": 315006,
+      "median_price": 364999,
+      "avg_price": 352568,
       "min_price": 272000,
       "max_price": 339207
     },
     {
       "year": 2024,
       "count": 22,
-      "median_price": 330396,
-      "avg_price": 329848,
+      "median_price": 375000,
+      "avg_price": 372537,
       "min_price": 300000,
       "max_price": 352423
     },
     {
       "year": 2025,
       "count": 17,
-      "median_price": 376305,
-      "avg_price": 357781,
+      "median_price": 415000,
+      "avg_price": 395940,
       "min_price": 230000,
       "max_price": 436123
     },
@@ -398,16 +398,16 @@
     },
     {
       "date": "2024-05-10",
-      "address": "96 Ashewood Walk, Summerhill Lane, Portlaoise",
-      "price": 325991,
+      "address": "92 Ashewood Walk, Summerhill Lane, Stradbally Road",
+      "price": 317181,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2024-05-10",
-      "address": "92 Ashewood Walk, Summerhill Lane, Stradbally Road",
-      "price": 317181,
+      "address": "96 Ashewood Walk, Summerhill Lane, Portlaoise",
+      "price": 325991,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

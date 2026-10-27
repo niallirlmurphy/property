@@ -2,13 +2,13 @@
   "name": "Cork City",
   "slug": "cork-city",
   "center": {
-    "lat": 51.8897795,
-    "lon": -8.4653846
+    "lat": 51.897203000000005,
+    "lon": -8.47513
   },
   "radius_km": 3.0,
   "total_count": 10,
-  "median_price": 355000.0,
-  "avg_price": 280200,
+  "median_price": 338000.0,
+  "avg_price": 294200,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,46 @@
       "routing_key": "T12",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 784.48705057
+      "price_incl_vat": 252000.0,
+      "distance_m": 431.44152223
+    },
+    {
+      "id": 805496,
+      "sale_date": "2026-10-01",
+      "address": "15 VALEBROOK, BALLYVOLANE, CORK",
+      "county": "Cork",
+      "eircode": "T23Y7P0",
+      "price": 370000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.91641,
+      "longitude": -8.45014,
+      "routing_key": "T23",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "price_incl_vat": 370000.0,
+      "distance_m": 2743.15534303
+    },
+    {
+      "id": 805495,
+      "sale_date": "2026-10-01",
+      "address": "15 VALEBROOK, BALLYVOLANE, CORK",
+      "county": "Cork",
+      "eircode": "T23Y7P0",
+      "price": 370000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.91641,
+      "longitude": -8.45014,
+      "routing_key": "T23",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "price_incl_vat": 370000.0,
+      "distance_m": 2743.15534303
     },
     {
       "id": 805431,
@@ -46,7 +85,8 @@
       "routing_key": "T12",
       "bedrooms": null,
       "property_type": "terraced",
-      "distance_m": 618.66474646
+      "price_incl_vat": 325000.0,
+      "distance_m": 488.70903562
     },
     {
       "id": 805387,
@@ -64,7 +104,8 @@
       "routing_key": "T23",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 2587.36639321
+      "price_incl_vat": 310000.0,
+      "distance_m": 1538.97266895
     },
     {
       "id": 805467,
@@ -82,25 +123,8 @@
       "routing_key": "T23",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 2706.68630071
-    },
-    {
-      "id": 805219,
-      "sale_date": "2026-09-28",
-      "address": "9 ROCHELLE PARK, BLACKROCK, CORK",
-      "county": "Cork",
-      "eircode": "T12YV1Y",
-      "price": 275000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.89261,
-      "longitude": -8.45596,
-      "routing_key": "T12",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 721.2256624
+      "price_incl_vat": 250000.0,
+      "distance_m": 1802.55535211
     },
     {
       "id": 805170,
@@ -118,7 +142,27 @@
       "routing_key": "T12",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 829.90330396
+      "price_incl_vat": 315000.0,
+      "distance_m": 1067.80922
+    },
+    {
+      "id": 805219,
+      "sale_date": "2026-09-28",
+      "address": "9 ROCHELLE PARK, BLACKROCK, CORK",
+      "county": "Cork",
+      "eircode": "T12YV1Y",
+      "price": 275000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.89261,
+      "longitude": -8.45596,
+      "routing_key": "T12",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 275000.0,
+      "distance_m": 1415.13569569
     },
     {
       "id": 805177,
@@ -136,7 +180,8 @@
       "routing_key": "T23",
       "bedrooms": 3,
       "property_type": "apartment",
-      "distance_m": 1563.32955238
+      "price_incl_vat": 245000.0,
+      "distance_m": 1470.02729604
     },
     {
       "id": 805095,
@@ -154,179 +199,144 @@
       "routing_key": "T23",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 2604.28724943
-    },
-    {
-      "id": 805005,
-      "sale_date": "2026-09-24",
-      "address": "18 CAMDEN WHARF, CAMDEN QUAY, CORK",
-      "county": "Cork",
-      "eircode": "T23TY82",
-      "price": 315000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.900996,
-      "longitude": -8.470283,
-      "routing_key": "T23",
-      "bedrooms": 2,
-      "property_type": "apartment",
-      "distance_m": 1292.75868622
-    },
-    {
-      "id": 805040,
-      "sale_date": "2026-09-24",
-      "address": "APT 9, KNAPPS SQUARE, CARROLLS QUAY",
-      "county": "Cork",
-      "eircode": "T23R9KC",
-      "price": 285000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.901198,
-      "longitude": -8.473025,
-      "routing_key": "T23",
-      "bedrooms": 2,
-      "property_type": "apartment",
-      "distance_m": 1375.04562282
+      "price_incl_vat": 230000.0,
+      "distance_m": 1759.05318216
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 158,
-      "median_price": 200000.0,
-      "avg_price": 225610.0,
+      "count": 166,
+      "median_price": 189500.0,
+      "avg_price": 209221.0,
       "min_price": 16371.68,
-      "max_price": 1525000.0
+      "max_price": 855000.0
     },
     {
       "year": 2011,
-      "count": 148,
-      "median_price": 160000.0,
-      "avg_price": 178110.0,
+      "count": 172,
+      "median_price": 158500.0,
+      "avg_price": 168121.0,
       "min_price": 10000.0,
       "max_price": 950000.0
     },
     {
       "year": 2012,
-      "count": 217,
-      "median_price": 139500.0,
-      "avg_price": 154026.0,
+      "count": 221,
+      "median_price": 126000.0,
+      "avg_price": 145926.0,
       "min_price": 10000.0,
       "max_price": 600000.0
     },
     {
       "year": 2013,
-      "count": 318,
-      "median_price": 105500.0,
-      "avg_price": 191525.0,
+      "count": 335,
+      "median_price": 105000.0,
+      "avg_price": 186068.0,
       "min_price": 10000.0,
       "max_price": 18441109.0
     },
     {
       "year": 2014,
-      "count": 619,
-      "median_price": 123000.0,
-      "avg_price": 151710.0,
+      "count": 651,
+      "median_price": 117500.0,
+      "avg_price": 153283.0,
       "min_price": 20000.0,
-      "max_price": 2005271.0
+      "max_price": 5550000.0
     },
     {
       "year": 2015,
-      "count": 593,
-      "median_price": 150000.0,
-      "avg_price": 196951.0,
+      "count": 670,
+      "median_price": 140000.0,
+      "avg_price": 183324.0,
       "min_price": 10000.0,
       "max_price": 15176000.0
     },
     {
       "year": 2016,
-      "count": 671,
-      "median_price": 170000.0,
-      "avg_price": 206786.0,
+      "count": 696,
+      "median_price": 165000.0,
+      "avg_price": 196991.0,
       "min_price": 10000.0,
       "max_price": 5950000.0
     },
     {
       "year": 2017,
-      "count": 729,
-      "median_price": 190000.0,
-      "avg_price": 231868.0,
+      "count": 726,
+      "median_price": 180000.0,
+      "avg_price": 224068.0,
       "min_price": 23000.0,
       "max_price": 11600000.0
     },
     {
       "year": 2018,
-      "count": 763,
-      "median_price": 210000.0,
-      "avg_price": 244554.0,
+      "count": 760,
+      "median_price": 205000.0,
+      "avg_price": 241058.0,
       "min_price": 15000.0,
       "max_price": 5525000.0
     },
     {
       "year": 2019,
-      "count": 801,
-      "median_price": 225000.0,
-      "avg_price": 242253.0,
+      "count": 775,
+      "median_price": 215000.0,
+      "avg_price": 232868.0,
       "min_price": 10000.0,
-      "max_price": 1400000.0
+      "max_price": 960000.0
     },
     {
       "year": 2020,
-      "count": 674,
-      "median_price": 220500.0,
-      "avg_price": 246317.0,
+      "count": 648,
+      "median_price": 215000.0,
+      "avg_price": 244252.0,
       "min_price": 15000.0,
       "max_price": 1500000.0
     },
     {
       "year": 2021,
-      "count": 1033,
-      "median_price": 260000.0,
-      "avg_price": 301870.0,
+      "count": 982,
+      "median_price": 248500.0,
+      "avg_price": 288100.0,
       "min_price": 22400.0,
       "max_price": 4250000.0
     },
     {
       "year": 2022,
-      "count": 1185,
-      "median_price": 284000.0,
-      "avg_price": 319827.0,
+      "count": 1147,
+      "median_price": 275000.0,
+      "avg_price": 317493.0,
       "min_price": 10000.0,
       "max_price": 3540000.0
     },
     {
       "year": 2023,
-      "count": 1182,
-      "median_price": 285000.0,
-      "avg_price": 329630.0,
+      "count": 1104,
+      "median_price": 275000.0,
+      "avg_price": 329604.0,
       "min_price": 14209.57,
-      "max_price": 2700000.0
+      "max_price": 5685000.0
     },
     {
       "year": 2024,
-      "count": 1146,
-      "median_price": 305000.0,
-      "avg_price": 349921.0,
+      "count": 1121,
+      "median_price": 300000.0,
+      "avg_price": 340286.0,
       "min_price": 14280.0,
       "max_price": 3261094.0
     },
     {
       "year": 2025,
-      "count": 1079,
-      "median_price": 340000.0,
-      "avg_price": 392042.0,
+      "count": 1003,
+      "median_price": 320000.0,
+      "avg_price": 374634.0,
       "min_price": 10000.0,
       "max_price": 3450000.0
     },
     {
       "year": 2026,
-      "count": 590,
-      "median_price": 355000.0,
-      "avg_price": 401170.0,
+      "count": 557,
+      "median_price": 338000.0,
+      "avg_price": 384094.0,
       "min_price": 10000.0,
       "max_price": 1990000.0
     }

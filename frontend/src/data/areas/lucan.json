@@ -2,13 +2,13 @@
   "name": "Lucan, Dublin",
   "slug": "lucan",
   "center": {
-    "lat": 53.3567157,
-    "lon": -6.4501534
+    "lat": 53.3474,
+    "lon": -6.44358
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 502500.0,
-  "avg_price": 511931,
+  "median_price": 499983.0,
+  "avg_price": 463758,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,27 @@
       "routing_key": "K78",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1182.4971944
+      "price_incl_vat": 420000.0,
+      "distance_m": 98.84904899
+    },
+    {
+      "id": 805434,
+      "sale_date": "2026-09-30",
+      "address": "61 EARLSFORT RD, LUCAN, DUBLIN",
+      "county": "Dublin",
+      "eircode": "K78A364",
+      "price": 450000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.347179,
+      "longitude": -6.414001,
+      "routing_key": "K78",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "price_incl_vat": 450000.0,
+      "distance_m": 1970.03413423
     },
     {
       "id": 805295,
@@ -46,7 +66,27 @@
       "routing_key": "K78",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 1232.43502562
+      "price_incl_vat": 680000.0,
+      "distance_m": 618.13969888
+    },
+    {
+      "id": 804909,
+      "sale_date": "2026-09-23",
+      "address": "18 HANSTED PLACE, LUCAN, DUBLIN",
+      "county": "Dublin",
+      "eircode": "K78EH57",
+      "price": 292500.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.336799,
+      "longitude": -6.451258,
+      "routing_key": "K78",
+      "bedrooms": 3,
+      "property_type": "duplex",
+      "price_incl_vat": 292500.0,
+      "distance_m": 1285.87972134
     },
     {
       "id": 804797,
@@ -64,7 +104,27 @@
       "routing_key": "K78",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 1794.98300016
+      "price_incl_vat": 560000.0,
+      "distance_m": 1755.32145318
+    },
+    {
+      "id": 804651,
+      "sale_date": "2026-09-21",
+      "address": "1 Heron's Lock Rise, Heron's Lock, Lucan",
+      "county": "Dublin",
+      "eircode": null,
+      "price": 462555.0,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.333724,
+      "longitude": -6.450492,
+      "routing_key": null,
+      "bedrooms": 4,
+      "property_type": "house",
+      "price_incl_vat": 524999.93,
+      "distance_m": 1590.14556628
     },
     {
       "id": 804504,
@@ -82,7 +142,8 @@
       "routing_key": "K78",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 1286.70483037
+      "price_incl_vat": 357000.0,
+      "distance_m": 522.14323956
     },
     {
       "id": 804494,
@@ -100,7 +161,27 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "house",
-      "distance_m": 1891.12087997
+      "price_incl_vat": 500000.0,
+      "distance_m": 1465.35565621
+    },
+    {
+      "id": 804471,
+      "sale_date": "2026-09-16",
+      "address": "33 LIFFEY TERRACE, LIFFEY VALLEY PARK, LUCAN",
+      "county": "Dublin",
+      "eircode": "K78T188",
+      "price": 510000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.351943,
+      "longitude": -6.417198,
+      "routing_key": "K78",
+      "bedrooms": 3,
+      "property_type": "terraced",
+      "price_incl_vat": 510000.0,
+      "distance_m": 1828.17700727
     },
     {
       "id": 804353,
@@ -118,216 +199,145 @@
       "routing_key": "K78",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1065.90555454
-    },
-    {
-      "id": 804067,
-      "sale_date": "2026-09-11",
-      "address": "17 HILLCREST CLOSE, LUCAN, DUBLIN",
-      "county": "Dublin",
-      "eircode": "K78W272",
-      "price": 500000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.351924,
-      "longitude": -6.461331,
-      "routing_key": "K78",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 915.60666219
-    },
-    {
-      "id": 804102,
-      "sale_date": "2026-09-11",
-      "address": "246 BEECH PARK, LUCAN, CO DUBLIN",
-      "county": "Dublin",
-      "eircode": "K78X7W4",
-      "price": 670000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.356636,
-      "longitude": -6.434465,
-      "routing_key": "K78",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 1044.61275297
-    },
-    {
-      "id": 803985,
-      "sale_date": "2026-09-10",
-      "address": "6 ELMBROOK AVE, LUCAN, DUBLIN 20",
-      "county": "Dublin",
-      "eircode": "K78RT99",
-      "price": 586250.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.352203,
-      "longitude": -6.431048,
-      "routing_key": "K78",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 1367.70330096
-    },
-    {
-      "id": 803739,
-      "sale_date": "2026-09-09",
-      "address": "13 Tandys Lane Park, Adamstown, Lucan",
-      "county": "Dublin",
-      "eircode": null,
-      "price": 440528.0,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.341125,
-      "longitude": -6.463225,
-      "routing_key": null,
-      "bedrooms": null,
-      "property_type": "house",
-      "distance_m": 1941.2512561
+      "price_incl_vat": 465000.0,
+      "distance_m": 455.77834912
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 147,
-      "median_price": 260000.0,
-      "avg_price": 281509.0,
+      "count": 238,
+      "median_price": 258000.0,
+      "avg_price": 265665.0,
       "min_price": 122500.0,
       "max_price": 1115000.0
     },
     {
       "year": 2011,
-      "count": 97,
-      "median_price": 220000.0,
-      "avg_price": 246122.0,
+      "count": 132,
+      "median_price": 215000.0,
+      "avg_price": 235191.0,
       "min_price": 107750.0,
       "max_price": 650000.0
     },
     {
       "year": 2012,
-      "count": 116,
-      "median_price": 210000.0,
-      "avg_price": 229521.0,
-      "min_price": 102000.0,
+      "count": 192,
+      "median_price": 195000.0,
+      "avg_price": 209317.0,
+      "min_price": 77093.0,
       "max_price": 735000.0
     },
     {
       "year": 2013,
-      "count": 120,
-      "median_price": 235000.0,
-      "avg_price": 252189.0,
+      "count": 228,
+      "median_price": 191000.0,
+      "avg_price": 207766.0,
       "min_price": 20000.0,
       "max_price": 750000.0
     },
     {
       "year": 2014,
-      "count": 187,
-      "median_price": 275000.0,
-      "avg_price": 293274.0,
+      "count": 364,
+      "median_price": 231500.0,
+      "avg_price": 240457.0,
       "min_price": 50000.0,
       "max_price": 950000.0
     },
     {
       "year": 2015,
-      "count": 205,
-      "median_price": 283000.0,
-      "avg_price": 325545.0,
-      "min_price": 142000.0,
+      "count": 329,
+      "median_price": 268000.0,
+      "avg_price": 282248.0,
+      "min_price": 27000.0,
       "max_price": 1200005.0
     },
     {
       "year": 2016,
-      "count": 211,
-      "median_price": 283000.0,
-      "avg_price": 332136.0,
+      "count": 303,
+      "median_price": 273000.0,
+      "avg_price": 298553.0,
       "min_price": 80188.0,
       "max_price": 1000000.0
     },
     {
       "year": 2017,
-      "count": 222,
-      "median_price": 312909.0,
-      "avg_price": 352032.0,
-      "min_price": 155000.0,
-      "max_price": 819493.0
+      "count": 370,
+      "median_price": 298500.0,
+      "avg_price": 331481.0,
+      "min_price": 125000.0,
+      "max_price": 3325000.0
     },
     {
       "year": 2018,
-      "count": 358,
-      "median_price": 325000.0,
-      "avg_price": 337107.0,
+      "count": 556,
+      "median_price": 331230.0,
+      "avg_price": 337243.0,
       "min_price": 145000.0,
       "max_price": 785000.0
     },
     {
       "year": 2019,
-      "count": 454,
-      "median_price": 321586.0,
-      "avg_price": 345706.0,
+      "count": 613,
+      "median_price": 345000.0,
+      "avg_price": 345838.0,
       "min_price": 144626.14,
       "max_price": 1095000.0
     },
     {
       "year": 2020,
-      "count": 328,
-      "median_price": 340000.0,
-      "avg_price": 358562.0,
-      "min_price": 110000.0,
+      "count": 432,
+      "median_price": 353500.0,
+      "avg_price": 350785.0,
+      "min_price": 95000.0,
       "max_price": 1000000.0
     },
     {
       "year": 2021,
-      "count": 223,
-      "median_price": 373000.0,
-      "avg_price": 394628.0,
-      "min_price": 130000.0,
-      "max_price": 980000.0
+      "count": 363,
+      "median_price": 350000.0,
+      "avg_price": 403750.0,
+      "min_price": 21360.0,
+      "max_price": 5766520.0
     },
     {
       "year": 2022,
-      "count": 308,
-      "median_price": 378855.0,
-      "avg_price": 391894.0,
+      "count": 466,
+      "median_price": 376500.0,
+      "avg_price": 391327.0,
       "min_price": 12000.0,
       "max_price": 1409500.0
     },
     {
       "year": 2023,
-      "count": 290,
-      "median_price": 418282.0,
-      "avg_price": 443779.0,
+      "count": 456,
+      "median_price": 405000.0,
+      "avg_price": 416358.0,
       "min_price": 50000.0,
       "max_price": 4200000.0
     },
     {
       "year": 2024,
-      "count": 274,
-      "median_price": 465577.0,
-      "avg_price": 487014.0,
+      "count": 437,
+      "median_price": 437000.0,
+      "avg_price": 449235.0,
       "min_price": 15000.0,
-      "max_price": 1900000.0
+      "max_price": 1340000.0
     },
     {
       "year": 2025,
-      "count": 291,
-      "median_price": 475771.0,
-      "avg_price": 540184.0,
+      "count": 484,
+      "median_price": 458500.0,
+      "avg_price": 506595.0,
       "min_price": 67500.0,
       "max_price": 5137843.47
     },
     {
       "year": 2026,
-      "count": 132,
-      "median_price": 502500.0,
-      "avg_price": 542716.0,
-      "min_price": 278000.0,
+      "count": 254,
+      "median_price": 499983.0,
+      "avg_price": 515059.0,
+      "min_price": 231000.0,
       "max_price": 1650000.0
     }
   ]

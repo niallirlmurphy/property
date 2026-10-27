@@ -78,6 +78,22 @@
     },
     {
       "date": "2014-09-24",
+      "address": "13 EDWARD SQUARE, BLOOMFIELD, DONNYBROOK",
+      "price": 1409692,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-09-24",
+      "address": "14 EDWARD SQ, BLOOMFIELD, DONNYBROOK DUBLIN 4",
+      "price": 1409692,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2014-09-24",
       "address": "16 EDWARD SQ, BLOOMFIELD, DONNYBROOK DUBLIN 4",
       "price": 1374449,
       "bedrooms": null,
@@ -96,22 +112,6 @@
       "date": "2014-09-24",
       "address": "9 EDWARD SQ, BLOOMFIELD, DONNYBROOK",
       "price": 1828194,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2014-09-24",
-      "address": "13 EDWARD SQUARE, BLOOMFIELD, DONNYBROOK",
-      "price": 1409692,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2014-09-24",
-      "address": "14 EDWARD SQ, BLOOMFIELD, DONNYBROOK DUBLIN 4",
-      "price": 1409692,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

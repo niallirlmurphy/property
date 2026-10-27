@@ -2,12 +2,12 @@
   "name": "Gorey, Wexford",
   "slug": "gorey",
   "center": {
-    "lat": 52.6712171,
-    "lon": -6.2920098
+    "lat": 52.676390999999995,
+    "lon": -6.2927925
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 339207.0,
+  "median_price": 369868.0,
   "avg_price": 319121,
   "min_year": 2010,
   "max_year": 2026,
@@ -28,7 +28,8 @@
       "routing_key": "Y25",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1281.26869143
+      "price_incl_vat": 415000.0,
+      "distance_m": 804.68029781
     },
     {
       "id": 805362,
@@ -46,7 +47,8 @@
       "routing_key": "Y25",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 499.35503323
+      "price_incl_vat": 333000.0,
+      "distance_m": 1009.39116317
     },
     {
       "id": 805318,
@@ -64,7 +66,8 @@
       "routing_key": "Y25",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 739.90381226
+      "price_incl_vat": 285000.0,
+      "distance_m": 167.45739341
     },
     {
       "id": 805288,
@@ -82,7 +85,8 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": "semi-detached",
-      "distance_m": 1759.75151253
+      "price_incl_vat": 415000.0,
+      "distance_m": 1288.40095967
     },
     {
       "id": 805176,
@@ -100,7 +104,8 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 520.83087156
+      "price_incl_vat": 384999.95,
+      "distance_m": 1069.60151228
     },
     {
       "id": 804842,
@@ -118,43 +123,8 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 524.6555991
-    },
-    {
-      "id": 804682,
-      "sale_date": "2026-09-21",
-      "address": "2 Rams Brooke, Ramstown Lower, Gorey",
-      "county": "Wexford",
-      "eircode": null,
-      "price": 339300.0,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.666946,
-      "longitude": -6.294904,
-      "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 514.03589061
-    },
-    {
-      "id": 804740,
-      "sale_date": "2026-09-21",
-      "address": "7 Rams Brooke, Ramstown Lower, Gorey",
-      "county": "Wexford",
-      "eircode": null,
-      "price": 321500.0,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.666713,
-      "longitude": -6.294672,
-      "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 532.59054272
+      "price_incl_vat": 339999.99,
+      "distance_m": 1074.34629883
     },
     {
       "id": 804715,
@@ -172,7 +142,8 @@
       "routing_key": "Y25",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 747.08255522
+      "price_incl_vat": 163000.0,
+      "distance_m": 720.33991859
     },
     {
       "id": 804723,
@@ -190,143 +161,182 @@
       "routing_key": "Y25",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1409.73148693
+      "price_incl_vat": 330000.0,
+      "distance_m": 834.10031118
+    },
+    {
+      "id": 804682,
+      "sale_date": "2026-09-21",
+      "address": "2 Rams Brooke, Ramstown Lower, Gorey",
+      "county": "Wexford",
+      "eircode": null,
+      "price": 339300.0,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.666946,
+      "longitude": -6.294904,
+      "routing_key": null,
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 385105.5,
+      "distance_m": 1060.70124868
+    },
+    {
+      "id": 804740,
+      "sale_date": "2026-09-21",
+      "address": "7 Rams Brooke, Ramstown Lower, Gorey",
+      "county": "Wexford",
+      "eircode": null,
+      "price": 321500.0,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.666713,
+      "longitude": -6.294672,
+      "routing_key": null,
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 364902.5,
+      "distance_m": 1084.44726058
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 44,
-      "median_price": 177413.0,
-      "avg_price": 198826.0,
-      "min_price": 65000.0,
+      "count": 54,
+      "median_price": 186500.0,
+      "avg_price": 200771.0,
+      "min_price": 18000.0,
       "max_price": 740000.0
     },
     {
       "year": 2011,
-      "count": 21,
+      "count": 23,
       "median_price": 150000.0,
-      "avg_price": 149877.0,
+      "avg_price": 149934.0,
       "min_price": 55000.0,
       "max_price": 292500.0
     },
     {
       "year": 2012,
-      "count": 55,
-      "median_price": 115000.0,
-      "avg_price": 123097.0,
+      "count": 59,
+      "median_price": 116000.0,
+      "avg_price": 128757.0,
       "min_price": 40000.0,
       "max_price": 375000.0
     },
     {
       "year": 2013,
-      "count": 38,
-      "median_price": 126250.0,
-      "avg_price": 129318.0,
+      "count": 43,
+      "median_price": 131000.0,
+      "avg_price": 132259.0,
       "min_price": 19816.0,
       "max_price": 280000.0
     },
     {
       "year": 2014,
-      "count": 84,
-      "median_price": 130000.0,
-      "avg_price": 128413.0,
+      "count": 96,
+      "median_price": 131000.0,
+      "avg_price": 131700.0,
       "min_price": 22900.0,
       "max_price": 298000.0
     },
     {
       "year": 2015,
-      "count": 92,
-      "median_price": 154500.0,
-      "avg_price": 161376.0,
+      "count": 99,
+      "median_price": 159000.0,
+      "avg_price": 168976.0,
       "min_price": 61000.0,
       "max_price": 395000.0
     },
     {
       "year": 2016,
-      "count": 111,
-      "median_price": 151000.0,
-      "avg_price": 157944.0,
+      "count": 128,
+      "median_price": 146000.0,
+      "avg_price": 158742.0,
       "min_price": 59800.0,
       "max_price": 400000.0
     },
     {
       "year": 2017,
-      "count": 113,
-      "median_price": 177000.0,
-      "avg_price": 181836.0,
+      "count": 124,
+      "median_price": 185000.0,
+      "avg_price": 191500.0,
       "min_price": 37000.0,
       "max_price": 390000.0
     },
     {
       "year": 2018,
-      "count": 127,
-      "median_price": 217000.0,
-      "avg_price": 220574.0,
+      "count": 131,
+      "median_price": 229270.0,
+      "avg_price": 230170.0,
       "min_price": 77000.0,
       "max_price": 727500.0
     },
     {
       "year": 2019,
-      "count": 146,
-      "median_price": 224300.0,
-      "avg_price": 225142.0,
+      "count": 148,
+      "median_price": 230000.0,
+      "avg_price": 236788.0,
       "min_price": 80000.0,
       "max_price": 650000.0
     },
     {
       "year": 2020,
-      "count": 177,
-      "median_price": 220265.0,
-      "avg_price": 228067.0,
+      "count": 179,
+      "median_price": 250000.0,
+      "avg_price": 243849.0,
       "min_price": 90000.0,
       "max_price": 440000.0
     },
     {
       "year": 2021,
-      "count": 177,
-      "median_price": 237500.0,
-      "avg_price": 255656.0,
+      "count": 176,
+      "median_price": 239500.0,
+      "avg_price": 263184.0,
       "min_price": 85000.0,
       "max_price": 1477750.0
     },
     {
       "year": 2022,
-      "count": 234,
-      "median_price": 260627.0,
-      "avg_price": 278209.0,
+      "count": 231,
+      "median_price": 284999.0,
+      "avg_price": 290262.0,
       "min_price": 90000.0,
       "max_price": 743000.0
     },
     {
       "year": 2023,
-      "count": 284,
-      "median_price": 276550.0,
-      "avg_price": 291280.0,
+      "count": 285,
+      "median_price": 295000.0,
+      "avg_price": 305865.0,
       "min_price": 110000.0,
       "max_price": 898000.0
     },
     {
       "year": 2024,
       "count": 218,
-      "median_price": 308400.0,
-      "avg_price": 314267.0,
+      "median_price": 325000.0,
+      "avg_price": 328388.0,
       "min_price": 75000.0,
       "max_price": 625000.0
     },
     {
       "year": 2025,
-      "count": 249,
-      "median_price": 329000.0,
-      "avg_price": 334033.0,
+      "count": 248,
+      "median_price": 356500.0,
+      "avg_price": 352970.0,
       "min_price": 65000.0,
       "max_price": 1120000.0
     },
     {
       "year": 2026,
-      "count": 179,
-      "median_price": 339207.0,
-      "avg_price": 340765.0,
+      "count": 178,
+      "median_price": 369868.0,
+      "avg_price": 360647.0,
       "min_price": 120000.0,
       "max_price": 900000.0
     }

@@ -2,8 +2,8 @@
   "slug": "thormanby-hill-howth",
   "stats": {
     "count": 9,
-    "median": 1497797,
-    "avg": 1461745,
+    "median": 1700000,
+    "avg": 1632081,
     "min": 1189427,
     "max": 1800000,
     "firstYear": 2015,
@@ -13,48 +13,48 @@
     {
       "year": 2015,
       "count": 1,
-      "median_price": 1189427,
-      "avg_price": 1189427,
+      "median_price": 1350000,
+      "avg_price": 1350000,
       "min_price": 1189427,
       "max_price": 1189427
     },
     {
       "year": 2016,
       "count": 1,
-      "median_price": 1223975,
-      "avg_price": 1223975,
+      "median_price": 1389212,
+      "avg_price": 1389212,
       "min_price": 1223975,
       "max_price": 1223975
     },
     {
       "year": 2018,
       "count": 1,
-      "median_price": 1299559,
-      "avg_price": 1299559,
+      "median_price": 1474999,
+      "avg_price": 1474999,
       "min_price": 1299559,
       "max_price": 1299559
     },
     {
       "year": 2022,
       "count": 1,
-      "median_price": 1497797,
-      "avg_price": 1497797,
+      "median_price": 1700000,
+      "avg_price": 1700000,
       "min_price": 1497797,
       "max_price": 1497797
     },
     {
       "year": 2023,
       "count": 2,
-      "median_price": 1499787,
-      "avg_price": 1499787,
+      "median_price": 1702258,
+      "avg_price": 1702258,
       "min_price": 1404574,
       "max_price": 1595000
     },
     {
       "year": 2024,
       "count": 2,
-      "median_price": 1572687,
-      "avg_price": 1572687,
+      "median_price": 1785000,
+      "avg_price": 1785000,
       "min_price": 1563877,
       "max_price": 1581498
     },

@@ -2,8 +2,8 @@
   "slug": "the-burbidge-lansdowne-place",
   "stats": {
     "count": 14,
-    "median": 1909691,
-    "avg": 2309770,
+    "median": 2125000,
+    "avg": 2550714,
     "min": 1365639,
     "max": 6167400,
     "firstYear": 2022,
@@ -13,32 +13,32 @@
     {
       "year": 2022,
       "count": 3,
-      "median_price": 1969162,
-      "avg_price": 1867841,
+      "median_price": 2234999,
+      "avg_price": 2120000,
       "min_price": 1651982,
       "max_price": 1982379
     },
     {
       "year": 2023,
       "count": 5,
-      "median_price": 1850220,
-      "avg_price": 2933920,
+      "median_price": 2100000,
+      "avg_price": 3330000,
       "min_price": 1365639,
       "max_price": 6167400
     },
     {
       "year": 2024,
       "count": 3,
-      "median_price": 1718062,
-      "avg_price": 1773935,
+      "median_price": 1950000,
+      "avg_price": 1916667,
       "min_price": 1453744,
       "max_price": 2150000
     },
     {
       "year": 2025,
       "count": 2,
-      "median_price": 2170925,
-      "avg_price": 2170925,
+      "median_price": 2275000,
+      "avg_price": 2275000,
       "min_price": 1541850,
       "max_price": 2800000
     },

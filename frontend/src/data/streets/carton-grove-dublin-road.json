@@ -2,8 +2,8 @@
   "slug": "carton-grove-dublin-road",
   "stats": {
     "count": 102,
-    "median": 296262,
-    "avg": 360863,
+    "median": 336257,
+    "avg": 406702,
     "min": 246657,
     "max": 5528399,
     "firstYear": 2017,
@@ -13,24 +13,24 @@
     {
       "year": 2017,
       "count": 23,
-      "median_price": 312775,
-      "avg_price": 321050,
+      "median_price": 355000,
+      "avg_price": 364391,
       "min_price": 281938,
       "max_price": 370044
     },
     {
       "year": 2018,
       "count": 22,
-      "median_price": 317180,
-      "avg_price": 325998,
+      "median_price": 359999,
+      "avg_price": 370008,
       "min_price": 257128,
       "max_price": 406691
     },
     {
       "year": 2019,
       "count": 53,
-      "median_price": 296262,
-      "avg_price": 378820,
+      "median_price": 336257,
+      "avg_price": 429960,
       "min_price": 246657,
       "max_price": 5528399
     },

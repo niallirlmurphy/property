@@ -2,8 +2,8 @@
   "name": "Clifden, Galway",
   "slug": "connemara",
   "center": {
-    "lat": 53.4884916,
-    "lon": -10.0210673
+    "lat": 53.48852736229965,
+    "lon": -10.018052
   },
   "radius_km": 5.0,
   "total_count": 10,
@@ -28,7 +28,8 @@
       "routing_key": "H71",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 565.56886121
+      "price_incl_vat": 270000.0,
+      "distance_m": 521.56846105
     },
     {
       "id": 803801,
@@ -46,7 +47,8 @@
       "routing_key": "H71",
       "bedrooms": 3,
       "property_type": "detached",
-      "distance_m": 2475.42676033
+      "price_incl_vat": 285000.0,
+      "distance_m": 2275.41714917
     },
     {
       "id": 790965,
@@ -64,7 +66,8 @@
       "routing_key": "H71",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 194.68584129
+      "price_incl_vat": 320000.0,
+      "distance_m": 288.67238808
     },
     {
       "id": 797163,
@@ -82,7 +85,8 @@
       "routing_key": "H71",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 679.28580548
+      "price_incl_vat": 170000.0,
+      "distance_m": 762.12356356
     },
     {
       "id": 788085,
@@ -100,7 +104,8 @@
       "routing_key": "H71",
       "bedrooms": 2,
       "property_type": "detached",
-      "distance_m": 133.0118722
+      "price_incl_vat": 150000.0,
+      "distance_m": 73.69425106
     },
     {
       "id": 786401,
@@ -118,7 +123,8 @@
       "routing_key": "H71",
       "bedrooms": null,
       "property_type": "apartment",
-      "distance_m": 679.28580548
+      "price_incl_vat": 215000.0,
+      "distance_m": 762.12356356
     },
     {
       "id": 796585,
@@ -136,7 +142,8 @@
       "routing_key": "H71",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 2993.97347146
+      "price_incl_vat": 320000.0,
+      "distance_m": 3189.43461924
     },
     {
       "id": 782789,
@@ -154,7 +161,8 @@
       "routing_key": "H71",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 577.37470715
+      "price_incl_vat": 317500.0,
+      "distance_m": 533.09217461
     },
     {
       "id": 782941,
@@ -172,7 +180,8 @@
       "routing_key": "H71",
       "bedrooms": 5,
       "property_type": "detached",
-      "distance_m": 949.22138093
+      "price_incl_vat": 565000.0,
+      "distance_m": 1034.13748953
     },
     {
       "id": 792953,
@@ -190,15 +199,16 @@
       "routing_key": "H71",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 2454.84091763
+      "price_incl_vat": 127000.0,
+      "distance_m": 2255.94508151
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 6,
-      "median_price": 240000.0,
-      "avg_price": 252000.0,
+      "count": 7,
+      "median_price": 230000.0,
+      "avg_price": 236000.0,
       "min_price": 110000.0,
       "max_price": 450000.0
     },
@@ -220,57 +230,57 @@
     },
     {
       "year": 2013,
-      "count": 5,
-      "median_price": 190000.0,
-      "avg_price": 276194.0,
-      "min_price": 155000.0,
+      "count": 8,
+      "median_price": 157500.0,
+      "avg_price": 179746.0,
+      "min_price": 48458.0,
       "max_price": 455968.0
     },
     {
       "year": 2014,
-      "count": 31,
-      "median_price": 33929.0,
-      "avg_price": 90342.0,
+      "count": 33,
+      "median_price": 40000.0,
+      "avg_price": 91472.0,
       "min_price": 25000.0,
       "max_price": 890000.0
     },
     {
       "year": 2015,
-      "count": 24,
-      "median_price": 66500.0,
-      "avg_price": 98327.0,
+      "count": 32,
+      "median_price": 63000.0,
+      "avg_price": 93387.0,
       "min_price": 30000.0,
       "max_price": 360000.0
     },
     {
       "year": 2016,
-      "count": 34,
-      "median_price": 74500.0,
-      "avg_price": 92848.0,
+      "count": 38,
+      "median_price": 75500.0,
+      "avg_price": 94969.0,
       "min_price": 30000.0,
       "max_price": 285000.0
     },
     {
       "year": 2017,
-      "count": 26,
+      "count": 30,
       "median_price": 99000.0,
-      "avg_price": 122615.0,
+      "avg_price": 118433.0,
       "min_price": 10000.0,
       "max_price": 390000.0
     },
     {
       "year": 2018,
-      "count": 24,
-      "median_price": 122500.0,
-      "avg_price": 170875.0,
+      "count": 23,
+      "median_price": 115000.0,
+      "avg_price": 175163.0,
       "min_price": 48000.0,
       "max_price": 642500.0
     },
     {
       "year": 2019,
-      "count": 22,
-      "median_price": 155000.0,
-      "avg_price": 217111.0,
+      "count": 21,
+      "median_price": 150000.0,
+      "avg_price": 225623.0,
       "min_price": 25000.0,
       "max_price": 1080000.0
     },
@@ -286,7 +296,7 @@
       "year": 2021,
       "count": 34,
       "median_price": 147000.0,
-      "avg_price": 209534.0,
+      "avg_price": 211074.0,
       "min_price": 70000.0,
       "max_price": 710000.0
     },

@@ -3,7 +3,7 @@
   "stats": {
     "count": 107,
     "median": 178000,
-    "avg": 182609,
+    "avg": 182907,
     "min": 22492,
     "max": 340000,
     "firstYear": 2010,
@@ -14,7 +14,7 @@
       "year": 2010,
       "count": 5,
       "median_price": 165000,
-      "avg_price": 158383,
+      "avg_price": 161999,
       "min_price": 125000,
       "max_price": 186000
     },
@@ -29,8 +29,8 @@
     {
       "year": 2013,
       "count": 2,
-      "median_price": 53272,
-      "avg_price": 53272,
+      "median_price": 55738,
+      "avg_price": 55738,
       "min_price": 36543,
       "max_price": 70000
     },
@@ -38,7 +38,7 @@
       "year": 2014,
       "count": 5,
       "median_price": 115000,
-      "avg_price": 95898,
+      "avg_price": 96506,
       "min_price": 22492,
       "max_price": 127000
     },
@@ -54,7 +54,7 @@
       "year": 2016,
       "count": 3,
       "median_price": 83000,
-      "avg_price": 81000,
+      "avg_price": 82935,
       "min_price": 43000,
       "max_price": 117000
     },

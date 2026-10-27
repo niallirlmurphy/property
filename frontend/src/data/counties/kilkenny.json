@@ -1,54 +1,54 @@
 {
   "county": "Kilkenny",
   "total_count": 12990,
-  "median_price": 321586.0,
-  "avg_price": 363728.0,
+  "median_price": 345383.0,
+  "avg_price": 377476.0,
   "trends": [
     {
       "year": 2010,
       "count": 329,
-      "median_price": 170000.0,
-      "avg_price": 214077.0,
+      "median_price": 175000.0,
+      "avg_price": 219931.0,
       "min_price": 10000.0,
       "max_price": 5141700.0
     },
     {
       "year": 2011,
       "count": 339,
-      "median_price": 139000.0,
-      "avg_price": 170058.0,
+      "median_price": 141875.0,
+      "avg_price": 173410.0,
       "min_price": 10000.0,
       "max_price": 1746500.0
     },
     {
       "year": 2012,
       "count": 435,
-      "median_price": 123000.0,
-      "avg_price": 141689.0,
+      "median_price": 125000.0,
+      "avg_price": 145415.0,
       "min_price": 10000.0,
       "max_price": 1500000.0
     },
     {
       "year": 2013,
       "count": 443,
-      "median_price": 111000.0,
-      "avg_price": 135619.0,
+      "median_price": 115000.0,
+      "avg_price": 138030.0,
       "min_price": 14000.0,
       "max_price": 730000.0
     },
     {
       "year": 2014,
       "count": 655,
-      "median_price": 116000.0,
-      "avg_price": 140847.0,
+      "median_price": 117500.0,
+      "avg_price": 143429.0,
       "min_price": 12000.0,
       "max_price": 1400000.0
     },
     {
       "year": 2015,
       "count": 727,
-      "median_price": 135000.0,
-      "avg_price": 160901.0,
+      "median_price": 136200.0,
+      "avg_price": 162727.0,
       "min_price": 13333.3,
       "max_price": 1335000.0
     },
@@ -56,7 +56,7 @@
       "year": 2016,
       "count": 668,
       "median_price": 160000.0,
-      "avg_price": 181691.0,
+      "avg_price": 183452.0,
       "min_price": 10000.0,
       "max_price": 1940000.0
     },
@@ -64,79 +64,79 @@
       "year": 2017,
       "count": 731,
       "median_price": 160000.0,
-      "avg_price": 183281.0,
+      "avg_price": 184746.0,
       "min_price": 13333.0,
       "max_price": 1196000.0
     },
     {
       "year": 2018,
       "count": 771,
-      "median_price": 180000.0,
-      "avg_price": 207759.0,
+      "median_price": 185000.0,
+      "avg_price": 209879.0,
       "min_price": 10000.0,
       "max_price": 2820000.0
     },
     {
       "year": 2019,
       "count": 841,
-      "median_price": 185000.0,
-      "avg_price": 222602.0,
+      "median_price": 190000.0,
+      "avg_price": 225023.0,
       "min_price": 10000.0,
       "max_price": 12600000.0
     },
     {
       "year": 2020,
       "count": 676,
-      "median_price": 199000.0,
-      "avg_price": 218682.0,
+      "median_price": 200000.0,
+      "avg_price": 221462.0,
       "min_price": 10000.0,
       "max_price": 1420000.0
     },
     {
       "year": 2021,
       "count": 877,
-      "median_price": 219000.0,
-      "avg_price": 256417.0,
+      "median_price": 220000.0,
+      "avg_price": 259356.0,
       "min_price": 10000.0,
       "max_price": 4250000.0
     },
     {
       "year": 2022,
       "count": 906,
-      "median_price": 239800.0,
-      "avg_price": 282057.0,
+      "median_price": 240000.0,
+      "avg_price": 286408.0,
       "min_price": 20000.0,
       "max_price": 1765000.0
     },
     {
       "year": 2023,
       "count": 940,
-      "median_price": 268787.0,
-      "avg_price": 316714.0,
+      "median_price": 275000.0,
+      "avg_price": 328788.0,
       "min_price": 20000.0,
       "max_price": 11839728.63
     },
     {
       "year": 2024,
       "count": 995,
-      "median_price": 300000.0,
-      "avg_price": 323841.0,
+      "median_price": 301000.0,
+      "avg_price": 336048.0,
       "min_price": 22500.0,
       "max_price": 2625000.0
     },
     {
       "year": 2025,
       "count": 952,
-      "median_price": 312775.0,
-      "avg_price": 345031.0,
+      "median_price": 340000.0,
+      "avg_price": 356888.0,
       "min_price": 10000.0,
       "max_price": 2750000.0
     },
     {
       "year": 2026,
       "count": 638,
-      "median_price": 321586.0,
-      "avg_price": 363728.0,
+      "median_price": 345383.0,
+      "avg_price": 377476.0,
       "min_price": 10000.0,
       "max_price": 2200000.0
     }
@@ -157,7 +157,8 @@
       "longitude": -7.2413515,
       "routing_key": "R95",
       "bedrooms": 3,
-      "property_type": "semi-detached"
+      "property_type": "semi-detached",
+      "price_incl_vat": 287000.0
     },
     {
       "id": 805451,
@@ -174,7 +175,8 @@
       "longitude": -7.27089,
       "routing_key": "R95",
       "bedrooms": 2,
-      "property_type": "apartment"
+      "property_type": "apartment",
+      "price_incl_vat": 260000.0
     },
     {
       "id": 805332,
@@ -191,7 +193,8 @@
       "longitude": -7.38274,
       "routing_key": "R95",
       "bedrooms": 3,
-      "property_type": "semi-detached"
+      "property_type": "semi-detached",
+      "price_incl_vat": 340000.0
     },
     {
       "id": 805251,
@@ -208,7 +211,8 @@
       "longitude": -7.243112,
       "routing_key": "R95",
       "bedrooms": 2,
-      "property_type": "semi-detached"
+      "property_type": "semi-detached",
+      "price_incl_vat": 255000.0
     },
     {
       "id": 805193,
@@ -225,7 +229,8 @@
       "longitude": -7.384474,
       "routing_key": null,
       "bedrooms": 3,
-      "property_type": "detached"
+      "property_type": "detached",
+      "price_incl_vat": 345000.28
     },
     {
       "id": 805158,
@@ -242,7 +247,8 @@
       "longitude": -7.263178,
       "routing_key": null,
       "bedrooms": 3,
-      "property_type": "semi-detached"
+      "property_type": "semi-detached",
+      "price_incl_vat": 365000.11
     },
     {
       "id": 805110,
@@ -259,7 +265,8 @@
       "longitude": null,
       "routing_key": "X91",
       "bedrooms": 3,
-      "property_type": "semi-detached"
+      "property_type": "semi-detached",
+      "price_incl_vat": 70000.0
     },
     {
       "id": 805028,
@@ -276,7 +283,8 @@
       "longitude": -7.2374,
       "routing_key": "R95",
       "bedrooms": 3,
-      "property_type": "duplex"
+      "property_type": "duplex",
+      "price_incl_vat": 260000.0
     },
     {
       "id": 805019,
@@ -293,7 +301,8 @@
       "longitude": -7.26264,
       "routing_key": null,
       "bedrooms": 4,
-      "property_type": "semi-detached"
+      "property_type": "semi-detached",
+      "price_incl_vat": 365000.11
     },
     {
       "id": 804974,
@@ -310,7 +319,8 @@
       "longitude": -7.559815,
       "routing_key": "E41",
       "bedrooms": null,
-      "property_type": null
+      "property_type": null,
+      "price_incl_vat": 285000.0
     }
   ]
 }

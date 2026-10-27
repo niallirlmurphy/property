@@ -2,13 +2,13 @@
   "name": "Tallaght, Dublin",
   "slug": "tallaght",
   "center": {
-    "lat": 53.2878082,
-    "lon": -6.362355
+    "lat": 53.28475,
+    "lon": -6.37183
   },
   "radius_km": 2.5,
   "total_count": 10,
-  "median_price": 415000.0,
-  "avg_price": 375500,
+  "median_price": 390000.0,
+  "avg_price": 315300,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "D24",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 1937.8066278
+      "price_incl_vat": 318000.0,
+      "distance_m": 1494.10753818
     },
     {
       "id": 805385,
@@ -46,7 +47,8 @@
       "routing_key": "D24",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1925.58037779
+      "price_incl_vat": 360000.0,
+      "distance_m": 1300.88799706
     },
     {
       "id": 805300,
@@ -64,43 +66,8 @@
       "routing_key": "D24",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 362.75494495
-    },
-    {
-      "id": 805296,
-      "sale_date": "2026-09-29",
-      "address": "31 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
-      "county": "Dublin",
-      "eircode": "D24H273",
-      "price": 290000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.295526,
-      "longitude": -6.354784,
-      "routing_key": "D24",
-      "bedrooms": 2,
-      "property_type": "apartment",
-      "distance_m": 996.31522321
-    },
-    {
-      "id": 805285,
-      "sale_date": "2026-09-29",
-      "address": "23 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
-      "county": "Dublin",
-      "eircode": "D24CP86",
-      "price": 290000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.295526,
-      "longitude": -6.354784,
-      "routing_key": "D24",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 996.31522321
+      "price_incl_vat": 265000.0,
+      "distance_m": 1010.30364257
     },
     {
       "id": 805252,
@@ -118,43 +85,46 @@
       "routing_key": "D24",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1510.58627986
+      "price_incl_vat": 390000.0,
+      "distance_m": 1135.60951845
     },
     {
-      "id": 805299,
+      "id": 805285,
       "sale_date": "2026-09-29",
-      "address": "34 FOREST CLOSE, KINGSWOOD, DUBLIN 24",
+      "address": "23 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
       "county": "Dublin",
-      "eircode": "D24KPP2",
-      "price": 692000.0,
+      "eircode": "D24CP86",
+      "price": 290000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.30784,
-      "longitude": -6.36124,
+      "latitude": 53.295526,
+      "longitude": -6.354784,
       "routing_key": "D24",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 2230.61563989
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 290000.0,
+      "distance_m": 1652.403456
     },
     {
-      "id": 805218,
-      "sale_date": "2026-09-28",
-      "address": "9 DALETREE PK, BALLYCULLEN VIEW, DUBLIN 24",
+      "id": 805296,
+      "sale_date": "2026-09-29",
+      "address": "31 GREENHILLS COURT, GREENHILLS RD, TALLAGHT DUBLIN 24",
       "county": "Dublin",
-      "eircode": "D24H2AA",
-      "price": 525000.0,
+      "eircode": "D24H273",
+      "price": 290000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.27227,
-      "longitude": -6.335348,
+      "latitude": 53.295526,
+      "longitude": -6.354784,
       "routing_key": "D24",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 2497.09720179
+      "bedrooms": 2,
+      "property_type": "apartment",
+      "price_incl_vat": 290000.0,
+      "distance_m": 1652.403456
     },
     {
       "id": 804956,
@@ -172,7 +142,8 @@
       "routing_key": "D24",
       "bedrooms": null,
       "property_type": "house",
-      "distance_m": 525.44453156
+      "price_incl_vat": 440000.0,
+      "distance_m": 959.24960671
     },
     {
       "id": 804943,
@@ -190,145 +161,184 @@
       "routing_key": "D24",
       "bedrooms": 3,
       "property_type": "detached",
-      "distance_m": 1388.71505194
+      "price_incl_vat": 185000.0,
+      "distance_m": 2089.40592397
+    },
+    {
+      "id": 804840,
+      "sale_date": "2026-09-22",
+      "address": "487 CUSHLAWN PARK, KILLINARDEN, TALLAGHT DUBLIN 24",
+      "county": "Dublin",
+      "eircode": "D24WF6C",
+      "price": 350000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.275135,
+      "longitude": -6.378641,
+      "routing_key": "D24",
+      "bedrooms": null,
+      "property_type": "detached",
+      "price_incl_vat": 350000.0,
+      "distance_m": 1162.5153458
+    },
+    {
+      "id": 804568,
+      "sale_date": "2026-09-17",
+      "address": "5 TALLOW HALL, BELGARD SQ, TALLAGHT",
+      "county": "Dublin",
+      "eircode": "D24KN9F",
+      "price": 265000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.285856,
+      "longitude": -6.375302,
+      "routing_key": "D24",
+      "bedrooms": 1,
+      "property_type": "apartment",
+      "price_incl_vat": 265000.0,
+      "distance_m": 262.24276874
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 171,
-      "median_price": 217000.0,
-      "avg_price": 233337.0,
+      "count": 173,
+      "median_price": 209000.0,
+      "avg_price": 229653.0,
       "min_price": 45000.0,
       "max_price": 2610000.0
     },
     {
       "year": 2011,
-      "count": 92,
-      "median_price": 191500.0,
-      "avg_price": 182170.0,
+      "count": 94,
+      "median_price": 178500.0,
+      "avg_price": 176709.0,
       "min_price": 50000.0,
       "max_price": 345000.0
     },
     {
       "year": 2012,
-      "count": 123,
-      "median_price": 160000.0,
-      "avg_price": 160937.0,
-      "min_price": 30000.0,
+      "count": 131,
+      "median_price": 151000.0,
+      "avg_price": 152681.0,
+      "min_price": 29500.0,
       "max_price": 305000.0
     },
     {
       "year": 2013,
-      "count": 180,
-      "median_price": 149750.0,
-      "avg_price": 187329.0,
+      "count": 202,
+      "median_price": 137000.0,
+      "avg_price": 174598.0,
       "min_price": 10000.0,
       "max_price": 6373697.0
     },
     {
       "year": 2014,
-      "count": 207,
-      "median_price": 190000.0,
-      "avg_price": 196126.0,
+      "count": 236,
+      "median_price": 172750.0,
+      "avg_price": 180592.0,
       "min_price": 50000.0,
       "max_price": 815000.0
     },
     {
       "year": 2015,
-      "count": 229,
-      "median_price": 200000.0,
-      "avg_price": 212556.0,
+      "count": 248,
+      "median_price": 182500.0,
+      "avg_price": 198771.0,
       "min_price": 15000.0,
       "max_price": 450000.0
     },
     {
       "year": 2016,
-      "count": 254,
-      "median_price": 208500.0,
-      "avg_price": 221648.0,
+      "count": 268,
+      "median_price": 182500.0,
+      "avg_price": 207696.0,
       "min_price": 16000.0,
       "max_price": 2154000.0
     },
     {
       "year": 2017,
-      "count": 306,
-      "median_price": 230500.0,
-      "avg_price": 264171.0,
+      "count": 322,
+      "median_price": 220000.0,
+      "avg_price": 257773.0,
       "min_price": 49517.0,
       "max_price": 5055000.0
     },
     {
       "year": 2018,
-      "count": 267,
-      "median_price": 255000.0,
-      "avg_price": 273343.0,
-      "min_price": 130000.0,
+      "count": 284,
+      "median_price": 245000.0,
+      "avg_price": 265684.0,
+      "min_price": 110000.0,
       "max_price": 3500000.0
     },
     {
       "year": 2019,
-      "count": 328,
-      "median_price": 265000.0,
-      "avg_price": 272203.0,
-      "min_price": 92500.0,
+      "count": 349,
+      "median_price": 250000.0,
+      "avg_price": 265605.0,
+      "min_price": 31335.0,
       "max_price": 510000.0
     },
     {
       "year": 2020,
-      "count": 257,
-      "median_price": 269300.0,
-      "avg_price": 300977.0,
+      "count": 282,
+      "median_price": 259000.0,
+      "avg_price": 292818.0,
       "min_price": 45000.0,
       "max_price": 4075690.0
     },
     {
       "year": 2021,
-      "count": 413,
-      "median_price": 300000.0,
-      "avg_price": 330672.0,
-      "min_price": 49300.0,
+      "count": 418,
+      "median_price": 277500.0,
+      "avg_price": 316301.0,
+      "min_price": 18360.0,
       "max_price": 9249397.0
     },
     {
       "year": 2022,
-      "count": 506,
-      "median_price": 331500.0,
-      "avg_price": 353826.0,
+      "count": 511,
+      "median_price": 310000.0,
+      "avg_price": 336363.0,
       "min_price": 62500.0,
       "max_price": 5900000.0
     },
     {
       "year": 2023,
-      "count": 456,
-      "median_price": 325000.0,
-      "avg_price": 338679.0,
+      "count": 475,
+      "median_price": 305000.0,
+      "avg_price": 322578.0,
       "min_price": 100000.0,
       "max_price": 700000.0
     },
     {
       "year": 2024,
-      "count": 459,
-      "median_price": 375000.0,
-      "avg_price": 411503.0,
+      "count": 452,
+      "median_price": 335000.0,
+      "avg_price": 394970.0,
       "min_price": 14000.0,
       "max_price": 12661957.45
     },
     {
       "year": 2025,
-      "count": 499,
-      "median_price": 390000.0,
-      "avg_price": 398458.0,
+      "count": 491,
+      "median_price": 376000.0,
+      "avg_price": 381525.0,
       "min_price": 105000.0,
       "max_price": 1480176.21
     },
     {
       "year": 2026,
-      "count": 278,
-      "median_price": 415000.0,
-      "avg_price": 413625.0,
+      "count": 287,
+      "median_price": 390000.0,
+      "avg_price": 391548.0,
       "min_price": 150000.0,
-      "max_price": 720000.0
+      "max_price": 630000.0
     }
   ]
 }

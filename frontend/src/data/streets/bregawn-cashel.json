@@ -2,8 +2,8 @@
   "slug": "bregawn-cashel",
   "stats": {
     "count": 95,
-    "median": 312775,
-    "avg": 312296,
+    "median": 355000,
+    "avg": 353895,
     "min": 259075,
     "max": 395000,
     "firstYear": 2023,
@@ -13,32 +13,32 @@
     {
       "year": 2023,
       "count": 13,
-      "median_price": 286343,
-      "avg_price": 288670,
+      "median_price": 324999,
+      "avg_price": 327640,
       "min_price": 259075,
       "max_price": 350000
     },
     {
       "year": 2024,
       "count": 16,
-      "median_price": 292886,
-      "avg_price": 288322,
+      "median_price": 332425,
+      "avg_price": 327245,
       "min_price": 273128,
       "max_price": 297291
     },
     {
       "year": 2025,
       "count": 44,
-      "median_price": 317114,
-      "avg_price": 321884,
+      "median_price": 359925,
+      "avg_price": 365338,
       "min_price": 302750,
       "max_price": 355000
     },
     {
       "year": 2026,
       "count": 22,
-      "median_price": 313844,
-      "avg_price": 324517,
+      "median_price": 356213,
+      "avg_price": 365903,
       "min_price": 298902,
       "max_price": 395000
     }

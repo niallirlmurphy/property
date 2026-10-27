@@ -310,19 +310,19 @@
     },
     {
       "date": "2024-03-01",
-      "address": "241 REDFORD PARK, GREYSTONES, CO WICKLOW",
-      "price": 450000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "A63DH98"
-    },
-    {
-      "date": "2024-03-01",
       "address": "314 REDFORD PARK, GREYSTONES, WICKLOW",
       "price": 485000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "A63YC98"
+    },
+    {
+      "date": "2024-03-01",
+      "address": "241 REDFORD PARK, GREYSTONES, CO WICKLOW",
+      "price": 450000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63DH98"
     },
     {
       "date": "2023-12-20",

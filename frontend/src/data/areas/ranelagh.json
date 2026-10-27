@@ -2,12 +2,12 @@
   "name": "Ranelagh, Dublin",
   "slug": "ranelagh",
   "center": {
-    "lat": 53.3252185,
-    "lon": -6.2550504
+    "lat": 53.3239085,
+    "lon": -6.25434
   },
   "radius_km": 1.0,
   "total_count": 10,
-  "median_price": 937500.0,
+  "median_price": 940000.0,
   "avg_price": 957650,
   "min_year": 2010,
   "max_year": 2026,
@@ -28,7 +28,8 @@
       "routing_key": "D06",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 670.91539643
+      "price_incl_vat": 520000.0,
+      "distance_m": 736.37251666
     },
     {
       "id": 804704,
@@ -46,7 +47,8 @@
       "routing_key": "D06",
       "bedrooms": 3,
       "property_type": null,
-      "distance_m": 633.52731946
+      "price_incl_vat": 2750000.0,
+      "distance_m": 500.43850491
     },
     {
       "id": 804475,
@@ -64,7 +66,8 @@
       "routing_key": "D06",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 378.20626247
+      "price_incl_vat": 940000.0,
+      "distance_m": 265.23257733
     },
     {
       "id": 804325,
@@ -82,7 +85,8 @@
       "routing_key": "D06",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 303.89145766
+      "price_incl_vat": 375000.0,
+      "distance_m": 455.65242013
     },
     {
       "id": 804035,
@@ -100,7 +104,8 @@
       "routing_key": "D06",
       "bedrooms": 8,
       "property_type": "terraced",
-      "distance_m": 555.28011169
+      "price_incl_vat": 1250000.0,
+      "distance_m": 659.13893756
     },
     {
       "id": 803454,
@@ -118,25 +123,8 @@
       "routing_key": "D06",
       "bedrooms": 1,
       "property_type": "terraced",
-      "distance_m": 440.70473362
-    },
-    {
-      "id": 803231,
-      "sale_date": "2026-09-04",
-      "address": "1A MOUNTPLEASANT AVE UPPER, RANELAGH, DUBLIN 6",
-      "county": "Dublin",
-      "eircode": "D06C820",
-      "price": 715000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.326534,
-      "longitude": -6.261086,
-      "routing_key": "D06",
-      "bedrooms": 2,
-      "property_type": "terraced",
-      "distance_m": 427.97639378
+      "price_incl_vat": 275000.0,
+      "distance_m": 305.4564068
     },
     {
       "id": 803178,
@@ -154,7 +142,27 @@
       "routing_key": "D06",
       "bedrooms": 4,
       "property_type": "terraced",
-      "distance_m": 439.9842938
+      "price_incl_vat": 1441500.0,
+      "distance_m": 301.27823163
+    },
+    {
+      "id": 803231,
+      "sale_date": "2026-09-04",
+      "address": "1A MOUNTPLEASANT AVE UPPER, RANELAGH, DUBLIN 6",
+      "county": "Dublin",
+      "eircode": "D06C820",
+      "price": 715000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.326534,
+      "longitude": -6.261086,
+      "routing_key": "D06",
+      "bedrooms": 2,
+      "property_type": "terraced",
+      "price_incl_vat": 715000.0,
+      "distance_m": 536.12259224
     },
     {
       "id": 803307,
@@ -172,7 +180,8 @@
       "routing_key": "D06",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 512.58382432
+      "price_incl_vat": 460000.0,
+      "distance_m": 562.63872492
     },
     {
       "id": 803167,
@@ -190,15 +199,16 @@
       "routing_key": "D06",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 274.93175605
+      "price_incl_vat": 850000.0,
+      "distance_m": 126.49349389
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 51,
+      "count": 52,
       "median_price": 605000.0,
-      "avg_price": 664887.0,
+      "avg_price": 655466.0,
       "min_price": 142500.0,
       "max_price": 1721500.0
     },
@@ -206,15 +216,15 @@
       "year": 2011,
       "count": 53,
       "median_price": 590000.0,
-      "avg_price": 595229.0,
+      "avg_price": 606113.0,
       "min_price": 75000.0,
       "max_price": 1450000.0
     },
     {
       "year": 2012,
-      "count": 76,
+      "count": 78,
       "median_price": 437500.0,
-      "avg_price": 500819.0,
+      "avg_price": 504444.0,
       "min_price": 100000.0,
       "max_price": 2050000.0
     },
@@ -228,41 +238,41 @@
     },
     {
       "year": 2014,
-      "count": 87,
-      "median_price": 550000.0,
-      "avg_price": 679659.0,
+      "count": 88,
+      "median_price": 578250.0,
+      "avg_price": 713760.0,
       "min_price": 75000.0,
       "max_price": 3778483.0
     },
     {
       "year": 2015,
-      "count": 80,
-      "median_price": 558750.0,
-      "avg_price": 699460.0,
+      "count": 79,
+      "median_price": 567500.0,
+      "avg_price": 705204.0,
       "min_price": 60000.0,
       "max_price": 4350000.0
     },
     {
       "year": 2016,
-      "count": 113,
+      "count": 115,
       "median_price": 730000.0,
-      "avg_price": 771066.0,
+      "avg_price": 777613.0,
       "min_price": 162500.0,
       "max_price": 4500000.0
     },
     {
       "year": 2017,
-      "count": 113,
-      "median_price": 760000.0,
-      "avg_price": 816447.0,
+      "count": 119,
+      "median_price": 750000.0,
+      "avg_price": 814702.0,
       "min_price": 145000.0,
       "max_price": 2800000.0
     },
     {
       "year": 2018,
       "count": 103,
-      "median_price": 724000.0,
-      "avg_price": 866046.0,
+      "median_price": 725000.0,
+      "avg_price": 888594.0,
       "min_price": 150000.0,
       "max_price": 4569595.0
     },
@@ -270,63 +280,63 @@
       "year": 2019,
       "count": 123,
       "median_price": 750000.0,
-      "avg_price": 860255.0,
+      "avg_price": 862013.0,
       "min_price": 10000.0,
       "max_price": 4935000.0
     },
     {
       "year": 2020,
-      "count": 79,
-      "median_price": 740000.0,
-      "avg_price": 857855.0,
+      "count": 80,
+      "median_price": 720000.0,
+      "avg_price": 855005.0,
       "min_price": 290000.0,
       "max_price": 3000000.0
     },
     {
       "year": 2021,
-      "count": 165,
-      "median_price": 590000.0,
-      "avg_price": 815277.0,
+      "count": 167,
+      "median_price": 595000.0,
+      "avg_price": 832849.0,
       "min_price": 23611.0,
       "max_price": 4440000.0
     },
     {
       "year": 2022,
-      "count": 204,
-      "median_price": 946267.0,
-      "avg_price": 1050950.0,
+      "count": 209,
+      "median_price": 952500.0,
+      "avg_price": 1085857.0,
       "min_price": 10000.0,
       "max_price": 4724500.0
     },
     {
       "year": 2023,
-      "count": 213,
-      "median_price": 843750.0,
-      "avg_price": 1011303.0,
+      "count": 224,
+      "median_price": 845625.0,
+      "avg_price": 1039792.0,
       "min_price": 18750.0,
       "max_price": 4200000.0
     },
     {
       "year": 2024,
-      "count": 204,
-      "median_price": 810000.0,
-      "avg_price": 959495.0,
+      "count": 205,
+      "median_price": 785000.0,
+      "avg_price": 983243.0,
       "min_price": 35000.0,
       "max_price": 6500000.0
     },
     {
       "year": 2025,
-      "count": 165,
-      "median_price": 999999.0,
-      "avg_price": 1096565.0,
+      "count": 173,
+      "median_price": 940000.0,
+      "avg_price": 1092795.0,
       "min_price": 90000.0,
       "max_price": 6000000.0
     },
     {
       "year": 2026,
-      "count": 106,
-      "median_price": 937500.0,
-      "avg_price": 1091989.0,
+      "count": 107,
+      "median_price": 940000.0,
+      "avg_price": 1136868.0,
       "min_price": 15000.0,
       "max_price": 4550000.0
     }

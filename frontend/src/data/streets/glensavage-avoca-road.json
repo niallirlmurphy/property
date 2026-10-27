@@ -2,8 +2,8 @@
   "slug": "glensavage-avoca-road",
   "stats": {
     "count": 10,
-    "median": 1563877,
-    "avg": 1470540,
+    "median": 1775000,
+    "avg": 1617087,
     "min": 656388,
     "max": 3000000,
     "firstYear": 2016,
@@ -21,16 +21,16 @@
     {
       "year": 2021,
       "count": 2,
-      "median_price": 671806,
-      "avg_price": 671806,
+      "median_price": 762500,
+      "avg_price": 762500,
       "min_price": 656388,
       "max_price": 687224
     },
     {
       "year": 2022,
       "count": 6,
-      "median_price": 1656388,
-      "avg_price": 1585297,
+      "median_price": 1880000,
+      "avg_price": 1799312,
       "min_price": 660793,
       "max_price": 2071366
     },

@@ -2,8 +2,8 @@
   "slug": "ardmore-hills-mullingar",
   "stats": {
     "count": 103,
-    "median": 339207,
-    "avg": 350406,
+    "median": 364999,
+    "avg": 385666,
     "min": 202643,
     "max": 550000,
     "firstYear": 2010,
@@ -29,8 +29,8 @@
     {
       "year": 2016,
       "count": 2,
-      "median_price": 317709,
-      "avg_price": 317709,
+      "median_price": 339000,
+      "avg_price": 339000,
       "min_price": 315418,
       "max_price": 320000
     },
@@ -45,48 +45,48 @@
     {
       "year": 2018,
       "count": 4,
-      "median_price": 337014,
-      "avg_price": 328120,
+      "median_price": 382511,
+      "avg_price": 358005,
       "min_price": 211453,
       "max_price": 427000
     },
     {
       "year": 2019,
       "count": 14,
-      "median_price": 264251,
-      "avg_price": 272395,
+      "median_price": 299925,
+      "avg_price": 305311,
       "min_price": 202643,
       "max_price": 400000
     },
     {
       "year": 2020,
       "count": 11,
-      "median_price": 299950,
-      "avg_price": 301385,
+      "median_price": 340443,
+      "avg_price": 342072,
       "min_price": 242247,
       "max_price": 415000
     },
     {
       "year": 2021,
       "count": 18,
-      "median_price": 281938,
-      "avg_price": 307631,
+      "median_price": 320000,
+      "avg_price": 339711,
       "min_price": 242247,
       "max_price": 500000
     },
     {
       "year": 2022,
       "count": 18,
-      "median_price": 356828,
-      "avg_price": 382526,
+      "median_price": 405000,
+      "avg_price": 426959,
       "min_price": 299559,
       "max_price": 535000
     },
     {
       "year": 2023,
       "count": 15,
-      "median_price": 372247,
-      "avg_price": 382242,
+      "median_price": 422500,
+      "avg_price": 418157,
       "min_price": 215859,
       "max_price": 550000
     },
@@ -109,8 +109,8 @@
     {
       "year": 2026,
       "count": 12,
-      "median_price": 427313,
-      "avg_price": 441228,
+      "median_price": 485000,
+      "avg_price": 495000,
       "min_price": 352423,
       "max_price": 528634
     }
@@ -294,19 +294,19 @@
     },
     {
       "date": "2023-07-17",
-      "address": "172 Ardmore Hills, Mullingar",
-      "price": 354626,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-07-17",
       "address": "123 ARDMORE HILLS, MULLINGAR, CO. WESTMEATH",
       "price": 337000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "N91CFN2"
+    },
+    {
+      "date": "2023-07-17",
+      "address": "172 Ardmore Hills, Mullingar",
+      "price": 354626,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2023-07-10",

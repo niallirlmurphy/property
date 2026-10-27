@@ -3,7 +3,7 @@
   "stats": {
     "count": 91,
     "median": 150000,
-    "avg": 167746,
+    "avg": 167993,
     "min": 67000,
     "max": 338000,
     "firstYear": 2011,
@@ -21,8 +21,8 @@
     {
       "year": 2013,
       "count": 1,
-      "median_price": 80000,
-      "avg_price": 80000,
+      "median_price": 90800,
+      "avg_price": 90800,
       "min_price": 80000,
       "max_price": 80000
     },
@@ -30,7 +30,7 @@
       "year": 2014,
       "count": 6,
       "median_price": 77500,
-      "avg_price": 78724,
+      "avg_price": 80667,
       "min_price": 70000,
       "max_price": 86344
     },

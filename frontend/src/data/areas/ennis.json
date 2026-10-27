@@ -2,12 +2,12 @@
   "name": "Ennis, Clare",
   "slug": "ennis",
   "center": {
-    "lat": 52.8435152,
+    "lat": 52.845549000000005,
     "lon": -8.983747
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 325000.0,
+  "median_price": 330000.0,
   "avg_price": 350806,
   "min_year": 2010,
   "max_year": 2026,
@@ -28,7 +28,8 @@
       "routing_key": "V95",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1824.00851514
+      "price_incl_vat": 138000.0,
+      "distance_m": 1634.78511486
     },
     {
       "id": 804073,
@@ -46,7 +47,8 @@
       "routing_key": "V95",
       "bedrooms": 5,
       "property_type": "detached",
-      "distance_m": 815.07523647
+      "price_incl_vat": 500000.0,
+      "distance_m": 592.43635122
     },
     {
       "id": 804169,
@@ -64,7 +66,8 @@
       "routing_key": "V95",
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 1105.6846681
+      "price_incl_vat": 485000.0,
+      "distance_m": 970.84385035
     },
     {
       "id": 803792,
@@ -82,7 +85,8 @@
       "routing_key": "V95",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 665.55879179
+      "price_incl_vat": 322500.0,
+      "distance_m": 464.80066718
     },
     {
       "id": 803590,
@@ -100,7 +104,8 @@
       "routing_key": "V95",
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 1404.12742913
+      "price_incl_vat": 351000.0,
+      "distance_m": 1218.37790364
     },
     {
       "id": 803631,
@@ -118,7 +123,8 @@
       "routing_key": "V95",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1474.76063852
+      "price_incl_vat": 360000.0,
+      "distance_m": 1691.87946668
     },
     {
       "id": 803449,
@@ -136,25 +142,8 @@
       "routing_key": "V95",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1013.87175079
-    },
-    {
-      "id": 803201,
-      "sale_date": "2026-09-04",
-      "address": "13 WESTWOOD, GOLF LINKS RD, ENNIS",
-      "county": "Clare",
-      "eircode": "V95X6X4",
-      "price": 357500.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.841438,
-      "longitude": -8.996327,
-      "routing_key": "V95",
-      "bedrooms": 5,
-      "property_type": "semi-detached",
-      "distance_m": 878.61041864
+      "price_incl_vat": 313000.0,
+      "distance_m": 1208.83645289
     },
     {
       "id": 803193,
@@ -172,7 +161,27 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 984.82114971
+      "price_incl_vat": 387998.62,
+      "distance_m": 845.49697817
+    },
+    {
+      "id": 803201,
+      "sale_date": "2026-09-04",
+      "address": "13 WESTWOOD, GOLF LINKS RD, ENNIS",
+      "county": "Clare",
+      "eircode": "V95X6X4",
+      "price": 357500.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.841438,
+      "longitude": -8.996327,
+      "routing_key": "V95",
+      "bedrooms": 5,
+      "property_type": "semi-detached",
+      "price_incl_vat": 357500.0,
+      "distance_m": 963.21442044
     },
     {
       "id": 803218,
@@ -190,143 +199,144 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1203.64114221
+      "price_incl_vat": 384999.99,
+      "distance_m": 1034.17734195
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 84,
-      "median_price": 167500.0,
-      "avg_price": 174626.0,
+      "count": 94,
+      "median_price": 171250.0,
+      "avg_price": 197943.0,
       "min_price": 15000.0,
-      "max_price": 360000.0
+      "max_price": 1890000.0
     },
     {
       "year": 2011,
-      "count": 68,
-      "median_price": 140000.0,
-      "avg_price": 155732.0,
+      "count": 75,
+      "median_price": 137500.0,
+      "avg_price": 155770.0,
       "min_price": 37500.0,
       "max_price": 651000.0
     },
     {
       "year": 2012,
-      "count": 85,
-      "median_price": 115000.0,
-      "avg_price": 142198.0,
+      "count": 96,
+      "median_price": 116250.0,
+      "avg_price": 146397.0,
       "min_price": 20000.0,
       "max_price": 1923952.0
     },
     {
       "year": 2013,
-      "count": 108,
-      "median_price": 88750.0,
-      "avg_price": 102372.0,
+      "count": 114,
+      "median_price": 90000.0,
+      "avg_price": 104569.0,
       "min_price": 20000.0,
       "max_price": 455000.0
     },
     {
       "year": 2014,
-      "count": 141,
-      "median_price": 83500.0,
-      "avg_price": 105516.0,
+      "count": 149,
+      "median_price": 80000.0,
+      "avg_price": 105110.0,
       "min_price": 10000.0,
       "max_price": 970000.0
     },
     {
       "year": 2015,
-      "count": 188,
-      "median_price": 99000.0,
-      "avg_price": 108168.0,
+      "count": 206,
+      "median_price": 97000.0,
+      "avg_price": 106747.0,
       "min_price": 15000.0,
       "max_price": 300000.0
     },
     {
       "year": 2016,
-      "count": 180,
-      "median_price": 130000.0,
-      "avg_price": 128434.0,
+      "count": 194,
+      "median_price": 125000.0,
+      "avg_price": 130129.0,
       "min_price": 20000.0,
-      "max_price": 355000.0
+      "max_price": 365000.0
     },
     {
       "year": 2017,
-      "count": 146,
+      "count": 159,
       "median_price": 160000.0,
-      "avg_price": 166368.0,
+      "avg_price": 165070.0,
       "min_price": 37500.0,
       "max_price": 450000.0
     },
     {
       "year": 2018,
-      "count": 182,
-      "median_price": 173000.0,
-      "avg_price": 165480.0,
+      "count": 183,
+      "median_price": 175000.0,
+      "avg_price": 171609.0,
       "min_price": 17000.0,
-      "max_price": 390000.0
+      "max_price": 609000.0
     },
     {
       "year": 2019,
-      "count": 198,
+      "count": 201,
       "median_price": 180000.0,
-      "avg_price": 181164.0,
+      "avg_price": 184420.0,
       "min_price": 26250.0,
       "max_price": 395000.0
     },
     {
       "year": 2020,
-      "count": 185,
-      "median_price": 187000.0,
-      "avg_price": 192093.0,
+      "count": 181,
+      "median_price": 185000.0,
+      "avg_price": 193396.0,
       "min_price": 40000.0,
       "max_price": 585000.0
     },
     {
       "year": 2021,
-      "count": 238,
+      "count": 239,
       "median_price": 205000.0,
-      "avg_price": 208838.0,
+      "avg_price": 213068.0,
       "min_price": 32000.0,
       "max_price": 829915.0
     },
     {
       "year": 2022,
-      "count": 234,
-      "median_price": 225000.0,
-      "avg_price": 233799.0,
+      "count": 233,
+      "median_price": 223000.0,
+      "avg_price": 228568.0,
       "min_price": 20000.0,
-      "max_price": 1700000.0
+      "max_price": 537500.0
     },
     {
       "year": 2023,
-      "count": 245,
-      "median_price": 255000.0,
-      "avg_price": 253867.0,
+      "count": 244,
+      "median_price": 252500.0,
+      "avg_price": 259315.0,
       "min_price": 68000.0,
       "max_price": 595000.0
     },
     {
       "year": 2024,
-      "count": 209,
-      "median_price": 271000.0,
-      "avg_price": 293908.0,
+      "count": 211,
+      "median_price": 275000.0,
+      "avg_price": 302300.0,
       "min_price": 10000.0,
       "max_price": 3218234.67
     },
     {
       "year": 2025,
-      "count": 208,
-      "median_price": 287250.0,
-      "avg_price": 299417.0,
+      "count": 214,
+      "median_price": 291000.0,
+      "avg_price": 303483.0,
       "min_price": 50000.0,
       "max_price": 1250000.0
     },
     {
       "year": 2026,
-      "count": 125,
-      "median_price": 325000.0,
-      "avg_price": 321029.0,
+      "count": 127,
+      "median_price": 330000.0,
+      "avg_price": 326109.0,
       "min_price": 48000.0,
       "max_price": 590308.36
     }

@@ -2,8 +2,8 @@
   "slug": "clonlara-kerry-pike",
   "stats": {
     "count": 147,
-    "median": 330396,
-    "avg": 376058,
+    "median": 375000,
+    "avg": 416827,
     "min": 255174,
     "max": 820000,
     "firstYear": 2017,
@@ -13,40 +13,40 @@
     {
       "year": 2017,
       "count": 1,
-      "median_price": 286344,
-      "avg_price": 286344,
+      "median_price": 325000,
+      "avg_price": 325000,
       "min_price": 286344,
       "max_price": 286344
     },
     {
       "year": 2018,
       "count": 33,
-      "median_price": 295154,
-      "avg_price": 324247,
+      "median_price": 335000,
+      "avg_price": 368020,
       "min_price": 255174,
       "max_price": 458438
     },
     {
       "year": 2019,
       "count": 37,
-      "median_price": 306607,
-      "avg_price": 335821,
+      "median_price": 347999,
+      "avg_price": 381157,
       "min_price": 256721,
       "max_price": 462555
     },
     {
       "year": 2020,
       "count": 38,
-      "median_price": 321586,
-      "avg_price": 343950,
+      "median_price": 365000,
+      "avg_price": 389267,
       "min_price": 277532,
       "max_price": 453744
     },
     {
       "year": 2021,
       "count": 21,
-      "median_price": 455947,
-      "avg_price": 409504,
+      "median_price": 517500,
+      "avg_price": 462376,
       "min_price": 283700,
       "max_price": 515418
     },

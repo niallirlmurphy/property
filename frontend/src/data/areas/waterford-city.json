@@ -2,16 +2,35 @@
   "name": "Waterford City",
   "slug": "waterford-city",
   "center": {
-    "lat": 52.2628502,
-    "lon": -7.1150928
+    "lat": 52.255681,
+    "lon": -7.11804
   },
   "radius_km": 3.0,
   "total_count": 10,
-  "median_price": 228000.0,
-  "avg_price": 276730,
+  "median_price": 250000.0,
+  "avg_price": 273140,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805539,
+      "sale_date": "2026-10-01",
+      "address": "90 Cul Dara, Williamstown, Waterford",
+      "county": "Waterford",
+      "eircode": null,
+      "price": 281938.33,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.238246,
+      "longitude": -7.085616,
+      "routing_key": null,
+      "bedrooms": null,
+      "property_type": "house",
+      "price_incl_vat": 320000.0,
+      "distance_m": 2944.12993288
+    },
     {
       "id": 805409,
       "sale_date": "2026-09-30",
@@ -28,25 +47,8 @@
       "routing_key": "X91",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 196.01820225
-    },
-    {
-      "id": 805364,
-      "sale_date": "2026-09-30",
-      "address": "11 CATHAL BRUGHA ST, WATERFORD, WATERFORD",
-      "county": "Waterford",
-      "eircode": "X91WER8",
-      "price": 285000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.26089,
-      "longitude": -7.12696,
-      "routing_key": "X91",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 839.09599671
+      "price_incl_vat": 170000.0,
+      "distance_m": 628.98273043
     },
     {
       "id": 805365,
@@ -64,7 +66,27 @@
       "routing_key": "X91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1302.57197835
+      "price_incl_vat": 265000.0,
+      "distance_m": 656.90537848
+    },
+    {
+      "id": 805364,
+      "sale_date": "2026-09-30",
+      "address": "11 CATHAL BRUGHA ST, WATERFORD, WATERFORD",
+      "county": "Waterford",
+      "eircode": "X91WER8",
+      "price": 285000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.26089,
+      "longitude": -7.12696,
+      "routing_key": "X91",
+      "bedrooms": 3,
+      "property_type": "terraced",
+      "price_incl_vat": 285000.0,
+      "distance_m": 840.79105024
     },
     {
       "id": 805423,
@@ -82,7 +104,8 @@
       "routing_key": "X91",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 1507.31017776
+      "price_incl_vat": 233000.0,
+      "distance_m": 1299.5354308
     },
     {
       "id": 805406,
@@ -100,7 +123,46 @@
       "routing_key": "X91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 2811.60204925
+      "price_incl_vat": 250000.0,
+      "distance_m": 2037.85399648
+    },
+    {
+      "id": 805182,
+      "sale_date": "2026-09-28",
+      "address": "46 Brookfield Drive, Waterford",
+      "county": "Waterford",
+      "eircode": null,
+      "price": 339163.0,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.235928,
+      "longitude": -7.13741,
+      "routing_key": null,
+      "bedrooms": 3,
+      "property_type": "house",
+      "price_incl_vat": 384950.01,
+      "distance_m": 2565.40957111
+    },
+    {
+      "id": 805139,
+      "sale_date": "2026-09-28",
+      "address": "2 CHESNUT CLOSE, VIEWMOUNT, WATERFORD",
+      "county": "Waterford",
+      "eircode": "X91X961",
+      "price": 350000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.241962,
+      "longitude": -7.081193,
+      "routing_key": "X91",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 350000.0,
+      "distance_m": 2943.33560468
     },
     {
       "id": 804894,
@@ -118,7 +180,8 @@
       "routing_key": "X91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 437.46606997
+      "price_incl_vat": 230000.0,
+      "distance_m": 385.34953257
     },
     {
       "id": 804907,
@@ -136,197 +199,144 @@
       "routing_key": null,
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 2374.61257797
-    },
-    {
-      "id": 804772,
-      "sale_date": "2026-09-22",
-      "address": "1 BISHOPSGROVE, FERRYBANK, WATERFORD",
-      "county": "Waterford",
-      "eircode": "X91FC2R",
-      "price": 257000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.265514,
-      "longitude": -7.106484,
-      "routing_key": "X91",
-      "bedrooms": 3,
-      "property_type": "detached",
-      "distance_m": 658.25963127
-    },
-    {
-      "id": 804737,
-      "sale_date": "2026-09-21",
-      "address": "62 SLIEVEKEALE RD, WATERFORD, WATERFORD",
-      "county": "Waterford",
-      "eircode": "X91KX0P",
-      "price": 330000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.255573,
-      "longitude": -7.121999,
-      "routing_key": "X91",
-      "bedrooms": 2,
-      "property_type": "semi-detached",
-      "distance_m": 937.05100248
-    },
-    {
-      "id": 804700,
-      "sale_date": "2026-09-21",
-      "address": "3 FAIRFIELD AVE, BELVEDERE MANOR, WATERFORD CITY",
-      "county": "Waterford",
-      "eircode": "X91E9WX",
-      "price": 420000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.25389,
-      "longitude": -7.137796,
-      "routing_key": "X91",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 1843.15730167
+      "price_incl_vat": 371485.0,
+      "distance_m": 2278.28080934
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 58,
-      "median_price": 133000.0,
-      "avg_price": 147524.0,
+      "count": 65,
+      "median_price": 136000.0,
+      "avg_price": 147840.0,
       "min_price": 18500.0,
       "max_price": 500000.0
     },
     {
       "year": 2011,
-      "count": 83,
-      "median_price": 82000.0,
-      "avg_price": 111517.0,
+      "count": 98,
+      "median_price": 83000.0,
+      "avg_price": 113539.0,
       "min_price": 17500.0,
       "max_price": 750000.0
     },
     {
       "year": 2012,
-      "count": 111,
-      "median_price": 60000.0,
-      "avg_price": 72642.0,
+      "count": 118,
+      "median_price": 61800.0,
+      "avg_price": 75788.0,
       "min_price": 15000.0,
       "max_price": 430000.0
     },
     {
       "year": 2013,
-      "count": 131,
-      "median_price": 64000.0,
-      "avg_price": 82555.0,
+      "count": 172,
+      "median_price": 65000.0,
+      "avg_price": 81454.0,
       "min_price": 10000.0,
       "max_price": 340000.0
     },
     {
       "year": 2014,
-      "count": 268,
-      "median_price": 65000.0,
-      "avg_price": 80155.0,
+      "count": 310,
+      "median_price": 69250.0,
+      "avg_price": 84383.0,
       "min_price": 15000.0,
       "max_price": 485000.0
     },
     {
       "year": 2015,
-      "count": 311,
-      "median_price": 73000.0,
-      "avg_price": 88937.0,
+      "count": 355,
+      "median_price": 78000.0,
+      "avg_price": 93763.0,
       "min_price": 22000.0,
-      "max_price": 400000.0
+      "max_price": 555000.0
     },
     {
       "year": 2016,
-      "count": 387,
-      "median_price": 80000.0,
-      "avg_price": 100175.0,
+      "count": 457,
+      "median_price": 90000.0,
+      "avg_price": 107247.0,
       "min_price": 12000.0,
       "max_price": 850000.0
     },
     {
       "year": 2017,
-      "count": 335,
-      "median_price": 100000.0,
-      "avg_price": 122357.0,
+      "count": 382,
+      "median_price": 110000.0,
+      "avg_price": 130236.0,
       "min_price": 10000.0,
       "max_price": 620000.0
     },
     {
       "year": 2018,
-      "count": 394,
-      "median_price": 120000.0,
-      "avg_price": 134800.0,
-      "min_price": 20517.0,
+      "count": 433,
+      "median_price": 125000.0,
+      "avg_price": 139929.0,
+      "min_price": 15000.0,
       "max_price": 805000.0
     },
     {
       "year": 2019,
-      "count": 401,
-      "median_price": 130000.0,
-      "avg_price": 146524.0,
+      "count": 467,
+      "median_price": 140000.0,
+      "avg_price": 153124.0,
       "min_price": 20000.0,
       "max_price": 620000.0
     },
     {
       "year": 2020,
-      "count": 339,
-      "median_price": 134000.0,
-      "avg_price": 147809.0,
+      "count": 401,
+      "median_price": 147000.0,
+      "avg_price": 161610.0,
       "min_price": 13045.0,
       "max_price": 735000.0
     },
     {
       "year": 2021,
-      "count": 540,
-      "median_price": 143500.0,
-      "avg_price": 177332.0,
+      "count": 595,
+      "median_price": 150000.0,
+      "avg_price": 183775.0,
       "min_price": 20000.0,
       "max_price": 2820000.0
     },
     {
       "year": 2022,
-      "count": 553,
-      "median_price": 171000.0,
-      "avg_price": 200146.0,
+      "count": 621,
+      "median_price": 180000.0,
+      "avg_price": 207694.0,
       "min_price": 40000.0,
       "max_price": 2020000.0
     },
     {
       "year": 2023,
-      "count": 510,
-      "median_price": 171000.0,
-      "avg_price": 197048.0,
+      "count": 590,
+      "median_price": 185000.0,
+      "avg_price": 207792.0,
       "min_price": 25394.0,
       "max_price": 930000.0
     },
     {
       "year": 2024,
-      "count": 494,
-      "median_price": 195000.0,
-      "avg_price": 217623.0,
+      "count": 597,
+      "median_price": 215000.0,
+      "avg_price": 233667.0,
       "min_price": 10000.0,
-      "max_price": 765000.0
+      "max_price": 885000.0
     },
     {
       "year": 2025,
-      "count": 475,
-      "median_price": 217000.0,
-      "avg_price": 248383.0,
+      "count": 552,
+      "median_price": 230000.0,
+      "avg_price": 284855.0,
       "min_price": 45000.0,
-      "max_price": 1410000.0
+      "max_price": 10422730.0
     },
     {
       "year": 2026,
-      "count": 315,
-      "median_price": 228000.0,
-      "avg_price": 262404.0,
+      "count": 384,
+      "median_price": 250000.0,
+      "avg_price": 278908.0,
       "min_price": 44166.0,
       "max_price": 2448356.0
     }

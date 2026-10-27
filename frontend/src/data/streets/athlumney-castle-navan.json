@@ -406,19 +406,19 @@
     },
     {
       "date": "2021-03-12",
-      "address": "75 ATHLUMNEY CASTLE, NAVAN, MEATH",
-      "price": 350000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2021-03-12",
       "address": "226 ATHLUMNEY CASTLE, NAVAN, MEATH",
       "price": 245000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "C15F1W8"
+    },
+    {
+      "date": "2021-03-12",
+      "address": "75 ATHLUMNEY CASTLE, NAVAN, MEATH",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2021-02-09",

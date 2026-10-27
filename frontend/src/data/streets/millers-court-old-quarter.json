@@ -2,8 +2,8 @@
   "slug": "millers-court-old-quarter",
   "stats": {
     "count": 100,
-    "median": 317181,
-    "avg": 339694,
+    "median": 357500,
+    "avg": 368467,
     "min": 114537,
     "max": 640000,
     "firstYear": 2012,
@@ -13,64 +13,64 @@
     {
       "year": 2012,
       "count": 3,
-      "median_price": 200000,
-      "avg_price": 185000,
+      "median_price": 225000,
+      "avg_price": 199850,
       "min_price": 130000,
       "max_price": 225000
     },
     {
       "year": 2013,
       "count": 5,
-      "median_price": 114537,
-      "avg_price": 117630,
+      "median_price": 130000,
+      "avg_price": 130000,
       "min_price": 114537,
       "max_price": 130000
     },
     {
       "year": 2014,
       "count": 3,
-      "median_price": 176178,
-      "avg_price": 162283,
+      "median_price": 199962,
+      "avg_price": 184191,
       "min_price": 133040,
       "max_price": 177630
     },
     {
       "year": 2016,
       "count": 4,
-      "median_price": 442731,
-      "avg_price": 432819,
+      "median_price": 502500,
+      "avg_price": 491250,
       "min_price": 365638,
       "max_price": 480176
     },
     {
       "year": 2017,
       "count": 33,
-      "median_price": 290748,
-      "avg_price": 289373,
+      "median_price": 329999,
+      "avg_price": 325063,
       "min_price": 167400,
       "max_price": 425000
     },
     {
       "year": 2018,
       "count": 25,
-      "median_price": 352422,
-      "avg_price": 372101,
+      "median_price": 385000,
+      "avg_price": 414823,
       "min_price": 250000,
       "max_price": 546256
     },
     {
       "year": 2019,
       "count": 5,
-      "median_price": 325000,
-      "avg_price": 328768,
+      "median_price": 345000,
+      "avg_price": 364376,
       "min_price": 303964,
       "max_price": 358487
     },
     {
       "year": 2020,
       "count": 7,
-      "median_price": 375000,
-      "avg_price": 381775,
+      "median_price": 400000,
+      "avg_price": 388571,
       "min_price": 275000,
       "max_price": 550000
     },
@@ -342,19 +342,19 @@
     },
     {
       "date": "2018-12-05",
-      "address": "46 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
-      "price": 410000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "P31FT66"
-    },
-    {
-      "date": "2018-12-05",
       "address": "22 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
       "price": 355000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2018-12-05",
+      "address": "46 MILLERS COURT, OLD QUARTER, BALLINCOLLIG",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P31FT66"
     },
     {
       "date": "2018-11-08",

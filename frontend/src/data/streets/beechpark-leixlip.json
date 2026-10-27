@@ -2,8 +2,8 @@
   "slug": "beechpark-leixlip",
   "stats": {
     "count": 111,
-    "median": 290000,
-    "avg": 302524,
+    "median": 325000,
+    "avg": 333584,
     "min": 74889,
     "max": 622000,
     "firstYear": 2010,
@@ -13,16 +13,16 @@
     {
       "year": 2010,
       "count": 7,
-      "median_price": 225000,
-      "avg_price": 216574,
+      "median_price": 255375,
+      "avg_price": 242089,
       "min_price": 125000,
       "max_price": 265000
     },
     {
       "year": 2011,
       "count": 11,
-      "median_price": 187225,
-      "avg_price": 188271,
+      "median_price": 212500,
+      "avg_price": 213687,
       "min_price": 74889,
       "max_price": 337500
     },
@@ -37,56 +37,56 @@
     {
       "year": 2013,
       "count": 2,
-      "median_price": 190000,
-      "avg_price": 190000,
+      "median_price": 202150,
+      "avg_price": 202150,
       "min_price": 180000,
       "max_price": 200000
     },
     {
       "year": 2014,
       "count": 4,
-      "median_price": 257709,
-      "avg_price": 262373,
+      "median_price": 292500,
+      "avg_price": 297794,
       "min_price": 229075,
       "max_price": 305000
     },
     {
       "year": 2015,
       "count": 19,
-      "median_price": 310132,
-      "avg_price": 298877,
+      "median_price": 352000,
+      "avg_price": 339225,
       "min_price": 229075,
       "max_price": 352379
     },
     {
       "year": 2016,
       "count": 23,
-      "median_price": 273127,
-      "avg_price": 274878,
+      "median_price": 309999,
+      "avg_price": 311987,
       "min_price": 237885,
       "max_price": 356828
     },
     {
       "year": 2017,
       "count": 21,
-      "median_price": 325991,
-      "avg_price": 319371,
+      "median_price": 370000,
+      "avg_price": 362487,
       "min_price": 253304,
       "max_price": 383259
     },
     {
       "year": 2018,
       "count": 6,
-      "median_price": 370044,
-      "avg_price": 371167,
+      "median_price": 402500,
+      "avg_price": 412500,
       "min_price": 352422,
       "max_price": 392070
     },
     {
       "year": 2019,
       "count": 3,
-      "median_price": 370044,
-      "avg_price": 358348,
+      "median_price": 415000,
+      "avg_price": 375000,
       "min_price": 290000,
       "max_price": 415000
     },
@@ -478,16 +478,16 @@
     },
     {
       "date": "2017-02-08",
-      "address": "193 Beechpark, Leixlip",
-      "price": 343568,
+      "address": "187 Beechpark, Leixlip",
+      "price": 312775,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2017-02-08",
-      "address": "187 Beechpark, Leixlip",
-      "price": 312775,
+      "address": "193 Beechpark, Leixlip",
+      "price": 343568,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

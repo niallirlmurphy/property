@@ -2,8 +2,8 @@
   "slug": "the-strand-o-callaghan-strand",
   "stats": {
     "count": 121,
-    "median": 249000,
-    "avg": 268250,
+    "median": 255000,
+    "avg": 270133,
     "min": 150000,
     "max": 530000,
     "firstYear": 2014,
@@ -29,8 +29,8 @@
     {
       "year": 2016,
       "count": 26,
-      "median_price": 248788,
-      "avg_price": 247591,
+      "median_price": 252500,
+      "avg_price": 252977,
       "min_price": 170000,
       "max_price": 305000
     },
@@ -46,7 +46,7 @@
       "year": 2018,
       "count": 43,
       "median_price": 235000,
-      "avg_price": 241244,
+      "avg_price": 243285,
       "min_price": 177000,
       "max_price": 440000
     },

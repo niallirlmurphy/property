@@ -2,8 +2,8 @@
   "slug": "honeypark-dun-laoghaire",
   "stats": {
     "count": 484,
-    "median": 361233,
-    "avg": 343928,
+    "median": 410000,
+    "avg": 388424,
     "min": 102000,
     "max": 484582,
     "firstYear": 2011,
@@ -16,7 +16,7 @@
       "year": 2011,
       "count": 6,
       "median_price": 195500,
-      "avg_price": 195333,
+      "avg_price": 200508,
       "min_price": 175000,
       "max_price": 230000
     },
@@ -47,32 +47,32 @@
     {
       "year": 2015,
       "count": 2,
-      "median_price": 110500,
-      "avg_price": 110500,
+      "median_price": 117959,
+      "avg_price": 117959,
       "min_price": 110500,
       "max_price": 110500
     },
     {
       "year": 2016,
       "count": 57,
-      "median_price": 308370,
-      "avg_price": 312805,
+      "median_price": 350000,
+      "avg_price": 353632,
       "min_price": 102000,
       "max_price": 484582
     },
     {
       "year": 2017,
       "count": 142,
-      "median_price": 308370,
-      "avg_price": 326270,
+      "median_price": 350000,
+      "avg_price": 370317,
       "min_price": 251101,
       "max_price": 484582
     },
     {
       "year": 2018,
       "count": 262,
-      "median_price": 361233,
-      "avg_price": 366359,
+      "median_price": 410000,
+      "avg_price": 415630,
       "min_price": 259912,
       "max_price": 484582
     },
@@ -130,8 +130,8 @@
     {
       "type": "Apartment",
       "count": 462,
-      "median": 361233,
-      "avg": 346803
+      "median": 410000,
+      "avg": 393076
     }
   ],
   "development": {

@@ -2,16 +2,35 @@
   "name": "Navan, Meath",
   "slug": "navan",
   "center": {
-    "lat": 53.6530941,
-    "lon": -6.6840434
+    "lat": 53.648242,
+    "lon": -6.677762
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 350000.0,
-  "avg_price": 375123,
+  "median_price": 355000.0,
+  "avg_price": 363123,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805001,
+      "sale_date": "2026-09-24",
+      "address": "150 Millbrook, Johnstown, Navan",
+      "county": "Meath",
+      "eircode": "C15D9C9",
+      "price": 356000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.641307,
+      "longitude": -6.651829,
+      "routing_key": "C15",
+      "bedrooms": 4,
+      "property_type": "semi-detached",
+      "price_incl_vat": 356000.0,
+      "distance_m": 1880.70653375
+    },
     {
       "id": 804801,
       "sale_date": "2026-09-22",
@@ -28,7 +47,8 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 1448.17818272
+      "price_incl_vat": 594998.78,
+      "distance_m": 1964.17124589
     },
     {
       "id": 804701,
@@ -46,7 +66,27 @@
       "routing_key": "C15",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 470.72834766
+      "price_incl_vat": 255000.0,
+      "distance_m": 246.65100935
+    },
+    {
+      "id": 804677,
+      "sale_date": "2026-09-21",
+      "address": "18 PRIORY DR, JOHNSTOWN, NAVAN",
+      "county": "Meath",
+      "eircode": "C15HHP0",
+      "price": 293000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.641731,
+      "longitude": -6.657586,
+      "routing_key": "C15",
+      "bedrooms": 2,
+      "property_type": "terraced",
+      "price_incl_vat": 293000.0,
+      "distance_m": 1518.37498919
     },
     {
       "id": 804536,
@@ -64,25 +104,8 @@
       "routing_key": "C15",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1064.14593985
-    },
-    {
-      "id": 803898,
-      "sale_date": "2026-09-10",
-      "address": "10 BLACKWATER ABBEY, NAVAN, MEATH",
-      "county": "Meath",
-      "eircode": "C15A4Y8",
-      "price": 350000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.660263,
-      "longitude": -6.687399,
-      "routing_key": "C15",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 828.15737539
+      "price_incl_vat": 430000.0,
+      "distance_m": 577.38879705
     },
     {
       "id": 803959,
@@ -100,7 +123,27 @@
       "routing_key": "C15",
       "bedrooms": 5,
       "property_type": "detached",
-      "distance_m": 1491.59191219
+      "price_incl_vat": 710000.0,
+      "distance_m": 856.13636486
+    },
+    {
+      "id": 803898,
+      "sale_date": "2026-09-10",
+      "address": "10 BLACKWATER ABBEY, NAVAN, MEATH",
+      "county": "Meath",
+      "eircode": "C15A4Y8",
+      "price": 350000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.660263,
+      "longitude": -6.687399,
+      "routing_key": "C15",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 350000.0,
+      "distance_m": 1481.8995186
     },
     {
       "id": 803822,
@@ -118,7 +161,8 @@
       "routing_key": "C15",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 1220.26465715
+      "price_incl_vat": 273000.0,
+      "distance_m": 1333.63286799
     },
     {
       "id": 803653,
@@ -136,7 +180,8 @@
       "routing_key": "C15",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1328.78400773
+      "price_incl_vat": 95000.0,
+      "distance_m": 1087.95363366
     },
     {
       "id": 803369,
@@ -154,179 +199,144 @@
       "routing_key": "C15",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1144.2247036
-    },
-    {
-      "id": 802561,
-      "sale_date": "2026-09-01",
-      "address": "104 BLACKCASTLE LODGE, NAVAN, CO. MEATH",
-      "county": "Meath",
-      "eircode": "C15W744",
-      "price": 310000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.655208,
-      "longitude": -6.678093,
-      "routing_key": "C15",
-      "bedrooms": 3,
-      "property_type": "duplex",
-      "distance_m": 458.41071552
-    },
-    {
-      "id": 802186,
-      "sale_date": "2026-08-26",
-      "address": "36 CLUAIN ADAIN GREEN, CLONGMAGADDEN, NAVAN",
-      "county": "Meath",
-      "eircode": "C15FX7W",
-      "price": 459000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.669933,
-      "longitude": -6.688749,
-      "routing_key": "C15",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 1899.78782424
+      "price_incl_vat": 345000.0,
+      "distance_m": 1307.26231186
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 83,
-      "median_price": 180000.0,
-      "avg_price": 189318.0,
-      "min_price": 50000.0,
+      "count": 92,
+      "median_price": 189500.0,
+      "avg_price": 195502.0,
+      "min_price": 18000.0,
       "max_price": 475000.0
     },
     {
       "year": 2011,
-      "count": 69,
-      "median_price": 137000.0,
-      "avg_price": 140183.0,
+      "count": 82,
+      "median_price": 142250.0,
+      "avg_price": 145672.0,
       "min_price": 44000.0,
       "max_price": 290000.0
     },
     {
       "year": 2012,
-      "count": 74,
-      "median_price": 121950.0,
-      "avg_price": 132801.0,
+      "count": 95,
+      "median_price": 127500.0,
+      "avg_price": 143334.0,
       "min_price": 26470.0,
       "max_price": 700000.0
     },
     {
       "year": 2013,
-      "count": 104,
-      "median_price": 117000.0,
-      "avg_price": 128480.0,
+      "count": 115,
+      "median_price": 116000.0,
+      "avg_price": 129094.0,
       "min_price": 10000.0,
       "max_price": 440528.0
     },
     {
       "year": 2014,
-      "count": 167,
-      "median_price": 127000.0,
-      "avg_price": 135717.0,
+      "count": 203,
+      "median_price": 130000.0,
+      "avg_price": 139473.0,
       "min_price": 30000.0,
       "max_price": 480000.0
     },
     {
       "year": 2015,
-      "count": 162,
-      "median_price": 152500.0,
-      "avg_price": 159589.0,
+      "count": 199,
+      "median_price": 165000.0,
+      "avg_price": 167700.0,
       "min_price": 25000.0,
       "max_price": 425000.0
     },
     {
       "year": 2016,
-      "count": 205,
-      "median_price": 170000.0,
-      "avg_price": 173750.0,
+      "count": 259,
+      "median_price": 185000.0,
+      "avg_price": 185314.0,
       "min_price": 40000.0,
       "max_price": 725000.0
     },
     {
       "year": 2017,
-      "count": 163,
-      "median_price": 198500.0,
-      "avg_price": 196359.0,
+      "count": 207,
+      "median_price": 210000.0,
+      "avg_price": 214952.0,
       "min_price": 30000.0,
       "max_price": 960000.0
     },
     {
       "year": 2018,
-      "count": 205,
-      "median_price": 225000.0,
-      "avg_price": 228711.0,
+      "count": 255,
+      "median_price": 233000.0,
+      "avg_price": 239743.0,
       "min_price": 20000.0,
       "max_price": 452500.0
     },
     {
       "year": 2019,
-      "count": 255,
-      "median_price": 235000.0,
-      "avg_price": 231858.0,
-      "min_price": 15060.84,
+      "count": 283,
+      "median_price": 240000.0,
+      "avg_price": 239953.0,
+      "min_price": 88000.0,
       "max_price": 1666666.0
     },
     {
       "year": 2020,
-      "count": 219,
-      "median_price": 230000.0,
-      "avg_price": 226101.0,
+      "count": 256,
+      "median_price": 240000.0,
+      "avg_price": 237329.0,
       "min_price": 68181.82,
       "max_price": 594500.0
     },
     {
       "year": 2021,
-      "count": 267,
-      "median_price": 250000.0,
-      "avg_price": 257627.0,
+      "count": 285,
+      "median_price": 254999.0,
+      "avg_price": 259345.0,
       "min_price": 64333.0,
       "max_price": 890000.0
     },
     {
       "year": 2022,
-      "count": 295,
-      "median_price": 282000.0,
-      "avg_price": 342129.0,
-      "min_price": 17500.0,
+      "count": 325,
+      "median_price": 290000.0,
+      "avg_price": 350499.0,
+      "min_price": 80000.0,
       "max_price": 15861233.51
     },
     {
       "year": 2023,
-      "count": 442,
-      "median_price": 318502.0,
-      "avg_price": 357154.0,
+      "count": 481,
+      "median_price": 335000.0,
+      "avg_price": 376122.0,
       "min_price": 40000.0,
       "max_price": 15635242.0
     },
     {
       "year": 2024,
-      "count": 351,
-      "median_price": 325991.0,
-      "avg_price": 332024.0,
+      "count": 332,
+      "median_price": 350000.0,
+      "avg_price": 335329.0,
       "min_price": 75000.0,
-      "max_price": 2061674.01
+      "max_price": 940000.0
     },
     {
       "year": 2025,
-      "count": 233,
+      "count": 269,
       "median_price": 350000.0,
-      "avg_price": 358634.0,
+      "avg_price": 361957.0,
       "min_price": 30000.0,
       "max_price": 1347136.56
     },
     {
       "year": 2026,
-      "count": 136,
-      "median_price": 350000.0,
-      "avg_price": 358721.0,
+      "count": 155,
+      "median_price": 355000.0,
+      "avg_price": 362849.0,
       "min_price": 55000.0,
       "max_price": 1680000.0
     }

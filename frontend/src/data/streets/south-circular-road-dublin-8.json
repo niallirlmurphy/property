@@ -1,9 +1,9 @@
 {
   "slug": "south-circular-road-dublin-8",
   "stats": {
-    "count": 123,
-    "median": 475000,
-    "avg": 581170,
+    "count": 124,
+    "median": 479500,
+    "avg": 583378,
     "min": 70000,
     "max": 2017177,
     "firstYear": 2010,
@@ -100,9 +100,9 @@
     },
     {
       "year": 2021,
-      "count": 6,
-      "median_price": 453000,
-      "avg_price": 554333,
+      "count": 7,
+      "median_price": 475000,
+      "avg_price": 597286,
       "min_price": 275000,
       "max_price": 1250000
     },
@@ -373,6 +373,14 @@
       "eircode": "D08VHW0"
     },
     {
+      "date": "2021-07-20",
+      "address": "531 SOUTH CIRCULAR RD., DUBLIN 8",
+      "price": 855000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D08Y3X2"
+    },
+    {
       "date": "2021-07-16",
       "address": "445 SOUTH CIRCULAR ROAD, DUBLIN 8",
       "price": 325000,
@@ -531,15 +539,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2018-10-26",
-      "address": "270 SOUTH CIRCULAR ROAD, DUBLIN 8",
-      "price": 1614251,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 123
+  "totalTransactions": 124
 }

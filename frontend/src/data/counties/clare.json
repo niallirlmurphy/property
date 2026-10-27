@@ -1,62 +1,62 @@
 {
   "county": "Clare",
   "total_count": 18000,
-  "median_price": 308369.0,
-  "avg_price": 314795.0,
+  "median_price": 320000.0,
+  "avg_price": 323099.0,
   "trends": [
     {
       "year": 2010,
       "count": 487,
-      "median_price": 162000.0,
-      "avg_price": 179409.0,
+      "median_price": 166000.0,
+      "avg_price": 184924.0,
       "min_price": 15000.0,
       "max_price": 1890000.0
     },
     {
       "year": 2011,
       "count": 413,
-      "median_price": 145000.0,
-      "avg_price": 162969.0,
+      "median_price": 147000.0,
+      "avg_price": 165991.0,
       "min_price": 14500.0,
       "max_price": 960000.0
     },
     {
       "year": 2012,
       "count": 551,
-      "median_price": 116740.0,
-      "avg_price": 135567.0,
+      "median_price": 117500.0,
+      "avg_price": 137996.0,
       "min_price": 10000.0,
       "max_price": 1923952.0
     },
     {
       "year": 2013,
       "count": 607,
-      "median_price": 97500.0,
-      "avg_price": 121299.0,
+      "median_price": 100000.0,
+      "avg_price": 122575.0,
       "min_price": 15000.0,
       "max_price": 1462500.0
     },
     {
       "year": 2014,
       "count": 1021,
-      "median_price": 97000.0,
-      "avg_price": 119735.0,
+      "median_price": 98000.0,
+      "avg_price": 121474.0,
       "min_price": 10000.0,
       "max_price": 1885000.0
     },
     {
       "year": 2015,
       "count": 1161,
-      "median_price": 100563.0,
-      "avg_price": 124139.0,
+      "median_price": 104000.0,
+      "avg_price": 125525.0,
       "min_price": 13000.0,
       "max_price": 1390000.0
     },
     {
       "year": 2016,
       "count": 1153,
-      "median_price": 123000.0,
-      "avg_price": 140514.0,
+      "median_price": 125000.0,
+      "avg_price": 142246.0,
       "min_price": 10000.0,
       "max_price": 1360000.0
     },
@@ -64,15 +64,15 @@
       "year": 2017,
       "count": 1261,
       "median_price": 140000.0,
-      "avg_price": 152317.0,
+      "avg_price": 154736.0,
       "min_price": 10000.0,
       "max_price": 2900000.0
     },
     {
       "year": 2018,
       "count": 1191,
-      "median_price": 163000.0,
-      "avg_price": 173334.0,
+      "median_price": 165000.0,
+      "avg_price": 176182.0,
       "min_price": 12322.47,
       "max_price": 1175000.0
     },
@@ -80,23 +80,23 @@
       "year": 2019,
       "count": 1197,
       "median_price": 172000.0,
-      "avg_price": 185193.0,
+      "avg_price": 187834.0,
       "min_price": 16000.0,
       "max_price": 1900000.0
     },
     {
       "year": 2020,
       "count": 1064,
-      "median_price": 179000.0,
-      "avg_price": 184357.0,
+      "median_price": 180000.0,
+      "avg_price": 187270.0,
       "min_price": 12000.0,
       "max_price": 2275000.0
     },
     {
       "year": 2021,
       "count": 1367,
-      "median_price": 194000.0,
-      "avg_price": 212432.0,
+      "median_price": 195000.0,
+      "avg_price": 214896.0,
       "min_price": 10000.0,
       "max_price": 1500000.0
     },
@@ -104,7 +104,7 @@
       "year": 2022,
       "count": 1353,
       "median_price": 225000.0,
-      "avg_price": 246337.0,
+      "avg_price": 249561.0,
       "min_price": 10000.0,
       "max_price": 5080000.0
     },
@@ -112,31 +112,31 @@
       "year": 2023,
       "count": 1291,
       "median_price": 230000.0,
-      "avg_price": 246307.0,
+      "avg_price": 249004.0,
       "min_price": 10000.0,
       "max_price": 1500000.0
     },
     {
       "year": 2024,
       "count": 1209,
-      "median_price": 270000.0,
-      "avg_price": 282510.0,
+      "median_price": 275000.0,
+      "avg_price": 288773.0,
       "min_price": 10000.0,
       "max_price": 3218234.67
     },
     {
       "year": 2025,
       "count": 1267,
-      "median_price": 292000.0,
-      "avg_price": 315399.0,
+      "median_price": 300000.0,
+      "avg_price": 321591.0,
       "min_price": 20000.0,
       "max_price": 10425586.0
     },
     {
       "year": 2026,
       "count": 771,
-      "median_price": 308369.0,
-      "avg_price": 314795.0,
+      "median_price": 320000.0,
+      "avg_price": 323099.0,
       "min_price": 10000.0,
       "max_price": 2600000.0
     }
@@ -157,7 +157,8 @@
       "longitude": -8.909559,
       "routing_key": "V95",
       "bedrooms": null,
-      "property_type": null
+      "property_type": null,
+      "price_incl_vat": 390000.0
     },
     {
       "id": 805602,
@@ -174,7 +175,8 @@
       "longitude": null,
       "routing_key": "V94",
       "bedrooms": null,
-      "property_type": null
+      "property_type": null,
+      "price_incl_vat": 180000.0
     },
     {
       "id": 805590,
@@ -191,7 +193,8 @@
       "longitude": -9.492993,
       "routing_key": "V15",
       "bedrooms": 2,
-      "property_type": "terraced"
+      "property_type": "terraced",
+      "price_incl_vat": 150000.0
     },
     {
       "id": 805581,
@@ -208,7 +211,8 @@
       "longitude": -8.95336566666667,
       "routing_key": "V95",
       "bedrooms": 4,
-      "property_type": "semi-detached"
+      "property_type": "semi-detached",
+      "price_incl_vat": 467500.0
     },
     {
       "id": 805553,
@@ -225,7 +229,8 @@
       "longitude": -9.292248,
       "routing_key": "V95",
       "bedrooms": null,
-      "property_type": null
+      "property_type": null,
+      "price_incl_vat": 310000.0
     },
     {
       "id": 805547,
@@ -242,7 +247,8 @@
       "longitude": null,
       "routing_key": "V94",
       "bedrooms": null,
-      "property_type": null
+      "property_type": null,
+      "price_incl_vat": 120000.0
     },
     {
       "id": 805529,
@@ -259,7 +265,8 @@
       "longitude": -8.969691,
       "routing_key": "V95",
       "bedrooms": null,
-      "property_type": null
+      "property_type": null,
+      "price_incl_vat": 138000.0
     },
     {
       "id": 805513,
@@ -276,7 +283,8 @@
       "longitude": -9.640807,
       "routing_key": "V15",
       "bedrooms": 3,
-      "property_type": "semi-detached"
+      "property_type": "semi-detached",
+      "price_incl_vat": 180000.0
     },
     {
       "id": 805354,
@@ -293,7 +301,8 @@
       "longitude": -9.320556,
       "routing_key": "V15",
       "bedrooms": 4,
-      "property_type": "detached"
+      "property_type": "detached",
+      "price_incl_vat": 395000.0
     },
     {
       "id": 805345,
@@ -310,7 +319,8 @@
       "longitude": -8.920734,
       "routing_key": "V95",
       "bedrooms": 5,
-      "property_type": "detached"
+      "property_type": "detached",
+      "price_incl_vat": 510000.0
     }
   ]
 }

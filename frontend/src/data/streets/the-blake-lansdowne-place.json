@@ -2,8 +2,8 @@
   "slug": "the-blake-lansdowne-place",
   "stats": {
     "count": 14,
-    "median": 1607720,
-    "avg": 1832832,
+    "median": 1750000,
+    "avg": 2034597,
     "min": 770925,
     "max": 5726872,
     "firstYear": 2021,
@@ -13,24 +13,24 @@
     {
       "year": 2021,
       "count": 6,
-      "median_price": 1541850,
-      "avg_price": 2205971,
+      "median_price": 1750000,
+      "avg_price": 2503777,
       "min_price": 1297500,
       "max_price": 5726872
     },
     {
       "year": 2022,
       "count": 4,
-      "median_price": 1784504,
-      "avg_price": 1795231,
+      "median_price": 2025412,
+      "avg_price": 1982591,
       "min_price": 1629538,
       "max_price": 1982379
     },
     {
       "year": 2024,
       "count": 3,
-      "median_price": 1365639,
-      "avg_price": 1445965,
+      "median_price": 1550000,
+      "avg_price": 1542110,
       "min_price": 770925,
       "max_price": 2201331
     },

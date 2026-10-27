@@ -2,8 +2,8 @@
   "slug": "cois-farraige-blackrock",
   "stats": {
     "count": 94,
-    "median": 325496,
-    "avg": 288062,
+    "median": 357295,
+    "avg": 323711,
     "min": 101140,
     "max": 410758,
     "firstYear": 2010,
@@ -13,32 +13,32 @@
     {
       "year": 2010,
       "count": 1,
-      "median_price": 140088,
-      "avg_price": 140088,
+      "median_price": 159000,
+      "avg_price": 159000,
       "min_price": 140088,
       "max_price": 140088
     },
     {
       "year": 2017,
       "count": 22,
-      "median_price": 193833,
-      "avg_price": 180593,
+      "median_price": 220000,
+      "avg_price": 204973,
       "min_price": 101140,
       "max_price": 237885
     },
     {
       "year": 2018,
       "count": 1,
-      "median_price": 193832,
-      "avg_price": 193832,
+      "median_price": 219999,
+      "avg_price": 219999,
       "min_price": 193832,
       "max_price": 193832
     },
     {
       "year": 2019,
       "count": 1,
-      "median_price": 190300,
-      "avg_price": 190300,
+      "median_price": 215990,
+      "avg_price": 215990,
       "min_price": 190300,
       "max_price": 190300
     },
@@ -61,32 +61,32 @@
     {
       "year": 2023,
       "count": 8,
-      "median_price": 334801,
-      "avg_price": 339169,
+      "median_price": 379999,
+      "avg_price": 384957,
       "min_price": 330395,
       "max_price": 370044
     },
     {
       "year": 2024,
       "count": 21,
-      "median_price": 339207,
-      "avg_price": 348727,
+      "median_price": 385000,
+      "avg_price": 393349,
       "min_price": 325991,
       "max_price": 410758
     },
     {
       "year": 2025,
       "count": 15,
-      "median_price": 343612,
-      "avg_price": 332903,
+      "median_price": 389949,
+      "avg_price": 375109,
       "min_price": 255505,
       "max_price": 409691
     },
     {
       "year": 2026,
       "count": 22,
-      "median_price": 299559,
-      "avg_price": 305153,
+      "median_price": 337500,
+      "avg_price": 341856,
       "min_price": 255505,
       "max_price": 409692
     }
@@ -182,19 +182,19 @@
     },
     {
       "date": "2026-03-24",
-      "address": "21 COIS FARRAIGE, BLACKROCK, LOUTH",
-      "price": 310000,
-      "bedrooms": 2,
-      "propertyType": "semi-detached",
-      "eircode": "A91TY7X"
-    },
-    {
-      "date": "2026-03-24",
       "address": "192 Cois Farraige, Blackrock, Dundalk",
       "price": 348016,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2026-03-24",
+      "address": "21 COIS FARRAIGE, BLACKROCK, LOUTH",
+      "price": 310000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "A91TY7X"
     },
     {
       "date": "2026-03-23",

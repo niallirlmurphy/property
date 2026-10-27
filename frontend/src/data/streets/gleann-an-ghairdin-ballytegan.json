@@ -2,8 +2,8 @@
   "slug": "gleann-an-ghairdin-ballytegan",
   "stats": {
     "count": 113,
-    "median": 237885,
-    "avg": 251120,
+    "median": 270000,
+    "avg": 282905,
     "min": 192070,
     "max": 385000,
     "firstYear": 2017,
@@ -13,72 +13,72 @@
     {
       "year": 2017,
       "count": 7,
-      "median_price": 207049,
-      "avg_price": 212139,
+      "median_price": 235001,
+      "avg_price": 240778,
       "min_price": 198237,
       "max_price": 225000
     },
     {
       "year": 2018,
       "count": 4,
-      "median_price": 220264,
-      "avg_price": 222252,
+      "median_price": 250000,
+      "avg_price": 252256,
       "min_price": 215000,
       "max_price": 233479
     },
     {
       "year": 2020,
       "count": 41,
-      "median_price": 192070,
-      "avg_price": 204188,
+      "median_price": 218000,
+      "avg_price": 231754,
       "min_price": 192070,
       "max_price": 237800
     },
     {
       "year": 2021,
       "count": 5,
-      "median_price": 237885,
-      "avg_price": 232652,
+      "median_price": 270000,
+      "avg_price": 264060,
       "min_price": 206450,
       "max_price": 243238
     },
     {
       "year": 2022,
       "count": 21,
-      "median_price": 254846,
-      "avg_price": 256102,
+      "median_price": 289250,
+      "avg_price": 290676,
       "min_price": 237885,
       "max_price": 285000
     },
     {
       "year": 2023,
       "count": 13,
-      "median_price": 277533,
-      "avg_price": 278190,
+      "median_price": 315000,
+      "avg_price": 312225,
       "min_price": 251101,
       "max_price": 339000
     },
     {
       "year": 2024,
       "count": 1,
-      "median_price": 299500,
-      "avg_price": 299500,
+      "median_price": 339932,
+      "avg_price": 339932,
       "min_price": 299500,
       "max_price": 299500
     },
     {
       "year": 2025,
       "count": 12,
-      "median_price": 321586,
-      "avg_price": 327631,
+      "median_price": 360000,
+      "avg_price": 367755,
       "min_price": 308400,
       "max_price": 365000
     },
     {
       "year": 2026,
       "count": 9,
-      "median_price": 365600,
-      "avg_price": 360217,
+      "median_price": 395000,
+      "avg_price": 392834,
       "min_price": 335000,
       "max_price": 385000
     }
@@ -262,19 +262,19 @@
     },
     {
       "date": "2023-11-21",
-      "address": "137 Gleann an Ghairdin, Ballytegan, Gorey",
-      "price": 277533,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-11-21",
       "address": "15 GLEANN AN GHAIRDIN, BALLYTEGAN, WEXFORD",
       "price": 339000,
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": "Y25R8H3"
+    },
+    {
+      "date": "2023-11-21",
+      "address": "137 Gleann an Ghairdin, Ballytegan, Gorey",
+      "price": 277533,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2023-10-18",

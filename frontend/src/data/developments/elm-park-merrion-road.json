@@ -3,13 +3,13 @@
   "stats": {
     "count": 387,
     "median": 350000,
-    "avg": 395069,
+    "avg": 406460,
     "min": 100000,
     "max": 1400000,
     "firstYear": 2013,
     "lastYear": 2026,
-    "recentMedian": 616740,
-    "recentCount": 66
+    "recentMedian": 700000,
+    "recentCount": 65
   },
   "trends": [
     {
@@ -40,7 +40,7 @@
       "year": 2016,
       "count": 193,
       "median_price": 167117,
-      "avg_price": 233221,
+      "avg_price": 233903,
       "min_price": 111008,
       "max_price": 1048829
     },
@@ -48,7 +48,7 @@
       "year": 2017,
       "count": 9,
       "median_price": 350000,
-      "avg_price": 418667,
+      "avg_price": 433322,
       "min_price": 100000,
       "max_price": 1240000
     },
@@ -56,7 +56,7 @@
       "year": 2018,
       "count": 26,
       "median_price": 361000,
-      "avg_price": 445769,
+      "avg_price": 450001,
       "min_price": 295000,
       "max_price": 1190000
     },
@@ -72,7 +72,7 @@
       "year": 2020,
       "count": 5,
       "median_price": 545000,
-      "avg_price": 558000,
+      "avg_price": 575010,
       "min_price": 425000,
       "max_price": 715000
     },
@@ -103,24 +103,24 @@
     {
       "year": 2024,
       "count": 54,
-      "median_price": 535220,
-      "avg_price": 582486,
+      "median_price": 556041,
+      "avg_price": 607449,
       "min_price": 324677,
       "max_price": 1400000
     },
     {
       "year": 2025,
       "count": 42,
-      "median_price": 623370,
-      "avg_price": 653687,
+      "median_price": 700000,
+      "avg_price": 704007,
       "min_price": 387000,
       "max_price": 1299550
     },
     {
       "year": 2026,
       "count": 14,
-      "median_price": 628926,
-      "avg_price": 648780,
+      "median_price": 685529,
+      "avg_price": 683641,
       "min_price": 410000,
       "max_price": 850000
     }
@@ -130,14 +130,14 @@
     {
       "type": "Apartment",
       "count": 97,
-      "median": 603524,
-      "avg": 582303
+      "median": 650000,
+      "avg": 611698
     },
     {
       "type": "House",
       "count": 5,
-      "median": 881058,
-      "avg": 949212
+      "median": 1000001,
+      "avg": 973000
     }
   ],
   "development": {

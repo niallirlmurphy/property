@@ -2,8 +2,8 @@
   "slug": "silverbanks-the-coast",
   "stats": {
     "count": 165,
-    "median": 233481,
-    "avg": 253395,
+    "median": 265000,
+    "avg": 276650,
     "min": 140969,
     "max": 685000,
     "firstYear": 2017,
@@ -15,32 +15,32 @@
     {
       "year": 2017,
       "count": 30,
-      "median_price": 226872,
-      "avg_price": 216129,
+      "median_price": 257500,
+      "avg_price": 245306,
       "min_price": 140969,
       "max_price": 330396
     },
     {
       "year": 2018,
       "count": 98,
-      "median_price": 219888,
-      "avg_price": 213383,
+      "median_price": 249573,
+      "avg_price": 242190,
       "min_price": 140969,
       "max_price": 350000
     },
     {
       "year": 2019,
       "count": 2,
-      "median_price": 337918,
-      "avg_price": 337918,
+      "median_price": 358225,
+      "avg_price": 358225,
       "min_price": 300837,
       "max_price": 375000
     },
     {
       "year": 2020,
       "count": 2,
-      "median_price": 275254,
-      "avg_price": 275254,
+      "median_price": 292500,
+      "avg_price": 292500,
       "min_price": 255507,
       "max_price": 295000
     },
@@ -48,7 +48,7 @@
       "year": 2021,
       "count": 7,
       "median_price": 337000,
-      "avg_price": 325000,
+      "avg_price": 334064,
       "min_price": 232000,
       "max_price": 470000
     },
@@ -98,8 +98,8 @@
     {
       "type": "Apartment",
       "count": 19,
-      "median": 295154,
-      "avg": 302412
+      "median": 300775,
+      "avg": 316359
     }
   ],
   "development": {

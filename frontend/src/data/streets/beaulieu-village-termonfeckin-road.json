@@ -2,8 +2,8 @@
   "slug": "beaulieu-village-termonfeckin-road",
   "stats": {
     "count": 161,
-    "median": 238009,
-    "avg": 262921,
+    "median": 269950,
+    "avg": 295217,
     "min": 191629,
     "max": 449339,
     "firstYear": 2018,
@@ -13,72 +13,72 @@
     {
       "year": 2018,
       "count": 8,
-      "median_price": 225551,
-      "avg_price": 226322,
+      "median_price": 256000,
+      "avg_price": 256875,
       "min_price": 210573,
       "max_price": 259912
     },
     {
       "year": 2019,
       "count": 29,
-      "median_price": 228194,
-      "avg_price": 231201,
+      "median_price": 259000,
+      "avg_price": 262413,
       "min_price": 191629,
       "max_price": 308370
     },
     {
       "year": 2020,
       "count": 26,
-      "median_price": 227312,
-      "avg_price": 224721,
+      "median_price": 258000,
+      "avg_price": 255058,
       "min_price": 201762,
       "max_price": 248459
     },
     {
       "year": 2021,
       "count": 13,
-      "median_price": 228193,
-      "avg_price": 232094,
+      "median_price": 258999,
+      "avg_price": 263427,
       "min_price": 202643,
       "max_price": 320704
     },
     {
       "year": 2022,
       "count": 25,
-      "median_price": 234361,
-      "avg_price": 248993,
+      "median_price": 266000,
+      "avg_price": 281152,
       "min_price": 203524,
       "max_price": 348017
     },
     {
       "year": 2023,
       "count": 23,
-      "median_price": 303964,
-      "avg_price": 295954,
+      "median_price": 335000,
+      "avg_price": 330067,
       "min_price": 256387,
       "max_price": 340000
     },
     {
       "year": 2024,
       "count": 20,
-      "median_price": 299559,
-      "avg_price": 305099,
+      "median_price": 330000,
+      "avg_price": 339146,
       "min_price": 264273,
       "max_price": 378000
     },
     {
       "year": 2025,
       "count": 14,
-      "median_price": 323766,
-      "avg_price": 330842,
+      "median_price": 362500,
+      "avg_price": 361119,
       "min_price": 273127,
       "max_price": 415000
     },
     {
       "year": 2026,
       "count": 3,
-      "median_price": 370000,
-      "avg_price": 396446,
+      "median_price": 419950,
+      "avg_price": 449967,
       "min_price": 370000,
       "max_price": 449339
     }
@@ -142,19 +142,19 @@
     },
     {
       "date": "2025-06-27",
-      "address": "167 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
-      "price": 277500,
-      "bedrooms": 4,
-      "propertyType": "semi-detached",
-      "eircode": null
-    },
-    {
-      "date": "2025-06-27",
       "address": "35 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
       "price": 397000,
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": "A92PCP2"
+    },
+    {
+      "date": "2025-06-27",
+      "address": "167 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 277500,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
     },
     {
       "date": "2025-06-20",

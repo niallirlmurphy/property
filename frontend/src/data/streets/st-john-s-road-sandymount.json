@@ -1,15 +1,23 @@
 {
   "slug": "st-john-s-road-sandymount",
   "stats": {
-    "count": 9,
-    "median": 1400000,
-    "avg": 1450111,
-    "min": 1000000,
+    "count": 10,
+    "median": 1265000,
+    "avg": 1387600,
+    "min": 825000,
     "max": 2180000,
-    "firstYear": 2014,
+    "firstYear": 2013,
     "lastYear": 2025
   },
   "trends": [
+    {
+      "year": 2013,
+      "count": 1,
+      "median_price": 825000,
+      "avg_price": 825000,
+      "min_price": 825000,
+      "max_price": 825000
+    },
     {
       "year": 2014,
       "count": 1,
@@ -139,7 +147,15 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2013-11-25",
+      "address": "17 St. Johns Road, Sandymount, Dublin 4",
+      "price": 825000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     }
   ],
-  "totalTransactions": 9
+  "totalTransactions": 10
 }

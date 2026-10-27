@@ -2,8 +2,8 @@
   "slug": "cnoc-tiarnach-grange-end",
   "stats": {
     "count": 94,
-    "median": 339207,
-    "avg": 361959,
+    "median": 385000,
+    "avg": 402567,
     "min": 286343,
     "max": 650000,
     "firstYear": 2018,
@@ -13,24 +13,24 @@
     {
       "year": 2018,
       "count": 9,
-      "median_price": 321585,
-      "avg_price": 317207,
+      "median_price": 364999,
+      "avg_price": 360029,
       "min_price": 286343,
       "max_price": 353650
     },
     {
       "year": 2019,
       "count": 59,
-      "median_price": 330396,
-      "avg_price": 328302,
+      "median_price": 375000,
+      "avg_price": 372623,
       "min_price": 286344,
       "max_price": 497797
     },
     {
       "year": 2020,
       "count": 15,
-      "median_price": 414100,
-      "avg_price": 403361,
+      "median_price": 470004,
+      "avg_price": 457815,
       "min_price": 295154,
       "max_price": 535000
     },
@@ -310,19 +310,19 @@
     },
     {
       "date": "2019-12-06",
-      "address": "12 Cnoc Tiarnach, Grange End, Dunshaughlin",
-      "price": 352423,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-12-06",
       "address": "59 Cnoc Tiarnach, Grange End, Dunshaughlin",
       "price": 339207,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "A85KW40"
+    },
+    {
+      "date": "2019-12-06",
+      "address": "12 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "price": 352423,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2019-11-27",
@@ -366,7 +366,7 @@
     },
     {
       "date": "2019-10-24",
-      "address": "48 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "address": "51 Cnoc Tiarnach, Grange End, Dunshaughlin",
       "price": 339207,
       "bedrooms": null,
       "propertyType": null,
@@ -374,7 +374,7 @@
     },
     {
       "date": "2019-10-24",
-      "address": "51 Cnoc Tiarnach, Grange End, Dunshaughlin",
+      "address": "48 Cnoc Tiarnach, Grange End, Dunshaughlin",
       "price": 339207,
       "bedrooms": null,
       "propertyType": null,

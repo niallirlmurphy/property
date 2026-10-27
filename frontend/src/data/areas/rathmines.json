@@ -2,13 +2,13 @@
   "name": "Rathmines, Dublin",
   "slug": "rathmines",
   "center": {
-    "lat": 53.3265199,
-    "lon": -6.2648571
+    "lat": 53.32207115086855,
+    "lon": -6.2654339229112
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 950000.0,
-  "avg_price": 1001600,
+  "median_price": 850000.0,
+  "avg_price": 1320600,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "D06",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 128.47082105
+      "price_incl_vat": 520000.0,
+      "distance_m": 368.41402067
     },
     {
       "id": 805133,
@@ -46,7 +47,8 @@
       "routing_key": "D06",
       "bedrooms": 3,
       "property_type": "detached",
-      "distance_m": 1301.77021082
+      "price_incl_vat": 2200000.0,
+      "distance_m": 811.62378013
     },
     {
       "id": 805211,
@@ -64,7 +66,8 @@
       "routing_key": "D06",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 1401.91460322
+      "price_incl_vat": 316000.0,
+      "distance_m": 927.16656645
     },
     {
       "id": 804899,
@@ -82,7 +85,27 @@
       "routing_key": "D06",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 894.97985542
+      "price_incl_vat": 675000.0,
+      "distance_m": 402.67009742
+    },
+    {
+      "id": 804843,
+      "sale_date": "2026-09-22",
+      "address": "51 ST KEVINS PARK, DARTRY, DUBLIN 6",
+      "county": "Dublin",
+      "eircode": "D06R5X5",
+      "price": 4400000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.310794,
+      "longitude": -6.264007,
+      "routing_key": "D06",
+      "bedrooms": 4,
+      "property_type": "detached",
+      "price_incl_vat": 4400000.0,
+      "distance_m": 1258.65683372
     },
     {
       "id": 804704,
@@ -100,7 +123,27 @@
       "routing_key": "D06",
       "bedrooms": 3,
       "property_type": null,
-      "distance_m": 956.13717598
+      "price_incl_vat": 2750000.0,
+      "distance_m": 663.12512503
+    },
+    {
+      "id": 804661,
+      "sale_date": "2026-09-21",
+      "address": "13 HILLCOURT, HIGHFIELD RD, RATHGAR DUBLIN 6",
+      "county": "Dublin",
+      "eircode": "D06WP04",
+      "price": 410000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.312782,
+      "longitude": -6.26561,
+      "routing_key": "D06",
+      "bedrooms": 1,
+      "property_type": "apartment",
+      "price_incl_vat": 410000.0,
+      "distance_m": 1033.87697572
     },
     {
       "id": 804475,
@@ -118,7 +161,8 @@
       "routing_key": "D06",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1023.55706685
+      "price_incl_vat": 940000.0,
+      "distance_m": 996.56821608
     },
     {
       "id": 804325,
@@ -136,199 +180,165 @@
       "routing_key": "D06",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 630.34360656
+      "price_incl_vat": 375000.0,
+      "distance_m": 919.48409338
     },
     {
-      "id": 804035,
-      "sale_date": "2026-09-10",
-      "address": "UNIT 1, 14 RICHMOND HILL, RATHMINES",
+      "id": 804300,
+      "sale_date": "2026-09-14",
+      "address": "Apartment 11, Park Hill, Milltown Avenue",
       "county": "Dublin",
-      "eircode": "D06C985",
-      "price": 1250000.0,
+      "eircode": "D06VH30",
+      "price": 620000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.32685,
-      "longitude": -6.262926,
-      "routing_key": "D06",
-      "bedrooms": 8,
-      "property_type": "terraced",
-      "distance_m": 133.80995034
-    },
-    {
-      "id": 803454,
-      "sale_date": "2026-09-07",
-      "address": "16 COLLIERS AVENUE, DUBLIN 6",
-      "county": "Dublin",
-      "eircode": "D06TW92",
-      "price": 275000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.322227,
-      "longitude": -6.250717,
-      "routing_key": "D06",
-      "bedrooms": 1,
-      "property_type": "terraced",
-      "distance_m": 1056.4072794
-    },
-    {
-      "id": 803231,
-      "sale_date": "2026-09-04",
-      "address": "1A MOUNTPLEASANT AVE UPPER, RANELAGH, DUBLIN 6",
-      "county": "Dublin",
-      "eircode": "D06C820",
-      "price": 715000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.326534,
-      "longitude": -6.261086,
+      "latitude": 53.314368,
+      "longitude": -6.249882,
       "routing_key": "D06",
       "bedrooms": 2,
-      "property_type": "terraced",
-      "distance_m": 251.27185748
+      "property_type": "apartment",
+      "price_incl_vat": 620000.0,
+      "distance_m": 1345.03953672
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 39,
+      "count": 41,
       "median_price": 510000.0,
-      "avg_price": 650206.0,
+      "avg_price": 656782.0,
       "min_price": 10000.0,
       "max_price": 2137550.0
     },
     {
       "year": 2011,
-      "count": 52,
-      "median_price": 403143.0,
-      "avg_price": 520959.0,
+      "count": 53,
+      "median_price": 401000.0,
+      "avg_price": 517564.0,
       "min_price": 130000.0,
       "max_price": 2260000.0
     },
     {
       "year": 2012,
-      "count": 83,
-      "median_price": 420000.0,
-      "avg_price": 573353.0,
+      "count": 86,
+      "median_price": 425900.0,
+      "avg_price": 577415.0,
       "min_price": 121000.0,
       "max_price": 2000000.0
     },
     {
       "year": 2013,
-      "count": 65,
-      "median_price": 410000.0,
-      "avg_price": 591751.0,
+      "count": 70,
+      "median_price": 416250.0,
+      "avg_price": 599606.0,
       "min_price": 140000.0,
       "max_price": 4500000.0
     },
     {
       "year": 2014,
-      "count": 113,
+      "count": 120,
       "median_price": 530000.0,
-      "avg_price": 653238.0,
+      "avg_price": 647015.0,
       "min_price": 17057.0,
       "max_price": 2500000.0
     },
     {
       "year": 2015,
-      "count": 143,
-      "median_price": 484582.0,
-      "avg_price": 580673.0,
+      "count": 155,
+      "median_price": 485000.0,
+      "avg_price": 581831.0,
       "min_price": 60000.0,
       "max_price": 2700000.0
     },
     {
       "year": 2016,
-      "count": 162,
-      "median_price": 602500.0,
-      "avg_price": 727988.0,
+      "count": 180,
+      "median_price": 592500.0,
+      "avg_price": 706807.0,
       "min_price": 50000.0,
       "max_price": 6500000.0
     },
     {
       "year": 2017,
-      "count": 135,
-      "median_price": 620000.0,
-      "avg_price": 779998.0,
+      "count": 164,
+      "median_price": 615740.0,
+      "avg_price": 775326.0,
       "min_price": 145000.0,
       "max_price": 4800000.0
     },
     {
       "year": 2018,
-      "count": 163,
-      "median_price": 600000.0,
-      "avg_price": 855000.0,
-      "min_price": 114285.71,
+      "count": 189,
+      "median_price": 545000.0,
+      "avg_price": 838709.0,
+      "min_price": 10000.0,
       "max_price": 4700000.0
     },
     {
       "year": 2019,
-      "count": 128,
-      "median_price": 660000.0,
-      "avg_price": 867789.0,
+      "count": 142,
+      "median_price": 635000.0,
+      "avg_price": 855591.0,
       "min_price": 10000.0,
       "max_price": 3900000.0
     },
     {
       "year": 2020,
-      "count": 145,
+      "count": 150,
       "median_price": 480000.0,
-      "avg_price": 794744.0,
+      "avg_price": 797342.0,
       "min_price": 75000.0,
       "max_price": 3000000.0
     },
     {
       "year": 2021,
-      "count": 256,
+      "count": 324,
       "median_price": 645000.0,
-      "avg_price": 874768.0,
+      "avg_price": 877274.0,
       "min_price": 23611.0,
       "max_price": 4440000.0
     },
     {
       "year": 2022,
-      "count": 280,
-      "median_price": 875000.0,
-      "avg_price": 1042060.0,
+      "count": 373,
+      "median_price": 788000.0,
+      "avg_price": 1052406.0,
       "min_price": 10000.0,
-      "max_price": 4724500.0
-    },
-    {
-      "year": 2023,
-      "count": 304,
-      "median_price": 792070.0,
-      "avg_price": 1005458.0,
-      "min_price": 18750.0,
-      "max_price": 4200000.0
-    },
-    {
-      "year": 2024,
-      "count": 311,
-      "median_price": 750000.0,
-      "avg_price": 971468.0,
-      "min_price": 35000.0,
       "max_price": 6500000.0
     },
     {
+      "year": 2023,
+      "count": 386,
+      "median_price": 768000.0,
+      "avg_price": 980319.0,
+      "min_price": 18750.0,
+      "max_price": 4250000.0
+    },
+    {
+      "year": 2024,
+      "count": 398,
+      "median_price": 742000.0,
+      "avg_price": 975183.0,
+      "min_price": 20000.0,
+      "max_price": 7500000.0
+    },
+    {
       "year": 2025,
-      "count": 260,
-      "median_price": 871500.0,
-      "avg_price": 1044278.0,
+      "count": 329,
+      "median_price": 817000.0,
+      "avg_price": 1058241.0,
       "min_price": 90000.0,
-      "max_price": 6000000.0
+      "max_price": 7325000.0
     },
     {
       "year": 2026,
-      "count": 165,
-      "median_price": 950000.0,
-      "avg_price": 1148915.0,
+      "count": 211,
+      "median_price": 850000.0,
+      "avg_price": 1169126.0,
       "min_price": 15000.0,
-      "max_price": 4550000.0
+      "max_price": 6000000.0
     }
   ]
 }

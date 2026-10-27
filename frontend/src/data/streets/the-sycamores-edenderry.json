@@ -2,8 +2,8 @@
   "slug": "the-sycamores-edenderry",
   "stats": {
     "count": 94,
-    "median": 180500,
-    "avg": 198833,
+    "median": 185750,
+    "avg": 199654,
     "min": 65000,
     "max": 380000,
     "firstYear": 2010,
@@ -38,7 +38,7 @@
       "year": 2013,
       "count": 3,
       "median_price": 100000,
-      "avg_price": 92333,
+      "avg_price": 95258,
       "min_price": 65000,
       "max_price": 112000
     },
@@ -69,16 +69,16 @@
     {
       "year": 2017,
       "count": 4,
-      "median_price": 152092,
-      "avg_price": 148921,
+      "median_price": 156000,
+      "avg_price": 154125,
       "min_price": 129500,
       "max_price": 162000
     },
     {
       "year": 2018,
       "count": 11,
-      "median_price": 176211,
-      "avg_price": 172266,
+      "median_price": 181500,
+      "avg_price": 176591,
       "min_price": 115000,
       "max_price": 213000
     },
@@ -262,19 +262,19 @@
     },
     {
       "date": "2025-04-24",
-      "address": "204 THE SYCAMORES, EDENDERRY, OFFALY",
-      "price": 305000,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
-      "eircode": "R45T922"
-    },
-    {
-      "date": "2025-04-24",
       "address": "283  THE SYCAMORES, EDENDERRY, COUNTY OFFALY",
       "price": 265000,
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": "R45NW29"
+    },
+    {
+      "date": "2025-04-24",
+      "address": "204 THE SYCAMORES, EDENDERRY, OFFALY",
+      "price": 305000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "R45T922"
     },
     {
       "date": "2025-04-16",

@@ -2,8 +2,8 @@
   "slug": "annabasky-glen-berryfield-avenue",
   "stats": {
     "count": 9,
-    "median": 1519824,
-    "avg": 1574523,
+    "median": 1725000,
+    "avg": 1758583,
     "min": 1409692,
     "max": 1900000,
     "firstYear": 2024,
@@ -13,16 +13,16 @@
     {
       "year": 2024,
       "count": 7,
-      "median_price": 1519824,
-      "avg_price": 1551573,
+      "median_price": 1725000,
+      "avg_price": 1761036,
       "min_price": 1453745,
       "max_price": 1675000
     },
     {
       "year": 2025,
       "count": 1,
-      "median_price": 1409692,
-      "avg_price": 1409692,
+      "median_price": 1600000,
+      "avg_price": 1600000,
       "min_price": 1409692,
       "max_price": 1409692
     },

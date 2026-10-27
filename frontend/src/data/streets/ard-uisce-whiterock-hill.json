@@ -2,8 +2,8 @@
   "slug": "ard-uisce-whiterock-hill",
   "stats": {
     "count": 187,
-    "median": 255000,
-    "avg": 232125,
+    "median": 278075,
+    "avg": 259636,
     "min": 105000,
     "max": 342000,
     "firstYear": 2010,
@@ -13,72 +13,72 @@
     {
       "year": 2010,
       "count": 4,
-      "median_price": 145162,
-      "avg_price": 139459,
+      "median_price": 164759,
+      "avg_price": 158286,
       "min_price": 112511,
       "max_price": 155000
     },
     {
       "year": 2011,
       "count": 4,
-      "median_price": 105727,
-      "avg_price": 111052,
+      "median_price": 120000,
+      "avg_price": 126044,
       "min_price": 105000,
       "max_price": 127753
     },
     {
       "year": 2012,
       "count": 3,
-      "median_price": 122500,
-      "avg_price": 124814,
+      "median_price": 139038,
+      "avg_price": 141664,
       "min_price": 118943,
       "max_price": 133000
     },
     {
       "year": 2013,
       "count": 2,
-      "median_price": 127471,
-      "avg_price": 127471,
+      "median_price": 144680,
+      "avg_price": 144680,
       "min_price": 118943,
       "max_price": 136000
     },
     {
       "year": 2014,
       "count": 3,
-      "median_price": 118899,
-      "avg_price": 118966,
+      "median_price": 133930,
+      "avg_price": 129627,
       "min_price": 118000,
       "max_price": 120000
     },
     {
       "year": 2015,
       "count": 6,
-      "median_price": 138744,
-      "avg_price": 141238,
+      "median_price": 157475,
+      "avg_price": 157605,
       "min_price": 120000,
       "max_price": 168000
     },
     {
       "year": 2016,
       "count": 9,
-      "median_price": 149780,
-      "avg_price": 152212,
+      "median_price": 170000,
+      "avg_price": 172760,
       "min_price": 140926,
       "max_price": 170000
     },
     {
       "year": 2017,
       "count": 14,
-      "median_price": 203846,
-      "avg_price": 199410,
+      "median_price": 231365,
+      "avg_price": 223052,
       "min_price": 162996,
       "max_price": 229075
     },
     {
       "year": 2018,
       "count": 6,
-      "median_price": 207048,
-      "avg_price": 208517,
+      "median_price": 235000,
+      "avg_price": 236667,
       "min_price": 193833,
       "max_price": 229075
     },
@@ -94,55 +94,55 @@
       "year": 2020,
       "count": 7,
       "median_price": 205000,
-      "avg_price": 200099,
+      "avg_price": 204143,
       "min_price": 174000,
       "max_price": 210000
     },
     {
       "year": 2021,
       "count": 10,
-      "median_price": 209692,
-      "avg_price": 209901,
+      "median_price": 238000,
+      "avg_price": 229800,
       "min_price": 195000,
       "max_price": 225000
     },
     {
       "year": 2022,
       "count": 28,
-      "median_price": 242291,
-      "avg_price": 240828,
+      "median_price": 275000,
+      "avg_price": 272352,
       "min_price": 205000,
       "max_price": 285000
     },
     {
       "year": 2023,
       "count": 23,
-      "median_price": 263877,
-      "avg_price": 260222,
+      "median_price": 299500,
+      "avg_price": 290205,
       "min_price": 132159,
       "max_price": 342000
     },
     {
       "year": 2024,
       "count": 23,
-      "median_price": 268722,
-      "avg_price": 273058,
+      "median_price": 305000,
+      "avg_price": 308219,
       "min_price": 263877,
       "max_price": 300909
     },
     {
       "year": 2025,
       "count": 27,
-      "median_price": 277533,
-      "avg_price": 280495,
+      "median_price": 315000,
+      "avg_price": 313872,
       "min_price": 273128,
       "max_price": 331000
     },
     {
       "year": 2026,
       "count": 16,
-      "median_price": 295154,
-      "avg_price": 294827,
+      "median_price": 335000,
+      "avg_price": 332317,
       "min_price": 274000,
       "max_price": 309720
     }

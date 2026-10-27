@@ -2,8 +2,8 @@
   "slug": "cluain-larach-knockenduff",
   "stats": {
     "count": 167,
-    "median": 229075,
-    "avg": 237959,
+    "median": 257298,
+    "avg": 264516,
     "min": 149443,
     "max": 555000,
     "firstYear": 2016,
@@ -13,56 +13,56 @@
     {
       "year": 2016,
       "count": 11,
-      "median_price": 188684,
-      "avg_price": 190926,
+      "median_price": 214156,
+      "avg_price": 216701,
       "min_price": 157725,
       "max_price": 257532
     },
     {
       "year": 2017,
       "count": 39,
-      "median_price": 211454,
-      "avg_price": 213424,
+      "median_price": 240000,
+      "avg_price": 242236,
       "min_price": 160616,
       "max_price": 297000
     },
     {
       "year": 2018,
       "count": 29,
-      "median_price": 193833,
-      "avg_price": 210157,
+      "median_price": 220000,
+      "avg_price": 237467,
       "min_price": 167639,
       "max_price": 283963
     },
     {
       "year": 2019,
       "count": 10,
-      "median_price": 247136,
-      "avg_price": 223776,
+      "median_price": 280500,
+      "avg_price": 253986,
       "min_price": 149443,
       "max_price": 281939
     },
     {
       "year": 2020,
       "count": 24,
-      "median_price": 242291,
-      "avg_price": 251934,
+      "median_price": 275000,
+      "avg_price": 280883,
       "min_price": 211453,
       "max_price": 370000
     },
     {
       "year": 2021,
       "count": 26,
-      "median_price": 242291,
-      "avg_price": 242379,
+      "median_price": 275000,
+      "avg_price": 272141,
       "min_price": 211454,
       "max_price": 303965
     },
     {
       "year": 2022,
       "count": 19,
-      "median_price": 253304,
-      "avg_price": 262993,
+      "median_price": 287500,
+      "avg_price": 287477,
       "min_price": 219383,
       "max_price": 350500
     },

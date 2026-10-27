@@ -2,8 +2,8 @@
   "slug": "cluain-bui-quinagh",
   "stats": {
     "count": 117,
-    "median": 233480,
-    "avg": 242745,
+    "median": 257000,
+    "avg": 273246,
     "min": 79295,
     "max": 1453745,
     "firstYear": 2010,
@@ -13,96 +13,96 @@
     {
       "year": 2010,
       "count": 1,
-      "median_price": 1453745,
-      "avg_price": 1453745,
+      "median_price": 1650001,
+      "avg_price": 1650001,
       "min_price": 1453745,
       "max_price": 1453745
     },
     {
       "year": 2011,
       "count": 1,
-      "median_price": 212000,
-      "avg_price": 212000,
+      "median_price": 240620,
+      "avg_price": 240620,
       "min_price": 212000,
       "max_price": 212000
     },
     {
       "year": 2015,
       "count": 7,
-      "median_price": 96916,
-      "avg_price": 95604,
+      "median_price": 110000,
+      "avg_price": 108511,
       "min_price": 79295,
       "max_price": 110000
     },
     {
       "year": 2017,
       "count": 1,
-      "median_price": 160000,
-      "avg_price": 160000,
+      "median_price": 181600,
+      "avg_price": 181600,
       "min_price": 160000,
       "max_price": 160000
     },
     {
       "year": 2018,
       "count": 6,
-      "median_price": 170925,
-      "avg_price": 173663,
+      "median_price": 194000,
+      "avg_price": 197108,
       "min_price": 167400,
       "max_price": 190000
     },
     {
       "year": 2019,
       "count": 15,
-      "median_price": 174450,
-      "avg_price": 179494,
+      "median_price": 198001,
+      "avg_price": 203726,
       "min_price": 151982,
       "max_price": 198238
     },
     {
       "year": 2020,
       "count": 9,
-      "median_price": 185022,
-      "avg_price": 197159,
+      "median_price": 210000,
+      "avg_price": 223775,
       "min_price": 161233,
       "max_price": 259912
     },
     {
       "year": 2021,
       "count": 11,
-      "median_price": 226432,
-      "avg_price": 231958,
+      "median_price": 257000,
+      "avg_price": 259934,
       "min_price": 161233,
       "max_price": 290749
     },
     {
       "year": 2022,
       "count": 20,
-      "median_price": 207049,
-      "avg_price": 223404,
+      "median_price": 235001,
+      "avg_price": 251660,
       "min_price": 172687,
       "max_price": 299559
     },
     {
       "year": 2023,
       "count": 16,
-      "median_price": 255506,
-      "avg_price": 266615,
+      "median_price": 289999,
+      "avg_price": 300625,
       "min_price": 224670,
       "max_price": 317181
     },
     {
       "year": 2024,
       "count": 19,
-      "median_price": 286344,
-      "avg_price": 290749,
+      "median_price": 325000,
+      "avg_price": 330000,
       "min_price": 259911,
       "max_price": 334801
     },
     {
       "year": 2025,
       "count": 11,
-      "median_price": 303964,
-      "avg_price": 326154,
+      "median_price": 340000,
+      "avg_price": 355727,
       "min_price": 299559,
       "max_price": 500000
     }

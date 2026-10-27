@@ -2,13 +2,13 @@
   "name": "Ashbourne, Meath",
   "slug": "ashbourne",
   "center": {
-    "lat": 53.5116146,
-    "lon": -6.3981743
+    "lat": 53.510431603252044,
+    "lon": -6.402158
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 434681.0,
-  "avg_price": 481758,
+  "median_price": 470573.0,
+  "avg_price": 497758,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": "house",
-      "distance_m": 1019.44198082
+      "price_incl_vat": 515000.0,
+      "distance_m": 1030.48006784
     },
     {
       "id": 805311,
@@ -46,7 +47,8 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": "house",
-      "distance_m": 1019.44198082
+      "price_incl_vat": 494999.61,
+      "distance_m": 1030.48006784
     },
     {
       "id": 805250,
@@ -64,7 +66,8 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 1596.68300653
+      "price_incl_vat": 975000.0,
+      "distance_m": 1589.06465945
     },
     {
       "id": 804781,
@@ -82,7 +85,8 @@
       "routing_key": "A84",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 545.50595749
+      "price_incl_vat": 350000.0,
+      "distance_m": 431.70830787
     },
     {
       "id": 803726,
@@ -100,7 +104,27 @@
       "routing_key": "A84",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 134.95381879
+      "price_incl_vat": 420000.0,
+      "distance_m": 345.36316511
+    },
+    {
+      "id": 803406,
+      "sale_date": "2026-09-04",
+      "address": "HARLOCKSTOWN, ASHBOURNE, MEATH",
+      "county": "Meath",
+      "eircode": "A84VK07",
+      "price": 660000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.497402,
+      "longitude": -6.418684,
+      "routing_key": "A84",
+      "bedrooms": 4,
+      "property_type": "bungalow",
+      "price_incl_vat": 660000.0,
+      "distance_m": 1818.05466511
     },
     {
       "id": 802148,
@@ -118,7 +142,8 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "house",
-      "distance_m": 1036.88396652
+      "price_incl_vat": 485000.01,
+      "distance_m": 1041.76090813
     },
     {
       "id": 802028,
@@ -136,7 +161,8 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "house",
-      "distance_m": 1032.39887018
+      "price_incl_vat": 535000.0,
+      "distance_m": 1038.11811929
     },
     {
       "id": 800722,
@@ -154,7 +180,8 @@
       "routing_key": "A84",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 142.97022198
+      "price_incl_vat": 250000.0,
+      "distance_m": 152.82556896
     },
     {
       "id": 800478,
@@ -172,113 +199,96 @@
       "routing_key": "A84",
       "bedrooms": 5,
       "property_type": "semi-detached",
-      "distance_m": 647.80833089
-    },
-    {
-      "id": 800543,
-      "sale_date": "2026-08-12",
-      "address": "42. CHURCHFIELDS WAY, CHURCFIELDS, ASHBOURNE",
-      "county": "Meath",
-      "eircode": "A84Y722",
-      "price": 500000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.507835,
-      "longitude": -6.406383,
-      "routing_key": "A84",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 688.13907225
+      "price_incl_vat": 650000.0,
+      "distance_m": 375.61567855
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 77,
-      "median_price": 237004.0,
-      "avg_price": 242887.0,
+      "count": 79,
+      "median_price": 250934.0,
+      "avg_price": 262042.0,
       "min_price": 119000.0,
       "max_price": 484400.0
     },
     {
       "year": 2011,
-      "count": 51,
-      "median_price": 202500.0,
-      "avg_price": 221759.0,
+      "count": 52,
+      "median_price": 212500.0,
+      "avg_price": 237710.0,
       "min_price": 75000.0,
       "max_price": 415000.0
     },
     {
       "year": 2012,
-      "count": 60,
-      "median_price": 190150.0,
-      "avg_price": 204862.0,
+      "count": 64,
+      "median_price": 204068.0,
+      "avg_price": 213517.0,
       "min_price": 70484.0,
       "max_price": 546000.0
     },
     {
       "year": 2013,
-      "count": 71,
-      "median_price": 184140.0,
-      "avg_price": 190541.0,
+      "count": 73,
+      "median_price": 200499.0,
+      "avg_price": 201296.0,
       "min_price": 60000.0,
       "max_price": 512500.0
     },
     {
       "year": 2014,
-      "count": 94,
-      "median_price": 214328.0,
-      "avg_price": 215411.0,
+      "count": 97,
+      "median_price": 235000.0,
+      "avg_price": 223618.0,
       "min_price": 59000.0,
       "max_price": 470000.0
     },
     {
       "year": 2015,
-      "count": 138,
-      "median_price": 242500.0,
-      "avg_price": 234210.0,
+      "count": 142,
+      "median_price": 257500.0,
+      "avg_price": 249662.0,
       "min_price": 77000.0,
       "max_price": 610000.0
     },
     {
       "year": 2016,
-      "count": 159,
-      "median_price": 255507.0,
-      "avg_price": 251270.0,
+      "count": 163,
+      "median_price": 279000.0,
+      "avg_price": 269747.0,
       "min_price": 92000.0,
       "max_price": 525000.0
     },
     {
       "year": 2017,
-      "count": 363,
-      "median_price": 263830.0,
-      "avg_price": 283398.0,
+      "count": 370,
+      "median_price": 295000.0,
+      "avg_price": 310777.0,
       "min_price": 100000.0,
       "max_price": 2104462.55
     },
     {
       "year": 2018,
-      "count": 309,
-      "median_price": 286343.0,
-      "avg_price": 282831.0,
+      "count": 310,
+      "median_price": 319239.0,
+      "avg_price": 307106.0,
       "min_price": 100000.0,
       "max_price": 600000.0
     },
     {
       "year": 2019,
       "count": 240,
-      "median_price": 297357.0,
-      "avg_price": 298315.0,
+      "median_price": 329574.0,
+      "avg_price": 317702.0,
       "min_price": 21000.0,
       "max_price": 750000.0
     },
     {
       "year": 2020,
       "count": 168,
-      "median_price": 297300.0,
-      "avg_price": 307129.0,
+      "median_price": 310000.0,
+      "avg_price": 320286.0,
       "min_price": 120000.0,
       "max_price": 925000.0
     },
@@ -286,23 +296,23 @@
       "year": 2021,
       "count": 147,
       "median_price": 310000.0,
-      "avg_price": 331710.0,
+      "avg_price": 340973.0,
       "min_price": 30000.0,
       "max_price": 2255000.0
     },
     {
       "year": 2022,
       "count": 148,
-      "median_price": 287500.0,
-      "avg_price": 328231.0,
+      "median_price": 291500.0,
+      "avg_price": 328664.0,
       "min_price": 100575.0,
       "max_price": 785000.0
     },
     {
       "year": 2023,
       "count": 196,
-      "median_price": 337500.0,
-      "avg_price": 339914.0,
+      "median_price": 342500.0,
+      "avg_price": 347658.0,
       "min_price": 80000.0,
       "max_price": 775000.0
     },
@@ -310,23 +320,23 @@
       "year": 2024,
       "count": 164,
       "median_price": 345500.0,
-      "avg_price": 371913.0,
+      "avg_price": 375588.0,
       "min_price": 16050.0,
       "max_price": 965000.0
     },
     {
       "year": 2025,
       "count": 269,
-      "median_price": 431718.0,
-      "avg_price": 412928.0,
+      "median_price": 475374.0,
+      "avg_price": 438385.0,
       "min_price": 186666.0,
       "max_price": 980000.0
     },
     {
       "year": 2026,
-      "count": 186,
-      "median_price": 434681.0,
-      "avg_price": 424544.0,
+      "count": 187,
+      "median_price": 470573.0,
+      "avg_price": 447292.0,
       "min_price": 187500.0,
       "max_price": 975000.0
     }

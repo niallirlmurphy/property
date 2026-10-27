@@ -2,8 +2,8 @@
   "slug": "balure-balure-lane",
   "stats": {
     "count": 8,
-    "median": 1476872,
-    "avg": 1626911,
+    "median": 1612500,
+    "avg": 1718125,
     "min": 1277533,
     "max": 2350000,
     "firstYear": 2016,
@@ -13,16 +13,16 @@
     {
       "year": 2016,
       "count": 2,
-      "median_price": 1281938,
-      "avg_price": 1281938,
+      "median_price": 1455000,
+      "avg_price": 1455000,
       "min_price": 1277533,
       "max_price": 1286344
     },
     {
       "year": 2017,
       "count": 2,
-      "median_price": 1420705,
-      "avg_price": 1420705,
+      "median_price": 1612500,
+      "avg_price": 1612500,
       "min_price": 1387666,
       "max_price": 1453744
     },

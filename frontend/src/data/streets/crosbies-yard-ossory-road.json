@@ -2,8 +2,8 @@
   "slug": "crosbies-yard-ossory-road",
   "stats": {
     "count": 104,
-    "median": 220174,
-    "avg": 238462,
+    "median": 239201,
+    "avg": 246279,
     "min": 77973,
     "max": 605000,
     "firstYear": 2010,
@@ -13,32 +13,32 @@
     {
       "year": 2010,
       "count": 6,
-      "median_price": 196493,
-      "avg_price": 212889,
+      "median_price": 223020,
+      "avg_price": 241629,
       "min_price": 129848,
       "max_price": 341500
     },
     {
       "year": 2012,
       "count": 22,
-      "median_price": 119317,
-      "avg_price": 126210,
+      "median_price": 135425,
+      "avg_price": 143248,
       "min_price": 77973,
       "max_price": 213348
     },
     {
       "year": 2013,
       "count": 14,
-      "median_price": 125292,
-      "avg_price": 134724,
+      "median_price": 142206,
+      "avg_price": 148437,
       "min_price": 77974,
       "max_price": 210000
     },
     {
       "year": 2014,
       "count": 4,
-      "median_price": 179000,
-      "avg_price": 182176,
+      "median_price": 190812,
+      "avg_price": 200594,
       "min_price": 120705,
       "max_price": 250000
     },
@@ -406,19 +406,19 @@
     },
     {
       "date": "2021-05-28",
-      "address": "138 CROSBIES YARD, OSSORY RD, DUBLIN 3",
-      "price": 305000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D03A2Y5"
-    },
-    {
-      "date": "2021-05-28",
       "address": "189 CROSBIES YARD, OSSORY RD, DUBLIN 1",
       "price": 306000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D03HR98"
+    },
+    {
+      "date": "2021-05-28",
+      "address": "138 CROSBIES YARD, OSSORY RD, DUBLIN 3",
+      "price": 305000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03A2Y5"
     },
     {
       "date": "2021-05-27",

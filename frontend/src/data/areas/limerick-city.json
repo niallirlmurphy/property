@@ -7,7 +7,7 @@
   },
   "radius_km": 3.0,
   "total_count": 10,
-  "median_price": 284500.0,
+  "median_price": 284000.0,
   "avg_price": 352900,
   "min_year": 2010,
   "max_year": 2026,
@@ -28,6 +28,7 @@
       "routing_key": "V94",
       "bedrooms": 2,
       "property_type": "duplex",
+      "price_incl_vat": 180000.0,
       "distance_m": 690.80991957
     },
     {
@@ -46,6 +47,7 @@
       "routing_key": "V94",
       "bedrooms": 3,
       "property_type": "duplex",
+      "price_incl_vat": 300000.0,
       "distance_m": 1897.52262619
     },
     {
@@ -64,6 +66,7 @@
       "routing_key": "V94",
       "bedrooms": null,
       "property_type": null,
+      "price_incl_vat": 670000.0,
       "distance_m": 624.09314264
     },
     {
@@ -82,6 +85,7 @@
       "routing_key": "V94",
       "bedrooms": 2,
       "property_type": "apartment",
+      "price_incl_vat": 175000.0,
       "distance_m": 932.70157252
     },
     {
@@ -100,6 +104,7 @@
       "routing_key": "V94",
       "bedrooms": 2,
       "property_type": "terraced",
+      "price_incl_vat": 195000.0,
       "distance_m": 1188.59949121
     },
     {
@@ -118,6 +123,7 @@
       "routing_key": "V94",
       "bedrooms": 4,
       "property_type": "terraced",
+      "price_incl_vat": 340000.0,
       "distance_m": 920.12649694
     },
     {
@@ -136,6 +142,7 @@
       "routing_key": "V94",
       "bedrooms": null,
       "property_type": null,
+      "price_incl_vat": 240000.0,
       "distance_m": 1590.31991109
     },
     {
@@ -154,6 +161,7 @@
       "routing_key": "V94",
       "bedrooms": null,
       "property_type": null,
+      "price_incl_vat": 672000.0,
       "distance_m": 268.94241605
     },
     {
@@ -172,6 +180,7 @@
       "routing_key": "V94",
       "bedrooms": 4,
       "property_type": "semi-detached",
+      "price_incl_vat": 495000.0,
       "distance_m": 974.45434376
     },
     {
@@ -190,143 +199,144 @@
       "routing_key": "V94",
       "bedrooms": 3,
       "property_type": "semi-detached",
+      "price_incl_vat": 262000.0,
       "distance_m": 1176.74497995
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 71,
-      "median_price": 168500.0,
-      "avg_price": 222793.0,
+      "count": 84,
+      "median_price": 169000.0,
+      "avg_price": 213189.0,
       "min_price": 12697.38,
       "max_price": 1750000.0
     },
     {
       "year": 2011,
-      "count": 82,
-      "median_price": 152500.0,
-      "avg_price": 163670.0,
+      "count": 96,
+      "median_price": 154000.0,
+      "avg_price": 165231.0,
       "min_price": 33000.0,
       "max_price": 750000.0
     },
     {
       "year": 2012,
-      "count": 68,
+      "count": 78,
       "median_price": 118750.0,
-      "avg_price": 148207.0,
+      "avg_price": 149120.0,
       "min_price": 15500.0,
       "max_price": 750000.0
     },
     {
       "year": 2013,
-      "count": 97,
+      "count": 111,
       "median_price": 91500.0,
-      "avg_price": 122524.0,
+      "avg_price": 122104.0,
       "min_price": 10000.0,
       "max_price": 1000000.0
     },
     {
       "year": 2014,
-      "count": 392,
-      "median_price": 85000.0,
-      "avg_price": 106399.0,
+      "count": 429,
+      "median_price": 84000.0,
+      "avg_price": 104104.0,
       "min_price": 10000.0,
       "max_price": 1100000.0
     },
     {
       "year": 2015,
-      "count": 495,
-      "median_price": 90000.0,
-      "avg_price": 116457.0,
+      "count": 595,
+      "median_price": 91500.0,
+      "avg_price": 119724.0,
       "min_price": 10000.0,
       "max_price": 1150000.0
     },
     {
       "year": 2016,
-      "count": 477,
-      "median_price": 111000.0,
-      "avg_price": 132932.0,
-      "min_price": 10983.0,
+      "count": 552,
+      "median_price": 105000.0,
+      "avg_price": 128337.0,
+      "min_price": 10000.0,
       "max_price": 720000.0
     },
     {
       "year": 2017,
-      "count": 568,
-      "median_price": 128000.0,
-      "avg_price": 156366.0,
+      "count": 585,
+      "median_price": 130000.0,
+      "avg_price": 157427.0,
       "min_price": 10000.0,
       "max_price": 2300000.0
     },
     {
       "year": 2018,
-      "count": 604,
-      "median_price": 166000.0,
-      "avg_price": 185974.0,
+      "count": 607,
+      "median_price": 165000.0,
+      "avg_price": 186061.0,
       "min_price": 10000.0,
       "max_price": 2758100.0
     },
     {
       "year": 2019,
-      "count": 605,
-      "median_price": 156000.0,
-      "avg_price": 171354.0,
+      "count": 606,
+      "median_price": 156500.0,
+      "avg_price": 171632.0,
       "min_price": 10000.0,
       "max_price": 800000.0
     },
     {
       "year": 2020,
-      "count": 489,
-      "median_price": 167500.0,
-      "avg_price": 189028.0,
+      "count": 488,
+      "median_price": 166250.0,
+      "avg_price": 189216.0,
       "min_price": 12500.0,
       "max_price": 920000.0
     },
     {
       "year": 2021,
-      "count": 700,
-      "median_price": 187500.0,
-      "avg_price": 208575.0,
+      "count": 697,
+      "median_price": 187000.0,
+      "avg_price": 208641.0,
       "min_price": 12000.0,
       "max_price": 2172000.0
     },
     {
       "year": 2022,
-      "count": 767,
-      "median_price": 213500.0,
-      "avg_price": 234266.0,
+      "count": 765,
+      "median_price": 214000.0,
+      "avg_price": 235001.0,
       "min_price": 10000.0,
       "max_price": 1420000.0
     },
     {
       "year": 2023,
-      "count": 743,
+      "count": 742,
       "median_price": 230000.0,
-      "avg_price": 248808.0,
+      "avg_price": 249648.0,
       "min_price": 20000.0,
       "max_price": 1350000.0
     },
     {
       "year": 2024,
-      "count": 679,
-      "median_price": 251500.0,
-      "avg_price": 285661.0,
+      "count": 676,
+      "median_price": 251250.0,
+      "avg_price": 286260.0,
       "min_price": 20000.0,
       "max_price": 5000000.0
     },
     {
       "year": 2025,
-      "count": 720,
-      "median_price": 278992.0,
-      "avg_price": 303693.0,
+      "count": 719,
+      "median_price": 279984.0,
+      "avg_price": 307195.0,
       "min_price": 10000.0,
       "max_price": 3150000.0
     },
     {
       "year": 2026,
-      "count": 408,
-      "median_price": 284500.0,
-      "avg_price": 288105.0,
+      "count": 407,
+      "median_price": 284000.0,
+      "avg_price": 287171.0,
       "min_price": 35000.0,
       "max_price": 1000000.0
     }

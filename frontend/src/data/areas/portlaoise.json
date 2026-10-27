@@ -2,13 +2,13 @@
   "name": "Portlaoise, Laois",
   "slug": "portlaoise",
   "center": {
-    "lat": 53.0340093,
-    "lon": -7.3000591
+    "lat": 53.0409165,
+    "lon": -7.292432
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 351000.0,
-  "avg_price": 266110,
+  "median_price": 374537.0,
+  "avg_price": 252841,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "R32",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1753.95507547
+      "price_incl_vat": 272000.0,
+      "distance_m": 1575.32326165
     },
     {
       "id": 805402,
@@ -46,7 +47,8 @@
       "routing_key": "R32",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 422.17854608
+      "price_incl_vat": 87343.46,
+      "distance_m": 771.50011717
     },
     {
       "id": 805398,
@@ -64,7 +66,27 @@
       "routing_key": "R32",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1160.85981066
+      "price_incl_vat": 65136.68,
+      "distance_m": 1153.19567534
+    },
+    {
+      "id": 805079,
+      "sale_date": "2026-09-25",
+      "address": "39 CARMODY WAY, THE VILLAGE, PORTLAOISE",
+      "county": "Laois",
+      "eircode": "R32V59T",
+      "price": 250000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.047569,
+      "longitude": -7.319754,
+      "routing_key": "R32",
+      "bedrooms": 2,
+      "property_type": "semi-detached",
+      "price_incl_vat": 250000.0,
+      "distance_m": 1976.35115942
     },
     {
       "id": 804994,
@@ -82,7 +104,8 @@
       "routing_key": "R32",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1683.72116638
+      "price_incl_vat": 296000.0,
+      "distance_m": 1497.26408361
     },
     {
       "id": 804916,
@@ -100,7 +123,8 @@
       "routing_key": "R32",
       "bedrooms": 2,
       "property_type": "semi-detached",
-      "distance_m": 1985.82954119
+      "price_incl_vat": 280000.0,
+      "distance_m": 1885.44270247
     },
     {
       "id": 803825,
@@ -118,25 +142,27 @@
       "routing_key": null,
       "bedrooms": 3,
       "property_type": null,
-      "distance_m": 1838.41504949
+      "price_incl_vat": 394999.3,
+      "distance_m": 958.04425375
     },
     {
-      "id": 803552,
+      "id": 803528,
       "sale_date": "2026-09-07",
-      "address": "CLONARD, PORTLAOISE, LAOIS",
+      "address": "87 THE HERMITAGE, PORTLAOISE, LAOIS",
       "county": "Laois",
-      "eircode": "R32X31C",
-      "price": 300000.0,
+      "eircode": "R32FH9T",
+      "price": 327000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.034048,
-      "longitude": -7.300163,
+      "latitude": 53.052707,
+      "longitude": -7.278588,
       "routing_key": "R32",
       "bedrooms": 3,
-      "property_type": "bungalow",
-      "distance_m": 8.19331816
+      "property_type": "semi-detached",
+      "price_incl_vat": 327000.0,
+      "distance_m": 1607.38701571
     },
     {
       "id": 803326,
@@ -154,7 +180,8 @@
       "routing_key": null,
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1706.98197829
+      "price_incl_vat": 387499.22,
+      "distance_m": 791.50155685
     },
     {
       "id": 803134,
@@ -172,163 +199,146 @@
       "routing_key": "R32",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 1148.33763717
-    },
-    {
-      "id": 802902,
-      "sale_date": "2026-09-02",
-      "address": "63 Dargan Woods, Borris Road, Portlaoise",
-      "county": "Laois",
-      "eircode": null,
-      "price": 409692.0,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.044586,
-      "longitude": -7.280883,
-      "routing_key": null,
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 1743.53439768
+      "price_incl_vat": 261500.0,
+      "distance_m": 1895.24462697
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 73,
-      "median_price": 175000.0,
-      "avg_price": 168259.0,
+      "count": 72,
+      "median_price": 140750.0,
+      "avg_price": 157510.0,
       "min_price": 30000.0,
       "max_price": 337500.0
     },
     {
       "year": 2011,
-      "count": 36,
-      "median_price": 133000.0,
-      "avg_price": 130827.0,
+      "count": 57,
+      "median_price": 136000.0,
+      "avg_price": 157480.0,
       "min_price": 23850.0,
-      "max_price": 274000.0
+      "max_price": 970000.0
     },
     {
       "year": 2012,
-      "count": 69,
-      "median_price": 86000.0,
-      "avg_price": 97772.0,
+      "count": 96,
+      "median_price": 89250.0,
+      "avg_price": 102224.0,
       "min_price": 22000.0,
       "max_price": 305375.0
     },
     {
       "year": 2013,
-      "count": 65,
-      "median_price": 85000.0,
-      "avg_price": 91577.0,
+      "count": 112,
+      "median_price": 72500.0,
+      "avg_price": 91054.0,
       "min_price": 12000.0,
-      "max_price": 260000.0
+      "max_price": 537866.66
     },
     {
       "year": 2014,
-      "count": 103,
-      "median_price": 80000.0,
-      "avg_price": 88597.0,
+      "count": 139,
+      "median_price": 85000.0,
+      "avg_price": 94799.0,
       "min_price": 13500.0,
       "max_price": 320000.0
     },
     {
       "year": 2015,
-      "count": 130,
-      "median_price": 103000.0,
-      "avg_price": 116244.0,
+      "count": 163,
+      "median_price": 115000.0,
+      "avg_price": 125135.0,
       "min_price": 15000.0,
       "max_price": 435000.0
     },
     {
       "year": 2016,
-      "count": 108,
-      "median_price": 123500.0,
-      "avg_price": 123684.0,
+      "count": 151,
+      "median_price": 126000.0,
+      "avg_price": 129593.0,
       "min_price": 28500.0,
-      "max_price": 226000.0
+      "max_price": 277533.04
     },
     {
       "year": 2017,
-      "count": 137,
-      "median_price": 145000.0,
-      "avg_price": 152541.0,
+      "count": 170,
+      "median_price": 141000.0,
+      "avg_price": 154889.0,
       "min_price": 42500.0,
-      "max_price": 600000.0
+      "max_price": 400000.0
     },
     {
       "year": 2018,
-      "count": 161,
+      "count": 180,
       "median_price": 160000.0,
-      "avg_price": 158195.0,
+      "avg_price": 164422.0,
       "min_price": 25000.0,
       "max_price": 440000.0
     },
     {
       "year": 2019,
-      "count": 198,
-      "median_price": 181000.0,
-      "avg_price": 185533.0,
+      "count": 193,
+      "median_price": 185000.0,
+      "avg_price": 189593.0,
       "min_price": 62500.0,
       "max_price": 550000.0
     },
     {
       "year": 2020,
-      "count": 185,
-      "median_price": 180000.0,
-      "avg_price": 180498.0,
-      "min_price": 52000.0,
-      "max_price": 425000.0
+      "count": 192,
+      "median_price": 171250.0,
+      "avg_price": 181957.0,
+      "min_price": 18650.0,
+      "max_price": 405000.0
     },
     {
       "year": 2021,
-      "count": 275,
-      "median_price": 198237.0,
-      "avg_price": 204891.0,
+      "count": 294,
+      "median_price": 205000.0,
+      "avg_price": 211129.0,
       "min_price": 30000.0,
       "max_price": 517500.0
     },
     {
       "year": 2022,
-      "count": 285,
-      "median_price": 237000.0,
-      "avg_price": 244399.0,
+      "count": 330,
+      "median_price": 233250.0,
+      "avg_price": 249163.0,
       "min_price": 68400.0,
       "max_price": 810000.0
     },
     {
       "year": 2023,
-      "count": 330,
-      "median_price": 262159.0,
-      "avg_price": 267316.0,
-      "min_price": 82000.0,
+      "count": 426,
+      "median_price": 269000.0,
+      "avg_price": 278864.0,
+      "min_price": 37696.0,
       "max_price": 715000.0
     },
     {
       "year": 2024,
-      "count": 361,
-      "median_price": 290000.0,
-      "avg_price": 281920.0,
+      "count": 455,
+      "median_price": 305000.0,
+      "avg_price": 290680.0,
       "min_price": 60000.0,
       "max_price": 620000.0
     },
     {
       "year": 2025,
-      "count": 440,
-      "median_price": 320025.0,
-      "avg_price": 332385.0,
+      "count": 477,
+      "median_price": 339500.0,
+      "avg_price": 322690.0,
       "min_price": 76524.47,
-      "max_price": 8458149.76
+      "max_price": 925000.0
     },
     {
       "year": 2026,
-      "count": 219,
-      "median_price": 351000.0,
-      "avg_price": 352076.0,
+      "count": 237,
+      "median_price": 374537.0,
+      "avg_price": 377899.0,
       "min_price": 20000.0,
-      "max_price": 875000.0
+      "max_price": 990000.0
     }
   ]
 }

@@ -2,13 +2,13 @@
   "name": "Skerries, Dublin",
   "slug": "skerries",
   "center": {
-    "lat": 53.5739887,
-    "lon": -6.1191749
+    "lat": 53.580078,
+    "lon": -6.11865
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 576500.0,
-  "avg_price": 591050,
+  "median_price": 564000.0,
+  "avg_price": 546050,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "K34",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 943.3111948
+      "price_incl_vat": 602500.0,
+      "distance_m": 1072.49229312
     },
     {
       "id": 804919,
@@ -46,7 +47,8 @@
       "routing_key": "K34",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1250.62143476
+      "price_incl_vat": 510000.0,
+      "distance_m": 799.51227842
     },
     {
       "id": 804911,
@@ -64,7 +66,8 @@
       "routing_key": "K34",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 1257.697305
+      "price_incl_vat": 310000.0,
+      "distance_m": 999.17132121
     },
     {
       "id": 804115,
@@ -82,7 +85,27 @@
       "routing_key": "K34",
       "bedrooms": 2,
       "property_type": null,
-      "distance_m": 1050.72392822
+      "price_incl_vat": 840000.0,
+      "distance_m": 716.09850014
+    },
+    {
+      "id": 803757,
+      "sale_date": "2026-09-09",
+      "address": "17 TURNSTONE, BARNAGEERAGH COVE, SKERRIES",
+      "county": "Dublin",
+      "eircode": "K34A064",
+      "price": 245000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.584686,
+      "longitude": -6.135448,
+      "routing_key": "K34",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 245000.0,
+      "distance_m": 1225.05600889
     },
     {
       "id": 803610,
@@ -100,7 +123,8 @@
       "routing_key": "K34",
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 336.08836844
+      "price_incl_vat": 660000.0,
+      "distance_m": 403.39092354
     },
     {
       "id": 803441,
@@ -118,7 +142,8 @@
       "routing_key": "K34",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 526.57872491
+      "price_incl_vat": 630000.0,
+      "distance_m": 155.62409254
     },
     {
       "id": 799310,
@@ -136,7 +161,8 @@
       "routing_key": "K34",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 1269.50549187
+      "price_incl_vat": 325000.0,
+      "distance_m": 953.92820381
     },
     {
       "id": 798690,
@@ -154,25 +180,8 @@
       "routing_key": "K34",
       "bedrooms": 3,
       "property_type": "detached",
-      "distance_m": 1066.51207392
-    },
-    {
-      "id": 798353,
-      "sale_date": "2026-07-29",
-      "address": "10 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
-      "county": "Dublin",
-      "eircode": "K34ND92",
-      "price": 695000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.571994,
-      "longitude": -6.107819,
-      "routing_key": "K34",
-      "bedrooms": 5,
-      "property_type": "house",
-      "distance_m": 784.34612362
+      "price_incl_vat": 578000.0,
+      "distance_m": 809.04007321
     },
     {
       "id": 798533,
@@ -190,143 +199,144 @@
       "routing_key": "K34",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1070.73171112
+      "price_incl_vat": 760000.0,
+      "distance_m": 919.39370445
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 43,
-      "median_price": 287000.0,
-      "avg_price": 333626.0,
+      "count": 54,
+      "median_price": 311725.0,
+      "avg_price": 332256.0,
       "min_price": 125000.0,
       "max_price": 1250200.0
     },
     {
       "year": 2011,
-      "count": 28,
-      "median_price": 252500.0,
-      "avg_price": 294704.0,
+      "count": 35,
+      "median_price": 261000.0,
+      "avg_price": 275853.0,
       "min_price": 180000.0,
-      "max_price": 700000.0
+      "max_price": 525000.0
     },
     {
       "year": 2012,
-      "count": 51,
-      "median_price": 233000.0,
-      "avg_price": 273417.0,
-      "min_price": 109200.0,
-      "max_price": 950000.0
+      "count": 63,
+      "median_price": 225000.0,
+      "avg_price": 247865.0,
+      "min_price": 108370.04,
+      "max_price": 487500.0
     },
     {
       "year": 2013,
-      "count": 66,
-      "median_price": 251500.0,
-      "avg_price": 293309.0,
+      "count": 69,
+      "median_price": 251000.0,
+      "avg_price": 288149.0,
       "min_price": 90000.0,
       "max_price": 820000.0
     },
     {
       "year": 2014,
-      "count": 88,
-      "median_price": 292500.0,
-      "avg_price": 311332.0,
+      "count": 109,
+      "median_price": 275000.0,
+      "avg_price": 300920.0,
       "min_price": 50000.0,
       "max_price": 950000.0
     },
     {
       "year": 2015,
-      "count": 65,
-      "median_price": 325000.0,
-      "avg_price": 332447.0,
+      "count": 91,
+      "median_price": 315000.0,
+      "avg_price": 325225.0,
       "min_price": 70677.0,
       "max_price": 1162500.0
     },
     {
       "year": 2016,
-      "count": 77,
-      "median_price": 310000.0,
-      "avg_price": 327917.0,
+      "count": 93,
+      "median_price": 315000.0,
+      "avg_price": 331562.0,
       "min_price": 75000.0,
       "max_price": 920000.0
     },
     {
       "year": 2017,
-      "count": 110,
-      "median_price": 300000.0,
-      "avg_price": 362925.0,
+      "count": 143,
+      "median_price": 325000.0,
+      "avg_price": 368568.0,
       "min_price": 92500.0,
       "max_price": 1195000.0
     },
     {
       "year": 2018,
-      "count": 86,
-      "median_price": 331401.0,
-      "avg_price": 371241.0,
+      "count": 91,
+      "median_price": 355000.0,
+      "avg_price": 386895.0,
       "min_price": 63069.5,
-      "max_price": 1100000.0
+      "max_price": 1400000.0
     },
     {
       "year": 2019,
-      "count": 103,
-      "median_price": 400000.0,
-      "avg_price": 424131.0,
+      "count": 129,
+      "median_price": 375000.0,
+      "avg_price": 417470.0,
       "min_price": 22500.0,
       "max_price": 975000.0
     },
     {
       "year": 2020,
-      "count": 46,
+      "count": 54,
       "median_price": 368500.0,
-      "avg_price": 387194.0,
+      "avg_price": 392866.0,
       "min_price": 25000.0,
       "max_price": 765000.0
     },
     {
       "year": 2021,
-      "count": 100,
-      "median_price": 442500.0,
-      "avg_price": 488069.0,
+      "count": 109,
+      "median_price": 430000.0,
+      "avg_price": 476161.0,
       "min_price": 135000.0,
       "max_price": 1450000.0
     },
     {
       "year": 2022,
-      "count": 96,
-      "median_price": 458000.0,
-      "avg_price": 486338.0,
+      "count": 126,
+      "median_price": 430000.0,
+      "avg_price": 463856.0,
       "min_price": 140000.0,
-      "max_price": 1275000.0
+      "max_price": 2350000.0
     },
     {
       "year": 2023,
-      "count": 101,
-      "median_price": 475000.0,
-      "avg_price": 522805.0,
+      "count": 122,
+      "median_price": 458500.0,
+      "avg_price": 492537.0,
       "min_price": 215000.0,
       "max_price": 2000000.0
     },
     {
       "year": 2024,
-      "count": 86,
-      "median_price": 462555.0,
-      "avg_price": 522534.0,
+      "count": 88,
+      "median_price": 487500.0,
+      "avg_price": 526366.0,
       "min_price": 187500.0,
       "max_price": 2312500.0
     },
     {
       "year": 2025,
-      "count": 107,
-      "median_price": 540000.0,
-      "avg_price": 554381.0,
+      "count": 106,
+      "median_price": 549999.0,
+      "avg_price": 554842.0,
       "min_price": 162400.0,
       "max_price": 1725000.0
     },
     {
       "year": 2026,
-      "count": 60,
-      "median_price": 576500.0,
-      "avg_price": 595247.0,
+      "count": 65,
+      "median_price": 564000.0,
+      "avg_price": 580139.0,
       "min_price": 78000.0,
       "max_price": 1550000.0
     }

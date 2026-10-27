@@ -2,13 +2,13 @@
   "name": "Howth, Dublin",
   "slug": "howth",
   "center": {
-    "lat": 53.3858337,
-    "lon": -6.0651186
+    "lat": 53.38331,
+    "lon": -6.06541
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 750000.0,
-  "avg_price": 930100,
+  "median_price": 975000.0,
+  "avg_price": 1243500,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "D13",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 361.5173258
+      "price_incl_vat": 605000.0,
+      "distance_m": 448.71793803
     },
     {
       "id": 804663,
@@ -46,7 +47,8 @@
       "routing_key": "D13",
       "bedrooms": 3,
       "property_type": "apartment",
-      "distance_m": 178.95104541
+      "price_incl_vat": 600000.0,
+      "distance_m": 202.76309407
     },
     {
       "id": 804650,
@@ -64,7 +66,8 @@
       "routing_key": "D13",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 180.55763359
+      "price_incl_vat": 620000.0,
+      "distance_m": 310.69393526
     },
     {
       "id": 802965,
@@ -82,25 +85,8 @@
       "routing_key": "D13",
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 843.73060653
-    },
-    {
-      "id": 802512,
-      "sale_date": "2026-08-31",
-      "address": "APT 28 VENETIAN HALL, HOWTH RD, DUBLIN",
-      "county": "Dublin",
-      "eircode": "D05YH02",
-      "price": 381000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.391031,
-      "longitude": -6.093309,
-      "routing_key": "D05",
-      "bedrooms": 2,
-      "property_type": "apartment",
-      "distance_m": 1962.76233415
+      "price_incl_vat": 2250000.0,
+      "distance_m": 660.20418103
     },
     {
       "id": 801321,
@@ -118,7 +104,8 @@
       "routing_key": "D13",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 276.432887
+      "price_incl_vat": 750000.0,
+      "distance_m": 420.29987009
     },
     {
       "id": 800240,
@@ -136,7 +123,8 @@
       "routing_key": "D13",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 843.73060653
+      "price_incl_vat": 1125000.0,
+      "distance_m": 660.20418103
     },
     {
       "id": 799472,
@@ -154,7 +142,8 @@
       "routing_key": "D13",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 150.83464457
+      "price_incl_vat": 595000.0,
+      "distance_m": 186.74674195
     },
     {
       "id": 798275,
@@ -172,41 +161,62 @@
       "routing_key": "D13",
       "bedrooms": 1,
       "property_type": "terraced",
-      "distance_m": 133.74129059
+      "price_incl_vat": 375000.0,
+      "distance_m": 380.51520035
     },
     {
-      "id": 789015,
-      "sale_date": "2026-07-01",
-      "address": "13A THORMANBY HILL, THORMANBY ROAD, HOWTH",
+      "id": 790795,
+      "sale_date": "2026-07-17",
+      "address": "BRAMLEY HILL, DANESFORT AVE, OLD CARRICKBRACK RD",
       "county": "Dublin",
-      "eircode": "D13E00E",
-      "price": 2000000.0,
+      "eircode": "D13PH31",
+      "price": 3200000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.37614,
-      "longitude": -6.060091,
+      "latitude": 53.366594,
+      "longitude": -6.073178,
       "routing_key": "D13",
-      "bedrooms": 3,
+      "bedrooms": 5,
       "property_type": "detached",
-      "distance_m": 1129.52973557
+      "price_incl_vat": 3200000.0,
+      "distance_m": 1930.87848238
+    },
+    {
+      "id": 797900,
+      "sale_date": "2026-07-03",
+      "address": "8B CARRICKBRACK ROAD, SUTTON, CO DUBLIN",
+      "county": "Dublin",
+      "eircode": "D13WE5A",
+      "price": 2315000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.381362,
+      "longitude": -6.095067,
+      "routing_key": "D13",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 2315000.0,
+      "distance_m": 1985.32796071
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 29,
+      "count": 30,
       "median_price": 675000.0,
-      "avg_price": 726741.0,
+      "avg_price": 735742.0,
       "min_price": 250000.0,
       "max_price": 2022511.0
     },
     {
       "year": 2011,
       "count": 19,
-      "median_price": 555000.0,
-      "avg_price": 562184.0,
+      "median_price": 567500.0,
+      "avg_price": 565211.0,
       "min_price": 225000.0,
       "max_price": 1425000.0
     },
@@ -220,9 +230,9 @@
     },
     {
       "year": 2013,
-      "count": 45,
-      "median_price": 395000.0,
-      "avg_price": 442383.0,
+      "count": 46,
+      "median_price": 370000.0,
+      "avg_price": 440767.0,
       "min_price": 132000.0,
       "max_price": 1275000.0
     },
@@ -230,31 +240,31 @@
       "year": 2014,
       "count": 42,
       "median_price": 387500.0,
-      "avg_price": 490557.0,
+      "avg_price": 492440.0,
       "min_price": 40000.0,
       "max_price": 1600000.0
     },
     {
       "year": 2015,
-      "count": 36,
-      "median_price": 385000.0,
-      "avg_price": 564689.0,
+      "count": 35,
+      "median_price": 382500.0,
+      "avg_price": 583029.0,
       "min_price": 130000.0,
       "max_price": 1246696.03
     },
     {
       "year": 2016,
-      "count": 52,
-      "median_price": 527500.0,
-      "avg_price": 600881.0,
+      "count": 51,
+      "median_price": 525000.0,
+      "avg_price": 613758.0,
       "min_price": 130000.0,
       "max_price": 1620000.0
     },
     {
       "year": 2017,
-      "count": 42,
-      "median_price": 637500.0,
-      "avg_price": 729241.0,
+      "count": 44,
+      "median_price": 645000.0,
+      "avg_price": 767015.0,
       "min_price": 295000.0,
       "max_price": 2900000.0
     },
@@ -262,55 +272,55 @@
       "year": 2018,
       "count": 58,
       "median_price": 660000.0,
-      "avg_price": 697642.0,
+      "avg_price": 709229.0,
       "min_price": 24000.0,
       "max_price": 2150000.0
     },
     {
       "year": 2019,
-      "count": 56,
+      "count": 59,
       "median_price": 675000.0,
-      "avg_price": 778529.0,
+      "avg_price": 853248.0,
       "min_price": 133389.0,
       "max_price": 2895000.0
     },
     {
       "year": 2020,
-      "count": 60,
-      "median_price": 804692.0,
-      "avg_price": 841806.0,
+      "count": 59,
+      "median_price": 790000.0,
+      "avg_price": 877027.0,
       "min_price": 160000.0,
       "max_price": 2075000.0
     },
     {
       "year": 2021,
-      "count": 60,
-      "median_price": 680000.0,
-      "avg_price": 772866.0,
+      "count": 62,
+      "median_price": 692500.0,
+      "avg_price": 783476.0,
       "min_price": 295000.0,
-      "max_price": 1885000.0
+      "max_price": 1859500.0
     },
     {
       "year": 2022,
-      "count": 72,
-      "median_price": 742500.0,
-      "avg_price": 1023053.0,
+      "count": 70,
+      "median_price": 720000.0,
+      "avg_price": 1010172.0,
       "min_price": 217500.0,
       "max_price": 5700000.0
     },
     {
       "year": 2023,
-      "count": 77,
+      "count": 75,
       "median_price": 870000.0,
-      "avg_price": 1016492.0,
+      "avg_price": 1055804.0,
       "min_price": 260000.0,
       "max_price": 3150000.0
     },
     {
       "year": 2024,
-      "count": 64,
-      "median_price": 887500.0,
-      "avg_price": 1057178.0,
+      "count": 65,
+      "median_price": 930000.0,
+      "avg_price": 1068329.0,
       "min_price": 377500.0,
       "max_price": 4300000.0
     },
@@ -318,15 +328,15 @@
       "year": 2025,
       "count": 52,
       "median_price": 740000.0,
-      "avg_price": 879078.0,
+      "avg_price": 871369.0,
       "min_price": 30000.0,
       "max_price": 3000000.0
     },
     {
       "year": 2026,
-      "count": 35,
-      "median_price": 750000.0,
-      "avg_price": 1071057.0,
+      "count": 34,
+      "median_price": 975000.0,
+      "avg_price": 1229735.0,
       "min_price": 30000.0,
       "max_price": 4650000.0
     }

@@ -2,8 +2,8 @@
   "slug": "the-heath-ramsgate-village",
   "stats": {
     "count": 108,
-    "median": 179500,
-    "avg": 186714,
+    "median": 182228,
+    "avg": 189555,
     "min": 55507,
     "max": 400000,
     "firstYear": 2010,
@@ -13,8 +13,8 @@
     {
       "year": 2010,
       "count": 4,
-      "median_price": 172266,
-      "avg_price": 184873,
+      "median_price": 195522,
+      "avg_price": 209830,
       "min_price": 164959,
       "max_price": 230000
     },
@@ -37,16 +37,16 @@
     {
       "year": 2014,
       "count": 11,
-      "median_price": 97117,
-      "avg_price": 97808,
+      "median_price": 110000,
+      "avg_price": 108390,
       "min_price": 55507,
       "max_price": 138527
     },
     {
       "year": 2015,
       "count": 6,
-      "median_price": 122656,
-      "avg_price": 113615,
+      "median_price": 131114,
+      "avg_price": 124543,
       "min_price": 76000,
       "max_price": 145000
     },
@@ -62,7 +62,7 @@
       "year": 2017,
       "count": 11,
       "median_price": 166500,
-      "avg_price": 161638,
+      "avg_price": 163909,
       "min_price": 125000,
       "max_price": 188000
     },
@@ -430,19 +430,19 @@
     },
     {
       "date": "2022-08-10",
-      "address": "191 THE HEATH, RAMSGATE VILLAGE, GOREY",
-      "price": 265000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "Y25Y597"
-    },
-    {
-      "date": "2022-08-10",
       "address": "158 THE HEATH, RAMSGATE VILLAGE, GOREY",
       "price": 220000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "Y25AH50"
+    },
+    {
+      "date": "2022-08-10",
+      "address": "191 THE HEATH, RAMSGATE VILLAGE, GOREY",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "Y25Y597"
     },
     {
       "date": "2022-04-27",

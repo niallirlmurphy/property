@@ -2,8 +2,8 @@
   "slug": "the-elms-ridgewood",
   "stats": {
     "count": 93,
-    "median": 315000,
-    "avg": 313095,
+    "median": 346500,
+    "avg": 345765,
     "min": 193760,
     "max": 535000,
     "firstYear": 2014,
@@ -13,48 +13,48 @@
     {
       "year": 2014,
       "count": 17,
-      "median_price": 254625,
-      "avg_price": 250966,
+      "median_price": 288999,
+      "avg_price": 284846,
       "min_price": 193760,
       "max_price": 365000
     },
     {
       "year": 2015,
       "count": 33,
-      "median_price": 268722,
-      "avg_price": 276982,
+      "median_price": 304999,
+      "avg_price": 314375,
       "min_price": 207048,
       "max_price": 330400
     },
     {
       "year": 2016,
       "count": 10,
-      "median_price": 287312,
-      "avg_price": 294984,
+      "median_price": 326100,
+      "avg_price": 329643,
       "min_price": 249985,
       "max_price": 382500
     },
     {
       "year": 2017,
       "count": 1,
-      "median_price": 324229,
-      "avg_price": 324229,
+      "median_price": 368000,
+      "avg_price": 368000,
       "min_price": 324229,
       "max_price": 324229
     },
     {
       "year": 2019,
       "count": 18,
-      "median_price": 350220,
-      "avg_price": 362296,
+      "median_price": 395000,
+      "avg_price": 405944,
       "min_price": 342731,
       "max_price": 418502
     },
     {
       "year": 2020,
       "count": 6,
-      "median_price": 383832,
-      "avg_price": 377111,
+      "median_price": 402500,
+      "avg_price": 385833,
       "min_price": 270000,
       "max_price": 435000
     },

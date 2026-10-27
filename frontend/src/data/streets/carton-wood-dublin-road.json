@@ -2,8 +2,8 @@
   "slug": "carton-wood-dublin-road",
   "stats": {
     "count": 126,
-    "median": 372247,
-    "avg": 389730,
+    "median": 420000,
+    "avg": 429914,
     "min": 160000,
     "max": 760000,
     "firstYear": 2017,
@@ -13,32 +13,32 @@
     {
       "year": 2017,
       "count": 18,
-      "median_price": 310324,
-      "avg_price": 316734,
+      "median_price": 352217,
+      "avg_price": 359493,
       "min_price": 259912,
       "max_price": 374449
     },
     {
       "year": 2018,
       "count": 52,
-      "median_price": 365639,
-      "avg_price": 355691,
+      "median_price": 415000,
+      "avg_price": 403710,
       "min_price": 268150,
       "max_price": 440000
     },
     {
       "year": 2019,
       "count": 33,
-      "median_price": 393575,
-      "avg_price": 390722,
+      "median_price": 446708,
+      "avg_price": 442017,
       "min_price": 276800,
       "max_price": 493393
     },
     {
       "year": 2020,
       "count": 4,
-      "median_price": 384361,
-      "avg_price": 362181,
+      "median_price": 436250,
+      "avg_price": 388125,
       "min_price": 160000,
       "max_price": 520000
     },
@@ -438,14 +438,6 @@
     },
     {
       "date": "2019-04-12",
-      "address": "134 CARTON WOOD, DUBLIN ROAD, MAYNOOTH",
-      "price": 356828,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-04-12",
       "address": "135 CARTON WOOD, DUBLIN ROAD, MAYNOOTH",
       "price": 356828,
       "bedrooms": null,
@@ -453,9 +445,9 @@
       "eircode": "W23X5CR"
     },
     {
-      "date": "2019-04-03",
-      "address": "122 Carton Wood, Dublin Road, Maynooth",
-      "price": 334802,
+      "date": "2019-04-12",
+      "address": "134 CARTON WOOD, DUBLIN ROAD, MAYNOOTH",
+      "price": 356828,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -467,6 +459,14 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "W23DPW4"
+    },
+    {
+      "date": "2019-04-03",
+      "address": "122 Carton Wood, Dublin Road, Maynooth",
+      "price": 334802,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2019-03-27",

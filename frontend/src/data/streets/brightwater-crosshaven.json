@@ -2,8 +2,8 @@
   "slug": "brightwater-crosshaven",
   "stats": {
     "count": 110,
-    "median": 275000,
-    "avg": 285315,
+    "median": 276250,
+    "avg": 287692,
     "min": 113000,
     "max": 650000,
     "firstYear": 2010,
@@ -37,32 +37,32 @@
     {
       "year": 2013,
       "count": 5,
-      "median_price": 160000,
-      "avg_price": 167294,
+      "median_price": 181600,
+      "avg_price": 176541,
       "min_price": 140969,
       "max_price": 193000
     },
     {
       "year": 2014,
       "count": 10,
-      "median_price": 172500,
-      "avg_price": 188397,
+      "median_price": 178300,
+      "avg_price": 192460,
       "min_price": 113000,
       "max_price": 285000
     },
     {
       "year": 2015,
       "count": 10,
-      "median_price": 222500,
-      "avg_price": 237242,
+      "median_price": 239154,
+      "avg_price": 242931,
       "min_price": 195000,
       "max_price": 310000
     },
     {
       "year": 2016,
       "count": 6,
-      "median_price": 238050,
-      "avg_price": 225041,
+      "median_price": 239000,
+      "avg_price": 244667,
       "min_price": 185022,
       "max_price": 253000
     },

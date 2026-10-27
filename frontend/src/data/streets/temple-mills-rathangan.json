@@ -2,8 +2,8 @@
   "slug": "temple-mills-rathangan",
   "stats": {
     "count": 121,
-    "median": 211410,
-    "avg": 215497,
+    "median": 239950,
+    "avg": 237409,
     "min": 38634,
     "max": 404000,
     "firstYear": 2010,
@@ -13,24 +13,24 @@
     {
       "year": 2010,
       "count": 5,
-      "median_price": 180000,
-      "avg_price": 173674,
+      "median_price": 204300,
+      "avg_price": 197120,
       "min_price": 140970,
       "max_price": 200000
     },
     {
       "year": 2011,
       "count": 3,
-      "median_price": 114537,
-      "avg_price": 121358,
+      "median_price": 130000,
+      "avg_price": 137741,
       "min_price": 114536,
       "max_price": 135000
     },
     {
       "year": 2013,
       "count": 9,
-      "median_price": 79295,
-      "avg_price": 71005,
+      "median_price": 90000,
+      "avg_price": 80590,
       "min_price": 38634,
       "max_price": 109559
     },
@@ -69,40 +69,40 @@
     {
       "year": 2018,
       "count": 8,
-      "median_price": 211410,
-      "avg_price": 201800,
+      "median_price": 239950,
+      "avg_price": 223205,
       "min_price": 150941,
       "max_price": 211410
     },
     {
       "year": 2019,
       "count": 28,
-      "median_price": 211410,
-      "avg_price": 219146,
+      "median_price": 239950,
+      "avg_price": 246527,
       "min_price": 207555,
       "max_price": 259912
     },
     {
       "year": 2020,
       "count": 16,
-      "median_price": 211410,
-      "avg_price": 215977,
+      "median_price": 239950,
+      "avg_price": 241717,
       "min_price": 170000,
       "max_price": 239950
     },
     {
       "year": 2021,
       "count": 17,
-      "median_price": 233480,
-      "avg_price": 229699,
+      "median_price": 265000,
+      "avg_price": 260708,
       "min_price": 211409,
       "max_price": 262555
     },
     {
       "year": 2022,
       "count": 16,
-      "median_price": 227306,
-      "avg_price": 241572,
+      "median_price": 257993,
+      "avg_price": 274184,
       "min_price": 205691,
       "max_price": 400000
     },

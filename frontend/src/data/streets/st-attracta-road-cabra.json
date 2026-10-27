@@ -1,9 +1,9 @@
 {
   "slug": "st-attracta-road-cabra",
   "stats": {
-    "count": 93,
-    "median": 295000,
-    "avg": 290130,
+    "count": 99,
+    "median": 292000,
+    "avg": 282284,
     "min": 90000,
     "max": 602000,
     "firstYear": 2010,
@@ -12,41 +12,41 @@
   "trends": [
     {
       "year": 2010,
-      "count": 1,
-      "median_price": 210000,
-      "avg_price": 210000,
-      "min_price": 210000,
+      "count": 2,
+      "median_price": 185000,
+      "avg_price": 185000,
+      "min_price": 160000,
       "max_price": 210000
     },
     {
       "year": 2011,
-      "count": 1,
-      "median_price": 175000,
-      "avg_price": 175000,
-      "min_price": 175000,
+      "count": 2,
+      "median_price": 157500,
+      "avg_price": 157500,
+      "min_price": 140000,
       "max_price": 175000
     },
     {
       "year": 2012,
-      "count": 3,
-      "median_price": 95000,
-      "avg_price": 111667,
+      "count": 4,
+      "median_price": 97000,
+      "avg_price": 108500,
       "min_price": 90000,
       "max_price": 150000
     },
     {
       "year": 2013,
-      "count": 6,
-      "median_price": 140000,
-      "avg_price": 138750,
-      "min_price": 111000,
+      "count": 7,
+      "median_price": 135000,
+      "avg_price": 132500,
+      "min_price": 95000,
       "max_price": 170500
     },
     {
       "year": 2014,
-      "count": 3,
-      "median_price": 188000,
-      "avg_price": 176000,
+      "count": 4,
+      "median_price": 184000,
+      "avg_price": 177000,
       "min_price": 140000,
       "max_price": 200000
     },
@@ -84,9 +84,9 @@
     },
     {
       "year": 2019,
-      "count": 4,
-      "median_price": 306000,
-      "avg_price": 298000,
+      "count": 5,
+      "median_price": 292000,
+      "avg_price": 296400,
       "min_price": 260000,
       "max_price": 320000
     },
@@ -549,5 +549,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 93
+  "totalTransactions": 99
 }

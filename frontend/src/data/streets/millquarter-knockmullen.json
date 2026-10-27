@@ -2,8 +2,8 @@
   "slug": "millquarter-knockmullen",
   "stats": {
     "count": 207,
-    "median": 303900,
-    "avg": 314241,
+    "median": 344050,
+    "avg": 352388,
     "min": 65000,
     "max": 560000,
     "firstYear": 2019,
@@ -13,64 +13,64 @@
     {
       "year": 2019,
       "count": 23,
-      "median_price": 262115,
-      "avg_price": 266961,
+      "median_price": 297500,
+      "avg_price": 303001,
       "min_price": 237885,
       "max_price": 308370
     },
     {
       "year": 2020,
       "count": 27,
-      "median_price": 286342,
-      "avg_price": 279994,
+      "median_price": 324998,
+      "avg_price": 317793,
       "min_price": 237885,
       "max_price": 337000
     },
     {
       "year": 2021,
       "count": 19,
-      "median_price": 273127,
-      "avg_price": 285211,
+      "median_price": 310000,
+      "avg_price": 321192,
       "min_price": 246697,
       "max_price": 355000
     },
     {
       "year": 2022,
       "count": 27,
-      "median_price": 286344,
-      "avg_price": 289073,
+      "median_price": 325000,
+      "avg_price": 326173,
       "min_price": 233480,
       "max_price": 385000
     },
     {
       "year": 2023,
       "count": 35,
-      "median_price": 307489,
-      "avg_price": 319909,
+      "median_price": 348899,
+      "avg_price": 356132,
       "min_price": 220264,
       "max_price": 460000
     },
     {
       "year": 2024,
       "count": 24,
-      "median_price": 332150,
-      "avg_price": 320758,
+      "median_price": 376990,
+      "avg_price": 364060,
       "min_price": 242291,
       "max_price": 389400
     },
     {
       "year": 2025,
       "count": 38,
-      "median_price": 379427,
-      "avg_price": 365804,
+      "median_price": 405499,
+      "avg_price": 406505,
       "min_price": 65000,
       "max_price": 440529
     },
     {
       "year": 2026,
       "count": 14,
-      "median_price": 374449,
-      "avg_price": 380604,
+      "median_price": 425000,
+      "avg_price": 416885,
       "min_price": 233480,
       "max_price": 560000
     }

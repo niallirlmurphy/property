@@ -2,13 +2,13 @@
   "name": "Greystones, Wicklow",
   "slug": "greystones",
   "center": {
-    "lat": 53.1448901,
-    "lon": -6.0632184
+    "lat": 53.137318,
+    "lon": -6.070339
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 756250.0,
-  "avg_price": 1067905,
+  "median_price": 657500.0,
+  "avg_price": 951605,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,27 @@
       "routing_key": "A63",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 1469.58724071
+      "price_incl_vat": 660000.0,
+      "distance_m": 718.28479459
+    },
+    {
+      "id": 805147,
+      "sale_date": "2026-09-28",
+      "address": "211 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "county": "Wicklow",
+      "eircode": "A63F308",
+      "price": 455000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.12587,
+      "longitude": -6.07071,
+      "routing_key": "A63",
+      "bedrooms": 2,
+      "property_type": "terraced",
+      "price_incl_vat": 455000.0,
+      "distance_m": 1274.27554035
     },
     {
       "id": 805059,
@@ -46,7 +66,8 @@
       "routing_key": "A63",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 1416.51208519
+      "price_incl_vat": 934050.0,
+      "distance_m": 463.13754986
     },
     {
       "id": 805048,
@@ -64,7 +85,27 @@
       "routing_key": "A63",
       "bedrooms": 5,
       "property_type": "semi-detached",
-      "distance_m": 180.11775203
+      "price_incl_vat": 1725000.0,
+      "distance_m": 833.8449148
+    },
+    {
+      "id": 804657,
+      "sale_date": "2026-09-21",
+      "address": "100 GLENHERON VIEW, GLENHERON, GREYSTONES",
+      "county": "Wicklow",
+      "eircode": "A63VN25",
+      "price": 720000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.125049,
+      "longitude": -6.070199,
+      "routing_key": "A63",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "price_incl_vat": 720000.0,
+      "distance_m": 1365.43368335
     },
     {
       "id": 804521,
@@ -82,7 +123,8 @@
       "routing_key": "A63",
       "bedrooms": 5,
       "property_type": "semi-detached",
-      "distance_m": 462.80576028
+      "price_incl_vat": 2350000.0,
+      "distance_m": 749.59390549
     },
     {
       "id": 803958,
@@ -100,7 +142,8 @@
       "routing_key": "A63",
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 532.34540728
+      "price_incl_vat": 990000.0,
+      "distance_m": 1230.13538667
     },
     {
       "id": 803674,
@@ -118,216 +161,183 @@
       "routing_key": "A63",
       "bedrooms": 3,
       "property_type": "detached",
-      "distance_m": 1272.1641657
+      "price_incl_vat": 560000.0,
+      "distance_m": 455.89040714
     },
     {
-      "id": 802273,
-      "sale_date": "2026-08-27",
-      "address": "240 REDFORD PARK, GREYSTONES, WICKLOW",
+      "id": 802921,
+      "sale_date": "2026-09-02",
+      "address": "77 CHARLESLAND PARK, GREYSTONES, WICKLOW",
       "county": "Wicklow",
-      "eircode": "A63PX62",
-      "price": 585000.0,
+      "eircode": "A63KC81",
+      "price": 452000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.155323,
-      "longitude": -6.07544,
+      "latitude": 53.125926,
+      "longitude": -6.06833,
       "routing_key": "A63",
       "bedrooms": 2,
-      "property_type": "detached",
-      "distance_m": 1420.09594219
+      "property_type": "terraced",
+      "price_incl_vat": 452000.0,
+      "distance_m": 1274.91257326
     },
     {
-      "id": 801787,
+      "id": 801791,
       "sale_date": "2026-08-21",
-      "address": "38 OAKLANDS, CHURCH LANE, GREYSTONES",
+      "address": "4 CHERRY RISE, DELGANY WOOD, DELGANY",
       "county": "Wicklow",
-      "eircode": "A63VP38",
-      "price": 650000.0,
+      "eircode": "A63FY96",
+      "price": 670000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.147499,
-      "longitude": -6.075324,
-      "routing_key": "A63",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 860.45322462
-    },
-    {
-      "id": 801724,
-      "sale_date": "2026-08-21",
-      "address": "16 THE STRAND, MARINA VILLAGE, GREYSTONES",
-      "county": "Wicklow",
-      "eircode": "A63EC97",
-      "price": 1000000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.152343,
-      "longitude": -6.068587,
+      "latitude": 53.136531,
+      "longitude": -6.083108,
       "routing_key": "A63",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 903.86299574
-    },
-    {
-      "id": 801371,
-      "sale_date": "2026-08-18",
-      "address": "CLAREMONT, 4 SIDMONTON RD, GREYSTONES",
-      "county": "Wicklow",
-      "eircode": "A63EW68",
-      "price": 1225000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.149244,
-      "longitude": -6.063933,
-      "routing_key": "A63",
-      "bedrooms": 4,
-      "property_type": "detached",
-      "distance_m": 486.89464804
+      "price_incl_vat": 670000.0,
+      "distance_m": 859.03722808
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 54,
-      "median_price": 411250.0,
-      "avg_price": 464655.0,
-      "min_price": 205000.0,
+      "count": 59,
+      "median_price": 385000.0,
+      "avg_price": 422823.0,
+      "min_price": 147550.0,
       "max_price": 1395000.0
     },
     {
       "year": 2011,
-      "count": 38,
-      "median_price": 320000.0,
-      "avg_price": 350466.0,
+      "count": 46,
+      "median_price": 295000.0,
+      "avg_price": 316359.0,
       "min_price": 50000.0,
       "max_price": 920000.0
     },
     {
       "year": 2012,
-      "count": 58,
-      "median_price": 350000.0,
-      "avg_price": 389244.0,
+      "count": 59,
+      "median_price": 335000.0,
+      "avg_price": 374423.0,
       "min_price": 120000.0,
       "max_price": 1100000.0
     },
     {
       "year": 2013,
-      "count": 45,
-      "median_price": 300000.0,
-      "avg_price": 387893.0,
+      "count": 55,
+      "median_price": 236000.0,
+      "avg_price": 314266.0,
       "min_price": 99119.0,
       "max_price": 1600000.0
     },
     {
       "year": 2014,
-      "count": 69,
-      "median_price": 385000.0,
-      "avg_price": 410714.0,
-      "min_price": 100000.0,
+      "count": 103,
+      "median_price": 270000.0,
+      "avg_price": 344590.0,
+      "min_price": 87500.0,
       "max_price": 1399680.0
     },
     {
       "year": 2015,
-      "count": 56,
-      "median_price": 424000.0,
-      "avg_price": 533214.0,
-      "min_price": 103000.0,
+      "count": 93,
+      "median_price": 328750.0,
+      "avg_price": 437153.0,
+      "min_price": 150000.0,
       "max_price": 2325000.0
     },
     {
       "year": 2016,
-      "count": 74,
-      "median_price": 470683.0,
-      "avg_price": 532698.0,
-      "min_price": 217583.0,
+      "count": 129,
+      "median_price": 315000.0,
+      "avg_price": 409033.0,
+      "min_price": 11000.0,
       "max_price": 1360000.0
     },
     {
       "year": 2017,
-      "count": 118,
-      "median_price": 484581.0,
-      "avg_price": 500660.0,
-      "min_price": 210000.0,
-      "max_price": 1400000.0
+      "count": 117,
+      "median_price": 335000.0,
+      "avg_price": 403541.0,
+      "min_price": 195000.0,
+      "max_price": 1220000.0
     },
     {
       "year": 2018,
-      "count": 73,
-      "median_price": 480176.0,
-      "avg_price": 559638.0,
+      "count": 167,
+      "median_price": 412346.0,
+      "avg_price": 438073.0,
       "min_price": 127500.0,
       "max_price": 1390000.0
     },
     {
       "year": 2019,
-      "count": 102,
-      "median_price": 440528.0,
-      "avg_price": 547056.0,
-      "min_price": 225000.0,
+      "count": 227,
+      "median_price": 440000.0,
+      "avg_price": 449881.0,
+      "min_price": 167416.74,
       "max_price": 2572000.0
     },
     {
       "year": 2020,
-      "count": 89,
-      "median_price": 513000.0,
-      "avg_price": 588684.0,
+      "count": 136,
+      "median_price": 442500.0,
+      "avg_price": 462323.0,
       "min_price": 100000.0,
       "max_price": 1900000.0
     },
     {
       "year": 2021,
-      "count": 133,
-      "median_price": 520000.0,
-      "avg_price": 614982.0,
-      "min_price": 240000.0,
+      "count": 248,
+      "median_price": 500000.0,
+      "avg_price": 548325.0,
+      "min_price": 96000.0,
       "max_price": 2200000.0
     },
     {
       "year": 2022,
-      "count": 112,
-      "median_price": 682500.0,
-      "avg_price": 765354.0,
-      "min_price": 275000.0,
+      "count": 261,
+      "median_price": 534999.0,
+      "avg_price": 601281.0,
+      "min_price": 154738.65,
       "max_price": 2800000.0
     },
     {
       "year": 2023,
-      "count": 109,
-      "median_price": 620000.0,
-      "avg_price": 676747.0,
-      "min_price": 50000.0,
+      "count": 250,
+      "median_price": 502500.0,
+      "avg_price": 564915.0,
+      "min_price": 265000.0,
       "max_price": 2680000.0
     },
     {
       "year": 2024,
-      "count": 151,
-      "median_price": 535000.0,
-      "avg_price": 613076.0,
+      "count": 191,
+      "median_price": 525000.0,
+      "avg_price": 586928.0,
       "min_price": 120000.0,
-      "max_price": 2150000.0
+      "max_price": 2800000.0
     },
     {
       "year": 2025,
-      "count": 101,
-      "median_price": 790000.0,
-      "avg_price": 894986.0,
+      "count": 178,
+      "median_price": 600000.0,
+      "avg_price": 719259.0,
       "min_price": 72000.0,
       "max_price": 2200000.0
     },
     {
       "year": 2026,
-      "count": 58,
-      "median_price": 756250.0,
-      "avg_price": 869580.0,
-      "min_price": 395000.0,
+      "count": 114,
+      "median_price": 657500.0,
+      "avg_price": 730529.0,
+      "min_price": 345000.0,
       "max_price": 2350000.0
     }
   ]

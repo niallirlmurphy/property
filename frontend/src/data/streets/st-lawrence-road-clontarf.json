@@ -1,9 +1,9 @@
 {
   "slug": "st-lawrence-road-clontarf",
   "stats": {
-    "count": 44,
-    "median": 1301250,
-    "avg": 1401130,
+    "count": 48,
+    "median": 1255000,
+    "avg": 1350827,
     "min": 375000,
     "max": 3450000,
     "firstYear": 2010,
@@ -20,11 +20,19 @@
     },
     {
       "year": 2011,
-      "count": 2,
-      "median_price": 1212500,
-      "avg_price": 1212500,
+      "count": 3,
+      "median_price": 1050000,
+      "avg_price": 1158333,
       "min_price": 375000,
       "max_price": 2050000
+    },
+    {
+      "year": 2013,
+      "count": 2,
+      "median_price": 620000,
+      "avg_price": 620000,
+      "min_price": 400000,
+      "max_price": 840000
     },
     {
       "year": 2014,
@@ -36,9 +44,9 @@
     },
     {
       "year": 2015,
-      "count": 2,
-      "median_price": 921500,
-      "avg_price": 921500,
+      "count": 3,
+      "median_price": 900000,
+      "avg_price": 914333,
       "min_price": 868000,
       "max_price": 975000
     },
@@ -366,7 +374,7 @@
     },
     {
       "date": "2020-10-19",
-      "address": "29 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
+      "address": "122 ST LAWRENCE ROAD, CLONTARF, DUBLIN 3",
       "price": 650000,
       "bedrooms": null,
       "propertyType": null,
@@ -374,7 +382,7 @@
     },
     {
       "date": "2020-10-19",
-      "address": "122 ST LAWRENCE ROAD, CLONTARF, DUBLIN 3",
+      "address": "29 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
       "price": 650000,
       "bedrooms": null,
       "propertyType": null,
@@ -453,6 +461,14 @@
       "eircode": null
     },
     {
+      "date": "2015-07-20",
+      "address": "114 St. Lawrence Road, Clontarf",
+      "price": 900000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2014-05-27",
       "address": "84 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
       "price": 955000,
@@ -461,9 +477,33 @@
       "eircode": null
     },
     {
+      "date": "2013-07-25",
+      "address": "14  St. Lawrence Road, Clontarf",
+      "price": 840000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2013-01-22",
+      "address": "116 St.Lawrence Road, Clontarf",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2011-09-23",
       "address": "26 St Lawrence Road, Clontarf",
       "price": 2050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2011-07-28",
+      "address": "70 St. Lawrence Road, Clontarf",
+      "price": 1050000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -485,5 +525,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 44
+  "totalTransactions": 48
 }

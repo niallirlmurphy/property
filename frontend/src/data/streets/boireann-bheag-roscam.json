@@ -2,8 +2,8 @@
   "slug": "boireann-bheag-roscam",
   "stats": {
     "count": 201,
-    "median": 240750,
-    "avg": 247470,
+    "median": 252254,
+    "avg": 255010,
     "min": 110000,
     "max": 492000,
     "firstYear": 2010,
@@ -13,16 +13,16 @@
     {
       "year": 2010,
       "count": 20,
-      "median_price": 187500,
-      "avg_price": 193894,
+      "median_price": 200662,
+      "avg_price": 215596,
       "min_price": 135000,
       "max_price": 249500
     },
     {
       "year": 2011,
       "count": 13,
-      "median_price": 162996,
-      "avg_price": 150720,
+      "median_price": 185000,
+      "avg_price": 167308,
       "min_price": 110000,
       "max_price": 183260
     },
@@ -37,32 +37,32 @@
     {
       "year": 2013,
       "count": 1,
-      "median_price": 180616,
-      "avg_price": 180616,
+      "median_price": 204999,
+      "avg_price": 204999,
       "min_price": 180616,
       "max_price": 180616
     },
     {
       "year": 2014,
       "count": 5,
-      "median_price": 189427,
-      "avg_price": 177585,
+      "median_price": 209500,
+      "avg_price": 182700,
       "min_price": 122000,
       "max_price": 222000
     },
     {
       "year": 2015,
       "count": 28,
-      "median_price": 145000,
-      "avg_price": 156122,
+      "median_price": 159450,
+      "avg_price": 170150,
       "min_price": 115000,
       "max_price": 359000
     },
     {
       "year": 2016,
       "count": 21,
-      "median_price": 195000,
-      "avg_price": 203571,
+      "median_price": 200611,
+      "avg_price": 223725,
       "min_price": 167250,
       "max_price": 286000
     },

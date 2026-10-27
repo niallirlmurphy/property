@@ -2,12 +2,12 @@
   "name": "Newbridge, Kildare",
   "slug": "newbridge",
   "center": {
-    "lat": 53.1801492,
-    "lon": -6.7981931
+    "lat": 53.17884,
+    "lon": -6.804017
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 405286.0,
+  "median_price": 430500.0,
   "avg_price": 415907,
   "min_year": 2010,
   "max_year": 2026,
@@ -28,7 +28,8 @@
       "routing_key": "W12",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 170.85408675
+      "price_incl_vat": 450000.0,
+      "distance_m": 245.83417016
     },
     {
       "id": 805159,
@@ -46,7 +47,8 @@
       "routing_key": "W12",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1378.16739011
+      "price_incl_vat": 412000.0,
+      "distance_m": 997.04836512
     },
     {
       "id": 805087,
@@ -64,7 +66,8 @@
       "routing_key": "W12",
       "bedrooms": 5,
       "property_type": "detached",
-      "distance_m": 763.42590537
+      "price_incl_vat": 575000.0,
+      "distance_m": 857.75075402
     },
     {
       "id": 804868,
@@ -82,7 +85,8 @@
       "routing_key": "W12",
       "bedrooms": 2,
       "property_type": "house",
-      "distance_m": 107.03068567
+      "price_incl_vat": 215000.0,
+      "distance_m": 454.85693824
     },
     {
       "id": 804462,
@@ -100,7 +104,8 @@
       "routing_key": "W12",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 711.93080675
+      "price_incl_vat": 255000.0,
+      "distance_m": 357.08072381
     },
     {
       "id": 804358,
@@ -118,25 +123,8 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1675.22135203
-    },
-    {
-      "id": 804160,
-      "sale_date": "2026-09-11",
-      "address": "7 KILBELIN ABBEY, WALSHESTOWN, NEWBRIDGE",
-      "county": "Kildare",
-      "eircode": "W12A625",
-      "price": 633000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.165576,
-      "longitude": -6.789734,
-      "routing_key": "W12",
-      "bedrooms": 5,
-      "property_type": "detached",
-      "distance_m": 1717.65507494
+      "price_incl_vat": 435000.0,
+      "distance_m": 1268.10594156
     },
     {
       "id": 804114,
@@ -154,7 +142,27 @@
       "routing_key": "W12",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1801.35366351
+      "price_incl_vat": 390000.0,
+      "distance_m": 1472.95615885
+    },
+    {
+      "id": 804160,
+      "sale_date": "2026-09-11",
+      "address": "7 KILBELIN ABBEY, WALSHESTOWN, NEWBRIDGE",
+      "county": "Kildare",
+      "eircode": "W12A625",
+      "price": 633000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.165576,
+      "longitude": -6.789734,
+      "routing_key": "W12",
+      "bedrooms": 5,
+      "property_type": "detached",
+      "price_incl_vat": 633000.0,
+      "distance_m": 1758.18645305
     },
     {
       "id": 804048,
@@ -172,7 +180,8 @@
       "routing_key": null,
       "bedrooms": 3,
       "property_type": null,
-      "distance_m": 1930.60034036
+      "price_incl_vat": 495000.0,
+      "distance_m": 1922.96912828
     },
     {
       "id": 803964,
@@ -190,143 +199,144 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": "apartment",
-      "distance_m": 917.31667052
+      "price_incl_vat": 446563.87,
+      "distance_m": 1302.54818647
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 107,
-      "median_price": 237885.0,
-      "avg_price": 238891.0,
+      "count": 100,
+      "median_price": 250000.0,
+      "avg_price": 252193.0,
       "min_price": 64464.0,
-      "max_price": 385000.0
+      "max_price": 400000.0
     },
     {
       "year": 2011,
       "count": 56,
-      "median_price": 172750.0,
-      "avg_price": 218977.0,
+      "median_price": 170000.0,
+      "avg_price": 219598.0,
       "min_price": 70000.0,
       "max_price": 1795000.0
     },
     {
       "year": 2012,
-      "count": 83,
-      "median_price": 158000.0,
-      "avg_price": 162207.0,
+      "count": 76,
+      "median_price": 149000.0,
+      "avg_price": 154805.0,
       "min_price": 25000.0,
-      "max_price": 308000.0
+      "max_price": 305000.0
     },
     {
       "year": 2013,
-      "count": 80,
-      "median_price": 143863.0,
-      "avg_price": 155223.0,
+      "count": 82,
+      "median_price": 141250.0,
+      "avg_price": 154379.0,
       "min_price": 43500.0,
-      "max_price": 348800.0
+      "max_price": 360000.0
     },
     {
       "year": 2014,
-      "count": 157,
-      "median_price": 165000.0,
-      "avg_price": 175171.0,
+      "count": 152,
+      "median_price": 161500.0,
+      "avg_price": 177535.0,
       "min_price": 14375.0,
-      "max_price": 600000.0
+      "max_price": 1141000.0
     },
     {
       "year": 2015,
-      "count": 141,
-      "median_price": 197000.0,
-      "avg_price": 205380.0,
+      "count": 134,
+      "median_price": 185000.0,
+      "avg_price": 194084.0,
       "min_price": 30000.0,
       "max_price": 520000.0
     },
     {
       "year": 2016,
-      "count": 122,
-      "median_price": 207500.0,
-      "avg_price": 268572.0,
-      "min_price": 52500.0,
+      "count": 119,
+      "median_price": 198000.0,
+      "avg_price": 261331.0,
+      "min_price": 40000.0,
       "max_price": 8500000.0
     },
     {
       "year": 2017,
-      "count": 138,
-      "median_price": 240250.0,
-      "avg_price": 243796.0,
+      "count": 137,
+      "median_price": 240000.0,
+      "avg_price": 248126.0,
       "min_price": 35000.0,
-      "max_price": 565000.0
+      "max_price": 945000.0
     },
     {
       "year": 2018,
-      "count": 150,
-      "median_price": 240500.0,
-      "avg_price": 307148.0,
+      "count": 152,
+      "median_price": 241750.0,
+      "avg_price": 307213.0,
       "min_price": 30000.0,
       "max_price": 8261055.0
     },
     {
       "year": 2019,
-      "count": 182,
-      "median_price": 251500.0,
-      "avg_price": 265327.0,
+      "count": 180,
+      "median_price": 257750.0,
+      "avg_price": 273160.0,
       "min_price": 17000.0,
       "max_price": 1250000.0
     },
     {
       "year": 2020,
       "count": 161,
-      "median_price": 244052.0,
-      "avg_price": 262728.0,
+      "median_price": 245000.0,
+      "avg_price": 270450.0,
       "min_price": 17000.0,
       "max_price": 1560000.0
     },
     {
       "year": 2021,
       "count": 212,
-      "median_price": 286343.0,
-      "avg_price": 297627.0,
+      "median_price": 297500.0,
+      "avg_price": 305848.0,
       "min_price": 65000.0,
       "max_price": 2442129.83
     },
     {
       "year": 2022,
-      "count": 375,
-      "median_price": 333000.0,
-      "avg_price": 326708.0,
+      "count": 373,
+      "median_price": 355000.0,
+      "avg_price": 346196.0,
       "min_price": 45000.0,
       "max_price": 975000.0
     },
     {
       "year": 2023,
-      "count": 348,
-      "median_price": 352422.0,
-      "avg_price": 344845.0,
+      "count": 342,
+      "median_price": 375000.0,
+      "avg_price": 364742.0,
       "min_price": 99500.0,
-      "max_price": 760000.0
+      "max_price": 800000.0
     },
     {
       "year": 2024,
-      "count": 397,
-      "median_price": 374449.0,
-      "avg_price": 387831.0,
+      "count": 387,
+      "median_price": 402000.0,
+      "avg_price": 411842.0,
       "min_price": 22000.0,
       "max_price": 5760352.42
     },
     {
       "year": 2025,
-      "count": 298,
-      "median_price": 396476.0,
-      "avg_price": 388591.0,
+      "count": 294,
+      "median_price": 414500.0,
+      "avg_price": 403195.0,
       "min_price": 33648.0,
       "max_price": 1250000.0
     },
     {
       "year": 2026,
-      "count": 182,
-      "median_price": 405286.0,
-      "avg_price": 409354.0,
+      "count": 184,
+      "median_price": 430500.0,
+      "avg_price": 427182.0,
       "min_price": 50000.0,
       "max_price": 1400000.0
     }

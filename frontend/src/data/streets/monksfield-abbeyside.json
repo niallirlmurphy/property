@@ -2,8 +2,8 @@
   "slug": "monksfield-abbeyside",
   "stats": {
     "count": 124,
-    "median": 211454,
-    "avg": 249755,
+    "median": 240000,
+    "avg": 271342,
     "min": 140088,
     "max": 530000,
     "firstYear": 2010,
@@ -13,72 +13,72 @@
     {
       "year": 2010,
       "count": 3,
-      "median_price": 202643,
-      "avg_price": 202643,
+      "median_price": 230000,
+      "avg_price": 230000,
       "min_price": 202643,
       "max_price": 202643
     },
     {
       "year": 2011,
       "count": 1,
-      "median_price": 179958,
-      "avg_price": 179958,
+      "median_price": 204252,
+      "avg_price": 204252,
       "min_price": 179958,
       "max_price": 179958
     },
     {
       "year": 2012,
       "count": 2,
-      "median_price": 171134,
-      "avg_price": 171134,
+      "median_price": 183438,
+      "avg_price": 183438,
       "min_price": 160000,
       "max_price": 182269
     },
     {
       "year": 2014,
       "count": 8,
-      "median_price": 140370,
-      "avg_price": 147011,
+      "median_price": 159320,
+      "avg_price": 162130,
       "min_price": 140088,
       "max_price": 162586
     },
     {
       "year": 2015,
       "count": 5,
-      "median_price": 148899,
-      "avg_price": 153617,
+      "median_price": 169000,
+      "avg_price": 174355,
       "min_price": 145560,
       "max_price": 173330
     },
     {
       "year": 2016,
       "count": 21,
-      "median_price": 154185,
-      "avg_price": 170387,
+      "median_price": 175000,
+      "avg_price": 191905,
       "min_price": 146550,
       "max_price": 231000
     },
     {
       "year": 2017,
       "count": 11,
-      "median_price": 202643,
-      "avg_price": 190909,
+      "median_price": 230000,
+      "avg_price": 216682,
       "min_price": 166520,
       "max_price": 216260
     },
     {
       "year": 2018,
       "count": 14,
-      "median_price": 195081,
-      "avg_price": 205292,
+      "median_price": 221417,
+      "avg_price": 227799,
       "min_price": 166519,
       "max_price": 275000
     },
     {
       "year": 2019,
       "count": 10,
-      "median_price": 220239,
-      "avg_price": 218065,
+      "median_price": 249972,
+      "avg_price": 247504,
       "min_price": 185022,
       "max_price": 260000
     },
@@ -93,8 +93,8 @@
     {
       "year": 2021,
       "count": 13,
-      "median_price": 267500,
-      "avg_price": 306887,
+      "median_price": 287835,
+      "avg_price": 322511,
       "min_price": 246525,
       "max_price": 457500
     },
@@ -102,31 +102,31 @@
       "year": 2022,
       "count": 12,
       "median_price": 360000,
-      "avg_price": 354964,
+      "avg_price": 366986,
       "min_price": 264316,
       "max_price": 460000
     },
     {
       "year": 2023,
       "count": 11,
-      "median_price": 347968,
-      "avg_price": 338208,
+      "median_price": 391018,
+      "avg_price": 374318,
       "min_price": 253599,
       "max_price": 430000
     },
     {
       "year": 2024,
       "count": 6,
-      "median_price": 360714,
-      "avg_price": 347122,
+      "median_price": 398186,
+      "avg_price": 375871,
       "min_price": 157585,
       "max_price": 435000
     },
     {
       "year": 2025,
       "count": 3,
-      "median_price": 452500,
-      "avg_price": 466775,
+      "median_price": 497499,
+      "avg_price": 486500,
       "min_price": 438325,
       "max_price": 509500
     },
@@ -190,19 +190,19 @@
     },
     {
       "date": "2024-09-16",
-      "address": "140 Monksfield, Abbeyside, Dungarvan",
-      "price": 418500,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2024-09-16",
       "address": "33  MONKSFIELD, ABBEYSIDE, DUNGARVAN",
       "price": 370000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "X35KW50"
+    },
+    {
+      "date": "2024-09-16",
+      "address": "140 Monksfield, Abbeyside, Dungarvan",
+      "price": 418500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2024-06-27",
@@ -342,14 +342,6 @@
     },
     {
       "date": "2022-11-02",
-      "address": "132  Monksfield, Abbeyside, Dungarvan",
-      "price": 264316,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-11-02",
       "address": "111 MONKSFIELD, ABBEYSIDE, DUNGARVAN",
       "price": 360000,
       "bedrooms": null,
@@ -357,8 +349,8 @@
       "eircode": "X35FD88"
     },
     {
-      "date": "2022-10-26",
-      "address": "133  Monksfield, Abbeyside, Dungarvan",
+      "date": "2022-11-02",
+      "address": "132  Monksfield, Abbeyside, Dungarvan",
       "price": 264316,
       "bedrooms": null,
       "propertyType": null,
@@ -371,6 +363,14 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "X35KW50"
+    },
+    {
+      "date": "2022-10-26",
+      "address": "133  Monksfield, Abbeyside, Dungarvan",
+      "price": 264316,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2022-10-07",

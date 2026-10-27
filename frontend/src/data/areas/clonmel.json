@@ -2,13 +2,13 @@
   "name": "Clonmel, Tipperary",
   "slug": "clonmel",
   "center": {
-    "lat": 52.3610817,
-    "lon": -7.6991241
+    "lat": 52.358007,
+    "lon": -7.704724
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 288500.0,
-  "avg_price": 294858,
+  "median_price": 292500.0,
+  "avg_price": 274658,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 865.52881747
+      "price_incl_vat": 200000.0,
+      "distance_m": 487.7512264
     },
     {
       "id": 805246,
@@ -46,7 +47,8 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "bungalow",
-      "distance_m": 1143.95065286
+      "price_incl_vat": 305000.0,
+      "distance_m": 631.53639704
     },
     {
       "id": 805027,
@@ -64,7 +66,8 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 374.81089156
+      "price_incl_vat": 280000.0,
+      "distance_m": 593.60858135
     },
     {
       "id": 804670,
@@ -82,7 +85,8 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 659.85667095
+      "price_incl_vat": 220000.0,
+      "distance_m": 152.14746578
     },
     {
       "id": 804529,
@@ -100,25 +104,8 @@
       "routing_key": "E91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 986.24743555
-    },
-    {
-      "id": 804485,
-      "sale_date": "2026-09-16",
-      "address": "6 GORT AN OIR, SILVERSPRINGS, CLONMEL",
-      "county": "Tipperary",
-      "eircode": "E91E4F4",
-      "price": 242000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.359645,
-      "longitude": -7.67097,
-      "routing_key": "E91",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 1924.65423627
+      "price_incl_vat": 75000.0,
+      "distance_m": 490.67703201
     },
     {
       "id": 804218,
@@ -136,7 +123,27 @@
       "routing_key": "E91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1175.84488504
+      "price_incl_vat": 325000.0,
+      "distance_m": 1375.8589584
+    },
+    {
+      "id": 804309,
+      "sale_date": "2026-09-14",
+      "address": "CAHIR ROAD, BALLYCLERIHAN, CLONMEL",
+      "county": "Tipperary",
+      "eircode": "E91HX06",
+      "price": 50000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.353733,
+      "longitude": -7.729341,
+      "routing_key": "E91",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 50000.0,
+      "distance_m": 1743.33224876
     },
     {
       "id": 803890,
@@ -154,7 +161,27 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 1413.13095907
+      "price_incl_vat": 643062.63,
+      "distance_m": 944.16424582
+    },
+    {
+      "id": 803854,
+      "sale_date": "2026-09-09",
+      "address": "91 GLENOAKS CLOSE, GLENCONNOR, CLONMEL",
+      "county": "Tipperary",
+      "eircode": "E91T6K4",
+      "price": 275000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.355979,
+      "longitude": -7.727736,
+      "routing_key": "E91",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "price_incl_vat": 275000.0,
+      "distance_m": 1583.97321266
     },
     {
       "id": 803550,
@@ -172,162 +199,145 @@
       "routing_key": "E91",
       "bedrooms": 4,
       "property_type": "bungalow",
-      "distance_m": 775.24900196
-    },
-    {
-      "id": 803273,
-      "sale_date": "2026-09-04",
-      "address": "3 PRIOR PARK HILL, PRIOR PARK, CLONMEL",
-      "county": "Tipperary",
-      "eircode": "E91R578",
-      "price": 285000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.360523,
-      "longitude": -7.704172,
-      "routing_key": "E91",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 349.46008049
+      "price_incl_vat": 450000.0,
+      "distance_m": 728.72193255
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 39,
+      "count": 43,
       "median_price": 180000.0,
-      "avg_price": 188589.0,
+      "avg_price": 202728.0,
       "min_price": 50000.0,
-      "max_price": 365000.0
+      "max_price": 420000.0
     },
     {
       "year": 2011,
-      "count": 50,
-      "median_price": 122500.0,
-      "avg_price": 143975.0,
+      "count": 59,
+      "median_price": 138500.0,
+      "avg_price": 151547.0,
       "min_price": 10500.0,
       "max_price": 335000.0
     },
     {
       "year": 2012,
-      "count": 52,
-      "median_price": 90000.0,
-      "avg_price": 118356.0,
+      "count": 58,
+      "median_price": 100000.0,
+      "avg_price": 122998.0,
       "min_price": 17000.0,
       "max_price": 359500.0
     },
     {
       "year": 2013,
-      "count": 56,
+      "count": 63,
       "median_price": 90000.0,
-      "avg_price": 103496.0,
+      "avg_price": 102244.0,
       "min_price": 25000.0,
       "max_price": 265000.0
     },
     {
       "year": 2014,
-      "count": 85,
-      "median_price": 97000.0,
-      "avg_price": 118137.0,
+      "count": 94,
+      "median_price": 105500.0,
+      "avg_price": 122267.0,
       "min_price": 30000.0,
       "max_price": 335000.0
     },
     {
       "year": 2015,
-      "count": 125,
-      "median_price": 109000.0,
-      "avg_price": 121279.0,
+      "count": 149,
+      "median_price": 112500.0,
+      "avg_price": 122577.0,
       "min_price": 16000.0,
-      "max_price": 338000.0
+      "max_price": 340000.0
     },
     {
       "year": 2016,
-      "count": 93,
-      "median_price": 112000.0,
-      "avg_price": 128616.0,
-      "min_price": 35000.0,
+      "count": 108,
+      "median_price": 113500.0,
+      "avg_price": 127368.0,
+      "min_price": 25000.0,
       "max_price": 545000.0
     },
     {
       "year": 2017,
-      "count": 109,
-      "median_price": 141750.0,
-      "avg_price": 153239.0,
+      "count": 122,
+      "median_price": 135500.0,
+      "avg_price": 147757.0,
       "min_price": 32500.0,
       "max_price": 405000.0
     },
     {
       "year": 2018,
-      "count": 139,
+      "count": 144,
       "median_price": 149000.0,
-      "avg_price": 163860.0,
+      "avg_price": 168486.0,
       "min_price": 26000.0,
       "max_price": 488000.0
     },
     {
       "year": 2019,
-      "count": 136,
-      "median_price": 152250.0,
-      "avg_price": 166243.0,
+      "count": 149,
+      "median_price": 155000.0,
+      "avg_price": 169231.0,
       "min_price": 40500.0,
       "max_price": 450000.0
     },
     {
       "year": 2020,
-      "count": 104,
-      "median_price": 153500.0,
-      "avg_price": 169421.0,
+      "count": 110,
+      "median_price": 160000.0,
+      "avg_price": 171989.0,
       "min_price": 23000.0,
       "max_price": 540000.0
     },
     {
       "year": 2021,
-      "count": 158,
-      "median_price": 182500.0,
-      "avg_price": 190752.0,
+      "count": 166,
+      "median_price": 185000.0,
+      "avg_price": 192606.0,
       "min_price": 25000.0,
       "max_price": 645000.0
     },
     {
       "year": 2022,
-      "count": 156,
-      "median_price": 195000.0,
-      "avg_price": 197579.0,
+      "count": 165,
+      "median_price": 196000.0,
+      "avg_price": 202469.0,
       "min_price": 10000.0,
       "max_price": 560000.0
     },
     {
       "year": 2023,
-      "count": 182,
-      "median_price": 210000.0,
-      "avg_price": 232257.0,
+      "count": 191,
+      "median_price": 215000.0,
+      "avg_price": 235512.0,
       "min_price": 25000.0,
       "max_price": 650000.0
     },
     {
       "year": 2024,
-      "count": 168,
-      "median_price": 211500.0,
-      "avg_price": 229203.0,
+      "count": 178,
+      "median_price": 230500.0,
+      "avg_price": 231118.0,
       "min_price": 50000.0,
       "max_price": 585000.0
     },
     {
       "year": 2025,
-      "count": 171,
-      "median_price": 260000.0,
-      "avg_price": 257608.0,
+      "count": 190,
+      "median_price": 271000.0,
+      "avg_price": 268455.0,
       "min_price": 13000.0,
       "max_price": 870000.0
     },
     {
       "year": 2026,
-      "count": 126,
-      "median_price": 288500.0,
-      "avg_price": 282022.0,
-      "min_price": 60000.0,
+      "count": 138,
+      "median_price": 292500.0,
+      "avg_price": 293532.0,
+      "min_price": 50000.0,
       "max_price": 705000.0
     }
   ]

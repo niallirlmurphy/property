@@ -2,8 +2,8 @@
   "slug": "trimbleston-goatstown-road",
   "stats": {
     "count": 119,
-    "median": 495000,
-    "avg": 563918,
+    "median": 525000,
+    "avg": 592048,
     "min": 241000,
     "max": 1167401,
     "firstYear": 2010,
@@ -13,16 +13,16 @@
     {
       "year": 2010,
       "count": 2,
-      "median_price": 385022,
-      "avg_price": 385022,
+      "median_price": 410000,
+      "avg_price": 410000,
       "min_price": 370044,
       "max_price": 400000
     },
     {
       "year": 2011,
       "count": 2,
-      "median_price": 286469,
-      "avg_price": 286469,
+      "median_price": 305500,
+      "avg_price": 305500,
       "min_price": 281938,
       "max_price": 291000
     },
@@ -45,24 +45,24 @@
     {
       "year": 2014,
       "count": 3,
-      "median_price": 484581,
-      "avg_price": 504677,
+      "median_price": 549999,
+      "avg_price": 543333,
       "min_price": 374449,
       "max_price": 655000
     },
     {
       "year": 2015,
       "count": 11,
-      "median_price": 387665,
-      "avg_price": 417798,
+      "median_price": 440000,
+      "avg_price": 460364,
       "min_price": 310000,
       "max_price": 780000
     },
     {
       "year": 2016,
       "count": 20,
-      "median_price": 390682,
-      "avg_price": 447513,
+      "median_price": 443425,
+      "avg_price": 485892,
       "min_price": 370044,
       "max_price": 750000
     },
@@ -70,7 +70,7 @@
       "year": 2017,
       "count": 6,
       "median_price": 455000,
-      "avg_price": 494167,
+      "avg_price": 505642,
       "min_price": 395000,
       "max_price": 750000
     },
@@ -86,7 +86,7 @@
       "year": 2019,
       "count": 11,
       "median_price": 572000,
-      "avg_price": 563161,
+      "avg_price": 569000,
       "min_price": 406000,
       "max_price": 800000
     },
@@ -102,15 +102,15 @@
       "year": 2021,
       "count": 12,
       "median_price": 614000,
-      "avg_price": 676967,
+      "avg_price": 708833,
       "min_price": 426000,
       "max_price": 969163
     },
     {
       "year": 2022,
       "count": 15,
-      "median_price": 876652,
-      "avg_price": 831334,
+      "median_price": 995000,
+      "avg_price": 919867,
       "min_price": 450000,
       "max_price": 1167401
     },
@@ -126,7 +126,7 @@
       "year": 2024,
       "count": 6,
       "median_price": 621750,
-      "avg_price": 691545,
+      "avg_price": 702250,
       "min_price": 475770,
       "max_price": 970000
     },

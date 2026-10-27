@@ -2,8 +2,8 @@
   "slug": "maryborough-village-mountrath-road",
   "stats": {
     "count": 108,
-    "median": 237885,
-    "avg": 241984,
+    "median": 267500,
+    "avg": 271833,
     "min": 113500,
     "max": 440529,
     "firstYear": 2011,
@@ -21,96 +21,96 @@
     {
       "year": 2012,
       "count": 2,
-      "median_price": 145374,
-      "avg_price": 145374,
+      "median_price": 165000,
+      "avg_price": 165000,
       "min_price": 145374,
       "max_price": 145374
     },
     {
       "year": 2015,
       "count": 1,
-      "median_price": 145375,
-      "avg_price": 145375,
+      "median_price": 165001,
+      "avg_price": 165001,
       "min_price": 145375,
       "max_price": 145375
     },
     {
       "year": 2016,
       "count": 3,
-      "median_price": 170925,
-      "avg_price": 172981,
+      "median_price": 194000,
+      "avg_price": 196333,
       "min_price": 154185,
       "max_price": 193833
     },
     {
       "year": 2017,
       "count": 6,
-      "median_price": 173106,
-      "avg_price": 181050,
+      "median_price": 196475,
+      "avg_price": 205491,
       "min_price": 149780,
       "max_price": 229074
     },
     {
       "year": 2018,
       "count": 10,
-      "median_price": 158590,
-      "avg_price": 169780,
+      "median_price": 180000,
+      "avg_price": 192700,
       "min_price": 149779,
       "max_price": 202644
     },
     {
       "year": 2019,
       "count": 8,
-      "median_price": 206168,
-      "avg_price": 213435,
+      "median_price": 234000,
+      "avg_price": 242249,
       "min_price": 189427,
       "max_price": 242291
     },
     {
       "year": 2020,
       "count": 11,
-      "median_price": 207048,
-      "avg_price": 210777,
+      "median_price": 234999,
+      "avg_price": 236900,
       "min_price": 189427,
       "max_price": 242291
     },
     {
       "year": 2021,
       "count": 21,
-      "median_price": 237885,
-      "avg_price": 234500,
+      "median_price": 269999,
+      "avg_price": 264551,
       "min_price": 198238,
       "max_price": 280000
     },
     {
       "year": 2022,
       "count": 13,
-      "median_price": 264317,
-      "avg_price": 284373,
+      "median_price": 300000,
+      "avg_price": 319389,
       "min_price": 246525,
       "max_price": 350000
     },
     {
       "year": 2023,
       "count": 18,
-      "median_price": 269658,
-      "avg_price": 278131,
+      "median_price": 300000,
+      "avg_price": 308464,
       "min_price": 220260,
       "max_price": 380000
     },
     {
       "year": 2024,
       "count": 12,
-      "median_price": 330396,
-      "avg_price": 314363,
+      "median_price": 375000,
+      "avg_price": 356802,
       "min_price": 251101,
       "max_price": 352423
     },
     {
       "year": 2025,
       "count": 2,
-      "median_price": 427764,
-      "avg_price": 427764,
+      "median_price": 457500,
+      "avg_price": 457500,
       "min_price": 415000,
       "max_price": 440529
     }
@@ -406,19 +406,19 @@
     },
     {
       "date": "2022-10-06",
-      "address": "108 Maryborough Village, Mountrath Road, Portlaoise",
-      "price": 308370,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "R32HNR2"
-    },
-    {
-      "date": "2022-10-06",
       "address": "114 Maryborough Village, Mountrath Road, Portlaoise",
       "price": 308370,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "R32K20T"
+    },
+    {
+      "date": "2022-10-06",
+      "address": "108 Maryborough Village, Mountrath Road, Portlaoise",
+      "price": 308370,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R32HNR2"
     },
     {
       "date": "2022-09-22",

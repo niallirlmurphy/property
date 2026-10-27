@@ -2,8 +2,8 @@
   "slug": "ballygossan-park-golf-links-road",
   "stats": {
     "count": 107,
-    "median": 317180,
-    "avg": 356887,
+    "median": 359999,
+    "avg": 390430,
     "min": 251100,
     "max": 695000,
     "firstYear": 2016,
@@ -13,32 +13,32 @@
     {
       "year": 2016,
       "count": 18,
-      "median_price": 281057,
-      "avg_price": 288910,
+      "median_price": 319000,
+      "avg_price": 327912,
       "min_price": 251100,
       "max_price": 370000
     },
     {
       "year": 2017,
       "count": 28,
-      "median_price": 290774,
-      "avg_price": 308025,
+      "median_price": 330029,
+      "avg_price": 349609,
       "min_price": 259912,
       "max_price": 387665
     },
     {
       "year": 2018,
       "count": 28,
-      "median_price": 309185,
-      "avg_price": 317093,
+      "median_price": 350925,
+      "avg_price": 359900,
       "min_price": 263876,
       "max_price": 440529
     },
     {
       "year": 2019,
       "count": 13,
-      "median_price": 317181,
-      "avg_price": 365943,
+      "median_price": 360000,
+      "avg_price": 406258,
       "min_price": 285264,
       "max_price": 510000
     },
@@ -230,19 +230,19 @@
     },
     {
       "date": "2022-09-30",
-      "address": "27 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
-      "price": 650000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "K34Y940"
-    },
-    {
-      "date": "2022-09-30",
       "address": "36, BALLYGOSSAN PARK, GOLF LINKS ROAD",
       "price": 547000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "K34F407"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "27 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34Y940"
     },
     {
       "date": "2021-09-02",

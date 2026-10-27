@@ -2,8 +2,8 @@
   "slug": "browneshill-wood-browneshill-road",
   "stats": {
     "count": 139,
-    "median": 233500,
-    "avg": 220714,
+    "median": 243999,
+    "avg": 242058,
     "min": 92511,
     "max": 373000,
     "firstYear": 2010,
@@ -13,48 +13,48 @@
     {
       "year": 2010,
       "count": 26,
-      "median_price": 140088,
-      "avg_price": 136016,
+      "median_price": 159000,
+      "avg_price": 154378,
       "min_price": 92511,
       "max_price": 179000
     },
     {
       "year": 2011,
       "count": 11,
-      "median_price": 149000,
-      "avg_price": 162958,
+      "median_price": 169115,
+      "avg_price": 184958,
       "min_price": 92511,
       "max_price": 230000
     },
     {
       "year": 2012,
       "count": 1,
-      "median_price": 118943,
-      "avg_price": 118943,
+      "median_price": 135000,
+      "avg_price": 135000,
       "min_price": 118943,
       "max_price": 118943
     },
     {
       "year": 2014,
       "count": 6,
-      "median_price": 136542,
-      "avg_price": 136046,
+      "median_price": 154975,
+      "avg_price": 154412,
       "min_price": 123348,
       "max_price": 147092
     },
     {
       "year": 2015,
       "count": 7,
-      "median_price": 148898,
-      "avg_price": 151250,
+      "median_price": 168999,
+      "avg_price": 168699,
       "min_price": 136564,
       "max_price": 169950
     },
     {
       "year": 2016,
       "count": 6,
-      "median_price": 166802,
-      "avg_price": 181720,
+      "median_price": 181225,
+      "avg_price": 193742,
       "min_price": 149736,
       "max_price": 230000
     },
@@ -69,8 +69,8 @@
     {
       "year": 2018,
       "count": 16,
-      "median_price": 233500,
-      "avg_price": 231750,
+      "median_price": 265022,
+      "avg_price": 259332,
       "min_price": 200000,
       "max_price": 239000
     },
@@ -109,16 +109,16 @@
     {
       "year": 2023,
       "count": 31,
-      "median_price": 281938,
-      "avg_price": 284633,
+      "median_price": 320000,
+      "avg_price": 319488,
       "min_price": 185000,
       "max_price": 370000
     },
     {
       "year": 2024,
       "count": 12,
-      "median_price": 292577,
-      "avg_price": 302159,
+      "median_price": 330000,
+      "avg_price": 335908,
       "min_price": 277533,
       "max_price": 336000
     },

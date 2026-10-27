@@ -2,8 +2,8 @@
   "slug": "owendoher-lodge-ballyboden-road",
   "stats": {
     "count": 91,
-    "median": 350000,
-    "avg": 349872,
+    "median": 353439,
+    "avg": 354577,
     "min": 132687,
     "max": 582000,
     "firstYear": 2016,
@@ -13,8 +13,8 @@
     {
       "year": 2016,
       "count": 58,
-      "median_price": 289482,
-      "avg_price": 302132,
+      "median_price": 304572,
+      "avg_price": 309514,
       "min_price": 224670,
       "max_price": 400000
     },

@@ -2,16 +2,35 @@
   "name": "Blanchardstown, Dublin",
   "slug": "blanchardstown",
   "center": {
-    "lat": 53.3844588,
-    "lon": -6.3829415
+    "lat": 53.392915,
+    "lon": -6.38285
   },
   "radius_km": 2.5,
   "total_count": 10,
-  "median_price": 440000.0,
-  "avg_price": 775400,
+  "median_price": 415000.0,
+  "avg_price": 494400,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805524,
+      "sale_date": "2026-10-01",
+      "address": "40 SHACKLETON HOUSE, ARCHERSWOOD, DUBLIN 15",
+      "county": "Dublin",
+      "eircode": "D15CH73",
+      "price": 270000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.404534,
+      "longitude": -6.408477,
+      "routing_key": "D15",
+      "bedrooms": 1,
+      "property_type": "apartment",
+      "price_incl_vat": 270000.0,
+      "distance_m": 2139.6121266
+    },
     {
       "id": 805278,
       "sale_date": "2026-09-29",
@@ -28,25 +47,8 @@
       "routing_key": "D15",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1658.00291993
-    },
-    {
-      "id": 805145,
-      "sale_date": "2026-09-28",
-      "address": "21 FARMLEIGH CLOSE, CASTLEKNOCK, DUBLIN 15",
-      "county": "Dublin",
-      "eircode": "D15E0A2",
-      "price": 1150000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.367992,
-      "longitude": -6.361921,
-      "routing_key": "D15",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 2305.57517436
+      "price_incl_vat": 600000.0,
+      "distance_m": 2163.38240625
     },
     {
       "id": 805073,
@@ -64,25 +66,8 @@
       "routing_key": "D15",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 2144.89349477
-    },
-    {
-      "id": 805062,
-      "sale_date": "2026-09-25",
-      "address": "113 GEORGIAN VILLAGE, CASTLEKNOCK, DUBLIN 15",
-      "county": "Dublin",
-      "eircode": "D15P82N",
-      "price": 2450000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.369384,
-      "longitude": -6.357496,
-      "routing_key": "D15",
-      "bedrooms": 5,
-      "property_type": "detached",
-      "distance_m": 2383.78928721
+      "price_incl_vat": 422000.0,
+      "distance_m": 1274.73698974
     },
     {
       "id": 805011,
@@ -100,7 +85,8 @@
       "routing_key": "D15",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1250.68739081
+      "price_incl_vat": 500000.0,
+      "distance_m": 2124.21433669
     },
     {
       "id": 804998,
@@ -118,7 +104,8 @@
       "routing_key": "D15",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 1378.38085251
+      "price_incl_vat": 470000.0,
+      "distance_m": 2125.75440335
     },
     {
       "id": 804953,
@@ -136,7 +123,8 @@
       "routing_key": "D15",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1446.57261581
+      "price_incl_vat": 590000.0,
+      "distance_m": 2267.16467427
     },
     {
       "id": 804806,
@@ -154,25 +142,8 @@
       "routing_key": "D15",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 713.44616038
-    },
-    {
-      "id": 804826,
-      "sale_date": "2026-09-22",
-      "address": "3 PHOENIX PLACE, CASTLEKNOCK, DUBLIN 15",
-      "county": "Dublin",
-      "eircode": "D15X6RR",
-      "price": 815000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.377258,
-      "longitude": -6.354966,
-      "routing_key": "D15",
-      "bedrooms": 4,
-      "property_type": "house",
-      "distance_m": 2026.79644722
+      "price_incl_vat": 321000.0,
+      "distance_m": 1422.45758983
     },
     {
       "id": 804726,
@@ -190,145 +161,184 @@
       "routing_key": "D15",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1952.81199301
+      "price_incl_vat": 436000.0,
+      "distance_m": 1058.7921467
+    },
+    {
+      "id": 804659,
+      "sale_date": "2026-09-21",
+      "address": "12 CHARNWOOD PARK, CLONSILLA, DUBLIN 15",
+      "county": "Dublin",
+      "eircode": "D15R5Y2",
+      "price": 500000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.386108,
+      "longitude": -6.415458,
+      "routing_key": "D15",
+      "bedrooms": 3,
+      "property_type": "house",
+      "price_incl_vat": 500000.0,
+      "distance_m": 2297.92665814
+    },
+    {
+      "id": 804603,
+      "sale_date": "2026-09-18",
+      "address": "1 CHARNWOOD PARK, CLONSILLA, DUBLIN 15",
+      "county": "Dublin",
+      "eircode": "D15XPF6",
+      "price": 835000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.385185,
+      "longitude": -6.413773,
+      "routing_key": "D15",
+      "bedrooms": 5,
+      "property_type": "semi-detached",
+      "price_incl_vat": 835000.0,
+      "distance_m": 2230.00096698
     }
   ],
   "trends": [
     {
       "year": 2010,
       "count": 69,
-      "median_price": 212500.0,
-      "avg_price": 229350.0,
+      "median_price": 217000.0,
+      "avg_price": 232623.0,
       "min_price": 17500.0,
       "max_price": 425000.0
     },
     {
       "year": 2011,
-      "count": 47,
-      "median_price": 180617.0,
-      "avg_price": 424544.0,
+      "count": 51,
+      "median_price": 162500.0,
+      "avg_price": 432732.0,
       "min_price": 80000.0,
       "max_price": 11315000.0
     },
     {
       "year": 2012,
-      "count": 72,
-      "median_price": 160000.0,
-      "avg_price": 175214.0,
+      "count": 68,
+      "median_price": 165000.0,
+      "avg_price": 167975.0,
       "min_price": 50000.0,
-      "max_price": 770000.0
+      "max_price": 380000.0
     },
     {
       "year": 2013,
       "count": 92,
       "median_price": 145000.0,
-      "avg_price": 168064.0,
+      "avg_price": 169205.0,
       "min_price": 77000.0,
       "max_price": 449000.0
     },
     {
       "year": 2014,
-      "count": 204,
-      "median_price": 243172.0,
-      "avg_price": 254850.0,
+      "count": 197,
+      "median_price": 230000.0,
+      "avg_price": 248669.0,
       "min_price": 93000.0,
-      "max_price": 1050000.0
+      "max_price": 910000.0
     },
     {
       "year": 2015,
-      "count": 202,
-      "median_price": 268111.0,
-      "avg_price": 257600.0,
-      "min_price": 100000.0,
-      "max_price": 770000.0
+      "count": 196,
+      "median_price": 276500.0,
+      "avg_price": 263565.0,
+      "min_price": 90000.0,
+      "max_price": 647576.0
     },
     {
       "year": 2016,
-      "count": 173,
-      "median_price": 235000.0,
-      "avg_price": 287578.0,
+      "count": 158,
+      "median_price": 220500.0,
+      "avg_price": 265083.0,
       "min_price": 85000.0,
-      "max_price": 1000000.0
+      "max_price": 940000.0
     },
     {
       "year": 2017,
-      "count": 196,
-      "median_price": 255000.0,
-      "avg_price": 286795.0,
+      "count": 175,
+      "median_price": 245000.0,
+      "avg_price": 266633.0,
       "min_price": 60000.0,
-      "max_price": 1160000.0
+      "max_price": 810000.0
     },
     {
       "year": 2018,
-      "count": 181,
-      "median_price": 258000.0,
-      "avg_price": 305855.0,
+      "count": 172,
+      "median_price": 251500.0,
+      "avg_price": 286500.0,
       "min_price": 130000.0,
-      "max_price": 1150000.0
+      "max_price": 702000.0
     },
     {
       "year": 2019,
-      "count": 200,
-      "median_price": 265000.0,
-      "avg_price": 290737.0,
+      "count": 182,
+      "median_price": 255500.0,
+      "avg_price": 279575.0,
       "min_price": 27500.0,
       "max_price": 947200.0
     },
     {
       "year": 2020,
       "count": 123,
-      "median_price": 265000.0,
-      "avg_price": 301494.0,
+      "median_price": 264644.0,
+      "avg_price": 289598.0,
       "min_price": 50000.0,
       "max_price": 812000.0
     },
     {
       "year": 2021,
-      "count": 476,
-      "median_price": 335000.0,
-      "avg_price": 401014.0,
+      "count": 437,
+      "median_price": 320000.0,
+      "avg_price": 366502.0,
       "min_price": 70128.0,
-      "max_price": 1700000.0
+      "max_price": 1400000.0
     },
     {
       "year": 2022,
-      "count": 631,
-      "median_price": 355000.0,
-      "avg_price": 465656.0,
+      "count": 591,
+      "median_price": 340000.0,
+      "avg_price": 413927.0,
       "min_price": 80000.0,
-      "max_price": 9814000.0
+      "max_price": 2600000.0
     },
     {
       "year": 2023,
-      "count": 664,
-      "median_price": 375000.0,
-      "avg_price": 450641.0,
+      "count": 608,
+      "median_price": 351750.0,
+      "avg_price": 418927.0,
       "min_price": 20000.0,
       "max_price": 4150000.0
     },
     {
       "year": 2024,
-      "count": 579,
-      "median_price": 390000.0,
-      "avg_price": 481610.0,
+      "count": 548,
+      "median_price": 375000.0,
+      "avg_price": 454430.0,
       "min_price": 21000.0,
       "max_price": 10134439.65
     },
     {
       "year": 2025,
-      "count": 570,
-      "median_price": 454500.0,
-      "avg_price": 535943.0,
-      "min_price": 20000.0,
+      "count": 515,
+      "median_price": 426000.0,
+      "avg_price": 487708.0,
+      "min_price": 139795.94,
       "max_price": 4359030.0
     },
     {
       "year": 2026,
-      "count": 371,
-      "median_price": 440000.0,
-      "avg_price": 497400.0,
+      "count": 344,
+      "median_price": 415000.0,
+      "avg_price": 459860.0,
       "min_price": 100000.0,
-      "max_price": 2450000.0
+      "max_price": 1500000.0
     }
   ]
 }

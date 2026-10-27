@@ -2,8 +2,8 @@
   "slug": "longstone-blessington-road",
   "stats": {
     "count": 132,
-    "median": 352423,
-    "avg": 372530,
+    "median": 400000,
+    "avg": 415852,
     "min": 262963,
     "max": 750000,
     "firstYear": 2019,
@@ -13,24 +13,24 @@
     {
       "year": 2019,
       "count": 38,
-      "median_price": 334801,
-      "avg_price": 345095,
+      "median_price": 380000,
+      "avg_price": 391683,
       "min_price": 299560,
       "max_price": 437181
     },
     {
       "year": 2020,
       "count": 43,
-      "median_price": 343612,
-      "avg_price": 341871,
+      "median_price": 390000,
+      "avg_price": 388024,
       "min_price": 262963,
       "max_price": 418501
     },
     {
       "year": 2021,
       "count": 39,
-      "median_price": 380600,
-      "avg_price": 372947,
+      "median_price": 431981,
+      "avg_price": 423295,
       "min_price": 268150,
       "max_price": 471365
     },

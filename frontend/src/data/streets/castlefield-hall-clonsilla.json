@@ -2,8 +2,8 @@
   "slug": "castlefield-hall-clonsilla",
   "stats": {
     "count": 120,
-    "median": 433920,
-    "avg": 442105,
+    "median": 492500,
+    "avg": 491435,
     "min": 321128,
     "max": 630000,
     "firstYear": 2019,
@@ -13,48 +13,48 @@
     {
       "year": 2019,
       "count": 29,
-      "median_price": 405286,
-      "avg_price": 393839,
+      "median_price": 460000,
+      "avg_price": 447007,
       "min_price": 321128,
       "max_price": 470000
     },
     {
       "year": 2020,
       "count": 13,
-      "median_price": 415200,
-      "avg_price": 414620,
+      "median_price": 471252,
+      "avg_price": 470594,
       "min_price": 373984,
       "max_price": 436123
     },
     {
       "year": 2022,
       "count": 12,
-      "median_price": 440485,
-      "avg_price": 423409,
+      "median_price": 499950,
+      "avg_price": 480569,
       "min_price": 338800,
       "max_price": 499950
     },
     {
       "year": 2023,
       "count": 28,
-      "median_price": 440485,
-      "avg_price": 431120,
+      "median_price": 499950,
+      "avg_price": 489321,
       "min_price": 378854,
       "max_price": 502203
     },
     {
       "year": 2024,
       "count": 23,
-      "median_price": 493392,
-      "avg_price": 479922,
+      "median_price": 523000,
+      "avg_price": 532409,
       "min_price": 418502,
       "max_price": 572687
     },
     {
       "year": 2025,
       "count": 10,
-      "median_price": 531000,
-      "avg_price": 540199,
+      "median_price": 552500,
+      "avg_price": 546800,
       "min_price": 488986,
       "max_price": 630000
     },
@@ -62,7 +62,7 @@
       "year": 2026,
       "count": 5,
       "median_price": 560000,
-      "avg_price": 529749,
+      "avg_price": 542000,
       "min_price": 453744,
       "max_price": 560000
     }

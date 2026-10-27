@@ -2,8 +2,8 @@
   "slug": "the-avenue-marianella",
   "stats": {
     "count": 14,
-    "median": 1352095,
-    "avg": 1463101,
+    "median": 1500000,
+    "avg": 1605608,
     "min": 1286344,
     "max": 2375000,
     "firstYear": 2017,
@@ -13,40 +13,40 @@
     {
       "year": 2017,
       "count": 1,
-      "median_price": 1387665,
-      "avg_price": 1387665,
+      "median_price": 1575000,
+      "avg_price": 1575000,
       "min_price": 1387665,
       "max_price": 1387665
     },
     {
       "year": 2018,
       "count": 6,
-      "median_price": 1352095,
-      "avg_price": 1356609,
+      "median_price": 1534628,
+      "avg_price": 1539751,
       "min_price": 1321585,
       "max_price": 1409692
     },
     {
       "year": 2019,
       "count": 1,
-      "median_price": 1321586,
-      "avg_price": 1321586,
+      "median_price": 1500000,
+      "avg_price": 1500000,
       "min_price": 1321586,
       "max_price": 1321586
     },
     {
       "year": 2020,
       "count": 1,
-      "median_price": 1321586,
-      "avg_price": 1321586,
+      "median_price": 1500000,
+      "avg_price": 1500000,
       "min_price": 1321586,
       "max_price": 1321586
     },
     {
       "year": 2021,
       "count": 3,
-      "median_price": 1321585,
-      "avg_price": 1362643,
+      "median_price": 1480000,
+      "avg_price": 1480000,
       "min_price": 1286344,
       "max_price": 1480000
     },

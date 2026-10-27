@@ -2,8 +2,8 @@
   "slug": "oldbridge-station-osberstown",
   "stats": {
     "count": 107,
-    "median": 264273,
-    "avg": 286537,
+    "median": 294950,
+    "avg": 308625,
     "min": 160000,
     "max": 581000,
     "firstYear": 2012,
@@ -13,56 +13,56 @@
     {
       "year": 2012,
       "count": 4,
-      "median_price": 171806,
-      "avg_price": 177384,
+      "median_price": 195000,
+      "avg_price": 194750,
       "min_price": 170925,
       "max_price": 195000
     },
     {
       "year": 2013,
       "count": 6,
-      "median_price": 176212,
-      "avg_price": 176406,
+      "median_price": 200000,
+      "avg_price": 200221,
       "min_price": 173000,
       "max_price": 180600
     },
     {
       "year": 2014,
       "count": 16,
-      "median_price": 223750,
-      "avg_price": 220314,
+      "median_price": 253956,
+      "avg_price": 250056,
       "min_price": 177975,
       "max_price": 265000
     },
     {
       "year": 2015,
       "count": 13,
-      "median_price": 255463,
-      "avg_price": 256232,
+      "median_price": 277501,
+      "avg_price": 285600,
       "min_price": 228000,
       "max_price": 315000
     },
     {
       "year": 2016,
       "count": 15,
-      "median_price": 259868,
-      "avg_price": 261859,
+      "median_price": 294950,
+      "avg_price": 292436,
       "min_price": 198200,
       "max_price": 294950
     },
     {
       "year": 2017,
       "count": 20,
-      "median_price": 277533,
-      "avg_price": 277731,
+      "median_price": 315000,
+      "avg_price": 313524,
       "min_price": 252000,
       "max_price": 308370
     },
     {
       "year": 2018,
       "count": 7,
-      "median_price": 290749,
-      "avg_price": 287794,
+      "median_price": 330000,
+      "avg_price": 304786,
       "min_price": 255000,
       "max_price": 350000
     },

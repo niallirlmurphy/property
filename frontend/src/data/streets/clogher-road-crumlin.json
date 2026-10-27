@@ -174,19 +174,19 @@
     },
     {
       "date": "2026-07-31",
-      "address": "139 CLOGHER RD, CRUMLIN, DUBLIN 12",
-      "price": 436000,
-      "bedrooms": 2,
-      "propertyType": "terraced",
-      "eircode": "D12X867"
-    },
-    {
-      "date": "2026-07-31",
       "address": "205 CLOGHER RD, CRUMLIN, DUBLIN",
       "price": 537000,
       "bedrooms": 2,
       "propertyType": "terraced",
       "eircode": "D12EK18"
+    },
+    {
+      "date": "2026-07-31",
+      "address": "139 CLOGHER RD, CRUMLIN, DUBLIN 12",
+      "price": 436000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12X867"
     },
     {
       "date": "2026-06-03",

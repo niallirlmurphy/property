@@ -1,9 +1,9 @@
 {
   "slug": "palmerston-road-rathmines",
   "stats": {
-    "count": 42,
+    "count": 43,
     "median": 1950000,
-    "avg": 2157117,
+    "avg": 2135440,
     "min": 870000,
     "max": 4650000,
     "firstYear": 2010,
@@ -92,10 +92,10 @@
     },
     {
       "year": 2020,
-      "count": 2,
-      "median_price": 2050000,
-      "avg_price": 2050000,
-      "min_price": 1800000,
+      "count": 3,
+      "median_price": 1800000,
+      "avg_price": 1775000,
+      "min_price": 1225000,
       "max_price": 2300000
     },
     {
@@ -256,6 +256,14 @@
       "date": "2020-12-04",
       "address": "14 PALMERSTON ROAD, RATHMINES, DUBLIN 6",
       "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-23",
+      "address": "56 PALMERSTON RD., RATHMINES, DUBLIN 6",
+      "price": 1225000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -477,5 +485,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 42
+  "totalTransactions": 43
 }

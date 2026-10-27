@@ -2,8 +2,8 @@
   "slug": "drakes-point-crosshaven",
   "stats": {
     "count": 167,
-    "median": 292142,
-    "avg": 304713,
+    "median": 330000,
+    "avg": 339411,
     "min": 123348,
     "max": 763000,
     "firstYear": 2014,
@@ -13,64 +13,64 @@
     {
       "year": 2014,
       "count": 1,
-      "median_price": 123348,
-      "avg_price": 123348,
+      "median_price": 140000,
+      "avg_price": 140000,
       "min_price": 123348,
       "max_price": 123348
     },
     {
       "year": 2016,
       "count": 1,
-      "median_price": 287647,
-      "avg_price": 287647,
+      "median_price": 326479,
+      "avg_price": 326479,
       "min_price": 287647,
       "max_price": 287647
     },
     {
       "year": 2017,
       "count": 2,
-      "median_price": 295154,
-      "avg_price": 295154,
+      "median_price": 335000,
+      "avg_price": 335000,
       "min_price": 281938,
       "max_price": 308370
     },
     {
       "year": 2018,
       "count": 27,
-      "median_price": 286344,
-      "avg_price": 270493,
+      "median_price": 325000,
+      "avg_price": 307010,
       "min_price": 193831,
       "max_price": 465000
     },
     {
       "year": 2019,
       "count": 42,
-      "median_price": 295182,
-      "avg_price": 271405,
+      "median_price": 335031,
+      "avg_price": 308045,
       "min_price": 202643,
       "max_price": 338000
     },
     {
       "year": 2020,
       "count": 22,
-      "median_price": 303965,
-      "avg_price": 312224,
+      "median_price": 345000,
+      "avg_price": 354375,
       "min_price": 242291,
       "max_price": 462500
     },
     {
       "year": 2021,
       "count": 38,
-      "median_price": 264317,
-      "avg_price": 279190,
+      "median_price": 299999,
+      "avg_price": 315424,
       "min_price": 220263,
       "max_price": 418502
     },
     {
       "year": 2022,
       "count": 21,
-      "median_price": 310000,
-      "avg_price": 351728,
+      "median_price": 340500,
+      "avg_price": 391272,
       "min_price": 226872,
       "max_price": 542000
     },
@@ -110,19 +110,19 @@
   "transactions": [
     {
       "date": "2026-08-21",
-      "address": "22  DRAKES POINT, CROSSHAVEN, CORK",
-      "price": 420000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "P43DH59"
-    },
-    {
-      "date": "2026-08-21",
       "address": "5 DRAKES POINT, CROSSHAVEN, CO CORK",
       "price": 763000,
       "bedrooms": 4,
       "propertyType": "detached",
       "eircode": "P43W598"
+    },
+    {
+      "date": "2026-08-21",
+      "address": "22  DRAKES POINT, CROSSHAVEN, CORK",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "P43DH59"
     },
     {
       "date": "2026-05-22",
@@ -286,19 +286,19 @@
     },
     {
       "date": "2022-03-11",
-      "address": "171 Drakes Point, Crosshaven, Cork",
-      "price": 288987,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-03-11",
       "address": "88 DRAKES POINT, CROSSHAVEN, CORK",
       "price": 420000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "P43HD52"
+    },
+    {
+      "date": "2022-03-11",
+      "address": "171 Drakes Point, Crosshaven, Cork",
+      "price": 288987,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2022-03-08",

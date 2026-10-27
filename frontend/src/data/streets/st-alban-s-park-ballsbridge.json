@@ -1,15 +1,23 @@
 {
   "slug": "st-alban-s-park-ballsbridge",
   "stats": {
-    "count": 10,
-    "median": 1270000,
-    "avg": 1234500,
-    "min": 855000,
+    "count": 11,
+    "median": 1245000,
+    "avg": 1172727,
+    "min": 555000,
     "max": 1700000,
-    "firstYear": 2016,
+    "firstYear": 2012,
     "lastYear": 2026
   },
   "trends": [
+    {
+      "year": 2012,
+      "count": 1,
+      "median_price": 555000,
+      "avg_price": 555000,
+      "min_price": 555000,
+      "max_price": 555000
+    },
     {
       "year": 2016,
       "count": 2,
@@ -147,7 +155,15 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D04Y2P8"
+    },
+    {
+      "date": "2012-11-16",
+      "address": "62 St. Albans Park, Ballsbridge, Dublin 4",
+      "price": 555000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     }
   ],
-  "totalTransactions": 10
+  "totalTransactions": 11
 }

@@ -2,8 +2,8 @@
   "slug": "kylemore-schoolhouse-road",
   "stats": {
     "count": 132,
-    "median": 290748,
-    "avg": 315186,
+    "median": 329999,
+    "avg": 349860,
     "min": 145000,
     "max": 610000,
     "firstYear": 2010,
@@ -13,112 +13,112 @@
     {
       "year": 2010,
       "count": 3,
-      "median_price": 211454,
-      "avg_price": 240485,
+      "median_price": 240000,
+      "avg_price": 266425,
       "min_price": 145000,
       "max_price": 365000
     },
     {
       "year": 2011,
       "count": 3,
-      "median_price": 266000,
-      "avg_price": 303402,
+      "median_price": 301910,
+      "avg_price": 344361,
       "min_price": 181650,
       "max_price": 462555
     },
     {
       "year": 2013,
       "count": 2,
-      "median_price": 209295,
-      "avg_price": 209295,
+      "median_price": 222700,
+      "avg_price": 222700,
       "min_price": 198590,
       "max_price": 220000
     },
     {
       "year": 2014,
       "count": 6,
-      "median_price": 229394,
-      "avg_price": 225348,
+      "median_price": 252075,
+      "avg_price": 250483,
       "min_price": 185727,
       "max_price": 247401
     },
     {
       "year": 2015,
       "count": 4,
-      "median_price": 210573,
-      "avg_price": 212996,
+      "median_price": 239000,
+      "avg_price": 241750,
       "min_price": 202643,
       "max_price": 228194
     },
     {
       "year": 2016,
       "count": 6,
-      "median_price": 237004,
-      "avg_price": 231061,
+      "median_price": 269000,
+      "avg_price": 262254,
       "min_price": 187577,
       "max_price": 245925
     },
     {
       "year": 2017,
       "count": 7,
-      "median_price": 267285,
-      "avg_price": 267476,
+      "median_price": 303368,
+      "avg_price": 299207,
       "min_price": 223000,
       "max_price": 325000
     },
     {
       "year": 2018,
       "count": 13,
-      "median_price": 248458,
-      "avg_price": 254955,
+      "median_price": 282000,
+      "avg_price": 289374,
       "min_price": 200200,
       "max_price": 316300
     },
     {
       "year": 2019,
       "count": 14,
-      "median_price": 289434,
-      "avg_price": 274169,
+      "median_price": 314808,
+      "avg_price": 308386,
       "min_price": 236841,
       "max_price": 298678
     },
     {
       "year": 2020,
       "count": 26,
-      "median_price": 287269,
-      "avg_price": 278092,
+      "median_price": 326050,
+      "avg_price": 314362,
       "min_price": 245000,
       "max_price": 328722
     },
     {
       "year": 2021,
       "count": 6,
-      "median_price": 334064,
-      "avg_price": 335514,
+      "median_price": 369050,
+      "avg_price": 365846,
       "min_price": 317181,
       "max_price": 360000
     },
     {
       "year": 2022,
       "count": 12,
-      "median_price": 342731,
-      "avg_price": 346539,
+      "median_price": 389000,
+      "avg_price": 388557,
       "min_price": 316260,
       "max_price": 423500
     },
     {
       "year": 2023,
       "count": 12,
-      "median_price": 392158,
-      "avg_price": 406173,
+      "median_price": 441050,
+      "avg_price": 456428,
       "min_price": 365000,
       "max_price": 492511
     },
     {
       "year": 2024,
       "count": 9,
-      "median_price": 453745,
-      "avg_price": 473243,
+      "median_price": 515001,
+      "avg_price": 522355,
       "min_price": 334802,
       "max_price": 610000
     },
@@ -126,7 +126,7 @@
       "year": 2025,
       "count": 6,
       "median_price": 475000,
-      "avg_price": 473264,
+      "avg_price": 485518,
       "min_price": 385000,
       "max_price": 550000
     },

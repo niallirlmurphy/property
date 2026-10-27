@@ -2,8 +2,8 @@
   "slug": "the-elms-lakeview",
   "stats": {
     "count": 93,
-    "median": 350220,
-    "avg": 344654,
+    "median": 397500,
+    "avg": 390989,
     "min": 264316,
     "max": 462555,
     "firstYear": 2024,
@@ -13,24 +13,24 @@
     {
       "year": 2024,
       "count": 65,
-      "median_price": 345000,
-      "avg_price": 339195,
+      "median_price": 391575,
+      "avg_price": 384986,
       "min_price": 264316,
       "max_price": 462555
     },
     {
       "year": 2025,
       "count": 27,
-      "median_price": 374383,
-      "avg_price": 356121,
+      "median_price": 424925,
+      "avg_price": 403532,
       "min_price": 272738,
       "max_price": 400881
     },
     {
       "year": 2026,
       "count": 1,
-      "median_price": 389868,
-      "avg_price": 389868,
+      "median_price": 442500,
+      "avg_price": 442500,
       "min_price": 389868,
       "max_price": 389868
     }
@@ -278,6 +278,14 @@
     },
     {
       "date": "2024-12-17",
+      "address": "74 The Elms, Lakeview, Middleton",
+      "price": 361233,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-12-17",
       "address": "33 The Elms, Lakeview, Midleton",
       "price": 378854,
       "bedrooms": null,
@@ -288,14 +296,6 @@
       "date": "2024-12-17",
       "address": "79 The Elms, Lakeview, Castleredmond",
       "price": 299560,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2024-12-17",
-      "address": "74 The Elms, Lakeview, Middleton",
-      "price": 361233,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

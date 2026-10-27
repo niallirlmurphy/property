@@ -2,8 +2,8 @@
   "slug": "homeleigh-porterstown",
   "stats": {
     "count": 10,
-    "median": 1282159,
-    "avg": 1336432,
+    "median": 1300000,
+    "avg": 1353500,
     "min": 800000,
     "max": 2350000,
     "firstYear": 2014,
@@ -53,8 +53,8 @@
     {
       "year": 2021,
       "count": 2,
-      "median_price": 1257159,
-      "avg_price": 1257159,
+      "median_price": 1342500,
+      "avg_price": 1342500,
       "min_price": 1250000,
       "max_price": 1264318
     },

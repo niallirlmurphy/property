@@ -3,7 +3,7 @@
   "stats": {
     "count": 100,
     "median": 280500,
-    "avg": 294335,
+    "avg": 295442,
     "min": 115000,
     "max": 516000,
     "firstYear": 2011,
@@ -78,7 +78,7 @@
       "year": 2019,
       "count": 5,
       "median_price": 265000,
-      "avg_price": 259200,
+      "avg_price": 265275,
       "min_price": 220000,
       "max_price": 321000
     },
@@ -101,8 +101,8 @@
     {
       "year": 2022,
       "count": 11,
-      "median_price": 290000,
-      "avg_price": 310727,
+      "median_price": 302000,
+      "avg_price": 314286,
       "min_price": 145000,
       "max_price": 471000
     },
@@ -110,7 +110,7 @@
       "year": 2023,
       "count": 11,
       "median_price": 395000,
-      "avg_price": 358236,
+      "avg_price": 361979,
       "min_price": 265000,
       "max_price": 466599
     },
@@ -406,19 +406,19 @@
     },
     {
       "date": "2023-02-28",
-      "address": "158 THE OVAL, TULLYVALE, CABINTEELY DUBLIN 18",
-      "price": 402000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D18AF88"
-    },
-    {
-      "date": "2023-02-28",
       "address": "125 THE OVAL, TULLYVALE, CABINTEELY DUBLIN 18",
       "price": 268000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D18NP22"
+    },
+    {
+      "date": "2023-02-28",
+      "address": "158 THE OVAL, TULLYVALE, CABINTEELY DUBLIN 18",
+      "price": 402000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D18AF88"
     },
     {
       "date": "2023-02-03",

@@ -3,7 +3,7 @@
   "stats": {
     "count": 93,
     "median": 290000,
-    "avg": 285486,
+    "avg": 285684,
     "min": 130000,
     "max": 550000,
     "firstYear": 2011,
@@ -21,8 +21,8 @@
     {
       "year": 2012,
       "count": 2,
-      "median_price": 148300,
-      "avg_price": 148300,
+      "median_price": 157520,
+      "avg_price": 157520,
       "min_price": 136600,
       "max_price": 160000
     },
@@ -160,16 +160,16 @@
       "date": "2026-03-24",
       "address": "23 THE GALLERY, TURVEY WALK, DONABATE",
       "price": 400000,
-      "bedrooms": 2,
-      "propertyType": "apartment",
+      "bedrooms": null,
+      "propertyType": null,
       "eircode": "K36KC84"
     },
     {
       "date": "2026-03-24",
       "address": "23 THE GALLERY, TURVEY WALK, DONABATE",
       "price": 400000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "apartment",
       "eircode": "K36KC84"
     },
     {
@@ -334,19 +334,19 @@
     },
     {
       "date": "2023-11-14",
-      "address": "179 THE GALLERY, TURVEY WALK, DONABATE",
-      "price": 265000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "K36N220"
-    },
-    {
-      "date": "2023-11-14",
       "address": "41 THE GALLERY, TURVEY WALK, DONABATE",
       "price": 310000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "K36E436"
+    },
+    {
+      "date": "2023-11-14",
+      "address": "179 THE GALLERY, TURVEY WALK, DONABATE",
+      "price": 265000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K36N220"
     },
     {
       "date": "2023-08-24",

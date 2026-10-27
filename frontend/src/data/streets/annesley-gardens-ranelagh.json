@@ -3,7 +3,7 @@
   "stats": {
     "count": 19,
     "median": 1480000,
-    "avg": 1393950,
+    "avg": 1549592,
     "min": 1164758,
     "max": 1650000,
     "firstYear": 2022,
@@ -13,16 +13,16 @@
     {
       "year": 2022,
       "count": 16,
-      "median_price": 1253304,
-      "avg_price": 1360933,
+      "median_price": 1422500,
+      "avg_price": 1519162,
       "min_price": 1164758,
       "max_price": 1650000
     },
     {
       "year": 2023,
       "count": 2,
-      "median_price": 1576058,
-      "avg_price": 1576058,
+      "median_price": 1788825,
+      "avg_price": 1788825,
       "min_price": 1535375,
       "max_price": 1616740
     },
@@ -142,16 +142,16 @@
     },
     {
       "date": "2022-06-07",
-      "address": "10 Annesley Gardens, Ranelagh, Dublin 6",
-      "price": 1251101,
+      "address": "13 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1164758,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2022-06-07",
-      "address": "13 Annesley Gardens, Ranelagh, Dublin 6",
-      "price": 1164758,
+      "address": "10 Annesley Gardens, Ranelagh, Dublin 6",
+      "price": 1251101,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

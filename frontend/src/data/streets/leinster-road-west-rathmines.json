@@ -2,8 +2,8 @@
   "slug": "leinster-road-west-rathmines",
   "stats": {
     "count": 10,
-    "median": 1222466,
-    "avg": 1107923,
+    "median": 1325000,
+    "avg": 1164718,
     "min": 490000,
     "max": 1762115,
     "firstYear": 2013,
@@ -37,16 +37,16 @@
     {
       "year": 2019,
       "count": 1,
-      "median_price": 1145374,
-      "avg_price": 1145374,
+      "median_price": 1299999,
+      "avg_price": 1299999,
       "min_price": 1145374,
       "max_price": 1145374
     },
     {
       "year": 2020,
       "count": 3,
-      "median_price": 1350000,
-      "avg_price": 1470558,
+      "median_price": 1474999,
+      "avg_price": 1608333,
       "min_price": 1299559,
       "max_price": 1762115
     },

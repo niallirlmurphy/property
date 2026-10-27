@@ -2,8 +2,8 @@
   "slug": "barley-field-wicklow-hills",
   "stats": {
     "count": 128,
-    "median": 237005,
-    "avg": 269055,
+    "median": 269001,
+    "avg": 294406,
     "min": 172135,
     "max": 580000,
     "firstYear": 2016,
@@ -13,32 +13,32 @@
     {
       "year": 2016,
       "count": 8,
-      "median_price": 208810,
-      "avg_price": 202684,
+      "median_price": 236999,
+      "avg_price": 230046,
       "min_price": 172135,
       "max_price": 237004
     },
     {
       "year": 2017,
       "count": 51,
-      "median_price": 224035,
-      "avg_price": 226835,
+      "median_price": 254280,
+      "avg_price": 257458,
       "min_price": 180616,
       "max_price": 285022
     },
     {
       "year": 2018,
       "count": 21,
-      "median_price": 237004,
-      "avg_price": 239952,
+      "median_price": 269000,
+      "avg_price": 269870,
       "min_price": 202642,
       "max_price": 385000
     },
     {
       "year": 2019,
       "count": 25,
-      "median_price": 237885,
-      "avg_price": 247681,
+      "median_price": 269999,
+      "avg_price": 281118,
       "min_price": 220264,
       "max_price": 295154
     },

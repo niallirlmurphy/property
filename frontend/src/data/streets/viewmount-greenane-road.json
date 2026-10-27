@@ -2,8 +2,8 @@
   "slug": "viewmount-greenane-road",
   "stats": {
     "count": 91,
-    "median": 245815,
-    "avg": 254117,
+    "median": 279000,
+    "avg": 284382,
     "min": 161500,
     "max": 456000,
     "firstYear": 2016,
@@ -13,48 +13,48 @@
     {
       "year": 2016,
       "count": 3,
-      "median_price": 161500,
-      "avg_price": 174167,
+      "median_price": 183302,
+      "avg_price": 188702,
       "min_price": 161500,
       "max_price": 199500
     },
     {
       "year": 2017,
       "count": 3,
-      "median_price": 230000,
-      "avg_price": 221667,
+      "median_price": 261050,
+      "avg_price": 242367,
       "min_price": 205000,
       "max_price": 230000
     },
     {
       "year": 2019,
       "count": 14,
-      "median_price": 236564,
-      "avg_price": 239798,
+      "median_price": 268500,
+      "avg_price": 270001,
       "min_price": 224600,
       "max_price": 297000
     },
     {
       "year": 2020,
       "count": 18,
-      "median_price": 227313,
-      "avg_price": 235440,
+      "median_price": 258000,
+      "avg_price": 267225,
       "min_price": 214537,
       "max_price": 279000
     },
     {
       "year": 2021,
       "count": 25,
-      "median_price": 251057,
-      "avg_price": 253006,
+      "median_price": 284950,
+      "avg_price": 287161,
       "min_price": 229031,
       "max_price": 312950
     },
     {
       "year": 2022,
       "count": 23,
-      "median_price": 263436,
-      "avg_price": 257516,
+      "median_price": 299000,
+      "avg_price": 292281,
       "min_price": 224669,
       "max_price": 303965
     },

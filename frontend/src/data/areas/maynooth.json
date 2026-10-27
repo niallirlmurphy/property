@@ -2,12 +2,12 @@
   "name": "Maynooth, Kildare",
   "slug": "maynooth",
   "center": {
-    "lat": 53.3830239,
-    "lon": -6.5922806
+    "lat": 53.378431,
+    "lon": -6.58962775961751
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 517000.0,
+  "median_price": 520000.0,
   "avg_price": 485397,
   "min_year": 2010,
   "max_year": 2026,
@@ -28,7 +28,8 @@
       "routing_key": "W23",
       "bedrooms": 4,
       "property_type": "bungalow",
-      "distance_m": 974.17196727
+      "price_incl_vat": 605000.0,
+      "distance_m": 444.10896404
     },
     {
       "id": 804435,
@@ -46,7 +47,8 @@
       "routing_key": "W23",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 565.04639545
+      "price_incl_vat": 320000.0,
+      "distance_m": 313.38557952
     },
     {
       "id": 803772,
@@ -64,7 +66,8 @@
       "routing_key": "W23",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1181.94278818
+      "price_incl_vat": 170250.0,
+      "distance_m": 642.0483734
     },
     {
       "id": 803467,
@@ -82,7 +85,8 @@
       "routing_key": "W23",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1633.54282069
+      "price_incl_vat": 325000.0,
+      "distance_m": 1100.93307867
     },
     {
       "id": 803448,
@@ -100,7 +104,8 @@
       "routing_key": "W23",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 1657.60704828
+      "price_incl_vat": 320000.0,
+      "distance_m": 1123.5831691
     },
     {
       "id": 803267,
@@ -118,25 +123,8 @@
       "routing_key": "W23",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 953.06069821
-    },
-    {
-      "id": 802995,
-      "sale_date": "2026-09-03",
-      "address": "11 THE COURT, STRAFFAN WOOD, MAYNOOTH",
-      "county": "Kildare",
-      "eircode": "W23X4T1",
-      "price": 505000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.392684,
-      "longitude": -6.592337,
-      "routing_key": "W23",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 1075.11345336
+      "price_incl_vat": 569714.0,
+      "distance_m": 1446.81563089
     },
     {
       "id": 803010,
@@ -154,7 +142,27 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": "house",
-      "distance_m": 1430.46659173
+      "price_incl_vat": 619999.99,
+      "distance_m": 903.62031833
+    },
+    {
+      "id": 802995,
+      "sale_date": "2026-09-03",
+      "address": "11 THE COURT, STRAFFAN WOOD, MAYNOOTH",
+      "county": "Kildare",
+      "eircode": "W23X4T1",
+      "price": 505000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.392684,
+      "longitude": -6.592337,
+      "routing_key": "W23",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "price_incl_vat": 505000.0,
+      "distance_m": 1596.47652859
     },
     {
       "id": 802142,
@@ -172,7 +180,8 @@
       "routing_key": "W23",
       "bedrooms": 5,
       "property_type": "detached",
-      "distance_m": 1141.55802881
+      "price_incl_vat": 996000.0,
+      "distance_m": 602.6025726
     },
     {
       "id": 802152,
@@ -190,143 +199,144 @@
       "routing_key": "W23",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1673.40634587
+      "price_incl_vat": 517000.0,
+      "distance_m": 1133.03199351
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 74,
-      "median_price": 260500.0,
-      "avg_price": 269682.0,
+      "count": 78,
+      "median_price": 261000.0,
+      "avg_price": 273891.0,
       "min_price": 132114.0,
       "max_price": 520000.0
     },
     {
       "year": 2011,
-      "count": 64,
-      "median_price": 213500.0,
-      "avg_price": 228890.0,
+      "count": 65,
+      "median_price": 224999.0,
+      "avg_price": 236738.0,
       "min_price": 60000.0,
       "max_price": 460000.0
     },
     {
       "year": 2012,
-      "count": 91,
-      "median_price": 220000.0,
-      "avg_price": 225465.0,
+      "count": 96,
+      "median_price": 234000.0,
+      "avg_price": 290386.0,
       "min_price": 80000.0,
-      "max_price": 382550.0
+      "max_price": 5205926.0
     },
     {
       "year": 2013,
-      "count": 91,
-      "median_price": 223665.0,
-      "avg_price": 237652.0,
+      "count": 102,
+      "median_price": 251930.0,
+      "avg_price": 262212.0,
       "min_price": 80000.0,
       "max_price": 610000.0
     },
     {
       "year": 2014,
-      "count": 175,
-      "median_price": 265000.0,
-      "avg_price": 282911.0,
+      "count": 178,
+      "median_price": 282750.0,
+      "avg_price": 301369.0,
       "min_price": 98000.0,
       "max_price": 860000.0
     },
     {
       "year": 2015,
-      "count": 181,
-      "median_price": 274000.0,
-      "avg_price": 287172.0,
+      "count": 185,
+      "median_price": 290000.0,
+      "avg_price": 305268.0,
       "min_price": 90000.0,
       "max_price": 625000.0
     },
     {
       "year": 2016,
-      "count": 172,
-      "median_price": 292841.0,
-      "avg_price": 309092.0,
+      "count": 174,
+      "median_price": 316665.0,
+      "avg_price": 329032.0,
       "min_price": 40000.0,
       "max_price": 1835000.0
     },
     {
       "year": 2017,
-      "count": 169,
-      "median_price": 295000.0,
-      "avg_price": 306010.0,
+      "count": 174,
+      "median_price": 312500.0,
+      "avg_price": 322509.0,
       "min_price": 110000.0,
       "max_price": 570000.0
     },
     {
       "year": 2018,
       "count": 162,
-      "median_price": 332401.0,
-      "avg_price": 343375.0,
+      "median_price": 341000.0,
+      "avg_price": 357743.0,
       "min_price": 125000.0,
       "max_price": 1285000.0
     },
     {
       "year": 2019,
       "count": 181,
-      "median_price": 327500.0,
-      "avg_price": 363671.0,
+      "median_price": 369999.0,
+      "avg_price": 386759.0,
       "min_price": 145000.0,
       "max_price": 4833945.73
     },
     {
       "year": 2020,
       "count": 173,
-      "median_price": 356828.0,
-      "avg_price": 365448.0,
+      "median_price": 400000.0,
+      "avg_price": 392448.0,
       "min_price": 42867.0,
       "max_price": 1200000.0
     },
     {
       "year": 2021,
       "count": 277,
-      "median_price": 370045.0,
-      "avg_price": 375156.0,
+      "median_price": 415000.0,
+      "avg_price": 404220.0,
       "min_price": 162000.0,
       "max_price": 1200000.0
     },
     {
       "year": 2022,
       "count": 234,
-      "median_price": 414096.0,
-      "avg_price": 434021.0,
+      "median_price": 450000.0,
+      "avg_price": 454125.0,
       "min_price": 140000.0,
       "max_price": 3182258.15
     },
     {
       "year": 2023,
-      "count": 284,
-      "median_price": 440000.0,
-      "avg_price": 444728.0,
+      "count": 283,
+      "median_price": 485000.0,
+      "avg_price": 469962.0,
       "min_price": 15000.0,
       "max_price": 925000.0
     },
     {
       "year": 2024,
       "count": 188,
-      "median_price": 440528.0,
-      "avg_price": 478641.0,
+      "median_price": 450000.0,
+      "avg_price": 490589.0,
       "min_price": 202500.0,
       "max_price": 2480176.21
     },
     {
       "year": 2025,
-      "count": 139,
-      "median_price": 470000.0,
-      "avg_price": 510074.0,
+      "count": 140,
+      "median_price": 475000.0,
+      "avg_price": 516435.0,
       "min_price": 15000.0,
       "max_price": 1310999.0
     },
     {
       "year": 2026,
       "count": 81,
-      "median_price": 517000.0,
-      "avg_price": 535993.0,
+      "median_price": 520000.0,
+      "avg_price": 541187.0,
       "min_price": 150000.0,
       "max_price": 1520000.0
     }

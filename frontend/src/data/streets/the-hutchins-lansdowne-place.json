@@ -2,8 +2,8 @@
   "slug": "the-hutchins-lansdowne-place",
   "stats": {
     "count": 24,
-    "median": 1522900,
-    "avg": 1643391,
+    "median": 1728492,
+    "avg": 1835954,
     "min": 969162,
     "max": 3480176,
     "firstYear": 2023,
@@ -13,16 +13,16 @@
     {
       "year": 2023,
       "count": 10,
-      "median_price": 1145374,
-      "avg_price": 1430154,
+      "median_price": 1300000,
+      "avg_price": 1623225,
       "min_price": 969162,
       "max_price": 3480176
     },
     {
       "year": 2024,
       "count": 13,
-      "median_price": 1588825,
-      "avg_price": 1790757,
+      "median_price": 1803316,
+      "avg_price": 1997742,
       "min_price": 1160006,
       "max_price": 3348018
     },

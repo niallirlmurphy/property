@@ -2,13 +2,13 @@
   "name": "Clontarf, Dublin",
   "slug": "clontarf",
   "center": {
-    "lat": 53.3608138,
-    "lon": -6.1968538
+    "lat": 53.365322,
+    "lon": -6.197839
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 870000.0,
-  "avg_price": 1477800,
+  "median_price": 865000.0,
+  "avg_price": 1435300,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "D03",
       "bedrooms": 4,
       "property_type": "terraced",
-      "distance_m": 996.61869606
+      "price_incl_vat": 865000.0,
+      "distance_m": 493.59206563
     },
     {
       "id": 804617,
@@ -46,25 +47,8 @@
       "routing_key": "D03",
       "bedrooms": 4,
       "property_type": "terraced",
-      "distance_m": 97.20816552
-    },
-    {
-      "id": 804491,
-      "sale_date": "2026-09-16",
-      "address": "70 KINCORA COURT, CLONTARF, DUBLIN",
-      "county": "Dublin",
-      "eircode": "D03Y5H2",
-      "price": 612000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.360038,
-      "longitude": -6.188147,
-      "routing_key": "D03",
-      "bedrooms": 2,
-      "property_type": "bungalow",
-      "distance_m": 586.06576458
+      "price_incl_vat": 1781000.0,
+      "distance_m": 556.76215911
     },
     {
       "id": 804467,
@@ -82,7 +66,27 @@
       "routing_key": "D03",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 667.62324095
+      "price_incl_vat": 730000.0,
+      "distance_m": 363.0536039
+    },
+    {
+      "id": 804491,
+      "sale_date": "2026-09-16",
+      "address": "70 KINCORA COURT, CLONTARF, DUBLIN",
+      "county": "Dublin",
+      "eircode": "D03Y5H2",
+      "price": 612000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.360038,
+      "longitude": -6.188147,
+      "routing_key": "D03",
+      "bedrooms": 2,
+      "property_type": "bungalow",
+      "price_incl_vat": 612000.0,
+      "distance_m": 873.01143047
     },
     {
       "id": 804227,
@@ -100,7 +104,8 @@
       "routing_key": "D03",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1419.35605694
+      "price_incl_vat": 2320000.0,
+      "distance_m": 1158.69715115
     },
     {
       "id": 804224,
@@ -118,7 +123,27 @@
       "routing_key": "D03",
       "bedrooms": 5,
       "property_type": "detached",
-      "distance_m": 1466.26883497
+      "price_incl_vat": 4250000.0,
+      "distance_m": 1203.16704249
+    },
+    {
+      "id": 804302,
+      "sale_date": "2026-09-14",
+      "address": "APT 2 GLASLYNN HOUSE, 97 HOWTH ROAD, CLONTARF",
+      "county": "Dublin",
+      "eircode": "D03W188",
+      "price": 515000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.366634,
+      "longitude": -6.218629,
+      "routing_key": "D03",
+      "bedrooms": 2,
+      "property_type": "apartment",
+      "price_incl_vat": 515000.0,
+      "distance_m": 1391.63323196
     },
     {
       "id": 803029,
@@ -136,7 +161,8 @@
       "routing_key": "D03",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 845.85275734
+      "price_incl_vat": 460000.0,
+      "distance_m": 906.84926968
     },
     {
       "id": 801936,
@@ -154,7 +180,8 @@
       "routing_key": "D03",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1121.28139059
+      "price_incl_vat": 1095000.0,
+      "distance_m": 639.19528603
     },
     {
       "id": 801491,
@@ -172,161 +199,144 @@
       "routing_key": "D03",
       "bedrooms": 6,
       "property_type": "detached",
-      "distance_m": 611.71088787
-    },
-    {
-      "id": 801341,
-      "sale_date": "2026-08-18",
-      "address": "7 PARK LAWN, MOUNT PROSPECT AVE, CLONTARF DUBLIN 3",
-      "county": "Dublin",
-      "eircode": "D03PX66",
-      "price": 940000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.366897,
-      "longitude": -6.193922,
-      "routing_key": "D03",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 704.58970487
+      "price_incl_vat": 1725000.0,
+      "distance_m": 356.78202438
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 87,
-      "median_price": 500000.0,
-      "avg_price": 524127.0,
+      "count": 92,
+      "median_price": 485000.0,
+      "avg_price": 510723.0,
       "min_price": 155000.0,
       "max_price": 1250000.0
     },
     {
       "year": 2011,
-      "count": 88,
+      "count": 93,
       "median_price": 430000.0,
-      "avg_price": 512062.0,
+      "avg_price": 502505.0,
       "min_price": 137000.0,
       "max_price": 2050000.0
     },
     {
       "year": 2012,
-      "count": 114,
-      "median_price": 360250.0,
-      "avg_price": 430479.0,
+      "count": 115,
+      "median_price": 360000.0,
+      "avg_price": 428431.0,
       "min_price": 131500.0,
       "max_price": 1950000.0
     },
     {
       "year": 2013,
-      "count": 120,
-      "median_price": 477500.0,
-      "avg_price": 497180.0,
+      "count": 123,
+      "median_price": 480000.0,
+      "avg_price": 497761.0,
       "min_price": 12000.0,
       "max_price": 1200000.0
     },
     {
       "year": 2014,
-      "count": 128,
-      "median_price": 515000.0,
-      "avg_price": 553740.0,
+      "count": 134,
+      "median_price": 500000.0,
+      "avg_price": 539867.0,
       "min_price": 87500.0,
       "max_price": 1459500.0
     },
     {
       "year": 2015,
-      "count": 134,
+      "count": 140,
       "median_price": 560000.0,
-      "avg_price": 590054.0,
+      "avg_price": 598671.0,
       "min_price": 143333.0,
       "max_price": 2350000.0
     },
     {
       "year": 2016,
-      "count": 136,
-      "median_price": 598000.0,
-      "avg_price": 624785.0,
+      "count": 140,
+      "median_price": 625000.0,
+      "avg_price": 631435.0,
       "min_price": 175000.0,
       "max_price": 2100000.0
     },
     {
       "year": 2017,
-      "count": 146,
+      "count": 147,
       "median_price": 630000.0,
-      "avg_price": 661367.0,
+      "avg_price": 664093.0,
       "min_price": 175000.0,
       "max_price": 2004405.29
     },
     {
       "year": 2018,
-      "count": 145,
+      "count": 150,
       "median_price": 680000.0,
-      "avg_price": 700350.0,
+      "avg_price": 706592.0,
       "min_price": 109375.0,
       "max_price": 3300000.0
     },
     {
       "year": 2019,
-      "count": 150,
-      "median_price": 675500.0,
-      "avg_price": 770211.0,
+      "count": 153,
+      "median_price": 676000.0,
+      "avg_price": 773904.0,
       "min_price": 65000.0,
       "max_price": 3575000.0
     },
     {
       "year": 2020,
-      "count": 149,
+      "count": 154,
       "median_price": 650000.0,
-      "avg_price": 643310.0,
+      "avg_price": 649831.0,
       "min_price": 10000.0,
       "max_price": 1750000.0
     },
     {
       "year": 2021,
-      "count": 178,
-      "median_price": 623500.0,
-      "avg_price": 675840.0,
+      "count": 181,
+      "median_price": 637500.0,
+      "avg_price": 683069.0,
       "min_price": 50000.0,
       "max_price": 2750000.0
     },
     {
       "year": 2022,
-      "count": 224,
-      "median_price": 606333.0,
-      "avg_price": 730346.0,
+      "count": 236,
+      "median_price": 585000.0,
+      "avg_price": 717505.0,
       "min_price": 50000.0,
       "max_price": 6750000.0
     },
     {
       "year": 2023,
-      "count": 175,
+      "count": 177,
       "median_price": 700000.0,
-      "avg_price": 765872.0,
+      "avg_price": 762859.0,
       "min_price": 195000.0,
       "max_price": 3300000.0
     },
     {
       "year": 2024,
-      "count": 221,
+      "count": 229,
       "median_price": 715000.0,
-      "avg_price": 751024.0,
+      "avg_price": 748715.0,
       "min_price": 90000.0,
       "max_price": 2765000.0
     },
     {
       "year": 2025,
-      "count": 218,
-      "median_price": 711000.0,
-      "avg_price": 841849.0,
+      "count": 223,
+      "median_price": 751000.0,
+      "avg_price": 847585.0,
       "min_price": 153333.31,
       "max_price": 3450000.0
     },
     {
       "year": 2026,
-      "count": 102,
-      "median_price": 870000.0,
-      "avg_price": 1009595.0,
+      "count": 103,
+      "median_price": 865000.0,
+      "avg_price": 1004793.0,
       "min_price": 265000.0,
       "max_price": 4250000.0
     }

@@ -2,8 +2,8 @@
   "slug": "castleguard-manor-ardee",
   "stats": {
     "count": 102,
-    "median": 227500,
-    "avg": 219189,
+    "median": 258212,
+    "avg": 248779,
     "min": 187225,
     "max": 250000,
     "firstYear": 2018,
@@ -13,21 +13,37 @@
     {
       "year": 2018,
       "count": 80,
-      "median_price": 227500,
-      "avg_price": 216403,
+      "median_price": 258212,
+      "avg_price": 245618,
       "min_price": 187225,
       "max_price": 250000
     },
     {
       "year": 2019,
       "count": 22,
-      "median_price": 230000,
-      "avg_price": 229318,
+      "median_price": 261050,
+      "avg_price": 260276,
       "min_price": 227500,
       "max_price": 235000
     }
   ],
   "transactions": [
+    {
+      "date": "2019-04-24",
+      "address": "85 Castleguard Manor, Ardee",
+      "price": 235000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-04-24",
+      "address": "91 Castleguard Manor, Ardee",
+      "price": 230000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
     {
       "date": "2019-04-24",
       "address": "102 Castleguard Manor, Ardee",
@@ -189,17 +205,33 @@
       "eircode": null
     },
     {
-      "date": "2019-04-24",
-      "address": "85 Castleguard Manor, Ardee",
-      "price": 235000,
+      "date": "2018-12-07",
+      "address": "59 Castleguard Manor, Ardee",
+      "price": 227500,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
-      "date": "2019-04-24",
-      "address": "91 Castleguard Manor, Ardee",
-      "price": 230000,
+      "date": "2018-12-07",
+      "address": "61 Castleguard Manor, Ardee",
+      "price": 227500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-07",
+      "address": "60 Castleguard Manor, Ardee",
+      "price": 227500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-12-07",
+      "address": "64 Castleguard Manor, Ardee",
+      "price": 195000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -349,33 +381,17 @@
       "eircode": null
     },
     {
-      "date": "2018-12-07",
-      "address": "59 Castleguard Manor, Ardee",
+      "date": "2018-10-03",
+      "address": "57 Castleguard Manor, Ardee",
       "price": 227500,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
-      "date": "2018-12-07",
-      "address": "61 Castleguard Manor, Ardee",
+      "date": "2018-10-03",
+      "address": "58 Castleguard Manor, Ardee",
       "price": 227500,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2018-12-07",
-      "address": "60 Castleguard Manor, Ardee",
-      "price": 227500,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2018-12-07",
-      "address": "64 Castleguard Manor, Ardee",
-      "price": 195000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -407,22 +423,6 @@
     {
       "date": "2018-10-03",
       "address": "56 Castleguard Manor, Ardee",
-      "price": 227500,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2018-10-03",
-      "address": "57 Castleguard Manor, Ardee",
-      "price": 227500,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2018-10-03",
-      "address": "58 Castleguard Manor, Ardee",
       "price": 227500,
       "bedrooms": null,
       "propertyType": null,

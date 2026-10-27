@@ -1,9 +1,9 @@
 {
   "slug": "st-thomas-road-mount-merrion",
   "stats": {
-    "count": 9,
-    "median": 1460000,
-    "avg": 1285000,
+    "count": 10,
+    "median": 1325000,
+    "avg": 1236500,
     "min": 650000,
     "max": 1900000,
     "firstYear": 2012,
@@ -12,11 +12,11 @@
   "trends": [
     {
       "year": 2012,
-      "count": 1,
-      "median_price": 735000,
-      "avg_price": 735000,
+      "count": 2,
+      "median_price": 767500,
+      "avg_price": 767500,
       "min_price": 735000,
-      "max_price": 735000
+      "max_price": 800000
     },
     {
       "year": 2013,
@@ -139,7 +139,15 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2012-01-20",
+      "address": "29 St. Thomas ROad, Mount Merrion",
+      "price": 800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     }
   ],
-  "totalTransactions": 9
+  "totalTransactions": 10
 }

@@ -2,8 +2,8 @@
   "slug": "crieve-mor-avenue-crievesmith",
   "stats": {
     "count": 148,
-    "median": 259284,
-    "avg": 260937,
+    "median": 294287,
+    "avg": 294066,
     "min": 155700,
     "max": 445000,
     "firstYear": 2020,
@@ -13,56 +13,56 @@
     {
       "year": 2020,
       "count": 16,
-      "median_price": 181057,
-      "avg_price": 194370,
+      "median_price": 205500,
+      "avg_price": 220610,
       "min_price": 169603,
       "max_price": 255500
     },
     {
       "year": 2021,
       "count": 2,
-      "median_price": 169604,
-      "avg_price": 169604,
+      "median_price": 192500,
+      "avg_price": 192500,
       "min_price": 169604,
       "max_price": 169604
     },
     {
       "year": 2022,
       "count": 29,
-      "median_price": 207168,
-      "avg_price": 205688,
+      "median_price": 235135,
+      "avg_price": 232718,
       "min_price": 155700,
       "max_price": 268722
     },
     {
       "year": 2023,
       "count": 29,
-      "median_price": 255066,
-      "avg_price": 256368,
+      "median_price": 289500,
+      "avg_price": 290000,
       "min_price": 180617,
       "max_price": 351982
     },
     {
       "year": 2024,
       "count": 32,
-      "median_price": 285903,
-      "avg_price": 276830,
+      "median_price": 324500,
+      "avg_price": 312759,
       "min_price": 198238,
       "max_price": 342000
     },
     {
       "year": 2025,
       "count": 24,
-      "median_price": 316740,
-      "avg_price": 320623,
+      "median_price": 359500,
+      "avg_price": 360793,
       "min_price": 241850,
       "max_price": 445000
     },
     {
       "year": 2026,
       "count": 16,
-      "median_price": 343172,
-      "avg_price": 326026,
+      "median_price": 376582,
+      "avg_price": 361309,
       "min_price": 235365,
       "max_price": 360792
     }
@@ -398,19 +398,19 @@
     },
     {
       "date": "2024-12-10",
-      "address": "62 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
-      "price": 342000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "F92A8PE"
-    },
-    {
-      "date": "2024-12-10",
       "address": "67 Crieve Mor Avenue, Crievesmith, Letterkenny",
       "price": 245000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2024-12-10",
+      "address": "62 CRIEVE MOR AVENUE, CRIEVESMITH, LETTERKENNY",
+      "price": 342000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "F92A8PE"
     },
     {
       "date": "2024-12-06",

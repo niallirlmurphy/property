@@ -2,13 +2,13 @@
   "name": "Nenagh, Tipperary",
   "slug": "nenagh",
   "center": {
-    "lat": 52.861944,
-    "lon": -8.196667
+    "lat": 52.8657897212837,
+    "lon": -8.202148000000001
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 287388.0,
-  "avg_price": 470100,
+  "median_price": 310000.0,
+  "avg_price": 476850,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "E45",
       "bedrooms": 3,
       "property_type": "house",
-      "distance_m": 315.17908512
+      "price_incl_vat": 130000.0,
+      "distance_m": 423.09043325
     },
     {
       "id": 804149,
@@ -46,7 +47,8 @@
       "routing_key": "E45",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 288.3394267
+      "price_incl_vat": 190000.0,
+      "distance_m": 407.83432604
     },
     {
       "id": 804028,
@@ -64,7 +66,8 @@
       "routing_key": "E45",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1553.99612801
+      "price_incl_vat": 550000.0,
+      "distance_m": 1937.4160687
     },
     {
       "id": 803893,
@@ -82,7 +85,8 @@
       "routing_key": "E45",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 710.29925357
+      "price_incl_vat": 330000.0,
+      "distance_m": 1275.10208868
     },
     {
       "id": 803691,
@@ -100,7 +104,8 @@
       "routing_key": "E45",
       "bedrooms": null,
       "property_type": "apartment",
-      "distance_m": 269.09544537
+      "price_incl_vat": 1650000.0,
+      "distance_m": 508.21088944
     },
     {
       "id": 803354,
@@ -118,7 +123,8 @@
       "routing_key": "E45",
       "bedrooms": 5,
       "property_type": "detached",
-      "distance_m": 1171.48774701
+      "price_incl_vat": 415000.0,
+      "distance_m": 653.68182572
     },
     {
       "id": 803137,
@@ -136,7 +142,8 @@
       "routing_key": "E45",
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 759.59909066
+      "price_incl_vat": 410000.0,
+      "distance_m": 1311.29842363
     },
     {
       "id": 802478,
@@ -154,7 +161,8 @@
       "routing_key": "E45",
       "bedrooms": 3,
       "property_type": "detached",
-      "distance_m": 690.17392534
+      "price_incl_vat": 364000.0,
+      "distance_m": 846.93477129
     },
     {
       "id": 802056,
@@ -172,161 +180,163 @@
       "routing_key": "E45",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1481.23726507
+      "price_incl_vat": 332000.0,
+      "distance_m": 1047.29827167
     },
     {
-      "id": 802032,
+      "id": 802121,
       "sale_date": "2026-08-25",
-      "address": "118A Springfort Meadows, Nenagh",
+      "address": "BREFFNI, GORTLANDROE, NENAGH",
       "county": "Tipperary",
-      "eircode": null,
-      "price": 330000.0,
+      "eircode": "E45X585",
+      "price": 397500.0,
       "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 52.858964,
-      "longitude": -8.220756,
-      "routing_key": null,
-      "bedrooms": null,
-      "property_type": "terraced",
-      "distance_m": 1656.02257167
+      "latitude": 52.870091,
+      "longitude": -8.21768,
+      "routing_key": "E45",
+      "bedrooms": 5,
+      "property_type": "detached",
+      "price_incl_vat": 397500.0,
+      "distance_m": 1150.27750117
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 45,
-      "median_price": 141700.0,
-      "avg_price": 138316.0,
+      "count": 48,
+      "median_price": 145000.0,
+      "avg_price": 143321.0,
       "min_price": 15000.0,
       "max_price": 323500.0
     },
     {
       "year": 2011,
-      "count": 26,
-      "median_price": 117500.0,
-      "avg_price": 127477.0,
+      "count": 31,
+      "median_price": 120000.0,
+      "avg_price": 131543.0,
       "min_price": 50000.0,
       "max_price": 286344.0
     },
     {
       "year": 2012,
-      "count": 42,
-      "median_price": 86500.0,
-      "avg_price": 178682.0,
+      "count": 48,
+      "median_price": 91250.0,
+      "avg_price": 172747.0,
       "min_price": 15000.0,
       "max_price": 2010000.0
     },
     {
       "year": 2013,
-      "count": 51,
-      "median_price": 98000.0,
-      "avg_price": 101595.0,
+      "count": 52,
+      "median_price": 93000.0,
+      "avg_price": 101089.0,
       "min_price": 12000.0,
       "max_price": 365000.0
     },
     {
       "year": 2014,
-      "count": 61,
-      "median_price": 104000.0,
-      "avg_price": 96811.0,
+      "count": 70,
+      "median_price": 104500.0,
+      "avg_price": 98405.0,
       "min_price": 21000.0,
       "max_price": 215000.0
     },
     {
       "year": 2015,
-      "count": 89,
-      "median_price": 99475.0,
-      "avg_price": 126513.0,
+      "count": 98,
+      "median_price": 102500.0,
+      "avg_price": 127969.0,
       "min_price": 20000.0,
       "max_price": 3000000.0
     },
     {
       "year": 2016,
-      "count": 103,
-      "median_price": 113000.0,
-      "avg_price": 106672.0,
+      "count": 113,
+      "median_price": 125000.0,
+      "avg_price": 115767.0,
       "min_price": 10000.0,
       "max_price": 255000.0
     },
     {
       "year": 2017,
-      "count": 104,
-      "median_price": 129258.0,
-      "avg_price": 123951.0,
+      "count": 121,
+      "median_price": 137500.0,
+      "avg_price": 129400.0,
       "min_price": 30000.0,
       "max_price": 270000.0
     },
     {
       "year": 2018,
-      "count": 126,
-      "median_price": 154218.0,
-      "avg_price": 147048.0,
+      "count": 129,
+      "median_price": 160000.0,
+      "avg_price": 152303.0,
       "min_price": 35000.0,
       "max_price": 335000.0
     },
     {
       "year": 2019,
-      "count": 123,
-      "median_price": 162000.0,
-      "avg_price": 156761.0,
+      "count": 121,
+      "median_price": 165000.0,
+      "avg_price": 163552.0,
       "min_price": 22500.0,
       "max_price": 425000.0
     },
     {
       "year": 2020,
-      "count": 111,
-      "median_price": 162500.0,
-      "avg_price": 176817.0,
+      "count": 113,
+      "median_price": 165000.0,
+      "avg_price": 182439.0,
       "min_price": 28000.0,
       "max_price": 1938317.0
     },
     {
       "year": 2021,
-      "count": 119,
-      "median_price": 185841.0,
-      "avg_price": 186773.0,
-      "min_price": 22700.0,
+      "count": 127,
+      "median_price": 200000.0,
+      "avg_price": 202633.0,
+      "min_price": 36000.0,
       "max_price": 520000.0
     },
     {
       "year": 2022,
-      "count": 156,
-      "median_price": 198246.0,
-      "avg_price": 206894.0,
+      "count": 165,
+      "median_price": 215000.0,
+      "avg_price": 221829.0,
       "min_price": 35000.0,
       "max_price": 525000.0
     },
     {
       "year": 2023,
-      "count": 118,
-      "median_price": 200000.0,
-      "avg_price": 204716.0,
+      "count": 128,
+      "median_price": 202500.0,
+      "avg_price": 218060.0,
       "min_price": 56000.0,
       "max_price": 580000.0
     },
     {
       "year": 2024,
-      "count": 82,
-      "median_price": 210500.0,
-      "avg_price": 215871.0,
+      "count": 91,
+      "median_price": 225000.0,
+      "avg_price": 236436.0,
       "min_price": 12500.0,
       "max_price": 462000.0
     },
     {
       "year": 2025,
-      "count": 104,
-      "median_price": 290000.0,
-      "avg_price": 273560.0,
+      "count": 118,
+      "median_price": 315000.0,
+      "avg_price": 291992.0,
       "min_price": 25000.0,
       "max_price": 556000.0
     },
     {
       "year": 2026,
-      "count": 76,
-      "median_price": 287388.0,
-      "avg_price": 550770.0,
+      "count": 80,
+      "median_price": 310000.0,
+      "avg_price": 580296.0,
       "min_price": 80000.0,
       "max_price": 19077531.0
     }

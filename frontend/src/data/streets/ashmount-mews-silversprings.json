@@ -2,8 +2,8 @@
   "slug": "ashmount-mews-silversprings",
   "stats": {
     "count": 123,
-    "median": 149779,
-    "avg": 164534,
+    "median": 162995,
+    "avg": 178988,
     "min": 88758,
     "max": 385000,
     "firstYear": 2011,
@@ -13,8 +13,8 @@
     {
       "year": 2011,
       "count": 2,
-      "median_price": 160352,
-      "avg_price": 160352,
+      "median_price": 181999,
+      "avg_price": 181999,
       "min_price": 153303,
       "max_price": 167401
     },
@@ -29,8 +29,8 @@
     {
       "year": 2013,
       "count": 1,
-      "median_price": 136563,
-      "avg_price": 136563,
+      "median_price": 154999,
+      "avg_price": 154999,
       "min_price": 136563,
       "max_price": 136563
     },
@@ -45,40 +45,40 @@
     {
       "year": 2015,
       "count": 13,
-      "median_price": 140969,
-      "avg_price": 147500,
+      "median_price": 160000,
+      "avg_price": 167412,
       "min_price": 125000,
       "max_price": 170800
     },
     {
       "year": 2016,
       "count": 60,
-      "median_price": 132159,
-      "avg_price": 140130,
+      "median_price": 150000,
+      "avg_price": 158249,
       "min_price": 118943,
       "max_price": 198238
     },
     {
       "year": 2017,
       "count": 13,
-      "median_price": 158590,
-      "avg_price": 158979,
+      "median_price": 180000,
+      "avg_price": 179520,
       "min_price": 88758,
       "max_price": 215859
     },
     {
       "year": 2018,
       "count": 6,
-      "median_price": 171000,
-      "avg_price": 175729,
+      "median_price": 181800,
+      "avg_price": 179329,
       "min_price": 140907,
       "max_price": 247500
     },
     {
       "year": 2019,
       "count": 9,
-      "median_price": 162995,
-      "avg_price": 182724,
+      "median_price": 175000,
+      "avg_price": 191777,
       "min_price": 149779,
       "max_price": 255000
     },

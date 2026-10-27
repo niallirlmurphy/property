@@ -2,8 +2,8 @@
   "slug": "the-nicholson-lansdowne-place",
   "stats": {
     "count": 27,
-    "median": 1453744,
-    "avg": 1550049,
+    "median": 1650000,
+    "avg": 1733883,
     "min": 704846,
     "max": 6343612,
     "firstYear": 2023,
@@ -13,24 +13,24 @@
     {
       "year": 2023,
       "count": 7,
-      "median_price": 859031,
-      "avg_price": 992644,
+      "median_price": 975000,
+      "avg_price": 1126651,
       "min_price": 748899,
       "max_price": 1629955
     },
     {
       "year": 2024,
       "count": 13,
-      "median_price": 1519823,
-      "avg_price": 1394694,
+      "median_price": 1724999,
+      "avg_price": 1564131,
       "min_price": 704846,
       "max_price": 2511013
     },
     {
       "year": 2025,
       "count": 7,
-      "median_price": 1762114,
-      "avg_price": 2395969,
+      "median_price": 1960000,
+      "avg_price": 2656369,
       "min_price": 825000,
       "max_price": 6343612
     }

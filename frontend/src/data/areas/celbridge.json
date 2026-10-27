@@ -2,12 +2,12 @@
   "name": "Celbridge, Kildare",
   "slug": "celbridge",
   "center": {
-    "lat": 53.3383004,
-    "lon": -6.5396223
+    "lat": 53.341606,
+    "lon": -6.546475
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 440529.0,
+  "median_price": 479500.0,
   "avg_price": 435308,
   "min_year": 2010,
   "max_year": 2026,
@@ -28,25 +28,8 @@
       "routing_key": "W23",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 825.30352688
-    },
-    {
-      "id": 805109,
-      "sale_date": "2026-09-28",
-      "address": "10 The Avenue, Grattan Park, Celbridge",
-      "county": "Kildare",
-      "eircode": null,
-      "price": 327400.0,
-      "not_full_market_price": true,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.341567,
-      "longitude": -6.544976,
-      "routing_key": null,
-      "bedrooms": 4,
-      "property_type": "house",
-      "distance_m": 509.24787746
+      "price_incl_vat": 365000.11,
+      "distance_m": 506.01505549
     },
     {
       "id": 805206,
@@ -64,7 +47,27 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "house",
-      "distance_m": 524.03675013
+      "price_incl_vat": 450000.0,
+      "distance_m": 69.60936907
+    },
+    {
+      "id": 805109,
+      "sale_date": "2026-09-28",
+      "address": "10 The Avenue, Grattan Park, Celbridge",
+      "county": "Kildare",
+      "eircode": null,
+      "price": 327400.0,
+      "not_full_market_price": true,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.341567,
+      "longitude": -6.544976,
+      "routing_key": null,
+      "bedrooms": 4,
+      "property_type": "house",
+      "price_incl_vat": 371599.0,
+      "distance_m": 99.93692691
     },
     {
       "id": 804809,
@@ -82,7 +85,8 @@
       "routing_key": "W23",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1279.542258
+      "price_incl_vat": 655000.56,
+      "distance_m": 938.10732492
     },
     {
       "id": 804341,
@@ -100,7 +104,8 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 835.9785948
+      "price_incl_vat": 500000.0,
+      "distance_m": 829.37816333
     },
     {
       "id": 804291,
@@ -118,7 +123,8 @@
       "routing_key": "W23",
       "bedrooms": 4,
       "property_type": "terraced",
-      "distance_m": 1309.49425266
+      "price_incl_vat": 490000.0,
+      "distance_m": 723.76155654
     },
     {
       "id": 804113,
@@ -136,25 +142,8 @@
       "routing_key": "W23",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 943.9906513
-    },
-    {
-      "id": 803513,
-      "sale_date": "2026-09-07",
-      "address": "55 WILLOW AVE, PRIMROSE WAY, CELBRIDGE",
-      "county": "Kildare",
-      "eircode": "W23FT93",
-      "price": 440000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.33374,
-      "longitude": -6.524548,
-      "routing_key": "W23",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 1125.14744054
+      "price_incl_vat": 330000.0,
+      "distance_m": 362.45039515
     },
     {
       "id": 803437,
@@ -172,7 +161,27 @@
       "routing_key": "W23",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1328.51993897
+      "price_incl_vat": 560000.0,
+      "distance_m": 742.68348908
+    },
+    {
+      "id": 803513,
+      "sale_date": "2026-09-07",
+      "address": "55 WILLOW AVE, PRIMROSE WAY, CELBRIDGE",
+      "county": "Kildare",
+      "eircode": "W23FT93",
+      "price": 440000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.33374,
+      "longitude": -6.524548,
+      "routing_key": "W23",
+      "bedrooms": 3,
+      "property_type": "terraced",
+      "price_incl_vat": 440000.0,
+      "distance_m": 1702.86409412
     },
     {
       "id": 803242,
@@ -190,143 +199,144 @@
       "routing_key": "W23",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 752.04137726
+      "price_incl_vat": 470000.0,
+      "distance_m": 723.68685915
     }
   ],
   "trends": [
     {
       "year": 2010,
       "count": 94,
-      "median_price": 256608.0,
-      "avg_price": 281209.0,
+      "median_price": 267250.0,
+      "avg_price": 289638.0,
       "min_price": 155000.0,
       "max_price": 594713.65
     },
     {
       "year": 2011,
-      "count": 67,
+      "count": 68,
       "median_price": 245000.0,
-      "avg_price": 253606.0,
-      "min_price": 110000.0,
+      "avg_price": 256879.0,
+      "min_price": 105727.0,
       "max_price": 800000.0
     },
     {
       "year": 2012,
       "count": 84,
-      "median_price": 188251.0,
-      "avg_price": 201014.0,
+      "median_price": 190000.0,
+      "avg_price": 204451.0,
       "min_price": 101500.0,
       "max_price": 730000.0
     },
     {
       "year": 2013,
       "count": 72,
-      "median_price": 206000.0,
-      "avg_price": 208856.0,
+      "median_price": 217499.0,
+      "avg_price": 213588.0,
       "min_price": 97000.0,
       "max_price": 370000.0
     },
     {
       "year": 2014,
-      "count": 119,
-      "median_price": 227000.0,
-      "avg_price": 241002.0,
+      "count": 120,
+      "median_price": 226000.0,
+      "avg_price": 237454.0,
       "min_price": 56500.0,
       "max_price": 553000.0
     },
     {
       "year": 2015,
-      "count": 167,
-      "median_price": 283000.0,
-      "avg_price": 293284.0,
+      "count": 170,
+      "median_price": 296250.0,
+      "avg_price": 305379.0,
       "min_price": 42827.34,
       "max_price": 1650000.0
     },
     {
       "year": 2016,
-      "count": 138,
-      "median_price": 278400.0,
-      "avg_price": 293009.0,
+      "count": 137,
+      "median_price": 290000.0,
+      "avg_price": 300554.0,
       "min_price": 92500.0,
       "max_price": 640000.0
     },
     {
       "year": 2017,
-      "count": 139,
-      "median_price": 310000.0,
-      "avg_price": 318879.0,
+      "count": 140,
+      "median_price": 317500.0,
+      "avg_price": 332114.0,
       "min_price": 110000.0,
-      "max_price": 613000.0
+      "max_price": 615000.0
     },
     {
       "year": 2018,
       "count": 158,
-      "median_price": 315000.0,
-      "avg_price": 322856.0,
+      "median_price": 317500.0,
+      "avg_price": 330727.0,
       "min_price": 20000.0,
       "max_price": 830000.0
     },
     {
       "year": 2019,
-      "count": 161,
-      "median_price": 317000.0,
-      "avg_price": 347546.0,
+      "count": 159,
+      "median_price": 320000.0,
+      "avg_price": 356610.0,
       "min_price": 121775.0,
       "max_price": 3010000.0
     },
     {
       "year": 2020,
       "count": 118,
-      "median_price": 313000.0,
-      "avg_price": 330701.0,
-      "min_price": 25000.0,
+      "median_price": 317000.0,
+      "avg_price": 338773.0,
+      "min_price": 115000.0,
       "max_price": 605000.0
     },
     {
       "year": 2021,
-      "count": 235,
-      "median_price": 348018.0,
-      "avg_price": 381073.0,
+      "count": 229,
+      "median_price": 385000.0,
+      "avg_price": 401545.0,
       "min_price": 150000.0,
       "max_price": 4237885.0
     },
     {
       "year": 2022,
-      "count": 265,
-      "median_price": 374449.0,
-      "avg_price": 389650.0,
+      "count": 299,
+      "median_price": 420000.0,
+      "avg_price": 415171.0,
       "min_price": 180768.0,
       "max_price": 975000.0
     },
     {
       "year": 2023,
-      "count": 302,
-      "median_price": 357000.0,
-      "avg_price": 372482.0,
+      "count": 358,
+      "median_price": 385000.0,
+      "avg_price": 399636.0,
       "min_price": 76588.0,
       "max_price": 850000.0
     },
     {
       "year": 2024,
-      "count": 169,
-      "median_price": 420000.0,
-      "avg_price": 465359.0,
+      "count": 185,
+      "median_price": 422500.0,
+      "avg_price": 457213.0,
       "min_price": 200000.0,
       "max_price": 1251750.0
     },
     {
       "year": 2025,
-      "count": 161,
-      "median_price": 455000.0,
-      "avg_price": 483849.0,
+      "count": 160,
+      "median_price": 456000.0,
+      "avg_price": 487043.0,
       "min_price": 115000.0,
       "max_price": 2060000.0
     },
     {
       "year": 2026,
       "count": 158,
-      "median_price": 440529.0,
-      "avg_price": 477003.0,
+      "median_price": 479500.0,
+      "avg_price": 497507.0,
       "min_price": 240000.0,
       "max_price": 935000.0
     }

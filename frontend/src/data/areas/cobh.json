@@ -2,13 +2,13 @@
   "name": "Cobh, Cork",
   "slug": "cobh",
   "center": {
-    "lat": 51.8502284,
-    "lon": -8.2950649
+    "lat": 51.8541425,
+    "lon": -8.303382
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 332989.0,
-  "avg_price": 343700,
+  "median_price": 350000.0,
+  "avg_price": 346700,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "P24",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1279.06679256
+      "price_incl_vat": 350000.0,
+      "distance_m": 566.70481143
     },
     {
       "id": 804530,
@@ -46,7 +47,8 @@
       "routing_key": "P24",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 194.83333282
+      "price_incl_vat": 340000.0,
+      "distance_m": 892.91467251
     },
     {
       "id": 804216,
@@ -64,25 +66,8 @@
       "routing_key": "P24",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 744.90136511
-    },
-    {
-      "id": 804159,
-      "sale_date": "2026-09-11",
-      "address": "7 JOE REID PLACE, CARRIGNAFOY, COBH",
-      "county": "Cork",
-      "eircode": "P24EF90",
-      "price": 300000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.856491,
-      "longitude": -8.274284,
-      "routing_key": "P24",
-      "bedrooms": 2,
-      "property_type": "terraced",
-      "distance_m": 1592.39789027
+      "price_incl_vat": 285000.0,
+      "distance_m": 677.12003752
     },
     {
       "id": 804210,
@@ -100,7 +85,8 @@
       "routing_key": "P24",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1853.76699595
+      "price_incl_vat": 360000.0,
+      "distance_m": 1291.74609629
     },
     {
       "id": 803686,
@@ -118,7 +104,8 @@
       "routing_key": "P24",
       "bedrooms": 3,
       "property_type": "bungalow",
-      "distance_m": 1915.46002168
+      "price_incl_vat": 562000.0,
+      "distance_m": 1201.52514078
     },
     {
       "id": 803173,
@@ -136,7 +123,8 @@
       "routing_key": "P24",
       "bedrooms": 2,
       "property_type": "house",
-      "distance_m": 232.65324001
+      "price_incl_vat": 240000.0,
+      "distance_m": 868.88872004
     },
     {
       "id": 803030,
@@ -154,7 +142,8 @@
       "routing_key": "P24",
       "bedrooms": 4,
       "property_type": "terraced",
-      "distance_m": 227.3868276
+      "price_incl_vat": 400000.0,
+      "distance_m": 623.32199562
     },
     {
       "id": 803012,
@@ -172,7 +161,27 @@
       "routing_key": "P24",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1015.19246071
+      "price_incl_vat": 325000.0,
+      "distance_m": 1571.58296601
+    },
+    {
+      "id": 802785,
+      "sale_date": "2026-09-02",
+      "address": "12 RIVERSIDE AVE, RUSHBROOKE LINKS, CORK",
+      "county": "Cork",
+      "eircode": "P24PC44",
+      "price": 330000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.858318,
+      "longitude": -8.322309,
+      "routing_key": "P24",
+      "bedrooms": 3,
+      "property_type": "terraced",
+      "price_incl_vat": 330000.0,
+      "distance_m": 1384.31599563
     },
     {
       "id": 802580,
@@ -190,143 +199,144 @@
       "routing_key": "P24",
       "bedrooms": null,
       "property_type": "terraced",
-      "distance_m": 437.95829103
+      "price_incl_vat": 275000.0,
+      "distance_m": 994.39174712
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 29,
-      "median_price": 180000.0,
-      "avg_price": 169428.0,
+      "count": 31,
+      "median_price": 178000.0,
+      "avg_price": 170849.0,
       "min_price": 30000.0,
       "max_price": 265000.0
     },
     {
       "year": 2011,
-      "count": 22,
-      "median_price": 155000.0,
-      "avg_price": 181376.0,
+      "count": 24,
+      "median_price": 167500.0,
+      "avg_price": 195320.0,
       "min_price": 80000.0,
-      "max_price": 450000.0
+      "max_price": 472500.0
     },
     {
       "year": 2012,
-      "count": 13,
-      "median_price": 127000.0,
-      "avg_price": 146731.0,
+      "count": 16,
+      "median_price": 123500.0,
+      "avg_price": 141978.0,
       "min_price": 40000.0,
       "max_price": 465000.0
     },
     {
       "year": 2013,
-      "count": 17,
-      "median_price": 93000.0,
-      "avg_price": 94908.0,
+      "count": 20,
+      "median_price": 102500.0,
+      "avg_price": 184090.0,
       "min_price": 35000.0,
-      "max_price": 191000.0
+      "max_price": 1511011.0
     },
     {
       "year": 2014,
-      "count": 36,
-      "median_price": 97500.0,
-      "avg_price": 134478.0,
-      "min_price": 45000.0,
+      "count": 47,
+      "median_price": 105000.0,
+      "avg_price": 137284.0,
+      "min_price": 40000.0,
       "max_price": 415000.0
     },
     {
       "year": 2015,
-      "count": 72,
-      "median_price": 100000.0,
-      "avg_price": 128796.0,
+      "count": 82,
+      "median_price": 105500.0,
+      "avg_price": 135941.0,
       "min_price": 30000.0,
       "max_price": 449500.0
     },
     {
       "year": 2016,
-      "count": 71,
-      "median_price": 121500.0,
-      "avg_price": 132033.0,
+      "count": 82,
+      "median_price": 130000.0,
+      "avg_price": 134206.0,
       "min_price": 12143.0,
       "max_price": 395000.0
     },
     {
       "year": 2017,
-      "count": 71,
-      "median_price": 136000.0,
-      "avg_price": 160572.0,
-      "min_price": 18750.0,
+      "count": 83,
+      "median_price": 142000.0,
+      "avg_price": 158501.0,
+      "min_price": 10000.0,
       "max_price": 580000.0
     },
     {
       "year": 2018,
-      "count": 77,
-      "median_price": 177974.0,
-      "avg_price": 191528.0,
+      "count": 86,
+      "median_price": 188000.0,
+      "avg_price": 195493.0,
       "min_price": 40000.0,
       "max_price": 485000.0
     },
     {
       "year": 2019,
-      "count": 95,
-      "median_price": 215000.0,
-      "avg_price": 223103.0,
+      "count": 99,
+      "median_price": 220000.0,
+      "avg_price": 230045.0,
       "min_price": 60000.0,
       "max_price": 570000.0
     },
     {
       "year": 2020,
-      "count": 88,
-      "median_price": 201638.0,
-      "avg_price": 227122.0,
+      "count": 94,
+      "median_price": 214000.0,
+      "avg_price": 237679.0,
       "min_price": 20000.0,
       "max_price": 585000.0
     },
     {
       "year": 2021,
-      "count": 164,
-      "median_price": 216740.0,
-      "avg_price": 231322.0,
+      "count": 175,
+      "median_price": 235000.0,
+      "avg_price": 238803.0,
       "min_price": 18125.0,
       "max_price": 761000.0
     },
     {
       "year": 2022,
-      "count": 156,
-      "median_price": 261968.0,
-      "avg_price": 314263.0,
+      "count": 162,
+      "median_price": 270000.0,
+      "avg_price": 318915.0,
       "min_price": 100000.0,
       "max_price": 1232500.0
     },
     {
       "year": 2023,
-      "count": 153,
+      "count": 165,
       "median_price": 260000.0,
-      "avg_price": 285760.0,
+      "avg_price": 287679.0,
       "min_price": 20000.0,
       "max_price": 750000.0
     },
     {
       "year": 2024,
-      "count": 159,
-      "median_price": 281938.0,
-      "avg_price": 309169.0,
+      "count": 169,
+      "median_price": 295000.0,
+      "avg_price": 317065.0,
       "min_price": 32703.22,
       "max_price": 1330000.0
     },
     {
       "year": 2025,
-      "count": 110,
-      "median_price": 308250.0,
-      "avg_price": 338618.0,
+      "count": 120,
+      "median_price": 312500.0,
+      "avg_price": 337964.0,
       "min_price": 10000.0,
       "max_price": 1100000.0
     },
     {
       "year": 2026,
-      "count": 92,
-      "median_price": 332989.0,
-      "avg_price": 352147.0,
+      "count": 94,
+      "median_price": 350000.0,
+      "avg_price": 355349.0,
       "min_price": 135000.0,
       "max_price": 795000.0
     }

@@ -462,19 +462,19 @@
     },
     {
       "date": "2021-03-03",
-      "address": "169 THE LAURELS, TULLOW RD, CARLOW",
-      "price": 100000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "R93EY86"
-    },
-    {
-      "date": "2021-03-03",
       "address": "163 THE LAURELS, TULLOW RD, CARLOW",
       "price": 110000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "R93AW70"
+    },
+    {
+      "date": "2021-03-03",
+      "address": "169 THE LAURELS, TULLOW RD, CARLOW",
+      "price": 100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93EY86"
     },
     {
       "date": "2021-02-04",

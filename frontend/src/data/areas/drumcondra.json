@@ -2,12 +2,12 @@
   "name": "Drumcondra, Dublin",
   "slug": "drumcondra",
   "center": {
-    "lat": 53.3680988,
-    "lon": -6.2554727
+    "lat": 53.37032,
+    "lon": -6.25468
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 565000.0,
+  "median_price": 568500.0,
   "avg_price": 585200,
   "min_year": 2010,
   "max_year": 2026,
@@ -28,7 +28,8 @@
       "routing_key": "D07",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1150.84440354
+      "price_incl_vat": 600000.0,
+      "distance_m": 1391.75828852
     },
     {
       "id": 805196,
@@ -46,7 +47,8 @@
       "routing_key": "D09",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1380.63339333
+      "price_incl_vat": 640000.0,
+      "distance_m": 1291.96978238
     },
     {
       "id": 804773,
@@ -64,7 +66,8 @@
       "routing_key": "D09",
       "bedrooms": 2,
       "property_type": "house",
-      "distance_m": 1064.06518293
+      "price_incl_vat": 414000.0,
+      "distance_m": 1139.26472304
     },
     {
       "id": 804622,
@@ -82,7 +85,8 @@
       "routing_key": "D09",
       "bedrooms": 4,
       "property_type": "terraced",
-      "distance_m": 765.68579
+      "price_incl_vat": 810000.0,
+      "distance_m": 840.8643063
     },
     {
       "id": 804565,
@@ -100,25 +104,8 @@
       "routing_key": "D09",
       "bedrooms": 4,
       "property_type": "house",
-      "distance_m": 769.02532956
-    },
-    {
-      "id": 804559,
-      "sale_date": "2026-09-17",
-      "address": "36 CROYDON GREEN, MARINO, DUBLIN 3",
-      "county": "Dublin",
-      "eircode": "D03R9H6",
-      "price": 567000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.367763,
-      "longitude": -6.236184,
-      "routing_key": "D03",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 1284.49797999
+      "price_incl_vat": 870000.0,
+      "distance_m": 851.74904257
     },
     {
       "id": 804534,
@@ -136,7 +123,27 @@
       "routing_key": "D09",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1401.33110839
+      "price_incl_vat": 300000.0,
+      "distance_m": 1190.29152982
+    },
+    {
+      "id": 804559,
+      "sale_date": "2026-09-17",
+      "address": "36 CROYDON GREEN, MARINO, DUBLIN 3",
+      "county": "Dublin",
+      "eircode": "D03R9H6",
+      "price": 567000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.367763,
+      "longitude": -6.236184,
+      "routing_key": "D03",
+      "bedrooms": 3,
+      "property_type": "terraced",
+      "price_incl_vat": 567000.0,
+      "distance_m": 1263.61745174
     },
     {
       "id": 804319,
@@ -154,7 +161,8 @@
       "routing_key": "D03",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 837.38003883
+      "price_incl_vat": 535000.0,
+      "distance_m": 944.4310651
     },
     {
       "id": 804099,
@@ -172,7 +180,8 @@
       "routing_key": "D09",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 790.1670713
+      "price_incl_vat": 634000.0,
+      "distance_m": 617.34369344
     },
     {
       "id": 803962,
@@ -190,143 +199,144 @@
       "routing_key": "D03",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 624.29628193
+      "price_incl_vat": 482000.0,
+      "distance_m": 873.96604209
     }
   ],
   "trends": [
     {
       "year": 2010,
       "count": 62,
-      "median_price": 305000.0,
-      "avg_price": 347163.0,
+      "median_price": 307500.0,
+      "avg_price": 348453.0,
       "min_price": 150000.0,
       "max_price": 760000.0
     },
     {
       "year": 2011,
-      "count": 81,
+      "count": 85,
       "median_price": 282200.0,
-      "avg_price": 298688.0,
+      "avg_price": 303057.0,
       "min_price": 76666.0,
       "max_price": 1625000.0
     },
     {
       "year": 2012,
-      "count": 101,
-      "median_price": 245000.0,
-      "avg_price": 269810.0,
+      "count": 109,
+      "median_price": 247777.0,
+      "avg_price": 271555.0,
       "min_price": 30000.0,
       "max_price": 670000.0
     },
     {
       "year": 2013,
-      "count": 137,
-      "median_price": 280000.0,
-      "avg_price": 286583.0,
+      "count": 140,
+      "median_price": 285000.0,
+      "avg_price": 291607.0,
       "min_price": 42000.0,
       "max_price": 750000.0
     },
     {
       "year": 2014,
-      "count": 167,
-      "median_price": 330000.0,
-      "avg_price": 347980.0,
+      "count": 169,
+      "median_price": 335000.0,
+      "avg_price": 353318.0,
       "min_price": 48409.0,
       "max_price": 1350000.0
     },
     {
       "year": 2015,
-      "count": 168,
-      "median_price": 352500.0,
-      "avg_price": 375777.0,
+      "count": 169,
+      "median_price": 357000.0,
+      "avg_price": 383726.0,
       "min_price": 100000.0,
       "max_price": 1270000.0
     },
     {
       "year": 2016,
-      "count": 184,
-      "median_price": 409692.0,
-      "avg_price": 405983.0,
+      "count": 212,
+      "median_price": 428750.0,
+      "avg_price": 431276.0,
       "min_price": 100000.0,
       "max_price": 900000.0
     },
     {
       "year": 2017,
-      "count": 167,
-      "median_price": 398000.0,
-      "avg_price": 420672.0,
+      "count": 170,
+      "median_price": 400000.0,
+      "avg_price": 428581.0,
       "min_price": 91000.0,
       "max_price": 1300000.0
     },
     {
       "year": 2018,
-      "count": 217,
-      "median_price": 440529.0,
-      "avg_price": 469839.0,
+      "count": 216,
+      "median_price": 457500.0,
+      "avg_price": 483482.0,
       "min_price": 30000.0,
       "max_price": 2000000.0
     },
     {
       "year": 2019,
-      "count": 181,
-      "median_price": 410000.0,
-      "avg_price": 446147.0,
+      "count": 186,
+      "median_price": 425000.0,
+      "avg_price": 456340.0,
       "min_price": 135000.0,
       "max_price": 1300000.0
     },
     {
       "year": 2020,
-      "count": 141,
+      "count": 147,
       "median_price": 437000.0,
-      "avg_price": 470549.0,
+      "avg_price": 473695.0,
       "min_price": 175000.0,
       "max_price": 1460000.0
     },
     {
       "year": 2021,
-      "count": 327,
-      "median_price": 465000.0,
-      "avg_price": 511339.0,
+      "count": 326,
+      "median_price": 471000.0,
+      "avg_price": 515120.0,
       "min_price": 15000.0,
       "max_price": 1760000.0
     },
     {
       "year": 2022,
-      "count": 379,
+      "count": 375,
       "median_price": 475000.0,
-      "avg_price": 547053.0,
+      "avg_price": 546342.0,
       "min_price": 20000.0,
       "max_price": 2943385.0
     },
     {
       "year": 2023,
-      "count": 445,
-      "median_price": 467000.0,
-      "avg_price": 521013.0,
+      "count": 456,
+      "median_price": 473500.0,
+      "avg_price": 523538.0,
       "min_price": 26500.0,
       "max_price": 1900000.0
     },
     {
       "year": 2024,
-      "count": 424,
-      "median_price": 518500.0,
-      "avg_price": 569790.0,
+      "count": 430,
+      "median_price": 525000.0,
+      "avg_price": 571934.0,
       "min_price": 120000.0,
       "max_price": 3100000.0
     },
     {
       "year": 2025,
-      "count": 398,
-      "median_price": 551500.0,
-      "avg_price": 605101.0,
+      "count": 400,
+      "median_price": 555000.0,
+      "avg_price": 608731.0,
       "min_price": 100000.0,
       "max_price": 2500000.0
     },
     {
       "year": 2026,
-      "count": 202,
-      "median_price": 565000.0,
-      "avg_price": 577796.0,
+      "count": 208,
+      "median_price": 568500.0,
+      "avg_price": 583956.0,
       "min_price": 118000.0,
       "max_price": 1470000.0
     }

@@ -2,13 +2,13 @@
   "name": "Bray, Wicklow",
   "slug": "bray",
   "center": {
-    "lat": 53.2014604,
-    "lon": -6.1105049
+    "lat": 53.195542,
+    "lon": -6.114568
   },
   "radius_km": 2.0,
   "total_count": 10,
   "median_price": 525000.0,
-  "avg_price": 450033,
+  "avg_price": 467633,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": "A98",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1756.37484047
+      "price_incl_vat": 324333.33,
+      "distance_m": 1140.25921046
     },
     {
       "id": 805227,
@@ -46,25 +47,8 @@
       "routing_key": "A98",
       "bedrooms": 3,
       "property_type": "apartment",
-      "distance_m": 513.02303014
-    },
-    {
-      "id": 804950,
-      "sale_date": "2026-09-23",
-      "address": "58 THE FAIRWAYS, WOODBROOK GLEN, BRAY",
-      "county": "Dublin",
-      "eircode": "A98N208",
-      "price": 470000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.214393,
-      "longitude": -6.10933,
-      "routing_key": "A98",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1441.41055774
+      "price_incl_vat": 465000.0,
+      "distance_m": 1051.95332175
     },
     {
       "id": 804739,
@@ -82,25 +66,8 @@
       "routing_key": "A98",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 640.18974606
-    },
-    {
-      "id": 804734,
-      "sale_date": "2026-09-21",
-      "address": "6 WOODBROOK AVENUE, DUBLIN ROAD, BRAY",
-      "county": "Dublin",
-      "eircode": "A98E9N7",
-      "price": 830000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.218425,
-      "longitude": -6.11799,
-      "routing_key": "A98",
-      "bedrooms": 4,
-      "property_type": "terraced",
-      "distance_m": 1953.10248869
+      "price_incl_vat": 330000.0,
+      "distance_m": 1213.41553412
     },
     {
       "id": 804545,
@@ -118,7 +85,8 @@
       "routing_key": "A98",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1006.16945972
+      "price_incl_vat": 545000.0,
+      "distance_m": 1476.38167998
     },
     {
       "id": 804509,
@@ -136,7 +104,8 @@
       "routing_key": "A98",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 242.62425091
+      "price_incl_vat": 350000.0,
+      "distance_m": 713.10981726
     },
     {
       "id": 804388,
@@ -154,7 +123,8 @@
       "routing_key": "A98",
       "bedrooms": 5,
       "property_type": "terraced",
-      "distance_m": 146.10116631
+      "price_incl_vat": 335000.0,
+      "distance_m": 804.81400429
     },
     {
       "id": 804110,
@@ -172,7 +142,27 @@
       "routing_key": "A98",
       "bedrooms": 2,
       "property_type": "duplex",
-      "distance_m": 607.16029893
+      "price_incl_vat": 426000.0,
+      "distance_m": 207.3342446
+    },
+    {
+      "id": 804080,
+      "sale_date": "2026-09-11",
+      "address": "2 SUGARLOAF TERRACE, BRAY, CO WICKLOW",
+      "county": "Wicklow",
+      "eircode": "A98E3P2",
+      "price": 675000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.192829,
+      "longitude": -6.106752,
+      "routing_key": "A98",
+      "bedrooms": 4,
+      "property_type": "terraced",
+      "price_incl_vat": 675000.0,
+      "distance_m": 603.36541821
     },
     {
       "id": 804084,
@@ -190,143 +180,163 @@
       "routing_key": "A98",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 613.13539072
+      "price_incl_vat": 425000.0,
+      "distance_m": 1062.10049286
+    },
+    {
+      "id": 803897,
+      "sale_date": "2026-09-10",
+      "address": "1 THE MEWS, OLDCOURT PARK, BRAY",
+      "county": "Wicklow",
+      "eircode": "A98VA07",
+      "price": 801000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.198593,
+      "longitude": -6.112262,
+      "routing_key": "A98",
+      "bedrooms": 4,
+      "property_type": "semi-detached",
+      "price_incl_vat": 801000.0,
+      "distance_m": 372.88334332
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 121,
-      "median_price": 264000.0,
-      "avg_price": 279366.0,
+      "count": 152,
+      "median_price": 267500.0,
+      "avg_price": 285208.0,
       "min_price": 16000.0,
       "max_price": 828000.0
     },
     {
       "year": 2011,
-      "count": 105,
+      "count": 120,
       "median_price": 230000.0,
-      "avg_price": 248705.0,
-      "min_price": 80000.0,
+      "avg_price": 248261.0,
+      "min_price": 60000.0,
       "max_price": 610000.0
     },
     {
       "year": 2012,
-      "count": 105,
-      "median_price": 205000.0,
-      "avg_price": 225081.0,
+      "count": 125,
+      "median_price": 215000.0,
+      "avg_price": 228693.0,
       "min_price": 30000.0,
       "max_price": 715000.0
     },
     {
       "year": 2013,
-      "count": 145,
-      "median_price": 210000.0,
-      "avg_price": 234989.0,
+      "count": 164,
+      "median_price": 226000.0,
+      "avg_price": 255508.0,
       "min_price": 21000.0,
-      "max_price": 595000.0
+      "max_price": 2500000.0
     },
     {
       "year": 2014,
-      "count": 160,
-      "median_price": 270000.0,
-      "avg_price": 282799.0,
+      "count": 194,
+      "median_price": 280000.0,
+      "avg_price": 285797.0,
       "min_price": 50000.0,
       "max_price": 665000.0
     },
     {
       "year": 2015,
-      "count": 171,
+      "count": 204,
       "median_price": 320000.0,
-      "avg_price": 324727.0,
+      "avg_price": 333445.0,
       "min_price": 18600.0,
       "max_price": 960000.0
     },
     {
       "year": 2016,
-      "count": 185,
-      "median_price": 322000.0,
-      "avg_price": 374349.0,
+      "count": 209,
+      "median_price": 330000.0,
+      "avg_price": 380103.0,
       "min_price": 18000.0,
       "max_price": 5000000.0
     },
     {
       "year": 2017,
-      "count": 184,
-      "median_price": 351250.0,
-      "avg_price": 393100.0,
+      "count": 225,
+      "median_price": 350000.0,
+      "avg_price": 396414.0,
       "min_price": 35000.0,
       "max_price": 5000000.0
     },
     {
       "year": 2018,
-      "count": 149,
-      "median_price": 325000.0,
-      "avg_price": 356232.0,
+      "count": 172,
+      "median_price": 330000.0,
+      "avg_price": 360238.0,
       "min_price": 28000.0,
       "max_price": 1050000.0
     },
     {
       "year": 2019,
-      "count": 203,
-      "median_price": 346000.0,
-      "avg_price": 380992.0,
+      "count": 220,
+      "median_price": 351000.0,
+      "avg_price": 386107.0,
       "min_price": 52000.0,
       "max_price": 1250000.0
     },
     {
       "year": 2020,
-      "count": 203,
-      "median_price": 330000.0,
-      "avg_price": 373006.0,
+      "count": 216,
+      "median_price": 336000.0,
+      "avg_price": 376493.0,
       "min_price": 100000.0,
       "max_price": 870000.0
     },
     {
       "year": 2021,
-      "count": 272,
-      "median_price": 403500.0,
-      "avg_price": 467369.0,
+      "count": 304,
+      "median_price": 405000.0,
+      "avg_price": 466164.0,
       "min_price": 70000.0,
       "max_price": 4475000.0
     },
     {
       "year": 2022,
-      "count": 245,
-      "median_price": 427312.0,
-      "avg_price": 466890.0,
+      "count": 269,
+      "median_price": 432500.0,
+      "avg_price": 471322.0,
       "min_price": 22500.0,
       "max_price": 1395000.0
     },
     {
       "year": 2023,
-      "count": 281,
-      "median_price": 425000.0,
-      "avg_price": 466795.0,
+      "count": 305,
+      "median_price": 449999.0,
+      "avg_price": 475802.0,
       "min_price": 12000.0,
       "max_price": 1425000.0
     },
     {
       "year": 2024,
-      "count": 392,
-      "median_price": 452000.0,
-      "avg_price": 501504.0,
+      "count": 433,
+      "median_price": 475000.0,
+      "avg_price": 522149.0,
       "min_price": 150000.0,
       "max_price": 3200000.0
     },
     {
       "year": 2025,
-      "count": 369,
-      "median_price": 510000.0,
-      "avg_price": 542175.0,
+      "count": 370,
+      "median_price": 510267.0,
+      "avg_price": 555277.0,
       "min_price": 65000.0,
-      "max_price": 2000000.0
+      "max_price": 1900000.0
     },
     {
       "year": 2026,
-      "count": 153,
+      "count": 158,
       "median_price": 525000.0,
-      "avg_price": 593335.0,
+      "avg_price": 594308.0,
       "min_price": 235000.0,
       "max_price": 2500000.0
     }

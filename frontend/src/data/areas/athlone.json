@@ -2,13 +2,13 @@
   "name": "Athlone, Westmeath",
   "slug": "athlone",
   "center": {
-    "lat": 53.4228434,
-    "lon": -7.9425897
+    "lat": 53.425560000000004,
+    "lon": -7.93105
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 285000.0,
-  "avg_price": 311760,
+  "median_price": 296500.0,
+  "avg_price": 319145,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,25 +28,8 @@
       "routing_key": null,
       "bedrooms": 4,
       "property_type": "house",
-      "distance_m": 1595.32772169
-    },
-    {
-      "id": 805116,
-      "sale_date": "2026-09-28",
-      "address": "12 Fionnan Mor, Coosan, Athlone",
-      "county": "Westmeath",
-      "eircode": "N37P9V6",
-      "price": 495000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.43357,
-      "longitude": -7.945543,
-      "routing_key": "N37",
-      "bedrooms": null,
-      "property_type": null,
-      "distance_m": 1209.84239942
+      "price_incl_vat": 389999.62,
+      "distance_m": 1360.42849002
     },
     {
       "id": 805142,
@@ -64,7 +47,27 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1650.82880115
+      "price_incl_vat": 554999.11,
+      "distance_m": 953.97267044
+    },
+    {
+      "id": 805116,
+      "sale_date": "2026-09-28",
+      "address": "12 Fionnan Mor, Coosan, Athlone",
+      "county": "Westmeath",
+      "eircode": "N37P9V6",
+      "price": 495000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.43357,
+      "longitude": -7.945543,
+      "routing_key": "N37",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 561825.0,
+      "distance_m": 1312.52768454
     },
     {
       "id": 805061,
@@ -82,25 +85,8 @@
       "routing_key": "N37",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 1777.00538733
-    },
-    {
-      "id": 804923,
-      "sale_date": "2026-09-23",
-      "address": "3 ST PETERS TERRACE, ATHLONE, WESTMEATH",
-      "county": "Westmeath",
-      "eircode": "N37N9C4",
-      "price": 130000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.423629,
-      "longitude": -7.95729,
-      "routing_key": "N37",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 981.16254577
+      "price_incl_vat": 305000.0,
+      "distance_m": 1010.07176573
     },
     {
       "id": 804964,
@@ -118,7 +104,27 @@
       "routing_key": "N37",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 1114.40157735
+      "price_incl_vat": 260000.0,
+      "distance_m": 662.56405638
+    },
+    {
+      "id": 804923,
+      "sale_date": "2026-09-23",
+      "address": "3 ST PETERS TERRACE, ATHLONE, WESTMEATH",
+      "county": "Westmeath",
+      "eircode": "N37N9C4",
+      "price": 130000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.423629,
+      "longitude": -7.95729,
+      "routing_key": "N37",
+      "bedrooms": 3,
+      "property_type": "semi-detached",
+      "price_incl_vat": 130000.0,
+      "distance_m": 1757.53850104
     },
     {
       "id": 804832,
@@ -136,7 +142,8 @@
       "routing_key": "N37",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 787.78603599
+      "price_incl_vat": 240000.0,
+      "distance_m": 353.72964193
     },
     {
       "id": 803965,
@@ -154,7 +161,8 @@
       "routing_key": "N37",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1951.09885284
+      "price_incl_vat": 315000.0,
+      "distance_m": 1489.6826896
     },
     {
       "id": 803866,
@@ -172,161 +180,163 @@
       "routing_key": "N37",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 522.87724909
+      "price_incl_vat": 235000.0,
+      "distance_m": 423.93353229
     },
     {
-      "id": 803844,
+      "id": 803821,
       "sale_date": "2026-09-09",
-      "address": "68 JOLLY MARINER, COOSAN ROAD, ATHLONE",
+      "address": "41 Glenatore, Coosan, Athlone",
       "county": "Westmeath",
-      "eircode": "N37K640",
-      "price": 305000.0,
+      "eircode": null,
+      "price": 378854.0,
       "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.432456,
-      "longitude": -7.948922,
-      "routing_key": "N37",
-      "bedrooms": 2,
-      "property_type": "apartment",
-      "distance_m": 1149.65438755
+      "latitude": 53.436961,
+      "longitude": -7.938432,
+      "routing_key": null,
+      "bedrooms": 4,
+      "property_type": "house",
+      "price_incl_vat": 429999.29,
+      "distance_m": 1360.42849002
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 34,
-      "median_price": 170000.0,
-      "avg_price": 182116.0,
+      "count": 40,
+      "median_price": 192200.0,
+      "avg_price": 207530.0,
       "min_price": 75000.0,
-      "max_price": 382645.0
+      "max_price": 500000.0
     },
     {
       "year": 2011,
-      "count": 39,
+      "count": 43,
       "median_price": 135000.0,
-      "avg_price": 145662.0,
+      "avg_price": 147305.0,
       "min_price": 40000.0,
       "max_price": 465000.0
     },
     {
       "year": 2012,
-      "count": 53,
-      "median_price": 85000.0,
-      "avg_price": 102964.0,
+      "count": 75,
+      "median_price": 109000.0,
+      "avg_price": 114360.0,
       "min_price": 10000.0,
-      "max_price": 250000.0
+      "max_price": 265000.0
     },
     {
       "year": 2013,
-      "count": 58,
-      "median_price": 90000.0,
-      "avg_price": 92913.0,
+      "count": 69,
+      "median_price": 75000.0,
+      "avg_price": 88947.0,
       "min_price": 12000.0,
       "max_price": 317000.0
     },
     {
       "year": 2014,
-      "count": 127,
-      "median_price": 90000.0,
-      "avg_price": 98117.0,
+      "count": 142,
+      "median_price": 86000.0,
+      "avg_price": 98514.0,
       "min_price": 10000.0,
-      "max_price": 270000.0
+      "max_price": 273127.0
     },
     {
       "year": 2015,
-      "count": 145,
-      "median_price": 100000.0,
-      "avg_price": 107342.0,
+      "count": 166,
+      "median_price": 93000.0,
+      "avg_price": 105809.0,
       "min_price": 17576.0,
-      "max_price": 330000.0
+      "max_price": 346000.0
     },
     {
       "year": 2016,
-      "count": 172,
-      "median_price": 99500.0,
-      "avg_price": 115196.0,
+      "count": 197,
+      "median_price": 97000.0,
+      "avg_price": 113523.0,
       "min_price": 24000.0,
       "max_price": 392000.0
     },
     {
       "year": 2017,
-      "count": 142,
+      "count": 152,
       "median_price": 126500.0,
-      "avg_price": 136634.0,
+      "avg_price": 149488.0,
       "min_price": 10000.0,
-      "max_price": 1120000.0
+      "max_price": 1859358.0
     },
     {
       "year": 2018,
-      "count": 166,
-      "median_price": 170000.0,
-      "avg_price": 170447.0,
+      "count": 169,
+      "median_price": 170500.0,
+      "avg_price": 173079.0,
       "min_price": 17000.0,
       "max_price": 575000.0
     },
     {
       "year": 2019,
-      "count": 164,
-      "median_price": 164500.0,
-      "avg_price": 175590.0,
-      "min_price": 52000.0,
+      "count": 194,
+      "median_price": 153031.0,
+      "avg_price": 170569.0,
+      "min_price": 22500.0,
       "max_price": 590000.0
     },
     {
       "year": 2020,
-      "count": 145,
-      "median_price": 183000.0,
-      "avg_price": 189650.0,
+      "count": 157,
+      "median_price": 185000.0,
+      "avg_price": 193920.0,
       "min_price": 17350.0,
       "max_price": 500000.0
     },
     {
       "year": 2021,
-      "count": 173,
-      "median_price": 195000.0,
-      "avg_price": 203777.0,
+      "count": 198,
+      "median_price": 199000.0,
+      "avg_price": 208601.0,
       "min_price": 23000.0,
       "max_price": 490000.0
     },
     {
       "year": 2022,
-      "count": 190,
+      "count": 194,
       "median_price": 235000.0,
-      "avg_price": 233250.0,
+      "avg_price": 237655.0,
       "min_price": 40000.0,
       "max_price": 800000.0
     },
     {
       "year": 2023,
-      "count": 190,
-      "median_price": 230500.0,
-      "avg_price": 250630.0,
+      "count": 214,
+      "median_price": 240000.0,
+      "avg_price": 261742.0,
       "min_price": 30000.0,
       "max_price": 1080000.0
     },
     {
       "year": 2024,
-      "count": 172,
-      "median_price": 251000.0,
-      "avg_price": 253283.0,
+      "count": 185,
+      "median_price": 260000.0,
+      "avg_price": 274282.0,
       "min_price": 24000.0,
-      "max_price": 970000.0
+      "max_price": 1938325.99
     },
     {
       "year": 2025,
-      "count": 164,
-      "median_price": 300000.0,
-      "avg_price": 298031.0,
+      "count": 170,
+      "median_price": 309000.0,
+      "avg_price": 310682.0,
       "min_price": 39600.0,
-      "max_price": 670000.0
+      "max_price": 680000.0
     },
     {
       "year": 2026,
-      "count": 109,
-      "median_price": 285000.0,
-      "avg_price": 290596.0,
+      "count": 126,
+      "median_price": 296500.0,
+      "avg_price": 296589.0,
       "min_price": 60000.0,
       "max_price": 770000.0
     }

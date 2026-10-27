@@ -2,8 +2,8 @@
   "slug": "wyckham-point-wyckham-way",
   "stats": {
     "count": 120,
-    "median": 369000,
-    "avg": 375550,
+    "median": 370000,
+    "avg": 388110,
     "min": 84234,
     "max": 799000,
     "firstYear": 2010,
@@ -13,24 +13,24 @@
     {
       "year": 2010,
       "count": 22,
-      "median_price": 281234,
-      "avg_price": 285512,
+      "median_price": 319201,
+      "avg_price": 324056,
       "min_price": 84234,
       "max_price": 551111
     },
     {
       "year": 2011,
       "count": 6,
-      "median_price": 252500,
-      "avg_price": 302054,
+      "median_price": 286588,
+      "avg_price": 342831,
       "min_price": 229074,
       "max_price": 572000
     },
     {
       "year": 2012,
       "count": 9,
-      "median_price": 230000,
-      "avg_price": 224435,
+      "median_price": 261050,
+      "avg_price": 252454,
       "min_price": 152000,
       "max_price": 280000
     },
@@ -38,7 +38,7 @@
       "year": 2013,
       "count": 3,
       "median_price": 245000,
-      "avg_price": 389333,
+      "avg_price": 430868,
       "min_price": 124000,
       "max_price": 799000
     },
@@ -53,8 +53,8 @@
     {
       "year": 2015,
       "count": 9,
-      "median_price": 305000,
-      "avg_price": 301761,
+      "median_price": 317800,
+      "avg_price": 305961,
       "min_price": 123250,
       "max_price": 400000
     },
@@ -326,19 +326,19 @@
     },
     {
       "date": "2022-09-20",
-      "address": "169 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
-      "price": 425000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D16RN09"
-    },
-    {
-      "date": "2022-09-20",
       "address": "101 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
       "price": 490000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D16P4A6"
+    },
+    {
+      "date": "2022-09-20",
+      "address": "169 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16RN09"
     },
     {
       "date": "2022-05-24",

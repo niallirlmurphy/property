@@ -2,13 +2,13 @@
   "name": "Naas, Kildare",
   "slug": "naas",
   "center": {
-    "lat": 53.2214677,
-    "lon": -6.6574093
+    "lat": 53.220676,
+    "lon": -6.662318
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 470000.0,
-  "avg_price": 454421,
+  "median_price": 477500.0,
+  "avg_price": 460511,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,8 @@
       "routing_key": null,
       "bedrooms": 5,
       "property_type": "detached",
-      "distance_m": 547.58729627
+      "price_incl_vat": 740000.0,
+      "distance_m": 288.54268458
     },
     {
       "id": 805576,
@@ -46,7 +47,8 @@
       "routing_key": "W91",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1406.54429084
+      "price_incl_vat": 396000.0,
+      "distance_m": 1496.80955618
     },
     {
       "id": 805166,
@@ -64,7 +66,8 @@
       "routing_key": "W91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1786.15588775
+      "price_incl_vat": 495000.0,
+      "distance_m": 1908.81374922
     },
     {
       "id": 804963,
@@ -82,7 +85,8 @@
       "routing_key": null,
       "bedrooms": null,
       "property_type": "duplex",
-      "distance_m": 947.47428538
+      "price_incl_vat": 297709.25,
+      "distance_m": 660.50062335
     },
     {
       "id": 804632,
@@ -100,7 +104,8 @@
       "routing_key": "W91",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 274.69594831
+      "price_incl_vat": 320000.0,
+      "distance_m": 112.02161846
     },
     {
       "id": 804548,
@@ -118,7 +123,8 @@
       "routing_key": "W91",
       "bedrooms": 2,
       "property_type": "terraced",
-      "distance_m": 595.18429341
+      "price_incl_vat": 385000.0,
+      "distance_m": 395.29296096
     },
     {
       "id": 804510,
@@ -136,7 +142,8 @@
       "routing_key": "W91",
       "bedrooms": 2,
       "property_type": "apartment",
-      "distance_m": 799.65677647
+      "price_incl_vat": 350000.0,
+      "distance_m": 809.81461556
     },
     {
       "id": 804166,
@@ -154,7 +161,8 @@
       "routing_key": "W91",
       "bedrooms": 4,
       "property_type": "detached",
-      "distance_m": 1338.18928517
+      "price_incl_vat": 890000.0,
+      "distance_m": 1453.08043793
     },
     {
       "id": 804098,
@@ -172,161 +180,163 @@
       "routing_key": "W91",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1790.40039076
+      "price_incl_vat": 515000.0,
+      "distance_m": 1760.06861549
     },
     {
-      "id": 803919,
-      "sale_date": "2026-09-10",
-      "address": "18 Cearbhall Court, Naas",
+      "id": 804071,
+      "sale_date": "2026-09-11",
+      "address": "18 WENTHWORTH PLACE, NAAS, KILDARE",
       "county": "Kildare",
-      "eircode": null,
-      "price": 268100.0,
+      "eircode": "W91X9PN",
+      "price": 329000.0,
       "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.215732,
-      "longitude": -6.668171,
-      "routing_key": null,
-      "bedrooms": null,
-      "property_type": "detached",
-      "distance_m": 961.36213097
+      "latitude": 53.212593,
+      "longitude": -6.686162,
+      "routing_key": "W91",
+      "bedrooms": 3,
+      "property_type": "terraced",
+      "price_incl_vat": 329000.0,
+      "distance_m": 1829.26394147
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 86,
-      "median_price": 250000.0,
-      "avg_price": 265661.0,
+      "count": 90,
+      "median_price": 245000.0,
+      "avg_price": 259153.0,
       "min_price": 10000.0,
       "max_price": 695000.0
     },
     {
       "year": 2011,
-      "count": 74,
-      "median_price": 210527.0,
-      "avg_price": 232058.0,
-      "min_price": 89383.5,
+      "count": 78,
+      "median_price": 207300.0,
+      "avg_price": 230865.0,
+      "min_price": 79295.0,
       "max_price": 515000.0
     },
     {
       "year": 2012,
-      "count": 84,
-      "median_price": 195000.0,
-      "avg_price": 202831.0,
+      "count": 94,
+      "median_price": 187575.0,
+      "avg_price": 194834.0,
       "min_price": 63487.0,
       "max_price": 440000.0
     },
     {
       "year": 2013,
-      "count": 85,
-      "median_price": 188000.0,
-      "avg_price": 212784.0,
+      "count": 96,
+      "median_price": 190000.0,
+      "avg_price": 211010.0,
       "min_price": 38000.0,
       "max_price": 503500.0
     },
     {
       "year": 2014,
-      "count": 109,
-      "median_price": 243000.0,
-      "avg_price": 256087.0,
-      "min_price": 73500.0,
+      "count": 118,
+      "median_price": 241500.0,
+      "avg_price": 251490.0,
+      "min_price": 50000.0,
       "max_price": 630000.0
     },
     {
       "year": 2015,
-      "count": 170,
-      "median_price": 276500.0,
-      "avg_price": 296911.0,
-      "min_price": 90000.0,
+      "count": 183,
+      "median_price": 270000.0,
+      "avg_price": 296790.0,
+      "min_price": 75000.0,
       "max_price": 1000000.0
     },
     {
       "year": 2016,
-      "count": 171,
-      "median_price": 280176.0,
-      "avg_price": 288420.0,
+      "count": 183,
+      "median_price": 285000.0,
+      "avg_price": 297698.0,
       "min_price": 72000.0,
-      "max_price": 590000.0
+      "max_price": 616000.0
     },
     {
       "year": 2017,
-      "count": 200,
-      "median_price": 305000.0,
-      "avg_price": 303010.0,
+      "count": 213,
+      "median_price": 316000.0,
+      "avg_price": 314583.0,
       "min_price": 37000.0,
       "max_price": 745000.0
     },
     {
       "year": 2018,
-      "count": 324,
-      "median_price": 308370.0,
-      "avg_price": 317943.0,
+      "count": 327,
+      "median_price": 340000.0,
+      "avg_price": 339881.0,
       "min_price": 20000.0,
       "max_price": 1090000.0
     },
     {
       "year": 2019,
-      "count": 311,
-      "median_price": 295154.0,
-      "avg_price": 295343.0,
+      "count": 328,
+      "median_price": 315000.0,
+      "avg_price": 313594.0,
       "min_price": 80000.0,
       "max_price": 700000.0
     },
     {
       "year": 2020,
-      "count": 172,
-      "median_price": 298784.0,
-      "avg_price": 313398.0,
-      "min_price": 41000.0,
+      "count": 187,
+      "median_price": 324951.0,
+      "avg_price": 324995.0,
+      "min_price": 10000.0,
       "max_price": 670000.0
     },
     {
       "year": 2021,
-      "count": 344,
-      "median_price": 317180.0,
-      "avg_price": 336576.0,
-      "min_price": 90000.0,
+      "count": 356,
+      "median_price": 343750.0,
+      "avg_price": 356244.0,
+      "min_price": 40000.0,
       "max_price": 1953261.67
     },
     {
       "year": 2022,
-      "count": 339,
-      "median_price": 370044.0,
-      "avg_price": 385193.0,
+      "count": 341,
+      "median_price": 392070.0,
+      "avg_price": 397291.0,
       "min_price": 133000.0,
       "max_price": 1250000.0
     },
     {
       "year": 2023,
-      "count": 266,
-      "median_price": 365000.0,
-      "avg_price": 387152.0,
+      "count": 276,
+      "median_price": 370000.0,
+      "avg_price": 388589.0,
       "min_price": 130000.0,
       "max_price": 1155000.0
     },
     {
       "year": 2024,
-      "count": 255,
+      "count": 273,
       "median_price": 430000.0,
-      "avg_price": 451062.0,
+      "avg_price": 455097.0,
       "min_price": 20000.0,
       "max_price": 2500000.0
     },
     {
       "year": 2025,
-      "count": 269,
-      "median_price": 436123.0,
-      "avg_price": 456736.0,
+      "count": 293,
+      "median_price": 452958.0,
+      "avg_price": 466808.0,
       "min_price": 70000.0,
       "max_price": 1368610.0
     },
     {
       "year": 2026,
-      "count": 161,
-      "median_price": 470000.0,
-      "avg_price": 489098.0,
+      "count": 168,
+      "median_price": 477500.0,
+      "avg_price": 499574.0,
       "min_price": 130000.0,
       "max_price": 1050000.0
     }

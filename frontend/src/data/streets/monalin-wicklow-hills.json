@@ -2,8 +2,8 @@
   "slug": "monalin-wicklow-hills",
   "stats": {
     "count": 105,
-    "median": 237004,
-    "avg": 278160,
+    "median": 269000,
+    "avg": 299441,
     "min": 116250,
     "max": 600000,
     "firstYear": 2015,
@@ -13,40 +13,40 @@
     {
       "year": 2015,
       "count": 12,
-      "median_price": 209487,
-      "avg_price": 212501,
+      "median_price": 237767,
+      "avg_price": 241188,
       "min_price": 171806,
       "max_price": 300000
     },
     {
       "year": 2016,
       "count": 34,
-      "median_price": 211454,
-      "avg_price": 213330,
+      "median_price": 240000,
+      "avg_price": 242130,
       "min_price": 171805,
       "max_price": 264316
     },
     {
       "year": 2018,
       "count": 16,
-      "median_price": 226872,
-      "avg_price": 238650,
+      "median_price": 257500,
+      "avg_price": 267745,
       "min_price": 211453,
       "max_price": 370000
     },
     {
       "year": 2019,
       "count": 19,
-      "median_price": 254626,
-      "avg_price": 268468,
+      "median_price": 288999,
+      "avg_price": 289539,
       "min_price": 116250,
       "max_price": 375000
     },
     {
       "year": 2020,
       "count": 3,
-      "median_price": 334802,
-      "avg_price": 336601,
+      "median_price": 380000,
+      "avg_price": 351667,
       "min_price": 295000,
       "max_price": 380000
     },

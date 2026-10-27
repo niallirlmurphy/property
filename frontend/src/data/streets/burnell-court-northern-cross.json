@@ -2,8 +2,8 @@
   "slug": "burnell-court-northern-cross",
   "stats": {
     "count": 99,
-    "median": 132787,
-    "avg": 192510,
+    "median": 150713,
+    "avg": 201900,
     "min": 106230,
     "max": 351000,
     "firstYear": 2014,
@@ -21,8 +21,8 @@
     {
       "year": 2015,
       "count": 54,
-      "median_price": 132787,
-      "avg_price": 127518,
+      "median_price": 150713,
+      "avg_price": 144733,
       "min_price": 106230,
       "max_price": 166933
     },

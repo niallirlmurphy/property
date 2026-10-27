@@ -2,8 +2,8 @@
   "slug": "the-woods-glounthaune",
   "stats": {
     "count": 108,
-    "median": 264317,
-    "avg": 290971,
+    "median": 290713,
+    "avg": 315731,
     "min": 120000,
     "max": 605000,
     "firstYear": 2012,
@@ -13,56 +13,56 @@
     {
       "year": 2012,
       "count": 10,
-      "median_price": 221916,
-      "avg_price": 213048,
+      "median_price": 251875,
+      "avg_price": 241809,
       "min_price": 132158,
       "max_price": 300000
     },
     {
       "year": 2013,
       "count": 3,
-      "median_price": 135683,
-      "avg_price": 165874,
+      "median_price": 154000,
+      "avg_price": 188267,
       "min_price": 132160,
       "max_price": 229780
     },
     {
       "year": 2014,
       "count": 8,
-      "median_price": 213992,
-      "avg_price": 187725,
+      "median_price": 242881,
+      "avg_price": 211043,
       "min_price": 120000,
       "max_price": 233000
     },
     {
       "year": 2015,
       "count": 15,
-      "median_price": 221164,
-      "avg_price": 237146,
+      "median_price": 251021,
+      "avg_price": 267900,
       "min_price": 140000,
       "max_price": 400678
     },
     {
       "year": 2016,
       "count": 24,
-      "median_price": 238691,
-      "avg_price": 263072,
+      "median_price": 270914,
+      "avg_price": 298586,
       "min_price": 220263,
       "max_price": 425000
     },
     {
       "year": 2017,
       "count": 13,
-      "median_price": 304770,
-      "avg_price": 318415,
+      "median_price": 345914,
+      "avg_price": 361401,
       "min_price": 243096,
       "max_price": 414317
     },
     {
       "year": 2018,
       "count": 7,
-      "median_price": 308370,
-      "avg_price": 325162,
+      "median_price": 350000,
+      "avg_price": 362347,
       "min_price": 284552,
       "max_price": 396475
     },

@@ -2,8 +2,8 @@
   "slug": "an-fiodan-doughiska",
   "stats": {
     "count": 103,
-    "median": 232500,
-    "avg": 244322,
+    "median": 240000,
+    "avg": 244602,
     "min": 85000,
     "max": 460000,
     "firstYear": 2010,
@@ -13,8 +13,8 @@
     {
       "year": 2010,
       "count": 4,
-      "median_price": 212596,
-      "avg_price": 211298,
+      "median_price": 218000,
+      "avg_price": 218527,
       "min_price": 195000,
       "max_price": 225000
     },

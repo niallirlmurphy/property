@@ -2,8 +2,8 @@
   "slug": "dundoogan-haynestown",
   "stats": {
     "count": 158,
-    "median": 227300,
-    "avg": 229430,
+    "median": 257986,
+    "avg": 258570,
     "min": 185845,
     "max": 395000,
     "firstYear": 2019,
@@ -13,40 +13,40 @@
     {
       "year": 2019,
       "count": 40,
-      "median_price": 227300,
-      "avg_price": 229119,
+      "median_price": 257986,
+      "avg_price": 260050,
       "min_price": 200264,
       "max_price": 253100
     },
     {
       "year": 2020,
       "count": 4,
-      "median_price": 209647,
-      "avg_price": 210551,
+      "median_price": 232450,
+      "avg_price": 231899,
       "min_price": 199956,
       "max_price": 222953
     },
     {
       "year": 2021,
       "count": 29,
-      "median_price": 229030,
-      "avg_price": 221937,
+      "median_price": 259949,
+      "avg_price": 251899,
       "min_price": 185845,
       "max_price": 269950
     },
     {
       "year": 2022,
       "count": 74,
-      "median_price": 225528,
-      "avg_price": 228438,
+      "median_price": 255975,
+      "avg_price": 258538,
       "min_price": 198193,
       "max_price": 284938
     },
     {
       "year": 2023,
       "count": 7,
-      "median_price": 230000,
-      "avg_price": 228898,
+      "median_price": 254964,
+      "avg_price": 255363,
       "min_price": 198194,
       "max_price": 264273
     },

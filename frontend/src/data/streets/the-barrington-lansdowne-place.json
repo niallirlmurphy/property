@@ -2,8 +2,8 @@
   "slug": "the-barrington-lansdowne-place",
   "stats": {
     "count": 27,
-    "median": 1211454,
-    "avg": 1259917,
+    "median": 1375000,
+    "avg": 1390119,
     "min": 726872,
     "max": 2251982,
     "firstYear": 2020,
@@ -13,32 +13,32 @@
     {
       "year": 2020,
       "count": 3,
-      "median_price": 859031,
-      "avg_price": 976505,
+      "median_price": 975000,
+      "avg_price": 1108333,
       "min_price": 859031,
       "max_price": 1211454
     },
     {
       "year": 2021,
       "count": 10,
-      "median_price": 1112334,
-      "avg_price": 1257357,
+      "median_price": 1262499,
+      "avg_price": 1427100,
       "min_price": 726872,
       "max_price": 2251982
     },
     {
       "year": 2022,
       "count": 5,
-      "median_price": 1061947,
-      "avg_price": 1102785,
+      "median_price": 1104497,
+      "avg_price": 1221961,
       "min_price": 748898,
       "max_price": 1629956
     },
     {
       "year": 2023,
       "count": 1,
-      "median_price": 1409691,
-      "avg_price": 1409691,
+      "median_price": 1599999,
+      "avg_price": 1599999,
       "min_price": 1409691,
       "max_price": 1409691
     },
@@ -46,15 +46,15 @@
       "year": 2024,
       "count": 3,
       "median_price": 1629956,
-      "avg_price": 1411637,
+      "avg_price": 1484985,
       "min_price": 975000,
       "max_price": 1629956
     },
     {
       "year": 2025,
       "count": 4,
-      "median_price": 1541850,
-      "avg_price": 1544038,
+      "median_price": 1671225,
+      "avg_price": 1648112,
       "min_price": 1500000,
       "max_price": 1592450
     },

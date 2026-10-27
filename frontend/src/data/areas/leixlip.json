@@ -2,16 +2,35 @@
   "name": "Leixlip, Kildare",
   "slug": "leixlip",
   "center": {
-    "lat": 53.3644766,
-    "lon": -6.4897438
+    "lat": 53.364702,
+    "lon": -6.507628
   },
   "radius_km": 1.5,
   "total_count": 10,
-  "median_price": 478000.0,
-  "avg_price": 426310,
+  "median_price": 480177.0,
+  "avg_price": 499640,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 805412,
+      "sale_date": "2026-09-30",
+      "address": "3 GLEN EASTON GROVE, EASTON RD, LEIXLIP",
+      "county": "Kildare",
+      "eircode": "W23KF62",
+      "price": 650000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.366264,
+      "longitude": -6.518916,
+      "routing_key": "W23",
+      "bedrooms": 5,
+      "property_type": "semi-detached",
+      "price_incl_vat": 650000.0,
+      "distance_m": 771.27633712
+    },
     {
       "id": 804331,
       "sale_date": "2026-09-15",
@@ -28,7 +47,8 @@
       "routing_key": "W23",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 1041.84880824
+      "price_incl_vat": 570000.0,
+      "distance_m": 156.51420949
     },
     {
       "id": 803270,
@@ -46,7 +66,8 @@
       "routing_key": "W23",
       "bedrooms": 4,
       "property_type": "terraced",
-      "distance_m": 1404.2175214
+      "price_incl_vat": 495000.0,
+      "distance_m": 238.77983879
     },
     {
       "id": 803002,
@@ -64,7 +85,8 @@
       "routing_key": "W23",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 1280.0441279
+      "price_incl_vat": 225000.0,
+      "distance_m": 337.65754502
     },
     {
       "id": 802439,
@@ -82,7 +104,8 @@
       "routing_key": "W23",
       "bedrooms": 3,
       "property_type": "detached",
-      "distance_m": 448.29305039
+      "price_incl_vat": 435100.0,
+      "distance_m": 1432.69327178
     },
     {
       "id": 801988,
@@ -100,7 +123,27 @@
       "routing_key": "W23",
       "bedrooms": 1,
       "property_type": "apartment",
-      "distance_m": 821.84448557
+      "price_incl_vat": 300000.0,
+      "distance_m": 668.44422388
+    },
+    {
+      "id": 801786,
+      "sale_date": "2026-08-21",
+      "address": "38 Harpur Avenue, Harpur Lane, Leixlip",
+      "county": "Kildare",
+      "eircode": null,
+      "price": 462555.06,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.3639,
+      "longitude": -6.525297,
+      "routing_key": null,
+      "bedrooms": 4,
+      "property_type": "house",
+      "price_incl_vat": 524999.99,
+      "distance_m": 1179.6203869
     },
     {
       "id": 801158,
@@ -118,217 +161,184 @@
       "routing_key": "W23",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1341.51530935
+      "price_incl_vat": 560000.0,
+      "distance_m": 308.64232816
     },
     {
-      "id": 798046,
-      "sale_date": "2026-07-27",
-      "address": "29 EASTON PARK, LEIXLIP, KILDARE",
+      "id": 799128,
+      "sale_date": "2026-07-31",
+      "address": "6 GLEN, EASTON COURT, LEIXLIP",
       "county": "Kildare",
-      "eircode": "W23P2R9",
-      "price": 501000.0,
+      "eircode": "W23F348",
+      "price": 845000.0,
       "not_full_market_price": false,
       "vat_exclusive": false,
       "description": "Second-Hand Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.367252,
-      "longitude": -6.509191,
+      "latitude": 53.364986,
+      "longitude": -6.515992,
       "routing_key": "W23",
-      "bedrooms": 3,
-      "property_type": "semi-detached",
-      "distance_m": 1330.90701381
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 845000.0,
+      "distance_m": 557.68712144
     },
     {
-      "id": 791248,
-      "sale_date": "2026-07-24",
-      "address": "54 BLOCK D, LOUISA PARK, LEIXLIP",
+      "id": 799053,
+      "sale_date": "2026-07-31",
+      "address": "32 HARPUR AVENUE, HARPUR LANE, LEIXLIP",
       "county": "Kildare",
-      "eircode": "W23XW11",
-      "price": 340000.0,
+      "eircode": null,
+      "price": 453746.49,
       "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
       "size_description": null,
-      "latitude": 53.360693,
-      "longitude": -6.500521,
-      "routing_key": "W23",
+      "latitude": 53.3639,
+      "longitude": -6.525297,
+      "routing_key": null,
       "bedrooms": 2,
-      "property_type": "apartment",
-      "distance_m": 831.91716236
-    },
-    {
-      "id": 791022,
-      "sale_date": "2026-07-21",
-      "address": "8 CEDAR PARK, LEIXLIP, KILDARE",
-      "county": "Kildare",
-      "eircode": "W23R3H9",
-      "price": 457000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.36737,
-      "longitude": -6.499745,
-      "routing_key": "W23",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "distance_m": 739.54937832
-    },
-    {
-      "id": 790822,
-      "sale_date": "2026-07-17",
-      "address": "UNIT 7, RIVER FOREST SHOPPING CENTRE, LEIXLIP",
-      "county": "Kildare",
-      "eircode": "W23C9D3",
-      "price": 380000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.371395,
-      "longitude": -6.48881,
-      "routing_key": "W23",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "distance_m": 772.47567203
+      "property_type": null,
+      "price_incl_vat": 515002.27,
+      "distance_m": 1179.6203869
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 26,
-      "median_price": 265000.0,
-      "avg_price": 286864.0,
-      "min_price": 100000.0,
+      "count": 43,
+      "median_price": 285000.0,
+      "avg_price": 290561.0,
+      "min_price": 74584.0,
       "max_price": 630000.0
     },
     {
       "year": 2011,
-      "count": 22,
-      "median_price": 206500.0,
-      "avg_price": 215659.0,
-      "min_price": 12000.0,
-      "max_price": 520000.0
+      "count": 41,
+      "median_price": 230000.0,
+      "avg_price": 245683.0,
+      "min_price": 74889.0,
+      "max_price": 510000.0
     },
     {
       "year": 2012,
-      "count": 34,
-      "median_price": 220000.0,
-      "avg_price": 226228.0,
+      "count": 45,
+      "median_price": 230000.0,
+      "avg_price": 235649.0,
       "min_price": 70000.0,
       "max_price": 520500.0
     },
     {
       "year": 2013,
-      "count": 41,
-      "median_price": 185000.0,
-      "avg_price": 210248.0,
+      "count": 65,
+      "median_price": 215000.0,
+      "avg_price": 222896.0,
       "min_price": 66960.0,
-      "max_price": 550000.0
+      "max_price": 527500.0
     },
     {
       "year": 2014,
-      "count": 39,
-      "median_price": 268722.0,
-      "avg_price": 371238.0,
-      "min_price": 115000.0,
+      "count": 62,
+      "median_price": 291250.0,
+      "avg_price": 352739.0,
+      "min_price": 117000.0,
       "max_price": 2867100.0
     },
     {
       "year": 2015,
-      "count": 65,
-      "median_price": 245000.0,
-      "avg_price": 270046.0,
+      "count": 82,
+      "median_price": 277500.0,
+      "avg_price": 279562.0,
       "min_price": 50000.0,
       "max_price": 750000.0
     },
     {
       "year": 2016,
-      "count": 56,
-      "median_price": 295000.0,
-      "avg_price": 308063.0,
-      "min_price": 60000.0,
+      "count": 65,
+      "median_price": 300000.0,
+      "avg_price": 307896.0,
+      "min_price": 145000.0,
       "max_price": 600000.0
     },
     {
       "year": 2017,
-      "count": 64,
-      "median_price": 280000.0,
-      "avg_price": 319519.0,
+      "count": 92,
+      "median_price": 315000.0,
+      "avg_price": 335560.0,
       "min_price": 129000.0,
       "max_price": 955000.0
     },
     {
       "year": 2018,
-      "count": 58,
-      "median_price": 321750.0,
-      "avg_price": 381728.0,
+      "count": 118,
+      "median_price": 375000.0,
+      "avg_price": 380783.0,
       "min_price": 150000.0,
       "max_price": 1564591.0
     },
     {
       "year": 2019,
-      "count": 72,
-      "median_price": 297500.0,
-      "avg_price": 311705.0,
-      "min_price": 125000.0,
+      "count": 139,
+      "median_price": 375000.0,
+      "avg_price": 358982.0,
+      "min_price": 132500.0,
       "max_price": 755000.0
     },
     {
       "year": 2020,
-      "count": 120,
-      "median_price": 352423.0,
-      "avg_price": 366405.0,
+      "count": 167,
+      "median_price": 409999.0,
+      "avg_price": 399788.0,
       "min_price": 100000.0,
-      "max_price": 1100000.0
+      "max_price": 860000.0
     },
     {
       "year": 2021,
-      "count": 88,
-      "median_price": 375000.0,
-      "avg_price": 365574.0,
+      "count": 150,
+      "median_price": 420000.0,
+      "avg_price": 405924.0,
       "min_price": 152500.0,
-      "max_price": 845000.0
+      "max_price": 850000.0
     },
     {
       "year": 2022,
-      "count": 103,
-      "median_price": 402500.0,
-      "avg_price": 420552.0,
+      "count": 147,
+      "median_price": 459998.0,
+      "avg_price": 463580.0,
       "min_price": 95000.0,
       "max_price": 1650000.0
     },
     {
       "year": 2023,
-      "count": 94,
-      "median_price": 416000.0,
-      "avg_price": 415852.0,
+      "count": 219,
+      "median_price": 490000.0,
+      "avg_price": 475474.0,
       "min_price": 91666.66,
-      "max_price": 821000.0
+      "max_price": 1200000.0
     },
     {
       "year": 2024,
-      "count": 119,
-      "median_price": 440000.0,
-      "avg_price": 443598.0,
-      "min_price": 176500.0,
+      "count": 139,
+      "median_price": 483000.0,
+      "avg_price": 474625.0,
+      "min_price": 115000.0,
       "max_price": 865000.0
     },
     {
       "year": 2025,
-      "count": 215,
-      "median_price": 436123.0,
-      "avg_price": 442723.0,
+      "count": 319,
+      "median_price": 489780.0,
+      "avg_price": 485874.0,
       "min_price": 160000.0,
       "max_price": 1072500.0
     },
     {
       "year": 2026,
-      "count": 56,
-      "median_price": 478000.0,
-      "avg_price": 476892.0,
+      "count": 123,
+      "median_price": 480177.0,
+      "avg_price": 492259.0,
       "min_price": 196000.0,
-      "max_price": 830000.0
+      "max_price": 970000.0
     }
   ]
 }

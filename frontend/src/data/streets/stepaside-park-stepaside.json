@@ -2,8 +2,8 @@
   "slug": "stepaside-park-stepaside",
   "stats": {
     "count": 102,
-    "median": 693314,
-    "avg": 719906,
+    "median": 745000,
+    "avg": 757591,
     "min": 490000,
     "max": 1185000,
     "firstYear": 2010,
@@ -53,32 +53,32 @@
     {
       "year": 2017,
       "count": 10,
-      "median_price": 644934,
-      "avg_price": 677357,
+      "median_price": 732000,
+      "avg_price": 748348,
       "min_price": 634362,
       "max_price": 765000
     },
     {
       "year": 2018,
       "count": 22,
-      "median_price": 674008,
-      "avg_price": 681127,
+      "median_price": 745000,
+      "avg_price": 750058,
       "min_price": 524229,
       "max_price": 855000
     },
     {
       "year": 2019,
       "count": 13,
-      "median_price": 760000,
-      "avg_price": 726696,
+      "median_price": 770000,
+      "avg_price": 785042,
       "min_price": 568282,
       "max_price": 830000
     },
     {
       "year": 2020,
       "count": 12,
-      "median_price": 654185,
-      "avg_price": 668847,
+      "median_price": 735000,
+      "avg_price": 733042,
       "min_price": 568282,
       "max_price": 795000
     },
@@ -86,7 +86,7 @@
       "year": 2021,
       "count": 10,
       "median_price": 820000,
-      "avg_price": 826639,
+      "avg_price": 835500,
       "min_price": 656388,
       "max_price": 985000
     },

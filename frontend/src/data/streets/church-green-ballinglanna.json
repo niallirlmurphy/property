@@ -2,8 +2,8 @@
   "slug": "church-green-ballinglanna",
   "stats": {
     "count": 107,
-    "median": 343612,
-    "avg": 421532,
+    "median": 390000,
+    "avg": 474947,
     "min": 222028,
     "max": 4588106,
     "firstYear": 2020,
@@ -13,40 +13,40 @@
     {
       "year": 2020,
       "count": 21,
-      "median_price": 275331,
-      "avg_price": 296343,
+      "median_price": 312501,
+      "avg_price": 336350,
       "min_price": 222028,
       "max_price": 436123
     },
     {
       "year": 2021,
       "count": 13,
-      "median_price": 339207,
-      "avg_price": 370244,
+      "median_price": 385000,
+      "avg_price": 420227,
       "min_price": 328745,
       "max_price": 458150
     },
     {
       "year": 2022,
       "count": 34,
-      "median_price": 343612,
-      "avg_price": 492123,
+      "median_price": 390000,
+      "avg_price": 558559,
       "min_price": 312775,
       "max_price": 4588106
     },
     {
       "year": 2023,
       "count": 30,
-      "median_price": 400881,
-      "avg_price": 417304,
+      "median_price": 455000,
+      "avg_price": 472222,
       "min_price": 312775,
       "max_price": 560000
     },
     {
       "year": 2024,
       "count": 4,
-      "median_price": 475771,
-      "avg_price": 490385,
+      "median_price": 540000,
+      "avg_price": 556588,
       "min_price": 365000,
       "max_price": 645000
     },
@@ -54,7 +54,7 @@
       "year": 2025,
       "count": 3,
       "median_price": 500000,
-      "avg_price": 524908,
+      "avg_price": 543008,
       "min_price": 402225,
       "max_price": 672500
     },
@@ -430,16 +430,16 @@
     },
     {
       "date": "2022-12-07",
-      "address": "90-105 Church Green, Ballinglanna, Glanmire",
-      "price": 4588106,
+      "address": "136 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 370044,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2022-12-07",
-      "address": "136 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
-      "price": 370044,
+      "address": "90-105 Church Green, Ballinglanna, Glanmire",
+      "price": 4588106,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

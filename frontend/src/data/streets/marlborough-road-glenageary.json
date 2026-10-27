@@ -3,7 +3,7 @@
   "stats": {
     "count": 9,
     "median": 1750000,
-    "avg": 2700972,
+    "avg": 2722778,
     "min": 1453744,
     "max": 6500000,
     "firstYear": 2013,
@@ -45,8 +45,8 @@
     {
       "year": 2021,
       "count": 1,
-      "median_price": 1453744,
-      "avg_price": 1453744,
+      "median_price": 1649999,
+      "avg_price": 1649999,
       "min_price": 1453744,
       "max_price": 1453744
     },

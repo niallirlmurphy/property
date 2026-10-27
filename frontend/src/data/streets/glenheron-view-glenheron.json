@@ -2,8 +2,8 @@
   "slug": "glenheron-view-glenheron",
   "stats": {
     "count": 91,
-    "median": 440485,
-    "avg": 447656,
+    "median": 499950,
+    "avg": 498813,
     "min": 167417,
     "max": 895000,
     "firstYear": 2018,
@@ -13,32 +13,32 @@
     {
       "year": 2018,
       "count": 32,
-      "median_price": 394274,
-      "avg_price": 364904,
+      "median_price": 447500,
+      "avg_price": 414166,
       "min_price": 167417,
       "max_price": 515418
     },
     {
       "year": 2019,
       "count": 38,
-      "median_price": 440500,
-      "avg_price": 451430,
+      "median_price": 499968,
+      "avg_price": 512373,
       "min_price": 383259,
       "max_price": 563876
     },
     {
       "year": 2020,
       "count": 7,
-      "median_price": 449295,
-      "avg_price": 443669,
+      "median_price": 509950,
+      "avg_price": 503564,
       "min_price": 396475,
       "max_price": 515418
     },
     {
       "year": 2021,
       "count": 5,
-      "median_price": 515418,
-      "avg_price": 509251,
+      "median_price": 585000,
+      "avg_price": 578000,
       "min_price": 440529,
       "max_price": 550661
     },
