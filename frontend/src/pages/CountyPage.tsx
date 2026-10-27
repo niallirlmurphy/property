@@ -10,6 +10,7 @@ import type { CountySummary } from "../types";
 import { countyFromSlug, areasForCounty, provinceForCounty, PROVINCES } from "../areas";
 import Breadcrumbs from "../components/Breadcrumbs";
 import StreetLevelAnalysis from "../components/StreetLevelAnalysis";
+import CsoFigures from "../components/CsoFigures";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { getCountyContent } from "../content/counties";
 import {
@@ -231,6 +232,8 @@ export default function CountyPage() {
               </p>
             </section>
           )}
+
+          {data.cso && <CsoFigures cso={data.cso} place={`County ${county}`} />}
 
           {data.recent.length > 0 && (
             <section className="content-section">

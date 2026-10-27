@@ -52,6 +52,7 @@ export interface AreaSummary {
   max_year: number | null;
   recent: Property[];
   trends: TrendPoint[];
+  cso?: CsoSlice;   // added by areaLoader
 }
 
 export interface CountySummary {
@@ -61,6 +62,7 @@ export interface CountySummary {
   avg_price: number | null;
   trends: TrendPoint[];
   recent: Property[];
+  cso?: CsoSlice;   // added by countyLoader
 }
 
 export interface EircodeStats {
@@ -82,6 +84,7 @@ export interface EircodeResponse {
 export interface EircodePageData {
   eircode: EircodeResponse;
   trends: TrendPoint[];
+  cso?: CsoSlice;   // added by eircodeLoader
 }
 
 // Valuation types
@@ -239,4 +242,36 @@ export interface DevelopmentData {
   };
   transactions: DevelopmentTransaction[];
   totalTransactions: number;
+}
+
+// Official CSO figures shown next to ours (frontend/src/data/cso.json, from
+// scripts/generate_cso_data.py). Rolling figures cover the 12 months to
+// `latest_month`; medians include VAT on new homes, unlike PPR prices.
+export interface CsoRollingFigures {
+  median_12m: number | null;
+  median_12m_prev: number | null;
+  existing_12m: number | null;
+  new_12m: number | null;
+  volume_12m: number | null;
+}
+
+export interface CsoRegion extends CsoRollingFigures {
+  name: string;
+  house: { median: number | null; volume: number | null };
+  apartment: { median: number | null; volume: number | null };
+}
+
+export interface CsoRoutingKey extends CsoRollingFigures {
+  key: string;
+  name: string;
+}
+
+export interface CsoSlice {
+  latest_month: string;    // e.g. "August 2026"
+  rppi_month: string;
+  annual_year: string;     // year of the house/apartment split
+  source_url: string;
+  rppi?: { label: string; change_12m: number | null }[];
+  regions?: CsoRegion[];
+  routing_keys?: CsoRoutingKey[];
 }

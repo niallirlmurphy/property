@@ -171,14 +171,23 @@ python3 scripts/generate_sitemap.py          # refresh sitemap
 python3 scripts/generate_page_data.py        # writes frontend/src/data/{areas,eircodes,counties}/*.json
 python3 scripts/generate_site_stats.py       # writes frontend/src/data/site_stats.json (homepage trust strip/FAQ figures)
 python3 scripts/generate_development_data.py # writes frontend/src/data/developments/*.json (/development/:slug)
+python3 scripts/generate_cso_data.py        # writes frontend/src/data/cso.json (CSO figures on county/area/Eircode pages; CSO API only, no DB)
 git add frontend/src/data/streets frontend/public/sitemap.xml
-git add frontend/src/data/areas frontend/src/data/eircodes frontend/src/data/counties frontend/src/data/site_stats.json frontend/src/data/developments frontend/src/data/page_data_generated.json
+git add frontend/src/data/areas frontend/src/data/eircodes frontend/src/data/counties frontend/src/data/site_stats.json frontend/src/data/developments frontend/src/data/cso.json frontend/src/data/page_data_generated.json
 git commit -m "chore: refresh street page data" && git push origin main
 ```
 **Page data is limited to once per calendar month.** `generate_page_data.py`, `generate_street_data.py`,
 `generate_site_stats.py` and `generate_development_data.py` record their last run in `frontend/src/data/page_data_generated.json` and
 skip (exit 0) if they already ran this month; pass `--force` to override (or `--force-page-data` to
 `ppr_full_pipeline.py`), e.g. for a new page type with no data yet. Commit the stamp file with the data.
+
+**CSO figures** (`scripts/cso_api.py`, `generate_cso_data.py`, `cso_compare.py`): the CSO's price statistics come from the
+same stamp duty returns as the PPR (market-based household purchases only, new homes incl. VAT; we compare by "Executions",
+the deed date). `generate_cso_data.py` follows the monthly page-data limit (stamp key `cso`). After each monthly refresh, run
+`python3 scripts/cso_compare.py` (one aggregate over a single year of sales): it compares our second-hand medians with the
+CSO's by routing key and county and writes `logs/cso/compare_<year>.md`. Areas more than 10% apart usually mean bad
+geocodes/Eircodes, unexcluded bulk sales or a wrong county. Baseline 2025: 132 routing keys, typical gap ±1.2%, 1 over 10%
+(A75); counties within 3% except rural ones (Roscommon -7.3%). CSO data is CC BY 4.0: credit "Central Statistics Office", no CSO logo.
 
 **Development pages** (`/development/:slug`, index `/developments`): one per entry in
 `frontend/src/data/developments_registry.json`. Each entry's `pinName` names a row in

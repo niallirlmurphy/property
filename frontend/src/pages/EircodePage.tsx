@@ -8,6 +8,7 @@ import type { EircodeResponse, TrendPoint, EircodePageData } from "../types";
 import { DUBLIN_EIRCODE_AREAS, countySlug } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
 import Breadcrumbs from "../components/Breadcrumbs";
+import CsoFigures from "../components/CsoFigures";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -119,6 +120,8 @@ export default function EircodePage() {
               </div>
             </section>
           )}
+
+          {baked?.cso && <CsoFigures cso={baked.cso} place={friendlyName} />}
 
           {data.results.length > 0 && (
             <section className="content-section">

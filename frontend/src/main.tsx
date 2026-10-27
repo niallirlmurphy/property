@@ -4,7 +4,8 @@ import { Navigate } from "react-router-dom";
 import { inject } from "@vercel/analytics";
 import App from "./App";
 import {
-  areaGuidesLoader, areaLoader, countyLoader, developmentLoader, developmentsIndexLoader, eircodeLoader, streetLoader,
+  areaGuidesLoader, areaLoader, countyLoader, developmentLoader, developmentsIndexLoader, dublinCountyLoader, eircodeLoader,
+  streetLoader,
 } from "./routeLoaders";
 import ScrollToTopLayout from "./components/ScrollToTopLayout";
 import "leaflet/dist/leaflet.css";
@@ -33,7 +34,7 @@ export const routes = [
   { path: "/street/:slug", lazy: () => import("./pages/StreetPage").then(page), loader: streetLoader },
   { path: "/developments", lazy: () => import("./pages/DevelopmentsIndexPage").then(page), loader: developmentsIndexLoader },
   { path: "/development/:slug", lazy: () => import("./pages/DevelopmentPage").then(page), loader: developmentLoader },
-  { path: "/county/dublin", lazy: () => import("./pages/DublinCountyPage").then(page) },
+  { path: "/county/dublin", lazy: () => import("./pages/DublinCountyPage").then(page), loader: dublinCountyLoader },
   { path: "/county/:slug", lazy: () => import("./pages/CountyPage").then(page), loader: countyLoader },
   { path: "/eircode/:code", lazy: () => import("./pages/EircodePage").then(page), loader: eircodeLoader },
   { path: "/mortgage", lazy: () => import("./pages/MortgagePage").then(page) },

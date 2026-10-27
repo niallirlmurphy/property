@@ -33,6 +33,15 @@ export function publishedPosts(now: Date = new Date()): BlogPost[] {
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "property-price-register-vs-cso-house-prices",
+    title: "Property Price Register vs CSO: Why the House Price Figures Differ",
+    description: "The Property Price Register and the CSO's price statistics come from the same stamp duty returns, not asking prices or valuations. We compared them: second-hand medians agree to about 1% by Eircode area, while VAT on new homes, missing Eircodes, rural coverage and mix-adjustment explain the gaps.",
+    date: "2026-10-27",
+    author: "HomeIQ Team",
+    tags: ["Analysis", "PPR", "CSO", "Methodology"],
+    readTime: "8 min read"
+  },
+  {
     slug: "irish-property-market-2010-2026-demand-supply-affordability",
     title: "Demand, Supply or Affordability? What 16 Years of Irish Property Data Says About the Market",
     description: "We put 16 years of Property Price Register sales next to CSO population, migration, income and house-building data. Prices more than doubled from the 2013 low while earnings rose 46%: a demand-led market hitting a supply wall, with affordability worsening fastest outside Dublin. With charts, regional figures, and Tullamore and Skibbereen up close.",

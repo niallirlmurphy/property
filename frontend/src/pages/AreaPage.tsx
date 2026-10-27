@@ -10,6 +10,7 @@ import { usePageMeta } from "../hooks/usePageMeta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import MapSearchThumb from "../components/MapSearchThumb";
 import { developmentsForArea } from "../developments";
+import CsoFigures from "../components/CsoFigures";
 
 function formatPrice(n: number | null) {
   if (n == null) return "—";
@@ -132,6 +133,8 @@ export default function AreaPage() {
               </div>
             </section>
           )}
+
+          {data.cso && <CsoFigures cso={data.cso} place={config.name} areaNote />}
 
           {data.recent.length > 0 && (
             <section className="content-section">

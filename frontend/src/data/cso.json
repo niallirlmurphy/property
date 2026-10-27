@@ -1,0 +1,2071 @@
+{
+ "generated": "2026-10-27",
+ "source": "Central Statistics Office (CSO), Residential Property Price Index",
+ "source_url": "https://www.cso.ie/en/statistics/prices/residentialpropertypriceindex/",
+ "licence": "CC BY 4.0",
+ "latest_month": "2026 August",
+ "rppi_month": "2026 August",
+ "annual_year": "2025",
+ "rppi": {
+  "National - all residential properties": {
+   "index": 209.7,
+   "change_12m": 5.1
+  },
+  "National - houses": {
+   "index": 210.5,
+   "change_12m": 4.9
+  },
+  "National - apartments": {
+   "index": 206.8,
+   "change_12m": 6.6
+  },
+  "Dublin - all residential properties": {
+   "index": 178.4,
+   "change_12m": 3.9
+  },
+  "Dublin - houses": {
+   "index": 177.8,
+   "change_12m": 3.3
+  },
+  "Dublin - apartments": {
+   "index": 183.1,
+   "change_12m": 5.7
+  },
+  "Dublin City - houses": {
+   "index": 175.2,
+   "change_12m": 1.0
+  },
+  "Dun Laoghaire-Rathdown - houses": {
+   "index": 171.2,
+   "change_12m": 6.0
+  },
+  "Fingal - houses": {
+   "index": 180.7,
+   "change_12m": 4.4
+  },
+  "South Dublin - houses": {
+   "index": 181.7,
+   "change_12m": 2.3
+  },
+  "National excluding Dublin - all residential properties": {
+   "index": 242.6,
+   "change_12m": 6.2
+  },
+  "National excluding Dublin - houses": {
+   "index": 240.2,
+   "change_12m": 6.0
+  },
+  "National excluding Dublin - apartments": {
+   "index": 271.9,
+   "change_12m": 8.6
+  },
+  "Border - houses": {
+   "index": 266.2,
+   "change_12m": 9.1
+  },
+  "Midland - houses": {
+   "index": 285.1,
+   "change_12m": 8.8
+  },
+  "West - houses": {
+   "index": 274.4,
+   "change_12m": 5.0
+  },
+  "Mid-East - houses": {
+   "index": 212.5,
+   "change_12m": 4.9
+  },
+  "Mid-West - houses": {
+   "index": 253.2,
+   "change_12m": 5.0
+  },
+  "South-East - houses": {
+   "index": 249.4,
+   "change_12m": 8.7
+  },
+  "South-West - houses": {
+   "index": 236.3,
+   "change_12m": 4.9
+  }
+ },
+ "regions": {
+  "Carlow": {
+   "median_12m": 300000,
+   "median_12m_prev": 265000,
+   "existing_12m": 275250,
+   "new_12m": 370000,
+   "volume_12m": 484,
+   "all_2025": {
+    "median": 270000,
+    "volume": 488
+   },
+   "house_2025": {
+    "median": 287500,
+    "volume": 433
+   },
+   "apartment_2025": {
+    "median": 178500,
+    "volume": 55
+   }
+  },
+  "Cavan": {
+   "median_12m": 260000,
+   "median_12m_prev": 245000,
+   "existing_12m": 250000,
+   "new_12m": 357499,
+   "volume_12m": 585,
+   "all_2025": {
+    "median": 255000,
+    "volume": 586
+   },
+   "house_2025": {
+    "median": 260000,
+    "volume": 551
+   },
+   "apartment_2025": {
+    "median": 153000,
+    "volume": 35
+   }
+  },
+  "Clare": {
+   "median_12m": 327500,
+   "median_12m_prev": 297000,
+   "existing_12m": 300000,
+   "new_12m": 399999,
+   "volume_12m": 1062,
+   "all_2025": {
+    "median": 307500,
+    "volume": 1062
+   },
+   "house_2025": {
+    "median": 317000,
+    "volume": 999
+   },
+   "apartment_2025": {
+    "median": 200000,
+    "volume": 63
+   }
+  },
+  "Cork City": {
+   "median_12m": 355000,
+   "median_12m_prev": 337005,
+   "existing_12m": 350000,
+   "new_12m": 450000,
+   "volume_12m": 932,
+   "all_2025": {
+    "median": 345000,
+    "volume": 1022
+   },
+   "house_2025": {
+    "median": 365000,
+    "volume": 820
+   },
+   "apartment_2025": {
+    "median": 300000,
+    "volume": 202
+   }
+  },
+  "Cork County": {
+   "median_12m": 400500,
+   "median_12m_prev": 370000,
+   "existing_12m": 350500,
+   "new_12m": 444999,
+   "volume_12m": 4681,
+   "all_2025": {
+    "median": 385000,
+    "volume": 4777
+   },
+   "house_2025": {
+    "median": 395000,
+    "volume": 4444
+   },
+   "apartment_2025": {
+    "median": 275000,
+    "volume": 333
+   }
+  },
+  "Donegal": {
+   "median_12m": 219500,
+   "median_12m_prev": 190000,
+   "existing_12m": 200000,
+   "new_12m": 370000,
+   "volume_12m": 1083,
+   "all_2025": {
+    "median": 194000,
+    "volume": 1130
+   },
+   "house_2025": {
+    "median": 200000,
+    "volume": 1062
+   },
+   "apartment_2025": {
+    "median": 119000,
+    "volume": 68
+   }
+  },
+  "Dublin": {
+   "median_12m": 500000,
+   "median_12m_prev": 495000,
+   "existing_12m": 495000,
+   "new_12m": 500000,
+   "volume_12m": 15998,
+   "all_2025": {
+    "median": 500000,
+    "volume": 16414
+   },
+   "house_2025": {
+    "median": 550000,
+    "volume": 11443
+   },
+   "apartment_2025": {
+    "median": 397000,
+    "volume": 4971
+   }
+  },
+  "Dublin City": {
+   "median_12m": 475000,
+   "median_12m_prev": 470000,
+   "existing_12m": 475000,
+   "new_12m": 454000,
+   "volume_12m": 5633,
+   "all_2025": {
+    "median": 475000,
+    "volume": 5816
+   },
+   "house_2025": {
+    "median": 535000,
+    "volume": 3683
+   },
+   "apartment_2025": {
+    "median": 387000,
+    "volume": 2133
+   }
+  },
+  "Dún Laoghaire-Rathdown": {
+   "median_12m": 685000,
+   "median_12m_prev": 670000,
+   "existing_12m": 702000,
+   "new_12m": 599369,
+   "volume_12m": 3135,
+   "all_2025": {
+    "median": 678999,
+    "volume": 3196
+   },
+   "house_2025": {
+    "median": 795000,
+    "volume": 2161
+   },
+   "apartment_2025": {
+    "median": 490000,
+    "volume": 1035
+   }
+  },
+  "Fingal": {
+   "median_12m": 485000,
+   "median_12m_prev": 460000,
+   "existing_12m": 444000,
+   "new_12m": 500000,
+   "volume_12m": 4081,
+   "all_2025": {
+    "median": 475499,
+    "volume": 4262
+   },
+   "house_2025": {
+    "median": 500000,
+    "volume": 3162
+   },
+   "apartment_2025": {
+    "median": 360000,
+    "volume": 1100
+   }
+  },
+  "Galway City": {
+   "median_12m": 423500,
+   "median_12m_prev": 397000,
+   "existing_12m": 405000,
+   "new_12m": 463725,
+   "volume_12m": 812,
+   "all_2025": {
+    "median": 411475,
+    "volume": 769
+   },
+   "house_2025": {
+    "median": 455000,
+    "volume": 516
+   },
+   "apartment_2025": {
+    "median": 317000,
+    "volume": 253
+   }
+  },
+  "Galway County": {
+   "median_12m": 374999,
+   "median_12m_prev": 340000,
+   "existing_12m": 330000,
+   "new_12m": 454999,
+   "volume_12m": 1367,
+   "all_2025": {
+    "median": 355000,
+    "volume": 1318
+   },
+   "house_2025": {
+    "median": 362000,
+    "volume": 1203
+   },
+   "apartment_2025": {
+    "median": 255000,
+    "volume": 115
+   }
+  },
+  "Kerry": {
+   "median_12m": 305000,
+   "median_12m_prev": 285000,
+   "existing_12m": 292000,
+   "new_12m": 457000,
+   "volume_12m": 967,
+   "all_2025": {
+    "median": 290000,
+    "volume": 994
+   },
+   "house_2025": {
+    "median": 292500,
+    "volume": 939
+   },
+   "apartment_2025": {
+    "median": 245000,
+    "volume": 55
+   }
+  },
+  "Kildare": {
+   "median_12m": 450000,
+   "median_12m_prev": 435000,
+   "existing_12m": 429000,
+   "new_12m": 465000,
+   "volume_12m": 3161,
+   "all_2025": {
+    "median": 440000,
+    "volume": 2978
+   },
+   "house_2025": {
+    "median": 460000,
+    "volume": 2451
+   },
+   "apartment_2025": {
+    "median": 335000,
+    "volume": 527
+   }
+  },
+  "Kilkenny": {
+   "median_12m": 350000,
+   "median_12m_prev": 335000,
+   "existing_12m": 300000,
+   "new_12m": 395000,
+   "volume_12m": 857,
+   "all_2025": {
+    "median": 340000,
+    "volume": 841
+   },
+   "house_2025": {
+    "median": 348530,
+    "volume": 776
+   },
+   "apartment_2025": {
+    "median": 240000,
+    "volume": 65
+   }
+  },
+  "Laois": {
+   "median_12m": 357674,
+   "median_12m_prev": 300000,
+   "existing_12m": 280000,
+   "new_12m": 390000,
+   "volume_12m": 1030,
+   "all_2025": {
+    "median": 322022,
+    "volume": 1025
+   },
+   "house_2025": {
+    "median": 333312,
+    "volume": 951
+   },
+   "apartment_2025": {
+    "median": 187000,
+    "volume": 74
+   }
+  },
+  "Leitrim": {
+   "median_12m": 230000,
+   "median_12m_prev": 200000,
+   "existing_12m": 225000,
+   "new_12m": 414978,
+   "volume_12m": 348,
+   "all_2025": {
+    "median": 206000,
+    "volume": 349
+   },
+   "house_2025": {
+    "median": 220000,
+    "volume": 312
+   },
+   "apartment_2025": {
+    "median": 180000,
+    "volume": 37
+   }
+  },
+  "Limerick City": {
+   "median_12m": 295000,
+   "median_12m_prev": 285000,
+   "existing_12m": 270000,
+   "new_12m": 448375,
+   "volume_12m": 503,
+   "all_2025": {
+    "median": 290000,
+    "volume": 593
+   },
+   "house_2025": {
+    "median": 330500,
+    "volume": 410
+   },
+   "apartment_2025": {
+    "median": 225000,
+    "volume": 183
+   }
+  },
+  "Limerick County": {
+   "median_12m": 350000,
+   "median_12m_prev": 345000,
+   "existing_12m": 318000,
+   "new_12m": 450000,
+   "volume_12m": 1035,
+   "all_2025": {
+    "median": 360000,
+    "volume": 1143
+   },
+   "house_2025": {
+    "median": 365000,
+    "volume": 1060
+   },
+   "apartment_2025": {
+    "median": 265000,
+    "volume": 83
+   }
+  },
+  "Longford": {
+   "median_12m": 200000,
+   "median_12m_prev": 200000,
+   "existing_12m": 200000,
+   "new_12m": 175585,
+   "volume_12m": 313,
+   "all_2025": {
+    "median": 200000,
+    "volume": 323
+   },
+   "house_2025": {
+    "median": 225500,
+    "volume": 279
+   },
+   "apartment_2025": {
+    "median": 134500,
+    "volume": 44
+   }
+  },
+  "Louth": {
+   "median_12m": 380000,
+   "median_12m_prev": 347250,
+   "existing_12m": 300000,
+   "new_12m": 402528,
+   "volume_12m": 1721,
+   "all_2025": {
+    "median": 370000,
+    "volume": 1700
+   },
+   "house_2025": {
+    "median": 375000,
+    "volume": 1558
+   },
+   "apartment_2025": {
+    "median": 205000,
+    "volume": 142
+   }
+  },
+  "Mayo": {
+   "median_12m": 245000,
+   "median_12m_prev": 225000,
+   "existing_12m": 239000,
+   "new_12m": 387950,
+   "volume_12m": 999,
+   "all_2025": {
+    "median": 230000,
+    "volume": 1063
+   },
+   "house_2025": {
+    "median": 235000,
+    "volume": 989
+   },
+   "apartment_2025": {
+    "median": 180300,
+    "volume": 74
+   }
+  },
+  "Meath": {
+   "median_12m": 430000,
+   "median_12m_prev": 390000,
+   "existing_12m": 390000,
+   "new_12m": 455000,
+   "volume_12m": 2346,
+   "all_2025": {
+    "median": 412173,
+    "volume": 2454
+   },
+   "house_2025": {
+    "median": 425000,
+    "volume": 2139
+   },
+   "apartment_2025": {
+    "median": 288546,
+    "volume": 315
+   }
+  },
+  "Monaghan": {
+   "median_12m": 265000,
+   "median_12m_prev": 250000,
+   "existing_12m": 235000,
+   "new_12m": 336047,
+   "volume_12m": 321,
+   "all_2025": {
+    "median": 255000,
+    "volume": 345
+   },
+   "house_2025": {
+    "median": 262000,
+    "volume": 335
+   },
+   "apartment_2025": {
+    "median": 144163,
+    "volume": 10
+   }
+  },
+  "Offaly": {
+   "median_12m": 295000,
+   "median_12m_prev": 271000,
+   "existing_12m": 280000,
+   "new_12m": 350000,
+   "volume_12m": 621,
+   "all_2025": {
+    "median": 280000,
+    "volume": 614
+   },
+   "house_2025": {
+    "median": 285000,
+    "volume": 580
+   },
+   "apartment_2025": {
+    "median": 180000,
+    "volume": 34
+   }
+  },
+  "Roscommon": {
+   "median_12m": 245000,
+   "median_12m_prev": 205000,
+   "existing_12m": 226000,
+   "new_12m": 385000,
+   "volume_12m": 600,
+   "all_2025": {
+    "median": 211000,
+    "volume": 574
+   },
+   "house_2025": {
+    "median": 217825,
+    "volume": 544
+   },
+   "apartment_2025": {
+    "median": 128500,
+    "volume": 30
+   }
+  },
+  "Sligo": {
+   "median_12m": 280000,
+   "median_12m_prev": 255000,
+   "existing_12m": 243500,
+   "new_12m": 379000,
+   "volume_12m": 721,
+   "all_2025": {
+    "median": 270000,
+    "volume": 699
+   },
+   "house_2025": {
+    "median": 287155,
+    "volume": 621
+   },
+   "apartment_2025": {
+    "median": 179250,
+    "volume": 78
+   }
+  },
+  "South Dublin": {
+   "median_12m": 490000,
+   "median_12m_prev": 469999,
+   "existing_12m": 460000,
+   "new_12m": 500000,
+   "volume_12m": 3149,
+   "all_2025": {
+    "median": 480000,
+    "volume": 3140
+   },
+   "house_2025": {
+    "median": 500000,
+    "volume": 2437
+   },
+   "apartment_2025": {
+    "median": 352000,
+    "volume": 703
+   }
+  },
+  "Tipperary": {
+   "median_12m": 275000,
+   "median_12m_prev": 250000,
+   "existing_12m": 255500,
+   "new_12m": 350000,
+   "volume_12m": 1208,
+   "all_2025": {
+    "median": 267250,
+    "volume": 1168
+   },
+   "house_2025": {
+    "median": 275000,
+    "volume": 1120
+   },
+   "apartment_2025": {
+    "median": 160000,
+    "volume": 48
+   }
+  },
+  "Waterford City": {
+   "median_12m": 315000,
+   "median_12m_prev": 275000,
+   "existing_12m": 236500,
+   "new_12m": 387500,
+   "volume_12m": 771,
+   "all_2025": {
+    "median": 296250,
+    "volume": 732
+   },
+   "house_2025": {
+    "median": 312500,
+    "volume": 633
+   },
+   "apartment_2025": {
+    "median": 158000,
+    "volume": 99
+   }
+  },
+  "Waterford County": {
+   "median_12m": 350000,
+   "median_12m_prev": 340000,
+   "existing_12m": 320000,
+   "new_12m": 388831,
+   "volume_12m": 581,
+   "all_2025": {
+    "median": 345000,
+    "volume": 629
+   },
+   "house_2025": {
+    "median": 350000,
+    "volume": 605
+   },
+   "apartment_2025": {
+    "median": 228500,
+    "volume": 24
+   }
+  },
+  "Westmeath": {
+   "median_12m": 335000,
+   "median_12m_prev": 310000,
+   "existing_12m": 300000,
+   "new_12m": 385900,
+   "volume_12m": 954,
+   "all_2025": {
+    "median": 325000,
+    "volume": 956
+   },
+   "house_2025": {
+    "median": 340000,
+    "volume": 833
+   },
+   "apartment_2025": {
+    "median": 210000,
+    "volume": 123
+   }
+  },
+  "Wexford": {
+   "median_12m": 318000,
+   "median_12m_prev": 300000,
+   "existing_12m": 285000,
+   "new_12m": 379000,
+   "volume_12m": 1803,
+   "all_2025": {
+    "median": 305000,
+    "volume": 1767
+   },
+   "house_2025": {
+    "median": 315000,
+    "volume": 1656
+   },
+   "apartment_2025": {
+    "median": 190000,
+    "volume": 111
+   }
+  },
+  "Wicklow": {
+   "median_12m": 480000,
+   "median_12m_prev": 450000,
+   "existing_12m": 465000,
+   "new_12m": 499999,
+   "volume_12m": 1829,
+   "all_2025": {
+    "median": 455000,
+    "volume": 2056
+   },
+   "house_2025": {
+    "median": 466250,
+    "volume": 1784
+   },
+   "apartment_2025": {
+    "median": 382496,
+    "volume": 272
+   }
+  }
+ },
+ "routing_keys": {
+  "A41": {
+   "name": "Ballyboughal",
+   "median_12m": 865000,
+   "median_12m_prev": 690000,
+   "existing_12m": 865000,
+   "new_12m": null,
+   "volume_12m": 4
+  },
+  "A42": {
+   "name": "Garristown",
+   "median_12m": 525000,
+   "median_12m_prev": 487500,
+   "existing_12m": 545000,
+   "new_12m": 500000,
+   "volume_12m": 29
+  },
+  "A45": {
+   "name": "Oldtown",
+   "median_12m": 685000,
+   "median_12m_prev": 700000,
+   "existing_12m": 685000,
+   "new_12m": null,
+   "volume_12m": 7
+  },
+  "A63": {
+   "name": "Greystones",
+   "median_12m": 580000,
+   "median_12m_prev": 515000,
+   "existing_12m": 575000,
+   "new_12m": 584999,
+   "volume_12m": 557
+  },
+  "A67": {
+   "name": "Wicklow",
+   "median_12m": 440000,
+   "median_12m_prev": 410000,
+   "existing_12m": 441000,
+   "new_12m": 435000,
+   "volume_12m": 512
+  },
+  "A75": {
+   "name": "Castleblaney",
+   "median_12m": 265500,
+   "median_12m_prev": 240000,
+   "existing_12m": 266000,
+   "new_12m": 62425,
+   "volume_12m": 68
+  },
+  "A81": {
+   "name": "Carrickmacross",
+   "median_12m": 290000,
+   "median_12m_prev": 290000,
+   "existing_12m": 243000,
+   "new_12m": 360000,
+   "volume_12m": 95
+  },
+  "A82": {
+   "name": "Kells",
+   "median_12m": 335000,
+   "median_12m_prev": 295000,
+   "existing_12m": 300000,
+   "new_12m": 385000,
+   "volume_12m": 421
+  },
+  "A83": {
+   "name": "Enfield",
+   "median_12m": 449999,
+   "median_12m_prev": 399999,
+   "existing_12m": 419000,
+   "new_12m": 450000,
+   "volume_12m": 236
+  },
+  "A84": {
+   "name": "Ashbourne",
+   "median_12m": 491000,
+   "median_12m_prev": 445000,
+   "existing_12m": 423250,
+   "new_12m": 499950,
+   "volume_12m": 277
+  },
+  "A85": {
+   "name": "Dunshaughlin",
+   "median_12m": 475000,
+   "median_12m_prev": 465000,
+   "existing_12m": 495000,
+   "new_12m": 470000,
+   "volume_12m": 304
+  },
+  "A86": {
+   "name": "Dunboyne",
+   "median_12m": 556250,
+   "median_12m_prev": 508000,
+   "existing_12m": 535000,
+   "new_12m": 585001,
+   "volume_12m": 92
+  },
+  "A91": {
+   "name": "Dundalk",
+   "median_12m": 360000,
+   "median_12m_prev": 330000,
+   "existing_12m": 290000,
+   "new_12m": 395000,
+   "volume_12m": 697
+  },
+  "A92": {
+   "name": "Drogheda",
+   "median_12m": 388250,
+   "median_12m_prev": 372500,
+   "existing_12m": 333000,
+   "new_12m": 409999,
+   "volume_12m": 1358
+  },
+  "A94": {
+   "name": "Blackrock",
+   "median_12m": 858555,
+   "median_12m_prev": 800000,
+   "existing_12m": 845000,
+   "new_12m": 1069908,
+   "volume_12m": 607
+  },
+  "A96": {
+   "name": "Glenageary",
+   "median_12m": 703500,
+   "median_12m_prev": 698500,
+   "existing_12m": 715000,
+   "new_12m": 575000,
+   "volume_12m": 656
+  },
+  "A98": {
+   "name": "Bray",
+   "median_12m": 560000,
+   "median_12m_prev": 550000,
+   "existing_12m": 513000,
+   "new_12m": 655004,
+   "volume_12m": 443
+  },
+  "C15": {
+   "name": "Navan",
+   "median_12m": 405000,
+   "median_12m_prev": 360000,
+   "existing_12m": 377000,
+   "new_12m": 425000,
+   "volume_12m": 793
+  },
+  "D01": {
+   "name": "Dublin 1",
+   "median_12m": 370000,
+   "median_12m_prev": 350000,
+   "existing_12m": 369000,
+   "new_12m": 436975,
+   "volume_12m": 249
+  },
+  "D02": {
+   "name": "Dublin 2",
+   "median_12m": 495000,
+   "median_12m_prev": 480000,
+   "existing_12m": 488000,
+   "new_12m": 886709,
+   "volume_12m": 149
+  },
+  "D03": {
+   "name": "Dublin 3",
+   "median_12m": 540000,
+   "median_12m_prev": 536750,
+   "existing_12m": 538000,
+   "new_12m": 721250,
+   "volume_12m": 451
+  },
+  "D04": {
+   "name": "Dublin 4",
+   "median_12m": 690500,
+   "median_12m_prev": 700000,
+   "existing_12m": 682500,
+   "new_12m": 735007,
+   "volume_12m": 674
+  },
+  "D05": {
+   "name": "Dublin 5",
+   "median_12m": 521000,
+   "median_12m_prev": 510500,
+   "existing_12m": 530000,
+   "new_12m": 500000,
+   "volume_12m": 457
+  },
+  "D06": {
+   "name": "Dublin 6",
+   "median_12m": 750000,
+   "median_12m_prev": 722000,
+   "existing_12m": 750000,
+   "new_12m": 455000,
+   "volume_12m": 363
+  },
+  "D07": {
+   "name": "Dublin 7",
+   "median_12m": 449835,
+   "median_12m_prev": 455000,
+   "existing_12m": 473500,
+   "new_12m": 408150,
+   "volume_12m": 654
+  },
+  "D08": {
+   "name": "Dublin 8",
+   "median_12m": 415000,
+   "median_12m_prev": 400000,
+   "existing_12m": 413500,
+   "new_12m": 544800,
+   "volume_12m": 704
+  },
+  "D09": {
+   "name": "Dublin 9",
+   "median_12m": 490500,
+   "median_12m_prev": 490000,
+   "existing_12m": 490000,
+   "new_12m": 711787,
+   "volume_12m": 506
+  },
+  "D10": {
+   "name": "Dublin 10",
+   "median_12m": 340000,
+   "median_12m_prev": 320000,
+   "existing_12m": 340000,
+   "new_12m": null,
+   "volume_12m": 112
+  },
+  "D11": {
+   "name": "Dublin 11",
+   "median_12m": 366000,
+   "median_12m_prev": 343750,
+   "existing_12m": 365525,
+   "new_12m": 829000,
+   "volume_12m": 484
+  },
+  "D12": {
+   "name": "Dublin 12",
+   "median_12m": 485000,
+   "median_12m_prev": 460000,
+   "existing_12m": 483500,
+   "new_12m": 689388,
+   "volume_12m": 501
+  },
+  "D13": {
+   "name": "Dublin 13",
+   "median_12m": 530000,
+   "median_12m_prev": 535000,
+   "existing_12m": 492000,
+   "new_12m": 851250,
+   "volume_12m": 620
+  },
+  "D14": {
+   "name": "Dublin 14",
+   "median_12m": 772500,
+   "median_12m_prev": 745000,
+   "existing_12m": 755000,
+   "new_12m": 1300000,
+   "volume_12m": 483
+  },
+  "D15": {
+   "name": "Dublin 15",
+   "median_12m": 440000,
+   "median_12m_prev": 450000,
+   "existing_12m": 420000,
+   "new_12m": 495000,
+   "volume_12m": 1361
+  },
+  "D16": {
+   "name": "Dublin 16",
+   "median_12m": 665000,
+   "median_12m_prev": 630000,
+   "existing_12m": 650000,
+   "new_12m": 882500,
+   "volume_12m": 471
+  },
+  "D17": {
+   "name": "Dublin 17",
+   "median_12m": 335000,
+   "median_12m_prev": 324500,
+   "existing_12m": 335000,
+   "new_12m": 492500,
+   "volume_12m": 115
+  },
+  "D18": {
+   "name": "Dublin 18",
+   "median_12m": 585000,
+   "median_12m_prev": 650000,
+   "existing_12m": 600000,
+   "new_12m": 580000,
+   "volume_12m": 1222
+  },
+  "D20": {
+   "name": "Dublin 20",
+   "median_12m": 475000,
+   "median_12m_prev": 427000,
+   "existing_12m": 475000,
+   "new_12m": null,
+   "volume_12m": 104
+  },
+  "D22": {
+   "name": "Dublin 22",
+   "median_12m": 420000,
+   "median_12m_prev": 429999,
+   "existing_12m": 368750,
+   "new_12m": 500000,
+   "volume_12m": 623
+  },
+  "D24": {
+   "name": "Dublin 24",
+   "median_12m": 429000,
+   "median_12m_prev": 400000,
+   "existing_12m": 405000,
+   "new_12m": 550000,
+   "volume_12m": 898
+  },
+  "D6W": {
+   "name": "Dublin 6W",
+   "median_12m": 742000,
+   "median_12m_prev": 700000,
+   "existing_12m": 742000,
+   "new_12m": 1249999,
+   "volume_12m": 264
+  },
+  "E21": {
+   "name": "Cahir",
+   "median_12m": 250000,
+   "median_12m_prev": 250000,
+   "existing_12m": 237500,
+   "new_12m": 330000,
+   "volume_12m": 73
+  },
+  "E25": {
+   "name": "Cashel",
+   "median_12m": 322750,
+   "median_12m_prev": 275000,
+   "existing_12m": 273500,
+   "new_12m": 366583,
+   "volume_12m": 128
+  },
+  "E32": {
+   "name": "Carrick-on-Suir",
+   "median_12m": 270000,
+   "median_12m_prev": 242000,
+   "existing_12m": 260000,
+   "new_12m": 374000,
+   "volume_12m": 110
+  },
+  "E34": {
+   "name": "Tipperary",
+   "median_12m": 207500,
+   "median_12m_prev": 200000,
+   "existing_12m": 206000,
+   "new_12m": 263838,
+   "volume_12m": 109
+  },
+  "E41": {
+   "name": "Thurles",
+   "median_12m": 252500,
+   "median_12m_prev": 245000,
+   "existing_12m": 240000,
+   "new_12m": 324999,
+   "volume_12m": 243
+  },
+  "E45": {
+   "name": "Nenagh",
+   "median_12m": 300000,
+   "median_12m_prev": 290000,
+   "existing_12m": 281000,
+   "new_12m": 345000,
+   "volume_12m": 183
+  },
+  "E53": {
+   "name": "Roscrea",
+   "median_12m": 220000,
+   "median_12m_prev": 200000,
+   "existing_12m": 220000,
+   "new_12m": 233743,
+   "volume_12m": 85
+  },
+  "E91": {
+   "name": "Clonmel",
+   "median_12m": 290000,
+   "median_12m_prev": 268000,
+   "existing_12m": 279000,
+   "new_12m": 344979,
+   "volume_12m": 273
+  },
+  "F12": {
+   "name": "Claremorris",
+   "median_12m": 222500,
+   "median_12m_prev": 205000,
+   "existing_12m": 220000,
+   "new_12m": 371940,
+   "volume_12m": 229
+  },
+  "F23": {
+   "name": "Castlebar",
+   "median_12m": 295000,
+   "median_12m_prev": 265000,
+   "existing_12m": 272500,
+   "new_12m": 390000,
+   "volume_12m": 197
+  },
+  "F26": {
+   "name": "Ballina",
+   "median_12m": 220000,
+   "median_12m_prev": 190000,
+   "existing_12m": 215000,
+   "new_12m": 400000,
+   "volume_12m": 319
+  },
+  "F28": {
+   "name": "Westport",
+   "median_12m": 320000,
+   "median_12m_prev": 297501,
+   "existing_12m": 305000,
+   "new_12m": 389437,
+   "volume_12m": 198
+  },
+  "F31": {
+   "name": "Ballinrobe",
+   "median_12m": 215000,
+   "median_12m_prev": 220000,
+   "existing_12m": 215000,
+   "new_12m": 139973,
+   "volume_12m": 57
+  },
+  "F35": {
+   "name": "Ballyhaunis",
+   "median_12m": 180000,
+   "median_12m_prev": 166250,
+   "existing_12m": 180000,
+   "new_12m": 147550,
+   "volume_12m": 59
+  },
+  "F42": {
+   "name": "Roscommon",
+   "median_12m": 296000,
+   "median_12m_prev": 250000,
+   "existing_12m": 284000,
+   "new_12m": 357794,
+   "volume_12m": 138
+  },
+  "F45": {
+   "name": "Castlerea",
+   "median_12m": 160000,
+   "median_12m_prev": 148500,
+   "existing_12m": 160000,
+   "new_12m": 181600,
+   "volume_12m": 204
+  },
+  "F52": {
+   "name": "Boyle",
+   "median_12m": 215000,
+   "median_12m_prev": 193750,
+   "existing_12m": 212750,
+   "new_12m": 385000,
+   "volume_12m": 103
+  },
+  "F56": {
+   "name": "Ballymote",
+   "median_12m": 209000,
+   "median_12m_prev": 186000,
+   "existing_12m": 200000,
+   "new_12m": 297500,
+   "volume_12m": 94
+  },
+  "F91": {
+   "name": "Sligo",
+   "median_12m": 285000,
+   "median_12m_prev": 255500,
+   "existing_12m": 250000,
+   "new_12m": 383238,
+   "volume_12m": 657
+  },
+  "F92": {
+   "name": "Letterkenny",
+   "median_12m": 252000,
+   "median_12m_prev": 202850,
+   "existing_12m": 213500,
+   "new_12m": 379501,
+   "volume_12m": 447
+  },
+  "F93": {
+   "name": "Lifford",
+   "median_12m": 180000,
+   "median_12m_prev": 175000,
+   "existing_12m": 172000,
+   "new_12m": 320000,
+   "volume_12m": 345
+  },
+  "F94": {
+   "name": "Donegal",
+   "median_12m": 218000,
+   "median_12m_prev": 200000,
+   "existing_12m": 201500,
+   "new_12m": 364999,
+   "volume_12m": 291
+  },
+  "H12": {
+   "name": "Cavan",
+   "median_12m": 265000,
+   "median_12m_prev": 240000,
+   "existing_12m": 251500,
+   "new_12m": 370000,
+   "volume_12m": 244
+  },
+  "H14": {
+   "name": "Belturbet",
+   "median_12m": 205000,
+   "median_12m_prev": 197000,
+   "existing_12m": 200000,
+   "new_12m": 340000,
+   "volume_12m": 80
+  },
+  "H16": {
+   "name": "Cootehill",
+   "median_12m": 206000,
+   "median_12m_prev": 175000,
+   "existing_12m": 203000,
+   "new_12m": 276940,
+   "volume_12m": 27
+  },
+  "H18": {
+   "name": "Monaghan",
+   "median_12m": 260000,
+   "median_12m_prev": 245000,
+   "existing_12m": 227000,
+   "new_12m": 317068,
+   "volume_12m": 138
+  },
+  "H23": {
+   "name": "Clones",
+   "median_12m": 176000,
+   "median_12m_prev": 181000,
+   "existing_12m": 176000,
+   "new_12m": null,
+   "volume_12m": 29
+  },
+  "H53": {
+   "name": "Ballinasloe",
+   "median_12m": 243000,
+   "median_12m_prev": 220000,
+   "existing_12m": 225000,
+   "new_12m": 444920,
+   "volume_12m": 221
+  },
+  "H54": {
+   "name": "Tuam",
+   "median_12m": 300000,
+   "median_12m_prev": 266000,
+   "existing_12m": 297500,
+   "new_12m": 465350,
+   "volume_12m": 185
+  },
+  "H62": {
+   "name": "Loughrea",
+   "median_12m": 333000,
+   "median_12m_prev": 327000,
+   "existing_12m": 330000,
+   "new_12m": 536000,
+   "volume_12m": 101
+  },
+  "H65": {
+   "name": "Athenry",
+   "median_12m": 393500,
+   "median_12m_prev": 380000,
+   "existing_12m": 390000,
+   "new_12m": 440001,
+   "volume_12m": 96
+  },
+  "H71": {
+   "name": "Clifden",
+   "median_12m": 305000,
+   "median_12m_prev": 285000,
+   "existing_12m": 305000,
+   "new_12m": null,
+   "volume_12m": 35
+  },
+  "H91": {
+   "name": "Galway",
+   "median_12m": 425813,
+   "median_12m_prev": 390000,
+   "existing_12m": 400000,
+   "new_12m": 460000,
+   "volume_12m": 1550
+  },
+  "K32": {
+   "name": "Balbriggan",
+   "median_12m": 355000,
+   "median_12m_prev": 385000,
+   "existing_12m": 340000,
+   "new_12m": 460001,
+   "volume_12m": 253
+  },
+  "K34": {
+   "name": "Skerries",
+   "median_12m": 567500,
+   "median_12m_prev": 540000,
+   "existing_12m": 567500,
+   "new_12m": 545438,
+   "volume_12m": 112
+  },
+  "K36": {
+   "name": "Malahide",
+   "median_12m": 519944,
+   "median_12m_prev": 545000,
+   "existing_12m": 630000,
+   "new_12m": 499500,
+   "volume_12m": 679
+  },
+  "K45": {
+   "name": "Lusk",
+   "median_12m": 495000,
+   "median_12m_prev": 474998,
+   "existing_12m": 420000,
+   "new_12m": 499950,
+   "volume_12m": 242
+  },
+  "K56": {
+   "name": "Rush",
+   "median_12m": 484986,
+   "median_12m_prev": 434000,
+   "existing_12m": 445000,
+   "new_12m": 484999,
+   "volume_12m": 198
+  },
+  "K67": {
+   "name": "Swords",
+   "median_12m": 492000,
+   "median_12m_prev": 427250,
+   "existing_12m": 420000,
+   "new_12m": 500000,
+   "volume_12m": 693
+  },
+  "K78": {
+   "name": "Lucan",
+   "median_12m": 499968,
+   "median_12m_prev": 470000,
+   "existing_12m": 470000,
+   "new_12m": 500000,
+   "volume_12m": 1044
+  },
+  "N37": {
+   "name": "Athlone",
+   "median_12m": 325000,
+   "median_12m_prev": 296000,
+   "existing_12m": 281000,
+   "new_12m": 390000,
+   "volume_12m": 478
+  },
+  "N39": {
+   "name": "Longford",
+   "median_12m": 200000,
+   "median_12m_prev": 203000,
+   "existing_12m": 200000,
+   "new_12m": 175585,
+   "volume_12m": 343
+  },
+  "N41": {
+   "name": "Carrick-on-Shannon",
+   "median_12m": 230000,
+   "median_12m_prev": 200500,
+   "existing_12m": 220000,
+   "new_12m": 415000,
+   "volume_12m": 268
+  },
+  "N91": {
+   "name": "Mullingar",
+   "median_12m": 345000,
+   "median_12m_prev": 320000,
+   "existing_12m": 310000,
+   "new_12m": 385000,
+   "volume_12m": 612
+  },
+  "P12": {
+   "name": "Macroom",
+   "median_12m": 360000,
+   "median_12m_prev": 347125,
+   "existing_12m": 307500,
+   "new_12m": 399000,
+   "volume_12m": 157
+  },
+  "P14": {
+   "name": "Crookstown",
+   "median_12m": 435000,
+   "median_12m_prev": 412500,
+   "existing_12m": 332500,
+   "new_12m": 444999,
+   "volume_12m": 45
+  },
+  "P17": {
+   "name": "Kinsale",
+   "median_12m": 485000,
+   "median_12m_prev": 490000,
+   "existing_12m": 500000,
+   "new_12m": 483034,
+   "volume_12m": 159
+  },
+  "P24": {
+   "name": "Cobh",
+   "median_12m": 340000,
+   "median_12m_prev": 310000,
+   "existing_12m": 338750,
+   "new_12m": 449000,
+   "volume_12m": 125
+  },
+  "P25": {
+   "name": "Midleton",
+   "median_12m": 425000,
+   "median_12m_prev": 379999,
+   "existing_12m": 342500,
+   "new_12m": 450000,
+   "volume_12m": 580
+  },
+  "P31": {
+   "name": "Ballincollig",
+   "median_12m": 476000,
+   "median_12m_prev": 414999,
+   "existing_12m": 406750,
+   "new_12m": 493975,
+   "volume_12m": 284
+  },
+  "P32": {
+   "name": "Rylane",
+   "median_12m": 416000,
+   "median_12m_prev": 287000,
+   "existing_12m": 416000,
+   "new_12m": null,
+   "volume_12m": 16
+  },
+  "P36": {
+   "name": "Youghal",
+   "median_12m": 300000,
+   "median_12m_prev": 255000,
+   "existing_12m": 294500,
+   "new_12m": 376650,
+   "volume_12m": 155
+  },
+  "P43": {
+   "name": "Carrigaline",
+   "median_12m": 420000,
+   "median_12m_prev": 420000,
+   "existing_12m": 417500,
+   "new_12m": 454999,
+   "volume_12m": 294
+  },
+  "P47": {
+   "name": "Dunmanway",
+   "median_12m": 288500,
+   "median_12m_prev": 260000,
+   "existing_12m": 280000,
+   "new_12m": 500000,
+   "volume_12m": 72
+  },
+  "P51": {
+   "name": "Mallow",
+   "median_12m": 280000,
+   "median_12m_prev": 251500,
+   "existing_12m": 265000,
+   "new_12m": 425000,
+   "volume_12m": 470
+  },
+  "P56": {
+   "name": "Charleville",
+   "median_12m": 250000,
+   "median_12m_prev": 195000,
+   "existing_12m": 250000,
+   "new_12m": 350000,
+   "volume_12m": 82
+  },
+  "P61": {
+   "name": "Fermoy",
+   "median_12m": 385000,
+   "median_12m_prev": 347500,
+   "existing_12m": 268750,
+   "new_12m": 428382,
+   "volume_12m": 208
+  },
+  "P67": {
+   "name": "Mitchelstown",
+   "median_12m": 286500,
+   "median_12m_prev": 250250,
+   "existing_12m": 286500,
+   "new_12m": null,
+   "volume_12m": 42
+  },
+  "P72": {
+   "name": "Bandon",
+   "median_12m": 380500,
+   "median_12m_prev": 360000,
+   "existing_12m": 330500,
+   "new_12m": 414999,
+   "volume_12m": 186
+  },
+  "P75": {
+   "name": "Bantry",
+   "median_12m": 278000,
+   "median_12m_prev": 280000,
+   "existing_12m": 270000,
+   "new_12m": 292500,
+   "volume_12m": 143
+  },
+  "P81": {
+   "name": "Skibbereen",
+   "median_12m": 345000,
+   "median_12m_prev": 355000,
+   "existing_12m": 342500,
+   "new_12m": 383000,
+   "volume_12m": 116
+  },
+  "P85": {
+   "name": "Clonakilty",
+   "median_12m": 414999,
+   "median_12m_prev": 370000,
+   "existing_12m": 381000,
+   "new_12m": 475000,
+   "volume_12m": 98
+  },
+  "R14": {
+   "name": "Athy",
+   "median_12m": 369437,
+   "median_12m_prev": 284500,
+   "existing_12m": 280000,
+   "new_12m": 395000,
+   "volume_12m": 384
+  },
+  "R21": {
+   "name": "Mhuine Bheag",
+   "median_12m": 265000,
+   "median_12m_prev": 242500,
+   "existing_12m": 265000,
+   "new_12m": null,
+   "volume_12m": 38
+  },
+  "R32": {
+   "name": "Portlaoise",
+   "median_12m": 360000,
+   "median_12m_prev": 295000,
+   "existing_12m": 280000,
+   "new_12m": 390000,
+   "volume_12m": 991
+  },
+  "R35": {
+   "name": "Tullamore",
+   "median_12m": 311000,
+   "median_12m_prev": 278500,
+   "existing_12m": 290000,
+   "new_12m": 382500,
+   "volume_12m": 306
+  },
+  "R42": {
+   "name": "Birr",
+   "median_12m": 262000,
+   "median_12m_prev": 217500,
+   "existing_12m": 246000,
+   "new_12m": 330000,
+   "volume_12m": 133
+  },
+  "R45": {
+   "name": "Edenderry",
+   "median_12m": 289000,
+   "median_12m_prev": 305000,
+   "existing_12m": 273975,
+   "new_12m": 341950,
+   "volume_12m": 129
+  },
+  "R51": {
+   "name": "Kildare",
+   "median_12m": 460000,
+   "median_12m_prev": 414999,
+   "existing_12m": 375000,
+   "new_12m": 475000,
+   "volume_12m": 365
+  },
+  "R56": {
+   "name": "Curragh",
+   "median_12m": 440000,
+   "median_12m_prev": 420000,
+   "existing_12m": 400000,
+   "new_12m": 450000,
+   "volume_12m": 116
+  },
+  "R93": {
+   "name": "Carlow",
+   "median_12m": 307000,
+   "median_12m_prev": 290000,
+   "existing_12m": 285000,
+   "new_12m": 365000,
+   "volume_12m": 466
+  },
+  "R95": {
+   "name": "Kilkenny",
+   "median_12m": 360000,
+   "median_12m_prev": 349265,
+   "existing_12m": 315000,
+   "new_12m": 400000,
+   "volume_12m": 704
+  },
+  "T12": {
+   "name": "Cork Southside",
+   "median_12m": 422000,
+   "median_12m_prev": 419659,
+   "existing_12m": 410000,
+   "new_12m": 459000,
+   "volume_12m": 1414
+  },
+  "T23": {
+   "name": "Cork Northside",
+   "median_12m": 385000,
+   "median_12m_prev": 335000,
+   "existing_12m": 310000,
+   "new_12m": 444999,
+   "volume_12m": 713
+  },
+  "T34": {
+   "name": "Carrignavar",
+   "median_12m": 425000,
+   "median_12m_prev": 440000,
+   "existing_12m": 392500,
+   "new_12m": 425000,
+   "volume_12m": 33
+  },
+  "T45": {
+   "name": "Glanmire",
+   "median_12m": 399999,
+   "median_12m_prev": 385000,
+   "existing_12m": 390000,
+   "new_12m": 417500,
+   "volume_12m": 249
+  },
+  "T56": {
+   "name": "Watergrasshill",
+   "median_12m": 421000,
+   "median_12m_prev": 390000,
+   "existing_12m": 417000,
+   "new_12m": 425000,
+   "volume_12m": 89
+  },
+  "V14": {
+   "name": "Shannon",
+   "median_12m": 317500,
+   "median_12m_prev": 251000,
+   "existing_12m": 262000,
+   "new_12m": 335000,
+   "volume_12m": 102
+  },
+  "V15": {
+   "name": "Kilrush",
+   "median_12m": 250000,
+   "median_12m_prev": 209700,
+   "existing_12m": 250000,
+   "new_12m": 215650,
+   "volume_12m": 127
+  },
+  "V23": {
+   "name": "Caherciveen",
+   "median_12m": 305000,
+   "median_12m_prev": 280000,
+   "existing_12m": 305000,
+   "new_12m": null,
+   "volume_12m": 75
+  },
+  "V31": {
+   "name": "Listowel",
+   "median_12m": 260000,
+   "median_12m_prev": 250000,
+   "existing_12m": 260000,
+   "new_12m": 198219,
+   "volume_12m": 121
+  },
+  "V35": {
+   "name": "Kilmallock",
+   "median_12m": 250000,
+   "median_12m_prev": 313000,
+   "existing_12m": 235000,
+   "new_12m": 320000,
+   "volume_12m": 145
+  },
+  "V42": {
+   "name": "Newcastle West",
+   "median_12m": 261250,
+   "median_12m_prev": 245000,
+   "existing_12m": 251000,
+   "new_12m": 317000,
+   "volume_12m": 110
+  },
+  "V92": {
+   "name": "Tralee",
+   "median_12m": 290000,
+   "median_12m_prev": 268000,
+   "existing_12m": 275000,
+   "new_12m": 460000,
+   "volume_12m": 393
+  },
+  "V93": {
+   "name": "Killarney",
+   "median_12m": 355000,
+   "median_12m_prev": 320500,
+   "existing_12m": 325000,
+   "new_12m": 419950,
+   "volume_12m": 359
+  },
+  "V94": {
+   "name": "Limerick",
+   "median_12m": 350000,
+   "median_12m_prev": 340000,
+   "existing_12m": 315000,
+   "new_12m": 460000,
+   "volume_12m": 1491
+  },
+  "V95": {
+   "name": "Ennis",
+   "median_12m": 337999,
+   "median_12m_prev": 304000,
+   "existing_12m": 309000,
+   "new_12m": 400000,
+   "volume_12m": 664
+  },
+  "W12": {
+   "name": "Newbridge",
+   "median_12m": 450000,
+   "median_12m_prev": 439000,
+   "existing_12m": 390000,
+   "new_12m": 460000,
+   "volume_12m": 443
+  },
+  "W23": {
+   "name": "Celbridge",
+   "median_12m": 500000,
+   "median_12m_prev": 468171,
+   "existing_12m": 482000,
+   "new_12m": 500000,
+   "volume_12m": 930
+  },
+  "W34": {
+   "name": "Monasterevin",
+   "median_12m": 425000,
+   "median_12m_prev": 389950,
+   "existing_12m": 330000,
+   "new_12m": 440000,
+   "volume_12m": 110
+  },
+  "W91": {
+   "name": "Naas",
+   "median_12m": 450000,
+   "median_12m_prev": 430000,
+   "existing_12m": 440000,
+   "new_12m": 475000,
+   "volume_12m": 1084
+  },
+  "X35": {
+   "name": "Dungarvan",
+   "median_12m": 336328,
+   "median_12m_prev": 300000,
+   "existing_12m": 332000,
+   "new_12m": 591450,
+   "volume_12m": 140
+  },
+  "X42": {
+   "name": "Kilmacthomas",
+   "median_12m": 350000,
+   "median_12m_prev": 245000,
+   "existing_12m": 262000,
+   "new_12m": 435000,
+   "volume_12m": 49
+  },
+  "X91": {
+   "name": "Waterford",
+   "median_12m": 328447,
+   "median_12m_prev": 299000,
+   "existing_12m": 260000,
+   "new_12m": 385000,
+   "volume_12m": 1178
+  },
+  "Y14": {
+   "name": "Arklow",
+   "median_12m": 340000,
+   "median_12m_prev": 280000,
+   "existing_12m": 322500,
+   "new_12m": 395000,
+   "volume_12m": 199
+  },
+  "Y21": {
+   "name": "Enniscorthy",
+   "median_12m": 310000,
+   "median_12m_prev": 290000,
+   "existing_12m": 280000,
+   "new_12m": 320000,
+   "volume_12m": 456
+  },
+  "Y25": {
+   "name": "Gorey",
+   "median_12m": 360000,
+   "median_12m_prev": 347000,
+   "existing_12m": 319000,
+   "new_12m": 390000,
+   "volume_12m": 502
+  },
+  "Y34": {
+   "name": "New Ross",
+   "median_12m": 230000,
+   "median_12m_prev": 220000,
+   "existing_12m": 230000,
+   "new_12m": 479999,
+   "volume_12m": 169
+  },
+  "Y35": {
+   "name": "Wexford",
+   "median_12m": 320000,
+   "median_12m_prev": 300000,
+   "existing_12m": 281750,
+   "new_12m": 394980,
+   "volume_12m": 693
+  }
+ },
+ "counties": {
+  "cavan": {
+   "name": "Cavan",
+   "regions": [
+    "Cavan"
+   ],
+   "rppi_series": "Border - houses",
+   "rppi_region": "Border"
+  },
+  "donegal": {
+   "name": "Donegal",
+   "regions": [
+    "Donegal"
+   ],
+   "rppi_series": "Border - houses",
+   "rppi_region": "Border"
+  },
+  "leitrim": {
+   "name": "Leitrim",
+   "regions": [
+    "Leitrim"
+   ],
+   "rppi_series": "Border - houses",
+   "rppi_region": "Border"
+  },
+  "monaghan": {
+   "name": "Monaghan",
+   "regions": [
+    "Monaghan"
+   ],
+   "rppi_series": "Border - houses",
+   "rppi_region": "Border"
+  },
+  "sligo": {
+   "name": "Sligo",
+   "regions": [
+    "Sligo"
+   ],
+   "rppi_series": "Border - houses",
+   "rppi_region": "Border"
+  },
+  "laois": {
+   "name": "Laois",
+   "regions": [
+    "Laois"
+   ],
+   "rppi_series": "Midland - houses",
+   "rppi_region": "Midland"
+  },
+  "longford": {
+   "name": "Longford",
+   "regions": [
+    "Longford"
+   ],
+   "rppi_series": "Midland - houses",
+   "rppi_region": "Midland"
+  },
+  "offaly": {
+   "name": "Offaly",
+   "regions": [
+    "Offaly"
+   ],
+   "rppi_series": "Midland - houses",
+   "rppi_region": "Midland"
+  },
+  "westmeath": {
+   "name": "Westmeath",
+   "regions": [
+    "Westmeath"
+   ],
+   "rppi_series": "Midland - houses",
+   "rppi_region": "Midland"
+  },
+  "galway": {
+   "name": "Galway",
+   "regions": [
+    "Galway City",
+    "Galway County"
+   ],
+   "rppi_series": "West - houses",
+   "rppi_region": "West"
+  },
+  "mayo": {
+   "name": "Mayo",
+   "regions": [
+    "Mayo"
+   ],
+   "rppi_series": "West - houses",
+   "rppi_region": "West"
+  },
+  "roscommon": {
+   "name": "Roscommon",
+   "regions": [
+    "Roscommon"
+   ],
+   "rppi_series": "West - houses",
+   "rppi_region": "West"
+  },
+  "kildare": {
+   "name": "Kildare",
+   "regions": [
+    "Kildare"
+   ],
+   "rppi_series": "Mid-East - houses",
+   "rppi_region": "Mid-East"
+  },
+  "louth": {
+   "name": "Louth",
+   "regions": [
+    "Louth"
+   ],
+   "rppi_series": "Mid-East - houses",
+   "rppi_region": "Mid-East"
+  },
+  "meath": {
+   "name": "Meath",
+   "regions": [
+    "Meath"
+   ],
+   "rppi_series": "Mid-East - houses",
+   "rppi_region": "Mid-East"
+  },
+  "wicklow": {
+   "name": "Wicklow",
+   "regions": [
+    "Wicklow"
+   ],
+   "rppi_series": "Mid-East - houses",
+   "rppi_region": "Mid-East"
+  },
+  "clare": {
+   "name": "Clare",
+   "regions": [
+    "Clare"
+   ],
+   "rppi_series": "Mid-West - houses",
+   "rppi_region": "Mid-West"
+  },
+  "limerick": {
+   "name": "Limerick",
+   "regions": [
+    "Limerick City",
+    "Limerick County"
+   ],
+   "rppi_series": "Mid-West - houses",
+   "rppi_region": "Mid-West"
+  },
+  "tipperary": {
+   "name": "Tipperary",
+   "regions": [
+    "Tipperary"
+   ],
+   "rppi_series": "Mid-West - houses",
+   "rppi_region": "Mid-West"
+  },
+  "carlow": {
+   "name": "Carlow",
+   "regions": [
+    "Carlow"
+   ],
+   "rppi_series": "South-East - houses",
+   "rppi_region": "South-East"
+  },
+  "kilkenny": {
+   "name": "Kilkenny",
+   "regions": [
+    "Kilkenny"
+   ],
+   "rppi_series": "South-East - houses",
+   "rppi_region": "South-East"
+  },
+  "waterford": {
+   "name": "Waterford",
+   "regions": [
+    "Waterford City",
+    "Waterford County"
+   ],
+   "rppi_series": "South-East - houses",
+   "rppi_region": "South-East"
+  },
+  "wexford": {
+   "name": "Wexford",
+   "regions": [
+    "Wexford"
+   ],
+   "rppi_series": "South-East - houses",
+   "rppi_region": "South-East"
+  },
+  "cork": {
+   "name": "Cork",
+   "regions": [
+    "Cork City",
+    "Cork County"
+   ],
+   "rppi_series": "South-West - houses",
+   "rppi_region": "South-West"
+  },
+  "kerry": {
+   "name": "Kerry",
+   "regions": [
+    "Kerry"
+   ],
+   "rppi_series": "South-West - houses",
+   "rppi_region": "South-West"
+  },
+  "dublin": {
+   "name": "Dublin",
+   "regions": [
+    "Dublin",
+    "Dublin City",
+    "Dún Laoghaire-Rathdown",
+    "Fingal",
+    "South Dublin"
+   ],
+   "rppi_series": "Dublin - all residential properties",
+   "rppi_region": "Dublin"
+  }
+ }
+}

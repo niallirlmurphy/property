@@ -11,7 +11,9 @@
 // the page's live-API fallback.
 import type { LoaderFunctionArgs } from "react-router-dom";
 import { AREAS, COUNTIES, areaFromSlug, countySlug } from "./areas";
-import type { AreaSummary, CountySummary, DevelopmentData, EircodePageData, StreetData, TrendPoint } from "./types";
+import type {
+  AreaSummary, CountySummary, CsoRegion, CsoRollingFigures, CsoSlice, DevelopmentData, EircodePageData, StreetData, TrendPoint,
+} from "./types";
 import type { DevelopmentConfig } from "./developmentRegistry";
 import type { StreetConfig } from "./streetRegistry";
 
@@ -21,6 +23,55 @@ const EIRCODE_DATA = import.meta.glob<{ default: EircodePageData }>("./data/eirc
 const STREET_DATA = import.meta.glob<{ default: StreetData }>("./data/streets/*.json");
 const DEVELOPMENT_DATA = import.meta.glob<{ default: DevelopmentData }>("./data/developments/*.json");
 
+// Official CSO figures (data/cso.json, scripts/generate_cso_data.py), sliced per page.
+interface CsoFile {
+  latest_month: string;
+  rppi_month: string;
+  annual_year: string;
+  source_url: string;
+  rppi: Record<string, { index: number | null; change_12m: number | null }>;
+  regions: Record<string, CsoRollingFigures & Record<string, unknown>>;
+  routing_keys: Record<string, CsoRollingFigures & { name: string }>;
+  counties: Record<string, { regions: string[]; rppi_series: string; rppi_region: string }>;
+}
+
+const monthName = (m: string) => m.split(" ").reverse().join(" ");   // "2026 August" -> "August 2026"
+
+async function csoSlice(pick: (cso: CsoFile) => Partial<CsoSlice>): Promise<CsoSlice> {
+  const cso = (await import("./data/cso.json")).default as unknown as CsoFile;
+  return {
+    latest_month: monthName(cso.latest_month), rppi_month: monthName(cso.rppi_month),
+    annual_year: cso.annual_year, source_url: cso.source_url, ...pick(cso),
+  };
+}
+
+function csoRoutingKeys(keys: string[]) {
+  return csoSlice(cso => ({
+    routing_keys: keys.filter(k => cso.routing_keys[k]).map(k => ({ key: k, ...cso.routing_keys[k] })),
+  }));
+}
+
+function csoCounty(slug: string) {
+  return csoSlice(cso => {
+    const county = cso.counties[slug];
+    if (!county) return {};
+    const y = cso.annual_year;
+    const regions: CsoRegion[] = county.regions.filter(r => cso.regions[r]).map(name => {
+      const r = cso.regions[name];
+      const { median_12m, median_12m_prev, existing_12m, new_12m, volume_12m } = r;
+      return {
+        name, median_12m, median_12m_prev, existing_12m, new_12m, volume_12m,
+        house: r[`house_${y}`] as CsoRegion["house"], apartment: r[`apartment_${y}`] as CsoRegion["apartment"],
+      };
+    });
+    const series = slug === "dublin"
+      ? ["Dublin - all residential properties", "Dublin - houses", "Dublin - apartments"]
+      : [county.rppi_series];
+    series.push("National - all residential properties");
+    return { regions, rppi: series.map(label => ({ label, change_12m: cso.rppi[label]?.change_12m ?? null })) };
+  });
+}
+
 async function read<T>(load: (() => Promise<{ default: T }>) | undefined | null | false): Promise<T | null> {
   return load ? (await load()).default : null;
 }
@@ -28,18 +79,28 @@ async function read<T>(load: (() => Promise<{ default: T }>) | undefined | null 
 export async function areaLoader({ params }: LoaderFunctionArgs): Promise<AreaSummary | null> {
   if (!import.meta.env.SSR) return null;
   const config = areaFromSlug(params.slug ?? "");
-  return read(config && AREA_DATA[`./data/areas/${config.slug}.json`]);
+  const data = await read(config && AREA_DATA[`./data/areas/${config.slug}.json`]);
+  return data && config ? { ...data, cso: await csoRoutingKeys(config.routing_keys ?? []) } : data;
 }
 
 // Also serves the custom-template counties (CountyPageTemplate reads the same loader data).
 export async function countyLoader({ params }: LoaderFunctionArgs): Promise<CountySummary | null> {
   if (!import.meta.env.SSR) return null;
-  return read(COUNTY_DATA[`./data/counties/${params.slug ?? ""}.json`]);
+  const data = await read(COUNTY_DATA[`./data/counties/${params.slug ?? ""}.json`]);
+  return data ? { ...data, cso: await csoCounty(params.slug ?? "") } : data;
+}
+
+// /county/dublin has its own page (no PPR summary), just the CSO figures.
+export async function dublinCountyLoader(): Promise<{ cso: CsoSlice } | null> {
+  if (!import.meta.env.SSR) return null;
+  return { cso: await csoCounty("dublin") };
 }
 
 export async function eircodeLoader({ params }: LoaderFunctionArgs): Promise<EircodePageData | null> {
   if (!import.meta.env.SSR) return null;
-  return read(EIRCODE_DATA[`./data/eircodes/${(params.code ?? "").toUpperCase()}.json`]);
+  const code = (params.code ?? "").toUpperCase();
+  const data = await read(EIRCODE_DATA[`./data/eircodes/${code}.json`]);
+  return data ? { ...data, cso: await csoRoutingKeys([code]) } : data;
 }
 
 export interface StreetPageData {

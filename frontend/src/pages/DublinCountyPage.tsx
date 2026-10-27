@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import MapSearchThumb from "../components/MapSearchThumb";
 import StreetLevelAnalysis from "../components/StreetLevelAnalysis";
 import { usePageMeta } from "../hooks/usePageMeta";
+import CsoFigures from "../components/CsoFigures";
+import type { CsoSlice } from "../types";
 
 function formatPrice(n: number) {
   return "€" + Math.round(n).toLocaleString("en-IE");
@@ -52,6 +54,7 @@ const MOST_AFFORDABLE = [...POSTCODE_DATA].sort((a, b) => a.medianPrice - b.medi
 const MOST_ACTIVE = [...POSTCODE_DATA].sort((a, b) => b.txCount - a.txCount)[0];
 
 export default function DublinCountyPage() {
+  const baked = useLoaderData() as { cso: CsoSlice } | null;
   // SEO meta tags with breadcrumbs
   const meta = usePageMeta(
     "Dublin Property Prices by Postcode",
@@ -150,6 +153,8 @@ export default function DublinCountyPage() {
           in Blanchardstown and Sandyford/Foxrock.
         </p>
       </section>
+
+      {baked?.cso && <CsoFigures cso={baked.cso} place="County Dublin" />}
 
       <StreetLevelAnalysis countySlug="dublin" />
 

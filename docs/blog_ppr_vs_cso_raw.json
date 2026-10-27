@@ -1,0 +1,1502 @@
+{
+ "note": "Figures for frontend/src/blog-posts/property-price-register-vs-cso-house-prices.tsx. CSO PxStat tables downloaded 2026-10-27 (CC BY 4.0), by Executions.",
+ "compare_2025_second_hand": {
+  "year": 2025,
+  "threshold_pct": 10.0,
+  "routing_keys": {
+   "summary": {
+    "compared": 132,
+    "median_gap_pct": -0.1,
+    "median_abs_gap_pct": 1.2,
+    "within_5pct": 120,
+    "flagged": 1
+   },
+   "rows": [
+    {
+     "key": "A63",
+     "name": "Greystones",
+     "cso_n": 359,
+     "cso_median": 556000.0,
+     "ppr_n": 368,
+     "ppr_median": 570000,
+     "gap_pct": 2.5
+    },
+    {
+     "key": "A67",
+     "name": "Wicklow",
+     "cso_n": 263,
+     "cso_median": 406000.0,
+     "ppr_n": 277,
+     "ppr_median": 410000,
+     "gap_pct": 1.0
+    },
+    {
+     "key": "A75",
+     "name": "Castleblaney",
+     "cso_n": 72,
+     "cso_median": 265500.0,
+     "ppr_n": 84,
+     "ppr_median": 232500,
+     "gap_pct": -12.4
+    },
+    {
+     "key": "A81",
+     "name": "Carrickmacross",
+     "cso_n": 77,
+     "cso_median": 255000.0,
+     "ppr_n": 97,
+     "ppr_median": 265000,
+     "gap_pct": 3.9
+    },
+    {
+     "key": "A82",
+     "name": "Kells",
+     "cso_n": 332,
+     "cso_median": 295000.0,
+     "ppr_n": 367,
+     "ppr_median": 292000,
+     "gap_pct": -1.0
+    },
+    {
+     "key": "A83",
+     "name": "Enfield",
+     "cso_n": 68,
+     "cso_median": 393000.0,
+     "ppr_n": 86,
+     "ppr_median": 362500,
+     "gap_pct": -7.8
+    },
+    {
+     "key": "A84",
+     "name": "Ashbourne",
+     "cso_n": 150,
+     "cso_median": 365000.0,
+     "ppr_n": 165,
+     "ppr_median": 342000,
+     "gap_pct": -6.3
+    },
+    {
+     "key": "A85",
+     "name": "Dunshaughlin",
+     "cso_n": 147,
+     "cso_median": 460000.0,
+     "ppr_n": 151,
+     "ppr_median": 455000,
+     "gap_pct": -1.1
+    },
+    {
+     "key": "A86",
+     "name": "Dunboyne",
+     "cso_n": 57,
+     "cso_median": 450000.0,
+     "ppr_n": 75,
+     "ppr_median": 442000,
+     "gap_pct": -1.8
+    },
+    {
+     "key": "A91",
+     "name": "Dundalk",
+     "cso_n": 478,
+     "cso_median": 285000.0,
+     "ppr_n": 538,
+     "ppr_median": 275500,
+     "gap_pct": -3.3
+    },
+    {
+     "key": "A92",
+     "name": "Drogheda",
+     "cso_n": 791,
+     "cso_median": 320000.0,
+     "ppr_n": 873,
+     "ppr_median": 320000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "A94",
+     "name": "Blackrock",
+     "cso_n": 554,
+     "cso_median": 820000.0,
+     "ppr_n": 576,
+     "ppr_median": 825500,
+     "gap_pct": 0.7
+    },
+    {
+     "key": "A96",
+     "name": "Glenageary",
+     "cso_n": 618,
+     "cso_median": 690000.0,
+     "ppr_n": 666,
+     "ppr_median": 690000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "A98",
+     "name": "Bray",
+     "cso_n": 365,
+     "cso_median": 505000.0,
+     "ppr_n": 393,
+     "ppr_median": 503000,
+     "gap_pct": -0.4
+    },
+    {
+     "key": "C15",
+     "name": "Navan",
+     "cso_n": 560,
+     "cso_median": 355000.0,
+     "ppr_n": 633,
+     "ppr_median": 355000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "D01",
+     "name": "Dublin 1",
+     "cso_n": 256,
+     "cso_median": 350000.0,
+     "ppr_n": 328,
+     "ppr_median": 354500,
+     "gap_pct": 1.3
+    },
+    {
+     "key": "D02",
+     "name": "Dublin 2",
+     "cso_n": 184,
+     "cso_median": 473000.0,
+     "ppr_n": 240,
+     "ppr_median": 450500,
+     "gap_pct": -4.8
+    },
+    {
+     "key": "D03",
+     "name": "Dublin 3",
+     "cso_n": 493,
+     "cso_median": 511000.0,
+     "ppr_n": 531,
+     "ppr_median": 525000,
+     "gap_pct": 2.7
+    },
+    {
+     "key": "D04",
+     "name": "Dublin 4",
+     "cso_n": 614,
+     "cso_median": 660000.0,
+     "ppr_n": 689,
+     "ppr_median": 660000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "D05",
+     "name": "Dublin 5",
+     "cso_n": 472,
+     "cso_median": 516750.0,
+     "ppr_n": 486,
+     "ppr_median": 510000,
+     "gap_pct": -1.3
+    },
+    {
+     "key": "D06",
+     "name": "Dublin 6",
+     "cso_n": 394,
+     "cso_median": 751000.0,
+     "ppr_n": 452,
+     "ppr_median": 768500,
+     "gap_pct": 2.3
+    },
+    {
+     "key": "D07",
+     "name": "Dublin 7",
+     "cso_n": 543,
+     "cso_median": 470000.0,
+     "ppr_n": 596,
+     "ppr_median": 476750,
+     "gap_pct": 1.4
+    },
+    {
+     "key": "D08",
+     "name": "Dublin 8",
+     "cso_n": 604,
+     "cso_median": 414500.0,
+     "ppr_n": 645,
+     "ppr_median": 416000,
+     "gap_pct": 0.4
+    },
+    {
+     "key": "D09",
+     "name": "Dublin 9",
+     "cso_n": 560,
+     "cso_median": 493000.0,
+     "ppr_n": 613,
+     "ppr_median": 493000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "D10",
+     "name": "Dublin 10",
+     "cso_n": 147,
+     "cso_median": 330000.0,
+     "ppr_n": 165,
+     "ppr_median": 327000,
+     "gap_pct": -0.9
+    },
+    {
+     "key": "D11",
+     "name": "Dublin 11",
+     "cso_n": 475,
+     "cso_median": 355000.0,
+     "ppr_n": 534,
+     "ppr_median": 350000,
+     "gap_pct": -1.4
+    },
+    {
+     "key": "D12",
+     "name": "Dublin 12",
+     "cso_n": 547,
+     "cso_median": 466000.0,
+     "ppr_n": 598,
+     "ppr_median": 465000,
+     "gap_pct": -0.2
+    },
+    {
+     "key": "D13",
+     "name": "Dublin 13",
+     "cso_n": 576,
+     "cso_median": 497000.0,
+     "ppr_n": 605,
+     "ppr_median": 495000,
+     "gap_pct": -0.4
+    },
+    {
+     "key": "D14",
+     "name": "Dublin 14",
+     "cso_n": 509,
+     "cso_median": 737000.0,
+     "ppr_n": 539,
+     "ppr_median": 737000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "D15",
+     "name": "Dublin 15",
+     "cso_n": 1031,
+     "cso_median": 420000.0,
+     "ppr_n": 1146,
+     "ppr_median": 420000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "D16",
+     "name": "Dublin 16",
+     "cso_n": 494,
+     "cso_median": 640000.0,
+     "ppr_n": 523,
+     "ppr_median": 638000,
+     "gap_pct": -0.3
+    },
+    {
+     "key": "D17",
+     "name": "Dublin 17",
+     "cso_n": 127,
+     "cso_median": 330000.0,
+     "ppr_n": 144,
+     "ppr_median": 330000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "D18",
+     "name": "Dublin 18",
+     "cso_n": 725,
+     "cso_median": 595000.0,
+     "ppr_n": 798,
+     "ppr_median": 585000,
+     "gap_pct": -1.7
+    },
+    {
+     "key": "D20",
+     "name": "Dublin 20",
+     "cso_n": 101,
+     "cso_median": 440000.0,
+     "ppr_n": 110,
+     "ppr_median": 436149,
+     "gap_pct": -0.9
+    },
+    {
+     "key": "D22",
+     "name": "Dublin 22",
+     "cso_n": 413,
+     "cso_median": 365000.0,
+     "ppr_n": 452,
+     "ppr_median": 367000,
+     "gap_pct": 0.5
+    },
+    {
+     "key": "D24",
+     "name": "Dublin 24",
+     "cso_n": 783,
+     "cso_median": 390000.0,
+     "ppr_n": 867,
+     "ppr_median": 380000,
+     "gap_pct": -2.6
+    },
+    {
+     "key": "D6W",
+     "name": "Dublin 6W",
+     "cso_n": 273,
+     "cso_median": 713000.0,
+     "ppr_n": 284,
+     "ppr_median": 709000,
+     "gap_pct": -0.6
+    },
+    {
+     "key": "E21",
+     "name": "Cahir",
+     "cso_n": 54,
+     "cso_median": 242500.0,
+     "ppr_n": 66,
+     "ppr_median": 247500,
+     "gap_pct": 2.1
+    },
+    {
+     "key": "E25",
+     "name": "Cashel",
+     "cso_n": 83,
+     "cso_median": 235000.0,
+     "ppr_n": 93,
+     "ppr_median": 215000,
+     "gap_pct": -8.5
+    },
+    {
+     "key": "E32",
+     "name": "Carrick-on-Suir",
+     "cso_n": 92,
+     "cso_median": 250000.0,
+     "ppr_n": 109,
+     "ppr_median": 235000,
+     "gap_pct": -6.0
+    },
+    {
+     "key": "E34",
+     "name": "Tipperary",
+     "cso_n": 107,
+     "cso_median": 190000.0,
+     "ppr_n": 130,
+     "ppr_median": 185000,
+     "gap_pct": -2.6
+    },
+    {
+     "key": "E41",
+     "name": "Thurles",
+     "cso_n": 201,
+     "cso_median": 245000.0,
+     "ppr_n": 217,
+     "ppr_median": 243000,
+     "gap_pct": -0.8
+    },
+    {
+     "key": "E45",
+     "name": "Nenagh",
+     "cso_n": 174,
+     "cso_median": 288000.0,
+     "ppr_n": 204,
+     "ppr_median": 285938,
+     "gap_pct": -0.7
+    },
+    {
+     "key": "E53",
+     "name": "Roscrea",
+     "cso_n": 87,
+     "cso_median": 200000.0,
+     "ppr_n": 95,
+     "ppr_median": 207000,
+     "gap_pct": 3.5
+    },
+    {
+     "key": "E91",
+     "name": "Clonmel",
+     "cso_n": 224,
+     "cso_median": 265000.0,
+     "ppr_n": 268,
+     "ppr_median": 250000,
+     "gap_pct": -5.7
+    },
+    {
+     "key": "F12",
+     "name": "Claremorris",
+     "cso_n": 243,
+     "cso_median": 200000.0,
+     "ppr_n": 241,
+     "ppr_median": 200000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "F23",
+     "name": "Castlebar",
+     "cso_n": 155,
+     "cso_median": 257000.0,
+     "ppr_n": 168,
+     "ppr_median": 253500,
+     "gap_pct": -1.4
+    },
+    {
+     "key": "F26",
+     "name": "Ballina",
+     "cso_n": 316,
+     "cso_median": 195000.0,
+     "ppr_n": 392,
+     "ppr_median": 180000,
+     "gap_pct": -7.7
+    },
+    {
+     "key": "F28",
+     "name": "Westport",
+     "cso_n": 194,
+     "cso_median": 300000.0,
+     "ppr_n": 221,
+     "ppr_median": 295000,
+     "gap_pct": -1.7
+    },
+    {
+     "key": "F31",
+     "name": "Ballinrobe",
+     "cso_n": 57,
+     "cso_median": 215000.0,
+     "ppr_n": 58,
+     "ppr_median": 215000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "F35",
+     "name": "Ballyhaunis",
+     "cso_n": 64,
+     "cso_median": 180000.0,
+     "ppr_n": 67,
+     "ppr_median": 180000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "F42",
+     "name": "Roscommon",
+     "cso_n": 139,
+     "cso_median": 250000.0,
+     "ppr_n": 146,
+     "ppr_median": 250000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "F45",
+     "name": "Castlerea",
+     "cso_n": 212,
+     "cso_median": 155000.0,
+     "ppr_n": 204,
+     "ppr_median": 160000,
+     "gap_pct": 3.2
+    },
+    {
+     "key": "F52",
+     "name": "Boyle",
+     "cso_n": 95,
+     "cso_median": 180000.0,
+     "ppr_n": 107,
+     "ppr_median": 187500,
+     "gap_pct": 4.2
+    },
+    {
+     "key": "F56",
+     "name": "Ballymote",
+     "cso_n": 80,
+     "cso_median": 182500.0,
+     "ppr_n": 90,
+     "ppr_median": 178500,
+     "gap_pct": -2.2
+    },
+    {
+     "key": "F91",
+     "name": "Sligo",
+     "cso_n": 491,
+     "cso_median": 235000.0,
+     "ppr_n": 530,
+     "ppr_median": 236500,
+     "gap_pct": 0.6
+    },
+    {
+     "key": "F92",
+     "name": "Letterkenny",
+     "cso_n": 390,
+     "cso_median": 185000.0,
+     "ppr_n": 420,
+     "ppr_median": 180000,
+     "gap_pct": -2.7
+    },
+    {
+     "key": "F93",
+     "name": "Lifford",
+     "cso_n": 346,
+     "cso_median": 170000.0,
+     "ppr_n": 359,
+     "ppr_median": 171781,
+     "gap_pct": 1.0
+    },
+    {
+     "key": "F94",
+     "name": "Donegal",
+     "cso_n": 279,
+     "cso_median": 190000.0,
+     "ppr_n": 305,
+     "ppr_median": 190000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "H12",
+     "name": "Cavan",
+     "cso_n": 226,
+     "cso_median": 238750.0,
+     "ppr_n": 264,
+     "ppr_median": 225000,
+     "gap_pct": -5.8
+    },
+    {
+     "key": "H14",
+     "name": "Belturbet",
+     "cso_n": 87,
+     "cso_median": 195000.0,
+     "ppr_n": 99,
+     "ppr_median": 186000,
+     "gap_pct": -4.6
+    },
+    {
+     "key": "H18",
+     "name": "Monaghan",
+     "cso_n": 131,
+     "cso_median": 240000.0,
+     "ppr_n": 147,
+     "ppr_median": 239000,
+     "gap_pct": -0.4
+    },
+    {
+     "key": "H23",
+     "name": "Clones",
+     "cso_n": 32,
+     "cso_median": 182500.0,
+     "ppr_n": 33,
+     "ppr_median": 180000,
+     "gap_pct": -1.4
+    },
+    {
+     "key": "H53",
+     "name": "Ballinasloe",
+     "cso_n": 202,
+     "cso_median": 185000.0,
+     "ppr_n": 219,
+     "ppr_median": 185000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "H54",
+     "name": "Tuam",
+     "cso_n": 169,
+     "cso_median": 291100.0,
+     "ppr_n": 195,
+     "ppr_median": 270857,
+     "gap_pct": -7.0
+    },
+    {
+     "key": "H62",
+     "name": "Loughrea",
+     "cso_n": 90,
+     "cso_median": 323500.0,
+     "ppr_n": 99,
+     "ppr_median": 316000,
+     "gap_pct": -2.3
+    },
+    {
+     "key": "H65",
+     "name": "Athenry",
+     "cso_n": 75,
+     "cso_median": 372000.0,
+     "ppr_n": 91,
+     "ppr_median": 370000,
+     "gap_pct": -0.5
+    },
+    {
+     "key": "H71",
+     "name": "Clifden",
+     "cso_n": 46,
+     "cso_median": 287500.0,
+     "ppr_n": 54,
+     "ppr_median": 280000,
+     "gap_pct": -2.6
+    },
+    {
+     "key": "H91",
+     "name": "Galway",
+     "cso_n": 1090,
+     "cso_median": 385000.0,
+     "ppr_n": 1253,
+     "ppr_median": 385000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "K32",
+     "name": "Balbriggan",
+     "cso_n": 251,
+     "cso_median": 331000.0,
+     "ppr_n": 277,
+     "ppr_median": 325000,
+     "gap_pct": -1.8
+    },
+    {
+     "key": "K34",
+     "name": "Skerries",
+     "cso_n": 117,
+     "cso_median": 565000.0,
+     "ppr_n": 117,
+     "ppr_median": 555000,
+     "gap_pct": -1.8
+    },
+    {
+     "key": "K36",
+     "name": "Malahide",
+     "cso_n": 353,
+     "cso_median": 600000.0,
+     "ppr_n": 387,
+     "ppr_median": 600000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "K45",
+     "name": "Lusk",
+     "cso_n": 69,
+     "cso_median": 425000.0,
+     "ppr_n": 80,
+     "ppr_median": 419000,
+     "gap_pct": -1.4
+    },
+    {
+     "key": "K56",
+     "name": "Rush",
+     "cso_n": 70,
+     "cso_median": 432500.0,
+     "ppr_n": 79,
+     "ppr_median": 440000,
+     "gap_pct": 1.7
+    },
+    {
+     "key": "K67",
+     "name": "Swords",
+     "cso_n": 478,
+     "cso_median": 414000.0,
+     "ppr_n": 509,
+     "ppr_median": 412000,
+     "gap_pct": -0.5
+    },
+    {
+     "key": "K78",
+     "name": "Lucan",
+     "cso_n": 415,
+     "cso_median": 456500.0,
+     "ppr_n": 502,
+     "ppr_median": 440000,
+     "gap_pct": -3.6
+    },
+    {
+     "key": "N37",
+     "name": "Athlone",
+     "cso_n": 350,
+     "cso_median": 290000.0,
+     "ppr_n": 393,
+     "ppr_median": 282000,
+     "gap_pct": -2.8
+    },
+    {
+     "key": "N39",
+     "name": "Longford",
+     "cso_n": 337,
+     "cso_median": 200000.0,
+     "ppr_n": 402,
+     "ppr_median": 195000,
+     "gap_pct": -2.5
+    },
+    {
+     "key": "N41",
+     "name": "Carrick-on-Shannon",
+     "cso_n": 260,
+     "cso_median": 193000.0,
+     "ppr_n": 271,
+     "ppr_median": 190000,
+     "gap_pct": -1.6
+    },
+    {
+     "key": "N91",
+     "name": "Mullingar",
+     "cso_n": 462,
+     "cso_median": 300000.0,
+     "ppr_n": 485,
+     "ppr_median": 300000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "P12",
+     "name": "Macroom",
+     "cso_n": 77,
+     "cso_median": 295000.0,
+     "ppr_n": 72,
+     "ppr_median": 300000,
+     "gap_pct": 1.7
+    },
+    {
+     "key": "P17",
+     "name": "Kinsale",
+     "cso_n": 109,
+     "cso_median": 482500.0,
+     "ppr_n": 137,
+     "ppr_median": 485000,
+     "gap_pct": 0.5
+    },
+    {
+     "key": "P24",
+     "name": "Cobh",
+     "cso_n": 118,
+     "cso_median": 312500.0,
+     "ppr_n": 134,
+     "ppr_median": 310000,
+     "gap_pct": -0.8
+    },
+    {
+     "key": "P25",
+     "name": "Midleton",
+     "cso_n": 257,
+     "cso_median": 325000.0,
+     "ppr_n": 274,
+     "ppr_median": 323250,
+     "gap_pct": -0.5
+    },
+    {
+     "key": "P31",
+     "name": "Ballincollig",
+     "cso_n": 164,
+     "cso_median": 400000.0,
+     "ppr_n": 183,
+     "ppr_median": 395000,
+     "gap_pct": -1.2
+    },
+    {
+     "key": "P36",
+     "name": "Youghal",
+     "cso_n": 145,
+     "cso_median": 280000.0,
+     "ppr_n": 167,
+     "ppr_median": 275000,
+     "gap_pct": -1.8
+    },
+    {
+     "key": "P43",
+     "name": "Carrigaline",
+     "cso_n": 177,
+     "cso_median": 425000.0,
+     "ppr_n": 196,
+     "ppr_median": 422500,
+     "gap_pct": -0.6
+    },
+    {
+     "key": "P47",
+     "name": "Dunmanway",
+     "cso_n": 74,
+     "cso_median": 260000.0,
+     "ppr_n": 82,
+     "ppr_median": 253000,
+     "gap_pct": -2.7
+    },
+    {
+     "key": "P51",
+     "name": "Mallow",
+     "cso_n": 464,
+     "cso_median": 245000.0,
+     "ppr_n": 507,
+     "ppr_median": 249000,
+     "gap_pct": 1.6
+    },
+    {
+     "key": "P56",
+     "name": "Charleville",
+     "cso_n": 83,
+     "cso_median": 210000.0,
+     "ppr_n": 79,
+     "ppr_median": 230000,
+     "gap_pct": 9.5
+    },
+    {
+     "key": "P61",
+     "name": "Fermoy",
+     "cso_n": 103,
+     "cso_median": 265000.0,
+     "ppr_n": 118,
+     "ppr_median": 265000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "P67",
+     "name": "Mitchelstown",
+     "cso_n": 42,
+     "cso_median": 267500.0,
+     "ppr_n": 50,
+     "ppr_median": 267500,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "P72",
+     "name": "Bandon",
+     "cso_n": 99,
+     "cso_median": 325000.0,
+     "ppr_n": 110,
+     "ppr_median": 325000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "P75",
+     "name": "Bantry",
+     "cso_n": 121,
+     "cso_median": 275000.0,
+     "ppr_n": 133,
+     "ppr_median": 275000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "P81",
+     "name": "Skibbereen",
+     "cso_n": 123,
+     "cso_median": 355000.0,
+     "ppr_n": 144,
+     "ppr_median": 370000,
+     "gap_pct": 4.2
+    },
+    {
+     "key": "P85",
+     "name": "Clonakilty",
+     "cso_n": 87,
+     "cso_median": 370000.0,
+     "ppr_n": 90,
+     "ppr_median": 378000,
+     "gap_pct": 2.2
+    },
+    {
+     "key": "R14",
+     "name": "Athy",
+     "cso_n": 163,
+     "cso_median": 285000.0,
+     "ppr_n": 174,
+     "ppr_median": 286500,
+     "gap_pct": 0.5
+    },
+    {
+     "key": "R21",
+     "name": "Mhuine Bheag",
+     "cso_n": 37,
+     "cso_median": 250000.0,
+     "ppr_n": 35,
+     "ppr_median": 261000,
+     "gap_pct": 4.4
+    },
+    {
+     "key": "R32",
+     "name": "Portlaoise",
+     "cso_n": 571,
+     "cso_median": 252000.0,
+     "ppr_n": 607,
+     "ppr_median": 255000,
+     "gap_pct": 1.2
+    },
+    {
+     "key": "R35",
+     "name": "Tullamore",
+     "cso_n": 279,
+     "cso_median": 280000.0,
+     "ppr_n": 299,
+     "ppr_median": 280000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "R42",
+     "name": "Birr",
+     "cso_n": 136,
+     "cso_median": 239500.0,
+     "ppr_n": 153,
+     "ppr_median": 240000,
+     "gap_pct": 0.2
+    },
+    {
+     "key": "R45",
+     "name": "Edenderry",
+     "cso_n": 86,
+     "cso_median": 273000.0,
+     "ppr_n": 99,
+     "ppr_median": 270000,
+     "gap_pct": -1.1
+    },
+    {
+     "key": "R51",
+     "name": "Kildare",
+     "cso_n": 137,
+     "cso_median": 371000.0,
+     "ppr_n": 155,
+     "ppr_median": 368000,
+     "gap_pct": -0.8
+    },
+    {
+     "key": "R56",
+     "name": "Curragh",
+     "cso_n": 76,
+     "cso_median": 374550.0,
+     "ppr_n": 78,
+     "ppr_median": 374500,
+     "gap_pct": -0.0
+    },
+    {
+     "key": "R93",
+     "name": "Carlow",
+     "cso_n": 437,
+     "cso_median": 270000.0,
+     "ppr_n": 493,
+     "ppr_median": 265000,
+     "gap_pct": -1.9
+    },
+    {
+     "key": "R95",
+     "name": "Kilkenny",
+     "cso_n": 471,
+     "cso_median": 300000.0,
+     "ppr_n": 521,
+     "ppr_median": 305000,
+     "gap_pct": 1.7
+    },
+    {
+     "key": "T12",
+     "name": "Cork Southside",
+     "cso_n": 1062,
+     "cso_median": 396000.0,
+     "ppr_n": 1234,
+     "ppr_median": 390000,
+     "gap_pct": -1.5
+    },
+    {
+     "key": "T23",
+     "name": "Cork Northside",
+     "cso_n": 481,
+     "cso_median": 300000.0,
+     "ppr_n": 586,
+     "ppr_median": 290000,
+     "gap_pct": -3.3
+    },
+    {
+     "key": "T45",
+     "name": "Glanmire",
+     "cso_n": 180,
+     "cso_median": 380000.0,
+     "ppr_n": 193,
+     "ppr_median": 380000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "T56",
+     "name": "Watergrasshill",
+     "cso_n": 40,
+     "cso_median": 423750.0,
+     "ppr_n": 43,
+     "ppr_median": 450000,
+     "gap_pct": 6.2
+    },
+    {
+     "key": "V14",
+     "name": "Shannon",
+     "cso_n": 69,
+     "cso_median": 235000.0,
+     "ppr_n": 76,
+     "ppr_median": 240500,
+     "gap_pct": 2.3
+    },
+    {
+     "key": "V15",
+     "name": "Kilrush",
+     "cso_n": 134,
+     "cso_median": 227500.0,
+     "ppr_n": 147,
+     "ppr_median": 220000,
+     "gap_pct": -3.3
+    },
+    {
+     "key": "V23",
+     "name": "Caherciveen",
+     "cso_n": 71,
+     "cso_median": 290000.0,
+     "ppr_n": 83,
+     "ppr_median": 290000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "V31",
+     "name": "Listowel",
+     "cso_n": 115,
+     "cso_median": 250000.0,
+     "ppr_n": 129,
+     "ppr_median": 245000,
+     "gap_pct": -2.0
+    },
+    {
+     "key": "V35",
+     "name": "Kilmallock",
+     "cso_n": 147,
+     "cso_median": 260000.0,
+     "ppr_n": 153,
+     "ppr_median": 266000,
+     "gap_pct": 2.3
+    },
+    {
+     "key": "V42",
+     "name": "Newcastle West",
+     "cso_n": 97,
+     "cso_median": 230000.0,
+     "ppr_n": 103,
+     "ppr_median": 225000,
+     "gap_pct": -2.2
+    },
+    {
+     "key": "V92",
+     "name": "Tralee",
+     "cso_n": 390,
+     "cso_median": 267000.0,
+     "ppr_n": 402,
+     "ppr_median": 270000,
+     "gap_pct": 1.1
+    },
+    {
+     "key": "V93",
+     "name": "Killarney",
+     "cso_n": 326,
+     "cso_median": 320500.0,
+     "ppr_n": 374,
+     "ppr_median": 316000,
+     "gap_pct": -1.4
+    },
+    {
+     "key": "V94",
+     "name": "Limerick",
+     "cso_n": 1308,
+     "cso_median": 315000.0,
+     "ppr_n": 1502,
+     "ppr_median": 312000,
+     "gap_pct": -1.0
+    },
+    {
+     "key": "V95",
+     "name": "Ennis",
+     "cso_n": 557,
+     "cso_median": 300000.0,
+     "ppr_n": 597,
+     "ppr_median": 300000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "W12",
+     "name": "Newbridge",
+     "cso_n": 231,
+     "cso_median": 385000.0,
+     "ppr_n": 245,
+     "ppr_median": 389000,
+     "gap_pct": 1.0
+    },
+    {
+     "key": "W23",
+     "name": "Celbridge",
+     "cso_n": 510,
+     "cso_median": 458500.0,
+     "ppr_n": 533,
+     "ppr_median": 460000,
+     "gap_pct": 0.3
+    },
+    {
+     "key": "W34",
+     "name": "Monasterevin",
+     "cso_n": 48,
+     "cso_median": 310000.0,
+     "ppr_n": 52,
+     "ppr_median": 330000,
+     "gap_pct": 6.5
+    },
+    {
+     "key": "W91",
+     "name": "Naas",
+     "cso_n": 695,
+     "cso_median": 420000.0,
+     "ppr_n": 789,
+     "ppr_median": 420000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "X35",
+     "name": "Dungarvan",
+     "cso_n": 138,
+     "cso_median": 300000.0,
+     "ppr_n": 151,
+     "ppr_median": 300000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "X42",
+     "name": "Kilmacthomas",
+     "cso_n": 36,
+     "cso_median": 250000.0,
+     "ppr_n": 39,
+     "ppr_median": 245000,
+     "gap_pct": -2.0
+    },
+    {
+     "key": "X91",
+     "name": "Waterford",
+     "cso_n": 813,
+     "cso_median": 265000.0,
+     "ppr_n": 905,
+     "ppr_median": 260000,
+     "gap_pct": -1.9
+    },
+    {
+     "key": "Y14",
+     "name": "Arklow",
+     "cso_n": 214,
+     "cso_median": 289000.0,
+     "ppr_n": 237,
+     "ppr_median": 289000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "Y21",
+     "name": "Enniscorthy",
+     "cso_n": 326,
+     "cso_median": 270000.0,
+     "ppr_n": 358,
+     "ppr_median": 267500,
+     "gap_pct": -0.9
+    },
+    {
+     "key": "Y25",
+     "name": "Gorey",
+     "cso_n": 359,
+     "cso_median": 300000.0,
+     "ppr_n": 381,
+     "ppr_median": 300000,
+     "gap_pct": 0.0
+    },
+    {
+     "key": "Y34",
+     "name": "New Ross",
+     "cso_n": 185,
+     "cso_median": 225000.0,
+     "ppr_n": 199,
+     "ppr_median": 220000,
+     "gap_pct": -2.2
+    },
+    {
+     "key": "Y35",
+     "name": "Wexford",
+     "cso_n": 556,
+     "cso_median": 275000.0,
+     "ppr_n": 600,
+     "ppr_median": 275000,
+     "gap_pct": 0.0
+    }
+   ]
+  },
+  "counties": {
+   "summary": {
+    "compared": 26,
+    "median_gap_pct": -2.8,
+    "median_abs_gap_pct": 2.8,
+    "within_5pct": 21,
+    "flagged": 0
+   },
+   "rows": [
+    {
+     "key": "Carlow",
+     "name": "Carlow",
+     "cso_n": 429,
+     "cso_median": 255000.0,
+     "ppr_n": 550,
+     "ppr_median": 260000,
+     "gap_pct": 2.0
+    },
+    {
+     "key": "Dublin",
+     "name": "Dublin",
+     "cso_n": 13242,
+     "cso_median": 487925.0,
+     "ppr_n": 14807,
+     "ppr_median": 482000,
+     "gap_pct": -1.2
+    },
+    {
+     "key": "Kildare",
+     "name": "Kildare",
+     "cso_n": 1735,
+     "cso_median": 410000.0,
+     "ppr_n": 1973,
+     "ppr_median": 405000,
+     "gap_pct": -1.2
+    },
+    {
+     "key": "Kilkenny",
+     "name": "Kilkenny",
+     "cso_n": 617,
+     "cso_median": 290000.0,
+     "ppr_n": 727,
+     "ppr_median": 292000,
+     "gap_pct": 0.7
+    },
+    {
+     "key": "Laois",
+     "name": "Laois",
+     "cso_n": 621,
+     "cso_median": 260000.0,
+     "ppr_n": 703,
+     "ppr_median": 252500,
+     "gap_pct": -2.9
+    },
+    {
+     "key": "Longford",
+     "name": "Longford",
+     "cso_n": 320,
+     "cso_median": 200000.0,
+     "ppr_n": 428,
+     "ppr_median": 186750,
+     "gap_pct": -6.6
+    },
+    {
+     "key": "Louth",
+     "name": "Louth",
+     "cso_n": 976,
+     "cso_median": 290000.0,
+     "ppr_n": 1171,
+     "ppr_median": 285000,
+     "gap_pct": -1.7
+    },
+    {
+     "key": "Meath",
+     "name": "Meath",
+     "cso_n": 1504,
+     "cso_median": 365000.0,
+     "ppr_n": 1765,
+     "ppr_median": 360000,
+     "gap_pct": -1.4
+    },
+    {
+     "key": "Offaly",
+     "name": "Offaly",
+     "cso_n": 532,
+     "cso_median": 267500.0,
+     "ppr_n": 650,
+     "ppr_median": 260000,
+     "gap_pct": -2.8
+    },
+    {
+     "key": "Westmeath",
+     "name": "Westmeath",
+     "cso_n": 726,
+     "cso_median": 297000.0,
+     "ppr_n": 858,
+     "ppr_median": 292500,
+     "gap_pct": -1.5
+    },
+    {
+     "key": "Wexford",
+     "name": "Wexford",
+     "cso_n": 1411,
+     "cso_median": 277000.0,
+     "ppr_n": 1634,
+     "ppr_median": 275000,
+     "gap_pct": -0.7
+    },
+    {
+     "key": "Wicklow",
+     "name": "Wicklow",
+     "cso_n": 1264,
+     "cso_median": 445011.0,
+     "ppr_n": 1421,
+     "ppr_median": 440000,
+     "gap_pct": -1.1
+    },
+    {
+     "key": "Clare",
+     "name": "Clare",
+     "cso_n": 920,
+     "cso_median": 292000.0,
+     "ppr_n": 1105,
+     "ppr_median": 280000,
+     "gap_pct": -4.1
+    },
+    {
+     "key": "Cork",
+     "name": "Cork",
+     "cso_n": 3925,
+     "cso_median": 340000.0,
+     "ppr_n": 4793,
+     "ppr_median": 330000,
+     "gap_pct": -2.9
+    },
+    {
+     "key": "Kerry",
+     "name": "Kerry",
+     "cso_n": 920,
+     "cso_median": 285000.0,
+     "ppr_n": 1153,
+     "ppr_median": 280000,
+     "gap_pct": -1.8
+    },
+    {
+     "key": "Limerick",
+     "name": "Limerick",
+     "cso_n": 1370,
+     "cso_median": 297000.0,
+     "ppr_n": 1694,
+     "ppr_median": 287750,
+     "gap_pct": -3.1
+    },
+    {
+     "key": "Tipperary",
+     "name": "Tipperary",
+     "cso_n": 1011,
+     "cso_median": 250000.0,
+     "ppr_n": 1270,
+     "ppr_median": 240000,
+     "gap_pct": -4.0
+    },
+    {
+     "key": "Waterford",
+     "name": "Waterford",
+     "cso_n": 998,
+     "cso_median": 265000.0,
+     "ppr_n": 1184,
+     "ppr_median": 255000,
+     "gap_pct": -3.8
+    },
+    {
+     "key": "Galway",
+     "name": "Galway",
+     "cso_n": 1670,
+     "cso_median": 345000.0,
+     "ppr_n": 2085,
+     "ppr_median": 335000,
+     "gap_pct": -2.9
+    },
+    {
+     "key": "Leitrim",
+     "name": "Leitrim",
+     "cso_n": 317,
+     "cso_median": 195000.0,
+     "ppr_n": 409,
+     "ppr_median": 194000,
+     "gap_pct": -0.5
+    },
+    {
+     "key": "Mayo",
+     "name": "Mayo",
+     "cso_n": 990,
+     "cso_median": 225000.0,
+     "ppr_n": 1283,
+     "ppr_median": 210000,
+     "gap_pct": -6.7
+    },
+    {
+     "key": "Roscommon",
+     "name": "Roscommon",
+     "cso_n": 529,
+     "cso_median": 205000.0,
+     "ppr_n": 670,
+     "ppr_median": 190000,
+     "gap_pct": -7.3
+    },
+    {
+     "key": "Sligo",
+     "name": "Sligo",
+     "cso_n": 552,
+     "cso_median": 230000.0,
+     "ppr_n": 677,
+     "ppr_median": 221000,
+     "gap_pct": -3.9
+    },
+    {
+     "key": "Cavan",
+     "name": "Cavan",
+     "cso_n": 529,
+     "cso_median": 242500.0,
+     "ppr_n": 687,
+     "ppr_median": 230000,
+     "gap_pct": -5.2
+    },
+    {
+     "key": "Donegal",
+     "name": "Donegal",
+     "cso_n": 1014,
+     "cso_median": 180000.0,
+     "ppr_n": 1240,
+     "ppr_median": 175000,
+     "gap_pct": -2.8
+    },
+    {
+     "key": "Monaghan",
+     "name": "Monaghan",
+     "cso_n": 300,
+     "cso_median": 235000.0,
+     "ppr_n": 388,
+     "ppr_median": 222500,
+     "gap_pct": -5.3
+    }
+   ]
+  }
+ },
+ "new_homes_2025": {
+  "ppr_new_sales": 14519,
+  "ppr_new_no_eircode": 12788,
+  "ppr_new_median_ex_vat": 387665,
+  "cso_new_median_incl_vat": 440000,
+  "cso_new_sales": 12081,
+  "cso_existing_median": 355000,
+  "cso_existing_sales": 38502
+ },
+ "a84_ashbourne_2025": {
+  "cso_all_median": 485000,
+  "ppr_all_median": 343500
+ },
+ "cso_hpa02_2025": {
+  "all": [
+   74806,
+   360000
+  ],
+  "non_market": [
+   11363,
+   null
+  ],
+  "market": [
+   63443,
+   389000
+  ],
+  "non_household_market": [
+   12874,
+   390000
+  ],
+  "household_market": [
+   50569,
+   387500
+  ],
+  "ftb_market": [
+   19703,
+   395000
+  ],
+  "former_owner_occupier_market": [
+   25807,
+   400000
+  ],
+  "non_occupier_household_market": [
+   5059,
+   250000
+  ]
+ },
+ "ppr_2025_rows": {
+  "all": 62135,
+  "full_market_price": 58867
+ }
+}

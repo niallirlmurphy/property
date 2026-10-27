@@ -13,6 +13,7 @@ import {
 import Breadcrumbs from "./Breadcrumbs";
 import MapSearchThumb from "./MapSearchThumb";
 import StreetLevelAnalysis from "./StreetLevelAnalysis";
+import CsoFigures from "./CsoFigures";
 import { countySlug } from "../areas";
 
 function formatPrice(n: number | null) {
@@ -165,6 +166,8 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
                 </div>
               </section>
             )}
+
+            {data.cso && <CsoFigures cso={data.cso} place={`County ${content.name}`} />}
 
             {/* FAQs */}
             {content.faqs.length > 0 && (
