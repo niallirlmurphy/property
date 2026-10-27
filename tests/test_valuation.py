@@ -76,6 +76,7 @@ def sample_comparables():
             'id': 1,
             'address': '30 Slane Road, Crumlin, Dublin 12',
             'price': 380000,
+            'price_incl_vat': 380000,
             'sale_date': datetime(2024, 3, 15),
             'county': 'Dublin',
             'distance_m': 150.5,
@@ -87,6 +88,7 @@ def sample_comparables():
             'id': 2,
             'address': '32 Slane Road, Crumlin, Dublin 12',
             'price': 420000,
+            'price_incl_vat': 420000,
             'sale_date': datetime(2024, 6, 20),
             'county': 'Dublin',
             'distance_m': 180.0,
@@ -98,6 +100,7 @@ def sample_comparables():
             'id': 3,
             'address': '25 Slane Road, Crumlin, Dublin 12',
             'price': 395000,
+            'price_incl_vat': 395000,
             'sale_date': datetime(2024, 1, 10),
             'county': 'Dublin',
             'distance_m': 200.0,
@@ -792,6 +795,24 @@ class TestCalculator:
         assert model.lower == ci['lower']
         assert model.width_pct == ci['width_pct']
 
+    def test_identical_comparables_ci_builds_response_model(self):
+        """Units of one bulk sale (all the same price) must not give a zero-width CI.
+
+        Regression: Semple Woods, Donabate: 24 comparables at €400,881.06 gave
+        ±€1, which rounding could collapse to upper == lower (500).
+        """
+        from valuation.models import ConfidenceInterval
+
+        calculator = ValuationCalculator()
+        comparables = [{'adjusted_price': 473372}] * 24
+        weights = [1 / 24] * 24
+
+        result = calculator.calculate_valuation(comparables, weights)
+        ci = result['confidence_interval']
+
+        assert ci['upper'] - ci['lower'] >= 0.05 * result['estimate'] - 2
+        ConfidenceInterval(**ci)
+
     def test_calculate_valuation_invalid_inputs(self):
         """Test that invalid inputs raise errors."""
         calculator = ValuationCalculator()
@@ -899,6 +920,7 @@ class TestValidator:
                 'id': i,
                 'address': f'Property {i}',
                 'price': 300000 + i * 100000,  # High variation
+                'price_incl_vat': 300000 + i * 100000,
                 'adjusted_price': 300000 + i * 100000,
                 'sale_date': datetime(2024, 1, 1),
                 'county': 'Dublin',
@@ -941,6 +963,7 @@ class TestValidator:
                 'id': 1,
                 'address': 'Property 1',
                 'price': 400000,
+                'price_incl_vat': 400000,
                 'adjusted_price': 400000,
                 'sale_date': datetime(2024, 1, 1),
                 'county': 'Dublin',
@@ -953,6 +976,7 @@ class TestValidator:
                 'id': 2,
                 'address': 'Property 2',
                 'price': 420000,
+                'price_incl_vat': 420000,
                 'adjusted_price': 420000,
                 'sale_date': datetime(2024, 2, 1),
                 'county': 'Dublin',

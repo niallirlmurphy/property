@@ -29,27 +29,29 @@ function calculateTrendsFromProperties(properties: Property[]): TrendPoint[] {
   // Filter out non-market sales and group by year
   const validProperties = properties.filter(p => !p.not_full_market_price && p.sale_date);
 
-  const byYear = new Map<number, number[]>();
+  const byYear = new Map<number, Property[]>();
 
   validProperties.forEach(p => {
     const year = new Date(p.sale_date).getFullYear();
     if (!byYear.has(year)) {
       byYear.set(year, []);
     }
-    byYear.get(year)!.push(p.price);
+    byYear.get(year)!.push(p);
   });
 
   const trends: TrendPoint[] = [];
 
-  byYear.forEach((prices, year) => {
-    prices.sort((a, b) => a - b);
+  byYear.forEach((sales, year) => {
+    // Median/average include VAT on new homes; min/max are register prices.
+    const prices = sales.map(p => p.price_incl_vat ?? p.price).sort((a, b) => a - b);
+    const raw = sales.map(p => p.price).sort((a, b) => a - b);
     const count = prices.length;
     const median_price = count % 2 === 0
       ? (prices[count / 2 - 1] + prices[count / 2]) / 2
       : prices[Math.floor(count / 2)];
     const avg_price = prices.reduce((sum, p) => sum + p, 0) / count;
-    const min_price = prices[0];
-    const max_price = prices[count - 1];
+    const min_price = raw[0];
+    const max_price = raw[count - 1];
 
     trends.push({
       year,

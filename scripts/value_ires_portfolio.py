@@ -162,7 +162,7 @@ async def value_at(searcher, adjuster, calculator, validator, lat, lon, beds,
     if len(comps) < 3:
         return None
     for c in comps:
-        adj = await adjuster.adjust_temporal(sale_price=c["price"], sale_date=c["sale_date"],
+        adj = await adjuster.adjust_temporal(sale_price=c["price_incl_vat"], sale_date=c["sale_date"],
                                              target_date=target_date, county=c["county"])
         c["adjusted_price"] = adj["adjusted_price"]
         c["adjustment_factor"] = adj["adjustment_factor"]

@@ -8,6 +8,8 @@ from statistics import median as _median
 sys.path.insert(0, os.path.dirname(__file__))
 from street_key import street_key, normalized_key_string
 from page_data_schedule import record_generated, skip_if_generated_this_month
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend"))
+from price_vat import PRICE_INCL_VAT  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 REG = os.path.join(ROOT, "frontend", "src", "data", "streets_registry.json")
@@ -25,16 +27,17 @@ def main():
 
     conn = psycopg2.connect(os.getenv("DATABASE_URL"))
     cur = conn.cursor(name="stream"); cur.itersize = 20000
-    cur.execute("""
+    cur.execute(f"""
         SELECT address_normalized, county, price, sale_date, address,
-               bedrooms, property_type, eircode
+               bedrooms, property_type, eircode,
+               {PRICE_INCL_VAT}
         FROM properties
         WHERE address_normalized IS NOT NULL
           AND not_full_market_price = FALSE
           AND price > 0 AND county IS NOT NULL
           AND stats_excluded = FALSE   -- keep out-of-band price outliers off street pages
     """)
-    for addr, county, price, sale_date, raw_addr, beds, ptype, eircode in cur:
+    for addr, county, price, sale_date, raw_addr, beds, ptype, eircode, price_vat in cur:
         r = street_key(addr, county)
         if not r:
             continue
@@ -45,6 +48,7 @@ def main():
             "date": sale_date.isoformat(),
             "address": raw_addr,
             "price": float(price),
+            "priceInclVat": float(price_vat),  # for medians/averages; listings show "price"
             "bedrooms": beds,
             "propertyType": ptype,
             "eircode": eircode,
@@ -56,30 +60,36 @@ def main():
     for entry in registry:
         key = entry["normalizedKey"]; slug = entry["slug"]
         rows = tx.get(slug, [])
-        prices = [t["price"] for t in rows]
+        # New homes are on the register ex-VAT; medians and averages add it back
+        # (backend/price_vat.py). Min/max stay register prices.
+        prices = [t["priceInclVat"] for t in rows]
+        raw_prices = [t["price"] for t in rows]
         years = sorted({int(t["date"][:4]) for t in rows}) if rows else []
         # per-year trend points
         by_year = defaultdict(list)
         for t in rows:
-            by_year[int(t["date"][:4])].append(t["price"])
+            by_year[int(t["date"][:4])].append(t)
         trends = []
         for y in years:
-            pl = by_year[y]
+            pl = [t["priceInclVat"] for t in by_year[y]]
+            raw = [t["price"] for t in by_year[y]]
             trends.append({
                 "year": y, "count": len(pl),
                 "median_price": round(_median(pl)),
                 "avg_price": round(sum(pl) / len(pl)),
-                "min_price": round(min(pl)), "max_price": round(max(pl)),
+                "min_price": round(min(raw)), "max_price": round(max(raw)),
             })
         recent = sorted(rows, key=lambda t: t["date"], reverse=True)[:50]
         for t in recent:
             t["price"] = round(t["price"])
+        for t in rows:
+            t.pop("priceInclVat")
         stats = {
             "count": len(rows),
             "median": round(_median(prices)) if prices else 0,
             "avg": round(sum(prices) / len(prices)) if prices else 0,
-            "min": round(min(prices)) if prices else 0,
-            "max": round(max(prices)) if prices else 0,
+            "min": round(min(raw_prices)) if raw_prices else 0,
+            "max": round(max(raw_prices)) if raw_prices else 0,
             "firstYear": years[0] if years else None,
             "lastYear": years[-1] if years else None,
         }

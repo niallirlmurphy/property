@@ -5,6 +5,8 @@ export interface Property {
   county: string | null;
   eircode: string | null;
   price: number;
+  /** For medians/averages: new homes are listed ex-VAT, this adds it back. Display `price`. */
+  price_incl_vat?: number;
   not_full_market_price: boolean;
   vat_exclusive: boolean;
   description: string | null;
@@ -246,7 +248,7 @@ export interface DevelopmentData {
 
 // Official CSO figures shown next to ours (frontend/src/data/cso.json, from
 // scripts/generate_cso_data.py). Rolling figures cover the 12 months to
-// `latest_month`; medians include VAT on new homes, unlike PPR prices.
+// `latest_month`; medians include VAT on new homes, as ours do.
 export interface CsoRollingFigures {
   median_12m: number | null;
   median_12m_prev: number | null;

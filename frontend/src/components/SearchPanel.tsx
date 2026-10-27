@@ -62,9 +62,13 @@ export default function SearchPanel({ counties, loading, error, onSearch, result
     let finalCounty = county || undefined;
     const queryLower = query.trim().toLowerCase();
 
-    // Check if query contains a county name that doesn't match current filter
+    // Check if query names a county that doesn't match current filter. As in the
+    // backend (COUNTY_KEYWORDS), a county counts only after "Co"/"County" or ending a
+    // comma part ("Ennis, Clare", "Galway City"): "25 Clare Road" stays in Dublin.
     for (const countyName of counties) {
-      if (queryLower.includes(countyName.toLowerCase())) {
+      const name = countyName.toLowerCase();
+      const named = new RegExp(`\\b(?:co|county)\\.?\\s*${name}\\b|\\b${name}(?:\\s+(?:city|town))?\\s*(?:,|$)`);
+      if (named.test(queryLower)) {
         // Query mentions a county - use that instead of dropdown
         if (countyName !== county) {
           finalCounty = countyName;

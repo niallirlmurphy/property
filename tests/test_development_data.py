@@ -10,9 +10,19 @@ from generate_development_data import (  # noqa: E402
 
 
 def _sale(price, beds=None, ptype=None, d=date(2024, 5, 1), excluded=False,
-          desc="Second-Hand Dwelling house /Apartment", addr="1 The Oak"):
+          desc="Second-Hand Dwelling house /Apartment", addr="1 The Oak", vat=None):
     return {"date": d, "address": addr, "price": price, "bedrooms": beds,
-            "propertyType": ptype, "description": desc, "stats_excluded": excluded}
+            "propertyType": ptype, "description": desc, "stats_excluded": excluded,
+            "priceInclVat": vat or price}
+
+
+def test_stats_include_vat_but_listings_show_register_price():
+    sales = [_sale(400000, desc="New Dwelling house /Apartment", vat=454000) for _ in range(3)]
+    page = build_page("x", sales, [], 53.3, -6.2, today=date(2024, 6, 1))
+    assert page["stats"]["median"] == 454000
+    assert page["stats"]["max"] == 400000
+    assert page["trends"][0]["median_price"] == 454000
+    assert {t["price"] for t in page["transactions"]} == {400000}
 
 
 def test_split_bulk_moves_portfolio_sales_out():

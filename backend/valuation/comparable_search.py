@@ -13,6 +13,8 @@ Search strategy:
 from typing import List, Dict
 from datetime import datetime, timedelta
 
+from price_vat import price_incl_vat_sql
+
 
 class ComparableSearcher:
     """Find comparable properties using adaptive radius search."""
@@ -54,7 +56,7 @@ class ComparableSearcher:
 
         Returns:
             List of comparable property dicts with keys:
-                id, address, price, sale_date, bedrooms, property_type,
+                id, address, price, price_incl_vat, sale_date, bedrooms, property_type,
                 county, distance_m, recency_score
 
         Raises:
@@ -112,7 +114,7 @@ class ComparableSearcher:
         # Calculate lookback date
         lookback_date = datetime.now() - timedelta(days=self.lookback_years * 365)
 
-        query = """
+        query = f"""
             WITH subject_point AS (
                 SELECT ST_SetSRID(ST_MakePoint($1, $2), 4326)::geography AS geog
             )
@@ -120,6 +122,9 @@ class ComparableSearcher:
                 p.id,
                 p.address,
                 p.price,
+                -- New homes are on the register ex-VAT: value with VAT added
+                -- (price_vat.py); 'price' stays for display.
+                {price_incl_vat_sql('p')} AS price_incl_vat,
                 p.sale_date,
                 p.bedrooms,
                 p.property_type,
@@ -171,6 +176,7 @@ class ComparableSearcher:
                 'id': row['id'],
                 'address': row['address'],
                 'price': row['price'],
+                'price_incl_vat': float(row['price_incl_vat']),
                 'sale_date': row['sale_date'],
                 'bedrooms': row['bedrooms'],
                 'property_type': row['property_type'],

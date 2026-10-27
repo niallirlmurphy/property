@@ -21,6 +21,7 @@ import sentry_sdk
 from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.asyncio import AsyncioIntegration
 from places import parse_localities, parse_query, pick_place
+from price_vat import PRICE_INCL_VAT
 from address_normalize import normalize_address
 import usage
 
@@ -1287,6 +1288,7 @@ async def search(
                 not_full_market_price, vat_exclusive, description,
                 size_description, latitude, longitude,
                 routing_key, bedrooms, property_type,
+                {PRICE_INCL_VAT} AS price_incl_vat,
                 ST_Distance(geog, ST_MakePoint($2, $1)::geography) AS distance_m
             FROM properties
             WHERE {where}
@@ -1331,6 +1333,7 @@ async def search(
                     not_full_market_price, vat_exclusive, description,
                     size_description, latitude, longitude,
                     routing_key, bedrooms, property_type,
+                    {PRICE_INCL_VAT} AS price_incl_vat,
                     ST_Distance(geog, ST_MakePoint($2, $1)::geography) AS distance_m
                 FROM properties
                 WHERE {where}
@@ -1451,24 +1454,26 @@ async def search_exact(
     # Rows with NULL address_normalized are still found by the full-text fallback below.
     # Apply county filter if provided
     if county:
-        exact_rows = await db_pool.fetch("""
+        exact_rows = await db_pool.fetch(f"""
             SELECT
                 id, sale_date, address, county, eircode, price,
                 not_full_market_price, vat_exclusive, description,
                 size_description, latitude, longitude,
-                routing_key, bedrooms, property_type
+                routing_key, bedrooms, property_type,
+                {PRICE_INCL_VAT} AS price_incl_vat
             FROM properties
             WHERE address_normalized ^@ $1
               AND county = $2
             ORDER BY sale_date DESC
         """, search_normalized, county)
     else:
-        exact_rows = await db_pool.fetch("""
+        exact_rows = await db_pool.fetch(f"""
             SELECT
                 id, sale_date, address, county, eircode, price,
                 not_full_market_price, vat_exclusive, description,
                 size_description, latitude, longitude,
-                routing_key, bedrooms, property_type
+                routing_key, bedrooms, property_type,
+                {PRICE_INCL_VAT} AS price_incl_vat
             FROM properties
             WHERE address_normalized ^@ $1
             ORDER BY sale_date DESC
@@ -1489,12 +1494,13 @@ async def search_exact(
         search_terms = ' & '.join(words)
         # 'simple' must match idx_properties_address_fts, or Postgres seq-scans every row
         if county:
-            rows = await db_pool.fetch("""
+            rows = await db_pool.fetch(f"""
                 SELECT
                     id, sale_date, address, county, eircode, price,
                     not_full_market_price, vat_exclusive, description,
                     size_description, latitude, longitude,
                     routing_key, bedrooms, property_type,
+                    {PRICE_INCL_VAT} AS price_incl_vat,
                     ts_rank(to_tsvector('simple', COALESCE(address_normalized, address)), to_tsquery('simple', $1)) as rank
                 FROM properties
                 WHERE to_tsvector('simple', COALESCE(address_normalized, address)) @@ to_tsquery('simple', $1)
@@ -1503,12 +1509,13 @@ async def search_exact(
                 LIMIT 100
             """, search_terms, county)
         else:
-            rows = await db_pool.fetch("""
+            rows = await db_pool.fetch(f"""
                 SELECT
                     id, sale_date, address, county, eircode, price,
                     not_full_market_price, vat_exclusive, description,
                     size_description, latitude, longitude,
                     routing_key, bedrooms, property_type,
+                    {PRICE_INCL_VAT} AS price_incl_vat,
                     ts_rank(to_tsvector('simple', COALESCE(address_normalized, address)), to_tsquery('simple', $1)) as rank
                 FROM properties
                 WHERE to_tsvector('simple', COALESCE(address_normalized, address)) @@ to_tsquery('simple', $1)
@@ -1633,7 +1640,8 @@ async def search_polygon(
                 id, sale_date, address, county, eircode, price,
                 not_full_market_price, vat_exclusive, description,
                 size_description, latitude, longitude,
-                routing_key, bedrooms, property_type
+                routing_key, bedrooms, property_type,
+                {PRICE_INCL_VAT} AS price_incl_vat
             FROM properties
             WHERE {where}
             ORDER BY sale_date DESC
@@ -1705,8 +1713,8 @@ async def trends(
         SELECT
             EXTRACT(YEAR FROM sale_date)::int AS year,
             COUNT(*)                          AS count,
-            ROUND(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY price)::numeric, 0) AS median_price,
-            ROUND(AVG(price)::numeric, 0)     AS avg_price,
+            ROUND(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY {PRICE_INCL_VAT})::numeric, 0) AS median_price,
+            ROUND(AVG({PRICE_INCL_VAT})::numeric, 0) AS avg_price,
             MIN(price)                        AS min_price,
             MAX(price)                        AS max_price
         FROM properties
@@ -1779,7 +1787,8 @@ async def eircode_search(
             id, sale_date, address, county, eircode, price,
             not_full_market_price, vat_exclusive, description,
             size_description, latitude, longitude,
-            routing_key, bedrooms, property_type
+            routing_key, bedrooms, property_type,
+            {PRICE_INCL_VAT} AS price_incl_vat
         FROM properties
         WHERE {where}
         ORDER BY sale_date DESC
@@ -1790,8 +1799,8 @@ async def eircode_search(
     stats_row = await db_pool.fetchrow(f"""
         SELECT
             COUNT(*)                                                          AS total_count,
-            ROUND(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY price)::numeric, 0) AS median_price,
-            ROUND(AVG(price)::numeric, 0)                                    AS avg_price,
+            ROUND(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY {PRICE_INCL_VAT})::numeric, 0) AS median_price,
+            ROUND(AVG({PRICE_INCL_VAT})::numeric, 0)                         AS avg_price,
             MIN(sale_date)                                                    AS earliest_sale,
             MAX(sale_date)                                                    AS latest_sale
         FROM properties
@@ -1940,13 +1949,14 @@ async def county_recent(
             id, sale_date, address, county, eircode, price,
             not_full_market_price, vat_exclusive, description,
             size_description, latitude, longitude,
-            routing_key, bedrooms, property_type
+            routing_key, bedrooms, property_type,
+            {PRICE_INCL_VAT} AS price_incl_vat
         FROM properties
         WHERE LOWER(county) = LOWER($1)
           AND {STATS_EXCLUDE_FILTER}
         ORDER BY sale_date DESC, id DESC
         LIMIT $2
-    """.format(STATS_EXCLUDE_FILTER=STATS_EXCLUDE_FILTER), county, limit)
+    """.format(STATS_EXCLUDE_FILTER=STATS_EXCLUDE_FILTER, PRICE_INCL_VAT=PRICE_INCL_VAT), county, limit)
 
     result = {"count": len(rows), "results": [serialize_row(r) for r in rows]}
     cache.set("county_recent", cache_params, result, TTL_SEARCH)

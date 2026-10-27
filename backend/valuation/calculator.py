@@ -106,8 +106,10 @@ class ValuationCalculator:
         else:
             k = 1.0
 
-        # Calculate interval
-        interval_width = k * weighted_std
+        # Calculate interval. Identical comparables (one bulk sale's units, all at the
+        # same price) have no spread; keep at least ±2.5% so the interval never
+        # collapses to a point.
+        interval_width = max(k * weighted_std, 0.025 * estimate)
         lower = int(max(0, estimate - interval_width))
         upper = int(estimate + interval_width)
 

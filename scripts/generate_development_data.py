@@ -23,6 +23,8 @@ from typing import Optional
 
 sys.path.insert(0, os.path.dirname(__file__))
 from page_data_schedule import record_generated, skip_if_generated_this_month
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend"))
+from price_vat import price_incl_vat_sql  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 REGISTRY = os.path.join(ROOT, "frontend", "src", "data", "developments_registry.json")
@@ -57,9 +59,9 @@ def split_bulk(sales: list) -> tuple:
     kept = [s for s in sales if not s["stats_excluded"]]
     bulk = [s for s in sales if s["stats_excluded"]]
     if kept:
-        ceiling = BULK_MULTIPLE * median(s["price"] for s in kept)
-        bulk += [s for s in kept if s["price"] > ceiling]
-        kept = [s for s in kept if s["price"] <= ceiling]
+        ceiling = BULK_MULTIPLE * median(s["priceInclVat"] for s in kept)
+        bulk += [s for s in kept if s["priceInclVat"] > ceiling]
+        kept = [s for s in kept if s["priceInclVat"] <= ceiling]
     return kept, bulk
 
 
@@ -77,7 +79,7 @@ def bedroom_breakdown(rows: list) -> list:
     by_beds = defaultdict(list)
     for s in rows:
         if s["bedrooms"] is not None:
-            by_beds[s["bedrooms"]].append(s["price"])
+            by_beds[s["bedrooms"]].append(s["priceInclVat"])
     out = [{"bedrooms": b, **_summary(p)} for b, p in sorted(by_beds.items())
            if len(p) >= MIN_BREAKDOWN_SALES]
     if len(out) < 2 or any(lo["median"] >= hi["median"] for lo, hi in zip(out, out[1:])):
@@ -99,7 +101,7 @@ def type_breakdown(rows: list) -> list:
     for s in rows:
         label = _type_label(s["propertyType"])
         if label:
-            by_type[label].append(s["price"])
+            by_type[label].append(s["priceInclVat"])
     return [{"type": t, **_summary(p)} for t, p in sorted(by_type.items())
             if len(p) >= MIN_BREAKDOWN_SALES]
 
@@ -136,25 +138,30 @@ def build_page(slug: str, sales: list, amenities: list, lat: float, lon: float,
     today = today or date.today()
     rows, bulk = split_bulk(sales)
     rows.sort(key=lambda s: s["date"], reverse=True)
-    prices = [s["price"] for s in rows]
+    # Medians/averages use the VAT-inclusive price (new homes are on the register
+    # ex-VAT; backend/price_vat.py). Min/max and listings don't.
+    prices = [s["priceInclVat"] for s in rows]
+    raw_prices = [s["price"] for s in rows]
     years = sorted({s["date"].year for s in rows})
-    recent = [s["price"] for s in rows if s["date"] >= today - timedelta(days=RECENT_DAYS)]
+    recent = [s["priceInclVat"] for s in rows if s["date"] >= today - timedelta(days=RECENT_DAYS)]
 
     by_year = defaultdict(list)
     for s in rows:
-        by_year[s["date"].year].append(s["price"])
-    trends = [{"year": y, "count": len(p), "median_price": round(median(p)),
-               "avg_price": round(sum(p) / len(p)),
-               "min_price": round(min(p)), "max_price": round(max(p))}
-              for y, p in sorted(by_year.items())]
+        by_year[s["date"].year].append(s)
+    trends = [{"year": y, "count": len(ss),
+               "median_price": round(median(s["priceInclVat"] for s in ss)),
+               "avg_price": round(sum(s["priceInclVat"] for s in ss) / len(ss)),
+               "min_price": round(min(s["price"] for s in ss)),
+               "max_price": round(max(s["price"] for s in ss))}
+              for y, ss in sorted(by_year.items())]
 
     new_homes = [s for s in rows if (s["description"] or "").lower().startswith("new")]
     stats = {
         "count": len(rows),
         "median": round(median(prices)) if prices else 0,
         "avg": round(sum(prices) / len(prices)) if prices else 0,
-        "min": round(min(prices)) if prices else 0,
-        "max": round(max(prices)) if prices else 0,
+        "min": round(min(raw_prices)) if raw_prices else 0,
+        "max": round(max(raw_prices)) if raw_prices else 0,
         "firstYear": years[0] if years else None,
         "lastYear": years[-1] if years else None,
         "recentMedian": round(median(recent)) if len(recent) >= MIN_BREAKDOWN_SALES else None,
@@ -196,12 +203,14 @@ def _fetch(cur, pin_name: str, sales_match: Optional[str] = None) -> list:
               " @@ to_tsquery('simple', %s)") if sales_match else ""
     cur.execute(f"""
         SELECT p.sale_date, p.address, p.price, p.bedrooms, p.property_type,
-               p.description, p.stats_excluded
+               p.description, p.stats_excluded,
+               {price_incl_vat_sql('p')}
         FROM properties p JOIN development_pins d ON {PIN_MATCH}
         WHERE d.name = %s AND p.not_full_market_price = FALSE AND p.price > 0 {narrow}
     """, (pin_name, sales_match) if sales_match else (pin_name,))
     return [{"date": r[0], "address": r[1], "price": float(r[2]), "bedrooms": r[3],
-             "propertyType": r[4], "description": r[5], "stats_excluded": bool(r[6])}
+             "propertyType": r[4], "description": r[5], "stats_excluded": bool(r[6]),
+             "priceInclVat": float(r[7])}
             for r in cur.fetchall()]
 
 

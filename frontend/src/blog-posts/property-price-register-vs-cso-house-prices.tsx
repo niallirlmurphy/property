@@ -381,9 +381,10 @@ export function PprVsCsoContent() {
         A84 Eircode, mostly older homes, have a median of €343,500.
       </p>
       <p style={p}>
-        On HomeIQ, area and county pages place sales by address and map location rather than Eircode, and new-build prices in our{" "}
-        <Link to="/blog/irish-property-market-health-36-months" style={link}>market analysis</Link> are grossed up for VAT
-        so they compare with the CSO's.
+        On HomeIQ, area and county pages place sales by address and map location rather than Eircode. Our medians, trends
+        and valuations include VAT on new homes, as do new-build prices in our{" "}
+        <Link to="/blog/irish-property-market-health-36-months" style={link}>market analysis</Link>, so they compare with
+        the CSO's. Individual sales are listed at the register price.
       </p>
 
       <SectionHeading>Median price vs price index</SectionHeading>
@@ -423,7 +424,7 @@ export function PprVsCsoContent() {
         <li style={{ marginBottom: "0.5rem" }}><strong>For "how fast are prices rising?", use the CSO's index.</strong> It
           strips out changes in the mix of homes sold.</li>
         <li style={{ marginBottom: "0.5rem" }}><strong>Comparing new homes? Check VAT.</strong> A register price for a new
-          home is 13.5% below what the buyer paid.</li>
+          home excludes VAT: 13.5% on houses, and 9% on apartments sold since 8 October 2025.</li>
         <li style={{ marginBottom: "0.5rem" }}><strong>Small differences are expected.</strong> A gap of 1–3% between the
           register and the CSO is normal, and up to 7% in some rural counties.</li>
       </ul>

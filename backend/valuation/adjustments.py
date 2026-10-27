@@ -13,6 +13,7 @@ from typing import Dict, Optional
 from datetime import datetime
 
 from .cache import TTLCache
+from price_vat import PRICE_INCL_VAT
 
 
 # County price indices change at most once a month, but adjust_temporal looks
@@ -434,8 +435,8 @@ class MVPAdjuster:
             return cached
 
         rows = await self.db.fetch(
-            """
-            SELECT price, bedrooms
+            f"""
+            SELECT {PRICE_INCL_VAT} AS price, bedrooms
             FROM properties
             WHERE geog IS NOT NULL
               AND geocode_suspect IS NOT TRUE

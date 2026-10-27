@@ -239,7 +239,7 @@ async def estimate_property_value(
         for comp in comparables:
             # Temporal adjustment
             temporal_adj = await adjuster.adjust_temporal(
-                sale_price=comp['price'],
+                sale_price=comp['price_incl_vat'],
                 sale_date=comp['sale_date'],
                 target_date=target_date,
                 county=comp['county']
