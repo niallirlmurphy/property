@@ -113,6 +113,12 @@ async def enable_rls_security():
         # Belt-and-braces: revoke default schema-wide too.
         await conn.execute("REVOKE ALL ON ALL TABLES IN SCHEMA public FROM anon;")
         await conn.execute("REVOKE ALL ON ALL SEQUENCES IN SCHEMA public FROM anon;")
+        # And every PUBLIC/anon/authenticated grant: functions, defaults, the schema.
+        sql_path = os.path.join(os.path.dirname(__file__), "..", "db", "migrations",
+                                "009_no_public_access.sql")
+        with open(sql_path) as fh:
+            await conn.execute(fh.read())
+        print("  ✅ No PUBLIC/anon/authenticated grants (009_no_public_access.sql)")
 
         # 3. Verify
         print("\nVerifying configuration...")

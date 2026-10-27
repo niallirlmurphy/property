@@ -182,20 +182,11 @@ $$;
 REFRESH MATERIALIZED VIEW county_monthly_price_indices;
 
 -- ============================================================================
--- 6. Grant Permissions (if using RLS)
+-- 6. Permissions
 -- ============================================================================
 
--- Allow public SELECT on price indices (read-only reference data)
-GRANT SELECT ON county_monthly_price_indices TO PUBLIC;
-
--- Valuation requests: allow authenticated users to INSERT and SELECT their own
--- (Adjust based on your auth setup)
-GRANT SELECT, INSERT ON valuation_requests TO anon, authenticated;
-GRANT SELECT, INSERT ON valuation_comparables TO anon, authenticated;
-
--- Allow sequence usage
-GRANT USAGE ON SEQUENCE valuation_requests_id_seq TO anon, authenticated;
-GRANT USAGE ON SEQUENCE valuation_comparables_id_seq TO anon, authenticated;
+-- None: only the backend (postgres) reads or writes. Never grant to PUBLIC, anon
+-- or authenticated (db/migrations/009_no_public_access.sql).
 
 -- ============================================================================
 -- 7. Verification Queries

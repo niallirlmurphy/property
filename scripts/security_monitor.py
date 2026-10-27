@@ -19,6 +19,33 @@ from datetime import datetime
 from typing import List, Dict, Tuple
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
+NO_PUBLIC_ACCESS_SQL = os.path.join(os.path.dirname(__file__), "..", "db", "migrations",
+                                    "009_no_public_access.sql")
+
+_PUBLIC_ROLES = "(0, 'anon'::regrole::oid, 'authenticated'::regrole::oid)"
+# Every grant to PUBLIC (grantee 0), anon or authenticated in schema public: tables,
+# views, materialized views, sequences, functions, and the schema itself.
+PUBLIC_GRANTS_SQL = f"""
+    SELECT obj AS object,
+           CASE a.grantee WHEN 0 THEN 'PUBLIC' ELSE pg_get_userbyid(a.grantee) END AS grantee,
+           string_agg(a.privilege_type, ', ' ORDER BY a.privilege_type) AS privs
+    FROM (
+        SELECT c.relname::text AS obj, c.relacl AS acl
+        FROM pg_class c JOIN pg_namespace n ON n.oid = c.relnamespace
+        WHERE n.nspname = 'public' AND c.relkind IN ('r', 'p', 'v', 'm', 'S', 'f')
+        UNION ALL
+        SELECT p.oid::regprocedure::text,
+               COALESCE(p.proacl, acldefault('f', p.proowner))
+        FROM pg_proc p JOIN pg_namespace n ON n.oid = p.pronamespace
+        WHERE n.nspname = 'public' AND pg_get_userbyid(p.proowner) = 'postgres'
+        UNION ALL
+        SELECT 'schema public', nspacl FROM pg_namespace WHERE nspname = 'public'
+    ) o
+    CROSS JOIN LATERAL aclexplode(o.acl) a
+    WHERE a.grantee IN {_PUBLIC_ROLES}
+    GROUP BY 1, 2
+    ORDER BY 1, 2
+"""
 
 class SecurityIssue:
     def __init__(self, severity: str, title: str, description: str, fix_available: bool = False):
@@ -82,22 +109,20 @@ class SecurityMonitor:
         return True
 
     async def check_anon_access_revoked(self) -> bool:
-        """Check that the anon role has ZERO grants on ANY public relation."""
-        anon_grants = await self.conn.fetch("""
-            SELECT table_name,
-                   string_agg(privilege_type, ', ' ORDER BY privilege_type) AS privs
-            FROM information_schema.role_table_grants
-            WHERE grantee = 'anon' AND table_schema = 'public'
-            GROUP BY table_name
-            ORDER BY table_name
-        """)
+        """Check that PUBLIC, anon and authenticated have ZERO access to public.
 
-        if anon_grants:
-            detail = "; ".join(f"{g['table_name']}: {g['privs']}" for g in anon_grants)
+        Reads the catalog ACLs, not information_schema, which leaves out
+        materialized views (county_monthly_price_indices was PUBLIC-readable
+        until 2026-10-27) and functions. authenticated counts as public: anyone
+        can sign up through Supabase Auth.
+        """
+        grants = await self.conn.fetch(PUBLIC_GRANTS_SQL)
+        if grants:
+            detail = "; ".join(f"{g['object']} -> {g['grantee']}: {g['privs']}" for g in grants)
             self.issues.append(SecurityIssue(
                 severity="CRITICAL",
-                title="Anonymous role has database access",
-                description=f"anon can access via PostgREST API: {detail}",
+                title="Public roles have database access",
+                description=f"PUBLIC/anon/authenticated grants: {detail}",
                 fix_available=True
             ))
             return False
@@ -217,16 +242,9 @@ async def auto_fix_issues(conn, issues: List[SecurityIssue]) -> int:
                 FOR ALL TO authenticated USING (true) WITH CHECK (true);
             """)
 
-        # Revoke every anon grant (tables AND views).
-        anon_rels = await conn.fetch("""
-            SELECT DISTINCT table_name
-            FROM information_schema.role_table_grants
-            WHERE grantee = 'anon' AND table_schema = 'public'
-        """)
-        for r in anon_rels:
-            await conn.execute(f'REVOKE ALL ON "{r["table_name"]}" FROM anon;')
-        await conn.execute("REVOKE ALL ON ALL TABLES IN SCHEMA public FROM anon;")
-        await conn.execute("REVOKE ALL ON ALL SEQUENCES IN SCHEMA public FROM anon;")
+        # Revoke every public grant (db/migrations/009_no_public_access.sql).
+        with open(NO_PUBLIC_ACCESS_SQL) as fh:
+            await conn.execute(fh.read())
 
         print(f"  ✅ Re-applied RLS hardening across {len(tables)} table(s)")
         return len(fixable)

@@ -514,6 +514,7 @@ To modify DNS records (TXT for verification, A/CNAME for routing):
 - All data access flows through the authenticated Railway backend API
 - Architecture: `Frontend → Railway API (authenticated) → Supabase`
 - The `anon` role should have ZERO permissions on all tables
+- **Never grant anything to `PUBLIC`, `anon` or `authenticated`** (tables, views, materialized views, sequences, functions, schema `public`). `authenticated` counts as public: anyone can sign up through Supabase Auth. The backend connects as `postgres` and needs no grants. Locked down 2026-10-27 by `db/migrations/009_no_public_access.sql` (`county_monthly_price_indices` had been PUBLIC-readable since `db/phase1_valuation_schema.sql`); `scripts/security_monitor.py` reads the catalog ACLs, so it catches materialized views and functions too, and `--fix` / `enable_rls_security.py` re-apply 009
 - This prevents direct PostgREST API access and ensures all queries go through our controlled backend
 
 **Row-Level Security (RLS) - CONFIGURED 2026-07-07**
