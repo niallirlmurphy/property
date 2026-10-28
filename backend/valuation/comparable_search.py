@@ -15,6 +15,9 @@ from datetime import datetime, timedelta
 
 from price_vat import price_incl_vat_sql
 
+# This many sales on one day at one exact price nearby are a bulk sale's units.
+BULK_SALE_MIN_UNITS = 3
+
 
 class ComparableSearcher:
     """Find comparable properties using adaptive radius search."""
@@ -117,7 +120,8 @@ class ComparableSearcher:
         query = f"""
             WITH subject_point AS (
                 SELECT ST_SetSRID(ST_MakePoint($1, $2), 4326)::geography AS geog
-            )
+            ),
+            candidates AS (
             SELECT
                 p.id,
                 p.address,
@@ -135,7 +139,10 @@ class ComparableSearcher:
                 -- and fail the ComparableProperty ge=0 check, 500ing the whole valuation.
                 GREATEST(0.0, LEAST(1.0,
                     1.0 - (EXTRACT(EPOCH FROM (NOW() - p.sale_date)) / ($4 * 365 * 86400))
-                )) AS recency_score
+                )) AS recency_score,
+                -- Units of one bulk sale (e.g. Semple Woods: 24 units, each at the
+                -- same €400,881.06 on one day) share a date and an exact price.
+                COUNT(*) OVER (PARTITION BY p.sale_date, p.price) AS same_sale_units
             FROM properties p
             CROSS JOIN subject_point sp
             WHERE
@@ -154,6 +161,14 @@ class ComparableSearcher:
                 AND p.sale_date >= $5
                 AND ST_DWithin(p.geog, sp.geog, $3)  -- Uses GIST index
                 AND ($6::INTEGER IS NULL OR p.id != $6)  -- Exclude property if specified
+            )
+            SELECT id, address, price, price_incl_vat, sale_date, bedrooms,
+                   property_type, county, distance_m, recency_score
+            FROM candidates
+            -- Leave out bulk-sale units: their price is the deal split evenly, not
+            -- what one home sold for. Two same-day, same-price sales can be chance;
+            -- three or more is a bulk sale.
+            WHERE same_sale_units < {BULK_SALE_MIN_UNITS}
             ORDER BY distance_m ASC, recency_score DESC
             LIMIT $7;
         """

@@ -2,13 +2,13 @@
   "name": "Mallow, Cork",
   "slug": "mallow",
   "center": {
-    "lat": 52.138912,
-    "lon": -8.6551101
+    "lat": 52.137287,
+    "lon": -8.641888999999999
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 299250.0,
-  "avg_price": 297406,
+  "median_price": 305000.0,
+  "avg_price": 304406,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
@@ -28,7 +28,27 @@
       "routing_key": null,
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1174.65560198
+      "price_incl_vat": 400000.9,
+      "distance_m": 445.52991085
+    },
+    {
+      "id": 805617,
+      "sale_date": "2026-10-02",
+      "address": "SOUTHBANK, BALLYELLIS, MALLOW",
+      "county": "Cork",
+      "eircode": "P51VHR6",
+      "price": 515000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 52.129494,
+      "longitude": -8.628188,
+      "routing_key": "P51",
+      "bedrooms": 4,
+      "property_type": "detached",
+      "price_incl_vat": 515000.0,
+      "distance_m": 1277.5165871
     },
     {
       "id": 803450,
@@ -46,7 +66,8 @@
       "routing_key": "P51",
       "bedrooms": 4,
       "property_type": "semi-detached",
-      "distance_m": 1174.65560198
+      "price_incl_vat": 356000.0,
+      "distance_m": 445.52991085
     },
     {
       "id": 803005,
@@ -64,7 +85,8 @@
       "routing_key": "P51",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1695.14665415
+      "price_incl_vat": 68632.0,
+      "distance_m": 1427.05375538
     },
     {
       "id": 802953,
@@ -82,7 +104,8 @@
       "routing_key": "P51",
       "bedrooms": 5,
       "property_type": "detached",
-      "distance_m": 1472.7557487
+      "price_incl_vat": 300000.0,
+      "distance_m": 1304.08535849
     },
     {
       "id": 802650,
@@ -100,7 +123,8 @@
       "routing_key": "P51",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1573.31113018
+      "price_incl_vat": 295000.0,
+      "distance_m": 1371.70030549
     },
     {
       "id": 802226,
@@ -118,7 +142,8 @@
       "routing_key": "P51",
       "bedrooms": null,
       "property_type": null,
-      "distance_m": 1472.7557487
+      "price_incl_vat": 275000.0,
+      "distance_m": 1304.08535849
     },
     {
       "id": 802177,
@@ -136,7 +161,8 @@
       "routing_key": "P51",
       "bedrooms": 3,
       "property_type": "semi-detached",
-      "distance_m": 1541.77276865
+      "price_incl_vat": 320000.0,
+      "distance_m": 1365.57540393
     },
     {
       "id": 801896,
@@ -154,7 +180,8 @@
       "routing_key": "P51",
       "bedrooms": 3,
       "property_type": "terraced",
-      "distance_m": 832.76411173
+      "price_incl_vat": 327000.0,
+      "distance_m": 435.90520598
     },
     {
       "id": 801888,
@@ -172,161 +199,144 @@
       "routing_key": "P51",
       "bedrooms": 2,
       "property_type": "detached",
-      "distance_m": 1472.7557487
-    },
-    {
-      "id": 801175,
-      "sale_date": "2026-08-17",
-      "address": "7 TINLEY PARK, MALLOW, CORK",
-      "county": "Cork",
-      "eircode": "P51W29X",
-      "price": 445000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 52.149929,
-      "longitude": -8.636071,
-      "routing_key": "P51",
-      "bedrooms": 4,
-      "property_type": "detached",
-      "distance_m": 1789.26664605
+      "price_incl_vat": 235000.0,
+      "distance_m": 1304.08535849
     }
   ],
   "trends": [
     {
       "year": 2010,
-      "count": 18,
-      "median_price": 160000.0,
-      "avg_price": 157972.0,
+      "count": 33,
+      "median_price": 179000.0,
+      "avg_price": 184762.0,
       "min_price": 45000.0,
-      "max_price": 325000.0
+      "max_price": 365000.0
     },
     {
       "year": 2011,
-      "count": 21,
-      "median_price": 160000.0,
-      "avg_price": 175667.0,
+      "count": 26,
+      "median_price": 165000.0,
+      "avg_price": 191923.0,
       "min_price": 50000.0,
-      "max_price": 347000.0
+      "max_price": 695490.0
     },
     {
       "year": 2012,
-      "count": 17,
-      "median_price": 140000.0,
-      "avg_price": 133616.0,
+      "count": 25,
+      "median_price": 150000.0,
+      "avg_price": 145486.0,
       "min_price": 63000.0,
       "max_price": 255000.0
     },
     {
       "year": 2013,
-      "count": 20,
-      "median_price": 105500.0,
-      "avg_price": 123900.0,
+      "count": 46,
+      "median_price": 119175.0,
+      "avg_price": 122574.0,
       "min_price": 44000.0,
       "max_price": 322500.0
     },
     {
       "year": 2014,
-      "count": 50,
-      "median_price": 105000.0,
-      "avg_price": 112660.0,
+      "count": 66,
+      "median_price": 92500.0,
+      "avg_price": 112139.0,
       "min_price": 20000.0,
       "max_price": 305000.0
     },
     {
       "year": 2015,
-      "count": 49,
-      "median_price": 83750.0,
-      "avg_price": 102162.0,
+      "count": 69,
+      "median_price": 102000.0,
+      "avg_price": 119954.0,
       "min_price": 20000.0,
-      "max_price": 240000.0
+      "max_price": 350000.0
     },
     {
       "year": 2016,
-      "count": 61,
-      "median_price": 111000.0,
-      "avg_price": 126948.0,
+      "count": 78,
+      "median_price": 118750.0,
+      "avg_price": 131151.0,
       "min_price": 10000.0,
       "max_price": 375000.0
     },
     {
       "year": 2017,
-      "count": 54,
-      "median_price": 174000.0,
-      "avg_price": 171229.0,
+      "count": 67,
+      "median_price": 180000.0,
+      "avg_price": 175118.0,
       "min_price": 21500.0,
       "max_price": 525000.0
     },
     {
       "year": 2018,
-      "count": 49,
-      "median_price": 155000.0,
-      "avg_price": 172744.0,
+      "count": 56,
+      "median_price": 191500.0,
+      "avg_price": 188160.0,
       "min_price": 47000.0,
-      "max_price": 305000.0
+      "max_price": 450000.0
     },
     {
       "year": 2019,
-      "count": 91,
-      "median_price": 126000.0,
-      "avg_price": 155136.0,
+      "count": 104,
+      "median_price": 142500.0,
+      "avg_price": 163744.0,
       "min_price": 13333.33,
       "max_price": 900000.0
     },
     {
       "year": 2020,
-      "count": 53,
-      "median_price": 200207.0,
-      "avg_price": 212548.0,
+      "count": 64,
+      "median_price": 200104.0,
+      "avg_price": 219643.0,
       "min_price": 45000.0,
       "max_price": 834360.0
     },
     {
       "year": 2021,
-      "count": 109,
-      "median_price": 189000.0,
-      "avg_price": 211745.0,
+      "count": 120,
+      "median_price": 200000.0,
+      "avg_price": 216183.0,
       "min_price": 40000.0,
       "max_price": 1150000.0
     },
     {
       "year": 2022,
-      "count": 147,
-      "median_price": 222000.0,
-      "avg_price": 227385.0,
+      "count": 171,
+      "median_price": 240000.0,
+      "avg_price": 237382.0,
       "min_price": 23000.0,
       "max_price": 875000.0
     },
     {
       "year": 2023,
-      "count": 123,
-      "median_price": 225000.0,
-      "avg_price": 239159.0,
+      "count": 206,
+      "median_price": 290000.0,
+      "avg_price": 278204.0,
       "min_price": 50000.0,
       "max_price": 1012500.0
     },
     {
       "year": 2024,
-      "count": 106,
-      "median_price": 275500.0,
-      "avg_price": 265245.0,
+      "count": 153,
+      "median_price": 314500.0,
+      "avg_price": 293828.0,
       "min_price": 50000.0,
       "max_price": 600000.0
     },
     {
       "year": 2025,
-      "count": 109,
-      "median_price": 277000.0,
-      "avg_price": 273563.0,
+      "count": 138,
+      "median_price": 303250.0,
+      "avg_price": 297253.0,
       "min_price": 40000.0,
       "max_price": 715000.0
     },
     {
       "year": 2026,
-      "count": 66,
-      "median_price": 299250.0,
-      "avg_price": 291717.0,
+      "count": 75,
+      "median_price": 305000.0,
+      "avg_price": 310267.0,
       "min_price": 60000.0,
       "max_price": 715000.0
     }

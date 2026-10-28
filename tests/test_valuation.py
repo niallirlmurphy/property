@@ -460,6 +460,19 @@ class TestComparableSearch:
         call_args = mock_db_pool.fetch.call_args
         assert 123456 in call_args[0]  # Should be in the query params
 
+    @pytest.mark.asyncio
+    async def test_find_comparables_leaves_out_bulk_sale_units(self, mock_db_pool, sample_comparables):
+        """Units of one bulk sale (same day, same exact price) never become comparables:
+        Semple Woods' 24 units at EUR 400,881.06 each once made up a whole valuation."""
+        mock_db_pool.fetch.return_value = sample_comparables
+
+        searcher = ComparableSearcher(mock_db_pool)
+        await searcher.find_comparables(latitude=53.3217, longitude=-6.3167)
+
+        query = mock_db_pool.fetch.call_args[0][0]
+        assert "PARTITION BY p.sale_date, p.price" in query
+        assert "WHERE same_sale_units < 3" in query
+
 
 # ============================================================================
 # Temporal Adjustment Tests

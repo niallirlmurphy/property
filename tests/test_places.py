@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend"))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
-from places import address_place_names, normalize_place, parse_localities, parse_query, pick_place  # noqa: E402
+from places import address_place_names, normalize_place, parse_localities, parse_query, pick_dominant_place, pick_place  # noqa: E402
 from build_places import cluster_centre  # noqa: E402
 
 
@@ -99,3 +99,24 @@ def test_cluster_centre_tied_cells_pick_the_densest_neighbourhood():
     for pts in (lone_a + lone_b + village, village + lone_b + lone_a):
         lat, lon, n = cluster_centre(pts)
         assert abs(lat - 53.98) < 0.02 and abs(lon + 10.06) < 0.04
+
+
+def test_pick_dominant_place_finds_a_town_outside_the_county_filter():
+    """"Ballinasloe" with the Dublin default: its only row is Galway's (counties=2, so
+    the no-hint rule refuses it). Athlone's Westmeath row holds 77% of its sales."""
+    rows = [_row("ballinasloe", "Galway", 53.33, -8.22, sales=1871, counties=2),
+            _row("athlone", "Westmeath", 53.42, -7.94, sales=3601, counties=3),
+            _row("athlone", "Roscommon", 53.43, -7.96, sales=1105, counties=3)]
+    assert pick_place(rows, ["ballinasloe"], "Dublin") is None
+    assert pick_dominant_place(rows, ["ballinasloe"]) == (53.33, -8.22)
+    assert pick_dominant_place(rows, ["athlone"]) == (53.42, -7.94)
+
+
+def test_pick_dominant_place_refuses_names_spread_across_counties():
+    rows = [_row("kilmore", "Wexford", 52.2, -6.6, sales=144, counties=4),
+            _row("kilmore", "Dublin", 53.4, -6.2, sales=81, counties=4),
+            _row("kilmore", "Roscommon", 53.8, -8.1, sales=36, counties=4)]
+    assert pick_dominant_place(rows, ["kilmore"]) is None
+    # Only Meath's "Main Street" clusters, but 25 counties have one.
+    rows = [_row("main street", "Meath", 53.6, -6.7, sales=135, counties=25)]
+    assert pick_dominant_place(rows, ["main street"]) is None

@@ -20,7 +20,7 @@ from dotenv import load_dotenv
 import sentry_sdk
 from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.asyncio import AsyncioIntegration
-from places import parse_localities, parse_query, pick_place
+from places import parse_localities, parse_query, pick_dominant_place, pick_place
 from price_vat import PRICE_INCL_VAT
 from address_normalize import normalize_address
 import usage
@@ -835,12 +835,14 @@ COUNTY_KEYWORDS = re.compile(
     re.IGNORECASE,
 )
 async def _geocode_place(query: str, county: Optional[str] = None,
-                         parse=parse_query) -> "tuple[float, float] | None":
+                         parse=parse_query, anywhere: bool = False) -> "tuple[float, float] | None":
     """Resolve a town/suburb/locality name ("Swords, Dublin", "Limerick City") to the
     centre of its sales, from the `places` table (scripts/build_places.py). `parse`
-    picks the names to try (parse_localities: the later parts of the query)."""
-    names, hint = parse(query, county)
-    if not names:
+    picks the names to try (parse_localities: the later parts of the query).
+    anywhere=True: the name's main county, whatever the county filter, unless the
+    query itself names a county ("Ballinasloe" -> Galway, "Ballinasloe, Mayo" -> None)."""
+    names, hint = parse(query, None if anywhere else county)
+    if not names or (anywhere and hint):
         return None
     try:
         rows = await db_pool.fetch(
@@ -850,7 +852,8 @@ async def _geocode_place(query: str, county: Optional[str] = None,
     except Exception as e:
         logger.warning(f"Place lookup failed for {query!r}: {e}")
         return None
-    return pick_place([dict(r) for r in rows], names, hint)
+    rows = [dict(r) for r in rows]
+    return pick_dominant_place(rows, names) if anywhere else pick_place(rows, names, hint)
 
 
 async def _flag_bad_geocode(eircode: str):
@@ -924,9 +927,10 @@ async def resolve_location(query: str, county: Optional[str] = None,
       9. Place name → places table     (town/suburb centres built from our own sales)
       10. Token-based DB lookup        (full-text, tight clusters: estates, developments)
       11. Later parts → places table   (locality the query ends with: "Drumlaney, Redhills")
+      12. Place name, any county       (a town outside the county filter: "Ballinasloe")
     Anything else is logged to search_failures (no_location) and raises 404.
 
-    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_county', 'db_address', 'db_neighbour', 'db_place', 'db_tokens', 'db_locality'
+    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_county', 'db_address', 'db_neighbour', 'db_place', 'db_tokens', 'db_locality', 'db_place_elsewhere'
     """
     # 1. Raw coordinates
     coord_match = re.match(r"^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$", query.strip())
@@ -1034,6 +1038,12 @@ async def resolve_location(query: str, county: Optional[str] = None,
     result = await _geocode_place(query, county, parse=parse_localities)
     if result:
         return _cache_and_return(*result, "db_locality")
+
+    # 4f. A town outside the county filter ("Ballinasloe" with the Dublin default):
+    # only now, so a Dublin match above always wins.
+    result = await _geocode_place(query, county, anywhere=True)
+    if result:
+        return _cache_and_return(*result, "db_place_elsewhere")
 
     # Nothing in our data. Search uses no external geocoder (no Mapbox): log the
     # miss to search_failures (scripts/failures_report.py) and give up.

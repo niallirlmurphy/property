@@ -107,3 +107,28 @@ def pick_place(rows: list, names: list, hint: Optional[str]) -> "Optional[tuple[
             best = max(cands, key=lambda r: r["sales"])
             return best["latitude"], best["longitude"]
     return None
+
+
+# Share of a name's place sales one county needs to own it outright: Athlone
+# (Westmeath 77%, Roscommon 23%) yes, "Church Road" or "Kilmore" (half in one) no.
+DOMINANT_SHARE = 2 / 3
+# ... and the most counties whose addresses use the name: towns on a border
+# (Athlone 3, Ballinasloe 2) yes; "Main Street" (25, only Meath's clusters) no.
+DOMINANT_MAX_COUNTIES = 3
+
+
+def pick_dominant_place(rows: list, names: list) -> "Optional[tuple[float, float]]":
+    """Fallback for a town outside the county being searched ("Ballinasloe" with the
+    Dublin default): the name's busiest county, if it holds DOMINANT_SHARE of the
+    sales in `places` rows for that name and the name is used in at most
+    DOMINANT_MAX_COUNTIES counties. Dublin isn't preferred here: the caller
+    has already tried it."""
+    for name in names:
+        cands = [r for r in rows if r["name"] == name]
+        if not cands:
+            continue
+        best = max(cands, key=lambda r: r["sales"])
+        if (best["counties"] <= DOMINANT_MAX_COUNTIES
+                and best["sales"] >= DOMINANT_SHARE * sum(r["sales"] for r in cands)):
+            return best["latitude"], best["longitude"]
+    return None
