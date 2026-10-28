@@ -15,6 +15,10 @@ import { Link } from "react-router-dom";
 //   County and routing-key comparison: all full-market-price second-hand sales
 //   in 2025, compared where both sides have 30+ sales.
 //   New homes: the PPR shows prices ex-VAT; the CSO includes VAT at 13.5%.
+//   With VAT added (backend/price_vat.py: 13.5%, or 9% on new apartments from
+//   8 Oct 2025), 2025 full-price sales, €50k–€3m, bulk rows removed: all homes
+//   €361,233 -> €380,000 (CSO €387,500, HPA05); new homes €387,665 -> €435,000
+//   (CSO €440,000). One aggregate query, 28 Oct 2026.
 // ---------------------------------------------------------------------------
 
 const INK = "#374151";
@@ -365,8 +369,9 @@ export function PprVsCsoContent() {
 
       <SectionHeading>New homes: VAT and missing Eircodes</SectionHeading>
       <p style={p}>
-        Include new homes and the gap widens. Across all 2025 sales, the register's median is about 5% below the CSO's.
-        Almost all of that comes from new builds, for two reasons.
+        Include new homes and the gap widens. Across all full-price 2025 sales, the register's median was{" "}
+        <strong>€361,233</strong>, 7% below the CSO's <strong>€387,500</strong>. Almost all of that comes from new builds,
+        for two reasons.
       </p>
       <p style={p}>
         <strong>VAT.</strong> The register's national median for a new home in 2025 was <strong>€387,665</strong>. Add VAT
@@ -380,11 +385,29 @@ export function PprVsCsoContent() {
         changes the answer. In A84 (Ashbourne) the CSO's median for all homes is €485,000, while register sales with an
         A84 Eircode, mostly older homes, have a median of €343,500.
       </p>
+
+      <SectionHeading>How HomeIQ lines up with the CSO</SectionHeading>
       <p style={p}>
-        On HomeIQ, area and county pages place sales by address and map location rather than Eircode. Our medians, trends
-        and valuations include VAT on new homes, as do new-build prices in our{" "}
-        <Link to="/blog/irish-property-market-health-36-months" style={link}>market analysis</Link>, so they compare with
-        the CSO's. Individual sales are listed at the register price.
+        HomeIQ's area and county pages place sales by address and map location rather than Eircode, so new homes without
+        one are still counted. Before working out any median, trend or valuation, we add VAT back to every new-home sale
+        at the rate that applied: <strong>13.5%</strong> on houses, and <strong>9%</strong> on apartments sold from 8 October
+        2025. The register doesn't say which is which, so we tell an apartment from its address ("Apt", "Apartment",
+        "Duplex") or its recorded property type.
+      </p>
+      <p style={p}>
+        With VAT added, the national median for all full-price 2025 sales rises from €361,233 to{" "}
+        <strong>€380,000</strong>, within 2% of the CSO's €387,500. That is about the same gap as for second-hand homes
+        alone (€350,000 against €355,000), so what's left comes from the CSO's narrower sample rather than tax. For new homes
+        our median is <strong>€435,000</strong> against the CSO's €440,000. Ours is a little lower because new apartments
+        sold since October carry 9% rather than 13.5%.
+      </p>
+      <p style={p}>
+        Our valuations also leave out bulk sales. When a fund or housing body buys a block of new homes, the register
+        can list every unit at the same split price on the same day (24 apartments at €400,881.06 each in one Dublin
+        scheme). That's the deal's average rather than what one home sold for, so those units never count as comparables.
+        New-build prices in our{" "}
+        <Link to="/blog/irish-property-market-health-36-months" style={link}>market analysis</Link> include VAT too.
+        Individual sales are still listed at the register price, as published.
       </p>
 
       <SectionHeading>Median price vs price index</SectionHeading>
@@ -424,7 +447,8 @@ export function PprVsCsoContent() {
         <li style={{ marginBottom: "0.5rem" }}><strong>For "how fast are prices rising?", use the CSO's index.</strong> It
           strips out changes in the mix of homes sold.</li>
         <li style={{ marginBottom: "0.5rem" }}><strong>Comparing new homes? Check VAT.</strong> A register price for a new
-          home excludes VAT: 13.5% on houses, and 9% on apartments sold since 8 October 2025.</li>
+          home excludes VAT: 13.5% on houses, and 9% on apartments sold since 8 October 2025. HomeIQ's medians,
+          trends and valuations add it back for you.</li>
         <li style={{ marginBottom: "0.5rem" }}><strong>Small differences are expected.</strong> A gap of 1–3% between the
           register and the CSO is normal, and up to 7% in some rural counties.</li>
       </ul>
@@ -446,8 +470,9 @@ export function PprVsCsoContent() {
         Sources: Property Services Regulatory Authority, Property Price Register (HomeIQ analysis); Central Statistics
         Office, Residential Property Price Index tables HPA02, HPA04, HPA05 and HPA06, downloaded 27 October 2026 and used
         under CC BY 4.0. CSO figures are by date of sale (executions) and are revised as late returns are filed. Register
-        figures are full-market-price second-hand sales; yearly medians exclude prices outside €50,000–€3m and bulk
-        multi-unit rows. Comparisons by county and Eircode area use areas with at least 30 sales on both sides.
+        figures are full-market-price sales (second-hand unless stated); medians exclude prices outside €50,000–€3m and
+        bulk multi-unit rows, and VAT-inclusive figures add 13.5% (9% for new apartments from 8 October 2025) to new
+        homes. Comparisons by county and Eircode area use areas with at least 30 sales on both sides.
       </p>
     </div>
   );
