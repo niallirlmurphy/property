@@ -14,6 +14,7 @@ Environment variables (set in .env or shell):
 """
 
 import csv
+import html
 import os
 import sys
 import re
@@ -123,7 +124,7 @@ def run_import():
             lon = parse_float(row.get("Longitude"))
             geog = f"SRID=4326;POINT({lon} {lat})" if lat is not None and lon is not None else None
 
-            address = row.get("Address", "").strip()
+            address = html.unescape(row.get("Address", "")).strip()  # Tandy&#039;s
             batch.append((
                 sale_date,
                 address,

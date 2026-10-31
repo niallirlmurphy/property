@@ -27,6 +27,7 @@ Usage:
 import asyncpg
 import asyncio
 import csv
+import html
 import os
 import sys
 import re
@@ -109,7 +110,8 @@ def normalize_ppr_row(row: Dict[str, str]) -> Dict[str, any]:
     price_raw = row.get('Price (€)') or row.get('Price (�)') or row.get('Price (EUR)') or row.get('Price')
     eircode_raw = row.get('Postal Code') or row.get('Eircode')
 
-    address_raw = row.get('Address', '').strip()
+    # The PPR file has HTML entities in some addresses (Tandy&#039;s Lane).
+    address_raw = html.unescape(row.get('Address', '')).strip()
 
     return {
         'sale_date': parse_date(row.get('Date of Sale (dd/mm/yyyy)')),
