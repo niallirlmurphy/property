@@ -121,6 +121,13 @@ function BasisChart() {
 export function BaringsIresTakeoverContent() {
   return (
     <div style={{ fontSize: "1.125rem", lineHeight: 1.75, color: INK }}>
+      <p style={{ fontSize: "1rem", background: "#fff7ed", border: "1px solid #fed7aa", borderRadius: "0.5rem", padding: "0.85rem 1.1rem", marginBottom: "1.5rem" }}>
+        <strong>Update, 31 October 2026:</strong>{" "}
+        <Link to="/blog/barings-ires-reit-takeover-update-pusu-deadline" style={{ color: "#1d4ed8", fontWeight: 600 }}>
+          where the bid stands ahead of the 9 November deadline
+        </Link>
+        , with a timeline, shareholder sell-downs, and what VAT and the CSO figures mean for our valuation.
+      </p>
       <p style={{ marginBottom: "1.5rem" }}>
         On <strong>28 September 2026</strong>, Ireland's largest private residential landlord —{" "}
         <strong>IRES REIT plc</strong> — confirmed it had received a cash takeover approach from{" "}

@@ -18,6 +18,7 @@ import { MortgageCalculatorGuideContent } from "../blog-posts/how-to-use-a-mortg
 import { IresReitValuationContent } from "../blog-posts/valuing-ires-reit-property-portfolio";
 import { HowHomeIqValuesContent } from "../blog-posts/how-homeiq-values-a-home";
 import { BaringsIresTakeoverContent } from "../blog-posts/barings-ires-reit-takeover-offer-fair-value";
+import { BaringsIresUpdateContent } from "../blog-posts/barings-ires-reit-takeover-update-pusu-deadline";
 import { MarketHealth36MonthsContent } from "../blog-posts/irish-property-market-health-36-months";
 import { HousePriceGrowthMapContent } from "../blog-posts/ireland-house-price-growth-map";
 import { PprVsCsoContent } from "../blog-posts/property-price-register-vs-cso-house-prices";
@@ -29,6 +30,7 @@ const BLOG_CONTENT: Record<string, React.ComponentType> = {
   "irish-property-market-2010-2026-demand-supply-affordability": MarketDrivers2010To2026Content,
   "ireland-house-price-growth-map": HousePriceGrowthMapContent,
   "irish-property-market-health-36-months": MarketHealth36MonthsContent,
+  "barings-ires-reit-takeover-update-pusu-deadline": BaringsIresUpdateContent,
   "barings-ires-reit-takeover-offer-fair-value": BaringsIresTakeoverContent,
   "how-homeiq-values-a-home": HowHomeIqValuesContent,
   "valuing-ires-reit-property-portfolio": IresReitValuationContent,

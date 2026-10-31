@@ -46,6 +46,15 @@ export function relatedPosts(post: BlogPost, limit = 3, now: Date = new Date()):
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "barings-ires-reit-takeover-update-pusu-deadline",
+    title: "Barings' IRES Bid: €1.386 Still Sits 25% Below Our Valuation as the 9 November Deadline Nears",
+    description: "An update on Barings' €1.386-a-share approach for IRES REIT: a 30.75% premium to the undisturbed price but level with NAV and about 25% below our open-market estimate. The timeline to the 9 November put-up-or-shut-up deadline, shareholder sell-downs, and what VAT and the CSO figures mean for the valuation.",
+    date: "2026-10-31",
+    author: "HomeIQ Team",
+    tags: ["Analysis", "IRES REIT", "Takeover", "Valuation", "Dublin"],
+    readTime: "7 min read"
+  },
+  {
     slug: "property-price-register-vs-cso-house-prices",
     title: "Property Price Register vs CSO: Why the House Price Figures Differ",
     description: "The Property Price Register and the CSO's price statistics come from the same stamp duty returns, not asking prices or valuations. We compared them: second-hand medians agree to about 1% by Eircode area, while VAT on new homes, missing Eircodes, rural coverage and mix-adjustment explain the gaps.",
