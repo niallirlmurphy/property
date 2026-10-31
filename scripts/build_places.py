@@ -42,6 +42,7 @@ MANUAL_PLACES = [
     ("achill", "Mayo", 53.930, -9.939),             # "Achill" alone -> Achill Sound village
     ("dugort", "Mayo", 54.00965, -10.02500),        # village on Achill Island; both spellings
     ("doogort", "Mayo", 54.00965, -10.02500),
+    ("staplestown", "Kildare", 53.3299, -6.7684),   # village near Donadea; 15 sales (2026-10-31)
 ]
 
 SAMPLE = ["swords", "malahide", "tuam", "limerick city", "ranelagh", "dun laoghaire",

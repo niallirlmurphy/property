@@ -659,8 +659,9 @@ def _county_or_dublin(query: str, county: Optional[str]) -> Optional[str]:
     return county
 
 
-def _token_tsquery(tokens: list[str]) -> str:
-    """'mount & carmel & (road | rd)': every token, or its abbreviation/plural, must appear."""
+def _token_tsquery(tokens: list[str], phrase: bool = False) -> str:
+    """'mount & carmel & (road | rd)': every token, or its abbreviation/plural, must appear.
+    phrase=True: in that order, adjacent ('river <-> walk')."""
     parts = []
     for t in tokens:
         variants = {t}
@@ -672,7 +673,7 @@ def _token_tsquery(tokens: list[str]) -> str:
         elif not t.endswith("s") and not t.isdigit():
             variants.add(t + "s")       # garden → gardens
         parts.append("(" + " | ".join(sorted(variants)) + ")")
-    return " & ".join(parts)
+    return (" <-> " if phrase else " & ").join(parts)
 
 
 async def _geocode_db_nearest_number(query: str, county: Optional[str] = None) -> "tuple[float, float] | None":
@@ -811,6 +812,11 @@ async def _token_lookup(tokens: list, query: str, county: Optional[str]) -> "tup
     row = await _token_cluster(tsquery, county)
     if row and not row["cnt"]:
         return None
+    # "River Walk" also matches "Brookdale Walk, River Valley": try the words as a phrase.
+    if not tight(row) and len(tokens) >= 2:
+        phrase_row = await _token_cluster(_token_tsquery(tokens, phrase=True), county)
+        if tight(phrase_row):
+            row = phrase_row
     if not tight(row) and county:
         centre = await _geocode_place(county, county)
         if centre:
