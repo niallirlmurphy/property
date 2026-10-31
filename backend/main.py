@@ -943,6 +943,11 @@ async def resolve_location(query: str, county: Optional[str] = None,
     if coord_match:
         return float(coord_match.group(1)), float(coord_match.group(2)), "raw"
 
+    # Every sale is in Ireland, so a trailing country adds nothing ("Carlow, Ireland").
+    stripped = re.sub(r"(?<!northern)(?<!northern )[\s,]*\b(?:republic of )?ireland\s*$", "", query.strip(), flags=re.IGNORECASE)
+    if stripped:
+        query = stripped
+
     # 2. Cache hit (v4 namespace - includes county for disambiguation)
     cached = cache.get("geocode_v4", {"q": query, "county": county or ""})
     if cached is not None:
@@ -969,6 +974,13 @@ async def resolve_location(query: str, county: Optional[str] = None,
         # Get routing key centroid for quality validation
         rk_row = await _routing_key_centroid(prefix)
 
+        def near_routing_key(lat: float, lon: float) -> bool:
+            # Rough distance check (0.05° lat ≈ 5km; lon degrees are smaller at this latitude).
+            # Without enough routing key data to validate against, trust the match.
+            if not rk_row or (rk_row["cnt"] or 0) < 5:
+                return True
+            return abs(lat - float(rk_row["lat"])) < 0.05 and abs(lon - float(rk_row["lon"])) < 0.08
+
         # Try exact eircode
         row = await db_pool.fetchrow("""
             SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
@@ -981,20 +993,11 @@ async def resolve_location(query: str, county: Optional[str] = None,
             exact_lat, exact_lon = float(row["lat"]), float(row["lon"])
             # Validate: exact coordinates should be within ~5km of routing key centroid
             # Reject if too far away (indicates bad geocoding data)
-            if rk_row and (rk_row["cnt"] or 0) >= 5:
-                rk_lat, rk_lon = float(rk_row["lat"]), float(rk_row["lon"])
-                # Rough distance check (0.05 degrees ≈ 5km at Irish latitudes)
-                lat_diff = abs(exact_lat - rk_lat)
-                lon_diff = abs(exact_lon - rk_lon)
-                if lat_diff < 0.05 and lon_diff < 0.08:  # lon degrees are smaller at this latitude
-                    return _cache_and_return(exact_lat, exact_lon, "db_exact")
-                else:
-                    logger.warning(f"Eircode {norm} coordinates ({exact_lat:.5f}, {exact_lon:.5f}) too far from routing key {prefix} centroid ({rk_lat:.5f}, {rk_lon:.5f}), using centroid instead")
-                    # Flag properties with bad geocoding for priority re-geocoding
-                    asyncio.create_task(_flag_bad_geocode(norm))
-            else:
-                # No routing key data to validate against, trust the exact match
+            if near_routing_key(exact_lat, exact_lon):
                 return _cache_and_return(exact_lat, exact_lon, "db_exact")
+            logger.warning(f"Eircode {norm} coordinates ({exact_lat:.5f}, {exact_lon:.5f}) too far from routing key {prefix} centroid, using centroid instead")
+            # Flag properties with bad geocoding for priority re-geocoding
+            asyncio.create_task(_flag_bad_geocode(norm))
 
         # Exact match not in PPR or failed validation — try eircode_reference table
         # This table contains pre-computed Eircode centroids from all PPR properties with Eircodes
@@ -1004,7 +1007,9 @@ async def resolve_location(query: str, county: Optional[str] = None,
             WHERE eircode = $1
         """, norm)
 
-        if ref_row:
+        # The reference table is a snapshot of our own geocodes, so it holds the same bad
+        # points (D11 R288, College View Ballymun, sat in Lusk): validate it the same way.
+        if ref_row and near_routing_key(float(ref_row["latitude"]), float(ref_row["longitude"])):
             return _cache_and_return(float(ref_row["latitude"]), float(ref_row["longitude"]), "db_eircode_ref")
 
         # Still no match — use routing key centroid (already fetched above)
