@@ -22,6 +22,7 @@ from .models import (
 )
 from .geocoder import ValuationGeocoder, _normalize_address
 from .comparable_search import ComparableSearcher
+from bulk_sales import BULK_ADDR_RE
 from .adjustments import (
     MVPAdjuster, property_bucket, property_type_from_address, trim_price_outliers,
 )
@@ -576,8 +577,8 @@ async def log_valuation_request(
 
 # The address must name one property: a house number or unit ("42 …", "Apt 3, …").
 _SPECIFIC_ADDRESS_RE = re.compile(r"^(\d+[a-z]?\s|(apt|unit|flat)\s)", re.IGNORECASE)
-# Bulk sales ("Units 1-76 …") are not one property.
-_RANGE_ADDRESS_RE = re.compile(r"[0-9]+ *(-|to) *[0-9]+", re.IGNORECASE)
+# Bulk sales ("Units 1-76 …", "8 Units at …") are not one property.
+_RANGE_ADDRESS_RE = re.compile(BULK_ADDR_RE, re.IGNORECASE)
 # Different spellings of one house count as the same property if this close (~100m).
 _SAME_PROPERTY_DEG = 0.001
 # The valuation page's top option is "6+": only 1-5 are exact counts.

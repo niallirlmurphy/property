@@ -55,10 +55,10 @@ LON_MIN, LON_MAX = -10.7, -5.4
 # these bounds plus the bulk filter touch ~2% of rows.
 PRICE_FLOOR = 50_000
 PRICE_CEIL = 3_000_000
-# A single row whose address spans a unit range ("Apt 1-10", "Units 1 to 76") is
-# a bulk/portfolio sale recorded as one high price — not a single-dwelling sale.
-# Postgres POSIX regex (case-insensitive via !~*): digits, dash or "to", digits.
-BULK_ADDR_RE = r'[0-9]+ *(-|to) *[0-9]+'
+# A row whose address names several homes ("Apt 1-10", "8 Units at") is a bulk
+# sale recorded as one high price, not a single-dwelling sale (backend/bulk_sales.py).
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
+from bulk_sales import BULK_ADDR_RE  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 OUT_PATH = REPO / "frontend" / "public" / "data" / "heatmap.json"

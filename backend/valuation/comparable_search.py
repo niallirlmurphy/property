@@ -14,6 +14,7 @@ from typing import List, Dict
 from datetime import datetime, timedelta
 
 from price_vat import price_incl_vat_sql
+from bulk_sales import BULK_ADDR_RE
 
 # This many sales on one day at one exact price nearby are a bulk sale's units.
 BULK_SALE_MIN_UNITS = 3
@@ -152,12 +153,12 @@ class ComparableSearcher:
                 AND p.not_full_market_price = FALSE
                 AND p.price IS NOT NULL
                 AND p.price BETWEEN 50000 AND 5000000
-                -- Exclude bulk/multi-unit sales (e.g. "23 to 45", "A1-A7"):
+                -- Exclude bulk/multi-unit sales (e.g. "23 to 45", "8 Units at"):
                 -- their price is for many units, so a single such row would
                 -- enter as one grossly over-priced comparable. Mirrors the
                 -- BULK_ADDR_FILTER used for trends/lists in main.py.
                 AND (p.address_normalized IS NULL
-                     OR p.address_normalized !~* '[0-9]+ *(-|to) *[0-9]+')
+                     OR p.address_normalized !~* '{BULK_ADDR_RE}')
                 AND p.sale_date >= $5
                 AND ST_DWithin(p.geog, sp.geog, $3)  -- Uses GIST index
                 AND ($6::INTEGER IS NULL OR p.id != $6)  -- Exclude property if specified

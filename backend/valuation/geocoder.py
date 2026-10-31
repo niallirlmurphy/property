@@ -21,6 +21,7 @@ logger = logging.getLogger(__name__)
 from typing import Dict, Optional, Tuple
 from .models import GeocodingResult
 from .cache import TTLCache
+from bulk_sales import BULK_ADDR_RE
 
 
 # Addresses don't move, so a resolved (address, eircode, county) -> location is
@@ -538,7 +539,7 @@ class ValuationGeocoder:
                 AND latitude IS NOT NULL
                 AND longitude IS NOT NULL
                 AND (address_normalized IS NULL
-                     OR address_normalized !~* '[0-9]+ *(-|to) *[0-9]+')
+                     OR address_normalized !~* '""" + BULK_ADDR_RE + """')
                 AND geocode_suspect IS NOT TRUE
                 AND geocode_quality_issue IS NOT TRUE
             LIMIT 1;
@@ -584,7 +585,7 @@ class ValuationGeocoder:
                         AND latitude IS NOT NULL
                         AND longitude IS NOT NULL
                         AND (address_normalized IS NULL
-                             OR address_normalized !~* '[0-9]+ *(-|to) *[0-9]+')
+                             OR address_normalized !~* '""" + BULK_ADDR_RE + """')
                         AND geocode_suspect IS NOT TRUE
                         AND geocode_quality_issue IS NOT TRUE
                     ORDER BY LENGTH(COALESCE(address_normalized, address))  -- Prefer shorter (more specific) matches

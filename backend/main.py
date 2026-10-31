@@ -23,6 +23,7 @@ from sentry_sdk.integrations.asyncio import AsyncioIntegration
 from places import parse_localities, parse_query, pick_dominant_place, pick_place
 from price_vat import PRICE_INCL_VAT
 from address_normalize import normalize_address
+from bulk_sales import BULK_ADDR_RE, BULK_DESC_RE, BULK_FLAT_RE, BULK_PRICE
 import usage
 
 load_dotenv()
@@ -267,11 +268,12 @@ VISIBLE_LAT_LON = ("CASE WHEN geocode_suspect THEN NULL ELSE latitude END AS lat
 # dwellings at one combined price that sits inside the price band above, so they
 # survive TREND_PRICE_FILTER and badly skew the median in low-volume areas/years
 # (e.g. a single €3.9M "Apt 1-10" row pushing an area's median to ~€1M). Exclude
-# these address ranges from aggregates — the same rule the price-growth heatmap
+# these sales (bulk_sales.py) from aggregates — the same rule the price-growth heatmap
 # uses. Row-listing queries (search, alerts) are NOT filtered by this.
-BULK_ADDR_RE = r"[0-9]+ *(-|to) *[0-9]+"
 BULK_ADDR_FILTER = (
     f"(address_normalized IS NULL OR address_normalized !~* '{BULK_ADDR_RE}')"
+    f" AND NOT (price > {BULK_PRICE} AND (COALESCE(description, '') ~* '{BULK_DESC_RE}'"
+    f" OR COALESCE(address_normalized, '') ~* '{BULK_FLAT_RE}'))"
 )
 
 
