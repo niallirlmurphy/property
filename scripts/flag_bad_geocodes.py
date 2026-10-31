@@ -12,14 +12,14 @@ Two flags, two purposes:
 
   needs_geocoding = TRUE   -> the re-geocode worklist (drives geocode_mapbox_batch.py)
                              union of: no coordinates
-                                       coordinate outside its stored county's box
+                                       coordinate >2km outside its stored county
                                        eircode beyond its routing-key's adaptive extent
                                        numbered address far from its town's other sales
                                        on a coordinate shared by >=30 distinct addresses
 
   geocode_suspect = TRUE   -> hide from /search and /trends until re-geocoded
                              (coordinate is known-wrong / untrustworthy)
-                             union of: coordinate outside its stored county's box
+                             union of: coordinate >2km outside its stored county
                                        eircode beyond its routing-key's adaptive extent
                                        numbered address far from its town's other sales
                                        on a coordinate shared by >=50 distinct addresses
@@ -27,7 +27,7 @@ Two flags, two purposes:
 
   Why county-first: a routing-key centroid is a single point but keys are AREAS —
   rural ones sprawl (Nobber is 19km from the A82 centroid at its CORRECT coords), so a
-  flat distance-from-centroid conflated key-size with error. The county-box check is the
+  flat distance-from-centroid conflated key-size with error. The county-boundary check is the
   reliable wrong-town signal; the per-key adaptive distance rule and the cluster check
   catch the rest.
 
@@ -41,7 +41,14 @@ clears geocode_suspect on rows it places, so a wrong Mapbox answer stays visible
 re-flagged (2026-10: ~13k wrong rows had gone unflagged since the 23 Aug full run, e.g.
 Parkview, Stepaside D18 placed near Malahide). The full run would also re-queue rows
 that already failed (suspect + needs_geocoding = FALSE), so add-only leaves those alone.
+
+--clear-county NAME: unhide rows of one county that no longer meet any suspect rule,
+e.g. after widening that county's box (Donegal, 2026-10-31: Inishowen sat east of it).
+Touches nothing else; cleared rows leave the re-geocode queue unless still worklisted.
+--clear-ids FILE: the same for a list of ids (one per line), e.g. after correcting the
+county column of rows whose PPR county was wrong (2026-10-31, 835 rows).
 """
+import json
 import math
 import os
 import re
@@ -51,6 +58,9 @@ from collections import defaultdict
 
 import psycopg2
 from psycopg2.extras import execute_values
+from shapely import STRtree
+from shapely.geometry import Point, shape
+from shapely.ops import transform
 from dotenv import load_dotenv
 
 sys.path.insert(0, os.path.dirname(__file__))
@@ -74,12 +84,16 @@ RK_MULT = 2.0            # multiple of a key's p75 extent that counts as misplac
 RK_FLOOR_KM = 8.0        # minimum threshold (compact urban keys)
 RK_CEIL_KM = 45.0        # maximum threshold (largest sprawling keys)
 
-# County bounding boxes (county_validator.COUNTY_BOUNDS) are the strongest wrong-town
-# signal: a Kerry-county row sitting in Dublin is wrong regardless of eircode/cluster.
-# The boxes are tight, so we pad them by this margin before treating "outside the box"
-# as a hide signal — this spares genuine edge-of-county towns (e.g. Fingal reaches
-# ~53.63N, above County Dublin's 53.50 box) while still catching cross-region matches.
-COUNTY_MARGIN_DEG = 0.2
+# A point in a different county from its sale is the strongest wrong-town signal: a
+# Kerry row sitting in Dublin is wrong regardless of eircode/cluster. Tested against
+# real county boundaries (OSM, scripts/data/county_boundaries.geojson); the bounding
+# boxes in county_validator cut off parts of most counties (Inishowen, Ferrybank,
+# south Kilkenny), so they hid correct rows. A point is spared within COUNTY_TOL_KM of
+# its county (border houses, simplified coastline) or when its address names the
+# county it is in (the PPR county column is sometimes wrong: "Spa Road, Dingle" filed
+# under Kildare).
+COUNTY_TOL_KM = 2.0
+COUNTY_FILE = os.path.join(os.path.dirname(__file__), "data", "county_boundaries.geojson")
 
 SUSPECT_CLUSTER = 50     # distinct addresses on one coord -> fallback centroid (hide)
 WORKLIST_CLUSTER = 30    # distinct addresses on one coord -> worth re-geocoding
@@ -189,17 +203,49 @@ def locality_bad_ids(rows):
         bad.add(r[0])
     return bad
 
+_NAMED_COUNTY = re.compile(
+    rf"\b(?:co\.?|county)\s*({_COUNTY_WORDS})\b|(?:^|,)\s*({_COUNTY_WORDS})\s*$|\b(dublin)\s*\d{{1,2}}w?\b",
+    re.I)
+
+
+def county_bad_ids(rows):
+    """ids of rows whose point lies outside their own county (see COUNTY_TOL_KM).
+
+    rows: iterable of (id, county, address_normalized, lat, lon, geocode_suspect).
+    """
+    k = math.cos(math.radians(53.4))   # lon degrees -> lat-degree units, so buffers are round
+    squash = lambda g: transform(lambda x, y, z=None: (x * k, y), g)
+    feats = json.load(open(COUNTY_FILE))["features"]
+    names = [f["properties"]["county"] for f in feats]
+    polys = [squash(shape(f["geometry"])) for f in feats]
+    near = {n: p.buffer(COUNTY_TOL_KM / 111.0) for n, p in zip(names, polys)}
+    tree = STRtree(polys)
+    bad = set()
+    for i, county, address, lat, lon, _ in rows:
+        if lat is None or county not in near:
+            continue
+        pt = Point(lon * k, lat)
+        if near[county].contains(pt):
+            continue
+        hit = tree.query(pt, predicate="within")
+        point_county = names[hit[0]] if len(hit) else None
+        named = {next(g for g in m.groups() if g).title()
+                 for m in _NAMED_COUNTY.finditer(address or "")}
+        if point_county not in named:
+            bad.add(i)
+    return bad
+
+
 APPLY = "--apply" in sys.argv
 ADD_ONLY = "--add-only" in sys.argv
-
-
-def _county_bounds_values():
-    """SQL VALUES rows for the padded county bounding boxes."""
-    m = COUNTY_MARGIN_DEG
-    return ",".join(
-        f"('{c}',{a - m},{b + m},{lo - m},{hi + m})"
-        for c, (a, b, lo, hi) in COUNTY_BOUNDS.items()
-    )
+CLEAR_COUNTY = (sys.argv[sys.argv.index("--clear-county") + 1]
+                if "--clear-county" in sys.argv else None)
+CLEAR_IDS = ([int(x) for x in open(sys.argv[sys.argv.index("--clear-ids") + 1]).read().split()]
+             if "--clear-ids" in sys.argv else None)
+# Which suspect rows a clear may touch: one county, or a list of ids.
+CLEAR_SCOPE = (("p.county = %s", CLEAR_COUNTY) if CLEAR_COUNTY else
+               ("p.id = ANY(%s)", CLEAR_IDS) if CLEAR_IDS else None)
+CLEAR_LABEL = CLEAR_COUNTY or (CLEAR_IDS and f"{len(CLEAR_IDS):,} listed ids")
 
 
 def main():
@@ -220,7 +266,7 @@ def main():
     cur.execute("SET work_mem = '64MB'")
 
     print(f"Mode: {'APPLY (writing)' if APPLY else 'DRY RUN (no writes)'}")
-    print(f"Thresholds: county-box margin {COUNTY_MARGIN_DEG}deg, routing-key adaptive "
+    print(f"Thresholds: county boundary +{COUNTY_TOL_KM}km, routing-key adaptive "
           f"(p75*{RK_MULT}, clamp {RK_FLOOR_KM}-{RK_CEIL_KM}km), "
           f"suspect cluster >={SUSPECT_CLUSTER} distinct, worklist cluster >={WORKLIST_CLUSTER} distinct\n")
 
@@ -235,7 +281,13 @@ def main():
     # CTE below unions in. Temp tables are session-only, so this is fine in dry-run.
     cur.execute("SELECT id, county, address_normalized, latitude, longitude, "
                 "geocode_suspect IS TRUE FROM properties WHERE latitude IS NOT NULL")
-    loc_bad = locality_bad_ids(cur.fetchall())
+    geo_rows = cur.fetchall()
+    loc_bad = locality_bad_ids(geo_rows)
+    cty_bad = county_bad_ids(geo_rows)
+    cur.execute("DROP TABLE IF EXISTS _county_bad")
+    cur.execute("CREATE TEMP TABLE _county_bad (id BIGINT PRIMARY KEY)")
+    execute_values(cur, "INSERT INTO _county_bad (id) VALUES %s", [(i,) for i in cty_bad])
+    print(f"County rule: {len(cty_bad):,} rows outside their county")
     cur.execute("DROP TABLE IF EXISTS _loc_bad")
     cur.execute("CREATE TEMP TABLE _loc_bad (id BIGINT PRIMARY KEY)")
     execute_values(cur, "INSERT INTO _loc_bad (id) VALUES %s", [(i,) for i in loc_bad])
@@ -243,18 +295,9 @@ def main():
 
     # Reusable CTEs identifying the bad rows.
     cte = f"""
-    WITH cbounds(county, minlat, maxlat, minlon, maxlon) AS (
-        VALUES {_county_bounds_values()}
-    ),
-    county_bad AS (
-        -- Coordinate falls OUTSIDE the (margin-padded) box of its own stored county.
-        -- Strongest wrong-town signal; independent of eircode/cluster.
-        SELECT p.id
-        FROM properties p
-        JOIN cbounds b ON b.county = p.county
-        WHERE p.latitude IS NOT NULL
-          AND NOT (p.latitude BETWEEN b.minlat AND b.maxlat
-                   AND p.longitude BETWEEN b.minlon AND b.maxlon)
+    WITH county_bad AS (
+        -- Point outside its own county (county_bad_ids). Strongest wrong-town signal.
+        SELECT id FROM _county_bad
     ),
     good_keys AS (
         SELECT routing_key, centroid_lat, centroid_lon
@@ -350,6 +393,18 @@ def main():
     )
     """
 
+    if CLEAR_SCOPE and not APPLY:
+        cur.execute(cte + f"""SELECT p.address, p.latitude, p.longitude FROM properties p
+                             WHERE {CLEAR_SCOPE[0]} AND p.geocode_suspect AND p.latitude IS NOT NULL
+                               AND p.id NOT IN (SELECT id FROM suspect_ids)""", (CLEAR_SCOPE[1],))
+        rows = cur.fetchall()
+        print(f"{CLEAR_LABEL}: {len(rows):,} suspect rows now pass every rule, e.g.")
+        for r in rows[:15]:
+            print("  ", r)
+        print("\nDry run complete. Re-run with --apply to clear them.")
+        conn.close()
+        return
+
     if not APPLY:
         cur.execute(cte + "SELECT (SELECT COUNT(*) FROM suspect_ids), (SELECT COUNT(*) FROM worklist_ids)")
         n_suspect, n_worklist = cur.fetchone()
@@ -377,6 +432,17 @@ def main():
     n_suspect, n_worklist = cur.fetchone()
     print(f"geocode_suspect (hide from search): {n_suspect:,}")
     print(f"needs_geocoding (re-geocode worklist): {n_worklist:,}")
+
+    if CLEAR_SCOPE:
+        cur.execute("UPDATE properties p SET geocode_suspect = FALSE, "
+                    "needs_geocoding = EXISTS (SELECT 1 FROM _bad_geo b WHERE b.id = p.id) "
+                    f"WHERE {CLEAR_SCOPE[0]} AND p.geocode_suspect AND p.latitude IS NOT NULL "
+                    "AND NOT EXISTS (SELECT 1 FROM _bad_geo b WHERE b.id = p.id AND b.suspect)",
+                    (CLEAR_SCOPE[1],))
+        print(f"✓ {CLEAR_LABEL}: cleared geocode_suspect on {cur.rowcount:,} rows")
+        cur.execute("DROP TABLE IF EXISTS _bad_geo")
+        conn.close()
+        return
 
     if ADD_ONLY:
         # Rows not yet suspect: flag the suspect ones and queue all of them. Rows
