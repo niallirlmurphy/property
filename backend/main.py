@@ -992,6 +992,7 @@ async def resolve_location(query: str, county: Optional[str] = None,
             SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
             FROM properties
             WHERE latitude IS NOT NULL
+              AND geocode_suspect IS NOT TRUE
               AND REPLACE(UPPER(eircode), ' ', '') = $1
         """, norm)
 
@@ -1009,8 +1010,12 @@ async def resolve_location(query: str, county: Optional[str] = None,
         # This table contains pre-computed Eircode centroids from all PPR properties with Eircodes
         ref_row = await db_pool.fetchrow("""
             SELECT latitude, longitude, property_count, source
-            FROM eircode_reference
-            WHERE eircode = $1
+            FROM eircode_reference r
+            WHERE r.eircode = $1
+              -- a June snapshot of our geocodes: skip it where those sales are now flagged
+              AND NOT EXISTS (SELECT 1 FROM properties p
+                              WHERE REPLACE(UPPER(p.eircode), ' ', '') = r.eircode
+                                AND p.geocode_suspect)
         """, norm)
 
         # The reference table is a snapshot of our own geocodes, so it holds the same bad
@@ -2270,6 +2275,7 @@ async def subscribe_email_alert(
                 FROM properties
                 WHERE address ILIKE '%' || $1 || '%'
                   AND latitude IS NOT NULL
+                  AND geocode_suspect IS NOT TRUE
                 LIMIT 1
             """, subscription.address)
 
@@ -2447,6 +2453,7 @@ async def cron_send_monthly_alerts(request: Request):
                     FROM properties
                     WHERE address ILIKE '%' || $1 || '%'
                       AND latitude IS NOT NULL
+                      AND geocode_suspect IS NOT TRUE
                     LIMIT 1
                 """, sub['address'])
 

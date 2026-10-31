@@ -57,6 +57,7 @@ async def get_new_properties_for_subscription(
                    ST_Distance(geog, ST_MakePoint($1, $2)::geography) / 1000 AS distance_km
             FROM properties
             WHERE geog IS NOT NULL
+              AND geocode_suspect IS NOT TRUE
               AND ST_DWithin(geog, ST_MakePoint($1, $2)::geography, $3 * 1000)
               AND created_at > $4
               AND not_full_market_price = FALSE
@@ -121,6 +122,7 @@ async def process_monthly_alerts():
             FROM properties
             WHERE address ILIKE $1 || '%'
               AND latitude IS NOT NULL
+              AND geocode_suspect IS NOT TRUE
             LIMIT 1
         """
 

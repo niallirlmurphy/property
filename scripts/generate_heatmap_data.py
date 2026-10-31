@@ -266,6 +266,7 @@ def main():
             COUNT(*) FILTER (WHERE sale_date >= %(late_start)s AND sale_date < %(late_end)s) AS late_n
         FROM properties
         WHERE latitude IS NOT NULL AND longitude IS NOT NULL
+          AND geocode_suspect IS NOT TRUE   -- a known-wrong point lands in the wrong cell
           AND not_full_market_price = FALSE
           -- Resale market only. New-build schemes complete and sell in bulk in a
           -- single window, swamping a small area with cheaper apartments and
