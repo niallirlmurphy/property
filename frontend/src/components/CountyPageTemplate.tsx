@@ -12,6 +12,7 @@ import {
 } from "../utils/countyDataCache";
 import Breadcrumbs from "./Breadcrumbs";
 import MapSearchThumb from "./MapSearchThumb";
+import ValuationCta from "./ValuationCta";
 import StreetLevelAnalysis from "./StreetLevelAnalysis";
 import CsoFigures from "./CsoFigures";
 import { countySlug } from "../areas";
@@ -181,6 +182,8 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
                 ))}
               </section>
             )}
+
+            <ValuationCta place={`County ${content.name}`} />
 
             {/* Neighboring Counties */}
             {content.neighboringCounties.length > 0 && (

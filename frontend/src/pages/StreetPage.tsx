@@ -4,6 +4,9 @@ import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import MapSearchThumb from "../components/MapSearchThumb";
+import ValuationCta from "../components/ValuationCta";
+import { nearbyStreets } from "../streets";
+import { areaForLocality } from "../areas";
 import { usePageMeta } from "../hooks/usePageMeta";
 import type { StreetPageData } from "../routeLoaders";
 
@@ -46,6 +49,8 @@ export default function StreetPage() {
 
   const { stats } = data;
   const q = `${config.name}, ${config.area}`;
+  const moreStreets = nearbyStreets(config);
+  const areaPage = areaForLocality(config.area, config.countySlug);
   const faqs = [
     {
       q: `What is the average price on ${config.name}?`,
@@ -143,6 +148,21 @@ export default function StreetPage() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }} />
         </section>
 
+        <ValuationCta place={`${config.name}, ${config.area}`} />
+
+        {moreStreets.length > 0 && (
+          <section className="content-section">
+            <h2>More Streets Nearby</h2>
+            <div className="postcode-link-grid">
+              {moreStreets.map(s => (
+                <Link key={s.slug} to={`/street/${s.slug}`} className="postcode-link">
+                  {s.name}, {s.area}
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section className="content-section">
           <h2>Search Nearby Properties</h2>
           <MapSearchThumb
@@ -150,7 +170,9 @@ export default function StreetPage() {
             label={`Search around ${config.name} on the map`}
           />
           <p>
-            {config.name} is in <Link to={`/county/${config.countySlug}`}>County {config.county}</Link>.{" "}
+            {config.name} is in{" "}
+            {areaPage && <><Link to={`/area/${areaPage.slug}`}>{areaPage.name}</Link>,{" "}</>}
+            <Link to={`/county/${config.countySlug}`}>County {config.county}</Link>.{" "}
             Browse <Link to="/streets">street level analysis</Link> for all Ireland.
           </p>
         </section>

@@ -30,6 +30,19 @@ export function publishedPosts(now: Date = new Date()): BlogPost[] {
   return BLOG_POSTS.filter((p) => isPublished(p, now));
 }
 
+// Tags on most posts, too broad to say two posts are related.
+const BROAD_TAGS = new Set(["Analysis", "Guide"]);
+
+/** Published posts to suggest after `post`: most shared specific tags first, then newest. */
+export function relatedPosts(post: BlogPost, limit = 3, now: Date = new Date()): BlogPost[] {
+  const tags = new Set(post.tags.filter((t) => !BROAD_TAGS.has(t)));
+  const shared = (p: BlogPost) => p.tags.filter((t) => tags.has(t)).length;
+  return publishedPosts(now)
+    .filter((p) => p.slug !== post.slug)
+    .sort((a, b) => shared(b) - shared(a) || b.date.localeCompare(a.date))
+    .slice(0, limit);
+}
+
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {

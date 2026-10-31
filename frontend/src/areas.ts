@@ -226,3 +226,24 @@ export function provinceForCounty(countySlug: string): string | undefined {
 export function countyForArea(areaSlug: string): string | undefined {
   return AREAS.find(a => a.slug === areaSlug)?.county;
 }
+
+// Other areas to link from an area page: same county, those sharing an Eircode
+// routing key first (they're the closest), in registry order within each group.
+export function nearbyAreas(area: AreaConfig, limit = 6): AreaConfig[] {
+  const keys = new Set(area.routing_keys ?? []);
+  const shares = (a: AreaConfig) => (a.routing_keys ?? []).some(k => keys.has(k));
+  const others = AREAS.filter(a => a.county === area.county && a.slug !== area.slug);
+  return [...others.filter(shares), ...others.filter(a => !shares(a))].slice(0, limit);
+}
+
+// Areas whose Eircode routing keys include `code` (e.g. D06 → Rathmines, Ranelagh).
+export function areasForRoutingKey(code: string): AreaConfig[] {
+  return AREAS.filter(a => a.routing_keys?.includes(code));
+}
+
+// The area page a street (or other locality name) belongs to, if there is one.
+export function areaForLocality(locality: string, countySlug: string): AreaConfig | undefined {
+  const name = locality.toLowerCase();
+  return AREAS.find(a => a.county === countySlug &&
+    (a.name.toLowerCase() === name || a.match.some(m => m.toLowerCase() === name)));
+}

@@ -3,6 +3,7 @@ import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import MapSearchThumb from "../components/MapSearchThumb";
+import ValuationCta from "../components/ValuationCta";
 import StreetLevelAnalysis from "../components/StreetLevelAnalysis";
 import { usePageMeta } from "../hooks/usePageMeta";
 import CsoFigures from "../components/CsoFigures";
@@ -155,6 +156,8 @@ export default function DublinCountyPage() {
       </section>
 
       {baked?.cso && <CsoFigures cso={baked.cso} place="County Dublin" />}
+
+      <ValuationCta place="Dublin" />
 
       <StreetLevelAnalysis countySlug="dublin" />
 

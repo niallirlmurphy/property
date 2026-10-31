@@ -141,6 +141,17 @@ export function BaringsIresTakeoverContent() {
         </p>
       </div>
 
+      <div style={{ background: SURFACE, border: `1px solid ${GRID}`, borderRadius: "0.5rem", padding: "1rem 1.25rem", marginBottom: "2rem" }}>
+        <p style={{ fontSize: "1rem", margin: 0 }}>
+          <strong>Own an apartment in Dublin?</strong> Our numbers come from the same sold prices you can search.{" "}
+          <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>Value your home</Link> against real
+          comparable sales, or see{" "}
+          <Link to="/blog/dublin-property-prices-by-postcode-2026" style={{ color: "#1d4ed8", fontWeight: 600 }}>
+            Dublin prices by postcode
+          </Link>.
+        </p>
+      </div>
+
       <SectionHeading>What Barings has actually offered</SectionHeading>
       <p style={{ marginBottom: "1rem" }}>
         The 28 September statement is a <strong>Rule 2.4 "possible offer"</strong> announcement under the Irish Takeover
@@ -311,6 +322,11 @@ export function BaringsIresTakeoverContent() {
           <strong>Curious what your own home is worth?</strong> The same engine we pointed at IRES's €1.5bn book will value a
           single Irish address in seconds — from real comparable sales, with the comparables and confidence shown.{" "}
           <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>Value your property →</Link>
+        </p>
+        <p style={{ fontSize: "0.95rem", color: "#1e40af", margin: "0.75rem 0 0" }}>
+          Or browse sold prices for{" "}
+          <Link to="/county/dublin" style={{ color: "#1d4ed8", fontWeight: 600 }}>Dublin</Link>, or read{" "}
+          <Link to="/blog/how-homeiq-values-a-home" style={{ color: "#1d4ed8", fontWeight: 600 }}>how our valuations work</Link>.
         </p>
       </div>
 

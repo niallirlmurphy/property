@@ -5,7 +5,9 @@ import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import type { AreaSummary } from "../types";
-import { areaFromSlug, areaSearchQuery, countyForArea, countyFromSlug } from "../areas";
+import { areaFromSlug, areaSearchQuery, countyForArea, countyFromSlug, nearbyAreas } from "../areas";
+import { streetsInLocalities } from "../streets";
+import ValuationCta from "../components/ValuationCta";
 import { usePageMeta } from "../hooks/usePageMeta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import MapSearchThumb from "../components/MapSearchThumb";
@@ -60,6 +62,8 @@ export default function AreaPage() {
   );
 
   const latestTrend = data?.trends[data.trends.length - 1];
+  const areaStreets = streetsInLocalities([config.name, ...config.match], config.county);
+  const nearby = nearbyAreas(config);
 
   return (
     <>
@@ -166,6 +170,30 @@ export default function AreaPage() {
                   </li>
                 ))}
               </ul>
+            </section>
+          )}
+
+          <ValuationCta place={config.name} />
+
+          {areaStreets.length > 0 && (
+            <section className="content-section">
+              <h2>Streets in {config.name}</h2>
+              <div className="postcode-link-grid">
+                {areaStreets.map(s => (
+                  <Link key={s.slug} to={`/street/${s.slug}`} className="postcode-link">{s.name}</Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {nearby.length > 0 && (
+            <section className="content-section">
+              <h2>Nearby Areas</h2>
+              <div className="postcode-link-grid">
+                {nearby.map(a => (
+                  <Link key={a.slug} to={`/area/${a.slug}`} className="postcode-link">{a.name}</Link>
+                ))}
+              </div>
             </section>
           )}
 

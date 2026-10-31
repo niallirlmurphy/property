@@ -5,7 +5,8 @@ import TrendsChart from "../components/TrendsChart";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import type { EircodeResponse, TrendPoint, EircodePageData } from "../types";
-import { DUBLIN_EIRCODE_AREAS, countySlug } from "../areas";
+import { DUBLIN_EIRCODE_AREAS, areasForRoutingKey, countySlug } from "../areas";
+import ValuationCta from "../components/ValuationCta";
 import { usePageMeta } from "../hooks/usePageMeta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import CsoFigures from "../components/CsoFigures";
@@ -19,6 +20,7 @@ export default function EircodePage() {
   const { code } = useParams<{ code: string }>();
   const upperCode = code?.toUpperCase() ?? "";
   const friendlyName = DUBLIN_EIRCODE_AREAS[upperCode] ?? upperCode;
+  const postcodeAreas = areasForRoutingKey(upperCode);
 
   // SEO meta tags
   const meta = usePageMeta(
@@ -140,6 +142,19 @@ export default function EircodePage() {
                   ))}
                 </tbody>
               </table>
+            </section>
+          )}
+
+          <ValuationCta place={friendlyName} />
+
+          {postcodeAreas.length > 0 && (
+            <section className="content-section">
+              <h2>Areas in {friendlyName}</h2>
+              <div className="postcode-link-grid">
+                {postcodeAreas.map(a => (
+                  <Link key={a.slug} to={`/area/${a.slug}`} className="postcode-link">{a.name}</Link>
+                ))}
+              </div>
             </section>
           )}
 

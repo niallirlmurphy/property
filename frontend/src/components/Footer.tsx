@@ -12,6 +12,10 @@ export default function Footer() {
         <span className="separator">•</span>
         <a href="/polygon">Map Search</a>
         <span className="separator">•</span>
+        <a href="/areaguides">Area Guides</a>
+        <span className="separator">•</span>
+        <a href="/blog">Blog</a>
+        <span className="separator">•</span>
         <a href="/about">About</a>
         <span className="separator">•</span>
         <a href="/about#data-sources">Data Sources</a>

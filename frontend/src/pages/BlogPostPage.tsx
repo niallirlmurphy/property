@@ -4,7 +4,7 @@ import { usePageMeta } from "../hooks/usePageMeta";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import ShareButtons from "../components/ShareButtons";
-import { BLOG_POSTS, isPublished } from "../blogPosts";
+import { BLOG_POSTS, isPublished, relatedPosts } from "../blogPosts";
 
 // Blog post content - import from individual files
 import { HowToUsePPRContent } from "../blog-posts/how-to-use-property-price-register";
@@ -254,6 +254,35 @@ export default function BlogPostPage() {
             Value My Property
           </Link>
         </div>
+
+        {/* Related reading: other posts, then the data pages */}
+        <nav aria-label="Related reading" style={{ marginTop: "2.5rem" }}>
+          <h3 style={{ fontSize: "1.125rem", fontWeight: "600", color: "#111827", marginBottom: "1rem" }}>
+            Keep reading
+          </h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1rem" }}>
+            {relatedPosts(post).map((p) => (
+              <Link key={p.slug} to={`/blog/${p.slug}`} style={{
+                display: "block",
+                padding: "1rem",
+                border: "1px solid #e5e7eb",
+                borderRadius: "0.5rem",
+                backgroundColor: "#fff",
+                textDecoration: "none",
+              }}>
+                <span style={{ display: "block", fontWeight: "600", color: "#1d4ed8", lineHeight: 1.4 }}>{p.title}</span>
+                <span style={{ display: "block", marginTop: "0.5rem", fontSize: "0.8125rem", color: "#6b7280" }}>{p.readTime}</span>
+              </Link>
+            ))}
+          </div>
+          <p style={{ marginTop: "1.25rem", fontSize: "0.9375rem", color: "#6b7280" }}>
+            Or explore the data:{" "}
+            <Link to="/areaguides" style={{ color: "#1d4ed8" }}>area guides</Link>,{" "}
+            <Link to="/county/dublin" style={{ color: "#1d4ed8" }}>Dublin prices by postcode</Link>,{" "}
+            <Link to="/streets" style={{ color: "#1d4ed8" }}>street-level prices</Link> and the{" "}
+            <Link to="/property-price-register" style={{ color: "#1d4ed8" }}>Property Price Register</Link>.
+          </p>
+        </nav>
 
         {/* Back to blog */}
         <div style={{
