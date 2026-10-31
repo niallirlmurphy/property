@@ -257,6 +257,12 @@ TREND_PRICE_FILTER = f"price >= {TREND_MIN_PRICE} AND price <= {TREND_MAX_PRICE}
 # filtered: it shows that one property's real records, outlier or not.
 STATS_EXCLUDE_FILTER = "stats_excluded = FALSE"
 
+# Text searches (/search/exact, /eircode, /county-recent) still list a sale whose
+# geocode is flagged, but must not hand out its known-wrong point: the map would pin
+# it and centre on it. Spatial searches drop those rows outright.
+VISIBLE_LAT_LON = ("CASE WHEN geocode_suspect THEN NULL ELSE latitude END AS latitude, "
+                   "CASE WHEN geocode_suspect THEN NULL ELSE longitude END AS longitude")
+
 # Multi-unit/portfolio sales (e.g. "Apartments 1-10", "Units 1 to 76") record many
 # dwellings at one combined price that sits inside the price band above, so they
 # survive TREND_PRICE_FILTER and badly skew the median in low-volume areas/years
@@ -1479,7 +1485,7 @@ async def search_exact(
             SELECT
                 id, sale_date, address, county, eircode, price,
                 not_full_market_price, vat_exclusive, description,
-                size_description, latitude, longitude,
+                size_description, {VISIBLE_LAT_LON},
                 routing_key, bedrooms, property_type,
                 {PRICE_INCL_VAT} AS price_incl_vat
             FROM properties
@@ -1492,7 +1498,7 @@ async def search_exact(
             SELECT
                 id, sale_date, address, county, eircode, price,
                 not_full_market_price, vat_exclusive, description,
-                size_description, latitude, longitude,
+                size_description, {VISIBLE_LAT_LON},
                 routing_key, bedrooms, property_type,
                 {PRICE_INCL_VAT} AS price_incl_vat
             FROM properties
@@ -1519,7 +1525,7 @@ async def search_exact(
                 SELECT
                     id, sale_date, address, county, eircode, price,
                     not_full_market_price, vat_exclusive, description,
-                    size_description, latitude, longitude,
+                    size_description, {VISIBLE_LAT_LON},
                     routing_key, bedrooms, property_type,
                     {PRICE_INCL_VAT} AS price_incl_vat,
                     ts_rank(to_tsvector('simple', COALESCE(address_normalized, address)), to_tsquery('simple', $1)) as rank
@@ -1534,7 +1540,7 @@ async def search_exact(
                 SELECT
                     id, sale_date, address, county, eircode, price,
                     not_full_market_price, vat_exclusive, description,
-                    size_description, latitude, longitude,
+                    size_description, {VISIBLE_LAT_LON},
                     routing_key, bedrooms, property_type,
                     {PRICE_INCL_VAT} AS price_incl_vat,
                     ts_rank(to_tsvector('simple', COALESCE(address_normalized, address)), to_tsquery('simple', $1)) as rank
@@ -1660,7 +1666,7 @@ async def search_polygon(
             SELECT
                 id, sale_date, address, county, eircode, price,
                 not_full_market_price, vat_exclusive, description,
-                size_description, latitude, longitude,
+                size_description, {VISIBLE_LAT_LON},
                 routing_key, bedrooms, property_type,
                 {PRICE_INCL_VAT} AS price_incl_vat
             FROM properties
@@ -1807,7 +1813,7 @@ async def eircode_search(
         SELECT
             id, sale_date, address, county, eircode, price,
             not_full_market_price, vat_exclusive, description,
-            size_description, latitude, longitude,
+            size_description, {VISIBLE_LAT_LON},
             routing_key, bedrooms, property_type,
             {PRICE_INCL_VAT} AS price_incl_vat
         FROM properties
@@ -1969,7 +1975,7 @@ async def county_recent(
         SELECT
             id, sale_date, address, county, eircode, price,
             not_full_market_price, vat_exclusive, description,
-            size_description, latitude, longitude,
+            size_description, {VISIBLE_LAT_LON},
             routing_key, bedrooms, property_type,
             {PRICE_INCL_VAT} AS price_incl_vat
         FROM properties
@@ -1977,7 +1983,8 @@ async def county_recent(
           AND {STATS_EXCLUDE_FILTER}
         ORDER BY sale_date DESC, id DESC
         LIMIT $2
-    """.format(STATS_EXCLUDE_FILTER=STATS_EXCLUDE_FILTER, PRICE_INCL_VAT=PRICE_INCL_VAT), county, limit)
+    """.format(STATS_EXCLUDE_FILTER=STATS_EXCLUDE_FILTER, PRICE_INCL_VAT=PRICE_INCL_VAT,
+               VISIBLE_LAT_LON=VISIBLE_LAT_LON), county, limit)
 
     result = {"count": len(rows), "results": [serialize_row(r) for r in rows]}
     cache.set("county_recent", cache_params, result, TTL_SEARCH)
