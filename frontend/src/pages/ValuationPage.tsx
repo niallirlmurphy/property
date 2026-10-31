@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import WaffleMenu from "../components/WaffleMenu";
 import { usePageMeta } from "../hooks/usePageMeta";
@@ -139,6 +139,16 @@ export default function ValuationPage() {
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<ValuationResponse | null>(null);
   const [buildVersion, setBuildVersion] = useState<string>("unknown");
+  const [searchParams] = useSearchParams();
+
+  // Prefill from ?address=&county= (links from searches with no sale at that address).
+  // In an effect, not initial state, so the prerendered HTML and hydration agree.
+  useEffect(() => {
+    const a = searchParams.get("address");
+    const c = searchParams.get("county");
+    if (a) setAddress(a);
+    if (c) setCounty(c);
+  }, [searchParams]);
 
   // Fetch build version on mount
   useEffect(() => {

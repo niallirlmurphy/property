@@ -420,6 +420,11 @@ export default function App() {
       partialMatchIds={matchIds.partialMatchIds}
       hasSearched={hasSearched}
       loading={loading}
+      noExactMatch={
+        lastSearchQuery && /^\d+[a-z]?\s/i.test(lastSearchQuery.trim()) && matchIds.exactMatchIds.size === 0
+          ? { query: lastSearchQuery, county: lastSearchCounty }
+          : undefined
+      }
     />
   );
 

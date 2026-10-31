@@ -1,5 +1,5 @@
 import { useState, FormEvent, useEffect, useRef } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
 import TrendsChart from "../components/TrendsChart";
 import Footer from "../components/Footer";
@@ -404,6 +404,14 @@ export default function ExactSearchPage() {
           <div className="no-results-icon">🔍</div>
           <h2>No Sales Found</h2>
           <p>No sales records found for this exact address.</p>
+          <p className="no-results-valuation">
+            The Property Price Register only lists homes sold since 2010, so a home with no sale on record won't
+            appear here.{" "}
+            <Link to={`/valuation?${new URLSearchParams({ address: query })}`}>
+              Get an up-to-date valuation of this property
+            </Link>{" "}
+            from sales on the same street and nearby.
+          </p>
           {allResults.length > 0 && (
             <p className="nearby-info">
               Found {allResults.length} properties within 500m, but none match the exact address.
@@ -414,7 +422,7 @@ export default function ExactSearchPage() {
             <ul>
               <li>Check the spelling of the address and house number</li>
               <li>Include the area name (e.g., "Crumlin" in "26 Slane Road, Crumlin")</li>
-              <li>Try the <a href="/">main search</a> to see nearby properties</li>
+              <li>Try the <Link to={`/?${new URLSearchParams({ q: query })}`}>main search</Link> to see nearby properties</li>
             </ul>
           </div>
         </div>

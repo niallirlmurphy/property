@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import type { Property } from "../types";
 
 const SEARCH_LIMIT = 200;
@@ -11,6 +12,8 @@ interface Props {
   partialMatchIds?: Set<number>;
   hasSearched?: boolean;
   loading?: boolean;
+  // A numbered address with no sale of its own: say so and offer a valuation.
+  noExactMatch?: { query: string; county?: string };
 }
 
 function formatPrice(n: number) {
@@ -27,7 +30,7 @@ function formatDate(dateString: string): string {
   return `${day}-${month}-${year}`;
 }
 
-export default function ResultsList({ results, activeId, onSelect, exactMatchIds, partialMatchIds, hasSearched, loading }: Props) {
+export default function ResultsList({ results, activeId, onSelect, exactMatchIds, partialMatchIds, hasSearched, loading, noExactMatch }: Props) {
   const activeRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -59,6 +62,16 @@ export default function ResultsList({ results, activeId, onSelect, exactMatchIds
           </span>
         )}
       </div>
+      {noExactMatch && (
+        <div className="no-exact-note">
+          <strong>No recorded sale for {noExactMatch.query}.</strong> The Property Price Register only lists homes
+          sold since 2010, so we've placed it from its neighbours: below are {hasPartial ? "sales on the same street and " : ""}
+          nearby sales.{" "}
+          <Link to={`/valuation?${new URLSearchParams({ address: noExactMatch.query, ...(noExactMatch.county ? { county: noExactMatch.county } : {}) })}`}>
+            Get an up-to-date valuation of this property →
+          </Link>
+        </div>
+      )}
       {hasMatches && (
         <div className="exact-match-header">Comparable sales</div>
       )}
