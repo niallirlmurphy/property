@@ -1413,27 +1413,30 @@ async def search(
 
     cache.set("search", cache_params, result, TTL_SEARCH)
 
-    # Log search query for analytics (fire and forget)
+    # Log search query for analytics (fire and forget). The home page sends each
+    # search twice, the date-sorted list plus its 10 nearest pins (sort=distance);
+    # log only the list so one search is one row.
     elapsed_ms = int((time.time() - start_time) * 1000)
-    if not rows:
+    if not rows and sort != "distance":
         asyncio.create_task(_log_search_failure(
             "/search", q, county, "no_results", f"radius {actual_radius}km"))
-    asyncio.create_task(_log_search_query(
-        query=q,
-        resolved_lat=lat,
-        resolved_lon=lon,
-        radius_km=radius_km,
-        result_count=len(rows),
-        elapsed_ms=elapsed_ms,
-        county_filter=county,
-        min_price=min_price,
-        max_price=max_price,
-        min_year=min_year,
-        max_year=max_year,
-        geocode_source=geocode_source,
-        user_agent=request.headers.get("user-agent"),
-        ip_address=request.client.host if request.client else None,
-    ))
+    if sort != "distance":
+        asyncio.create_task(_log_search_query(
+            query=q,
+            resolved_lat=lat,
+            resolved_lon=lon,
+            radius_km=radius_km,
+            result_count=len(rows),
+            elapsed_ms=elapsed_ms,
+            county_filter=county,
+            min_price=min_price,
+            max_price=max_price,
+            min_year=min_year,
+            max_year=max_year,
+            geocode_source=geocode_source,
+            user_agent=request.headers.get("user-agent"),
+            ip_address=request.client.host if request.client else None,
+        ))
 
     # Enrich missing eircodes in the background — does not block the response
     asyncio.create_task(_enrich_eircodes(result["results"]))
