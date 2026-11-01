@@ -19,6 +19,7 @@ export async function searchProperties(params: SearchParams): Promise<SearchResp
     min_year:  params.min_year,
     county:    params.county,
     limit:     params.limit,
+    sort:      params.sort,
   });
 
   try {

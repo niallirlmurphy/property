@@ -88,6 +88,13 @@
 .hm-tabs { display: inline-flex; gap: 3px; background: #dfe8e6; border-radius: 12px; padding: 3px; margin: 18px 0 12px; }
 .hm-tabs button { background: none; border: 0; border-radius: 9px; padding: 8px 22px; min-height: 40px; font-size: 14.5px; font-weight: 600; cursor: pointer; color: var(--ink); }
 .hm-tabs button.on { background: #fff; box-shadow: 0 1px 4px #00000026; }
+.hm-tabs button:disabled { cursor: progress; }
+/* radius + sort above the list/map toggle: same segmented look, smaller buttons */
+.hm-refine { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 18px; }
+.hm-refine .hm-seg { margin: 0; }
+.hm-seg button { padding: 6px 14px; min-height: 36px; font-size: 14px; }
+.hm-refine + .hm-tabs { margin-top: 12px; }
+.hm-refining { opacity: 0.5; transition: opacity 0.15s; }
 
 /* result cards */
 .hm-cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }

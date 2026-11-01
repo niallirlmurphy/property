@@ -1,7 +1,13 @@
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ClientOnly } from "vite-react-ssg";
-import { fetchCountySummary, fetchTrends, searchExactAddress, searchProperties } from "./api";
+import { fetchTrends, searchExactAddress, searchProperties } from "./api";
+import dublinData from "./data/counties/dublin.json";
+import corkData from "./data/counties/cork.json";
+import galwayData from "./data/counties/galway.json";
+import limerickData from "./data/counties/limerick.json";
+import kildareData from "./data/counties/kildare.json";
+import meathData from "./data/counties/meath.json";
 import TrendsChart from "./components/TrendsChart";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
@@ -11,7 +17,7 @@ import EmailAlertModal from "./components/EmailAlertModal";
 import { AREAS, COUNTIES, countySlug } from "./areas";
 import { publishedPosts } from "./blogPosts";
 import { SITE_STATS as S } from "./siteStats";
-import type { CountySummary, Property, SearchResponse, TrendPoint } from "./types";
+import type { Property, SearchResponse, SearchSort, TrendPoint } from "./types";
 import "./styles/theme.css";
 import "./styles/site-chrome.css";
 import "./styles/home.css";
@@ -33,8 +39,19 @@ const EXAMPLES = [
   "Kenmare",
 ];
 const RADII = [0.5, 1, 2, 5, 10];
+const SORTS: { key: SearchSort; label: string }[] = [
+  { key: "date", label: "Date" },
+  { key: "distance", label: "Distance" },
+  { key: "price", label: "Value" },
+];
 const POPULAR_AREAS = ["rathmines", "ranelagh", "clontarf", "howth", "malahide", "blackrock", "swords", "bray", "cork-city", "galway-city", "limerick-city", "drogheda"];
 const SNAPSHOT_COUNTIES = ["Dublin", "Cork", "Galway", "Limerick", "Kildare", "Meath"];
+// The county card reads the monthly baked county page data (generate_page_data.py), so it
+// renders in the prerendered page with no API calls. Only the median and 3 latest sales are kept.
+const SNAPSHOTS: Record<string, { latest: TrendPoint | null; recent: Property[] }> = Object.fromEntries(
+  Object.entries({ Dublin: dublinData, Cork: corkData, Galway: galwayData, Limerick: limerickData, Kildare: kildareData, Meath: meathData })
+    .map(([c, d]) => [c, { latest: d.trends.length ? d.trends[d.trends.length - 1] : null, recent: (d.recent as Property[]).slice(0, 3) }]),
+);
 
 const eur = (n: number | null | undefined) => (n == null ? "–" : "€" + Math.round(n).toLocaleString("en-IE"));
 const shortEur = (n: number) => (n >= 1_000_000 ? `€${(n / 1_000_000).toFixed(2)}m` : `€${Math.round(n / 1000)}k`);
@@ -102,46 +119,62 @@ export default function App() {
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const [shown, setShown] = useState(PAGE_SIZE);
   const [view, setView] = useState<"list" | "map">("list");
+  const [sort, setSort] = useState<SearchSort>("date");
+  const [refining, setRefining] = useState(false);
   const [recent, setRecent] = useState<string[]>([]);
   const [snapshotCounty, setSnapshotCounty] = useState("Dublin");
-  const [snapshot, setSnapshot] = useState<CountySummary | null>(null);
   const [alertOpen, setAlertOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [locating, setLocating] = useState(false);
   const gen = useRef(0);
   const resultsRef = useRef<HTMLDivElement | null>(null);
 
-  const run = async (query: string, opts: { radius?: number; county?: string | null } = {}) => {
+  // refine: a radius or sort change on the results already shown. Keep them on screen
+  // (dimmed) and stay where the user is instead of jumping back to the top of the results.
+  const run = async (query: string, opts: { radius?: number; county?: string | null; sort?: SearchSort; refine?: boolean } = {}) => {
     const text = query.trim();
     if (!text) return;
     const r = opts.radius ?? radius;
+    const so = opts.sort ?? sort;
     const c = opts.county === undefined ? county : opts.county;
     const countyParam = isCoords(text) || !c ? undefined : c;
     const id = ++gen.current;
     setQ(text);
     setRadius(r);
+    setSort(so);
     if (opts.county !== undefined) setCounty(opts.county ?? "");
-    setStatus("loading");
     setError("");
     setShown(PAGE_SIZE);
-    setView("list");
-    setRecent(saveRecent(text));
+    if (opts.refine) {
+      setRefining(true);
+    } else {
+      setStatus("loading");
+      setView("list");
+      setRecent(saveRecent(text));
+      requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+    }
     const next: Record<string, string> = { q: text, radius_km: String(r) };
     if (countyParam) next.county = countyParam;
+    if (so !== "date") next.sort = so;
     setParams(next, { replace: true });
-    requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
     try {
-      const sp = { q: text, radius_km: r, county: countyParam };
+      const sp = { q: text, radius_km: r, county: countyParam, sort: so };
+      // The exact lookup gets the county only when it isn't the Dublin default: the
+      // backend applies that default itself unless the address names another county
+      // ("41 Fearann Ri, Doughiska, Galway"), which county=Dublin would override.
+      const exactCounty = countyParam === "Dublin" ? undefined : countyParam;
       const [search, trends, exact] = await Promise.all([
         searchProperties(sp),
         fetchTrends(text, r, countyParam).catch(() => [] as TrendPoint[]),
-        looksLikeAddress(text) ? searchExactAddress(text, countyParam).catch(() => null) : Promise.resolve(null),
+        looksLikeAddress(text) ? searchExactAddress(text, exactCounty).catch(() => null) : Promise.resolve(null),
       ]);
       if (gen.current !== id) return;
       setOutcome({ q: text, county: countyParam, search, trends, exact: exact?.results ?? [] });
       setStatus("done");
+      setRefining(false);
     } catch (e: any) {
       if (gen.current !== id) return;
+      setRefining(false);
       const msg: string = e?.message ?? "";
       setError(msg.includes("Could not") || msg.includes("find")
         ? `We couldn't find "${text}". Try adding the area or county, or use an Eircode.`
@@ -157,18 +190,11 @@ export default function App() {
     if (urlQ) {
       const r = Number(params.get("radius_km") ?? "1") || 1;
       const c = params.get("county");
+      const so = SORTS.find((x) => x.key === params.get("sort"))?.key ?? "date";
       setQ(urlQ);
-      run(urlQ, { radius: r, county: c ?? null });
+      run(urlQ, { radius: r, county: c ?? null, sort: so });
     }
   }, []);
-
-  // First useful answer without typing: latest sales and median for a county
-  useEffect(() => {
-    let live = true;
-    setSnapshot(null);
-    fetchCountySummary(snapshotCounty).then((s) => live && setSnapshot(s)).catch(() => {});
-    return () => { live = false; };
-  }, [snapshotCounty]);
 
   const locate = () => {
     if (!navigator.geolocation) { setError("Your browser can't share a location. Type an address instead."); setStatus("error"); return; }
@@ -211,7 +237,9 @@ export default function App() {
   const widened = o && o.search.radius_km > radius;
   const posts = [...publishedPosts()].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
   const areas = POPULAR_AREAS.map((s) => AREAS.find((a) => a.slug === s)).filter((a): a is NonNullable<typeof a> => a != null);
-  const snapLatest = snapshot?.trends.length ? snapshot.trends[snapshot.trends.length - 1] : null;
+  // First useful answer without typing: latest sales and median for a county
+  const snapshot = SNAPSHOTS[snapshotCounty];
+  const snapLatest = snapshot.latest;
 
   return (
     <>
@@ -277,26 +305,20 @@ export default function App() {
                   <button key={c} role="tab" aria-selected={c === snapshotCounty} className={c === snapshotCounty ? "on" : ""} onClick={() => setSnapshotCounty(c)}>{c}</button>
                 ))}
               </div>
-              {!snapshot ? (
-                <div className="hm-live-skel" aria-busy="true"><span /><span /><span /></div>
-              ) : (
-                <>
-                  <div className="hm-live-big">
-                    <span className="hm-live-label">Median price in {snapshotCounty}{snapLatest ? `, ${snapLatest.year}` : ""}</span>
-                    <strong>{eur(snapLatest?.median_price)}</strong>
-                  </div>
-                  <ul className="hm-live-list">
-                    {snapshot.recent.slice(0, 3).map((p) => (
-                      <li key={p.id}>
-                        <span className="hm-live-price">{eur(p.price)}</span>
-                        <span className="hm-live-addr">{p.address}</span>
-                        <span className="hm-live-date">{fmtDate(p.sale_date)}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link to={`/county/${countySlug(snapshotCounty)}`} className="hm-live-link">All {snapshotCounty} prices</Link>
-                </>
-              )}
+              <div className="hm-live-big">
+                <span className="hm-live-label">Median price in {snapshotCounty}{snapLatest ? `, ${snapLatest.year}` : ""}</span>
+                <strong>{eur(snapLatest?.median_price)}</strong>
+              </div>
+              <ul className="hm-live-list">
+                {snapshot.recent.slice(0, 3).map((p) => (
+                  <li key={p.id}>
+                    <span className="hm-live-price">{eur(p.price)}</span>
+                    <span className="hm-live-addr">{p.address}</span>
+                    <span className="hm-live-date">{fmtDate(p.sale_date)}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link to={`/county/${countySlug(snapshotCounty)}`} className="hm-live-link">All {snapshotCounty} prices</Link>
             </aside>
           </div>
         </section>
@@ -381,6 +403,25 @@ export default function App() {
               </div>
             )}
 
+            <div className="hm-refine">
+              <div className="hm-tabs hm-seg" role="radiogroup" aria-label="Search radius">
+                {RADII.map((r) => (
+                  <button key={r} role="radio" aria-checked={radius === r} className={radius === r ? "on" : ""}
+                    disabled={refining} onClick={() => radius !== r && run(o.q, { radius: r, county: o.county ?? null, refine: true })}>
+                    {r} km
+                  </button>
+                ))}
+              </div>
+              <div className="hm-tabs hm-seg" role="radiogroup" aria-label="Sort sales">
+                {SORTS.map((x) => (
+                  <button key={x.key} role="radio" aria-checked={sort === x.key} className={sort === x.key ? "on" : ""}
+                    disabled={refining} onClick={() => sort !== x.key && run(o.q, { sort: x.key, county: o.county ?? null, refine: true })}>
+                    {x.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <div className="hm-tabs" role="tablist">
               <button role="tab" aria-selected={view === "list"} className={view === "list" ? "on" : ""} onClick={() => setView("list")}>List</button>
               <button role="tab" aria-selected={view === "map"} className={view === "map" ? "on" : ""} onClick={() => setView("map")}>Map</button>
@@ -388,7 +429,7 @@ export default function App() {
 
             {view === "list" ? (
               <>
-                <ul className="hm-cards">
+                <ul className={`hm-cards${refining ? " hm-refining" : ""}`}>
                   {list.slice(0, shown).map((p) => (
                     <PropertyCard key={p.id} p={p} badge={exactIds.has(p.id) ? "This address" : undefined} />
                   ))}
@@ -398,7 +439,7 @@ export default function App() {
                     Show more ({list.length - shown} left)
                   </button>
                 )}
-                {o.search.count >= 200 && <p className="hm-hint">Showing the 200 most recent. Narrow the radius to see fewer.</p>}
+                {o.search.count >= 200 && <p className="hm-hint">Showing the 200 {sort === "price" ? "highest value" : sort === "distance" ? "nearest" : "most recent"}. Narrow the radius to see fewer.</p>}
               </>
             ) : (
               <div className="hm-map">

@@ -21,6 +21,8 @@ export interface Property {
 export interface SearchResponse {
   center: { lat: number; lon: number };
   radius_km: number;
+  requested_radius_km?: number;
+  county_filter_removed?: boolean;
   count: number;
   results: Property[];
 }
@@ -40,7 +42,11 @@ export interface SearchParams {
   min_year?: number;
   county?: string;
   limit?: number;
+  sort?: SearchSort;
 }
+
+// "date" = most recent first, "price" = highest price first, "distance" = nearest first
+export type SearchSort = "date" | "price" | "distance";
 
 export interface AreaSummary {
   name: string;

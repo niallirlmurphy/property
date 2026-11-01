@@ -1240,6 +1240,16 @@ async def geocode(
     return {"lat": lat, "lon": lon}
 
 
+# /search sort options: most recent first (default), nearest first, highest price first.
+# The price sort also drops bulk sales (BULK_ADDR_FILTER): a €19M "74 Apartments at"
+# row would otherwise top every list as if it were one home.
+SEARCH_ORDER = {
+    "date": "sale_date DESC, distance_m",
+    "distance": "distance_m",
+    "price": "price DESC, sale_date DESC",
+}
+
+
 @app.get("/search")
 async def search(
     request: Request,
@@ -1253,7 +1263,7 @@ async def search(
     locality: Optional[str] = Query(None, description="Comma-separated area locality terms; keep results whose address matches one (OR a routing_keys match). Used by area pages."),
     routing_keys: Optional[str] = Query(None, description="Comma-separated eircode routing keys; keep results in one (OR a locality match). Used by area pages."),
     limit: int = Query(200, ge=1, le=500),
-    sort: str = Query("date", regex="^(date|distance)$"),
+    sort: str = Query("date", regex="^(date|distance|price)$"),
 ):
     start_time = time.time()
     _rate_limit_check(request, 60, "search")
@@ -1307,6 +1317,8 @@ async def search(
         # centroid shared by many distinct addresses). Prevents e.g. a Kerry
         # property surfacing in a Howth radius search until it is re-geocoded.
         filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)", "geocode_suspect IS NOT TRUE", STATS_EXCLUDE_FILTER]
+        if sort == "price":
+            filters.append(BULK_ADDR_FILTER)
         params  = [lat, lon, radius_km * 1000]
         idx     = 4
 
@@ -1334,7 +1346,7 @@ async def search(
                 ST_Distance(geog, ST_MakePoint($2, $1)::geography) AS distance_m
             FROM properties
             WHERE {where}
-            ORDER BY {("distance_m" if sort == "distance" else "sale_date DESC, distance_m")}
+            ORDER BY {SEARCH_ORDER[sort]}
             LIMIT ${idx}
         """, *params)
 
@@ -1350,6 +1362,8 @@ async def search(
                 attempt_radius = MAX_RADIUS_KM
 
             filters = ["ST_DWithin(geog, ST_MakePoint($2, $1)::geography, $3)", "geocode_suspect IS NOT TRUE", STATS_EXCLUDE_FILTER]
+            if sort == "price":
+                filters.append(BULK_ADDR_FILTER)
             params  = [lat, lon, attempt_radius * 1000]
             idx     = 4
 
@@ -1379,7 +1393,7 @@ async def search(
                     ST_Distance(geog, ST_MakePoint($2, $1)::geography) AS distance_m
                 FROM properties
                 WHERE {where}
-                ORDER BY {("distance_m" if sort == "distance" else "sale_date DESC, distance_m")}
+                ORDER BY {SEARCH_ORDER[sort]}
                 LIMIT ${idx}
             """, *params)
 
