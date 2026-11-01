@@ -23,9 +23,11 @@ import { MarketHealth36MonthsContent } from "../blog-posts/irish-property-market
 import { HousePriceGrowthMapContent } from "../blog-posts/ireland-house-price-growth-map";
 import { PprVsCsoContent } from "../blog-posts/property-price-register-vs-cso-house-prices";
 import { MarketDrivers2010To2026Content } from "../blog-posts/irish-property-market-2010-2026-demand-supply-affordability";
+import { TopHouseSalesContent } from "../blog-posts/top-20-house-sales-ireland";
 
 // Map slugs to content components
 const BLOG_CONTENT: Record<string, React.ComponentType> = {
+  "top-20-house-sales-ireland": TopHouseSalesContent,
   "property-price-register-vs-cso-house-prices": PprVsCsoContent,
   "irish-property-market-2010-2026-demand-supply-affordability": MarketDrivers2010To2026Content,
   "ireland-house-price-growth-map": HousePriceGrowthMapContent,

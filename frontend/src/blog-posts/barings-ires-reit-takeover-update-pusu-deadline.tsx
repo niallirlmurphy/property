@@ -198,8 +198,7 @@ export function BaringsIresUpdateContent() {
           <strong>The short version:</strong> €1.386 is a <strong>30.75% premium</strong> to the undisturbed €1.06 share
           price but almost exactly IRES's <strong>138.8c</strong> net asset value, and about <strong>25% below</strong> our
           open-market estimate of <strong>185.7c</strong>. Fidelity has roughly halved its stake since the approach went public, while hedge
-          funds that trade takeovers have been buying: the market expects the deal to happen at €1.386, not higher. Adding VAT back
-          to new-home sales and checking our figures against the CSO's both suggest our estimate, if anything, is low. The deadline is{" "}
+          funds that trade takeovers have been buying: the market expects the deal to happen at €1.386, not higher. The deadline is{" "}
           <strong>9 November</strong>.
         </p>
       </div>
@@ -243,37 +242,6 @@ export function BaringsIresUpdateContent() {
       <p style={{ marginBottom: "1rem", fontSize: "1rem", color: INK_MUTED }}>
         <strong>A correction:</strong> our first post said the shares jumped about 20% on the news. Measured against the
         undisturbed price of €1.06, the offer is a 30.75% premium, and the shares have since traded close to it.
-      </p>
-
-      <SectionHeading>Do VAT and the official figures change the picture?</SectionHeading>
-      <p style={{ marginBottom: "1rem" }}>
-        Since our first two posts we have made two changes to how HomeIQ handles prices, and both bear on the IRES numbers.
-        Neither makes the offer look better.
-      </p>
-      <p style={{ marginBottom: "1rem" }}>
-        <strong>VAT on new homes.</strong> The Property Price Register records new homes <em>without</em> VAT: 13.5%, or 9%
-        on new apartments sold since 8 October 2025. Since 27 October our medians, trends and valuations add it back,
-        the same way the CSO does. Our September run of the IRES portfolio priced every comparable at the register figure,
-        so any new-build sales among the comparables counted 9–13.5% too low. Second-hand resales carry no VAT and are
-        unaffected. How much this matters depends on how many new-build sales were among the comparables, and we haven't
-        re-run the portfolio, but the correction can only push our estimate <em>up</em>. On this count, 185.7c is
-        conservative.
-      </p>
-      <p style={{ marginBottom: "1rem" }}>
-        <strong>Our resale prices match the CSO's.</strong> The CSO's price statistics come from the same stamp duty
-        returns as the register. When we{" "}
-        <Link to="/blog/property-price-register-vs-cso-house-prices" style={{ color: "#1d4ed8", fontWeight: 600 }}>
-          compared the two
-        </Link>
-        , second-hand medians agreed to within about <strong>±1.2%</strong> in a typical Eircode area, with Dublin's
-        register median <strong>1.2% below</strong> the CSO's. The resale data our valuation rests on matches the official
-        figures, and if anything sits slightly low.
-      </p>
-      <p style={{ marginBottom: "1rem" }}>
-        <strong>Dublin apartment prices are still rising.</strong> On the CSO's Residential Property Price Index, Dublin
-        apartment prices rose <strong>5.7%</strong> in the year to August 2026, faster than Dublin houses (3.3%). IRES's
-        138.8c NAV is a 30 June figure, and the €1.386 offer is fixed. If apartment prices keep rising at anything like
-        that pace, the gap between what the flats would fetch individually and what Barings is paying keeps widening.
       </p>
 
       <SectionHeading>Timeline: where the bid stands</SectionHeading>
@@ -392,6 +360,37 @@ export function BaringsIresUpdateContent() {
         valuations are an indicative statistical model based on Property Price Register resale comparables and are not a
         valuation of record. Nothing here is investment advice or a recommendation regarding any security; do your own
         research and, if in doubt, seek independent professional advice.
+      </p>
+
+      <SectionHeading>Appendix: VAT and the CSO figures</SectionHeading>
+      <p style={{ marginBottom: "1rem" }}>
+        Since our first two posts we have tweaked our valuation model in line with established CSO practice. Neither change
+        makes the offer look better.
+      </p>
+      <p style={{ marginBottom: "1rem" }}>
+        <strong>VAT on new homes.</strong> The Property Price Register records new homes <em>without</em> VAT: 13.5%, or 9%
+        on new apartments sold since 8 October 2025. Since 27 October our medians, trends and valuations add it back,
+        the same way the CSO does. Our September run of the IRES portfolio priced every comparable at the register figure,
+        so any new-build sales among the comparables counted 9–13.5% too low. Second-hand resales carry no VAT and are
+        unaffected. How much this matters depends on how many new-build sales were among the comparables, and we haven't
+        re-run the portfolio, but the correction can only push our estimate <em>up</em>. On this count, 185.7c is
+        conservative.
+      </p>
+      <p style={{ marginBottom: "1rem" }}>
+        <strong>Our resale prices match the CSO's.</strong> The CSO's price statistics come from the same stamp duty
+        returns as the register. When we{" "}
+        <Link to="/blog/property-price-register-vs-cso-house-prices" style={{ color: "#1d4ed8", fontWeight: 600 }}>
+          compared the two
+        </Link>
+        , second-hand medians agreed to within about <strong>±1.2%</strong> in a typical Eircode area, with Dublin's
+        register median <strong>1.2% below</strong> the CSO's. The resale data our valuation rests on matches the official
+        figures, and if anything sits slightly low.
+      </p>
+      <p style={{ marginBottom: "1rem" }}>
+        <strong>Dublin apartment prices are still rising.</strong> On the CSO's Residential Property Price Index, Dublin
+        apartment prices rose <strong>5.7%</strong> in the year to August 2026, faster than Dublin houses (3.3%). IRES's
+        138.8c NAV is a 30 June figure, and the €1.386 offer is fixed. If apartment prices keep rising at anything like
+        that pace, the gap between what the flats would fetch individually and what Barings is paying keeps widening.
       </p>
     </div>
   );

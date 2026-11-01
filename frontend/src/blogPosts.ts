@@ -46,9 +46,18 @@ export function relatedPosts(post: BlogPost, limit = 3, now: Date = new Date()):
 // Blog posts index - add new posts here
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "top-20-house-sales-ireland",
+    title: "Top 20 House Sales in Ireland: The Most Expensive Homes on the Property Price Register",
+    description: "The 20 highest prices paid for a single home in Ireland since 2010, from Inniscorrig in Dalkey (€14.96M) to Kenah Hill in Killiney (€9M): their history, size and setting, the estates the register undervalues, and the puzzle of Walford's €71.95M entry.",
+    date: "2026-11-01",
+    author: "HomeIQ Team",
+    tags: ["Analysis", "Dublin", "Luxury Homes", "Property Price Register"],
+    readTime: "12 min read"
+  },
+  {
     slug: "barings-ires-reit-takeover-update-pusu-deadline",
     title: "Barings' IRES Bid: €1.386 Still Sits 25% Below Our Valuation as the 9 November Deadline Nears",
-    description: "An update on Barings' €1.386-a-share approach for IRES REIT: a 30.75% premium to the undisturbed price but level with NAV and about 25% below our open-market estimate. The timeline to the 9 November put-up-or-shut-up deadline, shareholder sell-downs, and what VAT and the CSO figures mean for the valuation.",
+    description: "An update on Barings' €1.386-a-share approach for IRES REIT: a 30.75% premium to the undisturbed price but level with NAV and about 25% below our open-market estimate. The timeline to the 9 November put-up-or-shut-up deadline and the shareholder sell-downs.",
     date: "2026-10-31",
     author: "HomeIQ Team",
     tags: ["Analysis", "IRES REIT", "Takeover", "Valuation", "Dublin"],
