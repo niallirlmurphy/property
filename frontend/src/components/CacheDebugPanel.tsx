@@ -51,7 +51,7 @@ export default function CacheDebugPanel() {
         bottom: "20px",
         right: "20px",
         background: "white",
-        border: "2px solid #3b82f6",
+        border: "2px solid #1d4a42",
         borderRadius: "8px",
         padding: "16px",
         maxWidth: "400px",
@@ -127,7 +127,7 @@ export default function CacheDebugPanel() {
           style={{
             flex: 1,
             padding: "6px 12px",
-            background: "#3b82f6",
+            background: "#1d4a42",
             color: "white",
             border: "none",
             borderRadius: "4px",

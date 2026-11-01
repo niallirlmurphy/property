@@ -39,7 +39,6 @@ STATIC_PAGES = [
     ("/blog", "weekly", "0.7"),
     ("/heatmap", "weekly", "0.7"),
     ("/valuation", "monthly", "0.7"),
-    ("/polygon", "monthly", "0.7"),
     ("/mortgage", "monthly", "0.7"),
     ("/energy", "monthly", "0.6"),
     ("/about", "monthly", "0.5"),

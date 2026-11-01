@@ -16,7 +16,7 @@ export function HowToUsePPRContent() {
 
       <p style={{ marginBottom: "2rem" }}>
         This guide will show you how to search the PPR effectively using both the official government website
-        and modern tools like <Link to="/" style={{ color: "#3b82f6" }}>HomeIQ.ie</Link>.
+        and modern tools like <Link to="/" style={{ color: "#1d4a42" }}>HomeIQ.ie</Link>.
       </p>
 
       {/* What is PPR */}
@@ -83,7 +83,7 @@ export function HowToUsePPRContent() {
       </h3>
 
       <p style={{ marginBottom: "1rem" }}>
-        Visit <a href="https://www.propertypriceregister.ie" target="_blank" rel="noopener noreferrer" style={{ color: "#3b82f6" }}>propertypriceregister.ie</a>
+        Visit <a href="https://www.propertypriceregister.ie" target="_blank" rel="noopener noreferrer" style={{ color: "#1d4a42" }}>propertypriceregister.ie</a>
         and use the search form:
       </p>
 
@@ -121,7 +121,7 @@ export function HowToUsePPRContent() {
       </h3>
 
       <p style={{ marginBottom: "1rem" }}>
-        <Link to="/" style={{ color: "#3b82f6", fontWeight: "500" }}>HomeIQ.ie</Link> provides
+        <Link to="/" style={{ color: "#1d4a42", fontWeight: "500" }}>HomeIQ.ie</Link> provides
         a modern, map-based interface to search the same PPR data:
       </p>
 
@@ -193,7 +193,7 @@ export function HowToUsePPRContent() {
       </h3>
 
       <p style={{ marginBottom: "2rem" }}>
-        On <Link to="/" style={{ color: "#3b82f6" }}>HomeIQ</Link>, search for an address and
+        On <Link to="/" style={{ color: "#1d4a42" }}>HomeIQ</Link>, search for an address and
         adjust the radius to see all nearby sales. Great for understanding area pricing.
       </p>
 
@@ -315,7 +315,7 @@ export function HowToUsePPRContent() {
 
       <p style={{ marginBottom: "2rem" }}>
         Track price trends over time. Are prices rising or falling in your target area?
-        Use the <Link to="/" style={{ color: "#3b82f6" }}>trends charts on HomeIQ</Link> to visualize this.
+        Use the <Link to="/" style={{ color: "#1d4a42" }}>trends charts on HomeIQ</Link> to visualize this.
       </p>
 
       <h3 style={{
@@ -350,7 +350,7 @@ export function HowToUsePPRContent() {
       </p>
 
       <div style={{
-        backgroundColor: "#eff6ff",
+        backgroundColor: "#e4f1ee",
         border: "1px solid #bfdbfe",
         borderRadius: "0.5rem",
         padding: "1.5rem",
@@ -358,7 +358,7 @@ export function HowToUsePPRContent() {
       }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>Try it now:</strong> Search 785,000 Irish property sales on our{" "}
-          <Link to="/" style={{ color: "#3b82f6", textDecoration: "underline" }}>
+          <Link to="/" style={{ color: "#1d4a42", textDecoration: "underline" }}>
             interactive map
           </Link>
           . Free, fast, and easy to use.

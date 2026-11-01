@@ -31,7 +31,7 @@ function SubHeading({ children }: { children: React.ReactNode }) {
 
 function Callout({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", margin: "2rem 0" }}>
+    <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", margin: "2rem 0" }}>
       <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>{children}</p>
     </div>
   );
@@ -47,7 +47,7 @@ function WarningBox({ children }: { children: React.ReactNode }) {
 
 function ExtLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" style={{ color: "#1d4ed8", fontWeight: 600 }}>
+    <a href={href} target="_blank" rel="noopener noreferrer" style={{ color: "#10302b", fontWeight: 600 }}>
       {children}
     </a>
   );
@@ -87,7 +87,7 @@ export function MortgageCalculatorGuideContent() {
       </p>
       <p style={{ marginBottom: "1.5rem" }}>
         This guide shows how to use{" "}
-        <Link to="/mortgage" style={{ color: "#1d4ed8", fontWeight: 600 }}>HomeIQ's free mortgage calculator</Link>{" "}
+        <Link to="/mortgage" style={{ color: "#10302b", fontWeight: 600 }}>HomeIQ's free mortgage calculator</Link>{" "}
         to plan around <strong>affordability</strong> and the <strong>impact of interest rates</strong>, and finishes
         with a practical checklist for making a strong mortgage application.
 
@@ -288,9 +288,9 @@ export function MortgageCalculatorGuideContent() {
 
       <Callout>
         <strong>Ready to run your own numbers?</strong> Try the{" "}
-        <Link to="/mortgage" style={{ color: "#1d4ed8", fontWeight: 600 }}>HomeIQ mortgage calculator →</Link> and, when
+        <Link to="/mortgage" style={{ color: "#10302b", fontWeight: 600 }}>HomeIQ mortgage calculator →</Link> and, when
         you've a property in mind, get a free instant valuation based on comparable sales from Ireland's Property Price
-        Register with <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>HomeIQ valuations →</Link>
+        Register with <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>HomeIQ valuations →</Link>
       </Callout>
 
       <SectionHeading>Useful resources (official)</SectionHeading>

@@ -94,7 +94,7 @@ export default function BlogPostPage() {
   });
 
   return (
-    <div style={{ minHeight: "100vh", backgroundColor: "#f8f9fa" }}>
+    <div style={{ minHeight: "100vh", backgroundColor: "#f2f5f4" }}>
       {meta}
       <Head>
         <meta property="og:type" content="article" />
@@ -132,8 +132,8 @@ export default function BlogPostPage() {
                 style={{
                   fontSize: "0.75rem",
                   fontWeight: "500",
-                  color: "#3b82f6",
-                  backgroundColor: "#eff6ff",
+                  color: "#1d4a42",
+                  backgroundColor: "#e4f1ee",
                   padding: "0.25rem 0.75rem",
                   borderRadius: "9999px"
                 }}
@@ -223,7 +223,7 @@ export default function BlogPostPage() {
         padding: "0 1rem"
       }}>
         <div style={{
-          backgroundColor: "#eff6ff",
+          backgroundColor: "#e4f1ee",
           border: "1px solid #bfdbfe",
           borderRadius: "0.5rem",
           padding: "2rem",
@@ -247,7 +247,7 @@ export default function BlogPostPage() {
             to="/valuation"
             style={{
               display: "inline-block",
-              backgroundColor: "#3b82f6",
+              backgroundColor: "#1d4a42",
               color: "#fff",
               padding: "0.75rem 1.5rem",
               borderRadius: "0.375rem",
@@ -274,17 +274,17 @@ export default function BlogPostPage() {
                 backgroundColor: "#fff",
                 textDecoration: "none",
               }}>
-                <span style={{ display: "block", fontWeight: "600", color: "#1d4ed8", lineHeight: 1.4 }}>{p.title}</span>
+                <span style={{ display: "block", fontWeight: "600", color: "#10302b", lineHeight: 1.4 }}>{p.title}</span>
                 <span style={{ display: "block", marginTop: "0.5rem", fontSize: "0.8125rem", color: "#6b7280" }}>{p.readTime}</span>
               </Link>
             ))}
           </div>
           <p style={{ marginTop: "1.25rem", fontSize: "0.9375rem", color: "#6b7280" }}>
             Or explore the data:{" "}
-            <Link to="/areaguides" style={{ color: "#1d4ed8" }}>area guides</Link>,{" "}
-            <Link to="/county/dublin" style={{ color: "#1d4ed8" }}>Dublin prices by postcode</Link>,{" "}
-            <Link to="/streets" style={{ color: "#1d4ed8" }}>street-level prices</Link> and the{" "}
-            <Link to="/property-price-register" style={{ color: "#1d4ed8" }}>Property Price Register</Link>.
+            <Link to="/areaguides" style={{ color: "#10302b" }}>area guides</Link>,{" "}
+            <Link to="/county/dublin" style={{ color: "#10302b" }}>Dublin prices by postcode</Link>,{" "}
+            <Link to="/streets" style={{ color: "#10302b" }}>street-level prices</Link> and the{" "}
+            <Link to="/property-price-register" style={{ color: "#10302b" }}>Property Price Register</Link>.
           </p>
         </nav>
 

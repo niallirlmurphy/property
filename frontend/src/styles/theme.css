@@ -1,0 +1,40 @@
+/* HomeIQ design tokens: the one place for palette, type, radii and shadows.
+   Direction: Ordnance Survey. Bog-green ink, gorse yellow as the single action colour,
+   pale glass-green tints, heavy tight sans for headlines, tabular figures for prices.
+   Everything else (index.css, county-template.css, SiteChrome.css, home.css) reads these variables. */
+:root {
+  /* palette */
+  --ink: #10302b;        /* primary text on light, dark surfaces, headings */
+  --ink-2: #0a221e;      /* deepest green: header, footer */
+  --ink-3: #1d4a42;      /* links, hover fills, secondary buttons */
+  --gorse: #f2c230;      /* the one action colour */
+  --gorse-d: #d9a700;    /* gorse hover / borders */
+  --glass: #9fd3c7;      /* accents on dark, soft rules */
+  --tint: #e4f1ee;       /* light green panels and callouts */
+  --paper: #f2f5f4;      /* page background */
+  --card: #ffffff;
+  --line: #dbe3e1;       /* borders and dividers */
+  --text: #1a2927;
+  --muted: #5a6d69;      /* secondary text: 5.3:1 on paper */
+  --up: #14703a;
+  --down: #b3361f;
+  --amber: #a86a00;      /* second chart series, warnings */
+  --link: var(--ink-3);
+  --link-hover: var(--ink);
+  --focus: #f2c230;      /* focus ring on dark surfaces */
+  --focus-light: #1d4a42; /* focus ring on light surfaces */
+
+  /* type */
+  --display: "Avenir Next", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* shape and depth */
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --shadow-s: 0 1px 4px #10302b1f;
+  --shadow-m: 0 8px 20px #10302b1f;
+
+  /* spacing scale */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 40px;
+}

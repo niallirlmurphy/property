@@ -19,7 +19,6 @@ const POPULAR_AREAS = [
 const TOOLS = [
   { to: "/valuation", label: "Property valuation" },
   { to: "/heatmap", label: "Price change heatmap" },
-  { to: "/polygon", label: "Draw-on-map search" },
   { to: "/property-price-register", label: "Property Price Register guide" },
   { to: "/mortgage", label: "Mortgage calculator" },
 ];
@@ -173,9 +172,16 @@ export default function HomeIntro() {
         {posts.length > 0 && (
           <>
             <h3>Latest analysis</h3>
-            <ul className="home-intro-posts">
+            <ul className="home-intro-posts hm-posts">
               {posts.map((p) => (
-                <li key={p.slug}><Link to={`/blog/${p.slug}`}>{p.title}</Link></li>
+                <li key={p.slug}>
+                <Link to={`/blog/${p.slug}`}>
+                  <span className="hm-post-date">{new Date(p.date).toLocaleDateString("en-IE", { day: "numeric", month: "short", year: "numeric" })}</span>
+                  <span className="hm-post-title">{p.title}</span>
+                  <span className="hm-post-desc">{p.description}</span>
+                  <span className="hm-post-more" aria-hidden="true">Read →</span>
+                </Link>
+              </li>
               ))}
             </ul>
             <p><Link to="/blog">All articles →</Link></p>

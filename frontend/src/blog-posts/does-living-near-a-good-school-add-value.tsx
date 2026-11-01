@@ -178,14 +178,14 @@ export function SchoolPremiumContent() {
         July 2026, measuring each home's distance to the nearest primary school, secondary school and university/college.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>The short answer:</strong> yes &mdash; being within 1&nbsp;km of a school is linked to a real premium of
           about <strong>8&ndash;10%</strong>, and unlike many "location" effects it <em>survives</em> once you compare
           similar homes in the same area. Being near a <strong>university or college</strong> shows no premium (slightly
           negative). Notably, this school effect is <strong>stronger and more robust</strong> than the Luas/DART transport
           premium we found in a{" "}
-          <Link to="/blog/does-being-near-a-luas-or-dart-add-value" style={{ color: "#1d4ed8", fontWeight: 600 }}>companion analysis</Link>.
+          <Link to="/blog/does-being-near-a-luas-or-dart-add-value" style={{ color: "#10302b", fontWeight: 600 }}>companion analysis</Link>.
         </p>
       </div>
 
@@ -271,11 +271,11 @@ export function SchoolPremiumContent() {
         together so the confounding is visible rather than hidden.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>Curious what homes near your school of choice actually sold for?</strong> Use HomeIQ to explore real sold
           prices in any Dublin area, and get a free instant valuation for any address based on comparable sales.{" "}
-          <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>Value your property →</Link>
+          <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>Value your property →</Link>
         </p>
       </div>
     </div>

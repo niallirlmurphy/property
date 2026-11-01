@@ -15,7 +15,7 @@ export default function BlogListPage() {
   );
 
   return (
-    <div style={{ minHeight: "100vh", backgroundColor: "#f8f9fa" }}>
+    <div style={{ minHeight: "100vh", backgroundColor: "#f2f5f4" }}>
       {meta}
       <PageHeader title="Blog" titleAsHeading={false} />
 
@@ -88,8 +88,8 @@ export default function BlogListPage() {
                     style={{
                       fontSize: "0.75rem",
                       fontWeight: "500",
-                      color: "#3b82f6",
-                      backgroundColor: "#eff6ff",
+                      color: "#1d4a42",
+                      backgroundColor: "#e4f1ee",
                       padding: "0.25rem 0.75rem",
                       borderRadius: "9999px"
                     }}
@@ -150,7 +150,7 @@ export default function BlogListPage() {
               <Link
                 to={`/blog/${post.slug}`}
                 style={{
-                  color: "#3b82f6",
+                  color: "#1d4a42",
                   fontWeight: "500",
                   textDecoration: "none",
                   fontSize: "0.875rem"

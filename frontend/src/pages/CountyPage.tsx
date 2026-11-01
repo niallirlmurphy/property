@@ -176,7 +176,7 @@ export default function CountyPage() {
       )}
       <p className="content-intro">
         Explore residential property sale prices across County {county} from{" "}
-        <Link to="/property-price-register" style={{ color: "#1a3c5e", textDecoration: "underline" }}>
+        <Link to="/property-price-register" style={{ color: "#10302b", textDecoration: "underline" }}>
           Ireland's Property Price Register
         </Link>. Every sale since 2010 is included.
       </p>

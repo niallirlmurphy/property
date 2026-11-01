@@ -58,19 +58,19 @@ function DrawTools({
           allowIntersection: false,
           showArea: true,
           shapeOptions: {
-            color: '#3b82f6',
+            color: '#1d4a42',
             fillOpacity: 0.2
           }
         },
         rectangle: {
           shapeOptions: {
-            color: '#3b82f6',
+            color: '#1d4a42',
             fillOpacity: 0.2
           }
         },
         circle: {
           shapeOptions: {
-            color: '#3b82f6',
+            color: '#1d4a42',
             fillOpacity: 0.2
           }
         },

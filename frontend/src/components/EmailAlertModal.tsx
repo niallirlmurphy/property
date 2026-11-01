@@ -291,7 +291,7 @@ export default function EmailAlertModal({
               style={{
                 width: "100%",
                 padding: "0.75rem",
-                backgroundColor: "#1a3c5e",
+                backgroundColor: "#10302b",
                 color: "white",
                 border: "none",
                 borderRadius: "4px",

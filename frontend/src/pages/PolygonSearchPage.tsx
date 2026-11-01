@@ -1,6 +1,5 @@
 import { useState, useCallback, lazy, Suspense } from "react";
 import { ClientOnly } from "vite-react-ssg";
-import WaffleMenu from "../components/WaffleMenu";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import { usePageMeta } from "../hooks/usePageMeta";
@@ -89,13 +88,13 @@ function MapTips() {
           left: '0.5rem',
           zIndex: 1000,
           backgroundColor: 'white',
-          border: '2px solid #1a3c5e',
+          border: '2px solid #10302b',
           borderRadius: '4px',
           padding: '0.5rem 0.75rem',
           cursor: 'pointer',
           fontSize: '0.85rem',
           fontWeight: 600,
-          color: '#1a3c5e',
+          color: '#10302b',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
         }}
       >
@@ -120,7 +119,7 @@ function MapTips() {
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-        <h4 style={{ margin: 0, fontSize: '0.9rem', fontWeight: 600, color: '#1a3c5e' }}>
+        <h4 style={{ margin: 0, fontSize: '0.9rem', fontWeight: 600, color: '#10302b' }}>
           How to use Map Search
         </h4>
         <button
@@ -332,9 +331,9 @@ export default function PolygonSearchPage() {
       <PageHeader title="Map Based Search - Select an area to see sold properties in that area" />
 
       <div style={{ flex: 1, position: 'relative', minHeight: 0 }}>
-        <ClientOnly fallback={<div style={{ height: '100%', width: '100%', position: 'absolute', background: '#eef2f6' }} aria-hidden="true" />}>
+        <ClientOnly fallback={<div style={{ height: '100%', width: '100%', position: 'absolute', background: '#e4eceb' }} aria-hidden="true" />}>
           {() => (
-            <Suspense fallback={<div style={{ height: '100%', width: '100%', position: 'absolute', background: '#eef2f6' }} />}>
+            <Suspense fallback={<div style={{ height: '100%', width: '100%', position: 'absolute', background: '#e4eceb' }} />}>
               <PolygonMap
                 searchResults={searchResults}
                 activeProperty={activeProperty}
@@ -425,8 +424,8 @@ export default function PolygonSearchPage() {
                     border: '1px solid #e5e7eb',
                     borderRadius: '6px',
                     cursor: 'pointer',
-                    backgroundColor: prop.id === activeProperty?.id ? '#eff6ff' : 'white',
-                    borderColor: prop.id === activeProperty?.id ? '#3b82f6' : '#e5e7eb',
+                    backgroundColor: prop.id === activeProperty?.id ? '#e4f1ee' : 'white',
+                    borderColor: prop.id === activeProperty?.id ? '#1d4a42' : '#e5e7eb',
                     transition: 'all 0.2s',
                   }}
                   onMouseEnter={(e) => {
@@ -450,7 +449,7 @@ export default function PolygonSearchPage() {
                         {prop.eircode && ` · ${prop.eircode}`}
                       </div>
                     </div>
-                    <div style={{ fontWeight: 600, color: '#1a3c5e', whiteSpace: 'nowrap' }}>
+                    <div style={{ fontWeight: 600, color: '#10302b', whiteSpace: 'nowrap' }}>
                       {formatPrice(prop.price)}
                     </div>
                   </div>
@@ -462,7 +461,6 @@ export default function PolygonSearchPage() {
       )}
 
       <Footer />
-      <WaffleMenu />
     </div>
   );
 }

@@ -162,7 +162,7 @@ const HEATING_FUEL = [
   { fuel: "Other",        pct: 2.9,  count: 40048  },
 ];
 
-const FUEL_COLOURS = ["#1a3c5e","#e07b39","#2d9e47","#888","#b5e33a","#aaa"];
+const FUEL_COLOURS = ["#10302b","#a86a00","#2d9e47","#888","#b5e33a","#aaa"];
 
 // ---------------------------------------------------------------------------
 // Sub-components
@@ -326,7 +326,7 @@ export default function EnergyPage() {
                 type="monotone"
                 dataKey="upgradedPct"
                 name="HES grant upgrades (%)"
-                stroke="#e07b39"
+                stroke="#a86a00"
                 strokeWidth={2}
                 dot={false}
                 strokeDasharray="5 4"
@@ -355,7 +355,7 @@ export default function EnergyPage() {
               <Tooltip content={<AgeTooltip />} />
               <Legend wrapperStyle={{ fontSize: 12 }} />
               <Bar dataKey="ab"  name="A/B rated (%)"  stackId="a" fill="#2d9e47" />
-              <Bar dataKey="dg"  name="D–G rated (%)"  stackId="b" fill="#e07b39" />
+              <Bar dataKey="dg"  name="D–G rated (%)"  stackId="b" fill="#a86a00" />
             </BarChart>
           </ResponsiveContainer>
           <div className="ber-age-table-wrap">
@@ -375,7 +375,7 @@ export default function EnergyPage() {
                     <td>{row.band}</td>
                     <td className="num-col">{row.n.toLocaleString()}</td>
                     <td className="num-col" style={{ color: "#2d9e47", fontWeight: 600 }}>{row.ab}%</td>
-                    <td className="num-col" style={{ color: "#e07b39", fontWeight: 600 }}>{row.dg}%</td>
+                    <td className="num-col" style={{ color: "#a86a00", fontWeight: 600 }}>{row.dg}%</td>
                     <td className="num-col">{row.avgBer}</td>
                   </tr>
                 ))}
@@ -542,7 +542,7 @@ export default function EnergyPage() {
                 {COUNTY_RANKINGS.map((entry) => (
                   <Cell
                     key={entry.county}
-                    fill={entry.ab >= 40 ? "#2d9e47" : entry.ab >= 30 ? "#f5c935" : "#e07b39"}
+                    fill={entry.ab >= 40 ? "#2d9e47" : entry.ab >= 30 ? "#f5c935" : "#a86a00"}
                   />
                 ))}
               </Bar>

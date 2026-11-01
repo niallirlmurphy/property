@@ -129,7 +129,7 @@ export default function ManualGeocodePage() {
         display: "flex",
         alignItems: "center",
         padding: "1rem",
-        background: "#1a3c5e",
+        background: "#10302b",
         color: "white",
         gap: "1rem"
       }}>
@@ -154,7 +154,7 @@ export default function ManualGeocodePage() {
         <div style={{ padding: "2rem", textAlign: "center" }}>
           <h2>🎉 Geocoding queue is empty!</h2>
           <p>All properties have been geocoded.</p>
-          <Link to="/" style={{ color: "#1a3c5e" }}>Return home</Link>
+          <Link to="/" style={{ color: "#10302b" }}>Return home</Link>
         </div>
       )}
 
@@ -179,7 +179,7 @@ export default function ManualGeocodePage() {
             borderRight: "1px solid #ddd",
             background: "#f9f9f9"
           }}>
-            <h2 style={{ marginTop: 0, fontSize: "1.125rem", color: "#1a3c5e" }}>
+            <h2 style={{ marginTop: 0, fontSize: "1.125rem", color: "#10302b" }}>
               Property Details
             </h2>
 
@@ -267,9 +267,9 @@ export default function ManualGeocodePage() {
           {/* Right panel: Map and controls */}
           <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
             <div style={{ flex: 1, position: "relative" }}>
-              <ClientOnly fallback={<div style={{ width: "100%", height: "100%", background: "#eef2f6" }} aria-hidden="true" />}>
+              <ClientOnly fallback={<div style={{ width: "100%", height: "100%", background: "#e4eceb" }} aria-hidden="true" />}>
                 {() => (
-                  <Suspense fallback={<div style={{ width: "100%", height: "100%", background: "#eef2f6" }} />}>
+                  <Suspense fallback={<div style={{ width: "100%", height: "100%", background: "#e4eceb" }} />}>
                     <ManualGeocodeMap
                       mapCenter={mapCenter}
                       markerPosition={markerPosition}

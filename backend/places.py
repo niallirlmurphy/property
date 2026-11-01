@@ -82,6 +82,14 @@ def parse_query(query: str, county: Optional[str] = None) -> "tuple[list, Option
     return names, hint
 
 
+def is_bare_place(query: str) -> bool:
+    """A query that is only a place name: one part, no house number and no county
+    ("Kenmare" yes; "Kenmare, Kerry", "Kenmare Parade, Dublin 3", "12 Main St" no)."""
+    parts, hint = _query_parts(query, None)
+    return (len(parts) == 1 and hint is None and not _is_numbered(parts[0])
+            and county_of(parts[0]) is None)
+
+
 def parse_localities(query: str, county: Optional[str] = None) -> "tuple[list, Optional[str]]":
     """The later parts of a query, as place names to fall back on when the first part
     can't be placed: "Drumlaney, Redhills" -> (["redhills"], None). The backend tries

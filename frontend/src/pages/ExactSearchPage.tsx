@@ -5,6 +5,7 @@ import TrendsChart from "../components/TrendsChart";
 import Footer from "../components/Footer";
 import { searchProperties, searchExactAddress } from "../api";
 import type { Property, TrendPoint } from "../types";
+import SiteHeader from "../components/SiteHeader";
 import "./ExactSearchPage.css";
 
 function calculateTrendsFromProperties(properties: Property[]): TrendPoint[] {
@@ -240,6 +241,7 @@ export default function ExactSearchPage() {
   return (
     <div className="exact-search-page">
       {meta}
+      <SiteHeader />
       {/* Logo and Search Box */}
       <div className={`search-container ${(hasResults || hasSearched) ? "has-results" : "centered"}`}>
         {!hasSearched && (

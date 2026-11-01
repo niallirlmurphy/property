@@ -188,12 +188,12 @@ export function BaringsIresUpdateContent() {
         <strong>IRES REIT plc</strong>, Ireland's largest private residential landlord, the bid is still only a{" "}
         <em>possible</em> offer. Barings has until <strong>5pm on 9 November 2026</strong> to make it binding or walk away.
         Here is where things stand, what the market is signalling, and how the price still compares with{" "}
-        <Link to="/blog/barings-ires-reit-takeover-offer-fair-value" style={{ color: "#1d4ed8", fontWeight: 600 }}>
+        <Link to="/blog/barings-ires-reit-takeover-offer-fair-value" style={{ color: "#10302b", fontWeight: 600 }}>
           our valuation of the portfolio
         </Link>.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>The short version:</strong> €1.386 is a <strong>30.75% premium</strong> to the undisturbed €1.06 share
           price but almost exactly IRES's <strong>138.8c</strong> net asset value, and about <strong>25% below</strong> our
@@ -208,12 +208,12 @@ export function BaringsIresUpdateContent() {
       <SectionHeading>Recap: what we think IRES is worth</SectionHeading>
       <p style={{ marginBottom: "1rem" }}>
         In September we{" "}
-        <Link to="/blog/valuing-ires-reit-property-portfolio" style={{ color: "#1d4ed8", fontWeight: 600 }}>
+        <Link to="/blog/valuing-ires-reit-property-portfolio" style={{ color: "#10302b", fontWeight: 600 }}>
           valued the IRES portfolio
         </Link>{" "}
         flat by flat: <strong>35 developments</strong> and <strong>3,615 IRES-owned units</strong>, each priced against
         arm's-length resales from the Property Price Register by the same engine behind our{" "}
-        <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>valuation tool</Link>. (Press reports put the
+        <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>valuation tool</Link>. (Press reports put the
         portfolio at 3,700–3,900 apartments; our count covers the units we could match to IRES's published schemes.)
       </p>
       <ul style={{ marginBottom: "1rem", paddingLeft: "1.25rem" }}>
@@ -340,13 +340,13 @@ export function BaringsIresUpdateContent() {
         We'll update this post when Barings makes its move.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>Own an apartment in Dublin?</strong> The engine we used to value IRES's 3,615 units will value yours from
           real comparable sales, with the comparables shown.{" "}
-          <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>Value your property →</Link>{" "}
+          <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>Value your property →</Link>{" "}
           Or see{" "}
-          <Link to="/blog/dublin-property-prices-by-postcode-2026" style={{ color: "#1d4ed8", fontWeight: 600 }}>
+          <Link to="/blog/dublin-property-prices-by-postcode-2026" style={{ color: "#10302b", fontWeight: 600 }}>
             Dublin prices by postcode
           </Link>.
         </p>
@@ -379,7 +379,7 @@ export function BaringsIresUpdateContent() {
       <p style={{ marginBottom: "1rem" }}>
         <strong>Our resale prices match the CSO's.</strong> The CSO's price statistics come from the same stamp duty
         returns as the register. When we{" "}
-        <Link to="/blog/property-price-register-vs-cso-house-prices" style={{ color: "#1d4ed8", fontWeight: 600 }}>
+        <Link to="/blog/property-price-register-vs-cso-house-prices" style={{ color: "#10302b", fontWeight: 600 }}>
           compared the two
         </Link>
         , second-hand medians agreed to within about <strong>±1.2%</strong> in a typical Eircode area, with Dublin's

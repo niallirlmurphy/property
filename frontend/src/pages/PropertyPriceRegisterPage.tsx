@@ -337,8 +337,7 @@ export default function PropertyPriceRegisterPage() {
           </ul>
           <p>
             You can explore these trends on our{" "}
-            <Link to="/county/dublin">county pages</Link> and{" "}
-            <Link to="/polygon">map-based search tool</Link>.
+            <Link to="/county/dublin">county pages</Link>.
           </p>
         </section>
 
@@ -412,7 +411,7 @@ export default function PropertyPriceRegisterPage() {
           </p>
           <p>
             Want to learn about our other data sources?{" "}
-            <Link to="/about" style={{ color: "#1a3c5e", textDecoration: "underline" }}>
+            <Link to="/about" style={{ color: "#10302b", textDecoration: "underline" }}>
               Visit our About page
             </Link>{" "}
             to see how we integrate CSO statistics, BER energy ratings, and geospatial data for
@@ -423,27 +422,22 @@ export default function PropertyPriceRegisterPage() {
           </p>
           <ul style={{ listStyle: "disc", paddingLeft: "1.5rem", marginTop: "1rem" }}>
             <li style={{ marginBottom: "0.75rem" }}>
-              <Link to="/" style={{ color: "#1a3c5e", textDecoration: "underline", fontWeight: "500" }}>
+              <Link to="/" style={{ color: "#10302b", textDecoration: "underline", fontWeight: "500" }}>
                 Search by address, Eircode, or coordinates
               </Link> — Find specific properties or search within a radius
             </li>
             <li style={{ marginBottom: "0.75rem" }}>
-              <Link to="/polygon" style={{ color: "#1a3c5e", textDecoration: "underline", fontWeight: "500" }}>
-                Draw a custom area on the map
-              </Link> — Define your target neighborhood with polygon drawing tools
-            </li>
-            <li style={{ marginBottom: "0.75rem" }}>
-              <Link to="/county/dublin" style={{ color: "#1a3c5e", textDecoration: "underline", fontWeight: "500" }}>
+              <Link to="/county/dublin" style={{ color: "#10302b", textDecoration: "underline", fontWeight: "500" }}>
                 Browse sales by county
               </Link> — View price trends and recent sales for all 26 counties
             </li>
             <li style={{ marginBottom: "0.75rem" }}>
-              <Link to="/eircode/D02" style={{ color: "#1a3c5e", textDecoration: "underline", fontWeight: "500" }}>
+              <Link to="/eircode/D02" style={{ color: "#10302b", textDecoration: "underline", fontWeight: "500" }}>
                 Search by Eircode routing key
               </Link> — Explore properties in specific Dublin postal areas (e.g., D02, D04, A94)
             </li>
             <li style={{ marginBottom: "0.75rem" }}>
-              <Link to="/mortgages" style={{ color: "#1a3c5e", textDecoration: "underline", fontWeight: "500" }}>
+              <Link to="/mortgages" style={{ color: "#10302b", textDecoration: "underline", fontWeight: "500" }}>
                 Calculate mortgage affordability
               </Link> — See what you can afford based on your income and deposit
             </li>

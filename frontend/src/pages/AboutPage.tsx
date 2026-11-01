@@ -73,7 +73,7 @@ export default function AboutPage() {
           {showMethodology && methodologyPost && (
             <p>
               For a closer look at how estimates are built, read{" "}
-              <Link to={`/blog/${methodologyPost.slug}`} style={{ color: "#1a3c5e", textDecoration: "underline" }}>
+              <Link to={`/blog/${methodologyPost.slug}`} style={{ color: "#10302b", textDecoration: "underline" }}>
                 {methodologyPost.title}
               </Link>.
             </p>
@@ -108,7 +108,7 @@ export default function AboutPage() {
               <dd>
                 The primary source for all residential sales in Ireland since 2010. This allows us
                 to track every transaction, providing the baseline for our valuation models.{" "}
-                <Link to="/property-price-register" style={{ color: "#1a3c5e", textDecoration: "underline" }}>
+                <Link to="/property-price-register" style={{ color: "#10302b", textDecoration: "underline" }}>
                   Learn more about the Property Price Register
                 </Link>
                 .
@@ -193,7 +193,7 @@ export default function AboutPage() {
           </p>
           <p>
             Have a suggestion or question?{" "}
-            <span style={{ color: "#1a3c5e", cursor: "default" }}>
+            <span style={{ color: "#10302b", cursor: "default" }}>
               Use the Feedback or Contact buttons on the right side of this page.
             </span>
           </p>

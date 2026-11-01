@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend"))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
-from places import address_place_names, normalize_place, parse_localities, parse_query, pick_dominant_place, pick_place  # noqa: E402
+from places import address_place_names, is_bare_place, normalize_place, parse_localities, parse_query, pick_dominant_place, pick_place  # noqa: E402
 from build_places import cluster_centre  # noqa: E402
 
 
@@ -120,3 +120,14 @@ def test_pick_dominant_place_refuses_names_spread_across_counties():
     # Only Meath's "Main Street" clusters, but 25 counties have one.
     rows = [_row("main street", "Meath", 53.6, -6.7, sales=135, counties=25)]
     assert pick_dominant_place(rows, ["main street"]) is None
+
+
+def test_is_bare_place_only_for_a_lone_town_name():
+    """"Kenmare" alone is the Kerry town even with the Dublin default; a street,
+    house number or county in the query keeps the normal order."""
+    assert is_bare_place("Kenmare")
+    assert is_bare_place("  kenmare ")
+    assert not is_bare_place("Kenmare, Kerry")
+    assert not is_bare_place("Kenmare Parade, Dublin 3")
+    assert not is_bare_place("12 Main Street")
+    assert not is_bare_place("Co. Kerry")

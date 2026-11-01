@@ -165,22 +165,22 @@ export default function SearchPanel({ counties, loading, error, onSearch, result
             width: "100%",
             padding: "0.75rem",
             marginTop: "1rem",
-            backgroundColor: "#f8f9fa",
-            border: "2px solid #1a3c5e",
+            backgroundColor: "#f2f5f4",
+            border: "2px solid #10302b",
             borderRadius: "4px",
-            color: "#1a3c5e",
+            color: "#10302b",
             fontWeight: 600,
             cursor: "pointer",
             fontSize: "0.95rem",
             transition: "all 0.2s",
           }}
           onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = "#1a3c5e";
+            e.currentTarget.style.backgroundColor = "#10302b";
             e.currentTarget.style.color = "white";
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = "#f8f9fa";
-            e.currentTarget.style.color = "#1a3c5e";
+            e.currentTarget.style.backgroundColor = "#f2f5f4";
+            e.currentTarget.style.color = "#10302b";
           }}
         >
           📧 Property Email Alert

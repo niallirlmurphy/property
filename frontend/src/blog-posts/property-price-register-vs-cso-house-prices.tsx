@@ -288,7 +288,7 @@ export function PprVsCsoContent() {
         and is the CSO working from asking prices, valuations or something else entirely?
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>The short answer:</strong> both use the <strong>same data</strong>: the stamp duty returns that
           solicitors file with Revenue when a sale closes. Neither uses asking prices or valuations. The CSO keeps a
@@ -457,7 +457,7 @@ export function PprVsCsoContent() {
         figures next to our register-based ones, including its house and apartment medians.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>See both for your area.</strong> Search any address, Eircode or area for every recorded sale nearby,
           or open a county page for the official CSO figures alongside.{" "}

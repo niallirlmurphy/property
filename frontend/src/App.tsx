@@ -1,544 +1,523 @@
-import { useEffect, useRef, useState, lazy, Suspense } from "react";
+import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ClientOnly } from "vite-react-ssg";
-import { searchProperties, searchExactAddress, fetchTrends, fetchCounties, fetchEircode, fetchGeocode, fetchNearestPins } from "./api";
-import SearchPanel from "./components/SearchPanel";
-import ResultsList from "./components/ResultsList";
-import EircodePanel from "./components/EircodePanel";
+import { fetchCountySummary, fetchTrends, searchExactAddress, searchProperties } from "./api";
 import TrendsChart from "./components/TrendsChart";
-import EmailAlertModal from "./components/EmailAlertModal";
+import SiteHeader from "./components/SiteHeader";
+import SiteFooter from "./components/SiteFooter";
 import HomeIntro from "./components/HomeIntro";
-import type { Property, SearchResponse, TrendPoint, SearchParams, EircodeResponse } from "./types";
-import WaffleMenu from "./components/WaffleMenu";
-import ContactSidebar from "./components/ContactModals";
 import { usePageMeta } from "./hooks/usePageMeta";
+import EmailAlertModal from "./components/EmailAlertModal";
+import { AREAS, COUNTIES, countySlug } from "./areas";
+import { publishedPosts } from "./blogPosts";
+import { SITE_STATS as S } from "./siteStats";
+import type { CountySummary, Property, SearchResponse, TrendPoint } from "./types";
+import "./styles/theme.css";
+import "./styles/site-chrome.css";
+import "./styles/home.css";
+
 
 const MapView = lazy(() => import("./components/MapView"));
 
-function formatPrice(n: number) {
-  return "€" + Math.round(n).toLocaleString("en-IE");
-}
-
-function formatDate(dateString: string): string {
-  // Convert YYYY-MM-DD to DD-MM-YYYY
-  const [year, month, day] = dateString.slice(0, 10).split('-');
-  return `${day}-${month}-${year}`;
-}
-
-function calculateTrendsFromProperties(properties: Property[]): TrendPoint[] {
-  // Filter out non-market sales and group by year
-  const validProperties = properties.filter(p => !p.not_full_market_price && p.sale_date);
-
-  const byYear = new Map<number, Property[]>();
-
-  validProperties.forEach(p => {
-    const year = new Date(p.sale_date).getFullYear();
-    if (!byYear.has(year)) {
-      byYear.set(year, []);
-    }
-    byYear.get(year)!.push(p);
-  });
-
-  const trends: TrendPoint[] = [];
-
-  byYear.forEach((sales, year) => {
-    // Median/average include VAT on new homes; min/max are register prices.
-    const prices = sales.map(p => p.price_incl_vat ?? p.price).sort((a, b) => a - b);
-    const raw = sales.map(p => p.price).sort((a, b) => a - b);
-    const count = prices.length;
-    const median_price = count % 2 === 0
-      ? (prices[count / 2 - 1] + prices[count / 2]) / 2
-      : prices[Math.floor(count / 2)];
-    const avg_price = prices.reduce((sum, p) => sum + p, 0) / count;
-    const min_price = raw[0];
-    const max_price = raw[count - 1];
-
-    trends.push({
-      year,
-      count,
-      median_price: Math.round(median_price),
-      avg_price: Math.round(avg_price),
-      min_price,
-      max_price,
-    });
-  });
-
-  return trends.sort((a, b) => a.year - b.year);
-}
-
-const ABBREV_MAP: [RegExp, string][] = [
-  [/\brd\b/g,   "road"],
-  [/\bave?\b/g, "avenue"],
-  [/\bdr\b/g,   "drive"],
-  [/\btce\b/g,  "terrace"],
-  [/\bterr\b/g, "terrace"],
-  [/\bcres\b/g, "crescent"],
-  [/\bgdns?\b/g,"gardens"],
-  [/\bsq\b/g,   "square"],
-  [/\bpk\b/g,   "park"],
-  [/\bblvd\b/g, "boulevard"],
-  [/\bmt\b/g,   "mount"],
-  [/\bnth\b/g,  "north"],
-  [/\bsth\b/g,  "south"],
-  [/\bst\b/g,   "street"],
-  [/^no\.?\s*/g,""],
-  [/,?\s*co\.?\s+/g, " "],
+const RECENT_KEY = "homeiq_recent_searches";
+const PAGE_SIZE = 10;
+// Two Dublin streets, two full addresses elsewhere, then an area, an Eircode and a town.
+// Each address has a recorded sale, so the example shows an exact match.
+const EXAMPLES = [
+  "28 Mountain View Road",
+  "125 Tritonville Road",
+  "41 Fearann Ri, Doughiska, Galway",
+  "171 Dooradoyle Park, Dooradoyle, Limerick",
+  "Rathmines, Dublin",
+  "D06",
+  "Kenmare",
 ];
+const RADII = [0.5, 1, 2, 5, 10];
+const POPULAR_AREAS = ["rathmines", "ranelagh", "clontarf", "howth", "malahide", "blackrock", "swords", "bray", "cork-city", "galway-city", "limerick-city", "drogheda"];
+const SNAPSHOT_COUNTIES = ["Dublin", "Cork", "Galway", "Limerick", "Kildare", "Meath"];
 
-function normaliseAddr(s: string): string {
-  let n = s.toLowerCase().replace(/[.,\-]/g, " ").replace(/\s+/g, " ").trim();
-  for (const [pat, rep] of ABBREV_MAP) n = n.replace(pat, rep);
-  return n.replace(/\s+/g, " ").trim();
+const eur = (n: number | null | undefined) => (n == null ? "–" : "€" + Math.round(n).toLocaleString("en-IE"));
+const shortEur = (n: number) => (n >= 1_000_000 ? `€${(n / 1_000_000).toFixed(2)}m` : `€${Math.round(n / 1000)}k`);
+const fmtDate = (s: string) => {
+  const [y, m, d] = s.slice(0, 10).split("-");
+  return `${d}-${m}-${y}`;
+};
+const fmtDist = (m: number) => (m < 1000 ? `${Math.round(m)} m` : `${(m / 1000).toFixed(1)} km`);
+const isCoords = (q: string) => /^\s*-?\d+(\.\d+)?\s*,\s*-?\d+(\.\d+)?\s*$/.test(q);
+const looksLikeAddress = (q: string) => /^\d+[a-z]?\s/i.test(q.trim());
+
+function loadRecent(): string[] {
+  try { return JSON.parse(localStorage.getItem(RECENT_KEY) ?? "[]"); } catch { return []; }
+}
+function saveRecent(q: string): string[] {
+  const next = [q, ...loadRecent().filter((s) => s !== q)].slice(0, 5);
+  try { localStorage.setItem(RECENT_KEY, JSON.stringify(next)); } catch { /* private mode */ }
+  return next;
 }
 
-function extractStreetName(address: string): string | null {
-  // Extract street name from address (e.g., "36 Fairfield Road, Dublin" → "fairfield road")
-  const normalized = normaliseAddr(address);
-
-  // Remove leading house number (e.g., "36 fairfield road" → "fairfield road")
-  const withoutNumber = normalized.replace(/^\d+\s+/, '');
-
-  // Take everything up to the first comma or before common area names
-  const parts = withoutNumber.split(',');
-  const streetPart = parts[0].trim();
-
-  // Street name should be at least 2 words to avoid false positives
-  const words = streetPart.split(/\s+/);
-  if (words.length < 2) return null;
-
-  return streetPart;
-}
-
-function isExactMatch(address: string, query: string): boolean {
-  const a = normaliseAddr(address);
-  const q = normaliseAddr(query);
-  // Must start with query to be exact match (not just contain it anywhere)
-  // e.g., "92 rathdown park terenure" starts with "92 rathdown park" ✓
-  // e.g., "109 rathdown park terenure" does NOT start with "92 rathdown park" ✗
-  return a.startsWith(q);
-}
-
-function isPartialMatch(address: string, query: string): boolean {
-  // Check if addresses are on the same street (e.g., "18 Fairfield Road" matches query "36 Fairfield Road")
-  const addressStreet = extractStreetName(address);
-  const queryStreet = extractStreetName(query);
-
-  if (!addressStreet || !queryStreet) return false;
-
-  // Streets match if they're identical or one contains the other
-  return addressStreet === queryStreet ||
-         addressStreet.includes(queryStreet) ||
-         queryStreet.includes(addressStreet);
-}
-
-function partitionByExactMatch(results: Property[], query: string): {
+interface Outcome {
+  q: string;
+  county?: string;
+  search: SearchResponse;
+  trends: TrendPoint[];
   exact: Property[];
-  rest: Property[];
-  partialMatchIds: Set<number>;
-  exactMatchIds: Set<number>;
-} {
-  const partial: Property[] = [];   // Same street, different number
-  const exact: Property[] = [];     // Exact address match
-  const rest: Property[] = [];      // Other nearby properties
-
-  for (const p of results) {
-    if (isExactMatch(p.address, query)) {
-      exact.push(p);
-    } else if (isPartialMatch(p.address, query)) {
-      partial.push(p);
-    } else {
-      rest.push(p);
-    }
-  }
-
-  // Return first 2 partial matches, then exact matches, then remaining partial, then rest
-  const topPartial = partial.slice(0, 2);
-  const remainingPartial = partial.slice(2);
-
-  const sortedExact = [...topPartial, ...exact, ...remainingPartial];
-
-  // Track IDs for display styling
-  const partialMatchIds = new Set(topPartial.map(p => p.id));
-  const exactMatchIds = new Set(exact.map(p => p.id));
-
-  return {
-    exact: sortedExact,
-    rest,
-    partialMatchIds,
-    exactMatchIds
-  };
 }
 
-// "intro": mobile before the first search, when the main area shows the
-// homepage intro instead of the map. Both renders start there, so it can't
-// mismatch on hydration; the first search switches to "map".
-type MobileTab = "intro" | "map" | "list" | "trends";
+type Status = "idle" | "loading" | "done" | "error";
+
+const Icon = {
+  cal: <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 4h10v9H3zM3 7h10M6 2.5V5M10 2.5V5" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" /></svg>,
+  bed: <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 12V4M2 9h12v3M14 9V7a2 2 0 0 0-2-2H7v4" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>,
+  home: <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2.5 8 8 3l5.5 5M4 7v6h8V7" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>,
+  pin: <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 14s4.5-4 4.5-7.5a4.5 4.5 0 0 0-9 0C3.5 10 8 14 8 14z" fill="none" stroke="currentColor" strokeWidth="1.3" /><circle cx="8" cy="6.5" r="1.5" fill="currentColor" /></svg>,
+};
+
+function PropertyCard({ p, badge }: { p: Property; badge?: string }) {
+  return (
+    <li className={`hm-card${badge ? " hm-card-exact" : ""}`}>
+      <div className="hm-card-top">
+        <span className="hm-card-price">{eur(p.price)}</span>
+        {badge && <span className="hm-badge">{badge}</span>}
+      </div>
+      <div className="hm-card-addr">{p.address}</div>
+      <div className="hm-card-meta">
+        <span>{Icon.cal}{fmtDate(p.sale_date)}</span>
+        {p.bedrooms ? <span>{Icon.bed}{p.bedrooms} bed</span> : null}
+        {p.property_type ? <span>{Icon.home}{p.property_type}</span> : null}
+        {p.distance_m != null && <span>{Icon.pin}{fmtDist(p.distance_m)} away</span>}
+        {p.not_full_market_price && <span className="hm-warn" title="Not a full market price sale (e.g. family transfer or VAT-exclusive new build)">Not full market price</span>}
+      </div>
+    </li>
+  );
+}
 
 export default function App() {
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  // SEO meta tags for home page
   const meta = usePageMeta();
+  const [params, setParams] = useSearchParams();
+  const [q, setQ] = useState("");
+  const [radius, setRadius] = useState(1);
+  const [county, setCounty] = useState<string>("Dublin");
+  const [status, setStatus] = useState<Status>("idle");
+  const [error, setError] = useState("");
+  const [outcome, setOutcome] = useState<Outcome | null>(null);
+  const [shown, setShown] = useState(PAGE_SIZE);
+  const [view, setView] = useState<"list" | "map">("list");
+  const [recent, setRecent] = useState<string[]>([]);
+  const [snapshotCounty, setSnapshotCounty] = useState("Dublin");
+  const [snapshot, setSnapshot] = useState<CountySummary | null>(null);
+  const [alertOpen, setAlertOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [locating, setLocating] = useState(false);
+  const gen = useRef(0);
+  const resultsRef = useRef<HTMLDivElement | null>(null);
 
-  const [counties, setCounties] = useState<string[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const run = async (query: string, opts: { radius?: number; county?: string | null } = {}) => {
+    const text = query.trim();
+    if (!text) return;
+    const r = opts.radius ?? radius;
+    const c = opts.county === undefined ? county : opts.county;
+    const countyParam = isCoords(text) || !c ? undefined : c;
+    const id = ++gen.current;
+    setQ(text);
+    setRadius(r);
+    if (opts.county !== undefined) setCounty(opts.county ?? "");
+    setStatus("loading");
+    setError("");
+    setShown(PAGE_SIZE);
+    setView("list");
+    setRecent(saveRecent(text));
+    const next: Record<string, string> = { q: text, radius_km: String(r) };
+    if (countyParam) next.county = countyParam;
+    setParams(next, { replace: true });
+    requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+    try {
+      const sp = { q: text, radius_km: r, county: countyParam };
+      const [search, trends, exact] = await Promise.all([
+        searchProperties(sp),
+        fetchTrends(text, r, countyParam).catch(() => [] as TrendPoint[]),
+        looksLikeAddress(text) ? searchExactAddress(text, countyParam).catch(() => null) : Promise.resolve(null),
+      ]);
+      if (gen.current !== id) return;
+      setOutcome({ q: text, county: countyParam, search, trends, exact: exact?.results ?? [] });
+      setStatus("done");
+    } catch (e: any) {
+      if (gen.current !== id) return;
+      const msg: string = e?.message ?? "";
+      setError(msg.includes("Could not") || msg.includes("find")
+        ? `We couldn't find "${text}". Try adding the area or county, or use an Eircode.`
+        : msg || "Something went wrong. Please try again.");
+      setStatus("error");
+    }
+  };
 
-  const [pendingCenter, setPendingCenter] = useState<{ lat: number; lon: number; radius_km: number } | null>(null);
-  const [mapPins, setMapPins] = useState<Property[]>([]);
-  const [searchResult, setSearchResult] = useState<SearchResponse | null>(null);
-  const [trends, setTrends] = useState<TrendPoint[]>([]);
-  const [showTrends, setShowTrends] = useState(false);
-  const [hasSearched, setHasSearched] = useState(false);
-  const [lastSearchCounty, setLastSearchCounty] = useState<string | undefined>(undefined);
-
-  const [eircodeResult, setEircodeResult] = useState<EircodeResponse | null>(null);
-  const [eircodeCenter, setEircodeCenter] = useState<[number, number] | null>(null);
-
-  const [activeProperty, setActiveProperty] = useState<Property | null>(null);
-  const [lastSearchQuery, setLastSearchQuery] = useState<string>("");
-  const [mobileTab, setMobileTab] = useState<MobileTab>("intro");
-  const [emailAlertOpen, setEmailAlertOpen] = useState(false);
-  const [lastSearchParams, setLastSearchParams] = useState<SearchParams | null>(null);
-  const searchGenRef = useRef(0);
-
-  // Read initial search state from URL params
-  const urlQ = searchParams.get("q") ?? "";
-  const urlCounty = searchParams.get("county") ?? "Dublin";
-  const urlRadius = Number(searchParams.get("radius_km") ?? "0.5");
-
+  // Restore a shared link, saved searches and the county list (all client-side only)
   useEffect(() => {
-    fetchCounties().then(setCounties).catch(() => {});
+    setRecent(loadRecent());
+    const urlQ = params.get("q");
+    if (urlQ) {
+      const r = Number(params.get("radius_km") ?? "1") || 1;
+      const c = params.get("county");
+      setQ(urlQ);
+      run(urlQ, { radius: r, county: c ?? null });
+    }
   }, []);
 
-  // Fire search from URL params on initial load
+  // First useful answer without typing: latest sales and median for a county
   useEffect(() => {
-    if (urlQ) {
-      handleSearch({
-        q: urlQ,
-        radius_km: urlRadius || 0.5,
-        county: urlCounty || undefined,
-      });
-    }
-  }, []); // only on mount
+    let live = true;
+    setSnapshot(null);
+    fetchCountySummary(snapshotCounty).then((s) => live && setSnapshot(s)).catch(() => {});
+    return () => { live = false; };
+  }, [snapshotCounty]);
 
-  const handleSearch = async (params: SearchParams) => {
-    const gen = ++searchGenRef.current;
-
-    setLoading(true);
-    setError(null);
-    setActiveProperty(null);
-    setEircodeResult(null);
-    setEircodeCenter(null);
-    setSearchResult(null);
-    setMapPins([]);
-    setTrends([]);
-    setShowTrends(false);
-    setLastSearchParams(params);
-    setPendingCenter(null);
-    setLastSearchQuery("");
-    setHasSearched(true);
-    setMobileTab("map");
-
-    // Update URL so the search is bookmarkable/shareable
-    const nextParams: Record<string, string> = { q: params.q };
-    if (params.radius_km != null) nextParams.radius_km = String(params.radius_km);
-    if (params.county) nextParams.county = params.county;
-    setSearchParams(nextParams, { replace: true });
-
-    // Fetch both exact address matches and radius-based comparables
-    // Exact matches shown at top, then nearby properties for comparison
-    try {
-      const resolvedCenter = await fetchGeocode(params.q, params.county);
-      if (searchGenRef.current !== gen) return;
-      setPendingCenter({ ...resolvedCenter, radius_km: params.radius_km });
-    } catch {
-      // non-fatal
-    }
-
-    try {
-      // Run exact search and radius search in parallel
-      const looksLikeAddress = /^\d+\s/.test(params.q.trim());
-      const exactPromise = looksLikeAddress ? searchExactAddress(params.q, params.county).catch(() => null) : Promise.resolve(null);
-
-      let [pins, result, exactResult] = await Promise.all([
-        fetchNearestPins(params, 10),
-        searchProperties(params),
-        exactPromise,
-      ]);
-      if (searchGenRef.current !== gen) return;
-
-      // Merge exact matches with radius results
-      // Exact matches go first (if they're not already in radius results)
-      let allResults = result.results;
-      if (exactResult && exactResult.count > 0) {
-        const radiusIds = new Set(result.results.map(p => p.id));
-        const uniqueExact = exactResult.results.filter(p => !radiusIds.has(p.id));
-        allResults = [...uniqueExact, ...result.results];
-      }
-
-      const { exact, rest } = partitionByExactMatch(allResults, params.q);
-      const sortedResults = [...exact, ...rest];
-      const sortedResult = { ...result, results: sortedResults, count: sortedResults.length };
-
-      const exactWithCoords = exact.filter(p => p.latitude != null && p.longitude != null);
-      const pinIds = new Set(exactWithCoords.map(p => p.id));
-      const mergedPins = [...exactWithCoords, ...pins.filter(p => !pinIds.has(p.id))];
-
-      setMapPins(mergedPins);
-      setSearchResult(sortedResult);
-      setLastSearchQuery(params.q);
-      setLastSearchCounty(params.county);
-      setPendingCenter({ lat: result.center.lat, lon: result.center.lon, radius_km: result.radius_km });
-
-      // Calculate trends from the search results
-      const trendData = calculateTrendsFromProperties(result.results);
-      if (trendData.length > 0) {
-        setTrends(trendData);
-        setShowTrends(true);
-      }
-    } catch (e: any) {
-      if (searchGenRef.current !== gen) return;
-      // Provide more helpful error message for geocoding failures
-      const errorMsg = e.message?.includes("Could not geocode")
-        ? `Could not find "${params.q}". Try a more specific address or use an Eircode.`
-        : (e.message ?? "An error occurred");
-      setError(errorMsg);
-      setMobileTab("intro");   // the error shows in the search form
-    } finally {
-      if (searchGenRef.current === gen) setLoading(false);
-    }
+  const locate = () => {
+    if (!navigator.geolocation) { setError("Your browser can't share a location. Type an address instead."); setStatus("error"); return; }
+    setLocating(true);
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setLocating(false);
+        run(`${pos.coords.latitude.toFixed(5)},${pos.coords.longitude.toFixed(5)}`, { county: null });
+      },
+      () => {
+        setLocating(false);
+        setError("We couldn't get your location. Type an address, town or Eircode instead.");
+        setStatus("error");
+      },
+      { timeout: 10000 },
+    );
   };
 
-  const handleEircode = async (code: string) => {
-    const gen = ++searchGenRef.current;
-
-    setLoading(true);
-    setError(null);
-    setActiveProperty(null);
-    setSearchResult(null);
-    setPendingCenter(null);
-    setTrends([]);
-    setShowTrends(false);
-    setHasSearched(true);
-    setMobileTab("map");
-
-    try {
-      const result = await fetchEircode(code);
-      if (searchGenRef.current !== gen) return;
-      setEircodeResult(result);
-
-      const first = result.results.find((p) => p.latitude != null && p.longitude != null);
-      if (first) setEircodeCenter([first.latitude!, first.longitude!]);
-
-      // Calculate trends from the Eircode search results
-      const trendData = calculateTrendsFromProperties(result.results);
-      if (trendData.length > 0) {
-        setTrends(trendData);
-        setShowTrends(true);
-      }
-    } catch (e: any) {
-      if (searchGenRef.current !== gen) return;
-      setError(e.message ?? "An error occurred");
-      setMobileTab("intro");   // the error shows in the search form
-    } finally {
-      if (searchGenRef.current === gen) setLoading(false);
-    }
+  const copyLink = () => {
+    navigator.clipboard?.writeText(window.location.href).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }).catch(() => {});
   };
 
-  const handleSelectProperty = (p: Property) => {
-    setActiveProperty(p);
-    setMobileTab("map");
+  const o = outcome;
+  const latest = o?.trends.length ? o.trends[o.trends.length - 1] : null;
+  const prev = o && o.trends.length > 1 ? o.trends[o.trends.length - 2] : null;
+  const yoy = latest && prev && prev.median_price > 0 ? ((latest.median_price - prev.median_price) / prev.median_price) * 100 : null;
+  const exactIds = new Set(o?.exact.map((p) => p.id));
+  const list: Property[] = o ? [...o.exact, ...o.search.results.filter((p) => !exactIds.has(p.id))] : [];
+  const pins = list.filter((p) => p.latitude != null && p.longitude != null).slice(0, 60);
+  const center: [number, number] | null = o ? [o.search.center.lat, o.search.center.lon] : null;
 
-    // Add marker for this property if it has coordinates and isn't already on the map
-    // This ensures that when clicking a result, there's always a marker to pan to
-    if (p.latitude != null && p.longitude != null) {
-      const isAlreadyOnMap = mapPins.some(pin => pin.id === p.id);
-      if (!isAlreadyOnMap) {
-        setMapPins(prev => [...prev, p]);
-      }
-    }
-  };
-
-  const mapProperties: Property[] = eircodeResult
-    ? (eircodeResult.results as Property[]).filter(p => p.latitude != null).slice(0, 10)
-    : mapPins.filter(p => p.latitude != null);
-
-  const panTarget: [number, number] | null =
-    activeProperty?.latitude != null && activeProperty?.longitude != null
-      ? [activeProperty.latitude, activeProperty.longitude]
-      : null;
-
-  const flyCenter: [number, number] | null = pendingCenter
-    ? [pendingCenter.lat, pendingCenter.lon]
-    : eircodeCenter;
-
-  const flyRadius = pendingCenter?.radius_km ?? 1;
-  const defaultCenter: [number, number] = [53.35, -7.5];
-  const initialCenter: [number, number] = flyCenter ?? defaultCenter;
-
-  const resultCount = searchResult?.count ?? eircodeResult?.stats.total_count ?? 0;
-
-  // Compute match IDs for display styling
-  const matchIds = searchResult && lastSearchQuery
-    ? (() => {
-        const results = searchResult.results;
-        const partialTop2: number[] = [];
-        const exact: number[] = [];
-
-        for (const p of results) {
-          if (isExactMatch(p.address, lastSearchQuery)) {
-            exact.push(p.id);
-          } else if (isPartialMatch(p.address, lastSearchQuery) && partialTop2.length < 2) {
-            partialTop2.push(p.id);
-          }
-        }
-
-        return {
-          partialMatchIds: new Set(partialTop2),
-          exactMatchIds: new Set(exact)
-        };
-      })()
-    : { partialMatchIds: new Set<number>(), exactMatchIds: new Set<number>() };
-
-  const resultSummary = searchResult
-    ? { count: searchResult.count, radius_km: searchResult.radius_km }
-    : null;
-
-  const resultsPanel = eircodeResult ? (
-    <EircodePanel
-      result={eircodeResult}
-      activeId={activeProperty?.id ?? null}
-      onSelect={(p) => handleSelectProperty(p as Property)}
-    />
-  ) : (
-    <ResultsList
-      results={searchResult?.results ?? []}
-      activeId={activeProperty?.id ?? null}
-      onSelect={handleSelectProperty}
-      exactMatchIds={matchIds.exactMatchIds}
-      partialMatchIds={matchIds.partialMatchIds}
-      hasSearched={hasSearched}
-      loading={loading}
-      noExactMatch={
-        lastSearchQuery && /^\d+[a-z]?\s/i.test(lastSearchQuery.trim()) && matchIds.exactMatchIds.size === 0
-          ? { query: lastSearchQuery, county: lastSearchCounty }
-          : undefined
-      }
-    />
-  );
-
-  const mapEl = (
-    <ClientOnly fallback={<div style={{ width: "100%", height: "100%", background: "#eef2f6" }} aria-hidden="true" />}>
-      {() => (
-        <Suspense fallback={<div style={{ width: "100%", height: "100%", background: "#eef2f6" }} />}>
-          <MapView
-            initialCenter={initialCenter}
-            flyCenter={flyCenter}
-            flyRadius={flyRadius}
-            pendingCenter={pendingCenter}
-            searchResult={searchResult}
-            panTarget={panTarget}
-            mapProperties={mapProperties}
-            activeProperty={activeProperty}
-            handleSelectProperty={handleSelectProperty}
-          />
-        </Suspense>
-      )}
-    </ClientOnly>
-  );
+  const topResult = o?.search.results[0];
+  const countyName = topResult?.county ? COUNTIES.find((c) => c.toLowerCase() === topResult.county!.toLowerCase()) : undefined;
+  const routingKey = topResult?.eircode ? topResult.eircode.replace(/\s+/g, "").slice(0, 3).toUpperCase() : null;
+  const areaMatch = o ? AREAS.find((a) => a.name.toLowerCase() === o.q.split(",")[0].trim().toLowerCase()) : undefined;
+  const valuationHref = o ? `/valuation?${new URLSearchParams({ address: o.q, ...(o.county ? { county: o.county } : {}) })}` : "/valuation";
+  const widened = o && o.search.radius_km > radius;
+  const posts = [...publishedPosts()].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
+  const areas = POPULAR_AREAS.map((s) => AREAS.find((a) => a.slug === s)).filter((a): a is NonNullable<typeof a> => a != null);
+  const snapLatest = snapshot?.trends.length ? snapshot.trends[snapshot.trends.length - 1] : null;
 
   return (
-    <div className="app" data-tab={mobileTab}>
+    <>
       {meta}
-      <header className="app-header">
-        <Link to="/" className="app-header-home" aria-label="Home">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
-        </Link>
-        <Link to="/" className="app-header-title">
-          <h1>Ireland Property Price Valuation and Trend Insights</h1>
-        </Link>
-        {resultCount > 0 && (
-          <span className="header-count">
-            {searchResult
-              ? `${resultCount.toLocaleString()} results · ${searchResult.radius_km} km`
-              : `${resultCount.toLocaleString()} sales · ${eircodeResult?.code}`}
-          </span>
-        )}
-        <WaffleMenu />
-      </header>
+      <SiteHeader />
+      <div className="hm">
 
-      <div className="search-wrapper">
-        <SearchPanel
-          counties={counties}
-          loading={loading}
-          error={error}
-          onSearch={handleSearch}
-          onEircode={handleEircode}
-          resultSummary={resultSummary}
-          defaultValues={{ q: urlQ, radius_km: urlRadius, county: urlCounty }}
-          onOpenEmailAlert={() => setEmailAlertOpen(true)}
-        />
+        <section className="hm-hero">
+          <svg className="hm-contours" viewBox="0 0 800 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => (
+              <ellipse key={i} cx={560 - i * 6} cy={250 + i * 3} rx={60 + i * 34} ry={34 + i * 22} transform={`rotate(${-18 + i * 2.5} 560 250)`} />
+            ))}
+            {[0, 1, 2, 3, 4].map((i) => (
+              <ellipse key={`b${i}`} cx={90 + i * 4} cy={470 - i * 2} rx={40 + i * 30} ry={26 + i * 18} transform={`rotate(${12 - i * 3} 90 470)`} />
+            ))}
+          </svg>
+          <div className="hm-hero-in">
+            <div className="hm-hero-copy">
+              <h1>Research and understand property price trends before you buy, sell or remortgage.</h1>
+              <p className="hm-sub">
+                Search any address, Eircode or town for actual sales data or create an up to date valuation for any
+                property using sales data in its neighbourhood. {S.totalSales} sales since {S.firstYear}, free, no sign-up.
+              </p>
+              <form className="hm-search" role="search" onSubmit={(e) => { e.preventDefault(); run(q); }}>
+                <label htmlFor="hm-q" className="hm-sr">Address, Eircode or area</label>
+                <div className="hm-search-row">
+                  <svg className="hm-search-ico" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" strokeWidth="2" /><path d="m15.5 15.5 5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
+                  <input
+                    id="hm-q"
+                    type="search"
+                    inputMode="search"
+                    enterKeyHint="search"
+                    value={q}
+                    onChange={(e) => setQ(e.target.value)}
+                    placeholder="Address, Eircode or town"
+                    autoComplete="off"
+                    autoCapitalize="off"
+                  />
+                  <button type="submit" className="hm-go" disabled={status === "loading" || !q.trim()}>
+                    {status === "loading" ? "Searching…" : "Search"}
+                  </button>
+                </div>
+                <div className="hm-search-tools">
+                  <button type="button" className="hm-link-btn" onClick={locate} disabled={locating}>
+                    {locating ? "Locating…" : "Use my location"}
+                  </button>
+                  <Link to="/valuation" className="hm-link-btn">Create Property Valuation Report</Link>
+                </div>
+              </form>
+              <div className="hm-chips" aria-label="Try an example">
+                {recent.map((s) => (
+                  <button key={s} type="button" className="hm-chip hm-chip-recent" onClick={() => run(s)}>{s}</button>
+                ))}
+                {EXAMPLES.map((s) => (
+                  <button key={s} type="button" className="hm-chip" onClick={() => run(s)}>{s}</button>
+                ))}
+              </div>
+            </div>
+
+            <aside className="hm-live" aria-label="Latest on the register">
+              <div className="hm-live-tabs" role="tablist" aria-label="County">
+                {SNAPSHOT_COUNTIES.map((c) => (
+                  <button key={c} role="tab" aria-selected={c === snapshotCounty} className={c === snapshotCounty ? "on" : ""} onClick={() => setSnapshotCounty(c)}>{c}</button>
+                ))}
+              </div>
+              {!snapshot ? (
+                <div className="hm-live-skel" aria-busy="true"><span /><span /><span /></div>
+              ) : (
+                <>
+                  <div className="hm-live-big">
+                    <span className="hm-live-label">Median price in {snapshotCounty}{snapLatest ? `, ${snapLatest.year}` : ""}</span>
+                    <strong>{eur(snapLatest?.median_price)}</strong>
+                  </div>
+                  <ul className="hm-live-list">
+                    {snapshot.recent.slice(0, 3).map((p) => (
+                      <li key={p.id}>
+                        <span className="hm-live-price">{eur(p.price)}</span>
+                        <span className="hm-live-addr">{p.address}</span>
+                        <span className="hm-live-date">{fmtDate(p.sale_date)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link to={`/county/${countySlug(snapshotCounty)}`} className="hm-live-link">All {snapshotCounty} prices</Link>
+                </>
+              )}
+            </aside>
+          </div>
+        </section>
+
+        <div ref={resultsRef} className="hm-results-anchor" />
+
+        {status === "loading" && (
+          <section className="hm-section" aria-busy="true" aria-live="polite">
+            <div className="hm-skel hm-skel-head" />
+            <div className="hm-stats">
+              {[0, 1, 2].map((i) => <div key={i} className="hm-skel hm-skel-stat" />)}
+            </div>
+            {[0, 1, 2, 3].map((i) => <div key={i} className="hm-skel hm-skel-card" />)}
+          </section>
+        )}
+
+        {status === "error" && (
+          <section className="hm-section hm-empty" role="alert">
+            <h2>We couldn't complete that search</h2>
+            <p>{error}</p>
+            <div className="hm-actions">
+              {q.trim() && !isCoords(q) && <button className="hm-btn" onClick={() => run(q)}>Try again</button>}
+              <button className="hm-btn hm-btn-ghost" onClick={() => run(q, { county: null })} disabled={!q.trim()}>Search all counties</button>
+            </div>
+            <p className="hm-hint">Tip: a full Eircode (e.g. D06 X123) or a routing key (D06) always works best.</p>
+          </section>
+        )}
+
+        {status === "done" && o && o.search.count === 0 && o.exact.length === 0 && (
+          <section className="hm-section hm-empty">
+            <h2>No sales found within {radius} km of "{o.q}"</h2>
+            <p>That can mean a quiet area, not that nothing sold. Try a wider search:</p>
+            <div className="hm-actions">
+              {RADII.filter((r) => r > radius).map((r) => (
+                <button key={r} className="hm-btn hm-btn-ghost" onClick={() => run(o.q, { radius: r })}>{r} km</button>
+              ))}
+              {o.county && <button className="hm-btn hm-btn-ghost" onClick={() => run(o.q, { county: null })}>All counties</button>}
+            </div>
+            <p className="hm-hint">Or <Link to={valuationHref}>get a valuation estimate</Link>, or browse <Link to="/areaguides">area guides</Link>.</p>
+          </section>
+        )}
+
+        {status === "done" && o && (o.search.count > 0 || o.exact.length > 0) && (
+          <section className="hm-section" aria-live="polite">
+            <div className="hm-result-head">
+              <h2>Sales near {isCoords(o.q) ? "your location" : o.q}</h2>
+              <div className="hm-result-tools">
+                <button className="hm-link-btn" onClick={copyLink}>{copied ? "Link copied" : "Share"}</button>
+                <button className="hm-link-btn" onClick={() => setAlertOpen(true)}>Get price alerts</button>
+              </div>
+            </div>
+            {widened && (
+              <p className="hm-note">We widened the search to {o.search.radius_km} km to find enough sales.</p>
+            )}
+
+            <div className="hm-stats">
+              <div className="hm-stat">
+                <span>Median price{latest ? ` (${latest.year}${latest.year === Number(S.lastYear) ? " so far" : ""})` : ""}</span>
+                <strong>{eur(latest?.median_price)}</strong>
+                {yoy != null && prev && (
+                  <em className={yoy >= 0 ? "hm-up" : "hm-down"}>
+                    {yoy >= 0 ? "▲" : "▼"} {Math.abs(yoy).toFixed(1)}% vs {prev.year}
+                  </em>
+                )}
+              </div>
+              <div className="hm-stat">
+                <span>Sales found</span>
+                <strong>{o.search.count.toLocaleString()}</strong>
+                <em>within {o.search.radius_km} km</em>
+              </div>
+              <div className="hm-stat">
+                <span>Typical range{latest ? ` (${latest.year})` : ""}</span>
+                <strong>{latest ? `${shortEur(latest.min_price)} – ${shortEur(latest.max_price)}` : "–"}</strong>
+                <em>lowest to highest</em>
+              </div>
+            </div>
+
+            {o.exact.length === 0 && looksLikeAddress(o.q) && (
+              <div className="hm-callout">
+                <strong>No recorded sale for {o.q}.</strong> The register only lists homes sold since 2010, so these are
+                neighbouring sales. <Link to={valuationHref}>Get an estimate for this home →</Link>
+              </div>
+            )}
+
+            <div className="hm-tabs" role="tablist">
+              <button role="tab" aria-selected={view === "list"} className={view === "list" ? "on" : ""} onClick={() => setView("list")}>List</button>
+              <button role="tab" aria-selected={view === "map"} className={view === "map" ? "on" : ""} onClick={() => setView("map")}>Map</button>
+            </div>
+
+            {view === "list" ? (
+              <>
+                <ul className="hm-cards">
+                  {list.slice(0, shown).map((p) => (
+                    <PropertyCard key={p.id} p={p} badge={exactIds.has(p.id) ? "This address" : undefined} />
+                  ))}
+                </ul>
+                {shown < list.length && (
+                  <button className="hm-btn hm-btn-ghost hm-more" onClick={() => setShown((n) => n + PAGE_SIZE)}>
+                    Show more ({list.length - shown} left)
+                  </button>
+                )}
+                {o.search.count >= 200 && <p className="hm-hint">Showing the 200 most recent. Narrow the radius to see fewer.</p>}
+              </>
+            ) : (
+              <div className="hm-map">
+                <ClientOnly fallback={<div className="hm-map-ph" />}>
+                  {() => (
+                    <Suspense fallback={<div className="hm-map-ph" />}>
+                      <MapView
+                        initialCenter={center ?? [53.35, -7.5]}
+                        flyCenter={center}
+                        flyRadius={o.search.radius_km}
+                        pendingCenter={center ? { lat: center[0], lon: center[1], radius_km: o.search.radius_km } : null}
+                        searchResult={o.search}
+                        panTarget={null}
+                        mapProperties={pins}
+                        activeProperty={null}
+                        handleSelectProperty={() => {}}
+                      />
+                    </Suspense>
+                  )}
+                </ClientOnly>
+              </div>
+            )}
+
+            {o.trends.length > 0 && (
+              <div className="hm-trend">
+                <h3>Price trend in this area</h3>
+                <TrendsChart data={o.trends} onClose={() => {}} inline />
+              </div>
+            )}
+
+            <div className="hm-next">
+              <h3>What next?</h3>
+              <div className="hm-next-grid">
+                <Link to={valuationHref} className="hm-next-card hm-next-primary">
+                  <strong>Value a home here</strong>
+                  <span>Estimate from comparable sales</span>
+                </Link>
+                {areaMatch && (
+                  <Link to={`/area/${areaMatch.slug}`} className="hm-next-card">
+                    <strong>{areaMatch.name} guide</strong><span>Prices, streets, nearby areas</span>
+                  </Link>
+                )}
+                {countyName && (
+                  <Link to={`/county/${countySlug(countyName)}`} className="hm-next-card">
+                    <strong>{countyName} prices</strong><span>County trends and recent sales</span>
+                  </Link>
+                )}
+                {routingKey && (
+                  <Link to={`/eircode/${routingKey}`} className="hm-next-card">
+                    <strong>All sales in {routingKey}</strong><span>Eircode area overview</span>
+                  </Link>
+                )}
+                <Link to="/mortgage" className="hm-next-card">
+                  <strong>What can I borrow?</strong><span>Mortgage calculator</span>
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {status === "idle" && <div className="hm-intro-wrap"><HomeIntro /></div>}
+
+        {status !== "loading" && status !== "idle" && (
+          <>
+            <section className="hm-section">
+              <h2>Browse by place</h2>
+              <div className="hm-pills">
+                {areas.map((a) => <Link key={a.slug} to={`/area/${a.slug}`}>{a.name}</Link>)}
+                <Link to="/areaguides" className="hm-pill-more">All area guides →</Link>
+              </div>
+              <h3 className="hm-h3">Counties</h3>
+              <div className="hm-pills">
+                {COUNTIES.map((c) => <Link key={c} to={`/county/${countySlug(c)}`}>{c}</Link>)}
+              </div>
+            </section>
+
+            <section className="hm-section hm-how">
+              <h2>How it works</h2>
+              <ol>
+                <li><strong>Search</strong> an address, Eircode or town.</li>
+                <li><strong>See</strong> what nearby homes sold for, when, and how prices moved.</li>
+                <li><strong>Decide</strong> with a valuation, alerts or a deeper area guide.</li>
+              </ol>
+              <p className="hm-hint">
+                Data: Property Price Register, {S.firstMonth} to {S.lastMonth}, {S.mappedPct}% of sales mapped, updated every
+                two weeks. <Link to="/about#data-sources">How we handle the data →</Link>
+              </p>
+            </section>
+
+            {posts.length > 0 && (
+              <section className="hm-section">
+                <h2>Latest analysis</h2>
+                <ul className="hm-posts">
+                  {posts.map((p) => (
+                <li key={p.slug}>
+                  <Link to={`/blog/${p.slug}`}>
+                    <span className="hm-post-date">{new Date(p.date).toLocaleDateString("en-IE", { day: "numeric", month: "short", year: "numeric" })}</span>
+                    <span className="hm-post-title">{p.title}</span>
+                    <span className="hm-post-desc">{p.description}</span>
+                    <span className="hm-post-more" aria-hidden="true">Read →</span>
+                  </Link>
+                </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+          </>
+        )}
       </div>
 
       <EmailAlertModal
-        isOpen={emailAlertOpen}
-        onClose={() => setEmailAlertOpen(false)}
-        defaultAddress={lastSearchParams?.q || urlQ}
-        defaultRadius={lastSearchParams?.radius_km || urlRadius}
-        defaultCounty={lastSearchParams?.county || urlCounty}
-        counties={counties}
+        isOpen={alertOpen}
+        onClose={() => setAlertOpen(false)}
+        defaultAddress={o?.q ?? q}
+        defaultRadius={radius}
+        defaultCounty={county || "Dublin"}
+        counties={[...COUNTIES]}
       />
-
-      <div className="results-pane">
-        {/* No urlQ check: the prerendered HTML never has ?q, so keying on it would
-            mismatch on hydration. A ?q load sets hasSearched in its mount effect. */}
-        {!hasSearched && !loading ? <HomeIntro /> : resultsPanel}
-      </div>
-
-      <div className="map-container">
-        {mapEl}
-        {/* Price-trends chart temporarily removed: the client-side
-            calculateTrendsFromProperties series is broken (plots a flat line
-            over only the latest 1–2 years instead of the full sale-date range).
-            See docs/geocoding-todo.md backlog. Re-enable once the series is fixed. */}
-      </div>
-
-      <div className="trends-pane">
-        {resultsPanel}
-      </div>
-
-      <ContactSidebar />
-
-      <nav className="mobile-tab-bar">
-        <button
-          className={mobileTab === "intro" ? "active" : ""}
-          onClick={() => setMobileTab("intro")}
-        >
-          <span className="tab-icon">🔍</span>
-          Search
-        </button>
-        <button
-          className={mobileTab === "map" ? "active" : ""}
-          onClick={() => setMobileTab("map")}
-        >
-          <span className="tab-icon">🗺️</span>
-          Map
-        </button>
-        <button
-          className={mobileTab === "list" ? "active" : ""}
-          onClick={() => setMobileTab("list")}
-        >
-          <span className="tab-icon">🏠</span>
-          Results
-          {resultCount > 0 && (
-            <span className="tab-badge">{resultCount > 999 ? "999+" : resultCount}</span>
-          )}
-        </button>
-      </nav>
-    </div>
+      {status !== "idle" && <SiteFooter />}
+    </>
   );
 }

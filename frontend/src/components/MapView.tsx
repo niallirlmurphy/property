@@ -109,7 +109,7 @@ export default function MapView({
         <Circle
           center={[pendingCenter.lat, pendingCenter.lon]}
           radius={pendingCenter.radius_km * 1000}
-          pathOptions={{ color: "#1a3c5e", fillColor: "#1a3c5e", fillOpacity: 0.06, weight: 2 }}
+          pathOptions={{ color: "#10302b", fillColor: "#10302b", fillOpacity: 0.06, weight: 2 }}
         />
       )}
       <MapPanTo center={panTarget} />

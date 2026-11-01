@@ -289,12 +289,12 @@ export default function MortgagePage() {
                   <AreaChart data={balanceData} margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
                     <defs>
                       <linearGradient id="gradBalance" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#1a3c5e" stopOpacity={0.25} />
-                        <stop offset="95%" stopColor="#1a3c5e" stopOpacity={0.02} />
+                        <stop offset="5%" stopColor="#10302b" stopOpacity={0.25} />
+                        <stop offset="95%" stopColor="#10302b" stopOpacity={0.02} />
                       </linearGradient>
                       <linearGradient id="gradInterest" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#e07b39" stopOpacity={0.25} />
-                        <stop offset="95%" stopColor="#e07b39" stopOpacity={0.02} />
+                        <stop offset="5%" stopColor="#a86a00" stopOpacity={0.25} />
+                        <stop offset="95%" stopColor="#a86a00" stopOpacity={0.02} />
                       </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" stroke="#eee" />
@@ -302,8 +302,8 @@ export default function MortgagePage() {
                     <YAxis tickFormatter={euroK} tick={{ fontSize: 11 }} width={60} />
                     <Tooltip content={<CustomTooltip />} />
                     <Legend wrapperStyle={{ fontSize: 12 }} />
-                    <Area type="monotone" dataKey="Remaining Balance" stroke="#1a3c5e" strokeWidth={2} fill="url(#gradBalance)" />
-                    <Area type="monotone" dataKey="Cumulative Interest" stroke="#e07b39" strokeWidth={2} fill="url(#gradInterest)" />
+                    <Area type="monotone" dataKey="Remaining Balance" stroke="#10302b" strokeWidth={2} fill="url(#gradBalance)" />
+                    <Area type="monotone" dataKey="Cumulative Interest" stroke="#a86a00" strokeWidth={2} fill="url(#gradInterest)" />
                   </AreaChart>
                 </ResponsiveContainer>
               </div>
@@ -321,8 +321,8 @@ export default function MortgagePage() {
                     <YAxis tickFormatter={euroK} tick={{ fontSize: 11 }} width={60} />
                     <Tooltip content={<CustomTooltip />} />
                     <Legend wrapperStyle={{ fontSize: 12 }} />
-                    <Bar dataKey="Principal" stackId="a" fill="#1a3c5e" radius={[0, 0, 0, 0]} />
-                    <Bar dataKey="Interest" stackId="a" fill="#e07b39" radius={[3, 3, 0, 0]} />
+                    <Bar dataKey="Principal" stackId="a" fill="#10302b" radius={[0, 0, 0, 0]} />
+                    <Bar dataKey="Interest" stackId="a" fill="#a86a00" radius={[3, 3, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>
               </div>

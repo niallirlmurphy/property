@@ -308,13 +308,13 @@ export function IresReitValuationContent() {
     <div style={{ fontSize: "1.125rem", lineHeight: 1.75, color: INK }}>
       <p style={{ marginBottom: "1.5rem" }}>
         We built HomeIQ to answer one deceptively hard question: <em>what is a specific home actually worth today?</em> Our{" "}
-        <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>instant valuation tool</Link> answers it for any
+        <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>instant valuation tool</Link> answers it for any
         Irish address using real sold prices from the Property Price Register (PPR). To show what the engine can do at
         scale, we pointed it at one of the most-watched residential landlords in the country — <strong>IRES REIT plc</strong>{" "}
         — and valued its <strong>entire Dublin apartment portfolio, unit by unit</strong>.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>The headline:</strong> across <strong>35 developments</strong> and <strong>3,615 IRES-owned units</strong>,
           our model puts the open-market resale value of the portfolio at roughly <strong>€1.52 billion</strong> — an average
@@ -366,7 +366,7 @@ export function IresReitValuationContent() {
       <SectionHeading>How we valued it — and why property type matters</SectionHeading>
       <p style={{ marginBottom: "1rem" }}>
         Every figure here comes from the same engine behind our public{" "}
-        <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>valuation tool</Link>. For each development, and
+        <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>valuation tool</Link>. For each development, and
         for each bedroom type it contains, we run the following pipeline:
       </p>
       <ul style={{ marginBottom: "1rem", paddingLeft: "1.25rem" }}>
@@ -581,11 +581,11 @@ export function IresReitValuationContent() {
         certainly price a single address.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>Want the same analysis for your own home?</strong> Get a free instant valuation built from real comparable
           sales near you — with the comparables and confidence shown, and apartments valued off apartments.{" "}
-          <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>Value your property →</Link>
+          <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>Value your property →</Link>
         </p>
       </div>
 

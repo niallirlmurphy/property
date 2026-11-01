@@ -18,7 +18,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
 
 function Callout({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", margin: "2rem 0" }}>
+    <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", margin: "2rem 0" }}>
       <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>{children}</p>
     </div>
   );
@@ -176,7 +176,7 @@ export function SolarValueContent() {
       <Callout>
         <strong>Thinking about how upgrades affect your home's worth?</strong> Use HomeIQ to explore real sold prices in
         your area and get a free instant valuation for any address based on comparable sales from Ireland's Property Price
-        Register. <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>Value your property →</Link>
+        Register. <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>Value your property →</Link>
       </Callout>
 
       <p style={{ fontSize: "0.9rem", color: INK_MUTED, marginTop: "1.5rem" }}>

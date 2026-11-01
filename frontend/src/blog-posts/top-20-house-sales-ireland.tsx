@@ -109,7 +109,7 @@ const sale = (rank: number) => SALES[rank - 1];
 
 function Callout({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", margin: "1.5rem 0 2rem" }}>
+    <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", margin: "1.5rem 0 2rem" }}>
       <div style={{ fontSize: "1rem", color: "#1e40af" }}>{children}</div>
     </div>
   );
@@ -170,7 +170,7 @@ function RepeatTable() {
 }
 
 function MapFigure({ points, height, caption, label }: { points: TopSalePoint[]; height: number; caption: string; label: string }) {
-  const fallback = <div style={{ width: "100%", height: "100%", background: "#eef2f6" }} aria-hidden="true" />;
+  const fallback = <div style={{ width: "100%", height: "100%", background: "#e4eceb" }} aria-hidden="true" />;
   return (
     <figure style={{ margin: "1.5rem 0 2rem" }}>
       <div role="img" aria-label={label}
@@ -225,7 +225,7 @@ export function TopHouseSalesContent() {
         and are known locally for the Blackwater Valley Opera Festival. Mark Zuckerberg and Priscilla Chan bought it
         off-market in August 2026. The price first reported was €20–30 million; when the sale reached the register in
         October it showed {eurFull(sale(1).price)}, the highest price on the register for a home, bar one disputed entry
-        (see <a href="#walford" style={{ color: "#3b82f6", textDecoration: "underline" }}>the Walford puzzle</a>). A spokesperson said
+        (see <a href="#walford" style={{ color: "#1d4a42", textDecoration: "underline" }}>the Walford puzzle</a>). A spokesperson said
         the family "look forward to spending time in Ireland, where Meta maintains its international headquarters".
         James Dyson bought Ballynatray, the neighbouring 850-acre estate, in 2024.
       </P>
@@ -244,7 +244,7 @@ export function TopHouseSalesContent() {
         Walford is an Edwardian house from 1902, about 4,000 sq ft on 1.8 acres. Its 2016 sale, to a trust connected to
         Dermot Desmond, is the second-highest Dublin home price on the register, and planning permission was
         later granted to replace it with a 17,168 sq ft house. Its earlier history is the strangest on this list; see{" "}
-        <a href="#walford" style={{ color: "#3b82f6", textDecoration: "underline" }}>the Walford puzzle</a> below.
+        <a href="#walford" style={{ color: "#1d4a42", textDecoration: "underline" }}>the Walford puzzle</a> below.
       </P>
 
       <HomeHeading s={sale(4)} />
@@ -300,7 +300,7 @@ export function TopHouseSalesContent() {
         Guinness family house from 1937, home to Garech Browne until his death in 2018, and has appeared in films
         including <em>Excalibur</em> and <em>Braveheart</em> and in the series <em>Vikings</em>. It was listed at
         €28 million in 2017; the buyer, Count Padulli di Vighignolo, reportedly paid €20–25 million for the estate. See{" "}
-        <a href="#register-vs-deal" style={{ color: "#3b82f6", textDecoration: "underline" }}>register price vs the real deal</a>.
+        <a href="#register-vs-deal" style={{ color: "#1d4a42", textDecoration: "underline" }}>register price vs the real deal</a>.
       </P>
 
       <HomeHeading s={sale(11)} />
@@ -462,8 +462,8 @@ export function TopHouseSalesContent() {
 
       <Callout>
         <strong>What did your street sell for?</strong> Look up any address on the{" "}
-        <Link to="/" style={{ color: "#3b82f6", textDecoration: "underline" }}>interactive map</Link>, or get a free{" "}
-        <Link to="/valuation" style={{ color: "#3b82f6", textDecoration: "underline" }}>property valuation</Link> based
+        <Link to="/" style={{ color: "#1d4a42", textDecoration: "underline" }}>interactive map</Link>, or get a free{" "}
+        <Link to="/valuation" style={{ color: "#1d4a42", textDecoration: "underline" }}>property valuation</Link> based
         on real nearby sales.
       </Callout>
     </div>

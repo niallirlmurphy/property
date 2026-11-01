@@ -71,7 +71,7 @@ export function HowHomeIqValuesContent() {
       <p style={{ marginBottom: "1.5rem" }}>
         Every property valuation is really an answer to one hard question: <em>what would this specific home sell for
         today?</em> Our{" "}
-        <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>instant valuation tool</Link> answers it for
+        <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>instant valuation tool</Link> answers it for
         any Irish address in seconds, built entirely on real, public sold-price data. This post lifts the lid on how it
         works — not the secret sauce, but the ideas: where the data comes from, what we add to it, and the recent work
         that makes each estimate more trustworthy.
@@ -80,7 +80,7 @@ export function HowHomeIqValuesContent() {
       <SectionHeading>The foundation: the Property Price Register</SectionHeading>
       <p style={{ marginBottom: "1rem" }}>
         Ireland is fortunate to have the{" "}
-        <Link to="/blog/how-to-use-property-price-register" style={{ color: "#1d4ed8", fontWeight: 600 }}>Property Price
+        <Link to="/blog/how-to-use-property-price-register" style={{ color: "#10302b", fontWeight: 600 }}>Property Price
         Register</Link> (PPR): a public record of <strong>every residential property sale since 2010</strong>, with the
         address, the date and the actual price paid. That is gold for valuation. It isn't a listing site's asking prices
         or an estate agent's guide — it's what buyers <em>actually paid</em>, which is the only number that really
@@ -175,11 +175,11 @@ export function HowHomeIqValuesContent() {
         what's behind the result. It's free, instant, and built on data you can check yourself.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>Curious what your home is worth?</strong> Get a free instant valuation built from real comparable sales
           near you — with the comparables and confidence shown, and apartments valued off apartments.{" "}
-          <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>Value your property →</Link>
+          <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>Value your property →</Link>
         </p>
       </div>
 

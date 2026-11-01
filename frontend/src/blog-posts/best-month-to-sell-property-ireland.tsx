@@ -20,7 +20,7 @@ const PRICE_REST   = [96.7,97.1,95.2,96.5,96.5,99.9,100.9,102.2,101.6,102.6,102.
 // carries a direct value label so identity never relies on color alone).
 const INK = "#374151";
 const INK_MUTED = "#6b7280";
-const BLUE = "#2563eb";      // above annual median / magnitude
+const BLUE = "#1d4a42";      // above annual median / magnitude
 const AMBER = "#b45309";     // below annual median (darkened from #f59e0b for text-adjacent contrast)
 const GRID = "#e5e7eb";
 const SURFACE = "#fcfcfb";
@@ -200,7 +200,7 @@ export function BestMonthToSellContent() {
         Two clear seasonal patterns emerge, and they point to the same answer.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>The short answer:</strong> sales that close in <strong>late summer and autumn (August&ndash;November)</strong>
           {" "}fetch the highest prices relative to the rest of the year, and autumn is also when the most buyers are active.
@@ -343,12 +343,12 @@ export function BestMonthToSellContent() {
         </li>
       </ul>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>Thinking of selling?</strong> Check what comparable homes have actually sold for in your area with a free{" "}
-          <Link to="/valuation" style={{ color: "#3b82f6", textDecoration: "underline" }}>property valuation</Link>, or explore
+          <Link to="/valuation" style={{ color: "#1d4a42", textDecoration: "underline" }}>property valuation</Link>, or explore
           local sale prices and trends on the{" "}
-          <Link to="/" style={{ color: "#3b82f6", textDecoration: "underline" }}>interactive map</Link>.
+          <Link to="/" style={{ color: "#1d4a42", textDecoration: "underline" }}>interactive map</Link>.
         </p>
       </div>
     </div>

@@ -56,3 +56,11 @@ Files: `frontend/src/pages/TestUxPage.tsx`, `frontend/src/pages/TestUxPage.css` 
 - `<meta name="robots" content="noindex,nofollow">` via `Head`, no canonical, not in `sitemap.xml`, not in the waffle menu or footer.
 
 Verification: `npm run build` passes and `dist/testux/index.html` carries the noindex tag. Not verified in a browser: the available browser tool only opens https URLs, so the dev server could not be screenshotted at desktop and mobile widths, and the live API round trip from the page was not exercised end to end. Do a manual pass with `npm run dev` and `VITE_API_URL` set.
+
+## Final rollout
+
+The /testux design (OS-map style: bog green and gorse) is now the whole site.
+- Tokens live in `frontend/src/styles/theme.css` (CSS variables). Shared chrome and building blocks (cards, stat tiles, tables, chart containers, breadcrumbs, gorse buttons, reduced-motion) are in `styles/site-chrome.css`.
+- `components/SiteHeader.tsx` and `SiteFooter.tsx` replace the old header, WaffleMenu and footer on every page (`PageHeader` and `Footer` re-export them). Footer links use router `<Link>`.
+- `/` is the /testux experience (`App.tsx`, `styles/home.css`) with the indexable HomeIntro copy, meta and JSON-LD kept. /testux, /testux2 and /testux3 remain, noindex.
+- Not restyled: Camino (Tailwind) pages, Leaflet internals, held files (HeatmapBody and two heatmap blog posts keep old hex colours).

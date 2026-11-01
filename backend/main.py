@@ -20,7 +20,7 @@ from dotenv import load_dotenv
 import sentry_sdk
 from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.asyncio import AsyncioIntegration
-from places import parse_localities, parse_query, pick_dominant_place, pick_place
+from places import is_bare_place, parse_localities, parse_query, pick_dominant_place, pick_place
 from price_vat import PRICE_INCL_VAT
 from address_normalize import normalize_address
 from bulk_sales import BULK_ADDR_RE, BULK_DESC_RE, BULK_FLAT_RE, BULK_PRICE
@@ -1050,6 +1050,14 @@ async def resolve_location(query: str, county: Optional[str] = None,
     result = await _geocode_place(query, county)
     if result:
         return _cache_and_return(*result, "db_place")
+
+    # 4c'. A bare town name from outside the county filter ("Kenmare" with the Dublin
+    # default) is the town, not a same-named Dublin street ("Kenmare Parade"): try it
+    # before the token scan. Anything with a street, number or county still goes on.
+    if is_bare_place(query):
+        result = await _geocode_place(query, county, anywhere=True)
+        if result:
+            return _cache_and_return(*result, "db_place_elsewhere")
 
     # 4d. Token-based DB lookup — every significant word in the address (Rd↔Road,
     # plurals), accepted only as a tight cluster: developments, estates, streets.

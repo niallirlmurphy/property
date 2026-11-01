@@ -463,7 +463,7 @@ export function MarketDrivers2010To2026Content() {
         Skibbereen.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>The headline:</strong> this is a <strong>demand-led market running into a supply wall</strong>. Since 2010
           Ireland has added <strong>971,000 people</strong>. House building collapsed to <strong>4,575 homes in 2013</strong>{" "}
@@ -685,7 +685,7 @@ export function MarketDrivers2010To2026Content() {
 
       <SectionHeading>So what is the data telling us?</SectionHeading>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1rem", margin: "1rem 0 1.5rem" }}>
-        <div style={{ background: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.1rem 1.25rem" }}>
+        <div style={{ background: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.1rem 1.25rem" }}>
           <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1e40af", marginTop: 0, marginBottom: "0.6rem" }}>What's driving it</h3>
           <ul style={{ margin: 0, paddingLeft: "1.1rem", fontSize: "0.95rem", lineHeight: 1.6 }}>
             <li style={{ marginBottom: "0.5rem" }}><strong>Demand, mostly from population growth.</strong> 971,000 more people since 2010, more than half of it net migration since 2015.</li>
@@ -732,7 +732,7 @@ export function MarketDrivers2010To2026Content() {
         <li><strong>Lining up trends is not proof.</strong> We use standard economic reasoning to explain why these series move together, but this is not a formal model.</li>
       </ul>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>See how your area compares.</strong> Search any address, Eircode or town to see every recorded sale nearby
           with price trends since 2010, or get an instant estimate for your own home.{" "}

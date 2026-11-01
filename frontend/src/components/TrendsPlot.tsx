@@ -48,8 +48,8 @@ export default function TrendsPlot({ data }: { data: TrendPoint[] }) {
         <YAxis tickFormatter={formatK} tick={{ fontSize: 11 }} width={50} />
         <Tooltip content={<CustomTooltip />} />
         <Legend wrapperStyle={{ fontSize: 11 }} />
-        <Line type="monotone" dataKey="median_price" name="Median" stroke="#1a3c5e" strokeWidth={2} dot={false} />
-        <Line type="monotone" dataKey="avg_price"    name="Average" stroke="#e07b39" strokeWidth={2} dot={false} strokeDasharray="4 2" />
+        <Line type="monotone" dataKey="median_price" name="Median" stroke="#10302b" strokeWidth={2} dot={false} />
+        <Line type="monotone" dataKey="avg_price"    name="Average" stroke="#a86a00" strokeWidth={2} dot={false} strokeDasharray="4 2" />
       </LineChart>
     </ResponsiveContainer>
   );

@@ -1,0 +1,86 @@
+/* Shared header, footer and page-level building blocks. Reads the tokens in theme.css. */
+body { font-family: var(--font); background: var(--paper); color: var(--text); }
+
+/* Keyboard focus everywhere (low specificity so components can override) */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline: 3px solid var(--focus-light); outline-offset: 2px; }
+.site-header :focus-visible, .site-footer :focus-visible, .page-title-band :focus-visible { outline-color: var(--focus); }
+
+/* ---------- header ---------- */
+.site-header { position: sticky; top: 0; z-index: 1000; background: var(--ink-2); color: #fff; border-bottom: 1px solid #ffffff1f; }
+.site-header *, .site-footer * { box-sizing: border-box; }
+.site-header-in { max-width: 1120px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 18px; }
+.site-brand { display: inline-flex; align-items: center; gap: 9px; color: #fff; text-decoration: none; font: 800 21px/1 var(--display); letter-spacing: -0.02em; min-height: 44px; }
+.site-brand b { color: var(--gorse); font-weight: 800; }
+.site-nav { display: flex; align-items: center; gap: 2px; margin-left: auto; }
+.site-nav > a, .site-more-btn { color: #d3e6e1; text-decoration: none; font: 500 14.5px/1 var(--font); padding: 0 11px; min-height: 44px; display: inline-flex; align-items: center; gap: 6px; border-radius: var(--radius-s); background: none; border: 0; cursor: pointer; }
+.site-nav > a:hover, .site-more-btn:hover { background: #ffffff14; color: #fff; }
+.site-more { position: relative; }
+.site-more-list { position: absolute; right: 0; top: calc(100% + 6px); min-width: 210px; background: var(--ink-2); border: 1px solid #ffffff2e; border-radius: var(--radius-m); padding: 6px; box-shadow: 0 14px 30px #00000066; display: flex; flex-direction: column; }
+.site-more-list a { color: #e4f1ee; text-decoration: none; font-size: 14.5px; padding: 0 12px; min-height: 44px; display: flex; align-items: center; border-radius: var(--radius-s); }
+.site-more-list a:hover { background: #ffffff14; color: #fff; }
+.site-cta { background: var(--gorse); color: var(--ink-2); text-decoration: none; font-weight: 700; font-size: 14.5px; padding: 0 16px; min-height: 44px; display: inline-flex; align-items: center; border-radius: var(--radius-m); white-space: nowrap; }
+.site-cta:hover { background: #ffd24f; }
+.site-burger { display: none; margin-left: auto; width: 44px; height: 44px; background: none; border: 1px solid #ffffff40; border-radius: var(--radius-m); flex-direction: column; justify-content: center; align-items: center; gap: 4px; cursor: pointer; }
+.site-burger span { width: 20px; height: 2px; background: #fff; border-radius: 2px; }
+.site-menu { display: none; }
+
+/* title band under the header for pages whose h1 used to live in the old header */
+.page-title-band { background: var(--ink); color: #fff; }
+.page-title-band-in { max-width: 1120px; margin: 0 auto; padding: 14px 20px; }
+.page-title-band h1 { font: 800 clamp(20px, 3vw, 28px)/1.15 var(--display); letter-spacing: -0.02em; color: #fff; margin: 0; }
+
+/* ---------- footer ---------- */
+.site-footer { background: var(--ink-2); color: #b8d3cd; margin-top: 48px; padding: 40px 20px 20px; text-align: left; font-size: 14px; border-top: 0; }
+.site-footer-in { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 28px; }
+.site-footer p { margin: 10px 0 0; font-size: 14px; max-width: 26em; color: #b8d3cd; }
+.site-footer h2 { margin: 0 0 8px; font: 700 15px var(--display); color: #fff; }
+.site-footer a { display: block; color: #b8d3cd; text-decoration: none; padding: 0; min-height: 36px; line-height: 36px; font-size: 14.5px; }
+.site-footer a:hover { color: var(--gorse); text-decoration: underline; }
+.site-footer .site-brand { display: inline-flex; color: #fff; line-height: 1; }
+.site-footer .site-footer-note { max-width: 1000px; margin: 24px auto 0; padding-top: 14px; border-top: 1px solid #ffffff1f; font-size: 12.5px; }
+.site-footer .site-build { margin-top: 6px; padding-top: 0; border-top: 0; color: #8fb0a8; }
+.results-pane .site-footer { padding: 40px 20px 20px; }
+
+@media (max-width: 900px) {
+  .site-nav, .site-header .site-cta { display: none; }
+  .site-burger { display: flex; }
+  .site-menu { display: flex; flex-direction: column; padding: 8px 16px 16px; border-top: 1px solid #ffffff1f; max-height: calc(100dvh - 64px); overflow-y: auto; }
+  .site-menu a { color: #fff; text-decoration: none; padding: 0 4px; min-height: 48px; display: flex; align-items: center; font-size: 17px; border-bottom: 1px solid #ffffff14; }
+  .site-menu .site-cta-wide { justify-content: center; margin-top: 14px; border: 0; color: var(--ink-2); }
+  .site-footer-in { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 639px) {
+  .site-header-in { padding: 8px 14px; }
+  .page-title-band-in { padding: 12px 14px; }
+}
+
+/* ---------- shared building blocks, restyled to the OS palette ---------- */
+.content-page h1, .static-content h1 { font-family: var(--display); font-weight: 800; letter-spacing: -0.02em; color: var(--ink); }
+.content-page h2, .static-content h2, .content-page h3, .static-content h3 { font-family: var(--display); color: var(--ink); }
+.content-page a, .static-content a { color: var(--ink-3); }
+.content-page a:hover, .static-content a:hover { color: var(--ink); }
+.content-intro { color: var(--text); }
+
+/* buttons: gorse is the one action colour */
+.btn-search, .modal-btn:not(.modal-btn--secondary), .valuation-cta-btn { background: var(--gorse); color: var(--ink-2); border-radius: var(--radius-m); font-weight: 700; min-height: 44px; }
+.btn-search:hover:not(:disabled), .modal-btn:not(.modal-btn--secondary):hover:not(:disabled), .valuation-cta-btn:hover { background: #ffd24f; }
+
+/* cards and stat tiles */
+.stat-card, .mc-stat, .val-stat, .eircode-summary, .result-card, .area-card, .street-link-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-l); }
+.stat-card strong, .mc-stat strong, .val-stat-value { font-family: var(--display); font-weight: 800; letter-spacing: -0.02em; color: var(--ink); font-variant-numeric: tabular-nums; }
+.result-card:hover, .result-card.active, .area-card:hover, .street-link-card:hover { border-color: var(--ink-3); box-shadow: var(--shadow-m); }
+
+/* tables */
+.mc-table th, .postcode-table th, .sales-table th, .val-table th, .heatmap-loc-table th { background: var(--tint); color: var(--ink); border-bottom: 2px solid var(--line); }
+.mc-table tr:hover td, .postcode-table tr:hover td, .sales-table tr:hover td { background: var(--paper); }
+
+/* chart containers */
+.mc-chart-block, .trends-panel, .val-stats-card, .val-comparables-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-l); }
+
+/* breadcrumbs */
+.breadcrumbs a { color: var(--ink-3); text-decoration: underline; text-underline-offset: 3px; }
+.breadcrumbs span[aria-current="page"] { color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}

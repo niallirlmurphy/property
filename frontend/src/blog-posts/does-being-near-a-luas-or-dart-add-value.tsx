@@ -184,7 +184,7 @@ export function TransportPremiumContent() {
         <strong>Green Line Luas, Red Line Luas and the DART</strong>.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>The short answer:</strong> being within 1&nbsp;km of the <strong>Green Line Luas</strong> is linked to a
           small price premium of around <strong>3&ndash;5%</strong> once you compare similar homes in the same area. The{" "}
@@ -286,11 +286,11 @@ export function TransportPremiumContent() {
         the dose-response and the adjusted figures together precisely so the confounding is visible rather than hidden.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>Want to see the sales behind these numbers?</strong> Use HomeIQ to explore actual sold prices near any
           Luas or DART stop, and get a free instant valuation for any Dublin address based on comparable sales.{" "}
-          <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>Value your property →</Link>
+          <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>Value your property →</Link>
         </p>
       </div>
     </div>

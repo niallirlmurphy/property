@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { fetchCountySummary } from "../api";
 import TrendsChart from "./TrendsChart";
 import PageHeader from "./PageHeader";
+import Footer from "./Footer";
 import type { CountySummary } from "../types";
 import type { CountyContent } from "../content/countyData";
 import { usePageMeta } from "../hooks/usePageMeta";
@@ -217,6 +218,7 @@ export default function CountyPageTemplate({ content }: CountyPageTemplateProps)
           </>
         )}
       </div>
+      <Footer />
     </>
   );
 }

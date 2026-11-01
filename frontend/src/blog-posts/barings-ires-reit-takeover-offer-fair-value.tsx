@@ -123,7 +123,7 @@ export function BaringsIresTakeoverContent() {
     <div style={{ fontSize: "1.125rem", lineHeight: 1.75, color: INK }}>
       <p style={{ fontSize: "1rem", background: "#fff7ed", border: "1px solid #fed7aa", borderRadius: "0.5rem", padding: "0.85rem 1.1rem", marginBottom: "1.5rem" }}>
         <strong>Update, 31 October 2026:</strong>{" "}
-        <Link to="/blog/barings-ires-reit-takeover-update-pusu-deadline" style={{ color: "#1d4ed8", fontWeight: 600 }}>
+        <Link to="/blog/barings-ires-reit-takeover-update-pusu-deadline" style={{ color: "#10302b", fontWeight: 600 }}>
           where the bid stands ahead of the 9 November deadline
         </Link>
         , with a timeline, shareholder sell-downs, and what VAT and the CSO figures mean for our valuation.
@@ -137,7 +137,7 @@ export function BaringsIresTakeoverContent() {
         shareholder is now asking: <em>is €1.386 a fair price — or is the portfolio being bought on the cheap?</em>
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>The headline:</strong> Barings' <strong>€1.386</strong> cash offer values IRES's equity at about{" "}
           <strong>€727 million</strong> — almost exactly its reported <strong>138.8-cent</strong> book NAV. That is a
@@ -151,9 +151,9 @@ export function BaringsIresTakeoverContent() {
       <div style={{ background: SURFACE, border: `1px solid ${GRID}`, borderRadius: "0.5rem", padding: "1rem 1.25rem", marginBottom: "2rem" }}>
         <p style={{ fontSize: "1rem", margin: 0 }}>
           <strong>Own an apartment in Dublin?</strong> Our numbers come from the same sold prices you can search.{" "}
-          <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>Value your home</Link> against real
+          <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>Value your home</Link> against real
           comparable sales, or see{" "}
-          <Link to="/blog/dublin-property-prices-by-postcode-2026" style={{ color: "#1d4ed8", fontWeight: 600 }}>
+          <Link to="/blog/dublin-property-prices-by-postcode-2026" style={{ color: "#10302b", fontWeight: 600 }}>
             Dublin prices by postcode
           </Link>.
         </p>
@@ -215,11 +215,11 @@ export function BaringsIresTakeoverContent() {
       <SectionHeading>What we think the bricks are actually worth</SectionHeading>
       <p style={{ marginBottom: "1rem" }}>
         This is where our earlier work comes in. In our{" "}
-        <Link to="/blog/valuing-ires-reit-property-portfolio" style={{ color: "#1d4ed8", fontWeight: 600 }}>
+        <Link to="/blog/valuing-ires-reit-property-portfolio" style={{ color: "#10302b", fontWeight: 600 }}>
           portfolio valuation
         </Link>{" "}
         we ran all <strong>35 developments</strong> and <strong>3,615 IRES-owned units</strong> through the same engine that
-        powers our public <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>valuation tool</Link> —
+        powers our public <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>valuation tool</Link> —
         pricing each apartment against genuine, arm's-length resale comparables from the Property Price Register,
         time-adjusted to today and weighted by distance, recency, bedroom count and property type. The sum came to about{" "}
         <strong>€1.52 billion</strong> on an open-market, sold-individually basis — roughly <strong>19% above</strong> the
@@ -324,16 +324,16 @@ export function BaringsIresTakeoverContent() {
         done deal: the firm-offer deadline is <strong>9 November</strong>, and until then the price is not settled.
       </p>
 
-      <div style={{ backgroundColor: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
+      <div style={{ backgroundColor: "#e4f1ee", border: "1px solid #bfdbfe", borderRadius: "0.5rem", padding: "1.5rem", marginTop: "2rem" }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>Curious what your own home is worth?</strong> The same engine we pointed at IRES's €1.5bn book will value a
           single Irish address in seconds — from real comparable sales, with the comparables and confidence shown.{" "}
-          <Link to="/valuation" style={{ color: "#1d4ed8", fontWeight: 600 }}>Value your property →</Link>
+          <Link to="/valuation" style={{ color: "#10302b", fontWeight: 600 }}>Value your property →</Link>
         </p>
         <p style={{ fontSize: "0.95rem", color: "#1e40af", margin: "0.75rem 0 0" }}>
           Or browse sold prices for{" "}
-          <Link to="/county/dublin" style={{ color: "#1d4ed8", fontWeight: 600 }}>Dublin</Link>, or read{" "}
-          <Link to="/blog/how-homeiq-values-a-home" style={{ color: "#1d4ed8", fontWeight: 600 }}>how our valuations work</Link>.
+          <Link to="/county/dublin" style={{ color: "#10302b", fontWeight: 600 }}>Dublin</Link>, or read{" "}
+          <Link to="/blog/how-homeiq-values-a-home" style={{ color: "#10302b", fontWeight: 600 }}>how our valuations work</Link>.
         </p>
       </div>
 

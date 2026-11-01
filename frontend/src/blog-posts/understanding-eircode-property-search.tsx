@@ -76,7 +76,7 @@ export function EircodeGuideContent() {
       </p>
 
       <div style={{
-        backgroundColor: "#eff6ff",
+        backgroundColor: "#e4f1ee",
         border: "1px solid #bfdbfe",
         borderRadius: "0.5rem",
         padding: "1.5rem",
@@ -84,7 +84,7 @@ export function EircodeGuideContent() {
       }}>
         <p style={{ fontSize: "1rem", color: "#1e40af", margin: 0 }}>
           <strong>Try it now:</strong> Search by Eircode on our{" "}
-          <Link to="/" style={{ color: "#3b82f6", textDecoration: "underline" }}>
+          <Link to="/" style={{ color: "#1d4a42", textDecoration: "underline" }}>
             homepage
           </Link>
           {" "}(e.g., D02, H91, V94).
