@@ -24,6 +24,9 @@ export const routes = [
     element: <ScrollToTopLayout />,
     children: [
   { path: "/", element: <App /> },
+  { path: "/testux", lazy: () => import("./pages/TestUxPage").then(page) },   // UX prototype, noindex
+  { path: "/testux2", lazy: () => import("./pages/TestUx2Page").then(page) },   // UX prototype 2 (photographic), noindex
+  { path: "/testux3", lazy: () => import("./pages/TestUx3Page").then(page) },   // UX prototype 3 (warm, illustrated), noindex
   { path: "/s1", lazy: () => import("./pages/ExactSearchPage").then(page) },
   { path: "/polygon", lazy: () => import("./pages/PolygonSearchPage").then(page) },
   { path: "/heatmap", lazy: () => import("./pages/HeatmapPage").then(page) },
