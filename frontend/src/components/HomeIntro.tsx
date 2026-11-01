@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Head } from "vite-react-ssg";
-import { AREAS, COUNTIES, DUBLIN_EIRCODE_AREAS, PROVINCES, countyFromSlug } from "../areas";
+import { AREAS, COUNTIES, DUBLIN_EIRCODE_AREAS, countySlug } from "../areas";
 import { STREETS } from "../streets";
 import { publishedPosts } from "../blogPosts";
 import { SITE_STATS as S } from "../siteStats";
@@ -16,12 +17,10 @@ const POPULAR_AREAS = [
   "limerick-city", "waterford-city", "kilkenny-city", "drogheda", "navan", "naas",
 ];
 
-const TOOLS = [
-  { to: "/valuation", label: "Property valuation" },
-  { to: "/heatmap", label: "Price change heatmap" },
-  { to: "/property-price-register", label: "Property Price Register guide" },
-  { to: "/mortgage", label: "Mortgage calculator" },
-];
+// The six counties with the most register sales (Oct 2026: Dublin 252k ... Limerick 29k),
+// shown first; the rest follow alphabetically behind "More counties".
+const TOP_COUNTIES = ["Dublin", "Cork", "Kildare", "Galway", "Meath", "Limerick"];
+const OTHER_COUNTIES = COUNTIES.filter((c) => !TOP_COUNTIES.includes(c));
 
 // Visible on the page and mirrored in the FAQPage structured data below; Google
 // requires the two to match, so edit questions here only.
@@ -83,6 +82,7 @@ const STRUCTURED_DATA = JSON.stringify([
 ]);
 
 export default function HomeIntro() {
+  const [allCounties, setAllCounties] = useState(false);
   const areas = POPULAR_AREAS
     .map((slug) => AREAS.find((a) => a.slug === slug))
     .filter((a): a is NonNullable<typeof a> => a != null);
@@ -116,24 +116,23 @@ export default function HomeIntro() {
           median prices, sales volumes and recent sales from the register.
         </p>
 
-        <h3>Tools</h3>
-        <ul className="home-intro-links">
-          {TOOLS.map((t) => (
-            <li key={t.to}><Link to={t.to}>{t.label}</Link></li>
-          ))}
-        </ul>
-
         <h3>House prices by county</h3>
-        {PROVINCES.map((p) => (
-          <div key={p.name} className="home-intro-group">
-            <span className="home-intro-group-name">{p.name}</span>
-            <ul className="home-intro-links">
-              {p.counties.map((slug) => (
-                <li key={slug}><Link to={`/county/${slug}`}>{countyFromSlug(slug)}</Link></li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        {/* Every county link stays in the prerendered HTML; the rest are only hidden until "More" */}
+        <ul className="home-intro-links">
+          {TOP_COUNTIES.map((c) => (
+            <li key={c}><Link to={`/county/${countySlug(c)}`}>{c}</Link></li>
+          ))}
+          {OTHER_COUNTIES.map((c) => (
+            <li key={c} hidden={!allCounties}><Link to={`/county/${countySlug(c)}`}>{c}</Link></li>
+          ))}
+          {!allCounties && (
+            <li>
+              <button type="button" className="home-intro-more" aria-expanded={false} onClick={() => setAllCounties(true)}>
+                More counties ({OTHER_COUNTIES.length})
+              </button>
+            </li>
+          )}
+        </ul>
 
         <h3>Dublin property prices by postcode</h3>
         <ul className="home-intro-links">
