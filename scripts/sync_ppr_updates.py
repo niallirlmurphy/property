@@ -36,6 +36,7 @@ import tempfile
 import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
+from collections import Counter
 from typing import Optional, List, Dict
 from dotenv import load_dotenv
 
@@ -136,6 +137,26 @@ async def get_most_recent_sale_date(conn: asyncpg.Connection) -> Optional[dateti
     return row['max_date'] if row else None
 
 
+# The PPR adds each sale when its stamp duty return is filed, often weeks or months
+# after the sale date, so every new file has rows dated before our newest sale
+# (Strancally Castle: sold 17 Aug 2026, published Oct). Each sync rescans this many
+# months before the newest sale and imports only the rows the database lacks.
+RESCAN_MONTHS = 12
+
+
+def sale_key(sale_date, address: str, price) -> tuple:
+    """Identity of a PPR row for matching CSV against DB (no unique key in properties)."""
+    return (sale_date, normalize_address(html.unescape(address or '')), round(float(price) * 100))
+
+
+async def get_existing_sale_keys(conn: asyncpg.Connection, since_date) -> Counter:
+    """Multiset of sale_key for DB rows dated after since_date (indexed on sale_date)."""
+    rows = await conn.fetch("""
+        SELECT sale_date, address, price FROM properties WHERE sale_date > $1
+    """, since_date)
+    return Counter(sale_key(r['sale_date'], r['address'], r['price']) for r in rows)
+
+
 async def download_ppr_csv(output_path: str) -> bool:
     """
     Download PPR CSV file by submitting form to PPR website.
@@ -226,8 +247,8 @@ async def download_ppr_csv(output_path: str) -> bool:
         return False
 
 
-async def filter_new_sales(csv_path: str, since_date: datetime.date) -> List[Dict]:
-    """Read PPR CSV and filter to sales after since_date.
+async def filter_new_sales(csv_path: str, since_date: datetime.date, existing: Counter) -> List[Dict]:
+    """Read PPR CSV and filter to sales after since_date that aren't in `existing`.
 
     Optimized: PPR CSV is sorted oldest→newest, so we read from the end backwards
     to find recent sales quickly without scanning all 785k+ rows.
@@ -261,7 +282,11 @@ async def filter_new_sales(csv_path: str, since_date: datetime.date) -> List[Dic
             sale_date = normalized['sale_date']  # Already a date object
 
             if sale_date > since_date:
-                new_sales.append(normalized)
+                key = sale_key(sale_date, normalized['address'], normalized['price'])
+                if existing[key] > 0:
+                    existing[key] -= 1      # already imported
+                else:
+                    new_sales.append(normalized)
                 cutoff_line = i
             else:
                 # Hit older dates, stop scanning
@@ -273,6 +298,22 @@ async def filter_new_sales(csv_path: str, since_date: datetime.date) -> List[Dic
 
     # Reverse to get chronological order (oldest new sale first)
     new_sales.reverse()
+
+    # The PPR also amends published rows (date moved, price corrected). A CSV row whose
+    # address matches a DB row left without an exact match is that amendment, not a new
+    # sale: skip it rather than import a duplicate.
+    unmatched = Counter()
+    for key, count in existing.items():
+        if count > 0:
+            unmatched[key[1]] += count
+    kept = []
+    for sale in new_sales:
+        if unmatched[sale['address_normalized']] > 0:
+            unmatched[sale['address_normalized']] -= 1
+        else:
+            kept.append(sale)
+    print(f"  Skipped {len(new_sales) - len(kept)} amended rows already in database (date/price changed)")
+    new_sales = kept
 
     skipped = cutoff_line - 1  # Approximate
     print(f"  Found {len(new_sales)} new sales")
@@ -652,6 +693,9 @@ async def sync_ppr_updates(dry_run: bool = False, since_date: Optional[str] = No
             cutoff = await get_most_recent_sale_date(conn)
             if cutoff:
                 print(f"Most recent sale in database: {cutoff}")
+                months = cutoff.year * 12 + cutoff.month - 1 - RESCAN_MONTHS
+                cutoff = cutoff.replace(year=months // 12, month=months % 12 + 1, day=1) - timedelta(days=1)
+                print(f"Rescanning late filings after {cutoff} ({RESCAN_MONTHS} months)")
             else:
                 print("No sales in database, importing all")
                 cutoff = datetime(2010, 1, 1).date()  # PPR starts from 2010
@@ -683,7 +727,9 @@ async def sync_ppr_updates(dry_run: bool = False, since_date: Optional[str] = No
         print()
 
         # 3. Filter to new sales
-        new_sales = await filter_new_sales(csv_path, cutoff)
+        existing = await get_existing_sale_keys(conn, cutoff)
+        print(f"  {sum(existing.values()):,} sales already in database since {cutoff}")
+        new_sales = await filter_new_sales(csv_path, cutoff, existing)
 
         if not new_sales:
             print("\n✓ Database is up to date, no new sales to import")

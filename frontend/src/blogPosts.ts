@@ -47,8 +47,8 @@ export function relatedPosts(post: BlogPost, limit = 3, now: Date = new Date()):
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "top-20-house-sales-ireland",
-    title: "Top 20 House Sales in Ireland: The Most Expensive Homes on the Property Price Register",
-    description: "The 20 highest prices paid for a single home in Ireland since 2010, from Inniscorrig in Dalkey (€14.96M) to Kenah Hill in Killiney (€9M): their history, size and setting, the estates the register undervalues, and the puzzle of Walford's €71.95M entry.",
+    title: "Top 21 House Sales in Ireland: The Most Expensive Homes on the Property Price Register",
+    description: "The 21 highest prices paid for a single home in Ireland since 2010, from Mark Zuckerberg's Strancally Castle in Waterford (€51.17M) and Inniscorrig in Dalkey (€14.96M) to Kenah Hill in Killiney (€9M): their history, size and setting, the estates the register undervalues, and the puzzle of Walford's €71.95M entry.",
     date: "2026-11-01",
     author: "HomeIQ Team",
     tags: ["Analysis", "Dublin", "Luxury Homes", "Property Price Register"],
