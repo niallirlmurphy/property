@@ -36,7 +36,7 @@ import tempfile
 import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
-from collections import Counter
+from collections import Counter, defaultdict
 from typing import Optional, List, Dict
 from dotenv import load_dotenv
 
@@ -141,6 +141,8 @@ async def get_most_recent_sale_date(conn: asyncpg.Connection) -> Optional[dateti
 # after the sale date, so every new file has rows dated before our newest sale
 # (Strancally Castle: sold 17 Aug 2026, published Oct). Each sync rescans this many
 # months before the newest sale and imports only the rows the database lacks.
+# It also amends published rows (date moved, price corrected); those update the
+# DB row in place, keeping its id, geocode and enrichment.
 RESCAN_MONTHS = 12
 
 
@@ -149,12 +151,15 @@ def sale_key(sale_date, address: str, price) -> tuple:
     return (sale_date, normalize_address(html.unescape(address or '')), round(float(price) * 100))
 
 
-async def get_existing_sale_keys(conn: asyncpg.Connection, since_date) -> Counter:
-    """Multiset of sale_key for DB rows dated after since_date (indexed on sale_date)."""
+async def get_existing_sales(conn: asyncpg.Connection, since_date) -> Dict[tuple, List[dict]]:
+    """DB rows dated after since_date (indexed on sale_date), grouped by sale_key."""
     rows = await conn.fetch("""
-        SELECT sale_date, address, price FROM properties WHERE sale_date > $1
+        SELECT id, sale_date, address, price FROM properties WHERE sale_date > $1
     """, since_date)
-    return Counter(sale_key(r['sale_date'], r['address'], r['price']) for r in rows)
+    existing: Dict[tuple, List[dict]] = defaultdict(list)
+    for r in rows:
+        existing[sale_key(r['sale_date'], r['address'], r['price'])].append(dict(r))
+    return existing
 
 
 async def download_ppr_csv(output_path: str) -> bool:
@@ -247,8 +252,11 @@ async def download_ppr_csv(output_path: str) -> bool:
         return False
 
 
-async def filter_new_sales(csv_path: str, since_date: datetime.date, existing: Counter) -> List[Dict]:
-    """Read PPR CSV and filter to sales after since_date that aren't in `existing`.
+async def filter_new_sales(csv_path: str, since_date: datetime.date, existing: Dict[tuple, List[dict]]):
+    """Read PPR CSV and split sales after since_date into (new, amended, unmatched).
+
+    new: CSV rows the DB lacks. amended: (DB row, CSV row) where the register changed the
+    date or price of a row we hold. unmatched: DB rows with no CSV counterpart at all.
 
     Optimized: PPR CSV is sorted oldest→newest, so we read from the end backwards
     to find recent sales quickly without scanning all 785k+ rows.
@@ -283,8 +291,8 @@ async def filter_new_sales(csv_path: str, since_date: datetime.date, existing: C
 
             if sale_date > since_date:
                 key = sale_key(sale_date, normalized['address'], normalized['price'])
-                if existing[key] > 0:
-                    existing[key] -= 1      # already imported
+                if existing.get(key):
+                    existing[key].pop()     # already imported
                 else:
                     new_sales.append(normalized)
                 cutoff_line = i
@@ -299,28 +307,66 @@ async def filter_new_sales(csv_path: str, since_date: datetime.date, existing: C
     # Reverse to get chronological order (oldest new sale first)
     new_sales.reverse()
 
-    # The PPR also amends published rows (date moved, price corrected). A CSV row whose
-    # address matches a DB row left without an exact match is that amendment, not a new
-    # sale: skip it rather than import a duplicate.
-    unmatched = Counter()
-    for key, count in existing.items():
-        if count > 0:
-            unmatched[key[1]] += count
-    kept = []
+    # A CSV row whose address matches a DB row left without an exact match is the
+    # register's amendment of that row (closest date wins), not a new sale.
+    by_address: Dict[str, List[dict]] = defaultdict(list)
+    for key, rows in existing.items():
+        by_address[key[1]].extend(rows)
+    kept, amended = [], []
     for sale in new_sales:
-        if unmatched[sale['address_normalized']] > 0:
-            unmatched[sale['address_normalized']] -= 1
+        candidates = by_address.get(sale['address_normalized'])
+        if candidates:
+            old = min(candidates, key=lambda r: abs((r['sale_date'] - sale['sale_date']).days))
+            candidates.remove(old)
+            amended.append((old, sale))
         else:
             kept.append(sale)
-    print(f"  Skipped {len(new_sales) - len(kept)} amended rows already in database (date/price changed)")
     new_sales = kept
+    unmatched = [r for rows in by_address.values() for r in rows]
+    print(f"  Found {len(amended)} amended rows (register changed date/price)")
+    print(f"  {len(unmatched)} DB rows have no counterpart in the register file")
 
     skipped = cutoff_line - 1  # Approximate
     print(f"  Found {len(new_sales)} new sales")
     print(f"  Scanned last {len(lines) - cutoff_line:,} rows (skipped first {skipped:,})")
     print(f"  Invalid {invalid} rows")
 
-    return new_sales
+    return new_sales, amended, unmatched
+
+
+async def apply_amendments(conn: asyncpg.Connection, amended, dry_run: bool):
+    """Update amended rows in place to the register's current values."""
+    if not amended:
+        return
+    for old, sale in amended[:5]:
+        print(f"  #{old['id']} {sale['address'][:50]}: {old['sale_date']} €{old['price']:,.0f}"
+              f" → {sale['sale_date']} €{sale['price']:,.0f}")
+    if dry_run:
+        print(f"  [DRY RUN] Would amend {len(amended)} rows")
+        return
+    await conn.executemany("""
+        UPDATE properties SET sale_date = $2, price = $3, not_full_market_price = $4,
+               vat_exclusive = $5, description = $6, size_description = $7,
+               eircode = COALESCE(eircode, $8)
+        WHERE id = $1
+    """, [(old['id'], s['sale_date'], s['price'], s['not_full_market_price'], s['vat_exclusive'],
+           s['description'], s['size_description'], s['eircode']) for old, s in amended])
+    print(f"  ✓ Amended {len(amended)} rows")
+
+
+def write_unmatched_report(unmatched, key_counts: Counter):
+    """CSV of DB rows the register file no longer has, for review (nothing is deleted)."""
+    if not unmatched:
+        return
+    path = PROJECT_ROOT / "logs" / f"ppr_unmatched_{datetime.now():%Y-%m-%d}.csv"
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["id", "sale_date", "address", "price", "likely_cause"])
+        for r in sorted(unmatched, key=lambda r: (r['sale_date'], r['id'])):
+            key = sale_key(r['sale_date'], r['address'], r['price'])
+            cause = "duplicate in DB" if key_counts[key] > 1 else "not in register file"
+            w.writerow([r['id'], r['sale_date'], r['address'], r['price'], cause])
+    print(f"  Unmatched DB rows written to {path.relative_to(PROJECT_ROOT)}")
 
 
 async def geocode_new_sales(sales: List[Dict], output_csv: str):
@@ -727,9 +773,12 @@ async def sync_ppr_updates(dry_run: bool = False, since_date: Optional[str] = No
         print()
 
         # 3. Filter to new sales
-        existing = await get_existing_sale_keys(conn, cutoff)
-        print(f"  {sum(existing.values()):,} sales already in database since {cutoff}")
-        new_sales = await filter_new_sales(csv_path, cutoff, existing)
+        existing = await get_existing_sales(conn, cutoff)
+        key_counts = Counter({k: len(v) for k, v in existing.items()})
+        print(f"  {sum(key_counts.values()):,} sales already in database since {cutoff}")
+        new_sales, amended, unmatched = await filter_new_sales(csv_path, cutoff, existing)
+        await apply_amendments(conn, amended, dry_run)
+        write_unmatched_report(unmatched, key_counts)
 
         if not new_sales:
             print("\n✓ Database is up to date, no new sales to import")
