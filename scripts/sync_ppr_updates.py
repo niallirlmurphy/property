@@ -27,6 +27,7 @@ Usage:
 import asyncpg
 import asyncio
 import csv
+import difflib
 import html
 import os
 import sys
@@ -141,9 +142,16 @@ async def get_most_recent_sale_date(conn: asyncpg.Connection) -> Optional[dateti
 # after the sale date, so every new file has rows dated before our newest sale
 # (Strancally Castle: sold 17 Aug 2026, published Oct). Each sync rescans this many
 # months before the newest sale and imports only the rows the database lacks.
-# It also amends published rows (date moved, price corrected); those update the
-# DB row in place, keeping its id, geocode and enrichment.
+# It also amends published rows (date moved, price corrected, address respelled);
+# those update the DB row in place, keeping its id, geocode and enrichment.
 RESCAN_MONTHS = 12
+
+# An unmatched CSV row with the same date and price as a leftover DB row is that row
+# with its address corrected when the two addresses are at least this similar
+# (Parc/Pairc Na Manach 0.99, 60 Addison Dr/60 Riverbank Hall 0.77). Unrelated sales
+# that share a date and price score below it (81 The Park, Mullingar vs 17 Castle
+# Park, Dundalk: 0.47).
+ADDRESS_AMEND_SIMILARITY = 0.6
 
 
 def sale_key(sale_date, address: str, price) -> tuple:
@@ -321,9 +329,26 @@ async def filter_new_sales(csv_path: str, since_date: datetime.date, existing: D
             amended.append((old, sale))
         else:
             kept.append(sale)
-    new_sales = kept
+
+    # Then a same date and price with a similar address: the register respelled it
+    by_date_price: Dict[tuple, List[dict]] = defaultdict(list)
+    for key, rows in by_address.items():
+        for r in rows:
+            by_date_price[(r['sale_date'], round(float(r['price']) * 100))].append(r)
+    new_sales = []
+    for sale in kept:
+        candidates = by_date_price.get((sale['sale_date'], round(float(sale['price']) * 100)), [])
+        similarity = lambda r: difflib.SequenceMatcher(
+            None, sale_key(None, r['address'], 0)[1].lower(), sale['address_normalized'].lower()).ratio()
+        old = max(candidates, key=similarity, default=None)
+        if old is not None and similarity(old) >= ADDRESS_AMEND_SIMILARITY:
+            candidates.remove(old)
+            by_address[sale_key(None, old['address'], 0)[1]].remove(old)
+            amended.append((old, sale))
+        else:
+            new_sales.append(sale)
     unmatched = [r for rows in by_address.values() for r in rows]
-    print(f"  Found {len(amended)} amended rows (register changed date/price)")
+    print(f"  Found {len(amended)} amended rows (register changed date/price/address)")
     print(f"  {len(unmatched)} DB rows have no counterpart in the register file")
 
     skipped = cutoff_line - 1  # Approximate
@@ -339,7 +364,8 @@ async def apply_amendments(conn: asyncpg.Connection, amended, dry_run: bool):
     if not amended:
         return
     for old, sale in amended[:5]:
-        print(f"  #{old['id']} {sale['address'][:50]}: {old['sale_date']} €{old['price']:,.0f}"
+        respelled = f" (was {old['address'][:50]})" if old['address'] != sale['address'] else ""
+        print(f"  #{old['id']} {sale['address'][:50]}{respelled}: {old['sale_date']} €{old['price']:,.0f}"
               f" → {sale['sale_date']} €{sale['price']:,.0f}")
     if dry_run:
         print(f"  [DRY RUN] Would amend {len(amended)} rows")
@@ -347,10 +373,11 @@ async def apply_amendments(conn: asyncpg.Connection, amended, dry_run: bool):
     await conn.executemany("""
         UPDATE properties SET sale_date = $2, price = $3, not_full_market_price = $4,
                vat_exclusive = $5, description = $6, size_description = $7,
-               eircode = COALESCE(eircode, $8)
+               eircode = COALESCE(eircode, $8), address = $9, address_normalized = $10
         WHERE id = $1
     """, [(old['id'], s['sale_date'], s['price'], s['not_full_market_price'], s['vat_exclusive'],
-           s['description'], s['size_description'], s['eircode']) for old, s in amended])
+           s['description'], s['size_description'], s['eircode'], s['address'],
+           s['address_normalized']) for old, s in amended])
     print(f"  ✓ Amended {len(amended)} rows")
 
 
