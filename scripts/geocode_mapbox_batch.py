@@ -55,7 +55,7 @@ from dotenv import load_dotenv
 # Add scripts directory to path for imports
 sys.path.insert(0, os.path.dirname(__file__))
 from county_validator import validate_county, normalize_county, COUNTY_BOUNDS
-from development_pins import APPLY_SQL, PINNED_IDS_SQL
+from development_pins import APPLY_SQL, PIN_MATCH, PINNED_IDS_SQL
 from canonical_geocoding import (
     initialize_cache,
     get_canonical_coordinates,
@@ -217,6 +217,9 @@ async def fetch_centroid_properties(pool: asyncpg.Pool, limit: int = None,
             -- Skip rows already attempted: failures keep their centroid coords, so
             -- without this every sub-batch would re-select (and re-bill) them.
             WHERE p.geocode_attempts = 0 {county_clause}
+              -- A development pin is itself a point shared by 100+ addresses; its rows
+              -- are skipped later anyway, so leave them out here or they fill the LIMIT.
+              AND NOT EXISTS (SELECT 1 FROM development_pins d WHERE {PIN_MATCH})
             ORDER BY
                 (p.address ~ '^[0-9]') DESC,
                 (p.eircode IS NOT NULL AND p.eircode <> '') DESC,
