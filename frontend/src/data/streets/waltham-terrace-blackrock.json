@@ -1,9 +1,9 @@
 {
   "slug": "waltham-terrace-blackrock",
   "stats": {
-    "count": 26,
+    "count": 28,
     "median": 1732500,
-    "avg": 1804308,
+    "avg": 1794714,
     "min": 565000,
     "max": 3100000,
     "firstYear": 2010,
@@ -108,14 +108,30 @@
     },
     {
       "year": 2026,
-      "count": 1,
-      "median_price": 3100000,
-      "avg_price": 3100000,
-      "min_price": 3100000,
+      "count": 3,
+      "median_price": 2210000,
+      "avg_price": 2146667,
+      "min_price": 1130000,
       "max_price": 3100000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-08-27",
+      "address": "29 WALTHAM TERRACE, BLACKROCK, DUBLIN",
+      "price": 2210000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A94H7D7"
+    },
+    {
+      "date": "2026-03-31",
+      "address": "33 WALTHAM TERRACE, BLACKROCK, CO. DUBLIN",
+      "price": 1130000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A94A3W7"
+    },
     {
       "date": "2026-02-23",
       "address": "30 WALTHAM TERRACE, BLACKROCK, DUBLIN",
@@ -325,5 +341,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 26
+  "totalTransactions": 28
 }

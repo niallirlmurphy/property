@@ -1,13 +1,13 @@
 {
   "slug": "waterfall-heights-waterfall-road",
   "stats": {
-    "count": 104,
-    "median": 497500,
-    "avg": 484472,
+    "count": 105,
+    "median": 499999,
+    "avg": 485001,
     "min": 352422,
-    "max": 527500,
+    "max": 540000,
     "firstYear": 2024,
-    "lastYear": 2025
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -25,9 +25,25 @@
       "avg_price": 501729,
       "min_price": 362398,
       "max_price": 527500
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 540000,
+      "avg_price": 540000,
+      "min_price": 540000,
+      "max_price": 540000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-09",
+      "address": "44, WATERFALL HEIGHTS, WATERFALL ROAD",
+      "price": 540000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "T12P8WY"
+    },
     {
       "date": "2025-11-04",
       "address": "60 Waterfall Heights, Waterfall Road, Bishopstown",
@@ -238,19 +254,19 @@
     },
     {
       "date": "2025-07-30",
-      "address": "100 WATERFALL HEIGHTS, WATERFALL ROAD, BISHOPSTOWN",
-      "price": 497797,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "T12RR2R"
-    },
-    {
-      "date": "2025-07-30",
       "address": "87 Waterfall Heights, Waterfall Road, Bishopstown",
       "price": 440529,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2025-07-30",
+      "address": "100 WATERFALL HEIGHTS, WATERFALL ROAD, BISHOPSTOWN",
+      "price": 497797,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T12RR2R"
     },
     {
       "date": "2025-07-28",
@@ -419,15 +435,7 @@
       "bedrooms": 5,
       "propertyType": "semi-detached",
       "eircode": null
-    },
-    {
-      "date": "2025-02-21",
-      "address": "122 WATERFALL HEIGHTS, WATERFALL ROAD, Bishopstown",
-      "price": 421476,
-      "bedrooms": 4,
-      "propertyType": "house",
-      "eircode": null
     }
   ],
-  "totalTransactions": 104
+  "totalTransactions": 105
 }

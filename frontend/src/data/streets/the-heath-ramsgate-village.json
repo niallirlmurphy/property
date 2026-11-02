@@ -1,9 +1,9 @@
 {
   "slug": "the-heath-ramsgate-village",
   "stats": {
-    "count": 108,
-    "median": 182228,
-    "avg": 189555,
+    "count": 109,
+    "median": 182455,
+    "avg": 189834,
     "min": 55507,
     "max": 400000,
     "firstYear": 2010,
@@ -132,14 +132,22 @@
     },
     {
       "year": 2026,
-      "count": 1,
-      "median_price": 270000,
-      "avg_price": 270000,
-      "min_price": 270000,
+      "count": 2,
+      "median_price": 245000,
+      "avg_price": 245000,
+      "min_price": 220000,
       "max_price": 270000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-25",
+      "address": "140 THE HEATH, RAMSGATE VILLAGE, GOREY",
+      "price": 220000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "Y25HX66"
+    },
     {
       "date": "2026-03-02",
       "address": "100 THE HEATH, RAMSGATE VILLAGE, GOREY",
@@ -531,15 +539,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2020-04-01",
-      "address": "92 THE HEATH, RAMSGATE VILLAGE, GOREY",
-      "price": 162500,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 108
+  "totalTransactions": 109
 }

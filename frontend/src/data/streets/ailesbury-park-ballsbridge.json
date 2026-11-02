@@ -1,13 +1,13 @@
 {
   "slug": "ailesbury-park-ballsbridge",
   "stats": {
-    "count": 8,
-    "median": 1825000,
-    "avg": 1840938,
+    "count": 9,
+    "median": 1850000,
+    "avg": 1873056,
     "min": 1330000,
     "max": 2500000,
     "firstYear": 2010,
-    "lastYear": 2025
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -65,9 +65,25 @@
       "avg_price": 1860000,
       "min_price": 1860000,
       "max_price": 1860000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 2130000,
+      "avg_price": 2130000,
+      "min_price": 2130000,
+      "max_price": 2130000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-21",
+      "address": "29 AILESBURY PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 2130000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D04A3K6"
+    },
     {
       "date": "2025-03-19",
       "address": "5 AILESBURY PARK, BALLSBRIDGE, DUBLIN 4",
@@ -112,8 +128,8 @@
       "date": "2014-08-22",
       "address": "29 AILESBURY PARK, BALLSBRIDGE, DUBLIN 4",
       "price": 1330000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
@@ -133,5 +149,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 8
+  "totalTransactions": 9
 }

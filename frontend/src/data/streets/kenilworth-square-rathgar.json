@@ -1,13 +1,13 @@
 {
   "slug": "kenilworth-square-rathgar",
   "stats": {
-    "count": 17,
-    "median": 1280000,
-    "avg": 1418235,
+    "count": 19,
+    "median": 1380000,
+    "avg": 1594211,
     "min": 10000,
-    "max": 2700000,
+    "max": 3180000,
     "firstYear": 2013,
-    "lastYear": 2025
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -81,9 +81,33 @@
       "avg_price": 1900000,
       "min_price": 1900000,
       "max_price": 1900000
+    },
+    {
+      "year": 2026,
+      "count": 2,
+      "median_price": 3090000,
+      "avg_price": 3090000,
+      "min_price": 3000000,
+      "max_price": 3180000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-20",
+      "address": "40 KENILWORTH SQ, RATHGAR, DUBLIN 6",
+      "price": 3000000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06YX09"
+    },
+    {
+      "date": "2026-09-11",
+      "address": "50 KENILWORTH SQ, RATHGAR, DUBLIN 6",
+      "price": 3180000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "D06FE04"
+    },
     {
       "date": "2025-12-12",
       "address": "72 KENILWORTH SQUARE, RATHGAR, DUBLIN 6",
@@ -221,5 +245,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 17
+  "totalTransactions": 19
 }

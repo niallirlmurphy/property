@@ -1,13 +1,13 @@
 {
   "slug": "annesley-gardens-ranelagh",
   "stats": {
-    "count": 19,
-    "median": 1480000,
-    "avg": 1549592,
+    "count": 20,
+    "median": 1510920,
+    "avg": 1585862,
     "min": 1164758,
-    "max": 1650000,
+    "max": 2275000,
     "firstYear": 2022,
-    "lastYear": 2024
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -33,9 +33,25 @@
       "avg_price": 1558000,
       "min_price": 1558000,
       "max_price": 1558000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 2275000,
+      "avg_price": 2275000,
+      "min_price": 2275000,
+      "max_price": 2275000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-29",
+      "address": "19 ANNESLEY GARDENS, RANELAGH, DUBLIN 6",
+      "price": 2275000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06V1Y2"
+    },
     {
       "date": "2024-06-18",
       "address": "11 ANNESLEY GARDENS, RANELAGH, DUBLIN 6",
@@ -189,5 +205,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 19
+  "totalTransactions": 20
 }

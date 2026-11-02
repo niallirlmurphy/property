@@ -1,9 +1,9 @@
 {
   "slug": "abbeylands-mullingar",
   "stats": {
-    "count": 101,
+    "count": 102,
     "median": 125000,
-    "avg": 135499,
+    "avg": 135837,
     "min": 36640,
     "max": 347000,
     "firstYear": 2011,
@@ -132,14 +132,22 @@
     },
     {
       "year": 2026,
-      "count": 3,
-      "median_price": 290000,
-      "avg_price": 279333,
-      "min_price": 218000,
+      "count": 4,
+      "median_price": 254000,
+      "avg_price": 252000,
+      "min_price": 170000,
       "max_price": 330000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-13",
+      "address": "18C ABBEYLANDS, MULLINGAR, ABBEYLANDS",
+      "price": 170000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "N91YE81"
+    },
     {
       "date": "2026-08-25",
       "address": "91 ABBEYLANDS, MULLINGAR, WESTMEATH",
@@ -520,8 +528,8 @@
       "date": "2019-04-11",
       "address": "18C ABBEYLANDS, MULLINGAR, ABBEYLANDS",
       "price": 116714,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "apartment",
       "eircode": null
     },
     {
@@ -531,15 +539,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2019-03-25",
-      "address": "220 ABBEYLANDS, MULLINGAR, WESTMEATH",
-      "price": 163000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 101
+  "totalTransactions": 102
 }

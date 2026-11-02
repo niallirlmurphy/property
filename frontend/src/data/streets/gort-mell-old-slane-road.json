@@ -1,9 +1,9 @@
 {
   "slug": "gort-mell-old-slane-road",
   "stats": {
-    "count": 133,
+    "count": 146,
     "median": 399500,
-    "avg": 400026,
+    "avg": 400229,
     "min": 233480,
     "max": 440088,
     "firstYear": 2024,
@@ -28,14 +28,62 @@
     },
     {
       "year": 2026,
-      "count": 46,
-      "median_price": 410000,
-      "avg_price": 400808,
+      "count": 59,
+      "median_price": 412500,
+      "avg_price": 401139,
       "min_price": 233480,
       "max_price": 440088
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-22",
+      "address": "245 Gort Mell, Old Slane Road, Drogheda",
+      "price": 325991,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-19",
+      "address": "155 Gort Mell, Old Slane Road, Drogheda",
+      "price": 233480,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-16",
+      "address": "249 Gort Mell, Old Slane Road, Drogheda",
+      "price": 325991,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-12",
+      "address": "74 Gort Mell, Old Slane Road, Tullyallen",
+      "price": 378854,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-05",
+      "address": "93 Gort Mell, Old Slane Road, Drogheda",
+      "price": 370044,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-09-29",
+      "address": "91 Gort Mell, Old Slane Road, Drogheda",
+      "price": 374449,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": null
+    },
     {
       "date": "2026-09-24",
       "address": "96 Gort Mell, Old Slane Road, Tullyallen",
@@ -43,6 +91,22 @@
       "bedrooms": 4,
       "propertyType": "house",
       "eircode": "A92YR2V"
+    },
+    {
+      "date": "2026-09-23",
+      "address": "196 Gort Mell, Old Slane Road, Drogheda",
+      "price": 414097,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-09-18",
+      "address": "95 Gort Mell, Old Slane Road, Tullyallen",
+      "price": 374449,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
     },
     {
       "date": "2026-09-04",
@@ -93,10 +157,42 @@
       "eircode": null
     },
     {
+      "date": "2026-08-28",
+      "address": "75 Gort Mell, Old Slane Road, Drogheda",
+      "price": 365639,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-08-27",
+      "address": "70 Gort Mell, Old Slane Road, Tullyallen",
+      "price": 374449,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
       "date": "2026-08-27",
       "address": "89 Gort Mell, Old Slane Road, Tullyallen",
       "price": 365638,
       "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-08-25",
+      "address": "87 Gort Mell, Old Slane Road, Drogheda",
+      "price": 374449,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-08-24",
+      "address": "62 Gort Mell, Old Slane Road, Tullyallen",
+      "price": 374449,
+      "bedrooms": null,
       "propertyType": "house",
       "eircode": null
     },
@@ -142,8 +238,8 @@
     },
     {
       "date": "2026-08-07",
-      "address": "81 Gort Mell, Old Slane Road, Drogheda",
-      "price": 370044,
+      "address": "64 GORT MELL, OLD SLANE ROAD, DROGHEDA",
+      "price": 321586,
       "bedrooms": 4,
       "propertyType": "house",
       "eircode": null
@@ -152,6 +248,14 @@
       "date": "2026-08-07",
       "address": "63 Gort Mell, Old Slane Road, Tullyallen",
       "price": 321585,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-08-07",
+      "address": "81 Gort Mell, Old Slane Road, Drogheda",
+      "price": 370044,
       "bedrooms": 4,
       "propertyType": "house",
       "eircode": null
@@ -200,8 +304,8 @@
       "date": "2026-07-07",
       "address": "84 Gort Mell, Old Slane Road, Tullyallen",
       "price": 438326,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "detached",
       "eircode": null
     },
     {
@@ -331,111 +435,7 @@
       "bedrooms": 4,
       "propertyType": "apartment",
       "eircode": null
-    },
-    {
-      "date": "2026-03-31",
-      "address": "46 Gort Mell, Old Slane Road, Drogheda",
-      "price": 312775,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2026-03-27",
-      "address": "45 Gort Mell, Old Slane Road, Drogheda",
-      "price": 361233,
-      "bedrooms": 4,
-      "propertyType": "apartment",
-      "eircode": null
-    },
-    {
-      "date": "2026-03-23",
-      "address": "110 GORT MELL, OLD SLANE ROAD, DROGHEDA",
-      "price": 359031,
-      "bedrooms": 4,
-      "propertyType": "apartment",
-      "eircode": null
-    },
-    {
-      "date": "2026-03-18",
-      "address": "49 GORT MELL, OLD SLANE ROAD, DROGHEDA",
-      "price": 312775,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2026-03-12",
-      "address": "115 Gort Mell, Old Slane Road, Drogheda",
-      "price": 359031,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2026-03-05",
-      "address": "114 Gort Mell, Old Slane Road, Drogheda",
-      "price": 352423,
-      "bedrooms": 4,
-      "propertyType": "apartment",
-      "eircode": null
-    },
-    {
-      "date": "2026-01-28",
-      "address": "163 Gort Mell, Old Slane Road, Drogheda",
-      "price": 264317,
-      "bedrooms": 4,
-      "propertyType": "semi-detached",
-      "eircode": null
-    },
-    {
-      "date": "2026-01-21",
-      "address": "165 Gort Mell, Old Slane Road, Drogheda",
-      "price": 259500,
-      "bedrooms": 4,
-      "propertyType": "apartment",
-      "eircode": "A92HP2K"
-    },
-    {
-      "date": "2026-01-06",
-      "address": "164 Gort Mell, Old Slane Road, Drogheda",
-      "price": 264317,
-      "bedrooms": 4,
-      "propertyType": "house",
-      "eircode": null
-    },
-    {
-      "date": "2025-12-22",
-      "address": "126 GORT MELL, OLD SLANE ROAD, TULLYALLEN",
-      "price": 436123,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "eircode": null
-    },
-    {
-      "date": "2025-12-19",
-      "address": "119 Gort Mell, Old Slane Road, Drogheda",
-      "price": 436123,
-      "bedrooms": 4,
-      "propertyType": "apartment",
-      "eircode": null
-    },
-    {
-      "date": "2025-12-19",
-      "address": "162 Gort Mell, Old Slane Road, Tullyallen",
-      "price": 264317,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "eircode": null
-    },
-    {
-      "date": "2025-12-18",
-      "address": "130 Gort Mell, Old Slane Road, Drogheda",
-      "price": 359031,
-      "bedrooms": 4,
-      "propertyType": "apartment",
-      "eircode": null
     }
   ],
-  "totalTransactions": 133
+  "totalTransactions": 146
 }

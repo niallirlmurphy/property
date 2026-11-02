@@ -160,8 +160,8 @@
       "date": "2026-07-07",
       "address": "160 LANDEN ROAD, BALLYFERMOT, DUBLIN 10",
       "price": 335950,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "terraced",
       "eircode": "D10HH04"
     },
     {

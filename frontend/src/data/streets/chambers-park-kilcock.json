@@ -152,8 +152,8 @@
       "date": "2026-07-03",
       "address": "72 CHAMBERS PARK, KILCOCK, KILDARE",
       "price": 370000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "terraced",
       "eircode": "W23Y290"
     },
     {

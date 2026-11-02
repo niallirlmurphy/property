@@ -1,9 +1,9 @@
 {
   "slug": "brookfield-hall-castletroy",
   "stats": {
-    "count": 124,
+    "count": 126,
     "median": 42050,
-    "avg": 74482,
+    "avg": 76950,
     "min": 30000,
     "max": 311500,
     "firstYear": 2012,
@@ -116,14 +116,30 @@
     },
     {
       "year": 2026,
-      "count": 3,
-      "median_price": 200000,
-      "avg_price": 216667,
+      "count": 5,
+      "median_price": 220000,
+      "avg_price": 222000,
       "min_price": 200000,
       "max_price": 250000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-08-27",
+      "address": "636 BROOKFIELD HALL, CASTLETROY, LIMERICK",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A123456"
+    },
+    {
+      "date": "2026-08-24",
+      "address": "226 BROOKFIELD HALL, CASTLETROY, LIMERICK",
+      "price": 220000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A123456"
+    },
     {
       "date": "2026-06-12",
       "address": "503 BROOKFIELD HALL, CASTLETROY, LIMERICK",
@@ -182,19 +198,19 @@
     },
     {
       "date": "2024-10-14",
-      "address": "416 BROOKFIELD HALL, CASTLETROY, LIMERICK",
-      "price": 242500,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "V94T208"
-    },
-    {
-      "date": "2024-10-14",
       "address": "523 BROOKFIELD HALL, CASTLETROY, LIMERICK",
       "price": 147000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "V94TX66"
+    },
+    {
+      "date": "2024-10-14",
+      "address": "416 BROOKFIELD HALL, CASTLETROY, LIMERICK",
+      "price": 242500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94T208"
     },
     {
       "date": "2024-09-06",
@@ -358,6 +374,14 @@
     },
     {
       "date": "2019-05-09",
+      "address": "103 BROOKFIELD HALL, CASTLETROY, LIMERICK",
+      "price": 40000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2019-05-09",
       "address": "716 BROOKFIELD HALL, CASTLETROY, LIMERICK",
       "price": 85000,
       "bedrooms": null,
@@ -368,14 +392,6 @@
       "date": "2019-05-09",
       "address": "534 BROOKFIELD HALL, CASTLETROY, LIMERICK",
       "price": 60000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-05-09",
-      "address": "103 BROOKFIELD HALL, CASTLETROY, LIMERICK",
-      "price": 40000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -507,23 +523,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2017-06-06",
-      "address": "APT 106, BROOKFIELD HALL, CASTLETROY",
-      "price": 59000,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "eircode": null
-    },
-    {
-      "date": "2016-12-22",
-      "address": "APT 101, BROOKFIELD HALL, CASTLETROY",
-      "price": 62000,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "eircode": null
     }
   ],
-  "totalTransactions": 124
+  "totalTransactions": 126
 }

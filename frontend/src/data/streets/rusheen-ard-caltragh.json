@@ -1,9 +1,9 @@
 {
   "slug": "rusheen-ard-caltragh",
   "stats": {
-    "count": 107,
-    "median": 178000,
-    "avg": 182907,
+    "count": 109,
+    "median": 180000,
+    "avg": 185253,
     "min": 22492,
     "max": 340000,
     "firstYear": 2010,
@@ -132,14 +132,22 @@
     },
     {
       "year": 2026,
-      "count": 5,
-      "median_price": 228000,
-      "avg_price": 237200,
+      "count": 7,
+      "median_price": 238000,
+      "avg_price": 258214,
       "min_price": 215000,
-      "max_price": 280000
+      "max_price": 326000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-08",
+      "address": "131 RUSHEEN ARD, CALTRAGH, SLIGO",
+      "price": 295500,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "F91T6TN"
+    },
     {
       "date": "2026-09-15",
       "address": "149 RUSHEEN ARD, CALTRAGH, SLIGO",
@@ -147,6 +155,14 @@
       "bedrooms": 2,
       "propertyType": "terraced",
       "eircode": "F91E6CT"
+    },
+    {
+      "date": "2026-07-17",
+      "address": "69 RUSHEEN ARD, CALTRAGH, SLIGO",
+      "price": 326000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "F91NPV0"
     },
     {
       "date": "2026-05-14",
@@ -523,23 +539,7 @@
       "bedrooms": 2,
       "propertyType": "terraced",
       "eircode": "F91E6CT"
-    },
-    {
-      "date": "2021-08-11",
-      "address": "103 RUSHEEN ARD, CALTRAGH, SLIGO",
-      "price": 175000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "F91FAA9"
-    },
-    {
-      "date": "2021-06-25",
-      "address": "82 RUSHEEN ARD, CALTRAGH, SLIGO",
-      "price": 175000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "F91CH9E"
     }
   ],
-  "totalTransactions": 107
+  "totalTransactions": 109
 }

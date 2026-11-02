@@ -1,13 +1,13 @@
 {
   "slug": "belmont-gardens-donnybrook",
   "stats": {
-    "count": 14,
-    "median": 1211250,
-    "avg": 1202278,
+    "count": 15,
+    "median": 1350000,
+    "avg": 1258793,
     "min": 640000,
-    "max": 1625000,
+    "max": 2050000,
     "firstYear": 2011,
-    "lastYear": 2025
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -89,9 +89,25 @@
       "avg_price": 1355000,
       "min_price": 1355000,
       "max_price": 1355000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 2050000,
+      "avg_price": 2050000,
+      "min_price": 2050000,
+      "max_price": 2050000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-08-12",
+      "address": "19 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
+      "price": 2050000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H6E8"
+    },
     {
       "date": "2025-11-14",
       "address": "16 BELMONT GARDENS, DONNYBROOK, DUBLIN 4",
@@ -205,5 +221,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 14
+  "totalTransactions": 15
 }

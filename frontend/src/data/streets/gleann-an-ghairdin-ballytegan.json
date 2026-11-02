@@ -1,9 +1,9 @@
 {
   "slug": "gleann-an-ghairdin-ballytegan",
   "stats": {
-    "count": 113,
+    "count": 115,
     "median": 270000,
-    "avg": 282905,
+    "avg": 284146,
     "min": 192070,
     "max": 385000,
     "firstYear": 2017,
@@ -44,9 +44,9 @@
     },
     {
       "year": 2022,
-      "count": 21,
-      "median_price": 289250,
-      "avg_price": 290676,
+      "count": 22,
+      "median_price": 292125,
+      "avg_price": 292167,
       "min_price": 237885,
       "max_price": 285000
     },
@@ -76,9 +76,9 @@
     },
     {
       "year": 2026,
-      "count": 9,
-      "median_price": 395000,
-      "avg_price": 392834,
+      "count": 10,
+      "median_price": 390000,
+      "avg_price": 392051,
       "min_price": 335000,
       "max_price": 385000
     }
@@ -89,6 +89,14 @@
       "address": "264 Gleann An Ghairdin, Ballytegan, Gorey",
       "price": 365639,
       "bedrooms": null,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-09-23",
+      "address": "266 Gleann An Ghairdin, Ballytegan, Gorey",
+      "price": 339207,
+      "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": null
     },
@@ -104,8 +112,8 @@
       "date": "2026-07-06",
       "address": "100 GLEANN AN GHAIRDÍN, BALLYTEGAN, GOREY",
       "price": 335000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
       "eircode": "Y25W9X7"
     },
     {
@@ -413,6 +421,14 @@
       "eircode": null
     },
     {
+      "date": "2022-10-04",
+      "address": "226 Gleann An Ghairdin, Ballytegan, Gorey",
+      "price": 285000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2022-08-16",
       "address": "234 Gleann An Ghairdin, Ballytegan, Gorey",
       "price": 261255,
@@ -438,16 +454,16 @@
     },
     {
       "date": "2022-08-08",
-      "address": "238 GLEANN AN GHAIRDIN, BALLYTEGAN",
-      "price": 270000,
+      "address": "235 Gleann An Ghairdin, Ballytegan, Gorey",
+      "price": 264317,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2022-08-08",
-      "address": "235 Gleann An Ghairdin, Ballytegan, Gorey",
-      "price": 264317,
+      "address": "238 GLEANN AN GHAIRDIN, BALLYTEGAN",
+      "price": 270000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -467,23 +483,7 @@
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": "Y25T9C9"
-    },
-    {
-      "date": "2022-05-27",
-      "address": "296 Gleann An Ghairdin, Ballytegan, Gorey",
-      "price": 237900,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-05-27",
-      "address": "297 Gleann An Ghairdin, Ballytegan, Gorey",
-      "price": 239700,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 113
+  "totalTransactions": 115
 }

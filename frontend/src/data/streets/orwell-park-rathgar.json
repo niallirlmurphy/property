@@ -1,9 +1,9 @@
 {
   "slug": "orwell-park-rathgar",
   "stats": {
-    "count": 48,
-    "median": 2215000,
-    "avg": 2279991,
+    "count": 49,
+    "median": 2150000,
+    "avg": 2251787,
     "min": 807401,
     "max": 4800000,
     "firstYear": 2011,
@@ -20,10 +20,10 @@
     },
     {
       "year": 2012,
-      "count": 4,
-      "median_price": 1700000,
-      "avg_price": 2116262,
-      "min_price": 1375000,
+      "count": 5,
+      "median_price": 1550000,
+      "avg_price": 1872610,
+      "min_price": 898000,
       "max_price": 3251145
     },
     {
@@ -469,6 +469,14 @@
       "eircode": null
     },
     {
+      "date": "2012-08-15",
+      "address": "46  Orwell Park, Rathgar",
+      "price": 898000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2012-07-13",
       "address": "9 Orwell Park, Rathgar",
       "price": 1850000,
@@ -509,5 +517,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 48
+  "totalTransactions": 49
 }

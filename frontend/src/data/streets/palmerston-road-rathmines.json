@@ -144,8 +144,8 @@
       "date": "2026-07-06",
       "address": "30 PALMERSTON RD, RATHMINES, DUBLIN 6",
       "price": 3350000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
       "eircode": "D06N4V2"
     },
     {

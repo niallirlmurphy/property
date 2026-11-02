@@ -1,9 +1,9 @@
 {
   "slug": "dundoogan-haynestown",
   "stats": {
-    "count": 158,
+    "count": 161,
     "median": 257986,
-    "avg": 258570,
+    "avg": 259423,
     "min": 185845,
     "max": 395000,
     "firstYear": 2019,
@@ -60,9 +60,9 @@
     },
     {
       "year": 2026,
-      "count": 3,
-      "median_price": 285000,
-      "avg_price": 301667,
+      "count": 6,
+      "median_price": 294000,
+      "avg_price": 303000,
       "min_price": 270000,
       "max_price": 350000
     }
@@ -77,12 +77,36 @@
       "eircode": "A91XN5D"
     },
     {
+      "date": "2026-09-18",
+      "address": "150 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 290000,
+      "bedrooms": 2,
+      "propertyType": "house",
+      "eircode": "A91AWF1"
+    },
+    {
+      "date": "2026-09-15",
+      "address": "22 DUNDOOGAN, HAYNESTOWN, DUNDALK",
+      "price": 298000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A91YC6C"
+    },
+    {
       "date": "2026-09-04",
       "address": "27 DUNDOOGAN, HAYNESTOWN, DUNDALK",
       "price": 285000,
       "bedrooms": 2,
       "propertyType": "terraced",
       "eircode": "A91YFF1"
+    },
+    {
+      "date": "2026-08-13",
+      "address": "163 DUNDOOGAN, HAYNESTOWN, LOUTH",
+      "price": 325000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "A91AWX4"
     },
     {
       "date": "2026-04-15",
@@ -443,31 +467,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2022-06-27",
-      "address": "123 Dundoogan, Haynestown, Dundalk",
-      "price": 233436,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-06-21",
-      "address": "117 dundoogan, HAYNESTOWN, dundalk",
-      "price": 207004,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-06-14",
-      "address": "120 DUNDOOGAN, HAYNESTOWN, DUNDALK",
-      "price": 229031,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 158
+  "totalTransactions": 161
 }

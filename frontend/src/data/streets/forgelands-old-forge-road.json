@@ -1,9 +1,9 @@
 {
   "slug": "forgelands-old-forge-road",
   "stats": {
-    "count": 128,
+    "count": 131,
     "median": 274999,
-    "avg": 272022,
+    "avg": 273233,
     "min": 164428,
     "max": 312775,
     "firstYear": 2020,
@@ -60,19 +60,43 @@
     },
     {
       "year": 2026,
-      "count": 19,
+      "count": 22,
       "median_price": 335000,
-      "avg_price": 337850,
-      "min_price": 286344,
+      "avg_price": 336088,
+      "min_price": 286154,
       "max_price": 312775
     }
   ],
   "transactions": [
     {
+      "date": "2026-09-29",
+      "address": "209 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 286344,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
       "date": "2026-09-22",
       "address": "206 Forgelands, Old Forge Road, Milehouse Road",
       "price": 295154,
       "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-09-18",
+      "address": "No. 201 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-09-08",
+      "address": "202 Forgelands, Old Forge Road, Enniscorthy",
+      "price": 286154,
+      "bedrooms": 4,
       "propertyType": "house",
       "eircode": null
     },
@@ -443,31 +467,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2023-11-03",
-      "address": "93 FORGELANDS, OLD FORGE ROAD, ENNISCORTHY",
-      "price": 268040,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-09-18",
-      "address": "101 Forgelands, Old Forge Road, Enniscorthy",
-      "price": 193832,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-08-23",
-      "address": "109 Forgelands, Old Forge Road, Enniscorthy",
-      "price": 242291,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 128
+  "totalTransactions": 131
 }

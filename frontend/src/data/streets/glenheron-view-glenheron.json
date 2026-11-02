@@ -1,9 +1,9 @@
 {
   "slug": "glenheron-view-glenheron",
   "stats": {
-    "count": 91,
+    "count": 92,
     "median": 499950,
-    "avg": 498813,
+    "avg": 502195,
     "min": 167417,
     "max": 895000,
     "firstYear": 2018,
@@ -76,11 +76,11 @@
     },
     {
       "year": 2026,
-      "count": 3,
-      "median_price": 722500,
-      "avg_price": 726500,
+      "count": 4,
+      "median_price": 729750,
+      "avg_price": 747375,
       "min_price": 720000,
-      "max_price": 737000
+      "max_price": 810000
     }
   ],
   "transactions": [
@@ -99,6 +99,14 @@
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": "A63P710"
+    },
+    {
+      "date": "2026-06-22",
+      "address": "80 GLENHERON VIEW, GLENHERON, GREYSTONES",
+      "price": 810000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A63WE22"
     },
     {
       "date": "2026-03-23",
@@ -475,15 +483,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2019-03-07",
-      "address": "73 Glenheron View, Glenheron, Greystones",
-      "price": 396476,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 91
+  "totalTransactions": 92
 }

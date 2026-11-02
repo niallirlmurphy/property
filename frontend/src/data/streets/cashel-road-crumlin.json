@@ -1,9 +1,9 @@
 {
   "slug": "cashel-road-crumlin",
   "stats": {
-    "count": 103,
-    "median": 273000,
-    "avg": 270720,
+    "count": 104,
+    "median": 274000,
+    "avg": 272348,
     "min": 57821,
     "max": 765000,
     "firstYear": 2010,
@@ -140,14 +140,22 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 452500,
-      "avg_price": 452500,
+      "count": 3,
+      "median_price": 440000,
+      "avg_price": 448333,
       "min_price": 425000,
       "max_price": 480000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-08-26",
+      "address": "77 CASHEL RD, CRUMLIN, DUBLIN 12",
+      "price": 440000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D12V2A4"
+    },
     {
       "date": "2026-04-02",
       "address": "145A CASHEL RD, CRUMLIN, DUBLIN 12",
@@ -539,15 +547,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2019-08-09",
-      "address": "217 CASHEL RD, CRUMLIN, DUBLIN",
-      "price": 359250,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D12K5V9"
     }
   ],
-  "totalTransactions": 103
+  "totalTransactions": 104
 }

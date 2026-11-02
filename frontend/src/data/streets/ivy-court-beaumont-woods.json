@@ -1,9 +1,9 @@
 {
   "slug": "ivy-court-beaumont-woods",
   "stats": {
-    "count": 97,
+    "count": 99,
     "median": 265500,
-    "avg": 263780,
+    "avg": 264966,
     "min": 75000,
     "max": 490000,
     "firstYear": 2010,
@@ -132,14 +132,22 @@
     },
     {
       "year": 2026,
-      "count": 7,
-      "median_price": 410000,
-      "avg_price": 378571,
+      "count": 9,
+      "median_price": 385000,
+      "avg_price": 366111,
       "min_price": 265000,
       "max_price": 490000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-08",
+      "address": "95 IVY COURT, BEAUMONT WOODS, DUBLIN 9",
+      "price": 265000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": "D09ET91"
+    },
     {
       "date": "2026-09-10",
       "address": "23 IVY COURT, BEAUMONT WOODS, DUBLIN 9",
@@ -155,6 +163,14 @@
       "bedrooms": 1,
       "propertyType": "apartment",
       "eircode": "D09H0F2"
+    },
+    {
+      "date": "2026-07-29",
+      "address": "131 IVY COURT, BEAUMONT WOODS, BEAUMONT DUBLIN 9",
+      "price": 380000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D09HR50"
     },
     {
       "date": "2026-07-14",
@@ -302,19 +318,19 @@
     },
     {
       "date": "2023-08-30",
-      "address": "56 IVY COURT, BEAUMONT WOODS, DUBLIN 5",
-      "price": 315000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D09TH52"
-    },
-    {
-      "date": "2023-08-30",
       "address": "17 IVY COURT, BEAUMONT WOODS, DUBLIN 9",
       "price": 345000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D09WY27"
+    },
+    {
+      "date": "2023-08-30",
+      "address": "56 IVY COURT, BEAUMONT WOODS, DUBLIN 5",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09TH52"
     },
     {
       "date": "2023-08-18",
@@ -462,19 +478,19 @@
     },
     {
       "date": "2020-12-21",
-      "address": "77 IVY COURT, BEAUMONT WOODS, BEAUMONT DUBLIN 9",
-      "price": 203495,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "eircode": "D09P403"
-    },
-    {
-      "date": "2020-12-21",
       "address": "75 IVY COURT, BEAUMONT WOODS, BEAUMONT DUBLIN 9",
       "price": 205507,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2020-12-21",
+      "address": "77 IVY COURT, BEAUMONT WOODS, BEAUMONT DUBLIN 9",
+      "price": 203495,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D09P403"
     },
     {
       "date": "2020-12-11",
@@ -523,23 +539,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2019-11-11",
-      "address": "121 IVY COURT, BEAUMONT WOODS, BEAUMONT DUBLIN 9",
-      "price": 180000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-09-17",
-      "address": "113 IVY COURT, BEAUMONT WOODS, BEAUMONT DUBLIN 9",
-      "price": 205000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 97
+  "totalTransactions": 99
 }

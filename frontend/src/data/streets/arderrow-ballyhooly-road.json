@@ -1,11 +1,11 @@
 {
   "slug": "arderrow-ballyhooly-road",
   "stats": {
-    "count": 105,
+    "count": 109,
     "median": 397500,
-    "avg": 397453,
+    "avg": 399359,
     "min": 281125,
-    "max": 422907,
+    "max": 440000,
     "firstYear": 2024,
     "lastYear": 2026
   },
@@ -28,14 +28,46 @@
     },
     {
       "year": 2026,
-      "count": 17,
-      "median_price": 430000,
-      "avg_price": 427454,
+      "count": 21,
+      "median_price": 435000,
+      "avg_price": 431631,
       "min_price": 317181,
-      "max_price": 418502
+      "max_price": 440000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-22",
+      "address": "221 Arderrow, Ballyhooly Road, Ballyvolane",
+      "price": 376651,
+      "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-13",
+      "address": "223 Arderrow, Ballyhooly Road, Ballyvolane",
+      "price": 400908,
+      "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-02",
+      "address": "4 ARDERROW, BALLYHOOLY ROAD, BALLYVOLANE",
+      "price": 440000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "T23PF2H"
+    },
+    {
+      "date": "2026-10-02",
+      "address": "218  Arderrow, Ballyhooly Road, Ballvolane",
+      "price": 418502,
+      "bedrooms": 3,
+      "propertyType": "house",
+      "eircode": null
+    },
     {
       "date": "2026-09-07",
       "address": "222 Arderrow, Ballyhooly Road, Ballyvolane",
@@ -64,8 +96,8 @@
       "date": "2026-07-03",
       "address": "144 Arderrow, Ballyhooly Road, Ballyvolane",
       "price": 418502,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "house",
       "eircode": null
     },
     {
@@ -278,16 +310,16 @@
     },
     {
       "date": "2025-09-29",
-      "address": "No. 88 Arderrow, Ballyhooly Road, Ballyvolane",
-      "price": 348018,
+      "address": "212 Arderrow, Ballyhooly Road",
+      "price": 317180,
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": null
     },
     {
       "date": "2025-09-29",
-      "address": "212 Arderrow, Ballyhooly Road",
-      "price": 317180,
+      "address": "No. 88 Arderrow, Ballyhooly Road, Ballyvolane",
+      "price": 348018,
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": null
@@ -296,14 +328,6 @@
       "date": "2025-09-24",
       "address": "94 Arderrow, Ballyhooly Road, Ballyvolane",
       "price": 374449,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
-      "eircode": null
-    },
-    {
-      "date": "2025-09-22",
-      "address": "64 Arderrow, Ballyhooly Road, Ballyvolane",
-      "price": 351982,
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": null
@@ -320,6 +344,14 @@
       "date": "2025-09-22",
       "address": "95 Arderrow, Ballyhooly Road, Ballyvolane",
       "price": 367841,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2025-09-22",
+      "address": "64 Arderrow, Ballyhooly Road, Ballyvolane",
+      "price": 351982,
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": null
@@ -403,39 +435,7 @@
       "bedrooms": 3,
       "propertyType": "apartment",
       "eircode": null
-    },
-    {
-      "date": "2025-07-29",
-      "address": "134 Arderrow, Ballyhooly Road, Ballyvolane",
-      "price": 339005,
-      "bedrooms": 3,
-      "propertyType": "house",
-      "eircode": null
-    },
-    {
-      "date": "2025-07-28",
-      "address": "136 Arderrow, Ballyhooly Road, Ballyvolane",
-      "price": 299560,
-      "bedrooms": 3,
-      "propertyType": "terraced",
-      "eircode": null
-    },
-    {
-      "date": "2025-07-25",
-      "address": "139 Arderrow, Ballyhooly Road, Ballyvolane",
-      "price": 394207,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "T23YN6P"
-    },
-    {
-      "date": "2025-07-22",
-      "address": "135 ARDERROW, BALLYHOOLY ROAD, BALLYVOLANE",
-      "price": 299559,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
-      "eircode": null
     }
   ],
-  "totalTransactions": 105
+  "totalTransactions": 109
 }

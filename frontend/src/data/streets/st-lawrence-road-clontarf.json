@@ -1,9 +1,9 @@
 {
   "slug": "st-lawrence-road-clontarf",
   "stats": {
-    "count": 48,
-    "median": 1255000,
-    "avg": 1350827,
+    "count": 50,
+    "median": 1250000,
+    "avg": 1338194,
     "min": 375000,
     "max": 3450000,
     "firstYear": 2010,
@@ -132,14 +132,30 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 1180000,
-      "avg_price": 1180000,
+      "count": 4,
+      "median_price": 1035000,
+      "avg_price": 1107500,
       "min_price": 710000,
       "max_price": 1650000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-18",
+      "address": "118 Saint Lawrence Road, Clontarf",
+      "price": 1250000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2026-08-20",
+      "address": "10 ST LAWRENCE ROAD, CLONTARF, DUBLIN 3",
+      "price": 820000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D03H678"
+    },
     {
       "date": "2026-06-30",
       "address": "61 ST LAWRENCE RD, CLONTARF, DUBLIN 3",
@@ -525,5 +541,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 48
+  "totalTransactions": 50
 }

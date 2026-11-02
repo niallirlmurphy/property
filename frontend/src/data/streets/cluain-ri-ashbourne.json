@@ -1,9 +1,9 @@
 {
   "slug": "cluain-ri-ashbourne",
   "stats": {
-    "count": 92,
-    "median": 235000,
-    "avg": 241864,
+    "count": 93,
+    "median": 240000,
+    "avg": 243457,
     "min": 82000,
     "max": 459500,
     "firstYear": 2010,
@@ -140,11 +140,11 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 360000,
-      "avg_price": 360000,
+      "count": 3,
+      "median_price": 370000,
+      "avg_price": 370000,
       "min_price": 350000,
-      "max_price": 370000
+      "max_price": 390000
     }
   ],
   "transactions": [
@@ -155,6 +155,14 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "A84XT65"
+    },
+    {
+      "date": "2026-08-14",
+      "address": "15 CLUAIN RI, ASHBOURNE, MEATH",
+      "price": 390000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": "A84WP21"
     },
     {
       "date": "2026-02-27",
@@ -539,15 +547,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2019-10-30",
-      "address": "121 CLUAIN RI, ASHBOURNE, MEATH",
-      "price": 250500,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 92
+  "totalTransactions": 93
 }

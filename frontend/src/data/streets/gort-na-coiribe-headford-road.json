@@ -1,9 +1,9 @@
 {
   "slug": "gort-na-coiribe-headford-road",
   "stats": {
-    "count": 110,
-    "median": 240000,
-    "avg": 264353,
+    "count": 112,
+    "median": 242500,
+    "avg": 266927,
     "min": 108000,
     "max": 2270000,
     "firstYear": 2012,
@@ -124,14 +124,30 @@
     },
     {
       "year": 2026,
-      "count": 3,
-      "median_price": 466000,
-      "avg_price": 1038667,
-      "min_price": 380000,
+      "count": 5,
+      "median_price": 450000,
+      "avg_price": 786600,
+      "min_price": 367000,
       "max_price": 2270000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-05",
+      "address": "88 GORT NA COIRIBE, HEADFORD RD, GALWAY",
+      "price": 450000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "H91CF6X"
+    },
+    {
+      "date": "2026-10-02",
+      "address": "216 GORT NA COIRIBE, HEADFORD RD, TERRYLAND",
+      "price": 367000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "H91YD21"
+    },
     {
       "date": "2026-08-20",
       "address": "150 GORT NA COIRIBE, HEADFORD RD, GALWAY",
@@ -515,23 +531,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2017-12-21",
-      "address": "64 GORT NA COIRIBE, HEADFORD RD, GALWAY",
-      "price": 255000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-11-01",
-      "address": "189 GORT NA COIRIBE, HEADFORD ROAD, GALWAY",
-      "price": 225000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 110
+  "totalTransactions": 112
 }

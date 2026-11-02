@@ -1,9 +1,9 @@
 {
   "slug": "collins-avenue-whitehall",
   "stats": {
-    "count": 98,
-    "median": 432500,
-    "avg": 453256,
+    "count": 102,
+    "median": 444000,
+    "avg": 461825,
     "min": 10000,
     "max": 900000,
     "firstYear": 2010,
@@ -140,14 +140,22 @@
     },
     {
       "year": 2026,
-      "count": 4,
-      "median_price": 707500,
-      "avg_price": 681750,
+      "count": 8,
+      "median_price": 685000,
+      "avg_price": 676756,
       "min_price": 462000,
       "max_price": 850000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-30",
+      "address": "467 COLLINS AVE, WHITEHALL, DUBLIN 9",
+      "price": 680000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D09CX39"
+    },
     {
       "date": "2026-09-17",
       "address": "89 COLLINS AVE, WHITEHALL, DUBLIN 9",
@@ -155,6 +163,30 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D09X0P2"
+    },
+    {
+      "date": "2026-08-19",
+      "address": "572 COLLINS AVE, WHITEHALL, DUBLIN 11",
+      "price": 582000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09YD99"
+    },
+    {
+      "date": "2026-07-23",
+      "address": "612 COLLINS AVE, WHITEHALL, DUBLIN 9",
+      "price": 625000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D09V291"
+    },
+    {
+      "date": "2026-07-13",
+      "address": "275 COLLINS AVE, WHITEHALL, DUBLIN 9",
+      "price": 800050,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D09TF30"
     },
     {
       "date": "2026-05-06",
@@ -464,8 +496,8 @@
       "date": "2022-02-22",
       "address": "275 COLLINS AVE, WHITEHALL, DUBLIN 9",
       "price": 641000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
       "eircode": "D09TF30"
     },
     {
@@ -515,39 +547,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2020-09-24",
-      "address": "302 COLLINS AVE, WHITEHALL, DUBLIN 9",
-      "price": 425000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-09-14",
-      "address": "420 COLLINS AVE, WHITEHALL, DUBLIN 9",
-      "price": 371000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2019-08-12",
-      "address": "552 COLLINS AVE, WHITEHALL, DUBLIN 9",
-      "price": 450000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D09WV12"
-    },
-    {
-      "date": "2019-06-13",
-      "address": "508 COLLINS AVE, WHITEHALL, DUBLIN 9",
-      "price": 375000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 98
+  "totalTransactions": 102
 }

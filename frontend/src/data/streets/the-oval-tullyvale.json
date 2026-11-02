@@ -1,9 +1,9 @@
 {
   "slug": "the-oval-tullyvale",
   "stats": {
-    "count": 100,
-    "median": 280500,
-    "avg": 295442,
+    "count": 101,
+    "median": 281000,
+    "avg": 295794,
     "min": 115000,
     "max": 516000,
     "firstYear": 2011,
@@ -132,14 +132,22 @@
     },
     {
       "year": 2026,
-      "count": 5,
-      "median_price": 391000,
-      "avg_price": 387534,
+      "count": 6,
+      "median_price": 380500,
+      "avg_price": 378112,
       "min_price": 275000,
       "max_price": 475672
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-21",
+      "address": "130 THE OVAL, TULLYVALE, CABINTEELY",
+      "price": 331000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D18TW22"
+    },
     {
       "date": "2026-09-16",
       "address": "87 THE OVAL, TULLYVALE, CHERRYWOOD DUBLIN 18",
@@ -531,15 +539,7 @@
       "bedrooms": null,
       "propertyType": "apartment",
       "eircode": "D18DP80"
-    },
-    {
-      "date": "2021-06-24",
-      "address": "140 THE OVAL, TULLYVALE, CABINTEELY DUBLIN 18",
-      "price": 275000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D18TY77"
     }
   ],
-  "totalTransactions": 100
+  "totalTransactions": 101
 }

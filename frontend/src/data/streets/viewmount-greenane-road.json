@@ -1,13 +1,13 @@
 {
   "slug": "viewmount-greenane-road",
   "stats": {
-    "count": 91,
+    "count": 92,
     "median": 279000,
-    "avg": 284382,
+    "avg": 286508,
     "min": 161500,
-    "max": 456000,
+    "max": 480000,
     "firstYear": 2016,
-    "lastYear": 2025
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -73,9 +73,25 @@
       "avg_price": 446333,
       "min_price": 428000,
       "max_price": 456000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 480000,
+      "avg_price": 480000,
+      "min_price": 480000,
+      "max_price": 480000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-14",
+      "address": "65 VIEWMOUNT, GREENANE ROAD, RATHDRUM",
+      "price": 480000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "A67EY99"
+    },
     {
       "date": "2025-12-05",
       "address": "127 VIEWMOUNT, GREENANE ROAD, RATHDRUM",
@@ -467,15 +483,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2021-05-21",
-      "address": "78 Viewmount, Greenane Road, Rathdrum",
-      "price": 248414,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 91
+  "totalTransactions": 92
 }

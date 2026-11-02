@@ -1,9 +1,9 @@
 {
   "slug": "burnell-square-northern-cross",
   "stats": {
-    "count": 104,
-    "median": 235500,
-    "avg": 231893,
+    "count": 105,
+    "median": 236000,
+    "avg": 232733,
     "min": 68000,
     "max": 350000,
     "firstYear": 2013,
@@ -116,14 +116,22 @@
     },
     {
       "year": 2026,
-      "count": 9,
-      "median_price": 325000,
-      "avg_price": 309167,
+      "count": 10,
+      "median_price": 322500,
+      "avg_price": 310250,
       "min_price": 257000,
       "max_price": 339000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-28",
+      "address": "46 BURNELL SQ, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 320000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D17F971"
+    },
     {
       "date": "2026-09-11",
       "address": "53 BURNELL SQ, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
@@ -515,15 +523,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2021-03-01",
-      "address": "1 BURNELL SQUARE, NORTHERN CROSS, MALAHIDE ROAD",
-      "price": 250000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 104
+  "totalTransactions": 105
 }

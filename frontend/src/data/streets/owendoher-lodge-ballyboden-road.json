@@ -430,19 +430,19 @@
     },
     {
       "date": "2016-08-19",
-      "address": "67 OWENDOHER LODGE, BALLYBODEN ROAD, RATHFARNHAM",
-      "price": 370000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D16YX91"
-    },
-    {
-      "date": "2016-08-19",
       "address": "39 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
       "price": 350000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2016-08-19",
+      "address": "67 OWENDOHER LODGE, BALLYBODEN ROAD, RATHFARNHAM",
+      "price": 370000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16YX91"
     },
     {
       "date": "2016-08-16",

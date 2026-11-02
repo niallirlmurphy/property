@@ -1,9 +1,9 @@
 {
   "slug": "ardmore-hills-mullingar",
   "stats": {
-    "count": 103,
-    "median": 364999,
-    "avg": 385666,
+    "count": 107,
+    "median": 385000,
+    "avg": 387632,
     "min": 202643,
     "max": 550000,
     "firstYear": 2010,
@@ -108,18 +108,42 @@
     },
     {
       "year": 2026,
-      "count": 12,
+      "count": 16,
       "median_price": 485000,
-      "avg_price": 495000,
+      "avg_price": 480817,
       "min_price": 352423,
       "max_price": 528634
     }
   ],
   "transactions": [
     {
+      "date": "2026-10-16",
+      "address": "118 ARDMORE HILLS, MULLINGAR, WESTMEATH",
+      "price": 456000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "N91AH1F"
+    },
+    {
+      "date": "2026-10-08",
+      "address": "216 Ardmore Hills, Mullingar",
+      "price": 376275,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
       "date": "2026-09-25",
       "address": "218 Ardmore Hills, Mullingar",
       "price": 427313,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-09-18",
+      "address": "217 Ardmore Hills, Mullingar",
+      "price": 383260,
       "bedrooms": 2,
       "propertyType": "semi-detached",
       "eircode": null
@@ -161,6 +185,14 @@
       "address": "203 Ardmore Hills, Mullingar",
       "price": 436123,
       "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-07-17",
+      "address": "206 ARDMORE HILLS, MULLINGAR",
+      "price": 383260,
+      "bedrooms": 2,
       "propertyType": "semi-detached",
       "eircode": null
     },
@@ -294,19 +326,19 @@
     },
     {
       "date": "2023-07-17",
-      "address": "123 ARDMORE HILLS, MULLINGAR, CO. WESTMEATH",
-      "price": 337000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "N91CFN2"
-    },
-    {
-      "date": "2023-07-17",
       "address": "172 Ardmore Hills, Mullingar",
       "price": 354626,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2023-07-17",
+      "address": "123 ARDMORE HILLS, MULLINGAR, CO. WESTMEATH",
+      "price": 337000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "N91CFN2"
     },
     {
       "date": "2023-07-10",
@@ -483,39 +515,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2022-04-21",
-      "address": "165 Ardmore Hills, Mullingar",
-      "price": 348018,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-03-29",
-      "address": "163 Ardmore Hills, Mullingar",
-      "price": 299559,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-03-24",
-      "address": "162 Ardmore Hills, Mullingar",
-      "price": 299559,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-03-09",
-      "address": "161 Ardmore Hills, Mullingar",
-      "price": 339207,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 103
+  "totalTransactions": 107
 }

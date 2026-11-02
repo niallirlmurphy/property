@@ -1,9 +1,9 @@
 {
   "slug": "the-elms-ridgewood",
   "stats": {
-    "count": 93,
-    "median": 346500,
-    "avg": 345765,
+    "count": 94,
+    "median": 340095,
+    "avg": 344924,
     "min": 193760,
     "max": 535000,
     "firstYear": 2014,
@@ -20,9 +20,9 @@
     },
     {
       "year": 2015,
-      "count": 33,
+      "count": 34,
       "median_price": 304999,
-      "avg_price": 314375,
+      "avg_price": 312972,
       "min_price": 207048,
       "max_price": 330400
     },
@@ -509,5 +509,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 93
+  "totalTransactions": 94
 }

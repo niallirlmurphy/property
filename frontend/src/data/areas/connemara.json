@@ -2,16 +2,54 @@
   "name": "Clifden, Galway",
   "slug": "connemara",
   "center": {
-    "lat": 53.48852736229965,
-    "lon": -10.018052
+    "lat": 53.488624,
+    "lon": -10.018465
   },
   "radius_km": 5.0,
   "total_count": 10,
   "median_price": 285000.0,
-  "avg_price": 273950,
+  "avg_price": 256200,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 806951,
+      "sale_date": "2026-10-13",
+      "address": "4 CANNONS LANE, CLIFDEN, CO GALWAY",
+      "county": "Galway",
+      "eircode": "H71RH97",
+      "price": 355000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.491317,
+      "longitude": -10.021935,
+      "routing_key": "H71",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 355000.0,
+      "distance_m": 377.99302142
+    },
+    {
+      "id": 814593,
+      "sale_date": "2026-10-02",
+      "address": "21 THE SPIRES, CLIFDEN, GALWAY",
+      "county": "Galway",
+      "eircode": "H71ND30",
+      "price": 285000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.492149,
+      "longitude": -10.018755,
+      "routing_key": "H71",
+      "bedrooms": 4,
+      "property_type": "detached",
+      "price_incl_vat": 285000.0,
+      "distance_m": 392.78848544
+    },
     {
       "id": 805348,
       "sale_date": "2026-09-29",
@@ -29,7 +67,26 @@
       "bedrooms": 4,
       "property_type": "semi-detached",
       "price_incl_vat": 270000.0,
-      "distance_m": 521.56846105
+      "distance_m": 512.03324142
+    },
+    {
+      "id": 812916,
+      "sale_date": "2026-09-16",
+      "address": "90 CLIFDEN GLEN, CLIFDEN, GALWAY",
+      "county": "Galway",
+      "eircode": "H71T042",
+      "price": 117000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.487209,
+      "longitude": -9.989238,
+      "routing_key": "H71",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 117000.0,
+      "distance_m": 1946.40886346
     },
     {
       "id": 803801,
@@ -48,7 +105,26 @@
       "bedrooms": 3,
       "property_type": "detached",
       "price_incl_vat": 285000.0,
-      "distance_m": 2275.41714917
+      "distance_m": 2303.10253091
+    },
+    {
+      "id": 810566,
+      "sale_date": "2026-08-12",
+      "address": "BEACH RD, CLIFDEN, GALWAY",
+      "county": "Galway",
+      "eircode": "H71KA43",
+      "price": 395000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.487446,
+      "longitude": -10.029345,
+      "routing_key": "H71",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 395000.0,
+      "distance_m": 733.99375877
     },
     {
       "id": 790965,
@@ -67,7 +143,7 @@
       "bedrooms": 4,
       "property_type": "semi-detached",
       "price_incl_vat": 320000.0,
-      "distance_m": 288.67238808
+      "distance_m": 261.14156541
     },
     {
       "id": 797163,
@@ -86,7 +162,7 @@
       "bedrooms": null,
       "property_type": null,
       "price_incl_vat": 170000.0,
-      "distance_m": 762.12356356
+      "distance_m": 738.48063892
     },
     {
       "id": 788085,
@@ -105,7 +181,7 @@
       "bedrooms": 2,
       "property_type": "detached",
       "price_incl_vat": 150000.0,
-      "distance_m": 73.69425106
+      "distance_m": 55.45702568
     },
     {
       "id": 786401,
@@ -124,83 +200,7 @@
       "bedrooms": null,
       "property_type": "apartment",
       "price_incl_vat": 215000.0,
-      "distance_m": 762.12356356
-    },
-    {
-      "id": 796585,
-      "sale_date": "2026-06-05",
-      "address": "SKY ROAD, FAKEERAGH, CLIFDEN",
-      "county": "Galway",
-      "eircode": "H71AE82",
-      "price": 320000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.493957,
-      "longitude": -10.065235,
-      "routing_key": "H71",
-      "bedrooms": null,
-      "property_type": null,
-      "price_incl_vat": 320000.0,
-      "distance_m": 3189.43461924
-    },
-    {
-      "id": 782789,
-      "sale_date": "2026-04-29",
-      "address": "16 RACECOURSE LAWNS, CLIFDEN, GALWAY",
-      "county": "Galway",
-      "eircode": "H71X092",
-      "price": 317500.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.493316,
-      "longitude": -10.017869,
-      "routing_key": "H71",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "price_incl_vat": 317500.0,
-      "distance_m": 533.09217461
-    },
-    {
-      "id": 782941,
-      "sale_date": "2026-04-29",
-      "address": "ARDBEAR, CLIFDEN, GALWAY",
-      "county": "Galway",
-      "eircode": "H71EE04",
-      "price": 565000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.480408,
-      "longitude": -10.025627,
-      "routing_key": "H71",
-      "bedrooms": 5,
-      "property_type": "detached",
-      "price_incl_vat": 565000.0,
-      "distance_m": 1034.13748953
-    },
-    {
-      "id": 792953,
-      "sale_date": "2026-04-16",
-      "address": "LODGE 60, CLIFDEN GLEN, CLIFDEN",
-      "county": "Galway",
-      "eircode": "H71V520",
-      "price": 127000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.486526,
-      "longitude": -9.984232,
-      "routing_key": "H71",
-      "bedrooms": null,
-      "property_type": null,
-      "price_incl_vat": 127000.0,
-      "distance_m": 2255.94508151
+      "distance_m": 738.48063892
     }
   ],
   "trends": [
@@ -262,9 +262,9 @@
     },
     {
       "year": 2017,
-      "count": 30,
-      "median_price": 99000.0,
-      "avg_price": 118433.0,
+      "count": 31,
+      "median_price": 100000.0,
+      "avg_price": 123387.0,
       "min_price": 10000.0,
       "max_price": 390000.0
     },
@@ -334,10 +334,10 @@
     },
     {
       "year": 2026,
-      "count": 13,
+      "count": 18,
       "median_price": 285000.0,
-      "avg_price": 276885.0,
-      "min_price": 127000.0,
+      "avg_price": 277861.0,
+      "min_price": 117000.0,
       "max_price": 565000.0
     }
   ]

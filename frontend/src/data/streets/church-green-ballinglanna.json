@@ -1,9 +1,9 @@
 {
   "slug": "church-green-ballinglanna",
   "stats": {
-    "count": 107,
+    "count": 108,
     "median": 390000,
-    "avg": 474947,
+    "avg": 475503,
     "min": 222028,
     "max": 4588106,
     "firstYear": 2020,
@@ -60,14 +60,22 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 640000,
-      "avg_price": 640000,
+      "count": 3,
+      "median_price": 535000,
+      "avg_price": 605000,
       "min_price": 510000,
       "max_price": 770000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-12",
+      "address": "56  CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 535000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "T45X579"
+    },
     {
       "date": "2026-06-02",
       "address": "4 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
@@ -430,16 +438,16 @@
     },
     {
       "date": "2022-12-07",
-      "address": "136 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
-      "price": 370044,
+      "address": "90-105 Church Green, Ballinglanna, Glanmire",
+      "price": 4588106,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2022-12-07",
-      "address": "90-105 Church Green, Ballinglanna, Glanmire",
-      "price": 4588106,
+      "address": "136 CHURCH GREEN, BALLINGLANNA, GLANMIRE",
+      "price": 370044,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -459,15 +467,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2022-11-25",
-      "address": "80 Church Green, Ballinglanna, Glamire",
-      "price": 334802,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 107
+  "totalTransactions": 108
 }

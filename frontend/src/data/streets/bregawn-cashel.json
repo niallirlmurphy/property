@@ -1,11 +1,11 @@
 {
   "slug": "bregawn-cashel",
   "stats": {
-    "count": 95,
+    "count": 99,
     "median": 355000,
-    "avg": 353895,
+    "avg": 354903,
     "min": 259075,
-    "max": 395000,
+    "max": 397500,
     "firstYear": 2023,
     "lastYear": 2026
   },
@@ -36,11 +36,11 @@
     },
     {
       "year": 2026,
-      "count": 22,
-      "median_price": 356213,
-      "avg_price": 365903,
+      "count": 26,
+      "median_price": 362728,
+      "avg_price": 367894,
       "min_price": 298902,
-      "max_price": 395000
+      "max_price": 397500
     }
   ],
   "transactions": [
@@ -51,6 +51,22 @@
       "bedrooms": 4,
       "propertyType": "house",
       "eircode": "E25XH22"
+    },
+    {
+      "date": "2026-09-17",
+      "address": "214 Bregawn, Cashel",
+      "price": 328128,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "E25XP70"
+    },
+    {
+      "date": "2026-09-15",
+      "address": "179 Bregawn, Cashel",
+      "price": 339207,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
     },
     {
       "date": "2026-09-09",
@@ -101,9 +117,25 @@
       "eircode": null
     },
     {
+      "date": "2026-07-17",
+      "address": "12 BREGAWN, CASHEL, TIPPERARY",
+      "price": 397500,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "E25FX45"
+    },
+    {
       "date": "2026-07-02",
       "address": "212 Bregawn, Cashel",
       "price": 321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-06-25",
+      "address": "213 Bregawn, Cashel",
+      "price": 317584,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -411,39 +443,7 @@
       "bedrooms": 4,
       "propertyType": "semi-detached",
       "eircode": null
-    },
-    {
-      "date": "2025-06-25",
-      "address": "183 Bregawn, Cashel",
-      "price": 312775,
-      "bedrooms": 4,
-      "propertyType": "semi-detached",
-      "eircode": null
-    },
-    {
-      "date": "2025-06-24",
-      "address": "186 Bregawn, Cashel",
-      "price": 312775,
-      "bedrooms": 4,
-      "propertyType": "semi-detached",
-      "eircode": null
-    },
-    {
-      "date": "2025-06-20",
-      "address": "184 Bregawn, Cashel",
-      "price": 328128,
-      "bedrooms": 4,
-      "propertyType": "semi-detached",
-      "eircode": null
-    },
-    {
-      "date": "2025-06-20",
-      "address": "188 Bregawn, Cashel",
-      "price": 308370,
-      "bedrooms": 4,
-      "propertyType": "semi-detached",
-      "eircode": null
     }
   ],
-  "totalTransactions": 95
+  "totalTransactions": 99
 }

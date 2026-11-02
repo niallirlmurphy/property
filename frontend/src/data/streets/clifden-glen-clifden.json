@@ -1,9 +1,9 @@
 {
   "slug": "clifden-glen-clifden",
   "stats": {
-    "count": 91,
-    "median": 75000,
-    "avg": 90942,
+    "count": 92,
+    "median": 78500,
+    "avg": 91225,
     "min": 23000,
     "max": 285000,
     "firstYear": 2011,
@@ -132,14 +132,22 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 280000,
-      "avg_price": 280000,
-      "min_price": 275000,
+      "count": 3,
+      "median_price": 275000,
+      "avg_price": 225667,
+      "min_price": 117000,
       "max_price": 285000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-16",
+      "address": "90 CLIFDEN GLEN, CLIFDEN, GALWAY",
+      "price": 117000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H71T042"
+    },
     {
       "date": "2026-09-09",
       "address": "29 CLIFDEN GLEN, CLIFDEN, GALWAY",
@@ -262,6 +270,14 @@
     },
     {
       "date": "2023-08-01",
+      "address": "15 CLIFDEN GLEN, CLIFDEN, GALWAY",
+      "price": 165000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H71HK74"
+    },
+    {
+      "date": "2023-08-01",
       "address": "126 CLIFDEN GLEN, CLIFDEN, GALWAY",
       "price": 60000,
       "bedrooms": null,
@@ -275,14 +291,6 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "H71H348"
-    },
-    {
-      "date": "2023-08-01",
-      "address": "15 CLIFDEN GLEN, CLIFDEN, GALWAY",
-      "price": 165000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "H71HK74"
     },
     {
       "date": "2023-07-20",
@@ -531,15 +539,7 @@
       "bedrooms": 1,
       "propertyType": "semi-detached",
       "eircode": "H71X523"
-    },
-    {
-      "date": "2018-08-16",
-      "address": "3 CLIFDEN GLEN, CLIFDEN, GALWAY",
-      "price": 102500,
-      "bedrooms": 3,
-      "propertyType": "detached",
-      "eircode": "H71TN12"
     }
   ],
-  "totalTransactions": 91
+  "totalTransactions": 92
 }

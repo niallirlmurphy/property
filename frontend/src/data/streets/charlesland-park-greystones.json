@@ -1,9 +1,9 @@
 {
   "slug": "charlesland-park-greystones",
   "stats": {
-    "count": 148,
+    "count": 150,
     "median": 330000,
-    "avg": 337519,
+    "avg": 339072,
     "min": 126725,
     "max": 553000,
     "firstYear": 2013,
@@ -116,11 +116,11 @@
     },
     {
       "year": 2026,
-      "count": 6,
+      "count": 8,
       "median_price": 452250,
-      "avg_price": 450750,
+      "avg_price": 451562,
       "min_price": 415000,
-      "max_price": 485000
+      "max_price": 490000
     }
   ],
   "transactions": [
@@ -133,12 +133,28 @@
       "eircode": "A63F308"
     },
     {
+      "date": "2026-09-18",
+      "address": "302 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 418000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63HN20"
+    },
+    {
       "date": "2026-09-02",
       "address": "77 CHARLESLAND PARK, GREYSTONES, WICKLOW",
       "price": 452000,
       "bedrooms": 2,
       "propertyType": "terraced",
       "eircode": "A63KC81"
+    },
+    {
+      "date": "2026-08-18",
+      "address": "107 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 490000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63V563"
     },
     {
       "date": "2026-07-08",
@@ -416,8 +432,8 @@
       "date": "2023-07-13",
       "address": "107 CHARLESLAND PARK, GREYSTONES, WICKLOW",
       "price": 380000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "terraced",
       "eircode": "A63V563"
     },
     {
@@ -507,23 +523,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "A63KW40"
-    },
-    {
-      "date": "2022-12-02",
-      "address": "197 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
-      "price": 365000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "A63YV82"
-    },
-    {
-      "date": "2022-11-07",
-      "address": "279 CHARLESLAND PARK, GREYSTONES, CO WICKLOW",
-      "price": 395000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "A63X803"
     }
   ],
-  "totalTransactions": 148
+  "totalTransactions": 150
 }

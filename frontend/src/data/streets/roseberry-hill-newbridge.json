@@ -1,9 +1,9 @@
 {
   "slug": "roseberry-hill-newbridge",
   "stats": {
-    "count": 116,
-    "median": 275500,
-    "avg": 291885,
+    "count": 117,
+    "median": 276000,
+    "avg": 292750,
     "min": 140000,
     "max": 552000,
     "firstYear": 2011,
@@ -132,14 +132,22 @@
     },
     {
       "year": 2026,
-      "count": 5,
-      "median_price": 470000,
-      "avg_price": 453600,
-      "min_price": 405000,
+      "count": 6,
+      "median_price": 444000,
+      "avg_price": 443500,
+      "min_price": 393000,
       "max_price": 495000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-14",
+      "address": "245 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
+      "price": 393000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W12N932"
+    },
     {
       "date": "2026-06-02",
       "address": "110 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
@@ -531,15 +539,7 @@
       "bedrooms": 4,
       "propertyType": "semi-detached",
       "eircode": "W12A9W4"
-    },
-    {
-      "date": "2021-07-23",
-      "address": "146 ROSEBERRY HILL, NEWBRIDGE, KILDARE",
-      "price": 341000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "W12X017"
     }
   ],
-  "totalTransactions": 116
+  "totalTransactions": 117
 }

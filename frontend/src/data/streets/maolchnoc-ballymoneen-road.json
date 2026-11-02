@@ -1,9 +1,9 @@
 {
   "slug": "maolchnoc-ballymoneen-road",
   "stats": {
-    "count": 124,
-    "median": 479979,
-    "avg": 460592,
+    "count": 128,
+    "median": 480000,
+    "avg": 462462,
     "min": 259912,
     "max": 560000,
     "firstYear": 2023,
@@ -28,22 +28,30 @@
     },
     {
       "year": 2025,
-      "count": 36,
+      "count": 37,
       "median_price": 449950,
-      "avg_price": 446600,
+      "avg_price": 449712,
       "min_price": 259912,
       "max_price": 499515
     },
     {
       "year": 2026,
-      "count": 23,
+      "count": 26,
       "median_price": 499950,
-      "avg_price": 494317,
+      "avg_price": 495741,
       "min_price": 400836,
       "max_price": 560000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-22",
+      "address": "140 Maolchnoc, Ballymoneen Road, Galway",
+      "price": 449295,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": null
+    },
     {
       "date": "2026-09-08",
       "address": "138 Maolchnoc, Ballymoneen Road, Galway",
@@ -71,6 +79,22 @@
     {
       "date": "2026-06-25",
       "address": "134 Maolchnoc, Ballymoneen Road",
+      "price": 449411,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-06-24",
+      "address": "135 Maolchnoc, Ballymoneen Road, Ballyburke",
+      "price": 440485,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-06-18",
+      "address": "No. 133 Maolchnoc, Ballymoneen Road, GALWAY",
       "price": 449411,
       "bedrooms": null,
       "propertyType": null,
@@ -245,6 +269,14 @@
       "eircode": null
     },
     {
+      "date": "2025-12-03",
+      "address": "112 MAOLCHNOC, BALLYMONEEN ROAD, GALWAY",
+      "price": 494950,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "H910V30"
+    },
+    {
       "date": "2025-12-02",
       "address": "116 Maolchnoc, Ballymoneen Road, Galway",
       "price": 440485,
@@ -411,39 +443,7 @@
       "bedrooms": 4,
       "propertyType": "house",
       "eircode": null
-    },
-    {
-      "date": "2025-07-01",
-      "address": "30 Maolchnoc, Ballymoneen Road, Ballyburke",
-      "price": 321586,
-      "bedrooms": 4,
-      "propertyType": "house",
-      "eircode": null
-    },
-    {
-      "date": "2025-06-27",
-      "address": "99 Maolchnoc, Ballymoneen Road, Galway",
-      "price": 436079,
-      "bedrooms": 4,
-      "propertyType": "terraced",
-      "eircode": null
-    },
-    {
-      "date": "2025-06-26",
-      "address": "107 Maolchnoc, Ballymoneen Road, Ballyburke",
-      "price": 436079,
-      "bedrooms": 4,
-      "propertyType": "house",
-      "eircode": null
-    },
-    {
-      "date": "2025-06-25",
-      "address": "100 Maolchnoc, Ballymoneen Road, Knocknacarra",
-      "price": 436078,
-      "bedrooms": 4,
-      "propertyType": "semi-detached",
-      "eircode": null
     }
   ],
-  "totalTransactions": 124
+  "totalTransactions": 128
 }

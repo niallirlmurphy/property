@@ -2,16 +2,73 @@
   "name": "Kinsale, Cork",
   "slug": "kinsale",
   "center": {
-    "lat": 51.705969,
-    "lon": -8.526348
+    "lat": 51.706066,
+    "lon": -8.5260025
   },
   "radius_km": 2.0,
   "total_count": 10,
-  "median_price": 465000.0,
-  "avg_price": 455961,
+  "median_price": 484999.0,
+  "avg_price": 1173160,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 807682,
+      "sale_date": "2026-10-19",
+      "address": "41 THE COURT, COMPASS QUAY, KINSALE",
+      "county": "Cork",
+      "eircode": "P17K886",
+      "price": 622000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.700378,
+      "longitude": -8.531345,
+      "routing_key": "P17",
+      "bedrooms": 4,
+      "property_type": "semi-detached",
+      "price_incl_vat": 622000.0,
+      "distance_m": 732.74472017
+    },
+    {
+      "id": 806468,
+      "sale_date": "2026-10-09",
+      "address": "18 LIME COURT AVENUE, PARK LAURENCE, KINSALE",
+      "county": "Cork",
+      "eircode": null,
+      "price": 485000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": true,
+      "description": "New Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.712341,
+      "longitude": -8.5325,
+      "routing_key": null,
+      "bedrooms": null,
+      "property_type": "house",
+      "price_incl_vat": 550475.0,
+      "distance_m": 830.14947426
+    },
+    {
+      "id": 814210,
+      "sale_date": "2026-09-29",
+      "address": "PROSPECT VILLA, SCILLY, KINSALE",
+      "county": "Cork",
+      "eircode": "P17DA59",
+      "price": 6224500.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.704918,
+      "longitude": -8.517141,
+      "routing_key": "P17",
+      "bedrooms": 4,
+      "property_type": "detached",
+      "price_incl_vat": 6224500.0,
+      "distance_m": 625.75054915
+    },
     {
       "id": 805258,
       "sale_date": "2026-09-29",
@@ -29,7 +86,7 @@
       "bedrooms": null,
       "property_type": null,
       "price_incl_vat": 687500.0,
-      "distance_m": 1591.92781801
+      "distance_m": 1568.06688691
     },
     {
       "id": 805236,
@@ -48,7 +105,7 @@
       "bedrooms": 4,
       "property_type": "detached",
       "price_incl_vat": 550000.0,
-      "distance_m": 126.28329603
+      "distance_m": 139.04578784
     },
     {
       "id": 805165,
@@ -67,7 +124,7 @@
       "bedrooms": 2,
       "property_type": "apartment",
       "price_incl_vat": 450000.0,
-      "distance_m": 652.91626216
+      "distance_m": 643.11966094
     },
     {
       "id": 805140,
@@ -86,7 +143,45 @@
       "bedrooms": 4,
       "property_type": "house",
       "price_incl_vat": 495000.0,
-      "distance_m": 819.01817993
+      "distance_m": 823.45564923
+    },
+    {
+      "id": 813800,
+      "sale_date": "2026-09-24",
+      "address": "TROOPERS COURT, BARRACK HILL, KINSALE",
+      "county": "Cork",
+      "eircode": "P17EV29",
+      "price": 760000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.7084,
+      "longitude": -8.51888,
+      "routing_key": "P17",
+      "bedrooms": 4,
+      "property_type": "detached",
+      "price_incl_vat": 760000.0,
+      "distance_m": 556.63153206
+    },
+    {
+      "id": 813459,
+      "sale_date": "2026-09-22",
+      "address": "2 THE AVENUE, COMPASS QUAY, KINSALE",
+      "county": "Cork",
+      "eircode": "P17E793",
+      "price": 1120000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.699157,
+      "longitude": -8.532424,
+      "routing_key": "P17",
+      "bedrooms": 5,
+      "property_type": "detached",
+      "price_incl_vat": 1120000.0,
+      "distance_m": 887.68597228
     },
     {
       "id": 804720,
@@ -105,102 +200,7 @@
       "bedrooms": null,
       "property_type": "house",
       "price_incl_vat": 449999.13,
-      "distance_m": 798.37656658
-    },
-    {
-      "id": 803692,
-      "sale_date": "2026-09-08",
-      "address": "APT 2 RAMPARTS MANOR, THE RAMPARTS, KINSALE",
-      "county": "Cork",
-      "eircode": "P17W280",
-      "price": 300000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.704746,
-      "longitude": -8.524916,
-      "routing_key": "P17",
-      "bedrooms": 2,
-      "property_type": "apartment",
-      "price_incl_vat": 300000.0,
-      "distance_m": 168.27111172
-    },
-    {
-      "id": 803673,
-      "sale_date": "2026-09-08",
-      "address": "72 THE ORCHARDS, KINSALE, CORK",
-      "county": "Cork",
-      "eircode": "P17WV40",
-      "price": 410000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.701984,
-      "longitude": -8.527776,
-      "routing_key": "P17",
-      "bedrooms": null,
-      "property_type": null,
-      "price_incl_vat": 410000.0,
-      "distance_m": 454.23475837
-    },
-    {
-      "id": 803560,
-      "sale_date": "2026-09-07",
-      "address": "No. 14 Lime Court Drive, Park Laurence, Kinsale",
-      "county": "Cork",
-      "eircode": null,
-      "price": 493392.07,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.712173,
-      "longitude": -8.532338,
-      "routing_key": null,
-      "bedrooms": null,
-      "property_type": "house",
-      "price_incl_vat": 560000.0,
-      "distance_m": 804.92344972
-    },
-    {
-      "id": 803199,
-      "sale_date": "2026-09-04",
-      "address": "13 Lime Court Drive, Park Laurence, Kinsale",
-      "county": "Cork",
-      "eircode": null,
-      "price": 436123.35,
-      "not_full_market_price": false,
-      "vat_exclusive": true,
-      "description": "New Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.712108,
-      "longitude": -8.532268,
-      "routing_key": null,
-      "bedrooms": null,
-      "property_type": null,
-      "price_incl_vat": 495000.0,
-      "distance_m": 796.23294229
-    },
-    {
-      "id": 802589,
-      "sale_date": "2026-09-01",
-      "address": "16B CORK STREET, KINSALE, COUNTY CORK",
-      "county": "Cork",
-      "eircode": "P17YY26",
-      "price": 400000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.707706,
-      "longitude": -8.524062,
-      "routing_key": "P17",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "price_incl_vat": 400000.0,
-      "distance_m": 249.64145914
+      "distance_m": 802.88150173
     }
   ],
   "trends": [
@@ -222,9 +222,9 @@
     },
     {
       "year": 2012,
-      "count": 20,
-      "median_price": 218500.0,
-      "avg_price": 315160.0,
+      "count": 21,
+      "median_price": 227000.0,
+      "avg_price": 313486.0,
       "min_price": 100000.0,
       "max_price": 850000.0
     },
@@ -254,9 +254,9 @@
     },
     {
       "year": 2016,
-      "count": 64,
-      "median_price": 280500.0,
-      "avg_price": 372654.0,
+      "count": 63,
+      "median_price": 280000.0,
+      "avg_price": 368966.0,
       "min_price": 40000.0,
       "max_price": 1900000.0
     },
@@ -302,25 +302,25 @@
     },
     {
       "year": 2022,
-      "count": 91,
+      "count": 92,
       "median_price": 380000.0,
-      "avg_price": 481919.0,
+      "avg_price": 531898.0,
       "min_price": 50000.0,
-      "max_price": 1900000.0
+      "max_price": 5080000.0
     },
     {
       "year": 2023,
-      "count": 129,
-      "median_price": 400000.0,
-      "avg_price": 466138.0,
+      "count": 128,
+      "median_price": 398750.0,
+      "avg_price": 463530.0,
       "min_price": 10000.0,
       "max_price": 1485000.0
     },
     {
       "year": 2024,
-      "count": 127,
+      "count": 128,
       "median_price": 450000.0,
-      "avg_price": 506961.0,
+      "avg_price": 505540.0,
       "min_price": 100000.0,
       "max_price": 1926265.48
     },
@@ -334,11 +334,11 @@
     },
     {
       "year": 2026,
-      "count": 87,
-      "median_price": 465000.0,
-      "avg_price": 560259.0,
+      "count": 105,
+      "median_price": 484999.0,
+      "avg_price": 615143.0,
       "min_price": 10000.0,
-      "max_price": 3176500.0
+      "max_price": 6224500.0
     }
   ]
 }

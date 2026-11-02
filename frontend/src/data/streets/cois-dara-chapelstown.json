@@ -1,9 +1,9 @@
 {
   "slug": "cois-dara-chapelstown",
   "stats": {
-    "count": 110,
+    "count": 112,
     "median": 235000,
-    "avg": 262760,
+    "avg": 263514,
     "min": 164495,
     "max": 343612,
     "firstYear": 2021,
@@ -12,9 +12,9 @@
   "trends": [
     {
       "year": 2021,
-      "count": 40,
+      "count": 41,
       "median_price": 235000,
-      "avg_price": 225069,
+      "avg_price": 225312,
       "min_price": 164495,
       "max_price": 215859
     },
@@ -44,14 +44,22 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 377500,
-      "avg_price": 377500,
+      "count": 3,
+      "median_price": 374999,
+      "avg_price": 376666,
       "min_price": 330396,
       "max_price": 334802
     }
   ],
   "transactions": [
+    {
+      "date": "2026-07-03",
+      "address": "162 COIS DARA, CHAPELSTOWN, CO. CARLOW",
+      "price": 330396,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93N1NW"
+    },
     {
       "date": "2026-05-06",
       "address": "226 Cois Dara, Chapelstown",
@@ -443,15 +451,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2022-03-31",
-      "address": "43 Cois Dara, Chapelstown, Tullow Road",
-      "price": 195595,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 110
+  "totalTransactions": 112
 }

@@ -1,9 +1,9 @@
 {
   "slug": "beaulieu-village-termonfeckin-road",
   "stats": {
-    "count": 161,
+    "count": 164,
     "median": 269950,
-    "avg": 295217,
+    "avg": 294956,
     "min": 191629,
     "max": 449339,
     "firstYear": 2018,
@@ -76,19 +76,43 @@
     },
     {
       "year": 2026,
-      "count": 3,
-      "median_price": 419950,
-      "avg_price": 449967,
-      "min_price": 370000,
+      "count": 6,
+      "median_price": 403975,
+      "avg_price": 365483,
+      "min_price": 198238,
       "max_price": 449339
     }
   ],
   "transactions": [
     {
+      "date": "2026-10-14",
+      "address": "68 BEAULIEU VILLAGE, TERMONFECKIN ROAD, DROGHEDA",
+      "price": 388000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A92PHX3"
+    },
+    {
       "date": "2026-08-14",
       "address": "197 Beaulieu Village, Termonfeckin Road, Drogheda",
       "price": 449339,
       "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2026-07-06",
+      "address": "154 Beaulieu Village, Termonfeckin Road, Drogheda",
+      "price": 198238,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": null
+    },
+    {
+      "date": "2026-07-06",
+      "address": "163 BEAULIEU VILLAGE, Termonfeckin Road, Drogheda",
+      "price": 202643,
+      "bedrooms": 3,
       "propertyType": "terraced",
       "eircode": null
     },
@@ -459,31 +483,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2023-07-18",
-      "address": "149 Beaulieu Village, Termonfeckin Road, Drogheda",
-      "price": 273127,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-06-20",
-      "address": "141 Beaulieu Village, Termonfeckin Road, Newtownstabalan",
-      "price": 264273,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-05-12",
-      "address": "150 BEAULIEU VILLAGE, TERMONFECKIN ROAD",
-      "price": 325991,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 161
+  "totalTransactions": 164
 }

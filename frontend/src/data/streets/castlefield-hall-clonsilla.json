@@ -1,9 +1,9 @@
 {
   "slug": "castlefield-hall-clonsilla",
   "stats": {
-    "count": 120,
-    "median": 492500,
-    "avg": 491435,
+    "count": 122,
+    "median": 497250,
+    "avg": 492682,
     "min": 321128,
     "max": 630000,
     "firstYear": 2019,
@@ -44,9 +44,9 @@
     },
     {
       "year": 2024,
-      "count": 23,
-      "median_price": 523000,
-      "avg_price": 532409,
+      "count": 24,
+      "median_price": 526500,
+      "avg_price": 533767,
       "min_price": 418502,
       "max_price": 572687
     },
@@ -60,14 +60,22 @@
     },
     {
       "year": 2026,
-      "count": 5,
+      "count": 6,
       "median_price": 560000,
-      "avg_price": 542000,
+      "avg_price": 546667,
       "min_price": 453744,
-      "max_price": 560000
+      "max_price": 570000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-07-20",
+      "address": "42 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
+      "price": 570000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D15RC7H"
+    },
     {
       "date": "2026-06-19",
       "address": "45 CASTLEFIELD HALL, CLONSILLA, DUBLIN 15",
@@ -187,6 +195,14 @@
       "bedrooms": 3,
       "propertyType": "terraced",
       "eircode": "D15PNT7"
+    },
+    {
+      "date": "2024-11-27",
+      "address": "91 Castlefield Hall, Clonsilla",
+      "price": 497797,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2024-11-26",
@@ -451,23 +467,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2023-06-23",
-      "address": "31 Castlefield Hall, Clonsilla, Dublin 15",
-      "price": 453744,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-06-19",
-      "address": "29 Castlefield Hall, Clonsilla",
-      "price": 440484,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 120
+  "totalTransactions": 122
 }

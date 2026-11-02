@@ -1,13 +1,13 @@
 {
   "slug": "sunbury-park-dartry",
   "stats": {
-    "count": 12,
-    "median": 1200000,
-    "avg": 1112604,
+    "count": 13,
+    "median": 1250000,
+    "avg": 1129327,
     "min": 650000,
     "max": 1500000,
     "firstYear": 2011,
-    "lastYear": 2024
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -73,9 +73,25 @@
       "avg_price": 1305000,
       "min_price": 1305000,
       "max_price": 1305000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1330000,
+      "avg_price": 1330000,
+      "min_price": 1330000,
+      "max_price": 1330000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-22",
+      "address": "3 SUNBURY PARK, DARTRY, DUBLIN 6",
+      "price": 1330000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06DK57"
+    },
     {
       "date": "2024-07-03",
       "address": "18 SUNBURY PARK, DARTRY, DUBLIN 6",
@@ -173,5 +189,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 12
+  "totalTransactions": 13
 }

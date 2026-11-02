@@ -1,9 +1,9 @@
 {
   "slug": "maoilin-ballymoneen-road",
   "stats": {
-    "count": 100,
+    "count": 101,
     "median": 307500,
-    "avg": 318757,
+    "avg": 318875,
     "min": 189427,
     "max": 530000,
     "firstYear": 2016,
@@ -28,9 +28,9 @@
     },
     {
       "year": 2018,
-      "count": 25,
-      "median_price": 315763,
-      "avg_price": 324237,
+      "count": 26,
+      "median_price": 320381,
+      "avg_price": 324487,
       "min_price": 251156,
       "max_price": 390000
     },
@@ -294,6 +294,14 @@
     },
     {
       "date": "2018-07-17",
+      "address": "75 Maoilin, Ballymoneen Road, Co. Galway",
+      "price": 310000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-07-17",
       "address": "86 Maoilin, Ballymoneen Road, Galway",
       "price": 286344,
       "bedrooms": null,
@@ -301,9 +309,9 @@
       "eircode": null
     },
     {
-      "date": "2018-07-17",
-      "address": "75 Maoilin, Ballymoneen Road, Co. Galway",
-      "price": 310000,
+      "date": "2018-06-20",
+      "address": "90 Maoilin, Ballymoneen Road, Knocknacarra",
+      "price": 291399,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -483,15 +491,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2017-10-05",
-      "address": "45 Maoilin, Ballymoneen Road, Knocknacarra",
-      "price": 370000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 100
+  "totalTransactions": 101
 }

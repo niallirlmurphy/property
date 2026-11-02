@@ -1,9 +1,9 @@
 {
   "slug": "oldbridge-station-osberstown",
   "stats": {
-    "count": 107,
+    "count": 108,
     "median": 294950,
-    "avg": 308625,
+    "avg": 309749,
     "min": 160000,
     "max": 581000,
     "firstYear": 2012,
@@ -124,14 +124,22 @@
     },
     {
       "year": 2026,
-      "count": 1,
-      "median_price": 558500,
-      "avg_price": 558500,
-      "min_price": 558500,
+      "count": 2,
+      "median_price": 494250,
+      "avg_price": 494250,
+      "min_price": 430000,
       "max_price": 558500
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-30",
+      "address": "151 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
+      "price": 430000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "W91X5TT"
+    },
     {
       "date": "2026-02-24",
       "address": "282 OLDBRIDGE STATION, OSBERSTOWN, NAAS",
@@ -523,15 +531,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2017-03-23",
-      "address": "263 Oldbridge Station, Osberstown, Naas",
-      "price": 264273,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 107
+  "totalTransactions": 108
 }

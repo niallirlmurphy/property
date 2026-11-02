@@ -1,9 +1,9 @@
 {
   "slug": "longstone-blessington-road",
   "stats": {
-    "count": 132,
+    "count": 133,
     "median": 400000,
-    "avg": 415852,
+    "avg": 417800,
     "min": 262963,
     "max": 750000,
     "firstYear": 2019,
@@ -60,14 +60,22 @@
     },
     {
       "year": 2026,
-      "count": 1,
-      "median_price": 485000,
-      "avg_price": 485000,
+      "count": 2,
+      "median_price": 580000,
+      "avg_price": 580000,
       "min_price": 485000,
-      "max_price": 485000
+      "max_price": 675000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-07",
+      "address": "28 LONGSTONE, BLESSINGTON ROAD, NAAS",
+      "price": 675000,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": "W91N93X"
+    },
     {
       "date": "2026-06-19",
       "address": "55 LONGSTONE, BLESSINGTON ROAD, CRADDOCKSTOWN  NAAS",
@@ -459,15 +467,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2021-02-11",
-      "address": "108 Longstone, Blessington Road, Craddockstown",
-      "price": 312775,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 132
+  "totalTransactions": 133
 }

@@ -302,19 +302,19 @@
     },
     {
       "date": "2017-06-29",
-      "address": "41 Diswellstown Manor, Castleknock",
-      "price": 555066,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-06-29",
       "address": "80 Diswellstown Manor, CASTLEKNOCK, Dublin 15",
       "price": 365639,
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": "D15N2EY"
+    },
+    {
+      "date": "2017-06-29",
+      "address": "41 Diswellstown Manor, Castleknock",
+      "price": 555066,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2017-06-23",
@@ -430,16 +430,16 @@
     },
     {
       "date": "2017-03-31",
-      "address": "68 Diswellstown Manor, Castleknock, Dublin 15",
-      "price": 365639,
+      "address": "64 Diswellstown Manor, Castleknock",
+      "price": 374449,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2017-03-31",
-      "address": "64 Diswellstown Manor, Castleknock",
-      "price": 374449,
+      "address": "68 Diswellstown Manor, Castleknock, Dublin 15",
+      "price": 365639,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

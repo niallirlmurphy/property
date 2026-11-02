@@ -454,19 +454,19 @@
     },
     {
       "date": "2021-08-11",
-      "address": "40 MONKSFIELD, ABBEYSIDE, DUNGARVAN",
-      "price": 410000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "X35NX60"
-    },
-    {
-      "date": "2021-08-11",
       "address": "138 Monksfield, Abbeyside, Dungarvan",
       "price": 246525,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2021-08-11",
+      "address": "40 MONKSFIELD, ABBEYSIDE, DUNGARVAN",
+      "price": 410000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "X35NX60"
     },
     {
       "date": "2021-08-09",

@@ -2,16 +2,35 @@
   "name": "Skibbereen, Cork",
   "slug": "skibbereen-baltimore",
   "center": {
-    "lat": 51.548852499999995,
+    "lat": 51.5488165,
     "lon": -9.266211
   },
   "radius_km": 12.0,
   "total_count": 10,
   "median_price": 330000.0,
-  "avg_price": 320000,
+  "avg_price": 349000,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 807119,
+      "sale_date": "2026-10-14",
+      "address": "42C MARINERS COVE, BALTIMORE, CORK",
+      "county": "Cork",
+      "eircode": "P81CP82",
+      "price": 255000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.486286,
+      "longitude": -9.368954,
+      "routing_key": "P81",
+      "bedrooms": 2,
+      "property_type": "apartment",
+      "price_incl_vat": 255000.0,
+      "distance_m": 9963.06123316
+    },
     {
       "id": 805587,
       "sale_date": "2026-10-02",
@@ -29,7 +48,7 @@
       "bedrooms": 4,
       "property_type": "detached",
       "price_incl_vat": 330000.0,
-      "distance_m": 999.61033511
+      "distance_m": 1000.88909583
     },
     {
       "id": 805390,
@@ -48,7 +67,45 @@
       "bedrooms": 3,
       "property_type": "terraced",
       "price_incl_vat": 300000.0,
-      "distance_m": 530.36583
+      "distance_m": 532.07185518
+    },
+    {
+      "id": 814238,
+      "sale_date": "2026-09-30",
+      "address": "15 CORK ROAD, SKIBBEREEN, CO CORK",
+      "county": "Cork",
+      "eircode": "P81N528",
+      "price": 340000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.554985,
+      "longitude": -9.261392,
+      "routing_key": "P81",
+      "bedrooms": 3,
+      "property_type": null,
+      "price_incl_vat": 340000.0,
+      "distance_m": 763.36966646
+    },
+    {
+      "id": 813351,
+      "sale_date": "2026-09-18",
+      "address": "OLDCOURT, SKIBBEREEN, CORK",
+      "county": "Cork",
+      "eircode": "P81XW22",
+      "price": 440000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 51.527622,
+      "longitude": -9.313385,
+      "routing_key": "P81",
+      "bedrooms": null,
+      "property_type": null,
+      "price_incl_vat": 440000.0,
+      "distance_m": 4034.02071728
     },
     {
       "id": 804596,
@@ -67,7 +124,7 @@
       "bedrooms": 3,
       "property_type": "bungalow",
       "price_incl_vat": 340000.0,
-      "distance_m": 2866.46889409
+      "distance_m": 2866.36360886
     },
     {
       "id": 803885,
@@ -86,7 +143,7 @@
       "bedrooms": 3,
       "property_type": "detached",
       "price_incl_vat": 580000.0,
-      "distance_m": 10877.41091819
+      "distance_m": 10878.0564583
     },
     {
       "id": 803710,
@@ -105,7 +162,7 @@
       "bedrooms": null,
       "property_type": null,
       "price_incl_vat": 180000.0,
-      "distance_m": 576.31916214
+      "distance_m": 579.59960351
     },
     {
       "id": 803597,
@@ -124,7 +181,7 @@
       "bedrooms": 3,
       "property_type": "terraced",
       "price_incl_vat": 485000.0,
-      "distance_m": 10000.89560761
+      "distance_m": 9998.08805407
     },
     {
       "id": 803391,
@@ -143,64 +200,7 @@
       "bedrooms": 4,
       "property_type": "detached",
       "price_incl_vat": 240000.0,
-      "distance_m": 121.15903091
-    },
-    {
-      "id": 803241,
-      "sale_date": "2026-09-04",
-      "address": "20 SKIBBEREEN RETIREMENT VILLAGE, UNIT 20 CORONEA, BALTIMORE RD",
-      "county": "Cork",
-      "eircode": "P81FW20",
-      "price": 280000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.538814,
-      "longitude": -9.274807,
-      "routing_key": "P81",
-      "bedrooms": 2,
-      "property_type": "terraced",
-      "price_incl_vat": 280000.0,
-      "distance_m": 1266.10340599
-    },
-    {
-      "id": 803161,
-      "sale_date": "2026-09-03",
-      "address": "MILL RD, SKIBBEREEN, CORK",
-      "county": "Cork",
-      "eircode": "P81CY68",
-      "price": 250000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.554413,
-      "longitude": -9.262972,
-      "routing_key": "P81",
-      "bedrooms": 4,
-      "property_type": "semi-detached",
-      "price_incl_vat": 250000.0,
-      "distance_m": 658.18486598
-    },
-    {
-      "id": 800713,
-      "sale_date": "2026-08-13",
-      "address": "39 ST FACHTNAS TERRACE, SKIBBEREEN, CORK",
-      "county": "Cork",
-      "eircode": "P81FW71",
-      "price": 215000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 51.548873,
-      "longitude": -9.257889,
-      "routing_key": "P81",
-      "bedrooms": 3,
-      "property_type": "terraced",
-      "price_incl_vat": 215000.0,
-      "distance_m": 577.27031625
+      "distance_m": 122.24110131
     }
   ],
   "trends": [
@@ -326,18 +326,18 @@
     },
     {
       "year": 2025,
-      "count": 64,
-      "median_price": 357500.0,
-      "avg_price": 408809.0,
+      "count": 65,
+      "median_price": 360000.0,
+      "avg_price": 410750.0,
       "min_price": 50000.0,
       "max_price": 2397000.0
     },
     {
       "year": 2026,
-      "count": 46,
+      "count": 57,
       "median_price": 330000.0,
-      "avg_price": 397847.0,
-      "min_price": 100000.0,
+      "avg_price": 384929.0,
+      "min_price": 55000.0,
       "max_price": 1903404.49
     }
   ]

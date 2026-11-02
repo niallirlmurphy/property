@@ -1,11 +1,11 @@
 {
   "slug": "gilford-park-sandymount",
   "stats": {
-    "count": 12,
-    "median": 1207500,
-    "avg": 1324583,
+    "count": 13,
+    "median": 1250000,
+    "avg": 1418846,
     "min": 865000,
-    "max": 2050000,
+    "max": 2550000,
     "firstYear": 2013,
     "lastYear": 2026
   },
@@ -76,14 +76,22 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 1710000,
-      "avg_price": 1710000,
+      "count": 3,
+      "median_price": 1800000,
+      "avg_price": 1990000,
       "min_price": 1620000,
-      "max_price": 1800000
+      "max_price": 2550000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-24",
+      "address": "6 GILFORD PARK, SANDYMOUNT, DUBLIN 4",
+      "price": 2550000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04TH61"
+    },
     {
       "date": "2026-06-18",
       "address": "25 GILFORD PARK, SANDYMOUNT, DUBLIN 4",
@@ -181,5 +189,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 12
+  "totalTransactions": 13
 }

@@ -1,9 +1,9 @@
 {
   "slug": "aughamore-kilcock-road",
   "stats": {
-    "count": 94,
+    "count": 95,
     "median": 355000,
-    "avg": 367005,
+    "avg": 368773,
     "min": 145803,
     "max": 545000,
     "firstYear": 2016,
@@ -84,14 +84,22 @@
     },
     {
       "year": 2026,
-      "count": 1,
-      "median_price": 525000,
-      "avg_price": 525000,
+      "count": 2,
+      "median_price": 530000,
+      "avg_price": 530000,
       "min_price": 525000,
-      "max_price": 525000
+      "max_price": 535000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-07",
+      "address": "49 AUGHAMORE, KILCOCK ROAD, CLANE",
+      "price": 535000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "W91A5N3"
+    },
     {
       "date": "2026-03-02",
       "address": "3A AUGHAMORE, KILCOCK ROAD, CLANE",
@@ -483,15 +491,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "W91F3FH"
-    },
-    {
-      "date": "2018-08-21",
-      "address": "68 Aughamore, Kilcock Road, Clane",
-      "price": 312775,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 94
+  "totalTransactions": 95
 }

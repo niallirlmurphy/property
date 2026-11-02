@@ -1,9 +1,9 @@
 {
   "slug": "burnell-court-northern-cross",
   "stats": {
-    "count": 99,
+    "count": 100,
     "median": 150713,
-    "avg": 201900,
+    "avg": 203081,
     "min": 106230,
     "max": 351000,
     "firstYear": 2014,
@@ -108,14 +108,22 @@
     },
     {
       "year": 2026,
-      "count": 7,
+      "count": 8,
       "median_price": 320000,
-      "avg_price": 305143,
+      "avg_price": 307000,
       "min_price": 250000,
       "max_price": 344000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-08-25",
+      "address": "95 BURNELL COURT, NORTHERN CROSS, MALAHIDE RD DUBLIN 17",
+      "price": 320000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D17WK70"
+    },
     {
       "date": "2026-08-17",
       "address": "54 BURNELL COURT, NORTHERN CROSS, MALAHIDE",
@@ -507,15 +515,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2015-05-01",
-      "address": "132 Burnell Court, Northern Cross, Malahide Road",
-      "price": 132787,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 99
+  "totalTransactions": 100
 }

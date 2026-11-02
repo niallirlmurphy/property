@@ -1,9 +1,9 @@
 {
   "slug": "riverpoint-bishops-quay",
   "stats": {
-    "count": 98,
+    "count": 100,
     "median": 154200,
-    "avg": 169317,
+    "avg": 170380,
     "min": 55000,
     "max": 308370,
     "firstYear": 2010,
@@ -108,14 +108,30 @@
     },
     {
       "year": 2026,
-      "count": 4,
-      "median_price": 257500,
-      "avg_price": 257500,
-      "min_price": 215000,
+      "count": 6,
+      "median_price": 227500,
+      "avg_price": 245833,
+      "min_price": 205000,
       "max_price": 300000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-16",
+      "address": "606 RIVERPOINT, BISHOPS QUAY, LIMERICK",
+      "price": 240000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94KW31"
+    },
+    {
+      "date": "2026-07-31",
+      "address": "506 RIVERPOINT, BISHOPS QUAY, LIMERICK",
+      "price": 205000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "V94E6K3"
+    },
     {
       "date": "2026-02-27",
       "address": "703 RIVERPOINT, BISHOPS QUAY, LIMERICK",
@@ -230,14 +246,6 @@
     },
     {
       "date": "2024-10-02",
-      "address": "708 RIVERPOINT, BISHOPS QUAY, LIMERICK",
-      "price": 205000,
-      "bedrooms": 2,
-      "propertyType": "apartment",
-      "eircode": "V94AW95"
-    },
-    {
-      "date": "2024-10-02",
       "address": "501 RIVERPOINT, BISHOPS QUAY, LIMERICK",
       "price": 205000,
       "bedrooms": null,
@@ -259,6 +267,14 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2024-10-02",
+      "address": "708 RIVERPOINT, BISHOPS QUAY, LIMERICK",
+      "price": 205000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "V94AW95"
     },
     {
       "date": "2024-10-01",
@@ -494,22 +510,6 @@
     },
     {
       "date": "2019-11-01",
-      "address": "APARTMENT 605, RIVERPOINT, BISHOPS QUAY",
-      "price": 145161,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "eircode": "V94HP77"
-    },
-    {
-      "date": "2019-11-01",
-      "address": "APT 309 RIVERPOINT, BISHOPS QUAY, LIMERICK",
-      "price": 145161,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "eircode": null
-    },
-    {
-      "date": "2019-11-01",
       "address": "APT 407, RIVERPOINT, BISHOPS QUAY",
       "price": 145161,
       "bedrooms": null,
@@ -517,5 +517,5 @@
       "eircode": "V94X627"
     }
   ],
-  "totalTransactions": 98
+  "totalTransactions": 100
 }

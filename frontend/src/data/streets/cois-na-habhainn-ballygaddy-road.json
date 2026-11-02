@@ -438,19 +438,19 @@
     },
     {
       "date": "2021-03-30",
-      "address": "47 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
-      "price": 170000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2021-03-30",
       "address": "112 COIS NA HABHAINN, BALLYGADDY ROAD, TUAM",
       "price": 174000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "H54TR66"
+    },
+    {
+      "date": "2021-03-30",
+      "address": "47 COIS NA HABHAINN, BALLYGADDY RD, TUAM",
+      "price": 170000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2021-03-16",

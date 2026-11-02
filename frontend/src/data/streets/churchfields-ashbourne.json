@@ -1,11 +1,11 @@
 {
   "slug": "churchfields-ashbourne",
   "stats": {
-    "count": 98,
-    "median": 282875,
-    "avg": 294249,
+    "count": 99,
+    "median": 283750,
+    "avg": 299358,
     "min": 100000,
-    "max": 525000,
+    "max": 800000,
     "firstYear": 2010,
     "lastYear": 2026
   },
@@ -132,14 +132,22 @@
     },
     {
       "year": 2026,
-      "count": 3,
-      "median_price": 480000,
-      "avg_price": 482333,
+      "count": 4,
+      "median_price": 498500,
+      "avg_price": 561750,
       "min_price": 450000,
-      "max_price": 517000
+      "max_price": 800000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-13",
+      "address": "3 CHURCHFIELDS, ASHBOURNE, MEATH",
+      "price": 800000,
+      "bedrooms": 5,
+      "propertyType": "detached",
+      "eircode": "A84WT29"
+    },
     {
       "date": "2026-07-02",
       "address": "186  CHURCHFIELDS, ASHBOURNE, CO. MEATH",
@@ -382,18 +390,18 @@
     },
     {
       "date": "2017-07-07",
-      "address": "130 Churchfields, Ashbourne, Co. Meath",
-      "price": 239646,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-07-07",
       "address": "No.135 Churchfields, Ashbourne",
       "price": 239646,
       "bedrooms": null,
       "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2017-07-07",
+      "address": "130 Churchfields, Ashbourne, Co. Meath",
+      "price": 239646,
+      "bedrooms": null,
+      "propertyType": null,
       "eircode": null
     },
     {
@@ -502,16 +510,16 @@
     },
     {
       "date": "2017-06-16",
-      "address": "Unit 122 Churchfields, Ashbourne",
-      "price": 259912,
+      "address": "114 Churchfields, Ashbourne, Co Meath",
+      "price": 396476,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2017-06-16",
-      "address": "114 Churchfields, Ashbourne, Co Meath",
-      "price": 396476,
+      "address": "Unit 122 Churchfields, Ashbourne",
+      "price": 259912,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -531,15 +539,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2017-06-07",
-      "address": "117 Churchfields, Ashbourne",
-      "price": 259911,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 98
+  "totalTransactions": 99
 }

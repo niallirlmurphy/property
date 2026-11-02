@@ -1,9 +1,9 @@
 {
   "slug": "clonlara-kerry-pike",
   "stats": {
-    "count": 147,
+    "count": 149,
     "median": 375000,
-    "avg": 416827,
+    "avg": 417759,
     "min": 255174,
     "max": 820000,
     "firstYear": 2017,
@@ -36,9 +36,9 @@
     },
     {
       "year": 2020,
-      "count": 38,
+      "count": 39,
       "median_price": 365000,
-      "avg_price": 389267,
+      "avg_price": 389927,
       "min_price": 277532,
       "max_price": 453744
     },
@@ -84,14 +84,22 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 685000,
-      "avg_price": 685000,
+      "count": 3,
+      "median_price": 557500,
+      "avg_price": 642500,
       "min_price": 550000,
       "max_price": 820000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-07-10",
+      "address": "27 CLONLARA, KERRY PIKE, CORK",
+      "price": 557500,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "T23ETW7"
+    },
     {
       "date": "2026-06-29",
       "address": "109 CLONLARA, KERRY PIKE, CORK",
@@ -224,8 +232,8 @@
       "date": "2022-03-14",
       "address": "27 CLONLARA, KERRY PIKE, CORK",
       "price": 432000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
       "eircode": "T23ETW7"
     },
     {
@@ -462,6 +470,14 @@
     },
     {
       "date": "2020-11-30",
+      "address": "No 2 Clonlara, Kerry Pike, Co Cork",
+      "price": 365639,
+      "bedrooms": null,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2020-11-30",
       "address": "114 Clonlara, Kerry Pike",
       "price": 416299,
       "bedrooms": null,
@@ -475,23 +491,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2020-10-30",
-      "address": "64 CLONLARA, KERRY PIKE, CO CORK",
-      "price": 314000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-10-11",
-      "address": "1 Clonlara, Kerry Pike",
-      "price": 453744,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 147
+  "totalTransactions": 149
 }

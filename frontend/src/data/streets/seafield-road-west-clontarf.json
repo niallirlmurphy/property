@@ -1,9 +1,9 @@
 {
   "slug": "seafield-road-west-clontarf",
   "stats": {
-    "count": 9,
-    "median": 1275000,
-    "avg": 1616333,
+    "count": 10,
+    "median": 1287500,
+    "avg": 1584700,
     "min": 1000000,
     "max": 3450000,
     "firstYear": 2010,
@@ -60,14 +60,22 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 1762500,
-      "avg_price": 1762500,
-      "min_price": 1725000,
+      "count": 3,
+      "median_price": 1725000,
+      "avg_price": 1608333,
+      "min_price": 1300000,
       "max_price": 1800000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-08-20",
+      "address": "39 SEAFIELD ROAD WEST, CLONTARF, DUBLIN 3",
+      "price": 1300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03FY90"
+    },
     {
       "date": "2026-08-19",
       "address": "6 SEAFIELD ROAD WEST, CLONTARF, DUBLIN 3",
@@ -141,5 +149,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 9
+  "totalTransactions": 10
 }

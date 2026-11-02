@@ -1,15 +1,15 @@
 {
   "slug": "rockfield-dundrum",
   "stats": {
-    "count": 223,
-    "median": 385000,
-    "avg": 398563,
+    "count": 225,
+    "median": 387500,
+    "avg": 399187,
     "min": 180000,
     "max": 770000,
     "firstYear": 2010,
     "lastYear": 2026,
     "recentMedian": 495000,
-    "recentCount": 24
+    "recentCount": 26
   },
   "trends": [
     {
@@ -142,10 +142,10 @@
     },
     {
       "year": 2026,
-      "count": 7,
+      "count": 9,
       "median_price": 513000,
-      "avg_price": 540857,
-      "min_price": 425000,
+      "avg_price": 524833,
+      "min_price": 415000,
       "max_price": 717000
     }
   ],
@@ -153,9 +153,9 @@
   "types": [
     {
       "type": "Apartment",
-      "count": 63,
-      "median": 365000,
-      "avg": 379271
+      "count": 64,
+      "median": 368000,
+      "avg": 381509
     },
     {
       "type": "House",
@@ -167,8 +167,8 @@
   "development": {
     "firstSaleYear": 2010,
     "newHomeSales": 0,
-    "resales": 223,
-    "bedroomsKnown": 25
+    "resales": 225,
+    "bedroomsKnown": 26
   },
   "bulkSales": [],
   "amenities": {
@@ -249,9 +249,25 @@
   },
   "transactions": [
     {
+      "date": "2026-09-18",
+      "address": "39 THE ROWAN, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 522500,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
       "date": "2026-07-06",
       "address": "17 THE ELM, ROCKFIELD, DUNDRUM",
       "price": 556000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-07-02",
+      "address": "APT 79 THE OAKS, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 415000,
       "bedrooms": null,
       "propertyType": null,
       "newHome": false
@@ -631,23 +647,7 @@
       "bedrooms": null,
       "propertyType": null,
       "newHome": false
-    },
-    {
-      "date": "2023-08-11",
-      "address": "9 THE OAK, ROCKFIELD, DUNDRUM DUBLIN 14",
-      "price": 455000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2023-07-20",
-      "address": "48 THE OAKS, ROCKFIELD, DUNDRUM DUBLIN 14",
-      "price": 455000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
     }
   ],
-  "totalTransactions": 223
+  "totalTransactions": 225
 }

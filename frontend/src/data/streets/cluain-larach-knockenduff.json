@@ -1,9 +1,9 @@
 {
   "slug": "cluain-larach-knockenduff",
   "stats": {
-    "count": 167,
-    "median": 257298,
-    "avg": 264516,
+    "count": 168,
+    "median": 257299,
+    "avg": 265769,
     "min": 149443,
     "max": 555000,
     "firstYear": 2016,
@@ -92,14 +92,22 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 470000,
-      "avg_price": 470000,
+      "count": 3,
+      "median_price": 475000,
+      "avg_price": 471667,
       "min_price": 385000,
       "max_price": 555000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-08-19",
+      "address": "61 CLUAIN LARACH, KNOCKENDUFF, TRAMORE",
+      "price": 475000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "X91XT0C"
+    },
     {
       "date": "2026-07-28",
       "address": "132 CLUAIN LARACH, KNOCKENDUFF, TRAMORE",
@@ -491,15 +499,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2021-06-22",
-      "address": "74 Cluain Larach, Knockenduff, Tramore",
-      "price": 240000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 167
+  "totalTransactions": 168
 }

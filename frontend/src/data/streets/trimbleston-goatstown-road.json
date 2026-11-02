@@ -1,11 +1,11 @@
 {
   "slug": "trimbleston-goatstown-road",
   "stats": {
-    "count": 119,
-    "median": 525000,
-    "avg": 592048,
+    "count": 123,
+    "median": 540000,
+    "avg": 599339,
     "min": 241000,
-    "max": 1167401,
+    "max": 1450000,
     "firstYear": 2010,
     "lastYear": 2026
   },
@@ -140,14 +140,22 @@
     },
     {
       "year": 2026,
-      "count": 5,
-      "median_price": 685000,
-      "avg_price": 743600,
-      "min_price": 587000,
-      "max_price": 1115000
+      "count": 9,
+      "median_price": 650000,
+      "avg_price": 775889,
+      "min_price": 565000,
+      "max_price": 1450000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-17",
+      "address": "329 TRIMBLESTON, GOATSTOWN ROAD, GOATSTOWN",
+      "price": 600000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D14XN61"
+    },
     {
       "date": "2026-09-15",
       "address": "385 TRIMBLESTON, GOATSTOWN ROAD, DUBLIN14",
@@ -163,6 +171,30 @@
       "bedrooms": 3,
       "propertyType": "house",
       "eircode": "D14HE61"
+    },
+    {
+      "date": "2026-07-30",
+      "address": "APARTMENT 404, TRIMBLESTON, GOATSTOWN ROAD",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "D14RD93"
+    },
+    {
+      "date": "2026-07-21",
+      "address": "142 TRIMBLESTON, GOATSTOWN RD, DUBLIN",
+      "price": 565000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D14CC91"
+    },
+    {
+      "date": "2026-07-17",
+      "address": "76 TRIMBLESTON, GOATSTOWN RD, DUBLIN",
+      "price": 1450000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D14FY99"
     },
     {
       "date": "2026-06-03",
@@ -515,39 +547,7 @@
       "bedrooms": 2,
       "propertyType": "apartment",
       "eircode": null
-    },
-    {
-      "date": "2021-10-28",
-      "address": "210 TRIMBLESTON, GOATSTOWN RD, GOATSTOWN DUBLIN 14",
-      "price": 870000,
-      "bedrooms": 3,
-      "propertyType": "house",
-      "eircode": "D14HE61"
-    },
-    {
-      "date": "2021-09-20",
-      "address": "204 TRIMBLESTON, GOATSTOWN RD, DUBLIN 14",
-      "price": 592000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D14XV00"
-    },
-    {
-      "date": "2021-07-01",
-      "address": "78 TRIMBLESTON, GOATSTOWN RD, DUBLIN 14",
-      "price": 426000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2021-06-03",
-      "address": "177 TRIMBLESTON, GOATSTOWN RD, CLONSKEAGH DUBLIN 14",
-      "price": 780000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D14TV09"
     }
   ],
-  "totalTransactions": 119
+  "totalTransactions": 123
 }

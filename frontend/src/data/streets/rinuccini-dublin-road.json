@@ -128,8 +128,8 @@
       "date": "2026-07-03",
       "address": "102 RINUCCINI, DUBLIN RD, PORTLAOISE",
       "price": 245000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "apartment",
       "eircode": "R32DK57"
     },
     {
@@ -256,8 +256,8 @@
       "date": "2024-09-10",
       "address": "102 RINUCCINI, DUBLIN RD, PORTLAOISE",
       "price": 189000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "apartment",
       "eircode": "R32DK57"
     },
     {

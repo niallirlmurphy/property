@@ -1,9 +1,9 @@
 {
   "slug": "howth-road-raheny",
   "stats": {
-    "count": 129,
-    "median": 662201,
-    "avg": 707390,
+    "count": 130,
+    "median": 661100,
+    "avg": 706697,
     "min": 10000,
     "max": 1800000,
     "firstYear": 2010,
@@ -140,14 +140,22 @@
     },
     {
       "year": 2026,
-      "count": 4,
-      "median_price": 935000,
-      "avg_price": 1091250,
-      "min_price": 695000,
+      "count": 5,
+      "median_price": 910000,
+      "avg_price": 996450,
+      "min_price": 617250,
       "max_price": 1800000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-13",
+      "address": "632A HOWTH RD, RAHENY, DUBLIN 5",
+      "price": 617250,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "D05DT91"
+    },
     {
       "date": "2026-07-31",
       "address": "507 HOWTH RD, RAHENY, DUBLIN 5",
@@ -539,15 +547,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2020-04-22",
-      "address": "570 HOWTH RD, RAHENY, DUBLIN 5",
-      "price": 770000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 129
+  "totalTransactions": 130
 }
