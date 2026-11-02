@@ -29,7 +29,6 @@ export const routes = [
   { path: "/testux3", lazy: () => import("./pages/TestUx3Page").then(page) },   // UX prototype 3 (warm, illustrated), noindex
   { path: "/s1", lazy: () => import("./pages/ExactSearchPage").then(page) },
   { path: "/polygon", lazy: () => import("./pages/PolygonSearchPage").then(page) },
-  { path: "/heatmap", lazy: () => import("./pages/HeatmapPage").then(page) },
   { path: "/valuation", lazy: () => import("./pages/ValuationPage").then(page) },
   { path: "/areaguides", lazy: () => import("./pages/AreaGuidesPage").then(page), loader: areaGuidesLoader },
   { path: "/area/:slug", lazy: () => import("./pages/AreaPage").then(page), loader: areaLoader },

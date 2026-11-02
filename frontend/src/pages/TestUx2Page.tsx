@@ -56,7 +56,7 @@ type Status = "idle" | "loading" | "done" | "error";
 const NAV = [
   { to: "/valuation", label: "Valuation" },
   { to: "/areaguides", label: "Area guides" },
-  { to: "/heatmap", label: "Price heatmap" },
+  { to: "/blog/ireland-house-price-growth-map", label: "Price heatmap" },
   { to: "/polygon", label: "Draw on map" },
   { to: "/mortgage", label: "Mortgage" },
   { to: "/blog", label: "Analysis" },
@@ -124,7 +124,7 @@ function TuxFooter() {
           <h4>Search</h4>
           <Link to="/valuation">Valuation</Link>
           <Link to="/polygon">Draw on map</Link>
-          <Link to="/heatmap">Price heatmap</Link>
+          <Link to="/blog/ireland-house-price-growth-map">Price heatmap</Link>
           <Link to="/s1">Single property</Link>
         </div>
         <div>

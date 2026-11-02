@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import HeatmapBody from "../components/HeatmapBody";
 
-// The interactive price-growth map (formerly a standalone menu item at /heatmap)
+// The interactive price-growth map (formerly the standalone page /heatmap, which now 301s here)
 // as a post. Figures load from /data/heatmap.json, regenerated after each PPR
 // sync by scripts/generate_heatmap_data.py, so the prose here stays figure-free.
 

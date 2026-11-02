@@ -5,6 +5,11 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/heatmap",
+      "destination": "/blog/ireland-house-price-growth-map",
+      "permanent": true
+    },
+    {
       "source": "/mortgages",
       "destination": "/mortgage",
       "permanent": true

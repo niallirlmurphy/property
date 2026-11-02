@@ -2,8 +2,8 @@ import { useEffect, useState, lazy, Suspense } from "react";
 import { ClientOnly } from "vite-react-ssg";
 import type { HeatmapData, LocalityRow } from "../pages/HeatmapMap";
 
-// The price-growth map, legend, locality tables and methodology. Shared by the
-// /heatmap page and the "Ireland House Price Growth Map" blog post.
+// The price-growth map, legend, locality tables and methodology, rendered by the
+// "Ireland House Price Growth Map" blog post (/heatmap 301s there).
 
 const HeatmapMap = lazy(() => import("../pages/HeatmapMap"));
 

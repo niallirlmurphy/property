@@ -465,7 +465,7 @@ export function MarketHealth36MonthsContent() {
       <p style={p}>
         Raw register averages are easy to misread. A multi-million-euro portfolio deal, a €15,000 transfer of a share in a family
         home, or a 76-apartment block recorded as one sale can each swing a month's figure. So, using the same rules as our{" "}
-        <Link to="/heatmap" style={link}>price-growth heatmap</Link>, we kept only:
+        <Link to="/blog/ireland-house-price-growth-map" style={link}>price-growth heatmap</Link>, we kept only:
       </p>
       <ul style={{ marginBottom: "1.25rem", paddingLeft: "1.25rem" }}>
         <li style={{ marginBottom: "0.5rem" }}>sales the register marks as <strong>full market price</strong>;</li>
@@ -580,7 +580,7 @@ export function MarketHealth36MonthsContent() {
         One caveat: within a single district the mix of apartments and houses that happens to sell can shift from year to year,
         so treat differences of a few points as noise. For district-by-district detail, see our{" "}
         <Link to="/blog/dublin-property-prices-by-postcode-2026" style={link}>Dublin prices by postcode guide</Link> or the{" "}
-        <Link to="/heatmap" style={link}>heatmap</Link>.
+        <Link to="/blog/ireland-house-price-growth-map" style={link}>heatmap</Link>.
       </p>
 
       <SectionHeading>6. New builds: a growing share, built where land is cheaper</SectionHeading>
