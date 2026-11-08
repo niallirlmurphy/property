@@ -216,7 +216,7 @@ export default function CountyPage() {
                 Median and average residential sale prices in County {county} by year,
                 based on full market price sales only.
               </p>
-              <div style={{ position: "relative", height: 240 }}>
+              <div style={{ position: "relative", minHeight: 240 }}>
                 <TrendsChart data={data.trends} onClose={() => {}} inline />
               </div>
             </section>

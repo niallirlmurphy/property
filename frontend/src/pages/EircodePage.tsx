@@ -117,7 +117,7 @@ export default function EircodePage() {
                 )}
               </h2>
               <p>County-level median and average sale prices by year.</p>
-              <div style={{ position: "relative", height: 240 }}>
+              <div style={{ position: "relative", minHeight: 240 }}>
                 <TrendsChart data={trends} onClose={() => {}} inline />
               </div>
             </section>

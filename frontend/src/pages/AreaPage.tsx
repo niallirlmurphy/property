@@ -93,17 +93,6 @@ export default function AreaPage() {
         <p className="area-info">{config.info}</p>
       )}
 
-      {config.image2 && (
-        <img
-          className="area-hero"
-          src={config.image2}
-          alt={config.imageAlt2 ?? config.name}
-          width={2000}
-          height={1500}
-          loading="lazy"
-        />
-      )}
-
       {loading && <div className="content-loading">Loading data…</div>}
       {error && <div className="error-msg">{error}</div>}
 
@@ -132,13 +121,24 @@ export default function AreaPage() {
             <section className="content-section">
               <h2>Price Trends in {config.name}</h2>
               <p>Median and average sale prices by year within {config.radius_km} km of {config.name}.</p>
-              <div style={{ position: "relative", height: 240 }}>
+              <div style={{ position: "relative", minHeight: 240 }}>
                 <TrendsChart data={data.trends} onClose={() => setShowTrends(false)} inline />
               </div>
             </section>
           )}
 
           {data.cso && <CsoFigures cso={data.cso} place={config.name} areaNote />}
+
+          {config.image2 && (
+            <img
+              className="area-hero"
+              src={config.image2}
+              alt={config.imageAlt2 ?? config.name}
+              width={2000}
+              height={1500}
+              loading="lazy"
+            />
+          )}
 
           {data.recent.length > 0 && (
             <section className="content-section">

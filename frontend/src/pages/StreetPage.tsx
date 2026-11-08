@@ -108,7 +108,7 @@ export default function StreetPage() {
           <section className="content-section">
             <h2>Price Trends on {config.name}</h2>
             <p>Median and average sale prices by year, {stats.firstYear}–{stats.lastYear}.</p>
-            <div style={{ position: "relative", height: 240 }}>
+            <div style={{ position: "relative", minHeight: 240 }}>
               <TrendsChart data={data.trends} onClose={() => {}} inline />
             </div>
           </section>
