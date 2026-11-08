@@ -818,13 +818,14 @@ body {
 
 /* Hero photo on area guide pages (e.g. Clontarf) */
 .area-hero {
+  /* show the whole photo, scaled to fit (no cropping) */
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
-  max-height: 360px;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 560px;
   border-radius: 8px;
-  margin: 8px 0 20px;
+  margin: 8px auto 20px;
 }
 
 /* Factual location overview paragraph on area guide pages */
