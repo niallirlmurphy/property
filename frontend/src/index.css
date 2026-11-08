@@ -1115,7 +1115,8 @@ body {
 
 .mc-page-subtitle {
   background: var(--ink);
-  padding: 0 32px 20px;
+  /* line up with the title in .page-title-band-in (max-width 1120px, 20px padding) */
+  padding: 0 max(20px, calc((100% - 1120px) / 2 + 20px)) 20px;
 }
 
 .mc-subtitle {
@@ -1450,7 +1451,6 @@ input[type="range"]::-moz-range-thumb {
     gap: 16px;
   }
   .mc-inputs { position: static; }
-  .mc-page-subtitle { padding: 0 16px 16px; }
 }
 
 @media (max-width: 639px) {
