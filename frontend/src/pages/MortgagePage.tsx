@@ -371,6 +371,48 @@ export default function MortgagePage() {
         </main>
       </div>
 
+      {/* Rate guide */}
+      <section className="mc-guide">
+        <h2>Which interest rate should I enter?</h2>
+        <p>
+          Irish lenders show at least two figures beside every mortgage: the borrowing rate and the APRC.
+          They measure different things, so it matters which one you put into the calculator.
+        </p>
+        <dl>
+          <dt>Interest rate (borrowing rate)</dt>
+          <dd>
+            The annual rate charged on what you owe, often labelled the &ldquo;borrowing rate&rdquo;, &ldquo;fixed
+            rate&rdquo; or &ldquo;variable rate&rdquo;. Your monthly repayment is worked out from this figure.{" "}
+            <strong>This is the one to enter in the calculator.</strong>
+          </dd>
+          <dt>APRC (Annual Percentage Rate of Charge)</dt>
+          <dd>
+            The total cost of the mortgage expressed as a yearly rate. On top of interest it includes charges you
+            must pay the lender to get the loan, such as a valuation fee, and it assumes you keep the mortgage for
+            the full term. On a fixed rate, the APRC also assumes you move to the lender&rsquo;s variable rate
+            when the fixed period ends. That is why the APRC is usually higher than the borrowing rate. Use it to
+            compare offers from different lenders, not to work out your repayment.
+          </dd>
+          <dt>APR (Annual Percentage Rate)</dt>
+          <dd>
+            The older name for the same idea, still used for personal loans, car finance and credit cards. Irish
+            mortgages quote the APRC instead. If you see an &ldquo;APR&rdquo; on a mortgage, treat it like the
+            APRC: a cost-comparison figure, not the rate your repayments are based on.
+          </dd>
+        </dl>
+        <h3>Fixed periods</h3>
+        <p>
+          The calculator applies one rate for the whole term. Most Irish mortgages start on a rate fixed for a few
+          years and then roll on to a variable rate. To see what that means for you, run the calculator at the
+          fixed rate, then again at the lender&rsquo;s current variable rate, for the balance and years that would
+          remain when the fixed period ends.
+        </p>
+        <p>
+          Example: an offer might read &ldquo;3.50% fixed for 4 years, APRC 4.10%&rdquo;. Enter 3.50%. The
+          4.10% is the figure to compare with other lenders&rsquo; APRCs.
+        </p>
+      </section>
+
       {/* Disclosure */}
       <p className="mc-disclaimer">
         This page is for educational and informational purposes only. Your mortgage provider may have additional terms or fees not taken into consideration here.

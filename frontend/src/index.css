@@ -1433,6 +1433,21 @@ input[type="range"]::-moz-range-thumb {
 }
 .mc-show-more:hover { background: var(--paper); }
 
+/* Rate guide below the calculator */
+.mc-guide {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 24px;
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 15px;
+}
+.mc-guide h2 { font-size: 22px; margin: 0 0 12px; }
+.mc-guide h3 { font-size: 17px; margin: 24px 0 8px; }
+.mc-guide p, .mc-guide dl { max-width: 760px; margin: 0 0 12px; }
+.mc-guide dt { font-weight: 700; margin-top: 14px; }
+.mc-guide dd { margin: 4px 0 0; }
+
 .mc-disclaimer {
   max-width: 1200px;
   margin: 24px auto 0;
