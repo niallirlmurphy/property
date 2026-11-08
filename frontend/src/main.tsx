@@ -67,6 +67,20 @@ export const routes = [
 export const createRoot = ViteReactSSG(
   { routes },
   ({ isClient }) => {
-    if (isClient) inject();
+    if (isClient) {
+      inject();
+      // After a deploy, a tab opened earlier still points at the old hashed
+      // chunks, which no longer exist ("Failed to fetch dynamically imported
+      // module"). Reload once to pick up the new build; the sessionStorage
+      // guard stops a reload loop if the chunk is genuinely broken.
+      window.addEventListener("vite:preloadError", (event) => {
+        const key = "chunk-reload-at";
+        const last = Number(sessionStorage.getItem(key) ?? 0);
+        if (Date.now() - last < 10_000) return;
+        sessionStorage.setItem(key, String(Date.now()));
+        event.preventDefault();
+        window.location.reload();
+      });
+    }
   }
 );

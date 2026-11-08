@@ -10,6 +10,8 @@ import re
 import unicodedata
 from typing import Optional
 
+from address_normalize import _PLACE_TYPO_RE, _PLACE_TYPOS
+
 COUNTIES = [
     "Carlow", "Cavan", "Clare", "Cork", "Donegal", "Dublin", "Galway", "Kerry",
     "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth",
@@ -26,7 +28,9 @@ def normalize_place(s: str) -> str:
     "Dún Laoghaire" / "dun-laoghaire" -> "dun laoghaire", "Harold's Cross" -> "harolds cross"."""
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
     s = re.sub(r"['’]", "", s)
-    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", s)).strip()
+    s = re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", s)).strip()
+    # known register misspellings ("castlenock") look up the right place
+    return _PLACE_TYPO_RE.sub(lambda m: _PLACE_TYPOS[m.group(1).lower()].lower(), s)
 
 
 def county_of(part: str) -> Optional[str]:
