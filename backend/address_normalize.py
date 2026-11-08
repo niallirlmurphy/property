@@ -38,6 +38,108 @@ _LOWER_EXCEPTIONS = {'and', 'the', 'of', 'de', 'von', 'van', 'na', 'an'}
 _UPPER_EXCEPTIONS = {'Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford'}
 
 
+# Misspelled place names in the register, checked against OpenStreetMap
+# (name, name:ga, alt/old names) on 2026-11-08: OSM knows the right form and
+# not the wrong one. Whole words only. Irish/English variants and look-alike
+# real places (Croghan/Cloghan, Carrigane/Carrigaline...) are deliberately
+# absent; see logs/spelling/. Keep this list reviewed: never generate it.
+_PLACE_TYPOS = {
+    "aitkens village": "aikens village",
+    "asbourne": "ashbourne",
+    "athone": "athlone",
+    "bagnelstown": "bagenalstown",
+    "baileborough": "bailieborough",
+    "balbrigan": "balbriggan",
+    "balgriffen": "balgriffin",
+    "balinteer": "ballinteer",
+    "ballaghadreen": "ballaghaderreen",
+    "ballaghderreen": "ballaghaderreen",
+    "ballbriggan": "balbriggan",
+    "ballincurra": "ballinacurra",
+    "ballingcollig": "ballincollig",
+    "ballybritt": "ballybrit",
+    "ballymackenny": "ballymakenny",
+    "ballyraggett": "ballyragget",
+    "beaumount": "beaumont",
+    "beltutbet": "belturbet",
+    "boreenmana": "boreenmanna",
+    "buncranna": "buncrana",
+    "buttervant": "buttevant",
+    "cabinteeley": "cabinteely",
+    "carrigtowhill": "carrigtwohill",
+    "casteltroy": "castletroy",
+    "castetroy": "castletroy",
+    "castlecomber": "castlecomer",
+    "castlenock": "castleknock",
+    "castleroy": "castletroy",
+    "celebridge": "celbridge",
+    "cellbridge": "celbridge",
+    "chaplestown": "chapelstown",
+    "clonakility": "clonakilty",
+    "clongowan": "clongowen",
+    "clongriffen": "clongriffin",
+    "courttown": "courtown",
+    "delganey": "delgany",
+    "demense": "demesne",
+    "distillary": "distillery",
+    "donaghamede": "donaghmede",
+    "donaghmeade": "donaghmede",
+    "donneycarney": "donnycarney",
+    "driminagh": "drimnagh",
+    "drumshambo": "drumshanbo",
+    "dun laoighaire": "dun laoghaire",
+    "dun loaghaire": "dun laoghaire",
+    "dunleek": "duleek",
+    "dunsaughlin": "dunshaughlin",
+    "dunshauglin": "dunshaughlin",
+    "gerard griffin": "gerald griffin",
+    "glengariff": "glengarriff",
+    "glounthane": "glounthaune",
+    "glouthaune": "glounthaune",
+    "graiguemanagh": "graiguenamanagh",
+    "harold cross": "harolds cross",
+    "heynestown": "haynestown",
+    "keshkerrigan": "keshcarrigan",
+    "kilarney": "killarney",
+    "kilcarberry": "kilcarbery",
+    "kiliiney": "killiney",
+    "killcullen": "kilcullen",
+    "killmallock": "kilmallock",
+    "killygordan": "killygordon",
+    "kilorglin": "killorglin",
+    "kilpeddar": "kilpedder",
+    "knocknacara": "knocknacarra",
+    "landsdowne": "lansdowne",
+    "lehanaghbeg": "lehenaghbeg",
+    "lehanaghmore": "lehenaghmore",
+    "leixip": "leixlip",
+    "lexlip": "leixlip",
+    "marmocks": "marnocks",
+    "newtownmtkennedy": "newtownmountkennedy",
+    "phisboro": "phibsboro",
+    "portabello": "portobello",
+    "portlaois": "portlaoise",
+    "portloaise": "portlaoise",
+    "rathfarmham": "rathfarnham",
+    "rathfarnam": "rathfarnham",
+    "rathmoylon": "rathmolyon",
+    "rathoath": "ratoath",
+    "rochfordbridge": "rochfortbridge",
+    "roscarbery": "rosscarbery",
+    "shackelton": "shackleton",
+    "shankhill": "shankill",
+    "skibereen": "skibbereen",
+    "stokestown": "strokestown",
+    "tallagh": "tallaght",
+    "thomandgate": "thomondgate",
+    "tinahealy": "tinahely",
+    "tyrrellstown": "tyrrelstown",
+    "virgina": "virginia",
+    "westminister": "westminster",
+}
+_PLACE_TYPO_RE = re.compile(r"\b(" + "|".join(re.escape(k) for k in sorted(_PLACE_TYPOS, key=len, reverse=True)) + r")\b", re.I)
+
+
 def fold_accents(text: str) -> str:
     """Strip combining marks (á → a)."""
     decomposed = unicodedata.normalize('NFKD', text)
@@ -51,7 +153,7 @@ def _expand_st(line: str) -> str:
             return 'Street'
         nxt = rest[0].strip('.').lower()
         word = 'Street' if (nxt in _STREET_QUALIFIERS or nxt in _COUNTIES
-                            or nxt.isdigit()) else 'Saint'
+                            or nxt.isdigit() or nxt in ('and', '&')) else 'Saint'
         # "St.Marys" has no space after the dot
         return word if line[m.end():m.end() + 1] == ' ' else word + ' '
     return _ST_RE.sub(repl, line)
@@ -67,6 +169,7 @@ def normalize_address(address: str) -> str:
     4. St → Saint or Street (see _expand_st); Rd/Ave/Dr/Cl/Ct/Pk/Sq → full word
     5. Clean up punctuation and whitespace
     6. Title case with exceptions
+    7. Correct known place-name misspellings (_PLACE_TYPOS: Castlenock → Castleknock)
     """
     if not address:
         return address
@@ -106,4 +209,6 @@ def normalize_address(address: str) -> str:
         else:
             result_words.append(word.capitalize())
 
-    return re.sub(r'\s+', ' ', ' '.join(result_words)).strip()
+    result = re.sub(r'\s+', ' ', ' '.join(result_words)).strip()
+    return _PLACE_TYPO_RE.sub(
+        lambda m: _PLACE_TYPOS[m.group(1).lower()].title().replace("'S", "'s"), result)

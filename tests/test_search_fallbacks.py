@@ -26,3 +26,24 @@ def test_dublin_only_assumed_when_nobody_chose_it():
     assert not _dublin_was_assumed("tipperstown", "Dublin")
     assert not _dublin_was_assumed("Swords, Dublin", None)
     assert not _dublin_was_assumed("Main St, Tuam, Co Galway", None)
+
+
+def test_place_typos_corrected():
+    from address_normalize import normalize_address as n
+    assert n("12 Main St, Castlenock, Dublin 15") == "12 Main Street, Castleknock, Dublin 15"
+    assert n("Apt 3, Harold Cross Road, Dublin 6W").startswith("Apt 3, Harolds Cross Road")
+    assert n("2 Saint Georges Avenue, Kiliiney") == "2 Saint Georges Avenue, Killiney"
+    assert n("Rathoath Road, Finglas") == "Ratoath Road, Finglas"
+
+
+def test_real_lookalike_places_untouched():
+    from address_normalize import normalize_address as n
+    for a in ["Croghan, Offaly", "Carrigaloe, Cobh", "Kinsalebeg, Youghal", "Bagnalstown, Carlow",
+              "Ballincrokig, Cork", "Milltown Malbay, Clare", "10 Tallaght Road"]:
+        assert n(a) == a
+
+
+def test_st_before_and_is_street():
+    from address_normalize import normalize_address as n
+    assert n("Clarence St and Georges Place, Dun Laoghaire") == "Clarence Street and Georges Place, Dun Laoghaire"
+    assert n("5 St Mobhi Road, Dublin 9") == "5 Saint Mobhi Road, Dublin 9"
