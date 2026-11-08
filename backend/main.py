@@ -20,7 +20,8 @@ from dotenv import load_dotenv
 import sentry_sdk
 from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.asyncio import AsyncioIntegration
-from places import is_bare_place, parse_localities, parse_query, pick_dominant_place, pick_place
+from places import (dominant_cluster, is_bare_place, normalize_place, parse_localities, parse_query, parse_word_runs,
+                    pick_dominant_place, pick_place, query_windows, street_groups)
 from price_vat import PRICE_INCL_VAT
 from address_normalize import normalize_address
 from bulk_sales import BULK_ADDR_RE, BULK_DESC_RE, BULK_FLAT_RE, BULK_PRICE
@@ -660,11 +661,24 @@ _HOUSE_NUMBER_RE = re.compile(r"^(\d+)[a-z]?\s+(.+)$", re.IGNORECASE)
 _MAX_NUMBER_GAP = 20
 
 
+# Passed as `county` to search every county: the Dublin default is not applied.
+ANY_COUNTY = "*"
+
+
 def _county_or_dublin(query: str, county: Optional[str]) -> Optional[str]:
-    """Golden rule: no county in the call or the query text means Dublin."""
+    """Golden rule: no county in the call or the query text means Dublin.
+    ANY_COUNTY lifts it (None: no county filter)."""
+    if county == ANY_COUNTY:
+        return None
     if not county and not COUNTY_KEYWORDS.search(query.lower()):
         return "Dublin"
     return county
+
+
+def _dublin_was_assumed(query: str, county: Optional[str]) -> bool:
+    """True when nobody chose Dublin: no county passed and none (Dublin included)
+    named in the query, so the Dublin default can be dropped when it finds nothing."""
+    return not county and not COUNTY_KEYWORDS.search(query.lower()) and not re.search(r"\bdublin\b", query, re.IGNORECASE)
 
 
 def _token_tsquery(tokens: list[str], phrase: bool = False) -> str:
@@ -834,6 +848,36 @@ async def _token_lookup(tokens: list, query: str, county: Optional[str]) -> "tup
     return None
 
 
+async def _geocode_db_tokens_anywhere(query: str) -> "tuple[float, float] | None":
+    """The token lookup without the Dublin default, for a street or estate the
+    Dublin search found nothing for ("tipperstown" -> Tipperstown Walk, Naas). The
+    matches must sit mostly in one county and mostly together (places.dominant_cluster),
+    so a name used in many places ("chase") still fails."""
+    tokens = _address_tokens(normalize_for_search(query))
+    if tokens and tokens[0].isdigit():
+        tokens = tokens[1:]
+    if not tokens:
+        return None
+    try:
+        rows = await asyncio.wait_for(
+            db_pool.fetch(f"""
+                SELECT county, latitude, longitude
+                FROM properties
+                WHERE {_ADDRESS_TSVECTOR} @@ to_tsquery('simple', $1)
+                  AND latitude IS NOT NULL
+                  AND geocode_suspect IS NOT TRUE
+                LIMIT {_MAX_TOKEN_MATCHES + 1}
+            """, _token_tsquery(tokens)),
+            timeout=2.0,
+        )
+    except Exception as e:
+        logger.warning(f"Any-county token geocode failed for {query!r}: {e}")
+        return None
+    if len(rows) > _MAX_TOKEN_MATCHES:
+        return None
+    return dominant_cluster([dict(r) for r in rows])
+
+
 _OTHER_COUNTIES = (
     r"(?:carlow|cork|galway|limerick|waterford|kilkenny|wexford|wicklow|kildare|meath|louth|"
     r"cavan|monaghan|donegal|sligo|mayo|roscommon|leitrim|longford|westmeath|offaly|"
@@ -941,10 +985,13 @@ async def resolve_location(query: str, county: Optional[str] = None,
       9. Place name → places table     (town/suburb centres built from our own sales)
       10. Token-based DB lookup        (full-text, tight clusters: estates, developments)
       11. Later parts → places table   (locality the query ends with: "Drumlaney, Redhills")
+      11b. Word runs → places table    (an estate inside the query: "6 The Chase")
       12. Place name, any county       (a town outside the county filter: "Ballinasloe")
+      13. Steps 7, 8, 10 in any county (only when Dublin was assumed, not chosen:
+                                        "tipperstown" -> Tipperstown Walk, Naas)
     Anything else is logged to search_failures (no_location) and raises 404.
 
-    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_county', 'db_address', 'db_neighbour', 'db_place', 'db_tokens', 'db_locality', 'db_place_elsewhere'
+    Source values: 'raw', 'cache', 'db_routing_key', 'db_exact', 'db_eircode_ref', 'db_county', 'db_address', 'db_neighbour', 'db_place', 'db_tokens', 'db_locality', 'db_place_words', 'db_place_elsewhere', 'db_address_elsewhere', 'db_neighbour_elsewhere', 'db_tokens_elsewhere'
     """
     # 1. Raw coordinates
     coord_match = re.match(r"^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$", query.strip())
@@ -1071,11 +1118,30 @@ async def resolve_location(query: str, county: Optional[str] = None,
     if result:
         return _cache_and_return(*result, "db_locality")
 
+    # 4e'. An estate or place name inside a longer query: "6 The Chase" or "The Chase
+    # Stillorgan" -> The Chase (the register lists its homes by block, so no sale reads
+    # "6 The Chase"). Multi-word runs only, after every street-level step.
+    result = await _geocode_place(query, county, parse=parse_word_runs)
+    if result:
+        return _cache_and_return(*result, "db_place_words")
+
     # 4f. A town outside the county filter ("Ballinasloe" with the Dublin default):
     # only now, so a Dublin match above always wins.
     result = await _geocode_place(query, county, anywhere=True)
     if result:
         return _cache_and_return(*result, "db_place_elsewhere")
+
+    # 4g. Dublin was only assumed (no county chosen or typed) and found nothing: the
+    # same address, house-number and street lookups in every county.
+    if _dublin_was_assumed(query, county):
+        for step, source in ((_geocode_db_exact_address, "db_address_elsewhere"),
+                             (_geocode_db_nearest_number, "db_neighbour_elsewhere")):
+            result = await step(query, ANY_COUNTY)
+            if result:
+                return _cache_and_return(*result, source)
+        result = await _geocode_db_tokens_anywhere(query)
+        if result:
+            return _cache_and_return(*result, "db_tokens_elsewhere")
 
     # Nothing in our data. Search uses no external geocoder (no Mapbox): log the
     # miss to search_failures (scripts/failures_report.py) and give up.
@@ -1289,6 +1355,11 @@ async def search(
         }
         return SafeJSONResponse(content=cached, headers=headers)
 
+    # A county typed in the query beats the Dublin default the home page sends
+    # ("1 Wellington Place, Trim, County Meath" with county=Dublin).
+    if county and county.lower() == "dublin" and COUNTY_KEYWORDS.search(q.lower()):
+        county = None
+
     try:
         lat, lon, geocode_source = await resolve_location(q, county=county, log_miss=not county)
     except HTTPException as e:
@@ -1490,22 +1561,79 @@ async def search_exact(
     start_time = time.time()
     _rate_limit_check(request, 60, "search_exact")
 
-    search_normalized = normalize_for_search(address)
+    # A pasted postal address ends with an Eircode and "County X", which stored
+    # addresses don't hold ("1 Wellington Place, Trim, County Meath, C15V6RT"):
+    # the Eircode is looked up on its own, and both come off the address.
+    address_only, eircode, county_hint = _split_postal_address(address)
+    search_normalized = normalize_for_search(address_only)
 
-    # Golden rule: a bare street-level address with no county always resolves to
-    # Dublin. If the caller passed no county and the query text mentions no other
-    # county, assume Dublin — and keep that filter for the full-text fallback too.
-    # We never silently surface a match from another county for an unspecified
-    # query; if the address isn't in Dublin we simply return no results, which is
-    # far more likely to match the user's intent than a same-name street elsewhere.
-    if not county and not COUNTY_KEYWORDS.search(address.lower()):
-        county = "Dublin"
+    # Golden rule: a bare street-level address with no county is first looked for in
+    # Dublin, and that filter applies to the full-text fallback too. Only when Dublin
+    # was assumed (no county passed or typed) and has no match is every county tried.
+    dublin_assumed = _dublin_was_assumed(address, county)
+    if not county:
+        county = county_hint or ("Dublin" if not COUNTY_KEYWORDS.search(address.lower()) else None)
 
     # Check cache first (include county in cache key)
-    cache_key = {"address": search_normalized, "county": county}
+    cache_key = {"address": search_normalized, "county": county, "eircode": eircode}
     cached = cache.get("exact_search", cache_key)
     if cached is not None:
         return cached
+
+    rows = await _exact_rows(search_normalized, county, eircode)
+    if rows and eircode and all((r["eircode"] or "").replace(" ", "").upper() == eircode for r in rows):
+        county = None          # an Eircode is one home, whatever the county filter said
+    if not rows and dublin_assumed:
+        rows = await _exact_rows(search_normalized, None, eircode)
+        if rows:
+            county = None      # found outside Dublin: no county filter breach below
+
+    result = {
+        "address": address,
+        "count": len(rows),
+        "results": [serialize_row(r) for r in rows],
+    }
+    return _finish_exact(result, rows, address, county, search_normalized, cache_key)
+
+
+_EIRCODE_TAIL = re.compile(r"[\s,]+((?:[ac-fhknprtv-y]\d{2}|d6w)\s?[0-9ac-fhknprtv-y]{4})\s*$", re.IGNORECASE)
+_COUNTY_TAIL = re.compile(r"[\s,]+(?:co\.?|county)\s+([a-z]+)\s*$", re.IGNORECASE)
+
+
+def _split_postal_address(address: str) -> "tuple[str, Optional[str], Optional[str]]":
+    """(address, eircode, county) from a pasted postal address: "1 Wellington Place,
+    Trim, County Meath, C15V6RT" -> ("1 Wellington Place, Trim", "C15V6RT", "Meath").
+    A bare Eircode is left alone (the caller's full-text match handles it)."""
+    eircode = None
+    m = _EIRCODE_TAIL.search(address)
+    if m and m.start() > 0:
+        eircode = m.group(1).replace(" ", "").upper()
+        address = address[:m.start()]
+    county = None
+    m = _COUNTY_TAIL.search(address)
+    if m and m.group(1).lower() in _COUNTY_NAMES and m.start() > 0:
+        county = m.group(1).title()
+        address = address[:m.start()]
+    return address.strip(" ,"), eircode, county
+
+
+async def _exact_rows(search_normalized: str, county: Optional[str], eircode: Optional[str]) -> list:
+    """Sales of one address: its Eircode when one was given, else the address
+    prefix, else every word of it (full text)."""
+    if eircode:
+        rows = await db_pool.fetch(f"""
+            SELECT
+                id, sale_date, address, county, eircode, price,
+                not_full_market_price, vat_exclusive, description,
+                size_description, {VISIBLE_LAT_LON},
+                routing_key, bedrooms, property_type,
+                {PRICE_INCL_VAT} AS price_incl_vat
+            FROM properties
+            WHERE REPLACE(UPPER(eircode), ' ', '') = $1 AND eircode IS NOT NULL
+            ORDER BY sale_date DESC
+        """, eircode)
+        if rows:
+            return rows
 
     # Step 1: Find exact address match with prefix search
     # ^@ on the bare column so idx_properties_address_normalized_prefix (text_pattern_ops)
@@ -1582,12 +1710,11 @@ async def search_exact(
                 LIMIT 100
             """, search_terms)
 
-    result = {
-        "address": address,
-        "count": len(rows),
-        "results": [serialize_row(r) for r in rows],
-    }
+    return rows
 
+
+def _finish_exact(result: dict, rows: list, address: str, county: Optional[str],
+                  search_normalized: str, cache_key: dict) -> dict:
     # CRITICAL: Monitor county filter breaches in exact search
     if county and len(rows) > 0:
         wrong_county = [r for r in rows if r["county"] != county]
@@ -1616,6 +1743,85 @@ async def search_exact(
     # Cache the result
     cache.set("exact_search", cache_key, result, TTL_EXACT_SEARCH)
 
+    return result
+
+
+# "Did you mean" for a search that couldn't be placed or is ambiguous: places whose
+# name is close to a word run of the query (typos: "lepperdstown" -> Leopardstown) and
+# the distinct streets/estates holding all its words ("st george" -> Saint George's
+# Avenue, Killiney; Parish of Saint George, Dublin 7). Every county is searched.
+_SUGGEST_SIMILARITY = 0.4
+_SUGGEST_MAX = 6
+TTL_SUGGEST = 86400
+
+
+@app.get("/search/suggest")
+async def search_suggest(
+    request: Request,
+    q: str = Query(..., min_length=2, max_length=200, description="The query that failed or is ambiguous"),
+):
+    """Up to _SUGGEST_MAX {label, query, county, kind ('place'|'street'), sales}:
+    what a query could mean. The frontend lists them when /search can't place it."""
+    _rate_limit_check(request, 60, "search_suggest")
+    normalized = normalize_for_search(q)
+    cache_key = {"q": normalized.lower()}
+    cached = cache.get("suggest", cache_key)
+    if cached is not None:
+        return cached
+
+    suggestions: list = []
+    windows = query_windows(normalized)
+    if windows:
+        try:
+            rows = await asyncio.wait_for(db_pool.fetch("""
+                SELECT name, county, sales, MAX(similarity(name, w)) AS sim
+                FROM places, unnest($1::text[]) AS w
+                WHERE similarity(name, w) > $2
+                GROUP BY name, county, sales
+                ORDER BY sim DESC, sales DESC
+                LIMIT 12
+            """, windows, _SUGGEST_SIMILARITY), timeout=2.0)
+        except Exception as e:
+            logger.warning(f"Place suggestions failed for {q!r}: {e}")
+            rows = []
+        for r in rows:
+            label = f"{r['name'].title()}, {r['county']}"
+            suggestions.append({"label": label, "query": label, "county": r["county"],
+                                "kind": "place", "sales": r["sales"], "score": float(r["sim"])})
+
+    tokens = _address_tokens(normalized)
+    if tokens and tokens[0].isdigit():
+        tokens = tokens[1:]
+    if tokens:
+        try:
+            rows = await asyncio.wait_for(db_pool.fetch(f"""
+                SELECT address_normalized, county, latitude, longitude
+                FROM properties
+                WHERE {_ADDRESS_TSVECTOR} @@ to_tsquery('simple', $1)
+                  AND latitude IS NOT NULL
+                  AND geocode_suspect IS NOT TRUE
+                LIMIT 500
+            """, _token_tsquery(tokens)), timeout=2.0)
+        except Exception as e:
+            logger.warning(f"Street suggestions failed for {q!r}: {e}")
+            rows = []
+        for g in street_groups([dict(r) for r in rows], tokens):
+            suggestions.append({"label": g["label"], "query": g["label"], "county": g["county"],
+                                "kind": "street", "sales": g["sales"], "score": 0.5})
+
+    # Exact place names first, then streets, then fuzzy place matches; one per label.
+    suggestions.sort(key=lambda x: (-(x["score"] >= 0.99), x["kind"] != "street", -x["score"], -x["sales"]))
+    seen, out = set(), []
+    for x in suggestions:
+        key = normalize_place(x["label"])
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append({k: v for k, v in x.items() if k != "score"})
+        if len(out) >= _SUGGEST_MAX:
+            break
+    result = {"query": q, "suggestions": out}
+    cache.set("suggest", cache_key, result, TTL_SUGGEST)
     return result
 
 

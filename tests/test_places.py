@@ -131,3 +131,70 @@ def test_is_bare_place_only_for_a_lone_town_name():
     assert not is_bare_place("Kenmare Parade, Dublin 3")
     assert not is_bare_place("12 Main Street")
     assert not is_bare_place("Co. Kerry")
+
+
+from places import dominant_cluster, query_windows, street_groups, strip_house_number  # noqa: E402
+
+
+def _sale(county, lat, lon, address="x"):
+    return {"county": county, "latitude": lat, "longitude": lon, "address_normalized": address}
+
+
+def test_dominant_cluster_places_a_street_with_a_few_stray_geocodes():
+    rows = [_sale("Kildare", 53.2189, -6.6395)] * 20 + [_sale("Kildare", 53.25, -6.59), _sale("Kildare", 53.2364, -6.6191)]
+    lat, lon = dominant_cluster(rows)
+    assert abs(lat - 53.2189) < 0.001 and abs(lon + 6.6395) < 0.001
+
+
+def test_dominant_cluster_refuses_spread_or_shared_names():
+    spread = [_sale("Dublin", 53.27 + i * 0.03, -6.2) for i in range(10)]
+    assert dominant_cluster(spread) is None
+    shared = [_sale("Cork", 51.9, -8.47)] * 5 + [_sale("Galway", 53.27, -9.05)] * 5
+    assert dominant_cluster(shared) is None
+    assert dominant_cluster([]) is None
+
+
+def test_strip_house_number():
+    assert strip_house_number("6 Arkle Square") == "Arkle Square"
+    assert strip_house_number("Apt 10 Wellington Place") == "Wellington Place"
+    assert strip_house_number("12a Main Street") == "Main Street"
+    assert strip_house_number("Stoneleigh") == "Stoneleigh"
+
+
+def test_street_groups_lists_each_place_a_name_could_mean():
+    rows = [
+        _sale("Dublin", 53.2612, -6.12, "1 Stoneleigh, Saint George's Avenue, Killiney"),
+        _sale("Dublin", 53.2613, -6.12, "4 Saint George's Avenue, Killiney, Co Dublin"),
+        _sale("Dublin", 53.39, -6.30, "28 North Great Charles Street, Parish of Saint George, City of Dublin"),
+        _sale("Cork", None, None, "Fort Saint George, Charleville, Co Cork"),
+        _sale("Dublin", 53.29, -6.13, "4 Saint Helens Court, Lower Georges Street, Dun Laoghaire"),
+    ]
+    groups = street_groups(rows, ["saint", "george"])
+    assert [g["label"] for g in groups] == ["Saint George's Avenue, Killiney", "Parish of Saint George, City of Dublin"]
+    assert groups[0]["sales"] == 2 and groups[0]["county"] == "Dublin"
+
+
+def test_street_groups_drop_house_and_block_numbers():
+    rows = [_sale("Dublin", 53.2735, -6.1995, "6 Arkle Square, the Chase, Leopardstown"),
+            _sale("Dublin", 53.2738, -6.1994, "5 Sir Ivor Mall, the Chase, Brewery Road Leopardstown Dublin 18")]
+    labels = {g["label"] for g in street_groups(rows, ["chase"])}
+    assert labels == {"the Chase, Leopardstown", "the Chase, Brewery Road Leopardstown"}
+
+
+def test_query_windows():
+    w = query_windows("the chase lepperdstown")
+    assert w[:3] == ["the chase lepperdstown", "the chase", "chase lepperdstown"]
+    assert "lepperdstown" in w and "the" not in w
+    assert "chase" not in w
+    assert query_windows("6 the chase") == ["the chase"]
+    assert query_windows("st george") == ["st george", "george"]
+    assert query_windows("1 wellington place, trim, county meath") == ["wellington place", "wellington", "trim"]
+
+
+def test_parse_word_runs_finds_an_estate_inside_a_longer_query():
+    from places import parse_word_runs
+    assert parse_word_runs("6 the chase") == (["the chase"], None)
+    names, hint = parse_word_runs("the chase stillorgan")
+    assert "the chase" in names and "stillorgan" not in names and hint is None
+    assert parse_word_runs("Saint George") == (["saint george"], None)
+    assert parse_word_runs("Main Street, Tuam, Co Galway")[1] == "Galway"

@@ -140,3 +140,134 @@ def pick_dominant_place(rows: list, names: list) -> "Optional[tuple[float, float
                 and best["sales"] >= DOMINANT_SHARE * sum(r["sales"] for r in cands)):
             return best["latitude"], best["longitude"]
     return None
+
+
+# --- Searching beyond the Dublin default, and "did you mean" suggestions ---------
+
+# A street/estate found outside Dublin (the search assumed Dublin and found nothing)
+# is placed only if most of its sales sit together: share of the dominant county's
+# matches that must lie within CLUSTER_RADIUS_KM of their median point.
+CLUSTER_RADIUS_KM = 1.5
+CLUSTER_SHARE = 0.5
+_KM_PER_DEG_LAT = 111.0
+_KM_PER_DEG_LON = 67.0     # at Irish latitudes (~53°N)
+
+
+def _median(xs: list) -> float:
+    s = sorted(xs)
+    n = len(s)
+    return s[n // 2] if n % 2 else (s[n // 2 - 1] + s[n // 2]) / 2
+
+
+def dominant_cluster(rows: list) -> "Optional[tuple[float, float]]":
+    """Centre of token-matched sales (dicts with county, latitude, longitude) found in
+    any county: the median point of the busiest county's matches, if that county
+    holds DOMINANT_SHARE of all matches and CLUSTER_SHARE of its own matches lie
+    within CLUSTER_RADIUS_KM of the median. "Tipperstown" (33 sales, all Naas, a few
+    mis-geocoded) -> Naas; "Chase" (estates all over Dublin) -> None."""
+    if not rows:
+        return None
+    by_county: dict = {}
+    for r in rows:
+        by_county.setdefault(r["county"], []).append(r)
+    county, cands = max(by_county.items(), key=lambda kv: len(kv[1]))
+    if len(cands) < DOMINANT_SHARE * len(rows):
+        return None
+    lat = _median([float(r["latitude"]) for r in cands])
+    lon = _median([float(r["longitude"]) for r in cands])
+    near = sum(1 for r in cands
+               if ((float(r["latitude"]) - lat) * _KM_PER_DEG_LAT) ** 2
+               + ((float(r["longitude"]) - lon) * _KM_PER_DEG_LON) ** 2 <= CLUSTER_RADIUS_KM ** 2)
+    if near < CLUSTER_SHARE * len(cands):
+        return None
+    return lat, lon
+
+
+_HOUSE_PREFIX = re.compile(r"^(?:(?:apt|apartment|unit|flat|no)\.?\s*)?\d+[a-z]?\b[\s,]*", re.IGNORECASE)
+
+
+def strip_house_number(part: str) -> str:
+    """"6 Arkle Square" -> "Arkle Square", "Apt 10 Wellington Place" -> "Wellington Place"."""
+    return _HOUSE_PREFIX.sub("", part.strip()).strip()
+
+
+def _has_word(token: str, words: list) -> bool:
+    """token in words, allowing a plural/singular or possessive ("george" ~ "georges")."""
+    return any(w == token or w == token + "s" or token == w + "s" for w in words)
+
+
+def street_groups(rows: list, tokens: list, limit: int = 6) -> list:
+    """Group token-matched sales (dicts with address_normalized, county, latitude,
+    longitude) into the distinct streets/estates the query could mean, busiest first:
+    "st george" -> "Saint George's Avenue, Killiney" (Dublin), ... The label is the
+    first address part holding a query word, house number removed, plus the next
+    locality part; it is also the query the suggestion searches for."""
+    groups: dict = {}
+    for r in rows:
+        if r.get("latitude") is None:
+            continue
+        parts = [p.strip() for p in (r["address_normalized"] or "").split(",") if p.strip()]
+        # One part must hold every query word ("Saint George's Avenue"), not two parts
+        # one word each ("Saint Helens Court, Lower Georges Street").
+        idx = next((i for i, p in enumerate(parts)
+                    if all(_has_word(t, normalize_place(strip_house_number(p)).split()) for t in tokens)), None)
+        if idx is None:
+            continue
+        street = strip_house_number(parts[idx])
+        locality = next((loc for loc in (_DUBLIN_DISTRICT.sub("", p).strip() for p in parts[idx + 1:])
+                         if loc and not _COUNTY_PREFIX.match(normalize_place(loc))
+                         and county_of(normalize_place(loc)) is None
+                         and not re.search(r"\d", loc)), "")
+        label = f"{street}, {locality}" if locality else street
+        key = (normalize_place(label), r["county"])
+        g = groups.setdefault(key, {"label": label, "county": r["county"], "n": 0, "lat": 0.0, "lon": 0.0})
+        g["n"] += 1
+        g["lat"] += float(r["latitude"])
+        g["lon"] += float(r["longitude"])
+    ranked = sorted(groups.values(), key=lambda g: (-g["n"], g["county"] != "Dublin", g["label"]))
+    return [{"label": g["label"], "query": g["label"], "county": g["county"], "kind": "street",
+             "sales": g["n"], "lat": g["lat"] / g["n"], "lon": g["lon"] / g["n"]}
+            for g in ranked[:limit]]
+
+
+_DUBLIN_DISTRICT = re.compile(r"\s*\bdublin\s*\d{1,2}w?$", re.IGNORECASE)
+
+_SUGGEST_STOP = {"the", "a", "an", "of", "and", "co", "county", "no", "st", "saint", "dublin", "ireland"}
+# Street-type words: too generic to match alone ("chase"), fine in a run ("the chase").
+_GENERIC = {"road", "street", "avenue", "drive", "lane", "court", "close", "grove", "view",
+            "square", "place", "terrace", "hill", "green", "crescent", "gardens", "garden",
+            "way", "walk", "lawn", "lawns", "heights", "manor", "wood", "woods", "park",
+            "chase", "mews", "rise", "row", "vale", "glen", "upper", "lower", "north",
+            "south", "east", "west", "new", "old", "main", "apartments", "house"}
+
+
+def query_windows(query: str) -> list:
+    """Word runs (1-3 words) of each query part, house numbers and county parts
+    removed, to fuzzy-match against place names: "the chase lepperdstown" ->
+    ["the chase lepperdstown", "the chase", "chase lepperdstown", "chase",
+    "lepperdstown", ...]. Runs of only stop words, a lone street-type word
+    ("chase", "road") and runs under 4 letters are dropped."""
+    parts, _hint = _query_parts(query, None)
+    out: list = []
+    for p in parts:
+        words = normalize_place(strip_house_number(p)).split()
+        for n in range(min(3, len(words)), 0, -1):
+            for i in range(len(words) - n + 1):
+                w = words[i:i + n]
+                s = " ".join(w)
+                if (len(s) >= 4 and not set(w) <= _SUGGEST_STOP
+                        and not (n == 1 and w[0] in _GENERIC) and s not in out):
+                    out.append(s)
+        full = " ".join(words)
+        if len(words) > 3 and full not in out:
+            out.insert(0, full)
+    return out
+
+
+def parse_word_runs(query: str, county: Optional[str] = None) -> "tuple[list, Optional[str]]":
+    """Multi-word runs of the query as place names, longest first, house number
+    dropped: "6 the chase" -> ["the chase"]; "the chase stillorgan" -> [..., "the
+    chase", ...]. For an estate name typed with extra words or a number; single words
+    are left out ("saint george" must not become "george")."""
+    _parts, hint = _query_parts(query, county)
+    return [w for w in query_windows(query) if len(w.split()) >= 2], hint

@@ -129,6 +129,11 @@
 
 .hm-empty { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 20px; margin-top: 32px; }
 .hm-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.hm-did { list-style: none; padding: 0; margin: 12px 0 18px; display: grid; gap: 8px; }
+.hm-did-btn { width: 100%; text-align: left; display: flex; flex-direction: column; gap: 2px; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; min-height: 44px; background: #fff; cursor: pointer; font: inherit; }
+.hm-did-btn:hover, .hm-did-btn:focus-visible { border-color: var(--ink-3); }
+.hm-did-btn strong { color: var(--ink); font-size: 15.5px; }
+.hm-did-btn span { font-size: 13px; color: var(--muted); }
 
 .hm-pills { display: flex; flex-wrap: wrap; gap: 8px; }
 .tux .hm-pills a { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 15px; min-height: 40px; display: inline-flex; align-items: center; text-decoration: none; font-size: 14.5px; color: var(--ink); }

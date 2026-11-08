@@ -1,7 +1,8 @@
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ClientOnly } from "vite-react-ssg";
-import { fetchTrends, searchExactAddress, searchProperties } from "./api";
+import { fetchSuggestions, fetchTrends, searchExactAddress, searchProperties } from "./api";
+import type { SearchSuggestion } from "./api";
 import dublinData from "./data/counties/dublin.json";
 import corkData from "./data/counties/cork.json";
 import galwayData from "./data/counties/galway.json";
@@ -62,6 +63,14 @@ const fmtDate = (s: string) => {
 const fmtDist = (m: number) => (m < 1000 ? `${Math.round(m)} m` : `${(m / 1000).toFixed(1)} km`);
 const isCoords = (q: string) => /^\s*-?\d+(\.\d+)?\s*,\s*-?\d+(\.\d+)?\s*$/.test(q);
 const looksLikeAddress = (q: string) => /^\d+[a-z]?\s/i.test(q.trim());
+const foldName = (s: string) => s.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/['’]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+
+// Area guides a failed query or its suggestions point to: an area whose name appears
+// as whole words in the query ("the chase stillorgan" -> Stillorgan) or a suggestion.
+function areaGuidesFor(q: string, suggestions: SearchSuggestion[]) {
+  const texts = [q, ...suggestions.map((x) => x.label)].map((t) => ` ${foldName(t)} `);
+  return AREAS.filter((a) => texts.some((t) => t.includes(` ${foldName(a.name)} `))).slice(0, 4);
+}
 
 function loadRecent(): string[] {
   try { return JSON.parse(localStorage.getItem(RECENT_KEY) ?? "[]"); } catch { return []; }
@@ -116,6 +125,7 @@ export default function App() {
   const [county, setCounty] = useState<string>("Dublin");
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const [shown, setShown] = useState(PAGE_SIZE);
   const [view, setView] = useState<"list" | "map">("list");
@@ -144,6 +154,7 @@ export default function App() {
     setSort(so);
     if (opts.county !== undefined) setCounty(opts.county ?? "");
     setError("");
+    setSuggestions([]);
     setShown(PAGE_SIZE);
     if (opts.refine) {
       setRefining(true);
@@ -176,9 +187,14 @@ export default function App() {
       if (gen.current !== id) return;
       setRefining(false);
       const msg: string = e?.message ?? "";
-      setError(msg.includes("Could not") || msg.includes("find")
-        ? `We couldn't find "${text}". Try adding the area or county, or use an Eircode.`
+      const notFound = msg.includes("Could not") || msg.includes("find");
+      setError(notFound
+        ? `We couldn't place "${text}" on the map.`
         : msg || "Something went wrong. Please try again.");
+      // Couldn't be placed: ask the backend what it could mean before showing the page.
+      const did = notFound && !isCoords(text) ? await fetchSuggestions(text) : [];
+      if (gen.current !== id) return;
+      setSuggestions(did);
       setStatus("error");
     }
   };
@@ -335,10 +351,42 @@ export default function App() {
           </section>
         )}
 
-        {status === "error" && (
+        {status === "error" && (suggestions.length > 0 || areaGuidesFor(q, []).length > 0) && (
+          <section className="hm-section hm-empty" role="alert">
+            <h2>Did you mean…</h2>
+            <p>We couldn't place "{q}" on its own. It could be one of these:</p>
+            {suggestions.length > 0 && (
+              <ul className="hm-did" aria-label="Suggested searches">
+                {suggestions.map((x) => (
+                  <li key={`${x.label}|${x.county}`}>
+                    <button className="hm-did-btn" onClick={() => run(x.query, { county: x.county })}>
+                      <strong>{x.label}</strong>
+                      <span>{x.kind === "place" ? "Area" : "Street or estate"} · Co. {x.county} · {x.sales.toLocaleString()} {x.sales === 1 ? "sale" : "sales"}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {areaGuidesFor(q, suggestions).length > 0 && (
+              <>
+                <h3>Area guides</h3>
+                <div className="hm-next-grid">
+                  {areaGuidesFor(q, suggestions).map((a) => (
+                    <Link key={a.slug} to={`/area/${a.slug}`} className="hm-next-card">
+                      <strong>{a.name} guide</strong><span>Prices, streets, nearby areas</span>
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
+            <p className="hm-hint">Not here? Add the area or county ("Main Street, Tuam"), or use an Eircode (e.g. D06 X123).</p>
+          </section>
+        )}
+
+        {status === "error" && suggestions.length === 0 && areaGuidesFor(q, []).length === 0 && (
           <section className="hm-section hm-empty" role="alert">
             <h2>We couldn't complete that search</h2>
-            <p>{error}</p>
+            <p>{error}{error.startsWith("We couldn't place") ? " Try adding the area or county, or use an Eircode." : ""}</p>
             <div className="hm-actions">
               {q.trim() && !isCoords(q) && <button className="hm-btn" onClick={() => run(q)}>Try again</button>}
               <button className="hm-btn hm-btn-ghost" onClick={() => run(q, { county: null })} disabled={!q.trim()}>Search all counties</button>

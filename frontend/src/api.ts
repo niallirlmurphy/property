@@ -52,6 +52,27 @@ export async function searchProperties(params: SearchParams): Promise<SearchResp
   }
 }
 
+export interface SearchSuggestion {
+  label: string;
+  query: string;
+  county: string;
+  kind: "place" | "street";
+  sales: number;
+}
+
+// "Did you mean": what a query that couldn't be placed (or is ambiguous) could mean.
+// Never throws: no suggestions is a valid answer.
+export async function fetchSuggestions(q: string): Promise<SearchSuggestion[]> {
+  try {
+    const res = await fetch(buildUrl("/search/suggest", { q }));
+    if (!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data.suggestions) ? data.suggestions : [];
+  } catch {
+    return [];
+  }
+}
+
 export async function searchExactAddress(address: string, county?: string): Promise<{ address: string; count: number; results: Property[] }> {
   const params: Record<string, string> = { address };
   if (county) params.county = county;
