@@ -1,15 +1,15 @@
 {
   "slug": "elm-park-merrion-road",
   "stats": {
-    "count": 392,
+    "count": 391,
     "median": 350000,
-    "avg": 411832,
+    "avg": 411277,
     "min": 100000,
     "max": 1400000,
     "firstYear": 2013,
     "lastYear": 2026,
     "recentMedian": 700000,
-    "recentCount": 69
+    "recentCount": 67
   },
   "trends": [
     {
@@ -118,9 +118,9 @@
     },
     {
       "year": 2026,
-      "count": 19,
-      "median_price": 701057,
-      "avg_price": 721538,
+      "count": 18,
+      "median_price": 733028,
+      "avg_price": 726678,
       "min_price": 410000,
       "max_price": 1009174
     }
@@ -129,9 +129,9 @@
   "types": [
     {
       "type": "Apartment",
-      "count": 102,
-      "median": 658722,
-      "avg": 619293
+      "count": 101,
+      "median": 667445,
+      "avg": 619197
     },
     {
       "type": "House",
@@ -142,9 +142,9 @@
   ],
   "development": {
     "firstSaleYear": 2013,
-    "newHomeSales": 83,
+    "newHomeSales": 82,
     "resales": 309,
-    "bedroomsKnown": 36
+    "bedroomsKnown": 35
   },
   "bulkSales": [
     {
@@ -349,14 +349,6 @@
       "date": "2026-03-20",
       "address": "APT 30 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
       "price": 643172,
-      "bedrooms": 3,
-      "propertyType": "apartment",
-      "newHome": true
-    },
-    {
-      "date": "2026-03-19",
-      "address": "APT 54 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
-      "price": 577092,
       "bedrooms": 3,
       "propertyType": "apartment",
       "newHome": true
@@ -648,7 +640,15 @@
       "bedrooms": 3,
       "propertyType": "apartment",
       "newHome": true
+    },
+    {
+      "date": "2025-05-16",
+      "address": "APT 24 THE GARDENS AT ELMPARK GREEN, MERRION ROAD, DUBLIN 4",
+      "price": 572687,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": true
     }
   ],
-  "totalTransactions": 392
+  "totalTransactions": 391
 }

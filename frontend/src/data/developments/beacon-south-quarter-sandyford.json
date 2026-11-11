@@ -1,0 +1,669 @@
+{
+  "slug": "beacon-south-quarter-sandyford",
+  "stats": {
+    "count": 598,
+    "median": 327479,
+    "avg": 321236,
+    "min": 95000,
+    "max": 1405000,
+    "firstYear": 2010,
+    "lastYear": 2026,
+    "recentMedian": 420500,
+    "recentCount": 58
+  },
+  "trends": [
+    {
+      "year": 2010,
+      "count": 2,
+      "median_price": 219000,
+      "avg_price": 219000,
+      "min_price": 218000,
+      "max_price": 220000
+    },
+    {
+      "year": 2012,
+      "count": 68,
+      "median_price": 173000,
+      "avg_price": 176221,
+      "min_price": 125991,
+      "max_price": 285000
+    },
+    {
+      "year": 2013,
+      "count": 11,
+      "median_price": 190000,
+      "avg_price": 208682,
+      "min_price": 95000,
+      "max_price": 440000
+    },
+    {
+      "year": 2014,
+      "count": 240,
+      "median_price": 327479,
+      "avg_price": 333752,
+      "min_price": 180000,
+      "max_price": 524229
+    },
+    {
+      "year": 2015,
+      "count": 17,
+      "median_price": 295000,
+      "avg_price": 299596,
+      "min_price": 210000,
+      "max_price": 420000
+    },
+    {
+      "year": 2016,
+      "count": 23,
+      "median_price": 292500,
+      "avg_price": 292717,
+      "min_price": 215000,
+      "max_price": 390000
+    },
+    {
+      "year": 2017,
+      "count": 11,
+      "median_price": 290000,
+      "avg_price": 291084,
+      "min_price": 200000,
+      "max_price": 350000
+    },
+    {
+      "year": 2018,
+      "count": 22,
+      "median_price": 337500,
+      "avg_price": 333952,
+      "min_price": 180000,
+      "max_price": 465000
+    },
+    {
+      "year": 2019,
+      "count": 20,
+      "median_price": 332500,
+      "avg_price": 321855,
+      "min_price": 238118,
+      "max_price": 430000
+    },
+    {
+      "year": 2020,
+      "count": 25,
+      "median_price": 317000,
+      "avg_price": 298675,
+      "min_price": 220000,
+      "max_price": 372000
+    },
+    {
+      "year": 2021,
+      "count": 19,
+      "median_price": 345000,
+      "avg_price": 378737,
+      "min_price": 250000,
+      "max_price": 1405000
+    },
+    {
+      "year": 2022,
+      "count": 21,
+      "median_price": 350000,
+      "avg_price": 359667,
+      "min_price": 290000,
+      "max_price": 500000
+    },
+    {
+      "year": 2023,
+      "count": 28,
+      "median_price": 357500,
+      "avg_price": 350589,
+      "min_price": 170000,
+      "max_price": 400000
+    },
+    {
+      "year": 2024,
+      "count": 38,
+      "median_price": 350000,
+      "avg_price": 381197,
+      "min_price": 267000,
+      "max_price": 750000
+    },
+    {
+      "year": 2025,
+      "count": 36,
+      "median_price": 420500,
+      "avg_price": 411167,
+      "min_price": 315000,
+      "max_price": 650000
+    },
+    {
+      "year": 2026,
+      "count": 17,
+      "median_price": 435000,
+      "avg_price": 420638,
+      "min_price": 232500,
+      "max_price": 604000
+    }
+  ],
+  "bedrooms": [
+    {
+      "bedrooms": 1,
+      "count": 8,
+      "median": 330000,
+      "avg": 315000
+    },
+    {
+      "bedrooms": 2,
+      "count": 38,
+      "median": 402500,
+      "avg": 424691
+    }
+  ],
+  "types": [
+    {
+      "type": "Apartment",
+      "count": 465,
+      "median": 327479,
+      "avg": 321211
+    }
+  ],
+  "development": {
+    "firstSaleYear": 2010,
+    "newHomeSales": 279,
+    "resales": 319,
+    "bedroomsKnown": 48
+  },
+  "bulkSales": [
+    {
+      "date": "2020-11-10",
+      "address": "12 APARTMENTS, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 5074500,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2022-05-19",
+      "address": "APT.604 - BLOCK A3, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 3750000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    }
+  ],
+  "amenities": {
+    "transport": [
+      {
+        "name": "Luas Sandyford",
+        "mode": "Luas (Green Line)",
+        "distance_m": 68
+      },
+      {
+        "name": "Luas Stillorgan",
+        "mode": "Luas (Green Line)",
+        "distance_m": 302
+      },
+      {
+        "name": "Luas Kilmacud",
+        "mode": "Luas (Green Line)",
+        "distance_m": 719
+      },
+      {
+        "name": "Luas Central Park",
+        "mode": "Luas (Green Line)",
+        "distance_m": 1201
+      },
+      {
+        "name": "Luas Balally",
+        "mode": "Luas (Green Line)",
+        "distance_m": 1664
+      },
+      {
+        "name": "Luas Glencairn",
+        "mode": "Luas (Green Line)",
+        "distance_m": 2018
+      }
+    ],
+    "schools": [
+      {
+        "name": "Wesley College",
+        "level": "Secondary",
+        "distance_m": 1207
+      },
+      {
+        "name": "Mount Anville Secondary School",
+        "level": "Secondary",
+        "distance_m": 1625
+      },
+      {
+        "name": "Oatlands College",
+        "level": "Secondary",
+        "distance_m": 1918
+      },
+      {
+        "name": "Coláiste Íosagáin",
+        "level": "Secondary",
+        "distance_m": 2468
+      },
+      {
+        "name": "Coláiste Eoin",
+        "level": "Secondary",
+        "distance_m": 2491
+      },
+      {
+        "name": "Carysfort National School",
+        "level": "Primary",
+        "distance_m": 2782
+      },
+      {
+        "name": "St. Brigid's National School Foxrock",
+        "level": "Primary",
+        "distance_m": 2785
+      },
+      {
+        "name": "St. Andrew's College",
+        "level": "Secondary",
+        "distance_m": 3037
+      }
+    ]
+  },
+  "transactions": [
+    {
+      "date": "2026-10-19",
+      "address": "206 THE CUBES 3, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 435000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-09-21",
+      "address": "APARTMENT 404, THE CUBES 5, BEACON SOUTH QUARTER",
+      "price": 440350,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-09-11",
+      "address": "APT 200 THE CUBES 5, BEACON SOUTH QUARTER, BLACKTHORN RD DUBLIN 16",
+      "price": 400000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-08-14",
+      "address": "APT 405 CUBES 3, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 420000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-07-24",
+      "address": "APT 410, THE CUBES 7, BEACON SOUTH QUARTER DUBLIN 18",
+      "price": 480000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-07-16",
+      "address": "APT 626, THE CUBES 8, BEACON SOUTH QUARTER DUBLIN 18",
+      "price": 232500,
+      "bedrooms": 2,
+      "propertyType": "duplex",
+      "newHome": false
+    },
+    {
+      "date": "2026-07-13",
+      "address": "505 THE CUBES 6, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 410000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-06-04",
+      "address": "APARTMENT 107, THE CUBES 2, BEACON SOUTH QUARTER",
+      "price": 452000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-05-20",
+      "address": "APT 400 CUBES 3, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 356000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-05-01",
+      "address": "APT 410 CUBES 2, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 447000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-04-29",
+      "address": "APT 601, CUBES 8, BEACON SOUTH QUARTER DUBLIN 18",
+      "price": 495000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-04-29",
+      "address": "605 EDGES ONE, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 346000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-04-27",
+      "address": "403 THE CUBES 1, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 456000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-03-11",
+      "address": "APT 616 THE CUBES, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 604000,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-03-03",
+      "address": "APT 105 THE CUBES 2, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 400000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-02-13",
+      "address": "APT 24 THE CUBES 3, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 442000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2026-01-30",
+      "address": "APT 601 CUBE 3, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 335000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-12-22",
+      "address": "APT 610, BLOCK A3, BEACON SOUTH QUARTER",
+      "price": 650000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-12-15",
+      "address": "APT 101, CUBES 1, BEACON SOUTH QUARTER DUBLIN 18",
+      "price": 430000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-12-01",
+      "address": "APT 200, THE CUBES 3, BEACON SOUTH QUARTER DUBLIN 18",
+      "price": 430000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-11-27",
+      "address": "508 THE EDGES 2, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 442000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-11-14",
+      "address": "504 THE EDGES, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 390000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-11-12",
+      "address": "207 BLOCK A1, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 429000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-11-07",
+      "address": "APT 403, CUBES 8, BEACON SOUTH QUARTER DUBLIN 18",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-10-24",
+      "address": "410 THE EDGES 2, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 428000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-10-20",
+      "address": "APT 308 BEACON SOUTH, QUARTER SANDYFORD, DUBLIN 18",
+      "price": 405000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-09-22",
+      "address": "APT 632 THE CUBES 7, BEACON SOUTH QUARTER, BLACKTHORN RD DUBLIN 18",
+      "price": 335000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-09-04",
+      "address": "APT 412, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 456000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-09-02",
+      "address": "205 THE EDGES, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 331000,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-08-20",
+      "address": "APT 409, THE CUBES 3, BEACON SOUTH QUARTER DUBLIN 18",
+      "price": 375000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-08-13",
+      "address": "APT 206 CUBE 1, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 325000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-07-31",
+      "address": "509 THE EDGES TWO, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 465000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2025-07-08",
+      "address": "507 CUBES 1, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 445000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-07-03",
+      "address": "403 THE EDGES, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 435000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2025-06-25",
+      "address": "APT 316 - EDGES 1, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 480000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-06-23",
+      "address": "410 THE CUBES 8, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 460000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-06-11",
+      "address": "APT 402 - THE EDGES 3, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 360000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-06-10",
+      "address": "APARTMENT 101, CUBES 8, BEACON SOUTH QUARTER",
+      "price": 481000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-23",
+      "address": "APT 614 THE EDGES 1, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 485000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-23",
+      "address": "405 THE EDGES ONE, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 318000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-20",
+      "address": "APT 408 THE EDGES 1, BEACON SOUTH QUARTER, BLACKTHORN RD DUBLIN 18",
+      "price": 332000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-19",
+      "address": "APT 603, CUBES 3, BEACON SOUTH QUARTER DUBLIN 18",
+      "price": 342000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-16",
+      "address": "109 CUBES 1, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 420000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2025-05-15",
+      "address": "309 THE CUBES 1, SOUTH BEACON QUARTER, SANDYFORD",
+      "price": 370000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-05-15",
+      "address": "APT 510, EDGES 1, BEACON SOUTH QUARTER",
+      "price": 315000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-04-17",
+      "address": "506 THE EDGES 2, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 385000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-04-14",
+      "address": "602 THE CUBES 6, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 430000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-04-08",
+      "address": "QAPT 305 BEACON 1, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 421000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-03-10",
+      "address": "108 THE CUBES 2, BEACON SOUTH QUARTER, SANDYFORD DUBLIN 18",
+      "price": 370000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
+      "date": "2025-02-13",
+      "address": "2 CUBE 2, BEACON SOUTH QUARTER, SANDYFORD",
+      "price": 405000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    }
+  ],
+  "totalTransactions": 598
+}

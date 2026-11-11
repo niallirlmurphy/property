@@ -1,15 +1,15 @@
 {
   "slug": "rockfield-dundrum",
   "stats": {
-    "count": 225,
-    "median": 387500,
-    "avg": 399187,
+    "count": 224,
+    "median": 386250,
+    "avg": 399071,
     "min": 180000,
     "max": 770000,
     "firstYear": 2010,
     "lastYear": 2026,
     "recentMedian": 495000,
-    "recentCount": 26
+    "recentCount": 24
   },
   "trends": [
     {
@@ -142,9 +142,9 @@
     },
     {
       "year": 2026,
-      "count": 9,
-      "median_price": 513000,
-      "avg_price": 524833,
+      "count": 8,
+      "median_price": 517750,
+      "avg_price": 537312,
       "min_price": 415000,
       "max_price": 717000
     }
@@ -153,9 +153,9 @@
   "types": [
     {
       "type": "Apartment",
-      "count": 64,
-      "median": 368000,
-      "avg": 381509
+      "count": 63,
+      "median": 365000,
+      "avg": 380819
     },
     {
       "type": "House",
@@ -167,8 +167,8 @@
   "development": {
     "firstSaleYear": 2010,
     "newHomeSales": 0,
-    "resales": 225,
-    "bedroomsKnown": 26
+    "resales": 224,
+    "bedroomsKnown": 25
   },
   "bulkSales": [],
   "amenities": {
@@ -286,14 +286,6 @@
       "price": 717000,
       "bedrooms": null,
       "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2026-04-27",
-      "address": "12 THE ELM, ROCKFIELD, DUNDRUM DUBLIN 16",
-      "price": 425000,
-      "bedrooms": 2,
-      "propertyType": "apartment",
       "newHome": false
     },
     {
@@ -647,7 +639,15 @@
       "bedrooms": null,
       "propertyType": null,
       "newHome": false
+    },
+    {
+      "date": "2023-08-11",
+      "address": "9 THE OAK, ROCKFIELD, DUNDRUM DUBLIN 14",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
     }
   ],
-  "totalTransactions": 225
+  "totalTransactions": 224
 }

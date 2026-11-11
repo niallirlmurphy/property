@@ -88,5 +88,23 @@
       { "slug": "dun-laoghaire", "name": "Dún Laoghaire" },
       { "slug": "blackrock", "name": "Blackrock" }
     ]
+  },
+  {
+    "slug": "beacon-south-quarter-sandyford",
+    "name": "Beacon South Quarter",
+    "area": "Sandyford, Dublin 18",
+    "county": "Dublin",
+    "countySlug": "dublin",
+    "pinName": "Beacon South Quarter, Sandyford",
+    "latitude": 53.2782,
+    "longitude": -6.2156,
+    "description": "Sold prices, price trends and bedroom breakdown for the Beacon South Quarter apartments in Sandyford, Dublin 18, from the Property Price Register.",
+    "info": "Beacon South Quarter is a mixed-use scheme in Sandyford Business District, between Carmanhall Road and Blackthorn Road. Its apartments are set in named blocks (addresses such as The Cubes, The Edges, The Gates and Block A) above a plaza of shops and restaurants, and the scheme first appears on the Property Price Register in 2010.",
+    "areaInfo": "Sandyford is one of south Dublin's main business districts, with offices, apartments and the Beacon Hospital close together. The Luas Green Line stops at Stillorgan and Sandyford, and the M50 is a few minutes' drive away.",
+    "relatedAreas": [
+      { "slug": "sandyford", "name": "Sandyford" },
+      { "slug": "stillorgan", "name": "Stillorgan" }
+    ],
+    "eircode": "D18"
   }
 ]
