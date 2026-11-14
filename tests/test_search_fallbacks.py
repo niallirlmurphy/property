@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend"))
 os.environ.setdefault("DATABASE_URL", "postgresql://localhost/unused")
-from main import _dublin_was_assumed, _split_postal_address  # noqa: E402
+from main import _dublin_was_assumed, _find_eircode, _split_postal_address  # noqa: E402
 
 
 def test_split_postal_address_strips_eircode_and_county():
@@ -13,6 +13,27 @@ def test_split_postal_address_strips_eircode_and_county():
     assert _split_postal_address("26 the chase, stillorgan, dublin, a94 fk68") == \
         ("26 the chase, stillorgan, dublin", "A94FK68", None)
     assert _split_postal_address("12 Main St, Co. Cork") == ("12 Main St", None, "Cork")
+
+
+def test_split_postal_address_finds_eircode_anywhere():
+    assert _split_postal_address(
+        "9 st patrick's terrace, ballalease, donabate, co. dublin, k36 cf98, ireland") == \
+        ("9 st patrick's terrace, ballalease, donabate", "K36CF98", "Dublin")
+    assert _split_postal_address("K36 CF98, 9 St Patricks Terrace, Donabate") == \
+        ("9 St Patricks Terrace, Donabate", "K36CF98", None)
+
+
+def test_find_eircode_anywhere_in_query():
+    assert _find_eircode("a92ek06 laytown") == ("A92EK06", "laytown")
+    assert _find_eircode("laytown A92 EK06 meath") == ("A92EK06", "laytown, meath")
+    assert _find_eircode("6 pelletstown avenue, dublin 15, d15c6he") == ("D15C6HE", "6 pelletstown avenue, dublin 15")
+    assert _find_eircode("D6W Y123 rathfarnham") == ("D6WY123", "rathfarnham")
+
+
+def test_find_eircode_ignores_road_numbers_and_plain_words():
+    for q in ["N11 Dart station", "12 R132 Road, Swords", "Dublin 15", "1316857nh",
+              "Apt 12 Block B, Main Street", "M50 Business Park"]:
+        assert _find_eircode(q) == (None, q), q
 
 
 def test_split_postal_address_leaves_bare_eircodes_and_street_names():

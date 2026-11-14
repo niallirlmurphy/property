@@ -504,6 +504,27 @@ def _normalise_eircode(s: str) -> str:
     return s.strip().upper().replace(" ", "")
 
 
+# An Eircode inside a longer query ("a92ek06 laytown", "..., k36 cf98, ireland").
+# Stricter than _looks_like_eircode: real routing-key letters and the unique-id
+# alphabet only, as a whole word, so street words ("N11 Dart") rarely match.
+_EIRCODE_ANYWHERE = re.compile(
+    r"(?<![a-z0-9])((?:[ac-fhknprtv-y]\d{2}|d6w)\s?[0-9ac-fhknprtv-y]{4})(?![a-z0-9])", re.IGNORECASE)
+
+
+def _find_eircode(text: str) -> "tuple[Optional[str], str]":
+    """(eircode, rest of the text) for an Eircode anywhere in the text, else (None, text).
+    The rest has the Eircode cut out and its separators tidied. Written with a space,
+    the last four must hold a digit: "N11 Dart", "R132 Road" are roads, not Eircodes."""
+    for m in _EIRCODE_ANYWHERE.finditer(text):
+        if " " in m.group(1) and not any(ch.isdigit() for ch in m.group(1).split()[-1]):
+            continue
+        break
+    else:
+        return None, text
+    rest = (text[:m.start()].rstrip(" ,") + ", " + text[m.end():].lstrip(" ,")).strip(" ,")
+    return m.group(1).replace(" ", "").upper(), rest
+
+
 
 
 def normalize_query(q: str) -> str:
@@ -969,6 +990,63 @@ async def _geocode_county(query: str) -> "tuple[float, float] | None":
     return None
 
 
+async def _geocode_eircode(norm: str, routing_key_fallback: bool) -> "Optional[tuple[float, float, str]]":
+    """(lat, lon, source) for a normalised Eircode: our own sales with it, then the
+    eircode_reference snapshot, then (if allowed) its routing-key centroid."""
+    prefix = norm[:3]
+
+    # Get routing key centroid for quality validation
+    rk_row = await _routing_key_centroid(prefix)
+
+    def near_routing_key(lat: float, lon: float) -> bool:
+        # Rough distance check (0.05° lat ≈ 5km; lon degrees are smaller at this latitude).
+        # Without enough routing key data to validate against, trust the match.
+        if not rk_row or (rk_row["cnt"] or 0) < 5:
+            return True
+        return abs(lat - float(rk_row["lat"])) < 0.05 and abs(lon - float(rk_row["lon"])) < 0.08
+
+    # Try exact eircode
+    row = await db_pool.fetchrow("""
+        SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
+        FROM properties
+        WHERE latitude IS NOT NULL
+          AND geocode_suspect IS NOT TRUE
+          AND REPLACE(UPPER(eircode), ' ', '') = $1
+    """, norm)
+
+    if row and (row["cnt"] or 0) >= 1:
+        exact_lat, exact_lon = float(row["lat"]), float(row["lon"])
+        # Validate: exact coordinates should be within ~5km of routing key centroid
+        # Reject if too far away (indicates bad geocoding data)
+        if near_routing_key(exact_lat, exact_lon):
+            return exact_lat, exact_lon, "db_exact"
+        logger.warning(f"Eircode {norm} coordinates ({exact_lat:.5f}, {exact_lon:.5f}) too far from routing key {prefix} centroid, using centroid instead")
+        # Flag properties with bad geocoding for priority re-geocoding
+        asyncio.create_task(_flag_bad_geocode(norm))
+
+    # Exact match not in PPR or failed validation — try eircode_reference table
+    # This table contains pre-computed Eircode centroids from all PPR properties with Eircodes
+    ref_row = await db_pool.fetchrow("""
+        SELECT latitude, longitude, property_count, source
+        FROM eircode_reference r
+        WHERE r.eircode = $1
+          -- a June snapshot of our geocodes: skip it where those sales are now flagged
+          AND NOT EXISTS (SELECT 1 FROM properties p
+                          WHERE REPLACE(UPPER(p.eircode), ' ', '') = r.eircode
+                            AND p.geocode_suspect)
+    """, norm)
+
+    # The reference table is a snapshot of our own geocodes, so it holds the same bad
+    # points (D11 R288, College View Ballymun, sat in Lusk): validate it the same way.
+    if ref_row and near_routing_key(float(ref_row["latitude"]), float(ref_row["longitude"])):
+        return float(ref_row["latitude"]), float(ref_row["longitude"]), "db_eircode_ref"
+
+    # Still no match — use routing key centroid (already fetched above)
+    if routing_key_fallback and rk_row and (rk_row["cnt"] or 0) >= 1:
+        return float(rk_row["lat"]), float(rk_row["lon"]), "db_routing_key"
+    return None
+
+
 async def resolve_location(query: str, county: Optional[str] = None,
                            log_miss: bool = True) -> "tuple[float, float, str]":
     """Return (lat, lon, source) for an address, eircode, or 'lat,lon' string.
@@ -979,6 +1057,8 @@ async def resolve_location(query: str, county: Optional[str] = None,
       3. Routing key (D02, H91) → DB   (centroid of all properties with that Eircode prefix)
       4. Eircode → DB exact match      (fast indexed lookup with validation from properties table)
       5. Eircode → Reference table     (pre-computed Eircode centroids from 222k Eircodes)
+      5b. Eircode inside the query     ("a92ek06 laytown": steps 4-5, else the rest of the
+                                        query, else the Eircode's routing key)
       6. County name → county centre   (its same-named town, else routing_key_stats: "dublin")
       7. Exact address → DB            (prefix match on address_normalized, as /search/exact)
       8. Nearest house number → DB     (43 Mount Carmel Road → sale at No. 42/44)
@@ -1023,58 +1103,26 @@ async def resolve_location(query: str, county: Optional[str] = None,
 
     # 3b. Eircode — fast indexed DB lookup with routing key validation
     if _looks_like_eircode(query):
-        norm = _normalise_eircode(query)
-        prefix = norm[:3]
+        result = await _geocode_eircode(_normalise_eircode(query), routing_key_fallback=True)
+        if result:
+            return _cache_and_return(*result)
 
-        # Get routing key centroid for quality validation
-        rk_row = await _routing_key_centroid(prefix)
-
-        def near_routing_key(lat: float, lon: float) -> bool:
-            # Rough distance check (0.05° lat ≈ 5km; lon degrees are smaller at this latitude).
-            # Without enough routing key data to validate against, trust the match.
-            if not rk_row or (rk_row["cnt"] or 0) < 5:
-                return True
-            return abs(lat - float(rk_row["lat"])) < 0.05 and abs(lon - float(rk_row["lon"])) < 0.08
-
-        # Try exact eircode
-        row = await db_pool.fetchrow("""
-            SELECT AVG(latitude) AS lat, AVG(longitude) AS lon, COUNT(*) AS cnt
-            FROM properties
-            WHERE latitude IS NOT NULL
-              AND geocode_suspect IS NOT TRUE
-              AND REPLACE(UPPER(eircode), ' ', '') = $1
-        """, norm)
-
-        if row and (row["cnt"] or 0) >= 1:
-            exact_lat, exact_lon = float(row["lat"]), float(row["lon"])
-            # Validate: exact coordinates should be within ~5km of routing key centroid
-            # Reject if too far away (indicates bad geocoding data)
-            if near_routing_key(exact_lat, exact_lon):
-                return _cache_and_return(exact_lat, exact_lon, "db_exact")
-            logger.warning(f"Eircode {norm} coordinates ({exact_lat:.5f}, {exact_lon:.5f}) too far from routing key {prefix} centroid, using centroid instead")
-            # Flag properties with bad geocoding for priority re-geocoding
-            asyncio.create_task(_flag_bad_geocode(norm))
-
-        # Exact match not in PPR or failed validation — try eircode_reference table
-        # This table contains pre-computed Eircode centroids from all PPR properties with Eircodes
-        ref_row = await db_pool.fetchrow("""
-            SELECT latitude, longitude, property_count, source
-            FROM eircode_reference r
-            WHERE r.eircode = $1
-              -- a June snapshot of our geocodes: skip it where those sales are now flagged
-              AND NOT EXISTS (SELECT 1 FROM properties p
-                              WHERE REPLACE(UPPER(p.eircode), ' ', '') = r.eircode
-                                AND p.geocode_suspect)
-        """, norm)
-
-        # The reference table is a snapshot of our own geocodes, so it holds the same bad
-        # points (D11 R288, College View Ballymun, sat in Lusk): validate it the same way.
-        if ref_row and near_routing_key(float(ref_row["latitude"]), float(ref_row["longitude"])):
-            return _cache_and_return(float(ref_row["latitude"]), float(ref_row["longitude"]), "db_eircode_ref")
-
-        # Still no match — use routing key centroid (already fetched above)
-        if rk_row and (rk_row["cnt"] or 0) >= 1:
-            return _cache_and_return(float(rk_row["lat"]), float(rk_row["lon"]), "db_routing_key")
+    # 3b'. An Eircode inside a longer query ("a92ek06 laytown", "..., k36 cf98, ireland").
+    # Only a real hit counts first: no routing-key fallback yet, so a street word that
+    # happens to look like an Eircode can't drag the search to a district centre.
+    # Not in our data: place the rest of the query ("laytown"), and only then fall
+    # back to the Eircode's routing-key centre.
+    embedded, rest = _find_eircode(query)
+    if embedded and rest:
+        result = await _geocode_eircode(embedded, routing_key_fallback=False)
+        if result:
+            return _cache_and_return(*result)
+        try:
+            return await resolve_location(rest, county, log_miss=False)
+        except HTTPException:
+            result = await _geocode_eircode(embedded, routing_key_fallback=True)
+            if result:
+                return _cache_and_return(*result)
 
     # 3c. A bare county name ("dublin", "Co. Meath").
     result = await _geocode_county(query)
@@ -1596,19 +1644,20 @@ async def search_exact(
     return _finish_exact(result, rows, address, county, search_normalized, cache_key)
 
 
-_EIRCODE_TAIL = re.compile(r"[\s,]+((?:[ac-fhknprtv-y]\d{2}|d6w)\s?[0-9ac-fhknprtv-y]{4})\s*$", re.IGNORECASE)
 _COUNTY_TAIL = re.compile(r"[\s,]+(?:co\.?|county)\s+([a-z]+)\s*$", re.IGNORECASE)
 
 
 def _split_postal_address(address: str) -> "tuple[str, Optional[str], Optional[str]]":
     """(address, eircode, county) from a pasted postal address: "1 Wellington Place,
     Trim, County Meath, C15V6RT" -> ("1 Wellington Place, Trim", "C15V6RT", "Meath").
-    A bare Eircode is left alone (the caller's full-text match handles it)."""
+    The Eircode may sit anywhere ("..., K36 CF98, Ireland"). A bare Eircode is left
+    alone (the caller's full-text match handles it)."""
+    # Every sale is in Ireland: drop a trailing country first ("..., K36 CF98, Ireland").
+    address = re.sub(r"[\s,]*\b(?:republic of )?ireland\s*$", "", address, flags=re.IGNORECASE) or address
     eircode = None
-    m = _EIRCODE_TAIL.search(address)
-    if m and m.start() > 0:
-        eircode = m.group(1).replace(" ", "").upper()
-        address = address[:m.start()]
+    found, rest = _find_eircode(address)
+    if found and rest:
+        eircode, address = found, rest
     county = None
     m = _COUNTY_TAIL.search(address)
     if m and m.group(1).lower() in _COUNTY_NAMES and m.start() > 0:
