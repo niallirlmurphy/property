@@ -200,7 +200,7 @@ def search_web_for_property(address, county, max_retries=2, eircode=None):
 
     return None, None
 
-def fetch_properties_to_enrich(conn, limit=100, year=2026, since=None):
+def fetch_properties_to_enrich(conn, limit=100, year=2026, since=None, ids=None):
     """Fetch properties missing enrichment data, most recent first.
 
     By default targets the whole `year`; if `since` (YYYY-MM-DD) is given it is
@@ -220,11 +220,15 @@ def fetch_properties_to_enrich(conn, limit=100, year=2026, since=None):
     #   2  attempted, found empty (untyped, source 'web_enrichment') -> lowest yield, retry last
     # Within a tier, most-recent sales first.
     # Sargable date RANGE keeps properties_sale_date_idx usable.
-    cur.execute("""
+    if ids:
+        # Explicit id list (e.g. a fresh import): ignore the date window.
+        date_filter, params = "id = ANY(%s)", (list(ids),)
+    else:
+        date_filter, params = "sale_date >= %s AND sale_date < %s", (start_date, f'{year + 1}-01-01')
+    cur.execute(f"""
         SELECT id, address, county, sale_date, price, eircode
         FROM properties
-        WHERE sale_date >= %s
-          AND sale_date < %s
+        WHERE {date_filter}
           AND (
               (bedrooms IS NULL AND property_type IS NULL)
               OR property_type_source = 'address_house_guess'
@@ -238,7 +242,7 @@ def fetch_properties_to_enrich(conn, limit=100, year=2026, since=None):
             END,
             sale_date DESC
         LIMIT %s
-    """, (start_date, f'{year + 1}-01-01', limit))
+    """, params + (limit,))
 
     properties = []
     for row in cur.fetchall():
@@ -379,13 +383,15 @@ def mark_enrichment_attempted(address):
         conn.close()
 
 
-def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=5, year=2026, since=None):
+def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=5, year=2026, since=None, ids=None):
     """Run batch enrichment process."""
     print("=" * 70)
     print(f"BATCH 6 ENRICHMENT: {year} Properties")
     print("=" * 70)
     print(f"Target: Properties missing both bedrooms AND property_type")
-    if since:
+    if ids:
+        print(f"Window: {len(ids)} ids from --ids-file (most recent first)")
+    elif since:
         print(f"Window: sale_date >= {since} (most recent first)")
     else:
         print(f"Priority: December {year} → January {year} (most recent first)")
@@ -398,7 +404,7 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=
 
     # Fetch properties to enrich
     print("📊 Fetching properties to enrich...")
-    properties = fetch_properties_to_enrich(conn, limit=batch_size, year=year, since=since)
+    properties = fetch_properties_to_enrich(conn, limit=batch_size, year=year, since=since, ids=ids)
     # Close immediately: the loop below uses its own short-lived connections per
     # write, so there is no reason to hold this one idle for the whole run (idle
     # connections are exactly what Supabase drops).
@@ -534,6 +540,8 @@ if __name__ == '__main__':
     parser.add_argument('--year', type=int, default=2026, help='Sale year to target (default: 2026)')
     parser.add_argument('--since', type=str, default=None,
                         help='Lower sale_date bound YYYY-MM-DD (overrides year start; e.g. a fresh import window)')
+    parser.add_argument('--ids-file', type=str, default=None,
+                        help='File of property ids (whitespace-separated) to enrich; overrides --year/--since')
 
     args = parser.parse_args()
 
@@ -542,5 +550,6 @@ if __name__ == '__main__':
         rate_limit_seconds=args.rate_limit,
         report_interval=args.report_interval,
         year=args.year,
-        since=args.since
+        since=args.since,
+        ids=[int(x) for x in open(args.ids_file).read().split()] if args.ids_file else None
     )

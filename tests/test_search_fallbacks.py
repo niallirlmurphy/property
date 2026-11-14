@@ -34,6 +34,10 @@ def test_place_typos_corrected():
     assert n("Apt 3, Harold Cross Road, Dublin 6W").startswith("Apt 3, Harolds Cross Road")
     assert n("2 Saint Georges Avenue, Kiliiney") == "2 Saint Georges Avenue, Killiney"
     assert n("Rathoath Road, Finglas") == "Ratoath Road, Finglas"
+    assert (n("Apt 4 Charletown Centre, Charlsetown Place, St Margeret's Rd, Finglas")
+            == "Apt 4 Charlestown Centre, Charlestown Place, Saint Margaret's Road, Finglas")
+    assert n("Cahrlestown Centre, St Magaret's Road") == "Charlestown Centre, Saint Margaret's Road"
+    assert n("12 St Margerets Road, Finglas") == "12 Saint Margarets Road, Finglas"
 
 
 def test_real_lookalike_places_untouched():
