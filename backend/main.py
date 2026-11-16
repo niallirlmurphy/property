@@ -633,7 +633,8 @@ async def _geocode_db_exact_address(query: str, county: Optional[str] = None) ->
     Prefix match on address_normalized (idx_properties_address_normalized_prefix),
     so "42 Mount Carmel Road" finds "42 Mount Carmel Road, Goatstown, Dublin 14"
     in milliseconds. Only used when the matches are one tight cluster, so a street
-    name shared by several towns falls through to the later steps.
+    name shared by several towns falls through to the later steps. Also tries the
+    address without apostrophes: stored rows have both "Patrick's" and "Patricks".
     """
     normalized = normalize_for_search(query)
     if not re.match(r"(\d|apt |unit |flat )", normalized, re.IGNORECASE):
@@ -648,13 +649,13 @@ async def _geocode_db_exact_address(query: str, county: Optional[str] = None) ->
                 FROM (
                     SELECT latitude, longitude
                     FROM properties
-                    WHERE address_normalized ^@ $1
+                    WHERE (address_normalized ^@ $1 OR address_normalized ^@ $3)
                       AND ($2::text IS NULL OR county = $2)
                       AND latitude IS NOT NULL
                       AND geocode_suspect IS NOT TRUE
                     LIMIT 200
                 ) m
-            """, normalized, county),
+            """, normalized, county, normalized.replace("'", "")),
             timeout=2.0,
         )
     except Exception as e:
@@ -738,7 +739,9 @@ async def _geocode_db_nearest_number(query: str, county: Optional[str] = None) -
     if len(street) < 4:
         return None
     numbers = [n for d in range(1, _MAX_NUMBER_GAP + 1) for n in (number - d, number + d) if n > 0]
-    prefixes = [f"{n} {street}" for n in numbers]
+    # Stored rows spell it both ways ("Saint Patrick's" / "Saint Patricks").
+    spellings = {street, street.replace("'", "")}
+    prefixes = [f"{n} {st}" for n in numbers for st in spellings]
     # Each "^@ $n" is a separate index probe; the planner ORs them in one bitmap scan.
     probes = " OR ".join(f"address_normalized ^@ ${i}" for i in range(2, len(prefixes) + 2))
     try:
@@ -765,7 +768,7 @@ async def _geocode_db_nearest_number(query: str, county: Optional[str] = None) -
     for r in rows:
         pm = _HOUSE_NUMBER_RE.match(r["address_normalized"])
         rest = pm.group(2) if pm else ""
-        if not pm or not (rest == street or rest.startswith(street + ",")):
+        if not pm or not any(rest == st or rest.startswith(st + ",") for st in spellings):
             continue
         in_area = area_tokens <= set(_address_tokens(rest))
         on_street.append((int(pm.group(1)), r["latitude"], r["longitude"], in_area))

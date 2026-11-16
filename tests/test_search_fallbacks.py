@@ -59,6 +59,8 @@ def test_place_typos_corrected():
             == "Apt 4 Charlestown Centre, Charlestown Place, Saint Margaret's Road, Finglas")
     assert n("Cahrlestown Centre, St Magaret's Road") == "Charlestown Centre, Saint Margaret's Road"
     assert n("12 St Margerets Road, Finglas") == "12 Saint Margarets Road, Finglas"
+    assert n("14 Wolftone Street, Sligo") == "14 Wolfe Tone Street, Sligo"
+    assert n("3 wolfetone park") == "3 Wolfe Tone Park"
 
 
 def test_real_lookalike_places_untouched():

@@ -143,6 +143,8 @@ _PLACE_TYPOS = {
     "tyrrellstown": "tyrrelstown",
     "virgina": "virginia",
     "westminister": "westminster",
+    "wolfetone": "wolfe tone",
+    "wolftone": "wolfe tone",
 }
 _PLACE_TYPO_RE = re.compile(r"\b(" + "|".join(re.escape(k) for k in sorted(_PLACE_TYPOS, key=len, reverse=True)) + r")\b", re.I)
 
