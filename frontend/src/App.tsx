@@ -16,6 +16,8 @@ import HomeIntro from "./components/HomeIntro";
 import { usePageMeta } from "./hooks/usePageMeta";
 import EmailAlertModal from "./components/EmailAlertModal";
 import { AREAS, COUNTIES, countySlug } from "./areas";
+import { STREETS } from "./streets";
+import { DEVELOPMENTS } from "./developments";
 import { publishedPosts } from "./blogPosts";
 import { SITE_STATS as S } from "./siteStats";
 import type { Property, SearchResponse, SearchSort, TrendPoint } from "./types";
@@ -72,6 +74,31 @@ function areaGuidesFor(q: string, suggestions: SearchSuggestion[]) {
   return AREAS.filter((a) => texts.some((t) => t.includes(` ${foldName(a.name)} `))).slice(0, 4);
 }
 
+// Landing pages a sale's address belongs to: its street (name ends one address part,
+// same county, and the street's area appears too: there are many "Park Avenue"s)
+// and its development (name and the first part of its area both present).
+const hasWords = (text: string, words: string) => ` ${text} `.includes(` ${words} `);
+function pageLinksFor(p: Property) {
+  const parts = p.address.split(",").map((x) => foldName(x)).filter(Boolean);
+  const all = parts.join(" ");
+  const cty = foldName(p.county ?? "");
+  const named = STREETS.filter((st) => (!cty || foldName(st.county) === cty)
+    && parts.some((x) => x === foldName(st.name) || x.endsWith(` ${foldName(st.name)}`)));
+  const street = named.find((st) => hasWords(all, foldName(st.area)));
+  const dev = DEVELOPMENTS.find((d) => hasWords(all, foldName(d.name)) && hasWords(all, foldName(d.area.split(",")[0])));
+  return { street, dev };
+}
+
+// Well-formed searches shown when a query can't be placed (all checked on prod).
+const SEARCH_EXAMPLES: { q: string; what: string; county?: string }[] = [
+  { q: "28 Slane Road, Crumlin, Dublin 12", what: "House number, street, area", county: "Dublin" },
+  { q: "Sandymount Avenue, Dublin 4", what: "Street and postal district", county: "Dublin" },
+  { q: "Main Street, Tuam, Galway", what: "Street, town, county" },
+  { q: "Ballincollig, Cork", what: "Town or suburb, county" },
+  { q: "Rathmines", what: "Dublin area on its own", county: "Dublin" },
+  { q: "D06", what: "Eircode routing key (first three characters)" },
+];
+
 function loadRecent(): string[] {
   try { return JSON.parse(localStorage.getItem(RECENT_KEY) ?? "[]"); } catch { return []; }
 }
@@ -99,6 +126,9 @@ const Icon = {
 };
 
 function PropertyCard({ p, badge }: { p: Property; badge?: string }) {
+  const { street, dev } = pageLinksFor(p);
+  const exact = badge != null;
+  const valHref = `/valuation?${new URLSearchParams({ address: p.address, ...(p.county ? { county: p.county } : {}) })}`;
   return (
     <li className={`hm-card${badge ? " hm-card-exact" : ""}`}>
       <div className="hm-card-top">
@@ -113,6 +143,14 @@ function PropertyCard({ p, badge }: { p: Property; badge?: string }) {
         {p.distance_m != null && <span>{Icon.pin}{fmtDist(p.distance_m)} away</span>}
         {p.not_full_market_price && <span className="hm-warn" title="Not a full market price sale (e.g. family transfer or VAT-exclusive new build)">Not full market price</span>}
       </div>
+      {(exact || street || dev) && (
+        <div className="hm-card-links">
+          {exact && <Link to={`/s1?q=${encodeURIComponent(p.address)}`}>Full sales history →</Link>}
+          {exact && <Link to={valHref}>Value this home →</Link>}
+          {dev && <Link to={`/development/${dev.slug}`}>{dev.name} development →</Link>}
+          {street && <Link to={`/street/${street.slug}`}>{street.name} prices →</Link>}
+        </div>
+      )}
     </li>
   );
 }
@@ -379,6 +417,12 @@ export default function App() {
                 </div>
               </>
             )}
+            <div className="hm-actions">
+              {[...new Set(suggestions.map((x) => x.county))].filter((c) => c && c !== county).slice(0, 3).map((c) => (
+                <button key={c} className="hm-btn hm-btn-ghost" onClick={() => run(q, { county: c })}>Search in Co. {c} instead</button>
+              ))}
+              {county && <button className="hm-btn hm-btn-ghost" onClick={() => run(q, { county: null })}>Search all counties</button>}
+            </div>
             <p className="hm-hint">Not here? Add the area or county ("Main Street, Tuam"), or use an Eircode (e.g. D06 X123).</p>
           </section>
         )}
@@ -391,7 +435,30 @@ export default function App() {
               {q.trim() && !isCoords(q) && <button className="hm-btn" onClick={() => run(q)}>Try again</button>}
               <button className="hm-btn hm-btn-ghost" onClick={() => run(q, { county: null })} disabled={!q.trim()}>Search all counties</button>
             </div>
-            <p className="hm-hint">Tip: a full Eircode (e.g. D06 X123) or a routing key (D06) always works best.</p>
+            {error.startsWith("We couldn't place") ? (
+              <div className="hm-howto">
+                <h3>How to search</h3>
+                <p>Type one place, from most to least specific, separated by commas. Spelling matters more than punctuation or capitals.</p>
+                <ul className="hm-did" aria-label="Example searches">
+                  {SEARCH_EXAMPLES.map((x) => (
+                    <li key={x.q}>
+                      <button className="hm-did-btn" onClick={() => run(x.q, { county: x.county ?? null })}>
+                        <strong>{x.q}</strong>
+                        <span>{x.what}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+                <ul className="hm-howto-tips">
+                  <li>Outside Dublin, add the town or county: "Main Street, Tuam, Galway", not just "Main Street".</li>
+                  <li>A full Eircode (e.g. D06 X123) finds the exact spot. The first three characters (D06, H91) search the whole Eircode area.</li>
+                  <li>Leave out apartment numbers and words like "house for sale". Search the street or estate name instead.</li>
+                  <li>Homes that never sold since 2010 aren't on the register: search the street to see neighbouring sales.</li>
+                </ul>
+              </div>
+            ) : (
+              <p className="hm-hint">Tip: a full Eircode (e.g. D06 X123) or a routing key (D06) always works best.</p>
+            )}
           </section>
         )}
 
@@ -510,6 +577,14 @@ export default function App() {
                 </ClientOnly>
               </div>
             )}
+
+            <div className="hm-alert-cta">
+              <div>
+                <strong>Get an email when homes sell near {isCoords(o.q) ? "here" : o.q}</strong>
+                <span>New sales from the Property Price Register, at most once a month. Unsubscribe any time.</span>
+              </div>
+              <button className="hm-btn" onClick={() => setAlertOpen(true)}>Get alerts for this area</button>
+            </div>
 
             {o.trends.length > 0 && (
               <div className="hm-trend">

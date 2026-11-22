@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 from pydantic import BaseModel, Field, field_validator
 from collections import defaultdict, deque
 import asyncio
+import ipaddress
 import asyncpg
 import os
 import re
@@ -361,18 +362,28 @@ async def lifespan(app: FastAPI):
 _rate_buckets: dict[str, deque] = defaultdict(deque)
 
 def _client_ip(request: Request) -> str:
-    """
-    Get client IP address safely.
-    Railway/Cloudflare sets CF-Connecting-IP with the real client IP.
-    This prevents X-Forwarded-For spoofing attacks.
-    """
-    # Railway uses Cloudflare which sets this header with the real client IP
+    """The visitor's IP. Railway's edge proxy connects from a private 100.64.x.x
+    address, so the socket IP is the proxy, not the visitor: read the header the
+    edge sets (X-Real-IP), or the last X-Forwarded-For entry, which the edge
+    appends itself (earlier entries can be forged by the client)."""
     cf_ip = request.headers.get("cf-connecting-ip")
     if cf_ip:
-        return cf_ip
-
-    # Fallback to socket IP (safest, but may not work behind all proxies)
+        return cf_ip.strip()
+    real_ip = request.headers.get("x-real-ip")
+    if real_ip:
+        return real_ip.strip()
+    xff = request.headers.get("x-forwarded-for")
+    if xff:
+        return xff.split(",")[-1].strip()
     return request.client.host if request.client else "unknown"
+
+
+def _is_private_ip(ip: str) -> bool:
+    try:
+        return ipaddress.ip_address(ip).is_private or ip.startswith("100.")  # 100.64/10 CGNAT
+    except ValueError:
+        return True
+
 
 def _rate_limit_check(request: Request, limit_per_min: int, namespace: str) -> None:
     """Raise HTTPException(429) if this IP has exceeded its limit for the namespace."""
@@ -384,6 +395,28 @@ def _rate_limit_check(request: Request, limit_per_min: int, namespace: str) -> N
     if len(bucket) >= limit_per_min:
         raise HTTPException(status_code=429, detail="Too many requests")
     bucket.append(now)
+
+
+# Daily cap: the per-minute limit doesn't catch a script that searches every few
+# minutes around the clock (~300 searches, 20-21 Nov 2026). A person rarely runs
+# more than a few dozen searches a day. In memory, per replica, reset on deploy.
+SEARCH_DAILY_LIMIT = 150
+_daily_counts: dict[str, int] = defaultdict(int)
+_daily_day = {"day": ""}
+
+
+def _daily_limit_check(request: Request, limit_per_day: int, namespace: str) -> None:
+    ip = _client_ip(request)
+    if _is_private_ip(ip):
+        return  # only the proxy is visible: capping it would block everyone at once
+    today = time.strftime("%Y-%m-%d", time.gmtime())
+    if _daily_day["day"] != today:
+        _daily_counts.clear()
+        _daily_day["day"] = today
+    key = f"{namespace}:{ip}"
+    if _daily_counts[key] >= limit_per_day:
+        raise HTTPException(status_code=429, detail="Daily search limit reached. Please come back tomorrow.")
+    _daily_counts[key] += 1
 
 
 app = FastAPI(
@@ -1425,6 +1458,7 @@ async def search(
 ):
     start_time = time.time()
     _rate_limit_check(request, 60, "search")
+    _daily_limit_check(request, SEARCH_DAILY_LIMIT, "search")
 
     # Area-page locality filter (see _append_area_filter). Parsed once, reused by
     # both the county-first block and the radius-expansion loop below.
@@ -1627,7 +1661,7 @@ async def search(
             max_year=max_year,
             geocode_source=geocode_source,
             user_agent=request.headers.get("user-agent"),
-            ip_address=request.client.host if request.client else None,
+            ip_address=_client_ip(request),
         ))
 
     # Enrich missing eircodes in the background — does not block the response
