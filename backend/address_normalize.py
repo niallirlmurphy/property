@@ -145,6 +145,7 @@ _PLACE_TYPOS = {
     "westminister": "westminster",
     "wolfetone": "wolfe tone",
     "wolftone": "wolfe tone",
+    "wolf tone": "wolfe tone",
     # American spellings: Irish addresses use the British forms
     "center": "centre",
     "centers": "centres",

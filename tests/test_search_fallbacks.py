@@ -105,3 +105,11 @@ def test_american_center_becomes_centre():
     assert n("Unit 4, Dundrum Town Center, Dublin 16") == "Unit 4, Dundrum Town Centre, Dublin 16"
     assert normalize_place("Dundrum Town Center") == "dundrum town centre"
     assert n("12 Centenary Road") == "12 Centenary Road"
+
+
+def test_wolfe_tone_spellings():
+    from address_normalize import normalize_address as n
+    from places import normalize_place
+    for q in ["wolftone street limerick", "wolf tone street limerick", "wolfetone street limerick"]:
+        assert normalize_place(q) == "wolfe tone street limerick", q
+    assert n("43 WOLF TONE ST, SLIGO") == "43 Wolfe Tone Street, Sligo"
