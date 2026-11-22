@@ -700,7 +700,43 @@ def _county_or_dublin(query: str, county: Optional[str]) -> Optional[str]:
 def _dublin_was_assumed(query: str, county: Optional[str]) -> bool:
     """True when nobody chose Dublin: no county passed and none (Dublin included)
     named in the query, so the Dublin default can be dropped when it finds nothing."""
-    return not county and not COUNTY_KEYWORDS.search(query.lower()) and not re.search(r"\bdublin\b", query, re.IGNORECASE)
+    return (not county and not COUNTY_KEYWORDS.search(query.lower())
+            and not _DUBLIN_AS_PLACE.search(query))
+
+
+# "Dublin" as the county/city, not the street name "Dublin Road" / "Dublin St" that
+# most towns have ("Carton Wood, Dublin Road" is in Maynooth).
+_DUBLIN_AS_PLACE = re.compile(
+    r"\bdublin\b(?!\s+(?:road|rd|street|st|hill|gate|lane|avenue|ave)\b)", re.IGNORECASE)
+
+# Degrees/minutes/seconds as Google Maps shows them: 53°22'19.8"N 8°49'23.3"W
+_DMS_RE = re.compile(
+    r"^\s*(\d{1,3})\s*°\s*(\d{1,2})\s*['′]\s*(\d{1,2}(?:\.\d+)?)\s*(?:\"|″|'')?\s*([NS])"
+    r"[\s,]+(\d{1,3})\s*°\s*(\d{1,2})\s*['′]\s*(\d{1,2}(?:\.\d+)?)\s*(?:\"|″|'')?\s*([EW])\s*$",
+    re.IGNORECASE)
+
+
+def _parse_dms(query: str) -> "tuple[float, float] | None":
+    m = _DMS_RE.match(query)
+    if not m:
+        return None
+    lat = int(m[1]) + int(m[2]) / 60 + float(m[3]) / 3600
+    lon = int(m[5]) + int(m[6]) / 60 + float(m[7]) / 3600
+    return (-lat if m[4].upper() == "S" else lat), (-lon if m[8].upper() == "W" else lon)
+
+
+# Sentence-style queries: "3 bedroom house in stepaside", "houses for sale in Lucan".
+_LEAD_IN_RE = re.compile(
+    r"^\s*(?:(?:\d+|one|two|three|four|five)\s*[- ]?(?:bed(?:room)?s?)\s+)?"
+    r"(?:(?:semi[- ]detached|detached|terraced|terrace|end of terrace)\s+)?"
+    r"(?:houses?|homes?|apartments?|flats?|properties|property|bungalows?|duplex(?:es)?)\s+"
+    r"(?:(?:for\s+sale|sold|prices?)\s+)?(?:in|near|around|at)\s+(?=\S)",
+    re.IGNORECASE)
+
+
+def _strip_lead_in(query: str) -> str:
+    """'3 bedroom house in stepaside' -> 'stepaside'; other queries unchanged."""
+    return _LEAD_IN_RE.sub("", query, count=1)
 
 
 def _token_tsquery(tokens: list[str], phrase: bool = False) -> str:
@@ -1080,6 +1116,11 @@ async def resolve_location(query: str, county: Optional[str] = None,
     coord_match = re.match(r"^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$", query.strip())
     if coord_match:
         return float(coord_match.group(1)), float(coord_match.group(2)), "raw"
+    dms = _parse_dms(query)
+    if dms:
+        return dms[0], dms[1], "raw"
+
+    query = _strip_lead_in(query)
 
     # Every sale is in Ireland, so a trailing country adds nothing ("Carlow, Ireland").
     stripped = re.sub(r"(?<!northern)(?<!northern )[\s,]*\b(?:republic of )?ireland\s*$", "", query.strip(), flags=re.IGNORECASE)

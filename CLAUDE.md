@@ -118,6 +118,7 @@ python3 scripts/enrich_batch6_2026.py --batch-size 100 --rate-limit 5
 - DuckDuckGo full-page text scraping (not snippet-based)
 - Extracts bedroom counts and property types
 - 5-second rate limiting to avoid blocking
+- Each enriched sale's bedrooms/type are copied to other sales of the same dwelling (same house + street within 25m, or same Eircode + house number; never over existing values or `address_apartment` types), tagged `propagated`. One-off backfill: `python3 scripts/propagate_enrichment.py [--apply]` (one table read; 2026-11-22: 4,425 bedrooms, 4,379 types)
 - Expected success: ~90% for recent high-value properties
 
 4. **Regenerate street landing-page data (after sync):**

@@ -17,6 +17,9 @@ from dotenv import load_dotenv
 from urllib.parse import quote_plus
 from bs4 import BeautifulSoup
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from propagate_enrichment import propagate_from  # noqa: E402
+
 load_dotenv('backend/.env')
 DATABASE_URL = os.getenv('DATABASE_URL')
 
@@ -358,6 +361,16 @@ def update_property_enrichment(property_id, address, bedrooms, property_type):
         conn.close()
 
 @with_db_retry
+def propagate_to_other_sales(property_id):
+    """Copy a freshly enriched sale's details to other sales of the same dwelling."""
+    conn = psycopg2.connect(DATABASE_URL)
+    try:
+        return propagate_from(conn, property_id)
+    finally:
+        conn.close()
+
+
+@with_db_retry
 def mark_enrichment_attempted(address):
     """Record that an address was scraped but yielded nothing.
 
@@ -450,6 +463,10 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=
 
         if bedrooms or property_type:
             success, count = update_property_enrichment(prop['id'], prop['address'], bedrooms, property_type)
+            if success:
+                # Same dwelling sold under a different spelling ("Dublin" vs
+                # "Dublin 4", "Rd" vs "Road"): copy the details there too.
+                count += propagate_to_other_sales(prop['id'])
 
             if success:
                 if bedrooms and property_type:

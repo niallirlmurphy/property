@@ -74,3 +74,26 @@ def test_st_before_and_is_street():
     from address_normalize import normalize_address as n
     assert n("Clarence St and Georges Place, Dun Laoghaire") == "Clarence Street and Georges Place, Dun Laoghaire"
     assert n("5 St Mobhi Road, Dublin 9") == "5 Saint Mobhi Road, Dublin 9"
+
+
+def test_dublin_road_is_not_the_county():
+    assert _dublin_was_assumed("carton wood, dublin road", None)
+    assert _dublin_was_assumed("rinuccini, dublin rd", None)
+    assert not _dublin_was_assumed("Dublin Road, Swords, Dublin", None)
+    assert not _dublin_was_assumed("Carton Wood, Dublin", None)
+
+
+def test_dms_coordinates():
+    from main import _parse_dms
+    lat, lon = _parse_dms("53°22'19.8\"N 8°49'23.3\"W")
+    assert abs(lat - 53.37217) < 1e-4 and abs(lon + 8.82314) < 1e-4
+    assert _parse_dms("53 Main Street") is None
+
+
+def test_sentence_lead_in_stripped():
+    from main import _strip_lead_in
+    assert _strip_lead_in("3 bedroom house in stepaside") == "stepaside"
+    assert _strip_lead_in("houses for sale in Lucan") == "Lucan"
+    assert _strip_lead_in("semi-detached house near Swords, Dublin") == "Swords, Dublin"
+    assert _strip_lead_in("12 Main Street, Lucan") == "12 Main Street, Lucan"
+    assert _strip_lead_in("Apartments, Block A, Smithfield") == "Apartments, Block A, Smithfield"
