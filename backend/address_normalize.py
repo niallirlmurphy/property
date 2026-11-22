@@ -145,6 +145,9 @@ _PLACE_TYPOS = {
     "westminister": "westminster",
     "wolfetone": "wolfe tone",
     "wolftone": "wolfe tone",
+    # American spellings: Irish addresses use the British forms
+    "center": "centre",
+    "centers": "centres",
 }
 _PLACE_TYPO_RE = re.compile(r"\b(" + "|".join(re.escape(k) for k in sorted(_PLACE_TYPOS, key=len, reverse=True)) + r")\b", re.I)
 

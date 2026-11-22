@@ -97,3 +97,11 @@ def test_sentence_lead_in_stripped():
     assert _strip_lead_in("semi-detached house near Swords, Dublin") == "Swords, Dublin"
     assert _strip_lead_in("12 Main Street, Lucan") == "12 Main Street, Lucan"
     assert _strip_lead_in("Apartments, Block A, Smithfield") == "Apartments, Block A, Smithfield"
+
+
+def test_american_center_becomes_centre():
+    from address_normalize import normalize_address as n
+    from places import normalize_place
+    assert n("Unit 4, Dundrum Town Center, Dublin 16") == "Unit 4, Dundrum Town Centre, Dublin 16"
+    assert normalize_place("Dundrum Town Center") == "dundrum town centre"
+    assert n("12 Centenary Road") == "12 Centenary Road"

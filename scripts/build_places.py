@@ -43,6 +43,15 @@ MANUAL_PLACES = [
     ("dugort", "Mayo", 54.00965, -10.02500),        # village on Achill Island; both spellings
     ("doogort", "Mayo", 54.00965, -10.02500),
     ("staplestown", "Kildare", 53.3299, -6.7684),   # village near Donadea; 15 sales (2026-10-31)
+    # Dundrum's own sales centre (places 'dundrum', Dublin, 1,847 sales); Mapbox agrees
+    # within 90 m. "Dundrum village" otherwise matched Dundrum, Tipperary (2026-11-22).
+    ("dundrum town centre", "Dublin", 53.287545, -6.243182),
+    ("dundrum village", "Dublin", 53.287545, -6.243182),
+    # Mapbox locality matches, checked 2026-11-22 (Rathfee: a DMS search for it landed
+    # <1 km away; our 2 sales sit ~20 km off near Turloughmore)
+    ("cordeal east", "Kerry", 52.213043, -9.371404),  # Cordal East, near Castleisland
+    ("cordal east", "Kerry", 52.213043, -9.371404),
+    ("rathfee", "Galway", 53.368110, -8.812792),
 ]
 
 SAMPLE = ["swords", "malahide", "tuam", "limerick city", "ranelagh", "dun laoghaire",
