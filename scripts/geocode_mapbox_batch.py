@@ -600,6 +600,7 @@ async def batch_geocode_mapbox(properties: List[Dict], pool: asyncpg.Pool,
                 if is_valid and routing_key and got_rk and got_rk != routing_key:
                     is_valid, reason = False, f"routing_key_mismatch({got_rk}!={routing_key})"
                 if (is_valid and feature_type in ('address', 'street')
+                        and not ALLOW_STREET_VARIANT
                         and not street_matches(full_address, compare_to)):
                     is_valid, reason = False, f"street_mismatch({full_address[:40]})"
                 if is_valid and not routing_key:
@@ -959,8 +960,11 @@ async def geocode_with_mapbox(limit: int = None, dry_run: bool = True,
             await _close_pool(pool)
 
 
+ALLOW_STREET_VARIANT = False
+
+
 async def main():
-    global CHUNK_SIZE, RETRY_STRIPPED
+    global CHUNK_SIZE, RETRY_STRIPPED, ALLOW_STREET_VARIANT
     # Skip canonical cache for batch operations (too large to load into memory)
     # Cache will be checked per-address during geocoding
     print("Starting batch geocoding with improved logic...\n")
@@ -972,6 +976,10 @@ async def main():
     suspect = "--suspect" in sys.argv
     eircode_only = "--eircode-only" in sys.argv
     RETRY_STRIPPED = "--retry" in sys.argv
+    # --allow-street-variant: skip the street-name check (the other checks still
+    # apply). Only with --ids-file listing rows a person has reviewed, whose
+    # rejected match was a spelling variant ("Cherrivale" -> "Cherry Vale").
+    ALLOW_STREET_VARIANT = "--allow-street-variant" in sys.argv
     limit = None
     county = None
     min_price = None
