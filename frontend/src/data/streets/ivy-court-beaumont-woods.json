@@ -1,9 +1,9 @@
 {
   "slug": "ivy-court-beaumont-woods",
   "stats": {
-    "count": 99,
-    "median": 265500,
-    "avg": 264966,
+    "count": 102,
+    "median": 265000,
+    "avg": 261524,
     "min": 75000,
     "max": 490000,
     "firstYear": 2010,
@@ -36,11 +36,11 @@
     },
     {
       "year": 2014,
-      "count": 3,
-      "median_price": 126600,
-      "avg_price": 124200,
+      "count": 6,
+      "median_price": 133300,
+      "avg_price": 136067,
       "min_price": 101000,
-      "max_price": 145000
+      "max_price": 177200
     },
     {
       "year": 2015,
@@ -318,19 +318,19 @@
     },
     {
       "date": "2023-08-30",
-      "address": "17 IVY COURT, BEAUMONT WOODS, DUBLIN 9",
-      "price": 345000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D09WY27"
-    },
-    {
-      "date": "2023-08-30",
       "address": "56 IVY COURT, BEAUMONT WOODS, DUBLIN 5",
       "price": 315000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D09TH52"
+    },
+    {
+      "date": "2023-08-30",
+      "address": "17 IVY COURT, BEAUMONT WOODS, DUBLIN 9",
+      "price": 345000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D09WY27"
     },
     {
       "date": "2023-08-18",
@@ -478,19 +478,19 @@
     },
     {
       "date": "2020-12-21",
-      "address": "75 IVY COURT, BEAUMONT WOODS, BEAUMONT DUBLIN 9",
-      "price": 205507,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2020-12-21",
       "address": "77 IVY COURT, BEAUMONT WOODS, BEAUMONT DUBLIN 9",
       "price": 203495,
       "bedrooms": null,
       "propertyType": "apartment",
       "eircode": "D09P403"
+    },
+    {
+      "date": "2020-12-21",
+      "address": "75 IVY COURT, BEAUMONT WOODS, BEAUMONT DUBLIN 9",
+      "price": 205507,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2020-12-11",
@@ -541,5 +541,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 99
+  "totalTransactions": 102
 }

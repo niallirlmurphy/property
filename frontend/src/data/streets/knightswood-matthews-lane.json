@@ -304,8 +304,8 @@
       "date": "2019-12-10",
       "address": "136 Knightswood, Matthews Lane, Drogheda",
       "price": 207047,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "terraced",
       "eircode": "A92NNK6"
     },
     {
@@ -352,8 +352,8 @@
       "date": "2019-09-18",
       "address": "65 Knightswood, Matthews Lane, Drogheda",
       "price": 205286,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "terraced",
       "eircode": "A92DTR2"
     },
     {
@@ -470,16 +470,16 @@
     },
     {
       "date": "2019-03-08",
-      "address": "111 Knightswood, Matthews Lane, Drogheda",
-      "price": 233480,
+      "address": "108 knightswood, matthews lane, drogheda",
+      "price": 264000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2019-03-08",
-      "address": "108 knightswood, matthews lane, drogheda",
-      "price": 264000,
+      "address": "111 Knightswood, Matthews Lane, Drogheda",
+      "price": 233480,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

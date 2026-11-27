@@ -240,8 +240,8 @@
       "date": "2013-02-14",
       "address": "7 Deerpark Road, Castleknock",
       "price": 750000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "apartment",
       "eircode": null
     },
     {

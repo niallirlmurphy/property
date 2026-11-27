@@ -88,8 +88,8 @@
       "date": "2016-10-28",
       "address": "26 TEMPLE GARDENS, RATHMINES, DUBLIN 6",
       "price": 1100000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "apartment",
       "eircode": null
     },
     {

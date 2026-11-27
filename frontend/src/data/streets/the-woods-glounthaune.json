@@ -1,9 +1,9 @@
 {
   "slug": "the-woods-glounthaune",
   "stats": {
-    "count": 108,
-    "median": 290713,
-    "avg": 315731,
+    "count": 121,
+    "median": 283750,
+    "avg": 309632,
     "min": 120000,
     "max": 605000,
     "firstYear": 2012,
@@ -12,9 +12,9 @@
   "trends": [
     {
       "year": 2012,
-      "count": 10,
-      "median_price": 251875,
-      "avg_price": 241809,
+      "count": 11,
+      "median_price": 220000,
+      "avg_price": 235149,
       "min_price": 132158,
       "max_price": 300000
     },
@@ -28,49 +28,49 @@
     },
     {
       "year": 2014,
-      "count": 8,
-      "median_price": 242881,
-      "avg_price": 211043,
+      "count": 10,
+      "median_price": 235381,
+      "avg_price": 205334,
       "min_price": 120000,
       "max_price": 233000
     },
     {
       "year": 2015,
-      "count": 15,
-      "median_price": 251021,
-      "avg_price": 267900,
+      "count": 17,
+      "median_price": 254997,
+      "avg_price": 266382,
       "min_price": 140000,
       "max_price": 400678
     },
     {
       "year": 2016,
-      "count": 24,
-      "median_price": 270914,
-      "avg_price": 298586,
+      "count": 26,
+      "median_price": 270457,
+      "avg_price": 295234,
       "min_price": 220263,
       "max_price": 425000
     },
     {
       "year": 2017,
-      "count": 13,
-      "median_price": 345914,
-      "avg_price": 361401,
-      "min_price": 243096,
+      "count": 14,
+      "median_price": 340457,
+      "avg_price": 354158,
+      "min_price": 229075,
       "max_price": 414317
     },
     {
       "year": 2018,
-      "count": 7,
+      "count": 8,
       "median_price": 350000,
-      "avg_price": 362347,
+      "avg_price": 362168,
       "min_price": 284552,
       "max_price": 396475
     },
     {
       "year": 2019,
-      "count": 5,
-      "median_price": 270000,
-      "avg_price": 303300,
+      "count": 6,
+      "median_price": 310000,
+      "avg_price": 312333,
       "min_price": 253000,
       "max_price": 388500
     },
@@ -84,9 +84,9 @@
     },
     {
       "year": 2021,
-      "count": 7,
-      "median_price": 395000,
-      "avg_price": 390857,
+      "count": 8,
+      "median_price": 387500,
+      "avg_price": 376062,
       "min_price": 250000,
       "max_price": 560000
     },
@@ -100,18 +100,18 @@
     },
     {
       "year": 2023,
-      "count": 4,
-      "median_price": 297000,
-      "avg_price": 304750,
-      "min_price": 255000,
+      "count": 5,
+      "median_price": 280000,
+      "avg_price": 288800,
+      "min_price": 225000,
       "max_price": 370000
     },
     {
       "year": 2024,
-      "count": 3,
-      "median_price": 479000,
-      "avg_price": 464667,
-      "min_price": 410000,
+      "count": 4,
+      "median_price": 444500,
+      "avg_price": 432750,
+      "min_price": 337000,
       "max_price": 505000
     },
     {
@@ -165,6 +165,14 @@
       "eircode": "T45A440"
     },
     {
+      "date": "2024-11-07",
+      "address": "77 THE WOODS, GLOUTHAUNE, CORK",
+      "price": 337000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45HE24"
+    },
+    {
       "date": "2024-09-10",
       "address": "58 THE WOODS, GLOUNTHAUNE, CORK",
       "price": 505000,
@@ -203,6 +211,14 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "T45NT29"
+    },
+    {
+      "date": "2023-08-02",
+      "address": "84 THE WOODS, GLOUTHAUNE, CORK",
+      "price": 225000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45EP60"
     },
     {
       "date": "2023-05-15",
@@ -267,6 +283,14 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "T45A339"
+    },
+    {
+      "date": "2021-06-25",
+      "address": "77 THE WOODS, GLOUTHAUNE, CORK",
+      "price": 272500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "T45HE24"
     },
     {
       "date": "2021-06-10",
@@ -357,6 +381,14 @@
       "eircode": "T45TK80"
     },
     {
+      "date": "2019-02-04",
+      "address": "41  THE WOODS, GLOUNTHANE, CORK",
+      "price": 357500,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2018-06-01",
       "address": "11 The Woods, Glounthaune, Co. Cork",
       "price": 396475,
@@ -384,6 +416,14 @@
       "date": "2018-02-16",
       "address": "101  The Woods, Glounthaune",
       "price": 284552,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2018-02-02",
+      "address": "99 The Woods, Glounthane",
+      "price": 317986,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -491,47 +531,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2017-04-19",
-      "address": "10 The Woods, Glounthaune, Co. Cork",
-      "price": 414317,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-02-09",
-      "address": "44 THE WOODS, GLOUNTHAUNE, CO. CORK",
-      "price": 243096,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2017-02-03",
-      "address": "14 The Woods, Glounthaune",
-      "price": 374449,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2016-12-09",
-      "address": "42 The Woods, Glounthaune",
-      "price": 238691,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2016-11-28",
-      "address": "12 The Woods, Glounthaune, Cork",
-      "price": 384065,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 108
+  "totalTransactions": 121
 }

@@ -1,8 +1,8 @@
 {
-  "total_sales": 814771,
-  "mapped_sales": 769801,
+  "total_sales": 819546,
+  "mapped_sales": 774036,
   "first_sale_date": "2010-01-01",
-  "last_sale_date": "2026-10-23",
+  "last_sale_date": "2026-11-20",
   "counties": 26,
-  "generated": "2026-11-02"
+  "generated": "2026-11-27"
 }

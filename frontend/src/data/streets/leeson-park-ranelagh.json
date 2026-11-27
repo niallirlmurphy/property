@@ -1,13 +1,13 @@
 {
   "slug": "leeson-park-ranelagh",
   "stats": {
-    "count": 32,
-    "median": 2387500,
-    "avg": 2496504,
+    "count": 33,
+    "median": 2425000,
+    "avg": 2560246,
     "min": 170000,
     "max": 6500000,
     "firstYear": 2013,
-    "lastYear": 2024
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -105,9 +105,25 @@
       "avg_price": 4841667,
       "min_price": 3075000,
       "max_price": 6500000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 4600000,
+      "avg_price": 4600000,
+      "min_price": 4600000,
+      "max_price": 4600000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-11-17",
+      "address": "44 LEESON PARK, RANELAGH, DUBLIN 6",
+      "price": 4600000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06H2X2"
+    },
     {
       "date": "2024-10-01",
       "address": "32 LEESON PARK, RANELAGH, DUBLIN 6",
@@ -144,8 +160,8 @@
       "date": "2023-08-25",
       "address": "44 LEESON PARK, RANELAGH, DUBLIN 6",
       "price": 2100000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "terraced",
       "eircode": "D06H2X2"
     },
     {
@@ -365,5 +381,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 32
+  "totalTransactions": 33
 }

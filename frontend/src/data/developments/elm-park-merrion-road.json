@@ -8,8 +8,8 @@
     "max": 1400000,
     "firstYear": 2013,
     "lastYear": 2026,
-    "recentMedian": 700000,
-    "recentCount": 67
+    "recentMedian": 700001,
+    "recentCount": 65
   },
   "trends": [
     {
@@ -129,9 +129,9 @@
   "types": [
     {
       "type": "Apartment",
-      "count": 101,
-      "median": 667445,
-      "avg": 619197
+      "count": 102,
+      "median": 668723,
+      "avg": 620921
     },
     {
       "type": "House",
@@ -144,7 +144,7 @@
     "firstSaleYear": 2013,
     "newHomeSales": 82,
     "resales": 309,
-    "bedroomsKnown": 35
+    "bedroomsKnown": 37
   },
   "bulkSales": [
     {
@@ -517,7 +517,7 @@
       "date": "2025-08-11",
       "address": "12 ELM PARK, MERRION ROAD, BALLSBRIDGE",
       "price": 505000,
-      "bedrooms": null,
+      "bedrooms": 4,
       "propertyType": "apartment",
       "newHome": false
     },

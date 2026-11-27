@@ -192,16 +192,16 @@
       "date": "2013-10-04",
       "address": "13 Eaton Square, Monkstown",
       "price": 1260000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "apartment",
       "eircode": null
     },
     {
       "date": "2013-10-04",
       "address": "15 Eaton Square, Monkstown",
       "price": 975000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
@@ -232,8 +232,8 @@
       "date": "2010-08-19",
       "address": "29 Eaton Square, Monkstown",
       "price": 285000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "terraced",
       "eircode": null
     }
   ],

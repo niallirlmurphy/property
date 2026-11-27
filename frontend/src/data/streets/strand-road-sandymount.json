@@ -544,8 +544,8 @@
       "date": "2011-11-09",
       "address": "85A Strand Road, Sandymount, Dublin 4",
       "price": 350000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
       "eircode": null
     }
   ],

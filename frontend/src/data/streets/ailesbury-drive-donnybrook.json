@@ -1,13 +1,13 @@
 {
   "slug": "ailesbury-drive-donnybrook",
   "stats": {
-    "count": 9,
-    "median": 1500000,
-    "avg": 1790889,
+    "count": 10,
+    "median": 1650000,
+    "avg": 1841800,
     "min": 1100000,
     "max": 3325000,
     "firstYear": 2012,
-    "lastYear": 2024
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -73,9 +73,25 @@
       "avg_price": 3325000,
       "min_price": 3325000,
       "max_price": 3325000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 2300000,
+      "avg_price": 2300000,
+      "min_price": 2300000,
+      "max_price": 2300000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-23",
+      "address": "6 AILESBURY DR, DONNYBROOK, DUBLIN 4",
+      "price": 2300000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H2V1"
+    },
     {
       "date": "2024-04-23",
       "address": "1 AILESBURY DRIVE, DONNYBROOK, DUBLIN 4",
@@ -128,8 +144,8 @@
       "date": "2014-07-02",
       "address": "1 AILESBURY DR, DONNYBROOK, DUBLIN 4",
       "price": 1480000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 5,
+      "propertyType": "detached",
       "eircode": "D04E2T2"
     },
     {
@@ -149,5 +165,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 9
+  "totalTransactions": 10
 }

@@ -272,8 +272,8 @@
       "date": "2020-09-07",
       "address": "3B Aughamore, Kilcock Road, Clane",
       "price": 323788,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
       "eircode": "W91EHN0"
     },
     {

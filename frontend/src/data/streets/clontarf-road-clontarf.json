@@ -1,11 +1,11 @@
 {
   "slug": "clontarf-road-clontarf",
   "stats": {
-    "count": 91,
-    "median": 742000,
-    "avg": 720742,
+    "count": 93,
+    "median": 750000,
+    "avg": 740296,
     "min": 12000,
-    "max": 1350000,
+    "max": 1760000,
     "firstYear": 2010,
     "lastYear": 2026
   },
@@ -140,14 +140,30 @@
     },
     {
       "year": 2026,
-      "count": 1,
-      "median_price": 1125000,
-      "avg_price": 1125000,
+      "count": 3,
+      "median_price": 1500000,
+      "avg_price": 1461667,
       "min_price": 1125000,
-      "max_price": 1125000
+      "max_price": 1760000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-27",
+      "address": "206 CLONTARF RD, CLONTARF, DUBLIN 3",
+      "price": 1760000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D03FP84"
+    },
+    {
+      "date": "2026-10-20",
+      "address": "202 CLONTARF RD, CLONTARF, DUBLIN 3",
+      "price": 1500000,
+      "bedrooms": 5,
+      "propertyType": "terraced",
+      "eircode": "D03WD32"
+    },
     {
       "date": "2026-03-24",
       "address": "222 CLONTARF ROAD, CLONTARF, DUBLIN 2",
@@ -531,23 +547,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2016-12-14",
-      "address": "362 CLONTARF RD, CLONTARF, DUBLIN 3",
-      "price": 775000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2016-11-07",
-      "address": "365 CLONTARF RD, CLONTARF, DUBLIN 3",
-      "price": 635000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 91
+  "totalTransactions": 93
 }

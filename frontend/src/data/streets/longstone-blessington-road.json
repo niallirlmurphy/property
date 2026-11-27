@@ -256,8 +256,8 @@
       "date": "2021-09-14",
       "address": "NO 28 Longstone, Blessington Road, Cradockstown",
       "price": 422908,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "detached",
       "eircode": null
     },
     {
@@ -352,8 +352,8 @@
       "date": "2021-07-15",
       "address": "55 Longstone, Blessington Road, Craddockstown",
       "price": 273128,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "terraced",
       "eircode": null
     },
     {

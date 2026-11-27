@@ -1,9 +1,9 @@
 {
   "slug": "gort-mell-old-slane-road",
   "stats": {
-    "count": 146,
-    "median": 399500,
-    "avg": 400229,
+    "count": 156,
+    "median": 399950,
+    "avg": 401561,
     "min": 233480,
     "max": 440088,
     "firstYear": 2024,
@@ -28,20 +28,108 @@
     },
     {
       "year": 2026,
-      "count": 59,
-      "median_price": 412500,
-      "avg_price": 401139,
+      "count": 69,
+      "median_price": 415000,
+      "avg_price": 404017,
       "min_price": 233480,
       "max_price": 440088
     }
   ],
   "transactions": [
     {
+      "date": "2026-11-06",
+      "address": "255 Gort Mell, Old Slane Road, Tullyallen",
+      "price": 370044,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2026-10-30",
+      "address": "247 Gort Mell, Old Slane Road, Tullyallen",
+      "price": 374449,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-29",
+      "address": "256 Gort Mell, Old Slane Road, Drogheda",
+      "price": 378855,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-27",
+      "address": "240 Gort Mell, Old Slane Road, Drogheda",
+      "price": 436123,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-23",
+      "address": "244 Gort Mell, Old Slane Road, Tullyallen",
+      "price": 374449,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A92NNF8"
+    },
+    {
+      "date": "2026-10-23",
+      "address": "250 Gort Mell, Old Slane Road, Drogheda",
+      "price": 325992,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-23",
+      "address": "253 Gort Mell, Old Slane Road, Drogheda",
+      "price": 378855,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-22",
+      "address": "243 Gort Mell, Old Slane Road, Drogheda",
+      "price": 370044,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-22",
+      "address": "254 Gort Mell, Old Slane Road, Tullyallen",
+      "price": 378855,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "A92YHR2"
+    },
+    {
       "date": "2026-10-22",
       "address": "245 Gort Mell, Old Slane Road, Drogheda",
       "price": 325991,
       "bedrooms": 4,
       "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-20",
+      "address": "252 Gort Mell, Old Slane Road, Tullyallen",
+      "price": 378854,
+      "bedrooms": 4,
+      "propertyType": "detached",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-20",
+      "address": "239 Gort Mell, Old Slane Road, Tullyallen",
+      "price": 378854,
+      "bedrooms": 4,
+      "propertyType": "detached",
       "eircode": null
     },
     {
@@ -238,14 +326,6 @@
     },
     {
       "date": "2026-08-07",
-      "address": "64 GORT MELL, OLD SLANE ROAD, DROGHEDA",
-      "price": 321586,
-      "bedrooms": 4,
-      "propertyType": "house",
-      "eircode": null
-    },
-    {
-      "date": "2026-08-07",
       "address": "63 Gort Mell, Old Slane Road, Tullyallen",
       "price": 321585,
       "bedrooms": 4,
@@ -256,6 +336,14 @@
       "date": "2026-08-07",
       "address": "81 Gort Mell, Old Slane Road, Drogheda",
       "price": 370044,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-08-07",
+      "address": "64 GORT MELL, OLD SLANE ROAD, DROGHEDA",
+      "price": 321586,
       "bedrooms": 4,
       "propertyType": "house",
       "eircode": null
@@ -347,95 +435,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2026-05-18",
-      "address": "60 Gort Mell, Old Slane Road, Drogheda",
-      "price": 440088,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2026-05-12",
-      "address": "105 Gort Mell, Old Slane Road, Drogheda",
-      "price": 363436,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2026-05-11",
-      "address": "107 Gort Mell, Old Slane Road, Tullyallen",
-      "price": 356828,
-      "bedrooms": 4,
-      "propertyType": "detached",
-      "eircode": null
-    },
-    {
-      "date": "2026-05-07",
-      "address": "106 Gort Mell, Old Slane Road, Drogheda",
-      "price": 402439,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2026-05-05",
-      "address": "129 Gort Mell, Old Slane Road, Tullyallen",
-      "price": 436123,
-      "bedrooms": 4,
-      "propertyType": "house",
-      "eircode": null
-    },
-    {
-      "date": "2026-05-05",
-      "address": "129 Gort Mell, Old Slane Road, Tullyallen",
-      "price": 436123,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2026-04-30",
-      "address": "57 GORT MELL, OLD SLANE ROAD, TULLYALLEN",
-      "price": 317181,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2026-04-21",
-      "address": "56 Gort Mell, Old Slane Road, Drogheda",
-      "price": 317181,
-      "bedrooms": 4,
-      "propertyType": "detached",
-      "eircode": null
-    },
-    {
-      "date": "2026-04-21",
-      "address": "59 Gort Mell, Old Slane Road, Tullyallen",
-      "price": 367841,
-      "bedrooms": 4,
-      "propertyType": "apartment",
-      "eircode": null
-    },
-    {
-      "date": "2026-04-16",
-      "address": "54 Gort Mell, Old Slane Road, Drogheda",
-      "price": 374449,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2026-04-08",
-      "address": "50 Gort Mell, Old Slane Road, Drogheda",
-      "price": 410000,
-      "bedrooms": 4,
-      "propertyType": "apartment",
-      "eircode": null
     }
   ],
-  "totalTransactions": 146
+  "totalTransactions": 156
 }

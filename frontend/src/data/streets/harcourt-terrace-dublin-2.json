@@ -161,7 +161,7 @@
       "address": "9 HARCOURT TERRACE, DUBLIN 2, DUBLIN",
       "price": 2500000,
       "bedrooms": null,
-      "propertyType": null,
+      "propertyType": "terraced",
       "eircode": null
     },
     {

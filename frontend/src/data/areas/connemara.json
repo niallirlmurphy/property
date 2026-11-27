@@ -3,15 +3,34 @@
   "slug": "connemara",
   "center": {
     "lat": 53.488624,
-    "lon": -10.018465
+    "lon": -10.0185
   },
   "radius_km": 5.0,
   "total_count": 10,
   "median_price": 285000.0,
-  "avg_price": 256200,
+  "avg_price": 334700,
   "min_year": 2010,
   "max_year": 2026,
   "recent": [
+    {
+      "id": 819274,
+      "sale_date": "2026-11-12",
+      "address": "ERRISLANNAN MANOR, CLIFDEN, GALWAY",
+      "county": "Galway",
+      "eircode": "H71N932",
+      "price": 1000000.0,
+      "not_full_market_price": false,
+      "vat_exclusive": false,
+      "description": "Second-Hand Dwelling house /Apartment",
+      "size_description": null,
+      "latitude": 53.489178,
+      "longitude": -10.020158,
+      "routing_key": "H71",
+      "bedrooms": 6,
+      "property_type": "detached",
+      "price_incl_vat": 1000000.0,
+      "distance_m": 126.147223
+    },
     {
       "id": 806951,
       "sale_date": "2026-10-13",
@@ -29,7 +48,7 @@
       "bedrooms": null,
       "property_type": null,
       "price_incl_vat": 355000.0,
-      "distance_m": 377.99302142
+      "distance_m": 376.5819967
     },
     {
       "id": 814593,
@@ -48,7 +67,7 @@
       "bedrooms": 4,
       "property_type": "detached",
       "price_incl_vat": 285000.0,
-      "distance_m": 392.78848544
+      "distance_m": 392.68149825
     },
     {
       "id": 805348,
@@ -67,7 +86,7 @@
       "bedrooms": 4,
       "property_type": "semi-detached",
       "price_incl_vat": 270000.0,
-      "distance_m": 512.03324142
+      "distance_m": 512.20380387
     },
     {
       "id": 812916,
@@ -86,7 +105,7 @@
       "bedrooms": null,
       "property_type": null,
       "price_incl_vat": 117000.0,
-      "distance_m": 1946.40886346
+      "distance_m": 1948.72448287
     },
     {
       "id": 803801,
@@ -105,7 +124,7 @@
       "bedrooms": 3,
       "property_type": "detached",
       "price_incl_vat": 285000.0,
-      "distance_m": 2303.10253091
+      "distance_m": 2305.42478884
     },
     {
       "id": 810566,
@@ -124,7 +143,7 @@
       "bedrooms": null,
       "property_type": null,
       "price_incl_vat": 395000.0,
-      "distance_m": 733.99375877
+      "distance_m": 731.70801747
     },
     {
       "id": 790965,
@@ -143,7 +162,7 @@
       "bedrooms": 4,
       "property_type": "semi-detached",
       "price_incl_vat": 320000.0,
-      "distance_m": 261.14156541
+      "distance_m": 259.45649593
     },
     {
       "id": 797163,
@@ -162,7 +181,7 @@
       "bedrooms": null,
       "property_type": null,
       "price_incl_vat": 170000.0,
-      "distance_m": 738.48063892
+      "distance_m": 737.27610282
     },
     {
       "id": 788085,
@@ -181,26 +200,7 @@
       "bedrooms": 2,
       "property_type": "detached",
       "price_incl_vat": 150000.0,
-      "distance_m": 55.45702568
-    },
-    {
-      "id": 786401,
-      "sale_date": "2026-06-10",
-      "address": "16 CONNEMARA WAY, WESTPORT RD, CLIFDEN",
-      "county": "Galway",
-      "eircode": "H71NH99",
-      "price": 215000.0,
-      "not_full_market_price": false,
-      "vat_exclusive": false,
-      "description": "Second-Hand Dwelling house /Apartment",
-      "size_description": null,
-      "latitude": 53.494293,
-      "longitude": -10.024247,
-      "routing_key": "H71",
-      "bedrooms": null,
-      "property_type": "apartment",
-      "price_incl_vat": 215000.0,
-      "distance_m": 738.48063892
+      "distance_m": 53.73836349
     }
   ],
   "trends": [
@@ -334,11 +334,11 @@
     },
     {
       "year": 2026,
-      "count": 18,
+      "count": 19,
       "median_price": 285000.0,
-      "avg_price": 277861.0,
+      "avg_price": 315868.0,
       "min_price": 117000.0,
-      "max_price": 565000.0
+      "max_price": 1000000.0
     }
   ]
 }

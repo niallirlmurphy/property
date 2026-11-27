@@ -446,16 +446,16 @@
     },
     {
       "date": "2019-07-12",
-      "address": "137 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
-      "price": 770000,
-      "bedrooms": null,
-      "propertyType": null,
+      "address": "172 Stepaside Park, Stepaside",
+      "price": 585903,
+      "bedrooms": 4,
+      "propertyType": "detached",
       "eircode": null
     },
     {
       "date": "2019-07-12",
-      "address": "172 Stepaside Park, Stepaside",
-      "price": 585903,
+      "address": "137 STEPASIDE PARK, STEPASIDE, DUBLIN 18",
+      "price": 770000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

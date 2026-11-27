@@ -1,9 +1,9 @@
 {
   "slug": "greenpark-meadows-mullingar",
   "stats": {
-    "count": 111,
-    "median": 200000,
-    "avg": 214262,
+    "count": 112,
+    "median": 201250,
+    "avg": 215340,
     "min": 70000,
     "max": 430000,
     "firstYear": 2010,
@@ -140,14 +140,22 @@
     },
     {
       "year": 2026,
-      "count": 3,
-      "median_price": 415000,
-      "avg_price": 418000,
-      "min_price": 409000,
+      "count": 4,
+      "median_price": 412000,
+      "avg_price": 397250,
+      "min_price": 335000,
       "max_price": 430000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-11-12",
+      "address": "278 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
+      "price": 335000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "N91Y1F8"
+    },
     {
       "date": "2026-06-16",
       "address": "284 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
@@ -539,15 +547,7 @@
       "bedrooms": 4,
       "propertyType": "semi-detached",
       "eircode": "N91K4X0"
-    },
-    {
-      "date": "2019-08-09",
-      "address": "154 GREENPARK MEADOWS, MULLINGAR, WESTMEATH",
-      "price": 160000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 111
+  "totalTransactions": 112
 }

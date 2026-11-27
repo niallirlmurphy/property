@@ -376,8 +376,8 @@
       "date": "2020-11-13",
       "address": "64 Ridgewood Manor, Melitta Road, Kildare",
       "price": 264141,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
       "eircode": "R51E768"
     },
     {

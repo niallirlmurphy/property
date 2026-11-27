@@ -1,9 +1,9 @@
 {
   "slug": "laraghcon-lucan",
   "stats": {
-    "count": 92,
-    "median": 521000,
-    "avg": 531382,
+    "count": 93,
+    "median": 522000,
+    "avg": 533572,
     "min": 205000,
     "max": 1355000,
     "firstYear": 2010,
@@ -140,14 +140,22 @@
     },
     {
       "year": 2026,
-      "count": 4,
-      "median_price": 625000,
-      "avg_price": 768125,
+      "count": 5,
+      "median_price": 735000,
+      "avg_price": 761500,
       "min_price": 467500,
       "max_price": 1355000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-22",
+      "address": "82 LARAGHCON, LUCAN, DUBLIN",
+      "price": 735000,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
+      "eircode": "K78NX24"
+    },
     {
       "date": "2026-08-24",
       "address": "206 LARAGHCON, LUCAN, DUBLIN",
@@ -472,8 +480,8 @@
       "date": "2017-11-28",
       "address": "82 LARAGHCON, LUCAN, DUBLIN",
       "price": 546000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
@@ -539,15 +547,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2016-07-13",
-      "address": "18 LARAGHCON, LUCAN, DUBLIN",
-      "price": 483000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 92
+  "totalTransactions": 93
 }

@@ -1,13 +1,13 @@
 {
   "slug": "mountain-view-road-ranelagh",
   "stats": {
-    "count": 15,
-    "median": 1290000,
-    "avg": 1307467,
+    "count": 16,
+    "median": 1295000,
+    "avg": 1345125,
     "min": 932000,
-    "max": 1850000,
+    "max": 1910000,
     "firstYear": 2013,
-    "lastYear": 2024
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -81,9 +81,25 @@
       "avg_price": 1370000,
       "min_price": 1265000,
       "max_price": 1475000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1910000,
+      "avg_price": 1910000,
+      "min_price": 1910000,
+      "max_price": 1910000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-08",
+      "address": "10 MOUNTAIN VIEW ROAD, RANELAGH, DUBLIN 6",
+      "price": 1910000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "D06WD25"
+    },
     {
       "date": "2024-09-02",
       "address": "28 MOUNTAIN VIEW RD, RANELAGH, DUBLIN 6",
@@ -205,5 +221,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 15
+  "totalTransactions": 16
 }

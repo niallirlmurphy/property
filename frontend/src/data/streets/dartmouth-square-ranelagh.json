@@ -209,7 +209,7 @@
       "address": "10 DARTMOUTH SQ, RANELAGH, DUBLIN 6",
       "price": 1330000,
       "bedrooms": null,
-      "propertyType": null,
+      "propertyType": "apartment",
       "eircode": "D06DX88"
     },
     {

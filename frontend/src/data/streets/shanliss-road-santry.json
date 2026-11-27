@@ -1,9 +1,9 @@
 {
   "slug": "shanliss-road-santry",
   "stats": {
-    "count": 92,
-    "median": 353500,
-    "avg": 350144,
+    "count": 91,
+    "median": 350000,
+    "avg": 348992,
     "min": 100000,
     "max": 640000,
     "firstYear": 2010,
@@ -140,9 +140,9 @@
     },
     {
       "year": 2026,
-      "count": 5,
-      "median_price": 455000,
-      "avg_price": 498000,
+      "count": 4,
+      "median_price": 472500,
+      "avg_price": 508750,
       "min_price": 450000,
       "max_price": 640000
     }
@@ -155,14 +155,6 @@
       "bedrooms": 7,
       "propertyType": "semi-detached",
       "eircode": "D09WN93"
-    },
-    {
-      "date": "2026-05-15",
-      "address": "99 SHANLISS RD, SANTRY, DUBLIN 9",
-      "price": 455000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D09P2R6"
     },
     {
       "date": "2026-05-15",
@@ -547,7 +539,15 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D09R8C8"
+    },
+    {
+      "date": "2018-04-16",
+      "address": "135A Shanliss Road, Santry, Dublin 9",
+      "price": 400000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     }
   ],
-  "totalTransactions": 92
+  "totalTransactions": 91
 }

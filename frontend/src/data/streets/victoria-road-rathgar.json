@@ -248,8 +248,8 @@
       "date": "2013-08-14",
       "address": "19 Victoria Road, Rathgar",
       "price": 770000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "terraced",
       "eircode": null
     },
     {

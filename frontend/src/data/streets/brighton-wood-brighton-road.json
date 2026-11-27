@@ -368,8 +368,8 @@
       "date": "2021-07-28",
       "address": "19  Brighton Wood, Brighton Road, Foxrock",
       "price": 721813,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
       "eircode": "D18E04V"
     },
     {
@@ -430,16 +430,16 @@
     },
     {
       "date": "2021-06-11",
-      "address": "38 Brighton Wood, Brighton Road, Foxrock",
-      "price": 925110,
+      "address": "94 Brighton Wood, Brighton Road, Foxrock",
+      "price": 753304,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2021-06-11",
-      "address": "94 Brighton Wood, Brighton Road, Foxrock",
-      "price": 753304,
+      "address": "38 Brighton Wood, Brighton Road, Foxrock",
+      "price": 925110,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null

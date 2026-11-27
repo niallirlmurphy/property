@@ -144,8 +144,8 @@
       "date": "2012-05-03",
       "address": "13 Vesey Place, Dun Laoghaire, County Dublin",
       "price": 685000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "terraced",
       "eircode": null
     }
   ],

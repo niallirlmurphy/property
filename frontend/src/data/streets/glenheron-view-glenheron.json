@@ -184,8 +184,8 @@
       "date": "2021-07-14",
       "address": "21 Glenheron View, Glenheron, Greystones",
       "price": 524229,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "detached",
       "eircode": null
     },
     {
@@ -464,8 +464,8 @@
       "date": "2019-03-22",
       "address": "100 Glenheron View, Glenheron, Greystones",
       "price": 396476,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {

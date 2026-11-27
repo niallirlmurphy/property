@@ -1,9 +1,9 @@
 {
   "slug": "cois-dara-chapelstown",
   "stats": {
-    "count": 112,
+    "count": 124,
     "median": 235000,
-    "avg": 263514,
+    "avg": 267044,
     "min": 164495,
     "max": 343612,
     "firstYear": 2021,
@@ -12,11 +12,11 @@
   "trends": [
     {
       "year": 2021,
-      "count": 41,
+      "count": 44,
       "median_price": 235000,
-      "avg_price": 225312,
+      "avg_price": 225459,
       "min_price": 164495,
-      "max_price": 215859
+      "max_price": 240000
     },
     {
       "year": 2022,
@@ -28,10 +28,10 @@
     },
     {
       "year": 2024,
-      "count": 10,
-      "median_price": 340000,
-      "avg_price": 330254,
-      "min_price": 264317,
+      "count": 17,
+      "median_price": 330000,
+      "avg_price": 327355,
+      "min_price": 255507,
       "max_price": 303965
     },
     {
@@ -44,14 +44,30 @@
     },
     {
       "year": 2026,
-      "count": 3,
+      "count": 5,
       "median_price": 374999,
-      "avg_price": 376666,
-      "min_price": 330396,
+      "avg_price": 357000,
+      "min_price": 295000,
       "max_price": 334802
     }
   ],
   "transactions": [
+    {
+      "date": "2026-11-12",
+      "address": "201 COIS DARA, CHAPELSTOWN, CO. CARLOW",
+      "price": 317181,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "R93EH6K"
+    },
+    {
+      "date": "2026-09-28",
+      "address": "91 COIS DARA, CHAPLESTOWN, CARLOW",
+      "price": 295000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "R93C5VY"
+    },
     {
       "date": "2026-07-03",
       "address": "162 COIS DARA, CHAPELSTOWN, CO. CARLOW",
@@ -301,9 +317,41 @@
       "eircode": "R93XV4K"
     },
     {
+      "date": "2024-10-21",
+      "address": "107 Cois Dara, Chaplestown, Tullow Road",
+      "price": 286343,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-11",
+      "address": "134 Cois Dara, Chaplestown, Tullow Road",
+      "price": 301762,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
       "date": "2024-10-08",
       "address": "136 Cois Dara, Chapelstown, Tullow Road",
       "price": 299559,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-07",
+      "address": "121 Cois Dara, Chaplestown, Tullow Road",
+      "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-10-04",
+      "address": "133 Cois Dara, Chaplestown, Tullow Road",
+      "price": 303964,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -320,6 +368,22 @@
       "date": "2024-07-18",
       "address": "120 Cois Dara, Chapelstown, Tullow Road",
       "price": 290749,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-16",
+      "address": "102 Cois Dara, Chaplestown, Tullow Road",
+      "price": 264317,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-07-11",
+      "address": "118 Cois Dara, Chaplestown, Tullow Road",
+      "price": 255507,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -344,6 +408,14 @@
       "date": "2024-06-25",
       "address": "96 Cois Dara, Chapelstown, Tullow Road",
       "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2024-06-19",
+      "address": "104 Cois Dara, Chaplestown, Carlow",
+      "price": 290749,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -379,79 +451,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2022-05-19",
-      "address": "65 Cois Dara, Chapelstown, Tullow Road",
-      "price": 207048,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-05-19",
-      "address": "66 Cois Dara, Chapelstown, Tullow Road",
-      "price": 207048,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-05-19",
-      "address": "67 Cois Dara, Chapelstown, Tullow Road",
-      "price": 207048,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-05-19",
-      "address": "68 Cois Dara, Chapelstown, Tullow Road",
-      "price": 207048,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-05-19",
-      "address": "69 Cois Dara, Chapelstown, Tullow Road",
-      "price": 207048,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-05-19",
-      "address": "70 Cois Dara, Chapelstown, Tullow Road",
-      "price": 207048,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-03-31",
-      "address": "46 Cois Dara, Chapelstown, Tullow Road",
-      "price": 195595,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-03-31",
-      "address": "45 Cois Dara, Chapelstown, Tullow Road",
-      "price": 195595,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2022-03-31",
-      "address": "42 Cois Dara, Chapelstown, Tullow Road",
-      "price": 165815,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 112
+  "totalTransactions": 124
 }

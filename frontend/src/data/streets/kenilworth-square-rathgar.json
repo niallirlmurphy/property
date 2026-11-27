@@ -93,7 +93,7 @@
   ],
   "transactions": [
     {
-      "date": "2026-10-20",
+      "date": "2026-10-19",
       "address": "40 KENILWORTH SQ, RATHGAR, DUBLIN 6",
       "price": 3000000,
       "bedrooms": 4,
@@ -224,8 +224,8 @@
       "date": "2014-12-09",
       "address": "72 KENILWORTH SQ, RATHGAR, DUBLIN 6",
       "price": 1050000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "detached",
       "eircode": "D06A025"
     },
     {

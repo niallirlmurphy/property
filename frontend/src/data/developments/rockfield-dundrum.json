@@ -1,15 +1,15 @@
 {
   "slug": "rockfield-dundrum",
   "stats": {
-    "count": 224,
-    "median": 386250,
-    "avg": 399071,
+    "count": 226,
+    "median": 387750,
+    "avg": 400097,
     "min": 180000,
     "max": 770000,
     "firstYear": 2010,
     "lastYear": 2026,
-    "recentMedian": 495000,
-    "recentCount": 24
+    "recentMedian": 500000,
+    "recentCount": 25
   },
   "trends": [
     {
@@ -142,9 +142,9 @@
     },
     {
       "year": 2026,
-      "count": 8,
+      "count": 10,
       "median_price": 517750,
-      "avg_price": 537312,
+      "avg_price": 532850,
       "min_price": 415000,
       "max_price": 717000
     }
@@ -153,9 +153,9 @@
   "types": [
     {
       "type": "Apartment",
-      "count": 63,
-      "median": 365000,
-      "avg": 380819
+      "count": 65,
+      "median": 371000,
+      "avg": 383332
     },
     {
       "type": "House",
@@ -167,8 +167,8 @@
   "development": {
     "firstSaleYear": 2010,
     "newHomeSales": 0,
-    "resales": 224,
-    "bedroomsKnown": 25
+    "resales": 226,
+    "bedroomsKnown": 28
   },
   "bulkSales": [],
   "amenities": {
@@ -249,6 +249,22 @@
   },
   "transactions": [
     {
+      "date": "2026-11-09",
+      "address": "APT 44, THE ROWAN, ROCKFIELD DUBLIN 14",
+      "price": 530000,
+      "bedrooms": null,
+      "propertyType": null,
+      "newHome": false
+    },
+    {
+      "date": "2026-10-23",
+      "address": "11 THE OAKS, ROCKFIELD, DUNDRUM",
+      "price": 500000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
+    {
       "date": "2026-09-18",
       "address": "39 THE ROWAN, ROCKFIELD, DUNDRUM DUBLIN 14",
       "price": 522500,
@@ -292,8 +308,8 @@
       "date": "2026-04-27",
       "address": "12 THE ELM, ROCKFIELD, DUNDRUM DUBLIN 16",
       "price": 425000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "apartment",
       "newHome": false
     },
     {
@@ -631,23 +647,7 @@
       "bedrooms": null,
       "propertyType": null,
       "newHome": false
-    },
-    {
-      "date": "2023-09-28",
-      "address": "49 THE ROWAN, ROCKFIELD, DUNDRUM DUBLIN 14",
-      "price": 425000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
-    },
-    {
-      "date": "2023-08-11",
-      "address": "9 THE OAK, ROCKFIELD, DUNDRUM DUBLIN 14",
-      "price": 455000,
-      "bedrooms": null,
-      "propertyType": null,
-      "newHome": false
     }
   ],
-  "totalTransactions": 224
+  "totalTransactions": 226
 }

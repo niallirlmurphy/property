@@ -120,8 +120,8 @@
       "date": "2019-02-11",
       "address": "5 SANDYCOVE AVE WEST, SANDYCOVE, DUBLIN",
       "price": 1485000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "terraced",
       "eircode": null
     },
     {

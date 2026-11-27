@@ -112,8 +112,8 @@
       "date": "2023-07-07",
       "address": "44 SILCHESTER RD, GLENAGEARY, DUBLIN",
       "price": 1380000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "detached",
       "eircode": "A96A6F5"
     },
     {

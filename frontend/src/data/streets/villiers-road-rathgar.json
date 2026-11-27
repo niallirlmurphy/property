@@ -280,8 +280,8 @@
       "date": "2011-07-27",
       "address": "32 Villiers Road, Rathgar, Dublin6",
       "price": 450000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 5,
+      "propertyType": "terraced",
       "eircode": null
     }
   ],

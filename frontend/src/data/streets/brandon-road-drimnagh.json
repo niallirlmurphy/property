@@ -1,9 +1,9 @@
 {
   "slug": "brandon-road-drimnagh",
   "stats": {
-    "count": 91,
-    "median": 300000,
-    "avg": 301054,
+    "count": 92,
+    "median": 298500,
+    "avg": 300064,
     "min": 110000,
     "max": 531000,
     "firstYear": 2010,
@@ -44,9 +44,9 @@
     },
     {
       "year": 2014,
-      "count": 4,
-      "median_price": 195000,
-      "avg_price": 204250,
+      "count": 5,
+      "median_price": 210000,
+      "avg_price": 205400,
       "min_price": 170000,
       "max_price": 257000
     },
@@ -549,5 +549,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 91
+  "totalTransactions": 92
 }

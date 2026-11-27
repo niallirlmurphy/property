@@ -1,9 +1,9 @@
 {
   "slug": "millquarter-knockmullen",
   "stats": {
-    "count": 207,
-    "median": 344050,
-    "avg": 352388,
+    "count": 208,
+    "median": 344488,
+    "avg": 352882,
     "min": 65000,
     "max": 560000,
     "firstYear": 2019,
@@ -68,14 +68,22 @@
     },
     {
       "year": 2026,
-      "count": 14,
-      "median_price": 425000,
-      "avg_price": 416885,
+      "count": 15,
+      "median_price": 450000,
+      "avg_price": 419426,
       "min_price": 233480,
       "max_price": 560000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-11-05",
+      "address": "77 MILLQUARTER, KNOCKMULLEN, GOREY",
+      "price": 455000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "Y25K7W7"
+    },
     {
       "date": "2026-07-31",
       "address": "216 MILLQUARTER, KNOCKMULLEN, GOREY",
@@ -398,19 +406,19 @@
     },
     {
       "date": "2025-07-03",
-      "address": "16 MILLQUARTER, KNOCKMULLEN, GOREY",
-      "price": 406000,
-      "bedrooms": 4,
-      "propertyType": "semi-detached",
-      "eircode": "Y25E6F3"
-    },
-    {
-      "date": "2025-07-03",
       "address": "287 Millquarter, Knockmullen, Gorey",
       "price": 348017,
       "bedrooms": 5,
       "propertyType": "semi-detached",
       "eircode": null
+    },
+    {
+      "date": "2025-07-03",
+      "address": "16 MILLQUARTER, KNOCKMULLEN, GOREY",
+      "price": 406000,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": "Y25E6F3"
     },
     {
       "date": "2025-06-27",
@@ -467,15 +475,7 @@
       "bedrooms": 3,
       "propertyType": "semi-detached",
       "eircode": "Y25H6V0"
-    },
-    {
-      "date": "2025-02-12",
-      "address": "235 Millquarter, Knockmullen, Gorey",
-      "price": 377093,
-      "bedrooms": 3,
-      "propertyType": "semi-detached",
-      "eircode": null
     }
   ],
-  "totalTransactions": 207
+  "totalTransactions": 208
 }

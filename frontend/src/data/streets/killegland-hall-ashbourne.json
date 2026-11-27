@@ -1,9 +1,9 @@
 {
   "slug": "killegland-hall-ashbourne",
   "stats": {
-    "count": 95,
-    "median": 186000,
-    "avg": 189200,
+    "count": 98,
+    "median": 185500,
+    "avg": 189449,
     "min": 70000,
     "max": 314000,
     "firstYear": 2010,
@@ -36,9 +36,9 @@
     },
     {
       "year": 2015,
-      "count": 6,
-      "median_price": 121000,
-      "avg_price": 122333,
+      "count": 7,
+      "median_price": 122000,
+      "avg_price": 124429,
       "min_price": 100000,
       "max_price": 152000
     },
@@ -68,10 +68,10 @@
     },
     {
       "year": 2019,
-      "count": 4,
+      "count": 5,
       "median_price": 180000,
-      "avg_price": 178250,
-      "min_price": 160000,
+      "avg_price": 172600,
+      "min_price": 150000,
       "max_price": 193000
     },
     {
@@ -124,14 +124,22 @@
     },
     {
       "year": 2026,
-      "count": 9,
-      "median_price": 300000,
-      "avg_price": 286667,
+      "count": 10,
+      "median_price": 302000,
+      "avg_price": 288500,
       "min_price": 220000,
       "max_price": 314000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-11-03",
+      "address": "44 KILLEGLAND HALL, ASHBOURNE, MEATH",
+      "price": 305000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "A84ER28"
+    },
     {
       "date": "2026-08-04",
       "address": "6 KILLEGLAND HALL, ASHBOURNE, MEATH",
@@ -400,8 +408,8 @@
       "date": "2022-12-19",
       "address": "44 KILLEGLAND HALL, ASHBOURNE, MEATH",
       "price": 210000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "apartment",
       "eircode": "A84ER28"
     },
     {
@@ -523,15 +531,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "A84YN70"
-    },
-    {
-      "date": "2021-06-14",
-      "address": "78 KILLEGLAND HALL, ASHBOURNE, MEATH",
-      "price": 186500,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "A84R284"
     }
   ],
-  "totalTransactions": 95
+  "totalTransactions": 98
 }

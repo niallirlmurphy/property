@@ -112,8 +112,8 @@
       "date": "2019-09-18",
       "address": "6 The Avenue, Marianella, Rathgar",
       "price": 1321586,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "apartment",
       "eircode": "D06WR40"
     },
     {

@@ -1,13 +1,13 @@
 {
   "slug": "lansdowne-road-ballsbridge",
   "stats": {
-    "count": 12,
-    "median": 2050000,
-    "avg": 2120417,
+    "count": 13,
+    "median": 2100000,
+    "avg": 2265000,
     "min": 915000,
     "max": 4500000,
     "firstYear": 2013,
-    "lastYear": 2024
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -89,9 +89,25 @@
       "avg_price": 1965000,
       "min_price": 1810000,
       "max_price": 2120000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 4000000,
+      "avg_price": 4000000,
+      "min_price": 4000000,
+      "max_price": 4000000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-22",
+      "address": "38 LANSDOWNE RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 4000000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04V992"
+    },
     {
       "date": "2024-09-03",
       "address": "38 LANSDOWNE RD, BALLSBRIDGE, DUBLIN 4",
@@ -184,10 +200,10 @@
       "date": "2013-04-08",
       "address": "38 Lansdowne Road, Ballsbridge",
       "price": 1150000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 7,
+      "propertyType": "semi-detached",
       "eircode": null
     }
   ],
-  "totalTransactions": 12
+  "totalTransactions": 13
 }

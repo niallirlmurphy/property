@@ -165,43 +165,74 @@ def _focused_result_text(soup, address, county, eircode=None):
 
     return ' '.join(matched) if matched else soup.get_text()
 
+# Search engines, tried in order. DuckDuckGo blocks long runs with 202
+# bot-check pages (26 Nov 2026), so a blocked engine is skipped for
+# ENGINE_COOLDOWN seconds and Brave takes over. Bing was tested and rejected:
+# for scripted clients it answers only the house number ("5" -> the number 5).
+# Test on 15 already-enriched sales (2026-11-27): Brave right on 10 bedrooms
+# (1 wrong) and 11 types, no blocks at a 30s rate.
+ENGINES = [
+    ('duckduckgo', 'https://html.duckduckgo.com/html/', 'q', '.result__body'),
+    ('brave', 'https://search.brave.com/search', 'q', 'div.snippet'),
+]
+ENGINE_COOLDOWN = 3600
+_engine_blocked_until = {}
+ENGINE_USED = {}
+
+
+def _search_engine(name, url, param, selector, search_query):
+    """Return the result page soup with result blocks tagged .result__body,
+    or None if the engine is blocked / errors."""
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
+                      '(KHTML, like Gecko) Chrome/120 Safari/537.36',
+        'Accept-Language': 'en-IE,en;q=0.9',
+    }
+    response = requests.get(url, params={param: search_query}, headers=headers, timeout=30)
+    soup = BeautifulSoup(response.text, 'html.parser') if response.status_code == 200 else None
+    blocks = soup.select(selector) if soup else []
+    if not blocks:
+        # 202 bot-check, 429, or an empty/captcha page: treat as blocked
+        _engine_blocked_until[name] = time.time() + ENGINE_COOLDOWN
+        print(f"  ⚠️  {name} blocked/empty (HTTP {response.status_code}); "
+              f"skipping it for {ENGINE_COOLDOWN // 60} min")
+        return None
+    for b in blocks:
+        b['class'] = list(b.get('class', [])) + ['result__body']
+    return soup
+
+
 def search_web_for_property(address, county, max_retries=2, eircode=None):
-    """Search web for property details using DuckDuckGo with retries."""
-    for attempt in range(max_retries):
-        try:
-            search_query = f"{address} {county} Ireland property"
-            url = f"https://html.duckduckgo.com/html/?q={quote_plus(search_query)}"
-
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
-            }
-
-            response = requests.get(url, headers=headers, timeout=30)
-            if response.status_code != 200:
+    """Search the web for property details: DuckDuckGo, else Brave."""
+    search_query = f"{address} {county} Ireland property"
+    while all(_engine_blocked_until.get(n, 0) > time.time() for n, *_ in ENGINES):
+        # Wait for the first cooldown to end rather than marking this
+        # address attempted on an empty answer.
+        wait = min(_engine_blocked_until.values()) - time.time()
+        print(f"  ⏸  All search engines blocked; waiting {wait / 60:.0f} min", flush=True)
+        time.sleep(max(wait, 1))
+    for name, url, param, selector in ENGINES:
+        if _engine_blocked_until.get(name, 0) > time.time():
+            continue
+        for attempt in range(max_retries):
+            try:
+                soup = _search_engine(name, url, param, selector, search_query)
+                break
+            except Exception as e:
+                print(f"  ⚠️  {name} search failed (attempt {attempt + 1}/{max_retries}): {e}")
+                soup = None
                 if attempt < max_retries - 1:
                     time.sleep(5)
-                    continue
-                return None, None
+        if soup is None:
+            continue
+        ENGINE_USED[name] = ENGINE_USED.get(name, 0) + 1
+        # Focus on the result blocks that match this address (or Eircode),
+        # so unrelated listings and site boilerplate don't pollute extraction.
+        text_content = _focused_result_text(soup, address, county, eircode).lower()
+        return extract_bedrooms(text_content), extract_property_type(text_content)
+    # Every engine got blocked during this call: retry once cooldowns end
+    return search_web_for_property(address, county, max_retries, eircode)
 
-            soup = BeautifulSoup(response.text, 'html.parser')
-            # Focus on the result blocks that match this address (or Eircode),
-            # so unrelated listings and site boilerplate don't pollute extraction.
-            text_content = _focused_result_text(soup, address, county, eircode).lower()
-
-            bedrooms = extract_bedrooms(text_content)
-            property_type = extract_property_type(text_content)
-
-            return bedrooms, property_type
-
-        except Exception as e:
-            if attempt < max_retries - 1:
-                print(f"  ⚠️  Search failed (attempt {attempt + 1}/{max_retries}): {e}")
-                time.sleep(5)
-            else:
-                print(f"  ⚠️  Search failed after {max_retries} attempts: {e}")
-                return None, None
-
-    return None, None
 
 def fetch_properties_to_enrich(conn, limit=100, year=2026, since=None, ids=None):
     """Fetch properties missing enrichment data, most recent first.
@@ -511,6 +542,7 @@ def run_enrichment_batch(batch_size=100, rate_limit_seconds=10, report_interval=
             print(f"   ❌ Failed: {stats['failed']} ({stats['failed']/i*100:.1f}%)")
             if stats['duplicate_updates'] > 0:
                 print(f"   🎁 Bonus updates: {stats['duplicate_updates']} additional sales")
+            print(f"   🔎 Engines used: {ENGINE_USED}")
             print("─" * 70)
             print()
 

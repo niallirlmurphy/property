@@ -136,8 +136,8 @@
       "date": "2014-08-29",
       "address": "7  Morehampton Road, Dublin 4",
       "price": 1500000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "terraced",
       "eircode": "D04A7P8"
     }
   ],

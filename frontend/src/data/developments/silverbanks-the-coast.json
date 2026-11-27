@@ -93,20 +93,39 @@
       "max_price": 460000
     }
   ],
-  "bedrooms": [],
+  "bedrooms": [
+    {
+      "bedrooms": 1,
+      "count": 5,
+      "median": 255000,
+      "avg": 255000
+    },
+    {
+      "bedrooms": 2,
+      "count": 11,
+      "median": 325000,
+      "avg": 329414
+    }
+  ],
   "types": [
     {
       "type": "Apartment",
-      "count": 19,
-      "median": 300775,
-      "avg": 316359
+      "count": 24,
+      "median": 289999,
+      "avg": 296533
+    },
+    {
+      "type": "House",
+      "count": 5,
+      "median": 355000,
+      "avg": 372000
     }
   ],
   "development": {
     "firstSaleYear": 2017,
     "newHomeSales": 131,
     "resales": 34,
-    "bedroomsKnown": 14
+    "bedroomsKnown": 20
   },
   "bulkSales": [],
   "amenities": {

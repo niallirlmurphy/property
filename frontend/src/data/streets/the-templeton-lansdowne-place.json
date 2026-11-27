@@ -1,9 +1,9 @@
 {
   "slug": "the-templeton-lansdowne-place",
   "stats": {
-    "count": 10,
-    "median": 1568500,
-    "avg": 2013696,
+    "count": 11,
+    "median": 1550000,
+    "avg": 1971542,
     "min": 704846,
     "max": 5814978,
     "firstYear": 2019,
@@ -44,14 +44,22 @@
     },
     {
       "year": 2025,
-      "count": 1,
-      "median_price": 809964,
-      "avg_price": 809964,
+      "count": 2,
+      "median_price": 1179982,
+      "avg_price": 1179982,
       "min_price": 713625,
-      "max_price": 713625
+      "max_price": 1550000
     }
   ],
   "transactions": [
+    {
+      "date": "2025-08-29",
+      "address": "6 The Templeton, Landsdowne Place, Ballsbridge",
+      "price": 1550000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "D04W1K2"
+    },
     {
       "date": "2025-06-06",
       "address": "APT 3 THE TEMPLETON, LANSDOWNE PLACE, BALLSBRIDGE",
@@ -133,5 +141,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 10
+  "totalTransactions": 11
 }

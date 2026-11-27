@@ -1,9 +1,9 @@
 {
   "slug": "owendoher-lodge-ballyboden-road",
   "stats": {
-    "count": 91,
-    "median": 353439,
-    "avg": 354577,
+    "count": 92,
+    "median": 354220,
+    "avg": 356864,
     "min": 132687,
     "max": 582000,
     "firstYear": 2016,
@@ -92,14 +92,22 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 537500,
-      "avg_price": 537500,
+      "count": 3,
+      "median_price": 560000,
+      "avg_price": 546667,
       "min_price": 515000,
-      "max_price": 560000
+      "max_price": 565000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-11-16",
+      "address": "54 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 565000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16E3E9"
+    },
     {
       "date": "2026-03-26",
       "address": "61 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
@@ -430,19 +438,19 @@
     },
     {
       "date": "2016-08-19",
-      "address": "39 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
-      "price": 350000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2016-08-19",
       "address": "67 OWENDOHER LODGE, BALLYBODEN ROAD, RATHFARNHAM",
       "price": 370000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D16YX91"
+    },
+    {
+      "date": "2016-08-19",
+      "address": "39 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
+      "price": 350000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     },
     {
       "date": "2016-08-16",
@@ -491,15 +499,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2016-07-20",
-      "address": "60 OWENDOHER LODGE, BALLYBODEN RD, RATHFARNHAM DUBLIN 16",
-      "price": 265000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 91
+  "totalTransactions": 92
 }

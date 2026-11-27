@@ -200,8 +200,8 @@
       "date": "2014-09-30",
       "address": "39 Glenart Avenue, Blackrock",
       "price": 745000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {

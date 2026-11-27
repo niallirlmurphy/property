@@ -470,18 +470,18 @@
     },
     {
       "date": "2020-11-30",
-      "address": "No 2 Clonlara, Kerry Pike, Co Cork",
-      "price": 365639,
-      "bedrooms": null,
-      "propertyType": "house",
-      "eircode": null
-    },
-    {
-      "date": "2020-11-30",
       "address": "114 Clonlara, Kerry Pike",
       "price": 416299,
       "bedrooms": null,
       "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2020-11-30",
+      "address": "No 2 Clonlara, Kerry Pike, Co Cork",
+      "price": 365639,
+      "bedrooms": null,
+      "propertyType": "house",
       "eircode": null
     },
     {

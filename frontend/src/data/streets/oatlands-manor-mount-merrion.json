@@ -72,8 +72,8 @@
       "date": "2023-05-18",
       "address": "5 OATLANDS MANOR, MOUNT MERRION",
       "price": 1233480,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 5,
+      "propertyType": "detached",
       "eircode": "A94X6T0"
     },
     {

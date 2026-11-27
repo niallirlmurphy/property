@@ -248,8 +248,8 @@
       "date": "2010-11-26",
       "address": "10 Longford Terrace, Monkstown",
       "price": 2500000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 5,
+      "propertyType": "terraced",
       "eircode": null
     }
   ],

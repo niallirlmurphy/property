@@ -112,8 +112,8 @@
       "date": "2019-04-04",
       "address": "36 ALBANY RD, RANELAGH, DUBLIN 6",
       "price": 1300000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
       "eircode": "D06N6F7"
     },
     {

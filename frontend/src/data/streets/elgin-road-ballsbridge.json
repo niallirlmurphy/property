@@ -256,8 +256,8 @@
       "date": "2010-06-16",
       "address": "23 Elgin Road, Ballsbridge, Dublin 4",
       "price": 3000000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "terraced",
       "eircode": "D04T6C3"
     }
   ],

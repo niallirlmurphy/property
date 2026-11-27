@@ -1,9 +1,9 @@
 {
   "slug": "cois-farraige-blackrock",
   "stats": {
-    "count": 97,
-    "median": 344591,
-    "avg": 324725,
+    "count": 99,
+    "median": 370000,
+    "avg": 327104,
     "min": 101140,
     "max": 410758,
     "firstYear": 2010,
@@ -84,14 +84,30 @@
     },
     {
       "year": 2026,
-      "count": 25,
-      "median_price": 335000,
-      "avg_price": 343611,
+      "count": 27,
+      "median_price": 340000,
+      "avg_price": 350936,
       "min_price": 255505,
       "max_price": 409692
     }
   ],
   "transactions": [
+    {
+      "date": "2026-11-02",
+      "address": "180 Cois  Farraige, Blackrock, Dundalk",
+      "price": 383260,
+      "bedrooms": 4,
+      "propertyType": "house",
+      "eircode": null
+    },
+    {
+      "date": "2026-10-28",
+      "address": "122 Cois Farraige, Blackrock",
+      "price": 396476,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
+      "eircode": null
+    },
     {
       "date": "2026-10-22",
       "address": "181 Cois Farraige, Blackrock, Dundalk",
@@ -206,19 +222,19 @@
     },
     {
       "date": "2026-03-24",
-      "address": "21 COIS FARRAIGE, BLACKROCK, LOUTH",
-      "price": 310000,
-      "bedrooms": 2,
-      "propertyType": "semi-detached",
-      "eircode": "A91TY7X"
-    },
-    {
-      "date": "2026-03-24",
       "address": "192 Cois Farraige, Blackrock, Dundalk",
       "price": 348016,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
+    },
+    {
+      "date": "2026-03-24",
+      "address": "21 COIS FARRAIGE, BLACKROCK, LOUTH",
+      "price": 310000,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
+      "eircode": "A91TY7X"
     },
     {
       "date": "2026-03-23",
@@ -475,23 +491,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2024-09-06",
-      "address": "85 Cois Farraige, Blackrock",
-      "price": 348251,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2024-08-30",
-      "address": "46 Cois Farraige, Blackrock, Dundalk",
-      "price": 337025,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 97
+  "totalTransactions": 99
 }

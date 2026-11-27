@@ -3,9 +3,9 @@
   "stats": {
     "count": 20,
     "median": 1510920,
-    "avg": 1585862,
+    "avg": 1585647,
     "min": 1164758,
-    "max": 2275000,
+    "max": 2270700,
     "firstYear": 2022,
     "lastYear": 2026
   },
@@ -37,17 +37,17 @@
     {
       "year": 2026,
       "count": 1,
-      "median_price": 2275000,
-      "avg_price": 2275000,
-      "min_price": 2275000,
-      "max_price": 2275000
+      "median_price": 2270700,
+      "avg_price": 2270700,
+      "min_price": 2270700,
+      "max_price": 2270700
     }
   ],
   "transactions": [
     {
       "date": "2026-09-29",
       "address": "19 ANNESLEY GARDENS, RANELAGH, DUBLIN 6",
-      "price": 2275000,
+      "price": 2270700,
       "bedrooms": 4,
       "propertyType": "terraced",
       "eircode": "D06V1Y2"
@@ -144,8 +144,8 @@
       "date": "2022-06-15",
       "address": "19 Annesley Gardens, Ranelagh",
       "price": 1541841,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "terraced",
       "eircode": null
     },
     {

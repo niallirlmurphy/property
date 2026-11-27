@@ -1,9 +1,9 @@
 {
   "slug": "upper-leeson-street-dublin-4",
   "stats": {
-    "count": 31,
-    "median": 1400000,
-    "avg": 1667265,
+    "count": 32,
+    "median": 1375000,
+    "avg": 1647820,
     "min": 410000,
     "max": 7150000,
     "firstYear": 2011,
@@ -108,14 +108,22 @@
     },
     {
       "year": 2026,
-      "count": 2,
-      "median_price": 1275000,
-      "avg_price": 1275000,
+      "count": 3,
+      "median_price": 1045000,
+      "avg_price": 1198333,
       "min_price": 850000,
       "max_price": 1700000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-30",
+      "address": "135 UPPER LEESON ST, DUBLIN 4, DUBLIN",
+      "price": 1045000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E5Y6"
+    },
     {
       "date": "2026-05-20",
       "address": "119 UPPER LEESON ST, DUBLIN 4, DUBLIN",
@@ -365,5 +373,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 31
+  "totalTransactions": 32
 }

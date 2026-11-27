@@ -168,8 +168,8 @@
       "date": "2012-09-04",
       "address": "36 Coliemore Road, Dalkey",
       "price": 2400000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "apartment",
       "eircode": null
     },
     {

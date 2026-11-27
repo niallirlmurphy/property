@@ -1,9 +1,9 @@
 {
   "slug": "mourne-road-drimnagh",
   "stats": {
-    "count": 138,
+    "count": 139,
     "median": 295000,
-    "avg": 289483,
+    "avg": 290322,
     "min": 30000,
     "max": 550000,
     "firstYear": 2010,
@@ -132,9 +132,9 @@
     },
     {
       "year": 2025,
-      "count": 12,
-      "median_price": 411000,
-      "avg_price": 413250,
+      "count": 13,
+      "median_price": 406000,
+      "avg_price": 412692,
       "min_price": 280000,
       "max_price": 550000
     },
@@ -211,6 +211,14 @@
       "bedrooms": 2,
       "propertyType": "terraced",
       "eircode": "D12ND25"
+    },
+    {
+      "date": "2025-09-01",
+      "address": "410 MOURNE RD, DRIMINAGH, DUBLIN 12",
+      "price": 406000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "D12EK12"
     },
     {
       "date": "2025-08-29",
@@ -539,15 +547,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D12EDP7"
-    },
-    {
-      "date": "2022-02-11",
-      "address": "554 MOURNE RD, DRIMNAGH, DUBLIN 12",
-      "price": 322000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D12NV27"
     }
   ],
-  "totalTransactions": 138
+  "totalTransactions": 139
 }

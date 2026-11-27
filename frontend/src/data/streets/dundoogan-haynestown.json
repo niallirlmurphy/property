@@ -1,9 +1,9 @@
 {
   "slug": "dundoogan-haynestown",
   "stats": {
-    "count": 161,
+    "count": 169,
     "median": 257986,
-    "avg": 259423,
+    "avg": 259516,
     "min": 185845,
     "max": 395000,
     "firstYear": 2019,
@@ -20,17 +20,17 @@
     },
     {
       "year": 2020,
-      "count": 4,
-      "median_price": 232450,
-      "avg_price": 231899,
+      "count": 5,
+      "median_price": 237949,
+      "avg_price": 233310,
       "min_price": 199956,
       "max_price": 222953
     },
     {
       "year": 2021,
-      "count": 29,
+      "count": 35,
       "median_price": 259949,
-      "avg_price": 251899,
+      "avg_price": 253349,
       "min_price": 185845,
       "max_price": 269950
     },
@@ -60,14 +60,22 @@
     },
     {
       "year": 2026,
-      "count": 6,
-      "median_price": 294000,
-      "avg_price": 303000,
+      "count": 7,
+      "median_price": 290000,
+      "avg_price": 301143,
       "min_price": 270000,
       "max_price": 350000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-29",
+      "address": "17 DUNDOOGAN, HAYNESTOWN, LOUTH",
+      "price": 290000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A91V4AX"
+    },
     {
       "date": "2026-10-01",
       "address": "170 DUNDOOGAN, HAYNESTOWN, DUNDALK",
@@ -192,8 +200,8 @@
       "date": "2022-12-15",
       "address": "170 Dundoogan, Haynestown, Dundalk",
       "price": 211321,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "terraced",
       "eircode": null
     },
     {
@@ -224,8 +232,8 @@
       "date": "2022-12-12",
       "address": "163 Dundoogan, Haynestown",
       "price": 233436,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
@@ -392,8 +400,8 @@
       "date": "2022-09-15",
       "address": "150 Dundoogan, Haynestown, Dundalk",
       "price": 202599,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "house",
       "eircode": null
     },
     {
@@ -459,15 +467,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2022-06-28",
-      "address": "127 DUNDOOGAN, HAYNESTOWN, DUNDALK",
-      "price": 233436,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 161
+  "totalTransactions": 169
 }

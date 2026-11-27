@@ -1,10 +1,10 @@
 {
   "slug": "the-blake-lansdowne-place",
   "stats": {
-    "count": 14,
-    "median": 1750000,
-    "avg": 2034597,
-    "min": 770925,
+    "count": 16,
+    "median": 1664769,
+    "avg": 1928397,
+    "min": 722466,
     "max": 5726872,
     "firstYear": 2021,
     "lastYear": 2026
@@ -12,9 +12,9 @@
   "trends": [
     {
       "year": 2021,
-      "count": 6,
-      "median_price": 1750000,
-      "avg_price": 2503777,
+      "count": 7,
+      "median_price": 1700000,
+      "avg_price": 2367523,
       "min_price": 1297500,
       "max_price": 5726872
     },
@@ -35,6 +35,14 @@
       "max_price": 2201331
     },
     {
+      "year": 2025,
+      "count": 1,
+      "median_price": 819999,
+      "avg_price": 819999,
+      "min_price": 722466,
+      "max_price": 722466
+    },
+    {
       "year": 2026,
       "count": 1,
       "median_price": 905000,
@@ -51,6 +59,14 @@
       "bedrooms": 1,
       "propertyType": "apartment",
       "eircode": "D04V0V8"
+    },
+    {
+      "date": "2025-02-28",
+      "address": "9 The Blake, Landsdowne Place, Landsdowne Road",
+      "price": 722466,
+      "bedrooms": 1,
+      "propertyType": "apartment",
+      "eircode": null
     },
     {
       "date": "2024-12-05",
@@ -155,7 +171,15 @@
       "bedrooms": 2,
       "propertyType": "apartment",
       "eircode": "D04H6H2"
+    },
+    {
+      "date": "2021-02-05",
+      "address": "3 The Blake, Landsdowne Place, Landsdowne Road",
+      "price": 1365639,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
     }
   ],
-  "totalTransactions": 14
+  "totalTransactions": 16
 }

@@ -345,7 +345,7 @@
       "address": "33 Nutley Road, Donnybrook, Dublin 4",
       "price": 890000,
       "bedrooms": null,
-      "propertyType": null,
+      "propertyType": "detached",
       "eircode": "D04F6C3"
     },
     {

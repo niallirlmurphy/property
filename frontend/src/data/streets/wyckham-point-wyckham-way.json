@@ -326,19 +326,19 @@
     },
     {
       "date": "2022-09-20",
-      "address": "169 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
-      "price": 425000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D16RN09"
-    },
-    {
-      "date": "2022-09-20",
       "address": "101 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
       "price": 490000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D16P4A6"
+    },
+    {
+      "date": "2022-09-20",
+      "address": "169 WYCKHAM POINT, WYCKHAM WAY, DUNDRUM DUBLIN 16",
+      "price": 425000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D16RN09"
     },
     {
       "date": "2022-05-24",

@@ -246,19 +246,19 @@
     },
     {
       "date": "2022-09-30",
-      "address": "27 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
-      "price": 650000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "K34Y940"
-    },
-    {
-      "date": "2022-09-30",
       "address": "36, BALLYGOSSAN PARK, GOLF LINKS ROAD",
       "price": 547000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "K34F407"
+    },
+    {
+      "date": "2022-09-30",
+      "address": "27 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
+      "price": 650000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "K34Y940"
     },
     {
       "date": "2021-09-02",
@@ -376,16 +376,16 @@
       "date": "2019-01-24",
       "address": "85 BALLYGOSSAN PARK, GOLF LINKS ROAD, SKERRIES",
       "price": 299558,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
       "eircode": "K34P026"
     },
     {
       "date": "2018-12-14",
       "address": "84 Ballygossan Park, Golf Links Road, Skerries",
       "price": 310000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "detached",
       "eircode": "K34RY84"
     },
     {
@@ -456,8 +456,8 @@
       "date": "2018-09-12",
       "address": "75 Ballygossan Park, Golf Links Road, Skerries",
       "price": 325991,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
       "eircode": "K34K004"
     },
     {
@@ -488,16 +488,16 @@
       "date": "2018-07-20",
       "address": "73 Ballygossan Park, Golf Links Road, Skerries",
       "price": 440529,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "apartment",
       "eircode": "K34EP23"
     },
     {
       "date": "2018-07-18",
       "address": "101 Ballygossan Park, Golf Links Road, Skerries",
       "price": 334801,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
       "eircode": "K34YP82"
     }
   ],

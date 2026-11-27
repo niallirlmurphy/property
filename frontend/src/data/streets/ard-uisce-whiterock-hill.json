@@ -1,9 +1,9 @@
 {
   "slug": "ard-uisce-whiterock-hill",
   "stats": {
-    "count": 191,
-    "median": 285169,
-    "avg": 261162,
+    "count": 192,
+    "median": 286679,
+    "avg": 261494,
     "min": 105000,
     "max": 355000,
     "firstYear": 2010,
@@ -140,14 +140,22 @@
     },
     {
       "year": 2026,
-      "count": 20,
+      "count": 21,
       "median_price": 335000,
-      "avg_price": 332353,
+      "avg_price": 332003,
       "min_price": 274000,
       "max_price": 355000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-30",
+      "address": "389 Ard Uisce, Whiterock Hill, Wexford",
+      "price": 286344,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "Y35EC2X"
+    },
     {
       "date": "2026-10-09",
       "address": "392 Ard Uisce, Whiterock Hill, Wexford",
@@ -539,15 +547,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2024-11-22",
-      "address": "467 Ard Uisce, Whiterock Hill",
-      "price": 273128,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 191
+  "totalTransactions": 192
 }

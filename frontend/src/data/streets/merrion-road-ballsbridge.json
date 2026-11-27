@@ -1,9 +1,9 @@
 {
   "slug": "merrion-road-ballsbridge",
   "stats": {
-    "count": 51,
+    "count": 52,
     "median": 1750000,
-    "avg": 1822267,
+    "avg": 1835204,
     "min": 297000,
     "max": 4300000,
     "firstYear": 2011,
@@ -124,14 +124,22 @@
     },
     {
       "year": 2026,
-      "count": 4,
-      "median_price": 3450000,
-      "avg_price": 3352780,
+      "count": 5,
+      "median_price": 3250000,
+      "avg_price": 3181224,
       "min_price": 2211119,
       "max_price": 4300000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-22",
+      "address": "47 MERRION ROAD, BALLSBRIDGE, DUBLIN 4",
+      "price": 2495000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04K3C1"
+    },
     {
       "date": "2026-08-12",
       "address": "142 MERRION RD, BALLSBRIDGE, DUBLIN 4",
@@ -472,16 +480,16 @@
       "date": "2013-06-21",
       "address": "86 merrion road, ballsbridge",
       "price": 1100000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 5,
+      "propertyType": "detached",
       "eircode": null
     },
     {
       "date": "2013-06-07",
       "address": "90 Merrion Road, Ballsbridge",
       "price": 1300000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
@@ -523,15 +531,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2011-08-19",
-      "address": "140 Merrion Road, Ballsbridge, Dublin 4",
-      "price": 297000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 51
+  "totalTransactions": 52
 }

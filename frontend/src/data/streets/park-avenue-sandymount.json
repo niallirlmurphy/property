@@ -1,13 +1,13 @@
 {
   "slug": "park-avenue-sandymount",
   "stats": {
-    "count": 33,
-    "median": 2700000,
-    "avg": 2384182,
+    "count": 34,
+    "median": 2712500,
+    "avg": 2424353,
     "min": 10000,
     "max": 4500000,
     "firstYear": 2011,
-    "lastYear": 2025
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -121,9 +121,25 @@
       "avg_price": 4000000,
       "min_price": 4000000,
       "max_price": 4000000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 3750000,
+      "avg_price": 3750000,
+      "min_price": 3750000,
+      "max_price": 3750000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-19",
+      "address": "33 PARK AVE, SANDYMOUNT, DUBLIN 4",
+      "price": 3750000,
+      "bedrooms": 6,
+      "propertyType": "semi-detached",
+      "eircode": "D04HW63"
+    },
     {
       "date": "2025-02-18",
       "address": "31 PARK AVE, SANDYMOUNT, DUBLIN 4",
@@ -336,8 +352,8 @@
       "date": "2013-04-03",
       "address": "33 Park Avenue, Sandymount, Dublin 4",
       "price": 1500000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 6,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
@@ -389,5 +405,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 33
+  "totalTransactions": 34
 }

@@ -153,7 +153,7 @@
       "address": "11 SANDYCOVE AVENUE EAST, SANDYCOVE",
       "price": 875000,
       "bedrooms": null,
-      "propertyType": null,
+      "propertyType": "terraced",
       "eircode": null
     }
   ],

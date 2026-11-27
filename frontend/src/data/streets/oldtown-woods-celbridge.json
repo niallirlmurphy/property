@@ -1,9 +1,9 @@
 {
   "slug": "oldtown-woods-celbridge",
   "stats": {
-    "count": 216,
-    "median": 395875,
-    "avg": 410976,
+    "count": 220,
+    "median": 397000,
+    "avg": 411683,
     "min": 90000,
     "max": 550000,
     "firstYear": 2021,
@@ -12,11 +12,11 @@
   "trends": [
     {
       "year": 2021,
-      "count": 57,
-      "median_price": 394999,
-      "avg_price": 398681,
+      "count": 58,
+      "median_price": 395000,
+      "avg_price": 400417,
       "min_price": 251101,
-      "max_price": 422907
+      "max_price": 440000
     },
     {
       "year": 2022,
@@ -28,9 +28,9 @@
     },
     {
       "year": 2023,
-      "count": 76,
+      "count": 78,
       "median_price": 365000,
-      "avg_price": 396380,
+      "avg_price": 395832,
       "min_price": 107000,
       "max_price": 493382
     },
@@ -52,14 +52,22 @@
     },
     {
       "year": 2026,
-      "count": 4,
-      "median_price": 291000,
-      "avg_price": 305500,
+      "count": 5,
+      "median_price": 342000,
+      "avg_price": 354400,
       "min_price": 90000,
       "max_price": 550000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-11-02",
+      "address": "84 OLDTOWN WOODS, CELBRIDGE, KILDARE",
+      "price": 550000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "W23EWX2"
+    },
     {
       "date": "2026-09-03",
       "address": "247 OLDTOWN WOODS, CELBRIDGE, KILDARE",
@@ -136,8 +144,8 @@
       "date": "2024-02-08",
       "address": "197 Oldtown Woods, Celbridge",
       "price": 290749,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "apartment",
       "eircode": null
     },
     {
@@ -190,14 +198,6 @@
     },
     {
       "date": "2023-12-11",
-      "address": "238 Oldtown Woods, Celbridge, Co Kildare",
-      "price": 334802,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-12-11",
       "address": "240 Oldtown Woods, Celbridge",
       "price": 290749,
       "bedrooms": null,
@@ -216,6 +216,14 @@
       "date": "2023-12-11",
       "address": "239 Oldtown Woods, Celbridge, Co Kildare",
       "price": 321586,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-12-11",
+      "address": "238 Oldtown Woods, Celbridge, Co Kildare",
+      "price": 334802,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -286,14 +294,6 @@
     },
     {
       "date": "2023-11-24",
-      "address": "105 OLDTOWN WOODS, CELBRIDGE, CO. KILDARE",
-      "price": 286075,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "W23XK6Y"
-    },
-    {
-      "date": "2023-11-24",
       "address": "218 Oldtown Woods, Celbridge",
       "price": 312775,
       "bedrooms": null,
@@ -301,12 +301,28 @@
       "eircode": null
     },
     {
+      "date": "2023-11-24",
+      "address": "105 OLDTOWN WOODS, CELBRIDGE, CO. KILDARE",
+      "price": 286075,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "W23XK6Y"
+    },
+    {
       "date": "2023-11-23",
       "address": "213 Oldtown Woods, Celbridge, Co Kildare",
       "price": 290749,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "eircode": "W23W8XW"
+    },
+    {
+      "date": "2023-11-22",
+      "address": "227 OLDTOWN WOODS, CELLBRIDGE, KILDARE",
+      "price": 308370,
       "bedrooms": null,
       "propertyType": null,
-      "eircode": "W23W8XW"
+      "eircode": "W23CPN2"
     },
     {
       "date": "2023-11-22",
@@ -350,14 +366,6 @@
     },
     {
       "date": "2023-10-25",
-      "address": "236 Oldtown Woods, Celbridge, Co. Kildare",
-      "price": 308370,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-10-25",
       "address": "225 Oldtown Woods, Celbridge",
       "price": 317181,
       "bedrooms": null,
@@ -368,6 +376,14 @@
       "date": "2023-10-25",
       "address": "230 Oldtown Woods, Celbridge",
       "price": 312775,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": null
+    },
+    {
+      "date": "2023-10-25",
+      "address": "236 Oldtown Woods, Celbridge, Co. Kildare",
+      "price": 308370,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -430,36 +446,20 @@
     },
     {
       "date": "2023-09-05",
+      "address": "14 Oldtown Woods, Celbridge",
+      "price": 422906,
+      "bedrooms": 3,
+      "propertyType": "apartment",
+      "eircode": null
+    },
+    {
+      "date": "2023-09-05",
       "address": "241 Oldtown Woods, Celbridge",
       "price": 308370,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "W23V40V"
-    },
-    {
-      "date": "2023-09-05",
-      "address": "14 Oldtown Woods, Celbridge",
-      "price": 422906,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-08-30",
-      "address": "244 OLDTOWN WOODS, CELBRIDGE",
-      "price": 290749,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
-    },
-    {
-      "date": "2023-08-28",
-      "address": "246 Oldtown Woods, Celbridge, Kildare",
-      "price": 350000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 216
+  "totalTransactions": 220
 }

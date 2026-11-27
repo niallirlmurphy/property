@@ -200,8 +200,8 @@
       "date": "2014-09-11",
       "address": "18 Highfield Road, Rathgar",
       "price": 3300000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
@@ -248,8 +248,8 @@
       "date": "2012-08-13",
       "address": "18 Highfield Road, Rathgar",
       "price": 835000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 5,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {

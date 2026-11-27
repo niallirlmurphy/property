@@ -1,9 +1,9 @@
 {
   "slug": "waterloo-road-ballsbridge",
   "stats": {
-    "count": 24,
-    "median": 1447500,
-    "avg": 1465069,
+    "count": 25,
+    "median": 1540000,
+    "avg": 1478466,
     "min": 625000,
     "max": 2850000,
     "firstYear": 2011,
@@ -108,7 +108,7 @@
     },
     {
       "year": 2026,
-      "count": 1,
+      "count": 2,
       "median_price": 1800000,
       "avg_price": 1800000,
       "min_price": 1800000,
@@ -116,6 +116,14 @@
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-21",
+      "address": "35 WATERLOO RD, BALLSBRIDGE, DUBLIN 4",
+      "price": 1800000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D04X5Y3"
+    },
     {
       "date": "2026-08-10",
       "address": "79 WATERLOO RD, BALLSBRIDGE, DUBLIN 4",
@@ -224,8 +232,8 @@
       "date": "2018-09-07",
       "address": "35 WATERLOO RD, BALLSBRIDGE, DUBLIN 4",
       "price": 1325000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "terraced",
       "eircode": null
     },
     {
@@ -254,16 +262,16 @@
     },
     {
       "date": "2013-05-24",
-      "address": "89 Waterloo Road, Ballsbridge",
-      "price": 1037500,
+      "address": "87 Waterloo Road, Ballsbridge",
+      "price": 962500,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2013-05-24",
-      "address": "87 Waterloo Road, Ballsbridge",
-      "price": 962500,
+      "address": "89 Waterloo Road, Ballsbridge",
+      "price": 1037500,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -309,5 +317,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 24
+  "totalTransactions": 25
 }

@@ -1,9 +1,9 @@
 {
   "slug": "bushy-park-road-rathgar",
   "stats": {
-    "count": 16,
-    "median": 1655000,
-    "avg": 1702392,
+    "count": 17,
+    "median": 1700000,
+    "avg": 1716075,
     "min": 775000,
     "max": 3250000,
     "firstYear": 2014,
@@ -84,14 +84,22 @@
     },
     {
       "year": 2026,
-      "count": 1,
-      "median_price": 1995000,
-      "avg_price": 1995000,
-      "min_price": 1995000,
+      "count": 2,
+      "median_price": 1965000,
+      "avg_price": 1965000,
+      "min_price": 1935000,
       "max_price": 1995000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-09-21",
+      "address": "4 BUSHY PARK RD, RATHGAR, DUBLIN 6",
+      "price": 1935000,
+      "bedrooms": 4,
+      "propertyType": "terraced",
+      "eircode": "D06C1H5"
+    },
     {
       "date": "2026-09-11",
       "address": "7 BUSHY PARK RD, RATHGAR, DUBLIN 6",
@@ -216,10 +224,10 @@
       "date": "2014-10-16",
       "address": "96 BUSHY PARK RD, RATHGAR, DUBLIN 6",
       "price": 1260000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
       "eircode": "D06K6Y5"
     }
   ],
-  "totalTransactions": 16
+  "totalTransactions": 17
 }

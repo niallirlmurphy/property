@@ -310,19 +310,19 @@
     },
     {
       "date": "2023-05-30",
-      "address": "APT 169, DOORADOYLE PARK, DOORADOYLE",
-      "price": 260000,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "eircode": "V94DH90"
-    },
-    {
-      "date": "2023-05-30",
       "address": "29 DOORADOYLE PARK, DOORADOYLE, LIMERICK",
       "price": 234000,
       "bedrooms": null,
       "propertyType": null,
       "eircode": "V94FP68"
+    },
+    {
+      "date": "2023-05-30",
+      "address": "APT 169, DOORADOYLE PARK, DOORADOYLE",
+      "price": 260000,
+      "bedrooms": null,
+      "propertyType": "apartment",
+      "eircode": "V94DH90"
     },
     {
       "date": "2023-05-18",

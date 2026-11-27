@@ -1,9 +1,9 @@
 {
   "slug": "beechpark-leixlip",
   "stats": {
-    "count": 111,
+    "count": 112,
     "median": 325000,
-    "avg": 333584,
+    "avg": 331901,
     "min": 74889,
     "max": 622000,
     "firstYear": 2010,
@@ -36,10 +36,10 @@
     },
     {
       "year": 2013,
-      "count": 2,
-      "median_price": 202150,
-      "avg_price": 202150,
-      "min_price": 180000,
+      "count": 3,
+      "median_price": 200000,
+      "avg_price": 183100,
+      "min_price": 145000,
       "max_price": 200000
     },
     {
@@ -360,8 +360,8 @@
       "date": "2017-09-08",
       "address": "258 Beechpark, leixlip",
       "price": 343415,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
@@ -478,16 +478,16 @@
     },
     {
       "date": "2017-02-08",
-      "address": "193 Beechpark, Leixlip",
-      "price": 343568,
+      "address": "187 Beechpark, Leixlip",
+      "price": 312775,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
     },
     {
       "date": "2017-02-08",
-      "address": "187 Beechpark, Leixlip",
-      "price": 312775,
+      "address": "193 Beechpark, Leixlip",
+      "price": 343568,
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
@@ -549,5 +549,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 111
+  "totalTransactions": 112
 }

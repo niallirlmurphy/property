@@ -216,8 +216,8 @@
       "date": "2014-01-31",
       "address": "2 Clyde Lane, Ballsbridge",
       "price": 830000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 2,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {

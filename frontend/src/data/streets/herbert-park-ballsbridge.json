@@ -1,13 +1,13 @@
 {
   "slug": "herbert-park-ballsbridge",
   "stats": {
-    "count": 16,
-    "median": 3100000,
-    "avg": 3077911,
+    "count": 17,
+    "median": 3000000,
+    "avg": 3002740,
     "min": 776580,
     "max": 4700000,
     "firstYear": 2011,
-    "lastYear": 2025
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -65,9 +65,25 @@
       "avg_price": 4250000,
       "min_price": 4250000,
       "max_price": 4250000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1800000,
+      "avg_price": 1800000,
+      "min_price": 1800000,
+      "max_price": 1800000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-11-13",
+      "address": "40A HERBERT PARK, BALLSBRIDGE, DUBLIN",
+      "price": 1800000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "D04V5X4"
+    },
     {
       "date": "2025-05-27",
       "address": "18 HERBERT PARK, BALLSBRIDGE, DUBLIN 4",
@@ -104,8 +120,8 @@
       "date": "2021-10-15",
       "address": "40A HERBERT PARK, BALLSBRIDGE, DUBLIN",
       "price": 776580,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "terraced",
       "eircode": "D04V5X4"
     },
     {
@@ -197,5 +213,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 16
+  "totalTransactions": 17
 }

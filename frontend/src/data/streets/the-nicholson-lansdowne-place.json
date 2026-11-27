@@ -1,9 +1,9 @@
 {
   "slug": "the-nicholson-lansdowne-place",
   "stats": {
-    "count": 27,
-    "median": 1650000,
-    "avg": 1733883,
+    "count": 30,
+    "median": 1385569,
+    "avg": 1660495,
     "min": 704846,
     "max": 6343612,
     "firstYear": 2023,
@@ -12,9 +12,9 @@
   "trends": [
     {
       "year": 2023,
-      "count": 7,
+      "count": 10,
       "median_price": 975000,
-      "avg_price": 1126651,
+      "avg_price": 1088656,
       "min_price": 748899,
       "max_price": 1629955
     },
@@ -197,6 +197,14 @@
       "eircode": "D04X0A3"
     },
     {
+      "date": "2023-12-12",
+      "address": "8 THE NICHOLSON, LANDSDOWNE PLACE, BALLSBRIDGE",
+      "price": 1100000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H7P3"
+    },
+    {
       "date": "2023-09-29",
       "address": "37 The Nicholson, Lansdowne Place, Ballsbridge",
       "price": 1045425,
@@ -221,6 +229,14 @@
       "eircode": null
     },
     {
+      "date": "2023-05-02",
+      "address": "8 The Nicholson, Landsdowne Place, Ballsbridge",
+      "price": 814978,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04H7P3"
+    },
+    {
       "date": "2023-04-27",
       "address": "4 The Nicholson, Lansdowne Place, Lansdowne Road",
       "price": 1629955,
@@ -235,6 +251,14 @@
       "bedrooms": null,
       "propertyType": "apartment",
       "eircode": "D04X8C7"
+    },
+    {
+      "date": "2023-03-27",
+      "address": "14  The Nicholson, Landsdowne Place, Ballsbridge",
+      "price": 859031,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04P0K1"
     },
     {
       "date": "2023-03-10",
@@ -253,5 +277,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 27
+  "totalTransactions": 30
 }

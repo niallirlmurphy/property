@@ -1,13 +1,13 @@
 {
   "slug": "pembroke-park-ballsbridge",
   "stats": {
-    "count": 9,
-    "median": 1300000,
-    "avg": 1421111,
+    "count": 10,
+    "median": 1315000,
+    "avg": 1459000,
     "min": 750000,
     "max": 2400000,
     "firstYear": 2011,
-    "lastYear": 2025
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -57,9 +57,25 @@
       "avg_price": 2400000,
       "min_price": 2400000,
       "max_price": 2400000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 1800000,
+      "avg_price": 1800000,
+      "min_price": 1800000,
+      "max_price": 1800000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-11-06",
+      "address": "20 PEMBROKE PARK, BALLSBRIDGE, DUBLIN 4",
+      "price": 1800000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D04E1T1"
+    },
     {
       "date": "2025-10-02",
       "address": "13 PEMBROKE PARK, BALLSBRIDGE, DUBLIN 4",
@@ -133,5 +149,5 @@
       "eircode": null
     }
   ],
-  "totalTransactions": 9
+  "totalTransactions": 10
 }

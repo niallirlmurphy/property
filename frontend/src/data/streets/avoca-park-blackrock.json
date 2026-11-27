@@ -448,8 +448,8 @@
       "date": "2012-06-11",
       "address": "95 Avoca Park, Blackrock",
       "price": 640000,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 4,
+      "propertyType": "detached",
       "eircode": null
     },
     {

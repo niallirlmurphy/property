@@ -1,9 +1,9 @@
 {
   "slug": "kildare-road-crumlin",
   "stats": {
-    "count": 163,
+    "count": 162,
     "median": 275000,
-    "avg": 270644,
+    "avg": 270617,
     "min": 70000,
     "max": 530000,
     "firstYear": 2010,
@@ -140,9 +140,9 @@
     },
     {
       "year": 2026,
-      "count": 13,
-      "median_price": 435000,
-      "avg_price": 406423,
+      "count": 12,
+      "median_price": 440000,
+      "avg_price": 417375,
       "min_price": 250000,
       "max_price": 530000
     }
@@ -211,14 +211,6 @@
       "bedrooms": 2,
       "propertyType": "terraced",
       "eircode": "D12E89Y"
-    },
-    {
-      "date": "2026-05-14",
-      "address": "332 KILDARE RD, CRUMLIN, DUBLIN 12",
-      "price": 275000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "D12H6C6"
     },
     {
       "date": "2026-05-14",
@@ -547,7 +539,15 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "D12C2Y3"
+    },
+    {
+      "date": "2022-04-07",
+      "address": "317 KILDARE ROAD, CRUMLIN, DUBLIN 12",
+      "price": 262000,
+      "bedrooms": null,
+      "propertyType": null,
+      "eircode": "D12Y7Y3"
     }
   ],
-  "totalTransactions": 163
+  "totalTransactions": 162
 }

@@ -1,13 +1,13 @@
 {
   "slug": "castleland-park-way-balbriggan",
   "stats": {
-    "count": 109,
-    "median": 289999,
-    "avg": 278725,
+    "count": 112,
+    "median": 289996,
+    "avg": 279267,
     "min": 173250,
-    "max": 428000,
+    "max": 451000,
     "firstYear": 2014,
-    "lastYear": 2024
+    "lastYear": 2026
   },
   "trends": [
     {
@@ -20,9 +20,9 @@
     },
     {
       "year": 2015,
-      "count": 20,
+      "count": 22,
       "median_price": 224999,
-      "avg_price": 223452,
+      "avg_price": 223406,
       "min_price": 173250,
       "max_price": 235000
     },
@@ -81,9 +81,25 @@
       "avg_price": 424000,
       "min_price": 420000,
       "max_price": 428000
+    },
+    {
+      "year": 2026,
+      "count": 1,
+      "median_price": 451000,
+      "avg_price": 451000,
+      "min_price": 451000,
+      "max_price": 451000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-10-22",
+      "address": "50 CASTLELAND PARK WAY, BALBRIGGAN, CO DUBLIN",
+      "price": 451000,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
+      "eircode": "K32E172"
+    },
     {
       "date": "2024-10-17",
       "address": "102 CASTLELAND PARK WAY, BALBRIGGAN, DUBLIN",
@@ -344,8 +360,8 @@
       "date": "2020-12-04",
       "address": "50 Castleland Park Way, Balbriggan",
       "price": 268722,
-      "bedrooms": null,
-      "propertyType": null,
+      "bedrooms": 3,
+      "propertyType": "semi-detached",
       "eircode": null
     },
     {
@@ -475,15 +491,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": null
-    },
-    {
-      "date": "2019-09-24",
-      "address": "20 CASTLELAND PARK WAY, BALBRIGGAN, DUBLIN",
-      "price": 300000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": null
     }
   ],
-  "totalTransactions": 109
+  "totalTransactions": 112
 }

@@ -1,15 +1,15 @@
 {
   "slug": "honeypark-dun-laoghaire",
   "stats": {
-    "count": 484,
+    "count": 485,
     "median": 410000,
-    "avg": 388424,
+    "avg": 388644,
     "min": 102000,
-    "max": 484582,
+    "max": 495000,
     "firstYear": 2011,
     "lastYear": 2026,
     "recentMedian": null,
-    "recentCount": 1
+    "recentCount": 2
   },
   "trends": [
     {
@@ -118,27 +118,27 @@
     },
     {
       "year": 2026,
-      "count": 1,
-      "median_price": 426000,
-      "avg_price": 426000,
+      "count": 2,
+      "median_price": 460500,
+      "avg_price": 460500,
       "min_price": 426000,
-      "max_price": 426000
+      "max_price": 495000
     }
   ],
   "bedrooms": [],
   "types": [
     {
       "type": "Apartment",
-      "count": 462,
+      "count": 463,
       "median": 410000,
-      "avg": 393076
+      "avg": 393296
     }
   ],
   "development": {
     "firstSaleYear": 2011,
     "newHomeSales": 459,
-    "resales": 25,
-    "bedroomsKnown": 0
+    "resales": 26,
+    "bedroomsKnown": 1
   },
   "bulkSales": [
     {
@@ -212,6 +212,14 @@
     ]
   },
   "transactions": [
+    {
+      "date": "2026-11-05",
+      "address": "29 ROCHDALE, HONEY PARK, KILL AVENUE",
+      "price": 495000,
+      "bedrooms": 2,
+      "propertyType": "apartment",
+      "newHome": false
+    },
     {
       "date": "2026-05-20",
       "address": "15 ROCHDALE, HONEY PARK, KILL AVENUE   DUN LAOGHAIRE",
@@ -603,15 +611,7 @@
       "bedrooms": null,
       "propertyType": "apartment",
       "newHome": true
-    },
-    {
-      "date": "2018-11-21",
-      "address": "Apartment 94  Charlotte Block, Honeypark, Dun Laoghaire",
-      "price": 361233,
-      "bedrooms": null,
-      "propertyType": "apartment",
-      "newHome": true
     }
   ],
-  "totalTransactions": 484
+  "totalTransactions": 485
 }

@@ -1,11 +1,11 @@
 {
   "slug": "charlesland-park-greystones",
   "stats": {
-    "count": 150,
-    "median": 330000,
-    "avg": 339072,
+    "count": 152,
+    "median": 332500,
+    "avg": 342078,
     "min": 126725,
-    "max": 553000,
+    "max": 610000,
     "firstYear": 2013,
     "lastYear": 2026
   },
@@ -116,14 +116,30 @@
     },
     {
       "year": 2026,
-      "count": 8,
-      "median_price": 452250,
-      "avg_price": 451562,
+      "count": 10,
+      "median_price": 453750,
+      "avg_price": 474750,
       "min_price": 415000,
-      "max_price": 490000
+      "max_price": 610000
     }
   ],
   "transactions": [
+    {
+      "date": "2026-11-05",
+      "address": "9 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 610000,
+      "bedrooms": 3,
+      "propertyType": "terraced",
+      "eircode": "A63C443"
+    },
+    {
+      "date": "2026-10-22",
+      "address": "3 CHARLESLAND PARK, GREYSTONES, WICKLOW",
+      "price": 525000,
+      "bedrooms": 2,
+      "propertyType": "terraced",
+      "eircode": "A63PA97"
+    },
     {
       "date": "2026-09-28",
       "address": "211 CHARLESLAND PARK, GREYSTONES, WICKLOW",
@@ -507,23 +523,7 @@
       "bedrooms": null,
       "propertyType": null,
       "eircode": "A63NW59"
-    },
-    {
-      "date": "2022-12-15",
-      "address": "154 CHARLESLAND PARK, GREYSTONES, WICKLOW",
-      "price": 290000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "A63HY27"
-    },
-    {
-      "date": "2022-12-07",
-      "address": "220 CHARLESLAND PARK, GREYSTONES, WICKLOW",
-      "price": 480000,
-      "bedrooms": null,
-      "propertyType": null,
-      "eircode": "A63KW40"
     }
   ],
-  "totalTransactions": 150
+  "totalTransactions": 152
 }
